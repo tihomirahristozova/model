@@ -1,10 +1,5 @@
-# Welcome to the ERP.net Technical Documentation
+# Welcome to the ERP.net Domain Model
 
-The Technical Documentation documents the business logic of ERP.net.
-It is targeted towards implementation consultants and power users.
+The Domain Model includes full documentation of the object model and business logic of ERP.net.
 
-## Learn more
-
-- [Concepts](~/concepts/overview.md) - general concepts, which apply to all modules.
-- [Modules](~/modules/overview.md) - functionality of specific modules.
-- [Reference](~/reference/overview.md) - reference information about the entities, business rules, generations, etc.
+It is targeted towards advanced implementation consultants and developers.
