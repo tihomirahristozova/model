@@ -16,7 +16,7 @@
     ],
     "dest": "docs",
     "globalMetadata": {
-      "_appTitle": "ERP.net Tech Docs",
+      "_appTitle": "ERP.net Domain Model",
       "_enableSearch": true
     },
     "globalMetadataFiles": [],
