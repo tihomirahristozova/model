@@ -1,0 +1,22 @@
+{
+  "business-rules/R27179.html": {
+    "href": "business-rules/R27179.html",
+    "title": "R27179 SalesOrder - Check Customer Enterprise Company | ERP.net Domain Model",
+    "keywords": "R27179 SalesOrder - Check Customer Enterprise Company Name Value Code R27179 Entity @Crm.Sales.SalesOrder Name CheckCustomerEnterpriseCompany Attribute Customer Layer Back-End Events Planned+ Modify NO Action Validate that: Customer.EnterpriseCompany == SalesOrder.EnterpriseCompany OR Customer.EnterpriseCompany == null Description When the user sets the document state to Planned or higher, the system checks that if the customer has enterprise company, then this enterprise company is equal to the document enterprise company. If the customer has no enterprise company, then it is considered that this customer is valid customer to all enterprise companies in the database and this is a valid SalesOrder. The idea of this business rule is to prevent the user to make Sales Orders to a customer which is not registered as such in the current enterprise company. When registering a customer, the user enters sales terms which the company will apply with the specified customer. Message Customer's enterprise company is different than the document's enterprise company. Introduced In Version 2017"
+  },
+  "entities/Crm.Sales.SalesOrder.html": {
+    "href": "entities/Crm.Sales.SalesOrder.html",
+    "title": "Crm.Sales.SalesOrder - Entity | ERP.net Domain Model",
+    "keywords": "Crm.Sales.SalesOrder - Entity Sales order document headers. Attributes Name Type Description AdjustmentNumber int Consecutive number of the correction that this document is applying to the adjusted document. [Required] (Inherited from General_Document) AdjustmentTime time Date/time when the document last has been adjusted by corrective document (Inherited from General_Document) CustomerPurchaseOrderDate date Issue date of the referent customer purchase order. [Filter(ge;le)] References Name Type Description AccessKey @Systems.Security.AccessKey The access key, containing the user permissions for this document. null means that all users have unlimited permissions (Inherited from General_Document) Customer @Crm.Customer The primary customer, which placed the sales order. [Required] [Filter(multi eq)] Business Rules [!list erp.entity=Crm.Sales.SalesOrder erp.type=business-rule default-text=\"None\"] Front-End Business Rules [!list erp.entity=Crm.Sales.SalesOrder erp.type=front-end-business-rule default-text=\"None\"] Generations [!list erp.entity=Crm.Sales.SalesOrder erp.type=generation default-text=\"None\"] API Domain API Query: https://demodb.my.erp.net/api/domain/odata/Crm_Sales_SalesOrders?$top=10 Domain API Query Builder: https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_SalesOrders?$top=10 Table API: https://demodb.my.erp.net/tableapi/Crm_SalesOrders Domain API Operations (from https://restdev.erp.bg/ref/#Crm_Sales_SalesOrder ) Name Type Description ChangeState Changes the document state to the specified new state (HTTP Method: POST)"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Welcome to the ERP.net Domain Model | ERP.net Domain Model",
+    "keywords": "Welcome to the ERP.net Domain Model The Domain Model includes full documentation of the object model and business logic of ERP.net. It is targeted towards advanced implementation consultants and developers."
+  },
+  "README.html": {
+    "href": "README.html",
+    "title": "Welcome to the ERP.net Domain Model | ERP.net Domain Model",
+    "keywords": "Welcome to the ERP.net Domain Model The documentation uses a custom, internal ERP.net version of DocFX to build: https://github.com/ErpNetDocs/docfx The entities and attributes are managed automatically from internal entity meta-data. There is a build each night, which updates the entity topics with the latest changes. The model includes the very latest updates from the night builds. Some attributes might not exist in your current version of ERP.net. The business rules and generation procedures are added manually."
+  }
+}
