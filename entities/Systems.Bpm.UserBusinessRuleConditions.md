@@ -1,0 +1,125 @@
+# Systems.Bpm.UserBusinessRuleConditions
+
+Represents one condition for the execution of a business rule. Entity: Sys_User_Business_Rule_Conditions
+
+## Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Systems.Bpm.UserBusinessRuleConditions.md#Id) | guid |  
+| [AttributeName](Systems.Bpm.UserBusinessRuleConditions.md#AttributeName) | string | The attribute, which will be tested. [Required] 
+| [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#ComparisonType) | [Systems.Bpm.UserBusinessRuleConditionsRepository.ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#ComparisonType) | How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. [Required] [Default("Equals")] 
+| [ConditionNo](Systems.Bpm.UserBusinessRuleConditions.md#ConditionNo) | int32 | Unique consecutive number of the condition within the business rule. [Required] 
+| [Notes](Systems.Bpm.UserBusinessRuleConditions.md#Notes) | string (nullable) | Notes for this UserBusinessRuleCondition. (Introduced in version 20.1.100.0) 
+| [Value](Systems.Bpm.UserBusinessRuleConditions.md#Value) | string (nullable) | The value against which the data attribute will be tested. 
+
+## References
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#UserBusinessRule) | [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner] |
+
+
+## Attribute Details
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+_Default Value_: **NewGuid**  
+
+### AttributeName
+
+> The attribute, which will be tested. [Required]
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### ComparisonType
+
+> How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. [Required] [Default("Equals")]
+
+_Type_: **[Systems.Bpm.UserBusinessRuleConditionsRepository.ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#ComparisonType)**  
+Allowed values for the [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#ComparisonType) data attribute  
+_Allowed Values (Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| Equals | Equals. Stored as 'Equals'. <br /> _Database Value:_ 'Equals' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Equals' |
+| Greater_Than | Greater Than Or Equal. Stored as 'Greater_Than'. <br /> _Database Value:_ 'Greater_Than' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Greater_Than' |
+| Less_Than | Less Than Or Equal. Stored as 'Less_Than'. <br /> _Database Value:_ 'Less_Than' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Less_Than' |
+| Like | Compare by mask. Use * (asterisk) as wildcard char.. Stored as 'Like'. <br /> _Database Value:_ 'Like' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Like' |
+| IsNull | Field is null.. Stored as 'IsNull'. <br /> _Database Value:_ 'IsNull' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'IsNull' |
+| Not_Equals | Not Equals. Stored as 'Not_Equals'. <br /> _Database Value:_ 'Not_Equals' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Not_Equals' |
+
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **Equals**  
+
+### ConditionNo
+
+> Unique consecutive number of the condition within the business rule. [Required]
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+_Back-End Default Expression:_  
+`(obj.UserBusinessRule.Conditions.Select(c => c.ConditionNo).DefaultIfEmpty(0).Max() + 10)`
+
+_Front-End Recalc Expressions:_  
+`(obj.UserBusinessRule.Conditions.Select(c => c.ConditionNo).DefaultIfEmpty(0).Max() + 10)`
+### Notes
+
+> Notes for this UserBusinessRuleCondition. (Introduced in version 20.1.100.0)
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### Value
+
+> The value against which the data attribute will be tested.
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+
+## Reference Details
+
+### UserBusinessRule
+
+> The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner]
+
+_Type_: **[Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+
+
+
+## Business Rules
+
+[!list erp.entity=Systems.Bpm.UserBusinessRuleConditions erp.type=business-rule default-text="None"]
+
+## Front-End Business Rules
+
+[!list erp.entity=Systems.Bpm.UserBusinessRuleConditions erp.type=front-end-business-rule default-text="None"]
+
+## Generations
+
+[!list erp.entity=Systems.Bpm.UserBusinessRuleConditions erp.type=generation default-text="None"]
+
+## API
+
+Domain API Query:
+<https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_UserBusinessRuleConditions?$top=10>
+
+Domain API Query Builder:
+<https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_UserBusinessRuleConditions?$top=10>
+
+Table API Query:
+<https://demodb.my.erp.net/api/domain/odata/Sys_User_Business_Rule_Conditions?$top=10>
+

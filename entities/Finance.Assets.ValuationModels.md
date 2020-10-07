@@ -1,0 +1,81 @@
+# Finance.Assets.ValuationModels
+
+Valuation models stand for the different valuations an asset can have. For example Accounting, Tax, External Financial Reports, etc. All asset transactions are posted for specific valuation model, but are usually automatically copied to other models. Entity: Ast_Valuation_Models
+
+## Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Finance.Assets.ValuationModels.md#Id) | guid |  
+| [IsSystem](Finance.Assets.ValuationModels.md#IsSystem) | boolean | Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [Name](Finance.Assets.ValuationModels.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this ValuationModel. [Required] [Filter(like)] 
+
+## References
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [DefaultDepreciationMethod](Finance.Assets.ValuationModels.md#DefaultDepreciationMethod) | [Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable) | Obsolete. Not used. [Filter(multi eq)] |
+
+
+## Attribute Details
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+_Default Value_: **NewGuid**  
+
+### IsSystem
+
+> Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+
+_Type_: **boolean**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
+
+### Name
+
+> The name of this ValuationModel. [Required] [Filter(like)]
+
+_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+
+
+## Reference Details
+
+### DefaultDepreciationMethod
+
+> Obsolete. Not used. [Filter(multi eq)]
+
+_Type_: **[Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+
+
+
+## Business Rules
+
+[!list erp.entity=Finance.Assets.ValuationModels erp.type=business-rule default-text="None"]
+
+## Front-End Business Rules
+
+[!list erp.entity=Finance.Assets.ValuationModels erp.type=front-end-business-rule default-text="None"]
+
+## Generations
+
+[!list erp.entity=Finance.Assets.ValuationModels erp.type=generation default-text="None"]
+
+## API
+
+Domain API Query:
+<https://demodb.my.erp.net/api/domain/odata/Finance_Assets_ValuationModels?$top=10>
+
+Domain API Query Builder:
+<https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_ValuationModels?$top=10>
+
+Table API Query:
+<https://demodb.my.erp.net/api/domain/odata/Ast_Valuation_Models?$top=10>
+

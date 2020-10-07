@@ -1,0 +1,83 @@
+# Crm.Pos.Roles
+
+Represents a role, which can be assigned to POS operators (like Cashier, Manager, etc.). The role indicates the operations, which are allowed to be performed by the operators. Entity: Pos_Roles (Introduced in version 19.1.100.0)
+
+## Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Crm.Pos.Roles.md#Id) | guid |  
+| [CanProcessMinusSales](Crm.Pos.Roles.md#CanProcessMinusSales) | boolean | Indicates whether the role is allowed to process minus (qty and/or value) sales. [Required] [Default(false)] [Filter(multi eq)] 
+| [CanVoidSales](Crm.Pos.Roles.md#CanVoidSales) | boolean | Indicates whether this role can void sales orders. [Required] [Default(false)] [Filter(multi eq)] 
+| [PosRoleCode](Crm.Pos.Roles.md#PosRoleCode) | string | Unique role code. [Required] [Filter(multi eq;like)] [ORD] 
+| [PosRoleName](Crm.Pos.Roles.md#PosRoleName) | [MultilanguageString](../data-types/MultilanguageString.md) | Multi-language name of the POS role. [Required] [Filter(multi eq;like)] 
+
+
+## Attribute Details
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+_Default Value_: **NewGuid**  
+
+### CanProcessMinusSales
+
+> Indicates whether the role is allowed to process minus (qty and/or value) sales. [Required] [Default(false)] [Filter(multi eq)]
+
+_Type_: **boolean**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
+
+### CanVoidSales
+
+> Indicates whether this role can void sales orders. [Required] [Default(false)] [Filter(multi eq)]
+
+_Type_: **boolean**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
+
+### PosRoleCode
+
+> Unique role code. [Required] [Filter(multi eq;like)] [ORD]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like, EqualsIn**  
+_Supports Order By_: **True**  
+
+### PosRoleName
+
+> Multi-language name of the POS role. [Required] [Filter(multi eq;like)]
+
+_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Supported Filters_: **Equals, Like, EqualsIn**  
+_Supports Order By_: **False**  
+
+
+
+## Business Rules
+
+[!list erp.entity=Crm.Pos.Roles erp.type=business-rule default-text="None"]
+
+## Front-End Business Rules
+
+[!list erp.entity=Crm.Pos.Roles erp.type=front-end-business-rule default-text="None"]
+
+## Generations
+
+[!list erp.entity=Crm.Pos.Roles erp.type=generation default-text="None"]
+
+## API
+
+Domain API Query:
+<https://demodb.my.erp.net/api/domain/odata/Crm_Pos_Roles?$top=10>
+
+Domain API Query Builder:
+<https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_Roles?$top=10>
+
+Table API Query:
+<https://demodb.my.erp.net/api/domain/odata/Pos_Roles?$top=10>
+
