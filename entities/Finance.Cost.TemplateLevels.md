@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.TemplateLevels
+---
 # Finance.Cost.TemplateLevels
 
 Represents named hierarchy levels within a cost calculation. The hierarchy levels are used to specify cost allocation mechanisms. Entity: Cost_Template_Levels
@@ -75,7 +78,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_TemplateLevels?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Template_Levels?$top=10>
 

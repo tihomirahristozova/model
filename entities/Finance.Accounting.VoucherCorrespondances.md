@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.VoucherCorrespondances
+---
 # Finance.Accounting.VoucherCorrespondances
 
 Obsolete. Not used. Entity: Acc_Voucher_Correspondances
@@ -104,7 +107,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_VoucherCorrespondances?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Voucher_Correspondances?$top=10>
 

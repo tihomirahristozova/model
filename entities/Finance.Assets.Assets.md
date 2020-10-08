@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.Assets
+---
 # Finance.Assets.Assets
 
 The fixed assets. Entity: Ast_Assets
@@ -8,7 +11,7 @@ The fixed assets. Entity: Ast_Assets
 | ---- | ---- | --- |
 | [Id](Finance.Assets.Assets.md#Id) | guid |  
 | [Code](Finance.Assets.Assets.md#Code) | string | The unique code of the Asset. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Finance.Assets.Assets.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this Asset. [Required] [Filter(like)] 
+| [Name](Finance.Assets.Assets.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this Asset. [Required] [Filter(like)] 
 | [DeploymentDate](Finance.Assets.Assets.md#DeploymentDate) | datetime (nullable) | Date, when the asset is first deployed. Null if the asset is not deployed yet. 
 | [IsActive](Finance.Assets.Assets.md#IsActive) | boolean | Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. [Required] [Default(true)] [Filter(eq)] 
 | [Notes](Finance.Assets.Assets.md#Notes) | string (nullable) | Notes for this Asset. 
@@ -47,7 +50,7 @@ _Supports Order By_: **True**
 
 > The name of this Asset. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -156,7 +159,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_Assets?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Assets?$top=10>
 

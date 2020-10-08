@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.StoreResponsibleParties
+---
 # Logistics.Inventory.StoreResponsibleParties
 
 Contains the list of responsible parties (usually persons) for the stores. Stores can have multiple responsible parties. Entity: Inv_Store_Responsible_Parties
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_StoreResponsibleParties?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Store_Responsible_Parties?$top=10>
 

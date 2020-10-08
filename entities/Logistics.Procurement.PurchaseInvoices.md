@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.PurchaseInvoices
+---
 # Logistics.Procurement.PurchaseInvoices
 
 Contains purchase invoice headers. Entity: Scm_Purchase_Invoices
@@ -688,7 +691,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseInvoices?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Invoices?$top=10>
 

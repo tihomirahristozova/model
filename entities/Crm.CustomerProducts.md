@@ -1,3 +1,6 @@
+---
+uid: Crm.CustomerProducts
+---
 # Crm.CustomerProducts
 
 Contains the products, that are contracted (listed) with a customer. Entity: Crm_Customer_Products
@@ -110,7 +113,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_CustomerProducts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Customer_Products?$top=10>
 

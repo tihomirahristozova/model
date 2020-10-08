@@ -1,3 +1,6 @@
+---
+uid: General.Products.ProductCodes
+---
 # General.Products.ProductCodes
 
 Additional product codes, categorized by coding systems. Entity: Gen_Product_Codes
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_ProductCodes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Product_Codes?$top=10>
 

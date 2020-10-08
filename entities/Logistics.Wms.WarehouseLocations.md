@@ -1,3 +1,6 @@
+---
+uid: Logistics.Wms.WarehouseLocations
+---
 # Logistics.Wms.WarehouseLocations
 
 One physical location within a warehouse. Locations are the leaf elements of the rack structure of the warehouse. Entity: Wms_Warehouse_Locations (Introduced in version 20.1.100.0)
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseLocations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wms_Warehouse_Locations?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: General.DocumentComments
+---
 # General.DocumentComments
 
 Contains user comments for documents. Entity: Gen_Document_Comments
@@ -93,7 +96,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentComments?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Comments?$top=10>
 

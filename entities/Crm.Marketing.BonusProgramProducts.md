@@ -1,3 +1,6 @@
+---
+uid: Crm.Marketing.BonusProgramProducts
+---
 # Crm.Marketing.BonusProgramProducts
 
 Provides a way to specify additional (to the one specified in Bonus Program.Conditional Product) products, which will be used to evaluate bonus program conditions. When any of the products exists in the sales document, the conditions are satisfied and the program is applied. When the conditional products list for a bonus program is empty, it is considered that the program is valid for all products. Entity: Crm_Bonus_Program_Products
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Marketing_BonusProgramProducts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Bonus_Program_Products?$top=10>
 

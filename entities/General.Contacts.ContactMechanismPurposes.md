@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.ContactMechanismPurposes
+---
 # General.Contacts.ContactMechanismPurposes
 
 Contains user-defined purposes for processing contact mechanisms. Used for personal data management. Entity: Cm_Contact_Mechanism_Purposes (Introduced in version 18.2.100.0)
@@ -10,7 +13,7 @@ Contains user-defined purposes for processing contact mechanisms. Used for perso
 | [Code](General.Contacts.ContactMechanismPurposes.md#Code) | string | The unique code of the ContactMechanismPurpos. [Required] [Filter(eq;like)] [ORD] 
 | [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#ContactMechanismType) | [General.Contacts.ContactMechanismsRepository.ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#ContactMechanismType) (nullable) | When specified, allows the purpose to be specified only for contact mechanisms of the specified type. [Filter(multi eq)] 
 | [Description](General.Contacts.ContactMechanismPurposes.md#Description) | string (nullable) | The description of this ContactMechanismPurpos. [Filter(like)] 
-| [Name](General.Contacts.ContactMechanismPurposes.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the contact mechanism purpose (Multilanguage). [Required] [Filter(like)] 
+| [Name](General.Contacts.ContactMechanismPurposes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the contact mechanism purpose (Multilanguage). [Required] [Filter(like)] 
 
 
 ## Attribute Details
@@ -63,7 +66,7 @@ _Supports Order By_: **False**
 
 > Name of the contact mechanism purpose (Multilanguage). [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -88,7 +91,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_ContactMechanismPurposes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Contact_Mechanism_Purposes?$top=10>
 

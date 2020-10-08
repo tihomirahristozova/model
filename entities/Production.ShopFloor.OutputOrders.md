@@ -1,3 +1,6 @@
+---
+uid: Production.ShopFloor.OutputOrders
+---
 # Production.ShopFloor.OutputOrders
 
 Stores the output and run-time of the work orders. Entity: Prd_Output_Orders
@@ -454,7 +457,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_ShopFloor_OutputOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Output_Orders?$top=10>
 

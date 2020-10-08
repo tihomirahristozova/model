@@ -1,3 +1,6 @@
+---
+uid: General.DocumentVersions
+---
 # General.DocumentVersions
 
 History of each saved version of each document. Entity: Gen_Document_Versions
@@ -135,7 +138,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentVersions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Versions?$top=10>
 

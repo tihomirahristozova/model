@@ -1,3 +1,6 @@
+---
+uid: General.Printouts
+---
 # General.Printouts
 
 Contains data about binding of printout layouts to specific user-defined document types. Entity: Gen_Printouts
@@ -210,7 +213,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Printouts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Printouts?$top=10>
 

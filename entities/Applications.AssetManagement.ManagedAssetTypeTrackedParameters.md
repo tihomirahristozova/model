@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.ManagedAssetTypeTrackedParameters
+---
 # Applications.AssetManagement.ManagedAssetTypeTrackedParameters
 
 Defines the parameters, which are tracked for the assets of the different types. Entity: Eam_Managed_Asset_Type_Tracked_Parameters (Introduced in version 19.1.100.0)
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ManagedAssetTypeTrackedParameters?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Managed_Asset_Type_Tracked_Parameters?$top=10>
 

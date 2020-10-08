@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.TemplateCostTypes
+---
 # Finance.Cost.TemplateCostTypes
 
 Contains the cost types and their hierachy positions within a cost calculation. Entity: Cost_Template_Cost_Types
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_TemplateCostTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Template_Cost_Types?$top=10>
 

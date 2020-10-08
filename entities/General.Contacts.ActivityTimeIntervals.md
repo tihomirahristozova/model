@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.ActivityTimeIntervals
+---
 # General.Contacts.ActivityTimeIntervals
 
 History of work efforts for executing activities (timesheet). Entity: Cm_Activity_Time_Intervals
@@ -142,7 +145,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_ActivityTimeIntervals?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Activity_Time_Intervals?$top=10>
 

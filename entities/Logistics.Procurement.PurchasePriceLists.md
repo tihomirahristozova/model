@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.PurchasePriceLists
+---
 # Logistics.Procurement.PurchasePriceLists
 
 Contains purchase price list headers. Entity: Scm_Purchase_Price_Lists
@@ -66,7 +69,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchasePriceLists?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Price_Lists?$top=10>
 

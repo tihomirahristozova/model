@@ -1,3 +1,6 @@
+---
+uid: Finance.Vat.Entries
+---
 # Finance.Vat.Entries
 
 Contains the entries in the VAT sales and purchase ledgers. Entity: VAT_Entries
@@ -26,7 +29,7 @@ Contains the entries in the VAT sales and purchase ledgers. Entity: VAT_Entries
 | [VoidTime](Finance.Vat.Entries.md#VoidTime) | datetime (nullable) | Date/time when the document has become void 
 | [VoidUser](Finance.Vat.Entries.md#VoidUser) | string (nullable) | The user who voided the document 
 | [EntityName](Finance.Vat.Entries.md#EntityName) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
-| [AmountBase](Finance.Vat.Entries.md#AmountBase) | [Amount](../data-types/Amount.md) | Amount of the operation without the tax in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required] 
+| [AmountBase](Finance.Vat.Entries.md#AmountBase) | [Amount](../data-types.md#Amount) | Amount of the operation without the tax in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required] 
 | [ApplyDate](Finance.Vat.Entries.md#ApplyDate) | date | Specifies the date on which the entry should be applied in the reporting. Usually equal to the document date with exception for documents that are late to be applied in the correct period. [Required] [Filter(ge;le)] 
 | [CashReportingMode](Finance.Vat.Entries.md#CashReportingMode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. [Required] [Default(false)] 
 | [EntryType](Finance.Vat.Entries.md#EntryType) | [Finance.Vat.EntriesRepository.EntryType](Finance.Vat.Entries.md#EntryType) | Type of the VAT entry. S=Sales, P=Purchases. [Required] [Filter(eq)] [ORD] 
@@ -35,7 +38,7 @@ Contains the entries in the VAT sales and purchase ledgers. Entity: VAT_Entries
 | [ReferencedDocumentNo](Finance.Vat.Entries.md#ReferencedDocumentNo) | string | Number of the document that represents the operation that caused this entry. [Required] [Filter(eq)] 
 | [RegistrationNumber](Finance.Vat.Entries.md#RegistrationNumber) | string (nullable) | Identification code (IC) for the party specified by Party_Id. 
 | [RegistrationVATNumber](Finance.Vat.Entries.md#RegistrationVATNumber) | string | VAT number by registration (or national number) for the party specified by Party_Id. [Required] [Filter(eq)] 
-| [VATAmountBase](Finance.Vat.Entries.md#VATAmountBase) | [Amount](../data-types/Amount.md) | The amount of the tax for the operation in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required] 
+| [VATAmountBase](Finance.Vat.Entries.md#VATAmountBase) | [Amount](../data-types.md#Amount) | The amount of the tax for the operation in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required] 
 
 ## References
 
@@ -270,7 +273,7 @@ _Supports Order By_: **True**
 
 > Amount of the operation without the tax in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -353,7 +356,7 @@ _Supports Order By_: **False**
 
 > The amount of the tax for the operation in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -549,7 +552,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Vat_Entries?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/VAT_Entries?$top=10>
 

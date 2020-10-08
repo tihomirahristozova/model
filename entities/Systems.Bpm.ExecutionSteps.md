@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.ExecutionSteps
+---
 # Systems.Bpm.ExecutionSteps
 
 Contains both historical and active steps in the execution of the business processes. Entity: Bpm_Execution_Steps
@@ -85,7 +88,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_ExecutionSteps?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Bpm_Execution_Steps?$top=10>
 

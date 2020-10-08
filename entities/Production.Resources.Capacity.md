@@ -1,3 +1,6 @@
+---
+uid: Production.Resources.Capacity
+---
 # Production.Resources.Capacity
 
 Contains capacity of workgroup resources available for production. Entity: Prd_Capacity
@@ -8,7 +11,7 @@ Contains capacity of workgroup resources available for production. Entity: Prd_C
 | ---- | ---- | --- |
 | [Id](Production.Resources.Capacity.md#Id) | guid |  
 | [AvailableEndTime](Production.Resources.Capacity.md#AvailableEndTime) | datetime | End of availability period during Calendar_Date. [Required] 
-| [AvailableQuantity](Production.Resources.Capacity.md#AvailableQuantity) | [Quantity](../data-types/Quantity.md) | Quantity of the resource, available to production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] 
+| [AvailableQuantity](Production.Resources.Capacity.md#AvailableQuantity) | [Quantity](../data-types.md#Quantity) | Quantity of the resource, available to production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] 
 | [AvailableStartTime](Production.Resources.Capacity.md#AvailableStartTime) | datetime | Start of availability period during Calendar_Date. [Required] 
 | [CalendarDate](Production.Resources.Capacity.md#CalendarDate) | datetime | Date of the availability period. [Required] [Filter(ge;le)] 
 
@@ -40,7 +43,7 @@ _Supports Order By_: **False**
 
 > Quantity of the resource, available to production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -92,7 +95,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_Capacity?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Capacity?$top=10>
 

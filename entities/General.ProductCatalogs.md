@@ -1,3 +1,6 @@
+---
+uid: General.ProductCatalogs
+---
 # General.ProductCatalogs
 
 Product catalogs serve to organize the products for display primarily in web pages. Entity: Gen_Product_Catalogs
@@ -17,7 +20,7 @@ Product catalogs serve to organize the products for display primarily in web pag
 | [Logo](General.ProductCatalogs.md#Logo) | byte[] (nullable) | The logo of the product catalog. Used for web and other visualization of the catalog. 
 | [Notes](General.ProductCatalogs.md#Notes) | string (nullable) | Notes for this ProductCatalog. 
 | [Code](General.ProductCatalogs.md#Code) | string | Unique catalog code. [Required] 
-| [Name](General.ProductCatalogs.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Product catalog name (multilanguage). [Required] 
+| [Name](General.ProductCatalogs.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Product catalog name (multilanguage). [Required] 
 
 ## References
 
@@ -151,7 +154,7 @@ _Supports Order By_: **False**
 
 > Product catalog name (multilanguage). [Required]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -195,7 +198,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_ProductCatalogs?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Product_Catalogs?$top=10>
 

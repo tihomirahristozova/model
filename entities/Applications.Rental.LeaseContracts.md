@@ -1,3 +1,6 @@
+---
+uid: Applications.Rental.LeaseContracts
+---
 # Applications.Rental.LeaseContracts
 
 Contains the lease contracts for rental assets. Entity: Rent_Lease_Contracts
@@ -501,7 +504,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Rental_LeaseContracts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Rent_Lease_Contracts?$top=10>
 

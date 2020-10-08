@@ -1,3 +1,6 @@
+---
+uid: Crm.Pos.Sequences
+---
 # Crm.Pos.Sequences
 
 Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequences (Introduced in version 19.1.100.0)
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_Sequences?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Pos_Sequences?$top=10>
 

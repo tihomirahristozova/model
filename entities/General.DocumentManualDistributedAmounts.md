@@ -1,3 +1,6 @@
+---
+uid: General.DocumentManualDistributedAmounts
+---
 # General.DocumentManualDistributedAmounts
 
 Obsolete. Not used. Entity: Gen_Document_Manual_Distributed_Amounts
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentManualDistributedAmounts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Manual_Distributed_Amounts?$top=10>
 

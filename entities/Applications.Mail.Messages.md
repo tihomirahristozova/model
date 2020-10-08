@@ -1,3 +1,6 @@
+---
+uid: Applications.Mail.Messages
+---
 # Applications.Mail.Messages
 
 Represents email messages. Entity: Mail_Messages
@@ -173,7 +176,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Mail_Messages?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Mail_Messages?$top=10>
 

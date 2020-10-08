@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.RequisitionPlan
+---
 # Logistics.Inventory.RequisitionPlan
 
 The current requisition (MRP) plan. The data is deleted and re-created upon each planning. Entity: Inv_Requisition_Plan
@@ -11,17 +14,17 @@ The current requisition (MRP) plan. The data is deleted and re-created upon each
 | [CompletionDate](Logistics.Inventory.RequisitionPlan.md#CompletionDate) | datetime (nullable) | The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated. 
 | [ConfirmAction](Logistics.Inventory.RequisitionPlan.md#ConfirmAction) | boolean | True - generate firm planned orders for the current row; false- do not generate;. [Required] [Default(false)] [Filter(eq)] 
 | [ExplanationMessage](Logistics.Inventory.RequisitionPlan.md#ExplanationMessage) | string (nullable) | A message that explains why the program has generated the planned orders for this row. 
-| [FirmPlannedOrderReceipts](Logistics.Inventory.RequisitionPlan.md#FirmPlannedOrderReceipts) | [Quantity](../data-types/Quantity.md) | The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
-| [FirmPlannedOrderReleases](Logistics.Inventory.RequisitionPlan.md#FirmPlannedOrderReleases) | [Quantity](../data-types/Quantity.md) | The order releases which were manually confirmed for release on the specified calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [FirmPlannedOrderReceipts](Logistics.Inventory.RequisitionPlan.md#FirmPlannedOrderReceipts) | [Quantity](../data-types.md#Quantity) | The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [FirmPlannedOrderReleases](Logistics.Inventory.RequisitionPlan.md#FirmPlannedOrderReleases) | [Quantity](../data-types.md#Quantity) | The order releases which were manually confirmed for release on the specified calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
 | [GenerationDate](Logistics.Inventory.RequisitionPlan.md#GenerationDate) | datetime | Indicates the date on which the plan is generated. [Required] [Default(Now)] 
-| [GrossRequirements](Logistics.Inventory.RequisitionPlan.md#GrossRequirements) | [Quantity](../data-types/Quantity.md) | The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
-| [NetRequirements](Logistics.Inventory.RequisitionPlan.md#NetRequirements) | [Quantity](../data-types/Quantity.md) | The net requirements for the date, which are in shortage for the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
-| [PlannedOrderReceipts](Logistics.Inventory.RequisitionPlan.md#PlannedOrderReceipts) | [Quantity](../data-types/Quantity.md) | The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
-| [PlannedOrderReleases](Logistics.Inventory.RequisitionPlan.md#PlannedOrderReleases) | [Quantity](../data-types/Quantity.md) | The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
-| [ProjectedAvailableBalance](Logistics.Inventory.RequisitionPlan.md#ProjectedAvailableBalance) | [Quantity](../data-types/Quantity.md) | Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
-| [Quantity](Logistics.Inventory.RequisitionPlan.md#Quantity) | [Quantity](../data-types/Quantity.md) | The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [GrossRequirements](Logistics.Inventory.RequisitionPlan.md#GrossRequirements) | [Quantity](../data-types.md#Quantity) | The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [NetRequirements](Logistics.Inventory.RequisitionPlan.md#NetRequirements) | [Quantity](../data-types.md#Quantity) | The net requirements for the date, which are in shortage for the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [PlannedOrderReceipts](Logistics.Inventory.RequisitionPlan.md#PlannedOrderReceipts) | [Quantity](../data-types.md#Quantity) | The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [PlannedOrderReleases](Logistics.Inventory.RequisitionPlan.md#PlannedOrderReleases) | [Quantity](../data-types.md#Quantity) | The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [ProjectedAvailableBalance](Logistics.Inventory.RequisitionPlan.md#ProjectedAvailableBalance) | [Quantity](../data-types.md#Quantity) | Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [Quantity](Logistics.Inventory.RequisitionPlan.md#Quantity) | [Quantity](../data-types.md#Quantity) | The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
 | [ReleaseDate](Logistics.Inventory.RequisitionPlan.md#ReleaseDate) | datetime (nullable) | The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated. 
-| [ScheduledReceipts](Logistics.Inventory.RequisitionPlan.md#ScheduledReceipts) | [Quantity](../data-types/Quantity.md) | The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [ScheduledReceipts](Logistics.Inventory.RequisitionPlan.md#ScheduledReceipts) | [Quantity](../data-types.md#Quantity) | The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
 
 ## References
 
@@ -79,7 +82,7 @@ _Supports Order By_: **False**
 
 > The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -88,7 +91,7 @@ _Default Value_: **Constant**
 
 > The order releases which were manually confirmed for release on the specified calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -106,7 +109,7 @@ _Default Value_: **CurrentDateTime**
 
 > The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -115,7 +118,7 @@ _Default Value_: **Constant**
 
 > The net requirements for the date, which are in shortage for the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -124,7 +127,7 @@ _Default Value_: **Constant**
 
 > The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -133,7 +136,7 @@ _Default Value_: **Constant**
 
 > The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -142,7 +145,7 @@ _Default Value_: **Constant**
 
 > Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -151,7 +154,7 @@ _Default Value_: **Constant**
 
 > The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -168,7 +171,7 @@ _Supports Order By_: **False**
 
 > The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -237,7 +240,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_RequisitionPlan?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Requisition_Plan?$top=10>
 

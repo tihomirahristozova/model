@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.ProcessNodes
+---
 # Systems.Bpm.ProcessNodes
 
 Contains the flow Nodes of the process model. Entity: Bpm_Process_Nodes
@@ -10,7 +13,7 @@ Contains the flow Nodes of the process model. Entity: Bpm_Process_Nodes
 | [InstructionsHtml](Systems.Bpm.ProcessNodes.md#InstructionsHtml) | string (nullable) | Detailed instructions to the executor in HTML format. [Filter(eq;like)] 
 | [NodeType](Systems.Bpm.ProcessNodes.md#NodeType) | [Systems.Bpm.ProcessNodesRepository.NodeType](Systems.Bpm.ProcessNodes.md#NodeType) | Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. [Required] [Filter(eq;like)] 
 | [Code](Systems.Bpm.ProcessNodes.md#Code) | string | Node code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)] 
-| [Name](Systems.Bpm.ProcessNodes.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Multilanguage process name. [Required] [Filter(eq;like)] 
+| [Name](Systems.Bpm.ProcessNodes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage process name. [Required] [Filter(eq;like)] 
 
 ## References
 
@@ -67,7 +70,7 @@ _Supports Order By_: **False**
 
 > Multilanguage process name. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -111,7 +114,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_ProcessNodes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Bpm_Process_Nodes?$top=10>
 

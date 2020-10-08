@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.MaintenanceTypeGroups
+---
 # Applications.AssetManagement.MaintenanceTypeGroups
 
 Represents the hierarchy of the groups of maintenance types. Entity: Eam_Maintenance_Type_Groups (Introduced in version 19.1.100.0)
@@ -8,7 +11,7 @@ Represents the hierarchy of the groups of maintenance types. Entity: Eam_Mainten
 | ---- | ---- | --- |
 | [Id](Applications.AssetManagement.MaintenanceTypeGroups.md#Id) | guid |  
 | [Code](Applications.AssetManagement.MaintenanceTypeGroups.md#Code) | string | Unique code of the group. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Applications.AssetManagement.MaintenanceTypeGroups.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Multilanguage name of the group. [Required] [Filter(eq;like)] 
+| [Name](Applications.AssetManagement.MaintenanceTypeGroups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage name of the group. [Required] [Filter(eq;like)] 
 | [Notes](Applications.AssetManagement.MaintenanceTypeGroups.md#Notes) | string (nullable) | Notes for this MaintenanceTypeGroup. 
 
 ## References
@@ -39,7 +42,7 @@ _Supports Order By_: **True**
 
 > Multilanguage name of the group. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_MaintenanceTypeGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Maintenance_Type_Groups?$top=10>
 

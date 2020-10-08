@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.MaintenanceOrderLines
+---
 # Applications.AssetManagement.MaintenanceOrderLines
 
 Contains the types of maintenance and maintained assets in the maintenance orders. Entity: Eam_Maintenance_Order_Lines (Introduced in version 19.1.100.0)
@@ -115,7 +118,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_MaintenanceOrderLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Maintenance_Order_Lines?$top=10>
 

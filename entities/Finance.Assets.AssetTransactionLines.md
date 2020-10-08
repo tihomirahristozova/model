@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.AssetTransactionLines
+---
 # Finance.Assets.AssetTransactionLines
 
 Asset value transaction lines. Each line changes the values of one asset in one valuation model. Entity: Ast_Asset_Transaction_Lines
@@ -7,17 +10,17 @@ Asset value transaction lines. Each line changes the values of one asset in one 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Assets.AssetTransactionLines.md#Id) | guid |  
-| [DepreciationValue](Finance.Assets.AssetTransactionLines.md#DepreciationValue) | [Amount](../data-types/Amount.md) | Change in the depreciation value of the asset (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
-| [DepreciationValueBase](Finance.Assets.AssetTransactionLines.md#DepreciationValueBase) | [Amount](../data-types/Amount.md) | Change in the depreciation value of the asset (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [NegativeReserveValue](Finance.Assets.AssetTransactionLines.md#NegativeReserveValue) | [Amount](../data-types/Amount.md) | Change in the value of the negative reserve after asset valuations (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
-| [NegativeReserveValueBase](Finance.Assets.AssetTransactionLines.md#NegativeReserveValueBase) | [Amount](../data-types/Amount.md) | Change in the value of the negative reserve after asset valuations (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [DepreciationValue](Finance.Assets.AssetTransactionLines.md#DepreciationValue) | [Amount](../data-types.md#Amount) | Change in the depreciation value of the asset (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
+| [DepreciationValueBase](Finance.Assets.AssetTransactionLines.md#DepreciationValueBase) | [Amount](../data-types.md#Amount) | Change in the depreciation value of the asset (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [NegativeReserveValue](Finance.Assets.AssetTransactionLines.md#NegativeReserveValue) | [Amount](../data-types.md#Amount) | Change in the value of the negative reserve after asset valuations (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
+| [NegativeReserveValueBase](Finance.Assets.AssetTransactionLines.md#NegativeReserveValueBase) | [Amount](../data-types.md#Amount) | Change in the value of the negative reserve after asset valuations (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
 | [OperationType](Finance.Assets.AssetTransactionLines.md#OperationType) | [Finance.Assets.AssetTransactionLinesRepository.OperationType](Finance.Assets.AssetTransactionLines.md#OperationType) | Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation. [Required] [Default("ADJ")] [Filter(multi eq)] 
-| [PositiveReserveValue](Finance.Assets.AssetTransactionLines.md#PositiveReserveValue) | [Amount](../data-types/Amount.md) | Change in the value of the positive reserve after asset valuations (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
-| [PositiveReserveValueBase](Finance.Assets.AssetTransactionLines.md#PositiveReserveValueBase) | [Amount](../data-types/Amount.md) | Change in the value of the positive reserve after asset valuations (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [PurchaseValue](Finance.Assets.AssetTransactionLines.md#PurchaseValue) | [Amount](../data-types/Amount.md) | Change in the purchase value of the asset (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
-| [PurchaseValueBase](Finance.Assets.AssetTransactionLines.md#PurchaseValueBase) | [Amount](../data-types/Amount.md) | Change in the purchase value of the asset (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [SalvageValue](Finance.Assets.AssetTransactionLines.md#SalvageValue) | [Amount](../data-types/Amount.md) | Change in the salvage value of the asset (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
-| [SalvageValueBase](Finance.Assets.AssetTransactionLines.md#SalvageValueBase) | [Amount](../data-types/Amount.md) | Change in the salvage value of the asset (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [PositiveReserveValue](Finance.Assets.AssetTransactionLines.md#PositiveReserveValue) | [Amount](../data-types.md#Amount) | Change in the value of the positive reserve after asset valuations (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
+| [PositiveReserveValueBase](Finance.Assets.AssetTransactionLines.md#PositiveReserveValueBase) | [Amount](../data-types.md#Amount) | Change in the value of the positive reserve after asset valuations (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [PurchaseValue](Finance.Assets.AssetTransactionLines.md#PurchaseValue) | [Amount](../data-types.md#Amount) | Change in the purchase value of the asset (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
+| [PurchaseValueBase](Finance.Assets.AssetTransactionLines.md#PurchaseValueBase) | [Amount](../data-types.md#Amount) | Change in the purchase value of the asset (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [SalvageValue](Finance.Assets.AssetTransactionLines.md#SalvageValue) | [Amount](../data-types.md#Amount) | Change in the salvage value of the asset (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
+| [SalvageValueBase](Finance.Assets.AssetTransactionLines.md#SalvageValueBase) | [Amount](../data-types.md#Amount) | Change in the salvage value of the asset (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
 
 ## References
 
@@ -41,7 +44,7 @@ _Default Value_: **NewGuid**
 
 > Change in the depreciation value of the asset (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -50,7 +53,7 @@ _Default Value_: **Constant**
 
 > Change in the depreciation value of the asset (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -59,7 +62,7 @@ _Default Value_: **Constant**
 
 > Change in the value of the negative reserve after asset valuations (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -68,7 +71,7 @@ _Default Value_: **Constant**
 
 > Change in the value of the negative reserve after asset valuations (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -97,7 +100,7 @@ _Default Value_: **Adjustment**
 
 > Change in the value of the positive reserve after asset valuations (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -106,7 +109,7 @@ _Default Value_: **Constant**
 
 > Change in the value of the positive reserve after asset valuations (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -115,7 +118,7 @@ _Default Value_: **Constant**
 
 > Change in the purchase value of the asset (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -124,7 +127,7 @@ _Default Value_: **Constant**
 
 > Change in the purchase value of the asset (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -133,7 +136,7 @@ _Default Value_: **Constant**
 
 > Change in the salvage value of the asset (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -142,7 +145,7 @@ _Default Value_: **Constant**
 
 > Change in the salvage value of the asset (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -195,7 +198,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_AssetTransactionLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Asset_Transaction_Lines?$top=10>
 

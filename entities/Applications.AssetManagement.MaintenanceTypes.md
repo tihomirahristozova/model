@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.MaintenanceTypes
+---
 # Applications.AssetManagement.MaintenanceTypes
 
 Types of maintenances which can be scheduled and performed on the managed assets. Maintenances can be scheduled based on date and tracked parameter change. Entity: Eam_Maintenance_Types (Introduced in version 19.1.100.0)
@@ -10,9 +13,9 @@ Types of maintenances which can be scheduled and performed on the managed assets
 | [DefaultParameterChange](Applications.AssetManagement.MaintenanceTypes.md#DefaultParameterChange) | int32 (nullable) | Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change. 
 | [DefaultScheduleDays](Applications.AssetManagement.MaintenanceTypes.md#DefaultScheduleDays) | int32 (nullable) | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days. 
 | [DefaultScheduleMonths](Applications.AssetManagement.MaintenanceTypes.md#DefaultScheduleMonths) | int32 (nullable) | Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months. 
-| [Description](Applications.AssetManagement.MaintenanceTypes.md#Description) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Detailed description of the maintenance (multilanguage). 
+| [Description](Applications.AssetManagement.MaintenanceTypes.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Detailed description of the maintenance (multilanguage). 
 | [Code](Applications.AssetManagement.MaintenanceTypes.md#Code) | string | Unique code of the maintenance type. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Applications.AssetManagement.MaintenanceTypes.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Multilanguage name of the maintenance type. [Required] [Filter(eq;like)] 
+| [Name](Applications.AssetManagement.MaintenanceTypes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage name of the maintenance type. [Required] [Filter(eq;like)] 
 
 ## References
 
@@ -59,7 +62,7 @@ _Supports Order By_: **False**
 
 > Detailed description of the maintenance (multilanguage).
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -75,7 +78,7 @@ _Supports Order By_: **True**
 
 > Multilanguage name of the maintenance type. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -119,7 +122,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_MaintenanceTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Maintenance_Types?$top=10>
 

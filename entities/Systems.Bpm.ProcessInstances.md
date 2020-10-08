@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.ProcessInstances
+---
 # Systems.Bpm.ProcessInstances
 
 Contains the running instances of the processes. Entity: Bpm_Process_Instances
@@ -114,7 +117,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_ProcessInstances?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Bpm_Process_Instances?$top=10>
 

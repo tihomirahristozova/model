@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.AssetGroups
+---
 # Finance.Assets.AssetGroups
 
 User-defined grouping of the assets. Entity: Ast_Asset_Groups
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_AssetGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Asset_Groups?$top=10>
 

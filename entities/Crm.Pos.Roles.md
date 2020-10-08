@@ -1,3 +1,6 @@
+---
+uid: Crm.Pos.Roles
+---
 # Crm.Pos.Roles
 
 Represents a role, which can be assigned to POS operators (like Cashier, Manager, etc.). The role indicates the operations, which are allowed to be performed by the operators. Entity: Pos_Roles (Introduced in version 19.1.100.0)
@@ -10,7 +13,7 @@ Represents a role, which can be assigned to POS operators (like Cashier, Manager
 | [CanProcessMinusSales](Crm.Pos.Roles.md#CanProcessMinusSales) | boolean | Indicates whether the role is allowed to process minus (qty and/or value) sales. [Required] [Default(false)] [Filter(multi eq)] 
 | [CanVoidSales](Crm.Pos.Roles.md#CanVoidSales) | boolean | Indicates whether this role can void sales orders. [Required] [Default(false)] [Filter(multi eq)] 
 | [PosRoleCode](Crm.Pos.Roles.md#PosRoleCode) | string | Unique role code. [Required] [Filter(multi eq;like)] [ORD] 
-| [PosRoleName](Crm.Pos.Roles.md#PosRoleName) | [MultilanguageString](../data-types/MultilanguageString.md) | Multi-language name of the POS role. [Required] [Filter(multi eq;like)] 
+| [PosRoleName](Crm.Pos.Roles.md#PosRoleName) | [MultilanguageString](../data-types.md#MultilanguageString) | Multi-language name of the POS role. [Required] [Filter(multi eq;like)] 
 
 
 ## Attribute Details
@@ -52,7 +55,7 @@ _Supports Order By_: **True**
 
 > Multi-language name of the POS role. [Required] [Filter(multi eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -77,7 +80,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_Roles?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Pos_Roles?$top=10>
 

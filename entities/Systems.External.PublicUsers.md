@@ -1,3 +1,6 @@
+---
+uid: Systems.External.PublicUsers
+---
 # Systems.External.PublicUsers
 
 /Users of the publicly offered services. This includes Internet, external and employee users. Entity: Ext_Public_Users
@@ -256,7 +259,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_External_PublicUsers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ext_Public_Users?$top=10>
 

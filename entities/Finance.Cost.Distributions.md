@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.Distributions
+---
 # Finance.Cost.Distributions
 
 Used for cost distribution. Contains the period and the store of the cost distribution. Entity: Cost_Distributions
@@ -451,7 +454,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_Distributions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Distributions?$top=10>
 

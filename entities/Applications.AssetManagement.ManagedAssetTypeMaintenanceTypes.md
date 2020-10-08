@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes
+---
 # Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes
 
 Defines the types of maintenances, which are allowed for assets of the different types. Entity: Eam_Managed_Asset_Type_Maintenance_Types (Introduced in version 19.1.100.0)
@@ -101,7 +104,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ManagedAssetTypeMaintenanceTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Managed_Asset_Type_Maintenance_Types?$top=10>
 

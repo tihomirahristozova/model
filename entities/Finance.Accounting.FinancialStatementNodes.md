@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.FinancialStatementNodes
+---
 # Finance.Accounting.FinancialStatementNodes
 
 Contains the hierarchical structure of the user-defined financial statements. Entity: Acc_Financial_Statement_Nodes
@@ -8,7 +11,7 @@ Contains the hierarchical structure of the user-defined financial statements. En
 | ---- | ---- | --- |
 | [Id](Finance.Accounting.FinancialStatementNodes.md#Id) | guid |  
 | [Code](Finance.Accounting.FinancialStatementNodes.md#Code) | string | Identifying code of the financial statement node. Unique within the parent financial statement node. [Required] [Filter(eq;like)] 
-| [Name](Finance.Accounting.FinancialStatementNodes.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the financial statement node. [Required] [Filter(like)] 
+| [Name](Finance.Accounting.FinancialStatementNodes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the financial statement node. [Required] [Filter(like)] 
 | [FullPath](Finance.Accounting.FinancialStatementNodes.md#FullPath) | string (nullable) | Full identification path of the financial statement node. [Filter(like)] [ReadOnly] 
 | [ParentFullPath](Finance.Accounting.FinancialStatementNodes.md#ParentFullPath) | string (nullable) | Parent financial statement node specified through its full identification path. [Filter(like)] 
 
@@ -46,7 +49,7 @@ _Supports Order By_: **False**
 
 > Name of the financial statement node. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -98,7 +101,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_FinancialStatementNodes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Financial_Statement_Nodes?$top=10>
 

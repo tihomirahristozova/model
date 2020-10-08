@@ -1,3 +1,6 @@
+---
+uid: Production.Technologies.RecipeIngredients
+---
 # Production.Technologies.RecipeIngredients
 
 Contains the materials of a recipe that make up the product. Entity: Prd_Recipe_Ingredients
@@ -7,15 +10,15 @@ Contains the materials of a recipe that make up the product. Entity: Prd_Recipe_
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Production.Technologies.RecipeIngredients.md#Id) | guid |  
-| [Cost](Production.Technologies.RecipeIngredients.md#Cost) | [Amount](../data-types/Amount.md) | The cost of the specified quantity of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)] 
-| [FixedScrapQuantity](Production.Technologies.RecipeIngredients.md#FixedScrapQuantity) | [Quantity](../data-types/Quantity.md) | Fixed scrap quantity of the material, needed for setup. [Unit: UsageUnit] [Required] [Default(0)] 
+| [Cost](Production.Technologies.RecipeIngredients.md#Cost) | [Amount](../data-types.md#Amount) | The cost of the specified quantity of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)] 
+| [FixedScrapQuantity](Production.Technologies.RecipeIngredients.md#FixedScrapQuantity) | [Quantity](../data-types.md#Quantity) | Fixed scrap quantity of the material, needed for setup. [Unit: UsageUnit] [Required] [Default(0)] 
 | [LineOrd](Production.Technologies.RecipeIngredients.md#LineOrd) | int32 | The order of this line in the recipe. [Required] 
 | [Notes](Production.Technologies.RecipeIngredients.md#Notes) | string (nullable) | Notes for this RecipeIngredient. 
-| [Price](Production.Technologies.RecipeIngredients.md#Price) | [Amount](../data-types/Amount.md) | Total price of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)] 
+| [Price](Production.Technologies.RecipeIngredients.md#Price) | [Amount](../data-types.md#Amount) | Total price of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)] 
 | [ScrapRate](Production.Technologies.RecipeIngredients.md#ScrapRate) | decimal | The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. [Required] [Default(0)] 
-| [UnitCost](Production.Technologies.RecipeIngredients.md#UnitCost) | [Amount](../data-types/Amount.md) | Cost of 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)] 
-| [UnitPrice](Production.Technologies.RecipeIngredients.md#UnitPrice) | [Amount](../data-types/Amount.md) | Price for 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)] 
-| [UsageQuantity](Production.Technologies.RecipeIngredients.md#UsageQuantity) | [Quantity](../data-types/Quantity.md) (nullable) | Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. [Unit: UsageUnit] [Default(1.000)] [Filter(ge;le)] 
+| [UnitCost](Production.Technologies.RecipeIngredients.md#UnitCost) | [Amount](../data-types.md#Amount) | Cost of 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)] 
+| [UnitPrice](Production.Technologies.RecipeIngredients.md#UnitPrice) | [Amount](../data-types.md#Amount) | Price for 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)] 
+| [UsageQuantity](Production.Technologies.RecipeIngredients.md#UsageQuantity) | [Quantity](../data-types.md#Quantity) (nullable) | Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. [Unit: UsageUnit] [Default(1.000)] [Filter(ge;le)] 
 
 ## References
 
@@ -42,7 +45,7 @@ _Default Value_: **NewGuid**
 
 > The cost of the specified quantity of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -51,7 +54,7 @@ _Default Value_: **Constant**
 
 > Fixed scrap quantity of the material, needed for setup. [Unit: UsageUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -81,7 +84,7 @@ _Supports Order By_: **False**
 
 > Total price of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -99,7 +102,7 @@ _Default Value_: **0**
 
 > Cost of 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -108,7 +111,7 @@ _Default Value_: **Constant**
 
 > Price for 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -117,7 +120,7 @@ _Default Value_: **Constant**
 
 > Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. [Unit: UsageUnit] [Default(1.000)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -194,7 +197,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Technologies_RecipeIngredients?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Recipe_Ingredients?$top=10>
 

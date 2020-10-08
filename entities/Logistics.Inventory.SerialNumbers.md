@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.SerialNumbers
+---
 # Logistics.Inventory.SerialNumbers
 
 Serial numbers, used by the items. Rows are created on first occurrence of the serial number in a document. Rows can be deleted after deleting the last occurence of the serial number in a document. Entity: Inv_Serial_Numbers
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_SerialNumbers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Serial_Numbers?$top=10>
 

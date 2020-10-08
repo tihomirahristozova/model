@@ -1,3 +1,6 @@
+---
+uid: Crm.SalesPersons
+---
 # Crm.SalesPersons
 
 Sales persons (or representatives) are sellers inside the enterprise company who sell the products to customers. Entity: Crm_Sales_Persons
@@ -129,7 +132,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_SalesPersons?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Persons?$top=10>
 

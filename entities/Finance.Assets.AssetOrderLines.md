@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.AssetOrderLines
+---
 # Finance.Assets.AssetOrderLines
 
 Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines
@@ -7,7 +10,7 @@ Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Assets.AssetOrderLines.md#Id) | guid |  
-| [AssetValue](Finance.Assets.AssetOrderLines.md#AssetValue) | [Amount](../data-types/Amount.md) | Value of the acquired or retired asset. [Currency: AssetValueCurrency] [Required] [Default(0)] 
+| [AssetValue](Finance.Assets.AssetOrderLines.md#AssetValue) | [Amount](../data-types.md#Amount) | Value of the acquired or retired asset. [Currency: AssetValueCurrency] [Required] [Default(0)] 
 | [ParentLineNo](Finance.Assets.AssetOrderLines.md#ParentLineNo) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2.100.0) 
 | [Quantity](Finance.Assets.AssetOrderLines.md#Quantity) | int32 | Indicates the nature of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. [Required] [Default(0)] 
 
@@ -34,7 +37,7 @@ _Default Value_: **NewGuid**
 
 > Value of the acquired or retired asset. [Currency: AssetValueCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -112,7 +115,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_AssetOrderLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Asset_Order_Lines?$top=10>
 

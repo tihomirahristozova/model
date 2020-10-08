@@ -1,3 +1,6 @@
+---
+uid: Crm.DiscountTypes
+---
 # Crm.DiscountTypes
 
 Contains the different types of discounts, which can be applied to sales lines. Different types of discounts can be combined for a single sales line. Entity: Crm_Discount_Types
@@ -123,7 +126,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_DiscountTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Discount_Types?$top=10>
 

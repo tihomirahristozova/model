@@ -1,3 +1,6 @@
+---
+uid: Logistics.Wms.WarehouseOrders
+---
 # Logistics.Wms.WarehouseOrders
 
 Contains order for internal warehouse operation or plan for execution of warehouse requisition. Entity: Wms_Warehouse_Orders (Introduced in version 20.1.100.0)
@@ -80,7 +83,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wms_Warehouse_Orders?$top=10>
 

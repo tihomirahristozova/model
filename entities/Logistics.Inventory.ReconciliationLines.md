@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.ReconciliationLines
+---
 # Logistics.Inventory.ReconciliationLines
 
 Store reconciliations (physical counting) detail lines. Each line contains the reconciliation for one combination of product, lot, bin and serial number. Entity: Inv_Reconciliation_Lines
@@ -7,12 +10,12 @@ Store reconciliations (physical counting) detail lines. Each line contains the r
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.ReconciliationLines.md#Id) | guid |  
-| [AvailableQuantityBase](Logistics.Inventory.ReconciliationLines.md#AvailableQuantityBase) | [Quantity](../data-types/Quantity.md) | Quantity found at the reconciliation, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
+| [AvailableQuantityBase](Logistics.Inventory.ReconciliationLines.md#AvailableQuantityBase) | [Quantity](../data-types.md#Quantity) | Quantity found at the reconciliation, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
 | [LineOrd](Logistics.Inventory.ReconciliationLines.md#LineOrd) | int32 | The ordinal position of the line within the document. Duplicates are allowed, but not suggested. [Required] 
 | [Notes](Logistics.Inventory.ReconciliationLines.md#Notes) | string (nullable) | Notes for this ReconciliationLine. 
-| [Quantity](Logistics.Inventory.ReconciliationLines.md#Quantity) | [Quantity](../data-types/Quantity.md) | Quantity found at the reconciliation, . [Unit: QuantityUnit] [Required] [Filter(ge;le)] 
-| [QuantityBase](Logistics.Inventory.ReconciliationLines.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | Quantity found at the reconciliation, expressed in base measurement units. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] 
-| [StandardQuantityBase](Logistics.Inventory.ReconciliationLines.md#StandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [Quantity](Logistics.Inventory.ReconciliationLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | Quantity found at the reconciliation, . [Unit: QuantityUnit] [Required] [Filter(ge;le)] 
+| [QuantityBase](Logistics.Inventory.ReconciliationLines.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | Quantity found at the reconciliation, expressed in base measurement units. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] 
+| [StandardQuantityBase](Logistics.Inventory.ReconciliationLines.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
 | [TransactionTimestamp](Logistics.Inventory.ReconciliationLines.md#TransactionTimestamp) | datetime (nullable) | Exact time when the transaction occurred. 
 
 ## References
@@ -42,7 +45,7 @@ _Default Value_: **NewGuid**
 
 > Quantity found at the reconciliation, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -71,7 +74,7 @@ _Supports Order By_: **False**
 
 > Quantity found at the reconciliation, . [Unit: QuantityUnit] [Required] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -79,7 +82,7 @@ _Supports Order By_: **False**
 
 > Quantity found at the reconciliation, expressed in base measurement units. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -92,7 +95,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -207,7 +210,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_ReconciliationLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Reconciliation_Lines?$top=10>
 

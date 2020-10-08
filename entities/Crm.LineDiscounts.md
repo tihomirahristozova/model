@@ -1,3 +1,6 @@
+---
+uid: Crm.LineDiscounts
+---
 # Crm.LineDiscounts
 
 Discount policies for sales documents. Entity: Crm_Line_Discounts
@@ -10,8 +13,8 @@ Discount policies for sales documents. Entity: Crm_Line_Discounts
 | [Description](Crm.LineDiscounts.md#Description) | string (nullable) | The description of the discount that is shown to the operator when he/she should choose between different discounts. [Filter(like)] 
 | [DiscountPercent](Crm.LineDiscounts.md#DiscountPercent) | decimal | The discount percent that should be applied if all the matching criteria are met. [Required] [Default(0)] [Filter(ge;le)] 
 | [FromDate](Crm.LineDiscounts.md#FromDate) | datetime (nullable) | Starting date of validity of the discount. null means no from date restriction. [Filter(eq;ge;le)] 
-| [MaxQuantity](Crm.LineDiscounts.md#MaxQuantity) | [Quantity](../data-types/Quantity.md) (nullable) | Apply the discount only if the quantity sold is equal to or less than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
-| [MinQuantity](Crm.LineDiscounts.md#MinQuantity) | [Quantity](../data-types/Quantity.md) (nullable) | Apply the discount only if the quantity sold is equal to or more than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
+| [MaxQuantity](Crm.LineDiscounts.md#MaxQuantity) | [Quantity](../data-types.md#Quantity) (nullable) | Apply the discount only if the quantity sold is equal to or less than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
+| [MinQuantity](Crm.LineDiscounts.md#MinQuantity) | [Quantity](../data-types.md#Quantity) (nullable) | Apply the discount only if the quantity sold is equal to or more than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
 | [Priority](Crm.LineDiscounts.md#Priority) | [General.Priority](Crm.LineDiscounts.md#Priority) | The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. [Required] [Default(3)] 
 | [ThruDate](Crm.LineDiscounts.md#ThruDate) | datetime (nullable) | Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. [Filter(eq;ge;le)] 
 
@@ -68,7 +71,7 @@ _Supports Order By_: **False**
 
 > Apply the discount only if the quantity sold is equal to or less than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -76,7 +79,7 @@ _Supports Order By_: **False**
 
 > Apply the discount only if the quantity sold is equal to or more than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -206,7 +209,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_LineDiscounts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Line_Discounts?$top=10>
 

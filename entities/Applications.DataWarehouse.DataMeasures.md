@@ -1,3 +1,6 @@
+---
+uid: Applications.DataWarehouse.DataMeasures
+---
 # Applications.DataWarehouse.DataMeasures
 
 Contains the data measures of the General data warehouse. Entity: Dw_Data_Measures (Introduced in version 18.2.100.0)
@@ -123,7 +126,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_DataWarehouse_DataMeasures?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Dw_Data_Measures?$top=10>
 

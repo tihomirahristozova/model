@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.Trips
+---
 # Applications.Fleet.Trips
 
 Represents actual trip made by the vehicles. Entity: Fleet_Trips
@@ -478,7 +481,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_Trips?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Trips?$top=10>
 

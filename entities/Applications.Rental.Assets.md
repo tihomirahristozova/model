@@ -1,3 +1,6 @@
+---
+uid: Applications.Rental.Assets
+---
 # Applications.Rental.Assets
 
 Contains the rentable assets. Entity: Rent_Assets
@@ -11,7 +14,7 @@ Contains the rentable assets. Entity: Rent_Assets
 | [Notes](Applications.Rental.Assets.md#Notes) | string (nullable) | Notes for this Asset. 
 | [RentalAssetCode](Applications.Rental.Assets.md#RentalAssetCode) | string | Unique rental asset code. [Required] [Filter(eq;like)] [ORD] 
 | [RentalAssetName](Applications.Rental.Assets.md#RentalAssetName) | string | The name of the rental asset. [Required] [Filter(like)] 
-| [StandardGuaranteeAmount](Applications.Rental.Assets.md#StandardGuaranteeAmount) | [Amount](../data-types/Amount.md) (nullable) | Standard default amount of the guarantee that is set for this asset when leased. [Currency: StandardGuaranteeAmountCurrency] [Filter(multi eq)] 
+| [StandardGuaranteeAmount](Applications.Rental.Assets.md#StandardGuaranteeAmount) | [Amount](../data-types.md#Amount) (nullable) | Standard default amount of the guarantee that is set for this asset when leased. [Currency: StandardGuaranteeAmountCurrency] [Filter(multi eq)] 
 | [TimePeriodType](Applications.Rental.Assets.md#TimePeriodType) | [Applications.Rental.AssetsRepository.TimePeriodType](Applications.Rental.Assets.md#TimePeriodType) (nullable) | Specifies the unit by which the periods of renting of this asset are measured. Possible values are: 'by days' or 'by months'. [Filter(multi eq)] 
 
 ## References
@@ -81,7 +84,7 @@ _Supports Order By_: **False**
 
 > Standard default amount of the guarantee that is set for this asset when leased. [Currency: StandardGuaranteeAmountCurrency] [Filter(multi eq)]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -197,7 +200,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Rental_Assets?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Rent_Assets?$top=10>
 

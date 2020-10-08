@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.DepreciationPlanLines
+---
 # Finance.Assets.DepreciationPlanLines
 
 Each record contains one depreciation plan for one valuation model of one asset. Entity: Ast_Depreciation_Plan_Lines
@@ -10,7 +13,7 @@ Each record contains one depreciation plan for one valuation model of one asset.
 | [DepreciationEndDate](Finance.Assets.DepreciationPlanLines.md#DepreciationEndDate) | datetime | End date of the depreciation plan for this asset. [Required] 
 | [DepreciationStartDate](Finance.Assets.DepreciationPlanLines.md#DepreciationStartDate) | datetime | Start date of the depreciation plan for this asset. [Required] 
 | [LineNo](Finance.Assets.DepreciationPlanLines.md#LineNo) | int32 | Consecutive number of the line within the depreciation plan. [Required] [Filter(eq)] 
-| [PlanDepreciationValue](Finance.Assets.DepreciationPlanLines.md#PlanDepreciationValue) | [Amount](../data-types/Amount.md) | The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
+| [PlanDepreciationValue](Finance.Assets.DepreciationPlanLines.md#PlanDepreciationValue) | [Amount](../data-types.md#Amount) | The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. [Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
 
 ## References
 
@@ -70,7 +73,7 @@ _Front-End Recalc Expressions:_
 
 > The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. [Currency: Asset.ValuationCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -131,7 +134,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_DepreciationPlanLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Depreciation_Plan_Lines?$top=10>
 

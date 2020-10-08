@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.CostCorrectionsOptions
+---
 # Logistics.Inventory.CostCorrectionsOptions
 
 Options per document type for the cost corrections. Entity: Inv_Cost_Corrections_Options
@@ -76,7 +79,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_CostCorrectionsOptions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Cost_Corrections_Options?$top=10>
 

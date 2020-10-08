@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.ProcessElements
+---
 # Systems.Bpm.ProcessElements
 
 Contains the flow elements of the process model. Entity: Bpm_Process_Elements
@@ -11,7 +14,7 @@ Contains the flow elements of the process model. Entity: Bpm_Process_Elements
 | [ElementType](Systems.Bpm.ProcessElements.md#ElementType) | [Systems.Bpm.ProcessElementsRepository.ElementType](Systems.Bpm.ProcessElements.md#ElementType) | Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact. [Required] [Filter(eq;like)] 
 | [InstructionsHtml](Systems.Bpm.ProcessElements.md#InstructionsHtml) | string (nullable) | Detailed instructions to the executor in HTML format. [Filter(eq;like)] 
 | [Code](Systems.Bpm.ProcessElements.md#Code) | string | Element code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)] 
-| [Name](Systems.Bpm.ProcessElements.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Multilanguage process name. [Required] [Filter(eq;like)] 
+| [Name](Systems.Bpm.ProcessElements.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage process name. [Required] [Filter(eq;like)] 
 
 ## References
 
@@ -104,7 +107,7 @@ _Supports Order By_: **False**
 
 > Multilanguage process name. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -148,7 +151,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_ProcessElements?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Bpm_Process_Elements?$top=10>
 

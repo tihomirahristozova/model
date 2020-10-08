@@ -1,3 +1,6 @@
+---
+uid: Applications.Cms.WebSiteLanguages
+---
 # Applications.Cms.WebSiteLanguages
 
 Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Cms_WebSiteLanguages?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cms_Web_Site_Languages?$top=10>
 

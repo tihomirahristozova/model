@@ -1,3 +1,6 @@
+---
+uid: Applications.Rental.AssetGroups
+---
 # Applications.Rental.AssetGroups
 
 Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Groups
@@ -90,7 +93,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Rental_AssetGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Rent_Asset_Groups?$top=10>
 

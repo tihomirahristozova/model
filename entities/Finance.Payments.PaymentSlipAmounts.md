@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.PaymentSlipAmounts
+---
 # Finance.Payments.PaymentSlipAmounts
 
 Mass payment amount. Each record generates one payment transaction. Entity: Cash_Payment_Slip_Amounts
@@ -11,9 +14,9 @@ Mass payment amount. Each record generates one payment transaction. Entity: Cash
 | [Direction](Finance.Payments.PaymentSlipAmounts.md#Direction) | [Finance.Payments.PaymentOrdersRepository.Direction](Finance.Payments.PaymentSlipAmounts.md#Direction) | 'I' for Payment issue, 'R' for payment receipt. [Required] [Filter(eq)] 
 | [IsPartyPayment](Finance.Payments.PaymentSlipAmounts.md#IsPartyPayment) | boolean | Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). [Required] [Default(true)] 
 | [LineNo](Finance.Payments.PaymentSlipAmounts.md#LineNo) | int32 | The number of the line within the payment. [Required] 
-| [PartyName](Finance.Payments.PaymentSlipAmounts.md#PartyName) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee). 
+| [PartyName](Finance.Payments.PaymentSlipAmounts.md#PartyName) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee). 
 | [PaymentDate](Finance.Payments.PaymentSlipAmounts.md#PaymentDate) | datetime | The date on which the payment is done. [Required] [Filter(ge;le)] 
-| [TotalAmount](Finance.Payments.PaymentSlipAmounts.md#TotalAmount) | [Amount](../data-types/Amount.md) (nullable) | The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. [Currency: PaymentSlip.DocumentCurrency] 
+| [TotalAmount](Finance.Payments.PaymentSlipAmounts.md#TotalAmount) | [Amount](../data-types.md#Amount) (nullable) | The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. [Currency: PaymentSlip.DocumentCurrency] 
 
 ## References
 
@@ -89,7 +92,7 @@ _Front-End Recalc Expressions:_
 
 > The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee).
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -107,7 +110,7 @@ _Supports Order By_: **False**
 
 > The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. [Currency: PaymentSlip.DocumentCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -159,7 +162,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentSlipAmounts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Slip_Amounts?$top=10>
 

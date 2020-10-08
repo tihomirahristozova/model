@@ -1,3 +1,6 @@
+---
+uid: Production.Resources.Workgroups
+---
 # Production.Resources.Workgroups
 
 Production workgroups. Entity: Prd_Workgroups
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_Workgroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Workgroups?$top=10>
 

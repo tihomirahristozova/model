@@ -1,3 +1,6 @@
+---
+uid: Systems.Workflow.Routes
+---
 # Systems.Workflow.Routes
 
 Contains document routes, which specify which document generation procedures will be run upon document events. Entity: Wf_Routes
@@ -313,7 +316,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Workflow_Routes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wf_Routes?$top=10>
 

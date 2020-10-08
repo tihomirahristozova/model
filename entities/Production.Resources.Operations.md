@@ -1,3 +1,6 @@
+---
+uid: Production.Resources.Operations
+---
 # Production.Resources.Operations
 
 The different steps performed to create products. Entity: Prd_Operations
@@ -16,7 +19,7 @@ The different steps performed to create products. Entity: Prd_Operations
 | [SetupTimeMinutes](Production.Resources.Operations.md#SetupTimeMinutes) | int32 | The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity. [Required] [Default(0)] 
 | [StandardPricePerHour](Production.Resources.Operations.md#StandardPricePerHour) | decimal | Standard price for 1 hour work for this operation. [Required] [Default(0)] 
 | [Tooling](Production.Resources.Operations.md#Tooling) | string (nullable) | Short description of the needed instruments for the operation. 
-| [UseQuantityBase](Production.Resources.Operations.md#UseQuantityBase) | [Quantity](../data-types/Quantity.md) | Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] 
+| [UseQuantityBase](Production.Resources.Operations.md#UseQuantityBase) | [Quantity](../data-types.md#Quantity) | Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] 
 | [WaitTimeMinutes](Production.Resources.Operations.md#WaitTimeMinutes) | int32 | The time required to wait after completing the operation. During this time, the resource is still allocated to the operation. [Required] [Default(0)] 
 
 ## References
@@ -117,7 +120,7 @@ _Supports Order By_: **False**
 
 > Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -179,7 +182,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_Operations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Operations?$top=10>
 

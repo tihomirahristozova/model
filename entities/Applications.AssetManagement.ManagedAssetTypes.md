@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.ManagedAssetTypes
+---
 # Applications.AssetManagement.ManagedAssetTypes
 
 Types of managed assets. Used to categorize the assets and the tracked parameters for each type. Entity: Eam_Managed_Asset_Types (Introduced in version 19.1.100.0)
@@ -9,7 +12,7 @@ Types of managed assets. Used to categorize the assets and the tracked parameter
 | [Id](Applications.AssetManagement.ManagedAssetTypes.md#Id) | guid |  
 | [IsActive](Applications.AssetManagement.ManagedAssetTypes.md#IsActive) | boolean | Specifies whether the asset type is active for choosing in drop-down choices. [Required] [Default(true)] 
 | [Code](Applications.AssetManagement.ManagedAssetTypes.md#Code) | string | Unique code of the asset type. [Required] [Filter(multi eq;like)] [ORD] 
-| [Name](Applications.AssetManagement.ManagedAssetTypes.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Multilanguage name of the asset type. [Required] [Filter(multi eq;like)] 
+| [Name](Applications.AssetManagement.ManagedAssetTypes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage name of the asset type. [Required] [Filter(multi eq;like)] 
 | [Notes](Applications.AssetManagement.ManagedAssetTypes.md#Notes) | string (nullable) | Notes for this ManagedAssetType. 
 
 ## Child Collections
@@ -50,7 +53,7 @@ _Supports Order By_: **True**
 
 > Multilanguage name of the asset type. [Required] [Filter(multi eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ManagedAssetTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Managed_Asset_Types?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.AccountingVouchers
+---
 # Finance.Accounting.AccountingVouchers
 
 Contains the accounting vouchers (postings) in the general ledger. Entity: Acc_Vouchers
@@ -461,7 +464,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_AccountingVouchers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Vouchers?$top=10>
 

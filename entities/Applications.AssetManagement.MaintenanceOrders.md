@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.MaintenanceOrders
+---
 # Applications.AssetManagement.MaintenanceOrders
 
 Orders for maintenance. It is performed by a single service center, but can contain many different types of maintenance for many assets. The document is Activity and as such is scheduled and visible in the main calendar. Entity: Eam_Maintenance_Orders (Introduced in version 19.1.100.0)
@@ -633,7 +636,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_MaintenanceOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Maintenance_Orders?$top=10>
 

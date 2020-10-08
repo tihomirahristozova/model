@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.PaymentOrders
+---
 # Finance.Payments.PaymentOrders
 
 Each payment order contains a receivable or payable amount. Entity: Cash_Payment_Orders
@@ -32,7 +35,7 @@ Each payment order contains a receivable or payable amount. Entity: Cash_Payment
 | [DueDate](Finance.Payments.PaymentOrders.md#DueDate) | datetime (nullable) | The due date of the payment. null means there is no due date. [Filter(eq;ge;le)] 
 | [DueStartDate](Finance.Payments.PaymentOrders.md#DueStartDate) | date (nullable) | The date at which the payment becomes executable. null means the payment is executable at all times. [Filter(eq;ge;le)] [ORD] 
 | [InstallmentNumber](Finance.Payments.PaymentOrders.md#InstallmentNumber) | int32 (nullable) | Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. [Filter(eq)] 
-| [InvoiceAmount](Finance.Payments.PaymentOrders.md#InvoiceAmount) | [Amount](../data-types/Amount.md) (nullable) | The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). [Currency: InvoiceAmountCurrency] 
+| [InvoiceAmount](Finance.Payments.PaymentOrders.md#InvoiceAmount) | [Amount](../data-types.md#Amount) (nullable) | The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). [Currency: InvoiceAmountCurrency] 
 | [IsAmountWithVAT](Finance.Payments.PaymentOrders.md#IsAmountWithVAT) | boolean | Is_Amount_With_VAT=true if the requested amount includes VAT. [Required] [Default(true)] [Filter(eq)] 
 | [IsReleased](Finance.Payments.PaymentOrders.md#IsReleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [IsSingleExecution](Finance.Payments.PaymentOrders.md#IsSingleExecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
@@ -42,7 +45,7 @@ Each payment order contains a receivable or payable amount. Entity: Cash_Payment
 | [RefInvoiceApplyDate](Finance.Payments.PaymentOrders.md#RefInvoiceApplyDate) | datetime (nullable) | The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. [Filter(eq;ge;le)] 
 | [RefInvoiceDocumentDate](Finance.Payments.PaymentOrders.md#RefInvoiceDocumentDate) | datetime (nullable) | The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. [Filter(eq;ge;le)] 
 | [RefInvoiceDocumentNo](Finance.Payments.PaymentOrders.md#RefInvoiceDocumentNo) | string (nullable) | The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(eq)] 
-| [TotalAmount](Finance.Payments.PaymentOrders.md#TotalAmount) | [Amount](../data-types/Amount.md) | Total amount that should be payed. [Currency: TotalAmountCurrency] [Required] [Default(0)] [Filter(eq;ge;le)] 
+| [TotalAmount](Finance.Payments.PaymentOrders.md#TotalAmount) | [Amount](../data-types.md#Amount) | Total amount that should be payed. [Currency: TotalAmountCurrency] [Required] [Default(0)] [Filter(eq;ge;le)] 
 
 ## References
 
@@ -351,7 +354,7 @@ _Supports Order By_: **False**
 
 > The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). [Currency: InvoiceAmountCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -459,7 +462,7 @@ _Front-End Recalc Expressions:_
 
 > Total amount that should be payed. [Currency: TotalAmountCurrency] [Required] [Default(0)] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -738,7 +741,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Orders?$top=10>
 

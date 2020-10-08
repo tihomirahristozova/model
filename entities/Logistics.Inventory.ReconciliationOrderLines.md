@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.ReconciliationOrderLines
+---
 # Logistics.Inventory.ReconciliationOrderLines
 
 Obsolete. Not used. Entity: Inv_Reconciliation_Order_Lines
@@ -106,7 +109,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_ReconciliationOrderLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Reconciliation_Order_Lines?$top=10>
 

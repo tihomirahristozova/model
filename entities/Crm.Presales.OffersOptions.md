@@ -1,3 +1,6 @@
+---
+uid: Crm.Presales.OffersOptions
+---
 # Crm.Presales.OffersOptions
 
 Contains options for user defined document types for Offers. Entity: Crm_Offers_Options
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Presales_OffersOptions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Offers_Options?$top=10>
 

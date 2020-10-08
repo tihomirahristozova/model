@@ -1,3 +1,6 @@
+---
+uid: Crm.Presales.Deals
+---
 # Crm.Presales.Deals
 
 Potential deals (Opportunities). Entity: Crm_Deals
@@ -27,7 +30,7 @@ Potential deals (Opportunities). Entity: Crm_Deals
 | [VoidUser](Crm.Presales.Deals.md#VoidUser) | string (nullable) | The user who voided the document 
 | [EntityName](Crm.Presales.Deals.md#EntityName) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
 | [DealStatus](Crm.Presales.Deals.md#DealStatus) | [Crm.Presales.DealsRepository.DealStatus](Crm.Presales.Deals.md#DealStatus) | Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = In progress. [Required] [Default("INP")] [Filter(multi eq)] 
-| [ExpectedRevenue](Crm.Presales.Deals.md#ExpectedRevenue) | [Amount](../data-types/Amount.md) | Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. [Currency: ExpectedRevenueCurrency] [Required] [Default(0)] [Filter(ge;le)] 
+| [ExpectedRevenue](Crm.Presales.Deals.md#ExpectedRevenue) | [Amount](../data-types.md#Amount) | Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. [Currency: ExpectedRevenueCurrency] [Required] [Default(0)] [Filter(ge;le)] 
 | [IsReleased](Crm.Presales.Deals.md#IsReleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [IsSingleExecution](Crm.Presales.Deals.md#IsSingleExecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [RevenueEndDate](Crm.Presales.Deals.md#RevenueEndDate) | datetime | Expected date on which the last revenue from this deal will occur. [Required] [Default(Today)] [Filter(ge;le)] 
@@ -286,7 +289,7 @@ _Default Value_: **InProgress**
 
 > Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. [Currency: ExpectedRevenueCurrency] [Required] [Default(0)] [Filter(ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -540,7 +543,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Presales_Deals?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Deals?$top=10>
 

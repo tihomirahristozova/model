@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.DistributionResults
+---
 # Finance.Cost.DistributionResults
 
 Contains the results of a cost distribution calculation. Entity: Cost_Distribution_Results
@@ -7,7 +10,7 @@ Contains the results of a cost distribution calculation. Entity: Cost_Distributi
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Cost.DistributionResults.md#Id) | guid |  
-| [DistributedAmountBase](Finance.Cost.DistributionResults.md#DistributedAmountBase) | [Amount](../data-types/Amount.md) | The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] 
+| [DistributedAmountBase](Finance.Cost.DistributionResults.md#DistributedAmountBase) | [Amount](../data-types.md#Amount) | The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] 
 | [LineNo](Finance.Cost.DistributionResults.md#LineNo) | int32 | Consecutive line number (within the cost distribution document) of the result. [Required] 
 | [OutputLineNo](Finance.Cost.DistributionResults.md#OutputLineNo) | int32 | The line number (within the document) of the output over which the cost is distributed. [Required] 
 
@@ -32,7 +35,7 @@ _Default Value_: **NewGuid**
 
 > The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -97,7 +100,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_DistributionResults?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Distribution_Results?$top=10>
 

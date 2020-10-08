@@ -1,3 +1,6 @@
+---
+uid: Production.Resources.WorkgroupResources
+---
 # Production.Resources.WorkgroupResources
 
 Describes the availability of resources in the active workgroups. Entity: Prd_Workgroup_Resources
@@ -7,7 +10,7 @@ Describes the availability of resources in the active workgroups. Entity: Prd_Wo
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Production.Resources.WorkgroupResources.md#Id) | guid |  
-| [AvailableQuantity](Production.Resources.WorkgroupResources.md#AvailableQuantity) | [Quantity](../data-types/Quantity.md) | Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. [Unit: Resource.PrimaryUnit] [Required] [Default(0)] 
+| [AvailableQuantity](Production.Resources.WorkgroupResources.md#AvailableQuantity) | [Quantity](../data-types.md#Quantity) | Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. [Unit: Resource.PrimaryUnit] [Required] [Default(0)] 
 | [Notes](Production.Resources.WorkgroupResources.md#Notes) | string (nullable) | User notes for the workgroup resource. 
 
 ## References
@@ -37,7 +40,7 @@ _Default Value_: **NewGuid**
 
 > Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. [Unit: Resource.PrimaryUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -90,7 +93,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_WorkgroupResources?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Workgroup_Resources?$top=10>
 

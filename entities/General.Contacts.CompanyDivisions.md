@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.CompanyDivisions
+---
 # General.Contacts.CompanyDivisions
 
 Stores company divisions structure. The divisions are parties and as such, can be organized hierarchically mixed with other structuring mechanisms. The departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Divisions
@@ -15,13 +18,13 @@ Stores company divisions structure. The divisions are parties and as such, can b
 | [PartyNotes](General.Contacts.CompanyDivisions.md#PartyNotes) | string (nullable) | Notes for this Party 
 | [ParentPartyId](General.Contacts.CompanyDivisions.md#ParentPartyId) | guid (nullable) |  
 | [PartyCode](General.Contacts.CompanyDivisions.md#PartyCode) | string | The unique code of the Party [Required] 
-| [PartyName](General.Contacts.CompanyDivisions.md#PartyName) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the party [Required] 
+| [PartyName](General.Contacts.CompanyDivisions.md#PartyName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the party [Required] 
 | [PartyType](General.Contacts.CompanyDivisions.md#PartyType) | [General.Contacts.PartiesRepository.PartyType](General.Contacts.CompanyDivisions.md#PartyType) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required] 
 | [PartyUniqueNumber](General.Contacts.CompanyDivisions.md#PartyUniqueNumber) | string (nullable) | Unique number of the party (National number for persons, Registration number for companies) 
 | [PartyUpdateTime](General.Contacts.CompanyDivisions.md#PartyUpdateTime) | datetime (nullable) | Date and time when the Party was last updated. 
 | [PartyUpdateUser](General.Contacts.CompanyDivisions.md#PartyUpdateUser) | string (nullable) | Login name of the user, who last updated the Party. 
 | [Code](General.Contacts.CompanyDivisions.md#Code) | string | Company division code, unique within the company. [Required] [Filter(eq;like)] 
-| [Name](General.Contacts.CompanyDivisions.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Multi-language company divsion name. [Required] [Filter(eq;like)] 
+| [Name](General.Contacts.CompanyDivisions.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multi-language company divsion name. [Required] [Filter(eq;like)] 
 
 ## References
 
@@ -121,7 +124,7 @@ _Supports Order By_: **True**
 
 > The name of the party [Required]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -181,7 +184,7 @@ _Supports Order By_: **False**
 
 > Multi-language company divsion name. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -249,7 +252,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_CompanyDivisions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Company_Divisions?$top=10>
 

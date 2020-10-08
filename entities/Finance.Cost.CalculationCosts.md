@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.CalculationCosts
+---
 # Finance.Cost.CalculationCosts
 
 Contains the calculated costs allocated to the different Cost Types. Entity: Cost_Calculation_Costs
@@ -143,7 +146,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_CalculationCosts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Calculation_Costs?$top=10>
 

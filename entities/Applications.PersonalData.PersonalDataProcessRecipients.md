@@ -1,3 +1,6 @@
+---
+uid: Applications.PersonalData.PersonalDataProcessRecipients
+---
 # Applications.PersonalData.PersonalDataProcessRecipients
 
 Contains recipients, to which personal data is disclosed. Entity: Pdm_Personal_Data_Process_Recipients (Introduced in version 18.2.100.0)
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_PersonalData_PersonalDataProcessRecipients?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Pdm_Personal_Data_Process_Recipients?$top=10>
 

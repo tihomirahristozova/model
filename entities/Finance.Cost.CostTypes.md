@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.CostTypes
+---
 # Finance.Cost.CostTypes
 
 Types of costs. Entity: Cost_Types
@@ -57,7 +60,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_CostTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Types?$top=10>
 

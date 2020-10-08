@@ -1,3 +1,6 @@
+---
+uid: Communities.Notifications
+---
 # Communities.Notifications
 
 A single notification of a user. Entity: Cmm_Notifications (Introduced in version 20.1.100.0)
@@ -103,7 +106,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Communities_Notifications?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cmm_Notifications?$top=10>
 

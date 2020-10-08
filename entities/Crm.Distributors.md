@@ -1,3 +1,6 @@
+---
+uid: Crm.Distributors
+---
 # Crm.Distributors
 
 Distributors are external for the enterprise persons or companies who obtain sales orders from end-customers in benefit of the enterprise. Entity: Crm_Distributors
@@ -66,7 +69,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Distributors?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Distributors?$top=10>
 

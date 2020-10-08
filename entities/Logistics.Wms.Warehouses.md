@@ -1,3 +1,6 @@
+---
+uid: Logistics.Wms.Warehouses
+---
 # Logistics.Wms.Warehouses
 
 Physical warehouse. Entity: Wms_Warehouses (Introduced in version 20.1.100.0)
@@ -8,7 +11,7 @@ Physical warehouse. Entity: Wms_Warehouses (Introduced in version 20.1.100.0)
 | ---- | ---- | --- |
 | [Id](Logistics.Wms.Warehouses.md#Id) | guid |  
 | [Notes](Logistics.Wms.Warehouses.md#Notes) | string (nullable) | Notes for this Warehouse. 
-| [Name](Logistics.Wms.Warehouses.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the warehouse (multilanguage). [Required] [Filter(eq;like)] 
+| [Name](Logistics.Wms.Warehouses.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the warehouse (multilanguage). [Required] [Filter(eq;like)] 
 
 ## Child Collections
 
@@ -40,7 +43,7 @@ _Supports Order By_: **False**
 
 > Name of the warehouse (multilanguage). [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_Warehouses?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wms_Warehouses?$top=10>
 

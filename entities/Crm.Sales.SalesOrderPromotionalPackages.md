@@ -1,3 +1,6 @@
+---
+uid: Crm.Sales.SalesOrderPromotionalPackages
+---
 # Crm.Sales.SalesOrderPromotionalPackages
 
 The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Promotional_Packages
@@ -89,7 +92,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_SalesOrderPromotionalPackages?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Order_Promotional_Packages?$top=10>
 

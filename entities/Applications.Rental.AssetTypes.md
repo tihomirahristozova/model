@@ -1,3 +1,6 @@
+---
+uid: Applications.Rental.AssetTypes
+---
 # Applications.Rental.AssetTypes
 
 Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Types
@@ -64,7 +67,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Rental_AssetTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Rent_Asset_Types?$top=10>
 

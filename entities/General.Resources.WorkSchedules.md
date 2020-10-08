@@ -1,3 +1,6 @@
+---
+uid: General.Resources.WorkSchedules
+---
 # General.Resources.WorkSchedules
 
 Represents the different working schedules, used by the employees and resources. Entity: Gen_Work_Schedules
@@ -81,7 +84,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Resources_WorkSchedules?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Work_Schedules?$top=10>
 

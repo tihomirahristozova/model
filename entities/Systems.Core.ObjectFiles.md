@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.ObjectFiles
+---
 # Systems.Core.ObjectFiles
 
 Contains files attached to objects. Entity: Sys_Object_Files
@@ -185,7 +188,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_ObjectFiles?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Object_Files?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.AttributeChangesHistory
+---
 # Systems.Core.AttributeChangesHistory
 
 Each entry represents an entity attribute change with previous and new value. Entity: Sys_Attribute_Changes_History_View
@@ -101,7 +104,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_AttributeChangesHistory?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Attribute_Changes_History_View?$top=10>
 

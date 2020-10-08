@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.PurchaseInvoicesOptions
+---
 # Logistics.Procurement.PurchaseInvoicesOptions
 
 Contains purchase invoice specific options for the different document types. Entity: Scm_Purchase_Invoices_Options
@@ -94,7 +97,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseInvoicesOptions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Invoices_Options?$top=10>
 

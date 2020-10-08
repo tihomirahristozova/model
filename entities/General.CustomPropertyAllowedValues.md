@@ -1,3 +1,6 @@
+---
+uid: General.CustomPropertyAllowedValues
+---
 # General.CustomPropertyAllowedValues
 
 User-defined properties allowed values. Can be specified only for properties with unbound allowed values (e.g. for which Allowed Values Entity is not set). Entity: Gen_Property_Allowed_Values
@@ -8,7 +11,7 @@ User-defined properties allowed values. Can be specified only for properties wit
 | ---- | ---- | --- |
 | [Id](General.CustomPropertyAllowedValues.md#Id) | guid |  
 | [Active](General.CustomPropertyAllowedValues.md#Active) | boolean | Specifies whether the allowed value is active and can be used when selecting property values. [Required] [Default(true)] [Filter(eq)] 
-| [Description](General.CustomPropertyAllowedValues.md#Description) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. [Filter(eq;like)] 
+| [Description](General.CustomPropertyAllowedValues.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. [Filter(eq;like)] 
 | [LongDescription](General.CustomPropertyAllowedValues.md#LongDescription) | string (nullable) | When not null, specifies a long description of the allowed value. This long description is only used as helper information when selecting values, it is not copied in the property value. 
 | [ParentAllowedValueId](General.CustomPropertyAllowedValues.md#ParentAllowedValueId) | guid (nullable) | The value of the parent property, for which this allowed value is valid. [Filter(multi eq)] 
 | [Picture](General.CustomPropertyAllowedValues.md#Picture) | byte[] (nullable) | When not null, specifies a picture representation of the allowed value. 
@@ -44,7 +47,7 @@ _Default Value_: **True**
 
 > The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -120,7 +123,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_CustomPropertyAllowedValues?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Property_Allowed_Values?$top=10>
 

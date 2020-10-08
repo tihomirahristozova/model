@@ -1,3 +1,6 @@
+---
+uid: Projects.Resources
+---
 # Projects.Resources
 
 Contains the enterprise resources, which are available for including in projects. Entity: Prj_Resources
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_Resources?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Resources?$top=10>
 

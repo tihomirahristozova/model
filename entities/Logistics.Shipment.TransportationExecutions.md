@@ -1,3 +1,6 @@
+---
+uid: Logistics.Shipment.TransportationExecutions
+---
 # Logistics.Shipment.TransportationExecutions
 
 Contains executions (loading, unloading or other operations) of the transportation orders. Entity: Log_Transportation_Executions (Introduced in version 18.2.100.0)
@@ -455,7 +458,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_TransportationExecutions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Log_Transportation_Executions?$top=10>
 

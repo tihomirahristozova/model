@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.DepreciationAssets
+---
 # Finance.Assets.DepreciationAssets
 
 Depreciation document line. Can specify assets, whose depreciation should be calculated. Entity: Ast_Depreciation_Assets
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_DepreciationAssets?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Depreciation_Assets?$top=10>
 

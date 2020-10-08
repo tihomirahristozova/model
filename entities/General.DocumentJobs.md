@@ -1,3 +1,6 @@
+---
+uid: General.DocumentJobs
+---
 # General.DocumentJobs
 
 Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Introduced in version 20.1.100.0)
@@ -153,7 +156,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentJobs?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Jobs?$top=10>
 

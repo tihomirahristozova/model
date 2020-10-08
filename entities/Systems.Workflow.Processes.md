@@ -1,3 +1,6 @@
+---
+uid: Systems.Workflow.Processes
+---
 # Systems.Workflow.Processes
 
 Contains the business process diagrams. Entity: Wf_Processes
@@ -11,7 +14,7 @@ Contains the business process diagrams. Entity: Wf_Processes
 | [CreationUser](Systems.Workflow.Processes.md#CreationUser) | string (nullable) | Login name of the user, who created the Process. [ReadOnly] 
 | [IsLandscape](Systems.Workflow.Processes.md#IsLandscape) | boolean | Specifies whether the process diagram is intended to be viewed in landscape mode. [Required] [Default(true)] 
 | [Notes](Systems.Workflow.Processes.md#Notes) | string (nullable) | Notes for this Process. 
-| [Name](Systems.Workflow.Processes.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this Process. [Required] [Filter(eq;like)] 
+| [Name](Systems.Workflow.Processes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this Process. [Required] [Filter(eq;like)] 
 | [SchemaFormat](Systems.Workflow.Processes.md#SchemaFormat) | string | Application specific format of the Schema Layout. [Required] [Default("D")] 
 | [SchemaLayout](Systems.Workflow.Processes.md#SchemaLayout) | string | Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. [Required] 
 | [StartEvent](Systems.Workflow.Processes.md#StartEvent) | string (nullable) | USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process. 
@@ -67,7 +70,7 @@ _Supports Order By_: **False**
 
 > The name of this Process. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -149,7 +152,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Workflow_Processes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wf_Processes?$top=10>
 

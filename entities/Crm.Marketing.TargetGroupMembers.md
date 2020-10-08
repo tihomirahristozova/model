@@ -1,3 +1,6 @@
+---
+uid: Crm.Marketing.TargetGroupMembers
+---
 # Crm.Marketing.TargetGroupMembers
 
 Member parties of a marketing target group. Entity: Crm_Target_Group_Members
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Marketing_TargetGroupMembers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Target_Group_Members?$top=10>
 

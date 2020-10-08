@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.EquipmentTypes
+---
 # Applications.Fleet.EquipmentTypes
 
 Contains types of equipment, which can be installed on the vehicles. Entity: Fleet_Equipment_Types
@@ -48,7 +51,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_EquipmentTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Equipment_Types?$top=10>
 

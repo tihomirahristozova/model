@@ -1,3 +1,6 @@
+---
+uid: Crm.Marketing.BonusPrograms
+---
 # Crm.Marketing.BonusPrograms
 
 Bonus programs allow automatic adding of new line with bonus product or automatic application of discount in a sales document. Entity: Crm_Bonus_Programs
@@ -11,16 +14,16 @@ Bonus programs allow automatic adding of new line with bonus product or automati
 | [BonusAction](Crm.Marketing.BonusPrograms.md#BonusAction) | [Crm.Marketing.BonusProgramsRepository.BonusAction](Crm.Marketing.BonusPrograms.md#BonusAction) | Bonus action: P-Add product to the order, A-Add amount, D-Give discount. [Required] [Default("D")] [Filter(multi eq)] 
 | [BonusDocumentAmountPercent](Crm.Marketing.BonusPrograms.md#BonusDocumentAmountPercent) | decimal (nullable) | The percent of the document amount that is rewarded. Should be null if and only if the bonus document amount is null. 
 | [BonusLineDiscountPercent](Crm.Marketing.BonusPrograms.md#BonusLineDiscountPercent) | decimal | The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount). [Required] [Default(0)] 
-| [BonusProductQuantity](Crm.Marketing.BonusPrograms.md#BonusProductQuantity) | [Quantity](../data-types/Quantity.md) (nullable) | The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. [Unit: BonusProductQuantityUnit] 
-| [BonusProductQuantityMultiplierForEachLotSize](Crm.Marketing.BonusPrograms.md#BonusProductQuantityMultiplierForEachLotSize) | [Quantity](../data-types/Quantity.md) (nullable) | When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] 
-| [Name](Crm.Marketing.BonusPrograms.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the bonus program. [Required] [Filter(eq;like)] 
+| [BonusProductQuantity](Crm.Marketing.BonusPrograms.md#BonusProductQuantity) | [Quantity](../data-types.md#Quantity) (nullable) | The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. [Unit: BonusProductQuantityUnit] 
+| [BonusProductQuantityMultiplierForEachLotSize](Crm.Marketing.BonusPrograms.md#BonusProductQuantityMultiplierForEachLotSize) | [Quantity](../data-types.md#Quantity) (nullable) | When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] 
+| [Name](Crm.Marketing.BonusPrograms.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the bonus program. [Required] [Filter(eq;like)] 
 | [ConditionCustomerFilterXML](Crm.Marketing.BonusPrograms.md#ConditionCustomerFilterXML) | dataaccessfilter (nullable) | When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties. 
 | [ConditionDistributionChannelFilterXML](Crm.Marketing.BonusPrograms.md#ConditionDistributionChannelFilterXML) | dataaccessfilter (nullable) | When not null, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics. 
 | [ConditionFromDate](Crm.Marketing.BonusPrograms.md#ConditionFromDate) | datetime (nullable) | Starting date of the bonus. null means that there is no starting date restriction. [Filter(eq;ge;le)] 
-| [ConditionMaxAmount](Crm.Marketing.BonusPrograms.md#ConditionMaxAmount) | [Amount](../data-types/Amount.md) (nullable) | If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. [Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)] 
-| [ConditionMaxQuantity](Crm.Marketing.BonusPrograms.md#ConditionMaxQuantity) | [Quantity](../data-types/Quantity.md) (nullable) | When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
-| [ConditionMinAmount](Crm.Marketing.BonusPrograms.md#ConditionMinAmount) | [Amount](../data-types/Amount.md) (nullable) | If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. [Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)] 
-| [ConditionMinQuantity](Crm.Marketing.BonusPrograms.md#ConditionMinQuantity) | [Quantity](../data-types/Quantity.md) (nullable) | When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
+| [ConditionMaxAmount](Crm.Marketing.BonusPrograms.md#ConditionMaxAmount) | [Amount](../data-types.md#Amount) (nullable) | If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. [Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)] 
+| [ConditionMaxQuantity](Crm.Marketing.BonusPrograms.md#ConditionMaxQuantity) | [Quantity](../data-types.md#Quantity) (nullable) | When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
+| [ConditionMinAmount](Crm.Marketing.BonusPrograms.md#ConditionMinAmount) | [Amount](../data-types.md#Amount) (nullable) | If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. [Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)] 
+| [ConditionMinQuantity](Crm.Marketing.BonusPrograms.md#ConditionMinQuantity) | [Quantity](../data-types.md#Quantity) (nullable) | When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
 | [ConditionShipToCustomerFilterXML](Crm.Marketing.BonusPrograms.md#ConditionShipToCustomerFilterXML) | dataaccessfilter (nullable) | When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics. 
 | [ConditionToDate](Crm.Marketing.BonusPrograms.md#ConditionToDate) | datetime (nullable) | Ending date (inclusive) of the bonus. null means that there is no ending date restriction. [Filter(eq;ge;le)] 
 | [Priority](Crm.Marketing.BonusPrograms.md#Priority) | [Crm.Marketing.BonusProgramsRepository.Priority](Crm.Marketing.BonusPrograms.md#Priority) | Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority. [Required] [Default(2)] [Filter(multi eq)] 
@@ -106,7 +109,7 @@ _Default Value_: **0**
 
 > The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. [Unit: BonusProductQuantityUnit]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -114,7 +117,7 @@ _Supports Order By_: **False**
 
 > When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -122,7 +125,7 @@ _Supports Order By_: **False**
 
 > The name of the bonus program. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -154,7 +157,7 @@ _Supports Order By_: **False**
 
 > If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. [Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -162,7 +165,7 @@ _Supports Order By_: **False**
 
 > When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -170,7 +173,7 @@ _Supports Order By_: **False**
 
 > If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. [Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -178,7 +181,7 @@ _Supports Order By_: **False**
 
 > When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. [Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -346,7 +349,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Marketing_BonusPrograms?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Bonus_Programs?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.MaintenancePlans
+---
 # Applications.Fleet.MaintenancePlans
 
 Defines the periodic maintenance plans and the conditions for performing the next maintenance. Entity: Fleet_Maintenance_Plans
@@ -112,7 +115,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_MaintenancePlans?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Maintenance_Plans?$top=10>
 

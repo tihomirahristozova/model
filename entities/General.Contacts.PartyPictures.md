@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.PartyPictures
+---
 # General.Contacts.PartyPictures
 
 Party pictures - photos, logos, etc. Entity: Gen_Party_Pictures
@@ -110,7 +113,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_PartyPictures?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Party_Pictures?$top=10>
 

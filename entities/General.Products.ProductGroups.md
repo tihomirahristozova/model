@@ -1,3 +1,6 @@
+---
+uid: General.Products.ProductGroups
+---
 # General.Products.ProductGroups
 
 Hierarchical categorization of the products. Entity: Gen_Product_Groups
@@ -17,10 +20,10 @@ Hierarchical categorization of the products. Entity: Gen_Product_Groups
 | [Parent](General.Products.ProductGroups.md#Parent) | string | Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. [Required] [Default("/")] [Filter(eq)] [ORD] 
 | [Picture](General.Products.ProductGroups.md#Picture) | byte[] (nullable) | The picture of the product group. 
 | [PictureLastUpdateTime](General.Products.ProductGroups.md#PictureLastUpdateTime) | datetime (nullable) | Last update time of the Picture. [Filter(ge;le)] [ReadOnly] 
-| [ProductDescriptionMask](General.Products.ProductGroups.md#ProductDescriptionMask) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
+| [ProductDescriptionMask](General.Products.ProductGroups.md#ProductDescriptionMask) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
 | [Code](General.Products.ProductGroups.md#Code) | string | The unique code of the ProductGroup. [Required] [Filter(eq;like)] [ORD] 
-| [Name](General.Products.ProductGroups.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Group name should be unique among the other groups within the same parent. [Required] [Filter(eq;like)] 
-| [ProductNameMask](General.Products.ProductGroups.md#ProductNameMask) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
+| [Name](General.Products.ProductGroups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Group name should be unique among the other groups within the same parent. [Required] [Filter(eq;like)] 
+| [ProductNameMask](General.Products.ProductGroups.md#ProductNameMask) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
 | [UseLots](General.Products.ProductGroups.md#UseLots) | [General.Products.ProductGroupsRepository.UseLots](General.Products.ProductGroups.md#UseLots) (nullable) | Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required. 
 
 ## References
@@ -148,7 +151,7 @@ _Supports Order By_: **False**
 
 > When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -164,7 +167,7 @@ _Supports Order By_: **True**
 
 > Group name should be unique among the other groups within the same parent. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -172,7 +175,7 @@ _Supports Order By_: **False**
 
 > When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -249,7 +252,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_ProductGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Product_Groups?$top=10>
 

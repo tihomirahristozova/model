@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.AllocationModels
+---
 # Finance.Cost.AllocationModels
 
 User-defined models for cost allocation. Entity: Cost_Allocation_Models
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_AllocationModels?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Allocation_Models?$top=10>
 

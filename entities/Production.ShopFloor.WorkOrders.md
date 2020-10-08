@@ -1,3 +1,6 @@
+---
+uid: Production.ShopFloor.WorkOrders
+---
 # Production.ShopFloor.WorkOrders
 
 Scheduled and released production orders. Each order can contain the production of many items. Entity: Prd_Work_Orders
@@ -545,7 +548,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_ShopFloor_WorkOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Work_Orders?$top=10>
 

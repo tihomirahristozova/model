@@ -1,3 +1,6 @@
+---
+uid: Crm.ProductPrices
+---
 # Crm.ProductPrices
 
 Specific prices of products. A price is applied after matching the specified criteria. Entity: Crm_Product_Prices
@@ -8,11 +11,11 @@ Specific prices of products. A price is applied after matching the specified cri
 | ---- | ---- | --- |
 | [Id](Crm.ProductPrices.md#Id) | guid |  
 | [FromDate](Crm.ProductPrices.md#FromDate) | date (nullable) | Starting date of validity of the price. [Filter(eq;ge;le)] 
-| [MaxQuantity](Crm.ProductPrices.md#MaxQuantity) | [Quantity](../data-types/Quantity.md) (nullable) | Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)] 
-| [MinQuantity](Crm.ProductPrices.md#MinQuantity) | [Quantity](../data-types/Quantity.md) (nullable) | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)] 
+| [MaxQuantity](Crm.ProductPrices.md#MaxQuantity) | [Quantity](../data-types.md#Quantity) (nullable) | Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)] 
+| [MinQuantity](Crm.ProductPrices.md#MinQuantity) | [Quantity](../data-types.md#Quantity) (nullable) | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)] 
 | [Notes](Crm.ProductPrices.md#Notes) | string (nullable) | Notes for this ProductPrice. 
-| [Price](Crm.ProductPrices.md#Price) | [Amount](../data-types/Amount.md) | Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)] 
-| [PriceQuantity](Crm.ProductPrices.md#PriceQuantity) | [Quantity](../data-types/Quantity.md) | The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [Price](Crm.ProductPrices.md#Price) | [Amount](../data-types.md#Amount) | Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)] 
+| [PriceQuantity](Crm.ProductPrices.md#PriceQuantity) | [Quantity](../data-types.md#Quantity) | The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] [Filter(ge;le)] 
 | [Priority](Crm.ProductPrices.md#Priority) | [General.Priority](Crm.ProductPrices.md#Priority) | Priority of the price comparative to other prices. Only the highest priority price is applied. [Required] [Default(2)] [Filter(multi eq)] 
 | [ThruDate](Crm.ProductPrices.md#ThruDate) | date (nullable) | Ending date (inclusive) of the validity of the price. [Filter(eq;ge;le)] 
 
@@ -54,7 +57,7 @@ _Supports Order By_: **False**
 
 > Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -62,7 +65,7 @@ _Supports Order By_: **False**
 
 > Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -78,7 +81,7 @@ _Supports Order By_: **False**
 
 > Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -87,7 +90,7 @@ _Default Value_: **Constant**
 
 > The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -238,7 +241,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_ProductPrices?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Product_Prices?$top=10>
 

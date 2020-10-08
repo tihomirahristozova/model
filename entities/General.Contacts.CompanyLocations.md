@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.CompanyLocations
+---
 # General.Contacts.CompanyLocations
 
 Stores company locations. The locations are parties and as such, can be organized hierarchically mixed with other structuring mechanisms. The locations, departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Locations
@@ -15,13 +18,13 @@ Stores company locations. The locations are parties and as such, can be organize
 | [PartyNotes](General.Contacts.CompanyLocations.md#PartyNotes) | string (nullable) | Notes for this Party 
 | [ParentPartyId](General.Contacts.CompanyLocations.md#ParentPartyId) | guid (nullable) |  
 | [PartyCode](General.Contacts.CompanyLocations.md#PartyCode) | string | The unique code of the Party [Required] 
-| [PartyName](General.Contacts.CompanyLocations.md#PartyName) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the party [Required] 
+| [PartyName](General.Contacts.CompanyLocations.md#PartyName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the party [Required] 
 | [PartyType](General.Contacts.CompanyLocations.md#PartyType) | [General.Contacts.PartiesRepository.PartyType](General.Contacts.CompanyLocations.md#PartyType) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required] 
 | [PartyUniqueNumber](General.Contacts.CompanyLocations.md#PartyUniqueNumber) | string (nullable) | Unique number of the party (National number for persons, Registration number for companies) 
 | [PartyUpdateTime](General.Contacts.CompanyLocations.md#PartyUpdateTime) | datetime (nullable) | Date and time when the Party was last updated. 
 | [PartyUpdateUser](General.Contacts.CompanyLocations.md#PartyUpdateUser) | string (nullable) | Login name of the user, who last updated the Party. 
 | [BillTo](General.Contacts.CompanyLocations.md#BillTo) | [General.Contacts.CompanyLocationsRepository.BillTo](General.Contacts.CompanyLocations.md#BillTo) (nullable) | If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, null = unidentified. 
-| [LocationName](General.Contacts.CompanyLocations.md#LocationName) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the company location. [Required] [Filter(eq;like)] 
+| [LocationName](General.Contacts.CompanyLocations.md#LocationName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the company location. [Required] [Filter(eq;like)] 
 | [WorkingTime](General.Contacts.CompanyLocations.md#WorkingTime) | string (nullable) | Textual representation of the working time of the location. 
 
 ## References
@@ -123,7 +126,7 @@ _Supports Order By_: **True**
 
 > The name of the party [Required]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -191,7 +194,7 @@ _Supports Order By_: **False**
 
 > The name of the company location. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -275,7 +278,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_CompanyLocations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Company_Locations?$top=10>
 

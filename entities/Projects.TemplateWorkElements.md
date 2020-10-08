@@ -1,3 +1,6 @@
+---
+uid: Projects.TemplateWorkElements
+---
 # Projects.TemplateWorkElements
 
 Contains project work elements, which shall be copied to projects, based on the specified template. Entity: Prj_Template_Work_Elements
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_TemplateWorkElements?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Template_Work_Elements?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: General.Resources.Resources
+---
 # General.Resources.Resources
 
 Enterprise resources, categorized by groups. Entity: Gen_Resources
@@ -8,7 +11,7 @@ Enterprise resources, categorized by groups. Entity: Gen_Resources
 | ---- | ---- | --- |
 | [Id](General.Resources.Resources.md#Id) | guid |  
 | [Notes](General.Resources.Resources.md#Notes) | string (nullable) | Notes for this Resource. 
-| [Name](General.Resources.Resources.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Resource name. Unique within the resource group. [Required] [Filter(eq;like)] 
+| [Name](General.Resources.Resources.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Resource name. Unique within the resource group. [Required] [Filter(eq;like)] 
 
 ## References
 
@@ -47,7 +50,7 @@ _Supports Order By_: **False**
 
 > Resource name. Unique within the resource group. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -91,7 +94,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Resources_Resources?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Resources?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.CostCenters
+---
 # Finance.Accounting.CostCenters
 
 Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Centers
@@ -93,7 +96,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_CostCenters?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Cost_Centers?$top=10>
 

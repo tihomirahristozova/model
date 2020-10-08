@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.ProcessGroups
+---
 # Systems.Bpm.ProcessGroups
 
 Represents a node in the hierarchy of process groups. Entity: Bpm_Process_Groups
@@ -9,7 +12,7 @@ Represents a node in the hierarchy of process groups. Entity: Bpm_Process_Groups
 | [Id](Systems.Bpm.ProcessGroups.md#Id) | guid |  
 | [Notes](Systems.Bpm.ProcessGroups.md#Notes) | string (nullable) | Notes for this ProcessGroup. 
 | [Code](Systems.Bpm.ProcessGroups.md#Code) | string | Group code, unique within the parent group. [Required] [Filter(eq;like)] 
-| [Name](Systems.Bpm.ProcessGroups.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Multilanguage process group name. [Required] [Filter(eq;like)] 
+| [Name](Systems.Bpm.ProcessGroups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage process group name. [Required] [Filter(eq;like)] 
 
 ## References
 
@@ -47,7 +50,7 @@ _Supports Order By_: **False**
 
 > Multilanguage process group name. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_ProcessGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Bpm_Process_Groups?$top=10>
 

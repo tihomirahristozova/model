@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.StoreOrderLines
+---
 # Logistics.Inventory.StoreOrderLines
 
 Detail lines of store orders. Each line represents one planned stock transaction line, but can be executed in parts. E.g. many transaction lines can be bound to one order line. Entity: Inv_Store_Order_Lines
@@ -9,18 +12,18 @@ Detail lines of store orders. Each line represents one planned stock transaction
 | [Id](Logistics.Inventory.StoreOrderLines.md#Id) | guid |  
 | [ForOrdering](Logistics.Inventory.StoreOrderLines.md#ForOrdering) | boolean | Specifies that the quantity of the product can be less than free to use quantity, because the product will be supplied . [Required] [Default(false)] 
 | [GuaranteePeriodDays](Logistics.Inventory.StoreOrderLines.md#GuaranteePeriodDays) | int32 (nullable) | Guarantee period in days for the offered product. null for non-serviced products. 
-| [LineCost](Logistics.Inventory.StoreOrderLines.md#LineCost) | [Amount](../data-types/Amount.md) (nullable) | Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost. [Currency: StoreOrder.DocumentCurrency] 
+| [LineCost](Logistics.Inventory.StoreOrderLines.md#LineCost) | [Amount](../data-types.md#Amount) (nullable) | Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost. [Currency: StoreOrder.DocumentCurrency] 
 | [LineNo](Logistics.Inventory.StoreOrderLines.md#LineNo) | int32 | Line number within the store order. [Required] [Filter(eq)] 
 | [LotNumber](Logistics.Inventory.StoreOrderLines.md#LotNumber) | string (nullable) | Obsolete. Not used. 
 | [Notes](Logistics.Inventory.StoreOrderLines.md#Notes) | string (nullable) | Notes for this StoreOrderLine. 
 | [ParentLineId](Logistics.Inventory.StoreOrderLines.md#ParentLineId) | guid (nullable) | Id of the line of the parent document, which generated the store order. null for user-entered store orders or if not applicable. [Filter(multi eq)] 
 | [ParentLineNo](Logistics.Inventory.StoreOrderLines.md#ParentLineNo) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. [Filter(eq)] 
 | [PersistLot](Logistics.Inventory.StoreOrderLines.md#PersistLot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. [Required] [Default(false)] [Filter(eq)] 
-| [Quantity](Logistics.Inventory.StoreOrderLines.md#Quantity) | [Quantity](../data-types/Quantity.md) | Quantity ordered for receipt/issue. [Unit: QuantityUnit] [Required] [Default(0)] 
-| [QuantityBase](Logistics.Inventory.StoreOrderLines.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] 
-| [StandardQuantityBase](Logistics.Inventory.StoreOrderLines.md#StandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [Quantity](Logistics.Inventory.StoreOrderLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | Quantity ordered for receipt/issue. [Unit: QuantityUnit] [Required] [Default(0)] 
+| [QuantityBase](Logistics.Inventory.StoreOrderLines.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] 
+| [StandardQuantityBase](Logistics.Inventory.StoreOrderLines.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
 | [TransactionTimestamp](Logistics.Inventory.StoreOrderLines.md#TransactionTimestamp) | datetime (nullable) | Exact time when the transaction for this store order line changes the cost of the product. [ReadOnly] 
-| [UnitCost](Logistics.Inventory.StoreOrderLines.md#UnitCost) | [Amount](../data-types/Amount.md) (nullable) | Cost for 1 unit of measure in the currency of the document. [Currency: StoreOrder.DocumentCurrency] 
+| [UnitCost](Logistics.Inventory.StoreOrderLines.md#UnitCost) | [Amount](../data-types.md#Amount) (nullable) | Cost for 1 unit of measure in the currency of the document. [Currency: StoreOrder.DocumentCurrency] 
 
 ## References
 
@@ -70,7 +73,7 @@ _Front-End Recalc Expressions:_
 
 > Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost. [Currency: StoreOrder.DocumentCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -132,7 +135,7 @@ _Default Value_: **False**
 
 > Quantity ordered for receipt/issue. [Unit: QuantityUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -141,7 +144,7 @@ _Default Value_: **Constant**
 
 > Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -155,7 +158,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -176,7 +179,7 @@ _Supports Order By_: **False**
 
 > Cost for 1 unit of measure in the currency of the document. [Currency: StoreOrder.DocumentCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -286,7 +289,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_StoreOrderLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Store_Order_Lines?$top=10>
 

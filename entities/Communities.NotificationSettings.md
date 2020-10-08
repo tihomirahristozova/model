@@ -1,3 +1,6 @@
+---
+uid: Communities.NotificationSettings
+---
 # Communities.NotificationSettings
 
 User notification settings for the different notification classes. Entity: Cmm_Notification_Settings (Introduced in version 20.1.100.0)
@@ -95,7 +98,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Communities_NotificationSettings?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cmm_Notification_Settings?$top=10>
 

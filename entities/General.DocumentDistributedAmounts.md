@@ -1,3 +1,6 @@
+---
+uid: General.DocumentDistributedAmounts
+---
 # General.DocumentDistributedAmounts
 
 Contains the amounts which are distributed by the system over the document lines as a result of additional amount calculations. Entity: Gen_Document_Distributed_Amounts
@@ -7,7 +10,7 @@ Contains the amounts which are distributed by the system over the document lines
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.DocumentDistributedAmounts.md#Id) | guid |  
-| [Amount](General.DocumentDistributedAmounts.md#Amount) | [Amount](../data-types/Amount.md) | The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)] 
+| [Amount](General.DocumentDistributedAmounts.md#Amount) | [Amount](../data-types.md#Amount) | The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)] 
 | [DocumentLineId](General.DocumentDistributedAmounts.md#DocumentLineId) | guid (nullable) | The Id of the line over which the amount is distributed. [Filter(multi eq)] 
 
 ## References
@@ -32,7 +35,7 @@ _Default Value_: **NewGuid**
 
 > The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -92,7 +95,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentDistributedAmounts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Distributed_Amounts?$top=10>
 

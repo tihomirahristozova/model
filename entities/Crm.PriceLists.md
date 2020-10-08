@@ -1,3 +1,6 @@
+---
+uid: Crm.PriceLists
+---
 # Crm.PriceLists
 
 Price Lists are used to manage multiple price records, assign to customers, etc. Entity: Crm_Price_Lists
@@ -92,7 +95,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_PriceLists?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Price_Lists?$top=10>
 

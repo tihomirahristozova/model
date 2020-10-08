@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.ReceivingOrders
+---
 # Logistics.Procurement.ReceivingOrders
 
 Contains the received quantities from a supplier. Entity: Scm_Receiving_Orders
@@ -583,7 +586,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_ReceivingOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Receiving_Orders?$top=10>
 

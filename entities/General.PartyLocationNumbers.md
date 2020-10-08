@@ -1,3 +1,6 @@
+---
+uid: General.PartyLocationNumbers
+---
 # General.PartyLocationNumbers
 
 Location numbers for a party. Depending on the partner with which we are doing an exchange, our location number might be different. Entity: Gen_Party_Location_Numbers (Introduced in version 19.1.100.0)
@@ -111,7 +114,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_PartyLocationNumbers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Party_Location_Numbers?$top=10>
 

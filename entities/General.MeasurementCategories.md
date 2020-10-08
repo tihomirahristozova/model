@@ -1,3 +1,6 @@
+---
+uid: General.MeasurementCategories
+---
 # General.MeasurementCategories
 
 Categories of measurement units. The units within a category are directly convertable to each other. Each category contains one base unit and unlimited number of derived units with fixed ratio to the base unit. Entity: Gen_Measurement_Categories
@@ -8,7 +11,7 @@ Categories of measurement units. The units within a category are directly conver
 | ---- | ---- | --- |
 | [Id](General.MeasurementCategories.md#Id) | guid |  
 | [IsDefault](General.MeasurementCategories.md#IsDefault) | boolean | True=This category is the default category; false=otherwise. [Required] [Default(false)] [Filter(eq)] 
-| [Name](General.MeasurementCategories.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD] 
+| [Name](General.MeasurementCategories.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD] 
 
 ## Child Collections
 
@@ -39,7 +42,7 @@ _Default Value_: **False**
 
 > The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -64,7 +67,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_MeasurementCategories?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Measurement_Categories?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.TripSegments
+---
 # Applications.Fleet.TripSegments
 
 Represents the segments which comprise the route of the trips. Entity: Fleet_Trip_Segments
@@ -110,7 +113,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_TripSegments?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Trip_Segments?$top=10>
 

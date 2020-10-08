@@ -1,3 +1,6 @@
+---
+uid: Crm.PromotionalPackages
+---
 # Crm.PromotionalPackages
 
 Promotional packages are packages of products, which are sold together at a special pricing and discount conditions. Entity: Crm_Promotional_Packages
@@ -189,7 +192,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_PromotionalPackages?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Promotional_Packages?$top=10>
 

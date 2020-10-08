@@ -1,3 +1,6 @@
+---
+uid: Crm.Sales.DocumentTypePaymentOptions
+---
 # Crm.Sales.DocumentTypePaymentOptions
 
 Contains payment options for user documnet types for sales orders. Entity: Crm_Document_Type_Payment_Options
@@ -7,7 +10,7 @@ Contains payment options for user documnet types for sales orders. Entity: Crm_D
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Crm.Sales.DocumentTypePaymentOptions.md#Id) | guid |  
-| [DeferredPaymentMinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#DeferredPaymentMinimalAmmount) | [Amount](../data-types/Amount.md) | The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPaymentMinimalAmmountCurrency] [Required] 
+| [DeferredPaymentMinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#DeferredPaymentMinimalAmmount) | [Amount](../data-types.md#Amount) | The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPaymentMinimalAmmountCurrency] [Required] 
 
 ## References
 
@@ -31,7 +34,7 @@ _Default Value_: **NewGuid**
 
 > The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPaymentMinimalAmmountCurrency] [Required]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_DocumentTypePaymentOptions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Document_Type_Payment_Options?$top=10>
 

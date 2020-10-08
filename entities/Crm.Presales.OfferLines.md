@@ -1,3 +1,6 @@
+---
+uid: Crm.Presales.OfferLines
+---
 # Crm.Presales.OfferLines
 
 Detail records (lines) of Offers. Entity: Crm_Offer_Lines
@@ -11,17 +14,17 @@ Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 | [DeliveryTermDays](Crm.Presales.OfferLines.md#DeliveryTermDays) | int32 | Delivery term in days. When Required Delivery Date is specified (not null), it takes precedence and this is ignored. [Required] [Default(0)] 
 | [GuaranteePeriodDays](Crm.Presales.OfferLines.md#GuaranteePeriodDays) | int32 (nullable) | Guarantee period in days for the offered product. null for non-serviced products. 
 | [IsSelected](Crm.Presales.OfferLines.md#IsSelected) | boolean | True when the line is selected for further processing (ordering), false otherwise. [Required] [Default(true)] 
-| [LineAmount](Crm.Presales.OfferLines.md#LineAmount) | [Amount](../data-types/Amount.md) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: Offer.DocumentCurrency] [Required] [Default(0)] 
+| [LineAmount](Crm.Presales.OfferLines.md#LineAmount) | [Amount](../data-types.md#Amount) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: Offer.DocumentCurrency] [Required] [Default(0)] 
 | [LineCustomDiscountPercent](Crm.Presales.OfferLines.md#LineCustomDiscountPercent) | decimal | Operator defined discount percentage, specified for this line. [Required] [Default(0)] 
 | [LineNo](Crm.Presales.OfferLines.md#LineNo) | int32 | Line number, unique within the Offer. Usually is increasing number like 10, 20, 30, ... when initially entering the Offer (in order to allow insertions with adjustment documents). [Required] 
 | [LineStandardDiscountPercent](Crm.Presales.OfferLines.md#LineStandardDiscountPercent) | decimal | The discount percentage, applied through the standard discount policy. [Required] [Default(0)] 
 | [Notes](Crm.Presales.OfferLines.md#Notes) | string (nullable) | Notes for this OfferLine. 
-| [ProductDescription](Crm.Presales.OfferLines.md#ProductDescription) | [MultilanguageString](../data-types/MultilanguageString.md) | The description of the offered product. Initially copied from the name of the offered product. [Required] [Filter(like)] 
-| [Quantity](Crm.Presales.OfferLines.md#Quantity) | [Quantity](../data-types/Quantity.md) | Quantity offered. [Unit: QuantityUnit] [Required] [Default(1)] 
-| [QuantityBase](Crm.Presales.OfferLines.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
+| [ProductDescription](Crm.Presales.OfferLines.md#ProductDescription) | [MultilanguageString](../data-types.md#MultilanguageString) | The description of the offered product. Initially copied from the name of the offered product. [Required] [Filter(like)] 
+| [Quantity](Crm.Presales.OfferLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | Quantity offered. [Unit: QuantityUnit] [Required] [Default(1)] 
+| [QuantityBase](Crm.Presales.OfferLines.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
 | [RequiredDeliveryDate](Crm.Presales.OfferLines.md#RequiredDeliveryDate) | date (nullable) | Date, when the delivery is required. Alternative to Delivery Term Days. When null, Delivery Term Days is used. 
-| [StandardQuantityBase](Crm.Presales.OfferLines.md#StandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
-| [UnitPrice](Crm.Presales.OfferLines.md#UnitPrice) | [Amount](../data-types/Amount.md) | The unit price of the offered product. It is specified in the measurement unit of Quantity. [Currency: Offer.DocumentCurrency] [Required] [Default(0)] 
+| [StandardQuantityBase](Crm.Presales.OfferLines.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [UnitPrice](Crm.Presales.OfferLines.md#UnitPrice) | [Amount](../data-types.md#Amount) | The unit price of the offered product. It is specified in the measurement unit of Quantity. [Currency: Offer.DocumentCurrency] [Required] [Default(0)] 
 | [Variant](Crm.Presales.OfferLines.md#Variant) | string (nullable) | Name or number of variant of the whole offer. When multiple lines have the same variant, they are selected for ordering together. 
 
 ## References
@@ -85,7 +88,7 @@ _Default Value_: **True**
 
 > Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: Offer.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -143,7 +146,7 @@ _Supports Order By_: **False**
 
 > The description of the offered product. Initially copied from the name of the offered product. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -156,7 +159,7 @@ _Front-End Recalc Expressions:_
 
 > Quantity offered. [Unit: QuantityUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -165,7 +168,7 @@ _Default Value_: **Constant**
 
 > The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -192,7 +195,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -205,7 +208,7 @@ _Front-End Recalc Expressions:_
 
 > The unit price of the offered product. It is specified in the measurement unit of Quantity. [Currency: Offer.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -309,7 +312,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Presales_OfferLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Offer_Lines?$top=10>
 

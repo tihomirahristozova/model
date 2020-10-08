@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.TransferOrders
+---
 # Logistics.Inventory.TransferOrders
 
 Orders for stock transfers between stores. Entity: Inv_Transfer_Orders
@@ -511,7 +514,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_TransferOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Transfer_Orders?$top=10>
 

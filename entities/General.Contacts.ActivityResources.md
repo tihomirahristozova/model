@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.ActivityResources
+---
 # General.Contacts.ActivityResources
 
 Contains the resources, allocated to the activities. Entity: Cm_Activity_Resources
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_ActivityResources?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Activity_Resources?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Applications.Rental.AssetConsumables
+---
 # Applications.Rental.AssetConsumables
 
 Consumables are products, which are usually sold accompanying an asset rental. Entity: Rent_Asset_Consumables
@@ -7,7 +10,7 @@ Consumables are products, which are usually sold accompanying an asset rental. E
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Rental.AssetConsumables.md#Id) | guid |  
-| [ConsumableQuantity](Applications.Rental.AssetConsumables.md#ConsumableQuantity) | [Quantity](../data-types/Quantity.md) | Specifies what quantity of the consumable should be offered for each rented asset. [Unit: ConsumableQuantityUnit] [Required] 
+| [ConsumableQuantity](Applications.Rental.AssetConsumables.md#ConsumableQuantity) | [Quantity](../data-types.md#Quantity) | Specifies what quantity of the consumable should be offered for each rented asset. [Unit: ConsumableQuantityUnit] [Required] 
 | [Notes](Applications.Rental.AssetConsumables.md#Notes) | string (nullable) | Notes for this AssetConsumable. 
 
 ## References
@@ -33,7 +36,7 @@ _Default Value_: **NewGuid**
 
 > Specifies what quantity of the consumable should be offered for each rented asset. [Unit: ConsumableQuantityUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -101,7 +104,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Rental_AssetConsumables?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Rent_Asset_Consumables?$top=10>
 

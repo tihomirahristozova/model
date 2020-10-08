@@ -1,3 +1,6 @@
+---
+uid: Communities.SocialReactions
+---
 # Communities.SocialReactions
 
 Reaction of a user to any social comment to an object of the system. Entity: Cmm_Social_Reactions (Introduced in version 20.1.100.0)
@@ -105,7 +108,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Communities_SocialReactions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cmm_Social_Reactions?$top=10>
 

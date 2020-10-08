@@ -1,3 +1,6 @@
+---
+uid: Crm.Pricing.PricingModelPriceLists
+---
 # Crm.Pricing.PricingModelPriceLists
 
 The price lists, which are updated by the pricing model. Entity: Crm_Pricing_Model_Price_Lists
@@ -88,7 +91,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pricing_PricingModelPriceLists?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Pricing_Model_Price_Lists?$top=10>
 

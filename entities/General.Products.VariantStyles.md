@@ -1,3 +1,6 @@
+---
+uid: General.Products.VariantStyles
+---
 # General.Products.VariantStyles
 
 Contains the different styles, which can be assigned to product variants. Entity: Gen_Variant_Styles
@@ -8,7 +11,7 @@ Contains the different styles, which can be assigned to product variants. Entity
 | ---- | ---- | --- |
 | [Id](General.Products.VariantStyles.md#Id) | guid |  
 | [Code](General.Products.VariantStyles.md#Code) | string | Unique code of the style. Used to generate parts of bar-codes and in other coding schemes. [Required] [Filter(eq;like)] [ORD] 
-| [Name](General.Products.VariantStyles.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this VariantStyle. [Required] [Filter(eq;like)] [ORD] 
+| [Name](General.Products.VariantStyles.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this VariantStyle. [Required] [Filter(eq;like)] [ORD] 
 
 
 ## Attribute Details
@@ -32,7 +35,7 @@ _Supports Order By_: **True**
 
 > The name of this VariantStyle. [Required] [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -57,7 +60,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_VariantStyles?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Variant_Styles?$top=10>
 

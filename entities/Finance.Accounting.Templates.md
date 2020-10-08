@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.Templates
+---
 # Finance.Accounting.Templates
 
 Accounting templates are used to automate the postings for repetitive business transactions. Templates can be bound to almost all documents and automate their postings. Entity: Acc_Templates
@@ -89,7 +92,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_Templates?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Templates?$top=10>
 

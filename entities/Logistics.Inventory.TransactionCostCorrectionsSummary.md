@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.TransactionCostCorrectionsSummary
+---
 # Logistics.Inventory.TransactionCostCorrectionsSummary
 
 Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transaction_Cost_Corrections_Summary
@@ -6,10 +9,10 @@ Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transact
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#BaseCostAdjustment) | [Amount](../data-types/Amount.md) | The cost correction in Base currency. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)] 
-| [CostCorrectionAmount](Logistics.Inventory.TransactionCostCorrectionsSummary.md#CostCorrectionAmount) | [Amount](../data-types/Amount.md) | The cost correction in the original currency of the store transaction. [Currency: TransactionObj.DocumentCurrency] [Required] [Filter(eq;ge;le)] 
-| [ProductCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#ProductCostAdjustment) | [Amount](../data-types/Amount.md) | The cost correction in Products currency. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Filter(eq;ge;le)] 
-| [StoreCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#StoreCostAdjustment) | [Amount](../data-types/Amount.md) | The cost correction in Stores currency. [Currency: TransactionObj.Store.Currency] [Required] [Filter(eq;ge;le)] 
+| [BaseCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#BaseCostAdjustment) | [Amount](../data-types.md#Amount) | The cost correction in Base currency. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)] 
+| [CostCorrectionAmount](Logistics.Inventory.TransactionCostCorrectionsSummary.md#CostCorrectionAmount) | [Amount](../data-types.md#Amount) | The cost correction in the original currency of the store transaction. [Currency: TransactionObj.DocumentCurrency] [Required] [Filter(eq;ge;le)] 
+| [ProductCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#ProductCostAdjustment) | [Amount](../data-types.md#Amount) | The cost correction in Products currency. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Filter(eq;ge;le)] 
+| [StoreCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#StoreCostAdjustment) | [Amount](../data-types.md#Amount) | The cost correction in Stores currency. [Currency: TransactionObj.Store.Currency] [Required] [Filter(eq;ge;le)] 
 
 ## References
 
@@ -25,7 +28,7 @@ Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transact
 
 > The cost correction in Base currency. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -33,7 +36,7 @@ _Supports Order By_: **False**
 
 > The cost correction in the original currency of the store transaction. [Currency: TransactionObj.DocumentCurrency] [Required] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -41,7 +44,7 @@ _Supports Order By_: **False**
 
 > The cost correction in Products currency. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -49,7 +52,7 @@ _Supports Order By_: **False**
 
 > The cost correction in Stores currency. [Currency: TransactionObj.Store.Currency] [Required] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -94,7 +97,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_TransactionCostCorrectionsSummary?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Transaction_Cost_Corrections_Summary?$top=10>
 

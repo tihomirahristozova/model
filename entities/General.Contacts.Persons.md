@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.Persons
+---
 # General.Contacts.Persons
 
 Personal records. Requires related party record. Entity: Cm_Persons
@@ -15,24 +18,24 @@ Personal records. Requires related party record. Entity: Cm_Persons
 | [PartyNotes](General.Contacts.Persons.md#PartyNotes) | string (nullable) | Notes for this Party 
 | [ParentPartyId](General.Contacts.Persons.md#ParentPartyId) | guid (nullable) |  
 | [PartyCode](General.Contacts.Persons.md#PartyCode) | string | The unique code of the Party [Required] 
-| [PartyName](General.Contacts.Persons.md#PartyName) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the party [Required] 
+| [PartyName](General.Contacts.Persons.md#PartyName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the party [Required] 
 | [PartyType](General.Contacts.Persons.md#PartyType) | [General.Contacts.PartiesRepository.PartyType](General.Contacts.Persons.md#PartyType) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required] 
 | [PartyUniqueNumber](General.Contacts.Persons.md#PartyUniqueNumber) | string (nullable) | Unique number of the party (National number for persons, Registration number for companies) 
 | [PartyUpdateTime](General.Contacts.Persons.md#PartyUpdateTime) | datetime (nullable) | Date and time when the Party was last updated. 
 | [PartyUpdateUser](General.Contacts.Persons.md#PartyUpdateUser) | string (nullable) | Login name of the user, who last updated the Party. 
 | [BirthDate](General.Contacts.Persons.md#BirthDate) | datetime (nullable) | Birth date. null means unknown. [Filter(ge;le)] 
-| [City](General.Contacts.Persons.md#City) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | City from the legal registration address for the person. [Filter(like)] 
+| [City](General.Contacts.Persons.md#City) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | City from the legal registration address for the person. [Filter(like)] 
 | [CreationTime](General.Contacts.Persons.md#CreationTime) | datetime (nullable) | Date and time when the Person was created. [Filter(ge;le)] [ReadOnly] 
 | [CreationUser](General.Contacts.Persons.md#CreationUser) | string (nullable) | Login name of the user, who created the Person. [Filter(like)] [ReadOnly] 
-| [FirstName](General.Contacts.Persons.md#FirstName) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | First name of the person. [Filter(eq;like)] 
+| [FirstName](General.Contacts.Persons.md#FirstName) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | First name of the person. [Filter(eq;like)] 
 | [Gender](General.Contacts.Persons.md#Gender) | [General.Contacts.PersonsRepository.Gender](General.Contacts.Persons.md#Gender) (nullable) | Person gender. M=Male;F=Female;null=not known/not provided. [Filter(eq)] 
-| [LastName](General.Contacts.Persons.md#LastName) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Last name of the person. [Filter(eq;like)] 
-| [MiddleName](General.Contacts.Persons.md#MiddleName) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Middle name of the person. [Filter(eq;like)] 
+| [LastName](General.Contacts.Persons.md#LastName) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Last name of the person. [Filter(eq;like)] 
+| [MiddleName](General.Contacts.Persons.md#MiddleName) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Middle name of the person. [Filter(eq;like)] 
 | [NationalNumber](General.Contacts.Persons.md#NationalNumber) | string (nullable) | Government assigned unique personal number. null means unknown. [Filter(eq;like)] 
 | [Notes](General.Contacts.Persons.md#Notes) | string (nullable) | Internal notes for the person. 
 | [PassportIssuingDate](General.Contacts.Persons.md#PassportIssuingDate) | datetime (nullable) | Date of issuing the passport. null means unknown. [Filter(ge;le)] 
 | [PassportNumber](General.Contacts.Persons.md#PassportNumber) | string (nullable) | Current passport number. null means unknown. [Filter(eq)] 
-| [Title](General.Contacts.Persons.md#Title) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification. 
+| [Title](General.Contacts.Persons.md#Title) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification. 
 | [UpdateTime](General.Contacts.Persons.md#UpdateTime) | datetime (nullable) | Date and time when the Person was last updated. [Filter(ge;le)] [ReadOnly] 
 | [UpdateUser](General.Contacts.Persons.md#UpdateUser) | string (nullable) | Login name of the user, who last updated the Person. [Filter(like)] [ReadOnly] 
 
@@ -136,7 +139,7 @@ _Supports Order By_: **True**
 
 > The name of the party [Required]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -196,7 +199,7 @@ _Supports Order By_: **False**
 
 > City from the legal registration address for the person. [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -220,7 +223,7 @@ _Supports Order By_: **False**
 
 > First name of the person. [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -244,7 +247,7 @@ _Supports Order By_: **False**
 
 > Last name of the person. [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -252,7 +255,7 @@ _Supports Order By_: **False**
 
 > Middle name of the person. [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -292,7 +295,7 @@ _Supports Order By_: **False**
 
 > The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -376,7 +379,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_Persons?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Persons?$top=10>
 

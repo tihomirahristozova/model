@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceAgreementLines
+---
 # Applications.Service.ServiceAgreementLines
 
 Service agreement lines represent the individual serviced objects that are covered by the service agreement. Entity: Srv_Service_Agreement_Lines
@@ -125,7 +128,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceAgreementLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Agreement_Lines?$top=10>
 

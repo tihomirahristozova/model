@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.Calculations
+---
 # Finance.Cost.Calculations
 
 Represents one cost calculation and allocation. Entity: Cost_Calculations
@@ -471,7 +474,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_Calculations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Calculations?$top=10>
 

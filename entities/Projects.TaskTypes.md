@@ -1,3 +1,6 @@
+---
+uid: Projects.TaskTypes
+---
 # Projects.TaskTypes
 
 Represents the different types of tasks, which can be included in the projects. Entity: Prj_Task_Types
@@ -7,10 +10,10 @@ Represents the different types of tasks, which can be included in the projects. 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Projects.TaskTypes.md#Id) | guid |  
-| [Description](Projects.TaskTypes.md#Description) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Multilanguage description of the task type. 
+| [Description](Projects.TaskTypes.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Multilanguage description of the task type. 
 | [DisplayOrder](Projects.TaskTypes.md#DisplayOrder) | int32 | Display order position of the task. Lowest numbers are shown first (on top). [Required] [Default(1)] 
 | [Icon](Projects.TaskTypes.md#Icon) | byte[] (nullable) | Icon representing the task type. Preferrably 32x32 pixels. 
-| [Name](Projects.TaskTypes.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The multilanguage task type name. [Required] [Filter(multi eq;like)] 
+| [Name](Projects.TaskTypes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The multilanguage task type name. [Required] [Filter(multi eq;like)] 
 
 ## References
 
@@ -32,7 +35,7 @@ _Default Value_: **NewGuid**
 
 > Multilanguage description of the task type.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -57,7 +60,7 @@ _Supports Order By_: **False**
 
 > The multilanguage task type name. [Required] [Filter(multi eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -93,7 +96,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_TaskTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Task_Types?$top=10>
 

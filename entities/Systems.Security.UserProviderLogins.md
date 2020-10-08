@@ -1,3 +1,6 @@
+---
+uid: Systems.Security.UserProviderLogins
+---
 # Systems.Security.UserProviderLogins
 
 External login providers. Entity: Sec_User_Provider_Logins (Introduced in version 18.2.100.0)
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_UserProviderLogins?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sec_User_Provider_Logins?$top=10>
 

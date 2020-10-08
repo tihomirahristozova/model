@@ -1,3 +1,6 @@
+---
+uid: General.Currencies
+---
 # General.Currencies
 
 List of user-defined currencies. Entity: Gen_Currencies
@@ -67,7 +70,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Currencies?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Currencies?$top=10>
 

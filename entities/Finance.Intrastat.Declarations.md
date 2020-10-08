@@ -1,3 +1,6 @@
+---
+uid: Finance.Intrastat.Declarations
+---
 # Finance.Intrastat.Declarations
 
 Contains the headers of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declarations
@@ -550,7 +553,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Intrastat_Declarations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Its_Declarations?$top=10>
 

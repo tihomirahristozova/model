@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.MaintenanceProfilePlans
+---
 # Applications.Fleet.MaintenanceProfilePlans
 
 Contains the plans, included in the maintenance profile. Entity: Fleet_Maintenance_Profile_Plans
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_MaintenanceProfilePlans?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Maintenance_Profile_Plans?$top=10>
 

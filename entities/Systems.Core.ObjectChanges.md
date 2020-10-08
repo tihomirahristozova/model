@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.ObjectChanges
+---
 # Systems.Core.ObjectChanges
 
 Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in version 19.1.100.0)
@@ -101,7 +104,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_ObjectChanges?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Object_Changes?$top=10>
 

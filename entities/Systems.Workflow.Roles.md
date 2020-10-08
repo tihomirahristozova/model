@@ -1,3 +1,6 @@
+---
+uid: Systems.Workflow.Roles
+---
 # Systems.Workflow.Roles
 
 The various roles, which the users can play. Entity: Wf_Roles
@@ -72,7 +75,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Workflow_Roles?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wf_Roles?$top=10>
 

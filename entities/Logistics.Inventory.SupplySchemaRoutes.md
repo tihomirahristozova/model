@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.SupplySchemaRoutes
+---
 # Logistics.Inventory.SupplySchemaRoutes
 
 Obsolete. Not used. Entity: Inv_Supply_Schema_Routes
@@ -102,7 +105,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_SupplySchemaRoutes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Supply_Schema_Routes?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.VehicleSets
+---
 # Applications.Fleet.VehicleSets
 
 Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Sets
@@ -8,7 +11,7 @@ Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Se
 | ---- | ---- | --- |
 | [Id](Applications.Fleet.VehicleSets.md#Id) | guid |  
 | [Active](Applications.Fleet.VehicleSets.md#Active) | boolean | True if the vehicle set is active for choosing; false - otherwise. [Required] [Default(true)] [Filter(eq)] 
-| [Name](Applications.Fleet.VehicleSets.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the vehicle set (Multilanguage). [Required] [Filter(eq;like)] 
+| [Name](Applications.Fleet.VehicleSets.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the vehicle set (Multilanguage). [Required] [Filter(eq;like)] 
 
 ## References
 
@@ -45,7 +48,7 @@ _Default Value_: **True**
 
 > Name of the vehicle set (Multilanguage). [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -81,7 +84,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_VehicleSets?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Vehicle_Sets?$top=10>
 

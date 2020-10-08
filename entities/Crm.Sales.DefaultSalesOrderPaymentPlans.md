@@ -1,3 +1,6 @@
+---
+uid: Crm.Sales.DefaultSalesOrderPaymentPlans
+---
 # Crm.Sales.DefaultSalesOrderPaymentPlans
 
 Default payment plan for new documents of the specified document type. Entity: Crm_Default_Sales_Order_Payment_Plans
@@ -155,7 +158,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_DefaultSalesOrderPaymentPlans?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Default_Sales_Order_Payment_Plans?$top=10>
 

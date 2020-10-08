@@ -1,3 +1,6 @@
+---
+uid: Logistics.Shipment.TransportationRequisitions
+---
 # Logistics.Shipment.TransportationRequisitions
 
 Client requisition for transportation. Entity: Log_Transportation_Requisitions
@@ -512,7 +515,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_TransportationRequisitions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Log_Transportation_Requisitions?$top=10>
 

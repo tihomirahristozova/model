@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.PaymentSlipLines
+---
 # Finance.Payments.PaymentSlipLines
 
 Mass payment line, which is distribution of an amount among payment orders. Each record generates one payment transaction line. Entity: Cash_Payment_Slip_Lines
@@ -7,8 +10,8 @@ Mass payment line, which is distribution of an amount among payment orders. Each
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Payments.PaymentSlipLines.md#Id) | guid |  
-| [Amount](Finance.Payments.PaymentSlipLines.md#Amount) | [Amount](../data-types/Amount.md) | The part of the total amount in the payment slip amount, that is distributed to the specified payment order. [Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency] [Required] [Default(0)] 
-| [CoveredOrderAmount](Finance.Payments.PaymentSlipLines.md#CoveredOrderAmount) | [Amount](../data-types/Amount.md) | The part of the original payment order amount, that is covered by this payment slip line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)] 
+| [Amount](Finance.Payments.PaymentSlipLines.md#Amount) | [Amount](../data-types.md#Amount) | The part of the total amount in the payment slip amount, that is distributed to the specified payment order. [Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency] [Required] [Default(0)] 
+| [CoveredOrderAmount](Finance.Payments.PaymentSlipLines.md#CoveredOrderAmount) | [Amount](../data-types.md#Amount) | The part of the original payment order amount, that is covered by this payment slip line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)] 
 
 ## References
 
@@ -31,7 +34,7 @@ _Default Value_: **NewGuid**
 
 > The part of the total amount in the payment slip amount, that is distributed to the specified payment order. [Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -42,7 +45,7 @@ _Front-End Recalc Expressions:_
 
 > The part of the original payment order amount, that is covered by this payment slip line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -89,7 +92,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentSlipLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Slip_Lines?$top=10>
 

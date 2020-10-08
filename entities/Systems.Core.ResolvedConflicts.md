@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.ResolvedConflicts
+---
 # Systems.Core.ResolvedConflicts
 
 Contains records of conflicts, which were automatically resolved by update procedures. Entity: Sys_Resolved_Conflicts
@@ -7,13 +10,13 @@ Contains records of conflicts, which were automatically resolved by update proce
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Core.ResolvedConflicts.md#Id) | guid |  
-| [ConflictDescription](Systems.Core.ResolvedConflicts.md#ConflictDescription) | [MultilanguageString](../data-types/MultilanguageString.md) | Description of the conflict. [Required] [ReadOnly] 
+| [ConflictDescription](Systems.Core.ResolvedConflicts.md#ConflictDescription) | [MultilanguageString](../data-types.md#MultilanguageString) | Description of the conflict. [Required] [ReadOnly] 
 | [ResolveConfirmedByUser](Systems.Core.ResolvedConflicts.md#ResolveConfirmedByUser) | boolean | True, when the conflict resolution was manually confirmed by user. [Required] [Default(false)] [Filter(eq)] 
 | [ResolveConfirmedTime](Systems.Core.ResolvedConflicts.md#ResolveConfirmedTime) | datetime (nullable) | Time when the conflict resolution was confirmed by the user. [ReadOnly] 
-| [ResolveDescription](Systems.Core.ResolvedConflicts.md#ResolveDescription) | [MultilanguageString](../data-types/MultilanguageString.md) | Description of the resolution of the conflict. [Required] [ReadOnly] 
+| [ResolveDescription](Systems.Core.ResolvedConflicts.md#ResolveDescription) | [MultilanguageString](../data-types.md#MultilanguageString) | Description of the resolution of the conflict. [Required] [ReadOnly] 
 | [ResolvedTime](Systems.Core.ResolvedConflicts.md#ResolvedTime) | datetime | Time when the resolution of the conflict was made. [Required] [Default(Now)] [ReadOnly] 
 | [RevisedByUser](Systems.Core.ResolvedConflicts.md#RevisedByUser) | boolean | True, when the conflict resolution was revised (reviewed) manually by user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [TableName](Systems.Core.ResolvedConflicts.md#TableName) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the table in which the conflict has occurred. [Required] [Filter(like)] [ReadOnly] 
+| [TableName](Systems.Core.ResolvedConflicts.md#TableName) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the table in which the conflict has occurred. [Required] [Filter(like)] [ReadOnly] 
 | [URL](Systems.Core.ResolvedConflicts.md#URL) | string | URL of the item (the row) for which the conflict occurred. [Required] [ReadOnly] 
 
 
@@ -30,7 +33,7 @@ _Default Value_: **NewGuid**
 
 > Description of the conflict. [Required] [ReadOnly]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -55,7 +58,7 @@ _Supports Order By_: **False**
 
 > Description of the resolution of the conflict. [Required] [ReadOnly]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -81,7 +84,7 @@ _Default Value_: **False**
 
 > Name of the table in which the conflict has occurred. [Required] [Filter(like)] [ReadOnly]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -114,7 +117,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_ResolvedConflicts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Resolved_Conflicts?$top=10>
 

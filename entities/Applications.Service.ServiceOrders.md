@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceOrders
+---
 # Applications.Service.ServiceOrders
 
 Service Orders are issued when a new servicing is required. Entity: Srv_Service_Orders
@@ -482,7 +485,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Orders?$top=10>
 

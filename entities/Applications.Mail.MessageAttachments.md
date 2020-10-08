@@ -1,3 +1,6 @@
+---
+uid: Applications.Mail.MessageAttachments
+---
 # Applications.Mail.MessageAttachments
 
 Represents attachments to mail messages. Entity: Mail_Message_Attachments
@@ -93,7 +96,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Mail_MessageAttachments?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Mail_Message_Attachments?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Logistics.Shipment.TransportationOrders
+---
 # Logistics.Shipment.TransportationOrders
 
 Transportation ordered to specific carrier or vehicle. Entity: Log_Transportation_Orders
@@ -512,7 +515,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_TransportationOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Log_Transportation_Orders?$top=10>
 

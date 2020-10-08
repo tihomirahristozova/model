@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.CurrentBalances
+---
 # Logistics.Inventory.CurrentBalances
 
 The current inventory balances, grouped by storage key (Store, Product, Lot, etc.). Entity: Inv_Current_Balances
@@ -6,10 +9,10 @@ The current inventory balances, grouped by storage key (Store, Product, Lot, etc
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseCost](Logistics.Inventory.CurrentBalances.md#BaseCost) | [Amount](../data-types/Amount.md) | The cost of the inventory in base currency of the enterprise company. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Filter(ge;le)] 
-| [ProductCost](Logistics.Inventory.CurrentBalances.md#ProductCost) | [Amount](../data-types/Amount.md) | The cost of the inventory in the products currency. [Currency: Product.CostingCurrency] [Required] 
-| [QuantityBase](Logistics.Inventory.CurrentBalances.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] [ReadOnly] 
-| [StoreCost](Logistics.Inventory.CurrentBalances.md#StoreCost) | [Amount](../data-types/Amount.md) | The cost of the inventory in the stores currency. [Currency: Store.Currency] [Required] 
+| [BaseCost](Logistics.Inventory.CurrentBalances.md#BaseCost) | [Amount](../data-types.md#Amount) | The cost of the inventory in base currency of the enterprise company. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Filter(ge;le)] 
+| [ProductCost](Logistics.Inventory.CurrentBalances.md#ProductCost) | [Amount](../data-types.md#Amount) | The cost of the inventory in the products currency. [Currency: Product.CostingCurrency] [Required] 
+| [QuantityBase](Logistics.Inventory.CurrentBalances.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] [ReadOnly] 
+| [StoreCost](Logistics.Inventory.CurrentBalances.md#StoreCost) | [Amount](../data-types.md#Amount) | The cost of the inventory in the stores currency. [Currency: Store.Currency] [Required] 
 
 ## References
 
@@ -30,7 +33,7 @@ The current inventory balances, grouped by storage key (Store, Product, Lot, etc
 
 > The cost of the inventory in base currency of the enterprise company. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Filter(ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -38,7 +41,7 @@ _Supports Order By_: **False**
 
 > The cost of the inventory in the products currency. [Currency: Product.CostingCurrency] [Required]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -46,7 +49,7 @@ _Supports Order By_: **False**
 
 > The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -54,7 +57,7 @@ _Supports Order By_: **False**
 
 > The cost of the inventory in the stores currency. [Currency: Store.Currency] [Required]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -138,7 +141,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_CurrentBalances?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Current_Balances?$top=10>
 

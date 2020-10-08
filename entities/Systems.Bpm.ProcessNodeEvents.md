@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.ProcessNodeEvents
+---
 # Systems.Bpm.ProcessNodeEvents
 
 Abstract root of all process node events. Currently - not used. Entity: Bpm_Process_Node_Events
@@ -138,7 +141,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_ProcessNodeEvents?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Bpm_Process_Node_Events?$top=10>
 

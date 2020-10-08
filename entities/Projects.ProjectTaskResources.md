@@ -1,3 +1,6 @@
+---
+uid: Projects.ProjectTaskResources
+---
 # Projects.ProjectTaskResources
 
 Contains the resources, required by the project tasks. Entity: Prj_Project_Task_Resources
@@ -11,7 +14,7 @@ Contains the resources, required by the project tasks. Entity: Prj_Project_Task_
 | [BillingTotalAmount](Projects.ProjectTaskResources.md#BillingTotalAmount) | decimal (nullable) | When not null, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). null means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour. [Filter(eq)] 
 | [CostPerHour](Projects.ProjectTaskResources.md#CostPerHour) | decimal | Cost per hour for the resource usage for this task (in the currency of the project). [Required] [Default(0)] [Filter(eq)] 
 | [Notes](Projects.ProjectTaskResources.md#Notes) | string (nullable) | Notes for this ProjectTaskResource. 
-| [PerUseCost](Projects.ProjectTaskResources.md#PerUseCost) | [Amount](../data-types/Amount.md) (nullable) | One time cost for each resource usage, specified in the projects currency. [Currency: ProjectTask.Project.BudgetingCurrency] 
+| [PerUseCost](Projects.ProjectTaskResources.md#PerUseCost) | [Amount](../data-types.md#Amount) (nullable) | One time cost for each resource usage, specified in the projects currency. [Currency: ProjectTask.Project.BudgetingCurrency] 
 | [ResourceUsageHours](Projects.ProjectTaskResources.md#ResourceUsageHours) | decimal | The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage. [Required] [Default(0)] [Filter(eq)] 
 | [ResourceUsagePercent](Projects.ProjectTaskResources.md#ResourceUsagePercent) | decimal | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. [Required] [Default(1)] [Filter(eq)] 
 | [TaskTotalCost](Projects.ProjectTaskResources.md#TaskTotalCost) | decimal | Total cost for this task (in the currency of the project). [Required] [Default(0)] [Filter(eq)] 
@@ -77,7 +80,7 @@ _Supports Order By_: **False**
 
 > One time cost for each resource usage, specified in the projects currency. [Currency: ProjectTask.Project.BudgetingCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -165,7 +168,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_ProjectTaskResources?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Project_Task_Resources?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.FinancialStatements
+---
 # Finance.Accounting.FinancialStatements
 
 Contains the user-defined financial statement definitions. Entity: Acc_Financial_Statements
@@ -8,7 +11,7 @@ Contains the user-defined financial statement definitions. Entity: Acc_Financial
 | ---- | ---- | --- |
 | [Id](Finance.Accounting.FinancialStatements.md#Id) | guid |  
 | [Code](Finance.Accounting.FinancialStatements.md#Code) | string | Unique identifying code of the financial statement. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Finance.Accounting.FinancialStatements.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the financial statement. [Required] [Filter(eq;like)] 
+| [Name](Finance.Accounting.FinancialStatements.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the financial statement. [Required] [Filter(eq;like)] 
 
 ## Child Collections
 
@@ -38,7 +41,7 @@ _Supports Order By_: **True**
 
 > Name of the financial statement. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -63,7 +66,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_FinancialStatements?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Financial_Statements?$top=10>
 

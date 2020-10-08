@@ -1,3 +1,6 @@
+---
+uid: Systems.Security.UserProviderTokens
+---
 # Systems.Security.UserProviderTokens
 
 Stores verification tokens for users - e.g. tokens for email, phone or two-factor authentication. Entity: Sec_User_Provider_Tokens (Introduced in version 18.2.100.0)
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_UserProviderTokens?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sec_User_Provider_Tokens?$top=10>
 

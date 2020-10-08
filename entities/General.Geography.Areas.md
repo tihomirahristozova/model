@@ -1,3 +1,6 @@
+---
+uid: General.Geography.Areas
+---
 # General.Geography.Areas
 
 Areas are user-defined division of the sales territories. Entity: Gen_Areas
@@ -8,7 +11,7 @@ Areas are user-defined division of the sales territories. Entity: Gen_Areas
 | ---- | ---- | --- |
 | [Id](General.Geography.Areas.md#Id) | guid |  
 | [Code](General.Geography.Areas.md#Code) | string | The unique code of the Area. [Required] [Filter(eq;like)] [ORD] 
-| [Name](General.Geography.Areas.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this Area. [Required] [Filter(eq;like)] [ORD] 
+| [Name](General.Geography.Areas.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this Area. [Required] [Filter(eq;like)] [ORD] 
 | [FullPath](General.Geography.Areas.md#FullPath) | string (nullable) | Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'. [Filter(eq;like)] [ReadOnly] 
 
 ## References
@@ -39,7 +42,7 @@ _Supports Order By_: **True**
 
 > The name of this Area. [Required] [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Geography_Areas?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Areas?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.AccountRequiredProperties
+---
 # Finance.Accounting.AccountRequiredProperties
 
 Defines the required properties for new vouchers, for each account. Entity: Acc_Account_Required_Properties
@@ -89,7 +92,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_AccountRequiredProperties?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Account_Required_Properties?$top=10>
 

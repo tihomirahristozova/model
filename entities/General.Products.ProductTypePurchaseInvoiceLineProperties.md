@@ -1,3 +1,6 @@
+---
+uid: General.Products.ProductTypePurchaseInvoiceLineProperties
+---
 # General.Products.ProductTypePurchaseInvoiceLineProperties
 
 When specified for a product type, contains the suggested user-defined properties, which can be specified when creating new purchase invoice lines with products of this type. Entity: Gen_Product_Type_Purchase_Invoice_Line_Properties
@@ -89,7 +92,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_ProductTypePurchaseInvoiceLineProperties?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Product_Type_Purchase_Invoice_Line_Properties?$top=10>
 

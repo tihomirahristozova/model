@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.OrderBalances
+---
 # Finance.Payments.OrderBalances
 
 Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View
@@ -10,8 +13,8 @@ Represents the payment orders with their covered amounts. Entity: Cash_Payment_B
 | [DueDate](Finance.Payments.OrderBalances.md#DueDate) | datetime (nullable) | The due date of the payment. null means there is no due date. [Filter(eq;ge;le)] 
 | [DueStartDate](Finance.Payments.OrderBalances.md#DueStartDate) | date (nullable) | The date at which the payment becomes executable. null means the payment is executable at all times. [Filter(eq;ge;le)] 
 | [IsInvoiced](Finance.Payments.OrderBalances.md#IsInvoiced) | boolean | When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument. [Required] [Filter(multi eq)] 
-| [OrderAmount](Finance.Payments.OrderBalances.md#OrderAmount) | [Amount](../data-types/Amount.md) | The total amount of the payment order. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)] 
-| [PaidAmount](Finance.Payments.OrderBalances.md#PaidAmount) | [Amount](../data-types/Amount.md) | The paid amount. Taken from released payment transactions. [Currency: Currency] [Required] 
+| [OrderAmount](Finance.Payments.OrderBalances.md#OrderAmount) | [Amount](../data-types.md#Amount) | The total amount of the payment order. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)] 
+| [PaidAmount](Finance.Payments.OrderBalances.md#PaidAmount) | [Amount](../data-types.md#Amount) | The paid amount. Taken from released payment transactions. [Currency: Currency] [Required] 
 | [RefDocumentDate](Finance.Payments.OrderBalances.md#RefDocumentDate) | datetime (nullable) | The date of the original document. null means that it is unknown. [Filter(eq)] 
 | [RefDocumentNo](Finance.Payments.OrderBalances.md#RefDocumentNo) | string | The number of the document which has created the payment order and is the basis for the payment. [Required] [Filter(eq)] 
 | [RefInvoiceDocumentDate](Finance.Payments.OrderBalances.md#RefInvoiceDocumentDate) | datetime (nullable) | The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. [Filter(eq;ge;le)] 
@@ -79,7 +82,7 @@ _Supports Order By_: **False**
 
 > The total amount of the payment order. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -88,7 +91,7 @@ _Default Value_: **Constant**
 
 > The paid amount. Taken from released payment transactions. [Currency: Currency] [Required]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -251,7 +254,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_OrderBalances?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Balances_View?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.ProcessConnections
+---
 # Systems.Bpm.ProcessConnections
 
 Contains the connections between process elements. Part of the process model. Entity: Bpm_Process_Connections
@@ -10,7 +13,7 @@ Contains the connections between process elements. Part of the process model. En
 | [ConditionFilterXml](Systems.Bpm.ProcessConnections.md#ConditionFilterXml) | dataaccessfilter (nullable) | When not null, specifies that the flow will be followed only if the condition is matched by the current values in the process instance. [Filter(eq;like)] 
 | [IsDefault](Systems.Bpm.ProcessConnections.md#IsDefault) | boolean | Denotes this flow as the default sequence flow. It is taken only when all other flows are not valid. For example, gateways usually are followed by several conditional flows and one default flow. [Required] [Default(false)] [Filter(eq)] 
 | [Code](Systems.Bpm.ProcessConnections.md#Code) | string | Connection code, unique within the process. Used as ID for XML serialization purposes. [Required] [Default(New Guid)] [Filter(eq;like)] 
-| [Name](Systems.Bpm.ProcessConnections.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Multilanguage connection name. [Required] [Filter(eq;like)] 
+| [Name](Systems.Bpm.ProcessConnections.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage connection name. [Required] [Filter(eq;like)] 
 
 ## References
 
@@ -60,7 +63,7 @@ _Default Value_: **NewGuid**
 
 > Multilanguage connection name. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -112,7 +115,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_ProcessConnections?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Bpm_Process_Connections?$top=10>
 

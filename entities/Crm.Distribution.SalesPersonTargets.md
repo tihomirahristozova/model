@@ -1,3 +1,6 @@
+---
+uid: Crm.Distribution.SalesPersonTargets
+---
 # Crm.Distribution.SalesPersonTargets
 
 Sales person targets document header. Targets are expressed in amount or other numeric objectives and are tracked in achieved percentages. Entity: Crm_Sales_Person_Targets
@@ -475,7 +478,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Distribution_SalesPersonTargets?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Person_Targets?$top=10>
 

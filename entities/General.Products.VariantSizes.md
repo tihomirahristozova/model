@@ -1,3 +1,6 @@
+---
+uid: General.Products.VariantSizes
+---
 # General.Products.VariantSizes
 
 Contains the different sizes, which can be assigned to product variants. Entity: Gen_Variant_Sizes
@@ -8,7 +11,7 @@ Contains the different sizes, which can be assigned to product variants. Entity:
 | ---- | ---- | --- |
 | [Id](General.Products.VariantSizes.md#Id) | guid |  
 | [Code](General.Products.VariantSizes.md#Code) | string | Unique code of the size. Used to generate parts of bar-codes and in other coding schemes. [Required] [Filter(eq;like)] [ORD] 
-| [Name](General.Products.VariantSizes.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the variant size. [Required] [Filter(eq;like)] [ORD] 
+| [Name](General.Products.VariantSizes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the variant size. [Required] [Filter(eq;like)] [ORD] 
 
 
 ## Attribute Details
@@ -32,7 +35,7 @@ _Supports Order By_: **True**
 
 > The name of the variant size. [Required] [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -57,7 +60,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_VariantSizes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Variant_Sizes?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.UserBusinessRuleConditions
+---
 # Systems.Bpm.UserBusinessRuleConditions
 
 Represents one condition for the execution of a business rule. Entity: Sys_User_Business_Rule_Conditions
@@ -119,7 +122,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_UserBusinessRuleConditions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_User_Business_Rule_Conditions?$top=10>
 

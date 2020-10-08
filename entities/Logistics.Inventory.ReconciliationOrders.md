@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.ReconciliationOrders
+---
 # Logistics.Inventory.ReconciliationOrders
 
 Obsolete. Not used. (Orders for store reconciliations. After an order is executed, store reconciliation is created). Entity: Inv_Reconciliation_Orders
@@ -92,7 +95,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_ReconciliationOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Reconciliation_Orders?$top=10>
 

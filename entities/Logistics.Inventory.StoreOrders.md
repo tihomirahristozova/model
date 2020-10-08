@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.StoreOrders
+---
 # Logistics.Inventory.StoreOrders
 
 Orders for store transactions. After an order is executed, store transaction is created. Entity: Inv_Store_Orders
@@ -570,7 +573,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_StoreOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Store_Orders?$top=10>
 

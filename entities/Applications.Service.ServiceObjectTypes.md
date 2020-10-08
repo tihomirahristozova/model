@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceObjectTypes
+---
 # Applications.Service.ServiceObjectTypes
 
 Contins the types of serviceable objects. Entity: Srv_Service_Object_Types
@@ -48,7 +51,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceObjectTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Object_Types?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Logistics.Wms.WarehouseWorkers
+---
 # Logistics.Wms.WarehouseWorkers
 
 Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_Workers (Introduced in version 20.1.100.0)
@@ -11,7 +14,7 @@ Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_
 | [ActiveTo](Logistics.Wms.WarehouseWorkers.md#ActiveTo) | date (nullable) | The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. [Filter(eq;ge;le)] 
 | [IsActive](Logistics.Wms.WarehouseWorkers.md#IsActive) | boolean | Specifies whether the worker is active and can execute new warehouse tasks. [Required] [Default(true)] [Filter(eq)] 
 | [Notes](Logistics.Wms.WarehouseWorkers.md#Notes) | string (nullable) | Notes for this WarehouseWorker. 
-| [Name](Logistics.Wms.WarehouseWorkers.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the worker (multi-language). [Required] [Filter(multi eq;like)] 
+| [Name](Logistics.Wms.WarehouseWorkers.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the worker (multi-language). [Required] [Filter(multi eq;like)] 
 
 ## References
 
@@ -68,7 +71,7 @@ _Supports Order By_: **False**
 
 > Name of the worker (multi-language). [Required] [Filter(multi eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -112,7 +115,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseWorkers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wms_Warehouse_Workers?$top=10>
 

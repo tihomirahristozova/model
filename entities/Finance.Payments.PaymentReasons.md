@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.PaymentReasons
+---
 # Finance.Payments.PaymentReasons
 
 Represents reasons for the payments. Contains both system and user-defined reasons. Entity: Cash_Payment_Reasons
@@ -9,7 +12,7 @@ Represents reasons for the payments. Contains both system and user-defined reaso
 | [Id](Finance.Payments.PaymentReasons.md#Id) | guid |  
 | [IsActive](Finance.Payments.PaymentReasons.md#IsActive) | boolean | Specifies whether the payment reason is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] 
 | [IsSystem](Finance.Payments.PaymentReasons.md#IsSystem) | boolean | Specifies whether the payment reason is defined by the system. The system defined records are created by the system and are read-only for the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [Name](Finance.Payments.PaymentReasons.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this PaymentReason. [Required] [Filter(eq;like)] [ORD] 
+| [Name](Finance.Payments.PaymentReasons.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this PaymentReason. [Required] [Filter(eq;like)] [ORD] 
 
 
 ## Attribute Details
@@ -43,7 +46,7 @@ _Default Value_: **False**
 
 > The name of this PaymentReason. [Required] [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -68,7 +71,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentReasons?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Reasons?$top=10>
 

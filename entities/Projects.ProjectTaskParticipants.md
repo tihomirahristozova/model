@@ -1,3 +1,6 @@
+---
+uid: Projects.ProjectTaskParticipants
+---
 # Projects.ProjectTaskParticipants
 
 Contains the participants in the project tasks. Entity: Prj_Project_Task_Participants
@@ -94,7 +97,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_ProjectTaskParticipants?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Project_Task_Participants?$top=10>
 

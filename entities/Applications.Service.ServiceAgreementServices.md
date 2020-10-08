@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceAgreementServices
+---
 # Applications.Service.ServiceAgreementServices
 
 Contains the free services, included in the service agreement. Entity: Srv_Service_Agreement_Services
@@ -9,7 +12,7 @@ Contains the free services, included in the service agreement. Entity: Srv_Servi
 | [Id](Applications.Service.ServiceAgreementServices.md#Id) | guid |  
 | [EndDate](Applications.Service.ServiceAgreementServices.md#EndDate) | datetime (nullable) | End date to which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities. 
 | [LineNo](Applications.Service.ServiceAgreementServices.md#LineNo) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] 
-| [Quantity](Applications.Service.ServiceAgreementServices.md#Quantity) | [Quantity](../data-types/Quantity.md) | Quantity of the agreed servcice or product. [Unit: QuantityUnit] [Required] 
+| [Quantity](Applications.Service.ServiceAgreementServices.md#Quantity) | [Quantity](../data-types.md#Quantity) | Quantity of the agreed servcice or product. [Unit: QuantityUnit] [Required] 
 | [StartDate](Applications.Service.ServiceAgreementServices.md#StartDate) | datetime (nullable) | Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities. 
 
 ## References
@@ -56,7 +59,7 @@ _Front-End Recalc Expressions:_
 
 > Quantity of the agreed servcice or product. [Unit: QuantityUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -124,7 +127,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceAgreementServices?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Agreement_Services?$top=10>
 

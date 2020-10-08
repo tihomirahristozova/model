@@ -1,3 +1,6 @@
+---
+uid: Crm.Pricing.PricingModelCosts
+---
 # Crm.Pricing.PricingModelCosts
 
 List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs
@@ -7,7 +10,7 @@ List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Crm.Pricing.PricingModelCosts.md#Id) | guid |  
-| [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#AmountPerUnit) | [Amount](../data-types/Amount.md) (nullable) | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency] 
+| [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#AmountPerUnit) | [Amount](../data-types.md#Amount) (nullable) | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency] 
 | [AmountPercent](Crm.Pricing.PricingModelCosts.md#AmountPercent) | decimal (nullable) | Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way. 
 | [LineNo](Crm.Pricing.PricingModelCosts.md#LineNo) | int32 | The consequtive number of the cost within the pricing model. [Required] 
 
@@ -33,7 +36,7 @@ _Default Value_: **NewGuid**
 
 > Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -106,7 +109,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pricing_PricingModelCosts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Pricing_Model_Costs?$top=10>
 

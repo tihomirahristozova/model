@@ -1,3 +1,6 @@
+---
+uid: Crm.Marketing.MarketingActivities
+---
 # Crm.Marketing.MarketingActivities
 
 Marketing activity, part of a marketing campaign. Entity: Crm_Activities
@@ -39,7 +42,7 @@ Marketing activity, part of a marketing campaign. Entity: Crm_Activities
 | [Subject](Crm.Marketing.MarketingActivities.md#Subject) | string | Task primary subject (required). [Required] [Filter(eq;like)] 
 | [SystemType](Crm.Marketing.MarketingActivities.md#SystemType) | [General.Contacts.ActivitiesRepository.SystemType](Crm.Marketing.MarketingActivities.md#SystemType) | T=Task; C=Communication; M=Meeting. [Required] 
 | [ActivitiesCreated](Crm.Marketing.MarketingActivities.md#ActivitiesCreated) | boolean | True if the related activites are already created. Related activity can be created for each member of the target group. [Required] [Default(false)] 
-| [ForecastedCost](Crm.Marketing.MarketingActivities.md#ForecastedCost) | [Amount](../data-types/Amount.md) | Forecasted cost of the activity in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [ForecastedCost](Crm.Marketing.MarketingActivities.md#ForecastedCost) | [Amount](../data-types.md#Amount) | Forecasted cost of the activity in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
 
 ## References
 
@@ -414,7 +417,7 @@ _Default Value_: **False**
 
 > Forecasted cost of the activity in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -643,7 +646,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Marketing_MarketingActivities?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Activities?$top=10>
 

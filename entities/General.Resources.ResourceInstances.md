@@ -1,3 +1,6 @@
+---
+uid: General.Resources.ResourceInstances
+---
 # General.Resources.ResourceInstances
 
 Represents concrete instances of resources. Entity: Gen_Resource_Instances
@@ -101,7 +104,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Resources_ResourceInstances?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Resource_Instances?$top=10>
 

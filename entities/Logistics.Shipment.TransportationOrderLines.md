@@ -1,3 +1,6 @@
+---
+uid: Logistics.Shipment.TransportationOrderLines
+---
 # Logistics.Shipment.TransportationOrderLines
 
 Different cargoes of a transportation order. Entity: Log_Transportation_Order_Lines
@@ -142,7 +145,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_TransportationOrderLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Log_Transportation_Order_Lines?$top=10>
 

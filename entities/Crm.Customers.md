@@ -1,3 +1,6 @@
+---
+uid: Crm.Customers
+---
 # Crm.Customers
 
 Customer contracts list. For each combination of Enterprise Company and external Party there can be zero or one records of this. Entity: Crm_Customers
@@ -12,7 +15,7 @@ Customer contracts list. For each combination of Enterprise Company and external
 | [AllowUseAsShipToCustomer](Crm.Customers.md#AllowUseAsShipToCustomer) | boolean | True to allow the customer to be used as ship to customer in a sales deal. [Required] [Default(false)] [Filter(eq)] 
 | [CreationTime](Crm.Customers.md#CreationTime) | datetime (nullable) | Date and time when the Customer was created. [Filter(ge;le)] [ReadOnly] 
 | [CreationUser](Crm.Customers.md#CreationUser) | string (nullable) | Login name of the user, who created the Customer. [Filter(like)] [ReadOnly] 
-| [CreditLimit](Crm.Customers.md#CreditLimit) | [Amount](../data-types/Amount.md) (nullable) | Total credit limit for the customer in the customers' default currency. null means there is no limit. [Currency: DefaultCurrency] 
+| [CreditLimit](Crm.Customers.md#CreditLimit) | [Amount](../data-types.md#Amount) (nullable) | Total credit limit for the customer in the customers' default currency. null means there is no limit. [Currency: DefaultCurrency] 
 | [Number](Crm.Customers.md#Number) | string (nullable) | Unique customer number. [Filter(eq;like)] [ORD] 
 | [DefaultDeliveryTermDays](Crm.Customers.md#DefaultDeliveryTermDays) | int32 | Default term in days for goods delivery, starting at the day of sale. [Required] [Default(0)] 
 | [DefaultPaymentStartDays](Crm.Customers.md#DefaultPaymentStartDays) | int32 | Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately. [Required] [Default(0)] 
@@ -103,7 +106,7 @@ _Supports Order By_: **False**
 
 > Total credit limit for the customer in the customers' default currency. null means there is no limit. [Currency: DefaultCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -316,7 +319,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Customers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Customers?$top=10>
 

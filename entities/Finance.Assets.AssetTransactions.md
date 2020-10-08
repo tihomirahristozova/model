@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.AssetTransactions
+---
 # Finance.Assets.AssetTransactions
 
 Basic asset value transactions. The transactions can increase or decrease any of the 5 asset values. Entity: Ast_Asset_Transactions
@@ -451,7 +454,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_AssetTransactions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Asset_Transactions?$top=10>
 

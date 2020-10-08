@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.ProductDefaultStoreBins
+---
 # Logistics.Inventory.ProductDefaultStoreBins
 
 The default store bins in which products should be placed. Entity: Inv_Product_Default_Store_Bins
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_ProductDefaultStoreBins?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Product_Default_Store_Bins?$top=10>
 

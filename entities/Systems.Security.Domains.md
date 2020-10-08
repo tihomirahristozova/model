@@ -1,3 +1,6 @@
+---
+uid: Systems.Security.Domains
+---
 # Systems.Security.Domains
 
 Represents one user domain. The users in a domain have different emails. But one user can use the same email to register in different domains. Entity: Sec_Domains (Introduced in version 20.1.100.0)
@@ -8,7 +11,7 @@ Represents one user domain. The users in a domain have different emails. But one
 | ---- | ---- | --- |
 | [Id](Systems.Security.Domains.md#Id) | guid |  
 | [AllowLocalAccounts](Systems.Security.Domains.md#AllowLocalAccounts) | boolean | Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended). [Required] [Default(true)] 
-| [Description](Systems.Security.Domains.md#Description) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Multi-language description of the domain. 
+| [Description](Systems.Security.Domains.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Multi-language description of the domain. 
 | [Name](Systems.Security.Domains.md#Name) | string | The name of the domain (restricted for URL usage). [Required] [Filter(eq;like)] [ORD] 
 | [IsDefault](Systems.Security.Domains.md#IsDefault) | boolean | Specifies whether this is the default domain for the database. [Required] [Default(true)] [Filter(eq)] 
 
@@ -41,7 +44,7 @@ _Default Value_: **True**
 
 > Multi-language description of the domain.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_Domains?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sec_Domains?$top=10>
 

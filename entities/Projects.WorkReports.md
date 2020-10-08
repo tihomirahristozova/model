@@ -1,3 +1,6 @@
+---
+uid: Projects.WorkReports
+---
 # Projects.WorkReports
 
 Contains project work report documents. Each work report contains consumed materials and resources. Entity: Prj_Work_Reports
@@ -463,7 +466,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_WorkReports?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Work_Reports?$top=10>
 

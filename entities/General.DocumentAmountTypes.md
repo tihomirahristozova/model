@@ -1,3 +1,6 @@
+---
+uid: General.DocumentAmountTypes
+---
 # General.DocumentAmountTypes
 
 Represents the different types of additional amounts which are calculated for the documents. Entity: Gen_Document_Amount_Types
@@ -12,7 +15,7 @@ Represents the different types of additional amounts which are calculated for th
 | [AllowedDirections](General.DocumentAmountTypes.md#AllowedDirections) | [General.DocumentAmountTypesRepository.AllowedDirections](General.DocumentAmountTypes.md#AllowedDirections) (nullable) | Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. [Default(0)] 
 | [AmountInputAllowed](General.DocumentAmountTypes.md#AmountInputAllowed) | boolean | True when the user is allowed to input fixed amount for distribution. [Required] [Default(false)] [Filter(eq)] 
 | [AmountTypeCode](General.DocumentAmountTypes.md#AmountTypeCode) | string | A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. [Required] [Filter(multi eq)] [ORD] 
-| [AmountTypeName](General.DocumentAmountTypes.md#AmountTypeName) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the amount type. [Required] [Filter(like)] [ORD] 
+| [AmountTypeName](General.DocumentAmountTypes.md#AmountTypeName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the amount type. [Required] [Filter(like)] [ORD] 
 | [BaseOnLines](General.DocumentAmountTypes.md#BaseOnLines) | boolean | True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. [Required] [Default(true)] 
 | [DefaultPercent](General.DocumentAmountTypes.md#DefaultPercent) | decimal (nullable) | Default percent for amounts for which percent input is allowed; null otherwise. 
 | [Description](General.DocumentAmountTypes.md#Description) | string (nullable) | The description of this DocumentAmountType. 
@@ -102,7 +105,7 @@ _Supports Order By_: **True**
 
 > The name of the amount type. [Required] [Filter(like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
@@ -216,7 +219,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentAmountTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Amount_Types?$top=10>
 

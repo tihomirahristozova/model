@@ -1,3 +1,6 @@
+---
+uid: Projects.ProjectTypes
+---
 # Projects.ProjectTypes
 
 Contains the types of projects, which can be executed by the enterprise company. Entity: Prj_Types
@@ -82,7 +85,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_ProjectTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Types?$top=10>
 

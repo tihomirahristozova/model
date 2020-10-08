@@ -1,3 +1,6 @@
+---
+uid: Projects.ProjectTaskMaterials
+---
 # Projects.ProjectTaskMaterials
 
 Contains the materials, which are required for a project task. Entity: Prj_Project_Task_Materials
@@ -7,9 +10,9 @@ Contains the materials, which are required for a project task. Entity: Prj_Proje
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Projects.ProjectTaskMaterials.md#Id) | guid |  
-| [BudgetedMaterialAmount](Projects.ProjectTaskMaterials.md#BudgetedMaterialAmount) | [Amount](../data-types/Amount.md) (nullable) | Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. [Currency: ProjectTask.Project.BudgetingCurrency] 
+| [BudgetedMaterialAmount](Projects.ProjectTaskMaterials.md#BudgetedMaterialAmount) | [Amount](../data-types.md#Amount) (nullable) | Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. [Currency: ProjectTask.Project.BudgetingCurrency] 
 | [LineNumber](Projects.ProjectTaskMaterials.md#LineNumber) | int32 | Line number within the task, increased in steps of 10. Used for sorting purposes. [Required] [Default(0)] 
-| [Quantity](Projects.ProjectTaskMaterials.md#Quantity) | [Quantity](../data-types/Quantity.md) | The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)] 
+| [Quantity](Projects.ProjectTaskMaterials.md#Quantity) | [Quantity](../data-types.md#Quantity) | The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)] 
 | [QuantityBase](Projects.ProjectTaskMaterials.md#QuantityBase) | decimal | The equivalence of Quantity in the base measurement unit of the Material. [Required] [Default(0)] [ReadOnly] 
 
 ## References
@@ -34,7 +37,7 @@ _Default Value_: **NewGuid**
 
 > Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. [Currency: ProjectTask.Project.BudgetingCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -58,7 +61,7 @@ _Front-End Recalc Expressions:_
 
 > The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -122,7 +125,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_ProjectTaskMaterials?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Project_Task_Materials?$top=10>
 

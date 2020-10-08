@@ -1,3 +1,6 @@
+---
+uid: General.ProductVariants
+---
 # General.ProductVariants
 
 Contains definitions of different variants of a product. The variants are differentiated by color, size and style. Entity: Gen_Product_Variants
@@ -9,7 +12,7 @@ Contains definitions of different variants of a product. The variants are differ
 | [Id](General.ProductVariants.md#Id) | guid |  
 | [BarCode](General.ProductVariants.md#BarCode) | string (nullable) | When specified, it contains a bar code which uniquely identifies the product variant. [Filter(eq;like)] [ORD] 
 | [Code](General.ProductVariants.md#Code) | string | The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. [Required] [Filter(eq;like)] [ReadOnly] 
-| [Name](General.ProductVariants.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Product variant name. It is the concatenation of the names of the color, size and style. [ReadOnly] 
+| [Name](General.ProductVariants.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Product variant name. It is the concatenation of the names of the color, size and style. [ReadOnly] 
 
 ## References
 
@@ -50,7 +53,7 @@ _Supports Order By_: **False**
 
 > Product variant name. It is the concatenation of the names of the color, size and style. [ReadOnly]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -115,7 +118,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_ProductVariants?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Product_Variants?$top=10>
 

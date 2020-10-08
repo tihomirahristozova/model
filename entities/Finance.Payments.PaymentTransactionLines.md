@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.PaymentTransactionLines
+---
 # Finance.Payments.PaymentTransactionLines
 
 Contains the distibution of the payments' amounts among the source payment orders. Entity: Cash_Payment_Transaction_Lines
@@ -8,8 +11,8 @@ Contains the distibution of the payments' amounts among the source payment order
 | ---- | ---- | --- |
 | [Id](Finance.Payments.PaymentTransactionLines.md#Id) | guid |  
 | [AllowOverpayment](Finance.Payments.PaymentTransactionLines.md#AllowOverpayment) | boolean | True-Allows overpayment for the payment order; false=Does not allow (default). [Required] [Default(false)] 
-| [Amount](Finance.Payments.PaymentTransactionLines.md#Amount) | [Amount](../data-types/Amount.md) | The part of the total payed amount by the transaction, that is distributed to the specified payment order. [Currency: PaymentTransaction.TotalAmountCurrency] [Required] [Default(0)] 
-| [CoveredOrderAmount](Finance.Payments.PaymentTransactionLines.md#CoveredOrderAmount) | [Amount](../data-types/Amount.md) | The part of the original payment order amount, that is covered by this transaction line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)] 
+| [Amount](Finance.Payments.PaymentTransactionLines.md#Amount) | [Amount](../data-types.md#Amount) | The part of the total payed amount by the transaction, that is distributed to the specified payment order. [Currency: PaymentTransaction.TotalAmountCurrency] [Required] [Default(0)] 
+| [CoveredOrderAmount](Finance.Payments.PaymentTransactionLines.md#CoveredOrderAmount) | [Amount](../data-types.md#Amount) | The part of the original payment order amount, that is covered by this transaction line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)] 
 | [Notes](Finance.Payments.PaymentTransactionLines.md#Notes) | string (nullable) | Notes for this PaymentTransactionLine. 
 
 ## References
@@ -42,7 +45,7 @@ _Default Value_: **False**
 
 > The part of the total payed amount by the transaction, that is distributed to the specified payment order. [Currency: PaymentTransaction.TotalAmountCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -53,7 +56,7 @@ _Front-End Recalc Expressions:_
 
 > The part of the original payment order amount, that is covered by this transaction line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -108,7 +111,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentTransactionLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Transaction_Lines?$top=10>
 

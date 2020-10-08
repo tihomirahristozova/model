@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.ManagedAssetGroups
+---
 # Applications.AssetManagement.ManagedAssetGroups
 
 Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Introduced in version 19.1.100.0)
@@ -8,7 +11,7 @@ Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Intr
 | ---- | ---- | --- |
 | [Id](Applications.AssetManagement.ManagedAssetGroups.md#Id) | guid |  
 | [Code](Applications.AssetManagement.ManagedAssetGroups.md#Code) | string | Unique (within all groups) code of the asset group. [Required] [Filter(multi eq;like)] [ORD] 
-| [Name](Applications.AssetManagement.ManagedAssetGroups.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the asset group (multi-language). [Required] [Filter(eq;like)] 
+| [Name](Applications.AssetManagement.ManagedAssetGroups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the asset group (multi-language). [Required] [Filter(eq;like)] 
 | [Notes](Applications.AssetManagement.ManagedAssetGroups.md#Notes) | string (nullable) | Notes for this ManagedAssetGroup. 
 
 ## References
@@ -39,7 +42,7 @@ _Supports Order By_: **True**
 
 > Name of the asset group (multi-language). [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ManagedAssetGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Managed_Asset_Groups?$top=10>
 

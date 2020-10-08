@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.TemplateRouteLinks
+---
 # Finance.Accounting.TemplateRouteLinks
 
 When specified denotes that another route uses the template, initially bound to one route. Entity: Acc_Template_Route_Links
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_TemplateRouteLinks?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Template_Route_Links?$top=10>
 

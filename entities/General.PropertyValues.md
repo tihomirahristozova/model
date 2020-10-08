@@ -1,3 +1,6 @@
+---
+uid: General.PropertyValues
+---
 # General.PropertyValues
 
 The actual values of the user-defined properties for each actual entity. Entity: Gen_Property_Values
@@ -7,7 +10,7 @@ The actual values of the user-defined properties for each actual entity. Entity:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.PropertyValues.md#Id) | guid |  
-| [Description](General.PropertyValues.md#Description) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The actual description value of the property for the specified entity (the entity with the specified Id). 
+| [Description](General.PropertyValues.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The actual description value of the property for the specified entity (the entity with the specified Id). 
 | [EntityItemId](General.PropertyValues.md#EntityItemId) | guid | The Id of the actual entity for which the value is specified. [Required] [Filter(multi eq)] 
 | [Picture](General.PropertyValues.md#Picture) | byte[] (nullable) | The actual picture of the property for the specified entity (the entity with the specified Id). 
 | [PropertyValueField](General.PropertyValues.md#PropertyValueField) | string (nullable) | The actual value of the property for the specified entity (the entity with the specified Id). 
@@ -33,7 +36,7 @@ _Default Value_: **NewGuid**
 
 > The actual description value of the property for the specified entity (the entity with the specified Id).
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -101,7 +104,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_PropertyValues?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Property_Values?$top=10>
 

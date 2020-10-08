@@ -1,3 +1,6 @@
+---
+uid: Applications.Cms.NewsWebModuleArticles
+---
 # Applications.Cms.NewsWebModuleArticles
 
 Represents an article in a news web module. Entity: Cms_News_Web_Module_Articles
@@ -103,7 +106,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Cms_NewsWebModuleArticles?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cms_News_Web_Module_Articles?$top=10>
 

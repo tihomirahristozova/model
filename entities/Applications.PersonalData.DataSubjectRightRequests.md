@@ -1,3 +1,6 @@
+---
+uid: Applications.PersonalData.DataSubjectRightRequests
+---
 # Applications.PersonalData.DataSubjectRightRequests
 
 Contains user requests for application of user rights. Entity: Pdm_Data_Subject_Right_Requests (Introduced in version 18.2.100.0)
@@ -152,7 +155,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_PersonalData_DataSubjectRightRequests?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Pdm_Data_Subject_Right_Requests?$top=10>
 

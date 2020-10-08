@@ -1,3 +1,6 @@
+---
+uid: Finance.Vat.DealTypes
+---
 # Finance.Vat.DealTypes
 
 Contains deal types supported by the system as well as user-defined types. Entity: VAT_Deal_Types
@@ -92,7 +95,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Vat_DealTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/VAT_Deal_Types?$top=10>
 

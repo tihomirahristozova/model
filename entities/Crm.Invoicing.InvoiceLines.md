@@ -1,3 +1,6 @@
+---
+uid: Crm.Invoicing.InvoiceLines
+---
 # Crm.Invoicing.InvoiceLines
 
 Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines
@@ -11,18 +14,18 @@ Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines
 | [DeliveryTermsCode](Crm.Invoicing.InvoiceLines.md#DeliveryTermsCode) | [Finance.Intrastat.DeliveryTerms](Crm.Invoicing.InvoiceLines.md#DeliveryTermsCode) (nullable) | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
 | [IntrastatTransactionNatureCode](Crm.Invoicing.InvoiceLines.md#IntrastatTransactionNatureCode) | [Finance.Intrastat.TransactionNature](Crm.Invoicing.InvoiceLines.md#IntrastatTransactionNatureCode) (nullable) | Transaction nature; used for Intrastat reporting. 
 | [IntrastatTransportModeCode](Crm.Invoicing.InvoiceLines.md#IntrastatTransportModeCode) | [Finance.Intrastat.TransportMode](Crm.Invoicing.InvoiceLines.md#IntrastatTransportModeCode) (nullable) | Transport mode; used for Intrastat reporting. 
-| [LineAmount](Crm.Invoicing.InvoiceLines.md#LineAmount) | [Amount](../data-types/Amount.md) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)] 
+| [LineAmount](Crm.Invoicing.InvoiceLines.md#LineAmount) | [Amount](../data-types.md#Amount) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)] 
 | [LineCustomDiscountPercent](Crm.Invoicing.InvoiceLines.md#LineCustomDiscountPercent) | decimal | User-defined discount for the line. [Required] [Default(0)] [Filter(ge;le)] 
 | [LineNo](Crm.Invoicing.InvoiceLines.md#LineNo) | int32 | Consecutive line number, unique within the invoice. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)] 
 | [LineStandardDiscountPercent](Crm.Invoicing.InvoiceLines.md#LineStandardDiscountPercent) | decimal | Standard discount for the line. This is automatically computed according to discount conditions. [Required] [Default(0)] 
 | [Notes](Crm.Invoicing.InvoiceLines.md#Notes) | string (nullable) | Notes for this InvoiceLine. 
 | [ParentLineNo](Crm.Invoicing.InvoiceLines.md#ParentLineNo) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2.100.0) 
-| [ProductDescription](Crm.Invoicing.InvoiceLines.md#ProductDescription) | [MultilanguageString](../data-types/MultilanguageString.md) | The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document. [Required] 
-| [Quantity](Crm.Invoicing.InvoiceLines.md#Quantity) | [Quantity](../data-types/Quantity.md) | The quantity of the invoiced product. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
-| [QuantityBase](Crm.Invoicing.InvoiceLines.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
+| [ProductDescription](Crm.Invoicing.InvoiceLines.md#ProductDescription) | [MultilanguageString](../data-types.md#MultilanguageString) | The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document. [Required] 
+| [Quantity](Crm.Invoicing.InvoiceLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | The quantity of the invoiced product. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [QuantityBase](Crm.Invoicing.InvoiceLines.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
 | [SalesOrderAmount](Crm.Invoicing.InvoiceLines.md#SalesOrderAmount) | decimal (nullable) | Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing. 
-| [StandardQuantityBase](Crm.Invoicing.InvoiceLines.md#StandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
-| [UnitPrice](Crm.Invoicing.InvoiceLines.md#UnitPrice) | [Amount](../data-types/Amount.md) | The unit selling price of Quantity. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)] 
+| [StandardQuantityBase](Crm.Invoicing.InvoiceLines.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [UnitPrice](Crm.Invoicing.InvoiceLines.md#UnitPrice) | [Amount](../data-types.md#Amount) | The unit selling price of Quantity. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)] 
 
 ## References
 
@@ -168,7 +171,7 @@ _Front-End Recalc Expressions:_
 
 > Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -228,7 +231,7 @@ _Supports Order By_: **False**
 
 > The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document. [Required]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -238,7 +241,7 @@ _Front-End Recalc Expressions:_
 
 > The quantity of the invoiced product. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -247,7 +250,7 @@ _Default Value_: **Constant**
 
 > The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -268,7 +271,7 @@ _Supports Order By_: **False**
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -281,7 +284,7 @@ _Front-End Recalc Expressions:_
 
 > The unit selling price of Quantity. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -430,7 +433,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Invoicing_InvoiceLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Invoice_Lines?$top=10>
 

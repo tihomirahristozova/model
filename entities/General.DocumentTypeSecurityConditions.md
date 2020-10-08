@@ -1,3 +1,6 @@
+---
+uid: General.DocumentTypeSecurityConditions
+---
 # General.DocumentTypeSecurityConditions
 
 Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_Security_Conditions
@@ -104,7 +107,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentTypeSecurityConditions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Type_Security_Conditions?$top=10>
 

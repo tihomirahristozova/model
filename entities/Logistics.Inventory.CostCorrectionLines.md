@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.CostCorrectionLines
+---
 # Logistics.Inventory.CostCorrectionLines
 
 Cost correction detail lines. One line is created for each corrected transaction line. Entity: Inv_Cost_Correction_Lines
@@ -7,10 +10,10 @@ Cost correction detail lines. One line is created for each corrected transaction
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.CostCorrectionLines.md#Id) | guid |  
-| [BaseCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#BaseCostAdjustment) | [Amount](../data-types/Amount.md) | The amount of correction (plus or minus) for the Base Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [CostCorrectionAmount](Logistics.Inventory.CostCorrectionLines.md#CostCorrectionAmount) | [Amount](../data-types/Amount.md) | The amount of correction (plus or minus) for the Amount field of the transaction line. [Currency: TransactionLine.TransactionObj.DocumentCurrency] [Required] [Default(0)] 
-| [ProductCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#ProductCostAdjustment) | [Amount](../data-types/Amount.md) | The amount of correction (plus or minus) for the Product Cost field of the transaction line. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Default(0)] 
-| [StoreCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#StoreCostAdjustment) | [Amount](../data-types/Amount.md) | The amount of correction (plus or minus) for the Store Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.Store.Currency] [Required] [Default(0)] 
+| [BaseCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#BaseCostAdjustment) | [Amount](../data-types.md#Amount) | The amount of correction (plus or minus) for the Base Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [CostCorrectionAmount](Logistics.Inventory.CostCorrectionLines.md#CostCorrectionAmount) | [Amount](../data-types.md#Amount) | The amount of correction (plus or minus) for the Amount field of the transaction line. [Currency: TransactionLine.TransactionObj.DocumentCurrency] [Required] [Default(0)] 
+| [ProductCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#ProductCostAdjustment) | [Amount](../data-types.md#Amount) | The amount of correction (plus or minus) for the Product Cost field of the transaction line. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Default(0)] 
+| [StoreCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#StoreCostAdjustment) | [Amount](../data-types.md#Amount) | The amount of correction (plus or minus) for the Store Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.Store.Currency] [Required] [Default(0)] 
 
 ## References
 
@@ -33,7 +36,7 @@ _Default Value_: **NewGuid**
 
 > The amount of correction (plus or minus) for the Base Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -42,7 +45,7 @@ _Default Value_: **Constant**
 
 > The amount of correction (plus or minus) for the Amount field of the transaction line. [Currency: TransactionLine.TransactionObj.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -51,7 +54,7 @@ _Default Value_: **Constant**
 
 > The amount of correction (plus or minus) for the Product Cost field of the transaction line. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -60,7 +63,7 @@ _Default Value_: **Constant**
 
 > The amount of correction (plus or minus) for the Store Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.Store.Currency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -105,7 +108,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_CostCorrectionLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Cost_Correction_Lines?$top=10>
 

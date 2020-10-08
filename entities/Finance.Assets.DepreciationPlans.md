@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.DepreciationPlans
+---
 # Finance.Assets.DepreciationPlans
 
 Each depreciation plan document can create depreciation plans for numerous assets. Entity: Ast_Depreciation_Plans
@@ -442,7 +445,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_DepreciationPlans?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Depreciation_Plans?$top=10>
 

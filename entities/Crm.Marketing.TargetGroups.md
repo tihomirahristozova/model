@@ -1,3 +1,6 @@
+---
+uid: Crm.Marketing.TargetGroups
+---
 # Crm.Marketing.TargetGroups
 
 Marketing target group, containing a fixed list of parties. Entity: Crm_Target_Groups
@@ -72,7 +75,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Marketing_TargetGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Target_Groups?$top=10>
 

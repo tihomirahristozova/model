@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.ManagedAssetLocations
+---
 # Applications.AssetManagement.ManagedAssetLocations
 
 Contains the locations to which the assets are assigned at various moments in time. Entity: Eam_Managed_Asset_Locations (Introduced in version 19.1.100.0)
@@ -93,7 +96,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ManagedAssetLocations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Managed_Asset_Locations?$top=10>
 

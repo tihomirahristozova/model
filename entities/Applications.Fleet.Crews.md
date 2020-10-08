@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.Crews
+---
 # Applications.Fleet.Crews
 
 Represents the crews, which can operate vehicles. Entity: Fleet_Crews
@@ -8,7 +11,7 @@ Represents the crews, which can operate vehicles. Entity: Fleet_Crews
 | ---- | ---- | --- |
 | [Id](Applications.Fleet.Crews.md#Id) | guid |  
 | [Active](Applications.Fleet.Crews.md#Active) | boolean | Is the crew active? true-active for choosing; false-otherwise. [Required] [Default(true)] [Filter(eq)] 
-| [Name](Applications.Fleet.Crews.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the crew (multilanguage). [Required] [Filter(eq;like)] 
+| [Name](Applications.Fleet.Crews.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the crew (multilanguage). [Required] [Filter(eq;like)] 
 
 ## References
 
@@ -45,7 +48,7 @@ _Default Value_: **True**
 
 > The name of the crew (multilanguage). [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -81,7 +84,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_Crews?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Crews?$top=10>
 

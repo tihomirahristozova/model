@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.ActivityTemplates
+---
 # General.Contacts.ActivityTemplates
 
 Templates for automatical generation of activity from any document. Entity: Cm_Activity_Templates
@@ -111,7 +114,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_ActivityTemplates?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Activity_Templates?$top=10>
 

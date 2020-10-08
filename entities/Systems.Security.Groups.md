@@ -1,3 +1,6 @@
+---
+uid: Systems.Security.Groups
+---
 # Systems.Security.Groups
 
 Groups of users. Used for providing group access to secured data. Entity: Sec_Groups
@@ -8,7 +11,7 @@ Groups of users. Used for providing group access to secured data. Entity: Sec_Gr
 | ---- | ---- | --- |
 | [Id](Systems.Security.Groups.md#Id) | guid |  
 | [EditPeriodDays](Systems.Security.Groups.md#EditPeriodDays) | int32 (nullable) | The number of days before which the documents can not be corrected, released or voided. 
-| [Name](Systems.Security.Groups.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this Group. [Required] [Filter(like)] [ORD] 
+| [Name](Systems.Security.Groups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this Group. [Required] [Filter(like)] [ORD] 
 | [GroupType](Systems.Security.Groups.md#GroupType) | [Systems.Security.GroupsRepository.GroupType](Systems.Security.Groups.md#GroupType) | Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default("G")] [ReadOnly] 
 | [Notes](Systems.Security.Groups.md#Notes) | string (nullable) | Notes for this Group. 
 
@@ -46,7 +49,7 @@ _Supports Order By_: **False**
 
 > The name of this Group. [Required] [Filter(like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
@@ -109,7 +112,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_Groups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sec_Groups?$top=10>
 

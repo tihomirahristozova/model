@@ -1,3 +1,6 @@
+---
+uid: Crm.Marketing.Campaigns
+---
 # Crm.Marketing.Campaigns
 
 Marketing campaigns. Used to treat target groups with marketing messages, plan budgets and marketing activities. Entity: Crm_Campaigns
@@ -86,7 +89,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Marketing_Campaigns?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Campaigns?$top=10>
 

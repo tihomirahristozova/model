@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.Templates
+---
 # Finance.Cost.Templates
 
 Cost templates specify how to calculate and allocate costs. Entity: Cost_Templates
@@ -81,7 +84,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_Templates?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Templates?$top=10>
 

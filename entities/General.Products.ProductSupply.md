@@ -1,3 +1,6 @@
+---
+uid: General.Products.ProductSupply
+---
 # General.Products.ProductSupply
 
 Contains supply rules, which are used by the procurement planning system. Entity: Gen_Product_Supply
@@ -8,30 +11,30 @@ Contains supply rules, which are used by the procurement planning system. Entity
 | ---- | ---- | --- |
 | [Id](General.Products.ProductSupply.md#Id) | guid |  
 | [BuyerName](General.Products.ProductSupply.md#BuyerName) | string (nullable) | The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy. 
-| [FixedOrderQuantityBase](General.Products.ProductSupply.md#FixedOrderQuantityBase) | [Quantity](../data-types/Quantity.md) | Fixed order quantity under the FOQ & EOQ replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [FixedOrderQuantityBase](General.Products.ProductSupply.md#FixedOrderQuantityBase) | [Quantity](../data-types.md#Quantity) | Fixed order quantity under the FOQ & EOQ replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
 | [IsActive](General.Products.ProductSupply.md#IsActive) | boolean | True if this product supply is active. [Required] [Default(true)] [Filter(eq)] 
 | [IsDefault](General.Products.ProductSupply.md#IsDefault) | boolean | Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information. [Required] [Default(true)] [Filter(eq)] 
 | [ManufacturingPolicy](General.Products.ProductSupply.md#ManufacturingPolicy) | [General.Products.ProductSupplyRepository.ManufacturingPolicy](General.Products.ProductSupply.md#ManufacturingPolicy) | MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order. [Required] [Default("MTS")] 
-| [OrderLotSizeQuantityBase](General.Products.ProductSupply.md#OrderLotSizeQuantityBase) | [Quantity](../data-types/Quantity.md) | The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] 
+| [OrderLotSizeQuantityBase](General.Products.ProductSupply.md#OrderLotSizeQuantityBase) | [Quantity](../data-types.md#Quantity) | The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] 
 | [OrderLotSizingMethod](General.Products.ProductSupply.md#OrderLotSizingMethod) | [General.Products.ProductSupplyRepository.OrderLotSizingMethod](General.Products.ProductSupply.md#OrderLotSizingMethod) | LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;. [Required] [Default("ROP")] 
-| [OrderMaximum](General.Products.ProductSupply.md#OrderMaximum) | [Quantity](../data-types/Quantity.md) (nullable) | Order maximum when buying or making. null means no maximum. [Unit: Product.BaseMeasurementCategory.BaseUnit] 
-| [OrderMinimum](General.Products.ProductSupply.md#OrderMinimum) | [Quantity](../data-types/Quantity.md) | Minimum order quantity both for buying and making. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [OrderMaximum](General.Products.ProductSupply.md#OrderMaximum) | [Quantity](../data-types.md#Quantity) (nullable) | Order maximum when buying or making. null means no maximum. [Unit: Product.BaseMeasurementCategory.BaseUnit] 
+| [OrderMinimum](General.Products.ProductSupply.md#OrderMinimum) | [Quantity](../data-types.md#Quantity) | Minimum order quantity both for buying and making. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
 | [OrderMultiple](General.Products.ProductSupply.md#OrderMultiple) | boolean | True if the order qty should be multiple of lot size when buying or making. [Required] [Default(false)] 
 | [OrderPeriodPlanningDays](General.Products.ProductSupply.md#OrderPeriodPlanningDays) | int32 (nullable) | For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified. 
 | [OrderPeriodStartDate](General.Products.ProductSupply.md#OrderPeriodStartDate) | datetime (nullable) | Start date of the first period under fixed period replenishment system. null - not yet specified. 
-| [OrderPointQuantityBase](General.Products.ProductSupply.md#OrderPointQuantityBase) | [Quantity](../data-types/Quantity.md) | Order point quantity under the OP replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [OrderPointQuantityBase](General.Products.ProductSupply.md#OrderPointQuantityBase) | [Quantity](../data-types.md#Quantity) | Order point quantity under the OP replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
 | [OrderPolicy](General.Products.ProductSupply.md#OrderPolicy) | [General.Products.ProductSupplyRepository.OrderPolicy](General.Products.ProductSupply.md#OrderPolicy) | Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning. [Required] [Default("OPS")] 
 | [PlanningAnnualCarryingCostPercent](General.Products.ProductSupply.md#PlanningAnnualCarryingCostPercent) | decimal (nullable) | The expected carrying cost as percentage of inventory cost. null means unknown. 
-| [PlanningAnnualUsageQuantityBase](General.Products.ProductSupply.md#PlanningAnnualUsageQuantityBase) | [Quantity](../data-types/Quantity.md) (nullable) | Average usage of the product for 1 year. NUL means unknown. [Unit: Product.BaseMeasurementCategory.BaseUnit] 
+| [PlanningAnnualUsageQuantityBase](General.Products.ProductSupply.md#PlanningAnnualUsageQuantityBase) | [Quantity](../data-types.md#Quantity) (nullable) | Average usage of the product for 1 year. NUL means unknown. [Unit: Product.BaseMeasurementCategory.BaseUnit] 
 | [PlanningHorizonDays](General.Products.ProductSupply.md#PlanningHorizonDays) | int32 | Number of days in the future for which to plan the demand and supply. [Required] [Default(0)] 
 | [PlanningLeadTimeDays](General.Products.ProductSupply.md#PlanningLeadTimeDays) | int32 | The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components. [Required] [Default(0)] 
-| [PlanningMaximumInventoryQuantityBase](General.Products.ProductSupply.md#PlanningMaximumInventoryQuantityBase) | [Quantity](../data-types/Quantity.md) (nullable) | Maximum inventory. null if N/A. [Unit: Product.BaseMeasurementCategory.BaseUnit] 
-| [PlanningOrderCostBaseCurrency](General.Products.ProductSupply.md#PlanningOrderCostBaseCurrency) | [Amount](../data-types/Amount.md) (nullable) | Projected cost to place an order and set-up equipment. [Currency: EnterpriseCompany.BaseCurrency] 
+| [PlanningMaximumInventoryQuantityBase](General.Products.ProductSupply.md#PlanningMaximumInventoryQuantityBase) | [Quantity](../data-types.md#Quantity) (nullable) | Maximum inventory. null if N/A. [Unit: Product.BaseMeasurementCategory.BaseUnit] 
+| [PlanningOrderCostBaseCurrency](General.Products.ProductSupply.md#PlanningOrderCostBaseCurrency) | [Amount](../data-types.md#Amount) (nullable) | Projected cost to place an order and set-up equipment. [Currency: EnterpriseCompany.BaseCurrency] 
 | [PlanningOrderCycleDays](General.Products.ProductSupply.md#PlanningOrderCycleDays) | int32 (nullable) | Number of days in one period under fixed period replenishment system. null - not yet specified. 
-| [PlanningSafetyStockQuantityBase](General.Products.ProductSupply.md#PlanningSafetyStockQuantityBase) | [Quantity](../data-types/Quantity.md) | Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [PlanningSafetyStockQuantityBase](General.Products.ProductSupply.md#PlanningSafetyStockQuantityBase) | [Quantity](../data-types.md#Quantity) | Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
 | [PlanningTimeFenceDays](General.Products.ProductSupply.md#PlanningTimeFenceDays) | int32 | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. [Required] [Default(1)] 
 | [ProcurementType](General.Products.ProductSupply.md#ProcurementType) | [General.Products.ProductSupplyRepository.ProcurementType](General.Products.ProductSupply.md#ProcurementType) | M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought. [Required] [Default("B")] 
-| [StandardCostPerLot](General.Products.ProductSupply.md#StandardCostPerLot) | [Amount](../data-types/Amount.md) | Standard cost for one lot of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)] 
+| [StandardCostPerLot](General.Products.ProductSupply.md#StandardCostPerLot) | [Amount](../data-types.md#Amount) | Standard cost for one lot of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)] 
 | [SupplySchemaId](General.Products.ProductSupply.md#SupplySchemaId) | guid (nullable) | The supply schema to use for the distribution of the product among warehouses. [Filter(multi eq)] 
 
 ## References
@@ -69,7 +72,7 @@ _Supports Order By_: **False**
 
 > Fixed order quantity under the FOQ & EOQ replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -115,7 +118,7 @@ _Default Value_: **MakeToStock**
 
 > The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -145,7 +148,7 @@ _Default Value_: **ReorderPoint**
 
 > Order maximum when buying or making. null means no maximum. [Unit: Product.BaseMeasurementCategory.BaseUnit]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -153,7 +156,7 @@ _Supports Order By_: **False**
 
 > Minimum order quantity both for buying and making. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -187,7 +190,7 @@ _Supports Order By_: **False**
 
 > Order point quantity under the OP replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -223,7 +226,7 @@ _Supports Order By_: **False**
 
 > Average usage of the product for 1 year. NUL means unknown. [Unit: Product.BaseMeasurementCategory.BaseUnit]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -251,7 +254,7 @@ _Front-End Recalc Expressions:_
 
 > Maximum inventory. null if N/A. [Unit: Product.BaseMeasurementCategory.BaseUnit]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -259,7 +262,7 @@ _Supports Order By_: **False**
 
 > Projected cost to place an order and set-up equipment. [Currency: EnterpriseCompany.BaseCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -275,7 +278,7 @@ _Supports Order By_: **False**
 
 > Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -311,7 +314,7 @@ _Default Value_: **Buy**
 
 > Standard cost for one lot of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -412,7 +415,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_ProductSupply?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Product_Supply?$top=10>
 

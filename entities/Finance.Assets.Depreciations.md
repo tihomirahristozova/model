@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.Depreciations
+---
 # Finance.Assets.Depreciations
 
 Depreciation documents contain actual depreciation values for one or more assets for one period. Entity: Ast_Depreciations
@@ -478,7 +481,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_Depreciations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Depreciations?$top=10>
 

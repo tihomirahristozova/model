@@ -1,3 +1,6 @@
+---
+uid: General.PrintoutLayouts
+---
 # General.PrintoutLayouts
 
 Contains design layouts for document printouts. Entity: Gen_Printout_Layouts
@@ -116,7 +119,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_PrintoutLayouts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Printout_Layouts?$top=10>
 

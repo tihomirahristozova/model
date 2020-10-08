@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.Services
+---
 # Applications.Service.Services
 
 Contains the services, which can be performed. Entity: Srv_Services
@@ -90,7 +93,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_Services?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Services?$top=10>
 

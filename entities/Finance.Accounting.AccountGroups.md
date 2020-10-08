@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.AccountGroups
+---
 # Finance.Accounting.AccountGroups
 
 Hierarchical chart of account groups. Entity: Acc_Account_Groups
@@ -7,9 +10,9 @@ Hierarchical chart of account groups. Entity: Acc_Account_Groups
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Accounting.AccountGroups.md#Id) | guid |  
-| [Name](Finance.Accounting.AccountGroups.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Account group name, required. Must be unique within the parent group. [Required] [Filter(like)] 
+| [Name](Finance.Accounting.AccountGroups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Account group name, required. Must be unique within the parent group. [Required] [Filter(like)] 
 | [Number](Finance.Accounting.AccountGroups.md#Number) | string | Unique account group number. May contain characters, if required. [Required] [Filter(like)] [ORD] 
-| [Description](Finance.Accounting.AccountGroups.md#Description) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The description of this AccountGroup. 
+| [Description](Finance.Accounting.AccountGroups.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The description of this AccountGroup. 
 | [Discontinued](Finance.Accounting.AccountGroups.md#Discontinued) | boolean | True means that the account group won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)] 
 | [FullPath](Finance.Accounting.AccountGroups.md#FullPath) | string (nullable) | Full path to the group. Contains delimited list of group numbers of parent groups. [Filter(like)] 
 
@@ -33,7 +36,7 @@ _Default Value_: **NewGuid**
 
 > Account group name, required. Must be unique within the parent group. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -49,7 +52,7 @@ _Supports Order By_: **True**
 
 > The description of this AccountGroup.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -102,7 +105,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_AccountGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Account_Groups?$top=10>
 

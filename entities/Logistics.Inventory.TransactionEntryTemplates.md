@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.TransactionEntryTemplates
+---
 # Logistics.Inventory.TransactionEntryTemplates
 
 Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_TransactionEntryTemplates?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Transaction_Entry_Templates?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.VehicleObdTroubles
+---
 # Applications.Fleet.VehicleObdTroubles
 
 Contains troubles, reported by the on-board diagnostics (OBD) of the vehicle. Entity: Fleet_Vehicle_Obd_Troubles
@@ -92,7 +95,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_VehicleObdTroubles?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Vehicle_Obd_Troubles?$top=10>
 

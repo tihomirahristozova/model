@@ -1,3 +1,6 @@
+---
+uid: General.Products.ProductGroupRangeProperties
+---
 # General.Products.ProductGroupRangeProperties
 
 When specified for a product group, provides a way for automatical creation of new products, based on altering a set of values of some user-defined properties. Each value combination is used to create a new, unique product within the group. Entity: Gen_Product_Group_Range_Properties
@@ -110,7 +113,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_ProductGroupRangeProperties?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Product_Group_Range_Properties?$top=10>
 

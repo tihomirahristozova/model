@@ -1,3 +1,6 @@
+---
+uid: Crm.CustomerTypes
+---
 # Crm.CustomerTypes
 
 User defined customer type. Primarily used for customer definition security, because it has record level security, which is also applied to the individual customer definitions. Entity: Crm_Customer_Types
@@ -7,7 +10,7 @@ User defined customer type. Primarily used for customer definition security, bec
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Crm.CustomerTypes.md#Id) | guid |  
-| [Name](Crm.CustomerTypes.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this CustomerType. [Required] [Filter(eq;like)] 
+| [Name](Crm.CustomerTypes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this CustomerType. [Required] [Filter(eq;like)] 
 
 ## References
 
@@ -29,7 +32,7 @@ _Default Value_: **NewGuid**
 
 > The name of this CustomerType. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_CustomerTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Customer_Types?$top=10>
 

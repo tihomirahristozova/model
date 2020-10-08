@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.AssetCategories
+---
 # Finance.Assets.AssetCategories
 
 Categorization of the assets, which specifies their depreciation plans. Entity: Ast_Asset_Categories
@@ -80,7 +83,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_AssetCategories?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Asset_Categories?$top=10>
 

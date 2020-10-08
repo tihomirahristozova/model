@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceActivities
+---
 # Applications.Service.ServiceActivities
 
 Contains service activity headers. The service activities are the actual actions performed to service (repair) an object. Entity: Srv_Service_Activities
@@ -701,7 +704,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceActivities?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Activities?$top=10>
 

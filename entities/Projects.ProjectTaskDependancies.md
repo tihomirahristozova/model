@@ -1,3 +1,6 @@
+---
+uid: Projects.ProjectTaskDependancies
+---
 # Projects.ProjectTaskDependancies
 
 Represents dependancy between project tasks. Entity: Prj_Project_Task_Dependancies
@@ -86,7 +89,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_ProjectTaskDependancies?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Project_Task_Dependancies?$top=10>
 

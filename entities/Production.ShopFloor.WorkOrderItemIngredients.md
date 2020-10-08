@@ -1,3 +1,6 @@
+---
+uid: Production.ShopFloor.WorkOrderItemIngredients
+---
 # Production.ShopFloor.WorkOrderItemIngredients
 
 The materials consumed in the production order operations. Entity: Prd_Work_Order_Item_Ingredients
@@ -8,12 +11,12 @@ The materials consumed in the production order operations. Entity: Prd_Work_Orde
 | ---- | ---- | --- |
 | [Id](Production.ShopFloor.WorkOrderItemIngredients.md#Id) | guid |  
 | [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#DistributeBy) | [Production.ShopFloor.WorkOrderItemIngredientsRepository.DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#DistributeBy) (nullable) | Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT null iif Work_Order_Item_Id is null. MC=Measurement, SP=Standard_Price. 
-| [FixedScrapQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#FixedScrapQuantity) | [Quantity](../data-types/Quantity.md) | The quantity of the material, which will be used for setup. [Unit: UsedQuantityUnit] [Required] [Default(0)] 
+| [FixedScrapQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#FixedScrapQuantity) | [Quantity](../data-types.md#Quantity) | The quantity of the material, which will be used for setup. [Unit: UsedQuantityUnit] [Required] [Default(0)] 
 | [LineOrd](Production.ShopFloor.WorkOrderItemIngredients.md#LineOrd) | int32 | The order of the line within the item. [Required] [Filter(eq;like)] 
 | [Notes](Production.ShopFloor.WorkOrderItemIngredients.md#Notes) | string (nullable) | Notes for this WorkOrderItemIngredient. 
-| [UsedQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#UsedQuantity) | [Quantity](../data-types/Quantity.md) | The quantity of the material consumed in the operation. [Unit: UsedQuantityUnit] [Required] [Default(1)] 
-| [UsedQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#UsedQuantityBase) | [Quantity](../data-types/Quantity.md) | The equivalence of Used Quantity in the base measurement category of the material. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
-| [UsedStandardQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#UsedStandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [UsedQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#UsedQuantity) | [Quantity](../data-types.md#Quantity) | The quantity of the material consumed in the operation. [Unit: UsedQuantityUnit] [Required] [Default(1)] 
+| [UsedQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#UsedQuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalence of Used Quantity in the base measurement category of the material. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
+| [UsedStandardQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#UsedStandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
 
 ## References
 
@@ -65,7 +68,7 @@ _Front-End Recalc Expressions:_
 
 > The quantity of the material, which will be used for setup. [Unit: UsedQuantityUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -95,7 +98,7 @@ _Supports Order By_: **False**
 
 > The quantity of the material consumed in the operation. [Unit: UsedQuantityUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -104,7 +107,7 @@ _Default Value_: **Constant**
 
 > The equivalence of Used Quantity in the base measurement category of the material. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -117,7 +120,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -267,7 +270,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_ShopFloor_WorkOrderItemIngredients?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Work_Order_Item_Ingredients?$top=10>
 

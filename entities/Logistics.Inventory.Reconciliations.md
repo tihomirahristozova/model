@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.Reconciliations
+---
 # Logistics.Inventory.Reconciliations
 
 Store reconciliations (physical counting). Usefull for real-world reconciliations and for opening balance. Entity: Inv_Reconciliations
@@ -478,7 +481,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_Reconciliations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Reconciliations?$top=10>
 

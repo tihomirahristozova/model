@@ -1,3 +1,6 @@
+---
+uid: Crm.Sales.DefaultSalesOrderDocumentProperties
+---
 # Crm.Sales.DefaultSalesOrderDocumentProperties
 
 User-defined properties which shall be copied from the customer to the document for new documents of the specified document type. Entity: Crm_Default_Sales_Order_Document_Properties
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_DefaultSalesOrderDocumentProperties?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Default_Sales_Order_Document_Properties?$top=10>
 

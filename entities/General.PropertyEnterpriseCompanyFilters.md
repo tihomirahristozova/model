@@ -1,3 +1,6 @@
+---
+uid: General.PropertyEnterpriseCompanyFilters
+---
 # General.PropertyEnterpriseCompanyFilters
 
 Provides a way to apply different filtering of the property allowed values for the different enterprise companies. Entity: Gen_Property_Enterprise_Company_Filters
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_PropertyEnterpriseCompanyFilters?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Property_Enterprise_Company_Filters?$top=10>
 

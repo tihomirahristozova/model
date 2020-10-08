@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.PaymentSlipPaymentTransactionsTemplates
+---
 # Finance.Payments.PaymentSlipPaymentTransactionsTemplates
 
 Contains options for generation of payment transactions. Each option set is assigned to specific generation route. Entity: Cash_Payment_Slip_Payment_Transactions_Templates (Introduced in version 19.1.100.0)
@@ -73,7 +76,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentSlipPaymentTransactionsTemplates?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Slip_Payment_Transactions_Templates?$top=10>
 

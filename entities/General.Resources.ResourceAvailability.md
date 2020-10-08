@@ -1,3 +1,6 @@
+---
+uid: General.Resources.ResourceAvailability
+---
 # General.Resources.ResourceAvailability
 
 Contains the resources availability for the different periods. Each period is a separate record. The availability of a resource for any given date is determined by the sum of all availability periods that include it. Entity: Gen_Resource_Availability
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Resources_ResourceAvailability?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Resource_Availability?$top=10>
 

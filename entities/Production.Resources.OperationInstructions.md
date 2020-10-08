@@ -1,3 +1,6 @@
+---
+uid: Production.Resources.OperationInstructions
+---
 # Production.Resources.OperationInstructions
 
 Long (full) instructions for performing an operation. The operations point to the instructions and one instruction can be used for different operations. Entity: Prd_Operation_Instructions
@@ -56,7 +59,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_OperationInstructions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Operation_Instructions?$top=10>
 

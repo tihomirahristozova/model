@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.BulkPaymentOrderLines
+---
 # Finance.Payments.BulkPaymentOrderLines
 
 Bulk payment order document line. Each line usually creates one payment order. Entity: Cash_Bulk_Payment_Order_Lines
@@ -11,7 +14,7 @@ Bulk payment order document line. Each line usually creates one payment order. E
 | [Direction](Finance.Payments.BulkPaymentOrderLines.md#Direction) | [Finance.Payments.BulkPaymentOrderLinesRepository.Direction](Finance.Payments.BulkPaymentOrderLines.md#Direction) | I for Payment issue, R for payment receipt. [Required] [Default("I")] [Filter(eq)] 
 | [DueDate](Finance.Payments.BulkPaymentOrderLines.md#DueDate) | datetime (nullable) | The due date of the payment. null means there is no due date. [Filter(ge;le)] 
 | [InstallmentNumber](Finance.Payments.BulkPaymentOrderLines.md#InstallmentNumber) | int32 (nullable) | Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. 
-| [InvoiceAmount](Finance.Payments.BulkPaymentOrderLines.md#InvoiceAmount) | [Amount](../data-types/Amount.md) (nullable) | The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). [Currency: InvoiceAmountCurrency] 
+| [InvoiceAmount](Finance.Payments.BulkPaymentOrderLines.md#InvoiceAmount) | [Amount](../data-types.md#Amount) (nullable) | The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). [Currency: InvoiceAmountCurrency] 
 | [IsAmountWithVAT](Finance.Payments.BulkPaymentOrderLines.md#IsAmountWithVAT) | boolean | Is_Amount_With_VAT=true if the requested amount includes VAT. [Required] [Default(true)] [Filter(eq)] 
 | [Notes](Finance.Payments.BulkPaymentOrderLines.md#Notes) | string (nullable) | Notes for this BulkPaymentOrderLine. 
 | [RefDocumentDate](Finance.Payments.BulkPaymentOrderLines.md#RefDocumentDate) | datetime (nullable) | The date of the base document. null means that it is unknown. 
@@ -19,7 +22,7 @@ Bulk payment order document line. Each line usually creates one payment order. E
 | [RefInvoiceApplyDate](Finance.Payments.BulkPaymentOrderLines.md#RefInvoiceApplyDate) | datetime (nullable) | The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. 
 | [RefInvoiceDocumentDate](Finance.Payments.BulkPaymentOrderLines.md#RefInvoiceDocumentDate) | datetime (nullable) | The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. 
 | [RefInvoiceDocumentNo](Finance.Payments.BulkPaymentOrderLines.md#RefInvoiceDocumentNo) | string (nullable) | The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. 
-| [TotalAmount](Finance.Payments.BulkPaymentOrderLines.md#TotalAmount) | [Amount](../data-types/Amount.md) | Total amount that should be payed. [Currency: TotalAmountCurrency] [Required] [Default(0)] 
+| [TotalAmount](Finance.Payments.BulkPaymentOrderLines.md#TotalAmount) | [Amount](../data-types.md#Amount) | Total amount that should be payed. [Currency: TotalAmountCurrency] [Required] [Default(0)] 
 
 ## References
 
@@ -98,7 +101,7 @@ _Supports Order By_: **False**
 
 > The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). [Currency: InvoiceAmountCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -163,7 +166,7 @@ _Supports Order By_: **False**
 
 > Total amount that should be payed. [Currency: TotalAmountCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -270,7 +273,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_BulkPaymentOrderLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Bulk_Payment_Order_Lines?$top=10>
 

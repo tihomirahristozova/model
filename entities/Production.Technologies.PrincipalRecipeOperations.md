@@ -1,3 +1,6 @@
+---
+uid: Production.Technologies.PrincipalRecipeOperations
+---
 # Production.Technologies.PrincipalRecipeOperations
 
 Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_Operations
@@ -7,7 +10,7 @@ Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Production.Technologies.PrincipalRecipeOperations.md#Id) | guid |  
-| [ConditionalPropertyDescription](Production.Technologies.PrincipalRecipeOperations.md#ConditionalPropertyDescription) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The desired description of the Conditional Property. . 
+| [ConditionalPropertyDescription](Production.Technologies.PrincipalRecipeOperations.md#ConditionalPropertyDescription) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The desired description of the Conditional Property. . 
 | [ConditionalPropertyValue](Production.Technologies.PrincipalRecipeOperations.md#ConditionalPropertyValue) | string (nullable) | The desired value of the Conditional Property. . 
 | [LineOrd](Production.Technologies.PrincipalRecipeOperations.md#LineOrd) | int32 | Consecutive line number within the principal recipe. [Required] 
 | [MinimumConcurrentStartTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#MinimumConcurrentStartTimeMinutes) | int32 (nullable) | How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting. 
@@ -18,7 +21,7 @@ Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_
 | [ScrapRate](Production.Technologies.PrincipalRecipeOperations.md#ScrapRate) | decimal | Standard rate of scrap during the operation. [Required] [Default(0)] 
 | [SetupTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#SetupTimeMinutes) | int32 | Time needed to setup the equipment. [Required] [Default(0)] [Filter(ge;le)] 
 | [Tooling](Production.Technologies.PrincipalRecipeOperations.md#Tooling) | string (nullable) | The tools needed for the routing step. 
-| [UseQuantity](Production.Technologies.PrincipalRecipeOperations.md#UseQuantity) | [Quantity](../data-types/Quantity.md) | Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [UseQuantity](Production.Technologies.PrincipalRecipeOperations.md#UseQuantity) | [Quantity](../data-types.md#Quantity) | Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
 | [WaitTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#WaitTimeMinutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)] [Filter(ge;le)] 
 
 ## References
@@ -46,7 +49,7 @@ _Default Value_: **NewGuid**
 
 > The desired description of the Conditional Property. .
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -151,7 +154,7 @@ _Supports Order By_: **False**
 
 > Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -245,7 +248,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Technologies_PrincipalRecipeOperations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Principal_Recipe_Operations?$top=10>
 

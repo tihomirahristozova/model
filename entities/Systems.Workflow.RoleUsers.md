@@ -1,3 +1,6 @@
+---
+uid: Systems.Workflow.RoleUsers
+---
 # Systems.Workflow.RoleUsers
 
 The roles "played" by the security users. Entity: Wf_Role_Users
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Workflow_RoleUsers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wf_Role_Users?$top=10>
 

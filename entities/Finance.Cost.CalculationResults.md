@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.CalculationResults
+---
 # Finance.Cost.CalculationResults
 
 Contains the results of cost calculations. Entity: Cost_Calculation_Results
@@ -144,7 +147,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_CalculationResults?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Calculation_Results?$top=10>
 

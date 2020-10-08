@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.DistributionCosts
+---
 # Finance.Cost.DistributionCosts
 
 The cost types and their amounts which are distributed by a Cost Distribution document. Entity: Cost_Distribution_Costs
@@ -7,7 +10,7 @@ The cost types and their amounts which are distributed by a Cost Distribution do
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Cost.DistributionCosts.md#Id) | guid |  
-| [AmountBase](Finance.Cost.DistributionCosts.md#AmountBase) | [Amount](../data-types/Amount.md) | The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)] 
+| [AmountBase](Finance.Cost.DistributionCosts.md#AmountBase) | [Amount](../data-types.md#Amount) | The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)] 
 | [Notes](Finance.Cost.DistributionCosts.md#Notes) | string (nullable) | Notes for this DistributionCost. 
 
 ## References
@@ -31,7 +34,7 @@ _Default Value_: **NewGuid**
 
 > The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_DistributionCosts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Distribution_Costs?$top=10>
 

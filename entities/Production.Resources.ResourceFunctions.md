@@ -1,3 +1,6 @@
+---
+uid: Production.Resources.ResourceFunctions
+---
 # Production.Resources.ResourceFunctions
 
 List of functions that a specific resource is able to perform. Entity: Prd_Resource_Functions
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_ResourceFunctions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Resource_Functions?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Systems.Reporting.DataSources
+---
 # Systems.Reporting.DataSources
 
 Contains user-defined data sources, which retrieve rows from multiple queries. Entity: Sys_Data_Sources
@@ -92,7 +95,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Reporting_DataSources?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Data_Sources?$top=10>
 

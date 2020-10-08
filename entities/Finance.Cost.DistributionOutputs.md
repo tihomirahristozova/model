@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.DistributionOutputs
+---
 # Finance.Cost.DistributionOutputs
 
 Contains the output data for the specified period. This is the output on which cost is distributed. Entity: Cost_Distribution_Outputs
@@ -89,7 +92,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_DistributionOutputs?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Distribution_Outputs?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Applications.DataWarehouse.DataMeasureGroups
+---
 # Applications.DataWarehouse.DataMeasureGroups
 
 Contains the groups of measures in the general data warehouse. Entity: Dw_Data_Measure_Groups (Introduced in version 18.2.100.0)
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_DataWarehouse_DataMeasureGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Dw_Data_Measure_Groups?$top=10>
 

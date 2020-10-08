@@ -1,3 +1,6 @@
+---
+uid: Crm.Dealers
+---
 # Crm.Dealers
 
 External dealers. Entity: Crm_Dealers
@@ -93,7 +96,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Dealers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Dealers?$top=10>
 

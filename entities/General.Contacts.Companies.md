@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.Companies
+---
 # General.Contacts.Companies
 
 Contains company definitions. Entity: Cm_Companies
@@ -15,23 +18,23 @@ Contains company definitions. Entity: Cm_Companies
 | [PartyNotes](General.Contacts.Companies.md#PartyNotes) | string (nullable) | Notes for this Party 
 | [ParentPartyId](General.Contacts.Companies.md#ParentPartyId) | guid (nullable) |  
 | [PartyCode](General.Contacts.Companies.md#PartyCode) | string | The unique code of the Party [Required] 
-| [PartyName](General.Contacts.Companies.md#PartyName) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the party [Required] 
+| [PartyName](General.Contacts.Companies.md#PartyName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the party [Required] 
 | [PartyType](General.Contacts.Companies.md#PartyType) | [General.Contacts.PartiesRepository.PartyType](General.Contacts.Companies.md#PartyType) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required] 
 | [PartyUniqueNumber](General.Contacts.Companies.md#PartyUniqueNumber) | string (nullable) | Unique number of the party (National number for persons, Registration number for companies) 
 | [PartyUpdateTime](General.Contacts.Companies.md#PartyUpdateTime) | datetime (nullable) | Date and time when the Party was last updated. 
 | [PartyUpdateUser](General.Contacts.Companies.md#PartyUpdateUser) | string (nullable) | Login name of the user, who last updated the Party. 
 | [BranchNumber](General.Contacts.Companies.md#BranchNumber) | int32 | Branch number of the company. Companies with equal names and/or registration numbers can be inserted only if their branch numbers are different. [Required] [Default(0)] [Filter(eq)] 
-| [City](General.Contacts.Companies.md#City) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The city in which the company is registered. [Filter(like)] 
-| [Name](General.Contacts.Companies.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The name of this Company. [Filter(eq;like)] [ORD] 
+| [City](General.Contacts.Companies.md#City) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The city in which the company is registered. [Filter(like)] 
+| [Name](General.Contacts.Companies.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The name of this Company. [Filter(eq;like)] [ORD] 
 | [CreationTime](General.Contacts.Companies.md#CreationTime) | datetime (nullable) | Date and time when the Company was created. [Filter(ge;le)] [ReadOnly] 
 | [CreationUser](General.Contacts.Companies.md#CreationUser) | string (nullable) | Login name of the user, who created the Company. [Filter(like)] [ReadOnly] 
 | [IsVATCashReportingRegistered](General.Contacts.Companies.md#IsVATCashReportingRegistered) | boolean | When true, specifies that the company uses the special VAT Cash Reporting Mode. [Required] [Default(false)] 
 | [IsVATRegistered](General.Contacts.Companies.md#IsVATRegistered) | boolean | Determines wheather the company is included in VAT registers. [Required] [Default(false)] 
 | [RegistrationNumber](General.Contacts.Companies.md#RegistrationNumber) | string (nullable) | Unique, government-assigned registration number. null means unknown. [Filter(eq;like)] [ORD] 
-| [RegistrationPrimaryAddress](General.Contacts.Companies.md#RegistrationPrimaryAddress) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The primary registration address of the company. [Filter(like)] 
-| [RegistrationType](General.Contacts.Companies.md#RegistrationType) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Legal registration type - like LTD., PLC, etc. null means unknown. [Filter(eq)] 
+| [RegistrationPrimaryAddress](General.Contacts.Companies.md#RegistrationPrimaryAddress) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The primary registration address of the company. [Filter(like)] 
+| [RegistrationType](General.Contacts.Companies.md#RegistrationType) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Legal registration type - like LTD., PLC, etc. null means unknown. [Filter(eq)] 
 | [RegistrationVATNumber](General.Contacts.Companies.md#RegistrationVATNumber) | string (nullable) | VAT registration number where applicable. null means that VAT number is not applicable or unknown. [Filter(eq)] [ORD] 
-| [ResponsiblePersonName](General.Contacts.Companies.md#ResponsiblePersonName) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Primary responsible person of the company. null means unknown. [Filter(like)] 
+| [ResponsiblePersonName](General.Contacts.Companies.md#ResponsiblePersonName) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Primary responsible person of the company. null means unknown. [Filter(like)] 
 | [UpdateTime](General.Contacts.Companies.md#UpdateTime) | datetime (nullable) | Date and time when the Company was last updated. [Filter(ge;le)] [ReadOnly] 
 | [UpdateUser](General.Contacts.Companies.md#UpdateUser) | string (nullable) | Login name of the user, who last updated the Company. [Filter(like)] [ReadOnly] 
 
@@ -135,7 +138,7 @@ _Supports Order By_: **True**
 
 > The name of the party [Required]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -196,7 +199,7 @@ _Default Value_: **0**
 
 > The city in which the company is registered. [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -204,7 +207,7 @@ _Supports Order By_: **False**
 
 > The name of this Company. [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -254,7 +257,7 @@ _Supports Order By_: **True**
 
 > The primary registration address of the company. [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -262,7 +265,7 @@ _Supports Order By_: **False**
 
 > Legal registration type - like LTD., PLC, etc. null means unknown. [Filter(eq)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -278,7 +281,7 @@ _Supports Order By_: **True**
 
 > Primary responsible person of the company. null means unknown. [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -375,7 +378,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_Companies?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Companies?$top=10>
 

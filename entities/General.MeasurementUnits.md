@@ -1,3 +1,6 @@
+---
+uid: General.MeasurementUnits
+---
 # General.MeasurementUnits
 
 Contains all measurement units, grouped in categories. Each category has one base unit (with ratio 1/1) and unlimited number of derived units with fixed ratio to the base unit. Entity: Gen_Measurement_Units
@@ -7,11 +10,11 @@ Contains all measurement units, grouped in categories. Each category has one bas
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.MeasurementUnits.md#Id) | guid |  
-| [Description](General.MeasurementUnits.md#Description) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Full multi-language description of the measurement unit. 
+| [Description](General.MeasurementUnits.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Full multi-language description of the measurement unit. 
 | [Divisor](General.MeasurementUnits.md#Divisor) | decimal | Divisor of the relative value of the measurement unit against other units (divisor when converting to base). [Required] [Default(1)] 
 | [IsDefaultUnit](General.MeasurementUnits.md#IsDefaultUnit) | boolean | True if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category. [Required] [Default(false)] [Filter(eq)] 
 | [Code](General.MeasurementUnits.md#Code) | string (nullable) | When not null, contains unique measurement unit code. [Filter(eq;like)] [ORD] 
-| [Name](General.MeasurementUnits.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the measurement unit. [Required] [Filter(eq;like)] [ORD] 
+| [Name](General.MeasurementUnits.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the measurement unit. [Required] [Filter(eq;like)] [ORD] 
 | [Multiplier](General.MeasurementUnits.md#Multiplier) | decimal | Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base). [Required] [Default(1)] 
 | [SystemUnit](General.MeasurementUnits.md#SystemUnit) | [General.MeasurementUnitsRepository.SystemUnit](General.MeasurementUnits.md#SystemUnit) (nullable) | Not null only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH. [Filter(eq;like)] 
 
@@ -35,7 +38,7 @@ _Default Value_: **NewGuid**
 
 > Full multi-language description of the measurement unit.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -69,7 +72,7 @@ _Supports Order By_: **True**
 
 > Name of the measurement unit. [Required] [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -136,7 +139,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_MeasurementUnits?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Measurement_Units?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: General.PartyApplicableLegislations
+---
 # General.PartyApplicableLegislations
 
 Specifies a legislation, which is applicable for a party. A single party can have more than one applicable legislations. Entity: Gen_Party_Applicable_Legislations (Introduced in version 19.1.100.0)
@@ -105,7 +108,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_PartyApplicableLegislations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Party_Applicable_Legislations?$top=10>
 

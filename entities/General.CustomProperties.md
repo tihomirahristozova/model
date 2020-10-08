@@ -1,3 +1,6 @@
+---
+uid: General.CustomProperties
+---
 # General.CustomProperties
 
 User-defined properties, which can supplement the system properties of almost all entities in the system. Entity: Gen_Properties
@@ -10,13 +13,13 @@ User-defined properties, which can supplement the system properties of almost al
 | [AllowedValuesEntityName](General.CustomProperties.md#AllowedValuesEntityName) | string (nullable) | When not null, specifies that the allowed values are retrieved from the specified entity. [Filter(eq)] 
 | [AllowedValuesFilterXML](General.CustomProperties.md#AllowedValuesFilterXML) | string (nullable) | When not null specifies the filter to apply when extracting allowed values from entity. 
 | [EntityName](General.CustomProperties.md#EntityName) | string | The entity for which the property is applicable. [Required] [Filter(eq)] [ORD] 
-| [Hint](General.CustomProperties.md#Hint) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The hint, which is displayed alongside the property. [Filter(multi eq;like)] (Introduced in version 20.1.100.0) 
+| [Hint](General.CustomProperties.md#Hint) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The hint, which is displayed alongside the property. [Filter(multi eq;like)] (Introduced in version 20.1.100.0) 
 | [KeyOrder](General.CustomProperties.md#KeyOrder) | byte (nullable) | When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis. 
 | [LimitToAllowedValues](General.CustomProperties.md#LimitToAllowedValues) | boolean | When true, allows the property to be set only to allowed value. When false, the property can have any value. [Required] [Default(false)] [Filter(eq)] 
 | [MaskLength](General.CustomProperties.md#MaskLength) | int16 (nullable) | Limits te length of the property value to the specified number of characters. Null means no limitation. 
 | [Notes](General.CustomProperties.md#Notes) | string (nullable) | Notes for this CustomProperty. (Introduced in version 20.1.100.0) 
 | [Code](General.CustomProperties.md#Code) | string | Unique property code. [Required] [Filter(multi eq;like)] [ORD] 
-| [Name](General.CustomProperties.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this CustomProperty. [Required] [Filter(like)] [ORD] 
+| [Name](General.CustomProperties.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this CustomProperty. [Required] [Filter(like)] [ORD] 
 | [PropertyType](General.CustomProperties.md#PropertyType) | [General.CustomPropertiesRepository.PropertyType](General.CustomProperties.md#PropertyType) | Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date. [Required] [Default("T")] 
 
 ## References
@@ -72,7 +75,7 @@ _Supports Order By_: **True**
 
 > The hint, which is displayed alongside the property. [Filter(multi eq;like)] (Introduced in version 20.1.100.0)
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -121,7 +124,7 @@ _Supports Order By_: **True**
 
 > The name of this CustomProperty. [Required] [Filter(like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
@@ -192,7 +195,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_CustomProperties?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Properties?$top=10>
 

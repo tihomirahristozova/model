@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.CrewMembers
+---
 # Applications.Fleet.CrewMembers
 
 Contains the memnbers of vehicle crews. Entity: Fleet_Crew_Members
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_CrewMembers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Crew_Members?$top=10>
 

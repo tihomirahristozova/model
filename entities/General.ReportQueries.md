@@ -1,3 +1,6 @@
+---
+uid: General.ReportQueries
+---
 # General.ReportQueries
 
 Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries
@@ -131,7 +134,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_ReportQueries?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Report_Queries?$top=10>
 

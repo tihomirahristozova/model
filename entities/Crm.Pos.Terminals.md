@@ -1,3 +1,6 @@
+---
+uid: Crm.Pos.Terminals
+---
 # Crm.Pos.Terminals
 
 Represents a POS workplace for 1 person, with all the attached devices. (Not to be confused with Payment Terminal, which is specific POS device). Entity: Pos_Terminals (Introduced in version 19.1.100.0)
@@ -9,7 +12,7 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 | [Id](Crm.Pos.Terminals.md#Id) | guid |  
 | [IsActive](Crm.Pos.Terminals.md#IsActive) | boolean | Represents whether the POS terminal is active and can be chosen from drop-downs for new records. [Required] [Default(true)] [Filter(multi eq)] 
 | [PosTerminalCode](Crm.Pos.Terminals.md#PosTerminalCode) | string | Unique (within the location) code of the POS terminal. [Required] [Filter(eq;like)] 
-| [PosTerminalName](Crm.Pos.Terminals.md#PosTerminalName) | [MultilanguageString](../data-types/MultilanguageString.md) | The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc. [Required] [Filter(multi eq;like)] 
+| [PosTerminalName](Crm.Pos.Terminals.md#PosTerminalName) | [MultilanguageString](../data-types.md#MultilanguageString) | The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc. [Required] [Filter(multi eq;like)] 
 
 ## References
 
@@ -55,7 +58,7 @@ _Supports Order By_: **False**
 
 > The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc. [Required] [Filter(multi eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -99,7 +102,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_Terminals?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Pos_Terminals?$top=10>
 

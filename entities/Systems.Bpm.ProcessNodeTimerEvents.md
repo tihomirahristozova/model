@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.ProcessNodeTimerEvents
+---
 # Systems.Bpm.ProcessNodeTimerEvents
 
 Timer event definition. Currently - not used. Entity: Bpm_Process_Node_Timer_Events
@@ -75,7 +78,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_ProcessNodeTimerEvents?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Bpm_Process_Node_Timer_Events?$top=10>
 

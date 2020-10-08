@@ -1,3 +1,6 @@
+---
+uid: General.Sequences
+---
 # General.Sequences
 
 Provides numbering sequences, applicable for use in a multi-threaded environment. Entity: Gen_Sequences
@@ -64,7 +67,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Sequences?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Sequences?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: General.DocumentAmounts
+---
 # General.DocumentAmounts
 
 Contains a specific instance of an additional amount for a specific document. Entity: Gen_Document_Amounts
@@ -7,11 +10,11 @@ Contains a specific instance of an additional amount for a specific document. En
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.DocumentAmounts.md#Id) | guid |  
-| [BaseAmount](General.DocumentAmounts.md#BaseAmount) | [Amount](../data-types/Amount.md) (nullable) | The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly] 
-| [InputAmount](General.DocumentAmounts.md#InputAmount) | [Amount](../data-types/Amount.md) (nullable) | When not null, specifies directly the amount of the additional amount. [Currency: GetInputAmountCurrency()] [Filter(ge;le)] 
+| [BaseAmount](General.DocumentAmounts.md#BaseAmount) | [Amount](../data-types.md#Amount) (nullable) | The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly] 
+| [InputAmount](General.DocumentAmounts.md#InputAmount) | [Amount](../data-types.md#Amount) (nullable) | When not null, specifies directly the amount of the additional amount. [Currency: GetInputAmountCurrency()] [Filter(ge;le)] 
 | [InputPercent](General.DocumentAmounts.md#InputPercent) | decimal (nullable) | When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). [Filter(ge;le)] 
-| [InputUnitAmount](General.DocumentAmounts.md#InputUnitAmount) | [Amount](../data-types/Amount.md) (nullable) | Input unit amount for the calculation of the current amount. [Currency: GetInputAmountCurrency()] [Filter(eq;ge;le)] 
-| [TotalDistributedAmount](General.DocumentAmounts.md#TotalDistributedAmount) | [Amount](../data-types/Amount.md) (nullable) | The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly] 
+| [InputUnitAmount](General.DocumentAmounts.md#InputUnitAmount) | [Amount](../data-types.md#Amount) (nullable) | Input unit amount for the calculation of the current amount. [Currency: GetInputAmountCurrency()] [Filter(eq;ge;le)] 
+| [TotalDistributedAmount](General.DocumentAmounts.md#TotalDistributedAmount) | [Amount](../data-types.md#Amount) (nullable) | The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly] 
 | [UserCanChangeInput](General.DocumentAmounts.md#UserCanChangeInput) | boolean | True if the user, entering the document is allowed to change the default input percent. [Required] [Default(true)] 
 
 ## References
@@ -43,7 +46,7 @@ _Default Value_: **NewGuid**
 
 > The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -51,7 +54,7 @@ _Supports Order By_: **False**
 
 > When not null, specifies directly the amount of the additional amount. [Currency: GetInputAmountCurrency()] [Filter(ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -74,7 +77,7 @@ _Front-End Recalc Expressions:_
 
 > Input unit amount for the calculation of the current amount. [Currency: GetInputAmountCurrency()] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -84,7 +87,7 @@ _Front-End Recalc Expressions:_
 
 > The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -157,7 +160,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentAmounts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Amounts?$top=10>
 

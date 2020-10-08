@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceObjects
+---
 # Applications.Service.ServiceObjects
 
 Contains the serviceable objects. The service objects can be covered by service agreements, serviced in service activities, etc. Entity: Srv_Service_Objects
@@ -125,7 +128,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceObjects?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Objects?$top=10>
 

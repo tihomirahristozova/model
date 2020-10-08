@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.Operations
+---
 # Finance.Accounting.Operations
 
 Generic accounting operations. Since templates can be bound to such operations, they are usefull for automating the postings of repetitive business transactions, not represented in other modules. Entity: Acc_Operations
@@ -441,7 +444,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_Operations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Operations?$top=10>
 

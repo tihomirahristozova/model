@@ -1,3 +1,6 @@
+---
+uid: General.DocumentLineAmounts
+---
 # General.DocumentLineAmounts
 
 Specifies user-defined distribution pattern of additonal amount for specific document. Entity: Gen_Document_Line_Amounts
@@ -102,7 +105,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentLineAmounts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Line_Amounts?$top=10>
 

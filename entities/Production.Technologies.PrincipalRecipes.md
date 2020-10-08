@@ -1,3 +1,6 @@
+---
+uid: Production.Technologies.PrincipalRecipes
+---
 # Production.Technologies.PrincipalRecipes
 
 List of base recipe models. Recipe models are used by the Product Configurator to create specific recipes. Entity: Prd_Principal_Recipes
@@ -11,7 +14,7 @@ List of base recipe models. Recipe models are used by the Product Configurator t
 | [ExpiryDate](Production.Technologies.PrincipalRecipes.md#ExpiryDate) | datetime (nullable) | The last date, when the recipe should be used. null means that there is no expiry date yet and the recipe model is still active. [Filter(ge;le)] 
 | [Notes](Production.Technologies.PrincipalRecipes.md#Notes) | string (nullable) | User comments for the principal recipe. 
 | [Name](Production.Technologies.PrincipalRecipes.md#Name) | string | Name of the principal recipe. [Required] [Filter(like)] 
-| [ProduceQuantity](Production.Technologies.PrincipalRecipes.md#ProduceQuantity) | [Quantity](../data-types/Quantity.md) | Suggested quantity to produce. Usually it is equal to 1. [Unit: ProduceUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [ProduceQuantity](Production.Technologies.PrincipalRecipes.md#ProduceQuantity) | [Quantity](../data-types.md#Quantity) | Suggested quantity to produce. Usually it is equal to 1. [Unit: ProduceUnit] [Required] [Default(1)] [Filter(ge;le)] 
 | [ReleaseDate](Production.Technologies.PrincipalRecipes.md#ReleaseDate) | datetime | The date, when the recipe model is released for use. [Required] [Default(Today)] [Filter(ge;le)] 
 | [ScrapRate](Production.Technologies.PrincipalRecipes.md#ScrapRate) | decimal | The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. [Required] [Default(0)] 
 
@@ -76,7 +79,7 @@ _Supports Order By_: **False**
 
 > Suggested quantity to produce. Usually it is equal to 1. [Unit: ProduceUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -139,7 +142,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Technologies_PrincipalRecipes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Principal_Recipes?$top=10>
 

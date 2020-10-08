@@ -1,3 +1,6 @@
+---
+uid: Production.Resources.Resources
+---
 # Production.Resources.Resources
 
 Resource types available to production. Entity: Prd_Resources
@@ -10,9 +13,9 @@ Resource types available to production. Entity: Prd_Resources
 | [Notes](Production.Resources.Resources.md#Notes) | string (nullable) | User notes for the resource. 
 | [Name](Production.Resources.Resources.md#Name) | string | Name of the resource. [Required] [Filter(like)] 
 | [SetupDurationHours](Production.Resources.Resources.md#SetupDurationHours) | decimal | The usual duration of setup when changing production. [Required] [Default(0)] 
-| [SetupScrapQuantity](Production.Resources.Resources.md#SetupScrapQuantity) | [Quantity](../data-types/Quantity.md) | The usual quantity of fixed scrap occurring when changing production. . [Unit: SetupScrapUnit] [Required] [Default(0)] 
-| [StandardCostPerHour](Production.Resources.Resources.md#StandardCostPerHour) | [Amount](../data-types/Amount.md) (nullable) | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. [Currency: ResourceCurrency] 
-| [StandardPricePerHour](Production.Resources.Resources.md#StandardPricePerHour) | [Amount](../data-types/Amount.md) (nullable) | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. [Currency: ResourceCurrency] 
+| [SetupScrapQuantity](Production.Resources.Resources.md#SetupScrapQuantity) | [Quantity](../data-types.md#Quantity) | The usual quantity of fixed scrap occurring when changing production. . [Unit: SetupScrapUnit] [Required] [Default(0)] 
+| [StandardCostPerHour](Production.Resources.Resources.md#StandardCostPerHour) | [Amount](../data-types.md#Amount) (nullable) | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. [Currency: ResourceCurrency] 
+| [StandardPricePerHour](Production.Resources.Resources.md#StandardPricePerHour) | [Amount](../data-types.md#Amount) (nullable) | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. [Currency: ResourceCurrency] 
 
 ## References
 
@@ -68,7 +71,7 @@ _Default Value_: **0**
 
 > The usual quantity of fixed scrap occurring when changing production. . [Unit: SetupScrapUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -77,7 +80,7 @@ _Default Value_: **Constant**
 
 > Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. [Currency: ResourceCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -85,7 +88,7 @@ _Supports Order By_: **False**
 
 > Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. [Currency: ResourceCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -145,7 +148,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_Resources?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Resources?$top=10>
 

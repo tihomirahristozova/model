@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.Stores
+---
 # Logistics.Inventory.Stores
 
 Represents the physical warehouses. Entity: Inv_Stores
@@ -15,7 +18,7 @@ Represents the physical warehouses. Entity: Inv_Stores
 | [PartyNotes](Logistics.Inventory.Stores.md#PartyNotes) | string (nullable) | Notes for this Party 
 | [ParentPartyId](Logistics.Inventory.Stores.md#ParentPartyId) | guid (nullable) |  
 | [PartyCode](Logistics.Inventory.Stores.md#PartyCode) | string | The unique code of the Party [Required] 
-| [PartyName](Logistics.Inventory.Stores.md#PartyName) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the party [Required] 
+| [PartyName](Logistics.Inventory.Stores.md#PartyName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the party [Required] 
 | [PartyType](Logistics.Inventory.Stores.md#PartyType) | [General.Contacts.PartiesRepository.PartyType](Logistics.Inventory.Stores.md#PartyType) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required] 
 | [PartyUniqueNumber](Logistics.Inventory.Stores.md#PartyUniqueNumber) | string (nullable) | Unique number of the party (National number for persons, Registration number for companies) 
 | [PartyUpdateTime](Logistics.Inventory.Stores.md#PartyUpdateTime) | datetime (nullable) | Date and time when the Party was last updated. 
@@ -26,7 +29,7 @@ Represents the physical warehouses. Entity: Inv_Stores
 | [NumberOfDimensions](Logistics.Inventory.Stores.md#NumberOfDimensions) | int32 | Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended. [Required] [Default(0)] [Filter(eq)] 
 | [SchemaXML](Logistics.Inventory.Stores.md#SchemaXML) | string (nullable) | Obsolete. Not used. 
 | [Code](Logistics.Inventory.Stores.md#Code) | string | The unique code of the Store. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Logistics.Inventory.Stores.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the store. [Required] [Filter(like)] 
+| [Name](Logistics.Inventory.Stores.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the store. [Required] [Filter(like)] 
 | [Unmanaged](Logistics.Inventory.Stores.md#Unmanaged) | boolean | If false the system will expect the user to process the store transactions. If true the system will auto-generate them. [Required] [Default(true)] 
 | [UpdateTime](Logistics.Inventory.Stores.md#UpdateTime) | datetime (nullable) | Date and time when the Store was last updated. [Filter(ge;le)] [ReadOnly] 
 | [UpdateUser](Logistics.Inventory.Stores.md#UpdateUser) | string (nullable) | Login name of the user, who last updated the Store. [Filter(like)] [ReadOnly] 
@@ -139,7 +142,7 @@ _Supports Order By_: **True**
 
 > The name of the party [Required]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -240,7 +243,7 @@ _Supports Order By_: **True**
 
 > Name of the store. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -399,7 +402,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_Stores?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Stores?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Applications.Cms.ProductCatalogWebModules
+---
 # Applications.Cms.ProductCatalogWebModules
 
 A web module, which presents a whole product catalog. Entity: Cms_Product_Catalog_Web_Modules
@@ -129,7 +132,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Cms_ProductCatalogWebModules?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cms_Product_Catalog_Web_Modules?$top=10>
 

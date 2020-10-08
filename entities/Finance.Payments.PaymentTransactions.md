@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.PaymentTransactions
+---
 # Finance.Payments.PaymentTransactions
 
 Represents actual payments, which increase or decrease the balance of a payment account. Entity: Cash_Payment_Transactions
@@ -33,7 +36,7 @@ Represents actual payments, which increase or decrease the balance of a payment 
 | [PaymentSlipNo](Finance.Payments.PaymentTransactions.md#PaymentSlipNo) | string (nullable) | The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips. [Filter(eq)] 
 | [RequiresAllocation](Finance.Payments.PaymentTransactions.md#RequiresAllocation) | boolean | True=The total amount should be allocated to payment orders; false=Payment orders are not required. [Required] [Default(true)] [Filter(eq)] 
 | [ReversalReason](Finance.Payments.PaymentTransactions.md#ReversalReason) | [Finance.Payments.PaymentTransactionsRepository.ReversalReason](Finance.Payments.PaymentTransactions.md#ReversalReason) (nullable) | The reason for the reversal of the payment. (Introduced in version 20.1.100.0) 
-| [TotalAmount](Finance.Payments.PaymentTransactions.md#TotalAmount) | [Amount](../data-types/Amount.md) | The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines. [Currency: TotalAmountCurrency] [Required] [Default(0)] 
+| [TotalAmount](Finance.Payments.PaymentTransactions.md#TotalAmount) | [Amount](../data-types.md#Amount) | The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines. [Currency: TotalAmountCurrency] [Required] [Default(0)] 
 
 ## References
 
@@ -354,7 +357,7 @@ _Supports Order By_: **False**
 
 > The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines. [Currency: TotalAmountCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -634,7 +637,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentTransactions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Transactions?$top=10>
 

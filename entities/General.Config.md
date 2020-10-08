@@ -1,3 +1,6 @@
+---
+uid: General.Config
+---
 # General.Config
 
 Hierarchical repository of configuration options. Entity: Gen_Config
@@ -94,7 +97,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Config?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Config?$top=10>
 

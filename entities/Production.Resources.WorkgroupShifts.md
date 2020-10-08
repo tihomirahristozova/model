@@ -1,3 +1,6 @@
+---
+uid: Production.Resources.WorkgroupShifts
+---
 # Production.Resources.WorkgroupShifts
 
 Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts
@@ -94,7 +97,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_WorkgroupShifts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Workgroup_Shifts?$top=10>
 

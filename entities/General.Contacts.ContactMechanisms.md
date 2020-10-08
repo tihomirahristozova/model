@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.ContactMechanisms
+---
 # General.Contacts.ContactMechanisms
 
 Contains contacting mechanisms - telephone numbers, addresses, web sites, etc. Contact mechanisms can be attached to parties. Currently each contact mechanism is attached to strictly one party. Entity: Cm_Contact_Mechanisms
@@ -97,7 +100,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_ContactMechanisms?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Contact_Mechanisms?$top=10>
 

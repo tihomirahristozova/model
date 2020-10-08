@@ -1,3 +1,6 @@
+---
+uid: Logistics.Shipment.TransportationModes
+---
 # Logistics.Shipment.TransportationModes
 
 Represents a mode of transportation, like water, air, road, etc. Entity: Log_Transportation_Modes
@@ -67,7 +70,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_TransportationModes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Log_Transportation_Modes?$top=10>
 

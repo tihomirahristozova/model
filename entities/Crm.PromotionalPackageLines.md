@@ -1,3 +1,6 @@
+---
+uid: Crm.PromotionalPackageLines
+---
 # Crm.PromotionalPackageLines
 
 Detail records (lines) of promotional package definition. Entity: Crm_Promotional_Package_Lines
@@ -8,10 +11,10 @@ Detail records (lines) of promotional package definition. Entity: Crm_Promotiona
 | ---- | ---- | --- |
 | [Id](Crm.PromotionalPackageLines.md#Id) | guid |  
 | [LineNumber](Crm.PromotionalPackageLines.md#LineNumber) | int32 | Consecutive line number. [Required] 
-| [Quantity](Crm.PromotionalPackageLines.md#Quantity) | [Quantity](../data-types/Quantity.md) | The quantity of the product in the package in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [Quantity](Crm.PromotionalPackageLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | The quantity of the product in the package in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)] 
 | [StandardDiscountAdjustOrReplace](Crm.PromotionalPackageLines.md#StandardDiscountAdjustOrReplace) | [Crm.PromotionalPackageLinesRepository.StandardDiscountAdjustOrReplace](Crm.PromotionalPackageLines.md#StandardDiscountAdjustOrReplace) | Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. [Required] [Default("R")] 
 | [StandardDiscountPercentAdjust](Crm.PromotionalPackageLines.md#StandardDiscountPercentAdjust) | decimal | The value of change (in percents) for the standard discount. [Required] [Default(0)] 
-| [UnitPrice](Crm.PromotionalPackageLines.md#UnitPrice) | [Amount](../data-types/Amount.md) (nullable) | When not null specifies directly unit price for the product. When null, the package specifies only discount. [Currency: UnitPriceCurrency] 
+| [UnitPrice](Crm.PromotionalPackageLines.md#UnitPrice) | [Amount](../data-types.md#Amount) (nullable) | When not null specifies directly unit price for the product. When null, the package specifies only discount. [Currency: UnitPriceCurrency] 
 
 ## References
 
@@ -49,7 +52,7 @@ _Front-End Recalc Expressions:_
 
 > The quantity of the product in the package in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -85,7 +88,7 @@ _Default Value_: **0**
 
 > When not null specifies directly unit price for the product. When null, the package specifies only discount. [Currency: UnitPriceCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -145,7 +148,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_PromotionalPackageLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Promotional_Package_Lines?$top=10>
 

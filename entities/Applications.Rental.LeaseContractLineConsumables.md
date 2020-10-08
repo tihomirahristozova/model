@@ -1,3 +1,6 @@
+---
+uid: Applications.Rental.LeaseContractLineConsumables
+---
 # Applications.Rental.LeaseContractLineConsumables
 
 Contains the consumables, which are sold accompanying asset rentals. Entity: Rent_Lease_Contract_Line_Consumables
@@ -7,7 +10,7 @@ Contains the consumables, which are sold accompanying asset rentals. Entity: Ren
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Rental.LeaseContractLineConsumables.md#Id) | guid |  
-| [ConsumableQuantity](Applications.Rental.LeaseContractLineConsumables.md#ConsumableQuantity) | [Quantity](../data-types/Quantity.md) | The quantity sold of the consumable. [Unit: ConsumableQuantityUnit] [Required] [Default(0)] 
+| [ConsumableQuantity](Applications.Rental.LeaseContractLineConsumables.md#ConsumableQuantity) | [Quantity](../data-types.md#Quantity) | The quantity sold of the consumable. [Unit: ConsumableQuantityUnit] [Required] [Default(0)] 
 | [LineNo](Applications.Rental.LeaseContractLineConsumables.md#LineNo) | int32 | Consecutive number of the consumable within the lease contract line. [Required] [Filter(eq;ge;le)] 
 
 ## References
@@ -33,7 +36,7 @@ _Default Value_: **NewGuid**
 
 > The quantity sold of the consumable. [Unit: ConsumableQuantityUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -107,7 +110,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Rental_LeaseContractLineConsumables?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Rent_Lease_Contract_Line_Consumables?$top=10>
 

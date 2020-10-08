@@ -1,3 +1,6 @@
+---
+uid: Crm.Invoicing.InvoicesOptions
+---
 # Crm.Invoicing.InvoicesOptions
 
 Default options for user document types for Invoices. Entity: Crm_Invoices_Options
@@ -122,7 +125,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Invoicing_InvoicesOptions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Invoices_Options?$top=10>
 

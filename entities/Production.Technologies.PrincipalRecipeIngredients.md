@@ -1,3 +1,6 @@
+---
+uid: Production.Technologies.PrincipalRecipeIngredients
+---
 # Production.Technologies.PrincipalRecipeIngredients
 
 Template for material usage of a principal recipe. Entity: Prd_Principal_Recipe_Ingredients
@@ -7,13 +10,13 @@ Template for material usage of a principal recipe. Entity: Prd_Principal_Recipe_
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Production.Technologies.PrincipalRecipeIngredients.md#Id) | guid |  
-| [ConditionalPropertyDescription](Production.Technologies.PrincipalRecipeIngredients.md#ConditionalPropertyDescription) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The desired description of Conditional Property in order for the template line to match. 
+| [ConditionalPropertyDescription](Production.Technologies.PrincipalRecipeIngredients.md#ConditionalPropertyDescription) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The desired description of Conditional Property in order for the template line to match. 
 | [ConditionalPropertyValue](Production.Technologies.PrincipalRecipeIngredients.md#ConditionalPropertyValue) | string (nullable) | The desired value of Conditional Property in order for the template line to match. 
-| [FixedScrapQuantity](Production.Technologies.PrincipalRecipeIngredients.md#FixedScrapQuantity) | [Quantity](../data-types/Quantity.md) | Fixed scrap quantity for setup. [Unit: UsageUnit] [Required] [Default(0)] 
+| [FixedScrapQuantity](Production.Technologies.PrincipalRecipeIngredients.md#FixedScrapQuantity) | [Quantity](../data-types.md#Quantity) | Fixed scrap quantity for setup. [Unit: UsageUnit] [Required] [Default(0)] 
 | [IngredientName](Production.Technologies.PrincipalRecipeIngredients.md#IngredientName) | string | The principal name of the ingredient. [Required] [Filter(like)] 
 | [LineOrd](Production.Technologies.PrincipalRecipeIngredients.md#LineOrd) | int32 | The position of the line in the recipe model. [Required] 
 | [ScrapRate](Production.Technologies.PrincipalRecipeIngredients.md#ScrapRate) | decimal | The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. [Required] [Default(0)] [Filter(ge;le)] 
-| [UsageQuantity](Production.Technologies.PrincipalRecipeIngredients.md#UsageQuantity) | [Quantity](../data-types/Quantity.md) (nullable) | Quantity to be consumed from the material. null means that the quantity is specified with formula. [Unit: UsageUnit] [Default(1)] [Filter(ge;le)] 
+| [UsageQuantity](Production.Technologies.PrincipalRecipeIngredients.md#UsageQuantity) | [Quantity](../data-types.md#Quantity) (nullable) | Quantity to be consumed from the material. null means that the quantity is specified with formula. [Unit: UsageUnit] [Default(1)] [Filter(ge;le)] 
 | [UsageQuantityFormula](Production.Technologies.PrincipalRecipeIngredients.md#UsageQuantityFormula) | string (nullable) | Specifies formula for the usage quantity. The formula can reference properties in [<Prop_Name>] style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity. 
 
 ## References
@@ -44,7 +47,7 @@ _Default Value_: **NewGuid**
 
 > The desired description of Conditional Property in order for the template line to match.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -60,7 +63,7 @@ _Supports Order By_: **False**
 
 > Fixed scrap quantity for setup. [Unit: UsageUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -101,7 +104,7 @@ _Default Value_: **0**
 
 > Quantity to be consumed from the material. null means that the quantity is specified with formula. [Unit: UsageUnit] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -216,7 +219,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Technologies_PrincipalRecipeIngredients?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Principal_Recipe_Ingredients?$top=10>
 

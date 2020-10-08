@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.Processes
+---
 # Systems.Bpm.Processes
 
 Represents one business process version. All process model elements and execution instances are bound to specfic process version. Entity: Bpm_Processes
@@ -132,7 +135,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_Processes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Bpm_Processes?$top=10>
 

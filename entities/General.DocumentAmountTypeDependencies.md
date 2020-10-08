@@ -1,3 +1,6 @@
+---
+uid: General.DocumentAmountTypeDependencies
+---
 # General.DocumentAmountTypeDependencies
 
 Specifies the base amounts on which an amount depends. . Entity: Gen_Document_Amount_Type_Dependencies
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentAmountTypeDependencies?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Amount_Type_Dependencies?$top=10>
 

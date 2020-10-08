@@ -1,3 +1,6 @@
+---
+uid: Crm.Presales.Offers
+---
 # Crm.Presales.Offers
 
 Offers (quotes) for sales of products. Can contain variants and choice groups. The user can select some approved lines and generate Sales Order. Entity: Crm_Offers
@@ -584,7 +587,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Presales_Offers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Offers?$top=10>
 

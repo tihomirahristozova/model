@@ -1,3 +1,6 @@
+---
+uid: Projects.TypeWorkTypes
+---
 # Projects.TypeWorkTypes
 
 Contains the work types, that can be performed in projects of this project type. Entity: Prj_Type_Work_Types
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_TypeWorkTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Type_Work_Types?$top=10>
 

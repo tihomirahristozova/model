@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.Transfers
+---
 # Finance.Payments.Transfers
 
 Represents one fund transfer from one payment account to another. Entity: Cash_Transfers
@@ -26,10 +29,10 @@ Represents one fund transfer from one payment account to another. Entity: Cash_T
 | [VoidTime](Finance.Payments.Transfers.md#VoidTime) | datetime (nullable) | Date/time when the document has become void 
 | [VoidUser](Finance.Payments.Transfers.md#VoidUser) | string (nullable) | The user who voided the document 
 | [EntityName](Finance.Payments.Transfers.md#EntityName) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
-| [DestinationAmount](Finance.Payments.Transfers.md#DestinationAmount) | [Amount](../data-types/Amount.md) | The amount in the currency of the destination account. [Currency: DestinationPaymentAccount.Currency] [Required] [Default(0)] 
+| [DestinationAmount](Finance.Payments.Transfers.md#DestinationAmount) | [Amount](../data-types.md#Amount) | The amount in the currency of the destination account. [Currency: DestinationPaymentAccount.Currency] [Required] [Default(0)] 
 | [IsReleased](Finance.Payments.Transfers.md#IsReleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [IsSingleExecution](Finance.Payments.Transfers.md#IsSingleExecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [SourceAmount](Finance.Payments.Transfers.md#SourceAmount) | [Amount](../data-types/Amount.md) | The amount to transfer in the source currency. [Currency: SourcePaymentAccount.Currency] [Required] [Default(0)] 
+| [SourceAmount](Finance.Payments.Transfers.md#SourceAmount) | [Amount](../data-types.md#Amount) | The amount to transfer in the source currency. [Currency: SourcePaymentAccount.Currency] [Required] [Default(0)] 
 
 ## References
 
@@ -263,7 +266,7 @@ _Supports Order By_: **True**
 
 > The amount in the currency of the destination account. [Currency: DestinationPaymentAccount.Currency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -290,7 +293,7 @@ _Default Value_: **False**
 
 > The amount to transfer in the source currency. [Currency: SourcePaymentAccount.Currency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -479,7 +482,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_Transfers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Transfers?$top=10>
 

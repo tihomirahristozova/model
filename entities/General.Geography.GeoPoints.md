@@ -1,3 +1,6 @@
+---
+uid: General.Geography.GeoPoints
+---
 # General.Geography.GeoPoints
 
 Geographical (geo) points are used as points of interest on the map. They are used for routing and other purposes. The points of interest for the different enterprise companies are different. Entity: Gen_Geo_Points
@@ -8,7 +11,7 @@ Geographical (geo) points are used as points of interest on the map. They are us
 | ---- | ---- | --- |
 | [Id](General.Geography.GeoPoints.md#Id) | guid |  
 | [Address](General.Geography.GeoPoints.md#Address) | string (nullable) | The descriptive physical address, related to this geo point. [Filter(eq;like)] 
-| [Name](General.Geography.GeoPoints.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Geo point short name (Multilanguage). [Required] [Filter(eq;like)] 
+| [Name](General.Geography.GeoPoints.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Geo point short name (Multilanguage). [Required] [Filter(eq;like)] 
 | [Latitude](General.Geography.GeoPoints.md#Latitude) | decimal | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90]. [Required] [Default(0)] [Filter(eq;ge;le)] 
 | [Longitude](General.Geography.GeoPoints.md#Longitude) | decimal | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180]. [Required] [Default(0)] [Filter(eq;ge;le)] 
 
@@ -40,7 +43,7 @@ _Supports Order By_: **False**
 
 > Geo point short name (Multilanguage). [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -94,7 +97,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Geography_GeoPoints?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Geo_Points?$top=10>
 

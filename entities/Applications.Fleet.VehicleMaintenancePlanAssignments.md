@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.VehicleMaintenancePlanAssignments
+---
 # Applications.Fleet.VehicleMaintenancePlanAssignments
 
 Represents assignment of a maintenance plan to a vehicle. Entity: Fleet_Vehicle_Maintenance_Plan_Assignments
@@ -111,7 +114,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_VehicleMaintenancePlanAssignments?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Vehicle_Maintenance_Plan_Assignments?$top=10>
 

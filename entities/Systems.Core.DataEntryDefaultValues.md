@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.DataEntryDefaultValues
+---
 # Systems.Core.DataEntryDefaultValues
 
 Contains user-specified default values for columns in data entry forms. Entity: Sys_Default_Values
@@ -137,7 +140,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_DataEntryDefaultValues?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Default_Values?$top=10>
 

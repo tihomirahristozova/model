@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.UserBusinessRuleActions
+---
 # Systems.Bpm.UserBusinessRuleActions
 
 Represents an action within a business rule. Entity: Sys_User_Business_Rule_Actions
@@ -177,7 +180,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_UserBusinessRuleActions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_User_Business_Rule_Actions?$top=10>
 

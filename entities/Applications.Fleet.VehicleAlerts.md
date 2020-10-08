@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.VehicleAlerts
+---
 # Applications.Fleet.VehicleAlerts
 
 Contains alerts, specific to one vehicle. Alerts are created based on many sources and stay active, until excplicitly hidden. Entity: Fleet_Vehicle_Alerts
@@ -102,7 +105,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_VehicleAlerts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Vehicle_Alerts?$top=10>
 

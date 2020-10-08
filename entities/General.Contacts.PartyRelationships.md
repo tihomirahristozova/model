@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.PartyRelationships
+---
 # General.Contacts.PartyRelationships
 
 Defines the relationships between the parties. The data is preserved over time. Entity: Cm_Party_Relationships
@@ -101,7 +104,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_PartyRelationships?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Party_Relationships?$top=10>
 

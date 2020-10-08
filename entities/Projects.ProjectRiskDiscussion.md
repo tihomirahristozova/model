@@ -1,3 +1,6 @@
+---
+uid: Projects.ProjectRiskDiscussion
+---
 # Projects.ProjectRiskDiscussion
 
 Contains discussions on project risks. Entity: Prj_Project_Risk_Discussion
@@ -93,7 +96,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_ProjectRiskDiscussion?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Project_Risk_Discussion?$top=10>
 

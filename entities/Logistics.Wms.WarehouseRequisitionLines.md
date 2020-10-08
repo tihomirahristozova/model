@@ -1,3 +1,6 @@
+---
+uid: Logistics.Wms.WarehouseRequisitionLines
+---
 # Logistics.Wms.WarehouseRequisitionLines
 
 Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requisition_Lines (Introduced in version 20.1.100.0)
@@ -10,7 +13,7 @@ Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requ
 | [LineNo](Logistics.Wms.WarehouseRequisitionLines.md#LineNo) | int32 | The unique, consecutive line number within the requisition. [Required] 
 | [Notes](Logistics.Wms.WarehouseRequisitionLines.md#Notes) | string (nullable) | Notes for this WarehouseRequisitionLine. 
 | [ParentLineNo](Logistics.Wms.WarehouseRequisitionLines.md#ParentLineNo) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. 
-| [Quantity](Logistics.Wms.WarehouseRequisitionLines.md#Quantity) | [Quantity](../data-types/Quantity.md) | The requested quantity. [Unit: QuantityUnit] [Required] [Filter(eq;ge;le)] 
+| [Quantity](Logistics.Wms.WarehouseRequisitionLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | The requested quantity. [Unit: QuantityUnit] [Required] [Filter(eq;ge;le)] 
 
 ## References
 
@@ -66,7 +69,7 @@ _Supports Order By_: **False**
 
 > The requested quantity. [Unit: QuantityUnit] [Required] [Filter(eq;ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -142,7 +145,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseRequisitionLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wms_Warehouse_Requisition_Lines?$top=10>
 

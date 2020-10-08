@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.DepreciationPlanTemplates
+---
 # Finance.Assets.DepreciationPlanTemplates
 
 Specifies the default depreciation methods for the asset categories. Different methods can be specified for each valuation model. Entity: Ast_Depreciation_Plan_Templates
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_DepreciationPlanTemplates?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Depreciation_Plan_Templates?$top=10>
 

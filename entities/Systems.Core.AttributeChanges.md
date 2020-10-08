@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.AttributeChanges
+---
 # Systems.Core.AttributeChanges
 
 Attribute values of an object change. Entity: Sys_Attribute_Changes_View
@@ -66,7 +69,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_AttributeChanges?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Attribute_Changes_View?$top=10>
 

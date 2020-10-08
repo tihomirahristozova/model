@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.WebSites
+---
 # Systems.Core.WebSites
 
 Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites (Introduced in version 19.1.100.0)
@@ -129,7 +132,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_WebSites?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Web_Sites?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Logistics.Shipment.Carriers
+---
 # Logistics.Shipment.Carriers
 
 Represents a carrier agreement. One actual carrier can have different agreements over time or with different enterprise companies. Entity: Log_Carriers
@@ -112,7 +115,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_Carriers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Log_Carriers?$top=10>
 

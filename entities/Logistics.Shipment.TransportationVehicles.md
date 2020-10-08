@@ -1,3 +1,6 @@
+---
+uid: Logistics.Shipment.TransportationVehicles
+---
 # Logistics.Shipment.TransportationVehicles
 
 A vehicle, which is used for transportation. One actual vehicle might be defined multiple times as transportation vehicle - for different modes of transportation or cargo types. Entity: Log_Transportation_Vehicles
@@ -119,7 +122,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_TransportationVehicles?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Log_Transportation_Vehicles?$top=10>
 

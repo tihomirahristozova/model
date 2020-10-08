@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.CalculatedAttributeExpressions
+---
 # Systems.Bpm.CalculatedAttributeExpressions
 
 Represent an expression within the calculation of a calculated attribute. Entity: Sys_Calculated_Attribute_Expressions
@@ -235,7 +238,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_CalculatedAttributeExpressions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Calculated_Attribute_Expressions?$top=10>
 

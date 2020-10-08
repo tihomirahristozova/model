@@ -1,3 +1,6 @@
+---
+uid: Projects.WorkReportMaterials
+---
 # Projects.WorkReportMaterials
 
 Each record contains a consumed material, reported by the related Work Report. Entity: Prj_Work_Report_Materials
@@ -110,7 +113,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_WorkReportMaterials?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Work_Report_Materials?$top=10>
 

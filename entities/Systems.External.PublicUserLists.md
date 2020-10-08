@@ -1,3 +1,6 @@
+---
+uid: Systems.External.PublicUserLists
+---
 # Systems.External.PublicUserLists
 
 Each list represents a unique collection of public users. Entity: Ext_Public_User_Lists
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_External_PublicUserLists?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ext_Public_User_Lists?$top=10>
 

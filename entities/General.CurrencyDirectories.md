@@ -1,3 +1,6 @@
+---
+uid: General.CurrencyDirectories
+---
 # General.CurrencyDirectories
 
 Contains a named set of currency exchange rates against a single currency for a given date. Multiple directories with different names can exist for single date. For example, buy and sell rates are recorded as separate directories. Entity: Gen_Currency_Directories
@@ -480,7 +483,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_CurrencyDirectories?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Currency_Directories?$top=10>
 

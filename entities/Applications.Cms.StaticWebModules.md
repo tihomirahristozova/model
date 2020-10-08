@@ -1,3 +1,6 @@
+---
+uid: Applications.Cms.StaticWebModules
+---
 # Applications.Cms.StaticWebModules
 
 A web module, which contains one web page with static text. Entity: Cms_Static_Web_Modules
@@ -139,7 +142,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Cms_StaticWebModules?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cms_Static_Web_Modules?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.ManagedAssetMaintenanceSchedules
+---
 # Applications.AssetManagement.ManagedAssetMaintenanceSchedules
 
 Contains the maintenance schedules for the managed assets. Entity: Eam_Managed_Asset_Maintenance_Schedules (Introduced in version 19.1.100.0)
@@ -101,7 +104,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ManagedAssetMaintenanceSchedules?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Managed_Asset_Maintenance_Schedules?$top=10>
 

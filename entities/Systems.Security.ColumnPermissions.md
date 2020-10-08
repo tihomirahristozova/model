@@ -1,3 +1,6 @@
+---
+uid: Systems.Security.ColumnPermissions
+---
 # Systems.Security.ColumnPermissions
 
 User permissions for accessing the system data columns. Entity: Sec_Column_Permissions
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_ColumnPermissions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sec_Column_Permissions?$top=10>
 

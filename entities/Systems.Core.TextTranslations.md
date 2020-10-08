@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.TextTranslations
+---
 # Systems.Core.TextTranslations
 
 Obsolete. Not used. Entity: Gen_Text_Translations
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_TextTranslations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Text_Translations?$top=10>
 

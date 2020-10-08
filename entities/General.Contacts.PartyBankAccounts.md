@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.PartyBankAccounts
+---
 # General.Contacts.PartyBankAccounts
 
 The bank accounts of a party. Entity: Gen_Party_Bank_Accounts
@@ -8,10 +11,10 @@ The bank accounts of a party. Entity: Gen_Party_Bank_Accounts
 | ---- | ---- | --- |
 | [Id](General.Contacts.PartyBankAccounts.md#Id) | guid |  
 | [BankAccountCode](General.Contacts.PartyBankAccounts.md#BankAccountCode) | string | The code of the account, usually the IBAN code. [Required] [Filter(eq;like)] 
-| [BankAddress](General.Contacts.PartyBankAccounts.md#BankAddress) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments. 
-| [BankBranchName](General.Contacts.PartyBankAccounts.md#BankBranchName) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments. 
+| [BankAddress](General.Contacts.PartyBankAccounts.md#BankAddress) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments. 
+| [BankBranchName](General.Contacts.PartyBankAccounts.md#BankBranchName) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments. 
 | [BankCode](General.Contacts.PartyBankAccounts.md#BankCode) | string (nullable) | The code of the bank, usually the BIC code. [Filter(eq)] 
-| [BankName](General.Contacts.PartyBankAccounts.md#BankName) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The full name of the bank. [Filter(like)] 
+| [BankName](General.Contacts.PartyBankAccounts.md#BankName) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The full name of the bank. [Filter(like)] 
 | [IsDefault](General.Contacts.PartyBankAccounts.md#IsDefault) | boolean | True if the this is the default account for the party. Only one default per party is allowed. [Required] [Default(false)] [Filter(eq)] 
 | [Notes](General.Contacts.PartyBankAccounts.md#Notes) | string (nullable) | Notes for this PartyBankAccount. 
 
@@ -43,7 +46,7 @@ _Supports Order By_: **False**
 
 > The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -51,7 +54,7 @@ _Supports Order By_: **False**
 
 > The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -67,7 +70,7 @@ _Supports Order By_: **False**
 
 > The full name of the bank. [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -120,7 +123,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_PartyBankAccounts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Party_Bank_Accounts?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Projects.ProjectRisks
+---
 # Projects.ProjectRisks
 
 Contains risks, associated to projects. Entity: Prj_Project_Risks
@@ -147,7 +150,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_ProjectRisks?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Project_Risks?$top=10>
 

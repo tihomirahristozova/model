@@ -1,3 +1,6 @@
+---
+uid: Logistics.Shipment.TransportationRequisitionLines
+---
 # Logistics.Shipment.TransportationRequisitionLines
 
 One line in a client requisition for transportation. Different lines usually represent requisitions for different cargo types. Entity: Log_Transportation_Requisition_Lines
@@ -133,7 +136,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_TransportationRequisitionLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Log_Transportation_Requisition_Lines?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Finance.Vat.BGVATDeclarations
+---
 # Finance.Vat.BGVATDeclarations
 
 National data: Contains the VAT declarations, issued by the enterprise company, according to the Bulgarian legislation. Entity: Nat_BG_VAT_Declarations
@@ -27,13 +30,13 @@ National data: Contains the VAT declarations, issued by the enterprise company, 
 | [VoidUser](Finance.Vat.BGVATDeclarations.md#VoidUser) | string (nullable) | The user who voided the document 
 | [EntityName](Finance.Vat.BGVATDeclarations.md#EntityName) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
 | [CoefficientVATLArticle73](Finance.Vat.BGVATDeclarations.md#CoefficientVATLArticle73) | decimal | Field 01 - 33 from the declaration. Must be between 0.00 and 1.00. [Required] [Default(0)] 
-| [DeductedVATAmountArticle92Paragraph1](Finance.Vat.BGVATDeclarations.md#DeductedVATAmountArticle92Paragraph1) | [Amount](../data-types/Amount.md) | Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [DepositedVATAmount](Finance.Vat.BGVATDeclarations.md#DepositedVATAmount) | [Amount](../data-types/Amount.md) | Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [DeductedVATAmountArticle92Paragraph1](Finance.Vat.BGVATDeclarations.md#DeductedVATAmountArticle92Paragraph1) | [Amount](../data-types.md#Amount) | Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [DepositedVATAmount](Finance.Vat.BGVATDeclarations.md#DepositedVATAmount) | [Amount](../data-types.md#Amount) | Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
 | [IsReleased](Finance.Vat.BGVATDeclarations.md#IsReleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [IsSingleExecution](Finance.Vat.BGVATDeclarations.md#IsSingleExecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [VATAmountToRecoupArticle92Paragraph1](Finance.Vat.BGVATDeclarations.md#VATAmountToRecoupArticle92Paragraph1) | [Amount](../data-types/Amount.md) | Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [VATAmountToRecoupArticle92Paragraph3](Finance.Vat.BGVATDeclarations.md#VATAmountToRecoupArticle92Paragraph3) | [Amount](../data-types/Amount.md) | Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [VATAmountToRecoupArticle92Paragraph4](Finance.Vat.BGVATDeclarations.md#VATAmountToRecoupArticle92Paragraph4) | [Amount](../data-types/Amount.md) | Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [VATAmountToRecoupArticle92Paragraph1](Finance.Vat.BGVATDeclarations.md#VATAmountToRecoupArticle92Paragraph1) | [Amount](../data-types.md#Amount) | Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [VATAmountToRecoupArticle92Paragraph3](Finance.Vat.BGVATDeclarations.md#VATAmountToRecoupArticle92Paragraph3) | [Amount](../data-types.md#Amount) | Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [VATAmountToRecoupArticle92Paragraph4](Finance.Vat.BGVATDeclarations.md#VATAmountToRecoupArticle92Paragraph4) | [Amount](../data-types.md#Amount) | Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
 | [VATDeclarationRepresentingPersonPosition](Finance.Vat.BGVATDeclarations.md#VATDeclarationRepresentingPersonPosition) | string (nullable) | Position of the representing person for the purposes of submitting of VAT declarations. 
 | [VATPeriodEnd](Finance.Vat.BGVATDeclarations.md#VATPeriodEnd) | date | End date of the period fot which the VAT declaration is made. [Required] [Filter(ge;le)] 
 | [VATPeriodStart](Finance.Vat.BGVATDeclarations.md#VATPeriodStart) | date | Start date of the period fot which the VAT declaration is made. [Required] [Filter(ge;le)] 
@@ -279,7 +282,7 @@ _Default Value_: **0**
 
 > Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -288,7 +291,7 @@ _Default Value_: **Constant**
 
 > Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -315,7 +318,7 @@ _Default Value_: **False**
 
 > Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -324,7 +327,7 @@ _Default Value_: **Constant**
 
 > Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -333,7 +336,7 @@ _Default Value_: **Constant**
 
 > Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -546,7 +549,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Vat_BGVATDeclarations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Nat_BG_VAT_Declarations?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceActivityServices
+---
 # Applications.Service.ServiceActivityServices
 
 Contains the services, which were actually performed during the service activity (repair). Entity: Srv_Service_Activity_Services
@@ -10,7 +13,7 @@ Contains the services, which were actually performed during the service activity
 | [CoveredByGuarantee](Applications.Service.ServiceActivityServices.md#CoveredByGuarantee) | boolean | True when the performed service is covered by the guarantee. [Required] [Default(false)] 
 | [LineNo](Applications.Service.ServiceActivityServices.md#LineNo) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] 
 | [Notes](Applications.Service.ServiceActivityServices.md#Notes) | string (nullable) | Short notes for the service. 
-| [Quantity](Applications.Service.ServiceActivityServices.md#Quantity) | [Quantity](../data-types/Quantity.md) | The quantity of the service in the measurement unit of the service. [Unit: Service.MeasurementUnit] [Required] [Default(1)] 
+| [Quantity](Applications.Service.ServiceActivityServices.md#Quantity) | [Quantity](../data-types.md#Quantity) | The quantity of the service in the measurement unit of the service. [Unit: Service.MeasurementUnit] [Required] [Default(1)] 
 | [ServiceName](Applications.Service.ServiceActivityServices.md#ServiceName) | string | Description of the conducted service. The description may vary (contain additional information) from the standart name of the service. [Required] [Filter(like)] 
 
 ## References
@@ -72,7 +75,7 @@ _Supports Order By_: **False**
 
 > The quantity of the service in the measurement unit of the service. [Unit: Service.MeasurementUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -148,7 +151,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceActivityServices?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Activity_Services?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Logistics.Wms.WarehouseRequisitionExecutions
+---
 # Logistics.Wms.WarehouseRequisitionExecutions
 
 Execution ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition_Executions (Introduced in version 20.1.100.0)
@@ -110,7 +113,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseRequisitionExecutions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wms_Warehouse_Requisition_Executions?$top=10>
 

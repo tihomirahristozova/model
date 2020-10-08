@@ -1,3 +1,6 @@
+---
+uid: Crm.Distribution.SalesPersonTargetLines
+---
 # Crm.Distribution.SalesPersonTargetLines
 
 Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Target_Lines
@@ -10,7 +13,7 @@ Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Ta
 | [PeriodDate](Crm.Distribution.SalesPersonTargetLines.md#PeriodDate) | datetime | Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). [Required] [ReadOnly] 
 | [PeriodMonth](Crm.Distribution.SalesPersonTargetLines.md#PeriodMonth) | byte | Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). [Required] [Filter(ge;le)] 
 | [PeriodYear](Crm.Distribution.SalesPersonTargetLines.md#PeriodYear) | int16 | Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). [Required] [Filter(ge;le)] 
-| [TargetAmount](Crm.Distribution.SalesPersonTargetLines.md#TargetAmount) | [Amount](../data-types/Amount.md) (nullable) | Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. [Currency: TargetAmountCurrency] 
+| [TargetAmount](Crm.Distribution.SalesPersonTargetLines.md#TargetAmount) | [Amount](../data-types.md#Amount) (nullable) | Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. [Currency: TargetAmountCurrency] 
 | [TargetType](Crm.Distribution.SalesPersonTargetLines.md#TargetType) | [Crm.Distribution.SalesPersonTargetLinesRepository.TargetType](Crm.Distribution.SalesPersonTargetLines.md#TargetType) | Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs. [Required] [Default("SALES")] [Filter(multi eq)] 
 | [TargetValue](Crm.Distribution.SalesPersonTargetLines.md#TargetValue) | decimal | Value of target. Meaning depends on target type. [Required] [Default(0)] 
 | [TargetWeight](Crm.Distribution.SalesPersonTargetLines.md#TargetWeight) | decimal | Relative weight of target, comparatively to other targets. [Required] [Default(1)] 
@@ -64,7 +67,7 @@ _Supports Order By_: **False**
 
 > Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. [Currency: TargetAmountCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -192,7 +195,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Distribution_SalesPersonTargetLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Person_Target_Lines?$top=10>
 

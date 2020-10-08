@@ -1,3 +1,6 @@
+---
+uid: Crm.Sales.SalesOrderPaymentPlans
+---
 # Crm.Sales.SalesOrderPaymentPlans
 
 Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
@@ -7,7 +10,7 @@ Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Crm.Sales.SalesOrderPaymentPlans.md#Id) | guid |  
-| [Amount](Crm.Sales.SalesOrderPaymentPlans.md#Amount) | [Amount](../data-types/Amount.md) | Amount to be payed. [Currency: SalesOrder.DocumentCurrency] [Required] 
+| [Amount](Crm.Sales.SalesOrderPaymentPlans.md#Amount) | [Amount](../data-types.md#Amount) | Amount to be payed. [Currency: SalesOrder.DocumentCurrency] [Required] 
 | [AmountPercent](Crm.Sales.SalesOrderPaymentPlans.md#AmountPercent) | decimal (nullable) | Percent of the sales order amount to be payed. 
 | [DueDateFormMethod](Crm.Sales.SalesOrderPaymentPlans.md#DueDateFormMethod) | [Crm.PaymentPlanDueDateSource](Crm.Sales.SalesOrderPaymentPlans.md#DueDateFormMethod) | Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. [Required] 
 | [ExplicitPaymentDueDate](Crm.Sales.SalesOrderPaymentPlans.md#ExplicitPaymentDueDate) | datetime (nullable) | Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'. 
@@ -40,7 +43,7 @@ _Default Value_: **NewGuid**
 
 > Amount to be payed. [Currency: SalesOrder.DocumentCurrency] [Required]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -208,7 +211,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_SalesOrderPaymentPlans?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Order_Payment_Plans?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.AuditLogEntries
+---
 # Systems.Core.AuditLogEntries
 
 Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log_Entries (Introduced in version 18.2.100.0)
@@ -167,7 +170,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_AuditLogEntries?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Audit_Log_Entries?$top=10>
 

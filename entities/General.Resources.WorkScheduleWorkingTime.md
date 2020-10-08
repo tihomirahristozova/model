@@ -1,3 +1,6 @@
+---
+uid: General.Resources.WorkScheduleWorkingTime
+---
 # General.Resources.WorkScheduleWorkingTime
 
 Contains the different working time periods within the work schedule. Entity: Gen_Work_Schedule_Working_Time
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Resources_WorkScheduleWorkingTime?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Work_Schedule_Working_Time?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Crm.Pos.Devices
+---
 # Crm.Pos.Devices
 
 Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Introduced in version 19.1.100.0)
@@ -129,7 +132,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_Devices?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Pos_Devices?$top=10>
 

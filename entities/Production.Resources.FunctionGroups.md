@@ -1,3 +1,6 @@
+---
+uid: Production.Resources.FunctionGroups
+---
 # Production.Resources.FunctionGroups
 
 Represents the hierarchy of the function groups. They group the multitude of resource functions in logical, user-defined groups. Entity: Prd_Function_Groups
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_FunctionGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Function_Groups?$top=10>
 

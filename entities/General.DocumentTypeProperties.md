@@ -1,3 +1,6 @@
+---
+uid: General.DocumentTypeProperties
+---
 # General.DocumentTypeProperties
 
 Default user-defined properties, which should be added to new documents. Entity: Gen_Document_Type_Properties
@@ -8,7 +11,7 @@ Default user-defined properties, which should be added to new documents. Entity:
 | ---- | ---- | --- |
 | [Id](General.DocumentTypeProperties.md#Id) | guid |  
 | [DefaultPropertyValue](General.DocumentTypeProperties.md#DefaultPropertyValue) | string (nullable) | The default value of the property when creating new documents. 
-| [DefaultPropertyValueDescription](General.DocumentTypeProperties.md#DefaultPropertyValueDescription) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Default description value of the property when creating new documents. 
+| [DefaultPropertyValueDescription](General.DocumentTypeProperties.md#DefaultPropertyValueDescription) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Default description value of the property when creating new documents. 
 | [DefaultValueId](General.DocumentTypeProperties.md#DefaultValueId) | guid (nullable) | Internal Id of the default value of the property. [Filter(multi eq)] 
 | [LineNo](General.DocumentTypeProperties.md#LineNo) | int32 | Line number, unique within the document type. [Required] [Filter(ge;le)] [ORD] 
 | [Required](General.DocumentTypeProperties.md#Required) | boolean | True if the property is required when creating documents of this type. [Required] [Default(false)] [Filter(eq)] 
@@ -45,7 +48,7 @@ _Supports Order By_: **False**
 
 > Default description value of the property when creating new documents.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -143,7 +146,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentTypeProperties?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Type_Properties?$top=10>
 

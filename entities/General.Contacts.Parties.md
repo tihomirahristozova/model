@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.Parties
+---
 # General.Contacts.Parties
 
 Contains base data for different kind of parties - companies, persons, departments, etc.
@@ -15,7 +18,7 @@ Contains base data for different kind of parties - companies, persons, departmen
 | [PartyNotes](General.Contacts.Parties.md#PartyNotes) | string (nullable) | Notes for this Party 
 | [ParentPartyId](General.Contacts.Parties.md#ParentPartyId) | guid (nullable) |  
 | [PartyCode](General.Contacts.Parties.md#PartyCode) | string | The unique code of the Party [Required] 
-| [PartyName](General.Contacts.Parties.md#PartyName) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the party [Required] 
+| [PartyName](General.Contacts.Parties.md#PartyName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the party [Required] 
 | [PartyType](General.Contacts.Parties.md#PartyType) | [General.Contacts.PartiesRepository.PartyType](General.Contacts.Parties.md#PartyType) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required] 
 | [PartyUniqueNumber](General.Contacts.Parties.md#PartyUniqueNumber) | string (nullable) | Unique number of the party (National number for persons, Registration number for companies) 
 | [PartyUpdateTime](General.Contacts.Parties.md#PartyUpdateTime) | datetime (nullable) | Date and time when the Party was last updated. 
@@ -119,7 +122,7 @@ _Supports Order By_: **True**
 
 > The name of the party [Required]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -223,7 +226,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_Parties?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Parties?$top=10>
 

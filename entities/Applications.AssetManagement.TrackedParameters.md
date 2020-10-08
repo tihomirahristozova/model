@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.TrackedParameters
+---
 # Applications.AssetManagement.TrackedParameters
 
 Parameters of assets, tracked for maintenance reasons, like car mileage, aircraft cycles, etc. Entity: Eam_Tracked_Parameters (Introduced in version 19.1.100.0)
@@ -10,7 +13,7 @@ Parameters of assets, tracked for maintenance reasons, like car mileage, aircraf
 | [IsActive](Applications.AssetManagement.TrackedParameters.md#IsActive) | boolean | Specifies whether the parameter is active for choosing in drop downs. [Required] [Default(true)] [Filter(multi eq)] 
 | [Notes](Applications.AssetManagement.TrackedParameters.md#Notes) | string (nullable) | Notes for this TrackedParameter. [Filter(like)] 
 | [Code](Applications.AssetManagement.TrackedParameters.md#Code) | string | Unique code of the asset parameter. [Required] [Filter(multi eq;like)] [ORD] 
-| [Name](Applications.AssetManagement.TrackedParameters.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Multilanguage name of the asset parameter. [Required] [Filter(multi eq;like)] 
+| [Name](Applications.AssetManagement.TrackedParameters.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage name of the asset parameter. [Required] [Filter(multi eq;like)] 
 
 
 ## Attribute Details
@@ -51,7 +54,7 @@ _Supports Order By_: **True**
 
 > Multilanguage name of the asset parameter. [Required] [Filter(multi eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -76,7 +79,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_TrackedParameters?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Tracked_Parameters?$top=10>
 

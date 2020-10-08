@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.Accounts
+---
 # Finance.Accounting.Accounts
 
 Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
@@ -8,7 +11,7 @@ Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 | ---- | ---- | --- |
 | [Id](Finance.Accounting.Accounts.md#Id) | guid |  
 | [AccountFullNumber](Finance.Accounting.Accounts.md#AccountFullNumber) | string | The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. [Required] [Filter(like)] [ReadOnly] 
-| [Name](Finance.Accounting.Accounts.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The account name. [Required] [Filter(like)] 
+| [Name](Finance.Accounting.Accounts.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The account name. [Required] [Filter(like)] 
 | [Number](Finance.Accounting.Accounts.md#Number) | string | The number of the account, unique within the account group. [Required] [Filter(like)] 
 | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#CurrencyValuationMethod) | [Finance.Accounting.AccountsRepository.CurrencyValuationMethod](Finance.Accounting.Accounts.md#CurrencyValuationMethod) | Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document. [Required] [Default("ACB")] 
 | [Description](Finance.Accounting.Accounts.md#Description) | string (nullable) | The description of this Account. 
@@ -50,7 +53,7 @@ _Supports Order By_: **False**
 
 > The account name. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -145,7 +148,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_Accounts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Accounts?$top=10>
 

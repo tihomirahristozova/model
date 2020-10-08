@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.PaymentTypes
+---
 # Finance.Payments.PaymentTypes
 
 Describes the way of payment. For example: in cash, by bank transfer, with credit card, etc. Entity: Cash_Payment_Types
@@ -9,7 +12,7 @@ Describes the way of payment. For example: in cash, by bank transfer, with credi
 | [Id](Finance.Payments.PaymentTypes.md#Id) | guid |  
 | [IsActive](Finance.Payments.PaymentTypes.md#IsActive) | boolean | Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1.100.0) 
 | [Code](Finance.Payments.PaymentTypes.md#Code) | string | The payment type unique code. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Finance.Payments.PaymentTypes.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this PaymentType. [Required] [Filter(like)] [ORD] 
+| [Name](Finance.Payments.PaymentTypes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this PaymentType. [Required] [Filter(like)] [ORD] 
 | [SystemType](Finance.Payments.PaymentTypes.md#SystemType) | [Finance.Payments.PaymentTypesRepository.SystemType](Finance.Payments.PaymentTypes.md#SystemType) (nullable) | Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer. 
 
 ## References
@@ -50,7 +53,7 @@ _Supports Order By_: **True**
 
 > The name of this PaymentType. [Required] [Filter(like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
@@ -120,7 +123,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Types?$top=10>
 

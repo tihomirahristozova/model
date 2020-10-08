@@ -1,3 +1,6 @@
+---
+uid: General.Products.ProductTypes
+---
 # General.Products.ProductTypes
 
 Categorization of the products by their nature. Entity: Gen_Product_Types
@@ -15,7 +18,7 @@ Categorization of the products by their nature. Entity: Gen_Product_Types
 | [IsStocked](General.Products.ProductTypes.md#IsStocked) | boolean | True=The products of this type are stocked in a warehouse; false=otherwise (services). [Required] [Default(true)] [Filter(eq)] 
 | [LotAutoCreation](General.Products.ProductTypes.md#LotAutoCreation) | boolean | If checked specifies that lots are automatically created by the receiving orders with which the products are received. [Required] [Default(false)] 
 | [Code](General.Products.ProductTypes.md#Code) | string | The unique code of the ProductType. [Required] [Filter(eq)] 
-| [Name](General.Products.ProductTypes.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this ProductType. [Required] [Filter(eq;like)] [ORD] 
+| [Name](General.Products.ProductTypes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this ProductType. [Required] [Filter(eq;like)] [ORD] 
 
 ## Child Collections
 
@@ -109,7 +112,7 @@ _Supports Order By_: **False**
 
 > The name of this ProductType. [Required] [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -134,7 +137,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_ProductTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Product_Types?$top=10>
 

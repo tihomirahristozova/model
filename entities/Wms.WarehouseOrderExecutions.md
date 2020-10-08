@@ -1,3 +1,6 @@
+---
+uid: Wms.WarehouseOrderExecutions
+---
 # Wms.WarehouseOrderExecutions
 
 Execution of a warehouse order line. Entity: Wms_Warehouse_Order_Executions (Introduced in version 20.1.100.0)
@@ -119,7 +122,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Wms_WarehouseOrderExecutions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wms_Warehouse_Order_Executions?$top=10>
 

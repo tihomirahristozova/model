@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.UpdateProcedureExecutes
+---
 # Systems.Core.UpdateProcedureExecutes
 
 Contains data about the execution of Upgrade Procedures. Contains status messages and ensures that each procedure is executed only once. Entity: Sys_Update_Procedure_Executes
@@ -77,7 +80,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_UpdateProcedureExecutes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Update_Procedure_Executes?$top=10>
 

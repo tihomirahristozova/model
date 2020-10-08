@@ -1,3 +1,6 @@
+---
+uid: Logistics.Shipment.ShipmentLines
+---
 # Logistics.Shipment.ShipmentLines
 
 Represents detail lines of shipments. Each line contains the shipment of one product. Entity: Log_Shipment_Lines
@@ -19,9 +22,9 @@ Represents detail lines of shipments. Each line contains the shipment of one pro
 | [Notes](Logistics.Shipment.ShipmentLines.md#Notes) | string (nullable) | Specific notes for this line. 
 | [PalletNo](Logistics.Shipment.ShipmentLines.md#PalletNo) | int32 (nullable) | The number of the pallet in which the goods are packaged. null means unknown. 
 | [ParentLineNo](Logistics.Shipment.ShipmentLines.md#ParentLineNo) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. [Filter(multi eq)] 
-| [Quantity](Logistics.Shipment.ShipmentLines.md#Quantity) | [Quantity](../data-types/Quantity.md) | The quantity to be shipped. [Unit: QuantityUnit] [Required] 
-| [QuantityBase](Logistics.Shipment.ShipmentLines.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | The equivalence of Quantity in the base measurement category of the product. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] 
-| [StandardQuantityBase](Logistics.Shipment.ShipmentLines.md#StandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [Quantity](Logistics.Shipment.ShipmentLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | The quantity to be shipped. [Unit: QuantityUnit] [Required] 
+| [QuantityBase](Logistics.Shipment.ShipmentLines.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalence of Quantity in the base measurement category of the product. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] 
+| [StandardQuantityBase](Logistics.Shipment.ShipmentLines.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
 | [Volumel](Logistics.Shipment.ShipmentLines.md#Volumel) | decimal (nullable) | The volume in litres of the whole batch. null means unknown. 
 | [Widthm](Logistics.Shipment.ShipmentLines.md#Widthm) | decimal (nullable) | The width of the package in meters. null means unknown. 
 
@@ -163,7 +166,7 @@ _Supports Order By_: **False**
 
 > The quantity to be shipped. [Unit: QuantityUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -173,7 +176,7 @@ _Front-End Recalc Expressions:_
 
 > The equivalence of Quantity in the base measurement category of the product. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -186,7 +189,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -319,7 +322,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_ShipmentLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Log_Shipment_Lines?$top=10>
 

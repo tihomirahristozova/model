@@ -1,3 +1,6 @@
+---
+uid: Applications.PersonalData.JointControllers
+---
 # Applications.PersonalData.JointControllers
 
 Contains relationship between process and joint controllers. For processes with control role, these are the joint controllers. Otherwise, these are the joint controllers, on behalf of which the enterprise company processes the data. Entity: Pdm_Joint_Controllers (Introduced in version 18.2.100.0)
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_PersonalData_JointControllers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Pdm_Joint_Controllers?$top=10>
 

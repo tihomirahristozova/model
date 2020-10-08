@@ -1,3 +1,6 @@
+---
+uid: Crm.Sales.SalesOrdersOptions
+---
 # Crm.Sales.SalesOrdersOptions
 
 Options for sales orders of specific user defined document type. Entity: Crm_Sales_Orders_Options
@@ -9,7 +12,7 @@ Options for sales orders of specific user defined document type. Entity: Crm_Sal
 | [Id](Crm.Sales.SalesOrdersOptions.md#Id) | guid |  
 | [AllowedDirections](Crm.Sales.SalesOrdersOptions.md#AllowedDirections) | [Crm.Sales.SalesOrdersOptionsRepository.AllowedDirections](Crm.Sales.SalesOrdersOptions.md#AllowedDirections) | Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default). [Required] [Default("A")] [Filter(multi eq)] 
 | [AvailableQuantityOnly](Crm.Sales.SalesOrdersOptions.md#AvailableQuantityOnly) | boolean | When true indicates that the sales order can be released only if there is sufficient available quantity (by ATP). [Required] [Default(false)] [Filter(eq)] 
-| [MinimumAmount](Crm.Sales.SalesOrdersOptions.md#MinimumAmount) | [Amount](../data-types/Amount.md) (nullable) | When not null, specifies minimal total amount of the sales order, which is required for order releasing. [Currency: MinimumAmountCurrency] 
+| [MinimumAmount](Crm.Sales.SalesOrdersOptions.md#MinimumAmount) | [Amount](../data-types.md#Amount) (nullable) | When not null, specifies minimal total amount of the sales order, which is required for order releasing. [Currency: MinimumAmountCurrency] 
 | [ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#ShipmentAllowance) | [Crm.Sales.SalesOrdersOptionsRepository.ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#ShipmentAllowance) | Terms on which the shipment of the products in the sales order is allowed. [Required] [Default("A")] 
 
 ## References
@@ -63,7 +66,7 @@ _Default Value_: **False**
 
 > When not null, specifies minimal total amount of the sales order, which is required for order releasing. [Currency: MinimumAmountCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -141,7 +144,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_SalesOrdersOptions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Orders_Options?$top=10>
 

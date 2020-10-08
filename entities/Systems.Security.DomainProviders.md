@@ -1,3 +1,6 @@
+---
+uid: Systems.Security.DomainProviders
+---
 # Systems.Security.DomainProviders
 
 The external authentication providers, linked to the domain. Contains data about registration, usually the app id or app key. Entity: Sec_Domain_Providers (Introduced in version 20.1.100.0)
@@ -9,7 +12,7 @@ The external authentication providers, linked to the domain. Contains data about
 | [Id](Systems.Security.DomainProviders.md#Id) | guid |  
 | [ClientID](Systems.Security.DomainProviders.md#ClientID) | string (nullable) | This is the Client_ID of our registration within the provider. 
 | [ClientSecret](Systems.Security.DomainProviders.md#ClientSecret) | string (nullable) | This is the password, which we, as a client app, use to access the authentication provider. 
-| [DisplayName](Systems.Security.DomainProviders.md#DisplayName) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers. 
+| [DisplayName](Systems.Security.DomainProviders.md#DisplayName) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers. 
 | [IsActive](Systems.Security.DomainProviders.md#IsActive) | boolean | Specifies whether the provider is currently active for the domain. [Required] [Default(true)] [Filter(eq)] 
 | [Notes](Systems.Security.DomainProviders.md#Notes) | string (nullable) | Notes for this DomainProvider. 
 | [ProviderName](Systems.Security.DomainProviders.md#ProviderName) | [Systems.Security.DomainProvidersRepository.ProviderName](Systems.Security.DomainProviders.md#ProviderName) | The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc. [Required] [Filter(eq)] 
@@ -51,7 +54,7 @@ _Supports Order By_: **False**
 
 > Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -130,7 +133,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_DomainProviders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sec_Domain_Providers?$top=10>
 

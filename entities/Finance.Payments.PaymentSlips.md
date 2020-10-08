@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.PaymentSlips
+---
 # Finance.Payments.PaymentSlips
 
 Represents mass payment document (payment slip). Entity: Cash_Payment_Slips
@@ -480,7 +483,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentSlips?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Slips?$top=10>
 

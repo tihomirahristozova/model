@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.CompanyDepartments
+---
 # General.Contacts.CompanyDepartments
 
 Hierarchical structure of the company departments. The departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Departments
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_CompanyDepartments?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Company_Departments?$top=10>
 

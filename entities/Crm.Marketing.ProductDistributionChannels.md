@@ -1,3 +1,6 @@
+---
+uid: Crm.Marketing.ProductDistributionChannels
+---
 # Crm.Marketing.ProductDistributionChannels
 
 Channel assignments (listing) for products. Entity: Crm_Product_Distribution_Channels
@@ -9,7 +12,7 @@ Channel assignments (listing) for products. Entity: Crm_Product_Distribution_Cha
 | [Id](Crm.Marketing.ProductDistributionChannels.md#Id) | guid |  
 | [FromDate](Crm.Marketing.ProductDistributionChannels.md#FromDate) | date (nullable) | When the product was listed. null-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). [Default(Today)] [Filter(ge;le)] 
 | [IsActive](Crm.Marketing.ProductDistributionChannels.md#IsActive) | boolean | Is this product listing active? true=Yes, false=No. [Required] [Default(true)] [Filter(eq)] 
-| [MinimalSalesPricePerLot](Crm.Marketing.ProductDistributionChannels.md#MinimalSalesPricePerLot) | [Amount](../data-types/Amount.md) (nullable) | Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: Product.CostingCurrency] 
+| [MinimalSalesPricePerLot](Crm.Marketing.ProductDistributionChannels.md#MinimalSalesPricePerLot) | [Amount](../data-types.md#Amount) (nullable) | Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: Product.CostingCurrency] 
 | [MinimalSalesQuantityBase](Crm.Marketing.ProductDistributionChannels.md#MinimalSalesQuantityBase) | decimal (nullable) | Minimal base quantity of the current product that has to be specified in any sale for this distribution channel. 
 | [ToDate](Crm.Marketing.ProductDistributionChannels.md#ToDate) | date (nullable) | When the product was de-listed. null=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). [Filter(ge;le)] 
 
@@ -52,7 +55,7 @@ _Default Value_: **True**
 
 > Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: Product.CostingCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -112,7 +115,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Marketing_ProductDistributionChannels?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Product_Distribution_Channels?$top=10>
 

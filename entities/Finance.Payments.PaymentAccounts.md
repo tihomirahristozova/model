@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.PaymentAccounts
+---
 # Finance.Payments.PaymentAccounts
 
 Payment accounts are cash, bank and other accounts, which are used in payments. Payment accounts are frequently used as analytical dimensions (properties) for general ledger accounts. Entity: Cash_Payment_Accounts
@@ -9,7 +12,7 @@ Payment accounts are cash, bank and other accounts, which are used in payments. 
 | [Id](Finance.Payments.PaymentAccounts.md#Id) | guid |  
 | [IsActive](Finance.Payments.PaymentAccounts.md#IsActive) | boolean | Indicates wheather the payment account is currently used (active). [Required] [Default(true)] [Filter(eq)] 
 | [Code](Finance.Payments.PaymentAccounts.md#Code) | string | The unique code of the PaymentAccount. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Finance.Payments.PaymentAccounts.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this PaymentAccount. [Required] [Filter(like)] 
+| [Name](Finance.Payments.PaymentAccounts.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this PaymentAccount. [Required] [Filter(like)] 
 
 ## References
 
@@ -53,7 +56,7 @@ _Supports Order By_: **True**
 
 > The name of this PaymentAccount. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -129,7 +132,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentAccounts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Accounts?$top=10>
 

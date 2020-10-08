@@ -1,3 +1,6 @@
+---
+uid: General.EnterpriseCompanies
+---
 # General.EnterpriseCompanies
 
 The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Companies
@@ -9,7 +12,7 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 | [Id](General.EnterpriseCompanies.md#Id) | guid |  
 | [BIStartDate](General.EnterpriseCompanies.md#BIStartDate) | datetime (nullable) | Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". [Filter(eq)] (Introduced in version 18.2.100.0) 
 | [DefaultCostingMethod](General.EnterpriseCompanies.md#DefaultCostingMethod) | [General.EnterpriseCompaniesRepository.DefaultCostingMethod](General.EnterpriseCompanies.md#DefaultCostingMethod) | Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. [Required] [Default("AVG")] 
-| [DefaultCustomerCreditLimitBase](General.EnterpriseCompanies.md#DefaultCustomerCreditLimitBase) | [Amount](../data-types/Amount.md) (nullable) | Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. [Currency: BaseCurrency] [Filter(eq;like)] 
+| [DefaultCustomerCreditLimitBase](General.EnterpriseCompanies.md#DefaultCustomerCreditLimitBase) | [Amount](../data-types.md#Amount) (nullable) | Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. [Currency: BaseCurrency] [Filter(eq;like)] 
 | [DefaultLanguage](General.EnterpriseCompanies.md#DefaultLanguage) | [General.EnterpriseCompaniesRepository.DefaultLanguage](General.EnterpriseCompanies.md#DefaultLanguage) (nullable) | The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). [Default("en")] 
 | [EditPeriodStartDate](General.EnterpriseCompanies.md#EditPeriodStartDate) | datetime (nullable) | Start date of the priod when the documents can be edited. 
 | [IsActive](General.EnterpriseCompanies.md#IsActive) | boolean | Indicates whether the current Enterprise company  is active. [Required] [Default(true)] [Filter(multi eq)] (Introduced in version 20.1.100.0) 
@@ -79,7 +82,7 @@ _Default Value_: **AverageCost**
 
 > Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. [Currency: BaseCurrency] [Filter(eq;like)]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -214,7 +217,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_EnterpriseCompanies?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Enterprise_Companies?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Finance.Intrastat.DeclarationLines
+---
 # Finance.Intrastat.DeclarationLines
 
 Contains the details of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declaration_Lines
@@ -8,12 +11,12 @@ Contains the details of the Intrastat declarations, issued by the enterprise com
 | ---- | ---- | --- |
 | [Id](Finance.Intrastat.DeclarationLines.md#Id) | guid |  
 | [DeliveryTerms](Finance.Intrastat.DeclarationLines.md#DeliveryTerms) | [Finance.Intrastat.DeclarationLinesRepository.DeliveryTerms](Finance.Intrastat.DeclarationLines.md#DeliveryTerms) | Delivery terms - classification according to Intrastat (which uses the common abbreviations). [Required] 
-| [InvoicedValueAmountBase](Finance.Intrastat.DeclarationLines.md#InvoicedValueAmountBase) | [Amount](../data-types/Amount.md) | Invoiced value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency] [Required] 
+| [InvoicedValueAmountBase](Finance.Intrastat.DeclarationLines.md#InvoicedValueAmountBase) | [Amount](../data-types.md#Amount) | Invoiced value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency] [Required] 
 | [LineAction](Finance.Intrastat.DeclarationLines.md#LineAction) | [Finance.Intrastat.DeclarationLinesRepository.LineAction](Finance.Intrastat.DeclarationLines.md#LineAction) | Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted. [Required] [Default("NEW")] 
 | [LineNo](Finance.Intrastat.DeclarationLines.md#LineNo) | int32 | Consequtive line number within the intrastat declaration. [Required] [Filter(eq)] 
 | [NetMassKg](Finance.Intrastat.DeclarationLines.md#NetMassKg) | decimal | Net mass of the goods in kg. [Required] [Filter(multi eq)] 
 | [QuantitySupplementaryUnit](Finance.Intrastat.DeclarationLines.md#QuantitySupplementaryUnit) | decimal (nullable) | Quantity of the goods in the supplementary unit. null when no supplementary unit is specified. 
-| [StatisticalValueAmountBase](Finance.Intrastat.DeclarationLines.md#StatisticalValueAmountBase) | [Amount](../data-types/Amount.md) (nullable) | Statistical value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency] 
+| [StatisticalValueAmountBase](Finance.Intrastat.DeclarationLines.md#StatisticalValueAmountBase) | [Amount](../data-types.md#Amount) (nullable) | Statistical value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency] 
 | [TransactionNature](Finance.Intrastat.DeclarationLines.md#TransactionNature) | [Finance.Intrastat.DeclarationLinesRepository.TransactionNature](Finance.Intrastat.DeclarationLines.md#TransactionNature) | Transaction nature, according to the Intrastat classification. [Required] 
 | [TransportMode](Finance.Intrastat.DeclarationLines.md#TransportMode) | [Finance.Intrastat.DeclarationLinesRepository.TransportMode](Finance.Intrastat.DeclarationLines.md#TransportMode) | Transportation mode - type of transportation used. [Required] 
 
@@ -67,7 +70,7 @@ _Supports Order By_: **False**
 
 > Invoiced value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency] [Required]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -123,7 +126,7 @@ _Supports Order By_: **False**
 
 > Statistical value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -254,7 +257,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Intrastat_DeclarationLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Its_Declaration_Lines?$top=10>
 

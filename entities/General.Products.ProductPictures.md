@@ -1,3 +1,6 @@
+---
+uid: General.Products.ProductPictures
+---
 # General.Products.ProductPictures
 
 Pictures of products. Entity: Gen_Product_Pictures
@@ -126,7 +129,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_ProductPictures?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Product_Pictures?$top=10>
 

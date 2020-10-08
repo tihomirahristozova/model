@@ -1,3 +1,6 @@
+---
+uid: Production.WorkOrderDocumentTypesOptions
+---
 # Production.WorkOrderDocumentTypesOptions
 
 Options for user-defined Work Order document types. Entity: Prd_Work_Order_Document_Types_Options
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_WorkOrderDocumentTypesOptions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Work_Order_Document_Types_Options?$top=10>
 

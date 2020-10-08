@@ -1,3 +1,6 @@
+---
+uid: Crm.Marketing.ForecastItems
+---
 # Crm.Marketing.ForecastItems
 
 Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
@@ -8,7 +11,7 @@ Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 | ---- | ---- | --- |
 | [Id](Crm.Marketing.ForecastItems.md#Id) | guid |  
 | [Date](Crm.Marketing.ForecastItems.md#Date) | datetime | The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period. [Required] [Filter(ge;le)] 
-| [Quantity](Crm.Marketing.ForecastItems.md#Quantity) | [Quantity](../data-types/Quantity.md) | The forecasted sales quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)] 
+| [Quantity](Crm.Marketing.ForecastItems.md#Quantity) | [Quantity](../data-types.md#Quantity) | The forecasted sales quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)] 
 
 ## References
 
@@ -43,7 +46,7 @@ _Supports Order By_: **False**
 
 > The forecasted sales quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -120,7 +123,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Marketing_ForecastItems?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Forecast_Items?$top=10>
 

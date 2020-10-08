@@ -1,3 +1,6 @@
+---
+uid: Applications.Rental.TransactionTemplates
+---
 # Applications.Rental.TransactionTemplates
 
 Specifies additional options for document routes, generating Rental Transactions. Entity: Rent_Transaction_Templates
@@ -75,7 +78,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Rental_TransactionTemplates?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Rent_Transaction_Templates?$top=10>
 

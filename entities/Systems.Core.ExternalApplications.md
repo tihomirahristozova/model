@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.ExternalApplications
+---
 # Systems.Core.ExternalApplications
 
 List of external applications. Used to run external applications. Entity: Sys_External_Applications
@@ -11,7 +14,7 @@ List of external applications. Used to run external applications. Entity: Sys_Ex
 | [AvailableInMode](Systems.Core.ExternalApplications.md#AvailableInMode) | [Systems.Core.ExternalApplicationsRepository.AvailableInMode](Systems.Core.ExternalApplications.md#AvailableInMode) | Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. [Required] [Default("SINGLE")] [Filter(eq)] 
 | [EntityName](Systems.Core.ExternalApplications.md#EntityName) | string | The entity, for which the application is defined. [Required] [Filter(eq)] [ORD] 
 | [ExecuteForAllObjects](Systems.Core.ExternalApplications.md#ExecuteForAllObjects) | boolean | Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. [Required] [Default(true)] [Filter(eq)] 
-| [Name](Systems.Core.ExternalApplications.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the external application. [Required] [Filter(eq;like)] 
+| [Name](Systems.Core.ExternalApplications.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the external application. [Required] [Filter(eq;like)] 
 | [IsActive](Systems.Core.ExternalApplications.md#IsActive) | boolean (nullable) | Specifies whether the external application is currently used. [Default(true)] [Filter(eq)] 
 | [Notes](Systems.Core.ExternalApplications.md#Notes) | string (nullable) | Notes for this ExternalApplication. 
 | [Platform](Systems.Core.ExternalApplications.md#Platform) | [Systems.Core.ExternalApplicationsRepository.Platform](Systems.Core.ExternalApplications.md#Platform) | The execution platform of the application. [Required] [Filter(eq)] 
@@ -81,7 +84,7 @@ _Default Value_: **True**
 
 > The name of the external application. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -171,7 +174,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_ExternalApplications?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_External_Applications?$top=10>
 

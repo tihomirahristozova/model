@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.ScrapTypes
+---
 # Logistics.Inventory.ScrapTypes
 
 Types of scrap. Used in store transactions to categorize scrap, when it occurs. Entity: Inv_Scrap_Types
@@ -58,7 +61,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_ScrapTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Scrap_Types?$top=10>
 

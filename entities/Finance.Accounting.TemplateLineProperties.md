@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.TemplateLineProperties
+---
 # Finance.Accounting.TemplateLineProperties
 
 Contains the way to obtain the values for each required property of both the debit and the credit accounts. Entity: Acc_Template_Line_Properties
@@ -9,7 +12,7 @@ Contains the way to obtain the values for each required property of both the deb
 | [Id](Finance.Accounting.TemplateLineProperties.md#Id) | guid |  
 | [ConstantValueId](Finance.Accounting.TemplateLineProperties.md#ConstantValueId) | guid (nullable) | The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. [Filter(multi eq)] 
 | [IsDebit](Finance.Accounting.TemplateLineProperties.md#IsDebit) | boolean | If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. [Required] [Default(true)] [Filter(eq)] 
-| [PropertyDescription](Finance.Accounting.TemplateLineProperties.md#PropertyDescription) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant). 
+| [PropertyDescription](Finance.Accounting.TemplateLineProperties.md#PropertyDescription) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant). 
 | [PropertyNo](Finance.Accounting.TemplateLineProperties.md#PropertyNo) | int32 | The ordinal position of the property value in the item key of the account. [Required] [Filter(eq)] 
 | [PropertyValueSource](Finance.Accounting.TemplateLineProperties.md#PropertyValueSource) | string | Source for the property value according to the chosen source type. [Required] 
 | [PropertyValueSourceType](Finance.Accounting.TemplateLineProperties.md#PropertyValueSourceType) | string | Type of source for the property value. For example: System properties, User properties for document, Constant, ... [Required] 
@@ -52,7 +55,7 @@ _Default Value_: **True**
 
 > Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant).
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -120,7 +123,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_TemplateLineProperties?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Template_Line_Properties?$top=10>
 

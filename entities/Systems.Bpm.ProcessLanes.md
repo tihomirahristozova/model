@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.ProcessLanes
+---
 # Systems.Bpm.ProcessLanes
 
 The process lanes categorize elements in the process and contain logic for executor selection. Entity: Bpm_Process_Lanes
@@ -11,7 +14,7 @@ The process lanes categorize elements in the process and contain logic for execu
 | [IsSystemExecuted](Systems.Bpm.ProcessLanes.md#IsSystemExecuted) | boolean | When set, specifies that the lane allows only system executed tasks and will never have human user as executor. [Required] [Default(false)] [Filter(eq)] 
 | [Locality](Systems.Bpm.ProcessLanes.md#Locality) | [Systems.Bpm.Locality](Systems.Bpm.ProcessLanes.md#Locality) | Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. [Required] [Filter(eq;like)] 
 | [Notes](Systems.Bpm.ProcessLanes.md#Notes) | string (nullable) | Notes for this ProcessLane. 
-| [Name](Systems.Bpm.ProcessLanes.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Multilanguage lane name. [Required] [Filter(eq;like)] 
+| [Name](Systems.Bpm.ProcessLanes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage lane name. [Required] [Filter(eq;like)] 
 | [RestrictToSingleUser](Systems.Bpm.ProcessLanes.md#RestrictToSingleUser) | boolean | Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user. [Required] [Default(false)] [Filter(eq)] 
 | [UserConditionFilterXml](Systems.Bpm.ProcessLanes.md#UserConditionFilterXml) | dataaccessfilter (nullable) | User defined filter, used to select possible executors of tasks in the lane. [Filter(eq;like)] 
 
@@ -90,7 +93,7 @@ _Supports Order By_: **False**
 
 > Multilanguage lane name. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -167,7 +170,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_ProcessLanes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Bpm_Process_Lanes?$top=10>
 

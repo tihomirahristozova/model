@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.ExtensibleDataObjects
+---
 # Systems.Core.ExtensibleDataObjects
 
 Extends data in other tables with attached files, custom properties, etc. Each row is an object, bound to exactly one row in the primary table. Each object can be bound to a row in a different primary table, specified in Entity_Type. Entity: Sys_Objects
@@ -129,7 +132,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_ExtensibleDataObjects?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Objects?$top=10>
 

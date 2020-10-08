@@ -1,3 +1,6 @@
+---
+uid: Finance.Vat.BGVATDocumentTypeVATCodes
+---
 # Finance.Vat.BGVATDocumentTypeVATCodes
 
 Contains the VAT codes, which should be used, when reporting VAT for the different document types. Entity: Nat_BG_VAT_Document_Type_VAT_Codes
@@ -118,7 +121,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Vat_BGVATDocumentTypeVATCodes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Nat_BG_VAT_Document_Type_VAT_Codes?$top=10>
 

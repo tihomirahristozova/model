@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.PurchaseInvoiceLines
+---
 # Logistics.Procurement.PurchaseInvoiceLines
 
 Contains detail lines for purchase invoice documents. Entity: Scm_Purchase_Invoice_Lines
@@ -11,14 +14,14 @@ Contains detail lines for purchase invoice documents. Entity: Scm_Purchase_Invoi
 | [IntrastatApplyDate](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatApplyDate) | datetime (nullable) | Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used. 
 | [IntrastatTransactionNatureCode](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatTransactionNatureCode) | [Finance.Intrastat.TransactionNature](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatTransactionNatureCode) (nullable) | Transaction nature; used for Intrastat reporting. 
 | [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatTransportModeCode) | [Finance.Intrastat.TransportMode](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatTransportModeCode) (nullable) | Transport mode; used for Intrastat reporting. 
-| [LineAmount](Logistics.Procurement.PurchaseInvoiceLines.md#LineAmount) | [Amount](../data-types/Amount.md) | The total invoiced amount for this line in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)] 
+| [LineAmount](Logistics.Procurement.PurchaseInvoiceLines.md#LineAmount) | [Amount](../data-types.md#Amount) | The total invoiced amount for this line in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)] 
 | [LineNo](Logistics.Procurement.PurchaseInvoiceLines.md#LineNo) | int32 | Consecutive line number within the invoice. [Required] 
 | [Notes](Logistics.Procurement.PurchaseInvoiceLines.md#Notes) | string (nullable) | Notes for this PurchaseInvoiceLine. 
-| [ProductName](Logistics.Procurement.PurchaseInvoiceLines.md#ProductName) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user. [Required] 
-| [Quantity](Logistics.Procurement.PurchaseInvoiceLines.md#Quantity) | [Quantity](../data-types/Quantity.md) | The invoiced quantity. [Unit: QuantityUnit] [Required] [Default(1)] 
-| [QuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
-| [StandardQuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#StandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
-| [UnitPrice](Logistics.Procurement.PurchaseInvoiceLines.md#UnitPrice) | [Amount](../data-types/Amount.md) | The unit price of the invoiced item in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)] 
+| [ProductName](Logistics.Procurement.PurchaseInvoiceLines.md#ProductName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user. [Required] 
+| [Quantity](Logistics.Procurement.PurchaseInvoiceLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | The invoiced quantity. [Unit: QuantityUnit] [Required] [Default(1)] 
+| [QuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
+| [StandardQuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [UnitPrice](Logistics.Procurement.PurchaseInvoiceLines.md#UnitPrice) | [Amount](../data-types.md#Amount) | The unit price of the invoiced item in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)] 
 
 ## References
 
@@ -137,7 +140,7 @@ _Supports Order By_: **False**
 
 > The total invoiced amount for this line in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -167,7 +170,7 @@ _Supports Order By_: **False**
 
 > The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user. [Required]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -180,7 +183,7 @@ _Front-End Recalc Expressions:_
 
 > The invoiced quantity. [Unit: QuantityUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -189,7 +192,7 @@ _Default Value_: **Constant**
 
 > The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -202,7 +205,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -215,7 +218,7 @@ _Front-End Recalc Expressions:_
 
 > The unit price of the invoiced item in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -324,7 +327,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseInvoiceLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Invoice_Lines?$top=10>
 

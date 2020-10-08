@@ -1,3 +1,6 @@
+---
+uid: Finance.Payments.BulkPaymentOrders
+---
 # Finance.Payments.BulkPaymentOrders
 
 Bulk payment orders document. Can generate a multitude of payment orders. Often used for opening balances. Entity: Cash_Bulk_Payment_Orders
@@ -442,7 +445,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_BulkPaymentOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cash_Bulk_Payment_Orders?$top=10>
 

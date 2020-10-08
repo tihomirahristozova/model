@@ -1,3 +1,6 @@
+---
+uid: Crm.Pricing.PricingModels
+---
 # Crm.Pricing.PricingModels
 
 Pricing models are assigned to product groups and are used to automate creation of standard costs and prices and related price records. Entity: Crm_Pricing_Models
@@ -91,7 +94,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pricing_PricingModels?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Pricing_Models?$top=10>
 

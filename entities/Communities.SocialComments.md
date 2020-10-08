@@ -1,3 +1,6 @@
+---
+uid: Communities.SocialComments
+---
 # Communities.SocialComments
 
 User comment to any object in the system. Entity: Cmm_Social_Comments (Introduced in version 20.1.100.0)
@@ -92,7 +95,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Communities_SocialComments?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cmm_Social_Comments?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Production.Technologies.RecipeOperations
+---
 # Production.Technologies.RecipeOperations
 
 Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operations
@@ -15,10 +18,10 @@ Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operati
 | [RunTimeMinutes](Production.Technologies.RecipeOperations.md#RunTimeMinutes) | int32 | Duration of the operation for standard lot of the product. [Required] [Default(0)] 
 | [ScrapRate](Production.Technologies.RecipeOperations.md#ScrapRate) | decimal | Standard rate of scrap during the operation. [Required] [Default(0)] 
 | [SetupTimeMinutes](Production.Technologies.RecipeOperations.md#SetupTimeMinutes) | int32 | Time needed to setup the equipment. [Required] [Default(0)] 
-| [StandardCostPerHour](Production.Technologies.RecipeOperations.md#StandardCostPerHour) | [Amount](../data-types/Amount.md) (nullable) | Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. [Currency: Recipe.Product.CostingCurrency] 
-| [StandardPricePerHour](Production.Technologies.RecipeOperations.md#StandardPricePerHour) | [Amount](../data-types/Amount.md) | Standard price for 1 hour work. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] 
+| [StandardCostPerHour](Production.Technologies.RecipeOperations.md#StandardCostPerHour) | [Amount](../data-types.md#Amount) (nullable) | Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. [Currency: Recipe.Product.CostingCurrency] 
+| [StandardPricePerHour](Production.Technologies.RecipeOperations.md#StandardPricePerHour) | [Amount](../data-types.md#Amount) | Standard price for 1 hour work. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] 
 | [Tooling](Production.Technologies.RecipeOperations.md#Tooling) | string (nullable) | The tools needed for the routing step. 
-| [UseQuantity](Production.Technologies.RecipeOperations.md#UseQuantity) | [Quantity](../data-types/Quantity.md) | Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] 
+| [UseQuantity](Production.Technologies.RecipeOperations.md#UseQuantity) | [Quantity](../data-types.md#Quantity) | Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] 
 | [WaitTimeMinutes](Production.Technologies.RecipeOperations.md#WaitTimeMinutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)] 
 
 ## References
@@ -118,7 +121,7 @@ _Default Value_: **0**
 
 > Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. [Currency: Recipe.Product.CostingCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -126,7 +129,7 @@ _Supports Order By_: **False**
 
 > Standard price for 1 hour work. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -143,7 +146,7 @@ _Supports Order By_: **False**
 
 > Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -221,7 +224,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Technologies_RecipeOperations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Recipe_Operations?$top=10>
 

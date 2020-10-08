@@ -1,3 +1,6 @@
+---
+uid: Crm.Distribution.SalesPersonGroups
+---
 # Crm.Distribution.SalesPersonGroups
 
 Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
@@ -92,7 +95,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Distribution_SalesPersonGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Person_Groups?$top=10>
 

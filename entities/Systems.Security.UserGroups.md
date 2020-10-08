@@ -1,3 +1,6 @@
+---
+uid: Systems.Security.UserGroups
+---
 # Systems.Security.UserGroups
 
 Contains the user group members. Entity: Sec_User_Groups
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_UserGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sec_User_Groups?$top=10>
 

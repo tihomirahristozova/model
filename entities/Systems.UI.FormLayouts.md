@@ -1,3 +1,6 @@
+---
+uid: Systems.UI.FormLayouts
+---
 # Systems.UI.FormLayouts
 
 Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
@@ -139,7 +142,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_UI_FormLayouts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Form_Layouts?$top=10>
 

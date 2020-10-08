@@ -1,3 +1,6 @@
+---
+uid: Applications.DataWarehouse.DataValues
+---
 # Applications.DataWarehouse.DataValues
 
 The actual values in the general data warehouse. Entity: Dw_Data_Values (Introduced in version 18.2.100.0)
@@ -94,7 +97,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_DataWarehouse_DataValues?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Dw_Data_Values?$top=10>
 

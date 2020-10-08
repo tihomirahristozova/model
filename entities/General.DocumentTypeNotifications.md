@@ -1,3 +1,6 @@
+---
+uid: General.DocumentTypeNotifications
+---
 # General.DocumentTypeNotifications
 
 Provides notification addresses to be notified upon occurrence of different document events. Entity: Gen_Document_Type_Notifications
@@ -123,7 +126,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentTypeNotifications?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Type_Notifications?$top=10>
 

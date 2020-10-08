@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.Activities
+---
 # General.Contacts.Activities
 
 Generic activity. Provides task management functionality. Activity can be one of Task, Communication or Meeting. Entity: Cm_Activities
@@ -605,7 +608,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_Activities?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Activities?$top=10>
 

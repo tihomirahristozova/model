@@ -1,3 +1,6 @@
+---
+uid: Applications.Mail.Boxes
+---
 # Applications.Mail.Boxes
 
 Represents user mailboxes. Entity: Mail_Boxes
@@ -183,7 +186,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Mail_Boxes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Mail_Boxes?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.DepreciationMethods
+---
 # Finance.Assets.DepreciationMethods
 
 Depreciation methods. Contains both system-defined and user-defined methods. Entity: Ast_Depreciation_Methods
@@ -126,7 +129,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_DepreciationMethods?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Depreciation_Methods?$top=10>
 

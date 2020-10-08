@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.Requisitions
+---
 # Logistics.Procurement.Requisitions
 
 Contains the internal requisitions for products. Requisitions are consolidated by the purchase department into purchase orders. Entity: Scm_Requisitions
@@ -478,7 +481,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_Requisitions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Requisitions?$top=10>
 

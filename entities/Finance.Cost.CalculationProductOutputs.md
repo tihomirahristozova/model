@@ -1,3 +1,6 @@
+---
+uid: Finance.Cost.CalculationProductOutputs
+---
 # Finance.Cost.CalculationProductOutputs
 
 Represents costs allocated to product outputs. Entity: Cost_Calculation_Product_Outputs
@@ -152,7 +155,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Cost_CalculationProductOutputs?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cost_Calculation_Product_Outputs?$top=10>
 

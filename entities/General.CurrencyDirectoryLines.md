@@ -1,3 +1,6 @@
+---
+uid: General.CurrencyDirectoryLines
+---
 # General.CurrencyDirectoryLines
 
 Contains exchange rate for a currency against the main currency of currency directory. Entity: Gen_Currency_Directory_Lines
@@ -85,7 +88,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_CurrencyDirectoryLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Currency_Directory_Lines?$top=10>
 

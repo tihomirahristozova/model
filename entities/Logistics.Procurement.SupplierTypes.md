@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.SupplierTypes
+---
 # Logistics.Procurement.SupplierTypes
 
 Supplier types are primarily used to differentiate the security level access to the different supplier groups. Entity: Scm_Supplier_Types
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_SupplierTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Supplier_Types?$top=10>
 

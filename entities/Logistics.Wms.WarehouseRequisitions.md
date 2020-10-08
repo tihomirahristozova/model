@@ -1,3 +1,6 @@
+---
+uid: Logistics.Wms.WarehouseRequisitions
+---
 # Logistics.Wms.WarehouseRequisitions
 
 Contains request for warehouse operation created from another module. Entity: Wms_Warehouse_Requisitions (Introduced in version 20.1.100.0)
@@ -467,7 +470,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseRequisitions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wms_Warehouse_Requisitions?$top=10>
 

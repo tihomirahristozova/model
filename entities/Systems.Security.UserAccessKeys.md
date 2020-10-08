@@ -1,3 +1,6 @@
+---
+uid: Systems.Security.UserAccessKeys
+---
 # Systems.Security.UserAccessKeys
 
 Obsolete. Not used. Entity: Sec_User_Access_Keys
@@ -183,7 +186,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_UserAccessKeys?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sec_User_Access_Keys?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Projects.Projects
+---
 # Projects.Projects
 
 Contains the planned, running and completed projects of the enterprises. Entity: Prj_Projects
@@ -169,7 +172,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_Projects?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Projects?$top=10>
 

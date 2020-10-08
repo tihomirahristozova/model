@@ -1,3 +1,6 @@
+---
+uid: Crm.Pos.Locations
+---
 # Crm.Pos.Locations
 
 Defines a company location as POS enabled location. Entity: Pos_Locations (Introduced in version 19.1.100.0)
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_Locations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Pos_Locations?$top=10>
 

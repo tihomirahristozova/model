@@ -1,3 +1,6 @@
+---
+uid: General.Products.ProductDocumentAmounts
+---
 # General.Products.ProductDocumentAmounts
 
 Contains custom percent ratios for additional amount distribution over products. Entity: Gen_Product_Document_Amounts
@@ -75,7 +78,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_ProductDocumentAmounts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Product_Document_Amounts?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: General.DocumentTypes
+---
 # General.DocumentTypes
 
 List of user-defined document types. Each type has associated system entity (object class). Entity: Gen_Document_Types
@@ -16,7 +19,7 @@ List of user-defined document types. Each type has associated system entity (obj
 | [Notes](General.DocumentTypes.md#Notes) | string (nullable) | Notes for this DocumentType. 
 | [SchemaXML](General.DocumentTypes.md#SchemaXML) | string (nullable) | Obsolete. Not used. 
 | [TransitionalDocument](General.DocumentTypes.md#TransitionalDocument) | boolean | If checked determines that the documents from this type are automatically managed by the system and don't require management from the users. [Required] [Default(false)] 
-| [TypeName](General.DocumentTypes.md#TypeName) | [MultilanguageString](../data-types/MultilanguageString.md) | Description of the document type. [Required] [Filter(like)] [ORD] 
+| [TypeName](General.DocumentTypes.md#TypeName) | [MultilanguageString](../data-types.md#MultilanguageString) | Description of the document type. [Required] [Filter(like)] [ORD] 
 
 ## References
 
@@ -132,7 +135,7 @@ _Default Value_: **False**
 
 > Description of the document type. [Required] [Filter(like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
@@ -176,7 +179,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Types?$top=10>
 

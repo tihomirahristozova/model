@@ -1,3 +1,6 @@
+---
+uid: Systems.Security.Users
+---
 # Systems.Security.Users
 
 User logins. Entity: Sec_Users
@@ -22,7 +25,7 @@ User logins. Entity: Sec_Users
 | [PhoneNumber](Systems.Security.Users.md#PhoneNumber) | string (nullable) | Used only for two-factor authentication. null when phone-based two-factor is not used. [Filter(eq;like)] (Introduced in version 18.2.100.0) 
 | [PhoneNumberConfirmed](Systems.Security.Users.md#PhoneNumberConfirmed) | boolean | Indicates whether the Phone Number has been verified. [Required] [Default(false)] [Filter(eq)] (Introduced in version 18.2.100.0) 
 | [TwoFactorEnabled](Systems.Security.Users.md#TwoFactorEnabled) | boolean | Indicates whether two-factor authentication has been enabled. [Required] [Default(false)] [Filter(eq)] (Introduced in version 18.2.100.0) 
-| [Name](Systems.Security.Users.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The full name of the user. [Required] [Filter(like)] 
+| [Name](Systems.Security.Users.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The full name of the user. [Required] [Filter(like)] 
 | [UserType](Systems.Security.Users.md#UserType) | [Systems.Security.UsersRepository.UserType](Systems.Security.Users.md#UserType) | Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. [Required] [Default("INT")] [Filter(multi eq)] (Introduced in version 18.2.100.0) 
 | [VoiceExtensionNumbers](Systems.Security.Users.md#VoiceExtensionNumbers) | string (nullable) | Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration. 
 | [WindowsUserName](Systems.Security.Users.md#WindowsUserName) | string (nullable) | The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user. 
@@ -193,7 +196,7 @@ _Default Value_: **False**
 
 > The full name of the user. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -273,7 +276,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_Users?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sec_Users?$top=10>
 

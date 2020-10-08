@@ -1,3 +1,6 @@
+---
+uid: Logistics.Shipment.CargoTypes
+---
 # Logistics.Shipment.CargoTypes
 
 Represents a cargo type. Different cargo types might require different types of vehicles or modes of transportartion. Entity: Log_Cargo_Types
@@ -66,7 +69,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_CargoTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Log_Cargo_Types?$top=10>
 

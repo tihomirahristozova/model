@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.Lots
+---
 # Logistics.Inventory.Lots
 
 Warehouse lots. They contain one row for each specific product, status, production batch and other specific warehousing conditions. Lot status can block certain operations. Entity: Inv_Lots
@@ -7,7 +10,7 @@ Warehouse lots. They contain one row for each specific product, status, producti
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.Lots.md#Id) | guid |  
-| [Description](Logistics.Inventory.Lots.md#Description) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The description of this Lot. 
+| [Description](Logistics.Inventory.Lots.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The description of this Lot. 
 | [ExpiryDate](Logistics.Inventory.Lots.md#ExpiryDate) | datetime (nullable) | Expiry date for this lot. 
 | [LicenseNo](Logistics.Inventory.Lots.md#LicenseNo) | string (nullable) | The license number for this lot. Null when license number is N/A or unknown. 
 | [Number](Logistics.Inventory.Lots.md#Number) | string | The unique number of the Lot. May contain characters, if required. [Required] [Filter(eq;like)] 
@@ -40,7 +43,7 @@ _Default Value_: **NewGuid**
 
 > The description of this Lot.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -175,7 +178,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_Lots?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Lots?$top=10>
 

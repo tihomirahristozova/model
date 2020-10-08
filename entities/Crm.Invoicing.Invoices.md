@@ -1,3 +1,6 @@
+---
+uid: Crm.Invoicing.Invoices
+---
 # Crm.Invoicing.Invoices
 
 Invoices issued by the enterprise companies. Entity: Crm_Invoices
@@ -39,7 +42,7 @@ Invoices issued by the enterprise companies. Entity: Crm_Invoices
 | [Notes](Crm.Invoicing.Invoices.md#Notes) | string (nullable) | Notes for this Invoice. 
 | [PaymentDueDate](Crm.Invoicing.Invoices.md#PaymentDueDate) | datetime (nullable) | When not null specifies due date for the payment. 
 | [PaymentDueStartDate](Crm.Invoicing.Invoices.md#PaymentDueStartDate) | datetime (nullable) | The date when the payment becomes due for documents with one installment. 
-| [PaymentTypeDescription](Crm.Invoicing.Invoices.md#PaymentTypeDescription) | [MultilanguageString](../data-types/MultilanguageString.md) | Description of the payment type. Initially copied from the name of the Payment Type. [Required] 
+| [PaymentTypeDescription](Crm.Invoicing.Invoices.md#PaymentTypeDescription) | [MultilanguageString](../data-types.md#MultilanguageString) | Description of the payment type. Initially copied from the name of the Payment Type. [Required] 
 | [VATCashReportingMode](Crm.Invoicing.Invoices.md#VATCashReportingMode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. [Required] [Default(false)] [Filter(eq)] 
 | [VATNotes](Crm.Invoicing.Invoices.md#VATNotes) | string (nullable) | Description of the operation that will be entered in the VAT ledgers. 
 
@@ -457,7 +460,7 @@ _Front-End Recalc Expressions:_
 
 > Description of the payment type. Initially copied from the name of the Payment Type. [Required]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -717,7 +720,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Invoicing_Invoices?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Invoices?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: General.PropertiesCategories
+---
 # General.PropertiesCategories
 
 Categories of properties. Entity: Gen_Properties_Categories
@@ -7,7 +10,7 @@ Categories of properties. Entity: Gen_Properties_Categories
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.PropertiesCategories.md#Id) | guid |  
-| [Name](General.PropertiesCategories.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this PropertiesCategory. [Required] [Filter(eq;like)] [ORD] 
+| [Name](General.PropertiesCategories.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this PropertiesCategory. [Required] [Filter(eq;like)] [ORD] 
 
 
 ## Attribute Details
@@ -23,7 +26,7 @@ _Default Value_: **NewGuid**
 
 > The name of this PropertiesCategory. [Required] [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -48,7 +51,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_PropertiesCategories?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Properties_Categories?$top=10>
 

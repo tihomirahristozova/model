@@ -1,3 +1,6 @@
+---
+uid: General.Products.ProductGroupRequiredProperties
+---
 # General.Products.ProductGroupRequiredProperties
 
 Contains the properties, that are required to be set, when creating new products in the category and its sub-categories. Entity: Gen_Product_Group_Required_Properties
@@ -117,7 +120,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_ProductGroupRequiredProperties?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Product_Group_Required_Properties?$top=10>
 

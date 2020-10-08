@@ -1,3 +1,6 @@
+---
+uid: Logistics.Wms.WarehouseZones
+---
 # Logistics.Wms.WarehouseZones
 
 One zone within a warehouse. Each zone can have different rack structure and different temperature and other properties. Entity: Wms_Warehouse_Zones (Introduced in version 20.1.100.0)
@@ -9,7 +12,7 @@ One zone within a warehouse. Each zone can have different rack structure and dif
 | [Id](Logistics.Wms.WarehouseZones.md#Id) | guid |  
 | [Notes](Logistics.Wms.WarehouseZones.md#Notes) | string (nullable) | Notes for this WarehouseZone. 
 | [Code](Logistics.Wms.WarehouseZones.md#Code) | string | Zone code, unique within the warehouse. [Required] [Filter(multi eq)] 
-| [Name](Logistics.Wms.WarehouseZones.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Multi-language name of the zone. [Required] [Filter(eq;like)] 
+| [Name](Logistics.Wms.WarehouseZones.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multi-language name of the zone. [Required] [Filter(eq;like)] 
 
 ## References
 
@@ -53,7 +56,7 @@ _Front-End Recalc Expressions:_
 
 > Multi-language name of the zone. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -97,7 +100,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseZones?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Wms_Warehouse_Zones?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.SupplySchemata
+---
 # Logistics.Inventory.SupplySchemata
 
 Obsolete. Not used. Entity: Inv_Supply_Schemata
@@ -54,7 +57,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_SupplySchemata?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Supply_Schemata?$top=10>
 

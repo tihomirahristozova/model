@@ -1,3 +1,6 @@
+---
+uid: Production.Technologies.Recipes
+---
 # Production.Technologies.Recipes
 
 Contains the characteristics of operations used to create products. Entity: Prd_Recipes
@@ -12,9 +15,9 @@ Contains the characteristics of operations used to create products. Entity: Prd_
 | [ExpiryDate](Production.Technologies.Recipes.md#ExpiryDate) | datetime (nullable) | The last date, when the recipe should be used. null means that the recipe might still be in use. [Filter(ge;le)] 
 | [IsDefault](Production.Technologies.Recipes.md#IsDefault) | boolean | Default for period: Release_Date - Expiry_Date. [Required] [Default(false)] [Filter(eq)] 
 | [Notes](Production.Technologies.Recipes.md#Notes) | string (nullable) | User comments for the recipe. 
-| [Price](Production.Technologies.Recipes.md#Price) | [Amount](../data-types/Amount.md) | The price for the specified Produce_Quantity. [Currency: Product.CostingCurrency] [Required] [Default(0)] 
-| [PricePerLot](Production.Technologies.Recipes.md#PricePerLot) | [Amount](../data-types/Amount.md) | Price for one lot of the product (according to Lot_Size_Quantity_Base). [Currency: Product.CostingCurrency] [Required] [Default(0)] 
-| [ProduceQuantity](Production.Technologies.Recipes.md#ProduceQuantity) | [Quantity](../data-types/Quantity.md) | Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] 
+| [Price](Production.Technologies.Recipes.md#Price) | [Amount](../data-types.md#Amount) | The price for the specified Produce_Quantity. [Currency: Product.CostingCurrency] [Required] [Default(0)] 
+| [PricePerLot](Production.Technologies.Recipes.md#PricePerLot) | [Amount](../data-types.md#Amount) | Price for one lot of the product (according to Lot_Size_Quantity_Base). [Currency: Product.CostingCurrency] [Required] [Default(0)] 
+| [ProduceQuantity](Production.Technologies.Recipes.md#ProduceQuantity) | [Quantity](../data-types.md#Quantity) | Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] 
 | [Name](Production.Technologies.Recipes.md#Name) | string | The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. [Required] [Filter(like)] 
 | [ReleaseDate](Production.Technologies.Recipes.md#ReleaseDate) | datetime | The date, when the recipe was released to production. [Required] [Default(Today)] [Filter(ge;le)] 
 | [ScrapRate](Production.Technologies.Recipes.md#ScrapRate) | decimal | The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. [Required] [Default(0)] 
@@ -92,7 +95,7 @@ _Supports Order By_: **False**
 
 > The price for the specified Produce_Quantity. [Currency: Product.CostingCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -101,7 +104,7 @@ _Default Value_: **Constant**
 
 > Price for one lot of the product (according to Lot_Size_Quantity_Base). [Currency: Product.CostingCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -110,7 +113,7 @@ _Default Value_: **Constant**
 
 > Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -213,7 +216,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Technologies_Recipes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Recipes?$top=10>
 

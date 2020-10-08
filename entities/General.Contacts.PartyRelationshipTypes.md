@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.PartyRelationshipTypes
+---
 # General.Contacts.PartyRelationshipTypes
 
 Defines the types of relationships possible between the parties. Entity: Cm_Party_Relationship_Types
@@ -57,7 +60,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_PartyRelationshipTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Party_Relationship_Types?$top=10>
 

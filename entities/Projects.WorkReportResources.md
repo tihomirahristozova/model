@@ -1,3 +1,6 @@
+---
+uid: Projects.WorkReportResources
+---
 # Projects.WorkReportResources
 
 Each record contains usage of resource, reported by the related Work Report. Entity: Prj_Work_Report_Resources
@@ -118,7 +121,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_WorkReportResources?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Work_Report_Resources?$top=10>
 

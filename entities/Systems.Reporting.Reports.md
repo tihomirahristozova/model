@@ -1,3 +1,6 @@
+---
+uid: Systems.Reporting.Reports
+---
 # Systems.Reporting.Reports
 
 User-defined reports. Reports retrieve data from data sources and present it in a user-defined layout. Entity: Sys_Reports
@@ -138,7 +141,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Reporting_Reports?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Reports?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.StoreOrderLinesUnfulfilledView
+---
 # Logistics.Inventory.StoreOrderLinesUnfulfilledView
 
 Returns the remaining (unfulfilled) quantity and cost for each Store Order Line in Store Orders, which are Planned, FirmPlanned or Released. Is_Fulfilled and Is_QuantityFulfilled can be used to filter out lines which appear fulfilled. For best performance, the store orders should be finished after fulfilling. Entity: Inv_Store_Order_Lines_Unfulfilled_View
@@ -149,7 +152,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_StoreOrderLinesUnfulfilledView?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Store_Order_Lines_Unfulfilled_View?$top=10>
 

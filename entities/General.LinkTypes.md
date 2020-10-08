@@ -1,3 +1,6 @@
+---
+uid: General.LinkTypes
+---
 # General.LinkTypes
 
 Obsolete. Not used. Entity: Gen_Link_Types
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_LinkTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Link_Types?$top=10>
 

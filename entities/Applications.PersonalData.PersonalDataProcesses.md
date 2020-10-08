@@ -1,3 +1,6 @@
+---
+uid: Applications.PersonalData.PersonalDataProcesses
+---
 # Applications.PersonalData.PersonalDataProcesses
 
 Represents processes, which process personal data, regulated by GDPR and other applicable laws. Entity: Pdm_Personal_Data_Processes (Introduced in version 18.2.100.0)
@@ -20,7 +23,7 @@ Represents processes, which process personal data, regulated by GDPR and other a
 | [ListOfTechnicalMeasures](Applications.PersonalData.PersonalDataProcesses.md#ListOfTechnicalMeasures) | string (nullable) | Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. [Filter(eq)] 
 | [ListOfTransfersToThirdCountries](Applications.PersonalData.PersonalDataProcesses.md#ListOfTransfersToThirdCountries) | string (nullable) | Comma-separated list of third countries, to which data is sent. [Filter(eq;like)] 
 | [ListOfUsedSoftware](Applications.PersonalData.PersonalDataProcesses.md#ListOfUsedSoftware) | string (nullable) | Comma-separated list of the names of the software products used to process the data. [Filter(eq;like)] 
-| [Name](Applications.PersonalData.PersonalDataProcesses.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the process (Multilanguage). [Required] [Filter(eq;like)] 
+| [Name](Applications.PersonalData.PersonalDataProcesses.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the process (Multilanguage). [Required] [Filter(eq;like)] 
 | [Notes](Applications.PersonalData.PersonalDataProcesses.md#Notes) | string (nullable) | Notes for this PersonalDataProcess. 
 | [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#ProcessingRole) | [Applications.PersonalData.PersonalDataProcessesRepository.ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#ProcessingRole) | The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . [Required] [Default("C")] [Filter(eq)] 
 | [RetentionPeriodMonths](Applications.PersonalData.PersonalDataProcesses.md#RetentionPeriodMonths) | int32 (nullable) | The period in months, for which the data is kept. Null when the period is unknown or N/A. [Filter(eq)] 
@@ -184,7 +187,7 @@ _Supports Order By_: **False**
 
 > Name of the process (Multilanguage). [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -269,7 +272,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_PersonalData_PersonalDataProcesses?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Pdm_Personal_Data_Processes?$top=10>
 

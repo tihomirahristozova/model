@@ -1,3 +1,6 @@
+---
+uid: Communities.SocialReactionsSummary
+---
 # Communities.SocialReactionsSummary
 
 Summary with the social reactions per comment and dataobject. Entity: Cmm_Social_Reactions_Summary_Indexed_View
@@ -85,7 +88,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Communities_SocialReactionsSummary?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cmm_Social_Reactions_Summary_Indexed_View?$top=10>
 

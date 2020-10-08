@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.ManagedAssets
+---
 # Applications.AssetManagement.ManagedAssets
 
 Contains the managed assets. The management of assets include maintenance planning and execution, location assignments tracking, etc. Entity: Eam_Managed_Assets (Introduced in version 19.1.100.0)
@@ -8,7 +11,7 @@ Contains the managed assets. The management of assets include maintenance planni
 | ---- | ---- | --- |
 | [Id](Applications.AssetManagement.ManagedAssets.md#Id) | guid |  
 | [Code](Applications.AssetManagement.ManagedAssets.md#Code) | string | Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company. [Required] [Filter(eq;like)] 
-| [Name](Applications.AssetManagement.ManagedAssets.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the managed asset (multi-language). [Required] [Filter(eq;like)] 
+| [Name](Applications.AssetManagement.ManagedAssets.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the managed asset (multi-language). [Required] [Filter(eq;like)] 
 | [Notes](Applications.AssetManagement.ManagedAssets.md#Notes) | string (nullable) | Notes for this ManagedAsset. 
 | [RegistrationNumber](Applications.AssetManagement.ManagedAssets.md#RegistrationNumber) | string (nullable) | Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. [Filter(eq;like)] 
 
@@ -51,7 +54,7 @@ _Supports Order By_: **False**
 
 > Name of the managed asset (multi-language). [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -119,7 +122,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ManagedAssets?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Managed_Assets?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Crm.Sales.SalesOrders
+---
 # Crm.Sales.SalesOrders
 
 Sales order document headers. Entity: Crm_Sales_Orders
@@ -861,7 +864,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_SalesOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Orders?$top=10>
 

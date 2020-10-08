@@ -1,3 +1,6 @@
+---
+uid: General.SequenceGenerators
+---
 # General.SequenceGenerators
 
 Contains one or more sequence generators for each sequence. Many sequence generators for one sequence are used when the generators must be selected conditionally or when more generators are needed for parallel numbering. Entity: Gen_Sequence_Generators
@@ -113,7 +116,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_SequenceGenerators?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Sequence_Generators?$top=10>
 

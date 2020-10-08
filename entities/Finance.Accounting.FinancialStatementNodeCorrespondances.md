@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.FinancialStatementNodeCorrespondances
+---
 # Finance.Accounting.FinancialStatementNodeCorrespondances
 
 Contains the actual correspondance filters, which specify how each financial statement node is calculated. Entity: Acc_Financial_Statement_Node_Correspondances
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_FinancialStatementNodeCorrespondances?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Financial_Statement_Node_Correspondances?$top=10>
 

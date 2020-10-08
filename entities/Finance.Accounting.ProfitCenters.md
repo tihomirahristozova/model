@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.ProfitCenters
+---
 # Finance.Accounting.ProfitCenters
 
 Defines company profit centers and their relative weight for automatic balance transfers from cost centers. Entity: Acc_Profit_Centers
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_ProfitCenters?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Profit_Centers?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.TransferOrdersOptions
+---
 # Logistics.Inventory.TransferOrdersOptions
 
 Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_Options
@@ -66,7 +69,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_TransferOrdersOptions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Transfer_Orders_Options?$top=10>
 

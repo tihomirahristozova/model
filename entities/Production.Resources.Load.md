@@ -1,3 +1,6 @@
+---
+uid: Production.Resources.Load
+---
 # Production.Resources.Load
 
 Contains scheduled operations usage of the resources. Entity: Prd_Load
@@ -11,7 +14,7 @@ Contains scheduled operations usage of the resources. Entity: Prd_Load
 | [Priority](Production.Resources.Load.md#Priority) | [Production.Resources.LoadRepository.Priority](Production.Resources.Load.md#Priority) | Priority of the allocation. 1=Lowest ... 5=Highest. [Required] [Default(3)] 
 | [TimeType](Production.Resources.Load.md#TimeType) | [Production.Resources.LoadRepository.TimeType](Production.Resources.Load.md#TimeType) | S=Setup; R=Run; W=Wait; M=Move. [Required] [Default("R")] 
 | [UsageEndTime](Production.Resources.Load.md#UsageEndTime) | datetime | The ending time of the planned usage. [Required] [Filter(ge;le)] 
-| [UsageQuantity](Production.Resources.Load.md#UsageQuantity) | [Quantity](../data-types/Quantity.md) | Quantity of the resource, which will be used for production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [UsageQuantity](Production.Resources.Load.md#UsageQuantity) | [Quantity](../data-types.md#Quantity) | Quantity of the resource, which will be used for production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] [Filter(ge;le)] 
 | [UsageStartTime](Production.Resources.Load.md#UsageStartTime) | datetime | The starting time of the planned usage. [Required] [Filter(ge;le)] 
 | [UsageTimeMinutes](Production.Resources.Load.md#UsageTimeMinutes) | int32 | Time allocated for the operation in minutes. [Required] [Default(0)] [Filter(ge;le)] 
 
@@ -91,7 +94,7 @@ _Supports Order By_: **False**
 
 > Quantity of the resource, which will be used for production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -153,7 +156,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_Load?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Load?$top=10>
 

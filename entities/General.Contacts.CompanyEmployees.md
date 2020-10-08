@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.CompanyEmployees
+---
 # General.Contacts.CompanyEmployees
 
 Contains the company employee contracts. Entity: Cm_Company_Employees
@@ -110,7 +113,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_CompanyEmployees?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Company_Employees?$top=10>
 

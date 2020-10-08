@@ -1,3 +1,6 @@
+---
+uid: Finance.Intrastat.DocumentAmountTypeSettings
+---
 # Finance.Intrastat.DocumentAmountTypeSettings
 
 Specifies the additional amounts, which are added to the invoiced and statistical values. Entity: Its_Document_Amount_Type_Settings
@@ -85,7 +88,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Intrastat_DocumentAmountTypeSettings?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Its_Document_Amount_Type_Settings?$top=10>
 

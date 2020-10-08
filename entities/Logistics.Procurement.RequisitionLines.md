@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.RequisitionLines
+---
 # Logistics.Procurement.RequisitionLines
 
 Detail lines of Requistions. Entity: Scm_Requisition_Lines
@@ -9,11 +12,11 @@ Detail lines of Requistions. Entity: Scm_Requisition_Lines
 | [Id](Logistics.Procurement.RequisitionLines.md#Id) | guid |  
 | [LineNo](Logistics.Procurement.RequisitionLines.md#LineNo) | int32 | Line number, unique within the Requisition. Usually is increasing number like 10, 20, 30, ... when initially entering the Requisition (in order to allow insertions with adjustment documents). [Required] 
 | [Notes](Logistics.Procurement.RequisitionLines.md#Notes) | string (nullable) | Notes for this RequisitionLine. 
-| [ProductDescription](Logistics.Procurement.RequisitionLines.md#ProductDescription) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product. 
-| [Quantity](Logistics.Procurement.RequisitionLines.md#Quantity) | [Quantity](../data-types/Quantity.md) | The required quantity of the product. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)] 
-| [QuantityBase](Logistics.Procurement.RequisitionLines.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] 
+| [ProductDescription](Logistics.Procurement.RequisitionLines.md#ProductDescription) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product. 
+| [Quantity](Logistics.Procurement.RequisitionLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | The required quantity of the product. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)] 
+| [QuantityBase](Logistics.Procurement.RequisitionLines.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] 
 | [RequiredDeliveryDate](Logistics.Procurement.RequisitionLines.md#RequiredDeliveryDate) | datetime | The desired delivery date. Initially set to the required delivery date in the requisition header or if it is empty - to the document date plus the products lead time. [Required] [Filter(ge;le)] 
-| [StandardQuantityBase](Logistics.Procurement.RequisitionLines.md#StandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [StandardQuantityBase](Logistics.Procurement.RequisitionLines.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
 
 ## References
 
@@ -60,7 +63,7 @@ _Supports Order By_: **False**
 
 > The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -70,7 +73,7 @@ _Front-End Recalc Expressions:_
 
 > The required quantity of the product. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -79,7 +82,7 @@ _Default Value_: **Constant**
 
 > The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -101,7 +104,7 @@ _Supports Order By_: **False**
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -174,7 +177,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_RequisitionLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Requisition_Lines?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.VehicleSetVehicles
+---
 # Applications.Fleet.VehicleSetVehicles
 
 Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicles
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_VehicleSetVehicles?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Vehicle_Set_Vehicles?$top=10>
 

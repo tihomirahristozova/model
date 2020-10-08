@@ -1,3 +1,6 @@
+---
+uid: General.Contacts.ActivityParticipants
+---
 # General.Contacts.ActivityParticipants
 
 Contains the additional participants in the activities. These are the participating users, besides the user to which the activitiy is assigned. Entity: Cm_Activity_Participants
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_ActivityParticipants?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Activity_Participants?$top=10>
 

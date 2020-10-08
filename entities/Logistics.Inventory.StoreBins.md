@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.StoreBins
+---
 # Logistics.Inventory.StoreBins
 
 The storage locations within a store. If there are no differentiated storage locations, create only one, called “(Default)” or similar. Entity: Inv_Store_Bins
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_StoreBins?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Store_Bins?$top=10>
 

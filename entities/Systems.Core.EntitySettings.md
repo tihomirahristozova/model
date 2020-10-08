@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.EntitySettings
+---
 # Systems.Core.EntitySettings
 
 Contains entities, which have secured access. Entity: Sys_Entities
@@ -136,7 +139,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_EntitySettings?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Entities?$top=10>
 

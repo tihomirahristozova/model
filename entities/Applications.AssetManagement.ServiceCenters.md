@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.ServiceCenters
+---
 # Applications.AssetManagement.ServiceCenters
 
 Contains data about the service centers, which can maintain the assets. Entity: Eam_Service_Centers (Introduced in version 19.1.100.0)
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ServiceCenters?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Service_Centers?$top=10>
 

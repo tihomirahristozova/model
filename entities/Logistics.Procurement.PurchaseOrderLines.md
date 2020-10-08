@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.PurchaseOrderLines
+---
 # Logistics.Procurement.PurchaseOrderLines
 
 Contains detail lines of purchase orders. Entity: Scm_Purchase_Order_Lines
@@ -7,19 +10,19 @@ Contains detail lines of purchase orders. Entity: Scm_Purchase_Order_Lines
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Procurement.PurchaseOrderLines.md#Id) | guid |  
-| [ConfirmedPricePerUnit](Logistics.Procurement.PurchaseOrderLines.md#ConfirmedPricePerUnit) | [Amount](../data-types/Amount.md) (nullable) | The unit price that is confirmed by the supplier. null if there was no order confirmation. [Currency: PurchaseOrder.DocumentCurrency] 
-| [ConfirmedQuantity](Logistics.Procurement.PurchaseOrderLines.md#ConfirmedQuantity) | [Quantity](../data-types/Quantity.md) (nullable) | The quantity that is confirmed by the supplier. null if there was no order confirmation. [Unit: QuantityUnit] [Filter(ge;le)] 
-| [ConfirmedQuantityBase](Logistics.Procurement.PurchaseOrderLines.md#ConfirmedQuantityBase) | [Quantity](../data-types/Quantity.md) (nullable) | The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] 
-| [ConfirmedStandardQuantityBase](Logistics.Procurement.PurchaseOrderLines.md#ConfirmedStandardQuantityBase) | [Quantity](../data-types/Quantity.md) (nullable) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [ConfirmedPricePerUnit](Logistics.Procurement.PurchaseOrderLines.md#ConfirmedPricePerUnit) | [Amount](../data-types.md#Amount) (nullable) | The unit price that is confirmed by the supplier. null if there was no order confirmation. [Currency: PurchaseOrder.DocumentCurrency] 
+| [ConfirmedQuantity](Logistics.Procurement.PurchaseOrderLines.md#ConfirmedQuantity) | [Quantity](../data-types.md#Quantity) (nullable) | The quantity that is confirmed by the supplier. null if there was no order confirmation. [Unit: QuantityUnit] [Filter(ge;le)] 
+| [ConfirmedQuantityBase](Logistics.Procurement.PurchaseOrderLines.md#ConfirmedQuantityBase) | [Quantity](../data-types.md#Quantity) (nullable) | The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] 
+| [ConfirmedStandardQuantityBase](Logistics.Procurement.PurchaseOrderLines.md#ConfirmedStandardQuantityBase) | [Quantity](../data-types.md#Quantity) (nullable) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] (Introduced in version 18.2.100.0) 
 | [LineNo](Logistics.Procurement.PurchaseOrderLines.md#LineNo) | int32 | Line number, unique within the PurchaseOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the PurchaseOrder (in order to allow insertions with adjustment documents). [Required] 
 | [Notes](Logistics.Procurement.PurchaseOrderLines.md#Notes) | string (nullable) | Notes for this PurchaseOrderLine. 
 | [ParentLineNo](Logistics.Procurement.PurchaseOrderLines.md#ParentLineNo) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. [Filter(eq)] (Introduced in version 18.2.100.0) 
 | [PlannedDeliveryDate](Logistics.Procurement.PurchaseOrderLines.md#PlannedDeliveryDate) | datetime | The planned delivery date for this line. [Required] [Filter(ge;le)] 
-| [PricePerUnit](Logistics.Procurement.PurchaseOrderLines.md#PricePerUnit) | [Amount](../data-types/Amount.md) (nullable) | The expected unit price of the ordered products, in the document currency. [Currency: PurchaseOrder.DocumentCurrency] 
-| [ProductDescription](Logistics.Procurement.PurchaseOrderLines.md#ProductDescription) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the ordered product, initially copied from the name in the product definition. The field can be edited by the user. [Required] [Filter(like)] 
-| [Quantity](Logistics.Procurement.PurchaseOrderLines.md#Quantity) | [Quantity](../data-types/Quantity.md) | The quantity ordered. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)] 
-| [QuantityBase](Logistics.Procurement.PurchaseOrderLines.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | The equivalence of Quantity, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] 
-| [StandardQuantityBase](Logistics.Procurement.PurchaseOrderLines.md#StandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [PricePerUnit](Logistics.Procurement.PurchaseOrderLines.md#PricePerUnit) | [Amount](../data-types.md#Amount) (nullable) | The expected unit price of the ordered products, in the document currency. [Currency: PurchaseOrder.DocumentCurrency] 
+| [ProductDescription](Logistics.Procurement.PurchaseOrderLines.md#ProductDescription) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the ordered product, initially copied from the name in the product definition. The field can be edited by the user. [Required] [Filter(like)] 
+| [Quantity](Logistics.Procurement.PurchaseOrderLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | The quantity ordered. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)] 
+| [QuantityBase](Logistics.Procurement.PurchaseOrderLines.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalence of Quantity, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] 
+| [StandardQuantityBase](Logistics.Procurement.PurchaseOrderLines.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
 
 ## References
 
@@ -49,7 +52,7 @@ _Default Value_: **NewGuid**
 
 > The unit price that is confirmed by the supplier. null if there was no order confirmation. [Currency: PurchaseOrder.DocumentCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -57,7 +60,7 @@ _Supports Order By_: **False**
 
 > The quantity that is confirmed by the supplier. null if there was no order confirmation. [Unit: QuantityUnit] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -65,7 +68,7 @@ _Supports Order By_: **False**
 
 > The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -75,7 +78,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -122,7 +125,7 @@ _Supports Order By_: **False**
 
 > The expected unit price of the ordered products, in the document currency. [Currency: PurchaseOrder.DocumentCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -130,7 +133,7 @@ _Supports Order By_: **False**
 
 > The name of the ordered product, initially copied from the name in the product definition. The field can be edited by the user. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -143,7 +146,7 @@ _Front-End Recalc Expressions:_
 
 > The quantity ordered. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -152,7 +155,7 @@ _Default Value_: **Constant**
 
 > The equivalence of Quantity, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -166,7 +169,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -271,7 +274,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseOrderLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Order_Lines?$top=10>
 

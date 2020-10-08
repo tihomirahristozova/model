@@ -1,3 +1,6 @@
+---
+uid: Projects.ProjectParticipants
+---
 # Projects.ProjectParticipants
 
 Represents participant in a project, with a specific role. The same participant can participate multiple times in different roles. Entity: Prj_Project_Participants
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_ProjectParticipants?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Project_Participants?$top=10>
 

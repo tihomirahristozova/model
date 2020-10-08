@@ -1,3 +1,6 @@
+---
+uid: Production.ShopFloor.OutputOrderConsumptionLines
+---
 # Production.ShopFloor.OutputOrderConsumptionLines
 
 The internal production consumption of materials. Used only for control purposes - for comparison with the active consumption orders. Warehouse and accounting are still updated only by Consumption Orders. Entity: Prd_Output_Order_Consumption_Lines
@@ -7,9 +10,9 @@ The internal production consumption of materials. Used only for control purposes
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Production.ShopFloor.OutputOrderConsumptionLines.md#Id) | guid |  
-| [ConsumedQuantityForRun](Production.ShopFloor.OutputOrderConsumptionLines.md#ConsumedQuantityForRun) | [Quantity](../data-types/Quantity.md) | The consumed quantity of the material for the operation. [Unit: QuantityUnit] [Required] [Default(0)] 
-| [ConsumedQuantityForScrap](Production.ShopFloor.OutputOrderConsumptionLines.md#ConsumedQuantityForScrap) | [Quantity](../data-types/Quantity.md) | The scrapped quantity of the material for this operation. [Unit: QuantityUnit] [Required] [Default(0)] 
-| [ConsumedQuantityForSetup](Production.ShopFloor.OutputOrderConsumptionLines.md#ConsumedQuantityForSetup) | [Quantity](../data-types/Quantity.md) | The consumed quantity of the material while setting up the operation. [Unit: QuantityUnit] [Required] [Default(0)] 
+| [ConsumedQuantityForRun](Production.ShopFloor.OutputOrderConsumptionLines.md#ConsumedQuantityForRun) | [Quantity](../data-types.md#Quantity) | The consumed quantity of the material for the operation. [Unit: QuantityUnit] [Required] [Default(0)] 
+| [ConsumedQuantityForScrap](Production.ShopFloor.OutputOrderConsumptionLines.md#ConsumedQuantityForScrap) | [Quantity](../data-types.md#Quantity) | The scrapped quantity of the material for this operation. [Unit: QuantityUnit] [Required] [Default(0)] 
+| [ConsumedQuantityForSetup](Production.ShopFloor.OutputOrderConsumptionLines.md#ConsumedQuantityForSetup) | [Quantity](../data-types.md#Quantity) | The consumed quantity of the material while setting up the operation. [Unit: QuantityUnit] [Required] [Default(0)] 
 | [LineNo](Production.ShopFloor.OutputOrderConsumptionLines.md#LineNo) | int32 | Line number, unique within the OutputOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the OutputOrder (in order to allow insertions with adjustment documents). [Required] 
 | [Notes](Production.ShopFloor.OutputOrderConsumptionLines.md#Notes) | string (nullable) | Notes for this OutputOrderConsumptionLine. 
 
@@ -39,7 +42,7 @@ _Default Value_: **NewGuid**
 
 > The consumed quantity of the material for the operation. [Unit: QuantityUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -48,7 +51,7 @@ _Default Value_: **Constant**
 
 > The scrapped quantity of the material for this operation. [Unit: QuantityUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -57,7 +60,7 @@ _Default Value_: **Constant**
 
 > The consumed quantity of the material while setting up the operation. [Unit: QuantityUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -167,7 +170,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_ShopFloor_OutputOrderConsumptionLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Output_Order_Consumption_Lines?$top=10>
 

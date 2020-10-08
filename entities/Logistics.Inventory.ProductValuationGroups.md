@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.ProductValuationGroups
+---
 # Logistics.Inventory.ProductValuationGroups
 
 Contains the available valuation groups for products. They are used in reconciliations, where all pluses and minuses within a valuation group are allowed to balance each other without fiscal effects. Without valuation groups, each product is balanced for itself and taxes are calculated for each surplus. Entity: Inv_Product_Valuation_Groups
@@ -9,7 +12,7 @@ Contains the available valuation groups for products. They are used in reconcili
 | [Id](Logistics.Inventory.ProductValuationGroups.md#Id) | guid |  
 | [Description](Logistics.Inventory.ProductValuationGroups.md#Description) | string (nullable) | The description of this ProductValuationGroup. [Filter(like)] 
 | [ValuationGroupCode](Logistics.Inventory.ProductValuationGroups.md#ValuationGroupCode) | string | The unique code of the product valuation group. [Required] [Filter(eq;like)] [ORD] 
-| [ValuationGroupName](Logistics.Inventory.ProductValuationGroups.md#ValuationGroupName) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of the product valuation group. [Required] [Filter(eq;like)] 
+| [ValuationGroupName](Logistics.Inventory.ProductValuationGroups.md#ValuationGroupName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the product valuation group. [Required] [Filter(eq;like)] 
 
 
 ## Attribute Details
@@ -41,7 +44,7 @@ _Supports Order By_: **True**
 
 > The name of the product valuation group. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -66,7 +69,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_ProductValuationGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Product_Valuation_Groups?$top=10>
 

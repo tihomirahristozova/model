@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.ValuationModels
+---
 # Finance.Assets.ValuationModels
 
 Valuation models stand for the different valuations an asset can have. For example Accounting, Tax, External Financial Reports, etc. All asset transactions are posted for specific valuation model, but are usually automatically copied to other models. Entity: Ast_Valuation_Models
@@ -8,7 +11,7 @@ Valuation models stand for the different valuations an asset can have. For examp
 | ---- | ---- | --- |
 | [Id](Finance.Assets.ValuationModels.md#Id) | guid |  
 | [IsSystem](Finance.Assets.ValuationModels.md#IsSystem) | boolean | Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [Name](Finance.Assets.ValuationModels.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this ValuationModel. [Required] [Filter(like)] 
+| [Name](Finance.Assets.ValuationModels.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this ValuationModel. [Required] [Filter(like)] 
 
 ## References
 
@@ -39,7 +42,7 @@ _Default Value_: **False**
 
 > The name of this ValuationModel. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -75,7 +78,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_ValuationModels?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Valuation_Models?$top=10>
 

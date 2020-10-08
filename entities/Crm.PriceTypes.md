@@ -1,3 +1,6 @@
+---
+uid: Crm.PriceTypes
+---
 # Crm.PriceTypes
 
 Price types. Entity: Crm_Price_Types
@@ -75,7 +78,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_PriceTypes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Price_Types?$top=10>
 

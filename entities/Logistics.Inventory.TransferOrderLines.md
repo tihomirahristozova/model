@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.TransferOrderLines
+---
 # Logistics.Inventory.TransferOrderLines
 
 Details of Transfer Orders. Each line contains order for the movement of one product. Entity: Inv_Transfer_Order_Lines
@@ -11,10 +14,10 @@ Details of Transfer Orders. Each line contains order for the movement of one pro
 | [DueDateOut](Logistics.Inventory.TransferOrderLines.md#DueDateOut) | datetime | When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header. [Required] [Filter(ge;le)] 
 | [LineOrd](Logistics.Inventory.TransferOrderLines.md#LineOrd) | int32 | Line ordinal position within the transaction. Duplicates are allowed, but not advised. [Required] 
 | [Notes](Logistics.Inventory.TransferOrderLines.md#Notes) | string (nullable) | Notes for this TransferOrderLine. 
-| [Quantity](Logistics.Inventory.TransferOrderLines.md#Quantity) | [Quantity](../data-types/Quantity.md) | Quantity ordered for transfer. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
-| [QuantityBase](Logistics.Inventory.TransferOrderLines.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] 
-| [StandardQuantityBase](Logistics.Inventory.TransferOrderLines.md#StandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
-| [StandardUnitPrice](Logistics.Inventory.TransferOrderLines.md#StandardUnitPrice) | [Amount](../data-types/Amount.md) (nullable) | Standard unit price of the product during the creation of the transfer order line. [Currency: TransferOrder.DocumentCurrency] 
+| [Quantity](Logistics.Inventory.TransferOrderLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | Quantity ordered for transfer. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [QuantityBase](Logistics.Inventory.TransferOrderLines.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] 
+| [StandardQuantityBase](Logistics.Inventory.TransferOrderLines.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [StandardUnitPrice](Logistics.Inventory.TransferOrderLines.md#StandardUnitPrice) | [Amount](../data-types.md#Amount) (nullable) | Standard unit price of the product during the creation of the transfer order line. [Currency: TransferOrder.DocumentCurrency] 
 
 ## References
 
@@ -91,7 +94,7 @@ _Supports Order By_: **False**
 
 > Quantity ordered for transfer. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -100,7 +103,7 @@ _Default Value_: **Constant**
 
 > Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -113,7 +116,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -126,7 +129,7 @@ _Front-End Recalc Expressions:_
 
 > Standard unit price of the product during the creation of the transfer order line. [Currency: TransferOrder.DocumentCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -234,7 +237,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_TransferOrderLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Transfer_Order_Lines?$top=10>
 

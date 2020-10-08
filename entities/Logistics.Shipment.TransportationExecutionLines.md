@@ -1,3 +1,6 @@
+---
+uid: Logistics.Shipment.TransportationExecutionLines
+---
 # Logistics.Shipment.TransportationExecutionLines
 
 Contains details of executions of transportation order lines. Entity: Log_Transportation_Execution_Lines (Introduced in version 18.2.100.0)
@@ -184,7 +187,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_TransportationExecutionLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Log_Transportation_Execution_Lines?$top=10>
 

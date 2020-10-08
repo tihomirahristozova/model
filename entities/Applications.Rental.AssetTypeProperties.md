@@ -1,3 +1,6 @@
+---
+uid: Applications.Rental.AssetTypeProperties
+---
 # Applications.Rental.AssetTypeProperties
 
 Contains the properties, which are required for each asset category. Entity: Rent_Asset_Type_Properties
@@ -83,7 +86,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Rental_AssetTypeProperties?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Rent_Asset_Type_Properties?$top=10>
 

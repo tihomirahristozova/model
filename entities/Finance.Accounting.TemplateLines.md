@@ -1,3 +1,6 @@
+---
+uid: Finance.Accounting.TemplateLines
+---
 # Finance.Accounting.TemplateLines
 
 Each template line contains the posting to a single set of debit and credit account. It also specifies the way to calculate the amount. Entity: Acc_Template_Lines
@@ -202,7 +205,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_TemplateLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Acc_Template_Lines?$top=10>
 

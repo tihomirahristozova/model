@@ -1,3 +1,6 @@
+---
+uid: Communities.SocialGroups
+---
 # Communities.SocialGroups
 
 Represents a group of users, sharing interest in the group topic. Entity: Cmm_Social_Groups (Introduced in version 20.1.100.0)
@@ -72,7 +75,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Communities_SocialGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cmm_Social_Groups?$top=10>
 

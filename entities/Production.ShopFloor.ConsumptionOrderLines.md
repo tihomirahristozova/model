@@ -1,3 +1,6 @@
+---
+uid: Production.ShopFloor.ConsumptionOrderLines
+---
 # Production.ShopFloor.ConsumptionOrderLines
 
 Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_Lines
@@ -7,9 +10,9 @@ Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_L
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Production.ShopFloor.ConsumptionOrderLines.md#Id) | guid |  
-| [ConsumedQuantity](Production.ShopFloor.ConsumptionOrderLines.md#ConsumedQuantity) | [Quantity](../data-types/Quantity.md) | Requested quantity of the material. [Unit: ConsumedQuantityUnit] [Required] [Filter(ge;le)] 
-| [ConsumedQuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#ConsumedQuantityBase) | [Quantity](../data-types/Quantity.md) | The requested quantity equivalence in the base measurement category of the requested material. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
-| [ConsumedStandardQuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#ConsumedStandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [ConsumedQuantity](Production.ShopFloor.ConsumptionOrderLines.md#ConsumedQuantity) | [Quantity](../data-types.md#Quantity) | Requested quantity of the material. [Unit: ConsumedQuantityUnit] [Required] [Filter(ge;le)] 
+| [ConsumedQuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#ConsumedQuantityBase) | [Quantity](../data-types.md#Quantity) | The requested quantity equivalence in the base measurement category of the requested material. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
+| [ConsumedStandardQuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#ConsumedStandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
 | [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#ConsumptionType) | [Production.ShopFloor.ConsumptionOrderLinesRepository.ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#ConsumptionType) | Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). [Required] [Filter(eq)] [ReadOnly] 
 | [LineOrd](Production.ShopFloor.ConsumptionOrderLines.md#LineOrd) | int32 | Non-unique line number within the order. [Required] 
 | [Notes](Production.ShopFloor.ConsumptionOrderLines.md#Notes) | string (nullable) | Notes for this ConsumptionOrderLine. 
@@ -42,7 +45,7 @@ _Default Value_: **NewGuid**
 
 > Requested quantity of the material. [Unit: ConsumedQuantityUnit] [Required] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -52,7 +55,7 @@ _Front-End Recalc Expressions:_
 
 > The requested quantity equivalence in the base measurement category of the requested material. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -65,7 +68,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -218,7 +221,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_ShopFloor_ConsumptionOrderLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Consumption_Order_Lines?$top=10>
 

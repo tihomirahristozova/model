@@ -1,3 +1,6 @@
+---
+uid: Crm.Marketing.DistributionChannels
+---
 # Crm.Marketing.DistributionChannels
 
 General list of distribution channels. Used to control prices and availability of products for the different channels. Entity: Crm_Distribution_Channels
@@ -9,7 +12,7 @@ General list of distribution channels. Used to control prices and availability o
 | [Id](Crm.Marketing.DistributionChannels.md#Id) | guid |  
 | [Description](Crm.Marketing.DistributionChannels.md#Description) | string (nullable) | Full description of the distribution channel. 
 | [Code](Crm.Marketing.DistributionChannels.md#Code) | string | Unique distribution channel code. [Required] [Filter(eq;like)] 
-| [Name](Crm.Marketing.DistributionChannels.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Multi-language name of the distribution channel. [Required] [Filter(eq;like)] 
+| [Name](Crm.Marketing.DistributionChannels.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multi-language name of the distribution channel. [Required] [Filter(eq;like)] 
 | [IsActive](Crm.Marketing.DistributionChannels.md#IsActive) | boolean | Is the channel active for new sales? true=Yes, false=No. [Required] [Default(true)] [Filter(eq)] 
 
 
@@ -42,7 +45,7 @@ _Supports Order By_: **False**
 
 > Multi-language name of the distribution channel. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -76,7 +79,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Marketing_DistributionChannels?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Distribution_Channels?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.DemandManagement.AvailableToPromiseByLots
+---
 # Logistics.Inventory.DemandManagement.AvailableToPromiseByLots
 
 Quantities available to promise for the different date periods. Also contains the current and projected availability. The algorithm accounts for the quantities for each lot and separately for the quantities without lot. Entity: Inv_Demand_Management_ATP_By_Lots
@@ -6,12 +9,12 @@ Quantities available to promise for the different date periods. Also contains th
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ATPBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#ATPBase) | [Quantity](../data-types/Quantity.md) | Indicates the quantity available to promise (in a base unit). It is valid from this date on. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
-| [CurrentAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#CurrentAvailabilityBase) | [Quantity](../data-types/Quantity.md) | The current availability in а base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
+| [ATPBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#ATPBase) | [Quantity](../data-types.md#Quantity) | Indicates the quantity available to promise (in a base unit). It is valid from this date on. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
+| [CurrentAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#CurrentAvailabilityBase) | [Quantity](../data-types.md#Quantity) | The current availability in а base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
 | [FromDate](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#FromDate) | datetime | Тhe date from which the available to promise quantity is valid. [Required] [Filter(eq;ge;le)] 
-| [MovementsBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#MovementsBase) | [Quantity](../data-types/Quantity.md) | The sum of the quantity of all planned stock movements on this date in а base measurement unit. . [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
-| [MovementsToDateBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#MovementsToDateBase) | [Quantity](../data-types/Quantity.md) | The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
-| [ProjectedAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#ProjectedAvailabilityBase) | [Quantity](../data-types/Quantity.md) | Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
+| [MovementsBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#MovementsBase) | [Quantity](../data-types.md#Quantity) | The sum of the quantity of all planned stock movements on this date in а base measurement unit. . [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
+| [MovementsToDateBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#MovementsToDateBase) | [Quantity](../data-types.md#Quantity) | The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
+| [ProjectedAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#ProjectedAvailabilityBase) | [Quantity](../data-types.md#Quantity) | Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
 
 ## References
 
@@ -29,7 +32,7 @@ Quantities available to promise for the different date periods. Also contains th
 
 > Indicates the quantity available to promise (in a base unit). It is valid from this date on. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -37,7 +40,7 @@ _Supports Order By_: **False**
 
 > The current availability in а base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -53,7 +56,7 @@ _Supports Order By_: **False**
 
 > The sum of the quantity of all planned stock movements on this date in а base measurement unit. . [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -61,7 +64,7 @@ _Supports Order By_: **False**
 
 > The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -69,7 +72,7 @@ _Supports Order By_: **False**
 
 > Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -129,7 +132,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_DemandManagement_AvailableToPromiseByLots?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Demand_Management_ATP_By_Lots?$top=10>
 

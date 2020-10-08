@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceActivityMaterials
+---
 # Applications.Service.ServiceActivityMaterials
 
 Contains the materials, which were actually used during the service activity (repair). Entity: Srv_Service_Activity_Materials
@@ -9,9 +12,9 @@ Contains the materials, which were actually used during the service activity (re
 | [Id](Applications.Service.ServiceActivityMaterials.md#Id) | guid |  
 | [CoveredByGuarantee](Applications.Service.ServiceActivityMaterials.md#CoveredByGuarantee) | boolean | True when the used material is covered by the guarantee. [Required] [Default(false)] 
 | [LineNo](Applications.Service.ServiceActivityMaterials.md#LineNo) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] 
-| [Quantity](Applications.Service.ServiceActivityMaterials.md#Quantity) | [Quantity](../data-types/Quantity.md) | Quantity of the product, that was used. [Unit: QuantityUnit] [Required] 
-| [QuantityBase](Applications.Service.ServiceActivityMaterials.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
-| [StandardQuantityBase](Applications.Service.ServiceActivityMaterials.md#StandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [Quantity](Applications.Service.ServiceActivityMaterials.md#Quantity) | [Quantity](../data-types.md#Quantity) | Quantity of the product, that was used. [Unit: QuantityUnit] [Required] 
+| [QuantityBase](Applications.Service.ServiceActivityMaterials.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
+| [StandardQuantityBase](Applications.Service.ServiceActivityMaterials.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
 
 ## References
 
@@ -65,7 +68,7 @@ _Front-End Recalc Expressions:_
 
 > Quantity of the product, that was used. [Unit: QuantityUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -73,7 +76,7 @@ _Supports Order By_: **False**
 
 > The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -86,7 +89,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -171,7 +174,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceActivityMaterials?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Activity_Materials?$top=10>
 

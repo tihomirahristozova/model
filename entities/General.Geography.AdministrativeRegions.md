@@ -1,3 +1,6 @@
+---
+uid: General.Geography.AdministrativeRegions
+---
 # General.Geography.AdministrativeRegions
 
 Hierarchical structure of the legally defined administrative regions. Administrative regions are sub-divisions of the countries. Entity: Gen_Administrative_Regions
@@ -8,7 +11,7 @@ Hierarchical structure of the legally defined administrative regions. Administra
 | ---- | ---- | --- |
 | [Id](General.Geography.AdministrativeRegions.md#Id) | guid |  
 | [Code](General.Geography.AdministrativeRegions.md#Code) | string | Administrative code of country territorial subdivision. [Required] [Filter(eq;like)] 
-| [Name](General.Geography.AdministrativeRegions.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of country territorial subdivision. [Required] [Filter(like)] 
+| [Name](General.Geography.AdministrativeRegions.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of country territorial subdivision. [Required] [Filter(like)] 
 | [FullPath](General.Geography.AdministrativeRegions.md#FullPath) | string (nullable) | Full identification path of the current country territorial subdivision. [Filter(eq;like)] 
 | [ParentFullPath](General.Geography.AdministrativeRegions.md#ParentFullPath) | string (nullable) | Parent region of the current territorial subdivision. [Filter(eq;like)] 
 | [ValidFrom](General.Geography.AdministrativeRegions.md#ValidFrom) | date (nullable) | Start date of validity of this administrative division. null when the starting date is unknown in the past. [Filter(ge;le)] 
@@ -42,7 +45,7 @@ _Supports Order By_: **False**
 
 > Name of country territorial subdivision. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -110,7 +113,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Geography_AdministrativeRegions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Administrative_Regions?$top=10>
 

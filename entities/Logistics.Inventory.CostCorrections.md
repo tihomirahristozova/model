@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.CostCorrections
+---
 # Logistics.Inventory.CostCorrections
 
 Cost corrections provide a way to correct the cost of stock transactions after they are issued. Entity: Inv_Cost_Corrections
@@ -478,7 +481,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_CostCorrections?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Cost_Corrections?$top=10>
 

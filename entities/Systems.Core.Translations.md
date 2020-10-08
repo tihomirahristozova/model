@@ -1,3 +1,6 @@
+---
+uid: Systems.Core.Translations
+---
 # Systems.Core.Translations
 
 Contains user-defined translations for non-english languages of the user interface and program messages. Entity: Sys_Translations
@@ -129,7 +132,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_Translations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Translations?$top=10>
 

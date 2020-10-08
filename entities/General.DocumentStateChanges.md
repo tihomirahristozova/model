@@ -1,3 +1,6 @@
+---
+uid: General.DocumentStateChanges
+---
 # General.DocumentStateChanges
 
 History of document state changes. Entity: Gen_Document_State_Changes
@@ -125,7 +128,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentStateChanges?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_State_Changes?$top=10>
 

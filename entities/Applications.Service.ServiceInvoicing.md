@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceInvoicing
+---
 # Applications.Service.ServiceInvoicing
 
 Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
@@ -7,8 +10,8 @@ Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Service.ServiceInvoicing.md#Id) | guid |  
-| [QuantityOfProduct](Applications.Service.ServiceInvoicing.md#QuantityOfProduct) | [Quantity](../data-types/Quantity.md) | The quantity to invoice. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)] 
-| [QuantityOfService](Applications.Service.ServiceInvoicing.md#QuantityOfService) | [Quantity](../data-types/Quantity.md) | The quantity of service for which the invoicing is specified. [Unit: Service.MeasurementUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [QuantityOfProduct](Applications.Service.ServiceInvoicing.md#QuantityOfProduct) | [Quantity](../data-types.md#Quantity) | The quantity to invoice. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [QuantityOfService](Applications.Service.ServiceInvoicing.md#QuantityOfService) | [Quantity](../data-types.md#Quantity) | The quantity of service for which the invoicing is specified. [Unit: Service.MeasurementUnit] [Required] [Default(1)] [Filter(ge;le)] 
 
 ## References
 
@@ -31,7 +34,7 @@ _Default Value_: **NewGuid**
 
 > The quantity to invoice. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -40,7 +43,7 @@ _Default Value_: **Constant**
 
 > The quantity of service for which the invoicing is specified. [Unit: Service.MeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -85,7 +88,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceInvoicing?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Invoicing?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Production.Resources.ResourceGroups
+---
 # Production.Resources.ResourceGroups
 
 Groups of resource types. Entity: Prd_Resource_Groups
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_ResourceGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Resource_Groups?$top=10>
 

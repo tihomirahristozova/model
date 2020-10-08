@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceActivityAgreedMaterials
+---
 # Applications.Service.ServiceActivityAgreedMaterials
 
 Contains the materials, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Materials
@@ -7,7 +10,7 @@ Contains the materials, which were agreed for this service activity (repair), be
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Service.ServiceActivityAgreedMaterials.md#Id) | guid |  
-| [AgreedQuantity](Applications.Service.ServiceActivityAgreedMaterials.md#AgreedQuantity) | [Quantity](../data-types/Quantity.md) | Quantity from the service agreement material line that is accounted for this service activity material line. [Unit: ServiceAgreementMaterial.QuantityUnit] [Required] [Default(0)] [ReadOnly] 
+| [AgreedQuantity](Applications.Service.ServiceActivityAgreedMaterials.md#AgreedQuantity) | [Quantity](../data-types.md#Quantity) | Quantity from the service agreement material line that is accounted for this service activity material line. [Unit: ServiceAgreementMaterial.QuantityUnit] [Required] [Default(0)] [ReadOnly] 
 
 ## References
 
@@ -30,7 +33,7 @@ _Default Value_: **NewGuid**
 
 > Quantity from the service agreement material line that is accounted for this service activity material line. [Unit: ServiceAgreementMaterial.QuantityUnit] [Required] [Default(0)] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -75,7 +78,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceActivityAgreedMaterials?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Activity_Agreed_Materials?$top=10>
 

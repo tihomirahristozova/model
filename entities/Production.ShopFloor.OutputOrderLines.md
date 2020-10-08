@@ -1,3 +1,6 @@
+---
+uid: Production.ShopFloor.OutputOrderLines
+---
 # Production.ShopFloor.OutputOrderLines
 
 Detail records of output orders. Entity: Prd_Output_Order_Lines
@@ -11,9 +14,9 @@ Detail records of output orders. Entity: Prd_Output_Order_Lines
 | [Finished](Production.ShopFloor.OutputOrderLines.md#Finished) | boolean | True if this output entry completes the operation. false if there might be more entries. [Required] [Default(false)] [Filter(eq)] 
 | [LineOrd](Production.ShopFloor.OutputOrderLines.md#LineOrd) | int32 | Line number within the order. [Required] 
 | [Notes](Production.ShopFloor.OutputOrderLines.md#Notes) | string (nullable) | Notes for this OutputOrderLine. 
-| [ProducedQuantity](Production.ShopFloor.OutputOrderLines.md#ProducedQuantity) | [Quantity](../data-types/Quantity.md) | The processed quantity of the end product. [Unit: ProducedQuantityUnit] [Required] [Default(0)] [Filter(ge;le)] 
-| [ProducedQuantityBase](Production.ShopFloor.OutputOrderLines.md#ProducedQuantityBase) | [Quantity](../data-types/Quantity.md) | The equivalence of Produced Quantity in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] 
-| [ProducedStandardQuantityBase](Production.ShopFloor.OutputOrderLines.md#ProducedStandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [ProducedQuantity](Production.ShopFloor.OutputOrderLines.md#ProducedQuantity) | [Quantity](../data-types.md#Quantity) | The processed quantity of the end product. [Unit: ProducedQuantityUnit] [Required] [Default(0)] [Filter(ge;le)] 
+| [ProducedQuantityBase](Production.ShopFloor.OutputOrderLines.md#ProducedQuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalence of Produced Quantity in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] 
+| [ProducedStandardQuantityBase](Production.ShopFloor.OutputOrderLines.md#ProducedStandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
 | [StartTime](Production.ShopFloor.OutputOrderLines.md#StartTime) | datetime | Date and time when the operation has began. [Required] [Default(Now)] [Filter(ge;le)] 
 | [TransactionTimestamp](Production.ShopFloor.OutputOrderLines.md#TransactionTimestamp) | datetime (nullable) | Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. [ReadOnly] 
 
@@ -94,7 +97,7 @@ _Supports Order By_: **False**
 
 > The processed quantity of the end product. [Unit: ProducedQuantityUnit] [Required] [Default(0)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -103,7 +106,7 @@ _Default Value_: **Constant**
 
 > The equivalence of Produced Quantity in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -117,7 +120,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -284,7 +287,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_ShopFloor_OutputOrderLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Output_Order_Lines?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.PurchaseOrders
+---
 # Logistics.Procurement.PurchaseOrders
 
 Contains purchase order headers. The purchase orders are documents, sent to a supplier, to inform him for an order of goods or services. Entity: Scm_Purchase_Orders
@@ -541,7 +544,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Orders?$top=10>
 

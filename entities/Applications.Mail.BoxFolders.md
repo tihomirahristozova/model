@@ -1,3 +1,6 @@
+---
+uid: Applications.Mail.BoxFolders
+---
 # Applications.Mail.BoxFolders
 
 Contains the folders inside the mailboxes. Entity: Mail_Box_Folders
@@ -7,7 +10,7 @@ Contains the folders inside the mailboxes. Entity: Mail_Box_Folders
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Mail.BoxFolders.md#Id) | guid |  
-| [FolderName](Applications.Mail.BoxFolders.md#FolderName) | [MultilanguageString](../data-types/MultilanguageString.md) | Multi-language folder name. [Required] [Filter(eq;like)] 
+| [FolderName](Applications.Mail.BoxFolders.md#FolderName) | [MultilanguageString](../data-types.md#MultilanguageString) | Multi-language folder name. [Required] [Filter(eq;like)] 
 | [ServerFolderID](Applications.Mail.BoxFolders.md#ServerFolderID) | string (nullable) | ID of the folder on the mail server in the format of the mail server. [Filter(eq)] 
 | [SyncState](Applications.Mail.BoxFolders.md#SyncState) | string (nullable) | The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState. 
 | [SystemPurpose](Applications.Mail.BoxFolders.md#SystemPurpose) | [Applications.Mail.BoxFoldersRepository.SystemPurpose](Applications.Mail.BoxFolders.md#SystemPurpose) (nullable) | When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. [Filter(eq)] [ReadOnly] 
@@ -39,7 +42,7 @@ _Default Value_: **NewGuid**
 
 > Multi-language folder name. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -119,7 +122,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Mail_BoxFolders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Mail_Box_Folders?$top=10>
 

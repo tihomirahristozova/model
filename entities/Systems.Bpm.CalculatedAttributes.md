@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.CalculatedAttributes
+---
 # Systems.Bpm.CalculatedAttributes
 
 User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
@@ -7,7 +10,7 @@ User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Bpm.CalculatedAttributes.md#Id) | guid |  
-| [Caption](Systems.Bpm.CalculatedAttributes.md#Caption) | [MultilanguageString](../data-types/MultilanguageString.md) | The multi-language caption, used to display the attribute. [Required] 
+| [Caption](Systems.Bpm.CalculatedAttributes.md#Caption) | [MultilanguageString](../data-types.md#MultilanguageString) | The multi-language caption, used to display the attribute. [Required] 
 | [IsActive](Systems.Bpm.CalculatedAttributes.md#IsActive) | boolean | True if the attribute is activated and added to the repository. [Required] [Default(false)] 
 | [Name](Systems.Bpm.CalculatedAttributes.md#Name) | string | The unique name of the attribute within the repository. [Required] [Filter(eq;like)] 
 | [Notes](Systems.Bpm.CalculatedAttributes.md#Notes) | string (nullable) | Notes for this CalculatedAttribute. 
@@ -34,7 +37,7 @@ _Default Value_: **NewGuid**
 
 > The multi-language caption, used to display the attribute. [Required]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -101,7 +104,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_CalculatedAttributes?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Calculated_Attributes?$top=10>
 

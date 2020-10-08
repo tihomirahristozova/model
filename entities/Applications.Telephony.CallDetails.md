@@ -1,3 +1,6 @@
+---
+uid: Applications.Telephony.CallDetails
+---
 # Applications.Telephony.CallDetails
 
 Contains call detail records. Calls are phone calls, video calls and SMS messages. Entity: Cm_Call_Details
@@ -148,7 +151,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Telephony_CallDetails?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cm_Call_Details?$top=10>
 

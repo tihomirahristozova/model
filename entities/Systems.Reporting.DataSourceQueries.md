@@ -1,3 +1,6 @@
+---
+uid: Systems.Reporting.DataSourceQueries
+---
 # Systems.Reporting.DataSourceQueries
 
 Represents a query within a data source. Entity: Sys_Data_Source_Queries
@@ -130,7 +133,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Reporting_DataSourceQueries?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_Data_Source_Queries?$top=10>
 

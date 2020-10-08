@@ -1,3 +1,6 @@
+---
+uid: Applications.AssetManagement.ManagedAssetScheduledMaintenances
+---
 # Applications.AssetManagement.ManagedAssetScheduledMaintenances
 
 Contains the scheduled maintenances for the managed assets. Each maintenance can be planned based on date, parameter value or both. Past maintenance plans are kept only for reference and can be deleted at any time. Entity: Eam_Managed_Asset_Scheduled_Maintenances (Introduced in version 19.1.100.0)
@@ -102,7 +105,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ManagedAssetScheduledMaintenances?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Eam_Managed_Asset_Scheduled_Maintenances?$top=10>
 

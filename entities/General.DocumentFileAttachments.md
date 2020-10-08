@@ -1,3 +1,6 @@
+---
+uid: General.DocumentFileAttachments
+---
 # General.DocumentFileAttachments
 
 Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
@@ -102,7 +105,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentFileAttachments?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_File_Attachments?$top=10>
 

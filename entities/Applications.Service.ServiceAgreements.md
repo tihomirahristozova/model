@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceAgreements
+---
 # Applications.Service.ServiceAgreements
 
 Service agreements represent SLAs between the enterprise company and its clients. Entity: Srv_Service_Agreements
@@ -471,7 +474,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceAgreements?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Agreements?$top=10>
 

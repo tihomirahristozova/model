@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceOrderLines
+---
 # Applications.Service.ServiceOrderLines
 
 Contains the details and problem symptoms for each object, which requires servicing. Entity: Srv_Service_Order_Lines
@@ -88,7 +91,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceOrderLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Order_Lines?$top=10>
 

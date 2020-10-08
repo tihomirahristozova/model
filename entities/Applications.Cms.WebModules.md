@@ -1,3 +1,6 @@
+---
+uid: Applications.Cms.WebModules
+---
 # Applications.Cms.WebModules
 
 The abstract basic building block of web sites. Each module can render multiple web pages. Entity: Cms_Web_Modules
@@ -120,7 +123,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Cms_WebModules?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cms_Web_Modules?$top=10>
 

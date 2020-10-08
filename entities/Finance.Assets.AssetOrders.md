@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.AssetOrders
+---
 # Finance.Assets.AssetOrders
 
 Asset purchase or sales order. Entity: Ast_Asset_Orders
@@ -459,7 +462,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_AssetOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Asset_Orders?$top=10>
 

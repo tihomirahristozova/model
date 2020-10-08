@@ -1,3 +1,6 @@
+---
+uid: Crm.Sales.SalesOrderPaymentOrdersTemplates
+---
 # Crm.Sales.SalesOrderPaymentOrdersTemplates
 
 Contains options for generation of payment orders. Each option set is assigned to specific generation route. Entity: Crm_Sales_Order_Payment_Orders_Templates
@@ -92,7 +95,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_SalesOrderPaymentOrdersTemplates?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Order_Payment_Orders_Templates?$top=10>
 

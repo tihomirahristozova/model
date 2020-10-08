@@ -1,3 +1,6 @@
+---
+uid: General.DocumentAmountReferencedDocuments
+---
 # General.DocumentAmountReferencedDocuments
 
 Contains the documents which are referenced by each document amount. Entity: Gen_Document_Amount_Referenced_Documents
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentAmountReferencedDocuments?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Amount_Referenced_Documents?$top=10>
 

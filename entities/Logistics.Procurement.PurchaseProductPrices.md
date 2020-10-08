@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.PurchaseProductPrices
+---
 # Logistics.Procurement.PurchaseProductPrices
 
 Contains purchase prices of the products. Used for automatically loading unit prices in the purchase documents. Entity: Scm_Purchase_Product_Prices
@@ -8,11 +11,11 @@ Contains purchase prices of the products. Used for automatically loading unit pr
 | ---- | ---- | --- |
 | [Id](Logistics.Procurement.PurchaseProductPrices.md#Id) | guid |  
 | [FromDate](Logistics.Procurement.PurchaseProductPrices.md#FromDate) | datetime (nullable) | Starting date of validity of the price. [Filter(eq;ge;le)] 
-| [MaxQuantity](Logistics.Procurement.PurchaseProductPrices.md#MaxQuantity) | [Quantity](../data-types/Quantity.md) (nullable) | Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq)] 
-| [MinQuantity](Logistics.Procurement.PurchaseProductPrices.md#MinQuantity) | [Quantity](../data-types/Quantity.md) (nullable) | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq)] 
+| [MaxQuantity](Logistics.Procurement.PurchaseProductPrices.md#MaxQuantity) | [Quantity](../data-types.md#Quantity) (nullable) | Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq)] 
+| [MinQuantity](Logistics.Procurement.PurchaseProductPrices.md#MinQuantity) | [Quantity](../data-types.md#Quantity) (nullable) | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq)] 
 | [Notes](Logistics.Procurement.PurchaseProductPrices.md#Notes) | string (nullable) | Notes for this PurchaseProductPrice. 
-| [Price](Logistics.Procurement.PurchaseProductPrices.md#Price) | [Amount](../data-types/Amount.md) | Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)] 
-| [PriceQuantity](Logistics.Procurement.PurchaseProductPrices.md#PriceQuantity) | [Quantity](../data-types/Quantity.md) | The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] 
+| [Price](Logistics.Procurement.PurchaseProductPrices.md#Price) | [Amount](../data-types.md#Amount) | Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)] 
+| [PriceQuantity](Logistics.Procurement.PurchaseProductPrices.md#PriceQuantity) | [Quantity](../data-types.md#Quantity) | The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] 
 | [Priority](Logistics.Procurement.PurchaseProductPrices.md#Priority) | [Logistics.Procurement.PurchaseProductPricesRepository.Priority](Logistics.Procurement.PurchaseProductPrices.md#Priority) | Priority of the price comparative to other prices. [Required] [Default(2)] [Filter(multi eq)] 
 | [ThruDate](Logistics.Procurement.PurchaseProductPrices.md#ThruDate) | datetime (nullable) | Ending date (inclusive) of the validity of the price. [Filter(eq;ge;le)] 
 
@@ -49,7 +52,7 @@ _Supports Order By_: **False**
 
 > Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq)]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -57,7 +60,7 @@ _Supports Order By_: **False**
 
 > Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq)]
 
-_Type_: **[Quantity](../data-types/Quantity.md) (nullable)**  
+_Type_: **[Quantity](../data-types.md#Quantity) (nullable)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -73,7 +76,7 @@ _Supports Order By_: **False**
 
 > Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -82,7 +85,7 @@ _Default Value_: **Constant**
 
 > The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -189,7 +192,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseProductPrices?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Product_Prices?$top=10>
 

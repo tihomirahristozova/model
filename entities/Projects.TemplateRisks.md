@@ -1,3 +1,6 @@
+---
+uid: Projects.TemplateRisks
+---
 # Projects.TemplateRisks
 
 Contains project risks, which will be copied to projects, based on the template. Entity: Prj_Template_Risks
@@ -94,7 +97,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_TemplateRisks?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Template_Risks?$top=10>
 

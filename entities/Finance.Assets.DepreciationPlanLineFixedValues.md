@@ -1,3 +1,6 @@
+---
+uid: Finance.Assets.DepreciationPlanLineFixedValues
+---
 # Finance.Assets.DepreciationPlanLineFixedValues
 
 When specified, contains user-defined asset depreciation values for each depreciation period. Entity: Ast_Depreciation_Plan_Line_Fixed_Values
@@ -7,7 +10,7 @@ When specified, contains user-defined asset depreciation values for each depreci
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Assets.DepreciationPlanLineFixedValues.md#Id) | guid |  
-| [DepreciationValue](Finance.Assets.DepreciationPlanLineFixedValues.md#DepreciationValue) | [Amount](../data-types/Amount.md) | Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. [Currency: DepreciationPlanLine.Asset.ValuationCurrency] [Required] [Default(0)] 
+| [DepreciationValue](Finance.Assets.DepreciationPlanLineFixedValues.md#DepreciationValue) | [Amount](../data-types.md#Amount) | Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. [Currency: DepreciationPlanLine.Asset.ValuationCurrency] [Required] [Default(0)] 
 | [FixedValuePeriodMonth](Finance.Assets.DepreciationPlanLineFixedValues.md#FixedValuePeriodMonth) | byte | Month of the period for which the depreciation value is fixed. [Required] 
 | [FixedValuePeriodYear](Finance.Assets.DepreciationPlanLineFixedValues.md#FixedValuePeriodYear) | int16 | Year of the period for which the depreciation value is fixed. [Required] 
 
@@ -31,7 +34,7 @@ _Default Value_: **NewGuid**
 
 > Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. [Currency: DepreciationPlanLine.Asset.ValuationCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_DepreciationPlanLineFixedValues?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Ast_Depreciation_Plan_Line_Fixed_Values?$top=10>
 

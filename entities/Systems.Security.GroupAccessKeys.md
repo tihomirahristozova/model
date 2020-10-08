@@ -1,3 +1,6 @@
+---
+uid: Systems.Security.GroupAccessKeys
+---
 # Systems.Security.GroupAccessKeys
 
 Specifies the access keys for which the user groups have permissions. The existance of a record grants read permission. Additional permissions are granted through specialized fields. Entity: Sec_Group_Access_Keys
@@ -193,7 +196,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_GroupAccessKeys?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sec_Group_Access_Keys?$top=10>
 

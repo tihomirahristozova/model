@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.PurchaseControlDocumentLines
+---
 # Logistics.Procurement.PurchaseControlDocumentLines
 
 The detail line of purchase control data. The purchase control is used to tally all orders and execuctions in the purchasing module. Entity: Scm_Purchase_Control_Document_Lines (Introduced in version 18.2.100.0)
@@ -245,7 +248,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseControlDocumentLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Control_Document_Lines?$top=10>
 

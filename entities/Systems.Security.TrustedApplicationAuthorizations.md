@@ -1,3 +1,6 @@
+---
+uid: Systems.Security.TrustedApplicationAuthorizations
+---
 # Systems.Security.TrustedApplicationAuthorizations
 
 Authorization of a trusted application to access the data on behalf of a context user. Entity: Sec_Trusted_Application_Authorizations (Introduced in version 20.1.100.0)
@@ -121,7 +124,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_TrustedApplicationAuthorizations?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sec_Trusted_Application_Authorizations?$top=10>
 

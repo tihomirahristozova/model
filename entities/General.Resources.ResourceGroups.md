@@ -1,3 +1,6 @@
+---
+uid: General.Resources.ResourceGroups
+---
 # General.Resources.ResourceGroups
 
 Resource groups categorize the resources. Entity: Gen_Resource_Groups
@@ -7,7 +10,7 @@ Resource groups categorize the resources. Entity: Gen_Resource_Groups
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.Resources.ResourceGroups.md#Id) | guid |  
-| [Name](General.Resources.ResourceGroups.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Resource group name. Unique within its parent. [Required] [Filter(eq;like)] 
+| [Name](General.Resources.ResourceGroups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Resource group name. Unique within its parent. [Required] [Filter(eq;like)] 
 
 ## References
 
@@ -36,7 +39,7 @@ _Default Value_: **NewGuid**
 
 > Resource group name. Unique within its parent. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -80,7 +83,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Resources_ResourceGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Resource_Groups?$top=10>
 

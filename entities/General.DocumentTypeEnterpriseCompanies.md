@@ -1,3 +1,6 @@
+---
+uid: General.DocumentTypeEnterpriseCompanies
+---
 # General.DocumentTypeEnterpriseCompanies
 
 Specifies the visibility (availability) of the document type for the different enterprise companies. Entity: Gen_Document_Type_Enterprise_Companies
@@ -65,7 +68,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentTypeEnterpriseCompanies?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Type_Enterprise_Companies?$top=10>
 

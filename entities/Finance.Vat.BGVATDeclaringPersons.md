@@ -1,3 +1,6 @@
+---
+uid: Finance.Vat.BGVATDeclaringPersons
+---
 # Finance.Vat.BGVATDeclaringPersons
 
 National data: Contains the persons, which are authorized to issue and sign VAT declarations. Entity: Nat_BG_VAT_Declaring_Persons
@@ -128,7 +131,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Finance_Vat_BGVATDeclaringPersons?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Nat_BG_VAT_Declaring_Persons?$top=10>
 

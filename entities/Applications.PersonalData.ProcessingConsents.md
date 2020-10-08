@@ -1,3 +1,6 @@
+---
+uid: Applications.PersonalData.ProcessingConsents
+---
 # Applications.PersonalData.ProcessingConsents
 
 Consents of data subjects for processing of their personal data. Entity: Pdm_Processing_Consents (Introduced in version 18.2.100.0)
@@ -236,7 +239,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_PersonalData_ProcessingConsents?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Pdm_Processing_Consents?$top=10>
 

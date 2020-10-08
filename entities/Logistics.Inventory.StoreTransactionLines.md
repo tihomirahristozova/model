@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.StoreTransactionLines
+---
 # Logistics.Inventory.StoreTransactionLines
 
 Details records of Transactions. Each detail contains the movement for one product. Entity: Inv_Transaction_Lines
@@ -10,21 +13,21 @@ Details records of Transactions. Each detail contains the movement for one produ
 | [AllowOverExecution](Logistics.Inventory.StoreTransactionLines.md#AllowOverExecution) | boolean | When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line. [Required] [Default(false)] 
 | [Finished](Logistics.Inventory.StoreTransactionLines.md#Finished) | boolean (nullable) | True if this transaction entry completes the operation. false if there might be more entries. [Default(false)] [Filter(eq)] 
 | [GuaranteePeriodDays](Logistics.Inventory.StoreTransactionLines.md#GuaranteePeriodDays) | int32 (nullable) | Guarantee period in days for the offered product. null for non-serviced products. 
-| [LineBaseCost](Logistics.Inventory.StoreTransactionLines.md#LineBaseCost) | [Amount](../data-types/Amount.md) | The cost of the transaction in the currency of the enterprise company. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [LineCost](Logistics.Inventory.StoreTransactionLines.md#LineCost) | [Amount](../data-types/Amount.md) | Total cost for the line. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] 
-| [LineDocumentCost](Logistics.Inventory.StoreTransactionLines.md#LineDocumentCost) | [Amount](../data-types/Amount.md) | The cost of the transaction in the currency of the document. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] [ReadOnly] 
+| [LineBaseCost](Logistics.Inventory.StoreTransactionLines.md#LineBaseCost) | [Amount](../data-types.md#Amount) | The cost of the transaction in the currency of the enterprise company. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [LineCost](Logistics.Inventory.StoreTransactionLines.md#LineCost) | [Amount](../data-types.md#Amount) | Total cost for the line. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] 
+| [LineDocumentCost](Logistics.Inventory.StoreTransactionLines.md#LineDocumentCost) | [Amount](../data-types.md#Amount) | The cost of the transaction in the currency of the document. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] [ReadOnly] 
 | [LineNo](Logistics.Inventory.StoreTransactionLines.md#LineNo) | int32 | Line number, unique within the store transaction. [Required] 
-| [LineProductCost](Logistics.Inventory.StoreTransactionLines.md#LineProductCost) | [Amount](../data-types/Amount.md) | The cost of the transaction in the currency of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)] [ReadOnly] 
-| [LineStoreCost](Logistics.Inventory.StoreTransactionLines.md#LineStoreCost) | [Amount](../data-types/Amount.md) | The cost of the transaction in the currency of the warehouse. [Currency: TransactionObj.Store.Currency] [Required] [Default(0)] [ReadOnly] 
+| [LineProductCost](Logistics.Inventory.StoreTransactionLines.md#LineProductCost) | [Amount](../data-types.md#Amount) | The cost of the transaction in the currency of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)] [ReadOnly] 
+| [LineStoreCost](Logistics.Inventory.StoreTransactionLines.md#LineStoreCost) | [Amount](../data-types.md#Amount) | The cost of the transaction in the currency of the warehouse. [Currency: TransactionObj.Store.Currency] [Required] [Default(0)] [ReadOnly] 
 | [Notes](Logistics.Inventory.StoreTransactionLines.md#Notes) | string (nullable) | Notes for this StoreTransactionLine. 
 | [ParentLineId](Logistics.Inventory.StoreTransactionLines.md#ParentLineId) | guid (nullable) | Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line. [Filter(multi eq)] 
 | [ParentLineNo](Logistics.Inventory.StoreTransactionLines.md#ParentLineNo) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. 
-| [Quantity](Logistics.Inventory.StoreTransactionLines.md#Quantity) | [Quantity](../data-types/Quantity.md) | The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. [Unit: QuantityUnit] [Required] [Default(0)] 
-| [QuantityBase](Logistics.Inventory.StoreTransactionLines.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)] 
-| [StandardQuantityBase](Logistics.Inventory.StoreTransactionLines.md#StandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [Quantity](Logistics.Inventory.StoreTransactionLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. [Unit: QuantityUnit] [Required] [Default(0)] 
+| [QuantityBase](Logistics.Inventory.StoreTransactionLines.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)] 
+| [StandardQuantityBase](Logistics.Inventory.StoreTransactionLines.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
 | [TempOrderNo](Logistics.Inventory.StoreTransactionLines.md#TempOrderNo) | string (nullable) | Obsolete. Not used. [Filter(eq)] 
 | [TransactionTimestamp](Logistics.Inventory.StoreTransactionLines.md#TransactionTimestamp) | datetime (nullable) | Exact time when the transaction changes the cost of the product. [Filter(ge;le)] [ORD] 
-| [UnitCost](Logistics.Inventory.StoreTransactionLines.md#UnitCost) | [Amount](../data-types/Amount.md) | Cost for 1 of the specified quantity. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] 
+| [UnitCost](Logistics.Inventory.StoreTransactionLines.md#UnitCost) | [Amount](../data-types.md#Amount) | Cost for 1 of the specified quantity. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] 
 
 ## References
 
@@ -85,7 +88,7 @@ _Front-End Recalc Expressions:_
 
 > The cost of the transaction in the currency of the enterprise company. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -94,7 +97,7 @@ _Default Value_: **Constant**
 
 > Total cost for the line. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -103,7 +106,7 @@ _Default Value_: **Constant**
 
 > The cost of the transaction in the currency of the document. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] [ReadOnly]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -125,7 +128,7 @@ _Front-End Recalc Expressions:_
 
 > The cost of the transaction in the currency of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)] [ReadOnly]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -134,7 +137,7 @@ _Default Value_: **Constant**
 
 > The cost of the transaction in the currency of the warehouse. [Currency: TransactionObj.Store.Currency] [Required] [Default(0)] [ReadOnly]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -167,7 +170,7 @@ _Supports Order By_: **False**
 
 > The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. [Unit: QuantityUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -176,7 +179,7 @@ _Default Value_: **Constant**
 
 > The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -190,7 +193,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -219,7 +222,7 @@ _Supports Order By_: **True**
 
 > Cost for 1 of the specified quantity. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -348,7 +351,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_StoreTransactionLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Transaction_Lines?$top=10>
 

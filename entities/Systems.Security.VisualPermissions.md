@@ -1,3 +1,6 @@
+---
+uid: Systems.Security.VisualPermissions
+---
 # Systems.Security.VisualPermissions
 
 Contains permissions, which are honored only by client applications and are used to provide access to (primarily show/hide) different elements of the user interface. Entity: Sec_Visual_Permissions
@@ -101,7 +104,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_VisualPermissions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sec_Visual_Permissions?$top=10>
 

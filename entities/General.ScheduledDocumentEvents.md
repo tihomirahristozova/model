@@ -1,3 +1,6 @@
+---
+uid: General.ScheduledDocumentEvents
+---
 # General.ScheduledDocumentEvents
 
 Contains postponed events, which will be executed later. Usually these are large number of recalculation events, resulting from other events. For example, releasing a cost correction, publishes postponed events for all affected documents. Entity: Gen_Scheduled_Document_Events
@@ -144,7 +147,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_ScheduledDocumentEvents?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Scheduled_Document_Events?$top=10>
 

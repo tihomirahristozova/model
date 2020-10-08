@@ -1,3 +1,6 @@
+---
+uid: General.Documents
+---
 # General.Documents
 
 Contains all documents issued by and to the enterprise
@@ -423,7 +426,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Documents?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Documents?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Applications.Cms.WebSites
+---
 # Applications.Cms.WebSites
 
 Contains the public web sites. Entity: Cms_Web_Sites
@@ -100,7 +103,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Cms_WebSites?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cms_Web_Sites?$top=10>
 

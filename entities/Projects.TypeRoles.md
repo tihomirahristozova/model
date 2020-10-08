@@ -1,3 +1,6 @@
+---
+uid: Projects.TypeRoles
+---
 # Projects.TypeRoles
 
 Contains the roles of the participants of each project type. Entity: Prj_Type_Roles
@@ -74,7 +77,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_TypeRoles?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Type_Roles?$top=10>
 

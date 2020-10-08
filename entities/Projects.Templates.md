@@ -1,3 +1,6 @@
+---
+uid: Projects.Templates
+---
 # Projects.Templates
 
 Contains templates for creating new projects. Entity: Prj_Templates
@@ -64,7 +67,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_Templates?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Templates?$top=10>
 

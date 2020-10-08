@@ -1,3 +1,6 @@
+---
+uid: Applications.Rental.TransactionLines
+---
 # Applications.Rental.TransactionLines
 
 Contains all transactions of Record of Handover / Handing-Over Record lines. Entity: Rent_Transaction_Lines
@@ -120,7 +123,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Rental_TransactionLines?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Rent_Transaction_Lines?$top=10>
 

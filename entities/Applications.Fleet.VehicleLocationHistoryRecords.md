@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.VehicleLocationHistoryRecords
+---
 # Applications.Fleet.VehicleLocationHistoryRecords
 
 Stores information about vehicle locations. Entity: Fleet_Vehicle_Location_History_Records
@@ -92,7 +95,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_VehicleLocationHistoryRecords?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Vehicle_Location_History_Records?$top=10>
 

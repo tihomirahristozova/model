@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.StoreTransactions
+---
 # Logistics.Inventory.StoreTransactions
 
 Executed store-receipts(in) and store-issues(out). Store-issues are recorded with minus quantity. Entity: Inv_Transactions
@@ -553,7 +556,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_StoreTransactions?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Transactions?$top=10>
 

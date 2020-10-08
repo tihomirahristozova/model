@@ -1,3 +1,6 @@
+---
+uid: Projects.ProjectTasks
+---
 # Projects.ProjectTasks
 
 Represents one task of a project. Entity: Prj_Project_Tasks
@@ -7,7 +10,7 @@ Represents one task of a project. Entity: Prj_Project_Tasks
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Projects.ProjectTasks.md#Id) | guid |  
-| [BudgetLaborAmount](Projects.ProjectTasks.md#BudgetLaborAmount) | [Amount](../data-types/Amount.md) (nullable) | Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. [Currency: Project.BudgetingCurrency] 
+| [BudgetLaborAmount](Projects.ProjectTasks.md#BudgetLaborAmount) | [Amount](../data-types.md#Amount) (nullable) | Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. [Currency: Project.BudgetingCurrency] 
 | [FinishDateTime](Projects.ProjectTasks.md#FinishDateTime) | datetime | The date and time when the task is planned to finish. [Required] [Default(Now)] [Filter(eq;ge;le)] 
 | [Notes](Projects.ProjectTasks.md#Notes) | string (nullable) | Notes for this ProjectTask. 
 | [PlannedDurationHours](Projects.ProjectTasks.md#PlannedDurationHours) | decimal | Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. [Required] [Default(0)] 
@@ -50,7 +53,7 @@ _Default Value_: **NewGuid**
 
 > Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. [Currency: Project.BudgetingCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -187,7 +190,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Projects_ProjectTasks?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prj_Project_Tasks?$top=10>
 

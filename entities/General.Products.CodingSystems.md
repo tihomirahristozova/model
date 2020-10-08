@@ -1,3 +1,6 @@
+---
+uid: General.Products.CodingSystems
+---
 # General.Products.CodingSystems
 
 Coding systems categorize additional product codes. Entity: Gen_Coding_Systems
@@ -7,7 +10,7 @@ Coding systems categorize additional product codes. Entity: Gen_Coding_Systems
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.Products.CodingSystems.md#Id) | guid |  
-| [Name](General.Products.CodingSystems.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this CodingSystem. [Required] [Filter(eq;like)] 
+| [Name](General.Products.CodingSystems.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this CodingSystem. [Required] [Filter(eq;like)] 
 | [Description](General.Products.CodingSystems.md#Description) | string (nullable) | The description of this CodingSystem. 
 | [IsUnique](General.Products.CodingSystems.md#IsUnique) | boolean | True when the coding system can contain only unique product codes. false - duplicate product codes are allowed. [Required] [Default(true)] [Filter(eq)] 
 
@@ -31,7 +34,7 @@ _Default Value_: **NewGuid**
 
 > The name of this CodingSystem. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -84,7 +87,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_CodingSystems?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Coding_Systems?$top=10>
 

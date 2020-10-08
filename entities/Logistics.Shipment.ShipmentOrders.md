@@ -1,3 +1,6 @@
+---
+uid: Logistics.Shipment.ShipmentOrders
+---
 # Logistics.Shipment.ShipmentOrders
 
 Represnts order for shipment of sales orders to customers. Entity: Log_Shipment_Orders
@@ -498,7 +501,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_ShipmentOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Log_Shipment_Orders?$top=10>
 

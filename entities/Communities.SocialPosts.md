@@ -1,3 +1,6 @@
+---
+uid: Communities.SocialPosts
+---
 # Communities.SocialPosts
 
 User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.1.100.0)
@@ -92,7 +95,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Communities_SocialPosts?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Cmm_Social_Posts?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: General.Products.Products
+---
 # General.Products.Products
 
 Products are the different items in the enterprise, which can be purchased, stored, sold and depreciated. Entity: Gen_Products
@@ -14,7 +17,7 @@ Products are the different items in the enterprise, which can be purchased, stor
 | [CostingMethod](General.Products.Products.md#CostingMethod) | [General.Products.ProductsRepository.CostingMethod](General.Products.Products.md#CostingMethod) (nullable) | Specifies the costing method for the product. null means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost. 
 | [CreationTime](General.Products.Products.md#CreationTime) | datetime (nullable) | Date and time when the Product was created. [Filter(ge;le)] [ReadOnly] 
 | [CreationUser](General.Products.Products.md#CreationUser) | string (nullable) | Login name of the user, who created the Product. [Filter(like)] [ReadOnly] 
-| [Description](General.Products.Products.md#Description) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | The description of the product. 
+| [Description](General.Products.Products.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The description of the product. 
 | [ExpiryPeriodDays](General.Products.Products.md#ExpiryPeriodDays) | int32 (nullable) | Total default expiry period for the product (in days) from the date of production to the date of expiry. 
 | [FlushingMethod](General.Products.Products.md#FlushingMethod) | [General.Products.ProductsRepository.FlushingMethod](General.Products.Products.md#FlushingMethod) | Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). [Required] [Default("M")] 
 | [GuaranteePeriodDays](General.Products.Products.md#GuaranteePeriodDays) | int32 (nullable) | Default guarantee period length in days. 0 means no guarantee. Should be non-null for serviced products and null for the others. 
@@ -22,19 +25,19 @@ Products are the different items in the enterprise, which can be purchased, stor
 | [IsSerialized](General.Products.Products.md#IsSerialized) | boolean | True if the parts use/require serial numbers. [Required] [Default(false)] [Filter(eq)] 
 | [LotsIssue](General.Products.Products.md#LotsIssue) | [General.Products.ProductsRepository.LotsIssue](General.Products.Products.md#LotsIssue) (nullable) | Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO). 
 | [ManufacturingPolicy](General.Products.Products.md#ManufacturingPolicy) | string | Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. [Required] [Default("MTS")] 
-| [MinimalSalesPricePerLot](General.Products.Products.md#MinimalSalesPricePerLot) | [Amount](../data-types/Amount.md) (nullable) | Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: CostingCurrency] 
+| [MinimalSalesPricePerLot](General.Products.Products.md#MinimalSalesPricePerLot) | [Amount](../data-types.md#Amount) (nullable) | Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: CostingCurrency] 
 | [MinimalSalesQuantityBase](General.Products.Products.md#MinimalSalesQuantityBase) | decimal (nullable) | Minimal base quantity of this product that has to be specified in any sale. 
 | [PartNumber](General.Products.Products.md#PartNumber) | string | Unique part number of the product. [Required] [Filter(multi eq;like)] [ORD] 
 | [PlanningDemandTimeFenceDays](General.Products.Products.md#PlanningDemandTimeFenceDays) | int32 (nullable) | Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days). 
 | [PlanningHorizonDays](General.Products.Products.md#PlanningHorizonDays) | int32 (nullable) | Number of days in the future for which to plan the demand and supply (null = Default of 180 days). 
 | [PlanningTimeFenceDays](General.Products.Products.md#PlanningTimeFenceDays) | int32 (nullable) | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days). 
-| [Name](General.Products.Products.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | Name of the item. [Required] [Filter(eq;like)] 
+| [Name](General.Products.Products.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the item. [Required] [Filter(eq;like)] 
 | [ScrapRate](General.Products.Products.md#ScrapRate) | decimal | Default scrap rate for the recipe, when this product is used as ingredient. [Required] [Default(0)] 
-| [ShortName](General.Products.Products.md#ShortName) | [MultilanguageString](../data-types/MultilanguageString.md) (nullable) | Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. [Filter(eq;like)] 
+| [ShortName](General.Products.Products.md#ShortName) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. [Filter(eq;like)] 
 | [ShowInCatalog](General.Products.Products.md#ShowInCatalog) | boolean | Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. [Required] [Default(false)] [Filter(multi eq)] 
-| [StandardCostPerLot](General.Products.Products.md#StandardCostPerLot) | [Amount](../data-types/Amount.md) | Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)] 
-| [StandardLotSizeBase](General.Products.Products.md#StandardLotSizeBase) | [Quantity](../data-types/Quantity.md) | The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. [Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] 
-| [StandardPricePerLot](General.Products.Products.md#StandardPricePerLot) | [Amount](../data-types/Amount.md) | Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)] 
+| [StandardCostPerLot](General.Products.Products.md#StandardCostPerLot) | [Amount](../data-types.md#Amount) | Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)] 
+| [StandardLotSizeBase](General.Products.Products.md#StandardLotSizeBase) | [Quantity](../data-types.md#Quantity) | The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. [Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] 
+| [StandardPricePerLot](General.Products.Products.md#StandardPricePerLot) | [Amount](../data-types.md#Amount) | Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)] 
 | [SupplySchemaId](General.Products.Products.md#SupplySchemaId) | guid (nullable) | The supply schema to use for the distribution of the product among warehouses. [Filter(multi eq)] 
 | [UpdateTime](General.Products.Products.md#UpdateTime) | datetime (nullable) | Date and time when the Product was last updated. [Filter(ge;le)] [ReadOnly] 
 | [UpdateUser](General.Products.Products.md#UpdateUser) | string (nullable) | Login name of the user, who last updated the Product. [Filter(like)] [ReadOnly] 
@@ -165,7 +168,7 @@ _Supports Order By_: **False**
 
 > The description of the product.
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -251,7 +254,7 @@ _Default Value_: **MTS**
 
 > Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: CostingCurrency]
 
-_Type_: **[Amount](../data-types/Amount.md) (nullable)**  
+_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -299,7 +302,7 @@ _Supports Order By_: **False**
 
 > Name of the item. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -316,7 +319,7 @@ _Default Value_: **0**
 
 > Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -333,7 +336,7 @@ _Default Value_: **False**
 
 > Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -342,7 +345,7 @@ _Default Value_: **Constant**
 
 > The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. [Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -351,7 +354,7 @@ _Default Value_: **Constant**
 
 > Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types/Amount.md)**  
+_Type_: **[Amount](../data-types.md#Amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -526,7 +529,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_Products_Products?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Products?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Logistics.Procurement.Suppliers
+---
 # Logistics.Procurement.Suppliers
 
 Contains supplier conditions (contracts). Entity: Scm_Suppliers
@@ -213,7 +216,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_Suppliers?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Scm_Suppliers?$top=10>
 

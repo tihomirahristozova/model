@@ -1,3 +1,6 @@
+---
+uid: General.DocumentTypeUserStatuses
+---
 # General.DocumentTypeUserStatuses
 
 User-defined document statuses. Entity: Gen_Document_Type_User_Statuses
@@ -130,7 +133,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentTypeUserStatuses?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Gen_Document_Type_User_Statuses?$top=10>
 

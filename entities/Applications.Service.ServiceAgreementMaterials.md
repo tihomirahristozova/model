@@ -1,3 +1,6 @@
+---
+uid: Applications.Service.ServiceAgreementMaterials
+---
 # Applications.Service.ServiceAgreementMaterials
 
 Contains the free materials, included in the service agreement. Entity: Srv_Service_Agreement_Materials
@@ -9,9 +12,9 @@ Contains the free materials, included in the service agreement. Entity: Srv_Serv
 | [Id](Applications.Service.ServiceAgreementMaterials.md#Id) | guid |  
 | [EndDate](Applications.Service.ServiceAgreementMaterials.md#EndDate) | datetime (nullable) | End date to which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities. 
 | [LineNo](Applications.Service.ServiceAgreementMaterials.md#LineNo) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] 
-| [Quantity](Applications.Service.ServiceAgreementMaterials.md#Quantity) | [Quantity](../data-types/Quantity.md) | Quantity of the agreed material. [Unit: QuantityUnit] [Required] 
-| [QuantityBase](Applications.Service.ServiceAgreementMaterials.md#QuantityBase) | [Quantity](../data-types/Quantity.md) | The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
-| [StandardQuantityBase](Applications.Service.ServiceAgreementMaterials.md#StandardQuantityBase) | [Quantity](../data-types/Quantity.md) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [Quantity](Applications.Service.ServiceAgreementMaterials.md#Quantity) | [Quantity](../data-types.md#Quantity) | Quantity of the agreed material. [Unit: QuantityUnit] [Required] 
+| [QuantityBase](Applications.Service.ServiceAgreementMaterials.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
+| [StandardQuantityBase](Applications.Service.ServiceAgreementMaterials.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
 | [StartDate](Applications.Service.ServiceAgreementMaterials.md#StartDate) | datetime (nullable) | Start date from which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities. 
 
 ## References
@@ -57,7 +60,7 @@ _Front-End Recalc Expressions:_
 
 > Quantity of the agreed material. [Unit: QuantityUnit] [Required]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -65,7 +68,7 @@ _Supports Order By_: **False**
 
 > The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -78,7 +81,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types/Quantity.md)**  
+_Type_: **[Quantity](../data-types.md#Quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -143,7 +146,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceAgreementMaterials?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Srv_Service_Agreement_Materials?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Logistics.Inventory.StoreGroups
+---
 # Logistics.Inventory.StoreGroups
 
 Hierarchy of store groups. Entity: Inv_Store_Groups
@@ -10,7 +13,7 @@ Hierarchy of store groups. Entity: Inv_Store_Groups
 | [FullPath](Logistics.Inventory.StoreGroups.md#FullPath) | string (nullable) | The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. [Filter(eq;like)] [ORD] [ReadOnly] 
 | [ParentFullPath](Logistics.Inventory.StoreGroups.md#ParentFullPath) | string (nullable) | The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. [Filter(eq;like)] 
 | [Code](Logistics.Inventory.StoreGroups.md#Code) | string | The unique code of the StoreGroup. [Required] [Filter(eq;like)] 
-| [Name](Logistics.Inventory.StoreGroups.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this StoreGroup. [Required] [Filter(like)] 
+| [Name](Logistics.Inventory.StoreGroups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this StoreGroup. [Required] [Filter(like)] 
 
 ## References
 
@@ -57,7 +60,7 @@ _Supports Order By_: **False**
 
 > The name of this StoreGroup. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -101,7 +104,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_StoreGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Inv_Store_Groups?$top=10>
 

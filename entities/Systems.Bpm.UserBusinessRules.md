@@ -1,3 +1,6 @@
+---
+uid: Systems.Bpm.UserBusinessRules
+---
 # Systems.Bpm.UserBusinessRules
 
 Represents user-defined business rule. Entity: Sys_User_Business_Rules
@@ -15,7 +18,7 @@ Represents user-defined business rule. Entity: Sys_User_Business_Rules
 | [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#ScriptLanguage) | [Systems.Bpm.UserBusinessRulesRepository.ScriptLanguage](Systems.Bpm.UserBusinessRules.md#ScriptLanguage) | The programming language used to define the rule actions. [Required] [Default("Integrated")] 
 | [ScriptText](Systems.Bpm.UserBusinessRules.md#ScriptText) | string (nullable) | The program code used to define the rule actions. 
 | [Code](Systems.Bpm.UserBusinessRules.md#Code) | string | The unique code of the UserBusinessRule. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Systems.Bpm.UserBusinessRules.md#Name) | [MultilanguageString](../data-types/MultilanguageString.md) | The name of this UserBusinessRule. [Required] [Filter(like)] 
+| [Name](Systems.Bpm.UserBusinessRules.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this UserBusinessRule. [Required] [Filter(like)] 
 | [UserStartable](Systems.Bpm.UserBusinessRules.md#UserStartable) | boolean (nullable) | Specifies, that the rule can be manually started by the user. [Default(false)] [Filter(eq)] 
 
 ## Child Collections
@@ -124,7 +127,7 @@ _Supports Order By_: **True**
 
 > The name of this UserBusinessRule. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types/MultilanguageString.md)**  
+_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -158,7 +161,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_UserBusinessRules?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Sys_User_Business_Rules?$top=10>
 

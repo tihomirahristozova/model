@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.MaintenanceProfiles
+---
 # Applications.Fleet.MaintenanceProfiles
 
 Profiles contain multiple maintenance plans and can be assigned directly to a vehicle. Entity: Fleet_Maintenance_Profiles
@@ -82,7 +85,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_MaintenanceProfiles?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Maintenance_Profiles?$top=10>
 

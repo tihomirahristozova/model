@@ -1,3 +1,6 @@
+---
+uid: Crm.Pos.ProductTypeTaxGroups
+---
 # Crm.Pos.ProductTypeTaxGroups
 
 Contains the tax group codes for the product types. The tax group codes are used when sales documents are printed to fiscal printers or exported to fiscal authorities. Entity: Pos_Product_Type_Tax_Groups (Introduced in version 19.1.100.0)
@@ -128,7 +131,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_ProductTypeTaxGroups?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Pos_Product_Type_Tax_Groups?$top=10>
 

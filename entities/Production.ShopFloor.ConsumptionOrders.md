@@ -1,3 +1,6 @@
+---
+uid: Production.ShopFloor.ConsumptionOrders
+---
 # Production.ShopFloor.ConsumptionOrders
 
 Headers of material consuption orders of the work orders. Entity: Prd_Consumption_Orders
@@ -462,7 +465,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Production_ShopFloor_ConsumptionOrders?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Prd_Consumption_Orders?$top=10>
 

@@ -1,3 +1,6 @@
+---
+uid: Applications.Fleet.VehicleEquipment
+---
 # Applications.Fleet.VehicleEquipment
 
 Contains the actual and history of equipment, installed on the vehicles. Entity: Fleet_Vehicle_Equipment
@@ -102,7 +105,4 @@ Domain API Query:
 
 Domain API Query Builder:
 <https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_VehicleEquipment?$top=10>
-
-Table API Query:
-<https://demodb.my.erp.net/api/domain/odata/Fleet_Vehicle_Equipment?$top=10>
 
