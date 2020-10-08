@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>General.Contacts.ActivityTimeIntervals | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="General.Contacts.ActivityTimeIntervals | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="generalcontactsactivitytimeintervals">General.Contacts.ActivityTimeIntervals</h1>
+
+<p>History of work efforts for executing activities (timesheet). Entity: Cm_Activity_Time_Intervals</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#Date">Date</a></td>
+<td>date</td>
+<td>The date on which the work was performed. [Required] [Filter(eq;ge;le)]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#EndTime">EndTime</a></td>
+<td>time</td>
+<td>The ending time of the time interval within 'Date'. [Required] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#ExecutionCompletePercent">ExecutionCompletePercent</a></td>
+<td>decimal</td>
+<td>Percent of task completed. [Required] [Default(0)] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#Notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for the time interval.</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#StartTime">StartTime</a></td>
+<td>time</td>
+<td>The starting time of the time interval within 'Date'. [Required] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#State">State</a></td>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#State">General.DocumentState</a> (nullable)</td>
+<td>The state of the primary activity in the moment the time interval was created. null when the state is unknown.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#Activity">Activity</a></td>
+<td><a href="General.Contacts.Activities.html">General.Contacts.Activities</a></td>
+<td>The activity for which the time interval is recorded. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#Party">Party</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
+<td>The party for which the time interval is recorded. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#UserStatus">UserStatus</a></td>
+<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
+<td>The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="date">Date</h3>
+<blockquote>
+<p>The date on which the work was performed. [Required] [Filter(eq;ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>date</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="endtime">EndTime</h3>
+<blockquote>
+<p>The ending time of the time interval within 'Date'. [Required] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>time</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="executioncompletepercent">ExecutionCompletePercent</h3>
+<blockquote>
+<p>Percent of task completed. [Required] [Default(0)] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>decimal</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h3 id="notes">Notes</h3>
+<blockquote>
+<p>Notes for the time interval.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="starttime">StartTime</h3>
+<blockquote>
+<p>The starting time of the time interval within 'Date'. [Required] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>time</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="state">State</h3>
+<blockquote>
+<p>The state of the primary activity in the moment the time interval was created. null when the state is unknown.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.ActivityTimeIntervals.html#State">General.DocumentState</a> (nullable)</strong><br>
+Enumeration of document system states<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>New document, just created. Can be edited. (Stored as 0). <br> <em>Database Value:</em> 0 <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+</tr>
+<tr>
+<td>Adjustment</td>
+<td>Document which adjusts other released documents. (Stored as 5). <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Adjustment'</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Planned by the system for future releasing. (Stored as 10). <br> <em>Database Value:</em> 10 <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Planned'</td>
+</tr>
+<tr>
+<td>FirmPlanned</td>
+<td>Planned by operator for future releasing. (Stored as 20). <br> <em>Database Value:</em> 20 <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+</tr>
+<tr>
+<td>Released</td>
+<td>Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br> <em>Database Value:</em> 30 <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Released'</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Work has completed. (Stored as 40). <br> <em>Database Value:</em> 40 <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'Completed'</td>
+</tr>
+<tr>
+<td>Closed</td>
+<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br> <em>Database Value:</em> 50 <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Closed'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="activity">Activity</h3>
+<blockquote>
+<p>The activity for which the time interval is recorded. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Activities.html">General.Contacts.Activities</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="party">Party</h3>
+<blockquote>
+<p>The party for which the time interval is recorded. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="userstatus">UserStatus</h3>
+<blockquote>
+<p>The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=General.Contacts.ActivityTimeIntervals erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=General.Contacts.ActivityTimeIntervals erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=General.Contacts.ActivityTimeIntervals erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/General_Contacts_ActivityTimeIntervals?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Contacts_ActivityTimeIntervals?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_ActivityTimeIntervals?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_ActivityTimeIntervals?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Cm_Activity_Time_Intervals?$top=10">https://demodb.my.erp.net/api/domain/odata/Cm_Activity_Time_Intervals?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/General.Contacts.ActivityTimeIntervals.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

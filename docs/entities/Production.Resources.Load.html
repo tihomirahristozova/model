@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Production.Resources.Load | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Production.Resources.Load | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="productionresourcesload">Production.Resources.Load</h1>
+
+<p>Contains scheduled operations usage of the resources. Entity: Prd_Load</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Production.Resources.Load.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Production.Resources.Load.html#CalendarDate">CalendarDate</a></td>
+<td>datetime</td>
+<td>Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. [Required] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Production.Resources.Load.html#Priority">Priority</a></td>
+<td><a href="Production.Resources.Load.html#Priority">Production.Resources.LoadRepository.Priority</a></td>
+<td>Priority of the allocation. 1=Lowest ... 5=Highest. [Required] [Default(3)]</td>
+</tr>
+<tr>
+<td><a href="Production.Resources.Load.html#TimeType">TimeType</a></td>
+<td><a href="Production.Resources.Load.html#TimeType">Production.Resources.LoadRepository.TimeType</a></td>
+<td>S=Setup; R=Run; W=Wait; M=Move. [Required] [Default(&quot;R&quot;)]</td>
+</tr>
+<tr>
+<td><a href="Production.Resources.Load.html#UsageEndTime">UsageEndTime</a></td>
+<td>datetime</td>
+<td>The ending time of the planned usage. [Required] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Production.Resources.Load.html#UsageQuantity">UsageQuantity</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>Quantity of the resource, which will be used for production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Production.Resources.Load.html#UsageStartTime">UsageStartTime</a></td>
+<td>datetime</td>
+<td>The starting time of the planned usage. [Required] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Production.Resources.Load.html#UsageTimeMinutes">UsageTimeMinutes</a></td>
+<td>int32</td>
+<td>Time allocated for the operation in minutes. [Required] [Default(0)] [Filter(ge;le)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Production.Resources.Load.html#WorkOrderItemOperation">WorkOrderItemOperation</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItemOperations.html">Production.ShopFloor.WorkOrderItemOperations</a></td>
+<td>The <a href="Production.ShopFloor.WorkOrderItemOperations.html">WorkOrderItemOperation</a> to which this Load belongs. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+<tr>
+<td><a href="Production.Resources.Load.html#WorkgroupResource">WorkgroupResource</a></td>
+<td><a href="Production.Resources.WorkgroupResources.html">Production.Resources.WorkgroupResources</a></td>
+<td>The exact resource being utilised. [Required] [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="calendardate">CalendarDate</h3>
+<blockquote>
+<p>Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. [Required] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="priority">Priority</h3>
+<blockquote>
+<p>Priority of the allocation. 1=Lowest ... 5=Highest. [Required] [Default(3)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Production.Resources.Load.html#Priority">Production.Resources.LoadRepository.Priority</a></strong><br>
+Allowed values for the <a href="Production.Resources.Load.html#Priority">Priority</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lowest</td>
+<td>Lowest value. Stored as 1. <br> <em>Database Value:</em> 1 <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Lowest'</td>
+</tr>
+<tr>
+<td>Two</td>
+<td>Two value. Stored as 2. <br> <em>Database Value:</em> 2 <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Two'</td>
+</tr>
+<tr>
+<td>Three</td>
+<td>Three value. Stored as 3. <br> <em>Database Value:</em> 3 <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Three'</td>
+</tr>
+<tr>
+<td>Four</td>
+<td>Four value. Stored as 4. <br> <em>Database Value:</em> 4 <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Four'</td>
+</tr>
+<tr>
+<td>Highest</td>
+<td>Highest value. Stored as 5. <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Highest'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>3</strong></p>
+<h3 id="timetype">TimeType</h3>
+<blockquote>
+<p>S=Setup; R=Run; W=Wait; M=Move. [Required] [Default(&quot;R&quot;)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Production.Resources.Load.html#TimeType">Production.Resources.LoadRepository.TimeType</a></strong><br>
+Allowed values for the <a href="Production.Resources.Load.html#TimeType">TimeType</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move</td>
+<td>Move value. Stored as 'M'. <br> <em>Database Value:</em> 'M' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Move'</td>
+</tr>
+<tr>
+<td>Run</td>
+<td>Run value. Stored as 'R'. <br> <em>Database Value:</em> 'R' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Run'</td>
+</tr>
+<tr>
+<td>Setup</td>
+<td>Setup value. Stored as 'S'. <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Setup'</td>
+</tr>
+<tr>
+<td>Wait</td>
+<td>Wait value. Stored as 'W'. <br> <em>Database Value:</em> 'W' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Wait'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Run</strong></p>
+<h3 id="usageendtime">UsageEndTime</h3>
+<blockquote>
+<p>The ending time of the planned usage. [Required] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="usagequantity">UsageQuantity</h3>
+<blockquote>
+<p>Quantity of the resource, which will be used for production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="usagestarttime">UsageStartTime</h3>
+<blockquote>
+<p>The starting time of the planned usage. [Required] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="usagetimeminutes">UsageTimeMinutes</h3>
+<blockquote>
+<p>Time allocated for the operation in minutes. [Required] [Default(0)] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="workorderitemoperation">WorkOrderItemOperation</h3>
+<blockquote>
+<p>The <a href="Production.ShopFloor.WorkOrderItemOperations.html">WorkOrderItemOperation</a> to which this Load belongs. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItemOperations.html">Production.ShopFloor.WorkOrderItemOperations</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="workgroupresource">WorkgroupResource</h3>
+<blockquote>
+<p>The exact resource being utilised. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">Production.Resources.WorkgroupResources</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Production.Resources.Load erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Production.Resources.Load erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Production.Resources.Load erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Production_Resources_Load?$top=10">https://demodb.my.erp.net/api/domain/odata/Production_Resources_Load?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_Load?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Production_Resources_Load?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Prd_Load?$top=10">https://demodb.my.erp.net/api/domain/odata/Prd_Load?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Production.Resources.Load.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

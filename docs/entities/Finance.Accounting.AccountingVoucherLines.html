@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Finance.Accounting.AccountingVoucherLines | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Finance.Accounting.AccountingVoucherLines | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="financeaccountingaccountingvoucherlines">Finance.Accounting.AccountingVoucherLines</h1>
+
+<p>Contains one debit or credit posting within an accounting voucher. Entity: Acc_Voucher_Lines</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#CorrespondanceNo">CorrespondanceNo</a></td>
+<td>int32</td>
+<td>The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits. [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#CorrespondantAmount">CorrespondantAmount</a></td>
+<td>decimal (nullable)</td>
+<td>The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#Credit">Credit</a></td>
+<td><a href="../data-types/Amount.md">Amount</a></td>
+<td>The amount of the credit in the currency of the account. 0 means that the account is not credited. [Currency: Currency] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#CreditBase">CreditBase</a></td>
+<td><a href="../data-types/Amount.md">Amount</a></td>
+<td>The amount of credit in base currency. [Currency: Voucher.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#Debit">Debit</a></td>
+<td><a href="../data-types/Amount.md">Amount</a></td>
+<td>The amount of the debit in the currency of the account. 0 means that the account is not debited. [Currency: Currency] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#DebitBase">DebitBase</a></td>
+<td><a href="../data-types/Amount.md">Amount</a></td>
+<td>The amount of debit in base currency. [Currency: Voucher.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#ItemKey">ItemKey</a></td>
+<td>string (nullable)</td>
+<td>The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#LineNo">LineNo</a></td>
+<td>int32</td>
+<td>Consecutive number of the line within the voucher. [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#RateDivisor">RateDivisor</a></td>
+<td>decimal</td>
+<td>The divisor for conversion from Debit/Credit to base currency. [Required] [Default(1)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#RateMultiplier">RateMultiplier</a></td>
+<td>decimal</td>
+<td>The multiplier for conversion from Debit/Credit to base currency. [Required] [Default(1)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#Account">Account</a></td>
+<td><a href="Finance.Accounting.Accounts.html">Finance.Accounting.Accounts</a></td>
+<td>The account being debited or credited. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#CostCenter">CostCenter</a></td>
+<td><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</td>
+<td>The cost center to which this cost is related. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#Currency">Currency</a></td>
+<td><a href="General.Currencies.html">General.Currencies</a></td>
+<td>The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#ProfitCenter">ProfitCenter</a></td>
+<td><a href="Finance.Accounting.ProfitCenters.html">Finance.Accounting.ProfitCenters</a> (nullable)</td>
+<td>The profit center to which this revenue is related. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#ReferencedDocument">ReferencedDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a></td>
+<td>The document which is referenced by the line. By default, this is the document of the voucher. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#Voucher">Voucher</a></td>
+<td><a href="Finance.Accounting.AccountingVouchers.html">Finance.Accounting.AccountingVouchers</a></td>
+<td>The voucher to which this line is attached. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="correspondanceno">CorrespondanceNo</h3>
+<blockquote>
+<p>The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits. [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h3 id="correspondantamount">CorrespondantAmount</h3>
+<blockquote>
+<p>The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>decimal (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="credit">Credit</h3>
+<blockquote>
+<p>The amount of the credit in the currency of the account. 0 means that the account is not credited. [Currency: Currency] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="creditbase">CreditBase</h3>
+<blockquote>
+<p>The amount of credit in base currency. [Currency: Voucher.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="debit">Debit</h3>
+<blockquote>
+<p>The amount of the debit in the currency of the account. 0 means that the account is not debited. [Currency: Currency] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="debitbase">DebitBase</h3>
+<blockquote>
+<p>The amount of debit in base currency. [Currency: Voucher.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="itemkey">ItemKey</h3>
+<blockquote>
+<p>The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="lineno">LineNo</h3>
+<blockquote>
+<p>Consecutive number of the line within the voucher. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>(obj.Voucher.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>(obj.Voucher.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<h3 id="ratedivisor">RateDivisor</h3>
+<blockquote>
+<p>The divisor for conversion from Debit/Credit to base currency. [Required] [Default(1)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>decimal</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>1</strong></p>
+<h3 id="ratemultiplier">RateMultiplier</h3>
+<blockquote>
+<p>The multiplier for conversion from Debit/Credit to base currency. [Required] [Default(1)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>decimal</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>1</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="account">Account</h3>
+<blockquote>
+<p>The account being debited or credited. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Finance.Accounting.Accounts</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="costcenter">CostCenter</h3>
+<blockquote>
+<p>The cost center to which this cost is related. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="currency">Currency</h3>
+<blockquote>
+<p>The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="profitcenter">ProfitCenter</h3>
+<blockquote>
+<p>The profit center to which this revenue is related. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.ProfitCenters.html">Finance.Accounting.ProfitCenters</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="referenceddocument">ReferencedDocument</h3>
+<blockquote>
+<p>The document which is referenced by the line. By default, this is the document of the voucher. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="voucher">Voucher</h3>
+<blockquote>
+<p>The voucher to which this line is attached. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.AccountingVouchers.html">Finance.Accounting.AccountingVouchers</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Finance.Accounting.AccountingVoucherLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Finance.Accounting.AccountingVoucherLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Finance.Accounting.AccountingVoucherLines erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_AccountingVoucherLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_AccountingVoucherLines?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_AccountingVoucherLines?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_AccountingVoucherLines?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Acc_Voucher_Lines?$top=10">https://demodb.my.erp.net/api/domain/odata/Acc_Voucher_Lines?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Finance.Accounting.AccountingVoucherLines.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

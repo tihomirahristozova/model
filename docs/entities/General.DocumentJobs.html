@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>General.DocumentJobs | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="General.DocumentJobs | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="generaldocumentjobs">General.DocumentJobs</h1>
+
+<p>Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Introduced in version 20.1.100.0)</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="General.DocumentJobs.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.DocumentJobs.html#IsActive">IsActive</a></td>
+<td>boolean</td>
+<td>Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentJobs.html#Name">Name</a></td>
+<td>string</td>
+<td>The name of the job. [Required] [Filter(eq;like)] [ORD]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentJobs.html#JobType">JobType</a></td>
+<td><a href="General.DocumentJobs.html#JobType">Systems.Core.JobsRepository.JobType</a></td>
+<td>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentJobs.html#Notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this Job.</td>
+</tr>
+<tr>
+<td><a href="General.DocumentJobs.html#RunOnIdle">RunOnIdle</a></td>
+<td>boolean</td>
+<td>Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentJobs.html#FilterXml">FilterXml</a></td>
+<td>dataaccessfilter</td>
+<td>Specifies the documents, whose state will be changed. [Required]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentJobs.html#NewState">NewState</a></td>
+<td><a href="General.DocumentJobs.html#NewState">General.DocumentState</a></td>
+<td>Specifies the state, which should be set to the documents, matching the filter. [Required]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="General.DocumentJobs.html#DocumentType">DocumentType</a></td>
+<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
+<td>The type of the document, whose state will be changed. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentJobs.html#NewUserStatus">NewUserStatus</a></td>
+<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
+<td>Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type. [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="isactive">IsActive</h3>
+<blockquote>
+<p>Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>The name of the job. [Required] [Filter(eq;like)] [ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="jobtype">JobType</h3>
+<blockquote>
+<p>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentJobs.html#JobType">Systems.Core.JobsRepository.JobType</a></strong><br>
+Allowed values for the <a href="Systems.Core.Jobs.html#JobType">JobType</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DocumentChangeState</td>
+<td>DocumentChangeState value. Stored as 'DOC'. <br> <em>Database Value:</em> 'DOC' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'DocumentChangeState'</td>
+</tr>
+<tr>
+<td>RunPostponedEvents</td>
+<td>RunPostponedEvents value. Stored as 'POS'. <br> <em>Database Value:</em> 'POS' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'RunPostponedEvents'</td>
+</tr>
+<tr>
+<td>DeleteOldNotifications</td>
+<td>DeleteOldNotifications value. Stored as 'DNT'. <br> <em>Database Value:</em> 'DNT' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'DeleteOldNotifications'</td>
+</tr>
+<tr>
+<td>DeleteOldPrintImages</td>
+<td>DeleteOldPrintImages value. Stored as 'DPI'. <br> <em>Database Value:</em> 'DPI' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'DeleteOldPrintImages'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="notes">Notes</h3>
+<blockquote>
+<p>Notes for this Job.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="runonidle">RunOnIdle</h3>
+<blockquote>
+<p>Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
+<h3 id="filterxml">FilterXml</h3>
+<blockquote>
+<p>Specifies the documents, whose state will be changed. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>dataaccessfilter</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="newstate">NewState</h3>
+<blockquote>
+<p>Specifies the state, which should be set to the documents, matching the filter. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentJobs.html#NewState">General.DocumentState</a></strong><br>
+Enumeration of document system states<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>New document, just created. Can be edited. (Stored as 0). <br> <em>Database Value:</em> 0 <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+</tr>
+<tr>
+<td>Adjustment</td>
+<td>Document which adjusts other released documents. (Stored as 5). <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Adjustment'</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Planned by the system for future releasing. (Stored as 10). <br> <em>Database Value:</em> 10 <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Planned'</td>
+</tr>
+<tr>
+<td>FirmPlanned</td>
+<td>Planned by operator for future releasing. (Stored as 20). <br> <em>Database Value:</em> 20 <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+</tr>
+<tr>
+<td>Released</td>
+<td>Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br> <em>Database Value:</em> 30 <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Released'</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Work has completed. (Stored as 40). <br> <em>Database Value:</em> 40 <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'Completed'</td>
+</tr>
+<tr>
+<td>Closed</td>
+<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br> <em>Database Value:</em> 50 <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Closed'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="documenttype">DocumentType</h3>
+<blockquote>
+<p>The type of the document, whose state will be changed. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="newuserstatus">NewUserStatus</h3>
+<blockquote>
+<p>Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=General.DocumentJobs erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=General.DocumentJobs erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=General.DocumentJobs erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/General_DocumentJobs?$top=10">https://demodb.my.erp.net/api/domain/odata/General_DocumentJobs?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentJobs?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentJobs?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Gen_Document_Jobs?$top=10">https://demodb.my.erp.net/api/domain/odata/Gen_Document_Jobs?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/General.DocumentJobs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

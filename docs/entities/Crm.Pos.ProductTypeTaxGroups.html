@@ -1,0 +1,367 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Crm.Pos.ProductTypeTaxGroups | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Crm.Pos.ProductTypeTaxGroups | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="crmposproducttypetaxgroups">Crm.Pos.ProductTypeTaxGroups</h1>
+
+<p>Contains the tax group codes for the product types. The tax group codes are used when sales documents are printed to fiscal printers or exported to fiscal authorities. Entity: Pos_Product_Type_Tax_Groups (Introduced in version 19.1.100.0)</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Crm.Pos.ProductTypeTaxGroups.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Crm.Pos.ProductTypeTaxGroups.html#ApplicableLegislation">ApplicableLegislation</a></td>
+<td><a href="Crm.Pos.ProductTypeTaxGroups.html#ApplicableLegislation">General.PartyApplicableLegislationsRepository.ApplicableLegislation</a></td>
+<td>The legislation, for which the tax group is applicable. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Crm.Pos.ProductTypeTaxGroups.html#Notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this ProductTypeTaxGroup. [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Crm.Pos.ProductTypeTaxGroups.html#TaxGroup">TaxGroup</a></td>
+<td><a href="Crm.Pos.ProductTypeTaxGroups.html#TaxGroup">Crm.Pos.ProductTypeTaxGroupsRepository.TaxGroup</a></td>
+<td>The tax group of the product type within the specified applicable legislation. [Required] [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Crm.Pos.ProductTypeTaxGroups.html#ProductType">ProductType</a></td>
+<td><a href="General.Products.ProductTypes.html">General.Products.ProductTypes</a></td>
+<td>The product type for which the tax group is specified. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="applicablelegislation">ApplicableLegislation</h3>
+<blockquote>
+<p>The legislation, for which the tax group is applicable. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Crm.Pos.ProductTypeTaxGroups.html#ApplicableLegislation">General.PartyApplicableLegislationsRepository.ApplicableLegislation</a></strong><br>
+Allowed values for the <a href="General.PartyApplicableLegislations.html#ApplicableLegislation">ApplicableLegislation</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UnitedArabEmirates</td>
+<td>UnitedArabEmirates value. Stored as 'AE'. <br> <em>Database Value:</em> 'AE' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'UnitedArabEmirates'</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>Australia value. Stored as 'AU'. <br> <em>Database Value:</em> 'AU' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Australia'</td>
+</tr>
+<tr>
+<td>Bulgaria</td>
+<td>Bulgaria value. Stored as 'BG'. <br> <em>Database Value:</em> 'BG' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Bulgaria'</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Canada value. Stored as 'CA'. <br> <em>Database Value:</em> 'CA' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Canada'</td>
+</tr>
+<tr>
+<td>China</td>
+<td>China value. Stored as 'CN'. <br> <em>Database Value:</em> 'CN' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'China'</td>
+</tr>
+<tr>
+<td>CzechRepublic</td>
+<td>CzechRepublic value. Stored as 'CZ'. <br> <em>Database Value:</em> 'CZ' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'CzechRepublic'</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>Germany value. Stored as 'DE'. <br> <em>Database Value:</em> 'DE' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Germany'</td>
+</tr>
+<tr>
+<td>Spain</td>
+<td>Spain value. Stored as 'ES'. <br> <em>Database Value:</em> 'ES' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'Spain'</td>
+</tr>
+<tr>
+<td>EuropeanUnion</td>
+<td>EuropeanUnion value. Stored as 'EU'. <br> <em>Database Value:</em> 'EU' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'EuropeanUnion'</td>
+</tr>
+<tr>
+<td>France</td>
+<td>France value. Stored as 'FR'. <br> <em>Database Value:</em> 'FR' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'France'</td>
+</tr>
+<tr>
+<td>Greece</td>
+<td>Greece value. Stored as 'GR'. <br> <em>Database Value:</em> 'GR' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Greece'</td>
+</tr>
+<tr>
+<td>Hungary</td>
+<td>Hungary value. Stored as 'HU'. <br> <em>Database Value:</em> 'HU' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'Hungary'</td>
+</tr>
+<tr>
+<td>India</td>
+<td>India value. Stored as 'IN'. <br> <em>Database Value:</em> 'IN' <br> <em>Model Value:</em> 12 <br> <em>Domain API Value:</em> 'India'</td>
+</tr>
+<tr>
+<td>Italy</td>
+<td>Italy value. Stored as 'IT'. <br> <em>Database Value:</em> 'IT' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'Italy'</td>
+</tr>
+<tr>
+<td>Japan</td>
+<td>Japan value. Stored as 'JP'. <br> <em>Database Value:</em> 'JP' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'Japan'</td>
+</tr>
+<tr>
+<td>Macedonia</td>
+<td>Macedonia value. Stored as 'MK'. <br> <em>Database Value:</em> 'MK' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'Macedonia'</td>
+</tr>
+<tr>
+<td>Poland</td>
+<td>Poland value. Stored as 'PL'. <br> <em>Database Value:</em> 'PL' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'Poland'</td>
+</tr>
+<tr>
+<td>Portugal</td>
+<td>Portugal value. Stored as 'PT'. <br> <em>Database Value:</em> 'PT' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'Portugal'</td>
+</tr>
+<tr>
+<td>Romania</td>
+<td>Romania value. Stored as 'RO'. <br> <em>Database Value:</em> 'RO' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'Romania'</td>
+</tr>
+<tr>
+<td>Serbia</td>
+<td>Serbia value. Stored as 'RS'. <br> <em>Database Value:</em> 'RS' <br> <em>Model Value:</em> 19 <br> <em>Domain API Value:</em> 'Serbia'</td>
+</tr>
+<tr>
+<td>Russia</td>
+<td>Russia value. Stored as 'RU'. <br> <em>Database Value:</em> 'RU' <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'Russia'</td>
+</tr>
+<tr>
+<td>Turkey</td>
+<td>Turkey value. Stored as 'TR'. <br> <em>Database Value:</em> 'TR' <br> <em>Model Value:</em> 21 <br> <em>Domain API Value:</em> 'Turkey'</td>
+</tr>
+<tr>
+<td>UnitedKingdom</td>
+<td>UnitedKingdom value. Stored as 'UK'. <br> <em>Database Value:</em> 'UK' <br> <em>Model Value:</em> 22 <br> <em>Domain API Value:</em> 'UnitedKingdom'</td>
+</tr>
+<tr>
+<td>UnitedStates</td>
+<td>UnitedStates value. Stored as 'US'. <br> <em>Database Value:</em> 'US' <br> <em>Model Value:</em> 23 <br> <em>Domain API Value:</em> 'UnitedStates'</td>
+</tr>
+<tr>
+<td>SouthAfrica</td>
+<td>SouthAfrica value. Stored as 'ZA'. <br> <em>Database Value:</em> 'ZA' <br> <em>Model Value:</em> 24 <br> <em>Domain API Value:</em> 'SouthAfrica'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="notes">Notes</h3>
+<blockquote>
+<p>Notes for this ProductTypeTaxGroup. [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="taxgroup">TaxGroup</h3>
+<blockquote>
+<p>The tax group of the product type within the specified applicable legislation. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Crm.Pos.ProductTypeTaxGroups.html#TaxGroup">Crm.Pos.ProductTypeTaxGroupsRepository.TaxGroup</a></strong><br>
+Allowed values for the <a href="Crm.Pos.ProductTypeTaxGroups.html#TaxGroup">TaxGroup</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One</td>
+<td>One value. Stored as 1. <br> <em>Database Value:</em> 1 <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'One'</td>
+</tr>
+<tr>
+<td>Two</td>
+<td>Two value. Stored as 2. <br> <em>Database Value:</em> 2 <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Two'</td>
+</tr>
+<tr>
+<td>Three</td>
+<td>Three value. Stored as 3. <br> <em>Database Value:</em> 3 <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Three'</td>
+</tr>
+<tr>
+<td>Four</td>
+<td>Four value. Stored as 4. <br> <em>Database Value:</em> 4 <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Four'</td>
+</tr>
+<tr>
+<td>Five</td>
+<td>Five value. Stored as 5. <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Five'</td>
+</tr>
+<tr>
+<td>Six</td>
+<td>Six value. Stored as 6. <br> <em>Database Value:</em> 6 <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Six'</td>
+</tr>
+<tr>
+<td>Seven</td>
+<td>Seven value. Stored as 7. <br> <em>Database Value:</em> 7 <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'Seven'</td>
+</tr>
+<tr>
+<td>Eight</td>
+<td>Eight value. Stored as 8. <br> <em>Database Value:</em> 8 <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'Eight'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="producttype">ProductType</h3>
+<blockquote>
+<p>The product type for which the tax group is specified. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">General.Products.ProductTypes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Crm.Pos.ProductTypeTaxGroups erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Crm.Pos.ProductTypeTaxGroups erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Crm.Pos.ProductTypeTaxGroups erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Crm_Pos_ProductTypeTaxGroups?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Pos_ProductTypeTaxGroups?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_ProductTypeTaxGroups?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_ProductTypeTaxGroups?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Pos_Product_Type_Tax_Groups?$top=10">https://demodb.my.erp.net/api/domain/odata/Pos_Product_Type_Tax_Groups?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Crm.Pos.ProductTypeTaxGroups.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

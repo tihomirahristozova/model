@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Logistics.Wms.WarehouseOrderLines | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Logistics.Wms.WarehouseOrderLines | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="logisticswmswarehouseorderlines">Logistics.Wms.WarehouseOrderLines</h1>
+
+<p>A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lines (Introduced in version 20.1.100.0)</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#LineNo">LineNo</a></td>
+<td>int32</td>
+<td>Unique consecutive line number within the order. [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#Notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this WarehouseOrderLine.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#Quantity">Quantity</a></td>
+<td>decimal</td>
+<td>The quantity of the product, which should be operated. [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#TaskType">TaskType</a></td>
+<td>string</td>
+<td>The type of the task (operation), which should be performed. MOV=Move; INB=Inbound; OUT=Outbound; INS=Inspect; PCK=Packing/Unpacking; CNT=Count. [Required]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#Lot">Lot</a></td>
+<td><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</td>
+<td>The lot of the product, which should be operated. null for operations, which are not lot-specific, or when any lot can be used. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#Product">Product</a></td>
+<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td>The product, which should be operated. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#QuantityUnit">QuantityUnit</a></td>
+<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#SerialNumber">SerialNumber</a></td>
+<td><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</td>
+<td>The serial number of the product, which should be operated. null for operations, which are not serial number-specific, or when any serial number can be used. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#ToUnit">ToUnit</a></td>
+<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</td>
+<td>Destination measurement unit. null for operations, which do not specify destination measurement unit. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#ToWarehouseLocation">ToWarehouseLocation</a></td>
+<td><a href="Logistics.Wms.WarehouseLocations.html">Logistics.Wms.WarehouseLocations</a> (nullable)</td>
+<td>Destination warehouse location. null for operations, which do not specify destination location. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#WarehouseLocation">WarehouseLocation</a></td>
+<td><a href="Logistics.Wms.WarehouseLocations.html">Logistics.Wms.WarehouseLocations</a> (nullable)</td>
+<td>Location, where the opeartion should be performed. null for operations, which do not require location. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#WarehouseOrder">WarehouseOrder</a></td>
+<td><a href="Logistics.Wms.WarehouseOrders.html">Logistics.Wms.WarehouseOrders</a></td>
+<td>The <a href="Logistics.Wms.WarehouseOrderLines.html#WarehouseOrder">WarehouseOrder</a> to which this WarehouseOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#WarehouseWorker">WarehouseWorker</a></td>
+<td><a href="Logistics.Wms.WarehouseWorkers.html">Logistics.Wms.WarehouseWorkers</a> (nullable)</td>
+<td>The human or robot worker, which should execute the line. null means that the line is shared among all workers, assigned to the order. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#WarehouseZone">WarehouseZone</a></td>
+<td><a href="Logistics.Wms.WarehouseZones.html">Logistics.Wms.WarehouseZones</a> (nullable)</td>
+<td>The warehouse zone, in which the operation should be performed. null for operations which do not require specific zone. [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="lineno">LineNo</h3>
+<blockquote>
+<p>Unique consecutive line number within the order. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="notes">Notes</h3>
+<blockquote>
+<p>Notes for this WarehouseOrderLine.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="quantity">Quantity</h3>
+<blockquote>
+<p>The quantity of the product, which should be operated. [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>decimal</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h3 id="tasktype">TaskType</h3>
+<blockquote>
+<p>The type of the task (operation), which should be performed. MOV=Move; INB=Inbound; OUT=Outbound; INS=Inspect; PCK=Packing/Unpacking; CNT=Count. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="lot">Lot</h3>
+<blockquote>
+<p>The lot of the product, which should be operated. null for operations, which are not lot-specific, or when any lot can be used. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="product">Product</h3>
+<blockquote>
+<p>The product, which should be operated. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="quantityunit">QuantityUnit</h3>
+<blockquote>
+<p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="serialnumber">SerialNumber</h3>
+<blockquote>
+<p>The serial number of the product, which should be operated. null for operations, which are not serial number-specific, or when any serial number can be used. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="tounit">ToUnit</h3>
+<blockquote>
+<p>Destination measurement unit. null for operations, which do not specify destination measurement unit. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="towarehouselocation">ToWarehouseLocation</h3>
+<blockquote>
+<p>Destination warehouse location. null for operations, which do not specify destination location. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseLocations.html">Logistics.Wms.WarehouseLocations</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="warehouselocation">WarehouseLocation</h3>
+<blockquote>
+<p>Location, where the opeartion should be performed. null for operations, which do not require location. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseLocations.html">Logistics.Wms.WarehouseLocations</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="warehouseorder">WarehouseOrder</h3>
+<blockquote>
+<p>The <a href="Logistics.Wms.WarehouseOrderLines.html#WarehouseOrder">WarehouseOrder</a> to which this WarehouseOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrders.html">Logistics.Wms.WarehouseOrders</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="warehouseworker">WarehouseWorker</h3>
+<blockquote>
+<p>The human or robot worker, which should execute the line. null means that the line is shared among all workers, assigned to the order. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseWorkers.html">Logistics.Wms.WarehouseWorkers</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="warehousezone">WarehouseZone</h3>
+<blockquote>
+<p>The warehouse zone, in which the operation should be performed. null for operations which do not require specific zone. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseZones.html">Logistics.Wms.WarehouseZones</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Logistics.Wms.WarehouseOrderLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Logistics.Wms.WarehouseOrderLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Logistics.Wms.WarehouseOrderLines erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Wms_WarehouseOrderLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Wms_WarehouseOrderLines?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseOrderLines?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseOrderLines?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Wms_Warehouse_Order_Lines?$top=10">https://demodb.my.erp.net/api/domain/odata/Wms_Warehouse_Order_Lines?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Logistics.Wms.WarehouseOrderLines.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

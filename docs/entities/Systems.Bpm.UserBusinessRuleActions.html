@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Systems.Bpm.UserBusinessRuleActions | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Systems.Bpm.UserBusinessRuleActions | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="systemsbpmuserbusinessruleactions">Systems.Bpm.UserBusinessRuleActions</h1>
+
+<p>Represents an action within a business rule. Entity: Sys_User_Business_Rule_Actions</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#ActionNo">ActionNo</a></td>
+<td>int32</td>
+<td>Consecutive number of the action, unique within the business rule. [Required]</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#ActionType">ActionType</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#ActionType">Systems.Bpm.UserBusinessRuleActionsRepository.ActionType</a></td>
+<td>Specifies the type of action to perform. [Required]</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#Parameter1Type">Parameter1Type</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#Parameter1Type">Systems.Bpm.ActionParameterType</a> (nullable)</td>
+<td>The type of the parameter specifies how to obtain the parameter value.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#Parameter1Value">Parameter1Value</a></td>
+<td>string (nullable)</td>
+<td>The actual value of the parameter.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#Parameter2Type">Parameter2Type</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#Parameter2Type">Systems.Bpm.ActionParameterType</a> (nullable)</td>
+<td>The type of the parameter specifies how to obtain the parameter value.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#Parameter2Value">Parameter2Value</a></td>
+<td>string (nullable)</td>
+<td>The actual value of the parameter.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#Parameter3Type">Parameter3Type</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#Parameter3Type">Systems.Bpm.ActionParameterType</a> (nullable)</td>
+<td>The type of the parameter specifies how to obtain the parameter value.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#Parameter3Value">Parameter3Value</a></td>
+<td>string (nullable)</td>
+<td>The actual value of the parameter.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#UserBusinessRule">UserBusinessRule</a></td>
+<td><a href="Systems.Bpm.UserBusinessRules.html">Systems.Bpm.UserBusinessRules</a></td>
+<td>The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="actionno">ActionNo</h3>
+<blockquote>
+<p>Consecutive number of the action, unique within the business rule. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>(obj.UserBusinessRule.Actions.Select(c =&gt; c.ActionNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>(obj.UserBusinessRule.Actions.Select(c =&gt; c.ActionNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<h3 id="actiontype">ActionType</h3>
+<blockquote>
+<p>Specifies the type of action to perform. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleActions.html#ActionType">Systems.Bpm.UserBusinessRuleActionsRepository.ActionType</a></strong><br>
+Allowed values for the <a href="Systems.Bpm.UserBusinessRuleActions.html#ActionType">ActionType</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SETVALUE</td>
+<td>SETVALUE value. Stored as 'SETVALUE'. <br> <em>Database Value:</em> 'SETVALUE' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'SETVALUE'</td>
+</tr>
+<tr>
+<td>FAIL</td>
+<td>FAIL value. Stored as 'FAIL'. <br> <em>Database Value:</em> 'FAIL' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'FAIL'</td>
+</tr>
+<tr>
+<td>SENDMAIL</td>
+<td>SENDMAIL value. Stored as 'SENDMAIL'. <br> <em>Database Value:</em> 'SENDMAIL' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'SENDMAIL'</td>
+</tr>
+<tr>
+<td>WARNING</td>
+<td>WARNING value. Stored as 'WARNING'. <br> <em>Database Value:</em> 'WARNING' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'WARNING'</td>
+</tr>
+<tr>
+<td>NOTIFYUSER</td>
+<td>NOTIFYUSER value. Stored as 'NOTIFYUSER'. <br> <em>Database Value:</em> 'NOTIFYUSER' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'NOTIFYUSER'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parameter1type">Parameter1Type</h3>
+<blockquote>
+<p>The type of the parameter specifies how to obtain the parameter value.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleActions.html#Parameter1Type">Systems.Bpm.ActionParameterType</a> (nullable)</strong><br>
+Generic enum type for ActionParameterType properties<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constant</td>
+<td>Constant value. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>Attribute value. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>Reference value. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
+</tr>
+<tr>
+<td>ChildList</td>
+<td>ChildList value. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
+</tr>
+<tr>
+<td>FormattedString</td>
+<td>FormattedString value. Stored as 'FMTSTR'. <br> <em>Database Value:</em> 'FMTSTR' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'FormattedString'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parameter1value">Parameter1Value</h3>
+<blockquote>
+<p>The actual value of the parameter.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parameter2type">Parameter2Type</h3>
+<blockquote>
+<p>The type of the parameter specifies how to obtain the parameter value.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleActions.html#Parameter2Type">Systems.Bpm.ActionParameterType</a> (nullable)</strong><br>
+Generic enum type for ActionParameterType properties<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constant</td>
+<td>Constant value. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>Attribute value. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>Reference value. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
+</tr>
+<tr>
+<td>ChildList</td>
+<td>ChildList value. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
+</tr>
+<tr>
+<td>FormattedString</td>
+<td>FormattedString value. Stored as 'FMTSTR'. <br> <em>Database Value:</em> 'FMTSTR' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'FormattedString'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parameter2value">Parameter2Value</h3>
+<blockquote>
+<p>The actual value of the parameter.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parameter3type">Parameter3Type</h3>
+<blockquote>
+<p>The type of the parameter specifies how to obtain the parameter value.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleActions.html#Parameter3Type">Systems.Bpm.ActionParameterType</a> (nullable)</strong><br>
+Generic enum type for ActionParameterType properties<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constant</td>
+<td>Constant value. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>Attribute value. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>Reference value. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
+</tr>
+<tr>
+<td>ChildList</td>
+<td>ChildList value. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
+</tr>
+<tr>
+<td>FormattedString</td>
+<td>FormattedString value. Stored as 'FMTSTR'. <br> <em>Database Value:</em> 'FMTSTR' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'FormattedString'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parameter3value">Parameter3Value</h3>
+<blockquote>
+<p>The actual value of the parameter.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="userbusinessrule">UserBusinessRule</h3>
+<blockquote>
+<p>The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html">Systems.Bpm.UserBusinessRules</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Systems.Bpm.UserBusinessRuleActions erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Systems.Bpm.UserBusinessRuleActions erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Systems.Bpm.UserBusinessRuleActions erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_UserBusinessRuleActions?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_UserBusinessRuleActions?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_UserBusinessRuleActions?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_UserBusinessRuleActions?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Sys_User_Business_Rule_Actions?$top=10">https://demodb.my.erp.net/api/domain/odata/Sys_User_Business_Rule_Actions?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Systems.Bpm.UserBusinessRuleActions.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

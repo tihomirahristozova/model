@@ -1,0 +1,634 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Logistics.Procurement.PurchaseInvoiceLines | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Logistics.Procurement.PurchaseInvoiceLines | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="logisticsprocurementpurchaseinvoicelines">Logistics.Procurement.PurchaseInvoiceLines</h1>
+
+<p>Contains detail lines for purchase invoice documents. Entity: Scm_Purchase_Invoice_Lines</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#DeliveryTermsCode">DeliveryTermsCode</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#DeliveryTermsCode">Finance.Intrastat.DeliveryTerms</a> (nullable)</td>
+<td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatApplyDate">IntrastatApplyDate</a></td>
+<td>datetime (nullable)</td>
+<td>Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransactionNatureCode">IntrastatTransactionNatureCode</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransactionNatureCode">Finance.Intrastat.TransactionNature</a> (nullable)</td>
+<td>Transaction nature; used for Intrastat reporting.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransportModeCode">IntrastatTransportModeCode</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransportModeCode">Finance.Intrastat.TransportMode</a> (nullable)</td>
+<td>Transport mode; used for Intrastat reporting.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#LineAmount">LineAmount</a></td>
+<td><a href="../data-types/Amount.md">Amount</a></td>
+<td>The total invoiced amount for this line in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#LineNo">LineNo</a></td>
+<td>int32</td>
+<td>Consecutive line number within the invoice. [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#Notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this PurchaseInvoiceLine.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#ProductName">ProductName</a></td>
+<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td>The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user. [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#Quantity">Quantity</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The invoiced quantity. [Unit: QuantityUnit] [Required] [Default(1)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#QuantityBase">QuantityBase</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#StandardQuantityBase">StandardQuantityBase</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#UnitPrice">UnitPrice</a></td>
+<td><a href="../data-types/Amount.md">Amount</a></td>
+<td>The unit price of the invoiced item in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatDestinationRegion">IntrastatDestinationRegion</a></td>
+<td><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a> (nullable)</td>
+<td>Region, which is the final destination of the goods. Used for Intrastat reporting. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransportCountry">IntrastatTransportCountry</a></td>
+<td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
+<td>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#LineCostCenter">LineCostCenter</a></td>
+<td><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</td>
+<td>Cost center for which the amount from this row will be accounted. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#LineDealType">LineDealType</a></td>
+<td><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</td>
+<td>Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#OriginCountry">OriginCountry</a></td>
+<td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
+<td>The country of origin of the invoiced product. Should be non-null only when this is different from the country of origin from the product definition. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#Product">Product</a></td>
+<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td>The invoiced product. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#PurchaseInvoice">PurchaseInvoice</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoices.html">Logistics.Procurement.PurchaseInvoices</a></td>
+<td>The <a href="Logistics.Procurement.PurchaseInvoiceLines.html#PurchaseInvoice">PurchaseInvoice</a> to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#QuantityUnit">QuantityUnit</a></td>
+<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#ReceivingOrderLine">ReceivingOrderLine</a></td>
+<td><a href="Logistics.Procurement.ReceivingOrderLines.html">Logistics.Procurement.ReceivingOrderLines</a> (nullable)</td>
+<td>The receiving order line, which is invoiced by the current line. null means that this line is not directly related to receiving order line. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#SaleLineDealType">SaleLineDealType</a></td>
+<td><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</td>
+<td>Sale deal type for this line. If sale deal type in the line is different from sale deal type in the header another Sales VAT entry is created. [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="deliverytermscode">DeliveryTermsCode</h3>
+<blockquote>
+<p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoiceLines.html#DeliveryTermsCode">Finance.Intrastat.DeliveryTerms</a> (nullable)</strong><br>
+Generic enum type for DeliveryTerms properties<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ExWorks</td>
+<td>ExWorks value. Stored as 'EXW'. <br> <em>Database Value:</em> 'EXW' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'ExWorks'</td>
+</tr>
+<tr>
+<td>FrancoCarrier</td>
+<td>FrancoCarrier value. Stored as 'FCA'. <br> <em>Database Value:</em> 'FCA' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'FrancoCarrier'</td>
+</tr>
+<tr>
+<td>FreeAlongsideShip</td>
+<td>FreeAlongsideShip value. Stored as 'FAS'. <br> <em>Database Value:</em> 'FAS' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'FreeAlongsideShip'</td>
+</tr>
+<tr>
+<td>FreeOnBoard</td>
+<td>FreeOnBoard value. Stored as 'FOB'. <br> <em>Database Value:</em> 'FOB' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'FreeOnBoard'</td>
+</tr>
+<tr>
+<td>CostAndFreightCF</td>
+<td>CostAndFreightCF value. Stored as 'CFR'. <br> <em>Database Value:</em> 'CFR' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'CostAndFreightCF'</td>
+</tr>
+<tr>
+<td>CostInsuranceAndFreight</td>
+<td>CostInsuranceAndFreight value. Stored as 'CIF'. <br> <em>Database Value:</em> 'CIF' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'CostInsuranceAndFreight'</td>
+</tr>
+<tr>
+<td>CarriagePaidTo</td>
+<td>CarriagePaidTo value. Stored as 'CPT'. <br> <em>Database Value:</em> 'CPT' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'CarriagePaidTo'</td>
+</tr>
+<tr>
+<td>CarriageAndInsurancePaidTo</td>
+<td>CarriageAndInsurancePaidTo value. Stored as 'CIP'. <br> <em>Database Value:</em> 'CIP' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'CarriageAndInsurancePaidTo'</td>
+</tr>
+<tr>
+<td>DeliveredAtPlace</td>
+<td>DeliveredAtPlace value. Stored as 'DAP'. <br> <em>Database Value:</em> 'DAP' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'DeliveredAtPlace'</td>
+</tr>
+<tr>
+<td>DeliveredAtTerminal</td>
+<td>DeliveredAtTerminal value. Stored as 'DAT'. <br> <em>Database Value:</em> 'DAT' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'DeliveredAtTerminal'</td>
+</tr>
+<tr>
+<td>DeliveredDutyPaid</td>
+<td>DeliveredDutyPaid value. Stored as 'DDP'. <br> <em>Database Value:</em> 'DDP' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'DeliveredDutyPaid'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="intrastatapplydate">IntrastatApplyDate</h3>
+<blockquote>
+<p>Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="intrastattransactionnaturecode">IntrastatTransactionNatureCode</h3>
+<blockquote>
+<p>Transaction nature; used for Intrastat reporting.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransactionNatureCode">Finance.Intrastat.TransactionNature</a> (nullable)</strong><br>
+Generic enum type for TransactionNature properties<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OutrightPurchaseOrSale</td>
+<td>OutrightPurchaseOrSale value. Stored as '11'. <br> <em>Database Value:</em> '11' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'OutrightPurchaseOrSale'</td>
+</tr>
+<tr>
+<td>SupplyForSale</td>
+<td>SupplyForSale value. Stored as '12'. <br> <em>Database Value:</em> '12' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'SupplyForSale'</td>
+</tr>
+<tr>
+<td>BarterTrade</td>
+<td>BarterTrade value. Stored as '13'. <br> <em>Database Value:</em> '13' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'BarterTrade'</td>
+</tr>
+<tr>
+<td>FinancialLeasing</td>
+<td>FinancialLeasing value. Stored as '14'. <br> <em>Database Value:</em> '14' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'FinancialLeasing'</td>
+</tr>
+<tr>
+<td>OtherTransactions</td>
+<td>OtherTransactions value. Stored as '19'. <br> <em>Database Value:</em> '19' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'OtherTransactions'</td>
+</tr>
+<tr>
+<td>ReturnStokilizing</td>
+<td>ReturnStokilizing value. Stored as '21'. <br> <em>Database Value:</em> '21' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'ReturnStokilizing'</td>
+</tr>
+<tr>
+<td>ReplacementForReturnedGoods</td>
+<td>ReplacementForReturnedGoods value. Stored as '22'. <br> <em>Database Value:</em> '22' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'ReplacementForReturnedGoods'</td>
+</tr>
+<tr>
+<td>ReplacementOfGoodsNotBeingReturned</td>
+<td>ReplacementOfGoodsNotBeingReturned value. Stored as '23'. <br> <em>Database Value:</em> '23' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'ReplacementOfGoodsNotBeingReturned'</td>
+</tr>
+<tr>
+<td>ReturnOrExchangeOfOtherGoods</td>
+<td>ReturnOrExchangeOfOtherGoods value. Stored as '29'. <br> <em>Database Value:</em> '29' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'ReturnOrExchangeOfOtherGoods'</td>
+</tr>
+<tr>
+<td>SpecificTransactions</td>
+<td>SpecificTransactions value. Stored as '60'. <br> <em>Database Value:</em> '60' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'SpecificTransactions'</td>
+</tr>
+<tr>
+<td>OperationsOnJointProjects</td>
+<td>OperationsOnJointProjects value. Stored as '70'. <br> <em>Database Value:</em> '70' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'OperationsOnJointProjects'</td>
+</tr>
+<tr>
+<td>TransactionsOfConstructionMaterialsAndEquipment</td>
+<td>TransactionsOfConstructionMaterialsAndEquipment value. Stored as '80'. <br> <em>Database Value:</em> '80' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'TransactionsOfConstructionMaterialsAndEquipment'</td>
+</tr>
+<tr>
+<td>OtherTransactionsLeasing</td>
+<td>OtherTransactionsLeasing value. Stored as '91'. <br> <em>Database Value:</em> '91' <br> <em>Model Value:</em> 12 <br> <em>Domain API Value:</em> 'OtherTransactionsLeasing'</td>
+</tr>
+<tr>
+<td>OtherTransactionsOther</td>
+<td>OtherTransactionsOther value. Stored as '99'. <br> <em>Database Value:</em> '99' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'OtherTransactionsOther'</td>
+</tr>
+<tr>
+<td>DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind</td>
+<td>DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind value. Stored as '30'. <br> <em>Database Value:</em> '30' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind'</td>
+</tr>
+<tr>
+<td>GoodsThatAreExpectedToBeReturnedToSender</td>
+<td>GoodsThatAreExpectedToBeReturnedToSender value. Stored as '41'. <br> <em>Database Value:</em> '41' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'GoodsThatAreExpectedToBeReturnedToSender'</td>
+</tr>
+<tr>
+<td>GoodsThatAreNotExpectedToBeReturnedToSender</td>
+<td>GoodsThatAreNotExpectedToBeReturnedToSender value. Stored as '42'. <br> <em>Database Value:</em> '42' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'GoodsThatAreNotExpectedToBeReturnedToSender'</td>
+</tr>
+<tr>
+<td>GoodsThatAreReturnedToSender</td>
+<td>GoodsThatAreReturnedToSender value. Stored as '51'. <br> <em>Database Value:</em> '51' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GoodsThatAreReturnedToSender'</td>
+</tr>
+<tr>
+<td>GoodsThatAreNotReturnedToSender</td>
+<td>GoodsThatAreNotReturnedToSender value. Stored as '52'. <br> <em>Database Value:</em> '52' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GoodsThatAreNotReturnedToSender'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="intrastattransportmodecode">IntrastatTransportModeCode</h3>
+<blockquote>
+<p>Transport mode; used for Intrastat reporting.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransportModeCode">Finance.Intrastat.TransportMode</a> (nullable)</strong><br>
+Generic enum type for TransportMode properties<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shipping</td>
+<td>Shipping value. Stored as '1'. <br> <em>Database Value:</em> '1' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Shipping'</td>
+</tr>
+<tr>
+<td>RailwayTransport</td>
+<td>RailwayTransport value. Stored as '2'. <br> <em>Database Value:</em> '2' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'RailwayTransport'</td>
+</tr>
+<tr>
+<td>RoadTransport</td>
+<td>RoadTransport value. Stored as '3'. <br> <em>Database Value:</em> '3' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'RoadTransport'</td>
+</tr>
+<tr>
+<td>AirTransport</td>
+<td>AirTransport value. Stored as '4'. <br> <em>Database Value:</em> '4' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'AirTransport'</td>
+</tr>
+<tr>
+<td>Mail</td>
+<td>Mail value. Stored as '5'. <br> <em>Database Value:</em> '5' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Mail'</td>
+</tr>
+<tr>
+<td>FixedTransportInstallations</td>
+<td>FixedTransportInstallations value. Stored as '6'. <br> <em>Database Value:</em> '6' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'FixedTransportInstallations'</td>
+</tr>
+<tr>
+<td>RiverTransport</td>
+<td>RiverTransport value. Stored as '7'. <br> <em>Database Value:</em> '7' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'RiverTransport'</td>
+</tr>
+<tr>
+<td>SelfPropelled</td>
+<td>SelfPropelled value. Stored as '8'. <br> <em>Database Value:</em> '8' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'SelfPropelled'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="lineamount">LineAmount</h3>
+<blockquote>
+<p>The total invoiced amount for this line in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="lineno">LineNo</h3>
+<blockquote>
+<p>Consecutive line number within the invoice. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>(obj.PurchaseInvoice.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>(obj.PurchaseInvoice.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<h3 id="notes">Notes</h3>
+<blockquote>
+<p>Notes for this PurchaseInvoiceLine.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="productname">ProductName</h3>
+<blockquote>
+<p>The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.Product.Name</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Product.Name</code></p>
+<h3 id="quantity">Quantity</h3>
+<blockquote>
+<p>The invoiced quantity. [Unit: QuantityUnit] [Required] [Default(1)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="quantitybase">QuantityBase</h3>
+<blockquote>
+<p>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<h3 id="standardquantitybase">StandardQuantityBase</h3>
+<blockquote>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<h3 id="unitprice">UnitPrice</h3>
+<blockquote>
+<p>The unit price of the invoiced item in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="intrastatdestinationregion">IntrastatDestinationRegion</h3>
+<blockquote>
+<p>Region, which is the final destination of the goods. Used for Intrastat reporting. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="intrastattransportcountry">IntrastatTransportCountry</h3>
+<blockquote>
+<p>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="linecostcenter">LineCostCenter</h3>
+<blockquote>
+<p>Cost center for which the amount from this row will be accounted. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="linedealtype">LineDealType</h3>
+<blockquote>
+<p>Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="origincountry">OriginCountry</h3>
+<blockquote>
+<p>The country of origin of the invoiced product. Should be non-null only when this is different from the country of origin from the product definition. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="product">Product</h3>
+<blockquote>
+<p>The invoiced product. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="purchaseinvoice">PurchaseInvoice</h3>
+<blockquote>
+<p>The <a href="Logistics.Procurement.PurchaseInvoiceLines.html#PurchaseInvoice">PurchaseInvoice</a> to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoices.html">Logistics.Procurement.PurchaseInvoices</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="quantityunit">QuantityUnit</h3>
+<blockquote>
+<p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="receivingorderline">ReceivingOrderLine</h3>
+<blockquote>
+<p>The receiving order line, which is invoiced by the current line. null means that this line is not directly related to receiving order line. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrderLines.html">Logistics.Procurement.ReceivingOrderLines</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="salelinedealtype">SaleLineDealType</h3>
+<blockquote>
+<p>Sale deal type for this line. If sale deal type in the line is different from sale deal type in the header another Sales VAT entry is created. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Logistics.Procurement.PurchaseInvoiceLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Logistics.Procurement.PurchaseInvoiceLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Logistics.Procurement.PurchaseInvoiceLines erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_PurchaseInvoiceLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_PurchaseInvoiceLines?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseInvoiceLines?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseInvoiceLines?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Invoice_Lines?$top=10">https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Invoice_Lines?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Logistics.Procurement.PurchaseInvoiceLines.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

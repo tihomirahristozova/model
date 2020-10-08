@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Production.Technologies.PrincipalRecipeOperations | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Production.Technologies.PrincipalRecipeOperations | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="productiontechnologiesprincipalrecipeoperations">Production.Technologies.PrincipalRecipeOperations</h1>
+
+<p>Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_Operations</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#ConditionalPropertyDescription">ConditionalPropertyDescription</a></td>
+<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td>The desired description of the Conditional Property. .</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#ConditionalPropertyValue">ConditionalPropertyValue</a></td>
+<td>string (nullable)</td>
+<td>The desired value of the Conditional Property. .</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#LineOrd">LineOrd</a></td>
+<td>int32</td>
+<td>Consecutive line number within the principal recipe. [Required]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#MinimumConcurrentStartTimeMinutes">MinimumConcurrentStartTimeMinutes</a></td>
+<td>int32 (nullable)</td>
+<td>How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting.</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#MoveTimeMinutes">MoveTimeMinutes</a></td>
+<td>int32</td>
+<td>Time to move the lot to the next operation in minutes. [Required] [Default(0)] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#Notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this PrincipalRecipeOperation.</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#OperationDescription">OperationDescription</a></td>
+<td>string (nullable)</td>
+<td>The description of the operation. Initially copied from the generic operation definition.</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#RunTimeMinutes">RunTimeMinutes</a></td>
+<td>int32</td>
+<td>Duration of the operation for one piece in the standard measurement unit of the product. [Required] [Default(0)] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#ScrapRate">ScrapRate</a></td>
+<td>decimal</td>
+<td>Standard rate of scrap during the operation. [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#SetupTimeMinutes">SetupTimeMinutes</a></td>
+<td>int32</td>
+<td>Time needed to setup the equipment. [Required] [Default(0)] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#Tooling">Tooling</a></td>
+<td>string (nullable)</td>
+<td>The tools needed for the routing step.</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#UseQuantity">UseQuantity</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#WaitTimeMinutes">WaitTimeMinutes</a></td>
+<td>int32</td>
+<td>Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)] [Filter(ge;le)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#ConditionalProperty">ConditionalProperty</a></td>
+<td><a href="General.CustomProperties.html">General.CustomProperties</a> (nullable)</td>
+<td>When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#Operation">Operation</a></td>
+<td><a href="Production.Resources.Operations.html">Production.Resources.Operations</a> (nullable)</td>
+<td>The generic operation definition. The data is copied locally and can be modified for this specific record. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#OperationInstruction">OperationInstruction</a></td>
+<td><a href="Production.Resources.OperationInstructions.html">Production.Resources.OperationInstructions</a> (nullable)</td>
+<td>Link to additional data, containing instructions in external format. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#PrincipalRecipe">PrincipalRecipe</a></td>
+<td><a href="Production.Technologies.PrincipalRecipes.html">Production.Technologies.PrincipalRecipes</a></td>
+<td>The <a href="Production.Technologies.PrincipalRecipeOperations.html#PrincipalRecipe">PrincipalRecipe</a> to which this PrincipalRecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#UseQuantityUnit">UseQuantityUnit</a></td>
+<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td>The measurement unit of Use_Quantity. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#WorkgroupResource">WorkgroupResource</a></td>
+<td><a href="Production.Resources.WorkgroupResources.html">Production.Resources.WorkgroupResources</a></td>
+<td>Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. [Required] [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="conditionalpropertydescription">ConditionalPropertyDescription</h3>
+<blockquote>
+<p>The desired description of the Conditional Property. .</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="conditionalpropertyvalue">ConditionalPropertyValue</h3>
+<blockquote>
+<p>The desired value of the Conditional Property. .</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="lineord">LineOrd</h3>
+<blockquote>
+<p>Consecutive line number within the principal recipe. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>(obj.PrincipalRecipe.Operations.Select(c =&gt; c.LineOrd).DefaultIfEmpty(0).Max() + 10)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>(obj.PrincipalRecipe.Operations.Select(c =&gt; c.LineOrd).DefaultIfEmpty(0).Max() + 10)</code></p>
+<h3 id="minimumconcurrentstarttimeminutes">MinimumConcurrentStartTimeMinutes</h3>
+<blockquote>
+<p>How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting.</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="movetimeminutes">MoveTimeMinutes</h3>
+<blockquote>
+<p>Time to move the lot to the next operation in minutes. [Required] [Default(0)] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Operation.MoveTimeMinutes</code></p>
+<h3 id="notes">Notes</h3>
+<blockquote>
+<p>Notes for this PrincipalRecipeOperation.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="operationdescription">OperationDescription</h3>
+<blockquote>
+<p>The description of the operation. Initially copied from the generic operation definition.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Operation.Description</code></p>
+<h3 id="runtimeminutes">RunTimeMinutes</h3>
+<blockquote>
+<p>Duration of the operation for one piece in the standard measurement unit of the product. [Required] [Default(0)] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Operation.RunTimeMinutes</code></p>
+<h3 id="scraprate">ScrapRate</h3>
+<blockquote>
+<p>Standard rate of scrap during the operation. [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>decimal</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h3 id="setuptimeminutes">SetupTimeMinutes</h3>
+<blockquote>
+<p>Time needed to setup the equipment. [Required] [Default(0)] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Operation.SetupTimeMinutes</code></p>
+<h3 id="tooling">Tooling</h3>
+<blockquote>
+<p>The tools needed for the routing step.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="usequantity">UseQuantity</h3>
+<blockquote>
+<p>Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Operation.UseQuantityBase</code></p>
+<h3 id="waittimeminutes">WaitTimeMinutes</h3>
+<blockquote>
+<p>Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Operation.WaitTimeMinutes</code></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="conditionalproperty">ConditionalProperty</h3>
+<blockquote>
+<p>When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.CustomProperties.html">General.CustomProperties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="operation">Operation</h3>
+<blockquote>
+<p>The generic operation definition. The data is copied locally and can be modified for this specific record. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Production.Resources.Operations.html">Production.Resources.Operations</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="operationinstruction">OperationInstruction</h3>
+<blockquote>
+<p>Link to additional data, containing instructions in external format. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Production.Resources.OperationInstructions.html">Production.Resources.OperationInstructions</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="principalrecipe">PrincipalRecipe</h3>
+<blockquote>
+<p>The <a href="Production.Technologies.PrincipalRecipeOperations.html#PrincipalRecipe">PrincipalRecipe</a> to which this PrincipalRecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Production.Technologies.PrincipalRecipes.html">Production.Technologies.PrincipalRecipes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="usequantityunit">UseQuantityUnit</h3>
+<blockquote>
+<p>The measurement unit of Use_Quantity. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF((obj.WorkgroupResource.Resource != null), obj.WorkgroupResource.Resource.PrimaryUnit, obj.UseQuantityUnit)</code></p>
+<h3 id="workgroupresource">WorkgroupResource</h3>
+<blockquote>
+<p>Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">Production.Resources.WorkgroupResources</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Operation.WorkgroupResource</code></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Production.Technologies.PrincipalRecipeOperations erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Production.Technologies.PrincipalRecipeOperations erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Production.Technologies.PrincipalRecipeOperations erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Production_Technologies_PrincipalRecipeOperations?$top=10">https://demodb.my.erp.net/api/domain/odata/Production_Technologies_PrincipalRecipeOperations?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Production_Technologies_PrincipalRecipeOperations?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Production_Technologies_PrincipalRecipeOperations?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Prd_Principal_Recipe_Operations?$top=10">https://demodb.my.erp.net/api/domain/odata/Prd_Principal_Recipe_Operations?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Production.Technologies.PrincipalRecipeOperations.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

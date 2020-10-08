@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Crm.Sales.SalesOrderPaymentPlans | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Crm.Sales.SalesOrderPaymentPlans | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="crmsalessalesorderpaymentplans">Crm.Sales.SalesOrderPaymentPlans</h1>
+
+<p>Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#Amount">Amount</a></td>
+<td><a href="../data-types/Amount.md">Amount</a></td>
+<td>Amount to be payed. [Currency: SalesOrder.DocumentCurrency] [Required]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#AmountPercent">AmountPercent</a></td>
+<td>decimal (nullable)</td>
+<td>Percent of the sales order amount to be payed.</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#DueDateFormMethod">DueDateFormMethod</a></td>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#DueDateFormMethod">Crm.PaymentPlanDueDateSource</a></td>
+<td>Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. [Required]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#ExplicitPaymentDueDate">ExplicitPaymentDueDate</a></td>
+<td>datetime (nullable)</td>
+<td>Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'.</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#ExplicitPaymentDueStartDate">ExplicitPaymentDueStartDate</a></td>
+<td>date (nullable)</td>
+<td>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#InstallmentNumber">InstallmentNumber</a></td>
+<td>int32</td>
+<td>Consequtive installment number. Used for identifying different payments generated according this payment plan. [Required]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#Notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this SalesOrderPaymentPlan.</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#PaymentStartDays">PaymentStartDays</a></td>
+<td>int32</td>
+<td>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#PaymentTermDays">PaymentTermDays</a></td>
+<td>int32</td>
+<td>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#Remainder">Remainder</a></td>
+<td>boolean</td>
+<td>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). [Required] [Default(false)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#PaymentAccount">PaymentAccount</a></td>
+<td><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</td>
+<td>Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#PaymentType">PaymentType</a></td>
+<td><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</td>
+<td>Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#SalesOrder">SalesOrder</a></td>
+<td><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a></td>
+<td>The <a href="Crm.Sales.SalesOrderPaymentPlans.html#SalesOrder">SalesOrder</a> to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="amount">Amount</h3>
+<blockquote>
+<p>Amount to be payed. [Currency: SalesOrder.DocumentCurrency] [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="amountpercent">AmountPercent</h3>
+<blockquote>
+<p>Percent of the sales order amount to be payed.</p>
+</blockquote>
+<p><em>Type</em>: <strong>decimal (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="duedateformmethod">DueDateFormMethod</h3>
+<blockquote>
+<p>Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderPaymentPlans.html#DueDateFormMethod">Crm.PaymentPlanDueDateSource</a></strong><br>
+Generic enum type for PaymentPlanDueDateSource properties<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SpecifyTheDateExplicitly</td>
+<td>SpecifyTheDateExplicitly value. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'SpecifyTheDateExplicitly'</td>
+</tr>
+<tr>
+<td>UseInvoiceDate</td>
+<td>UseInvoiceDate value. Stored as 'INV'. <br> <em>Database Value:</em> 'INV' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'UseInvoiceDate'</td>
+</tr>
+<tr>
+<td>UseSalesOrderDate</td>
+<td>UseSalesOrderDate value. Stored as 'SLS'. <br> <em>Database Value:</em> 'SLS' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'UseSalesOrderDate'</td>
+</tr>
+<tr>
+<td>UseSalesOrderDueDate</td>
+<td>UseSalesOrderDueDate value. Stored as 'SDD'. <br> <em>Database Value:</em> 'SDD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'UseSalesOrderDueDate'</td>
+</tr>
+<tr>
+<td>UseInvoiceDueDate</td>
+<td>UseInvoiceDueDate value. Stored as 'IDD'. <br> <em>Database Value:</em> 'IDD' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'UseInvoiceDueDate'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="explicitpaymentduedate">ExplicitPaymentDueDate</h3>
+<blockquote>
+<p>Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'.</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF((Convert(obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueDate)</code></p>
+<h3 id="explicitpaymentduestartdate">ExplicitPaymentDueStartDate</h3>
+<blockquote>
+<p>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.</p>
+</blockquote>
+<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF((Convert(obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueStartDate)</code></p>
+<h3 id="installmentnumber">InstallmentNumber</h3>
+<blockquote>
+<p>Consequtive installment number. Used for identifying different payments generated according this payment plan. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>(obj.SalesOrder.PaymentPlans.Select(c =&gt; c.InstallmentNumber).DefaultIfEmpty(0).Max() + 10)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>(obj.SalesOrder.PaymentPlans.Select(c =&gt; c.InstallmentNumber).DefaultIfEmpty(0).Max() + 10)</code></p>
+<h3 id="notes">Notes</h3>
+<blockquote>
+<p>Notes for this SalesOrderPaymentPlan.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="paymentstartdays">PaymentStartDays</h3>
+<blockquote>
+<p>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h3 id="paymenttermdays">PaymentTermDays</h3>
+<blockquote>
+<p>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>IIF(((Convert(obj.DueDateFormMethod, Int32) == 3) OrElse (Convert(obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF(((Convert(obj.DueDateFormMethod, Int32) == 3) OrElse (Convert(obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)</code></p>
+<h3 id="remainder">Remainder</h3>
+<blockquote>
+<p>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). [Required] [Default(false)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>IIF((obj.AmountPercent != null), False, obj.Remainder)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF((obj.AmountPercent != null), False, obj.Remainder)</code></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="paymentaccount">PaymentAccount</h3>
+<blockquote>
+<p>Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.SalesOrder.PaymentAccount</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.SalesOrder.PaymentAccount.IfNullThen(obj.PaymentType.DefaultPaymentAccount.IfNullThen(obj.PaymentAccount))</code>
+<code>obj.SalesOrder.PaymentAccount</code></p>
+<h3 id="paymenttype">PaymentType</h3>
+<blockquote>
+<p>Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.SalesOrder.PaymentType</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.SalesOrder.PaymentType</code></p>
+<h3 id="salesorder">SalesOrder</h3>
+<blockquote>
+<p>The <a href="Crm.Sales.SalesOrderPaymentPlans.html#SalesOrder">SalesOrder</a> to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Crm.Sales.SalesOrderPaymentPlans erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Crm.Sales.SalesOrderPaymentPlans erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Crm.Sales.SalesOrderPaymentPlans erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Crm_Sales_SalesOrderPaymentPlans?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Sales_SalesOrderPaymentPlans?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_SalesOrderPaymentPlans?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_SalesOrderPaymentPlans?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Order_Payment_Plans?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Order_Payment_Plans?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Crm.Sales.SalesOrderPaymentPlans.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
