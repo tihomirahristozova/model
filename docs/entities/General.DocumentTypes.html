@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="General.DocumentTypes">
 <h1 id="generaldocumenttypes">General.DocumentTypes</h1>
 
 <p>List of user-defined document types. Each type has associated system entity (object class). Entity: Gen_Document_Types</p>
@@ -135,7 +142,7 @@
 </tr>
 <tr>
 <td><a href="General.DocumentTypes.html#TypeName">TypeName</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
 <td>Description of the document type. [Required] [Filter(like)] [ORD]</td>
 </tr>
 </tbody>
@@ -311,7 +318,7 @@
 <blockquote>
 <p>Description of the document type. [Required] [Filter(like)] [ORD]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -340,8 +347,6 @@
 <a href="https://demodb.my.erp.net/api/domain/odata/General_DocumentTypes?$top=10">https://demodb.my.erp.net/api/domain/odata/General_DocumentTypes?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentTypes?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentTypes?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Gen_Document_Types?$top=10">https://demodb.my.erp.net/api/domain/odata/Gen_Document_Types?$top=10</a></p>
 </article>
           </div>
           

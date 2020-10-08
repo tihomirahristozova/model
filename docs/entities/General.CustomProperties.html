@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="General.CustomProperties">
 <h1 id="generalcustomproperties">General.CustomProperties</h1>
 
 <p>User-defined properties, which can supplement the system properties of almost all entities in the system. Entity: Gen_Properties</p>
@@ -105,7 +112,7 @@
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#Hint">Hint</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>The hint, which is displayed alongside the property. [Filter(multi eq;like)] (Introduced in version 20.1.100.0)</td>
 </tr>
 <tr>
@@ -135,7 +142,7 @@
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#Name">Name</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
 <td>The name of this CustomProperty. [Required] [Filter(like)] [ORD]</td>
 </tr>
 <tr>
@@ -225,7 +232,7 @@
 <blockquote>
 <p>The hint, which is displayed alongside the property. [Filter(multi eq;like)] (Introduced in version 20.1.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="keyorder">KeyOrder</h3>
@@ -268,7 +275,7 @@
 <blockquote>
 <p>The name of this CustomProperty. [Required] [Filter(like)] [ORD]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="propertytype">PropertyType</h3>
@@ -340,8 +347,6 @@ Allowed values for the <a href="General.CustomProperties.html#PropertyType">Prop
 <a href="https://demodb.my.erp.net/api/domain/odata/General_CustomProperties?$top=10">https://demodb.my.erp.net/api/domain/odata/General_CustomProperties?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#General_CustomProperties?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#General_CustomProperties?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Gen_Properties?$top=10">https://demodb.my.erp.net/api/domain/odata/Gen_Properties?$top=10</a></p>
 </article>
           </div>
           

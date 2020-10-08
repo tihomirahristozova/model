@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Systems.Security.Groups">
 <h1 id="systemssecuritygroups">Systems.Security.Groups</h1>
 
 <p>Groups of users. Used for providing group access to secured data. Entity: Sec_Groups</p>
@@ -95,7 +102,7 @@
 </tr>
 <tr>
 <td><a href="Systems.Security.Groups.html#Name">Name</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
 <td>The name of this Group. [Required] [Filter(like)] [ORD]</td>
 </tr>
 <tr>
@@ -161,7 +168,7 @@
 <blockquote>
 <p>The name of this Group. [Required] [Filter(like)] [ORD]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="grouptype">GroupType</h3>
@@ -226,8 +233,6 @@ Allowed values for the <a href="Systems.Security.Groups.html#GroupType">GroupTyp
 <a href="https://demodb.my.erp.net/api/domain/odata/Systems_Security_Groups?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Security_Groups?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_Groups?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_Groups?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Sec_Groups?$top=10">https://demodb.my.erp.net/api/domain/odata/Sec_Groups?$top=10</a></p>
 </article>
           </div>
           

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Finance.Payments.OrderBalances">
 <h1 id="financepaymentsorderbalances">Finance.Payments.OrderBalances</h1>
 
 <p>Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View</p>
@@ -105,12 +112,12 @@
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#OrderAmount">OrderAmount</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>The total amount of the payment order. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#PaidAmount">PaidAmount</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>The paid amount. Taken from released payment transactions. [Currency: Currency] [Required]</td>
 </tr>
 <tr>
@@ -246,7 +253,7 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#Direction">D
 <blockquote>
 <p>The total amount of the payment order. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -254,7 +261,7 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#Direction">D
 <blockquote>
 <p>The paid amount. Taken from released payment transactions. [Currency: Currency] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="refdocumentdate">RefDocumentDate</h3>
@@ -385,8 +392,6 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#Direction">D
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Payments_OrderBalances?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Payments_OrderBalances?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_OrderBalances?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_OrderBalances?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Balances_View?$top=10">https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Balances_View?$top=10</a></p>
 </article>
           </div>
           

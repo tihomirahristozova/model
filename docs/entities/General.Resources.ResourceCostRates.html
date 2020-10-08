@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="General.Resources.ResourceCostRates">
 <h1 id="generalresourcesresourcecostrates">General.Resources.ResourceCostRates</h1>
 
 <p>Contains cost rates for different periods for resources. Each record is valid until the next From Date. Entity: Gen_Resource_Cost_Rates</p>
@@ -100,17 +107,17 @@
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceCostRates.html#OvertimeRatePerHour">OvertimeRatePerHour</a></td>
-<td><a href="../data-types/Amount.md">Amount</a> (nullable)</td>
+<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
 <td>The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. null means that there is no special overtime rate and the standard rate should be applied. [Currency: Resource.CostingCurrency] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceCostRates.html#PerUseCost">PerUseCost</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>One-time cost for each usage of the resource in the resources costing currency. [Currency: Resource.CostingCurrency] [Required] [Default(0)] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceCostRates.html#StandardRatePerHour">StandardRatePerHour</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours. [Currency: Resource.CostingCurrency] [Required] [Filter(eq;like)]</td>
 </tr>
 </tbody>
@@ -161,14 +168,14 @@
 <blockquote>
 <p>The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. null means that there is no special overtime rate and the standard rate should be applied. [Currency: Resource.CostingCurrency] [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="perusecost">PerUseCost</h3>
 <blockquote>
 <p>One-time cost for each usage of the resource in the resources costing currency. [Currency: Resource.CostingCurrency] [Required] [Default(0)] [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -176,7 +183,7 @@
 <blockquote>
 <p>The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours. [Currency: Resource.CostingCurrency] [Required] [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -205,8 +212,6 @@
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Resources_ResourceCostRates?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Resources_ResourceCostRates?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#General_Resources_ResourceCostRates?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#General_Resources_ResourceCostRates?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Gen_Resource_Cost_Rates?$top=10">https://demodb.my.erp.net/api/domain/odata/Gen_Resource_Cost_Rates?$top=10</a></p>
 </article>
           </div>
           

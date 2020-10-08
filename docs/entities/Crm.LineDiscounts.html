@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Crm.LineDiscounts">
 <h1 id="crmlinediscounts">Crm.LineDiscounts</h1>
 
 <p>Discount policies for sales documents. Entity: Crm_Line_Discounts</p>
@@ -105,12 +112,12 @@
 </tr>
 <tr>
 <td><a href="Crm.LineDiscounts.html#MaxQuantity">MaxQuantity</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a> (nullable)</td>
+<td><a href="../data-types.md#Quantity">Quantity</a> (nullable)</td>
 <td>Apply the discount only if the quantity sold is equal to or less than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.LineDiscounts.html#MinQuantity">MinQuantity</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a> (nullable)</td>
+<td><a href="../data-types.md#Quantity">Quantity</a> (nullable)</td>
 <td>Apply the discount only if the quantity sold is equal to or more than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
@@ -214,14 +221,14 @@
 <blockquote>
 <p>Apply the discount only if the quantity sold is equal to or less than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="minquantity">MinQuantity</h3>
 <blockquote>
 <p>Apply the discount only if the quantity sold is equal to or more than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="priority">Priority</h3>
@@ -348,8 +355,6 @@ Generic enum type for Priority properties<br>
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_LineDiscounts?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_LineDiscounts?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Crm_LineDiscounts?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Crm_LineDiscounts?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Crm_Line_Discounts?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Line_Discounts?$top=10</a></p>
 </article>
           </div>
           

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Projects.TaskTypes">
 <h1 id="projectstasktypes">Projects.TaskTypes</h1>
 
 <p>Represents the different types of tasks, which can be included in the projects. Entity: Prj_Task_Types</p>
@@ -90,7 +97,7 @@
 </tr>
 <tr>
 <td><a href="Projects.TaskTypes.html#Description">Description</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>Multilanguage description of the task type.</td>
 </tr>
 <tr>
@@ -105,7 +112,7 @@
 </tr>
 <tr>
 <td><a href="Projects.TaskTypes.html#Name">Name</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
 <td>The multilanguage task type name. [Required] [Filter(multi eq;like)]</td>
 </tr>
 </tbody>
@@ -137,7 +144,7 @@
 <blockquote>
 <p>Multilanguage description of the task type.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="displayorder">DisplayOrder</h3>
@@ -159,7 +166,7 @@
 <blockquote>
 <p>The multilanguage task type name. [Required] [Filter(multi eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -181,8 +188,6 @@
 <a href="https://demodb.my.erp.net/api/domain/odata/Projects_TaskTypes?$top=10">https://demodb.my.erp.net/api/domain/odata/Projects_TaskTypes?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Projects_TaskTypes?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Projects_TaskTypes?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Prj_Task_Types?$top=10">https://demodb.my.erp.net/api/domain/odata/Prj_Task_Types?$top=10</a></p>
 </article>
           </div>
           

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="General.Contacts.Companies">
 <h1 id="generalcontactscompanies">General.Contacts.Companies</h1>
 
 <p>Contains company definitions. Entity: Cm_Companies</p>
@@ -130,7 +137,7 @@
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#PartyName">PartyName</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
 <td>The name of the party [Required]</td>
 </tr>
 <tr>
@@ -160,12 +167,12 @@
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#City">City</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>The city in which the company is registered. [Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#Name">Name</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>The name of this Company. [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
@@ -195,12 +202,12 @@
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#RegistrationPrimaryAddress">RegistrationPrimaryAddress</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>The primary registration address of the company. [Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#RegistrationType">RegistrationType</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>Legal registration type - like LTD., PLC, etc. null means unknown. [Filter(eq)]</td>
 </tr>
 <tr>
@@ -210,7 +217,7 @@
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#ResponsiblePersonName">ResponsiblePersonName</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>Primary responsible person of the company. null means unknown. [Filter(like)]</td>
 </tr>
 <tr>
@@ -389,7 +396,7 @@
 <blockquote>
 <p>The name of the party [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partytype">PartyType</h3>
@@ -465,14 +472,14 @@ Allowed values for the <a href="General.Contacts.Parties.html#PartyType">PartyTy
 <blockquote>
 <p>The city in which the company is registered. [Filter(like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
 <blockquote>
 <p>The name of this Company. [Filter(eq;like)] [ORD]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="creationtime">CreationTime</h3>
@@ -516,14 +523,14 @@ Allowed values for the <a href="General.Contacts.Parties.html#PartyType">PartyTy
 <blockquote>
 <p>The primary registration address of the company. [Filter(like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="registrationtype">RegistrationType</h3>
 <blockquote>
 <p>Legal registration type - like LTD., PLC, etc. null means unknown. [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="registrationvatnumber">RegistrationVATNumber</h3>
@@ -537,7 +544,7 @@ Allowed values for the <a href="General.Contacts.Parties.html#PartyType">PartyTy
 <blockquote>
 <p>Primary responsible person of the company. null means unknown. [Filter(like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
@@ -612,8 +619,6 @@ Allowed values for the <a href="General.Contacts.Parties.html#PartyType">PartyTy
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Contacts_Companies?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Contacts_Companies?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_Companies?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_Companies?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Cm_Companies?$top=10">https://demodb.my.erp.net/api/domain/odata/Cm_Companies?$top=10</a></p>
 </article>
           </div>
           

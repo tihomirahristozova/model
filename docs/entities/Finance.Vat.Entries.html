@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Finance.Vat.Entries">
 <h1 id="financevatentries">Finance.Vat.Entries</h1>
 
 <p>Contains the entries in the VAT sales and purchase ledgers. Entity: VAT_Entries</p>
@@ -185,7 +192,7 @@
 </tr>
 <tr>
 <td><a href="Finance.Vat.Entries.html#AmountBase">AmountBase</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>Amount of the operation without the tax in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required]</td>
 </tr>
 <tr>
@@ -230,7 +237,7 @@
 </tr>
 <tr>
 <td><a href="Finance.Vat.Entries.html#VATAmountBase">VATAmountBase</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>The amount of the tax for the operation in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required]</td>
 </tr>
 </tbody>
@@ -614,7 +621,7 @@ Enumeration of document system states<br>
 <blockquote>
 <p>Amount of the operation without the tax in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="applydate">ApplyDate</h3>
@@ -700,7 +707,7 @@ Allowed values for the <a href="Finance.Vat.Entries.html#EntryType">EntryType</a
 <blockquote>
 <p>The amount of the tax for the operation in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -862,8 +869,6 @@ Allowed values for the <a href="Finance.Vat.Entries.html#EntryType">EntryType</a
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Vat_Entries?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Vat_Entries?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Finance_Vat_Entries?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Finance_Vat_Entries?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/VAT_Entries?$top=10">https://demodb.my.erp.net/api/domain/odata/VAT_Entries?$top=10</a></p>
 </article>
           </div>
           

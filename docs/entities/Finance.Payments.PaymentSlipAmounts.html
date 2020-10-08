@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Finance.Payments.PaymentSlipAmounts">
 <h1 id="financepaymentspaymentslipamounts">Finance.Payments.PaymentSlipAmounts</h1>
 
 <p>Mass payment amount. Each record generates one payment transaction. Entity: Cash_Payment_Slip_Amounts</p>
@@ -110,7 +117,7 @@
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#PartyName">PartyName</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee).</td>
 </tr>
 <tr>
@@ -120,7 +127,7 @@
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#TotalAmount">TotalAmount</a></td>
-<td><a href="../data-types/Amount.md">Amount</a> (nullable)</td>
+<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
 <td>The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. [Currency: PaymentSlip.DocumentCurrency]</td>
 </tr>
 </tbody>
@@ -232,7 +239,7 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#Direction">D
 <blockquote>
 <p>The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee).</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -248,7 +255,7 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#Direction">D
 <blockquote>
 <p>The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. [Currency: PaymentSlip.DocumentCurrency]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -284,8 +291,6 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#Direction">D
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Payments_PaymentSlipAmounts?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Payments_PaymentSlipAmounts?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentSlipAmounts?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentSlipAmounts?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Slip_Amounts?$top=10">https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Slip_Amounts?$top=10</a></p>
 </article>
           </div>
           
