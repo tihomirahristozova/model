@@ -97,7 +97,7 @@
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#fixedscrapquantity">FixedScrapQuantity</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The quantity of the material, which will be used for setup. [Unit: UsedQuantityUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
@@ -117,17 +117,17 @@
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#usedquantity">UsedQuantity</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The quantity of the material consumed in the operation. [Unit: UsedQuantityUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#usedquantitybase">UsedQuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The equivalence of Used Quantity in the base measurement category of the material. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#usedstandardquantitybase">UsedStandardQuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 </tbody>
@@ -242,7 +242,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <blockquote>
 <p>The quantity of the material, which will be used for setup. [Unit: UsedQuantityUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -272,7 +272,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <blockquote>
 <p>The quantity of the material consumed in the operation. [Unit: UsedQuantityUnit] [Required] [Default(1)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -280,7 +280,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <blockquote>
 <p>The equivalence of Used Quantity in the base measurement category of the material. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -291,7 +291,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -390,11 +390,11 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF((obj.WorkOrderItem != null), null, obj.WorkOrderItem)</code></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Production.ShopFloor.WorkOrderItemIngredients erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Production.ShopFloor.WorkOrderItemIngredients erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Production.ShopFloor.WorkOrderItemIngredients erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Production_ShopFloor_WorkOrderItemIngredients?$top=10">https://demodb.my.erp.net/api/domain/odata/Production_ShopFloor_WorkOrderItemIngredients?$top=10</a></p>

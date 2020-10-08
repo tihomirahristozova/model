@@ -117,22 +117,22 @@
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#quantity">Quantity</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>Quantity ordered for transfer. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#quantitybase">QuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#standardquantitybase">StandardQuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#standardunitprice">StandardUnitPrice</a></td>
-<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
 <td>Standard unit price of the product during the creation of the transfer order line. [Currency: TransferOrder.DocumentCurrency]</td>
 </tr>
 </tbody>
@@ -243,7 +243,7 @@
 <blockquote>
 <p>Quantity ordered for transfer. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -251,7 +251,7 @@
 <blockquote>
 <p>Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -262,7 +262,7 @@
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -273,7 +273,7 @@
 <blockquote>
 <p>Standard unit price of the product during the creation of the transfer order line. [Currency: TransferOrder.DocumentCurrency]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -340,11 +340,11 @@
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.TransferOrders.html">Logistics.Inventory.TransferOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.TransferOrderLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.TransferOrderLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Logistics.Inventory.TransferOrderLines erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_TransferOrderLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_TransferOrderLines?$top=10</a></p>

@@ -92,17 +92,17 @@
 <tbody>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#confirmedquantity">ConfirmedQuantity</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
 <td>The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. [Unit: QuantityUnit]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#confirmedquantitybase">ConfirmedQuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
 <td>The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#confirmedstandardquantitybase">ConfirmedStandardQuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
@@ -117,7 +117,7 @@
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#lineamount">LineAmount</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The total amount for the line. Equals to Quantity * Price_Per_Unit. [Currency: ReceivingOrder.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
@@ -132,27 +132,27 @@
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#priceperunit">PricePerUnit</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The unit price of the received products, in the documents currency. [Currency: ReceivingOrder.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#productdescription">ProductDescription</a></td>
-<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
 <td>The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. [Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#quantity">Quantity</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The received quantity. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#quantitybase">QuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The equivalence of Quantity, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#standardquantitybase">StandardQuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 </tbody>
@@ -229,14 +229,14 @@
 <blockquote>
 <p>The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. [Unit: QuantityUnit]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="confirmedquantitybase">ConfirmedQuantityBase</h3>
 <blockquote>
 <p>The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -245,7 +245,7 @@
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -266,7 +266,7 @@
 <blockquote>
 <p>The total amount for the line. Equals to Quantity * Price_Per_Unit. [Currency: ReceivingOrder.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -296,7 +296,7 @@
 <blockquote>
 <p>The unit price of the received products, in the documents currency. [Currency: ReceivingOrder.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -306,7 +306,7 @@
 <blockquote>
 <p>The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -317,7 +317,7 @@
 <blockquote>
 <p>The received quantity. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -325,7 +325,7 @@
 <blockquote>
 <p>The equivalence of Quantity, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -336,7 +336,7 @@
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -421,11 +421,11 @@
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">Logistics.Inventory.StoreBins</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Logistics.Procurement.ReceivingOrderLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Logistics.Procurement.ReceivingOrderLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Logistics.Procurement.ReceivingOrderLines erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_ReceivingOrderLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_ReceivingOrderLines?$top=10</a></p>

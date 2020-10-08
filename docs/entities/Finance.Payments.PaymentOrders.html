@@ -167,7 +167,7 @@
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#invoiceamount">InvoiceAmount</a></td>
-<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
 <td>The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). [Currency: InvoiceAmountCurrency]</td>
 </tr>
 <tr>
@@ -252,7 +252,7 @@
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#totalamount">TotalAmount</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>Total amount that should be payed. [Currency: TotalAmountCurrency] [Required] [Default(0)] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
@@ -638,7 +638,7 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#direction">D
 <blockquote>
 <p>The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). [Currency: InvoiceAmountCurrency]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="isamountwithvat">IsAmountWithVAT</h3>
@@ -843,7 +843,7 @@ Enumeration of document system states<br>
 <blockquote>
 <p>Total amount that should be payed. [Currency: TotalAmountCurrency] [Required] [Default(0)] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -1066,11 +1066,11 @@ Enumeration of document system states<br>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Payments.PaymentOrders erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Payments.PaymentOrders erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Payments.PaymentOrders erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Payments_PaymentOrders?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Payments_PaymentOrders?$top=10</a></p>

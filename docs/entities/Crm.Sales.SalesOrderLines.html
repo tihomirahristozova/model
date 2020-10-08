@@ -107,7 +107,7 @@
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#historicalunitcost">HistoricalUnitCost</a></td>
-<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
 <td>Used for returning of goods that are sold before the exploitation of the system. [Currency: SalesOrder.DocumentCurrency] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
@@ -127,7 +127,7 @@
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#lineamount">LineAmount</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The total amount for the line. Equals to Quantity * Unit_Price, less the discounts. [Currency: SalesOrder.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
@@ -172,22 +172,22 @@
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#productdescription">ProductDescription</a></td>
-<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
 <td>The name of the sold product at the time the sale was made. [Required] [Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#quantity">Quantity</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The quantity sold. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#quantitybase">QuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The equivalent of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#requestedquantity">RequestedQuantity</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
 <td>Quantity requested by customer. [Unit: QuantityUnit]</td>
 </tr>
 <tr>
@@ -197,17 +197,17 @@
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#standardquantitybase">StandardQuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#standardunitprice">StandardUnitPrice</a></td>
-<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
 <td>Standard unit price of the product during the creation of the sales order line. [Currency: SalesOrder.DocumentCurrency] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#unitprice">UnitPrice</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId. [Currency: SalesOrder.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 </tbody>
@@ -412,7 +412,7 @@ Generic enum type for DeliveryTerms properties<br>
 <blockquote>
 <p>Used for returning of goods that are sold before the exploitation of the system. [Currency: SalesOrder.DocumentCurrency] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -577,7 +577,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The total amount for the line. Equals to Quantity * Unit_Price, less the discounts. [Currency: SalesOrder.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -668,7 +668,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The name of the sold product at the time the sale was made. [Required] [Filter(like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -679,7 +679,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The quantity sold. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -687,7 +687,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The equivalent of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -698,7 +698,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>Quantity requested by customer. [Unit: QuantityUnit]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="requireddeliverydate">RequiredDeliveryDate</h3>
@@ -716,7 +716,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -727,7 +727,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>Standard unit price of the product during the creation of the sales order line. [Currency: SalesOrder.DocumentCurrency] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -738,7 +738,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId. [Currency: SalesOrder.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -900,11 +900,11 @@ Generic enum type for TransportMode properties<br>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">Logistics.Inventory.StoreBins</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Crm.Sales.SalesOrderLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Crm.Sales.SalesOrderLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Crm.Sales.SalesOrderLines erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_Sales_SalesOrderLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Sales_SalesOrderLines?$top=10</a></p>

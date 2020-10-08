@@ -92,7 +92,7 @@
 <tbody>
 <tr>
 <td><a href="General.DocumentAmounts.html#baseamount">BaseAmount</a></td>
-<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
 <td>The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly]</td>
 </tr>
 <tr>
@@ -102,7 +102,7 @@
 </tr>
 <tr>
 <td><a href="General.DocumentAmounts.html#inputamount">InputAmount</a></td>
-<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
 <td>When not null, specifies directly the amount of the additional amount. [Currency: GetInputAmountCurrency()] [Filter(ge;le)]</td>
 </tr>
 <tr>
@@ -112,12 +112,12 @@
 </tr>
 <tr>
 <td><a href="General.DocumentAmounts.html#inputunitamount">InputUnitAmount</a></td>
-<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
 <td>Input unit amount for the calculation of the current amount. [Currency: GetInputAmountCurrency()] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmounts.html#totaldistributedamount">TotalDistributedAmount</a></td>
-<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
+<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
 <td>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly]</td>
 </tr>
 <tr>
@@ -181,7 +181,7 @@
 <blockquote>
 <p>The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -192,7 +192,7 @@
 <blockquote>
 <p>When not null, specifies directly the amount of the additional amount. [Currency: GetInputAmountCurrency()] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -212,7 +212,7 @@
 <blockquote>
 <p>Input unit amount for the calculation of the current amount. [Currency: GetInputAmountCurrency()] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -221,7 +221,7 @@
 <blockquote>
 <p>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="usercanchangeinput">UserCanChangeInput</h3>
@@ -262,11 +262,11 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF(obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnit, null)</code></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.DocumentAmounts erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.DocumentAmounts erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.DocumentAmounts erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_DocumentAmounts?$top=10">https://demodb.my.erp.net/api/domain/odata/General_DocumentAmounts?$top=10</a></p>

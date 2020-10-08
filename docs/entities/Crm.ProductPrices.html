@@ -102,12 +102,12 @@
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#maxquantity">MaxQuantity</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
 <td>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#minquantity">MinQuantity</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a> (nullable)</td>
+<td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
 <td>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
@@ -117,12 +117,12 @@
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#price">Price</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#pricequantity">PriceQuantity</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
 </tr>
 <tr>
@@ -220,14 +220,14 @@
 <blockquote>
 <p>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="minquantity">MinQuantity</h3>
 <blockquote>
 <p>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
@@ -241,7 +241,7 @@
 <blockquote>
 <p>Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -249,7 +249,7 @@
 <blockquote>
 <p>The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -374,11 +374,11 @@ Generic enum type for Priority properties<br>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.TargetGroups.html">Crm.Marketing.TargetGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Crm.ProductPrices erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Crm.ProductPrices erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Crm.ProductPrices erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_ProductPrices?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_ProductPrices?$top=10</a></p>

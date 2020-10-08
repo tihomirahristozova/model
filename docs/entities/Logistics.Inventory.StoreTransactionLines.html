@@ -112,17 +112,17 @@
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linebasecost">LineBaseCost</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The cost of the transaction in the currency of the enterprise company. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linecost">LineCost</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>Total cost for the line. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linedocumentcost">LineDocumentCost</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The cost of the transaction in the currency of the document. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] [ReadOnly]</td>
 </tr>
 <tr>
@@ -132,12 +132,12 @@
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#lineproductcost">LineProductCost</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The cost of the transaction in the currency of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linestorecost">LineStoreCost</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The cost of the transaction in the currency of the warehouse. [Currency: TransactionObj.Store.Currency] [Required] [Default(0)] [ReadOnly]</td>
 </tr>
 <tr>
@@ -157,17 +157,17 @@
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#quantity">Quantity</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. [Unit: QuantityUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#quantitybase">QuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#standardquantitybase">StandardQuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
@@ -182,7 +182,7 @@
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#unitcost">UnitCost</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>Cost for 1 of the specified quantity. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 </tbody>
@@ -293,7 +293,7 @@
 <blockquote>
 <p>The cost of the transaction in the currency of the enterprise company. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -301,7 +301,7 @@
 <blockquote>
 <p>Total cost for the line. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -309,7 +309,7 @@
 <blockquote>
 <p>The cost of the transaction in the currency of the document. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -328,7 +328,7 @@
 <blockquote>
 <p>The cost of the transaction in the currency of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -336,7 +336,7 @@
 <blockquote>
 <p>The cost of the transaction in the currency of the warehouse. [Currency: TransactionObj.Store.Currency] [Required] [Default(0)] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -364,7 +364,7 @@
 <blockquote>
 <p>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. [Unit: QuantityUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -372,7 +372,7 @@
 <blockquote>
 <p>The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -384,7 +384,7 @@
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -409,7 +409,7 @@
 <blockquote>
 <p>Cost for 1 of the specified quantity. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -491,11 +491,11 @@
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.StoreTransactionLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.StoreTransactionLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Logistics.Inventory.StoreTransactionLines erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_StoreTransactionLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_StoreTransactionLines?$top=10</a></p>

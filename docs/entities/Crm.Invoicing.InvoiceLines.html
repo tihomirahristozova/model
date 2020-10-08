@@ -117,7 +117,7 @@
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#lineamount">LineAmount</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
@@ -147,17 +147,17 @@
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#productdescription">ProductDescription</a></td>
-<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
 <td>The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document. [Required]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#quantity">Quantity</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The quantity of the invoiced product. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#quantitybase">QuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</td>
 </tr>
 <tr>
@@ -167,12 +167,12 @@
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#standardquantitybase">StandardQuantityBase</a></td>
-<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#unitprice">UnitPrice</a></td>
-<td><a href="../data-types.md#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The unit selling price of Quantity. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 </tbody>
@@ -512,7 +512,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -565,7 +565,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document. [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -574,7 +574,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The quantity of the invoiced product. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -582,7 +582,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -600,7 +600,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -611,7 +611,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The unit selling price of Quantity. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -709,11 +709,11 @@ Generic enum type for TransportMode properties<br>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Crm.Invoicing.InvoiceLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Crm.Invoicing.InvoiceLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Crm.Invoicing.InvoiceLines erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_Invoicing_InvoiceLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Invoicing_InvoiceLines?$top=10</a></p>
