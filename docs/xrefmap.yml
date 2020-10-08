@@ -421,6 +421,9 @@ references:
 - uid: Crm.SalesPersons
   name: Crm.SalesPersons
   href: entities/Crm.SalesPersons.html
+- uid: data-types
+  name: Data Types
+  href: data-types.html
 - uid: Finance.Accounting.AccountGroups
   name: Finance.Accounting.AccountGroups
   href: entities/Finance.Accounting.AccountGroups.html

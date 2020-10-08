@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Data Types | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Data Types | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="data-types">
+<h1 id="data-types">Data Types</h1>
+
+<h2 id="simple-types">Simple Types</h2>
+<h2 id="complex-types">Complex Types</h2>
+<h3 id="multilanguagestring">MultilanguageString</h3>
+<p>Multi-language strings - <a href="https://enterpriseone.atlassian.net/wiki/display/techdoc/Multi-language">https://enterpriseone.atlassian.net/wiki/display/techdoc/Multi-language</a></p>
+<p>Some text properties support value in more than one language. This properties are of multi-language string type.</p>
+<p>Example: General_Products_Products.Name property.</p>
+<p>The multi-language string can store many language strings, indexing them by language key. The language key is a CultureInfo two letter ISO language name, like &quot;en&quot;, &quot;de&quot;, etc.</p>
+<p>For example the Name property of General_Products_Products entity is displayed as:
+<code>
+{
+&quot;Name&quot;: {
+&quot;bg&quot;: &quot;Ябълка&quot;,
+&quot;en&quot;: &quot;Apple&quot;
+}
+}
+<code><p>
+<blockquote>
+<p>ALL multi-language values are treated as a single value. You cannot GET/PUT/PATCH only some multi-language values - they are treated as a single piece of data.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note!</strong><br>
+Multi-language properties support only filter function <strong>contains</strong>:<br>
+Domain API:
+~/General_Products_Products?$filter=contains(Name,'ppl')<br>
+This is an invalid filter:<br>
+~/General_Products_Products?$filter=Name eq 'Apple'</p>
+</blockquote>
+<h3 id="amount">Amount</h3>
+<p>The ERP domain model declares a special type for amount (currency) properties.</p>
+<p>The amount is represented by value and currency.</p>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Currency</td>
+<td>String</td>
+<td>The currency of the amount represented by it's sign.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>Decimal</td>
+<td>The value of the amount.</td>
+</tr>
+</tbody>
+</table>
+<p>Domain API Example:<br>
+Example:</p>
+<p>{
+&quot;LineAmount&quot;: {
+&quot;Value&quot;: &quot;3.55&quot;,
+&quot;Currency&quot;: &quot;USD&quot;
+}
+}</p>
+<h3 id="quantity">Quantity</h3>
+<p>The ERP domain model declares a special type for quantity properties.</p>
+<p>The quantity is represented by value and measurement unit.</p>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit</td>
+<td>String</td>
+<td>TThe measurement unit of the quantity represented by it's code.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>Decimal</td>
+<td>The value of the quantity.</td>
+</tr>
+</tbody>
+</table>
+<p>Domain API Example:<br>
+Example:</p>
+<p>{
+&quot;LineAmount&quot;: {
+&quot;Value&quot;: &quot;5.555&quot;,
+&quot;Unit&quot;: &quot;PCS&quot;
+}
+}</p>
+<h3 id="custompropertyvalue">CustomPropertyValue</h3>
+<p>User-defined properties, which can supplement the system properties of almost all entities in the system.</p>
+<p>Custom properties are defined in General_CustomProperties entity.</p>
+<p>EntityName specifies the entity for which the property is applicable.</p>
+<p>Table of EntityName -&gt; REST API Resource Name corespondences</p>
+<p>Custom properties can be free text property or restricted to a list of allowed values. This is specified by LimitToAllowedValues property.</p>
+<p>AllowedValuesEntityName specifies that the allowed values are retrieved from the specified entity. If null the allowed values are retrieved from General_CustomPropertyAllowedValues</p>
+<p>In EnterpriseOne REST API custom properties are properties of type General_CustomPropertyValue. The API name of the custom property starts with 'CustomProperty_' followed by the user defined property code.</p>
+<p>Each database contains different custom properties and that is why each database have different EDM model ($metadata).</p>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value</td>
+<td>String</td>
+<td>The short value</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>[MultilanguageString]</td>
+<td>The description of the property value.Can be null.</td>
+</tr>
+<tr>
+<td>ValueId</td>
+<td>guid (nullable)</td>
+<td>The Id of the entry represented by the property value. It's the id of the allowed value. Can be null.</td>
+</tr>
+</tbody>
+</table>
+<p>Domain API Example:</p>
+<p>&quot;CustomProperty_color&quot;: {
+&quot;Value&quot;: &quot;Син&quot;,
+&quot;ValueId&quot;: &quot;5263a2d3-88b0-41db-adae-31c76135719e&quot;,
+&quot;Description&quot;: {
+&quot;BG&quot;: &quot;Морско&quot;
+}
+}</p>
+</code></code></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/data-types.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
