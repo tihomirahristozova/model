@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Core.ObjectChangesets.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Systems.Core.ObjectChangesets.html#ApplicationName">ApplicationName</a></td>
+<td><a href="Systems.Core.ObjectChangesets.html#applicationname">ApplicationName</a></td>
 <td>string (nullable)</td>
 <td>The application which requested the change. null when it is unknown. [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.ObjectChangesets.html#ServerVersion">ServerVersion</a></td>
+<td><a href="Systems.Core.ObjectChangesets.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Core.ObjectChangesets.html#serverversion">ServerVersion</a></td>
 <td>string</td>
 <td>The version of the application server at the time of the change. [Required]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.ObjectChangesets.html#TimeUtc">TimeUtc</a></td>
+<td><a href="Systems.Core.ObjectChangesets.html#timeutc">TimeUtc</a></td>
 <td>datetime</td>
 <td>Date and time (in Utc) when the changeset was processed by the server. [Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD]</td>
 </tr>
@@ -123,7 +123,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Core.ObjectChangesets.html#User">User</a></td>
+<td><a href="Systems.Core.ObjectChangesets.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
 <td>The user which initiated the change. null when it is unknown. [Filter(multi eq)]</td>
 </tr>
@@ -142,16 +142,11 @@
 <tr>
 <td>ObjectChanges</td>
 <td><a href="Systems.Core.ObjectChanges.html">Systems.Core.ObjectChanges</a></td>
-<td>List of <a href="Systems.Core.ObjectChanges.html">ObjectChange</a> child objects, based on the <a href="Systems.Core.ObjectChanges.html#ObjectChangeset">Systems.Core.ObjectChange.ObjectChangeset</a> back reference</td>
+<td>List of <a href="Systems.Core.ObjectChanges.html">ObjectChange</a> child objects, based on the <a href="Systems.Core.ObjectChanges.html#objectchangeset">Systems.Core.ObjectChange.ObjectChangeset</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="applicationname">ApplicationName</h3>
 <blockquote>
 <p>The application which requested the change. null when it is unknown. [Filter(eq)]</p>
@@ -159,6 +154,10 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="serverversion">ServerVersion</h3>
 <blockquote>
 <p>The version of the application server at the time of the change. [Required]</p>
@@ -180,8 +179,7 @@
 <p>The user which initiated the change. null when it is unknown. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Systems.Core.ObjectChangesets erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

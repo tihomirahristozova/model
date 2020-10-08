@@ -91,47 +91,47 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.EnterpriseCompanies.html#BIStartDate">BIStartDate</a></td>
+<td><a href="General.EnterpriseCompanies.html#bistartdate">BIStartDate</a></td>
 <td>datetime (nullable)</td>
 <td>Defines the period for which BI extracts data. BI includes documents with &quot;Document Date&quot; greater than or equal to &quot;BI Start Date&quot;. [Filter(eq)] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#DefaultCostingMethod">DefaultCostingMethod</a></td>
-<td><a href="General.EnterpriseCompanies.html#DefaultCostingMethod">General.EnterpriseCompaniesRepository.DefaultCostingMethod</a></td>
+<td><a href="General.EnterpriseCompanies.html#defaultcostingmethod">DefaultCostingMethod</a></td>
+<td><a href="General.EnterpriseCompanies.html#defaultcostingmethod">DefaultCostingMethod</a></td>
 <td>Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. [Required] [Default(&quot;AVG&quot;)]</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#DefaultCustomerCreditLimitBase">DefaultCustomerCreditLimitBase</a></td>
-<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
+<td><a href="General.EnterpriseCompanies.html#defaultcustomercreditlimitbase">DefaultCustomerCreditLimitBase</a></td>
+<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
 <td>Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. [Currency: BaseCurrency] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#DefaultLanguage">DefaultLanguage</a></td>
-<td><a href="General.EnterpriseCompanies.html#DefaultLanguage">General.EnterpriseCompaniesRepository.DefaultLanguage</a> (nullable)</td>
+<td><a href="General.EnterpriseCompanies.html#defaultlanguage">DefaultLanguage</a></td>
+<td><a href="General.EnterpriseCompanies.html#defaultlanguage">DefaultLanguage</a> (nullable)</td>
 <td>The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). [Default(&quot;en&quot;)]</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#EditPeriodStartDate">EditPeriodStartDate</a></td>
+<td><a href="General.EnterpriseCompanies.html#editperiodstartdate">EditPeriodStartDate</a></td>
 <td>datetime (nullable)</td>
 <td>Start date of the priod when the documents can be edited.</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#IsActive">IsActive</a></td>
+<td><a href="General.EnterpriseCompanies.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.EnterpriseCompanies.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>Indicates whether the current Enterprise company  is active. [Required] [Default(true)] [Filter(multi eq)] (Introduced in version 20.1.100.0)</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#PrintImagesRetentionMonths">PrintImagesRetentionMonths</a></td>
+<td><a href="General.EnterpriseCompanies.html#printimagesretentionmonths">PrintImagesRetentionMonths</a></td>
 <td>int32</td>
 <td>A period of months for which the printed images of the documents will be kept. [Required] [Default(60)] [Filter(multi eq;ge;le)] (Introduced in version 20.1.100.0)</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#UIBaseColor">UIBaseColor</a></td>
+<td><a href="General.EnterpriseCompanies.html#uibasecolor">UIBaseColor</a></td>
 <td>int32 (nullable)</td>
 <td>When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. (Introduced in version 18.2.100.0)</td>
 </tr>
@@ -148,37 +148,37 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#AccessKey">AccessKey</a></td>
+<td><a href="General.EnterpriseCompanies.html#accesskey">AccessKey</a></td>
 <td><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</td>
 <td>The access key, containing the user permissions for this EnterpriseCompany. Null means that all users have unlimited permissions. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#AdvanceProduct">AdvanceProduct</a></td>
+<td><a href="General.EnterpriseCompanies.html#advanceproduct">AdvanceProduct</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</td>
 <td>Product that is used for handling advances in trade documents. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#BaseCurrency">BaseCurrency</a></td>
+<td><a href="General.EnterpriseCompanies.html#basecurrency">BaseCurrency</a></td>
 <td><a href="General.Currencies.html">General.Currencies</a></td>
 <td>The base currency for summary reporting for this company. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#Company">Company</a></td>
+<td><a href="General.EnterpriseCompanies.html#company">Company</a></td>
 <td><a href="General.Contacts.Companies.html">General.Contacts.Companies</a></td>
 <td>Contains the base company data on which this enterprise company is based. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#ExchangeDifferenceCreditAccount">ExchangeDifferenceCreditAccount</a></td>
+<td><a href="General.EnterpriseCompanies.html#exchangedifferencecreditaccount">ExchangeDifferenceCreditAccount</a></td>
 <td><a href="Finance.Accounting.Accounts.html">Finance.Accounting.Accounts</a> (nullable)</td>
 <td>Account for balancing accounting vouchers with credit difference due to currency exchanges. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#ExchangeDifferenceDebitAccount">ExchangeDifferenceDebitAccount</a></td>
+<td><a href="General.EnterpriseCompanies.html#exchangedifferencedebitaccount">ExchangeDifferenceDebitAccount</a></td>
 <td><a href="Finance.Accounting.Accounts.html">Finance.Accounting.Accounts</a> (nullable)</td>
 <td>Account for balancing accounting vouchers with debit difference due to currency exchanges. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.EnterpriseCompanies.html#VATDocumentAmountType">VATDocumentAmountType</a></td>
+<td><a href="General.EnterpriseCompanies.html#vatdocumentamounttype">VATDocumentAmountType</a></td>
 <td><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a> (nullable)</td>
 <td>The document amount that is used to determine the amount of the VAT entries when they are generated. [Filter(multi eq)]</td>
 </tr>
@@ -197,41 +197,36 @@
 <tr>
 <td>Assets</td>
 <td><a href="Finance.Assets.Assets.html">Finance.Assets.Assets</a></td>
-<td>List of <a href="Finance.Assets.Assets.html">Asset</a> child objects, based on the <a href="Finance.Assets.Assets.html#EnterpriseCompany">Finance.Assets.Asset.EnterpriseCompany</a> back reference</td>
-</tr>
-<tr>
-<td>Crews</td>
-<td><a href="Applications.Fleet.Crews.html">Applications.Fleet.Crews</a></td>
-<td>List of <a href="Applications.Fleet.Crews.html">Crew</a> child objects, based on the <a href="Applications.Fleet.Crews.html#EnterpriseCompany">Applications.Fleet.Crew.EnterpriseCompany</a> back reference</td>
-</tr>
-<tr>
-<td>VehicleSets</td>
-<td><a href="Applications.Fleet.VehicleSets.html">Applications.Fleet.VehicleSets</a></td>
-<td>List of <a href="Applications.Fleet.VehicleSets.html">VehicleSet</a> child objects, based on the <a href="Applications.Fleet.VehicleSets.html#EnterpriseCompany">Applications.Fleet.VehicleSet.EnterpriseCompany</a> back reference</td>
-</tr>
-<tr>
-<td>MapPoints</td>
-<td><a href="General.Geography.MapPoints.html">General.Geography.MapPoints</a></td>
-<td>List of <a href="General.Geography.MapPoints.html">MapPoint</a> child objects, based on the <a href="General.Geography.MapPoints.html#EnterpriseCompany">General.Geography.MapPoint.EnterpriseCompany</a> back reference</td>
+<td>List of <a href="Finance.Assets.Assets.html">Asset</a> child objects, based on the <a href="Finance.Assets.Assets.html#enterprisecompany">Finance.Assets.Asset.EnterpriseCompany</a> back reference</td>
 </tr>
 <tr>
 <td>BGVATDeclaringPersons</td>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html">Finance.Vat.BGVATDeclaringPersons</a></td>
-<td>List of <a href="Finance.Vat.BGVATDeclaringPersons.html">BGVATDeclaringPerson</a> child objects, based on the <a href="Finance.Vat.BGVATDeclaringPersons.html#EnterpriseCompany">Finance.Vat.BGVATDeclaringPerson.EnterpriseCompany</a> back reference</td>
+<td>List of <a href="Finance.Vat.BGVATDeclaringPersons.html">BGVATDeclaringPerson</a> child objects, based on the <a href="Finance.Vat.BGVATDeclaringPersons.html#enterprisecompany">Finance.Vat.BGVATDeclaringPerson.EnterpriseCompany</a> back reference</td>
+</tr>
+<tr>
+<td>Crews</td>
+<td><a href="Applications.Fleet.Crews.html">Applications.Fleet.Crews</a></td>
+<td>List of <a href="Applications.Fleet.Crews.html">Crew</a> child objects, based on the <a href="Applications.Fleet.Crews.html#enterprisecompany">Applications.Fleet.Crew.EnterpriseCompany</a> back reference</td>
+</tr>
+<tr>
+<td>MapPoints</td>
+<td><a href="General.Geography.MapPoints.html">General.Geography.MapPoints</a></td>
+<td>List of <a href="General.Geography.MapPoints.html">MapPoint</a> child objects, based on the <a href="General.Geography.MapPoints.html#enterprisecompany">General.Geography.MapPoint.EnterpriseCompany</a> back reference</td>
 </tr>
 <tr>
 <td>Resources</td>
 <td><a href="Projects.Resources.html">Projects.Resources</a></td>
-<td>List of <a href="Projects.Resources.html">Resource</a> child objects, based on the <a href="Projects.Resources.html#EnterpriseCompany">Projects.Resource.EnterpriseCompany</a> back reference</td>
+<td>List of <a href="Projects.Resources.html">Resource</a> child objects, based on the <a href="Projects.Resources.html#enterprisecompany">Projects.Resource.EnterpriseCompany</a> back reference</td>
+</tr>
+<tr>
+<td>VehicleSets</td>
+<td><a href="Applications.Fleet.VehicleSets.html">Applications.Fleet.VehicleSets</a></td>
+<td>List of <a href="Applications.Fleet.VehicleSets.html">VehicleSet</a> child objects, based on the <a href="Applications.Fleet.VehicleSets.html#enterprisecompany">Applications.Fleet.VehicleSet.EnterpriseCompany</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="bistartdate">BIStartDate</h3>
 <blockquote>
 <p>Defines the period for which BI extracts data. BI includes documents with &quot;Document Date&quot; greater than or equal to &quot;BI Start Date&quot;. [Filter(eq)] (Introduced in version 18.2.100.0)</p>
@@ -243,9 +238,9 @@
 <blockquote>
 <p>Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. [Required] [Default(&quot;AVG&quot;)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html#DefaultCostingMethod">General.EnterpriseCompaniesRepository.DefaultCostingMethod</a></strong><br>
-Allowed values for the <a href="General.EnterpriseCompanies.html#DefaultCostingMethod">DefaultCostingMethod</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html#defaultcostingmethod">DefaultCostingMethod</a></strong><br>
+Allowed values for the <a href="General.EnterpriseCompanies.html#defaultcostingmethod">DefaultCostingMethod</a> data attribute<br>
+<em>Allowed Values (General.EnterpriseCompaniesRepository.DefaultCostingMethod Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -275,16 +270,16 @@ Allowed values for the <a href="General.EnterpriseCompanies.html#DefaultCostingM
 <blockquote>
 <p>Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. [Currency: BaseCurrency] [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultlanguage">DefaultLanguage</h3>
 <blockquote>
 <p>The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). [Default(&quot;en&quot;)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html#DefaultLanguage">General.EnterpriseCompaniesRepository.DefaultLanguage</a> (nullable)</strong><br>
-Allowed values for the <a href="General.EnterpriseCompanies.html#DefaultLanguage">DefaultLanguage</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html#defaultlanguage">DefaultLanguage</a> (nullable)</strong><br>
+Allowed values for the <a href="General.EnterpriseCompanies.html#defaultlanguage">DefaultLanguage</a> data attribute<br>
+<em>Allowed Values (General.EnterpriseCompaniesRepository.DefaultLanguage Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -313,6 +308,10 @@ Allowed values for the <a href="General.EnterpriseCompanies.html#DefaultLanguage
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
 <p>Indicates whether the current Enterprise company  is active. [Required] [Default(true)] [Filter(multi eq)] (Introduced in version 20.1.100.0)</p>
@@ -342,50 +341,43 @@ Allowed values for the <a href="General.EnterpriseCompanies.html#DefaultLanguage
 <p>The access key, containing the user permissions for this EnterpriseCompany. Null means that all users have unlimited permissions. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="advanceproduct">AdvanceProduct</h3>
 <blockquote>
 <p>Product that is used for handling advances in trade documents. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="basecurrency">BaseCurrency</h3>
 <blockquote>
 <p>The base currency for summary reporting for this company. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="company">Company</h3>
 <blockquote>
 <p>Contains the base company data on which this enterprise company is based. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">General.Contacts.Companies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="exchangedifferencecreditaccount">ExchangeDifferenceCreditAccount</h3>
 <blockquote>
 <p>Account for balancing accounting vouchers with credit difference due to currency exchanges. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Finance.Accounting.Accounts</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="exchangedifferencedebitaccount">ExchangeDifferenceDebitAccount</h3>
 <blockquote>
 <p>Account for balancing accounting vouchers with debit difference due to currency exchanges. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Finance.Accounting.Accounts</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="vatdocumentamounttype">VATDocumentAmountType</h3>
 <blockquote>
 <p>The document amount that is used to determine the amount of the VAT entries when they are generated. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.EnterpriseCompanies erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

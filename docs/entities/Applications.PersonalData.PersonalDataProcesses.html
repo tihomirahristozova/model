@@ -91,97 +91,97 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#Code">Code</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#code">Code</a></td>
 <td>string</td>
 <td>Unique process code. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#ContainsSensitiveData">ContainsSensitiveData</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#containssensitivedata">ContainsSensitiveData</a></td>
 <td>boolean</td>
 <td>True if sensitive personal data is processed (racial, political, criminal, biometric, etc). [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#DataSubjectCategory">DataSubjectCategory</a></td>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#DataSubjectCategory">Applications.PersonalData.PersonalDataProcessesRepository.DataSubjectCategory</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#datasubjectcategory">DataSubjectCategory</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#datasubjectcategory">DataSubjectCategory</a></td>
 <td>The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. [Required]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#Description">Description</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#description">Description</a></td>
 <td>string (nullable)</td>
 <td>Description of the process.</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#DiscontinuationDate">DiscontinuationDate</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#discontinuationdate">DiscontinuationDate</a></td>
 <td>date (nullable)</td>
 <td>The date on which the process was discontinued. Null if the process is still active. [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#EstablishDate">EstablishDate</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#establishdate">EstablishDate</a></td>
 <td>date</td>
 <td>The data on which the process was established and started functioning. [Required] [Default(Now)] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#LegalBasisForProcessing">LegalBasisForProcessing</a></td>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#LegalBasisForProcessing">Applications.PersonalData.PersonalDataProcessesRepository.LegalBasisForProcessing</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#legalbasisforprocessing">LegalBasisForProcessing</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#legalbasisforprocessing">LegalBasisForProcessing</a></td>
 <td>The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;. [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#ListOfDataCategories">ListOfDataCategories</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#listofdatacategories">ListOfDataCategories</a></td>
 <td>string</td>
 <td>Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#ListOfDataRecipientCategories">ListOfDataRecipientCategories</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#listofdatarecipientcategories">ListOfDataRecipientCategories</a></td>
 <td>string (nullable)</td>
 <td>Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#ListOfProcessingPurposes">ListOfProcessingPurposes</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#listofprocessingpurposes">ListOfProcessingPurposes</a></td>
 <td>string (nullable)</td>
 <td>Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#ListOfTechnicalMeasures">ListOfTechnicalMeasures</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#listoftechnicalmeasures">ListOfTechnicalMeasures</a></td>
 <td>string (nullable)</td>
 <td>Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#ListOfTransfersToThirdCountries">ListOfTransfersToThirdCountries</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#listoftransferstothirdcountries">ListOfTransfersToThirdCountries</a></td>
 <td>string (nullable)</td>
 <td>Comma-separated list of third countries, to which data is sent. [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#ListOfUsedSoftware">ListOfUsedSoftware</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#listofusedsoftware">ListOfUsedSoftware</a></td>
 <td>string (nullable)</td>
 <td>Comma-separated list of the names of the software products used to process the data. [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#name">Name</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
 <td>Name of the process (Multilanguage). [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#Notes">Notes</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this PersonalDataProcess.</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#ProcessingRole">ProcessingRole</a></td>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#ProcessingRole">Applications.PersonalData.PersonalDataProcessesRepository.ProcessingRole</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#processingrole">ProcessingRole</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#processingrole">ProcessingRole</a></td>
 <td>The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . [Required] [Default(&quot;C&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#RetentionPeriodMonths">RetentionPeriodMonths</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#retentionperiodmonths">RetentionPeriodMonths</a></td>
 <td>int32 (nullable)</td>
 <td>The period in months, for which the data is kept. Null when the period is unknown or N/A. [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#ThirdCountryTransfersSafeguards">ThirdCountryTransfersSafeguards</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#thirdcountrytransferssafeguards">ThirdCountryTransfersSafeguards</a></td>
 <td>string (nullable)</td>
 <td>Description of safeguards, taken to protect personal data in case of third country transfers. [Filter(eq;like)]</td>
 </tr>
@@ -198,12 +198,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
 <td>The enterprise company, which owns the process. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html#ProcessOwnerPerson">ProcessOwnerPerson</a></td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#processownerperson">ProcessOwnerPerson</a></td>
 <td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a></td>
 <td>The owner and responsible person for the process. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -222,21 +222,16 @@
 <tr>
 <td>JointControllers</td>
 <td><a href="Applications.PersonalData.JointControllers.html">Applications.PersonalData.JointControllers</a></td>
-<td>List of <a href="Applications.PersonalData.JointControllers.html">JointController</a> child objects, based on the <a href="Applications.PersonalData.JointControllers.html#PersonalDataProcess">Applications.PersonalData.JointController.PersonalDataProcess</a> back reference</td>
+<td>List of <a href="Applications.PersonalData.JointControllers.html">JointController</a> child objects, based on the <a href="Applications.PersonalData.JointControllers.html#personaldataprocess">Applications.PersonalData.JointController.PersonalDataProcess</a> back reference</td>
 </tr>
 <tr>
 <td>Recipients</td>
 <td><a href="Applications.PersonalData.PersonalDataProcessRecipients.html">Applications.PersonalData.PersonalDataProcessRecipients</a></td>
-<td>List of <a href="Applications.PersonalData.PersonalDataProcessRecipients.html">PersonalDataProcessRecipient</a> child objects, based on the <a href="Applications.PersonalData.PersonalDataProcessRecipients.html#PersonalDataProcess">Applications.PersonalData.PersonalDataProcessRecipient.PersonalDataProcess</a> back reference</td>
+<td>List of <a href="Applications.PersonalData.PersonalDataProcessRecipients.html">PersonalDataProcessRecipient</a> child objects, based on the <a href="Applications.PersonalData.PersonalDataProcessRecipients.html#personaldataprocess">Applications.PersonalData.PersonalDataProcessRecipient.PersonalDataProcess</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="code">Code</h3>
 <blockquote>
 <p>Unique process code. [Required] [Filter(eq;like)]</p>
@@ -255,9 +250,9 @@
 <blockquote>
 <p>The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html#DataSubjectCategory">Applications.PersonalData.PersonalDataProcessesRepository.DataSubjectCategory</a></strong><br>
-Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.html#DataSubjectCategory">DataSubjectCategory</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html#datasubjectcategory">DataSubjectCategory</a></strong><br>
+Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.html#datasubjectcategory">DataSubjectCategory</a> data attribute<br>
+<em>Allowed Values (Applications.PersonalData.PersonalDataProcessesRepository.DataSubjectCategory Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -320,13 +315,17 @@ Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="legalbasisforprocessing">LegalBasisForProcessing</h3>
 <blockquote>
 <p>The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;. [Required] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html#LegalBasisForProcessing">Applications.PersonalData.PersonalDataProcessesRepository.LegalBasisForProcessing</a></strong><br>
-Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.html#LegalBasisForProcessing">LegalBasisForProcessing</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html#legalbasisforprocessing">LegalBasisForProcessing</a></strong><br>
+Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.html#legalbasisforprocessing">LegalBasisForProcessing</a> data attribute<br>
+<em>Allowed Values (Applications.PersonalData.PersonalDataProcessesRepository.LegalBasisForProcessing Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -409,7 +408,7 @@ Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.
 <blockquote>
 <p>Name of the process (Multilanguage). [Required] [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
@@ -423,9 +422,9 @@ Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.
 <blockquote>
 <p>The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . [Required] [Default(&quot;C&quot;)] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html#ProcessingRole">Applications.PersonalData.PersonalDataProcessesRepository.ProcessingRole</a></strong><br>
-Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.html#ProcessingRole">ProcessingRole</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html#processingrole">ProcessingRole</a></strong><br>
+Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.html#processingrole">ProcessingRole</a> data attribute<br>
+<em>Allowed Values (Applications.PersonalData.PersonalDataProcessesRepository.ProcessingRole Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -467,15 +466,13 @@ Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.
 <p>The enterprise company, which owns the process. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="processownerperson">ProcessOwnerPerson</h3>
 <blockquote>
 <p>The owner and responsible person for the process. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Applications.PersonalData.PersonalDataProcesses erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

@@ -91,72 +91,72 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#CompletionDate">CompletionDate</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#completiondate">CompletionDate</a></td>
 <td>datetime (nullable)</td>
 <td>The date, when the item should be completed. null means that there is no constraint for completion date.</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#LineOrd">LineOrd</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#lineord">LineOrd</a></td>
 <td>int32</td>
 <td>The order of the line within the work order. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#LotSize">LotSize</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#lotsize">LotSize</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
 <td>Quantity produced in one production run. [Unit: ProducedQuantityUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#Notes">Notes</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this WorkOrderItem.</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#ParentLineId">ParentLineId</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#parentlineid">ParentLineId</a></td>
 <td>guid (nullable)</td>
 <td>If not null contains the Id of the line of the parent document, that created the current row. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#ParentLineNo">ParentLineNo</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#parentlineno">ParentLineNo</a></td>
 <td>int32 (nullable)</td>
 <td>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#Priority">Priority</a></td>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#Priority">Production.ShopFloor.WorkOrderItemsRepository.Priority</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#priority">Priority</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#priority">Priority</a></td>
 <td>Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest. [Required] [Default(3)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#ProducedQuantity">ProducedQuantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#producedquantity">ProducedQuantity</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
 <td>The quantity produced in the operation. [Unit: ProducedQuantityUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#ProducedQuantityBase">ProducedQuantityBase</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#producedquantitybase">ProducedQuantityBase</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
 <td>The equivalence of Produced Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#ProducedStandardQuantityBase">ProducedStandardQuantityBase</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#producedstandardquantitybase">ProducedStandardQuantityBase</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#ReleaseDate">ReleaseDate</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#releasedate">ReleaseDate</a></td>
 <td>datetime (nullable)</td>
 <td>The date, when the item is released to production. null means that still there is no plan when the item will be released to production.</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#ScheduledEndDateTime">ScheduledEndDateTime</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#scheduledenddatetime">ScheduledEndDateTime</a></td>
 <td>datetime (nullable)</td>
 <td>Date and time when the production of this item is scheduled to end.</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#ScheduledStartDateTime">ScheduledStartDateTime</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#scheduledstartdatetime">ScheduledStartDateTime</a></td>
 <td>datetime (nullable)</td>
 <td>Date and time when the production of this item is scheduled to begin.</td>
 </tr>
@@ -173,52 +173,52 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#Lot">Lot</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</td>
 <td>The lot of the produced product. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#OutputStore">OutputStore</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#outputstore">OutputStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</td>
 <td>Output store for the production. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#ParentDocument">ParentDocument</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
 <td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#ProducedQuantityUnit">ProducedQuantityUnit</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#producedquantityunit">ProducedQuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
 <td>The measurement unit of the quantity produced in the operation. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#ProductCode">ProductCode</a></td>
-<td><a href="General.Products.ProductCodes.html">General.Products.ProductCodes</a> (nullable)</td>
-<td>Selects the product thru some of the product codes. [Filter(multi eq)]</td>
-</tr>
-<tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#Product">Product</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The Id of the produced product. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#Recipe">Recipe</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#productcode">ProductCode</a></td>
+<td><a href="General.Products.ProductCodes.html">General.Products.ProductCodes</a> (nullable)</td>
+<td>Selects the product thru some of the product codes. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#recipe">Recipe</a></td>
 <td><a href="Production.Technologies.Recipes.html">Production.Technologies.Recipes</a> (nullable)</td>
 <td>The base recipe. null means that the item is produced without recipe. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#SerialNumber">SerialNumber</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</td>
 <td>If not null, specifies that the product was (has to be) produced with specific serial number. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#StoreBin">StoreBin</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#storebin">StoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">Logistics.Inventory.StoreBins</a> (nullable)</td>
 <td>The store bin in which to store the products. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#WorkOrder">WorkOrder</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#workorder">WorkOrder</a></td>
 <td><a href="Production.ShopFloor.WorkOrders.html">Production.ShopFloor.WorkOrders</a></td>
 <td>The Id of the work order, containing the item. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
@@ -237,16 +237,11 @@
 <tr>
 <td>Operations</td>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html">Production.ShopFloor.WorkOrderItemOperations</a></td>
-<td>List of <a href="Production.ShopFloor.WorkOrderItemOperations.html">WorkOrderItemOperation</a> child objects, based on the <a href="Production.ShopFloor.WorkOrderItemOperations.html#WorkOrderItem">Production.ShopFloor.WorkOrderItemOperation.WorkOrderItem</a> back reference</td>
+<td>List of <a href="Production.ShopFloor.WorkOrderItemOperations.html">WorkOrderItemOperation</a> child objects, based on the <a href="Production.ShopFloor.WorkOrderItemOperations.html#workorderitem">Production.ShopFloor.WorkOrderItemOperation.WorkOrderItem</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="completiondate">CompletionDate</h3>
 <blockquote>
 <p>The date, when the item should be completed. null means that there is no constraint for completion date.</p>
@@ -258,6 +253,10 @@
 <code>obj.WorkOrder.CompletionDate</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.WorkOrder.CompletionDate</code></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineord">LineOrd</h3>
 <blockquote>
 <p>The order of the line within the work order. [Required] [Filter(eq;like)]</p>
@@ -273,7 +272,7 @@
 <blockquote>
 <p>Quantity produced in one production run. [Unit: ProducedQuantityUnit] [Required] [Default(1)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -291,8 +290,7 @@
 <p>If not null contains the Id of the line of the parent document, that created the current row. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
 <blockquote>
 <p>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. [Filter(eq)]</p>
@@ -304,9 +302,9 @@
 <blockquote>
 <p>Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest. [Required] [Default(3)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItems.html#Priority">Production.ShopFloor.WorkOrderItemsRepository.Priority</a></strong><br>
-Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#Priority">Priority</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItems.html#priority">Priority</a></strong><br>
+Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#priority">Priority</a> data attribute<br>
+<em>Allowed Values (Production.ShopFloor.WorkOrderItemsRepository.Priority Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -344,7 +342,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#Priorit
 <blockquote>
 <p>The quantity produced in the operation. [Unit: ProducedQuantityUnit] [Required] [Default(1)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -354,7 +352,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#Priorit
 <blockquote>
 <p>The equivalence of Produced Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -365,7 +363,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#Priorit
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -403,8 +401,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#Priorit
 <p>The lot of the produced product. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>IIF((obj.Lot.Product != obj.Product), null, obj.Lot)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -414,8 +411,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#Priorit
 <p>Output store for the production. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.WorkOrder.DefaultOutputStore</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -425,48 +421,43 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#Priorit
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="producedquantityunit">ProducedQuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of the quantity produced in the operation. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen(obj.Product.MeasurementUnit.IfNullThen(obj.ProducedQuantityUnit))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen(obj.Product.MeasurementUnit.IfNullThen(obj.ProducedQuantityUnit))</code></p>
-<h3 id="productcode">ProductCode</h3>
-<blockquote>
-<p>Selects the product thru some of the product codes. [Filter(multi eq)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.ProductCodes.html">General.Products.ProductCodes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<p><em>Back-End Default Expression:</em><br>
-<code>IIF((obj.ProductCode.Product != obj.Product), null, obj.ProductCode)</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((obj.ProductCode.Product != obj.Product), null, obj.ProductCode)</code></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The Id of the produced product. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.ProductCode.Product.IfNullThen(obj.Product)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ProductCode.Product.IfNullThen(obj.Product)</code></p>
+<h3 id="productcode">ProductCode</h3>
+<blockquote>
+<p>Selects the product thru some of the product codes. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Products.ProductCodes.html">General.Products.ProductCodes</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>IIF((obj.ProductCode.Product != obj.Product), null, obj.ProductCode)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF((obj.ProductCode.Product != obj.Product), null, obj.ProductCode)</code></p>
 <h3 id="recipe">Recipe</h3>
 <blockquote>
 <p>The base recipe. null means that the item is produced without recipe. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Technologies.Recipes.html">Production.Technologies.Recipes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.GetDefaultRecipe((obj.ReleaseDate ?? obj.WorkOrder.DocumentDate), obj.OutputStore.IfNullThen(obj.WorkOrder.DefaultOutputStore))</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
@@ -474,22 +465,19 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#Priorit
 <p>If not null, specifies that the product was (has to be) produced with specific serial number. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storebin">StoreBin</h3>
 <blockquote>
 <p>The store bin in which to store the products. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">Logistics.Inventory.StoreBins</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workorder">WorkOrder</h3>
 <blockquote>
 <p>The Id of the work order, containing the item. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">Production.ShopFloor.WorkOrders</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Production.ShopFloor.WorkOrderItems erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

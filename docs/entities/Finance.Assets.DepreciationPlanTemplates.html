@@ -91,14 +91,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Assets.DepreciationPlanTemplates.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Assets.DepreciationPlanTemplates.html#AssetLife">AssetLife</a></td>
+<td><a href="Finance.Assets.DepreciationPlanTemplates.html#assetlife">AssetLife</a></td>
 <td>int32 (nullable)</td>
 <td>Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).</td>
+</tr>
+<tr>
+<td><a href="Finance.Assets.DepreciationPlanTemplates.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -113,28 +113,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Assets.DepreciationPlanTemplates.html#AssetCategory">AssetCategory</a></td>
+<td><a href="Finance.Assets.DepreciationPlanTemplates.html#assetcategory">AssetCategory</a></td>
 <td><a href="Finance.Assets.AssetCategories.html">Finance.Assets.AssetCategories</a></td>
 <td>Asset category for which this template is defined. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Finance.Assets.DepreciationPlanTemplates.html#DepreciationMethod">DepreciationMethod</a></td>
+<td><a href="Finance.Assets.DepreciationPlanTemplates.html#depreciationmethod">DepreciationMethod</a></td>
 <td><a href="Finance.Assets.DepreciationMethods.html">Finance.Assets.DepreciationMethods</a></td>
 <td>Depreciation method by default for the depreciation plans created by this template. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Assets.DepreciationPlanTemplates.html#ValuationModel">ValuationModel</a></td>
+<td><a href="Finance.Assets.DepreciationPlanTemplates.html#valuationmodel">ValuationModel</a></td>
 <td><a href="Finance.Assets.ValuationModels.html">Finance.Assets.ValuationModels</a></td>
 <td>Valuation model for which this template is defined. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="assetlife">AssetLife</h3>
 <blockquote>
 <p>Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).</p>
@@ -142,28 +137,29 @@
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="assetcategory">AssetCategory</h3>
 <blockquote>
 <p>Asset category for which this template is defined. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.AssetCategories.html">Finance.Assets.AssetCategories</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="depreciationmethod">DepreciationMethod</h3>
 <blockquote>
 <p>Depreciation method by default for the depreciation plans created by this template. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationMethods.html">Finance.Assets.DepreciationMethods</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="valuationmodel">ValuationModel</h3>
 <blockquote>
 <p>Valuation model for which this template is defined. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.ValuationModels.html">Finance.Assets.ValuationModels</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Finance.Assets.DepreciationPlanTemplates erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

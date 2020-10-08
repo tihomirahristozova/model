@@ -91,38 +91,38 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.ActivityTimeIntervals.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Contacts.ActivityTimeIntervals.html#Date">Date</a></td>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#date">Date</a></td>
 <td>date</td>
 <td>The date on which the work was performed. [Required] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ActivityTimeIntervals.html#EndTime">EndTime</a></td>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#endtime">EndTime</a></td>
 <td>time</td>
 <td>The ending time of the time interval within 'Date'. [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ActivityTimeIntervals.html#ExecutionCompletePercent">ExecutionCompletePercent</a></td>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#executioncompletepercent">ExecutionCompletePercent</a></td>
 <td>decimal</td>
 <td>Percent of task completed. [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ActivityTimeIntervals.html#Notes">Notes</a></td>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for the time interval.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ActivityTimeIntervals.html#StartTime">StartTime</a></td>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#starttime">StartTime</a></td>
 <td>time</td>
 <td>The starting time of the time interval within 'Date'. [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ActivityTimeIntervals.html#State">State</a></td>
-<td><a href="General.Contacts.ActivityTimeIntervals.html#State">General.DocumentState</a> (nullable)</td>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#state">State</a></td>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#state">DocumentState</a> (nullable)</td>
 <td>The state of the primary activity in the moment the time interval was created. null when the state is unknown.</td>
 </tr>
 </tbody>
@@ -138,28 +138,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.ActivityTimeIntervals.html#Activity">Activity</a></td>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#activity">Activity</a></td>
 <td><a href="General.Contacts.Activities.html">General.Contacts.Activities</a></td>
 <td>The activity for which the time interval is recorded. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ActivityTimeIntervals.html#Party">Party</a></td>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
 <td>The party for which the time interval is recorded. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ActivityTimeIntervals.html#UserStatus">UserStatus</a></td>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#userstatus">UserStatus</a></td>
 <td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
 <td>The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="date">Date</h3>
 <blockquote>
 <p>The date on which the work was performed. [Required] [Filter(eq;ge;le)]</p>
@@ -182,6 +177,10 @@
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for the time interval.</p>
@@ -200,9 +199,9 @@
 <blockquote>
 <p>The state of the primary activity in the moment the time interval was created. null when the state is unknown.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.ActivityTimeIntervals.html#State">General.DocumentState</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.ActivityTimeIntervals.html#state">DocumentState</a> (nullable)</strong><br>
 Enumeration of document system states<br>
-<em>Allowed Values (Enum Members)</em></p>
+<em>Allowed Values (General.DocumentState Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -249,22 +248,19 @@ Enumeration of document system states<br>
 <p>The activity for which the time interval is recorded. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Activities.html">General.Contacts.Activities</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="party">Party</h3>
 <blockquote>
 <p>The party for which the time interval is recorded. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="userstatus">UserStatus</h3>
 <blockquote>
 <p>The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.Contacts.ActivityTimeIntervals erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

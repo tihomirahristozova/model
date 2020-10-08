@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#Id">Id</a></td>
+<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#Notes">Notes</a></td>
+<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this SupplySchemaRoute.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#SchemaXML">SchemaXML</a></td>
+<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#schemaxml">SchemaXML</a></td>
 <td>string (nullable)</td>
 <td>Obsolete. Not used. (Used by the schematic control).</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#TransitTimeDays">TransitTimeDays</a></td>
+<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#transittimedays">TransitTimeDays</a></td>
 <td>int32</td>
 <td>Obsolete. Not used. (Time needed for the delivery of the goods using this route). [Required] [Default(0)]</td>
 </tr>
@@ -123,19 +123,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#DestinationStore">DestinationStore</a></td>
+<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#destinationstore">DestinationStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></td>
 <td>Obsolete. Not used. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#SourceStore">SourceStore</a></td>
+<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#sourcestore">SourceStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></td>
 <td>Obsolete. Not used. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#SupplySchema">SupplySchema</a></td>
+<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#supplyschema">SupplySchema</a></td>
 <td><a href="Logistics.Inventory.SupplySchemata.html">Logistics.Inventory.SupplySchemata</a></td>
-<td>The <a href="Logistics.Inventory.SupplySchemaRoutes.html#SupplySchema">SupplySchema</a> to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Logistics.Inventory.SupplySchemaRoutes.html#supplyschema">SupplySchema</a> to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
@@ -143,7 +143,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
@@ -173,22 +172,19 @@
 <p>Obsolete. Not used. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="sourcestore">SourceStore</h3>
 <blockquote>
 <p>Obsolete. Not used. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="supplyschema">SupplySchema</h3>
 <blockquote>
-<p>The <a href="Logistics.Inventory.SupplySchemaRoutes.html#SupplySchema">SupplySchema</a> to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Logistics.Inventory.SupplySchemaRoutes.html#supplyschema">SupplySchema</a> to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SupplySchemata.html">Logistics.Inventory.SupplySchemata</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Logistics.Inventory.SupplySchemaRoutes erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

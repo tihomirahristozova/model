@@ -91,28 +91,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Products.VariantSizes.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Products.VariantSizes.html#Code">Code</a></td>
+<td><a href="General.Products.VariantSizes.html#code">Code</a></td>
 <td>string</td>
 <td>Unique code of the size. Used to generate parts of bar-codes and in other coding schemes. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="General.Products.VariantSizes.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="General.Products.VariantSizes.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Products.VariantSizes.html#name">Name</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
 <td>The name of the variant size. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="code">Code</h3>
 <blockquote>
 <p>Unique code of the size. Used to generate parts of bar-codes and in other coding schemes. [Required] [Filter(eq;like)] [ORD]</p>
@@ -120,11 +115,15 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <blockquote>
 <p>The name of the variant size. [Required] [Filter(eq;like)] [ORD]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h2 id="business-rules">Business Rules</h2>

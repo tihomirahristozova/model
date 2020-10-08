@@ -91,38 +91,33 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.ContactMechanismPurposes.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Contacts.ContactMechanismPurposes.html#Code">Code</a></td>
+<td><a href="General.Contacts.ContactMechanismPurposes.html#code">Code</a></td>
 <td>string</td>
 <td>The unique code of the ContactMechanismPurpos. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ContactMechanismPurposes.html#ContactMechanismType">ContactMechanismType</a></td>
-<td><a href="General.Contacts.ContactMechanismPurposes.html#ContactMechanismType">General.Contacts.ContactMechanismsRepository.ContactMechanismType</a> (nullable)</td>
+<td><a href="General.Contacts.ContactMechanismPurposes.html#contactmechanismtype">ContactMechanismType</a></td>
+<td><a href="General.Contacts.ContactMechanismPurposes.html#contactmechanismtype">ContactMechanismType</a> (nullable)</td>
 <td>When specified, allows the purpose to be specified only for contact mechanisms of the specified type. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ContactMechanismPurposes.html#Description">Description</a></td>
+<td><a href="General.Contacts.ContactMechanismPurposes.html#description">Description</a></td>
 <td>string (nullable)</td>
 <td>The description of this ContactMechanismPurpos. [Filter(like)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ContactMechanismPurposes.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="General.Contacts.ContactMechanismPurposes.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ContactMechanismPurposes.html#name">Name</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
 <td>Name of the contact mechanism purpose (Multilanguage). [Required] [Filter(like)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="code">Code</h3>
 <blockquote>
 <p>The unique code of the ContactMechanismPurpos. [Required] [Filter(eq;like)] [ORD]</p>
@@ -134,9 +129,9 @@
 <blockquote>
 <p>When specified, allows the purpose to be specified only for contact mechanisms of the specified type. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.ContactMechanismPurposes.html#ContactMechanismType">General.Contacts.ContactMechanismsRepository.ContactMechanismType</a> (nullable)</strong><br>
-Allowed values for the <a href="General.Contacts.ContactMechanisms.html#ContactMechanismType">ContactMechanismType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.ContactMechanismPurposes.html#contactmechanismtype">ContactMechanismType</a> (nullable)</strong><br>
+Allowed values for the <a href="General.Contacts.ContactMechanisms.html#contactmechanismtype">ContactMechanismType</a> data attribute<br>
+<em>Allowed Values (General.Contacts.ContactMechanismsRepository.ContactMechanismType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -184,11 +179,15 @@ Allowed values for the <a href="General.Contacts.ContactMechanisms.html#ContactM
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <blockquote>
 <p>Name of the contact mechanism purpose (Multilanguage). [Required] [Filter(like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>

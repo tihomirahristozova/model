@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.ProjectTaskMaterials.html#Id">Id</a></td>
+<td><a href="Projects.ProjectTaskMaterials.html#budgetedmaterialamount">BudgetedMaterialAmount</a></td>
+<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
+<td>Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. [Currency: ProjectTask.Project.BudgetingCurrency]</td>
+</tr>
+<tr>
+<td><a href="Projects.ProjectTaskMaterials.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskMaterials.html#BudgetedMaterialAmount">BudgetedMaterialAmount</a></td>
-<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
-<td>Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. [Currency: ProjectTask.Project.BudgetingCurrency]</td>
-</tr>
-<tr>
-<td><a href="Projects.ProjectTaskMaterials.html#LineNumber">LineNumber</a></td>
+<td><a href="Projects.ProjectTaskMaterials.html#linenumber">LineNumber</a></td>
 <td>int32</td>
 <td>Line number within the task, increased in steps of 10. Used for sorting purposes. [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskMaterials.html#Quantity">Quantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Projects.ProjectTaskMaterials.html#quantity">Quantity</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
 <td>The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskMaterials.html#QuantityBase">QuantityBase</a></td>
+<td><a href="Projects.ProjectTaskMaterials.html#quantitybase">QuantityBase</a></td>
 <td>decimal</td>
 <td>The equivalence of Quantity in the base measurement unit of the Material. [Required] [Default(0)] [ReadOnly]</td>
 </tr>
@@ -128,37 +128,36 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.ProjectTaskMaterials.html#MaterialProduct">MaterialProduct</a></td>
+<td><a href="Projects.ProjectTaskMaterials.html#materialproduct">MaterialProduct</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The product Id of the required material. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskMaterials.html#ProjectTask">ProjectTask</a></td>
+<td><a href="Projects.ProjectTaskMaterials.html#projecttask">ProjectTask</a></td>
 <td><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a></td>
 <td>The task for which is the material requirement. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskMaterials.html#QuantityUnit">QuantityUnit</a></td>
+<td><a href="Projects.ProjectTaskMaterials.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
 <td>The measurement unit of the required quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="budgetedmaterialamount">BudgetedMaterialAmount</h3>
 <blockquote>
 <p>Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. [Currency: ProjectTask.Project.BudgetingCurrency]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF((obj.MaterialProduct != null), obj.CalculateBudgetMaterialAmount(obj.Quantity), new Amount(0, obj.ProjectTask.Project.BudgetingCurrency))</code></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="linenumber">LineNumber</h3>
 <blockquote>
 <p>Line number within the task, increased in steps of 10. Used for sorting purposes. [Required] [Default(0)]</p>
@@ -175,7 +174,7 @@
 <blockquote>
 <p>The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -195,22 +194,19 @@
 <p>The product Id of the required material. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projecttask">ProjectTask</h3>
 <blockquote>
 <p>The task for which is the material requirement. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of the required quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Projects.ProjectTaskMaterials erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

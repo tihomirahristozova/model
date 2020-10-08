@@ -91,14 +91,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Sales.DocumentTypePaymentOptions.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
+<td><a href="Crm.Sales.DocumentTypePaymentOptions.html#deferredpaymentminimalammount">DeferredPaymentMinimalAmmount</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
+<td>The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPaymentMinimalAmmountCurrency] [Required]</td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.DocumentTypePaymentOptions.html#DeferredPaymentMinimalAmmount">DeferredPaymentMinimalAmmount</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
-<td>The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPaymentMinimalAmmountCurrency] [Required]</td>
+<td><a href="Crm.Sales.DocumentTypePaymentOptions.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -113,57 +113,53 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Sales.DocumentTypePaymentOptions.html#DeferredPaymentMinimalAmmountCurrency">DeferredPaymentMinimalAmmountCurrency</a></td>
+<td><a href="Crm.Sales.DocumentTypePaymentOptions.html#deferredpaymentminimalammountcurrency">DeferredPaymentMinimalAmmountCurrency</a></td>
 <td><a href="General.Currencies.html">General.Currencies</a></td>
 <td>The currency of Deferred Payment Minimal Amount. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.DocumentTypePaymentOptions.html#DocumentType">DocumentType</a></td>
+<td><a href="Crm.Sales.DocumentTypePaymentOptions.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
 <td>The document type for which the payment option applies. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.DocumentTypePaymentOptions.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="Crm.Sales.DocumentTypePaymentOptions.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
 <td>The enterprise company for which the payment options are specified. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="deferredpaymentminimalammount">DeferredPaymentMinimalAmmount</h3>
 <blockquote>
 <p>The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPaymentMinimalAmmountCurrency] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="deferredpaymentminimalammountcurrency">DeferredPaymentMinimalAmmountCurrency</h3>
 <blockquote>
 <p>The currency of Deferred Payment Minimal Amount. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
 <blockquote>
 <p>The document type for which the payment option applies. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The enterprise company for which the payment options are specified. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Crm.Sales.DocumentTypePaymentOptions erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

@@ -91,37 +91,37 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Pos.Devices.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Crm.Pos.Devices.html#DeviceRegistrationNo">DeviceRegistrationNo</a></td>
+<td><a href="Crm.Pos.Devices.html#deviceregistrationno">DeviceRegistrationNo</a></td>
 <td>string (nullable)</td>
 <td>The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. [Filter(multi eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Pos.Devices.html#DeviceType">DeviceType</a></td>
-<td><a href="Crm.Pos.Devices.html#DeviceType">Crm.Pos.DevicesRepository.DeviceType</a></td>
+<td><a href="Crm.Pos.Devices.html#devicetype">DeviceType</a></td>
+<td><a href="Crm.Pos.Devices.html#devicetype">DeviceType</a></td>
 <td>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. [Required] [Default(&quot;OTH&quot;)] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Pos.Devices.html#ElectronicAddress">ElectronicAddress</a></td>
+<td><a href="Crm.Pos.Devices.html#electronicaddress">ElectronicAddress</a></td>
 <td>string (nullable)</td>
 <td>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc. [Filter(multi eq;like)]</addr></td>
 </tr>
 <tr>
-<td><a href="Crm.Pos.Devices.html#IsActive">IsActive</a></td>
+<td><a href="Crm.Pos.Devices.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Crm.Pos.Devices.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>Indicates whether the device is currently active and can be choosen from drop-downs in new records. [Required] [Default(true)] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Pos.Devices.html#ProtocolName">ProtocolName</a></td>
-<td><a href="Crm.Pos.Devices.html#ProtocolName">Crm.Pos.DevicesRepository.ProtocolName</a> (nullable)</td>
+<td><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a></td>
+<td><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> (nullable)</td>
 <td>The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed.</td>
 </tr>
 <tr>
-<td><a href="Crm.Pos.Devices.html#SettingsJson">SettingsJson</a></td>
+<td><a href="Crm.Pos.Devices.html#settingsjson">SettingsJson</a></td>
 <td>string (nullable)</td>
 <td>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device.</td>
 </tr>
@@ -138,18 +138,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Pos.Devices.html#PosTerminal">PosTerminal</a></td>
+<td><a href="Crm.Pos.Devices.html#posterminal">PosTerminal</a></td>
 <td><a href="Crm.Pos.Terminals.html">Crm.Pos.Terminals</a></td>
 <td>The POS terminal, to which this device is attached. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="deviceregistrationno">DeviceRegistrationNo</h3>
 <blockquote>
 <p>The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. [Filter(multi eq;like)]</p>
@@ -161,9 +156,9 @@
 <blockquote>
 <p>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. [Required] [Default(&quot;OTH&quot;)] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html#DeviceType">Crm.Pos.DevicesRepository.DeviceType</a></strong><br>
-Allowed values for the <a href="Crm.Pos.Devices.html#DeviceType">DeviceType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html#devicetype">DeviceType</a></strong><br>
+Allowed values for the <a href="Crm.Pos.Devices.html#devicetype">DeviceType</a> data attribute<br>
+<em>Allowed Values (Crm.Pos.DevicesRepository.DeviceType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -200,6 +195,10 @@ Allowed values for the <a href="Crm.Pos.Devices.html#DeviceType">DeviceType</a> 
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
 <p>Indicates whether the device is currently active and can be choosen from drop-downs in new records. [Required] [Default(true)] [Filter(multi eq)]</p>
@@ -212,9 +211,9 @@ Allowed values for the <a href="Crm.Pos.Devices.html#DeviceType">DeviceType</a> 
 <blockquote>
 <p>The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html#ProtocolName">Crm.Pos.DevicesRepository.ProtocolName</a> (nullable)</strong><br>
-Allowed values for the <a href="Crm.Pos.Devices.html#ProtocolName">ProtocolName</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> (nullable)</strong><br>
+Allowed values for the <a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> data attribute<br>
+<em>Allowed Values (Crm.Pos.DevicesRepository.ProtocolName Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -244,8 +243,7 @@ Allowed values for the <a href="Crm.Pos.Devices.html#ProtocolName">ProtocolName<
 <p>The POS terminal, to which this device is attached. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Terminals.html">Crm.Pos.Terminals</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Crm.Pos.Devices erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

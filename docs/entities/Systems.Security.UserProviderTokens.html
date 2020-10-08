@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Security.UserProviderTokens.html#Id">Id</a></td>
+<td><a href="Systems.Security.UserProviderTokens.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Systems.Security.UserProviderTokens.html#LoginProviderName">LoginProviderName</a></td>
+<td><a href="Systems.Security.UserProviderTokens.html#loginprovidername">LoginProviderName</a></td>
 <td>string</td>
 <td>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.UserProviderTokens.html#TokenName">TokenName</a></td>
+<td><a href="Systems.Security.UserProviderTokens.html#tokenname">TokenName</a></td>
 <td>string</td>
 <td>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.UserProviderTokens.html#TokenValue">TokenValue</a></td>
+<td><a href="Systems.Security.UserProviderTokens.html#tokenvalue">TokenValue</a></td>
 <td>string (nullable)</td>
 <td>Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers.</td>
 </tr>
@@ -123,7 +123,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Security.UserProviderTokens.html#User">User</a></td>
+<td><a href="Systems.Security.UserProviderTokens.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a></td>
 <td>User for which we store tokens. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
@@ -133,7 +133,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="loginprovidername">LoginProviderName</h3>
 <blockquote>
@@ -162,8 +161,7 @@
 <p>User for which we store tokens. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Systems.Security.UserProviderTokens erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

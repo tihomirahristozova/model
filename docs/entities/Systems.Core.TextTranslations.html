@@ -91,43 +91,38 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Core.TextTranslations.html#Id">Id</a></td>
+<td><a href="Systems.Core.TextTranslations.html#columnname">ColumnName</a></td>
+<td>string</td>
+<td>Obsolete. Not used. [Required] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Core.TextTranslations.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Systems.Core.TextTranslations.html#ColumnName">ColumnName</a></td>
+<td><a href="Systems.Core.TextTranslations.html#language">Language</a></td>
 <td>string</td>
 <td>Obsolete. Not used. [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.TextTranslations.html#Language">Language</a></td>
-<td>string</td>
-<td>Obsolete. Not used. [Required] [Filter(eq)]</td>
-</tr>
-<tr>
-<td><a href="Systems.Core.TextTranslations.html#RowId">RowId</a></td>
+<td><a href="Systems.Core.TextTranslations.html#rowid">RowId</a></td>
 <td>guid</td>
 <td>Obsolete. Not used. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.TextTranslations.html#TableName">TableName</a></td>
+<td><a href="Systems.Core.TextTranslations.html#tablename">TableName</a></td>
 <td>string</td>
 <td>Obsolete. Not used. [Required] [Filter(eq)] [ORD] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.TextTranslations.html#TranslatedText">TranslatedText</a></td>
+<td><a href="Systems.Core.TextTranslations.html#translatedtext">TranslatedText</a></td>
 <td>string (nullable)</td>
 <td>Obsolete. Not used. [Filter(eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="columnname">ColumnName</h3>
 <blockquote>
 <p>Obsolete. Not used. [Required] [Filter(eq)]</p>
@@ -135,6 +130,10 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="language">Language</h3>
 <blockquote>
 <p>Obsolete. Not used. [Required] [Filter(eq)]</p>
@@ -147,8 +146,7 @@
 <p>Obsolete. Not used. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="tablename">TableName</h3>
 <blockquote>
 <p>Obsolete. Not used. [Required] [Filter(eq)] [ORD] [ReadOnly]</p>

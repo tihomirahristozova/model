@@ -91,33 +91,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Shipment.CargoTypes.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.CargoTypes.html#Code">Code</a></td>
+<td><a href="Logistics.Shipment.CargoTypes.html#code">Code</a></td>
 <td>string</td>
 <td>The unique code of the CargoType. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.CargoTypes.html#Name">Name</a></td>
+<td><a href="Logistics.Shipment.CargoTypes.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.CargoTypes.html#name">Name</a></td>
 <td>string</td>
 <td>The name of this CargoType. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.CargoTypes.html#Notes">Notes</a></td>
+<td><a href="Logistics.Shipment.CargoTypes.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this CargoType.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="code">Code</h3>
 <blockquote>
 <p>The unique code of the CargoType. [Required] [Filter(eq;like)] [ORD]</p>
@@ -125,6 +120,10 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <blockquote>
 <p>The name of this CargoType. [Required] [Filter(eq;like)]</p>

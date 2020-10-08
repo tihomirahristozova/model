@@ -91,37 +91,37 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.Projects.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Projects.Projects.html#FinishDate">FinishDate</a></td>
-<td>date (nullable)</td>
-<td>The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. [Filter(eq)]</td>
-</tr>
-<tr>
-<td><a href="Projects.Projects.html#Notes">Notes</a></td>
-<td>string (nullable)</td>
-<td>Notes for this Project.</td>
-</tr>
-<tr>
-<td><a href="Projects.Projects.html#Code">Code</a></td>
+<td><a href="Projects.Projects.html#code">Code</a></td>
 <td>string</td>
 <td>Short code for identification of projects. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Projects.Projects.html#Name">Name</a></td>
+<td><a href="Projects.Projects.html#finishdate">FinishDate</a></td>
+<td>date (nullable)</td>
+<td>The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Projects.Projects.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Projects.Projects.html#name">Name</a></td>
 <td>string</td>
 <td>The name of this Project. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Projects.Projects.html#ProjectStatus">ProjectStatus</a></td>
-<td><a href="Projects.Projects.html#ProjectStatus">Projects.ProjectsRepository.ProjectStatus</a></td>
+<td><a href="Projects.Projects.html#notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this Project.</td>
+</tr>
+<tr>
+<td><a href="Projects.Projects.html#projectstatus">ProjectStatus</a></td>
+<td><a href="Projects.Projects.html#projectstatus">ProjectStatus</a></td>
 <td>Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). [Required] [Default(0)] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.Projects.html#StartDate">StartDate</a></td>
+<td><a href="Projects.Projects.html#startdate">StartDate</a></td>
 <td>date (nullable)</td>
 <td>Expected date, when the execution of the tasks will start. null means that the start date is still unknown. [Filter(eq)]</td>
 </tr>
@@ -138,27 +138,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.Projects.html#BudgetingCurrency">BudgetingCurrency</a></td>
+<td><a href="Projects.Projects.html#budgetingcurrency">BudgetingCurrency</a></td>
 <td><a href="General.Currencies.html">General.Currencies</a> (nullable)</td>
 <td>The currency in which the project budget is calculated. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.Projects.html#ClientParty">ClientParty</a></td>
+<td><a href="Projects.Projects.html#clientparty">ClientParty</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
 <td>The external or internal client of the project. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.Projects.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="Projects.Projects.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
 <td>The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.Projects.html#ProjectManagerPerson">ProjectManagerPerson</a></td>
+<td><a href="Projects.Projects.html#projectmanagerperson">ProjectManagerPerson</a></td>
 <td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
 <td>The project manager. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.Projects.html#ProjectType">ProjectType</a></td>
+<td><a href="Projects.Projects.html#projecttype">ProjectType</a></td>
 <td><a href="Projects.ProjectTypes.html">Projects.ProjectTypes</a></td>
 <td>The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -177,32 +177,45 @@
 <tr>
 <td>Participants</td>
 <td><a href="Projects.ProjectParticipants.html">Projects.ProjectParticipants</a></td>
-<td>List of <a href="Projects.ProjectParticipants.html">ProjectParticipant</a> child objects, based on the <a href="Projects.ProjectParticipants.html#Project">Projects.ProjectParticipant.Project</a> back reference</td>
+<td>List of <a href="Projects.ProjectParticipants.html">ProjectParticipant</a> child objects, based on the <a href="Projects.ProjectParticipants.html#project">Projects.ProjectParticipant.Project</a> back reference</td>
 </tr>
 <tr>
 <td>Risks</td>
 <td><a href="Projects.ProjectRisks.html">Projects.ProjectRisks</a></td>
-<td>List of <a href="Projects.ProjectRisks.html">ProjectRisk</a> child objects, based on the <a href="Projects.ProjectRisks.html#Project">Projects.ProjectRisk.Project</a> back reference</td>
+<td>List of <a href="Projects.ProjectRisks.html">ProjectRisk</a> child objects, based on the <a href="Projects.ProjectRisks.html#project">Projects.ProjectRisk.Project</a> back reference</td>
 </tr>
 <tr>
 <td>WorkElements</td>
 <td><a href="Projects.ProjectWorkElements.html">Projects.ProjectWorkElements</a></td>
-<td>List of <a href="Projects.ProjectWorkElements.html">ProjectWorkElement</a> child objects, based on the <a href="Projects.ProjectWorkElements.html#Project">Projects.ProjectWorkElement.Project</a> back reference</td>
+<td>List of <a href="Projects.ProjectWorkElements.html">ProjectWorkElement</a> child objects, based on the <a href="Projects.ProjectWorkElements.html#project">Projects.ProjectWorkElement.Project</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="code">Code</h3>
+<blockquote>
+<p>Short code for identification of projects. [Required] [Filter(eq;like)] [ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="finishdate">FinishDate</h3>
 <blockquote>
 <p>The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. [Filter(eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>The name of this Project. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
@@ -211,27 +224,13 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="code">Code</h3>
-<blockquote>
-<p>Short code for identification of projects. [Required] [Filter(eq;like)] [ORD]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>The name of this Project. [Required] [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="projectstatus">ProjectStatus</h3>
 <blockquote>
 <p>Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). [Required] [Default(0)] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Projects.Projects.html#ProjectStatus">Projects.ProjectsRepository.ProjectStatus</a></strong><br>
-Allowed values for the <a href="Projects.Projects.html#ProjectStatus">ProjectStatus</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Projects.Projects.html#projectstatus">ProjectStatus</a></strong><br>
+Allowed values for the <a href="Projects.Projects.html#projectstatus">ProjectStatus</a> data attribute<br>
+<em>Allowed Values (Projects.ProjectsRepository.ProjectStatus Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -290,36 +289,31 @@ Allowed values for the <a href="Projects.Projects.html#ProjectStatus">ProjectSta
 <p>The currency in which the project budget is calculated. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="clientparty">ClientParty</h3>
 <blockquote>
 <p>The external or internal client of the project. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projectmanagerperson">ProjectManagerPerson</h3>
 <blockquote>
 <p>The project manager. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projecttype">ProjectType</h3>
 <blockquote>
 <p>The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTypes.html">Projects.ProjectTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Projects.Projects erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

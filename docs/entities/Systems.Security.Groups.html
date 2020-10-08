@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Security.Groups.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Systems.Security.Groups.html#EditPeriodDays">EditPeriodDays</a></td>
+<td><a href="Systems.Security.Groups.html#editperioddays">EditPeriodDays</a></td>
 <td>int32 (nullable)</td>
 <td>The number of days before which the documents can not be corrected, released or voided.</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Groups.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
-<td>The name of this Group. [Required] [Filter(like)] [ORD]</td>
-</tr>
-<tr>
-<td><a href="Systems.Security.Groups.html#GroupType">GroupType</a></td>
-<td><a href="Systems.Security.Groups.html#GroupType">Systems.Security.GroupsRepository.GroupType</a></td>
+<td><a href="Systems.Security.Groups.html#grouptype">GroupType</a></td>
+<td><a href="Systems.Security.Groups.html#grouptype">GroupType</a></td>
 <td>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default(&quot;G&quot;)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Groups.html#Notes">Notes</a></td>
+<td><a href="Systems.Security.Groups.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Security.Groups.html#name">Name</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
+<td>The name of this Group. [Required] [Filter(like)] [ORD]</td>
+</tr>
+<tr>
+<td><a href="Systems.Security.Groups.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this Group.</td>
 </tr>
@@ -128,7 +128,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Security.Groups.html#GroupForUser">GroupForUser</a></td>
+<td><a href="Systems.Security.Groups.html#groupforuser">GroupForUser</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
 <td>When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly]</td>
 </tr>
@@ -147,16 +147,11 @@
 <tr>
 <td>AccessKeys</td>
 <td><a href="Systems.Security.GroupAccessKeys.html">Systems.Security.GroupAccessKeys</a></td>
-<td>List of <a href="Systems.Security.GroupAccessKeys.html">GroupAccessKey</a> child objects, based on the <a href="Systems.Security.GroupAccessKeys.html#Group">Systems.Security.GroupAccessKey.Group</a> back reference</td>
+<td>List of <a href="Systems.Security.GroupAccessKeys.html">GroupAccessKey</a> child objects, based on the <a href="Systems.Security.GroupAccessKeys.html#group">Systems.Security.GroupAccessKey.Group</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="editperioddays">EditPeriodDays</h3>
 <blockquote>
 <p>The number of days before which the documents can not be corrected, released or voided.</p>
@@ -164,20 +159,13 @@
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>The name of this Group. [Required] [Filter(like)] [ORD]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="grouptype">GroupType</h3>
 <blockquote>
 <p>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default(&quot;G&quot;)] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Groups.html#GroupType">Systems.Security.GroupsRepository.GroupType</a></strong><br>
-Allowed values for the <a href="Systems.Security.Groups.html#GroupType">GroupType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Security.Groups.html#grouptype">GroupType</a></strong><br>
+Allowed values for the <a href="Systems.Security.Groups.html#grouptype">GroupType</a> data attribute<br>
+<em>Allowed Values (Systems.Security.GroupsRepository.GroupType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -207,6 +195,17 @@ Allowed values for the <a href="Systems.Security.Groups.html#GroupType">GroupTyp
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NormalUserDefinableGroup</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>The name of this Group. [Required] [Filter(like)] [ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this Group.</p>
@@ -220,8 +219,7 @@ Allowed values for the <a href="Systems.Security.Groups.html#GroupType">GroupTyp
 <p>When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Systems.Security.Groups erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

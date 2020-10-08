@@ -91,32 +91,32 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentTypeNotifications.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.DocumentTypeNotifications.html#DocumentEvent">DocumentEvent</a></td>
+<td><a href="General.DocumentTypeNotifications.html#documentevent">DocumentEvent</a></td>
 <td>string</td>
 <td>The event which will trigger the notification. [Required] [Default(&quot;StateChanging&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeNotifications.html#FilterXML">FilterXML</a></td>
+<td><a href="General.DocumentTypeNotifications.html#filterxml">FilterXML</a></td>
 <td>string (nullable)</td>
 <td>Filtering condition for the document. Only documents which match the filter will trigger the event.</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeNotifications.html#StateBitMask">StateBitMask</a></td>
+<td><a href="General.DocumentTypeNotifications.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.DocumentTypeNotifications.html#statebitmask">StateBitMask</a></td>
 <td>int32</td>
 <td>The document states that will trigger the event. [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeNotifications.html#StatusChangeDirection">StatusChangeDirection</a></td>
-<td><a href="General.DocumentTypeNotifications.html#StatusChangeDirection">General.DocumentTypeNotificationsRepository.StatusChangeDirection</a></td>
+<td><a href="General.DocumentTypeNotifications.html#statuschangedirection">StatusChangeDirection</a></td>
+<td><a href="General.DocumentTypeNotifications.html#statuschangedirection">StatusChangeDirection</a></td>
 <td>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '<em>'. [Required] [Default(&quot;</em>&quot;)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeNotifications.html#ToEmailAddressList">ToEmailAddressList</a></td>
+<td><a href="General.DocumentTypeNotifications.html#toemailaddresslist">ToEmailAddressList</a></td>
 <td>string</td>
 <td>List of email addressess to be notified. [Required]</td>
 </tr>
@@ -133,23 +133,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentTypeNotifications.html#DocumentType">DocumentType</a></td>
+<td><a href="General.DocumentTypeNotifications.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
 <td>The document type for which this notification is set. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeNotifications.html#UserStatus">UserStatus</a></td>
+<td><a href="General.DocumentTypeNotifications.html#userstatus">UserStatus</a></td>
 <td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
 <td>When not null, specifies that the event will be triggered only on this user status. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="documentevent">DocumentEvent</h3>
 <blockquote>
 <p>The event which will trigger the notification. [Required] [Default(&quot;StateChanging&quot;)] [Filter(eq)]</p>
@@ -165,6 +160,10 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="statebitmask">StateBitMask</h3>
 <blockquote>
 <p>The document states that will trigger the event. [Required] [Default(0)]</p>
@@ -177,9 +176,9 @@
 <blockquote>
 <p>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '<em>'. [Required] [Default(&quot;</em>&quot;)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypeNotifications.html#StatusChangeDirection">General.DocumentTypeNotificationsRepository.StatusChangeDirection</a></strong><br>
-Allowed values for the <a href="General.DocumentTypeNotifications.html#StatusChangeDirection">StatusChangeDirection</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeNotifications.html#statuschangedirection">StatusChangeDirection</a></strong><br>
+Allowed values for the <a href="General.DocumentTypeNotifications.html#statuschangedirection">StatusChangeDirection</a> data attribute<br>
+<em>Allowed Values (General.DocumentTypeNotificationsRepository.StatusChangeDirection Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -222,15 +221,13 @@ Allowed values for the <a href="General.DocumentTypeNotifications.html#StatusCha
 <p>The document type for which this notification is set. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="userstatus">UserStatus</h3>
 <blockquote>
 <p>When not null, specifies that the event will be triggered only on this user status. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.DocumentTypeNotifications erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

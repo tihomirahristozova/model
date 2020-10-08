@@ -91,45 +91,33 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Marketing.DistributionChannels.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Crm.Marketing.DistributionChannels.html#Description">Description</a></td>
-<td>string (nullable)</td>
-<td>Full description of the distribution channel.</td>
-</tr>
-<tr>
-<td><a href="Crm.Marketing.DistributionChannels.html#Code">Code</a></td>
+<td><a href="Crm.Marketing.DistributionChannels.html#code">Code</a></td>
 <td>string</td>
 <td>Unique distribution channel code. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.DistributionChannels.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
-<td>Multi-language name of the distribution channel. [Required] [Filter(eq;like)]</td>
+<td><a href="Crm.Marketing.DistributionChannels.html#description">Description</a></td>
+<td>string (nullable)</td>
+<td>Full description of the distribution channel.</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.DistributionChannels.html#IsActive">IsActive</a></td>
+<td><a href="Crm.Marketing.DistributionChannels.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Crm.Marketing.DistributionChannels.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>Is the channel active for new sales? true=Yes, false=No. [Required] [Default(true)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Crm.Marketing.DistributionChannels.html#name">Name</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
+<td>Multi-language name of the distribution channel. [Required] [Filter(eq;like)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
-<h3 id="description">Description</h3>
-<blockquote>
-<p>Full description of the distribution channel.</p>
-</blockquote>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="code">Code</h3>
 <blockquote>
 <p>Unique distribution channel code. [Required] [Filter(eq;like)]</p>
@@ -137,13 +125,17 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="name">Name</h3>
+<h3 id="description">Description</h3>
 <blockquote>
-<p>Multi-language name of the distribution channel. [Required] [Filter(eq;like)]</p>
+<p>Full description of the distribution channel.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
 <p>Is the channel active for new sales? true=Yes, false=No. [Required] [Default(true)] [Filter(eq)]</p>
@@ -152,6 +144,13 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>Multi-language name of the distribution channel. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Crm.Marketing.DistributionChannels erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

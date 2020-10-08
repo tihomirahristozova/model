@@ -91,19 +91,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Wms.Warehouses.html#Id">Id</a></td>
+<td><a href="Logistics.Wms.Warehouses.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.Warehouses.html#Notes">Notes</a></td>
-<td>string (nullable)</td>
-<td>Notes for this Warehouse.</td>
+<td><a href="Logistics.Wms.Warehouses.html#name">Name</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
+<td>Name of the warehouse (multilanguage). [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.Warehouses.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
-<td>Name of the warehouse (multilanguage). [Required] [Filter(eq;like)]</td>
+<td><a href="Logistics.Wms.Warehouses.html#notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this Warehouse.</td>
 </tr>
 </tbody>
 </table>
@@ -120,17 +120,17 @@
 <tr>
 <td>Locations</td>
 <td><a href="Logistics.Wms.WarehouseLocations.html">Logistics.Wms.WarehouseLocations</a></td>
-<td>List of <a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocation</a> child objects, based on the <a href="Logistics.Wms.WarehouseLocations.html#Warehouse">Logistics.Wms.WarehouseLocation.Warehouse</a> back reference</td>
+<td>List of <a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocation</a> child objects, based on the <a href="Logistics.Wms.WarehouseLocations.html#warehouse">Logistics.Wms.WarehouseLocation.Warehouse</a> back reference</td>
 </tr>
 <tr>
 <td>Workers</td>
 <td><a href="Logistics.Wms.WarehouseWorkers.html">Logistics.Wms.WarehouseWorkers</a></td>
-<td>List of <a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorker</a> child objects, based on the <a href="Logistics.Wms.WarehouseWorkers.html#Warehouse">Logistics.Wms.WarehouseWorker.Warehouse</a> back reference</td>
+<td>List of <a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorker</a> child objects, based on the <a href="Logistics.Wms.WarehouseWorkers.html#warehouse">Logistics.Wms.WarehouseWorker.Warehouse</a> back reference</td>
 </tr>
 <tr>
 <td>Zones</td>
 <td><a href="Logistics.Wms.WarehouseZones.html">Logistics.Wms.WarehouseZones</a></td>
-<td>List of <a href="Logistics.Wms.WarehouseZones.html">WarehouseZone</a> child objects, based on the <a href="Logistics.Wms.WarehouseZones.html#Warehouse">Logistics.Wms.WarehouseZone.Warehouse</a> back reference</td>
+<td>List of <a href="Logistics.Wms.WarehouseZones.html">WarehouseZone</a> child objects, based on the <a href="Logistics.Wms.WarehouseZones.html#warehouse">Logistics.Wms.WarehouseZone.Warehouse</a> back reference</td>
 </tr>
 </tbody>
 </table>
@@ -138,21 +138,20 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>Name of the warehouse (multilanguage). [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this Warehouse.</p>
 </blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>Name of the warehouse (multilanguage). [Required] [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Logistics.Wms.Warehouses erp.type=business-rule default-text=&quot;None&quot;]</p>

@@ -91,38 +91,38 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Rental.Assets.html#Id">Id</a></td>
+<td><a href="Applications.Rental.Assets.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#IsActive">IsActive</a></td>
+<td><a href="Applications.Rental.Assets.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>True if the asset is currently active and may be used in new documents. Deactivated assets are used only in reports. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#Notes">Notes</a></td>
+<td><a href="Applications.Rental.Assets.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this Asset.</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#RentalAssetCode">RentalAssetCode</a></td>
+<td><a href="Applications.Rental.Assets.html#rentalassetcode">RentalAssetCode</a></td>
 <td>string</td>
 <td>Unique rental asset code. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#RentalAssetName">RentalAssetName</a></td>
+<td><a href="Applications.Rental.Assets.html#rentalassetname">RentalAssetName</a></td>
 <td>string</td>
 <td>The name of the rental asset. [Required] [Filter(like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#StandardGuaranteeAmount">StandardGuaranteeAmount</a></td>
-<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
+<td><a href="Applications.Rental.Assets.html#standardguaranteeamount">StandardGuaranteeAmount</a></td>
+<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
 <td>Standard default amount of the guarantee that is set for this asset when leased. [Currency: StandardGuaranteeAmountCurrency] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#TimePeriodType">TimePeriodType</a></td>
-<td><a href="Applications.Rental.Assets.html#TimePeriodType">Applications.Rental.AssetsRepository.TimePeriodType</a> (nullable)</td>
+<td><a href="Applications.Rental.Assets.html#timeperiodtype">TimePeriodType</a></td>
+<td><a href="Applications.Rental.Assets.html#timeperiodtype">TimePeriodType</a> (nullable)</td>
 <td>Specifies the unit by which the periods of renting of this asset are measured. Possible values are: 'by days' or 'by months'. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -138,47 +138,47 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Rental.Assets.html#AccountingAsset">AccountingAsset</a></td>
+<td><a href="Applications.Rental.Assets.html#accountingasset">AccountingAsset</a></td>
 <td><a href="Finance.Assets.Assets.html">Finance.Assets.Assets</a> (nullable)</td>
 <td>When not null identifies the corresponding accounting asset. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="Applications.Rental.Assets.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
 <td>When not null, specifies that the asset is specific to a given enterprise company and may be used only in documents from this enterprise company. If null, the asset can be used in all enterprise companies. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#Product">Product</a></td>
+<td><a href="Applications.Rental.Assets.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</td>
 <td>Product which is used in the store transactions for this asset. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#RentalAssetGroup">RentalAssetGroup</a></td>
+<td><a href="Applications.Rental.Assets.html#rentalassetgroup">RentalAssetGroup</a></td>
 <td><a href="Applications.Rental.AssetGroups.html">Applications.Rental.AssetGroups</a></td>
 <td>The logical group of the rental asset. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#RentalAssetType">RentalAssetType</a></td>
+<td><a href="Applications.Rental.Assets.html#rentalassettype">RentalAssetType</a></td>
 <td><a href="Applications.Rental.AssetTypes.html">Applications.Rental.AssetTypes</a></td>
 <td>The type of the asset. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#SalesProduct">SalesProduct</a></td>
+<td><a href="Applications.Rental.Assets.html#salesproduct">SalesProduct</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</td>
 <td>Product which is used in the creation of Sales Orders to form the price of the service of renting this asset. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#SerialNumber">SerialNumber</a></td>
+<td><a href="Applications.Rental.Assets.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</td>
 <td>Serial number which in conjunction with the product for store operations allows for more accurate identification of the asset. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#StandardGuaranteeAmountCurrency">StandardGuaranteeAmountCurrency</a></td>
+<td><a href="Applications.Rental.Assets.html#standardguaranteeamountcurrency">StandardGuaranteeAmountCurrency</a></td>
 <td><a href="General.Currencies.html">General.Currencies</a> (nullable)</td>
 <td>Currency of the standard guarantee amount. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.Assets.html#WorkSchedule">WorkSchedule</a></td>
+<td><a href="Applications.Rental.Assets.html#workschedule">WorkSchedule</a></td>
 <td><a href="General.Resources.WorkSchedules.html">General.Resources.WorkSchedules</a> (nullable)</td>
 <td>Work schedule, which is used to calculate how many days this assets has been rented for (used only when the asset's lease by mode is by days). [Filter(multi eq)]</td>
 </tr>
@@ -197,7 +197,7 @@
 <tr>
 <td>Consumables</td>
 <td><a href="Applications.Rental.AssetConsumables.html">Applications.Rental.AssetConsumables</a></td>
-<td>List of <a href="Applications.Rental.AssetConsumables.html">AssetConsumable</a> child objects, based on the <a href="Applications.Rental.AssetConsumables.html#RentalAsset">Applications.Rental.AssetConsumable.RentalAsset</a> back reference</td>
+<td>List of <a href="Applications.Rental.AssetConsumables.html">AssetConsumable</a> child objects, based on the <a href="Applications.Rental.AssetConsumables.html#rentalasset">Applications.Rental.AssetConsumable.RentalAsset</a> back reference</td>
 </tr>
 </tbody>
 </table>
@@ -205,7 +205,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
@@ -240,16 +239,16 @@
 <blockquote>
 <p>Standard default amount of the guarantee that is set for this asset when leased. [Currency: StandardGuaranteeAmountCurrency] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="timeperiodtype">TimePeriodType</h3>
 <blockquote>
 <p>Specifies the unit by which the periods of renting of this asset are measured. Possible values are: 'by days' or 'by months'. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Rental.Assets.html#TimePeriodType">Applications.Rental.AssetsRepository.TimePeriodType</a> (nullable)</strong><br>
-Allowed values for the <a href="Applications.Rental.Assets.html#TimePeriodType">TimePeriodType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Applications.Rental.Assets.html#timeperiodtype">TimePeriodType</a> (nullable)</strong><br>
+Allowed values for the <a href="Applications.Rental.Assets.html#timeperiodtype">TimePeriodType</a> data attribute<br>
+<em>Allowed Values (Applications.Rental.AssetsRepository.TimePeriodType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -276,64 +275,55 @@ Allowed values for the <a href="Applications.Rental.Assets.html#TimePeriodType">
 <p>When not null identifies the corresponding accounting asset. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.Assets.html">Finance.Assets.Assets</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>When not null, specifies that the asset is specific to a given enterprise company and may be used only in documents from this enterprise company. If null, the asset can be used in all enterprise companies. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>Product which is used in the store transactions for this asset. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="rentalassetgroup">RentalAssetGroup</h3>
 <blockquote>
 <p>The logical group of the rental asset. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Rental.AssetGroups.html">Applications.Rental.AssetGroups</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="rentalassettype">RentalAssetType</h3>
 <blockquote>
 <p>The type of the asset. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Rental.AssetTypes.html">Applications.Rental.AssetTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salesproduct">SalesProduct</h3>
 <blockquote>
 <p>Product which is used in the creation of Sales Orders to form the price of the service of renting this asset. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <blockquote>
 <p>Serial number which in conjunction with the product for store operations allows for more accurate identification of the asset. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="standardguaranteeamountcurrency">StandardGuaranteeAmountCurrency</h3>
 <blockquote>
 <p>Currency of the standard guarantee amount. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workschedule">WorkSchedule</h3>
 <blockquote>
 <p>Work schedule, which is used to calculate how many days this assets has been rented for (used only when the asset's lease by mode is by days). [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Resources.WorkSchedules.html">General.Resources.WorkSchedules</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Applications.Rental.Assets erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

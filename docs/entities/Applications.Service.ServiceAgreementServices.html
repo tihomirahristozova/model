@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementServices.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.Service.ServiceAgreementServices.html#EndDate">EndDate</a></td>
+<td><a href="Applications.Service.ServiceAgreementServices.html#enddate">EndDate</a></td>
 <td>datetime (nullable)</td>
 <td>End date to which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementServices.html#LineNo">LineNo</a></td>
+<td><a href="Applications.Service.ServiceAgreementServices.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceAgreementServices.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementServices.html#Quantity">Quantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Applications.Service.ServiceAgreementServices.html#quantity">Quantity</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
 <td>Quantity of the agreed servcice or product. [Unit: QuantityUnit] [Required]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementServices.html#StartDate">StartDate</a></td>
+<td><a href="Applications.Service.ServiceAgreementServices.html#startdate">StartDate</a></td>
 <td>datetime (nullable)</td>
 <td>Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.</td>
 </tr>
@@ -128,33 +128,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementServices.html#QuantityUnit">QuantityUnit</a></td>
+<td><a href="Applications.Service.ServiceAgreementServices.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
 <td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementServices.html#ServiceAgreement">ServiceAgreement</a></td>
-<td><a href="Applications.Service.ServiceAgreements.html">Applications.Service.ServiceAgreements</a></td>
-<td>The <a href="Applications.Service.ServiceAgreementServices.html#ServiceAgreement">ServiceAgreement</a> to which this ServiceAgreementService belongs. [Required] [Filter(multi eq)] [Owner]</td>
-</tr>
-<tr>
-<td><a href="Applications.Service.ServiceAgreementServices.html#Service">Service</a></td>
+<td><a href="Applications.Service.ServiceAgreementServices.html#service">Service</a></td>
 <td><a href="Applications.Service.Services.html">Applications.Service.Services</a> (nullable)</td>
 <td>Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementServices.html#ServiceProduct">ServiceProduct</a></td>
+<td><a href="Applications.Service.ServiceAgreementServices.html#serviceagreement">ServiceAgreement</a></td>
+<td><a href="Applications.Service.ServiceAgreements.html">Applications.Service.ServiceAgreements</a></td>
+<td>The <a href="Applications.Service.ServiceAgreementServices.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementService belongs. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceAgreementServices.html#serviceproduct">ServiceProduct</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</td>
 <td>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="enddate">EndDate</h3>
 <blockquote>
 <p>End date to which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.</p>
@@ -162,6 +157,10 @@
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
 <p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</p>
@@ -177,7 +176,7 @@
 <blockquote>
 <p>Quantity of the agreed servcice or product. [Unit: QuantityUnit] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startdate">StartDate</h3>
@@ -193,29 +192,25 @@
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="serviceagreement">ServiceAgreement</h3>
-<blockquote>
-<p>The <a href="Applications.Service.ServiceAgreementServices.html#ServiceAgreement">ServiceAgreement</a> to which this ServiceAgreementService belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">Applications.Service.ServiceAgreements</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="service">Service</h3>
 <blockquote>
 <p>Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.Services.html">Applications.Service.Services</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="serviceagreement">ServiceAgreement</h3>
+<blockquote>
+<p>The <a href="Applications.Service.ServiceAgreementServices.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementService belongs. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">Applications.Service.ServiceAgreements</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceproduct">ServiceProduct</h3>
 <blockquote>
 <p>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Applications.Service.ServiceAgreementServices erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

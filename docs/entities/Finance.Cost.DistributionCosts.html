@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.DistributionCosts.html#Id">Id</a></td>
+<td><a href="Finance.Cost.DistributionCosts.html#amountbase">AmountBase</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
+<td>The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Cost.DistributionCosts.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.DistributionCosts.html#AmountBase">AmountBase</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
-<td>The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Cost.DistributionCosts.html#Notes">Notes</a></td>
+<td><a href="Finance.Cost.DistributionCosts.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this DistributionCost.</td>
 </tr>
@@ -118,30 +118,29 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.DistributionCosts.html#CostDistribution">CostDistribution</a></td>
+<td><a href="Finance.Cost.DistributionCosts.html#costdistribution">CostDistribution</a></td>
 <td><a href="Finance.Cost.Distributions.html">Finance.Cost.Distributions</a></td>
 <td>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.DistributionCosts.html#CostType">CostType</a></td>
+<td><a href="Finance.Cost.DistributionCosts.html#costtype">CostType</a></td>
 <td><a href="Finance.Cost.CostTypes.html">Finance.Cost.CostTypes</a></td>
 <td>The type of the cost, which will be distributed. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="amountbase">AmountBase</h3>
 <blockquote>
 <p>The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this DistributionCost.</p>
@@ -155,15 +154,13 @@
 <p>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Distributions.html">Finance.Cost.Distributions</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costtype">CostType</h3>
 <blockquote>
 <p>The type of the cost, which will be distributed. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">Finance.Cost.CostTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Finance.Cost.DistributionCosts erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.ActivityResources.html#Id">Id</a></td>
+<td><a href="General.Contacts.ActivityResources.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ActivityResources.html#Notes">Notes</a></td>
+<td><a href="General.Contacts.ActivityResources.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ActivityResource.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ActivityResources.html#ResourceUsagePercent">ResourceUsagePercent</a></td>
+<td><a href="General.Contacts.ActivityResources.html#resourceusagepercent">ResourceUsagePercent</a></td>
 <td>decimal</td>
 <td>The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. [Required] [Default(1)]</td>
 </tr>
@@ -118,12 +118,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.ActivityResources.html#Activity">Activity</a></td>
+<td><a href="General.Contacts.ActivityResources.html#activity">Activity</a></td>
 <td><a href="General.Contacts.Activities.html">General.Contacts.Activities</a></td>
-<td>The <a href="General.Contacts.ActivityResources.html#Activity">Activity</a> to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="General.Contacts.ActivityResources.html#activity">Activity</a> to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ActivityResources.html#Resource">Resource</a></td>
+<td><a href="General.Contacts.ActivityResources.html#resource">Resource</a></td>
 <td><a href="General.Resources.Resources.html">General.Resources.Resources</a></td>
 <td>The resource, which is required by the activity. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -133,7 +133,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
@@ -153,18 +152,16 @@
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="activity">Activity</h3>
 <blockquote>
-<p>The <a href="General.Contacts.ActivityResources.html#Activity">Activity</a> to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="General.Contacts.ActivityResources.html#activity">Activity</a> to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Activities.html">General.Contacts.Activities</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resource">Resource</h3>
 <blockquote>
 <p>The resource, which is required by the activity. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Resources.Resources.html">General.Resources.Resources</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.Contacts.ActivityResources erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

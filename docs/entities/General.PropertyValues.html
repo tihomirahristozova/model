@@ -91,32 +91,32 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.PropertyValues.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.PropertyValues.html#Description">Description</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="General.PropertyValues.html#description">Description</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>The actual description value of the property for the specified entity (the entity with the specified Id).</td>
 </tr>
 <tr>
-<td><a href="General.PropertyValues.html#EntityItemId">EntityItemId</a></td>
+<td><a href="General.PropertyValues.html#entityitemid">EntityItemId</a></td>
 <td>guid</td>
 <td>The Id of the actual entity for which the value is specified. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.PropertyValues.html#Picture">Picture</a></td>
+<td><a href="General.PropertyValues.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.PropertyValues.html#picture">Picture</a></td>
 <td>byte[] (nullable)</td>
 <td>The actual picture of the property for the specified entity (the entity with the specified Id).</td>
 </tr>
 <tr>
-<td><a href="General.PropertyValues.html#PropertyValueField">PropertyValueField</a></td>
+<td><a href="General.PropertyValues.html#propertyvaluefield">PropertyValueField</a></td>
 <td>string (nullable)</td>
 <td>The actual value of the property for the specified entity (the entity with the specified Id).</td>
 </tr>
 <tr>
-<td><a href="General.PropertyValues.html#ValueId">ValueId</a></td>
+<td><a href="General.PropertyValues.html#valueid">ValueId</a></td>
 <td>guid (nullable)</td>
 <td>The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original &quot;allowed value&quot; row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. [Filter(multi eq)]</td>
 </tr>
@@ -133,23 +133,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.PropertyValues.html#Property">Property</a></td>
+<td><a href="General.PropertyValues.html#property">Property</a></td>
 <td><a href="General.CustomProperties.html">General.CustomProperties</a></td>
 <td>The property, whose value is stored here. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="description">Description</h3>
 <blockquote>
 <p>The actual description value of the property for the specified entity (the entity with the specified Id).</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="entityitemid">EntityItemId</h3>
@@ -157,8 +152,11 @@
 <p>The Id of the actual entity for which the value is specified. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="picture">Picture</h3>
 <blockquote>
 <p>The actual picture of the property for the specified entity (the entity with the specified Id).</p>
@@ -178,16 +176,14 @@
 <p>The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original &quot;allowed value&quot; row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="property">Property</h3>
 <blockquote>
 <p>The property, whose value is stored here. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">General.CustomProperties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.PropertyValues erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Pricing.PricingModelCosts.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Crm.Pricing.PricingModelCosts.html#AmountPerUnit">AmountPerUnit</a></td>
-<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
-<td>Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency]</td>
-</tr>
-<tr>
-<td><a href="Crm.Pricing.PricingModelCosts.html#AmountPercent">AmountPercent</a></td>
+<td><a href="Crm.Pricing.PricingModelCosts.html#amountpercent">AmountPercent</a></td>
 <td>decimal (nullable)</td>
 <td>Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way.</td>
 </tr>
 <tr>
-<td><a href="Crm.Pricing.PricingModelCosts.html#LineNo">LineNo</a></td>
+<td><a href="Crm.Pricing.PricingModelCosts.html#amountperunit">AmountPerUnit</a></td>
+<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
+<td>Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency]</td>
+</tr>
+<tr>
+<td><a href="Crm.Pricing.PricingModelCosts.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Crm.Pricing.PricingModelCosts.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>The consequtive number of the cost within the pricing model. [Required]</td>
 </tr>
@@ -123,35 +123,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Pricing.PricingModelCosts.html#CostType">CostType</a></td>
+<td><a href="Crm.Pricing.PricingModelCosts.html#costtype">CostType</a></td>
 <td><a href="Finance.Cost.CostTypes.html">Finance.Cost.CostTypes</a></td>
 <td>The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Pricing.PricingModelCosts.html#MeasurementUnit">MeasurementUnit</a></td>
+<td><a href="Crm.Pricing.PricingModelCosts.html#measurementunit">MeasurementUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</td>
 <td>The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Pricing.PricingModelCosts.html#PricingModel">PricingModel</a></td>
+<td><a href="Crm.Pricing.PricingModelCosts.html#pricingmodel">PricingModel</a></td>
 <td><a href="Crm.Pricing.PricingModels.html">Crm.Pricing.PricingModels</a></td>
 <td>Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
-<h3 id="amountperunit">AmountPerUnit</h3>
-<blockquote>
-<p>Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="amountpercent">AmountPercent</h3>
 <blockquote>
 <p>Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way.</p>
@@ -159,6 +147,17 @@
 <p><em>Type</em>: <strong>decimal (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="amountperunit">AmountPerUnit</h3>
+<blockquote>
+<p>Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
 <p>The consequtive number of the cost within the pricing model. [Required]</p>
@@ -176,22 +175,19 @@
 <p>The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">Finance.Cost.CostTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="measurementunit">MeasurementUnit</h3>
 <blockquote>
 <p>The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="pricingmodel">PricingModel</h3>
 <blockquote>
 <p>Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pricing.PricingModels.html">Crm.Pricing.PricingModels</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Crm.Pricing.PricingModelCosts erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

@@ -91,32 +91,32 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Shipment.Carriers.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Carriers.html#AgreementEndDate">AgreementEndDate</a></td>
+<td><a href="Logistics.Shipment.Carriers.html#agreementenddate">AgreementEndDate</a></td>
 <td>date (nullable)</td>
 <td>The ending date of the agreement with this carrier. null for agreements which are still active. [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Carriers.html#AgreementStartDate">AgreementStartDate</a></td>
+<td><a href="Logistics.Shipment.Carriers.html#agreementstartdate">AgreementStartDate</a></td>
 <td>date</td>
 <td>The start date of the agreement with this carrier. [Required] [Default(Today)] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Carriers.html#Code">Code</a></td>
+<td><a href="Logistics.Shipment.Carriers.html#code">Code</a></td>
 <td>string</td>
 <td>Unique carrier code (or call sign). The code is unique within all enterprise companies. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Carriers.html#IsActive">IsActive</a></td>
+<td><a href="Logistics.Shipment.Carriers.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Carriers.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>Specifies whether the carrier agreement is active. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Carriers.html#Notes">Notes</a></td>
+<td><a href="Logistics.Shipment.Carriers.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this Carrier.</td>
 </tr>
@@ -133,23 +133,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Shipment.Carriers.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="Logistics.Shipment.Carriers.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
 <td>The enterprise company which signed the carrier agreement. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Carriers.html#Supplier">Supplier</a></td>
+<td><a href="Logistics.Shipment.Carriers.html#supplier">Supplier</a></td>
 <td><a href="Logistics.Procurement.Suppliers.html">Logistics.Procurement.Suppliers</a></td>
 <td>The supplier contract with the carrier. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="agreementenddate">AgreementEndDate</h3>
 <blockquote>
 <p>The ending date of the agreement with this carrier. null for agreements which are still active. [Filter(eq;ge;le)]</p>
@@ -172,6 +167,10 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
 <p>Specifies whether the carrier agreement is active. [Required] [Default(true)] [Filter(eq)]</p>
@@ -193,15 +192,13 @@
 <p>The enterprise company which signed the carrier agreement. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="supplier">Supplier</h3>
 <blockquote>
 <p>The supplier contract with the carrier. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.Suppliers.html">Logistics.Procurement.Suppliers</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Logistics.Shipment.Carriers erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

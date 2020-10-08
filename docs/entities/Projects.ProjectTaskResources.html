@@ -91,47 +91,47 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.ProjectTaskResources.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Projects.ProjectTaskResources.html#BillingPricePerHour">BillingPricePerHour</a></td>
+<td><a href="Projects.ProjectTaskResources.html#billingpriceperhour">BillingPricePerHour</a></td>
 <td>decimal (nullable)</td>
 <td>When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. null means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price. [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskResources.html#BillingTotalAmount">BillingTotalAmount</a></td>
+<td><a href="Projects.ProjectTaskResources.html#billingtotalamount">BillingTotalAmount</a></td>
 <td>decimal (nullable)</td>
 <td>When not null, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). null means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour. [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskResources.html#CostPerHour">CostPerHour</a></td>
+<td><a href="Projects.ProjectTaskResources.html#costperhour">CostPerHour</a></td>
 <td>decimal</td>
 <td>Cost per hour for the resource usage for this task (in the currency of the project). [Required] [Default(0)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskResources.html#Notes">Notes</a></td>
+<td><a href="Projects.ProjectTaskResources.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Projects.ProjectTaskResources.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ProjectTaskResource.</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskResources.html#PerUseCost">PerUseCost</a></td>
-<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
+<td><a href="Projects.ProjectTaskResources.html#perusecost">PerUseCost</a></td>
+<td><a href="../data-types.md#amount">Amount</a> (nullable)</td>
 <td>One time cost for each resource usage, specified in the projects currency. [Currency: ProjectTask.Project.BudgetingCurrency]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskResources.html#ResourceUsageHours">ResourceUsageHours</a></td>
+<td><a href="Projects.ProjectTaskResources.html#resourceusagehours">ResourceUsageHours</a></td>
 <td>decimal</td>
 <td>The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage. [Required] [Default(0)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskResources.html#ResourceUsagePercent">ResourceUsagePercent</a></td>
+<td><a href="Projects.ProjectTaskResources.html#resourceusagepercent">ResourceUsagePercent</a></td>
 <td>decimal</td>
 <td>The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. [Required] [Default(1)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskResources.html#TaskTotalCost">TaskTotalCost</a></td>
+<td><a href="Projects.ProjectTaskResources.html#tasktotalcost">TaskTotalCost</a></td>
 <td>decimal</td>
 <td>Total cost for this task (in the currency of the project). [Required] [Default(0)] [Filter(eq)]</td>
 </tr>
@@ -148,28 +148,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.ProjectTaskResources.html#ProjectTask">ProjectTask</a></td>
+<td><a href="Projects.ProjectTaskResources.html#projecttask">ProjectTask</a></td>
 <td><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a></td>
 <td>The task for which the resource is planned. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskResources.html#Resource">Resource</a></td>
+<td><a href="Projects.ProjectTaskResources.html#resource">Resource</a></td>
 <td><a href="General.Resources.Resources.html">General.Resources.Resources</a></td>
 <td>The planned resource. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectTaskResources.html#ResourceInstance">ResourceInstance</a></td>
+<td><a href="Projects.ProjectTaskResources.html#resourceinstance">ResourceInstance</a></td>
 <td><a href="General.Resources.ResourceInstances.html">General.Resources.ResourceInstances</a> (nullable)</td>
 <td>The concrete resource instance, which should be used. null when no specific resource instance is required. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="billingpriceperhour">BillingPricePerHour</h3>
 <blockquote>
 <p>When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. null means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price. [Filter(eq)]</p>
@@ -198,6 +193,10 @@
 <em>Default Value</em>: <strong>0</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF(((obj.PerUseCost != null) AndAlso (obj.ResourceUsageHours != 0)), ((obj.TaskTotalCost - obj.PerUseCost.Value) / obj.ResourceUsageHours), obj.CostPerHour)</code></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this ProjectTaskResource.</p>
@@ -209,7 +208,7 @@
 <blockquote>
 <p>One time cost for each resource usage, specified in the projects currency. [Currency: ProjectTask.Project.BudgetingCurrency]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="resourceusagehours">ResourceUsageHours</h3>
@@ -250,22 +249,19 @@
 <p>The task for which the resource is planned. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resource">Resource</h3>
 <blockquote>
 <p>The planned resource. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Resources.Resources.html">General.Resources.Resources</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resourceinstance">ResourceInstance</h3>
 <blockquote>
 <p>The concrete resource instance, which should be used. null when no specific resource instance is required. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Resources.ResourceInstances.html">General.Resources.ResourceInstances</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Projects.ProjectTaskResources erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

@@ -91,102 +91,102 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Security.Users.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Systems.Security.Users.html#AccessFailedCount">AccessFailedCount</a></td>
+<td><a href="Systems.Security.Users.html#accessfailedcount">AccessFailedCount</a></td>
 <td>int32</td>
 <td>Indicates how many times the user has failed to login. May be used for locking out the user. [Required] [Default(0)] [Filter(eq;ge;le)] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#Active">Active</a></td>
+<td><a href="Systems.Security.Users.html#active">Active</a></td>
 <td>boolean</td>
 <td>True when the login is currently active and the user can log in. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#CreationTimeUtc">CreationTimeUtc</a></td>
+<td><a href="Systems.Security.Users.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
 <td>The date and time (in UTC), when the user was created. [Required] [Default(Now)] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#DefaultCulture">DefaultCulture</a></td>
+<td><a href="Systems.Security.Users.html#defaultculture">DefaultCulture</a></td>
 <td>string (nullable)</td>
 <td>The preferred default culture of the user for UI, notifications, etc. null means &quot;en-US&quot;. (Introduced in version 20.1.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#Email">Email</a></td>
+<td><a href="Systems.Security.Users.html#email">Email</a></td>
 <td>string (nullable)</td>
 <td>Unique email of the user. Can be null because there may be login providers that don't use emails. [Filter(multi eq;like)] [ORD] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#EmailConfirmed">EmailConfirmed</a></td>
+<td><a href="Systems.Security.Users.html#emailconfirmed">EmailConfirmed</a></td>
 <td>boolean</td>
 <td>Indicates whether the email address for the specified user has been verified. [Required] [Default(false)] [Filter(eq)] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#IsAdmin">IsAdmin</a></td>
+<td><a href="Systems.Security.Users.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Security.Users.html#isadmin">IsAdmin</a></td>
 <td>boolean</td>
 <td>True if the user is administrator, otherwise false. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#LockoutEndUtc">LockoutEndUtc</a></td>
+<td><a href="Systems.Security.Users.html#lockoutendutc">LockoutEndUtc</a></td>
 <td>datetime (nullable)</td>
 <td>Contains the date and time (in UTC) until the user is locked. null when the user is not locked. [Filter(eq;ge;le;like)] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#Login">Login</a></td>
+<td><a href="Systems.Security.Users.html#login">Login</a></td>
 <td>string</td>
 <td>The login name of the user, which is usually the email. [Required] [Filter(multi eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#Notes">Notes</a></td>
+<td><a href="Systems.Security.Users.html#name">Name</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
+<td>The full name of the user. [Required] [Filter(like)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Security.Users.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this User.</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#Password">Password</a></td>
+<td><a href="Systems.Security.Users.html#password">Password</a></td>
 <td>string (nullable)</td>
 <td>The password hash of the user, stored in the format, specified in Password Format.</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#PasswordFormat">PasswordFormat</a></td>
-<td><a href="Systems.Security.Users.html#PasswordFormat">Systems.Security.UsersRepository.PasswordFormat</a></td>
+<td><a href="Systems.Security.Users.html#passwordformat">PasswordFormat</a></td>
+<td><a href="Systems.Security.Users.html#passwordformat">PasswordFormat</a></td>
 <td>The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. [Required] [Default(&quot;MD5&quot;)] [Filter(eq)] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#PhoneNumber">PhoneNumber</a></td>
+<td><a href="Systems.Security.Users.html#phonenumber">PhoneNumber</a></td>
 <td>string (nullable)</td>
 <td>Used only for two-factor authentication. null when phone-based two-factor is not used. [Filter(eq;like)] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#PhoneNumberConfirmed">PhoneNumberConfirmed</a></td>
+<td><a href="Systems.Security.Users.html#phonenumberconfirmed">PhoneNumberConfirmed</a></td>
 <td>boolean</td>
 <td>Indicates whether the Phone Number has been verified. [Required] [Default(false)] [Filter(eq)] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#TwoFactorEnabled">TwoFactorEnabled</a></td>
+<td><a href="Systems.Security.Users.html#twofactorenabled">TwoFactorEnabled</a></td>
 <td>boolean</td>
 <td>Indicates whether two-factor authentication has been enabled. [Required] [Default(false)] [Filter(eq)] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
-<td>The full name of the user. [Required] [Filter(like)]</td>
-</tr>
-<tr>
-<td><a href="Systems.Security.Users.html#UserType">UserType</a></td>
-<td><a href="Systems.Security.Users.html#UserType">Systems.Security.UsersRepository.UserType</a></td>
+<td><a href="Systems.Security.Users.html#usertype">UserType</a></td>
+<td><a href="Systems.Security.Users.html#usertype">UserType</a></td>
 <td>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. [Required] [Default(&quot;INT&quot;)] [Filter(multi eq)] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#VoiceExtensionNumbers">VoiceExtensionNumbers</a></td>
+<td><a href="Systems.Security.Users.html#voiceextensionnumbers">VoiceExtensionNumbers</a></td>
 <td>string (nullable)</td>
 <td>Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration.</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#WindowsUserName">WindowsUserName</a></td>
+<td><a href="Systems.Security.Users.html#windowsusername">WindowsUserName</a></td>
 <td>string (nullable)</td>
 <td>The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user.</td>
 </tr>
@@ -203,12 +203,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Security.Users.html#Domain">Domain</a></td>
+<td><a href="Systems.Security.Users.html#domain">Domain</a></td>
 <td><a href="Systems.Security.Domains.html">Systems.Security.Domains</a> (nullable)</td>
 <td>The domain, to which the user belongs. [Filter(multi eq)] (Introduced in version 20.1.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.Users.html#Person">Person</a></td>
+<td><a href="Systems.Security.Users.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
 <td>The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. [Filter(multi eq)]</td>
 </tr>
@@ -227,31 +227,26 @@
 <tr>
 <td>AccessKeys</td>
 <td><a href="Systems.Security.UserAccessKeys.html">Systems.Security.UserAccessKeys</a></td>
-<td>List of <a href="Systems.Security.UserAccessKeys.html">UserAccessKey</a> child objects, based on the <a href="Systems.Security.UserAccessKeys.html#User">Systems.Security.UserAccessKey.User</a> back reference</td>
+<td>List of <a href="Systems.Security.UserAccessKeys.html">UserAccessKey</a> child objects, based on the <a href="Systems.Security.UserAccessKeys.html#user">Systems.Security.UserAccessKey.User</a> back reference</td>
 </tr>
 <tr>
 <td>Groups</td>
 <td><a href="Systems.Security.UserGroups.html">Systems.Security.UserGroups</a></td>
-<td>List of <a href="Systems.Security.UserGroups.html">UserGroup</a> child objects, based on the <a href="Systems.Security.UserGroups.html#User">Systems.Security.UserGroup.User</a> back reference</td>
+<td>List of <a href="Systems.Security.UserGroups.html">UserGroup</a> child objects, based on the <a href="Systems.Security.UserGroups.html#user">Systems.Security.UserGroup.User</a> back reference</td>
 </tr>
 <tr>
 <td>ProviderLogins</td>
 <td><a href="Systems.Security.UserProviderLogins.html">Systems.Security.UserProviderLogins</a></td>
-<td>List of <a href="Systems.Security.UserProviderLogins.html">UserProviderLogin</a> child objects, based on the <a href="Systems.Security.UserProviderLogins.html#User">Systems.Security.UserProviderLogin.User</a> back reference</td>
+<td>List of <a href="Systems.Security.UserProviderLogins.html">UserProviderLogin</a> child objects, based on the <a href="Systems.Security.UserProviderLogins.html#user">Systems.Security.UserProviderLogin.User</a> back reference</td>
 </tr>
 <tr>
 <td>ProviderTokens</td>
 <td><a href="Systems.Security.UserProviderTokens.html">Systems.Security.UserProviderTokens</a></td>
-<td>List of <a href="Systems.Security.UserProviderTokens.html">UserProviderToken</a> child objects, based on the <a href="Systems.Security.UserProviderTokens.html#User">Systems.Security.UserProviderToken.User</a> back reference</td>
+<td>List of <a href="Systems.Security.UserProviderTokens.html">UserProviderToken</a> child objects, based on the <a href="Systems.Security.UserProviderTokens.html#user">Systems.Security.UserProviderToken.User</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="accessfailedcount">AccessFailedCount</h3>
 <blockquote>
 <p>Indicates how many times the user has failed to login. May be used for locking out the user. [Required] [Default(0)] [Filter(eq;ge;le)] (Introduced in version 18.2.100.0)</p>
@@ -298,6 +293,10 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isadmin">IsAdmin</h3>
 <blockquote>
 <p>True if the user is administrator, otherwise false. [Required] [Default(false)] [Filter(eq)]</p>
@@ -320,6 +319,13 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>The full name of the user. [Required] [Filter(like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this User.</p>
@@ -338,9 +344,9 @@
 <blockquote>
 <p>The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. [Required] [Default(&quot;MD5&quot;)] [Filter(eq)] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html#PasswordFormat">Systems.Security.UsersRepository.PasswordFormat</a></strong><br>
-Allowed values for the <a href="Systems.Security.Users.html#PasswordFormat">PasswordFormat</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html#passwordformat">PasswordFormat</a></strong><br>
+Allowed values for the <a href="Systems.Security.Users.html#passwordformat">PasswordFormat</a> data attribute<br>
+<em>Allowed Values (Systems.Security.UsersRepository.PasswordFormat Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -385,20 +391,13 @@ Allowed values for the <a href="Systems.Security.Users.html#PasswordFormat">Pass
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>The full name of the user. [Required] [Filter(like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="usertype">UserType</h3>
 <blockquote>
 <p>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. [Required] [Default(&quot;INT&quot;)] [Filter(multi eq)] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html#UserType">Systems.Security.UsersRepository.UserType</a></strong><br>
-Allowed values for the <a href="Systems.Security.Users.html#UserType">UserType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html#usertype">UserType</a></strong><br>
+Allowed values for the <a href="Systems.Security.Users.html#usertype">UserType</a> data attribute<br>
+<em>Allowed Values (Systems.Security.UsersRepository.UserType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -452,15 +451,13 @@ Allowed values for the <a href="Systems.Security.Users.html#UserType">UserType</
 <p>The domain, to which the user belongs. [Filter(multi eq)] (Introduced in version 20.1.100.0)</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Domains.html">Systems.Security.Domains</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
 <blockquote>
 <p>The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Systems.Security.Users erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

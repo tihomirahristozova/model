@@ -91,28 +91,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.TaskTypes.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Projects.TaskTypes.html#Description">Description</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="Projects.TaskTypes.html#description">Description</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>Multilanguage description of the task type.</td>
 </tr>
 <tr>
-<td><a href="Projects.TaskTypes.html#DisplayOrder">DisplayOrder</a></td>
+<td><a href="Projects.TaskTypes.html#displayorder">DisplayOrder</a></td>
 <td>int32</td>
 <td>Display order position of the task. Lowest numbers are shown first (on top). [Required] [Default(1)]</td>
 </tr>
 <tr>
-<td><a href="Projects.TaskTypes.html#Icon">Icon</a></td>
+<td><a href="Projects.TaskTypes.html#icon">Icon</a></td>
 <td>byte[] (nullable)</td>
 <td>Icon representing the task type. Preferrably 32x32 pixels.</td>
 </tr>
 <tr>
-<td><a href="Projects.TaskTypes.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="Projects.TaskTypes.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Projects.TaskTypes.html#name">Name</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
 <td>The multilanguage task type name. [Required] [Filter(multi eq;like)]</td>
 </tr>
 </tbody>
@@ -128,23 +128,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.TaskTypes.html#ProjectType">ProjectType</a></td>
+<td><a href="Projects.TaskTypes.html#projecttype">ProjectType</a></td>
 <td><a href="Projects.ProjectTypes.html">Projects.ProjectTypes</a> (nullable)</td>
 <td>When not null, specifies that this task type can be used only for projects of the specified type. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="description">Description</h3>
 <blockquote>
 <p>Multilanguage description of the task type.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="displayorder">DisplayOrder</h3>
@@ -162,11 +157,15 @@
 <p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <blockquote>
 <p>The multilanguage task type name. [Required] [Filter(multi eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -175,8 +174,7 @@
 <p>When not null, specifies that this task type can be used only for projects of the specified type. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTypes.html">Projects.ProjectTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Projects.TaskTypes erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

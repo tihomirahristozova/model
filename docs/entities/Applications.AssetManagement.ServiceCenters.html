@@ -91,12 +91,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.ServiceCenters.html#Id">Id</a></td>
+<td><a href="Applications.AssetManagement.ServiceCenters.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ServiceCenters.html#Notes">Notes</a></td>
+<td><a href="Applications.AssetManagement.ServiceCenters.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ServiceCenter.</td>
 </tr>
@@ -113,12 +113,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.ServiceCenters.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="Applications.AssetManagement.ServiceCenters.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
 <td>The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ServiceCenters.html#Party">Party</a></td>
+<td><a href="Applications.AssetManagement.ServiceCenters.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
 <td>The person or company, actually performing the maintenance. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -128,7 +128,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
@@ -143,15 +142,13 @@
 <p>The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="party">Party</h3>
 <blockquote>
 <p>The person or company, actually performing the maintenance. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Applications.AssetManagement.ServiceCenters erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

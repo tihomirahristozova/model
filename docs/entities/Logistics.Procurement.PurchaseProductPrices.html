@@ -91,47 +91,47 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#FromDate">FromDate</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#fromdate">FromDate</a></td>
 <td>datetime (nullable)</td>
 <td>Starting date of validity of the price. [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#MaxQuantity">MaxQuantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a> (nullable)</td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#maxquantity">MaxQuantity</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a> (nullable)</td>
 <td>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#MinQuantity">MinQuantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a> (nullable)</td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#minquantity">MinQuantity</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a> (nullable)</td>
 <td>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#Notes">Notes</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this PurchaseProductPrice.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#Price">Price</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#price">Price</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
 <td>Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#PriceQuantity">PriceQuantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#pricequantity">PriceQuantity</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
 <td>The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#Priority">Priority</a></td>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#Priority">Logistics.Procurement.PurchaseProductPricesRepository.Priority</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#priority">Priority</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#priority">Priority</a></td>
 <td>Priority of the price comparative to other prices. [Required] [Default(2)] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#ThruDate">ThruDate</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#thrudate">ThruDate</a></td>
 <td>datetime (nullable)</td>
 <td>Ending date (inclusive) of the validity of the price. [Filter(eq;ge;le)]</td>
 </tr>
@@ -148,43 +148,38 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#Currency">Currency</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#currency">Currency</a></td>
 <td><a href="General.Currencies.html">General.Currencies</a></td>
 <td>The currency of the price. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
 <td>Determines for which enterprise company this price is used. If not specified the price is used for all enterprise companies. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#PriceQuantityMeasurementUnit">PriceQuantityMeasurementUnit</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#pricequantitymeasurementunit">PriceQuantityMeasurementUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
 <td>The measurement unit of Price_Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#Product">Product</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The product for which a purchase price will be defined. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#PurchasePriceList">PurchasePriceList</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#purchasepricelist">PurchasePriceList</a></td>
 <td><a href="Logistics.Procurement.PurchasePriceLists.html">Logistics.Procurement.PurchasePriceLists</a> (nullable)</td>
 <td>When not null, specifies that this price is valid only when the purchase document is set to work with the specified price list. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseProductPrices.html#Supplier">Supplier</a></td>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#supplier">Supplier</a></td>
 <td><a href="Logistics.Procurement.Suppliers.html">Logistics.Procurement.Suppliers</a> (nullable)</td>
 <td>When not null, specifies that the price is valid only for the specified supplier. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="fromdate">FromDate</h3>
 <blockquote>
 <p>Starting date of validity of the price. [Filter(eq;ge;le)]</p>
@@ -192,18 +187,22 @@
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="maxquantity">MaxQuantity</h3>
 <blockquote>
 <p>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="minquantity">MinQuantity</h3>
 <blockquote>
 <p>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
@@ -217,7 +216,7 @@
 <blockquote>
 <p>Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -225,7 +224,7 @@
 <blockquote>
 <p>The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -233,9 +232,9 @@
 <blockquote>
 <p>Priority of the price comparative to other prices. [Required] [Default(2)] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseProductPrices.html#Priority">Logistics.Procurement.PurchaseProductPricesRepository.Priority</a></strong><br>
-Allowed values for the <a href="Logistics.Procurement.PurchaseProductPrices.html#Priority">Priority</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseProductPrices.html#priority">Priority</a></strong><br>
+Allowed values for the <a href="Logistics.Procurement.PurchaseProductPrices.html#priority">Priority</a> data attribute<br>
+<em>Allowed Values (Logistics.Procurement.PurchaseProductPricesRepository.Priority Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -282,22 +281,19 @@ Allowed values for the <a href="Logistics.Procurement.PurchaseProductPrices.html
 <p>The currency of the price. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>Determines for which enterprise company this price is used. If not specified the price is used for all enterprise companies. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="pricequantitymeasurementunit">PriceQuantityMeasurementUnit</h3>
 <blockquote>
 <p>The measurement unit of Price_Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.BaseUnit.IfNullThen(obj.PriceQuantityMeasurementUnit)</code></p>
 <h3 id="product">Product</h3>
@@ -305,22 +301,19 @@ Allowed values for the <a href="Logistics.Procurement.PurchaseProductPrices.html
 <p>The product for which a purchase price will be defined. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchasepricelist">PurchasePriceList</h3>
 <blockquote>
 <p>When not null, specifies that this price is valid only when the purchase document is set to work with the specified price list. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchasePriceLists.html">Logistics.Procurement.PurchasePriceLists</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="supplier">Supplier</h3>
 <blockquote>
 <p>When not null, specifies that the price is valid only for the specified supplier. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.Suppliers.html">Logistics.Procurement.Suppliers</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Logistics.Procurement.PurchaseProductPrices erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

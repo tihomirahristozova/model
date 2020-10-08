@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Wms.WarehouseLocations.html#Id">Id</a></td>
+<td><a href="Logistics.Wms.WarehouseLocations.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseLocations.html#LocationAddress">LocationAddress</a></td>
+<td><a href="Logistics.Wms.WarehouseLocations.html#locationaddress">LocationAddress</a></td>
 <td>string</td>
 <td>The address of the location. Should be unique within the warehouse. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseLocations.html#Notes">Notes</a></td>
+<td><a href="Logistics.Wms.WarehouseLocations.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this WarehouseLocation.</td>
 </tr>
@@ -118,12 +118,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Wms.WarehouseLocations.html#Warehouse">Warehouse</a></td>
+<td><a href="Logistics.Wms.WarehouseLocations.html#warehouse">Warehouse</a></td>
 <td><a href="Logistics.Wms.Warehouses.html">Logistics.Wms.Warehouses</a></td>
 <td>The warehouse containing the location. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseLocations.html#WarehouseZone">WarehouseZone</a></td>
+<td><a href="Logistics.Wms.WarehouseLocations.html#warehousezone">WarehouseZone</a></td>
 <td><a href="Logistics.Wms.WarehouseZones.html">Logistics.Wms.WarehouseZones</a></td>
 <td>The zone, which contains the location. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -133,7 +133,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="locationaddress">LocationAddress</h3>
 <blockquote>
@@ -155,15 +154,13 @@
 <p>The warehouse containing the location. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.Warehouses.html">Logistics.Wms.Warehouses</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehousezone">WarehouseZone</h3>
 <blockquote>
 <p>The zone, which contains the location. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseZones.html">Logistics.Wms.WarehouseZones</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Logistics.Wms.WarehouseLocations erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

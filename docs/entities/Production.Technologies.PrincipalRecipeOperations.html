@@ -91,72 +91,72 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#ConditionalPropertyDescription">ConditionalPropertyDescription</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#conditionalpropertydescription">ConditionalPropertyDescription</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>The desired description of the Conditional Property. .</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#ConditionalPropertyValue">ConditionalPropertyValue</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#conditionalpropertyvalue">ConditionalPropertyValue</a></td>
 <td>string (nullable)</td>
 <td>The desired value of the Conditional Property. .</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#LineOrd">LineOrd</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#lineord">LineOrd</a></td>
 <td>int32</td>
 <td>Consecutive line number within the principal recipe. [Required]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#MinimumConcurrentStartTimeMinutes">MinimumConcurrentStartTimeMinutes</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#minimumconcurrentstarttimeminutes">MinimumConcurrentStartTimeMinutes</a></td>
 <td>int32 (nullable)</td>
 <td>How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting.</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#MoveTimeMinutes">MoveTimeMinutes</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#movetimeminutes">MoveTimeMinutes</a></td>
 <td>int32</td>
 <td>Time to move the lot to the next operation in minutes. [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#Notes">Notes</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this PrincipalRecipeOperation.</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#OperationDescription">OperationDescription</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#operationdescription">OperationDescription</a></td>
 <td>string (nullable)</td>
 <td>The description of the operation. Initially copied from the generic operation definition.</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#RunTimeMinutes">RunTimeMinutes</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#runtimeminutes">RunTimeMinutes</a></td>
 <td>int32</td>
 <td>Duration of the operation for one piece in the standard measurement unit of the product. [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#ScrapRate">ScrapRate</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#scraprate">ScrapRate</a></td>
 <td>decimal</td>
 <td>Standard rate of scrap during the operation. [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#SetupTimeMinutes">SetupTimeMinutes</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#setuptimeminutes">SetupTimeMinutes</a></td>
 <td>int32</td>
 <td>Time needed to setup the equipment. [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#Tooling">Tooling</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#tooling">Tooling</a></td>
 <td>string (nullable)</td>
 <td>The tools needed for the routing step.</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#UseQuantity">UseQuantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#usequantity">UseQuantity</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
 <td>Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#WaitTimeMinutes">WaitTimeMinutes</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#waittimeminutes">WaitTimeMinutes</a></td>
 <td>int32</td>
 <td>Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
@@ -173,48 +173,43 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#ConditionalProperty">ConditionalProperty</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#conditionalproperty">ConditionalProperty</a></td>
 <td><a href="General.CustomProperties.html">General.CustomProperties</a> (nullable)</td>
 <td>When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#Operation">Operation</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#operation">Operation</a></td>
 <td><a href="Production.Resources.Operations.html">Production.Resources.Operations</a> (nullable)</td>
 <td>The generic operation definition. The data is copied locally and can be modified for this specific record. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#OperationInstruction">OperationInstruction</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#operationinstruction">OperationInstruction</a></td>
 <td><a href="Production.Resources.OperationInstructions.html">Production.Resources.OperationInstructions</a> (nullable)</td>
 <td>Link to additional data, containing instructions in external format. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#PrincipalRecipe">PrincipalRecipe</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#principalrecipe">PrincipalRecipe</a></td>
 <td><a href="Production.Technologies.PrincipalRecipes.html">Production.Technologies.PrincipalRecipes</a></td>
-<td>The <a href="Production.Technologies.PrincipalRecipeOperations.html#PrincipalRecipe">PrincipalRecipe</a> to which this PrincipalRecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Production.Technologies.PrincipalRecipeOperations.html#principalrecipe">PrincipalRecipe</a> to which this PrincipalRecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#UseQuantityUnit">UseQuantityUnit</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#usequantityunit">UseQuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
 <td>The measurement unit of Use_Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeOperations.html#WorkgroupResource">WorkgroupResource</a></td>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#workgroupresource">WorkgroupResource</a></td>
 <td><a href="Production.Resources.WorkgroupResources.html">Production.Resources.WorkgroupResources</a></td>
 <td>Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="conditionalpropertydescription">ConditionalPropertyDescription</h3>
 <blockquote>
 <p>The desired description of the Conditional Property. .</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionalpropertyvalue">ConditionalPropertyValue</h3>
@@ -224,6 +219,10 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineord">LineOrd</h3>
 <blockquote>
 <p>Consecutive line number within the principal recipe. [Required]</p>
@@ -307,7 +306,7 @@
 <blockquote>
 <p>Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -329,36 +328,31 @@
 <p>When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">General.CustomProperties</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="operation">Operation</h3>
 <blockquote>
 <p>The generic operation definition. The data is copied locally and can be modified for this specific record. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.Operations.html">Production.Resources.Operations</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="operationinstruction">OperationInstruction</h3>
 <blockquote>
 <p>Link to additional data, containing instructions in external format. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.OperationInstructions.html">Production.Resources.OperationInstructions</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="principalrecipe">PrincipalRecipe</h3>
 <blockquote>
-<p>The <a href="Production.Technologies.PrincipalRecipeOperations.html#PrincipalRecipe">PrincipalRecipe</a> to which this PrincipalRecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Production.Technologies.PrincipalRecipeOperations.html#principalrecipe">PrincipalRecipe</a> to which this PrincipalRecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Technologies.PrincipalRecipes.html">Production.Technologies.PrincipalRecipes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="usequantityunit">UseQuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of Use_Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF((obj.WorkgroupResource.Resource != null), obj.WorkgroupResource.Resource.PrimaryUnit, obj.UseQuantityUnit)</code></p>
 <h3 id="workgroupresource">WorkgroupResource</h3>
@@ -366,8 +360,7 @@
 <p>Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">Production.Resources.WorkgroupResources</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Operation.WorkgroupResource</code></p>
 <h2 id="business-rules">Business Rules</h2>

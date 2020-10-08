@@ -91,67 +91,67 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.Mail.Boxes.html#Active">Active</a></td>
+<td><a href="Applications.Mail.Boxes.html#active">Active</a></td>
 <td>boolean</td>
 <td>True when the mail box is active for mail sinchronization, sending and receiving. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#EmailAddress">EmailAddress</a></td>
+<td><a href="Applications.Mail.Boxes.html#emailaddress">EmailAddress</a></td>
 <td>string</td>
 <td>The email address associated with this mail box. [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#IsDefault">IsDefault</a></td>
+<td><a href="Applications.Mail.Boxes.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.Mail.Boxes.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
 <td>True when this is the default mailbox for the user. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#IsEncrypted">IsEncrypted</a></td>
+<td><a href="Applications.Mail.Boxes.html#isencrypted">IsEncrypted</a></td>
 <td>boolean</td>
 <td>True when the mailbox messages are stored in encrypted format. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#ResetOnNextSync">ResetOnNextSync</a></td>
+<td><a href="Applications.Mail.Boxes.html#resetonnextsync">ResetOnNextSync</a></td>
 <td>boolean</td>
 <td>Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#SendServerAddress">SendServerAddress</a></td>
+<td><a href="Applications.Mail.Boxes.html#sendserveraddress">SendServerAddress</a></td>
 <td>string (nullable)</td>
 <td>The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server.</td>
 </tr>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#SentItemsFolderName">SentItemsFolderName</a></td>
+<td><a href="Applications.Mail.Boxes.html#sentitemsfoldername">SentItemsFolderName</a></td>
 <td>string (nullable)</td>
 <td>The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne).</td>
 </tr>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#SignatureHtml">SignatureHtml</a></td>
+<td><a href="Applications.Mail.Boxes.html#signaturehtml">SignatureHtml</a></td>
 <td>string (nullable)</td>
 <td>Html text of the default signature, when creating new emails from this mailbox. When is null, a default generic signature is attached.</td>
 </tr>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#SyncPassword">SyncPassword</a></td>
+<td><a href="Applications.Mail.Boxes.html#syncpassword">SyncPassword</a></td>
 <td>string (nullable)</td>
 <td>The password to supply to the server when retrieving email. null when the connection is not setup or the server does not require user name.</td>
 </tr>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#SyncProtocol">SyncProtocol</a></td>
-<td><a href="Applications.Mail.Boxes.html#SyncProtocol">Applications.Mail.BoxesRepository.SyncProtocol</a> (nullable)</td>
+<td><a href="Applications.Mail.Boxes.html#syncprotocol">SyncProtocol</a></td>
+<td><a href="Applications.Mail.Boxes.html#syncprotocol">SyncProtocol</a> (nullable)</td>
 <td>Synchronization protocol, 'POP3' or 'IMAP'. null means that syncrhonization is not setup.</td>
 </tr>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#SyncServerAddress">SyncServerAddress</a></td>
+<td><a href="Applications.Mail.Boxes.html#syncserveraddress">SyncServerAddress</a></td>
 <td>string (nullable)</td>
 <td>Incoming and outgoing mail server internet address. null when synchronization is not setup.</td>
 </tr>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#SyncUserName">SyncUserName</a></td>
+<td><a href="Applications.Mail.Boxes.html#syncusername">SyncUserName</a></td>
 <td>string (nullable)</td>
 <td>User name to supply to the server, when retrieving email. null when the connection is not setup or the server does not require user name.</td>
 </tr>
@@ -168,7 +168,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Mail.Boxes.html#OwnerUser">OwnerUser</a></td>
+<td><a href="Applications.Mail.Boxes.html#owneruser">OwnerUser</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a></td>
 <td>The user, who owns the mailbox. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -187,16 +187,11 @@
 <tr>
 <td>Folders</td>
 <td><a href="Applications.Mail.BoxFolders.html">Applications.Mail.BoxFolders</a></td>
-<td>List of <a href="Applications.Mail.BoxFolders.html">BoxFolder</a> child objects, based on the <a href="Applications.Mail.BoxFolders.html#MailBox">Applications.Mail.BoxFolder.MailBox</a> back reference</td>
+<td>List of <a href="Applications.Mail.BoxFolders.html">BoxFolder</a> child objects, based on the <a href="Applications.Mail.BoxFolders.html#mailbox">Applications.Mail.BoxFolder.MailBox</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="active">Active</h3>
 <blockquote>
 <p>True when the mail box is active for mail sinchronization, sending and receiving. [Required] [Default(true)] [Filter(eq)]</p>
@@ -212,6 +207,10 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
 <blockquote>
 <p>True when this is the default mailbox for the user. [Required] [Default(true)] [Filter(eq)]</p>
@@ -268,9 +267,9 @@
 <blockquote>
 <p>Synchronization protocol, 'POP3' or 'IMAP'. null means that syncrhonization is not setup.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Mail.Boxes.html#SyncProtocol">Applications.Mail.BoxesRepository.SyncProtocol</a> (nullable)</strong><br>
-Allowed values for the <a href="Applications.Mail.Boxes.html#SyncProtocol">SyncProtocol</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Applications.Mail.Boxes.html#syncprotocol">SyncProtocol</a> (nullable)</strong><br>
+Allowed values for the <a href="Applications.Mail.Boxes.html#syncprotocol">SyncProtocol</a> data attribute<br>
+<em>Allowed Values (Applications.Mail.BoxesRepository.SyncProtocol Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -315,8 +314,7 @@ Allowed values for the <a href="Applications.Mail.Boxes.html#SyncProtocol">SyncP
 <p>The user, who owns the mailbox. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Applications.Mail.Boxes erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

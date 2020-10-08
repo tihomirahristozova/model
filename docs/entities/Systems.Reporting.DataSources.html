@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Reporting.DataSources.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Systems.Reporting.DataSources.html#BaseQueryName">BaseQueryName</a></td>
+<td><a href="Systems.Reporting.DataSources.html#basequeryname">BaseQueryName</a></td>
 <td>string</td>
 <td>The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Reporting.DataSources.html#Name">Name</a></td>
+<td><a href="Systems.Reporting.DataSources.html#datasourcetype">DataSourceType</a></td>
+<td><a href="Systems.Reporting.DataSources.html#datasourcetype">DataSourceType</a></td>
+<td>'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . [Required] [Default(&quot;M&quot;)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Reporting.DataSources.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Reporting.DataSources.html#name">Name</a></td>
 <td>string</td>
 <td>The name of the data source. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Reporting.DataSources.html#DataSourceType">DataSourceType</a></td>
-<td><a href="Systems.Reporting.DataSources.html#DataSourceType">Systems.Reporting.DataSourcesRepository.DataSourceType</a></td>
-<td>'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . [Required] [Default(&quot;M&quot;)] [Filter(eq)]</td>
-</tr>
-<tr>
-<td><a href="Systems.Reporting.DataSources.html#ShowParentTables">ShowParentTables</a></td>
+<td><a href="Systems.Reporting.DataSources.html#showparenttables">ShowParentTables</a></td>
 <td>boolean</td>
 <td>Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. [Required] [Default(false)]</td>
 </tr>
@@ -130,26 +130,14 @@
 <tr>
 <td>Queries</td>
 <td><a href="Systems.Reporting.DataSourceQueries.html">Systems.Reporting.DataSourceQueries</a></td>
-<td>List of <a href="Systems.Reporting.DataSourceQueries.html">DataSourceQuery</a> child objects, based on the <a href="Systems.Reporting.DataSourceQueries.html#DataSource">Systems.Reporting.DataSourceQuery.DataSource</a> back reference</td>
+<td>List of <a href="Systems.Reporting.DataSourceQueries.html">DataSourceQuery</a> child objects, based on the <a href="Systems.Reporting.DataSourceQueries.html#datasource">Systems.Reporting.DataSourceQuery.DataSource</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="basequeryname">BaseQueryName</h3>
 <blockquote>
 <p>The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>The name of the data source. [Required] [Filter(eq;like)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
@@ -158,9 +146,9 @@
 <blockquote>
 <p>'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . [Required] [Default(&quot;M&quot;)] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Reporting.DataSources.html#DataSourceType">Systems.Reporting.DataSourcesRepository.DataSourceType</a></strong><br>
-Allowed values for the <a href="Systems.Reporting.DataSources.html#DataSourceType">DataSourceType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Reporting.DataSources.html#datasourcetype">DataSourceType</a></strong><br>
+Allowed values for the <a href="Systems.Reporting.DataSources.html#datasourcetype">DataSourceType</a> data attribute<br>
+<em>Allowed Values (Systems.Reporting.DataSourcesRepository.DataSourceType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -186,6 +174,17 @@ Allowed values for the <a href="Systems.Reporting.DataSources.html#DataSourceTyp
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>MultiTable</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>The name of the data source. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="showparenttables">ShowParentTables</h3>
 <blockquote>
 <p>Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. [Required] [Default(false)]</p>

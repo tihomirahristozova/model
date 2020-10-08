@@ -91,58 +91,53 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Core.Translations.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Systems.Core.Translations.html#Active">Active</a></td>
+<td><a href="Systems.Core.Translations.html#active">Active</a></td>
 <td>boolean</td>
 <td>True when the translation is verified and activated. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.Translations.html#ApplicationName">ApplicationName</a></td>
+<td><a href="Systems.Core.Translations.html#applicationname">ApplicationName</a></td>
 <td>string (nullable)</td>
 <td>The application, containing the resource. For base resource types (T,C,H), this is null. [Filter(eq)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.Translations.html#CreationTime">CreationTime</a></td>
+<td><a href="Systems.Core.Translations.html#creationtime">CreationTime</a></td>
 <td>datetime</td>
 <td>Timestamp when the translation was first created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.Translations.html#Language">Language</a></td>
+<td><a href="Systems.Core.Translations.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Core.Translations.html#language">Language</a></td>
 <td>string</td>
 <td>The code of the language or language-culture pair. Standard Windows codes are used. English=&quot;en&quot;; US English = &quot;en-us&quot;. [Required] [Default(&quot;en&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.Translations.html#ResourceId">ResourceId</a></td>
+<td><a href="Systems.Core.Translations.html#resourceid">ResourceId</a></td>
 <td>string</td>
 <td>The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.Translations.html#ResourceType">ResourceType</a></td>
-<td><a href="Systems.Core.Translations.html#ResourceType">Systems.Core.TranslationsRepository.ResourceType</a></td>
+<td><a href="Systems.Core.Translations.html#resourcetype">ResourceType</a></td>
+<td><a href="Systems.Core.Translations.html#resourcetype">ResourceType</a></td>
 <td>T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. [Required] [Default(&quot;S&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.Translations.html#TranslationField">TranslationField</a></td>
+<td><a href="Systems.Core.Translations.html#translationfield">TranslationField</a></td>
 <td>string</td>
 <td>The translated text. [Required]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.Translations.html#UpdateTime">UpdateTime</a></td>
+<td><a href="Systems.Core.Translations.html#updatetime">UpdateTime</a></td>
 <td>datetime</td>
 <td>When the translation was last updated. [Required] [Default(Now)] [ReadOnly]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="active">Active</h3>
 <blockquote>
 <p>True when the translation is verified and activated. [Required] [Default(true)] [Filter(eq)]</p>
@@ -166,6 +161,10 @@
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="language">Language</h3>
 <blockquote>
 <p>The code of the language or language-culture pair. Standard Windows codes are used. English=&quot;en&quot;; US English = &quot;en-us&quot;. [Required] [Default(&quot;en&quot;)] [Filter(eq)]</p>
@@ -185,9 +184,9 @@
 <blockquote>
 <p>T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. [Required] [Default(&quot;S&quot;)] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Core.Translations.html#ResourceType">Systems.Core.TranslationsRepository.ResourceType</a></strong><br>
-Allowed values for the <a href="Systems.Core.Translations.html#ResourceType">ResourceType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Core.Translations.html#resourcetype">ResourceType</a></strong><br>
+Allowed values for the <a href="Systems.Core.Translations.html#resourcetype">ResourceType</a> data attribute<br>
+<em>Allowed Values (Systems.Core.TranslationsRepository.ResourceType Enum Members)</em></p>
 <table>
 <thead>
 <tr>

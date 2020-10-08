@@ -91,32 +91,32 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#GrantTimeUtc">GrantTimeUtc</a></td>
+<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#granttimeutc">GrantTimeUtc</a></td>
 <td>datetime</td>
 <td>The time (in UTC) when the authorization was granted. [Required] [Default(NowUtc)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#IsRevoked">IsRevoked</a></td>
+<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#isrevoked">IsRevoked</a></td>
 <td>boolean</td>
 <td>Specifies whether the grant is explicitly revoked. [Required] [Default(false)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#Notes">Notes</a></td>
+<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this TrustedApplicationAuthorization.</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#ValidFromUtc">ValidFromUtc</a></td>
+<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#validfromutc">ValidFromUtc</a></td>
 <td>datetime (nullable)</td>
 <td>The start of the validitiy of the authorization. null means that there is no restriction.</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#ValidUntilUtc">ValidUntilUtc</a></td>
+<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#validuntilutc">ValidUntilUtc</a></td>
 <td>datetime (nullable)</td>
 <td>The time (in UTC) when the grant expires. null means that there is no time restriction.</td>
 </tr>
@@ -133,28 +133,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#ContextUser">ContextUser</a></td>
+<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#contextuser">ContextUser</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a></td>
 <td>The user, whose permissions are granted to the application. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#GrantingUser">GrantingUser</a></td>
+<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#grantinguser">GrantingUser</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a></td>
 <td>The user, who authorized the application. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#TrustedApplication">TrustedApplication</a></td>
+<td><a href="Systems.Security.TrustedApplicationAuthorizations.html#trustedapplication">TrustedApplication</a></td>
 <td><a href="Systems.Security.TrustedApplications.html">Systems.Security.TrustedApplications</a></td>
 <td>The application, which is authorized. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="granttimeutc">GrantTimeUtc</h3>
 <blockquote>
 <p>The time (in UTC) when the authorization was granted. [Required] [Default(NowUtc)]</p>
@@ -163,6 +158,10 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isrevoked">IsRevoked</h3>
 <blockquote>
 <p>Specifies whether the grant is explicitly revoked. [Required] [Default(false)]</p>
@@ -198,22 +197,19 @@
 <p>The user, whose permissions are granted to the application. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="grantinguser">GrantingUser</h3>
 <blockquote>
 <p>The user, who authorized the application. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="trustedapplication">TrustedApplication</h3>
 <blockquote>
 <p>The application, which is authorized. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.TrustedApplications.html">Systems.Security.TrustedApplications</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Systems.Security.TrustedApplicationAuthorizations erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

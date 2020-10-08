@@ -91,7 +91,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Marketing.TargetGroupMembers.html#Id">Id</a></td>
+<td><a href="Crm.Marketing.TargetGroupMembers.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
@@ -108,12 +108,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Marketing.TargetGroupMembers.html#Party">Party</a></td>
+<td><a href="Crm.Marketing.TargetGroupMembers.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
 <td>The member party. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.TargetGroupMembers.html#TargetGroup">TargetGroup</a></td>
+<td><a href="Crm.Marketing.TargetGroupMembers.html#targetgroup">TargetGroup</a></td>
 <td><a href="Crm.Marketing.TargetGroups.html">Crm.Marketing.TargetGroups</a></td>
 <td>The target group, which includes the member party. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
@@ -123,7 +123,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="party">Party</h3>
@@ -131,15 +130,13 @@
 <p>The member party. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="targetgroup">TargetGroup</h3>
 <blockquote>
 <p>The target group, which includes the member party. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.TargetGroups.html">Crm.Marketing.TargetGroups</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Crm.Marketing.TargetGroupMembers erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

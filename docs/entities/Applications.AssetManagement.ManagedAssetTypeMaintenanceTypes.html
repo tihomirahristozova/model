@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#DefaultParameterChange">DefaultParameterChange</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#defaultparameterchange">DefaultParameterChange</a></td>
 <td>int32 (nullable)</td>
 <td>Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means, that maintenances are not scheduled based on parameter change.</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#DefaultScheduleDays">DefaultScheduleDays</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#defaultscheduledays">DefaultScheduleDays</a></td>
 <td>int32 (nullable)</td>
 <td>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in days.</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#DefaultScheduleMonths">DefaultScheduleMonths</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#defaultschedulemonths">DefaultScheduleMonths</a></td>
 <td>int32 (nullable)</td>
 <td>Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in months.</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#Notes">Notes</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ManagedAssetTypeMaintenanceType.</td>
 </tr>
@@ -128,23 +128,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#MaintenanceType">MaintenanceType</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#maintenancetype">MaintenanceType</a></td>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html">Applications.AssetManagement.MaintenanceTypes</a></td>
 <td>The allowed maintenance type for the asset type. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#ManagedAssetType">ManagedAssetType</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#managedassettype">ManagedAssetType</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssetTypes.html">Applications.AssetManagement.ManagedAssetTypes</a></td>
 <td>The asset type for which the allowed maintenance type is defined. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="defaultparameterchange">DefaultParameterChange</h3>
 <blockquote>
 <p>Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means, that maintenances are not scheduled based on parameter change.</p>
@@ -166,6 +161,10 @@
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this ManagedAssetTypeMaintenanceType.</p>
@@ -179,15 +178,13 @@
 <p>The allowed maintenance type for the asset type. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceTypes.html">Applications.AssetManagement.MaintenanceTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="managedassettype">ManagedAssetType</h3>
 <blockquote>
 <p>The asset type for which the allowed maintenance type is defined. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssetTypes.html">Applications.AssetManagement.ManagedAssetTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

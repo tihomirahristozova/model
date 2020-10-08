@@ -91,53 +91,53 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#Id">Id</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#cost">Cost</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
+<td>The cost of the specified quantity of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.RecipeIngredients.html#fixedscrapquantity">FixedScrapQuantity</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
+<td>Fixed scrap quantity of the material, needed for setup. [Unit: UsageUnit] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Production.Technologies.RecipeIngredients.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#Cost">Cost</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
-<td>The cost of the specified quantity of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#FixedScrapQuantity">FixedScrapQuantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
-<td>Fixed scrap quantity of the material, needed for setup. [Unit: UsageUnit] [Required] [Default(0)]</td>
-</tr>
-<tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#LineOrd">LineOrd</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#lineord">LineOrd</a></td>
 <td>int32</td>
 <td>The order of this line in the recipe. [Required]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#Notes">Notes</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this RecipeIngredient.</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#Price">Price</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#price">Price</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
 <td>Total price of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#ScrapRate">ScrapRate</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#scraprate">ScrapRate</a></td>
 <td>decimal</td>
 <td>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#UnitCost">UnitCost</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#unitcost">UnitCost</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
 <td>Cost of 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#UnitPrice">UnitPrice</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#unitprice">UnitPrice</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
 <td>Price for 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#UsageQuantity">UsageQuantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a> (nullable)</td>
+<td><a href="Production.Technologies.RecipeIngredients.html#usagequantity">UsageQuantity</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a> (nullable)</td>
 <td>Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. [Unit: UsageUnit] [Default(1.000)] [Filter(ge;le)]</td>
 </tr>
 </tbody>
@@ -153,48 +153,43 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#Material">Material</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#material">Material</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#Operation">Operation</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#operation">Operation</a></td>
 <td><a href="Production.Resources.Operations.html">Production.Resources.Operations</a> (nullable)</td>
 <td>Specifies for which operation this ingredient will be used. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#PrincipalRecipeIngredient">PrincipalRecipeIngredient</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#principalrecipeingredient">PrincipalRecipeIngredient</a></td>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html">Production.Technologies.PrincipalRecipeIngredients</a> (nullable)</td>
 <td>The principal recipe ingredient which was used to create this recipe ingredient. null means that this ingredient is standalone, not created with principal recipe ingredient. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#Recipe">Recipe</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#recipe">Recipe</a></td>
 <td><a href="Production.Technologies.Recipes.html">Production.Technologies.Recipes</a></td>
-<td>The <a href="Production.Technologies.RecipeIngredients.html#Recipe">Recipe</a> to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Production.Technologies.RecipeIngredients.html#recipe">Recipe</a> to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#Store">Store</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</td>
 <td>The store from which to retrieve the material. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#UsageUnit">UsageUnit</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html#usageunit">UsageUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
 <td>The measurement unit of Usage_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="cost">Cost</h3>
 <blockquote>
 <p>The cost of the specified quantity of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -202,10 +197,14 @@
 <blockquote>
 <p>Fixed scrap quantity of the material, needed for setup. [Unit: UsageUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineord">LineOrd</h3>
 <blockquote>
 <p>The order of this line in the recipe. [Required]</p>
@@ -228,7 +227,7 @@
 <blockquote>
 <p>Total price of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -244,7 +243,7 @@
 <blockquote>
 <p>Cost of 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -252,7 +251,7 @@
 <blockquote>
 <p>Price for 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -260,7 +259,7 @@
 <blockquote>
 <p>Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. [Unit: UsageUnit] [Default(1.000)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -270,43 +269,37 @@
 <p>The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="operation">Operation</h3>
 <blockquote>
 <p>Specifies for which operation this ingredient will be used. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.Operations.html">Production.Resources.Operations</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="principalrecipeingredient">PrincipalRecipeIngredient</h3>
 <blockquote>
 <p>The principal recipe ingredient which was used to create this recipe ingredient. null means that this ingredient is standalone, not created with principal recipe ingredient. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Technologies.PrincipalRecipeIngredients.html">Production.Technologies.PrincipalRecipeIngredients</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="recipe">Recipe</h3>
 <blockquote>
-<p>The <a href="Production.Technologies.RecipeIngredients.html#Recipe">Recipe</a> to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Production.Technologies.RecipeIngredients.html#recipe">Recipe</a> to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Technologies.Recipes.html">Production.Technologies.Recipes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
 <blockquote>
 <p>The store from which to retrieve the material. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="usageunit">UsageUnit</h3>
 <blockquote>
 <p>The measurement unit of Usage_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Production.Technologies.RecipeIngredients erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

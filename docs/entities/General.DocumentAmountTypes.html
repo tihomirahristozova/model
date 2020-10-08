@@ -91,77 +91,77 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.DocumentAmountTypes.html#AddToCustomer">AddToCustomer</a></td>
+<td><a href="General.DocumentAmountTypes.html#addtocustomer">AddToCustomer</a></td>
 <td>boolean</td>
 <td>True means that the amount will be charged to the primary customer of the document. [Required] [Default(true)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#AddToLine">AddToLine</a></td>
+<td><a href="General.DocumentAmountTypes.html#addtoline">AddToLine</a></td>
 <td>boolean</td>
 <td>True means that the resulting amount will be added to the amount of each respective line. [Required] [Default(true)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#AllowedDirections">AllowedDirections</a></td>
-<td><a href="General.DocumentAmountTypes.html#AllowedDirections">General.DocumentAmountTypesRepository.AllowedDirections</a> (nullable)</td>
+<td><a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a></td>
+<td><a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a> (nullable)</td>
 <td>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#AmountInputAllowed">AmountInputAllowed</a></td>
+<td><a href="General.DocumentAmountTypes.html#amountinputallowed">AmountInputAllowed</a></td>
 <td>boolean</td>
 <td>True when the user is allowed to input fixed amount for distribution. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#AmountTypeCode">AmountTypeCode</a></td>
+<td><a href="General.DocumentAmountTypes.html#amounttypecode">AmountTypeCode</a></td>
 <td>string</td>
 <td>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. [Required] [Filter(multi eq)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#AmountTypeName">AmountTypeName</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="General.DocumentAmountTypes.html#amounttypename">AmountTypeName</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
 <td>The name of the amount type. [Required] [Filter(like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#BaseOnLines">BaseOnLines</a></td>
+<td><a href="General.DocumentAmountTypes.html#baseonlines">BaseOnLines</a></td>
 <td>boolean</td>
 <td>True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. [Required] [Default(true)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#DefaultPercent">DefaultPercent</a></td>
+<td><a href="General.DocumentAmountTypes.html#defaultpercent">DefaultPercent</a></td>
 <td>decimal (nullable)</td>
 <td>Default percent for amounts for which percent input is allowed; null otherwise.</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#Description">Description</a></td>
+<td><a href="General.DocumentAmountTypes.html#description">Description</a></td>
 <td>string (nullable)</td>
 <td>The description of this DocumentAmountType.</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#DistributeBy">DistributeBy</a></td>
-<td><a href="General.DocumentAmountTypes.html#DistributeBy">General.DocumentAmountTypesRepository.DistributeBy</a></td>
+<td><a href="General.DocumentAmountTypes.html#distributeby">DistributeBy</a></td>
+<td><a href="General.DocumentAmountTypes.html#distributeby">DistributeBy</a></td>
 <td>Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). [Required] [Default(&quot;AMOUNT&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#IsActive">IsActive</a></td>
+<td><a href="General.DocumentAmountTypes.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>True when the amount type is active for new records; false - otherwise. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#PercentInputAllowed">PercentInputAllowed</a></td>
+<td><a href="General.DocumentAmountTypes.html#percentinputallowed">PercentInputAllowed</a></td>
 <td>boolean</td>
 <td>True when the user is allowed to input percent of total for distribution. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#RoundScale">RoundScale</a></td>
+<td><a href="General.DocumentAmountTypes.html#roundscale">RoundScale</a></td>
 <td>int32 (nullable)</td>
 <td>The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#UnitAmountInputAllowed">UnitAmountInputAllowed</a></td>
+<td><a href="General.DocumentAmountTypes.html#unitamountinputallowed">UnitAmountInputAllowed</a></td>
 <td>boolean</td>
 <td>Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
@@ -178,7 +178,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentAmountTypes.html#DistributeByMeasurementCategory">DistributeByMeasurementCategory</a></td>
+<td><a href="General.DocumentAmountTypes.html#distributebymeasurementcategory">DistributeByMeasurementCategory</a></td>
 <td><a href="General.MeasurementCategories.html">General.MeasurementCategories</a> (nullable)</td>
 <td>Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)]</td>
 </tr>
@@ -197,21 +197,16 @@
 <tr>
 <td>Dependencies</td>
 <td><a href="General.DocumentAmountTypeDependencies.html">General.DocumentAmountTypeDependencies</a></td>
-<td>List of <a href="General.DocumentAmountTypeDependencies.html">DocumentAmountTypeDependency</a> child objects, based on the <a href="General.DocumentAmountTypeDependencies.html#DocumentAmountType">General.DocumentAmountTypeDependency.DocumentAmountType</a> back reference</td>
+<td>List of <a href="General.DocumentAmountTypeDependencies.html">DocumentAmountTypeDependency</a> child objects, based on the <a href="General.DocumentAmountTypeDependencies.html#documentamounttype">General.DocumentAmountTypeDependency.DocumentAmountType</a> back reference</td>
 </tr>
 <tr>
 <td>Settings</td>
 <td><a href="Finance.Intrastat.DocumentAmountTypeSettings.html">Finance.Intrastat.DocumentAmountTypeSettings</a></td>
-<td>List of <a href="Finance.Intrastat.DocumentAmountTypeSettings.html">DocumentAmountTypeSetting</a> child objects, based on the <a href="Finance.Intrastat.DocumentAmountTypeSettings.html#DocumentAmountType">Finance.Intrastat.DocumentAmountTypeSetting.DocumentAmountType</a> back reference</td>
+<td>List of <a href="Finance.Intrastat.DocumentAmountTypeSettings.html">DocumentAmountTypeSetting</a> child objects, based on the <a href="Finance.Intrastat.DocumentAmountTypeSettings.html#documentamounttype">Finance.Intrastat.DocumentAmountTypeSetting.DocumentAmountType</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="addtocustomer">AddToCustomer</h3>
 <blockquote>
 <p>True means that the amount will be charged to the primary customer of the document. [Required] [Default(true)]</p>
@@ -232,9 +227,9 @@
 <blockquote>
 <p>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html#AllowedDirections">General.DocumentAmountTypesRepository.AllowedDirections</a> (nullable)</strong><br>
-Allowed values for the <a href="General.DocumentAmountTypes.html#AllowedDirections">AllowedDirections</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a> (nullable)</strong><br>
+Allowed values for the <a href="General.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a> data attribute<br>
+<em>Allowed Values (General.DocumentAmountTypesRepository.AllowedDirections Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -279,7 +274,7 @@ Allowed values for the <a href="General.DocumentAmountTypes.html#AllowedDirectio
 <blockquote>
 <p>The name of the amount type. [Required] [Filter(like)] [ORD]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="baseonlines">BaseOnLines</h3>
@@ -308,9 +303,9 @@ Allowed values for the <a href="General.DocumentAmountTypes.html#AllowedDirectio
 <blockquote>
 <p>Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). [Required] [Default(&quot;AMOUNT&quot;)] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html#DistributeBy">General.DocumentAmountTypesRepository.DistributeBy</a></strong><br>
-Allowed values for the <a href="General.DocumentAmountTypes.html#DistributeBy">DistributeBy</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html#distributeby">DistributeBy</a></strong><br>
+Allowed values for the <a href="General.DocumentAmountTypes.html#distributeby">DistributeBy</a> data attribute<br>
+<em>Allowed Values (General.DocumentAmountTypesRepository.DistributeBy Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -336,6 +331,10 @@ Allowed values for the <a href="General.DocumentAmountTypes.html#DistributeBy">D
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Amount</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
 <p>True when the amount type is active for new records; false - otherwise. [Required] [Default(true)] [Filter(eq)]</p>
@@ -373,8 +372,7 @@ Allowed values for the <a href="General.DocumentAmountTypes.html#DistributeBy">D
 <p>Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementCategories.html">General.MeasurementCategories</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.DocumentAmountTypes erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

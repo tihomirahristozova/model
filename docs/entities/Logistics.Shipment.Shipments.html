@@ -91,119 +91,119 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#CompleteTime">CompleteTime</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#completetime">CompleteTime</a></td>
 <td>datetime (nullable)</td>
 <td>Exact time, when the document was last completed[Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#CreationTime">CreationTime</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#creationtime">CreationTime</a></td>
 <td>datetime</td>
 <td>Date/Time when the document was created [Required][Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#CreationUser">CreationUser</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#creationuser">CreationUser</a></td>
 <td>string</td>
 <td>The login name of the user, who created the document [Required][Filter(like)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#DocumentDate">DocumentDate</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#documentdate">DocumentDate</a></td>
 <td>datetime</td>
 <td>The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#DocumentNo">DocumentNo</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#documentno">DocumentNo</a></td>
 <td>string</td>
 <td>Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#DocumentVersion">DocumentVersion</a></td>
-<td>int32</td>
-<td>[Filter(eq;ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#DocumentNotes">DocumentNotes</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#documentnotes">DocumentNotes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this Document</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#ParentDocumentRelationshipType">ParentDocumentRelationshipType</a></td>
-<td><a href="Logistics.Shipment.Shipments.html#ParentDocumentRelationshipType">General.ParentDocumentRelationshipType</a> (nullable)</td>
-<td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</td>
+<td><a href="Logistics.Shipment.Shipments.html#documentversion">DocumentVersion</a></td>
+<td>int32</td>
+<td>[Filter(eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#PlanningOnly">PlanningOnly</a></td>
-<td>boolean (nullable)</td>
-<td>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#ReadOnly">ReadOnly</a></td>
-<td>boolean</td>
-<td>True - the document is read only; false - the document is not read only [Required]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#ReferenceDate">ReferenceDate</a></td>
-<td>datetime (nullable)</td>
-<td>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#ReferenceDocumentNo">ReferenceDocumentNo</a></td>
-<td>string (nullable)</td>
-<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#ReleaseTime">ReleaseTime</a></td>
-<td>datetime (nullable)</td>
-<td>Exact time, when the document was first released [Filter(ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#State">State</a></td>
-<td><a href="Logistics.Shipment.Shipments.html#State">General.DocumentState</a></td>
-<td>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#Void">Void</a></td>
-<td>boolean</td>
-<td>True if the document is null and void [Required][Filter(eq)]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#VoidReason">VoidReason</a></td>
-<td>string (nullable)</td>
-<td>Reason for voiding the document, entered by the user</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#VoidTime">VoidTime</a></td>
-<td>datetime (nullable)</td>
-<td>Date/time when the document has become void</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#VoidUser">VoidUser</a></td>
-<td>string (nullable)</td>
-<td>The user who voided the document</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#EntityName">EntityName</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#entityname">EntityName</a></td>
 <td>string</td>
 <td>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#IsReleased">IsReleased</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#isreleased">IsReleased</a></td>
 <td>boolean</td>
 <td>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#IsSingleExecution">IsSingleExecution</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
 <td>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#RequiredDeliveryDate">RequiredDeliveryDate</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#parentdocumentrelationshiptype">ParentDocumentRelationshipType</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#parentdocumentrelationshiptype">ParentDocumentRelationshipType</a> (nullable)</td>
+<td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#planningonly">PlanningOnly</a></td>
+<td>boolean (nullable)</td>
+<td>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#readonly">ReadOnly</a></td>
+<td>boolean</td>
+<td>True - the document is read only; false - the document is not read only [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#referencedate">ReferenceDate</a></td>
+<td>datetime (nullable)</td>
+<td>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#referencedocumentno">ReferenceDocumentNo</a></td>
+<td>string (nullable)</td>
+<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#releasetime">ReleaseTime</a></td>
+<td>datetime (nullable)</td>
+<td>Exact time, when the document was first released [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#requireddeliverydate">RequiredDeliveryDate</a></td>
 <td>datetime (nullable)</td>
 <td>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly. When null means that the required delivery date is unknown or the document contains many required delivery dates (e.g. in the lines). [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#state">State</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#state">DocumentState</a></td>
+<td>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#void">Void</a></td>
+<td>boolean</td>
+<td>True if the document is null and void [Required][Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#voidreason">VoidReason</a></td>
+<td>string (nullable)</td>
+<td>Reason for voiding the document, entered by the user</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#voidtime">VoidTime</a></td>
+<td>datetime (nullable)</td>
+<td>Date/time when the document has become void</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#voiduser">VoidUser</a></td>
+<td>string (nullable)</td>
+<td>The user who voided the document</td>
 </tr>
 </tbody>
 </table>
@@ -218,114 +218,114 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#AccessKey">AccessKey</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#accesskey">AccessKey</a></td>
 <td><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</td>
 <td>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#AdjustedDocument">AdjustedDocument</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#adjusteddocument">AdjustedDocument</a></td>
 <td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
 <td>The primary document, which the current document adjusts. null when this is not an adjustment document</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#AssignedToUser">AssignedToUser</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#assignedtouser">AssignedToUser</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
 <td>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#CurrencyDirectory">CurrencyDirectory</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#currencydirectory">CurrencyDirectory</a></td>
 <td><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</td>
 <td>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#DocumentType">DocumentType</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
 <td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
 <td>The enterprise company which issued the document [Required]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#EnterpriseCompanyLocation">EnterpriseCompanyLocation</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</td>
 <td>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#FromCompanyDivision">FromCompanyDivision</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#fromcompanydivision">FromCompanyDivision</a></td>
 <td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</td>
 <td>The division of the company, issuing the document. null when the document is not issued by any specific division</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#FromParty">FromParty</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#fromparty">FromParty</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
 <td>The party which issued the document [Required]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#MasterDocument">MasterDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a></td>
-<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#Parent">Parent</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
-<td>In a multi-document tree, this is the direct parent document. If this is the root it is null</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#PrimeCauseDocument">PrimeCauseDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
-<td>The document that is the prime cause for creation of the current document</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#ResponsiblePerson">ResponsiblePerson</a></td>
-<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
-<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#ReverseOfDocument">ReverseOfDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
-<td>The document which the current document is reverse of</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#Sequence">Sequence</a></td>
-<td><a href="General.Sequences.html">General.Sequences</a> (nullable)</td>
-<td>The sequence that will be used to give new numbers to the documents of this type</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#ToCompanyDivision">ToCompanyDivision</a></td>
-<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></td>
-<td>The division of the company, receiving the document. null when the document is not received by any specific division</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#ToParty">ToParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
-<td>The party which should receive the document</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#UserStatus">UserStatus</a></td>
-<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
-<td>The user status of this document if applicable for this document type. null means unknown or not yet set</td>
-</tr>
-<tr>
-<td><a href="Logistics.Shipment.Shipments.html#IssuedByPerson">IssuedByPerson</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#issuedbyperson">IssuedByPerson</a></td>
 <td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
 <td>The person who signed for the shipment. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#ReceivedByPerson">ReceivedByPerson</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#masterdocument">MasterDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a></td>
+<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#parent">Parent</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>In a multi-document tree, this is the direct parent document. If this is the root it is null</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#primecausedocument">PrimeCauseDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>The document that is the prime cause for creation of the current document</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#receivedbyperson">ReceivedByPerson</a></td>
 <td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
 <td>The person who received the goods for/from the shipment . [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#ShipFromStore">ShipFromStore</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#responsibleperson">ResponsiblePerson</a></td>
+<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
+<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#reverseofdocument">ReverseOfDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>The document which the current document is reverse of</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#sequence">Sequence</a></td>
+<td><a href="General.Sequences.html">General.Sequences</a> (nullable)</td>
+<td>The sequence that will be used to give new numbers to the documents of this type</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#shipfromstore">ShipFromStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></td>
 <td>The store from which the shipment should be effected. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Shipment.Shipments.html#ShipToPartyContactMechanism">ShipToPartyContactMechanism</a></td>
+<td><a href="Logistics.Shipment.Shipments.html#shiptopartycontactmechanism">ShipToPartyContactMechanism</a></td>
 <td><a href="General.Contacts.PartyContactMechanisms.html">General.Contacts.PartyContactMechanisms</a></td>
 <td>Destination address where the goods should be shipped. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#tocompanydivision">ToCompanyDivision</a></td>
+<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></td>
+<td>The division of the company, receiving the document. null when the document is not received by any specific division</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#toparty">ToParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td>The party which should receive the document</td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.Shipments.html#userstatus">UserStatus</a></td>
+<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
+<td>The user status of this document if applicable for this document type. null means unknown or not yet set</td>
 </tr>
 </tbody>
 </table>
@@ -340,58 +340,53 @@
 </thead>
 <tbody>
 <tr>
-<td>DocumentAmounts</td>
-<td><a href="General.DocumentAmounts.html">General.DocumentAmounts</a></td>
-<td>List of <a href="General.DocumentAmounts.html">DocumentAmount</a> child objects, based on the <a href="General.DocumentAmounts.html#Document">DocumentAmount.Document</a> back reference</td>
-</tr>
-<tr>
 <td>Comments</td>
 <td><a href="General.DocumentComments.html">General.DocumentComments</a></td>
-<td>List of <a href="General.DocumentComments.html">DocumentComment</a> child objects, based on the <a href="General.DocumentComments.html#Document">DocumentComment.Document</a> back reference</td>
+<td>List of <a href="General.DocumentComments.html">DocumentComment</a> child objects, based on the <a href="General.DocumentComments.html#document">DocumentComment.Document</a> back reference</td>
 </tr>
 <tr>
 <td>DistributedAmounts</td>
 <td><a href="General.DocumentDistributedAmounts.html">General.DocumentDistributedAmounts</a></td>
-<td>List of <a href="General.DocumentDistributedAmounts.html">DocumentDistributedAmount</a> child objects, based on the <a href="General.DocumentDistributedAmounts.html#Document">DocumentDistributedAmount.Document</a> back reference</td>
+<td>List of <a href="General.DocumentDistributedAmounts.html">DocumentDistributedAmount</a> child objects, based on the <a href="General.DocumentDistributedAmounts.html#document">DocumentDistributedAmount.Document</a> back reference</td>
+</tr>
+<tr>
+<td>DocumentAmounts</td>
+<td><a href="General.DocumentAmounts.html">General.DocumentAmounts</a></td>
+<td>List of <a href="General.DocumentAmounts.html">DocumentAmount</a> child objects, based on the <a href="General.DocumentAmounts.html#document">DocumentAmount.Document</a> back reference</td>
 </tr>
 <tr>
 <td>FileAttachments</td>
 <td><a href="General.DocumentFileAttachments.html">General.DocumentFileAttachments</a></td>
-<td>List of <a href="General.DocumentFileAttachments.html">DocumentFileAttachment</a> child objects, based on the <a href="General.DocumentFileAttachments.html#Document">DocumentFileAttachment.Document</a> back reference</td>
+<td>List of <a href="General.DocumentFileAttachments.html">DocumentFileAttachment</a> child objects, based on the <a href="General.DocumentFileAttachments.html#document">DocumentFileAttachment.Document</a> back reference</td>
 </tr>
 <tr>
 <td>LineAmounts</td>
 <td><a href="General.DocumentLineAmounts.html">General.DocumentLineAmounts</a></td>
-<td>List of <a href="General.DocumentLineAmounts.html">DocumentLineAmount</a> child objects, based on the <a href="General.DocumentLineAmounts.html#Document">DocumentLineAmount.Document</a> back reference</td>
-</tr>
-<tr>
-<td>Prints</td>
-<td><a href="General.DocumentPrints.html">General.DocumentPrints</a></td>
-<td>List of <a href="General.DocumentPrints.html">DocumentPrint</a> child objects, based on the <a href="General.DocumentPrints.html#Document">DocumentPrint.Document</a> back reference</td>
-</tr>
-<tr>
-<td>StateChanges</td>
-<td><a href="General.DocumentStateChanges.html">General.DocumentStateChanges</a></td>
-<td>List of <a href="General.DocumentStateChanges.html">DocumentStateChange</a> child objects, based on the <a href="General.DocumentStateChanges.html#Document">DocumentStateChange.Document</a> back reference</td>
-</tr>
-<tr>
-<td>Versions</td>
-<td><a href="General.DocumentVersions.html">General.DocumentVersions</a></td>
-<td>List of <a href="General.Documents.html#DocumentVersion">DocumentVersion</a> child objects, based on the <a href="General.DocumentVersions.html#Document">DocumentVersion.Document</a> back reference</td>
+<td>List of <a href="General.DocumentLineAmounts.html">DocumentLineAmount</a> child objects, based on the <a href="General.DocumentLineAmounts.html#document">DocumentLineAmount.Document</a> back reference</td>
 </tr>
 <tr>
 <td>Lines</td>
 <td><a href="Logistics.Shipment.ShipmentLines.html">Logistics.Shipment.ShipmentLines</a></td>
-<td>List of <a href="Logistics.Shipment.ShipmentLines.html">ShipmentLine</a> child objects, based on the <a href="Logistics.Shipment.ShipmentLines.html#Shipment">Logistics.Shipment.ShipmentLine.Shipment</a> back reference</td>
+<td>List of <a href="Logistics.Shipment.ShipmentLines.html">ShipmentLine</a> child objects, based on the <a href="Logistics.Shipment.ShipmentLines.html#shipment">Logistics.Shipment.ShipmentLine.Shipment</a> back reference</td>
+</tr>
+<tr>
+<td>Prints</td>
+<td><a href="General.DocumentPrints.html">General.DocumentPrints</a></td>
+<td>List of <a href="General.DocumentPrints.html">DocumentPrint</a> child objects, based on the <a href="General.DocumentPrints.html#document">DocumentPrint.Document</a> back reference</td>
+</tr>
+<tr>
+<td>StateChanges</td>
+<td><a href="General.DocumentStateChanges.html">General.DocumentStateChanges</a></td>
+<td>List of <a href="General.DocumentStateChanges.html">DocumentStateChange</a> child objects, based on the <a href="General.DocumentStateChanges.html#document">DocumentStateChange.Document</a> back reference</td>
+</tr>
+<tr>
+<td>Versions</td>
+<td><a href="General.DocumentVersions.html">General.DocumentVersions</a></td>
+<td>List of <a href="General.Documents.html#documentversion">DocumentVersion</a> child objects, based on the <a href="General.DocumentVersions.html#document">DocumentVersion.Document</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="completetime">CompleteTime</h3>
 <blockquote>
 <p>Exact time, when the document was last completed[Filter(ge;le)]</p>
@@ -429,6 +424,13 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="documentnotes">DocumentNotes</h3>
+<blockquote>
+<p>Notes for this Document</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentversion">DocumentVersion</h3>
 <blockquote>
 <p>[Filter(eq;ge;le)]</p>
@@ -437,20 +439,40 @@
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
-<h3 id="documentnotes">DocumentNotes</h3>
+<h3 id="entityname">EntityName</h3>
 <blockquote>
-<p>Notes for this Document</p>
+<p>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</p>
 </blockquote>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="isreleased">IsReleased</h3>
+<blockquote>
+<p>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="issingleexecution">IsSingleExecution</h3>
+<blockquote>
+<p>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
 <h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
 <blockquote>
 <p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Shipment.Shipments.html#ParentDocumentRelationshipType">General.ParentDocumentRelationshipType</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.Shipments.html#parentdocumentrelationshiptype">ParentDocumentRelationshipType</a> (nullable)</strong><br>
 Relationship between parent and child documents<br>
-<em>Allowed Values (Enum Members)</em></p>
+<em>Allowed Values (General.ParentDocumentRelationshipType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -508,13 +530,22 @@ Relationship between parent and child documents<br>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="requireddeliverydate">RequiredDeliveryDate</h3>
+<blockquote>
+<p>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly. When null means that the required delivery date is unknown or the document contains many required delivery dates (e.g. in the lines). [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Lines.Select(c =&gt; ShipmentLinesRepository.LineRequiredDeliveryDateAttribute.GetUntypedValue(c, False)).Distinct().OnlyIfSingle()</code></p>
 <h3 id="state">State</h3>
 <blockquote>
 <p>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Shipment.Shipments.html#State">General.DocumentState</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.Shipments.html#state">DocumentState</a></strong><br>
 Enumeration of document system states<br>
-<em>Allowed Values (Enum Members)</em></p>
+<em>Allowed Values (General.DocumentState Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -585,193 +616,139 @@ Enumeration of document system states<br>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="entityname">EntityName</h3>
-<blockquote>
-<p>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
-<h3 id="isreleased">IsReleased</h3>
-<blockquote>
-<p>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
-</blockquote>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong></p>
-<h3 id="issingleexecution">IsSingleExecution</h3>
-<blockquote>
-<p>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
-</blockquote>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong></p>
-<h3 id="requireddeliverydate">RequiredDeliveryDate</h3>
-<blockquote>
-<p>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly. When null means that the required delivery date is unknown or the document contains many required delivery dates (e.g. in the lines). [Filter(ge;le)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Lines.Select(c =&gt; ShipmentLinesRepository.LineRequiredDeliveryDateAttribute.GetUntypedValue(c, False)).Distinct().OnlyIfSingle()</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
 <blockquote>
 <p>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="adjusteddocument">AdjustedDocument</h3>
 <blockquote>
 <p>The primary document, which the current document adjusts. null when this is not an adjustment document</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assignedtouser">AssignedToUser</h3>
 <blockquote>
 <p>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="currencydirectory">CurrencyDirectory</h3>
 <blockquote>
 <p>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
 <blockquote>
 <p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The enterprise company which issued the document [Required]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
 <blockquote>
 <p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromcompanydivision">FromCompanyDivision</h3>
 <blockquote>
 <p>The division of the company, issuing the document. null when the document is not issued by any specific division</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromparty">FromParty</h3>
 <blockquote>
 <p>The party which issued the document [Required]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="masterdocument">MasterDocument</h3>
-<blockquote>
-<p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="parent">Parent</h3>
-<blockquote>
-<p>In a multi-document tree, this is the direct parent document. If this is the root it is null</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="primecausedocument">PrimeCauseDocument</h3>
-<blockquote>
-<p>The document that is the prime cause for creation of the current document</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="responsibleperson">ResponsiblePerson</h3>
-<blockquote>
-<p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="reverseofdocument">ReverseOfDocument</h3>
-<blockquote>
-<p>The document which the current document is reverse of</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="sequence">Sequence</h3>
-<blockquote>
-<p>The sequence that will be used to give new numbers to the documents of this type</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Sequences.html">General.Sequences</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="tocompanydivision">ToCompanyDivision</h3>
-<blockquote>
-<p>The division of the company, receiving the document. null when the document is not received by any specific division</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****</p>
-<h3 id="toparty">ToParty</h3>
-<blockquote>
-<p>The party which should receive the document</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="userstatus">UserStatus</h3>
-<blockquote>
-<p>The user status of this document if applicable for this document type. null means unknown or not yet set</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="issuedbyperson">IssuedByPerson</h3>
 <blockquote>
 <p>The person who signed for the shipment. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="masterdocument">MasterDocument</h3>
+<blockquote>
+<p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="parent">Parent</h3>
+<blockquote>
+<p>In a multi-document tree, this is the direct parent document. If this is the root it is null</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="primecausedocument">PrimeCauseDocument</h3>
+<blockquote>
+<p>The document that is the prime cause for creation of the current document</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="receivedbyperson">ReceivedByPerson</h3>
 <blockquote>
 <p>The person who received the goods for/from the shipment . [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="responsibleperson">ResponsiblePerson</h3>
+<blockquote>
+<p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="reverseofdocument">ReverseOfDocument</h3>
+<blockquote>
+<p>The document which the current document is reverse of</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="sequence">Sequence</h3>
+<blockquote>
+<p>The sequence that will be used to give new numbers to the documents of this type</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Sequences.html">General.Sequences</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="shipfromstore">ShipFromStore</h3>
 <blockquote>
 <p>The store from which the shipment should be effected. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="shiptopartycontactmechanism">ShipToPartyContactMechanism</h3>
 <blockquote>
 <p>Destination address where the goods should be shipped. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.PartyContactMechanisms.html">General.Contacts.PartyContactMechanisms</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="tocompanydivision">ToCompanyDivision</h3>
+<blockquote>
+<p>The division of the company, receiving the document. null when the document is not received by any specific division</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong></p>
+<h3 id="toparty">ToParty</h3>
+<blockquote>
+<p>The party which should receive the document</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="userstatus">UserStatus</h3>
+<blockquote>
+<p>The user status of this document if applicable for this document type. null means unknown or not yet set</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Logistics.Shipment.Shipments erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

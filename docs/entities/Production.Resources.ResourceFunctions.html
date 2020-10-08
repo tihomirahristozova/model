@@ -91,12 +91,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Production.Resources.ResourceFunctions.html#Id">Id</a></td>
+<td><a href="Production.Resources.ResourceFunctions.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Production.Resources.ResourceFunctions.html#Notes">Notes</a></td>
+<td><a href="Production.Resources.ResourceFunctions.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>User notes on the resource function.</td>
 </tr>
@@ -113,14 +113,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Production.Resources.ResourceFunctions.html#Function">Function</a></td>
+<td><a href="Production.Resources.ResourceFunctions.html#function">Function</a></td>
 <td><a href="Production.Resources.Functions.html">Production.Resources.Functions</a></td>
 <td>Function, which the resource can perform. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Production.Resources.ResourceFunctions.html#Resource">Resource</a></td>
+<td><a href="Production.Resources.ResourceFunctions.html#resource">Resource</a></td>
 <td><a href="Production.Resources.Resources.html">Production.Resources.Resources</a></td>
-<td>The <a href="Production.Resources.ResourceFunctions.html#Resource">Resource</a> to which this ResourceFunction belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Production.Resources.ResourceFunctions.html#resource">Resource</a> to which this ResourceFunction belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
@@ -128,7 +128,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
@@ -143,15 +142,13 @@
 <p>Function, which the resource can perform. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.Functions.html">Production.Resources.Functions</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resource">Resource</h3>
 <blockquote>
-<p>The <a href="Production.Resources.ResourceFunctions.html#Resource">Resource</a> to which this ResourceFunction belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Production.Resources.ResourceFunctions.html#resource">Resource</a> to which this ResourceFunction belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.Resources.html">Production.Resources.Resources</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Production.Resources.ResourceFunctions erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

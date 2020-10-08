@@ -91,43 +91,43 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#Id">Id</a></td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#LineNo">LineNo</a></td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Line number, unique within the Requisition. Usually is increasing number like 10, 20, 30, ... when initially entering the Requisition (in order to allow insertions with adjustment documents). [Required]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#Notes">Notes</a></td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this RequisitionLine.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#ProductDescription">ProductDescription</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#productdescription">ProductDescription</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#Quantity">Quantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#quantity">Quantity</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
 <td>The required quantity of the product. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#QuantityBase">QuantityBase</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#quantitybase">QuantityBase</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
 <td>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#RequiredDeliveryDate">RequiredDeliveryDate</a></td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#requireddeliverydate">RequiredDeliveryDate</a></td>
 <td>datetime</td>
 <td>The desired delivery date. Initially set to the required delivery date in the requisition header or if it is empty - to the document date plus the products lead time. [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#StandardQuantityBase">StandardQuantityBase</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#standardquantitybase">StandardQuantityBase</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 </tbody>
@@ -143,27 +143,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#Lot">Lot</a></td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</td>
 <td>When not null, indicates a specific lot should be purchased. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#Product">Product</a></td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</td>
 <td>The required product. When null, the product is unknown to the requisitor and only a description is supplied to the purchase department. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#QuantityUnit">QuantityUnit</a></td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
 <td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#Requisition">Requisition</a></td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#requisition">Requisition</a></td>
 <td><a href="Logistics.Procurement.Requisitions.html">Logistics.Procurement.Requisitions</a></td>
-<td>The <a href="Logistics.Procurement.RequisitionLines.html#Requisition">Requisition</a> to which this RequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Logistics.Procurement.RequisitionLines.html#requisition">Requisition</a> to which this RequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.RequisitionLines.html#SuggestedSupplier">SuggestedSupplier</a></td>
+<td><a href="Logistics.Procurement.RequisitionLines.html#suggestedsupplier">SuggestedSupplier</a></td>
 <td><a href="Logistics.Procurement.Suppliers.html">Logistics.Procurement.Suppliers</a> (nullable)</td>
 <td>When the requisitor knows the supplier or has a supplier preference it is denoted in this field. [Filter(multi eq)]</td>
 </tr>
@@ -173,7 +173,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
@@ -197,7 +196,7 @@
 <blockquote>
 <p>The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -206,7 +205,7 @@
 <blockquote>
 <p>The required quantity of the product. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -214,7 +213,7 @@
 <blockquote>
 <p>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -233,7 +232,7 @@
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -246,36 +245,31 @@
 <p>When not null, indicates a specific lot should be purchased. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The required product. When null, the product is unknown to the requisitor and only a description is supplied to the purchase department. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="requisition">Requisition</h3>
 <blockquote>
-<p>The <a href="Logistics.Procurement.RequisitionLines.html#Requisition">Requisition</a> to which this RequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Logistics.Procurement.RequisitionLines.html#requisition">Requisition</a> to which this RequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.Requisitions.html">Logistics.Procurement.Requisitions</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="suggestedsupplier">SuggestedSupplier</h3>
 <blockquote>
 <p>When the requisitor knows the supplier or has a supplier preference it is denoted in this field. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.Suppliers.html">Logistics.Procurement.Suppliers</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Logistics.Procurement.RequisitionLines erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

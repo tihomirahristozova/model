@@ -91,43 +91,43 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.ScheduledDocumentEvents.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.ScheduledDocumentEvents.html#Cancelled">Cancelled</a></td>
+<td><a href="General.ScheduledDocumentEvents.html#cancelled">Cancelled</a></td>
 <td>boolean</td>
 <td>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.ScheduledDocumentEvents.html#CreationTime">CreationTime</a></td>
+<td><a href="General.ScheduledDocumentEvents.html#creationtime">CreationTime</a></td>
 <td>datetime</td>
 <td>Date and time when the ScheduledDocumentEvent was created. [Required] [Default(Now)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="General.ScheduledDocumentEvents.html#DocumentEvent">DocumentEvent</a></td>
+<td><a href="General.ScheduledDocumentEvents.html#documentevent">DocumentEvent</a></td>
 <td>string</td>
 <td>The type of the document event that is scheduled to be processed. [Required] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="General.ScheduledDocumentEvents.html#LastProcessStatus">LastProcessStatus</a></td>
+<td><a href="General.ScheduledDocumentEvents.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.ScheduledDocumentEvents.html#lastprocessstatus">LastProcessStatus</a></td>
 <td>string (nullable)</td>
 <td>Status/information of the last attemp to process the event. Usually shows the cause in case of failure. [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="General.ScheduledDocumentEvents.html#LastProcessTime">LastProcessTime</a></td>
+<td><a href="General.ScheduledDocumentEvents.html#lastprocesstime">LastProcessTime</a></td>
 <td>datetime (nullable)</td>
 <td>The time of the last attempt to process the event. [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="General.ScheduledDocumentEvents.html#Processed">Processed</a></td>
+<td><a href="General.ScheduledDocumentEvents.html#processed">Processed</a></td>
 <td>boolean</td>
 <td>Indicates wheather the event is already processed or not. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="General.ScheduledDocumentEvents.html#State">State</a></td>
-<td><a href="General.ScheduledDocumentEvents.html#State">General.ScheduledDocumentEventsRepository.State</a></td>
+<td><a href="General.ScheduledDocumentEvents.html#state">State</a></td>
+<td><a href="General.ScheduledDocumentEvents.html#state">State</a></td>
 <td>The state of the document for which the event will be processed. [Required] [ReadOnly]</td>
 </tr>
 </tbody>
@@ -143,23 +143,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.ScheduledDocumentEvents.html#Document">Document</a></td>
+<td><a href="General.ScheduledDocumentEvents.html#document">Document</a></td>
 <td><a href="General.Documents.html">General.Documents</a></td>
 <td>The document for which the event will be processed. [Required] [Filter(multi eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="General.ScheduledDocumentEvents.html#SourceDocument">SourceDocument</a></td>
+<td><a href="General.ScheduledDocumentEvents.html#sourcedocument">SourceDocument</a></td>
 <td><a href="General.Documents.html">General.Documents</a></td>
 <td>The document that has caused this event to be scheduled. [Required] [Filter(multi eq)] [ReadOnly]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="cancelled">Cancelled</h3>
 <blockquote>
 <p>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. [Required] [Default(false)] [Filter(eq)]</p>
@@ -183,6 +178,10 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lastprocessstatus">LastProcessStatus</h3>
 <blockquote>
 <p>Status/information of the last attemp to process the event. Usually shows the cause in case of failure. [ReadOnly]</p>
@@ -209,9 +208,9 @@
 <blockquote>
 <p>The state of the document for which the event will be processed. [Required] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.ScheduledDocumentEvents.html#State">General.ScheduledDocumentEventsRepository.State</a></strong><br>
-Allowed values for the <a href="General.ScheduledDocumentEvents.html#State">State</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.ScheduledDocumentEvents.html#state">State</a></strong><br>
+Allowed values for the <a href="General.ScheduledDocumentEvents.html#state">State</a> data attribute<br>
+<em>Allowed Values (General.ScheduledDocumentEventsRepository.State Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -258,15 +257,13 @@ Allowed values for the <a href="General.ScheduledDocumentEvents.html#State">Stat
 <p>The document for which the event will be processed. [Required] [Filter(multi eq)] [ReadOnly]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="sourcedocument">SourceDocument</h3>
 <blockquote>
 <p>The document that has caused this event to be scheduled. [Required] [Filter(multi eq)] [ReadOnly]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.ScheduledDocumentEvents erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

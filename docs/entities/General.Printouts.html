@@ -91,69 +91,69 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Printouts.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Printouts.html#AllowPrintingOnState">AllowPrintingOnState</a></td>
-<td><a href="General.Printouts.html#AllowPrintingOnState">General.PrintoutsRepository.AllowPrintingOnState</a></td>
+<td><a href="General.Printouts.html#allowprintingonstate">AllowPrintingOnState</a></td>
+<td><a href="General.Printouts.html#allowprintingonstate">AllowPrintingOnState</a></td>
 <td>The user can print documents only with state equal or greater than Allow_Printing_On_State. [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#ApplicationName">ApplicationName</a></td>
+<td><a href="General.Printouts.html#applicationname">ApplicationName</a></td>
 <td>string</td>
 <td>The application which stored and uses the printout. [Required]</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#BackwardCompatibility">BackwardCompatibility</a></td>
+<td><a href="General.Printouts.html#backwardcompatibility">BackwardCompatibility</a></td>
 <td>boolean</td>
 <td>Obsolete. Not used. [Required] [Default(false)]</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#Copies">Copies</a></td>
+<td><a href="General.Printouts.html#copies">Copies</a></td>
 <td>int32</td>
 <td>Number of copies that should be printed when using direct printing. [Required] [Default(1)]</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#Definition">Definition</a></td>
+<td><a href="General.Printouts.html#definition">Definition</a></td>
 <td>string (nullable)</td>
 <td>Obsolete. Not used.</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#DefinitionFormat">DefinitionFormat</a></td>
+<td><a href="General.Printouts.html#definitionformat">DefinitionFormat</a></td>
 <td>string (nullable)</td>
 <td>Obsolete. Not used. [Default(&quot;default&quot;)]</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#IsDefault">IsDefault</a></td>
+<td><a href="General.Printouts.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Printouts.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
 <td>True if this is the default printout for the application form. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#Notes">Notes</a></td>
+<td><a href="General.Printouts.html#name">Name</a></td>
+<td>string</td>
+<td>The name of the printout. Unique within the application form. [Required] [Filter(like)]</td>
+</tr>
+<tr>
+<td><a href="General.Printouts.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this Printout.</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#Ord">Ord</a></td>
+<td><a href="General.Printouts.html#ord">Ord</a></td>
 <td>int32</td>
 <td>Order in the list of printouts when using direct printing. [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#OrdFilterXml">OrdFilterXml</a></td>
+<td><a href="General.Printouts.html#ordfilterxml">OrdFilterXml</a></td>
 <td>dataaccessfilter (nullable)</td>
 <td>The condition, required to be matched in order for the printout to be executed upon &quot;Print All&quot; command.</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#OrdPriority">OrdPriority</a></td>
+<td><a href="General.Printouts.html#ordpriority">OrdPriority</a></td>
 <td>int32 (nullable)</td>
 <td>Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with &quot;Print All&quot; command. [Default(0)]</td>
-</tr>
-<tr>
-<td><a href="General.Printouts.html#Name">Name</a></td>
-<td>string</td>
-<td>The name of the printout. Unique within the application form. [Required] [Filter(like)]</td>
 </tr>
 </tbody>
 </table>
@@ -168,40 +168,35 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Printouts.html#DocumentType">DocumentType</a></td>
+<td><a href="General.Printouts.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
 <td>The document type to which this printout layout is bound. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="General.Printouts.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
 <td>The Enterprise Company to which this Printout applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#PrintoutLayout">PrintoutLayout</a></td>
+<td><a href="General.Printouts.html#printoutlayout">PrintoutLayout</a></td>
 <td><a href="General.PrintoutLayouts.html">General.PrintoutLayouts</a></td>
 <td>The printout layout, that is bound to the document type. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Printouts.html#Report">Report</a></td>
+<td><a href="General.Printouts.html#report">Report</a></td>
 <td><a href="Systems.Reporting.DataSources.html">Systems.Reporting.DataSources</a> (nullable)</td>
 <td>If not null points to a custom report that indicates which data will be loaded in the printout. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="allowprintingonstate">AllowPrintingOnState</h3>
 <blockquote>
 <p>The user can print documents only with state equal or greater than Allow_Printing_On_State. [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Printouts.html#AllowPrintingOnState">General.PrintoutsRepository.AllowPrintingOnState</a></strong><br>
-Allowed values for the <a href="General.Printouts.html#AllowPrintingOnState">AllowPrintingOnState</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.Printouts.html#allowprintingonstate">AllowPrintingOnState</a></strong><br>
+Allowed values for the <a href="General.Printouts.html#allowprintingonstate">AllowPrintingOnState</a> data attribute<br>
+<em>Allowed Values (General.PrintoutsRepository.AllowPrintingOnState Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -277,6 +272,10 @@ Allowed values for the <a href="General.Printouts.html#AllowPrintingOnState">All
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>default</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
 <blockquote>
 <p>True if this is the default printout for the application form. [Required] [Default(false)] [Filter(eq)]</p>
@@ -285,6 +284,13 @@ Allowed values for the <a href="General.Printouts.html#AllowPrintingOnState">All
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>The name of the printout. Unique within the application form. [Required] [Filter(like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this Printout.</p>
@@ -315,42 +321,31 @@ Allowed values for the <a href="General.Printouts.html#AllowPrintingOnState">All
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>The name of the printout. Unique within the application form. [Required] [Filter(like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
 <blockquote>
 <p>The document type to which this printout layout is bound. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The Enterprise Company to which this Printout applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="printoutlayout">PrintoutLayout</h3>
 <blockquote>
 <p>The printout layout, that is bound to the document type. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.PrintoutLayouts.html">General.PrintoutLayouts</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="report">Report</h3>
 <blockquote>
 <p>If not null points to a custom report that indicates which data will be loaded in the printout. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Reporting.DataSources.html">Systems.Reporting.DataSources</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.Printouts erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

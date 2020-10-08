@@ -91,19 +91,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Payments.PaymentSlipLines.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Payments.PaymentSlipLines.html#Amount">Amount</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Finance.Payments.PaymentSlipLines.html#amount">Amount</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
 <td>The part of the total amount in the payment slip amount, that is distributed to the specified payment order. [Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Payments.PaymentSlipLines.html#CoveredOrderAmount">CoveredOrderAmount</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Finance.Payments.PaymentSlipLines.html#coveredorderamount">CoveredOrderAmount</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
 <td>The part of the original payment order amount, that is covered by this payment slip line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentSlipLines.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -118,28 +118,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Payments.PaymentSlipLines.html#PaymentOrder">PaymentOrder</a></td>
+<td><a href="Finance.Payments.PaymentSlipLines.html#paymentorder">PaymentOrder</a></td>
 <td><a href="Finance.Payments.PaymentOrders.html">Finance.Payments.PaymentOrders</a></td>
 <td>The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Payments.PaymentSlipLines.html#PaymentSlipAmount">PaymentSlipAmount</a></td>
+<td><a href="Finance.Payments.PaymentSlipLines.html#paymentslipamount">PaymentSlipAmount</a></td>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html">Finance.Payments.PaymentSlipAmounts</a></td>
-<td>The <a href="Finance.Payments.PaymentSlipLines.html#PaymentSlipAmount">PaymentSlipAmount</a> to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</td>
+<td>The <a href="Finance.Payments.PaymentSlipLines.html#paymentslipamount">PaymentSlipAmount</a> to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="amount">Amount</h3>
 <blockquote>
 <p>The part of the total amount in the payment slip amount, that is distributed to the specified payment order. [Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -149,27 +144,29 @@
 <blockquote>
 <p>The part of the original payment order amount, that is covered by this payment slip line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Amount.ConvertTo(obj.PaymentOrder.TotalAmountCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)</code></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="paymentorder">PaymentOrder</h3>
 <blockquote>
 <p>The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentOrders.html">Finance.Payments.PaymentOrders</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentslipamount">PaymentSlipAmount</h3>
 <blockquote>
-<p>The <a href="Finance.Payments.PaymentSlipLines.html#PaymentSlipAmount">PaymentSlipAmount</a> to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
+<p>The <a href="Finance.Payments.PaymentSlipLines.html#paymentslipamount">PaymentSlipAmount</a> to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlipAmounts.html">Finance.Payments.PaymentSlipAmounts</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Finance.Payments.PaymentSlipLines erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

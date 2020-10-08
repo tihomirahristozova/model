@@ -91,78 +91,73 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Workflow.Processes.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Systems.Workflow.Processes.html#CreationTime">CreationTime</a></td>
+<td><a href="Systems.Workflow.Processes.html#creationtime">CreationTime</a></td>
 <td>datetime (nullable)</td>
 <td>Date and time when the Process was created. [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Systems.Workflow.Processes.html#CreationUser">CreationUser</a></td>
+<td><a href="Systems.Workflow.Processes.html#creationuser">CreationUser</a></td>
 <td>string (nullable)</td>
 <td>Login name of the user, who created the Process. [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Systems.Workflow.Processes.html#IsLandscape">IsLandscape</a></td>
+<td><a href="Systems.Workflow.Processes.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Processes.html#islandscape">IsLandscape</a></td>
 <td>boolean</td>
 <td>Specifies whether the process diagram is intended to be viewed in landscape mode. [Required] [Default(true)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Workflow.Processes.html#Notes">Notes</a></td>
+<td><a href="Systems.Workflow.Processes.html#name">Name</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
+<td>The name of this Process. [Required] [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Processes.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this Process.</td>
 </tr>
 <tr>
-<td><a href="Systems.Workflow.Processes.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
-<td>The name of this Process. [Required] [Filter(eq;like)]</td>
-</tr>
-<tr>
-<td><a href="Systems.Workflow.Processes.html#SchemaFormat">SchemaFormat</a></td>
+<td><a href="Systems.Workflow.Processes.html#schemaformat">SchemaFormat</a></td>
 <td>string</td>
 <td>Application specific format of the Schema Layout. [Required] [Default(&quot;D&quot;)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Workflow.Processes.html#SchemaLayout">SchemaLayout</a></td>
+<td><a href="Systems.Workflow.Processes.html#schemalayout">SchemaLayout</a></td>
 <td>string</td>
 <td>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. [Required]</td>
 </tr>
 <tr>
-<td><a href="Systems.Workflow.Processes.html#StartEvent">StartEvent</a></td>
+<td><a href="Systems.Workflow.Processes.html#startevent">StartEvent</a></td>
 <td>string (nullable)</td>
 <td>USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process.</td>
 </tr>
 <tr>
-<td><a href="Systems.Workflow.Processes.html#StartRoleId">StartRoleId</a></td>
+<td><a href="Systems.Workflow.Processes.html#startroleid">StartRoleId</a></td>
 <td>guid (nullable)</td>
 <td>When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Workflow.Processes.html#Thumbnail">Thumbnail</a></td>
+<td><a href="Systems.Workflow.Processes.html#thumbnail">Thumbnail</a></td>
 <td>byte[] (nullable)</td>
 <td>Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format.</td>
 </tr>
 <tr>
-<td><a href="Systems.Workflow.Processes.html#UpdateTime">UpdateTime</a></td>
+<td><a href="Systems.Workflow.Processes.html#updatetime">UpdateTime</a></td>
 <td>datetime (nullable)</td>
 <td>Date and time when the Process was last updated. [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Systems.Workflow.Processes.html#UpdateUser">UpdateUser</a></td>
+<td><a href="Systems.Workflow.Processes.html#updateuser">UpdateUser</a></td>
 <td>string (nullable)</td>
 <td>Login name of the user, who last updated the Process. [ReadOnly]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="creationtime">CreationTime</h3>
 <blockquote>
 <p>Date and time when the Process was created. [ReadOnly]</p>
@@ -177,6 +172,10 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="islandscape">IsLandscape</h3>
 <blockquote>
 <p>Specifies whether the process diagram is intended to be viewed in landscape mode. [Required] [Default(true)]</p>
@@ -185,19 +184,19 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>The name of this Process. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this Process.</p>
 </blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>The name of this Process. [Required] [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="schemaformat">SchemaFormat</h3>
 <blockquote>
@@ -226,8 +225,7 @@
 <p>When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="thumbnail">Thumbnail</h3>
 <blockquote>
 <p>Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format.</p>

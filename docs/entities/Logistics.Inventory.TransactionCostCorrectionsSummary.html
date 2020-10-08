@@ -91,23 +91,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#BaseCostAdjustment">BaseCostAdjustment</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#basecostadjustment">BaseCostAdjustment</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
 <td>The cost correction in Base currency. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#CostCorrectionAmount">CostCorrectionAmount</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#costcorrectionamount">CostCorrectionAmount</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
 <td>The cost correction in the original currency of the store transaction. [Currency: TransactionObj.DocumentCurrency] [Required] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#ProductCostAdjustment">ProductCostAdjustment</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#productcostadjustment">ProductCostAdjustment</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
 <td>The cost correction in Products currency. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#StoreCostAdjustment">StoreCostAdjustment</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#storecostadjustment">StoreCostAdjustment</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
 <td>The cost correction in Stores currency. [Currency: TransactionObj.Store.Currency] [Required] [Filter(eq;ge;le)]</td>
 </tr>
 </tbody>
@@ -123,14 +123,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#TransactionObj">TransactionObj</a></td>
-<td><a href="Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions</a></td>
-<td>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#TransactionLine">TransactionLine</a></td>
+<td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#transactionline">TransactionLine</a></td>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a></td>
 <td>Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#transactionobj">TransactionObj</a></td>
+<td><a href="Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions</a></td>
+<td>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
@@ -139,46 +139,44 @@
 <blockquote>
 <p>The cost correction in Base currency. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="costcorrectionamount">CostCorrectionAmount</h3>
 <blockquote>
 <p>The cost correction in the original currency of the store transaction. [Currency: TransactionObj.DocumentCurrency] [Required] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="productcostadjustment">ProductCostAdjustment</h3>
 <blockquote>
 <p>The cost correction in Products currency. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="storecostadjustment">StoreCostAdjustment</h3>
 <blockquote>
 <p>The cost correction in Stores currency. [Currency: TransactionObj.Store.Currency] [Required] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
-<h3 id="transactionobj">TransactionObj</h3>
-<blockquote>
-<p>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="transactionline">TransactionLine</h3>
 <blockquote>
 <p>Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="transactionobj">TransactionObj</h3>
+<blockquote>
+<p>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Logistics.Inventory.TransactionCostCorrectionsSummary erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

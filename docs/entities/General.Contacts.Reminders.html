@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.Reminders.html#Id">Id</a></td>
+<td><a href="General.Contacts.Reminders.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Reminders.html#IsDefault">IsDefault</a></td>
+<td><a href="General.Contacts.Reminders.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
 <td>True when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Reminders.html#IsDismissed">IsDismissed</a></td>
+<td><a href="General.Contacts.Reminders.html#isdismissed">IsDismissed</a></td>
 <td>boolean</td>
 <td>When true the reminder was dismissed by the user; the initial value is false. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Reminders.html#Notes">Notes</a></td>
+<td><a href="General.Contacts.Reminders.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes that describe this specific reminder for the task.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Reminders.html#ReminderTime">ReminderTime</a></td>
+<td><a href="General.Contacts.Reminders.html#remindertime">ReminderTime</a></td>
 <td>datetime</td>
 <td>The time when the alarm should snooze to the user. [Required] [Filter(ge;le)]</td>
 </tr>
@@ -128,7 +128,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.Reminders.html#Activity">Activity</a></td>
+<td><a href="General.Contacts.Reminders.html#activity">Activity</a></td>
 <td><a href="General.Contacts.Activities.html">General.Contacts.Activities</a></td>
 <td>The activity to which this reminder is attached. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
@@ -138,7 +138,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
 <blockquote>
@@ -176,8 +175,7 @@
 <p>The activity to which this reminder is attached. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Activities.html">General.Contacts.Activities</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.Contacts.Reminders erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

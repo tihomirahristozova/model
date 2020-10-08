@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentTypeAmounts.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.DocumentTypeAmounts.html#DefaultPercent">DefaultPercent</a></td>
+<td><a href="General.DocumentTypeAmounts.html#defaultpercent">DefaultPercent</a></td>
 <td>decimal (nullable)</td>
 <td>Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type.</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeAmounts.html#RequiredFromDate">RequiredFromDate</a></td>
+<td><a href="General.DocumentTypeAmounts.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.DocumentTypeAmounts.html#requiredfromdate">RequiredFromDate</a></td>
 <td>date (nullable)</td>
 <td>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeAmounts.html#RequiredThruDate">RequiredThruDate</a></td>
+<td><a href="General.DocumentTypeAmounts.html#requiredthrudate">RequiredThruDate</a></td>
 <td>date (nullable)</td>
 <td>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeAmounts.html#UserCanChangeInput">UserCanChangeInput</a></td>
+<td><a href="General.DocumentTypeAmounts.html#usercanchangeinput">UserCanChangeInput</a></td>
 <td>boolean</td>
 <td>True if the user, entering the document is allowed to change the default input percent. [Required] [Default(true)]</td>
 </tr>
@@ -128,23 +128,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentTypeAmounts.html#DocumentAmountType">DocumentAmountType</a></td>
+<td><a href="General.DocumentTypeAmounts.html#documentamounttype">DocumentAmountType</a></td>
 <td><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a></td>
 <td>The amount type that should be automatically added to the documents of the specified type. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeAmounts.html#DocumentType">DocumentType</a></td>
+<td><a href="General.DocumentTypeAmounts.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
 <td>The document type for which the amount type is specified. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="defaultpercent">DefaultPercent</h3>
 <blockquote>
 <p>Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type.</p>
@@ -152,6 +147,10 @@
 <p><em>Type</em>: <strong>decimal (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="requiredfromdate">RequiredFromDate</h3>
 <blockquote>
 <p>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. [Filter(ge;le)]</p>
@@ -180,15 +179,13 @@
 <p>The amount type that should be automatically added to the documents of the specified type. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
 <blockquote>
 <p>The document type for which the amount type is specified. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.DocumentTypeAmounts erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

@@ -91,7 +91,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Wms.WarehouseOrders.html#Id">Id</a></td>
+<td><a href="Logistics.Wms.WarehouseOrders.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
@@ -108,17 +108,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Wms.WarehouseOrders.html#Document">Document</a></td>
+<td><a href="Logistics.Wms.WarehouseOrders.html#document">Document</a></td>
 <td><a href="General.Documents.html">General.Documents</a></td>
 <td>The <a href="General.Documents.html">Document</a> to which this WarehouseOrder belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseOrders.html#Warehouse">Warehouse</a></td>
+<td><a href="Logistics.Wms.WarehouseOrders.html#warehouse">Warehouse</a></td>
 <td><a href="Logistics.Wms.Warehouses.html">Logistics.Wms.Warehouses</a></td>
 <td>The warehouse, where the order will be executed. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseOrders.html#WarehouseWorker">WarehouseWorker</a></td>
+<td><a href="Logistics.Wms.WarehouseOrders.html#warehouseworker">WarehouseWorker</a></td>
 <td><a href="Logistics.Wms.WarehouseWorkers.html">Logistics.Wms.WarehouseWorkers</a> (nullable)</td>
 <td>When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)]</td>
 </tr>
@@ -137,7 +137,7 @@
 <tr>
 <td>Lines</td>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html">Logistics.Wms.WarehouseOrderLines</a></td>
-<td>List of <a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLine</a> child objects, based on the <a href="Logistics.Wms.WarehouseOrderLines.html#WarehouseOrder">Logistics.Wms.WarehouseOrderLine.WarehouseOrder</a> back reference</td>
+<td>List of <a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLine</a> child objects, based on the <a href="Logistics.Wms.WarehouseOrderLines.html#warehouseorder">Logistics.Wms.WarehouseOrderLine.WarehouseOrder</a> back reference</td>
 </tr>
 </tbody>
 </table>
@@ -145,7 +145,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
@@ -153,22 +152,19 @@
 <p>The <a href="General.Documents.html">Document</a> to which this WarehouseOrder belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouse">Warehouse</h3>
 <blockquote>
 <p>The warehouse, where the order will be executed. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.Warehouses.html">Logistics.Wms.Warehouses</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouseworker">WarehouseWorker</h3>
 <blockquote>
 <p>When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseWorkers.html">Logistics.Wms.WarehouseWorkers</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Logistics.Wms.WarehouseOrders erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

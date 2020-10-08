@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.CalculationResults.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Cost.CalculationResults.html#FullCost">FullCost</a></td>
+<td><a href="Finance.Cost.CalculationResults.html#fullcost">FullCost</a></td>
 <td>decimal</td>
 <td>The full cost of the specified quantity. [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationResults.html#LineNo">LineNo</a></td>
+<td><a href="Finance.Cost.CalculationResults.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Finance.Cost.CalculationResults.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Consecutive number of the line within the calculation. [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationResults.html#ProjectId">ProjectId</a></td>
+<td><a href="Finance.Cost.CalculationResults.html#projectid">ProjectId</a></td>
 <td>guid (nullable)</td>
 <td>The Project to which the cost was allocated. When null, the cost was not allocated to any specific Project. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationResults.html#Quantity">Quantity</a></td>
+<td><a href="Finance.Cost.CalculationResults.html#quantity">Quantity</a></td>
 <td>decimal</td>
 <td>The quantity of the product. [Required] [Default(0)]</td>
 </tr>
@@ -128,43 +128,38 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.CalculationResults.html#Calculation">Calculation</a></td>
+<td><a href="Finance.Cost.CalculationResults.html#calculation">Calculation</a></td>
 <td><a href="Finance.Cost.Calculations.html">Finance.Cost.Calculations</a></td>
-<td>The <a href="Finance.Cost.CalculationResults.html#Calculation">Calculation</a> to which this CalculationResult belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Finance.Cost.CalculationResults.html#calculation">Calculation</a> to which this CalculationResult belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationResults.html#Lot">Lot</a></td>
+<td><a href="Finance.Cost.CalculationResults.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</td>
 <td>The Lot to which the cost was allocated. When null, the cost was not allocated to any specific Lot. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationResults.html#Product">Product</a></td>
+<td><a href="Finance.Cost.CalculationResults.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The Product to which the cost was allocated. When null, the cost was not allocated to any specific Product. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationResults.html#ProfitCenter">ProfitCenter</a></td>
+<td><a href="Finance.Cost.CalculationResults.html#profitcenter">ProfitCenter</a></td>
 <td><a href="Finance.Accounting.ProfitCenters.html">Finance.Accounting.ProfitCenters</a> (nullable)</td>
 <td>The Profit Center to which the cost was allocated. When null, the cost was not allocated to any specific Profit Center. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationResults.html#SalesOrder">SalesOrder</a></td>
+<td><a href="Finance.Cost.CalculationResults.html#salesorder">SalesOrder</a></td>
 <td><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a> (nullable)</td>
 <td>The Sales Order to which the cost was allocated. When null, the cost was not allocated to any specific Sales Order. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationResults.html#Workgroup">Workgroup</a></td>
+<td><a href="Finance.Cost.CalculationResults.html#workgroup">Workgroup</a></td>
 <td><a href="Production.Resources.Workgroups.html">Production.Resources.Workgroups</a> (nullable)</td>
 <td>The Workgroup to which the cost was allocated. When null, the cost was not allocated to any specific Workgroup. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="fullcost">FullCost</h3>
 <blockquote>
 <p>The full cost of the specified quantity. [Required] [Default(0)]</p>
@@ -173,6 +168,10 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
 <p>Consecutive number of the line within the calculation. [Required]</p>
@@ -189,8 +188,7 @@
 <p>The Project to which the cost was allocated. When null, the cost was not allocated to any specific Project. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantity">Quantity</h3>
 <blockquote>
 <p>The quantity of the product. [Required] [Default(0)]</p>
@@ -202,46 +200,40 @@
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="calculation">Calculation</h3>
 <blockquote>
-<p>The <a href="Finance.Cost.CalculationResults.html#Calculation">Calculation</a> to which this CalculationResult belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Finance.Cost.CalculationResults.html#calculation">Calculation</a> to which this CalculationResult belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Calculations.html">Finance.Cost.Calculations</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <blockquote>
 <p>The Lot to which the cost was allocated. When null, the cost was not allocated to any specific Lot. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The Product to which the cost was allocated. When null, the cost was not allocated to any specific Product. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="profitcenter">ProfitCenter</h3>
 <blockquote>
 <p>The Profit Center to which the cost was allocated. When null, the cost was not allocated to any specific Profit Center. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.ProfitCenters.html">Finance.Accounting.ProfitCenters</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salesorder">SalesOrder</h3>
 <blockquote>
 <p>The Sales Order to which the cost was allocated. When null, the cost was not allocated to any specific Sales Order. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workgroup">Workgroup</h3>
 <blockquote>
 <p>The Workgroup to which the cost was allocated. When null, the cost was not allocated to any specific Workgroup. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.Workgroups.html">Production.Resources.Workgroups</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Finance.Cost.CalculationResults erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

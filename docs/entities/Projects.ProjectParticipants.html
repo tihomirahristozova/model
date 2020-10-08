@@ -91,12 +91,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.ProjectParticipants.html#Id">Id</a></td>
+<td><a href="Projects.ProjectParticipants.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectParticipants.html#Notes">Notes</a></td>
+<td><a href="Projects.ProjectParticipants.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ProjectParticipant.</td>
 </tr>
@@ -113,17 +113,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.ProjectParticipants.html#ParticipantParty">ParticipantParty</a></td>
+<td><a href="Projects.ProjectParticipants.html#participantparty">ParticipantParty</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
 <td>The party Id of the participant. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectParticipants.html#Project">Project</a></td>
+<td><a href="Projects.ProjectParticipants.html#project">Project</a></td>
 <td><a href="Projects.Projects.html">Projects.Projects</a></td>
 <td>The project in which the participant will participate. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectParticipants.html#ProjectTypeRole">ProjectTypeRole</a></td>
+<td><a href="Projects.ProjectParticipants.html#projecttyperole">ProjectTypeRole</a></td>
 <td><a href="Projects.TypeRoles.html">Projects.TypeRoles</a> (nullable)</td>
 <td>The role which the participant will play in the project. null means that the role is undefined. [Filter(multi eq)]</td>
 </tr>
@@ -133,7 +133,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
@@ -148,22 +147,19 @@
 <p>The party Id of the participant. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="project">Project</h3>
 <blockquote>
 <p>The project in which the participant will participate. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Projects.Projects.html">Projects.Projects</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projecttyperole">ProjectTypeRole</h3>
 <blockquote>
 <p>The role which the participant will play in the project. null means that the role is undefined. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Projects.TypeRoles.html">Projects.TypeRoles</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Projects.ProjectParticipants erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.CurrencyDirectoryLines.html#Id">Id</a></td>
+<td><a href="General.CurrencyDirectoryLines.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="General.CurrencyDirectoryLines.html#RateDivisor">RateDivisor</a></td>
+<td><a href="General.CurrencyDirectoryLines.html#ratedivisor">RateDivisor</a></td>
 <td>decimal</td>
 <td>The divisor for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</td>
 </tr>
 <tr>
-<td><a href="General.CurrencyDirectoryLines.html#RateMultiplier">RateMultiplier</a></td>
+<td><a href="General.CurrencyDirectoryLines.html#ratemultiplier">RateMultiplier</a></td>
 <td>decimal</td>
 <td>The multiplier for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</td>
 </tr>
@@ -118,12 +118,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.CurrencyDirectoryLines.html#CurrencyDirectory">CurrencyDirectory</a></td>
+<td><a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a></td>
 <td><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a></td>
-<td>The <a href="General.CurrencyDirectoryLines.html#CurrencyDirectory">CurrencyDirectory</a> to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a> to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="General.CurrencyDirectoryLines.html#FromCurrency">FromCurrency</a></td>
+<td><a href="General.CurrencyDirectoryLines.html#fromcurrency">FromCurrency</a></td>
 <td><a href="General.Currencies.html">General.Currencies</a></td>
 <td>The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -133,7 +133,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="ratedivisor">RateDivisor</h3>
 <blockquote>
@@ -154,18 +153,16 @@
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="currencydirectory">CurrencyDirectory</h3>
 <blockquote>
-<p>The <a href="General.CurrencyDirectoryLines.html#CurrencyDirectory">CurrencyDirectory</a> to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a> to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromcurrency">FromCurrency</h3>
 <blockquote>
 <p>The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.CurrencyDirectoryLines erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

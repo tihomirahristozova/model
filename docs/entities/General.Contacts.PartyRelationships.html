@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.PartyRelationships.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Contacts.PartyRelationships.html#FromDate">FromDate</a></td>
+<td><a href="General.Contacts.PartyRelationships.html#fromdate">FromDate</a></td>
 <td>datetime (nullable)</td>
 <td>The starting date of the relationship. null means the date is the begining of the time. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.PartyRelationships.html#Notes">Notes</a></td>
+<td><a href="General.Contacts.PartyRelationships.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.PartyRelationships.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this PartyRelationship.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.PartyRelationships.html#ToDate">ToDate</a></td>
+<td><a href="General.Contacts.PartyRelationships.html#todate">ToDate</a></td>
 <td>datetime (nullable)</td>
 <td>The ending date of the relationship. null means the relationship is still active. [Filter(ge;le)]</td>
 </tr>
@@ -123,28 +123,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.PartyRelationships.html#FromParty">FromParty</a></td>
+<td><a href="General.Contacts.PartyRelationships.html#fromparty">FromParty</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
 <td>The first party in the relationship. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.PartyRelationships.html#RelationshipType">RelationshipType</a></td>
+<td><a href="General.Contacts.PartyRelationships.html#relationshiptype">RelationshipType</a></td>
 <td><a href="General.Contacts.PartyRelationshipTypes.html">General.Contacts.PartyRelationshipTypes</a></td>
 <td>The type of the relationship. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.PartyRelationships.html#ToParty">ToParty</a></td>
+<td><a href="General.Contacts.PartyRelationships.html#toparty">ToParty</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
 <td>The second party in the relationship. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="fromdate">FromDate</h3>
 <blockquote>
 <p>The starting date of the relationship. null means the date is the begining of the time. [Filter(ge;le)]</p>
@@ -152,6 +147,10 @@
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this PartyRelationship.</p>
@@ -172,22 +171,19 @@
 <p>The first party in the relationship. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="relationshiptype">RelationshipType</h3>
 <blockquote>
 <p>The type of the relationship. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.PartyRelationshipTypes.html">General.Contacts.PartyRelationshipTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="toparty">ToParty</h3>
 <blockquote>
 <p>The second party in the relationship. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.Contacts.PartyRelationships erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

@@ -91,18 +91,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Accounting.FinancialStatements.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Accounting.FinancialStatements.html#Code">Code</a></td>
+<td><a href="Finance.Accounting.FinancialStatements.html#code">Code</a></td>
 <td>string</td>
 <td>Unique identifying code of the financial statement. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.FinancialStatements.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="Finance.Accounting.FinancialStatements.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.FinancialStatements.html#name">Name</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
 <td>Name of the financial statement. [Required] [Filter(eq;like)]</td>
 </tr>
 </tbody>
@@ -120,16 +120,11 @@
 <tr>
 <td>Nodes</td>
 <td><a href="Finance.Accounting.FinancialStatementNodes.html">Finance.Accounting.FinancialStatementNodes</a></td>
-<td>List of <a href="Finance.Accounting.FinancialStatementNodes.html">FinancialStatementNode</a> child objects, based on the <a href="Finance.Accounting.FinancialStatementNodes.html#FinancialStatement">Finance.Accounting.FinancialStatementNode.FinancialStatement</a> back reference</td>
+<td>List of <a href="Finance.Accounting.FinancialStatementNodes.html">FinancialStatementNode</a> child objects, based on the <a href="Finance.Accounting.FinancialStatementNodes.html#financialstatement">Finance.Accounting.FinancialStatementNode.FinancialStatement</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="code">Code</h3>
 <blockquote>
 <p>Unique identifying code of the financial statement. [Required] [Filter(eq;like)] [ORD]</p>
@@ -137,11 +132,15 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <blockquote>
 <p>Name of the financial statement. [Required] [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>

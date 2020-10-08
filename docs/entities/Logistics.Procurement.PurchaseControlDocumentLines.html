@@ -91,67 +91,67 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#ConfirmedAmountBase">ConfirmedAmountBase</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#confirmedamountbase">ConfirmedAmountBase</a></td>
 <td>decimal (nullable)</td>
 <td>The amount (in base currency) of the ordered items, confirmed by the supplier (usually with Purchase Confirmation). Null when the logged operation did not involve confirming ordered items.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#ConfirmedStandardQuantityBase">ConfirmedStandardQuantityBase</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#confirmedstandardquantitybase">ConfirmedStandardQuantityBase</a></td>
 <td>decimal (nullable)</td>
 <td>The standard quantity of the ordered items, confirmed by the supplier (usually with Purchase Confirmation) in base measurement unit. Null when the logged operation did not involve confirming ordered items.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#InvoicedAmountBase">InvoicedAmountBase</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#invoicedamountbase">InvoicedAmountBase</a></td>
 <td>decimal (nullable)</td>
 <td>The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#InvoicedStandardQuantityBase">InvoicedStandardQuantityBase</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#invoicedstandardquantitybase">InvoicedStandardQuantityBase</a></td>
 <td>decimal (nullable)</td>
 <td>The standard quantity of the invoiced items (usually with Purchase Invoice) in base measurement unit. Null when the logged operation did not involve invoicing items.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#LineNo">LineNo</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>The consecutive line number within the control document. [Required]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#Notes">Notes</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this PurchaseControlDocumentLine.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#OrderedAmountBase">OrderedAmountBase</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#orderedamountbase">OrderedAmountBase</a></td>
 <td>decimal (nullable)</td>
 <td>The amount (in base currency) of the ordered items (usually with Purchase Order). Null when the logged operation did not involve ordering items.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#OrderedStandardQuantityBase">OrderedStandardQuantityBase</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#orderedstandardquantitybase">OrderedStandardQuantityBase</a></td>
 <td>decimal (nullable)</td>
 <td>The standard quantity of the ordered items (usually with Purchase Order) in base measurement unit. Null when the logged operation did not involve ordering items.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#ReceivedAmountBase">ReceivedAmountBase</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#receivedamountbase">ReceivedAmountBase</a></td>
 <td>decimal (nullable)</td>
 <td>The amount (in base currency) of the received items (usually with Receiving Order). Null when the logged operation did not involve receiving items.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#ReceivedStandardQuantityBase">ReceivedStandardQuantityBase</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#receivedstandardquantitybase">ReceivedStandardQuantityBase</a></td>
 <td>decimal (nullable)</td>
 <td>The standard quantity of the received items (usually with Receiving Order) in base measurement unit. Null when the logged operation did not involve receiving items.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#RequestedAmountBase">RequestedAmountBase</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#requestedamountbase">RequestedAmountBase</a></td>
 <td>decimal (nullable)</td>
 <td>The amount (in base currency) of the requested items (usually with Purchase Requisition). Null when the logged operation did not involve requesting items.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#RequestedStandardQuantityBase">RequestedStandardQuantityBase</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#requestedstandardquantitybase">RequestedStandardQuantityBase</a></td>
 <td>decimal (nullable)</td>
 <td>The standard quantity of the requested items (usually with Purchase Requisition) in base measurement unit. Null when the logged operation did not involve requesting items.</td>
 </tr>
@@ -168,63 +168,58 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#PurchaseControlDocument">PurchaseControlDocument</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchasecontroldocument">PurchaseControlDocument</a></td>
 <td><a href="Logistics.Procurement.PurchaseControlDocuments.html">Logistics.Procurement.PurchaseControlDocuments</a></td>
-<td>The <a href="Logistics.Procurement.PurchaseControlDocumentLines.html#PurchaseControlDocument">PurchaseControlDocument</a> to which this PurchaseControlDocumentLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchasecontroldocument">PurchaseControlDocument</a> to which this PurchaseControlDocumentLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#PurchaseInvoice">PurchaseInvoice</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseinvoice">PurchaseInvoice</a></td>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html">Logistics.Procurement.PurchaseInvoices</a> (nullable)</td>
 <td>The purchase invoice which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#PurchaseInvoiceLine">PurchaseInvoiceLine</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseinvoiceline">PurchaseInvoiceLine</a></td>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html">Logistics.Procurement.PurchaseInvoiceLines</a> (nullable)</td>
 <td>The purchase invoice line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#PurchaseOperationType">PurchaseOperationType</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseoperationtype">PurchaseOperationType</a></td>
 <td><a href="Logistics.Procurement.PurchaseOperationTypes.html">Logistics.Procurement.PurchaseOperationTypes</a> (nullable)</td>
 <td>The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#PurchaseOrder">PurchaseOrder</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseorder">PurchaseOrder</a></td>
 <td><a href="Logistics.Procurement.PurchaseOrders.html">Logistics.Procurement.PurchaseOrders</a> (nullable)</td>
 <td>The purchase order which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#PurchaseOrderLine">PurchaseOrderLine</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseorderline">PurchaseOrderLine</a></td>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html">Logistics.Procurement.PurchaseOrderLines</a> (nullable)</td>
 <td>The purchase order line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#PurchaseRequisition">PurchaseRequisition</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaserequisition">PurchaseRequisition</a></td>
 <td><a href="Logistics.Procurement.Requisitions.html">Logistics.Procurement.Requisitions</a> (nullable)</td>
 <td>The purchase requisition which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#PurchaseRequisitionLine">PurchaseRequisitionLine</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaserequisitionline">PurchaseRequisitionLine</a></td>
 <td><a href="Logistics.Procurement.RequisitionLines.html">Logistics.Procurement.RequisitionLines</a> (nullable)</td>
 <td>The purchase requisition line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#ReceivingOrder">ReceivingOrder</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#receivingorder">ReceivingOrder</a></td>
 <td><a href="Logistics.Procurement.ReceivingOrders.html">Logistics.Procurement.ReceivingOrders</a> (nullable)</td>
 <td>The receiving order which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#ReceivingOrderLine">ReceivingOrderLine</a></td>
+<td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#receivingorderline">ReceivingOrderLine</a></td>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html">Logistics.Procurement.ReceivingOrderLines</a> (nullable)</td>
 <td>The receiving order line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="confirmedamountbase">ConfirmedAmountBase</h3>
 <blockquote>
 <p>The amount (in base currency) of the ordered items, confirmed by the supplier (usually with Purchase Confirmation). Null when the logged operation did not involve confirming ordered items.</p>
@@ -239,6 +234,10 @@
 <p><em>Type</em>: <strong>decimal (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="invoicedamountbase">InvoicedAmountBase</h3>
 <blockquote>
 <p>The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items.</p>
@@ -312,74 +311,64 @@
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="purchasecontroldocument">PurchaseControlDocument</h3>
 <blockquote>
-<p>The <a href="Logistics.Procurement.PurchaseControlDocumentLines.html#PurchaseControlDocument">PurchaseControlDocument</a> to which this PurchaseControlDocumentLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchasecontroldocument">PurchaseControlDocument</a> to which this PurchaseControlDocumentLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseControlDocuments.html">Logistics.Procurement.PurchaseControlDocuments</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseinvoice">PurchaseInvoice</h3>
 <blockquote>
 <p>The purchase invoice which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoices.html">Logistics.Procurement.PurchaseInvoices</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseinvoiceline">PurchaseInvoiceLine</h3>
 <blockquote>
 <p>The purchase invoice line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoiceLines.html">Logistics.Procurement.PurchaseInvoiceLines</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseoperationtype">PurchaseOperationType</h3>
 <blockquote>
 <p>The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOperationTypes.html">Logistics.Procurement.PurchaseOperationTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseorder">PurchaseOrder</h3>
 <blockquote>
 <p>The purchase order which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOrders.html">Logistics.Procurement.PurchaseOrders</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseorderline">PurchaseOrderLine</h3>
 <blockquote>
 <p>The purchase order line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOrderLines.html">Logistics.Procurement.PurchaseOrderLines</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaserequisition">PurchaseRequisition</h3>
 <blockquote>
 <p>The purchase requisition which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.Requisitions.html">Logistics.Procurement.Requisitions</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaserequisitionline">PurchaseRequisitionLine</h3>
 <blockquote>
 <p>The purchase requisition line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.RequisitionLines.html">Logistics.Procurement.RequisitionLines</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="receivingorder">ReceivingOrder</h3>
 <blockquote>
 <p>The receiving order which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrders.html">Logistics.Procurement.ReceivingOrders</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="receivingorderline">ReceivingOrderLine</h3>
 <blockquote>
 <p>The receiving order line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrderLines.html">Logistics.Procurement.ReceivingOrderLines</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Logistics.Procurement.PurchaseControlDocumentLines erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

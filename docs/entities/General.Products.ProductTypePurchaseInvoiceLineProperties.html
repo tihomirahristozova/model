@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#Id">Id</a></td>
+<td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#PropertyNo">PropertyNo</a></td>
+<td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#propertyno">PropertyNo</a></td>
 <td>int32</td>
 <td>The consecutive number (position) of the property within the current product type. [Required]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#Required">Required</a></td>
+<td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#required">Required</a></td>
 <td>boolean</td>
 <td>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. [Required] [Default(false)]</td>
 </tr>
@@ -118,12 +118,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#ProductType">ProductType</a></td>
+<td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#producttype">ProductType</a></td>
 <td><a href="General.Products.ProductTypes.html">General.Products.ProductTypes</a></td>
-<td>The <a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#ProductType">ProductType</a> to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#producttype">ProductType</a> to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#Property">Property</a></td>
+<td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#property">Property</a></td>
 <td><a href="General.CustomProperties.html">General.CustomProperties</a></td>
 <td>The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -133,7 +133,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="propertyno">PropertyNo</h3>
 <blockquote>
@@ -157,18 +156,16 @@
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="producttype">ProductType</h3>
 <blockquote>
-<p>The <a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#ProductType">ProductType</a> to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#producttype">ProductType</a> to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">General.Products.ProductTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="property">Property</h3>
 <blockquote>
 <p>The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">General.CustomProperties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.Products.ProductTypePurchaseInvoiceLineProperties erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

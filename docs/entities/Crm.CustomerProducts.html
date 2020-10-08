@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.CustomerProducts.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Crm.CustomerProducts.html#FromDate">FromDate</a></td>
+<td><a href="Crm.CustomerProducts.html#fromdate">FromDate</a></td>
 <td>date (nullable)</td>
 <td>The initial date of the listing. null when the initial date is unknown. [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Crm.CustomerProducts.html#Notes">Notes</a></td>
+<td><a href="Crm.CustomerProducts.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Crm.CustomerProducts.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for the listing.</td>
 </tr>
 <tr>
-<td><a href="Crm.CustomerProducts.html#ToDate">ToDate</a></td>
+<td><a href="Crm.CustomerProducts.html#todate">ToDate</a></td>
 <td>date (nullable)</td>
 <td>The final date of the listing. null when the final date is unknown. [Filter(eq;ge;le)]</td>
 </tr>
@@ -123,33 +123,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.CustomerProducts.html#CompanyDivision">CompanyDivision</a></td>
+<td><a href="Crm.CustomerProducts.html#companydivision">CompanyDivision</a></td>
 <td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</td>
 <td>When the customer is a company, denotes the division for which the product is listed. null when the customer is not a company or when the listing is not division specific. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.CustomerProducts.html#CompanyLocation">CompanyLocation</a></td>
+<td><a href="Crm.CustomerProducts.html#companylocation">CompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</td>
 <td>When the customer is a company, denotes the location for which the product is listed. null when the customer is not a company or when the listing is not location specific. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.CustomerProducts.html#Customer">Customer</a></td>
+<td><a href="Crm.CustomerProducts.html#customer">Customer</a></td>
 <td><a href="Crm.Customers.html">Crm.Customers</a></td>
 <td>Customer, for which the product is listed. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Crm.CustomerProducts.html#Product">Product</a></td>
+<td><a href="Crm.CustomerProducts.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The product, which is listed for the customer. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="fromdate">FromDate</h3>
 <blockquote>
 <p>The initial date of the listing. null when the initial date is unknown. [Filter(eq;ge;le)]</p>
@@ -157,6 +152,10 @@
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for the listing.</p>
@@ -177,29 +176,25 @@
 <p>When the customer is a company, denotes the division for which the product is listed. null when the customer is not a company or when the listing is not division specific. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="companylocation">CompanyLocation</h3>
 <blockquote>
 <p>When the customer is a company, denotes the location for which the product is listed. null when the customer is not a company or when the listing is not location specific. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="customer">Customer</h3>
 <blockquote>
 <p>Customer, for which the product is listed. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Customers.html">Crm.Customers</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The product, which is listed for the customer. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Crm.CustomerProducts erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

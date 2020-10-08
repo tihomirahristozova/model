@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Assets.AssetCategories.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Assets.AssetCategories.html#Code">Code</a></td>
+<td><a href="Finance.Assets.AssetCategories.html#code">Code</a></td>
 <td>string</td>
 <td>The unique code of the AssetCategory. [Required] [Filter(eq)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Finance.Assets.AssetCategories.html#Name">Name</a></td>
+<td><a href="Finance.Assets.AssetCategories.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Finance.Assets.AssetCategories.html#name">Name</a></td>
 <td>string</td>
 <td>The name of this AssetCategory. [Required] [Filter(like)]</td>
 </tr>
@@ -118,7 +118,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Assets.AssetCategories.html#ProductType">ProductType</a></td>
+<td><a href="Finance.Assets.AssetCategories.html#producttype">ProductType</a></td>
 <td><a href="General.Products.ProductTypes.html">General.Products.ProductTypes</a></td>
 <td>Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -137,16 +137,11 @@
 <tr>
 <td>DepreciationPlanTemplates</td>
 <td><a href="Finance.Assets.DepreciationPlanTemplates.html">Finance.Assets.DepreciationPlanTemplates</a></td>
-<td>List of <a href="Finance.Assets.DepreciationPlanTemplates.html">DepreciationPlanTemplate</a> child objects, based on the <a href="Finance.Assets.DepreciationPlanTemplates.html#AssetCategory">Finance.Assets.DepreciationPlanTemplate.AssetCategory</a> back reference</td>
+<td>List of <a href="Finance.Assets.DepreciationPlanTemplates.html">DepreciationPlanTemplate</a> child objects, based on the <a href="Finance.Assets.DepreciationPlanTemplates.html#assetcategory">Finance.Assets.DepreciationPlanTemplate.AssetCategory</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="code">Code</h3>
 <blockquote>
 <p>The unique code of the AssetCategory. [Required] [Filter(eq)] [ORD]</p>
@@ -154,6 +149,10 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <blockquote>
 <p>The name of this AssetCategory. [Required] [Filter(like)]</p>
@@ -167,8 +166,7 @@
 <p>Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">General.Products.ProductTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Finance.Assets.AssetCategories erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

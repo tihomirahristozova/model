@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Fleet.TripSegments.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.Fleet.TripSegments.html#EndingTimestamp">EndingTimestamp</a></td>
+<td><a href="Applications.Fleet.TripSegments.html#endingtimestamp">EndingTimestamp</a></td>
 <td>datetime (nullable)</td>
 <td>The ending date and time of the travel on the segment.</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.TripSegments.html#Mileage">Mileage</a></td>
+<td><a href="Applications.Fleet.TripSegments.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.Fleet.TripSegments.html#mileage">Mileage</a></td>
 <td>decimal (nullable)</td>
 <td>Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage.</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.TripSegments.html#Notes">Notes</a></td>
+<td><a href="Applications.Fleet.TripSegments.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for the segment.</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.TripSegments.html#StartingTimestamp">StartingTimestamp</a></td>
+<td><a href="Applications.Fleet.TripSegments.html#startingtimestamp">StartingTimestamp</a></td>
 <td>datetime</td>
 <td>The starting date and time of the travel on the segment. [Required]</td>
 </tr>
@@ -128,28 +128,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Fleet.TripSegments.html#EndingMapPoint">EndingMapPoint</a></td>
+<td><a href="Applications.Fleet.TripSegments.html#endingmappoint">EndingMapPoint</a></td>
 <td><a href="General.Geography.MapPoints.html">General.Geography.MapPoints</a></td>
 <td>The ending geographical point of the route segment. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.TripSegments.html#StartingMapPoint">StartingMapPoint</a></td>
+<td><a href="Applications.Fleet.TripSegments.html#startingmappoint">StartingMapPoint</a></td>
 <td><a href="General.Geography.MapPoints.html">General.Geography.MapPoints</a></td>
 <td>The starting geographical point of the route segment. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.TripSegments.html#Trip">Trip</a></td>
+<td><a href="Applications.Fleet.TripSegments.html#trip">Trip</a></td>
 <td><a href="Applications.Fleet.Trips.html">Applications.Fleet.Trips</a></td>
 <td>The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="endingtimestamp">EndingTimestamp</h3>
 <blockquote>
 <p>The ending date and time of the travel on the segment.</p>
@@ -157,6 +152,10 @@
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="mileage">Mileage</h3>
 <blockquote>
 <p>Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage.</p>
@@ -184,22 +183,19 @@
 <p>The ending geographical point of the route segment. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.MapPoints.html">General.Geography.MapPoints</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="startingmappoint">StartingMapPoint</h3>
 <blockquote>
 <p>The starting geographical point of the route segment. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.MapPoints.html">General.Geography.MapPoints</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="trip">Trip</h3>
 <blockquote>
 <p>The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.Trips.html">Applications.Fleet.Trips</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Applications.Fleet.TripSegments erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

@@ -91,12 +91,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Communities.SocialGroupMembers.html#Id">Id</a></td>
+<td><a href="Communities.SocialGroupMembers.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Communities.SocialGroupMembers.html#JoinTimeUtc">JoinTimeUtc</a></td>
+<td><a href="Communities.SocialGroupMembers.html#jointimeutc">JoinTimeUtc</a></td>
 <td>datetime</td>
 <td>The exact server time (in UTC), when the user joined the group. [Required] [Default(NowUtc)]</td>
 </tr>
@@ -113,12 +113,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Communities.SocialGroupMembers.html#SocialGroup">SocialGroup</a></td>
+<td><a href="Communities.SocialGroupMembers.html#socialgroup">SocialGroup</a></td>
 <td><a href="Communities.SocialGroups.html">Communities.SocialGroups</a></td>
 <td>The group in which the user participates. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Communities.SocialGroupMembers.html#User">User</a></td>
+<td><a href="Communities.SocialGroupMembers.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a></td>
 <td>The user, who is a member of the group. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -128,7 +128,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="jointimeutc">JoinTimeUtc</h3>
 <blockquote>
@@ -144,15 +143,13 @@
 <p>The group in which the user participates. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Communities.SocialGroups.html">Communities.SocialGroups</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
 <blockquote>
 <p>The user, who is a member of the group. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Communities.SocialGroupMembers erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

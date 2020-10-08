@@ -91,32 +91,38 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Currencies.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Currencies.html#Name">Name</a></td>
-<td>string</td>
-<td>The name of this Currency. [Required] [Filter(like)]</td>
-</tr>
-<tr>
-<td><a href="General.Currencies.html#CurrencySign">CurrencySign</a></td>
+<td><a href="General.Currencies.html#currencysign">CurrencySign</a></td>
 <td>string</td>
 <td>The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="General.Currencies.html#ShowOrder">ShowOrder</a></td>
+<td><a href="General.Currencies.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Currencies.html#name">Name</a></td>
+<td>string</td>
+<td>The name of this Currency. [Required] [Filter(like)]</td>
+</tr>
+<tr>
+<td><a href="General.Currencies.html#showorder">ShowOrder</a></td>
 <td>int32</td>
 <td>The order in which to show the currency in combo boxes, etc. [Required] [Default(0)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="currencysign">CurrencySign</h3>
+<blockquote>
+<p>The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. [Required] [Filter(eq;like)] [ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <blockquote>
@@ -125,13 +131,6 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="currencysign">CurrencySign</h3>
-<blockquote>
-<p>The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. [Required] [Filter(eq;like)] [ORD]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="showorder">ShowOrder</h3>
 <blockquote>
 <p>The order in which to show the currency in combo boxes, etc. [Required] [Default(0)]</p>

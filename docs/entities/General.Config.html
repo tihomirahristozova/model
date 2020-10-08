@@ -91,48 +91,43 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Config.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Config.html#Description">Description</a></td>
+<td><a href="General.Config.html#description">Description</a></td>
 <td>string (nullable)</td>
 <td>The description of this Config.</td>
 </tr>
 <tr>
-<td><a href="General.Config.html#IsActive">IsActive</a></td>
+<td><a href="General.Config.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Config.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>Indicates whether this config entry is active. Inactive config entries are not taken into account. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1.100.0)</td>
 </tr>
 <tr>
-<td><a href="General.Config.html#KeyPath">KeyPath</a></td>
+<td><a href="General.Config.html#keypath">KeyPath</a></td>
 <td>string</td>
 <td>Full path of the configuration option. [Required] [Filter(eq)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="General.Config.html#KeyValue">KeyValue</a></td>
+<td><a href="General.Config.html#keyvalue">KeyValue</a></td>
 <td>string (nullable)</td>
 <td>The value of the configuration option.</td>
 </tr>
 <tr>
-<td><a href="General.Config.html#UserLogin">UserLogin</a></td>
+<td><a href="General.Config.html#userlogin">UserLogin</a></td>
 <td>string (nullable)</td>
 <td>If not null, the configuration option is specific to the user. [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Config.html#UserMachine">UserMachine</a></td>
+<td><a href="General.Config.html#usermachine">UserMachine</a></td>
 <td>string (nullable)</td>
 <td>If not null, the configuration option is specific to the machine. [Filter(eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="description">Description</h3>
 <blockquote>
 <p>The description of this Config.</p>
@@ -140,6 +135,10 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
 <p>Indicates whether this config entry is active. Inactive config entries are not taken into account. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1.100.0)</p>

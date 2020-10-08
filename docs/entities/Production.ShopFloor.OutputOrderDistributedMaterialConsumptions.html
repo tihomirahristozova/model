@@ -91,19 +91,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#ConsumedCost">ConsumedCost</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#consumedcost">ConsumedCost</a></td>
+<td><a href="../data-types.md#amount">Amount</a></td>
 <td>Cost of the actually issued Consumed_Quantity. [Currency: ConsumptionOrderLine.GetIssueCurrency()] [Required] [Default(0)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#ConsumedQuantity">ConsumedQuantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#consumedquantity">ConsumedQuantity</a></td>
+<td><a href="../data-types.md#quantity">Quantity</a></td>
 <td>Part of the quantity in the consumption order line which was used for the product in the output order line. [Unit: ConsumptionOrderLine.ConsumedQuantityUnit] [Required] [Default(0)] [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -118,28 +118,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#ConsumptionOrderLine">ConsumptionOrderLine</a></td>
+<td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#consumptionorderline">ConsumptionOrderLine</a></td>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html">Production.ShopFloor.ConsumptionOrderLines</a></td>
 <td>Consumption order line which requested the Consumed_Quantity. [Required] [Filter(multi eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#OutputOrderLine">OutputOrderLine</a></td>
+<td><a href="Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.html#outputorderline">OutputOrderLine</a></td>
 <td><a href="Production.ShopFloor.OutputOrderLines.html">Production.ShopFloor.OutputOrderLines</a></td>
 <td>The output order line for which the distribution is recorded. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="consumedcost">ConsumedCost</h3>
 <blockquote>
 <p>Cost of the actually issued Consumed_Quantity. [Currency: ConsumptionOrderLine.GetIssueCurrency()] [Required] [Default(0)] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -147,25 +142,27 @@
 <blockquote>
 <p>Part of the quantity in the consumption order line which was used for the product in the output order line. [Unit: ConsumptionOrderLine.ConsumedQuantityUnit] [Required] [Default(0)] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="consumptionorderline">ConsumptionOrderLine</h3>
 <blockquote>
 <p>Consumption order line which requested the Consumed_Quantity. [Required] [Filter(multi eq)] [ReadOnly]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.ConsumptionOrderLines.html">Production.ShopFloor.ConsumptionOrderLines</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="outputorderline">OutputOrderLine</h3>
 <blockquote>
 <p>The output order line for which the distribution is recorded. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.OutputOrderLines.html">Production.ShopFloor.OutputOrderLines</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Production.ShopFloor.OutputOrderDistributedMaterialConsumptions erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

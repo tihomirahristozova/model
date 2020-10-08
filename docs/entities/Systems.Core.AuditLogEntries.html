@@ -91,49 +91,49 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Core.AuditLogEntries.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Systems.Core.AuditLogEntries.html#ApplicationName">ApplicationName</a></td>
+<td><a href="Systems.Core.AuditLogEntries.html#applicationname">ApplicationName</a></td>
 <td>string (nullable)</td>
 <td>The client application that triggered the event. Null when unknown or N/A. [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.AuditLogEntries.html#Details">Details</a></td>
+<td><a href="Systems.Core.AuditLogEntries.html#details">Details</a></td>
 <td>string (nullable)</td>
 <td>Detailed contents of the event. Contents depend on the Event Type and Event Name.</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.AuditLogEntries.html#EntityItemId">EntityItemId</a></td>
+<td><a href="Systems.Core.AuditLogEntries.html#entityitemid">EntityItemId</a></td>
 <td>guid (nullable)</td>
 <td>The Id of the record, which is referenced by the event. Null when unknown or N/A. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.AuditLogEntries.html#EntityName">EntityName</a></td>
+<td><a href="Systems.Core.AuditLogEntries.html#entityname">EntityName</a></td>
 <td>string (nullable)</td>
 <td>The entity, which is being referenced by the event. Null when unknown or N/A. [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.AuditLogEntries.html#EventClass">EventClass</a></td>
-<td><a href="Systems.Core.AuditLogEntries.html#EventClass">Systems.Core.AuditLogEntriesRepository.EventClass</a></td>
+<td><a href="Systems.Core.AuditLogEntries.html#eventclass">EventClass</a></td>
+<td><a href="Systems.Core.AuditLogEntries.html#eventclass">EventClass</a></td>
 <td>The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.AuditLogEntries.html#EventName">EventName</a></td>
+<td><a href="Systems.Core.AuditLogEntries.html#eventname">EventName</a></td>
 <td>string (nullable)</td>
 <td>Specific event or method name. Contents depend on the Event Type. Null when N/A. [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.AuditLogEntries.html#EventTimeUtc">EventTimeUtc</a></td>
+<td><a href="Systems.Core.AuditLogEntries.html#eventtimeutc">EventTimeUtc</a></td>
 <td>datetime</td>
 <td>The exact date and time (in Utc) when the event occurred. [Required] [Default(Now)] [Filter(ge;le)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.AuditLogEntries.html#EventType">EventType</a></td>
-<td><a href="Systems.Core.AuditLogEntries.html#EventType">Systems.Core.AuditLogEntriesRepository.EventType</a></td>
+<td><a href="Systems.Core.AuditLogEntries.html#eventtype">EventType</a></td>
+<td><a href="Systems.Core.AuditLogEntries.html#eventtype">EventType</a></td>
 <td>Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Core.AuditLogEntries.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -148,23 +148,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Core.AuditLogEntries.html#PersonalDataProcess">PersonalDataProcess</a></td>
+<td><a href="Systems.Core.AuditLogEntries.html#personaldataprocess">PersonalDataProcess</a></td>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html">Applications.PersonalData.PersonalDataProcesses</a> (nullable)</td>
 <td>The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.AuditLogEntries.html#User">User</a></td>
+<td><a href="Systems.Core.AuditLogEntries.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
 <td>The user account under which the event has occurred. Null only for events which are not user-specific. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="applicationname">ApplicationName</h3>
 <blockquote>
 <p>The client application that triggered the event. Null when unknown or N/A. [Filter(eq;like)]</p>
@@ -184,8 +179,7 @@
 <p>The Id of the record, which is referenced by the event. Null when unknown or N/A. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="entityname">EntityName</h3>
 <blockquote>
 <p>The entity, which is being referenced by the event. Null when unknown or N/A. [Filter(eq;like)]</p>
@@ -197,9 +191,9 @@
 <blockquote>
 <p>The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Core.AuditLogEntries.html#EventClass">Systems.Core.AuditLogEntriesRepository.EventClass</a></strong><br>
-Allowed values for the <a href="Systems.Core.AuditLogEntries.html#EventClass">EventClass</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Core.AuditLogEntries.html#eventclass">EventClass</a></strong><br>
+Allowed values for the <a href="Systems.Core.AuditLogEntries.html#eventclass">EventClass</a> data attribute<br>
+<em>Allowed Values (Systems.Core.AuditLogEntriesRepository.EventClass Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -243,9 +237,9 @@ Allowed values for the <a href="Systems.Core.AuditLogEntries.html#EventClass">Ev
 <blockquote>
 <p>Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Core.AuditLogEntries.html#EventType">Systems.Core.AuditLogEntriesRepository.EventType</a></strong><br>
-Allowed values for the <a href="Systems.Core.AuditLogEntries.html#EventType">EventType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Core.AuditLogEntries.html#eventtype">EventType</a></strong><br>
+Allowed values for the <a href="Systems.Core.AuditLogEntries.html#eventtype">EventType</a> data attribute<br>
+<em>Allowed Values (Systems.Core.AuditLogEntriesRepository.EventType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -314,21 +308,23 @@ Allowed values for the <a href="Systems.Core.AuditLogEntries.html#EventType">Eve
 </table>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="personaldataprocess">PersonalDataProcess</h3>
 <blockquote>
 <p>The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html">Applications.PersonalData.PersonalDataProcesses</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
 <blockquote>
 <p>The user account under which the event has occurred. Null only for events which are not user-specific. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Systems.Core.AuditLogEntries erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

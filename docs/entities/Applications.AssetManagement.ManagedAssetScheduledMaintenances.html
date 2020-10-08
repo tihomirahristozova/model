@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#Date">Date</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#date">Date</a></td>
 <td>date (nullable)</td>
 <td>The date, when the maintenance is planned. null means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#IsDismissed">IsDismissed</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#isdismissed">IsDismissed</a></td>
 <td>boolean</td>
 <td>Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. [Required] [Default(false)] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#Notes">Notes</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ManagedAssetScheduledMaintenance.</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#TrackedParameterValue">TrackedParameterValue</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#trackedparametervalue">TrackedParameterValue</a></td>
 <td>int32 (nullable)</td>
 <td>The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. null means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)]</td>
 </tr>
@@ -128,23 +128,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#MaintenanceType">MaintenanceType</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#maintenancetype">MaintenanceType</a></td>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html">Applications.AssetManagement.MaintenanceTypes</a></td>
 <td>The type of maintenance, which will be performed. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#ManagedAsset">ManagedAsset</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">Applications.AssetManagement.ManagedAssets</a></td>
 <td>The asset, which will be maintained. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="date">Date</h3>
 <blockquote>
 <p>The date, when the maintenance is planned. null means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)]</p>
@@ -152,6 +147,10 @@
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdismissed">IsDismissed</h3>
 <blockquote>
 <p>Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. [Required] [Default(false)] [Filter(multi eq)]</p>
@@ -180,15 +179,13 @@
 <p>The type of maintenance, which will be performed. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceTypes.html">Applications.AssetManagement.MaintenanceTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
 <blockquote>
 <p>The asset, which will be maintained. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssets.html">Applications.AssetManagement.ManagedAssets</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=Applications.AssetManagement.ManagedAssetScheduledMaintenances erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

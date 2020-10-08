@@ -91,13 +91,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Resources.ResourceGroups.html#Id">Id</a></td>
+<td><a href="General.Resources.ResourceGroups.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="General.Resources.ResourceGroups.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="General.Resources.ResourceGroups.html#name">Name</a></td>
+<td><a href="../data-types.md#multilanguagestring">MultilanguageString</a></td>
 <td>Resource group name. Unique within its parent. [Required] [Filter(eq;like)]</td>
 </tr>
 </tbody>
@@ -113,12 +113,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Resources.ResourceGroups.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="General.Resources.ResourceGroups.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
 <td>The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Resources.ResourceGroups.html#Parent">Parent</a></td>
+<td><a href="General.Resources.ResourceGroups.html#parent">Parent</a></td>
 <td><a href="General.Resources.ResourceGroups.html">General.Resources.ResourceGroups</a> (nullable)</td>
 <td>The parent resource group or null if this is root group. [Filter(multi eq)]</td>
 </tr>
@@ -137,7 +137,7 @@
 <tr>
 <td>Resources</td>
 <td><a href="General.Resources.Resources.html">General.Resources.Resources</a></td>
-<td>List of <a href="General.Resources.Resources.html">Resource</a> child objects, based on the <a href="General.Resources.Resources.html#ResourceGroup">General.Resources.Resource.ResourceGroup</a> back reference</td>
+<td>List of <a href="General.Resources.Resources.html">Resource</a> child objects, based on the <a href="General.Resources.Resources.html#resourcegroup">General.Resources.Resource.ResourceGroup</a> back reference</td>
 </tr>
 </tbody>
 </table>
@@ -145,13 +145,12 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <blockquote>
 <p>Resource group name. Unique within its parent. [Required] [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -160,15 +159,13 @@
 <p>The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
 <blockquote>
 <p>The parent resource group or null if this is root group. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Resources.ResourceGroups.html">General.Resources.ResourceGroups</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>[!list erp.entity=General.Resources.ResourceGroups erp.type=business-rule default-text=&quot;None&quot;]</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
