@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Logistics.Inventory.CostCorrectionLines">
 <h1 id="logisticsinventorycostcorrectionlines">Logistics.Inventory.CostCorrectionLines</h1>
 
 <p>Cost correction detail lines. One line is created for each corrected transaction line. Entity: Inv_Cost_Correction_Lines</p>
@@ -90,22 +97,22 @@
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#BaseCostAdjustment">BaseCostAdjustment</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>The amount of correction (plus or minus) for the Base Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#CostCorrectionAmount">CostCorrectionAmount</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>The amount of correction (plus or minus) for the Amount field of the transaction line. [Currency: TransactionLine.TransactionObj.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#ProductCostAdjustment">ProductCostAdjustment</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>The amount of correction (plus or minus) for the Product Cost field of the transaction line. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#StoreCostAdjustment">StoreCostAdjustment</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>The amount of correction (plus or minus) for the Store Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.Store.Currency] [Required] [Default(0)]</td>
 </tr>
 </tbody>
@@ -142,7 +149,7 @@
 <blockquote>
 <p>The amount of correction (plus or minus) for the Base Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -150,7 +157,7 @@
 <blockquote>
 <p>The amount of correction (plus or minus) for the Amount field of the transaction line. [Currency: TransactionLine.TransactionObj.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -158,7 +165,7 @@
 <blockquote>
 <p>The amount of correction (plus or minus) for the Product Cost field of the transaction line. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -166,7 +173,7 @@
 <blockquote>
 <p>The amount of correction (plus or minus) for the Store Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.Store.Currency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -196,8 +203,6 @@
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_CostCorrectionLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_CostCorrectionLines?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_CostCorrectionLines?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_CostCorrectionLines?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Inv_Cost_Correction_Lines?$top=10">https://demodb.my.erp.net/api/domain/odata/Inv_Cost_Correction_Lines?$top=10</a></p>
 </article>
           </div>
           

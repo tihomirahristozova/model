@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Logistics.Inventory.RequisitionPlan">
 <h1 id="logisticsinventoryrequisitionplan">Logistics.Inventory.RequisitionPlan</h1>
 
 <p>The current requisition (MRP) plan. The data is deleted and re-created upon each planning. Entity: Inv_Requisition_Plan</p>
@@ -110,12 +117,12 @@
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#FirmPlannedOrderReceipts">FirmPlannedOrderReceipts</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#FirmPlannedOrderReleases">FirmPlannedOrderReleases</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The order releases which were manually confirmed for release on the specified calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
@@ -125,32 +132,32 @@
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#GrossRequirements">GrossRequirements</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#NetRequirements">NetRequirements</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The net requirements for the date, which are in shortage for the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#PlannedOrderReceipts">PlannedOrderReceipts</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#PlannedOrderReleases">PlannedOrderReleases</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#ProjectedAvailableBalance">ProjectedAvailableBalance</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#Quantity">Quantity</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
@@ -160,7 +167,7 @@
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#ScheduledReceipts">ScheduledReceipts</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 </tbody>
@@ -240,7 +247,7 @@
 <blockquote>
 <p>The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -248,7 +255,7 @@
 <blockquote>
 <p>The order releases which were manually confirmed for release on the specified calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -264,7 +271,7 @@
 <blockquote>
 <p>The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -272,7 +279,7 @@
 <blockquote>
 <p>The net requirements for the date, which are in shortage for the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -280,7 +287,7 @@
 <blockquote>
 <p>The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -288,7 +295,7 @@
 <blockquote>
 <p>The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -296,7 +303,7 @@
 <blockquote>
 <p>Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -304,7 +311,7 @@
 <blockquote>
 <p>The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -319,7 +326,7 @@
 <blockquote>
 <p>The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -370,8 +377,6 @@
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_RequisitionPlan?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_RequisitionPlan?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_RequisitionPlan?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_RequisitionPlan?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Inv_Requisition_Plan?$top=10">https://demodb.my.erp.net/api/domain/odata/Inv_Requisition_Plan?$top=10</a></p>
 </article>
           </div>
           

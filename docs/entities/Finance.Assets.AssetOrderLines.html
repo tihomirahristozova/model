@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Finance.Assets.AssetOrderLines">
 <h1 id="financeassetsassetorderlines">Finance.Assets.AssetOrderLines</h1>
 
 <p>Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines</p>
@@ -90,7 +97,7 @@
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#AssetValue">AssetValue</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>Value of the acquired or retired asset. [Currency: AssetValueCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
@@ -147,7 +154,7 @@
 <blockquote>
 <p>Value of the acquired or retired asset. [Currency: AssetValueCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -206,8 +213,6 @@
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Assets_AssetOrderLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Assets_AssetOrderLines?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_AssetOrderLines?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Finance_Assets_AssetOrderLines?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Ast_Asset_Order_Lines?$top=10">https://demodb.my.erp.net/api/domain/odata/Ast_Asset_Order_Lines?$top=10</a></p>
 </article>
           </div>
           

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Logistics.Procurement.PurchaseOrderLines">
 <h1 id="logisticsprocurementpurchaseorderlines">Logistics.Procurement.PurchaseOrderLines</h1>
 
 <p>Contains detail lines of purchase orders. Entity: Scm_Purchase_Order_Lines</p>
@@ -90,22 +97,22 @@
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#ConfirmedPricePerUnit">ConfirmedPricePerUnit</a></td>
-<td><a href="../data-types/Amount.md">Amount</a> (nullable)</td>
+<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
 <td>The unit price that is confirmed by the supplier. null if there was no order confirmation. [Currency: PurchaseOrder.DocumentCurrency]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#ConfirmedQuantity">ConfirmedQuantity</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a> (nullable)</td>
+<td><a href="../data-types.md#Quantity">Quantity</a> (nullable)</td>
 <td>The quantity that is confirmed by the supplier. null if there was no order confirmation. [Unit: QuantityUnit] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#ConfirmedQuantityBase">ConfirmedQuantityBase</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a> (nullable)</td>
+<td><a href="../data-types.md#Quantity">Quantity</a> (nullable)</td>
 <td>The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#ConfirmedStandardQuantityBase">ConfirmedStandardQuantityBase</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a> (nullable)</td>
+<td><a href="../data-types.md#Quantity">Quantity</a> (nullable)</td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
@@ -130,27 +137,27 @@
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#PricePerUnit">PricePerUnit</a></td>
-<td><a href="../data-types/Amount.md">Amount</a> (nullable)</td>
+<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
 <td>The expected unit price of the ordered products, in the document currency. [Currency: PurchaseOrder.DocumentCurrency]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#ProductDescription">ProductDescription</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
 <td>The name of the ordered product, initially copied from the name in the product definition. The field can be edited by the user. [Required] [Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#Quantity">Quantity</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The quantity ordered. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#QuantityBase">QuantityBase</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The equivalence of Quantity, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#StandardQuantityBase">StandardQuantityBase</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 </tbody>
@@ -222,21 +229,21 @@
 <blockquote>
 <p>The unit price that is confirmed by the supplier. null if there was no order confirmation. [Currency: PurchaseOrder.DocumentCurrency]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="confirmedquantity">ConfirmedQuantity</h3>
 <blockquote>
 <p>The quantity that is confirmed by the supplier. null if there was no order confirmation. [Unit: QuantityUnit] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="confirmedquantitybase">ConfirmedQuantityBase</h3>
 <blockquote>
 <p>The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -245,7 +252,7 @@
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -286,14 +293,14 @@
 <blockquote>
 <p>The expected unit price of the ordered products, in the document currency. [Currency: PurchaseOrder.DocumentCurrency]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="productdescription">ProductDescription</h3>
 <blockquote>
 <p>The name of the ordered product, initially copied from the name in the product definition. The field can be edited by the user. [Required] [Filter(like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -304,7 +311,7 @@
 <blockquote>
 <p>The quantity ordered. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -312,7 +319,7 @@
 <blockquote>
 <p>The equivalence of Quantity, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -324,7 +331,7 @@
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -406,8 +413,6 @@
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_PurchaseOrderLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_PurchaseOrderLines?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseOrderLines?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseOrderLines?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Order_Lines?$top=10">https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Order_Lines?$top=10</a></p>
 </article>
           </div>
           

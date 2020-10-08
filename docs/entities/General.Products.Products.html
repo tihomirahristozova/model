@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="General.Products.Products">
 <h1 id="generalproductsproducts">General.Products.Products</h1>
 
 <p>Products are the different items in the enterprise, which can be purchased, stored, sold and depreciated. Entity: Gen_Products</p>
@@ -125,7 +132,7 @@
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#Description">Description</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>The description of the product.</td>
 </tr>
 <tr>
@@ -165,7 +172,7 @@
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#MinimalSalesPricePerLot">MinimalSalesPricePerLot</a></td>
-<td><a href="../data-types/Amount.md">Amount</a> (nullable)</td>
+<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
 <td>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: CostingCurrency]</td>
 </tr>
 <tr>
@@ -195,7 +202,7 @@
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#Name">Name</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
 <td>Name of the item. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
@@ -205,7 +212,7 @@
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#ShortName">ShortName</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. [Filter(eq;like)]</td>
 </tr>
 <tr>
@@ -215,17 +222,17 @@
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#StandardCostPerLot">StandardCostPerLot</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#StandardLotSizeBase">StandardLotSizeBase</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. [Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#StandardPricePerLot">StandardPricePerLot</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
@@ -504,7 +511,7 @@ Allowed values for the <a href="General.Products.Products.html#CostingMethod">Co
 <blockquote>
 <p>The description of the product.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="expiryperioddays">ExpiryPeriodDays</h3>
@@ -612,7 +619,7 @@ Allowed values for the <a href="General.Products.Products.html#LotsIssue">LotsIs
 <blockquote>
 <p>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: CostingCurrency]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="minimalsalesquantitybase">MinimalSalesQuantityBase</h3>
@@ -654,7 +661,7 @@ Allowed values for the <a href="General.Products.Products.html#LotsIssue">LotsIs
 <blockquote>
 <p>Name of the item. [Required] [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
@@ -669,7 +676,7 @@ Allowed values for the <a href="General.Products.Products.html#LotsIssue">LotsIs
 <blockquote>
 <p>Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="showincatalog">ShowInCatalog</h3>
@@ -684,7 +691,7 @@ Allowed values for the <a href="General.Products.Products.html#LotsIssue">LotsIs
 <blockquote>
 <p>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -692,7 +699,7 @@ Allowed values for the <a href="General.Products.Products.html#LotsIssue">LotsIs
 <blockquote>
 <p>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. [Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -700,7 +707,7 @@ Allowed values for the <a href="General.Products.Products.html#LotsIssue">LotsIs
 <blockquote>
 <p>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -861,8 +868,6 @@ Allowed values for the <a href="General.Products.Products.html#UseLots">UseLots<
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Products_Products?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Products_Products?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#General_Products_Products?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#General_Products_Products?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Gen_Products?$top=10">https://demodb.my.erp.net/api/domain/odata/Gen_Products?$top=10</a></p>
 </article>
           </div>
           

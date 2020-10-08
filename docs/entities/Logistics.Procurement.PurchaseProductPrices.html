@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Logistics.Procurement.PurchaseProductPrices">
 <h1 id="logisticsprocurementpurchaseproductprices">Logistics.Procurement.PurchaseProductPrices</h1>
 
 <p>Contains purchase prices of the products. Used for automatically loading unit prices in the purchase documents. Entity: Scm_Purchase_Product_Prices</p>
@@ -95,12 +102,12 @@
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#MaxQuantity">MaxQuantity</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a> (nullable)</td>
+<td><a href="../data-types.md#Quantity">Quantity</a> (nullable)</td>
 <td>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#MinQuantity">MinQuantity</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a> (nullable)</td>
+<td><a href="../data-types.md#Quantity">Quantity</a> (nullable)</td>
 <td>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq)]</td>
 </tr>
 <tr>
@@ -110,12 +117,12 @@
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#Price">Price</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#PriceQuantity">PriceQuantity</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
@@ -189,14 +196,14 @@
 <blockquote>
 <p>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="minquantity">MinQuantity</h3>
 <blockquote>
 <p>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
@@ -210,7 +217,7 @@
 <blockquote>
 <p>Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -218,7 +225,7 @@
 <blockquote>
 <p>The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -325,8 +332,6 @@ Allowed values for the <a href="Logistics.Procurement.PurchaseProductPrices.html
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_PurchaseProductPrices?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_PurchaseProductPrices?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseProductPrices?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Procurement_PurchaseProductPrices?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Product_Prices?$top=10">https://demodb.my.erp.net/api/domain/odata/Scm_Purchase_Product_Prices?$top=10</a></p>
 </article>
           </div>
           

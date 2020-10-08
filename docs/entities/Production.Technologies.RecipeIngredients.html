@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Production.Technologies.RecipeIngredients">
 <h1 id="productiontechnologiesrecipeingredients">Production.Technologies.RecipeIngredients</h1>
 
 <p>Contains the materials of a recipe that make up the product. Entity: Prd_Recipe_Ingredients</p>
@@ -90,12 +97,12 @@
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#Cost">Cost</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>The cost of the specified quantity of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#FixedScrapQuantity">FixedScrapQuantity</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td><a href="../data-types.md#Quantity">Quantity</a></td>
 <td>Fixed scrap quantity of the material, needed for setup. [Unit: UsageUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
@@ -110,7 +117,7 @@
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#Price">Price</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>Total price of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
@@ -120,17 +127,17 @@
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#UnitCost">UnitCost</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>Cost of 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#UnitPrice">UnitPrice</a></td>
-<td><a href="../data-types/Amount.md">Amount</a></td>
+<td><a href="../data-types.md#Amount">Amount</a></td>
 <td>Price for 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#UsageQuantity">UsageQuantity</a></td>
-<td><a href="../data-types/Quantity.md">Quantity</a> (nullable)</td>
+<td><a href="../data-types.md#Quantity">Quantity</a> (nullable)</td>
 <td>Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. [Unit: UsageUnit] [Default(1.000)] [Filter(ge;le)]</td>
 </tr>
 </tbody>
@@ -187,7 +194,7 @@
 <blockquote>
 <p>The cost of the specified quantity of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -195,7 +202,7 @@
 <blockquote>
 <p>Fixed scrap quantity of the material, needed for setup. [Unit: UsageUnit] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -221,7 +228,7 @@
 <blockquote>
 <p>Total price of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -237,7 +244,7 @@
 <blockquote>
 <p>Cost of 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -245,7 +252,7 @@
 <blockquote>
 <p>Price for 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -253,7 +260,7 @@
 <blockquote>
 <p>Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. [Unit: UsageUnit] [Default(1.000)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -311,8 +318,6 @@
 <a href="https://demodb.my.erp.net/api/domain/odata/Production_Technologies_RecipeIngredients?$top=10">https://demodb.my.erp.net/api/domain/odata/Production_Technologies_RecipeIngredients?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Production_Technologies_RecipeIngredients?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Production_Technologies_RecipeIngredients?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Prd_Recipe_Ingredients?$top=10">https://demodb.my.erp.net/api/domain/odata/Prd_Recipe_Ingredients?$top=10</a></p>
 </article>
           </div>
           

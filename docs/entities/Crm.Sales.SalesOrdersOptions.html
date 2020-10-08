@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Crm.Sales.SalesOrdersOptions">
 <h1 id="crmsalessalesordersoptions">Crm.Sales.SalesOrdersOptions</h1>
 
 <p>Options for sales orders of specific user defined document type. Entity: Crm_Sales_Orders_Options</p>
@@ -100,7 +107,7 @@
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#MinimumAmount">MinimumAmount</a></td>
-<td><a href="../data-types/Amount.md">Amount</a> (nullable)</td>
+<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
 <td>When not null, specifies minimal total amount of the sales order, which is required for order releasing. [Currency: MinimumAmountCurrency]</td>
 </tr>
 <tr>
@@ -196,7 +203,7 @@ Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#AllowedDirecti
 <blockquote>
 <p>When not null, specifies minimal total amount of the sales order, which is required for order releasing. [Currency: MinimumAmountCurrency]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="shipmentallowance">ShipmentAllowance</h3>
@@ -271,8 +278,6 @@ Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#ShipmentAllowa
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_Sales_SalesOrdersOptions?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Sales_SalesOrdersOptions?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_SalesOrdersOptions?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_SalesOrdersOptions?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Orders_Options?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Orders_Options?$top=10</a></p>
 </article>
           </div>
           

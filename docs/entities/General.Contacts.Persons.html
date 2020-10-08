@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="General.Contacts.Persons">
 <h1 id="generalcontactspersons">General.Contacts.Persons</h1>
 
 <p>Personal records. Requires related party record. Entity: Cm_Persons</p>
@@ -130,7 +137,7 @@
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#PartyName">PartyName</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
 <td>The name of the party [Required]</td>
 </tr>
 <tr>
@@ -160,7 +167,7 @@
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#City">City</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>City from the legal registration address for the person. [Filter(like)]</td>
 </tr>
 <tr>
@@ -175,7 +182,7 @@
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#FirstName">FirstName</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>First name of the person. [Filter(eq;like)]</td>
 </tr>
 <tr>
@@ -185,12 +192,12 @@
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#LastName">LastName</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>Last name of the person. [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#MiddleName">MiddleName</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>Middle name of the person. [Filter(eq;like)]</td>
 </tr>
 <tr>
@@ -215,7 +222,7 @@
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#Title">Title</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
 <td>The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.</td>
 </tr>
 <tr>
@@ -394,7 +401,7 @@
 <blockquote>
 <p>The name of the party [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partytype">PartyType</h3>
@@ -469,7 +476,7 @@ Allowed values for the <a href="General.Contacts.Parties.html#PartyType">PartyTy
 <blockquote>
 <p>City from the legal registration address for the person. [Filter(like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationtime">CreationTime</h3>
@@ -490,7 +497,7 @@ Allowed values for the <a href="General.Contacts.Parties.html#PartyType">PartyTy
 <blockquote>
 <p>First name of the person. [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="gender">Gender</h3>
@@ -524,14 +531,14 @@ Allowed values for the <a href="General.Contacts.Persons.html#Gender">Gender</a>
 <blockquote>
 <p>Last name of the person. [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="middlename">MiddleName</h3>
 <blockquote>
 <p>Middle name of the person. [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="nationalnumber">NationalNumber</h3>
@@ -566,7 +573,7 @@ Allowed values for the <a href="General.Contacts.Persons.html#Gender">Gender</a>
 <blockquote>
 <p>The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
@@ -630,8 +637,6 @@ Allowed values for the <a href="General.Contacts.Persons.html#Gender">Gender</a>
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Contacts_Persons?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Contacts_Persons?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_Persons?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#General_Contacts_Persons?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Cm_Persons?$top=10">https://demodb.my.erp.net/api/domain/odata/Cm_Persons?$top=10</a></p>
 </article>
           </div>
           

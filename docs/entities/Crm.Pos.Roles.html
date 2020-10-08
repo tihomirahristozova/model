@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Crm.Pos.Roles">
 <h1 id="crmposroles">Crm.Pos.Roles</h1>
 
 <p>Represents a role, which can be assigned to POS operators (like Cashier, Manager, etc.). The role indicates the operations, which are allowed to be performed by the operators. Entity: Pos_Roles (Introduced in version 19.1.100.0)</p>
@@ -105,7 +112,7 @@
 </tr>
 <tr>
 <td><a href="Crm.Pos.Roles.html#PosRoleName">PosRoleName</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
 <td>Multi-language name of the POS role. [Required] [Filter(multi eq;like)]</td>
 </tr>
 </tbody>
@@ -143,7 +150,7 @@
 <blockquote>
 <p>Multi-language name of the POS role. [Required] [Filter(multi eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>
@@ -157,8 +164,6 @@
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_Pos_Roles?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Pos_Roles?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_Roles?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_Roles?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Pos_Roles?$top=10">https://demodb.my.erp.net/api/domain/odata/Pos_Roles?$top=10</a></p>
 </article>
           </div>
           

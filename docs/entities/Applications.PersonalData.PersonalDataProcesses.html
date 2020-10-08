@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     
@@ -67,9 +67,16 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Applications.PersonalData.PersonalDataProcesses">
 <h1 id="applicationspersonaldatapersonaldataprocesses">Applications.PersonalData.PersonalDataProcesses</h1>
 
 <p>Represents processes, which process personal data, regulated by GDPR and other applicable laws. Entity: Pdm_Personal_Data_Processes (Introduced in version 18.2.100.0)</p>
@@ -155,7 +162,7 @@
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html#Name">Name</a></td>
-<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
 <td>Name of the process (Multilanguage). [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
@@ -402,7 +409,7 @@ Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.
 <blockquote>
 <p>Name of the process (Multilanguage). [Required] [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
@@ -480,8 +487,6 @@ Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_PersonalData_PersonalDataProcesses?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_PersonalData_PersonalDataProcesses?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Applications_PersonalData_PersonalDataProcesses?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Applications_PersonalData_PersonalDataProcesses?$top=10</a></p>
-<p>Table API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Pdm_Personal_Data_Processes?$top=10">https://demodb.my.erp.net/api/domain/odata/Pdm_Personal_Data_Processes?$top=10</a></p>
 </article>
           </div>
           
