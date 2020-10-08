@@ -9,30 +9,23 @@ The bank accounts of a party. Entity: Gen_Party_Bank_Accounts
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.PartyBankAccounts.md#Id) | guid |  
-| [BankAccountCode](General.Contacts.PartyBankAccounts.md#BankAccountCode) | string | The code of the account, usually the IBAN code. [Required] [Filter(eq;like)] 
-| [BankAddress](General.Contacts.PartyBankAccounts.md#BankAddress) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments. 
-| [BankBranchName](General.Contacts.PartyBankAccounts.md#BankBranchName) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments. 
-| [BankCode](General.Contacts.PartyBankAccounts.md#BankCode) | string (nullable) | The code of the bank, usually the BIC code. [Filter(eq)] 
-| [BankName](General.Contacts.PartyBankAccounts.md#BankName) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The full name of the bank. [Filter(like)] 
-| [IsDefault](General.Contacts.PartyBankAccounts.md#IsDefault) | boolean | True if the this is the default account for the party. Only one default per party is allowed. [Required] [Default(false)] [Filter(eq)] 
-| [Notes](General.Contacts.PartyBankAccounts.md#Notes) | string (nullable) | Notes for this PartyBankAccount. 
+| [BankAccountCode](General.Contacts.PartyBankAccounts.md#bankaccountcode) | string | The code of the account, usually the IBAN code. [Required] [Filter(eq;like)] 
+| [BankAddress](General.Contacts.PartyBankAccounts.md#bankaddress) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments. 
+| [BankBranchName](General.Contacts.PartyBankAccounts.md#bankbranchname) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments. 
+| [BankCode](General.Contacts.PartyBankAccounts.md#bankcode) | string (nullable) | The code of the bank, usually the BIC code. [Filter(eq)] 
+| [BankName](General.Contacts.PartyBankAccounts.md#bankname) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The full name of the bank. [Filter(like)] 
+| [Id](General.Contacts.PartyBankAccounts.md#id) | guid |  
+| [IsDefault](General.Contacts.PartyBankAccounts.md#isdefault) | boolean | True if the this is the default account for the party. Only one default per party is allowed. [Required] [Default(false)] [Filter(eq)] 
+| [Notes](General.Contacts.PartyBankAccounts.md#notes) | string (nullable) | Notes for this PartyBankAccount. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](General.Contacts.PartyBankAccounts.md#Party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.PartyBankAccounts.md#Party) to which this PartyBankAccount belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Party](General.Contacts.PartyBankAccounts.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.PartyBankAccounts.md#party) to which this PartyBankAccount belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### BankAccountCode
 
@@ -46,7 +39,7 @@ _Supports Order By_: **False**
 
 > The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments.
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -54,7 +47,7 @@ _Supports Order By_: **False**
 
 > The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments.
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -70,9 +63,15 @@ _Supports Order By_: **False**
 
 > The full name of the bank. [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsDefault
 
@@ -96,11 +95,10 @@ _Supports Order By_: **False**
 
 ### Party
 
-> The [Party](General.Contacts.PartyBankAccounts.md#Party) to which this PartyBankAccount belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Party](General.Contacts.PartyBankAccounts.md#party) to which this PartyBankAccount belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,52 +9,45 @@ Contains detail lines for purchase invoice documents. Entity: Scm_Purchase_Invoi
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Procurement.PurchaseInvoiceLines.md#Id) | guid |  
-| [DeliveryTermsCode](Logistics.Procurement.PurchaseInvoiceLines.md#DeliveryTermsCode) | [Finance.Intrastat.DeliveryTerms](Logistics.Procurement.PurchaseInvoiceLines.md#DeliveryTermsCode) (nullable) | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
-| [IntrastatApplyDate](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatApplyDate) | datetime (nullable) | Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used. 
-| [IntrastatTransactionNatureCode](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatTransactionNatureCode) | [Finance.Intrastat.TransactionNature](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatTransactionNatureCode) (nullable) | Transaction nature; used for Intrastat reporting. 
-| [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatTransportModeCode) | [Finance.Intrastat.TransportMode](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatTransportModeCode) (nullable) | Transport mode; used for Intrastat reporting. 
-| [LineAmount](Logistics.Procurement.PurchaseInvoiceLines.md#LineAmount) | [Amount](../data-types.md#Amount) | The total invoiced amount for this line in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)] 
-| [LineNo](Logistics.Procurement.PurchaseInvoiceLines.md#LineNo) | int32 | Consecutive line number within the invoice. [Required] 
-| [Notes](Logistics.Procurement.PurchaseInvoiceLines.md#Notes) | string (nullable) | Notes for this PurchaseInvoiceLine. 
-| [ProductName](Logistics.Procurement.PurchaseInvoiceLines.md#ProductName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user. [Required] 
-| [Quantity](Logistics.Procurement.PurchaseInvoiceLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | The invoiced quantity. [Unit: QuantityUnit] [Required] [Default(1)] 
-| [QuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
-| [StandardQuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
-| [UnitPrice](Logistics.Procurement.PurchaseInvoiceLines.md#UnitPrice) | [Amount](../data-types.md#Amount) | The unit price of the invoiced item in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)] 
+| [DeliveryTermsCode](Logistics.Procurement.PurchaseInvoiceLines.md#deliverytermscode) | [DeliveryTerms](Logistics.Procurement.PurchaseInvoiceLines.md#deliverytermscode) (nullable) | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
+| [Id](Logistics.Procurement.PurchaseInvoiceLines.md#id) | guid |  
+| [IntrastatApplyDate](Logistics.Procurement.PurchaseInvoiceLines.md#intrastatapplydate) | datetime (nullable) | Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used. 
+| [IntrastatTransactionNatureCode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransactionnaturecode) | [TransactionNature](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransactionnaturecode) (nullable) | Transaction nature; used for Intrastat reporting. 
+| [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) | [TransportMode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) (nullable) | Transport mode; used for Intrastat reporting. 
+| [LineAmount](Logistics.Procurement.PurchaseInvoiceLines.md#lineamount) | [Amount](../data-types.md#amount) | The total invoiced amount for this line in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)] 
+| [LineNo](Logistics.Procurement.PurchaseInvoiceLines.md#lineno) | int32 | Consecutive line number within the invoice. [Required] 
+| [Notes](Logistics.Procurement.PurchaseInvoiceLines.md#notes) | string (nullable) | Notes for this PurchaseInvoiceLine. 
+| [ProductName](Logistics.Procurement.PurchaseInvoiceLines.md#productname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user. [Required] 
+| [Quantity](Logistics.Procurement.PurchaseInvoiceLines.md#quantity) | [Quantity](../data-types.md#quantity) | The invoiced quantity. [Unit: QuantityUnit] [Required] [Default(1)] 
+| [QuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
+| [StandardQuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [UnitPrice](Logistics.Procurement.PurchaseInvoiceLines.md#unitprice) | [Amount](../data-types.md#amount) | The unit price of the invoiced item in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IntrastatDestinationRegion](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatDestinationRegion) | [General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | Region, which is the final destination of the goods. Used for Intrastat reporting. [Filter(multi eq)] |
-| [IntrastatTransportCountry](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatTransportCountry) | [General.Geography.Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)] |
-| [LineCostCenter](Logistics.Procurement.PurchaseInvoiceLines.md#LineCostCenter) | [Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Cost center for which the amount from this row will be accounted. [Filter(multi eq)] |
-| [LineDealType](Logistics.Procurement.PurchaseInvoiceLines.md#LineDealType) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)] |
-| [OriginCountry](Logistics.Procurement.PurchaseInvoiceLines.md#OriginCountry) | [General.Geography.Countries](General.Geography.Countries.md) (nullable) | The country of origin of the invoiced product. Should be non-null only when this is different from the country of origin from the product definition. [Filter(multi eq)] |
-| [Product](Logistics.Procurement.PurchaseInvoiceLines.md#Product) | [General.Products.Products](General.Products.Products.md) | The invoiced product. [Required] [Filter(multi eq)] |
-| [PurchaseInvoice](Logistics.Procurement.PurchaseInvoiceLines.md#PurchaseInvoice) | [Logistics.Procurement.PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) | The [PurchaseInvoice](Logistics.Procurement.PurchaseInvoiceLines.md#PurchaseInvoice) to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [QuantityUnit](Logistics.Procurement.PurchaseInvoiceLines.md#QuantityUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
-| [ReceivingOrderLine](Logistics.Procurement.PurchaseInvoiceLines.md#ReceivingOrderLine) | [Logistics.Procurement.ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md) (nullable) | The receiving order line, which is invoiced by the current line. null means that this line is not directly related to receiving order line. [Filter(multi eq)] |
-| [SaleLineDealType](Logistics.Procurement.PurchaseInvoiceLines.md#SaleLineDealType) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable) | Sale deal type for this line. If sale deal type in the line is different from sale deal type in the header another Sales VAT entry is created. [Filter(multi eq)] |
+| [IntrastatDestinationRegion](Logistics.Procurement.PurchaseInvoiceLines.md#intrastatdestinationregion) | [General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | Region, which is the final destination of the goods. Used for Intrastat reporting. [Filter(multi eq)] |
+| [IntrastatTransportCountry](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportcountry) | [General.Geography.Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)] |
+| [LineCostCenter](Logistics.Procurement.PurchaseInvoiceLines.md#linecostcenter) | [Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Cost center for which the amount from this row will be accounted. [Filter(multi eq)] |
+| [LineDealType](Logistics.Procurement.PurchaseInvoiceLines.md#linedealtype) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)] |
+| [OriginCountry](Logistics.Procurement.PurchaseInvoiceLines.md#origincountry) | [General.Geography.Countries](General.Geography.Countries.md) (nullable) | The country of origin of the invoiced product. Should be non-null only when this is different from the country of origin from the product definition. [Filter(multi eq)] |
+| [Product](Logistics.Procurement.PurchaseInvoiceLines.md#product) | [General.Products.Products](General.Products.Products.md) | The invoiced product. [Required] [Filter(multi eq)] |
+| [PurchaseInvoice](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoice) | [Logistics.Procurement.PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) | The [PurchaseInvoice](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoice) to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [QuantityUnit](Logistics.Procurement.PurchaseInvoiceLines.md#quantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
+| [ReceivingOrderLine](Logistics.Procurement.PurchaseInvoiceLines.md#receivingorderline) | [Logistics.Procurement.ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md) (nullable) | The receiving order line, which is invoiced by the current line. null means that this line is not directly related to receiving order line. [Filter(multi eq)] |
+| [SaleLineDealType](Logistics.Procurement.PurchaseInvoiceLines.md#salelinedealtype) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable) | Sale deal type for this line. If sale deal type in the line is different from sale deal type in the header another Sales VAT entry is created. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DeliveryTermsCode
 
 > Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.
 
-_Type_: **[Finance.Intrastat.DeliveryTerms](Logistics.Procurement.PurchaseInvoiceLines.md#DeliveryTermsCode) (nullable)**  
+_Type_: **[DeliveryTerms](Logistics.Procurement.PurchaseInvoiceLines.md#deliverytermscode) (nullable)**  
 Generic enum type for DeliveryTerms properties  
-_Allowed Values (Enum Members)_  
+_Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -73,6 +66,12 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### IntrastatApplyDate
 
 > Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.
@@ -85,9 +84,9 @@ _Supports Order By_: **False**
 
 > Transaction nature; used for Intrastat reporting.
 
-_Type_: **[Finance.Intrastat.TransactionNature](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatTransactionNatureCode) (nullable)**  
+_Type_: **[TransactionNature](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransactionnaturecode) (nullable)**  
 Generic enum type for TransactionNature properties  
-_Allowed Values (Enum Members)_  
+_Allowed Values (Finance.Intrastat.TransactionNature Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -118,9 +117,9 @@ _Supports Order By_: **False**
 
 > Transport mode; used for Intrastat reporting.
 
-_Type_: **[Finance.Intrastat.TransportMode](Logistics.Procurement.PurchaseInvoiceLines.md#IntrastatTransportModeCode) (nullable)**  
+_Type_: **[TransportMode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) (nullable)**  
 Generic enum type for TransportMode properties  
-_Allowed Values (Enum Members)_  
+_Allowed Values (Finance.Intrastat.TransportMode Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -140,7 +139,7 @@ _Supports Order By_: **False**
 
 > The total invoiced amount for this line in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -170,7 +169,7 @@ _Supports Order By_: **False**
 
 > The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user. [Required]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -183,7 +182,7 @@ _Front-End Recalc Expressions:_
 
 > The invoiced quantity. [Unit: QuantityUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -192,7 +191,7 @@ _Default Value_: **Constant**
 
 > The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -205,7 +204,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -218,7 +217,7 @@ _Front-End Recalc Expressions:_
 
 > The unit price of the invoiced item in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -232,7 +231,6 @@ _Default Value_: **Constant**
 
 _Type_: **[General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### IntrastatTransportCountry
 
@@ -240,7 +238,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Geography.Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### LineCostCenter
 
@@ -248,7 +245,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### LineDealType
 
@@ -256,7 +252,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### OriginCountry
 
@@ -264,7 +259,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Geography.Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Product
 
@@ -272,15 +266,13 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PurchaseInvoice
 
-> The [PurchaseInvoice](Logistics.Procurement.PurchaseInvoiceLines.md#PurchaseInvoice) to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]
+> The [PurchaseInvoice](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoice) to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Logistics.Procurement.PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### QuantityUnit
 
@@ -288,7 +280,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ReceivingOrderLine
 
@@ -296,7 +287,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Procurement.ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### SaleLineDealType
 
@@ -304,7 +294,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

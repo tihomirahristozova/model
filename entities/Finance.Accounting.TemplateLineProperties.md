@@ -9,30 +9,23 @@ Contains the way to obtain the values for each required property of both the deb
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Accounting.TemplateLineProperties.md#Id) | guid |  
-| [ConstantValueId](Finance.Accounting.TemplateLineProperties.md#ConstantValueId) | guid (nullable) | The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. [Filter(multi eq)] 
-| [IsDebit](Finance.Accounting.TemplateLineProperties.md#IsDebit) | boolean | If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. [Required] [Default(true)] [Filter(eq)] 
-| [PropertyDescription](Finance.Accounting.TemplateLineProperties.md#PropertyDescription) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant). 
-| [PropertyNo](Finance.Accounting.TemplateLineProperties.md#PropertyNo) | int32 | The ordinal position of the property value in the item key of the account. [Required] [Filter(eq)] 
-| [PropertyValueSource](Finance.Accounting.TemplateLineProperties.md#PropertyValueSource) | string | Source for the property value according to the chosen source type. [Required] 
-| [PropertyValueSourceType](Finance.Accounting.TemplateLineProperties.md#PropertyValueSourceType) | string | Type of source for the property value. For example: System properties, User properties for document, Constant, ... [Required] 
+| [ConstantValueId](Finance.Accounting.TemplateLineProperties.md#constantvalueid) | guid (nullable) | The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. [Filter(multi eq)] 
+| [Id](Finance.Accounting.TemplateLineProperties.md#id) | guid |  
+| [IsDebit](Finance.Accounting.TemplateLineProperties.md#isdebit) | boolean | If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. [Required] [Default(true)] [Filter(eq)] 
+| [PropertyDescription](Finance.Accounting.TemplateLineProperties.md#propertydescription) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant). 
+| [PropertyNo](Finance.Accounting.TemplateLineProperties.md#propertyno) | int32 | The ordinal position of the property value in the item key of the account. [Required] [Filter(eq)] 
+| [PropertyValueSource](Finance.Accounting.TemplateLineProperties.md#propertyvaluesource) | string | Source for the property value according to the chosen source type. [Required] 
+| [PropertyValueSourceType](Finance.Accounting.TemplateLineProperties.md#propertyvaluesourcetype) | string | Type of source for the property value. For example: System properties, User properties for document, Constant, ... [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Property](Finance.Accounting.TemplateLineProperties.md#Property) | [General.CustomProperties](General.CustomProperties.md) | The property which value will be included in the item key of the account. [Required] [Filter(multi eq)] |
-| [TemplateLine](Finance.Accounting.TemplateLineProperties.md#TemplateLine) | [Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md) | The [TemplateLine](Finance.Accounting.TemplateLineProperties.md#TemplateLine) to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Property](Finance.Accounting.TemplateLineProperties.md#property) | [General.CustomProperties](General.CustomProperties.md) | The property which value will be included in the item key of the account. [Required] [Filter(multi eq)] |
+| [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) | [Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md) | The [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ConstantValueId
 
@@ -40,7 +33,12 @@ _Default Value_: **NewGuid**
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsDebit
 
@@ -55,7 +53,7 @@ _Default Value_: **True**
 
 > Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant).
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -92,15 +90,13 @@ _Supports Order By_: **False**
 
 _Type_: **[General.CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### TemplateLine
 
-> The [TemplateLine](Finance.Accounting.TemplateLineProperties.md#TemplateLine) to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner]
+> The [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

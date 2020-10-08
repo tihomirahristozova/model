@@ -9,23 +9,23 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pos.Terminals.md#Id) | guid |  
-| [IsActive](Crm.Pos.Terminals.md#IsActive) | boolean | Represents whether the POS terminal is active and can be chosen from drop-downs for new records. [Required] [Default(true)] [Filter(multi eq)] 
-| [PosTerminalCode](Crm.Pos.Terminals.md#PosTerminalCode) | string | Unique (within the location) code of the POS terminal. [Required] [Filter(eq;like)] 
-| [PosTerminalName](Crm.Pos.Terminals.md#PosTerminalName) | [MultilanguageString](../data-types.md#MultilanguageString) | The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc. [Required] [Filter(multi eq;like)] 
+| [Id](Crm.Pos.Terminals.md#id) | guid |  
+| [IsActive](Crm.Pos.Terminals.md#isactive) | boolean | Represents whether the POS terminal is active and can be chosen from drop-downs for new records. [Required] [Default(true)] [Filter(multi eq)] 
+| [PosTerminalCode](Crm.Pos.Terminals.md#posterminalcode) | string | Unique (within the location) code of the POS terminal. [Required] [Filter(eq;like)] 
+| [PosTerminalName](Crm.Pos.Terminals.md#posterminalname) | [MultilanguageString](../data-types.md#multilanguagestring) | The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc. [Required] [Filter(multi eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultFiscalPrinterPosDevice](Crm.Pos.Terminals.md#DefaultFiscalPrinterPosDevice) | [Crm.Pos.Devices](Crm.Pos.Devices.md) (nullable) | The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1.100.0) |
-| [PosLocation](Crm.Pos.Terminals.md#PosLocation) | [Crm.Pos.Locations](Crm.Pos.Locations.md) | The POS location, where the terminal is located. [Required] [Filter(multi eq)] |
+| [DefaultFiscalPrinterPosDevice](Crm.Pos.Terminals.md#defaultfiscalprinterposdevice) | [Crm.Pos.Devices](Crm.Pos.Devices.md) (nullable) | The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1.100.0) |
+| [PosLocation](Crm.Pos.Terminals.md#poslocation) | [Crm.Pos.Locations](Crm.Pos.Locations.md) | The POS location, where the terminal is located. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Devices | [Crm.Pos.Devices](Crm.Pos.Devices.md) | List of [Device](Crm.Pos.Devices.md) child objects, based on the [Crm.Pos.Device.PosTerminal](Crm.Pos.Devices.md#PosTerminal) back reference 
+| Devices | [Crm.Pos.Devices](Crm.Pos.Devices.md) | List of [Device](Crm.Pos.Devices.md) child objects, based on the [Crm.Pos.Device.PosTerminal](Crm.Pos.Devices.md#posterminal) back reference 
 
 
 ## Attribute Details
@@ -34,7 +34,6 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsActive
@@ -58,7 +57,7 @@ _Supports Order By_: **False**
 
 > The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc. [Required] [Filter(multi eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -71,7 +70,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Pos.Devices](Crm.Pos.Devices.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PosLocation
 
@@ -79,7 +77,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Pos.Locations](Crm.Pos.Locations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

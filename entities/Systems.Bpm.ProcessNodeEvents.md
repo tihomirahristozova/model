@@ -9,28 +9,21 @@ Abstract root of all process node events. Currently - not used. Entity: Bpm_Proc
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.ProcessNodeEvents.md#Id) | guid |  
-| [BoundaryOfProcessNodeId](Systems.Bpm.ProcessNodeEvents.md#BoundaryOfProcessNodeId) | guid (nullable) | When the event is boundary, contains the node to which the event is bound. Otherwise contains null. [Filter(multi eq)] 
-| [EventKey](Systems.Bpm.ProcessNodeEvents.md#EventKey) | string | The unique event key, which is thrown or caught. [Required] 
-| [EventType](Systems.Bpm.ProcessNodeEvents.md#EventType) | string | Event type. S=Start, T=Intermediate Throw, C=Intermediate Catch, B=Boundary, E=End. [Required] 
-| [IsCancel](Systems.Bpm.ProcessNodeEvents.md#IsCancel) | boolean | True if this is cancel event. [Required] 
-| [IsCompensation](Systems.Bpm.ProcessNodeEvents.md#IsCompensation) | boolean | True if this is compensation event. [Required] 
-| [IsError](Systems.Bpm.ProcessNodeEvents.md#IsError) | boolean | True if this is error event. [Required] 
-| [IsEscalation](Systems.Bpm.ProcessNodeEvents.md#IsEscalation) | boolean | True if this is escalation event. [Required] 
-| [IsMessage](Systems.Bpm.ProcessNodeEvents.md#IsMessage) | boolean | True if this is message event. [Required] 
-| [IsSignal](Systems.Bpm.ProcessNodeEvents.md#IsSignal) | boolean | True if this is signal event. [Required] 
-| [IsTimer](Systems.Bpm.ProcessNodeEvents.md#IsTimer) | boolean | True if this is timer event. [Required] 
-| [ProcessNodeId](Systems.Bpm.ProcessNodeEvents.md#ProcessNodeId) | guid | The node of this node event. [Required] [Filter(multi eq)] 
+| [BoundaryOfProcessNodeId](Systems.Bpm.ProcessNodeEvents.md#boundaryofprocessnodeid) | guid (nullable) | When the event is boundary, contains the node to which the event is bound. Otherwise contains null. [Filter(multi eq)] 
+| [EventKey](Systems.Bpm.ProcessNodeEvents.md#eventkey) | string | The unique event key, which is thrown or caught. [Required] 
+| [EventType](Systems.Bpm.ProcessNodeEvents.md#eventtype) | string | Event type. S=Start, T=Intermediate Throw, C=Intermediate Catch, B=Boundary, E=End. [Required] 
+| [Id](Systems.Bpm.ProcessNodeEvents.md#id) | guid |  
+| [IsCancel](Systems.Bpm.ProcessNodeEvents.md#iscancel) | boolean | True if this is cancel event. [Required] 
+| [IsCompensation](Systems.Bpm.ProcessNodeEvents.md#iscompensation) | boolean | True if this is compensation event. [Required] 
+| [IsError](Systems.Bpm.ProcessNodeEvents.md#iserror) | boolean | True if this is error event. [Required] 
+| [IsEscalation](Systems.Bpm.ProcessNodeEvents.md#isescalation) | boolean | True if this is escalation event. [Required] 
+| [IsMessage](Systems.Bpm.ProcessNodeEvents.md#ismessage) | boolean | True if this is message event. [Required] 
+| [IsSignal](Systems.Bpm.ProcessNodeEvents.md#issignal) | boolean | True if this is signal event. [Required] 
+| [IsTimer](Systems.Bpm.ProcessNodeEvents.md#istimer) | boolean | True if this is timer event. [Required] 
+| [ProcessNodeId](Systems.Bpm.ProcessNodeEvents.md#processnodeid) | guid | The node of this node event. [Required] [Filter(multi eq)] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### BoundaryOfProcessNodeId
 
@@ -38,7 +31,6 @@ _Default Value_: **NewGuid**
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EventKey
 
@@ -55,6 +47,12 @@ _Supports Order By_: **False**
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsCancel
 
@@ -118,7 +116,6 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

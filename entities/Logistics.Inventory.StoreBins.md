@@ -9,16 +9,16 @@ The storage locations within a store. If there are no differentiated storage loc
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.StoreBins.md#Id) | guid |  
-| [IsDefault](Logistics.Inventory.StoreBins.md#IsDefault) | boolean | True, when this is the default storage bin for the specified store. [Required] [Default(false)] 
-| [Name](Logistics.Inventory.StoreBins.md#Name) | string | Name of the store bin. [Required] [Filter(like)] 
+| [Id](Logistics.Inventory.StoreBins.md#id) | guid |  
+| [IsDefault](Logistics.Inventory.StoreBins.md#isdefault) | boolean | True, when this is the default storage bin for the specified store. [Required] [Default(false)] 
+| [Name](Logistics.Inventory.StoreBins.md#name) | string | Name of the store bin. [Required] [Filter(like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BlockedForParty](Logistics.Inventory.StoreBins.md#BlockedForParty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | If not null, the goods can only be used by the specified party. [Filter(multi eq)] |
-| [Store](Logistics.Inventory.StoreBins.md#Store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The id of the containing store. [Required] [Filter(multi eq)] [Owner] |
+| [BlockedForParty](Logistics.Inventory.StoreBins.md#blockedforparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | If not null, the goods can only be used by the specified party. [Filter(multi eq)] |
+| [Store](Logistics.Inventory.StoreBins.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The id of the containing store. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ The storage locations within a store. If there are no differentiated storage loc
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsDefault
@@ -56,7 +55,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Store
 
@@ -64,7 +62,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

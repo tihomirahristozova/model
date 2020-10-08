@@ -9,26 +9,19 @@ Represents the hierarchy of the groups of maintenance types. Entity: Eam_Mainten
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.AssetManagement.MaintenanceTypeGroups.md#Id) | guid |  
-| [Code](Applications.AssetManagement.MaintenanceTypeGroups.md#Code) | string | Unique code of the group. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Applications.AssetManagement.MaintenanceTypeGroups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage name of the group. [Required] [Filter(eq;like)] 
-| [Notes](Applications.AssetManagement.MaintenanceTypeGroups.md#Notes) | string (nullable) | Notes for this MaintenanceTypeGroup. 
+| [Code](Applications.AssetManagement.MaintenanceTypeGroups.md#code) | string | Unique code of the group. [Required] [Filter(eq;like)] [ORD] 
+| [Id](Applications.AssetManagement.MaintenanceTypeGroups.md#id) | guid |  
+| [Name](Applications.AssetManagement.MaintenanceTypeGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the group. [Required] [Filter(eq;like)] 
+| [Notes](Applications.AssetManagement.MaintenanceTypeGroups.md#notes) | string (nullable) | Notes for this MaintenanceTypeGroup. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.AssetManagement.MaintenanceTypeGroups.md#Parent) | [Applications.AssetManagement.MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) (nullable) | Parent group. null denotes a root group. [Filter(multi eq)] |
+| [Parent](Applications.AssetManagement.MaintenanceTypeGroups.md#parent) | [Applications.AssetManagement.MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) (nullable) | Parent group. null denotes a root group. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Code
 
@@ -38,11 +31,17 @@ _Type_: **string**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Name
 
 > Multilanguage name of the group. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -63,7 +62,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.AssetManagement.MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

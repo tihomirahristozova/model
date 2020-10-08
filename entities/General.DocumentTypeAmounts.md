@@ -9,28 +9,21 @@ Specifies amount types, that should be automatically added to documents of a giv
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentTypeAmounts.md#Id) | guid |  
-| [DefaultPercent](General.DocumentTypeAmounts.md#DefaultPercent) | decimal (nullable) | Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type. 
-| [RequiredFromDate](General.DocumentTypeAmounts.md#RequiredFromDate) | date (nullable) | When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. [Filter(ge;le)] 
-| [RequiredThruDate](General.DocumentTypeAmounts.md#RequiredThruDate) | date (nullable) | When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. [Filter(ge;le)] 
-| [UserCanChangeInput](General.DocumentTypeAmounts.md#UserCanChangeInput) | boolean | True if the user, entering the document is allowed to change the default input percent. [Required] [Default(true)] 
+| [DefaultPercent](General.DocumentTypeAmounts.md#defaultpercent) | decimal (nullable) | Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type. 
+| [Id](General.DocumentTypeAmounts.md#id) | guid |  
+| [RequiredFromDate](General.DocumentTypeAmounts.md#requiredfromdate) | date (nullable) | When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. [Filter(ge;le)] 
+| [RequiredThruDate](General.DocumentTypeAmounts.md#requiredthrudate) | date (nullable) | When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. [Filter(ge;le)] 
+| [UserCanChangeInput](General.DocumentTypeAmounts.md#usercanchangeinput) | boolean | True if the user, entering the document is allowed to change the default input percent. [Required] [Default(true)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAmountType](General.DocumentTypeAmounts.md#DocumentAmountType) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type that should be automatically added to the documents of the specified type. [Required] [Filter(multi eq)] |
-| [DocumentType](General.DocumentTypeAmounts.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the amount type is specified. [Required] [Filter(multi eq)] [Owner] |
+| [DocumentAmountType](General.DocumentTypeAmounts.md#documentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type that should be automatically added to the documents of the specified type. [Required] [Filter(multi eq)] |
+| [DocumentType](General.DocumentTypeAmounts.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the amount type is specified. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DefaultPercent
 
@@ -39,6 +32,12 @@ _Default Value_: **NewGuid**
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### RequiredFromDate
 
@@ -74,7 +73,6 @@ _Default Value_: **True**
 
 _Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DocumentType
 
@@ -82,7 +80,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

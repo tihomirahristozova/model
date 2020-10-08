@@ -9,24 +9,17 @@ Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_O
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.TransferOrdersOptions.md#Id) | guid |  
-| [AvailableQuantityOnly](Logistics.Inventory.TransferOrdersOptions.md#AvailableQuantityOnly) | boolean | Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity. [Required] [Default(false)] [Filter(eq)] 
+| [AvailableQuantityOnly](Logistics.Inventory.TransferOrdersOptions.md#availablequantityonly) | boolean | Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity. [Required] [Default(false)] [Filter(eq)] 
+| [Id](Logistics.Inventory.TransferOrdersOptions.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Logistics.Inventory.TransferOrdersOptions.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The document type, for which these options apply. [Required] [Filter(multi eq)] |
+| [DocumentType](Logistics.Inventory.TransferOrdersOptions.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type, for which these options apply. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### AvailableQuantityOnly
 
@@ -37,6 +30,12 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 
 ## Reference Details
 
@@ -46,7 +45,6 @@ _Default Value_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

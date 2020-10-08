@@ -9,17 +9,17 @@ User notification settings for the different notification classes. Entity: Cmm_N
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Communities.NotificationSettings.md#Id) | guid |  
-| [NotificationClass](Communities.NotificationSettings.md#NotificationClass) | string (nullable) | The class of the notification, for which the user is specifying settings. When null, the setting is applied to all notification classes. [Filter(multi eq)] 
-| [ReceiveMail](Communities.NotificationSettings.md#ReceiveMail) | boolean | True if the user should receive mail. [Required] [Default(false)] [Filter(eq)] 
-| [ReceiveNotification](Communities.NotificationSettings.md#ReceiveNotification) | boolean | True if the user should receive internal notification. [Required] [Default(true)] [Filter(eq)] 
-| [ReceiveSms](Communities.NotificationSettings.md#ReceiveSms) | boolean | True if the user should receive SMS. [Required] [Default(false)] [Filter(eq)] 
+| [Id](Communities.NotificationSettings.md#id) | guid |  
+| [NotificationClass](Communities.NotificationSettings.md#notificationclass) | string (nullable) | The class of the notification, for which the user is specifying settings. When null, the setting is applied to all notification classes. [Filter(multi eq)] 
+| [ReceiveMail](Communities.NotificationSettings.md#receivemail) | boolean | True if the user should receive mail. [Required] [Default(false)] [Filter(eq)] 
+| [ReceiveNotification](Communities.NotificationSettings.md#receivenotification) | boolean | True if the user should receive internal notification. [Required] [Default(true)] [Filter(eq)] 
+| [ReceiveSms](Communities.NotificationSettings.md#receivesms) | boolean | True if the user should receive SMS. [Required] [Default(false)] [Filter(eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Communities.NotificationSettings.md#User) | [Systems.Security.Users](Systems.Security.Users.md) | The user for whom the notification setting is about. [Required] [Filter(multi eq)] |
+| [User](Communities.NotificationSettings.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user for whom the notification setting is about. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -28,7 +28,6 @@ User notification settings for the different notification classes. Entity: Cmm_N
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### NotificationClass
@@ -75,7 +74,6 @@ _Default Value_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

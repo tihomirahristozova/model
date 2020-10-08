@@ -9,27 +9,20 @@ Contains discussions on project risks. Entity: Prj_Project_Risk_Discussion
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.ProjectRiskDiscussion.md#Id) | guid |  
-| [ContributionTime](Projects.ProjectRiskDiscussion.md#ContributionTime) | datetime | The time, when the message was contributed. [Required] [Default(Now)] [Filter(eq)] [ReadOnly] 
-| [LastEditTime](Projects.ProjectRiskDiscussion.md#LastEditTime) | datetime (nullable) | Contains the last edit time of the message. null if the message was never edited. [Filter(eq)] [ReadOnly] 
-| [Message](Projects.ProjectRiskDiscussion.md#Message) | string | The contents of the message. [Required] 
+| [ContributionTime](Projects.ProjectRiskDiscussion.md#contributiontime) | datetime | The time, when the message was contributed. [Required] [Default(Now)] [Filter(eq)] [ReadOnly] 
+| [Id](Projects.ProjectRiskDiscussion.md#id) | guid |  
+| [LastEditTime](Projects.ProjectRiskDiscussion.md#lastedittime) | datetime (nullable) | Contains the last edit time of the message. null if the message was never edited. [Filter(eq)] [ReadOnly] 
+| [Message](Projects.ProjectRiskDiscussion.md#message) | string | The contents of the message. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContributedByUser](Projects.ProjectRiskDiscussion.md#ContributedByUser) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who contributed (wrote) the message. [Required] [Filter(multi eq)] [ReadOnly] |
-| [ProjectRisk](Projects.ProjectRiskDiscussion.md#ProjectRisk) | [Projects.ProjectRisks](Projects.ProjectRisks.md) | The [ProjectRisk](Projects.ProjectRiskDiscussion.md#ProjectRisk) to which this ProjectRiskDiscussion belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ContributedByUser](Projects.ProjectRiskDiscussion.md#contributedbyuser) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who contributed (wrote) the message. [Required] [Filter(multi eq)] [ReadOnly] |
+| [ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) | [Projects.ProjectRisks](Projects.ProjectRisks.md) | The [ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) to which this ProjectRiskDiscussion belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ContributionTime
 
@@ -39,6 +32,12 @@ _Type_: **datetime**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### LastEditTime
 
@@ -65,15 +64,13 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProjectRisk
 
-> The [ProjectRisk](Projects.ProjectRiskDiscussion.md#ProjectRisk) to which this ProjectRiskDiscussion belongs. [Required] [Filter(multi eq)] [Owner]
+> The [ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) to which this ProjectRiskDiscussion belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Projects.ProjectRisks](Projects.ProjectRisks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

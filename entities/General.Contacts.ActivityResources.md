@@ -9,16 +9,16 @@ Contains the resources, allocated to the activities. Entity: Cm_Activity_Resourc
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.ActivityResources.md#Id) | guid |  
-| [Notes](General.Contacts.ActivityResources.md#Notes) | string (nullable) | Notes for this ActivityResource. 
-| [ResourceUsagePercent](General.Contacts.ActivityResources.md#ResourceUsagePercent) | decimal | The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. [Required] [Default(1)] 
+| [Id](General.Contacts.ActivityResources.md#id) | guid |  
+| [Notes](General.Contacts.ActivityResources.md#notes) | string (nullable) | Notes for this ActivityResource. 
+| [ResourceUsagePercent](General.Contacts.ActivityResources.md#resourceusagepercent) | decimal | The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. [Required] [Default(1)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Contacts.ActivityResources.md#Activity) | [General.Contacts.Activities](General.Contacts.Activities.md) | The [Activity](General.Contacts.ActivityResources.md#Activity) to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Resource](General.Contacts.ActivityResources.md#Resource) | [General.Resources.Resources](General.Resources.Resources.md) | The resource, which is required by the activity. [Required] [Filter(multi eq)] |
+| [Activity](General.Contacts.ActivityResources.md#activity) | [General.Contacts.Activities](General.Contacts.Activities.md) | The [Activity](General.Contacts.ActivityResources.md#activity) to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Resource](General.Contacts.ActivityResources.md#resource) | [General.Resources.Resources](General.Resources.Resources.md) | The resource, which is required by the activity. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Contains the resources, allocated to the activities. Entity: Cm_Activity_Resourc
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes
@@ -52,11 +51,10 @@ _Default Value_: **1**
 
 ### Activity
 
-> The [Activity](General.Contacts.ActivityResources.md#Activity) to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Activity](General.Contacts.ActivityResources.md#activity) to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[General.Contacts.Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Resource
 
@@ -64,7 +62,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Resources.Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

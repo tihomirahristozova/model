@@ -9,31 +9,24 @@ Represents an action within a business rule. Entity: Sys_User_Business_Rule_Acti
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.UserBusinessRuleActions.md#Id) | guid |  
-| [ActionNo](Systems.Bpm.UserBusinessRuleActions.md#ActionNo) | int32 | Consecutive number of the action, unique within the business rule. [Required] 
-| [ActionType](Systems.Bpm.UserBusinessRuleActions.md#ActionType) | [Systems.Bpm.UserBusinessRuleActionsRepository.ActionType](Systems.Bpm.UserBusinessRuleActions.md#ActionType) | Specifies the type of action to perform. [Required] 
-| [Parameter1Type](Systems.Bpm.UserBusinessRuleActions.md#Parameter1Type) | [Systems.Bpm.ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#Parameter1Type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
-| [Parameter1Value](Systems.Bpm.UserBusinessRuleActions.md#Parameter1Value) | string (nullable) | The actual value of the parameter. 
-| [Parameter2Type](Systems.Bpm.UserBusinessRuleActions.md#Parameter2Type) | [Systems.Bpm.ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#Parameter2Type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
-| [Parameter2Value](Systems.Bpm.UserBusinessRuleActions.md#Parameter2Value) | string (nullable) | The actual value of the parameter. 
-| [Parameter3Type](Systems.Bpm.UserBusinessRuleActions.md#Parameter3Type) | [Systems.Bpm.ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#Parameter3Type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
-| [Parameter3Value](Systems.Bpm.UserBusinessRuleActions.md#Parameter3Value) | string (nullable) | The actual value of the parameter. 
+| [ActionNo](Systems.Bpm.UserBusinessRuleActions.md#actionno) | int32 | Consecutive number of the action, unique within the business rule. [Required] 
+| [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | Specifies the type of action to perform. [Required] 
+| [Id](Systems.Bpm.UserBusinessRuleActions.md#id) | guid |  
+| [Parameter1Type](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
+| [Parameter1Value](Systems.Bpm.UserBusinessRuleActions.md#parameter1value) | string (nullable) | The actual value of the parameter. 
+| [Parameter2Type](Systems.Bpm.UserBusinessRuleActions.md#parameter2type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter2type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
+| [Parameter2Value](Systems.Bpm.UserBusinessRuleActions.md#parameter2value) | string (nullable) | The actual value of the parameter. 
+| [Parameter3Type](Systems.Bpm.UserBusinessRuleActions.md#parameter3type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter3type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
+| [Parameter3Value](Systems.Bpm.UserBusinessRuleActions.md#parameter3value) | string (nullable) | The actual value of the parameter. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [UserBusinessRule](Systems.Bpm.UserBusinessRuleActions.md#UserBusinessRule) | [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner] |
+| [UserBusinessRule](Systems.Bpm.UserBusinessRuleActions.md#userbusinessrule) | [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ActionNo
 
@@ -52,9 +45,9 @@ _Front-End Recalc Expressions:_
 
 > Specifies the type of action to perform. [Required]
 
-_Type_: **[Systems.Bpm.UserBusinessRuleActionsRepository.ActionType](Systems.Bpm.UserBusinessRuleActions.md#ActionType)**  
-Allowed values for the [ActionType](Systems.Bpm.UserBusinessRuleActions.md#ActionType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype)**  
+Allowed values for the [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) data attribute  
+_Allowed Values (Systems.Bpm.UserBusinessRuleActionsRepository.ActionType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -67,13 +60,19 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Parameter1Type
 
 > The type of the parameter specifies how to obtain the parameter value.
 
-_Type_: **[Systems.Bpm.ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#Parameter1Type) (nullable)**  
+_Type_: **[ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) (nullable)**  
 Generic enum type for ActionParameterType properties  
-_Allowed Values (Enum Members)_  
+_Allowed Values (Systems.Bpm.ActionParameterType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -98,9 +97,9 @@ _Supports Order By_: **False**
 
 > The type of the parameter specifies how to obtain the parameter value.
 
-_Type_: **[Systems.Bpm.ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#Parameter2Type) (nullable)**  
+_Type_: **[ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter2type) (nullable)**  
 Generic enum type for ActionParameterType properties  
-_Allowed Values (Enum Members)_  
+_Allowed Values (Systems.Bpm.ActionParameterType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -125,9 +124,9 @@ _Supports Order By_: **False**
 
 > The type of the parameter specifies how to obtain the parameter value.
 
-_Type_: **[Systems.Bpm.ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#Parameter3Type) (nullable)**  
+_Type_: **[ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter3type) (nullable)**  
 Generic enum type for ActionParameterType properties  
-_Allowed Values (Enum Members)_  
+_Allowed Values (Systems.Bpm.ActionParameterType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -157,7 +156,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

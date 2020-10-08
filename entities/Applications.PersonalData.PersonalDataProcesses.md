@@ -9,49 +9,42 @@ Represents processes, which process personal data, regulated by GDPR and other a
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.PersonalData.PersonalDataProcesses.md#Id) | guid |  
-| [Code](Applications.PersonalData.PersonalDataProcesses.md#Code) | string | Unique process code. [Required] [Filter(eq;like)] 
-| [ContainsSensitiveData](Applications.PersonalData.PersonalDataProcesses.md#ContainsSensitiveData) | boolean | True if sensitive personal data is processed (racial, political, criminal, biometric, etc). [Required] [Filter(eq)] 
-| [DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#DataSubjectCategory) | [Applications.PersonalData.PersonalDataProcessesRepository.DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#DataSubjectCategory) | The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. [Required] 
-| [Description](Applications.PersonalData.PersonalDataProcesses.md#Description) | string (nullable) | Description of the process. 
-| [DiscontinuationDate](Applications.PersonalData.PersonalDataProcesses.md#DiscontinuationDate) | date (nullable) | The date on which the process was discontinued. Null if the process is still active. [Filter(eq;ge;le)] 
-| [EstablishDate](Applications.PersonalData.PersonalDataProcesses.md#EstablishDate) | date | The data on which the process was established and started functioning. [Required] [Default(Now)] [Filter(eq;ge;le)] 
-| [LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#LegalBasisForProcessing) | [Applications.PersonalData.PersonalDataProcessesRepository.LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#LegalBasisForProcessing) | The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;. [Required] [Filter(eq)] 
-| [ListOfDataCategories](Applications.PersonalData.PersonalDataProcesses.md#ListOfDataCategories) | string | Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. [Required] [Filter(eq)] 
-| [ListOfDataRecipientCategories](Applications.PersonalData.PersonalDataProcesses.md#ListOfDataRecipientCategories) | string (nullable) | Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. [Filter(eq;like)] 
-| [ListOfProcessingPurposes](Applications.PersonalData.PersonalDataProcesses.md#ListOfProcessingPurposes) | string (nullable) | Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. [Filter(eq;like)] 
-| [ListOfTechnicalMeasures](Applications.PersonalData.PersonalDataProcesses.md#ListOfTechnicalMeasures) | string (nullable) | Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. [Filter(eq)] 
-| [ListOfTransfersToThirdCountries](Applications.PersonalData.PersonalDataProcesses.md#ListOfTransfersToThirdCountries) | string (nullable) | Comma-separated list of third countries, to which data is sent. [Filter(eq;like)] 
-| [ListOfUsedSoftware](Applications.PersonalData.PersonalDataProcesses.md#ListOfUsedSoftware) | string (nullable) | Comma-separated list of the names of the software products used to process the data. [Filter(eq;like)] 
-| [Name](Applications.PersonalData.PersonalDataProcesses.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the process (Multilanguage). [Required] [Filter(eq;like)] 
-| [Notes](Applications.PersonalData.PersonalDataProcesses.md#Notes) | string (nullable) | Notes for this PersonalDataProcess. 
-| [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#ProcessingRole) | [Applications.PersonalData.PersonalDataProcessesRepository.ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#ProcessingRole) | The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . [Required] [Default("C")] [Filter(eq)] 
-| [RetentionPeriodMonths](Applications.PersonalData.PersonalDataProcesses.md#RetentionPeriodMonths) | int32 (nullable) | The period in months, for which the data is kept. Null when the period is unknown or N/A. [Filter(eq)] 
-| [ThirdCountryTransfersSafeguards](Applications.PersonalData.PersonalDataProcesses.md#ThirdCountryTransfersSafeguards) | string (nullable) | Description of safeguards, taken to protect personal data in case of third country transfers. [Filter(eq;like)] 
+| [Code](Applications.PersonalData.PersonalDataProcesses.md#code) | string | Unique process code. [Required] [Filter(eq;like)] 
+| [ContainsSensitiveData](Applications.PersonalData.PersonalDataProcesses.md#containssensitivedata) | boolean | True if sensitive personal data is processed (racial, political, criminal, biometric, etc). [Required] [Filter(eq)] 
+| [DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory) | [DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory) | The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. [Required] 
+| [Description](Applications.PersonalData.PersonalDataProcesses.md#description) | string (nullable) | Description of the process. 
+| [DiscontinuationDate](Applications.PersonalData.PersonalDataProcesses.md#discontinuationdate) | date (nullable) | The date on which the process was discontinued. Null if the process is still active. [Filter(eq;ge;le)] 
+| [EstablishDate](Applications.PersonalData.PersonalDataProcesses.md#establishdate) | date | The data on which the process was established and started functioning. [Required] [Default(Now)] [Filter(eq;ge;le)] 
+| [Id](Applications.PersonalData.PersonalDataProcesses.md#id) | guid |  
+| [LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing) | [LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing) | The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;. [Required] [Filter(eq)] 
+| [ListOfDataCategories](Applications.PersonalData.PersonalDataProcesses.md#listofdatacategories) | string | Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. [Required] [Filter(eq)] 
+| [ListOfDataRecipientCategories](Applications.PersonalData.PersonalDataProcesses.md#listofdatarecipientcategories) | string (nullable) | Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. [Filter(eq;like)] 
+| [ListOfProcessingPurposes](Applications.PersonalData.PersonalDataProcesses.md#listofprocessingpurposes) | string (nullable) | Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. [Filter(eq;like)] 
+| [ListOfTechnicalMeasures](Applications.PersonalData.PersonalDataProcesses.md#listoftechnicalmeasures) | string (nullable) | Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. [Filter(eq)] 
+| [ListOfTransfersToThirdCountries](Applications.PersonalData.PersonalDataProcesses.md#listoftransferstothirdcountries) | string (nullable) | Comma-separated list of third countries, to which data is sent. [Filter(eq;like)] 
+| [ListOfUsedSoftware](Applications.PersonalData.PersonalDataProcesses.md#listofusedsoftware) | string (nullable) | Comma-separated list of the names of the software products used to process the data. [Filter(eq;like)] 
+| [Name](Applications.PersonalData.PersonalDataProcesses.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the process (Multilanguage). [Required] [Filter(eq;like)] 
+| [Notes](Applications.PersonalData.PersonalDataProcesses.md#notes) | string (nullable) | Notes for this PersonalDataProcess. 
+| [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole) | [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole) | The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . [Required] [Default("C")] [Filter(eq)] 
+| [RetentionPeriodMonths](Applications.PersonalData.PersonalDataProcesses.md#retentionperiodmonths) | int32 (nullable) | The period in months, for which the data is kept. Null when the period is unknown or N/A. [Filter(eq)] 
+| [ThirdCountryTransfersSafeguards](Applications.PersonalData.PersonalDataProcesses.md#thirdcountrytransferssafeguards) | string (nullable) | Description of safeguards, taken to protect personal data in case of third country transfers. [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.PersonalData.PersonalDataProcesses.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, which owns the process. [Required] [Filter(multi eq)] |
-| [ProcessOwnerPerson](Applications.PersonalData.PersonalDataProcesses.md#ProcessOwnerPerson) | [General.Contacts.Persons](General.Contacts.Persons.md) | The owner and responsible person for the process. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Applications.PersonalData.PersonalDataProcesses.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, which owns the process. [Required] [Filter(multi eq)] |
+| [ProcessOwnerPerson](Applications.PersonalData.PersonalDataProcesses.md#processownerperson) | [General.Contacts.Persons](General.Contacts.Persons.md) | The owner and responsible person for the process. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| JointControllers | [Applications.PersonalData.JointControllers](Applications.PersonalData.JointControllers.md) | List of [JointController](Applications.PersonalData.JointControllers.md) child objects, based on the [Applications.PersonalData.JointController.PersonalDataProcess](Applications.PersonalData.JointControllers.md#PersonalDataProcess) back reference 
-| Recipients | [Applications.PersonalData.PersonalDataProcessRecipients](Applications.PersonalData.PersonalDataProcessRecipients.md) | List of [PersonalDataProcessRecipient](Applications.PersonalData.PersonalDataProcessRecipients.md) child objects, based on the [Applications.PersonalData.PersonalDataProcessRecipient.PersonalDataProcess](Applications.PersonalData.PersonalDataProcessRecipients.md#PersonalDataProcess) back reference 
+| JointControllers | [Applications.PersonalData.JointControllers](Applications.PersonalData.JointControllers.md) | List of [JointController](Applications.PersonalData.JointControllers.md) child objects, based on the [Applications.PersonalData.JointController.PersonalDataProcess](Applications.PersonalData.JointControllers.md#personaldataprocess) back reference 
+| Recipients | [Applications.PersonalData.PersonalDataProcessRecipients](Applications.PersonalData.PersonalDataProcessRecipients.md) | List of [PersonalDataProcessRecipient](Applications.PersonalData.PersonalDataProcessRecipients.md) child objects, based on the [Applications.PersonalData.PersonalDataProcessRecipient.PersonalDataProcess](Applications.PersonalData.PersonalDataProcessRecipients.md#personaldataprocess) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Code
 
@@ -73,9 +66,9 @@ _Supports Order By_: **False**
 
 > The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. [Required]
 
-_Type_: **[Applications.PersonalData.PersonalDataProcessesRepository.DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#DataSubjectCategory)**  
-Allowed values for the [DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#DataSubjectCategory) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory)**  
+Allowed values for the [DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory) data attribute  
+_Allowed Values (Applications.PersonalData.PersonalDataProcessesRepository.DataSubjectCategory Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -115,13 +108,19 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### LegalBasisForProcessing
 
 > The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;. [Required] [Filter(eq)]
 
-_Type_: **[Applications.PersonalData.PersonalDataProcessesRepository.LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#LegalBasisForProcessing)**  
-Allowed values for the [LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#LegalBasisForProcessing) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing)**  
+Allowed values for the [LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing) data attribute  
+_Allowed Values (Applications.PersonalData.PersonalDataProcessesRepository.LegalBasisForProcessing Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -187,7 +186,7 @@ _Supports Order By_: **False**
 
 > Name of the process (Multilanguage). [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -203,9 +202,9 @@ _Supports Order By_: **False**
 
 > The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . [Required] [Default("C")] [Filter(eq)]
 
-_Type_: **[Applications.PersonalData.PersonalDataProcessesRepository.ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#ProcessingRole)**  
-Allowed values for the [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#ProcessingRole) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole)**  
+Allowed values for the [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole) data attribute  
+_Allowed Values (Applications.PersonalData.PersonalDataProcessesRepository.ProcessingRole Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -241,7 +240,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProcessOwnerPerson
 
@@ -249,7 +247,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

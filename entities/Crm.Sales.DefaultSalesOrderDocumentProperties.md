@@ -9,15 +9,15 @@ User-defined properties which shall be copied from the customer to the document 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Sales.DefaultSalesOrderDocumentProperties.md#Id) | guid |  
+| [Id](Crm.Sales.DefaultSalesOrderDocumentProperties.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CustomerProperty](Crm.Sales.DefaultSalesOrderDocumentProperties.md#CustomerProperty) | [General.CustomProperties](General.CustomProperties.md) | The user-defined customer property that shall be copied. [Required] [Filter(multi eq)] |
-| [DocumentProperty](Crm.Sales.DefaultSalesOrderDocumentProperties.md#DocumentProperty) | [General.CustomProperties](General.CustomProperties.md) | The user-defined document property in which to copy the customers property value. [Required] [Filter(multi eq)] |
-| [DocumentType](Crm.Sales.DefaultSalesOrderDocumentProperties.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the current definitions apply. [Required] [Filter(multi eq)] [Owner] |
+| [CustomerProperty](Crm.Sales.DefaultSalesOrderDocumentProperties.md#customerproperty) | [General.CustomProperties](General.CustomProperties.md) | The user-defined customer property that shall be copied. [Required] [Filter(multi eq)] |
+| [DocumentProperty](Crm.Sales.DefaultSalesOrderDocumentProperties.md#documentproperty) | [General.CustomProperties](General.CustomProperties.md) | The user-defined document property in which to copy the customers property value. [Required] [Filter(multi eq)] |
+| [DocumentType](Crm.Sales.DefaultSalesOrderDocumentProperties.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the current definitions apply. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ User-defined properties which shall be copied from the customer to the document 
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -38,7 +37,6 @@ _Default Value_: **NewGuid**
 
 _Type_: **[General.CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DocumentProperty
 
@@ -46,7 +44,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DocumentType
 
@@ -54,7 +51,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

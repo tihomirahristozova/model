@@ -9,16 +9,16 @@ The price lists, which are updated by the pricing model. Entity: Crm_Pricing_Mod
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pricing.PricingModelPriceLists.md#Id) | guid |  
-| [LineNo](Crm.Pricing.PricingModelPriceLists.md#LineNo) | int32 | The consecutive number of this price list within the pricing model. [Required] 
-| [MarginPercent](Crm.Pricing.PricingModelPriceLists.md#MarginPercent) | decimal (nullable) | Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way. 
+| [Id](Crm.Pricing.PricingModelPriceLists.md#id) | guid |  
+| [LineNo](Crm.Pricing.PricingModelPriceLists.md#lineno) | int32 | The consecutive number of this price list within the pricing model. [Required] 
+| [MarginPercent](Crm.Pricing.PricingModelPriceLists.md#marginpercent) | decimal (nullable) | Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PriceList](Crm.Pricing.PricingModelPriceLists.md#PriceList) | [Crm.PriceLists](Crm.PriceLists.md) | The price list, which is included in the pricing model. [Required] [Filter(multi eq)] |
-| [PricingModel](Crm.Pricing.PricingModelPriceLists.md#PricingModel) | [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md) | The pricing model, for which the price list is listed. [Required] [Filter(multi eq)] [Owner] |
+| [PriceList](Crm.Pricing.PricingModelPriceLists.md#pricelist) | [Crm.PriceLists](Crm.PriceLists.md) | The price list, which is included in the pricing model. [Required] [Filter(multi eq)] |
+| [PricingModel](Crm.Pricing.PricingModelPriceLists.md#pricingmodel) | [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md) | The pricing model, for which the price list is listed. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ The price lists, which are updated by the pricing model. Entity: Crm_Pricing_Mod
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### LineNo
@@ -60,7 +59,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.PriceLists](Crm.PriceLists.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PricingModel
 
@@ -68,7 +66,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

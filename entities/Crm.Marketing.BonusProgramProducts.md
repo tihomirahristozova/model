@@ -9,14 +9,14 @@ Provides a way to specify additional (to the one specified in Bonus Program.Cond
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Marketing.BonusProgramProducts.md#Id) | guid |  
+| [Id](Crm.Marketing.BonusProgramProducts.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BonusProgram](Crm.Marketing.BonusProgramProducts.md#BonusProgram) | [Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md) | The [BonusProgram](Crm.Marketing.BonusProgramProducts.md#BonusProgram) to which this BonusProgramProduct belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Product](Crm.Marketing.BonusProgramProducts.md#Product) | [General.Products.Products](General.Products.Products.md) | The product which is required to exist in the final sales document in order for the bonus program to be applied. [Required] [Filter(multi eq)] |
+| [BonusProgram](Crm.Marketing.BonusProgramProducts.md#bonusprogram) | [Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md) | The [BonusProgram](Crm.Marketing.BonusProgramProducts.md#bonusprogram) to which this BonusProgramProduct belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Product](Crm.Marketing.BonusProgramProducts.md#product) | [General.Products.Products](General.Products.Products.md) | The product which is required to exist in the final sales document in order for the bonus program to be applied. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ Provides a way to specify additional (to the one specified in Bonus Program.Cond
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -33,11 +32,10 @@ _Default Value_: **NewGuid**
 
 ### BonusProgram
 
-> The [BonusProgram](Crm.Marketing.BonusProgramProducts.md#BonusProgram) to which this BonusProgramProduct belongs. [Required] [Filter(multi eq)] [Owner]
+> The [BonusProgram](Crm.Marketing.BonusProgramProducts.md#bonusprogram) to which this BonusProgramProduct belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Product
 
@@ -45,7 +43,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

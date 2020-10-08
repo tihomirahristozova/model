@@ -9,41 +9,34 @@ Represents email messages. Entity: Mail_Messages
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Mail.Messages.md#Id) | guid |  
-| [Body](Applications.Mail.Messages.md#Body) | string (nullable) | The body of the message. 
-| [CcEmailAddressList](Applications.Mail.Messages.md#CcEmailAddressList) | string (nullable) | Semicolon-separated list of Cc email addresses. [Filter(like)] 
-| [CreationDateTime](Applications.Mail.Messages.md#CreationDateTime) | datetime | Date and time when the message was created. [Required] [Default(Now)] [Filter(ge;le)] 
-| [FromEmailAddress](Applications.Mail.Messages.md#FromEmailAddress) | string | Sending email address. [Required] [Filter(like)] 
-| [IsEncrypted](Applications.Mail.Messages.md#IsEncrypted) | boolean | True when the message is stored in encrypted format. [Required] [Default(false)] [Filter(eq)] 
-| [IsRead](Applications.Mail.Messages.md#IsRead) | boolean | True when the message was read by the user. [Required] [Default(false)] [Filter(eq)] 
-| [ReceivedDateTime](Applications.Mail.Messages.md#ReceivedDateTime) | datetime (nullable) | Date and time when the message was received. [Filter(ge;le)] 
-| [SentDateTime](Applications.Mail.Messages.md#SentDateTime) | datetime (nullable) | Date and time when the message was sent. [Filter(ge;le)] 
-| [ServerMessageID](Applications.Mail.Messages.md#ServerMessageID) | string (nullable) | Message ID as it appears on the mail server. [Filter(eq)] 
-| [Subject](Applications.Mail.Messages.md#Subject) | string (nullable) | The message subject. [Filter(like)] 
-| [ToEmailAddressList](Applications.Mail.Messages.md#ToEmailAddressList) | string (nullable) | Semicolon-separated list of receiving email addresses. [Filter(like)] 
+| [Body](Applications.Mail.Messages.md#body) | string (nullable) | The body of the message. 
+| [CcEmailAddressList](Applications.Mail.Messages.md#ccemailaddresslist) | string (nullable) | Semicolon-separated list of Cc email addresses. [Filter(like)] 
+| [CreationDateTime](Applications.Mail.Messages.md#creationdatetime) | datetime | Date and time when the message was created. [Required] [Default(Now)] [Filter(ge;le)] 
+| [FromEmailAddress](Applications.Mail.Messages.md#fromemailaddress) | string | Sending email address. [Required] [Filter(like)] 
+| [Id](Applications.Mail.Messages.md#id) | guid |  
+| [IsEncrypted](Applications.Mail.Messages.md#isencrypted) | boolean | True when the message is stored in encrypted format. [Required] [Default(false)] [Filter(eq)] 
+| [IsRead](Applications.Mail.Messages.md#isread) | boolean | True when the message was read by the user. [Required] [Default(false)] [Filter(eq)] 
+| [ReceivedDateTime](Applications.Mail.Messages.md#receiveddatetime) | datetime (nullable) | Date and time when the message was received. [Filter(ge;le)] 
+| [SentDateTime](Applications.Mail.Messages.md#sentdatetime) | datetime (nullable) | Date and time when the message was sent. [Filter(ge;le)] 
+| [ServerMessageID](Applications.Mail.Messages.md#servermessageid) | string (nullable) | Message ID as it appears on the mail server. [Filter(eq)] 
+| [Subject](Applications.Mail.Messages.md#subject) | string (nullable) | The message subject. [Filter(like)] 
+| [ToEmailAddressList](Applications.Mail.Messages.md#toemailaddresslist) | string (nullable) | Semicolon-separated list of receiving email addresses. [Filter(like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MailBoxFolder](Applications.Mail.Messages.md#MailBoxFolder) | [Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md) | The [BoxFolder](Applications.Mail.BoxFolders.md) to which this Message belongs. [Required] [Filter(multi eq)] [Owner] |
-| [RelatedToParty](Applications.Mail.Messages.md#RelatedToParty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. [Filter(multi eq)] |
+| [MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) | [Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md) | The [BoxFolder](Applications.Mail.BoxFolders.md) to which this Message belongs. [Required] [Filter(multi eq)] [Owner] |
+| [RelatedToParty](Applications.Mail.Messages.md#relatedtoparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Attachments | [Applications.Mail.MessageAttachments](Applications.Mail.MessageAttachments.md) | List of [MessageAttachment](Applications.Mail.MessageAttachments.md) child objects, based on the [Applications.Mail.MessageAttachment.MailMessage](Applications.Mail.MessageAttachments.md#MailMessage) back reference 
+| Attachments | [Applications.Mail.MessageAttachments](Applications.Mail.MessageAttachments.md) | List of [MessageAttachment](Applications.Mail.MessageAttachments.md) child objects, based on the [Applications.Mail.MessageAttachment.MailMessage](Applications.Mail.MessageAttachments.md#mailmessage) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Body
 
@@ -77,6 +70,12 @@ _Default Value_: **CurrentDateTime**
 _Type_: **string**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsEncrypted
 
@@ -145,7 +144,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### RelatedToParty
 
@@ -153,7 +151,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,29 +9,13 @@ Represents a mode of transportation, like water, air, road, etc. Entity: Log_Tra
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Shipment.TransportationModes.md#Id) | guid |  
-| [SystemIcon](Logistics.Shipment.TransportationModes.md#SystemIcon) | string | Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. [Required] [Default("O")] 
-| [Code](Logistics.Shipment.TransportationModes.md#Code) | string | Unique transportation mode code. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Logistics.Shipment.TransportationModes.md#Name) | string | Multilanguage name of the mode of transportation. [Required] [Filter(eq;like)] 
+| [Code](Logistics.Shipment.TransportationModes.md#code) | string | Unique transportation mode code. [Required] [Filter(eq;like)] [ORD] 
+| [Id](Logistics.Shipment.TransportationModes.md#id) | guid |  
+| [Name](Logistics.Shipment.TransportationModes.md#name) | string | Multilanguage name of the mode of transportation. [Required] [Filter(eq;like)] 
+| [SystemIcon](Logistics.Shipment.TransportationModes.md#systemicon) | string | Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. [Required] [Default("O")] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
-
-### SystemIcon
-
-> Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. [Required] [Default("O")]
-
-_Type_: **string**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **O**  
 
 ### Code
 
@@ -41,6 +25,12 @@ _Type_: **string**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Name
 
 > Multilanguage name of the mode of transportation. [Required] [Filter(eq;like)]
@@ -48,6 +38,15 @@ _Supports Order By_: **True**
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+
+### SystemIcon
+
+> Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. [Required] [Default("O")]
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **O**  
 
 
 

@@ -9,31 +9,24 @@ Contains the free materials, included in the service agreement. Entity: Srv_Serv
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Service.ServiceAgreementMaterials.md#Id) | guid |  
-| [EndDate](Applications.Service.ServiceAgreementMaterials.md#EndDate) | datetime (nullable) | End date to which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities. 
-| [LineNo](Applications.Service.ServiceAgreementMaterials.md#LineNo) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] 
-| [Quantity](Applications.Service.ServiceAgreementMaterials.md#Quantity) | [Quantity](../data-types.md#Quantity) | Quantity of the agreed material. [Unit: QuantityUnit] [Required] 
-| [QuantityBase](Applications.Service.ServiceAgreementMaterials.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
-| [StandardQuantityBase](Applications.Service.ServiceAgreementMaterials.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
-| [StartDate](Applications.Service.ServiceAgreementMaterials.md#StartDate) | datetime (nullable) | Start date from which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities. 
+| [EndDate](Applications.Service.ServiceAgreementMaterials.md#enddate) | datetime (nullable) | End date to which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities. 
+| [Id](Applications.Service.ServiceAgreementMaterials.md#id) | guid |  
+| [LineNo](Applications.Service.ServiceAgreementMaterials.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] 
+| [Quantity](Applications.Service.ServiceAgreementMaterials.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity of the agreed material. [Unit: QuantityUnit] [Required] 
+| [QuantityBase](Applications.Service.ServiceAgreementMaterials.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
+| [StandardQuantityBase](Applications.Service.ServiceAgreementMaterials.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [StartDate](Applications.Service.ServiceAgreementMaterials.md#startdate) | datetime (nullable) | Start date from which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](Applications.Service.ServiceAgreementMaterials.md#Product) | [General.Products.Products](General.Products.Products.md) | Paid or agreed in advance material that won't be invoiced after service activities. [Required] [Filter(multi eq)] |
-| [QuantityUnit](Applications.Service.ServiceAgreementMaterials.md#QuantityUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
-| [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#ServiceAgreement) | [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md) | The [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#ServiceAgreement) to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Product](Applications.Service.ServiceAgreementMaterials.md#product) | [General.Products.Products](General.Products.Products.md) | Paid or agreed in advance material that won't be invoiced after service activities. [Required] [Filter(multi eq)] |
+| [QuantityUnit](Applications.Service.ServiceAgreementMaterials.md#quantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
+| [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#serviceagreement) | [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md) | The [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### EndDate
 
@@ -42,6 +35,12 @@ _Default Value_: **NewGuid**
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### LineNo
 
@@ -60,7 +59,7 @@ _Front-End Recalc Expressions:_
 
 > Quantity of the agreed material. [Unit: QuantityUnit] [Required]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -68,7 +67,7 @@ _Supports Order By_: **False**
 
 > The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -81,7 +80,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -107,7 +106,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### QuantityUnit
 
@@ -115,15 +113,13 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ServiceAgreement
 
-> The [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#ServiceAgreement) to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner]
+> The [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

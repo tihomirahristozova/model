@@ -9,16 +9,16 @@ Represents the different working schedules, used by the employees and resources.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Resources.WorkSchedules.md#Id) | guid |  
-| [NumberOfDays](General.Resources.WorkSchedules.md#NumberOfDays) | int16 (nullable) | Number of days in a recurring period. Valid only when Recurrence_Type=D. 
-| [RecurrenceType](General.Resources.WorkSchedules.md#RecurrenceType) | [General.Resources.WorkSchedulesRepository.RecurrenceType](General.Resources.WorkSchedules.md#RecurrenceType) | D=recurring each X days; W=recurring each week; M=recurring each month. [Required] [Filter(multi eq)] 
-| [Name](General.Resources.WorkSchedules.md#Name) | string | The name of this WorkSchedule. [Required] [Filter(like)] 
+| [Id](General.Resources.WorkSchedules.md#id) | guid |  
+| [Name](General.Resources.WorkSchedules.md#name) | string | The name of this WorkSchedule. [Required] [Filter(like)] 
+| [NumberOfDays](General.Resources.WorkSchedules.md#numberofdays) | int16 (nullable) | Number of days in a recurring period. Valid only when Recurrence_Type=D. 
+| [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | D=recurring each X days; W=recurring each week; M=recurring each month. [Required] [Filter(multi eq)] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| WorkingTime | [General.Resources.WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md) | List of [WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md) child objects, based on the [General.Resources.WorkScheduleWorkingTime.WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#WorkSchedule) back reference 
+| WorkingTime | [General.Resources.WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md) | List of [WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md) child objects, based on the [General.Resources.WorkScheduleWorkingTime.WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) back reference 
 
 
 ## Attribute Details
@@ -27,8 +27,15 @@ Represents the different working schedules, used by the employees and resources.
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
+
+### Name
+
+> The name of this WorkSchedule. [Required] [Filter(like)]
+
+_Type_: **string**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
 
 ### NumberOfDays
 
@@ -42,9 +49,9 @@ _Supports Order By_: **False**
 
 > D=recurring each X days; W=recurring each week; M=recurring each month. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Resources.WorkSchedulesRepository.RecurrenceType](General.Resources.WorkSchedules.md#RecurrenceType)**  
-Allowed values for the [RecurrenceType](General.Resources.WorkSchedules.md#RecurrenceType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype)**  
+Allowed values for the [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) data attribute  
+_Allowed Values (General.Resources.WorkSchedulesRepository.RecurrenceType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -53,14 +60,6 @@ _Allowed Values (Enum Members)_
 | RecurringEachWeek | RecurringEachWeek value. Stored as 'W'. <br /> _Database Value:_ 'W' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'RecurringEachWeek' |
 
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### Name
-
-> The name of this WorkSchedule. [Required] [Filter(like)]
-
-_Type_: **string**  
-_Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
 

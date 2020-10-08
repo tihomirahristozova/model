@@ -9,19 +9,19 @@ Contains all transactions of Record of Handover / Handing-Over Record lines. Ent
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Rental.TransactionLines.md#Id) | guid |  
-| [Notes](Applications.Rental.TransactionLines.md#Notes) | string (nullable) | Notes. 
-| [TransactionTimestamp](Applications.Rental.TransactionLines.md#TransactionTimestamp) | datetime | Transaction Timestamp. [Required] [Filter(multi eq;ge;le)] 
-| [TransactionType](Applications.Rental.TransactionLines.md#TransactionType) | [Applications.Rental.TransactionLinesRepository.TransactionType](Applications.Rental.TransactionLines.md#TransactionType) | Transaction Type. [Required] [Filter(eq;like)] 
+| [Id](Applications.Rental.TransactionLines.md#id) | guid |  
+| [Notes](Applications.Rental.TransactionLines.md#notes) | string (nullable) | Notes. 
+| [TransactionTimestamp](Applications.Rental.TransactionLines.md#transactiontimestamp) | datetime | Transaction Timestamp. [Required] [Filter(multi eq;ge;le)] 
+| [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | Transaction Type. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LeaseContract](Applications.Rental.TransactionLines.md#LeaseContract) | [Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md) | Lease Contract. [Required] [Filter(multi eq)] |
-| [LesseeCustomer](Applications.Rental.TransactionLines.md#LesseeCustomer) | [Crm.Customers](Crm.Customers.md) | Lessee Customer. [Required] [Filter(multi eq)] |
-| [RentTransaction](Applications.Rental.TransactionLines.md#RentTransaction) | [Applications.Rental.Transactions](Applications.Rental.Transactions.md) | The [Transaction](Applications.Rental.Transactions.md) to which this TransactionLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [RentalAsset](Applications.Rental.TransactionLines.md#RentalAsset) | [Applications.Rental.Assets](Applications.Rental.Assets.md) | Rental asset. [Required] [Filter(multi eq)] |
+| [LeaseContract](Applications.Rental.TransactionLines.md#leasecontract) | [Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md) | Lease Contract. [Required] [Filter(multi eq)] |
+| [LesseeCustomer](Applications.Rental.TransactionLines.md#lesseecustomer) | [Crm.Customers](Crm.Customers.md) | Lessee Customer. [Required] [Filter(multi eq)] |
+| [RentalAsset](Applications.Rental.TransactionLines.md#rentalasset) | [Applications.Rental.Assets](Applications.Rental.Assets.md) | Rental asset. [Required] [Filter(multi eq)] |
+| [RentTransaction](Applications.Rental.TransactionLines.md#renttransaction) | [Applications.Rental.Transactions](Applications.Rental.Transactions.md) | The [Transaction](Applications.Rental.Transactions.md) to which this TransactionLine belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -30,7 +30,6 @@ Contains all transactions of Record of Handover / Handing-Over Record lines. Ent
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes
@@ -53,9 +52,9 @@ _Supports Order By_: **False**
 
 > Transaction Type. [Required] [Filter(eq;like)]
 
-_Type_: **[Applications.Rental.TransactionLinesRepository.TransactionType](Applications.Rental.TransactionLines.md#TransactionType)**  
-Allowed values for the [TransactionType](Applications.Rental.TransactionLines.md#TransactionType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[TransactionType](Applications.Rental.TransactionLines.md#transactiontype)**  
+Allowed values for the [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) data attribute  
+_Allowed Values (Applications.Rental.TransactionLinesRepository.TransactionType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -76,7 +75,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### LesseeCustomer
 
@@ -84,15 +82,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Customers](Crm.Customers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### RentTransaction
-
-> The [Transaction](Applications.Rental.Transactions.md) to which this TransactionLine belongs. [Required] [Filter(multi eq)] [Owner]
-
-_Type_: **[Applications.Rental.Transactions](Applications.Rental.Transactions.md)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### RentalAsset
 
@@ -100,7 +89,13 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Rental.Assets](Applications.Rental.Assets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### RentTransaction
+
+> The [Transaction](Applications.Rental.Transactions.md) to which this TransactionLine belongs. [Required] [Filter(multi eq)] [Owner]
+
+_Type_: **[Applications.Rental.Transactions](Applications.Rental.Transactions.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 
 

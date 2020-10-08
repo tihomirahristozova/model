@@ -9,43 +9,36 @@ Promotional packages are packages of products, which are sold together at a spec
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.PromotionalPackages.md#Id) | guid |  
-| [Active](Crm.PromotionalPackages.md#Active) | boolean | Package status: true = the offer is available for new documents; false = otherwise. [Required] [Default(true)] [Filter(eq)] 
-| [Code](Crm.PromotionalPackages.md#Code) | string | Unique code of the promotional package. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Crm.PromotionalPackages.md#Name) | string | The name of this PromotionalPackage. [Required] [Filter(eq;like)] [ORD] 
-| [ValidForCustomerFilterXML](Crm.PromotionalPackages.md#ValidForCustomerFilterXML) | dataaccessfilter (nullable) | When not null, the package is valid only for the customers, that match the filter. 
-| [ValidForDistributionChannelFilterXML](Crm.PromotionalPackages.md#ValidForDistributionChannelFilterXML) | dataaccessfilter (nullable) | When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria. 
-| [ValidForShipToCustomerFilterXML](Crm.PromotionalPackages.md#ValidForShipToCustomerFilterXML) | dataaccessfilter (nullable) | When not null, specifies validity condition for the Ship To Customer of the sales document. 
-| [ValidFromDate](Crm.PromotionalPackages.md#ValidFromDate) | date (nullable) | When not null specifies the first date when the package is valid for offering. The date is compared against the document date. [Filter(eq;ge;le)] 
-| [ValidToDate](Crm.PromotionalPackages.md#ValidToDate) | date (nullable) | When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. [Filter(eq;ge;le)] 
+| [Active](Crm.PromotionalPackages.md#active) | boolean | Package status: true = the offer is available for new documents; false = otherwise. [Required] [Default(true)] [Filter(eq)] 
+| [Code](Crm.PromotionalPackages.md#code) | string | Unique code of the promotional package. [Required] [Filter(eq;like)] [ORD] 
+| [Id](Crm.PromotionalPackages.md#id) | guid |  
+| [Name](Crm.PromotionalPackages.md#name) | string | The name of this PromotionalPackage. [Required] [Filter(eq;like)] [ORD] 
+| [ValidForCustomerFilterXML](Crm.PromotionalPackages.md#validforcustomerfilterxml) | dataaccessfilter (nullable) | When not null, the package is valid only for the customers, that match the filter. 
+| [ValidForDistributionChannelFilterXML](Crm.PromotionalPackages.md#validfordistributionchannelfilterxml) | dataaccessfilter (nullable) | When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria. 
+| [ValidForShipToCustomerFilterXML](Crm.PromotionalPackages.md#validforshiptocustomerfilterxml) | dataaccessfilter (nullable) | When not null, specifies validity condition for the Ship To Customer of the sales document. 
+| [ValidFromDate](Crm.PromotionalPackages.md#validfromdate) | date (nullable) | When not null specifies the first date when the package is valid for offering. The date is compared against the document date. [Filter(eq;ge;le)] 
+| [ValidToDate](Crm.PromotionalPackages.md#validtodate) | date (nullable) | When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. [Filter(eq;ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.PromotionalPackages.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, indicates that the package is valid only for the specified enterprise company. [Filter(multi eq)] |
-| [EnterpriseCompanyLocation](Crm.PromotionalPackages.md#EnterpriseCompanyLocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this PromotionalPackage applies, or null if it is for all enterprise company locations. [Filter(multi eq)] |
-| [ValidForCustomer](Crm.PromotionalPackages.md#ValidForCustomer) | [Crm.Customers](Crm.Customers.md) (nullable) | When not null, the package is valid only for the specified customer. [Filter(multi eq)] |
-| [ValidForDistributionChannel](Crm.PromotionalPackages.md#ValidForDistributionChannel) | [Crm.Marketing.DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | When not null, the package is valid only for the specified distribution channel of the sales order. [Filter(multi eq)] |
-| [ValidForPriceList](Crm.PromotionalPackages.md#ValidForPriceList) | [Crm.PriceLists](Crm.PriceLists.md) (nullable) | When not null, the package is valid only for the specified price list. [Filter(multi eq)] |
-| [ValidForShipToCustomer](Crm.PromotionalPackages.md#ValidForShipToCustomer) | [Crm.Customers](Crm.Customers.md) (nullable) | When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. [Filter(multi eq)] |
-| [ValidForTargetGroup](Crm.PromotionalPackages.md#ValidForTargetGroup) | [Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | When not null, the package is valid only for the specified customer target group. [Filter(multi eq)] |
+| [EnterpriseCompany](Crm.PromotionalPackages.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, indicates that the package is valid only for the specified enterprise company. [Filter(multi eq)] |
+| [EnterpriseCompanyLocation](Crm.PromotionalPackages.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this PromotionalPackage applies, or null if it is for all enterprise company locations. [Filter(multi eq)] |
+| [ValidForCustomer](Crm.PromotionalPackages.md#validforcustomer) | [Crm.Customers](Crm.Customers.md) (nullable) | When not null, the package is valid only for the specified customer. [Filter(multi eq)] |
+| [ValidForDistributionChannel](Crm.PromotionalPackages.md#validfordistributionchannel) | [Crm.Marketing.DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | When not null, the package is valid only for the specified distribution channel of the sales order. [Filter(multi eq)] |
+| [ValidForPriceList](Crm.PromotionalPackages.md#validforpricelist) | [Crm.PriceLists](Crm.PriceLists.md) (nullable) | When not null, the package is valid only for the specified price list. [Filter(multi eq)] |
+| [ValidForShipToCustomer](Crm.PromotionalPackages.md#validforshiptocustomer) | [Crm.Customers](Crm.Customers.md) (nullable) | When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. [Filter(multi eq)] |
+| [ValidForTargetGroup](Crm.PromotionalPackages.md#validfortargetgroup) | [Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | When not null, the package is valid only for the specified customer target group. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Lines | [Crm.PromotionalPackageLines](Crm.PromotionalPackageLines.md) | List of [PromotionalPackageLine](Crm.PromotionalPackageLines.md) child objects, based on the [Crm.PromotionalPackageLine.PromotionalPackage](Crm.PromotionalPackageLines.md#PromotionalPackage) back reference 
+| Lines | [Crm.PromotionalPackageLines](Crm.PromotionalPackageLines.md) | List of [PromotionalPackageLine](Crm.PromotionalPackageLines.md) child objects, based on the [Crm.PromotionalPackageLine.PromotionalPackage](Crm.PromotionalPackageLines.md#promotionalpackage) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Active
 
@@ -63,6 +56,12 @@ _Default Value_: **True**
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Name
 
@@ -121,7 +120,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EnterpriseCompanyLocation
 
@@ -129,7 +127,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ValidForCustomer
 
@@ -137,7 +134,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Customers](Crm.Customers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ValidForDistributionChannel
 
@@ -145,7 +141,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Marketing.DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ValidForPriceList
 
@@ -153,7 +148,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.PriceLists](Crm.PriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ValidForShipToCustomer
 
@@ -161,7 +155,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Customers](Crm.Customers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ValidForTargetGroup
 
@@ -169,7 +162,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

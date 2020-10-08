@@ -9,19 +9,19 @@ Contains history of saved version of the managed objects. Entity: Sys_Object_Ver
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.ObjectVersions.md#Id) | guid |  
-| [ObjectContents](Systems.Core.ObjectVersions.md#ObjectContents) | byte[] | The compressed contents of the object. [Required] 
-| [ServerVersion](Systems.Core.ObjectVersions.md#ServerVersion) | string (nullable) | The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown. 
-| [Version](Systems.Core.ObjectVersions.md#Version) | int32 | The version number of the version, stored in the current row, starting from 1. [Required] [Filter(multi eq;ge;le)] 
-| [VersionTime](Systems.Core.ObjectVersions.md#VersionTime) | datetime | The timestamp when the version was saved. [Required] [Filter(ge;le)] 
-| [VersionType](Systems.Core.ObjectVersions.md#VersionType) | [Systems.Core.ObjectVersionsRepository.VersionType](Systems.Core.ObjectVersions.md#VersionType) | Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. [Required] 
+| [Id](Systems.Core.ObjectVersions.md#id) | guid |  
+| [ObjectContents](Systems.Core.ObjectVersions.md#objectcontents) | byte[] | The compressed contents of the object. [Required] 
+| [ServerVersion](Systems.Core.ObjectVersions.md#serverversion) | string (nullable) | The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown. 
+| [Version](Systems.Core.ObjectVersions.md#version) | int32 | The version number of the version, stored in the current row, starting from 1. [Required] [Filter(multi eq;ge;le)] 
+| [VersionTime](Systems.Core.ObjectVersions.md#versiontime) | datetime | The timestamp when the version was saved. [Required] [Filter(ge;le)] 
+| [VersionType](Systems.Core.ObjectVersions.md#versiontype) | [VersionType](Systems.Core.ObjectVersions.md#versiontype) | Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Object](Systems.Core.ObjectVersions.md#Object) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object, for which a version is stored. [Required] [Filter(multi eq)] [Owner] |
-| [User](Systems.Core.ObjectVersions.md#User) | [Systems.Security.Users](Systems.Security.Users.md) | The user, which saved the version. [Required] [Filter(multi eq)] |
+| [Object](Systems.Core.ObjectVersions.md#object) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object, for which a version is stored. [Required] [Filter(multi eq)] [Owner] |
+| [User](Systems.Core.ObjectVersions.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user, which saved the version. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -30,7 +30,6 @@ Contains history of saved version of the managed objects. Entity: Sys_Object_Ver
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### ObjectContents
@@ -69,9 +68,9 @@ _Supports Order By_: **False**
 
 > Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. [Required]
 
-_Type_: **[Systems.Core.ObjectVersionsRepository.VersionType](Systems.Core.ObjectVersions.md#VersionType)**  
-Allowed values for the [VersionType](Systems.Core.ObjectVersions.md#VersionType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[VersionType](Systems.Core.ObjectVersions.md#versiontype)**  
+Allowed values for the [VersionType](Systems.Core.ObjectVersions.md#versiontype) data attribute  
+_Allowed Values (Systems.Core.ObjectVersionsRepository.VersionType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -90,7 +89,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### User
 
@@ -98,7 +96,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

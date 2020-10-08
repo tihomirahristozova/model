@@ -9,41 +9,40 @@ Describes the availability of resources in the active workgroups. Entity: Prd_Wo
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.WorkgroupResources.md#Id) | guid |  
-| [AvailableQuantity](Production.Resources.WorkgroupResources.md#AvailableQuantity) | [Quantity](../data-types.md#Quantity) | Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. [Unit: Resource.PrimaryUnit] [Required] [Default(0)] 
-| [Notes](Production.Resources.WorkgroupResources.md#Notes) | string (nullable) | User notes for the workgroup resource. 
+| [AvailableQuantity](Production.Resources.WorkgroupResources.md#availablequantity) | [Quantity](../data-types.md#quantity) | Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. [Unit: Resource.PrimaryUnit] [Required] [Default(0)] 
+| [Id](Production.Resources.WorkgroupResources.md#id) | guid |  
+| [Notes](Production.Resources.WorkgroupResources.md#notes) | string (nullable) | User notes for the workgroup resource. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Resource](Production.Resources.WorkgroupResources.md#Resource) | [Production.Resources.Resources](Production.Resources.Resources.md) | The contained resource type. [Required] [Filter(multi eq)] |
-| [Workgroup](Production.Resources.WorkgroupResources.md#Workgroup) | [Production.Resources.Workgroups](Production.Resources.Workgroups.md) | Id of the workgroup, containing the resource. [Required] [Filter(multi eq)] [Owner] |
+| [Resource](Production.Resources.WorkgroupResources.md#resource) | [Production.Resources.Resources](Production.Resources.Resources.md) | The contained resource type. [Required] [Filter(multi eq)] |
+| [Workgroup](Production.Resources.WorkgroupResources.md#workgroup) | [Production.Resources.Workgroups](Production.Resources.Workgroups.md) | Id of the workgroup, containing the resource. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Capacity | [Production.Resources.Capacity](Production.Resources.Capacity.md) | List of [Capacity](Production.Resources.Capacity.md) child objects, based on the [Production.Resources.Capacity.WorkgroupResource](Production.Resources.Capacity.md#WorkgroupResource) back reference 
+| Capacity | [Production.Resources.Capacity](Production.Resources.Capacity.md) | List of [Capacity](Production.Resources.Capacity.md) child objects, based on the [Production.Resources.Capacity.WorkgroupResource](Production.Resources.Capacity.md#workgroupresource) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### AvailableQuantity
 
 > Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. [Unit: Resource.PrimaryUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Notes
 
@@ -62,7 +61,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.Resources.Resources](Production.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Workgroup
 
@@ -70,7 +68,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.Resources.Workgroups](Production.Resources.Workgroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

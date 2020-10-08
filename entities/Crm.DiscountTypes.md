@@ -9,32 +9,25 @@ Contains the different types of discounts, which can be applied to sales lines. 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.DiscountTypes.md#Id) | guid |  
-| [ActionType](Crm.DiscountTypes.md#ActionType) | [Crm.DiscountTypesRepository.ActionType](Crm.DiscountTypes.md#ActionType) | Specifies the way the discount is applied over the previous discounts. [Required] [Default("A")] [Filter(multi eq)] 
-| [CalculationMethod](Crm.DiscountTypes.md#CalculationMethod) | [Crm.DiscountTypesRepository.CalculationMethod](Crm.DiscountTypes.md#CalculationMethod) | Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. [Required] [Filter(multi eq)] 
-| [Code](Crm.DiscountTypes.md#Code) | string | The unique code of the DiscountType. [Required] [Filter(eq)] 
-| [Name](Crm.DiscountTypes.md#Name) | string | The name of this DiscountType. [Required] [Filter(like)] 
-| [IsSystem](Crm.DiscountTypes.md#IsSystem) | boolean | Specifies whether this discount type is created and managed by the system. [Required] [Default(false)] [Filter(multi eq)] 
-| [Notes](Crm.DiscountTypes.md#Notes) | string (nullable) | Notes for this DiscountType. 
-| [Ord](Crm.DiscountTypes.md#Ord) | int32 | Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. [Required] [Default(1)] [Filter(ge;le)] 
+| [ActionType](Crm.DiscountTypes.md#actiontype) | [ActionType](Crm.DiscountTypes.md#actiontype) | Specifies the way the discount is applied over the previous discounts. [Required] [Default("A")] [Filter(multi eq)] 
+| [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) | [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) | Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. [Required] [Filter(multi eq)] 
+| [Code](Crm.DiscountTypes.md#code) | string | The unique code of the DiscountType. [Required] [Filter(eq)] 
+| [Id](Crm.DiscountTypes.md#id) | guid |  
+| [IsSystem](Crm.DiscountTypes.md#issystem) | boolean | Specifies whether this discount type is created and managed by the system. [Required] [Default(false)] [Filter(multi eq)] 
+| [Name](Crm.DiscountTypes.md#name) | string | The name of this DiscountType. [Required] [Filter(like)] 
+| [Notes](Crm.DiscountTypes.md#notes) | string (nullable) | Notes for this DiscountType. 
+| [Ord](Crm.DiscountTypes.md#ord) | int32 | Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. [Required] [Default(1)] [Filter(ge;le)] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ActionType
 
 > Specifies the way the discount is applied over the previous discounts. [Required] [Default("A")] [Filter(multi eq)]
 
-_Type_: **[Crm.DiscountTypesRepository.ActionType](Crm.DiscountTypes.md#ActionType)**  
-Allowed values for the [ActionType](Crm.DiscountTypes.md#ActionType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ActionType](Crm.DiscountTypes.md#actiontype)**  
+Allowed values for the [ActionType](Crm.DiscountTypes.md#actiontype) data attribute  
+_Allowed Values (Crm.DiscountTypesRepository.ActionType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -50,9 +43,9 @@ _Default Value_: **Add**
 
 > Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.DiscountTypesRepository.CalculationMethod](Crm.DiscountTypes.md#CalculationMethod)**  
-Allowed values for the [CalculationMethod](Crm.DiscountTypes.md#CalculationMethod) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[CalculationMethod](Crm.DiscountTypes.md#calculationmethod)**  
+Allowed values for the [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) data attribute  
+_Allowed Values (Crm.DiscountTypesRepository.CalculationMethod Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -71,13 +64,11 @@ _Type_: **string**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
-### Name
+### Id
 
-> The name of this DiscountType. [Required] [Filter(like)]
-
-_Type_: **string**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsSystem
 
@@ -87,6 +78,14 @@ _Type_: **boolean**
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### Name
+
+> The name of this DiscountType. [Required] [Filter(like)]
+
+_Type_: **string**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
 
 ### Notes
 

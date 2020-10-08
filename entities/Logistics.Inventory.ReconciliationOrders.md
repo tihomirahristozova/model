@@ -9,32 +9,25 @@ Obsolete. Not used. (Orders for store reconciliations. After an order is execute
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.ReconciliationOrders.md#Id) | guid |  
-| [DueDate](Logistics.Inventory.ReconciliationOrders.md#DueDate) | datetime | Date, when the transaction is scheduled to occur. [Required] [Default(Today)] 
-| [IsReleased](Logistics.Inventory.ReconciliationOrders.md#IsReleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [IsSingleExecution](Logistics.Inventory.ReconciliationOrders.md#IsSingleExecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [DueDate](Logistics.Inventory.ReconciliationOrders.md#duedate) | datetime | Date, when the transaction is scheduled to occur. [Required] [Default(Today)] 
+| [Id](Logistics.Inventory.ReconciliationOrders.md#id) | guid |  
+| [IsReleased](Logistics.Inventory.ReconciliationOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [IsSingleExecution](Logistics.Inventory.ReconciliationOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Inventory.ReconciliationOrders.md#Document) | [General.Documents](General.Documents.md) | The Id of the base document. [Required] [Filter(multi eq)] [Owner] |
+| [Document](Logistics.Inventory.ReconciliationOrders.md#document) | [General.Documents](General.Documents.md) | The Id of the base document. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Lines | [Logistics.Inventory.ReconciliationOrderLines](Logistics.Inventory.ReconciliationOrderLines.md) | List of [ReconciliationOrderLine](Logistics.Inventory.ReconciliationOrderLines.md) child objects, based on the [Logistics.Inventory.ReconciliationOrderLine.ReconciliationOrder](Logistics.Inventory.ReconciliationOrderLines.md#ReconciliationOrder) back reference 
+| Lines | [Logistics.Inventory.ReconciliationOrderLines](Logistics.Inventory.ReconciliationOrderLines.md) | List of [ReconciliationOrderLine](Logistics.Inventory.ReconciliationOrderLines.md) child objects, based on the [Logistics.Inventory.ReconciliationOrderLine.ReconciliationOrder](Logistics.Inventory.ReconciliationOrderLines.md#reconciliationorder) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DueDate
 
@@ -44,6 +37,12 @@ _Type_: **datetime**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsReleased
 
@@ -72,7 +71,6 @@ _Default Value_: **False**
 
 _Type_: **[General.Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

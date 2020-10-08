@@ -9,20 +9,20 @@ Represents one operator (person) in one POS location. Entity: Pos_Operators (Int
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pos.Operators.md#Id) | guid |  
-| [IsActive](Crm.Pos.Operators.md#IsActive) | boolean | Indicates whether this operator is active and can be chosen for new records. [Required] [Default(true)] [Filter(multi eq)] 
-| [PosOperatorCode](Crm.Pos.Operators.md#PosOperatorCode) | string | Operator code. Unique within the Pos Location. [Required] [Filter(multi eq;like)] [ORD] 
-| [StartingDate](Crm.Pos.Operators.md#StartingDate) | date | The first date, when the operator has started working for this POS location. [Required] [Filter(multi eq;ge;le)] 
-| [TerminationDate](Crm.Pos.Operators.md#TerminationDate) | date (nullable) | The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. [Filter(multi eq;ge;le)] 
+| [Id](Crm.Pos.Operators.md#id) | guid |  
+| [IsActive](Crm.Pos.Operators.md#isactive) | boolean | Indicates whether this operator is active and can be chosen for new records. [Required] [Default(true)] [Filter(multi eq)] 
+| [PosOperatorCode](Crm.Pos.Operators.md#posoperatorcode) | string | Operator code. Unique within the Pos Location. [Required] [Filter(multi eq;like)] [ORD] 
+| [StartingDate](Crm.Pos.Operators.md#startingdate) | date | The first date, when the operator has started working for this POS location. [Required] [Filter(multi eq;ge;le)] 
+| [TerminationDate](Crm.Pos.Operators.md#terminationdate) | date (nullable) | The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. [Filter(multi eq;ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultPosTerminal](Crm.Pos.Operators.md#DefaultPosTerminal) | [Crm.Pos.Terminals](Crm.Pos.Terminals.md) (nullable) | The default POS terminal for this opertor. null when there is no default. [Filter(multi eq)] |
-| [PosLocation](Crm.Pos.Operators.md#PosLocation) | [Crm.Pos.Locations](Crm.Pos.Locations.md) | The POS location where this operator works. [Required] [Filter(multi eq)] |
-| [PosRole](Crm.Pos.Operators.md#PosRole) | [Crm.Pos.Roles](Crm.Pos.Roles.md) | The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. [Required] [Filter(multi eq)] |
-| [User](Crm.Pos.Operators.md#User) | [Systems.Security.Users](Systems.Security.Users.md) | The login user for this POS operator. [Required] [Filter(multi eq)] |
+| [DefaultPosTerminal](Crm.Pos.Operators.md#defaultposterminal) | [Crm.Pos.Terminals](Crm.Pos.Terminals.md) (nullable) | The default POS terminal for this opertor. null when there is no default. [Filter(multi eq)] |
+| [PosLocation](Crm.Pos.Operators.md#poslocation) | [Crm.Pos.Locations](Crm.Pos.Locations.md) | The POS location where this operator works. [Required] [Filter(multi eq)] |
+| [PosRole](Crm.Pos.Operators.md#posrole) | [Crm.Pos.Roles](Crm.Pos.Roles.md) | The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. [Required] [Filter(multi eq)] |
+| [User](Crm.Pos.Operators.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The login user for this POS operator. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -31,7 +31,6 @@ Represents one operator (person) in one POS location. Entity: Pos_Operators (Int
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsActive
@@ -76,7 +75,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Pos.Terminals](Crm.Pos.Terminals.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PosLocation
 
@@ -84,7 +82,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Pos.Locations](Crm.Pos.Locations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PosRole
 
@@ -92,7 +89,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Pos.Roles](Crm.Pos.Roles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### User
 
@@ -100,7 +96,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

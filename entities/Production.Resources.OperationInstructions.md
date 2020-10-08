@@ -9,18 +9,12 @@ Long (full) instructions for performing an operation. The operations point to th
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.OperationInstructions.md#Id) | guid |  
-| [Description](Production.Resources.OperationInstructions.md#Description) | string (nullable) | Short description or notes for the instructions. [Filter(like)] 
-| [Instructions](Production.Resources.OperationInstructions.md#Instructions) | byte[] (nullable) | The operation instructions in OLE format. 
+| [Description](Production.Resources.OperationInstructions.md#description) | string (nullable) | Short description or notes for the instructions. [Filter(like)] 
+| [Id](Production.Resources.OperationInstructions.md#id) | guid |  
+| [Instructions](Production.Resources.OperationInstructions.md#instructions) | byte[] (nullable) | The operation instructions in OLE format. 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Description
 
@@ -29,6 +23,11 @@ _Supports Order By_: **False**
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### Instructions
 

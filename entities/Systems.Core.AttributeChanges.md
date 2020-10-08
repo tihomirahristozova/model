@@ -9,14 +9,14 @@ Attribute values of an object change. Entity: Sys_Attribute_Changes_View
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttributeName](Systems.Core.AttributeChanges.md#AttributeName) | string | The attribute name. [Required] [Filter(eq)] 
-| [NewValue](Systems.Core.AttributeChanges.md#NewValue) | string (nullable) | The new value. [Filter(eq;like)] 
+| [AttributeName](Systems.Core.AttributeChanges.md#attributename) | string | The attribute name. [Required] [Filter(eq)] 
+| [NewValue](Systems.Core.AttributeChanges.md#newvalue) | string (nullable) | The new value. [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ObjectChange](Systems.Core.AttributeChanges.md#ObjectChange) | [Systems.Core.ObjectChanges](Systems.Core.ObjectChanges.md) | The object change. [Required] [Filter(multi eq)] [Owner] |
+| [ObjectChange](Systems.Core.AttributeChanges.md#objectchange) | [Systems.Core.ObjectChanges](Systems.Core.ObjectChanges.md) | The object change. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -46,7 +46,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Core.ObjectChanges](Systems.Core.ObjectChanges.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

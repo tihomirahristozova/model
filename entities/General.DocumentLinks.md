@@ -9,7 +9,7 @@ Obsolete. Not used. Entity: Gen_Document_Links
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentLinks.md#Id) | guid |  
+| [Id](General.DocumentLinks.md#id) | guid |  
 
 
 ## Attribute Details
@@ -18,7 +18,6 @@ Obsolete. Not used. Entity: Gen_Document_Links
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

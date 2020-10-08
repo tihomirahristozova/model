@@ -9,14 +9,14 @@ Specifies the visibility (availability) of the document type for the different e
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentTypeEnterpriseCompanies.md#Id) | guid |  
+| [Id](General.DocumentTypeEnterpriseCompanies.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](General.DocumentTypeEnterpriseCompanies.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which visibility (availability) is set. [Required] [Filter(multi eq)] [Owner] |
-| [EnterpriseCompany](General.DocumentTypeEnterpriseCompanies.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current document type is visible (available). [Required] [Filter(multi eq)] |
+| [DocumentType](General.DocumentTypeEnterpriseCompanies.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which visibility (availability) is set. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](General.DocumentTypeEnterpriseCompanies.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current document type is visible (available). [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ Specifies the visibility (availability) of the document type for the different e
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -37,7 +36,6 @@ _Default Value_: **NewGuid**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EnterpriseCompany
 
@@ -45,7 +43,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

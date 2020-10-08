@@ -9,22 +9,15 @@ Contains the approved Intrastat commodity codes for each period. Entity: Its_Com
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Intrastat.CommodityCodes.md#Id) | guid |  
-| [CommodityCodeField](Finance.Intrastat.CommodityCodes.md#CommodityCodeField) | string | Product code from the Intrastat Combined nomenclature. [Required] [Filter(eq;like)] [ORD] 
-| [Description](Finance.Intrastat.CommodityCodes.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) | Description of the product code from the Intrastat Combined nomenclature. [Required] [Filter(like)] 
-| [SupplementaryUnit](Finance.Intrastat.CommodityCodes.md#SupplementaryUnit) | string | If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. [Required] 
-| [ValidFrom](Finance.Intrastat.CommodityCodes.md#ValidFrom) | date (nullable) | The starting date of validity of this code. [Filter(ge;le)] 
-| [ValidTo](Finance.Intrastat.CommodityCodes.md#ValidTo) | date (nullable) | The ending date of validity of this code. [Filter(ge;le)] 
+| [CommodityCodeField](Finance.Intrastat.CommodityCodes.md#commoditycodefield) | string | Product code from the Intrastat Combined nomenclature. [Required] [Filter(eq;like)] [ORD] 
+| [Description](Finance.Intrastat.CommodityCodes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) | Description of the product code from the Intrastat Combined nomenclature. [Required] [Filter(like)] 
+| [Id](Finance.Intrastat.CommodityCodes.md#id) | guid |  
+| [SupplementaryUnit](Finance.Intrastat.CommodityCodes.md#supplementaryunit) | string | If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. [Required] 
+| [ValidFrom](Finance.Intrastat.CommodityCodes.md#validfrom) | date (nullable) | The starting date of validity of this code. [Filter(ge;le)] 
+| [ValidTo](Finance.Intrastat.CommodityCodes.md#validto) | date (nullable) | The ending date of validity of this code. [Filter(ge;le)] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CommodityCodeField
 
@@ -38,9 +31,15 @@ _Supports Order By_: **True**
 
 > Description of the product code from the Intrastat Combined nomenclature. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### SupplementaryUnit
 

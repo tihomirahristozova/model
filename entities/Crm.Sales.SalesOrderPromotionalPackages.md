@@ -9,16 +9,16 @@ The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Pro
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Sales.SalesOrderPromotionalPackages.md#Id) | guid |  
-| [LineNumber](Crm.Sales.SalesOrderPromotionalPackages.md#LineNumber) | int32 | Consecutive line number of the package, unique within the document. [Required] [Filter(eq)] 
-| [NumberOfPackages](Crm.Sales.SalesOrderPromotionalPackages.md#NumberOfPackages) | int32 | Number of packages sold. [Required] [Default(0)] 
+| [Id](Crm.Sales.SalesOrderPromotionalPackages.md#id) | guid |  
+| [LineNumber](Crm.Sales.SalesOrderPromotionalPackages.md#linenumber) | int32 | Consecutive line number of the package, unique within the document. [Required] [Filter(eq)] 
+| [NumberOfPackages](Crm.Sales.SalesOrderPromotionalPackages.md#numberofpackages) | int32 | Number of packages sold. [Required] [Default(0)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PromotionalPackage](Crm.Sales.SalesOrderPromotionalPackages.md#PromotionalPackage) | [Crm.PromotionalPackages](Crm.PromotionalPackages.md) | The type of promotional package sold. [Required] [Filter(multi eq)] |
-| [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#SalesOrder) | [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) | The [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#SalesOrder) to which this SalesOrderPromotionalPackage belongs. [Required] [Filter(multi eq)] [Owner] |
+| [PromotionalPackage](Crm.Sales.SalesOrderPromotionalPackages.md#promotionalpackage) | [Crm.PromotionalPackages](Crm.PromotionalPackages.md) | The type of promotional package sold. [Required] [Filter(multi eq)] |
+| [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) | [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) | The [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) to which this SalesOrderPromotionalPackage belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Pro
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### LineNumber
@@ -61,15 +60,13 @@ _Default Value_: **0**
 
 _Type_: **[Crm.PromotionalPackages](Crm.PromotionalPackages.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### SalesOrder
 
-> The [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#SalesOrder) to which this SalesOrderPromotionalPackage belongs. [Required] [Filter(multi eq)] [Owner]
+> The [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) to which this SalesOrderPromotionalPackage belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

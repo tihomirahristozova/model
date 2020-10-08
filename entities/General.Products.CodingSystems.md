@@ -9,34 +9,19 @@ Coding systems categorize additional product codes. Entity: Gen_Coding_Systems
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.CodingSystems.md#Id) | guid |  
-| [Name](General.Products.CodingSystems.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this CodingSystem. [Required] [Filter(eq;like)] 
-| [Description](General.Products.CodingSystems.md#Description) | string (nullable) | The description of this CodingSystem. 
-| [IsUnique](General.Products.CodingSystems.md#IsUnique) | boolean | True when the coding system can contain only unique product codes. false - duplicate product codes are allowed. [Required] [Default(true)] [Filter(eq)] 
+| [Description](General.Products.CodingSystems.md#description) | string (nullable) | The description of this CodingSystem. 
+| [Id](General.Products.CodingSystems.md#id) | guid |  
+| [IsUnique](General.Products.CodingSystems.md#isunique) | boolean | True when the coding system can contain only unique product codes. false - duplicate product codes are allowed. [Required] [Default(true)] [Filter(eq)] 
+| [Name](General.Products.CodingSystems.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this CodingSystem. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultMeasurementUnit](General.Products.CodingSystems.md#DefaultMeasurementUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | When not null, specifies a measurement unit to be used as default, instead of the products default unit. [Filter(multi eq)] |
+| [DefaultMeasurementUnit](General.Products.CodingSystems.md#defaultmeasurementunit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | When not null, specifies a measurement unit to be used as default, instead of the products default unit. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
-
-### Name
-
-> The name of this CodingSystem. [Required] [Filter(eq;like)]
-
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
 
 ### Description
 
@@ -45,6 +30,12 @@ _Supports Order By_: **False**
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsUnique
 
@@ -55,6 +46,14 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
+### Name
+
+> The name of this CodingSystem. [Required] [Filter(eq;like)]
+
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -64,7 +63,6 @@ _Default Value_: **True**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

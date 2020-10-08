@@ -9,33 +9,26 @@ Contains the resources, required by the project tasks. Entity: Prj_Project_Task_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.ProjectTaskResources.md#Id) | guid |  
-| [BillingPricePerHour](Projects.ProjectTaskResources.md#BillingPricePerHour) | decimal (nullable) | When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. null means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price. [Filter(eq)] 
-| [BillingTotalAmount](Projects.ProjectTaskResources.md#BillingTotalAmount) | decimal (nullable) | When not null, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). null means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour. [Filter(eq)] 
-| [CostPerHour](Projects.ProjectTaskResources.md#CostPerHour) | decimal | Cost per hour for the resource usage for this task (in the currency of the project). [Required] [Default(0)] [Filter(eq)] 
-| [Notes](Projects.ProjectTaskResources.md#Notes) | string (nullable) | Notes for this ProjectTaskResource. 
-| [PerUseCost](Projects.ProjectTaskResources.md#PerUseCost) | [Amount](../data-types.md#Amount) (nullable) | One time cost for each resource usage, specified in the projects currency. [Currency: ProjectTask.Project.BudgetingCurrency] 
-| [ResourceUsageHours](Projects.ProjectTaskResources.md#ResourceUsageHours) | decimal | The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage. [Required] [Default(0)] [Filter(eq)] 
-| [ResourceUsagePercent](Projects.ProjectTaskResources.md#ResourceUsagePercent) | decimal | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. [Required] [Default(1)] [Filter(eq)] 
-| [TaskTotalCost](Projects.ProjectTaskResources.md#TaskTotalCost) | decimal | Total cost for this task (in the currency of the project). [Required] [Default(0)] [Filter(eq)] 
+| [BillingPricePerHour](Projects.ProjectTaskResources.md#billingpriceperhour) | decimal (nullable) | When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. null means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price. [Filter(eq)] 
+| [BillingTotalAmount](Projects.ProjectTaskResources.md#billingtotalamount) | decimal (nullable) | When not null, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). null means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour. [Filter(eq)] 
+| [CostPerHour](Projects.ProjectTaskResources.md#costperhour) | decimal | Cost per hour for the resource usage for this task (in the currency of the project). [Required] [Default(0)] [Filter(eq)] 
+| [Id](Projects.ProjectTaskResources.md#id) | guid |  
+| [Notes](Projects.ProjectTaskResources.md#notes) | string (nullable) | Notes for this ProjectTaskResource. 
+| [PerUseCost](Projects.ProjectTaskResources.md#perusecost) | [Amount](../data-types.md#amount) (nullable) | One time cost for each resource usage, specified in the projects currency. [Currency: ProjectTask.Project.BudgetingCurrency] 
+| [ResourceUsageHours](Projects.ProjectTaskResources.md#resourceusagehours) | decimal | The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage. [Required] [Default(0)] [Filter(eq)] 
+| [ResourceUsagePercent](Projects.ProjectTaskResources.md#resourceusagepercent) | decimal | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. [Required] [Default(1)] [Filter(eq)] 
+| [TaskTotalCost](Projects.ProjectTaskResources.md#tasktotalcost) | decimal | Total cost for this task (in the currency of the project). [Required] [Default(0)] [Filter(eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectTask](Projects.ProjectTaskResources.md#ProjectTask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The task for which the resource is planned. [Required] [Filter(multi eq)] [Owner] |
-| [Resource](Projects.ProjectTaskResources.md#Resource) | [General.Resources.Resources](General.Resources.Resources.md) | The planned resource. [Required] [Filter(multi eq)] |
-| [ResourceInstance](Projects.ProjectTaskResources.md#ResourceInstance) | [General.Resources.ResourceInstances](General.Resources.ResourceInstances.md) (nullable) | The concrete resource instance, which should be used. null when no specific resource instance is required. [Filter(multi eq)] |
+| [ProjectTask](Projects.ProjectTaskResources.md#projecttask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The task for which the resource is planned. [Required] [Filter(multi eq)] [Owner] |
+| [Resource](Projects.ProjectTaskResources.md#resource) | [General.Resources.Resources](General.Resources.Resources.md) | The planned resource. [Required] [Filter(multi eq)] |
+| [ResourceInstance](Projects.ProjectTaskResources.md#resourceinstance) | [General.Resources.ResourceInstances](General.Resources.ResourceInstances.md) (nullable) | The concrete resource instance, which should be used. null when no specific resource instance is required. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### BillingPricePerHour
 
@@ -68,6 +61,12 @@ _Default Value_: **0**
 
 _Front-End Recalc Expressions:_  
 `IIF(((obj.PerUseCost != null) AndAlso (obj.ResourceUsageHours != 0)), ((obj.TaskTotalCost - obj.PerUseCost.Value) / obj.ResourceUsageHours), obj.CostPerHour)`
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Notes
 
 > Notes for this ProjectTaskResource.
@@ -80,7 +79,7 @@ _Supports Order By_: **False**
 
 > One time cost for each resource usage, specified in the projects currency. [Currency: ProjectTask.Project.BudgetingCurrency]
 
-_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -129,7 +128,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Resource
 
@@ -137,7 +135,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Resources.Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ResourceInstance
 
@@ -145,7 +142,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Resources.ResourceInstances](General.Resources.ResourceInstances.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

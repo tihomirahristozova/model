@@ -9,40 +9,39 @@ Contains the materials, which are required for a project task. Entity: Prj_Proje
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.ProjectTaskMaterials.md#Id) | guid |  
-| [BudgetedMaterialAmount](Projects.ProjectTaskMaterials.md#BudgetedMaterialAmount) | [Amount](../data-types.md#Amount) (nullable) | Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. [Currency: ProjectTask.Project.BudgetingCurrency] 
-| [LineNumber](Projects.ProjectTaskMaterials.md#LineNumber) | int32 | Line number within the task, increased in steps of 10. Used for sorting purposes. [Required] [Default(0)] 
-| [Quantity](Projects.ProjectTaskMaterials.md#Quantity) | [Quantity](../data-types.md#Quantity) | The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)] 
-| [QuantityBase](Projects.ProjectTaskMaterials.md#QuantityBase) | decimal | The equivalence of Quantity in the base measurement unit of the Material. [Required] [Default(0)] [ReadOnly] 
+| [BudgetedMaterialAmount](Projects.ProjectTaskMaterials.md#budgetedmaterialamount) | [Amount](../data-types.md#amount) (nullable) | Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. [Currency: ProjectTask.Project.BudgetingCurrency] 
+| [Id](Projects.ProjectTaskMaterials.md#id) | guid |  
+| [LineNumber](Projects.ProjectTaskMaterials.md#linenumber) | int32 | Line number within the task, increased in steps of 10. Used for sorting purposes. [Required] [Default(0)] 
+| [Quantity](Projects.ProjectTaskMaterials.md#quantity) | [Quantity](../data-types.md#quantity) | The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)] 
+| [QuantityBase](Projects.ProjectTaskMaterials.md#quantitybase) | decimal | The equivalence of Quantity in the base measurement unit of the Material. [Required] [Default(0)] [ReadOnly] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaterialProduct](Projects.ProjectTaskMaterials.md#MaterialProduct) | [General.Products.Products](General.Products.Products.md) | The product Id of the required material. [Required] [Filter(multi eq)] |
-| [ProjectTask](Projects.ProjectTaskMaterials.md#ProjectTask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The task for which is the material requirement. [Required] [Filter(multi eq)] [Owner] |
-| [QuantityUnit](Projects.ProjectTaskMaterials.md#QuantityUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of the required quantity. [Required] [Filter(multi eq)] |
+| [MaterialProduct](Projects.ProjectTaskMaterials.md#materialproduct) | [General.Products.Products](General.Products.Products.md) | The product Id of the required material. [Required] [Filter(multi eq)] |
+| [ProjectTask](Projects.ProjectTaskMaterials.md#projecttask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The task for which is the material requirement. [Required] [Filter(multi eq)] [Owner] |
+| [QuantityUnit](Projects.ProjectTaskMaterials.md#quantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of the required quantity. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### BudgetedMaterialAmount
 
 > Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. [Currency: ProjectTask.Project.BudgetingCurrency]
 
-_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
 `IIF((obj.MaterialProduct != null), obj.CalculateBudgetMaterialAmount(obj.Quantity), new Amount(0, obj.ProjectTask.Project.BudgetingCurrency))`
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### LineNumber
 
 > Line number within the task, increased in steps of 10. Used for sorting purposes. [Required] [Default(0)]
@@ -61,7 +60,7 @@ _Front-End Recalc Expressions:_
 
 > The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -86,7 +85,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProjectTask
 
@@ -94,7 +92,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### QuantityUnit
 
@@ -102,7 +99,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

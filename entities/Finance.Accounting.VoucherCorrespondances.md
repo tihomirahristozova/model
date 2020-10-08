@@ -9,28 +9,21 @@ Obsolete. Not used. Entity: Acc_Voucher_Correspondances
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Accounting.VoucherCorrespondances.md#Id) | guid |  
-| [AmountBase](Finance.Accounting.VoucherCorrespondances.md#AmountBase) | decimal | Obsolete. Not used. [Required] [Default(0)] 
-| [CreditAmount](Finance.Accounting.VoucherCorrespondances.md#CreditAmount) | decimal | Obsolete. Not used. [Required] [Default(0)] 
-| [CreditVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#CreditVoucherLineId) | guid | Obsolete. Not used. (The voucher line which contains the credited account). [Required] [Filter(multi eq)] 
-| [DebitAmount](Finance.Accounting.VoucherCorrespondances.md#DebitAmount) | decimal | Obsolete. Not used. [Required] [Default(0)] 
-| [DebitVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#DebitVoucherLineId) | guid | Obsolete. Not used. (The voucher line which contains the debited account). [Required] [Filter(multi eq)] 
+| [AmountBase](Finance.Accounting.VoucherCorrespondances.md#amountbase) | decimal | Obsolete. Not used. [Required] [Default(0)] 
+| [CreditAmount](Finance.Accounting.VoucherCorrespondances.md#creditamount) | decimal | Obsolete. Not used. [Required] [Default(0)] 
+| [CreditVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#creditvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the credited account). [Required] [Filter(multi eq)] 
+| [DebitAmount](Finance.Accounting.VoucherCorrespondances.md#debitamount) | decimal | Obsolete. Not used. [Required] [Default(0)] 
+| [DebitVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#debitvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the debited account). [Required] [Filter(multi eq)] 
+| [Id](Finance.Accounting.VoucherCorrespondances.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Voucher](Finance.Accounting.VoucherCorrespondances.md#Voucher) | [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md) | The [AccountingVoucher](Finance.Accounting.AccountingVouchers.md) to which this VoucherCorrespondance belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Voucher](Finance.Accounting.VoucherCorrespondances.md#voucher) | [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md) | The [AccountingVoucher](Finance.Accounting.AccountingVouchers.md) to which this VoucherCorrespondance belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### AmountBase
 
@@ -56,7 +49,6 @@ _Default Value_: **0**
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DebitAmount
 
@@ -73,7 +65,12 @@ _Default Value_: **0**
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 
 ## Reference Details
@@ -84,7 +81,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

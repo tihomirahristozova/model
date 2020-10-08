@@ -9,24 +9,17 @@ User-defined models for cost allocation. Entity: Cost_Allocation_Models
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Cost.AllocationModels.md#Id) | guid |  
-| [CostAllocationModelName](Finance.Cost.AllocationModels.md#CostAllocationModelName) | string | Multilanguage allocation model name. [Required] 
+| [CostAllocationModelName](Finance.Cost.AllocationModels.md#costallocationmodelname) | string | Multilanguage allocation model name. [Required] 
+| [Id](Finance.Cost.AllocationModels.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Finance.Cost.AllocationModels.md#Currency) | [General.Currencies](General.Currencies.md) | The currency in which the calculation is done. This is applied to the production and the results. [Required] [Filter(multi eq)] |
+| [Currency](Finance.Cost.AllocationModels.md#currency) | [General.Currencies](General.Currencies.md) | The currency in which the calculation is done. This is applied to the production and the results. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CostAllocationModelName
 
@@ -35,6 +28,12 @@ _Default Value_: **NewGuid**
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 
 ## Reference Details
@@ -45,7 +44,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

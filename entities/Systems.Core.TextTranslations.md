@@ -9,22 +9,15 @@ Obsolete. Not used. Entity: Gen_Text_Translations
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.TextTranslations.md#Id) | guid |  
-| [ColumnName](Systems.Core.TextTranslations.md#ColumnName) | string | Obsolete. Not used. [Required] [Filter(eq)] 
-| [Language](Systems.Core.TextTranslations.md#Language) | string | Obsolete. Not used. [Required] [Filter(eq)] 
-| [RowId](Systems.Core.TextTranslations.md#RowId) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
-| [TableName](Systems.Core.TextTranslations.md#TableName) | string | Obsolete. Not used. [Required] [Filter(eq)] [ORD] [ReadOnly] 
-| [TranslatedText](Systems.Core.TextTranslations.md#TranslatedText) | string (nullable) | Obsolete. Not used. [Filter(eq)] 
+| [ColumnName](Systems.Core.TextTranslations.md#columnname) | string | Obsolete. Not used. [Required] [Filter(eq)] 
+| [Id](Systems.Core.TextTranslations.md#id) | guid |  
+| [Language](Systems.Core.TextTranslations.md#language) | string | Obsolete. Not used. [Required] [Filter(eq)] 
+| [RowId](Systems.Core.TextTranslations.md#rowid) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
+| [TableName](Systems.Core.TextTranslations.md#tablename) | string | Obsolete. Not used. [Required] [Filter(eq)] [ORD] [ReadOnly] 
+| [TranslatedText](Systems.Core.TextTranslations.md#translatedtext) | string (nullable) | Obsolete. Not used. [Filter(eq)] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ColumnName
 
@@ -33,6 +26,12 @@ _Default Value_: **NewGuid**
 _Type_: **string**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Language
 
@@ -48,7 +47,6 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### TableName
 

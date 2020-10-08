@@ -9,44 +9,37 @@ Represents the different types of additional amounts which are calculated for th
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentAmountTypes.md#Id) | guid |  
-| [AddToCustomer](General.DocumentAmountTypes.md#AddToCustomer) | boolean | True means that the amount will be charged to the primary customer of the document. [Required] [Default(true)] 
-| [AddToLine](General.DocumentAmountTypes.md#AddToLine) | boolean | True means that the resulting amount will be added to the amount of each respective line. [Required] [Default(true)] 
-| [AllowedDirections](General.DocumentAmountTypes.md#AllowedDirections) | [General.DocumentAmountTypesRepository.AllowedDirections](General.DocumentAmountTypes.md#AllowedDirections) (nullable) | Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. [Default(0)] 
-| [AmountInputAllowed](General.DocumentAmountTypes.md#AmountInputAllowed) | boolean | True when the user is allowed to input fixed amount for distribution. [Required] [Default(false)] [Filter(eq)] 
-| [AmountTypeCode](General.DocumentAmountTypes.md#AmountTypeCode) | string | A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. [Required] [Filter(multi eq)] [ORD] 
-| [AmountTypeName](General.DocumentAmountTypes.md#AmountTypeName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the amount type. [Required] [Filter(like)] [ORD] 
-| [BaseOnLines](General.DocumentAmountTypes.md#BaseOnLines) | boolean | True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. [Required] [Default(true)] 
-| [DefaultPercent](General.DocumentAmountTypes.md#DefaultPercent) | decimal (nullable) | Default percent for amounts for which percent input is allowed; null otherwise. 
-| [Description](General.DocumentAmountTypes.md#Description) | string (nullable) | The description of this DocumentAmountType. 
-| [DistributeBy](General.DocumentAmountTypes.md#DistributeBy) | [General.DocumentAmountTypesRepository.DistributeBy](General.DocumentAmountTypes.md#DistributeBy) | Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). [Required] [Default("AMOUNT")] [Filter(eq)] 
-| [IsActive](General.DocumentAmountTypes.md#IsActive) | boolean | True when the amount type is active for new records; false - otherwise. [Required] [Default(true)] [Filter(eq)] 
-| [PercentInputAllowed](General.DocumentAmountTypes.md#PercentInputAllowed) | boolean | True when the user is allowed to input percent of total for distribution. [Required] [Default(true)] [Filter(eq)] 
-| [RoundScale](General.DocumentAmountTypes.md#RoundScale) | int32 (nullable) | The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default. 
-| [UnitAmountInputAllowed](General.DocumentAmountTypes.md#UnitAmountInputAllowed) | boolean | Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. [Required] [Default(false)] [Filter(eq)] 
+| [AddToCustomer](General.DocumentAmountTypes.md#addtocustomer) | boolean | True means that the amount will be charged to the primary customer of the document. [Required] [Default(true)] 
+| [AddToLine](General.DocumentAmountTypes.md#addtoline) | boolean | True means that the resulting amount will be added to the amount of each respective line. [Required] [Default(true)] 
+| [AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) | [AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) (nullable) | Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. [Default(0)] 
+| [AmountInputAllowed](General.DocumentAmountTypes.md#amountinputallowed) | boolean | True when the user is allowed to input fixed amount for distribution. [Required] [Default(false)] [Filter(eq)] 
+| [AmountTypeCode](General.DocumentAmountTypes.md#amounttypecode) | string | A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. [Required] [Filter(multi eq)] [ORD] 
+| [AmountTypeName](General.DocumentAmountTypes.md#amounttypename) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the amount type. [Required] [Filter(like)] [ORD] 
+| [BaseOnLines](General.DocumentAmountTypes.md#baseonlines) | boolean | True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. [Required] [Default(true)] 
+| [DefaultPercent](General.DocumentAmountTypes.md#defaultpercent) | decimal (nullable) | Default percent for amounts for which percent input is allowed; null otherwise. 
+| [Description](General.DocumentAmountTypes.md#description) | string (nullable) | The description of this DocumentAmountType. 
+| [DistributeBy](General.DocumentAmountTypes.md#distributeby) | [DistributeBy](General.DocumentAmountTypes.md#distributeby) | Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). [Required] [Default("AMOUNT")] [Filter(eq)] 
+| [Id](General.DocumentAmountTypes.md#id) | guid |  
+| [IsActive](General.DocumentAmountTypes.md#isactive) | boolean | True when the amount type is active for new records; false - otherwise. [Required] [Default(true)] [Filter(eq)] 
+| [PercentInputAllowed](General.DocumentAmountTypes.md#percentinputallowed) | boolean | True when the user is allowed to input percent of total for distribution. [Required] [Default(true)] [Filter(eq)] 
+| [RoundScale](General.DocumentAmountTypes.md#roundscale) | int32 (nullable) | The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default. 
+| [UnitAmountInputAllowed](General.DocumentAmountTypes.md#unitamountinputallowed) | boolean | Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. [Required] [Default(false)] [Filter(eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DistributeByMeasurementCategory](General.DocumentAmountTypes.md#DistributeByMeasurementCategory) | [General.MeasurementCategories](General.MeasurementCategories.md) (nullable) | Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)] |
+| [DistributeByMeasurementCategory](General.DocumentAmountTypes.md#distributebymeasurementcategory) | [General.MeasurementCategories](General.MeasurementCategories.md) (nullable) | Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Dependencies | [General.DocumentAmountTypeDependencies](General.DocumentAmountTypeDependencies.md) | List of [DocumentAmountTypeDependency](General.DocumentAmountTypeDependencies.md) child objects, based on the [General.DocumentAmountTypeDependency.DocumentAmountType](General.DocumentAmountTypeDependencies.md#DocumentAmountType) back reference 
-| Settings | [Finance.Intrastat.DocumentAmountTypeSettings](Finance.Intrastat.DocumentAmountTypeSettings.md) | List of [DocumentAmountTypeSetting](Finance.Intrastat.DocumentAmountTypeSettings.md) child objects, based on the [Finance.Intrastat.DocumentAmountTypeSetting.DocumentAmountType](Finance.Intrastat.DocumentAmountTypeSettings.md#DocumentAmountType) back reference 
+| Dependencies | [General.DocumentAmountTypeDependencies](General.DocumentAmountTypeDependencies.md) | List of [DocumentAmountTypeDependency](General.DocumentAmountTypeDependencies.md) child objects, based on the [General.DocumentAmountTypeDependency.DocumentAmountType](General.DocumentAmountTypeDependencies.md#documentamounttype) back reference 
+| Settings | [Finance.Intrastat.DocumentAmountTypeSettings](Finance.Intrastat.DocumentAmountTypeSettings.md) | List of [DocumentAmountTypeSetting](Finance.Intrastat.DocumentAmountTypeSettings.md) child objects, based on the [Finance.Intrastat.DocumentAmountTypeSetting.DocumentAmountType](Finance.Intrastat.DocumentAmountTypeSettings.md#documentamounttype) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### AddToCustomer
 
@@ -70,9 +63,9 @@ _Default Value_: **True**
 
 > Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. [Default(0)]
 
-_Type_: **[General.DocumentAmountTypesRepository.AllowedDirections](General.DocumentAmountTypes.md#AllowedDirections) (nullable)**  
-Allowed values for the [AllowedDirections](General.DocumentAmountTypes.md#AllowedDirections) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) (nullable)**  
+Allowed values for the [AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) data attribute  
+_Allowed Values (General.DocumentAmountTypesRepository.AllowedDirections Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -105,7 +98,7 @@ _Supports Order By_: **True**
 
 > The name of the amount type. [Required] [Filter(like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
@@ -138,9 +131,9 @@ _Supports Order By_: **False**
 
 > Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). [Required] [Default("AMOUNT")] [Filter(eq)]
 
-_Type_: **[General.DocumentAmountTypesRepository.DistributeBy](General.DocumentAmountTypes.md#DistributeBy)**  
-Allowed values for the [DistributeBy](General.DocumentAmountTypes.md#DistributeBy) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[DistributeBy](General.DocumentAmountTypes.md#distributeby)**  
+Allowed values for the [DistributeBy](General.DocumentAmountTypes.md#distributeby) data attribute  
+_Allowed Values (General.DocumentAmountTypesRepository.DistributeBy Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -151,6 +144,12 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **Amount**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsActive
 
@@ -196,7 +195,6 @@ _Default Value_: **False**
 
 _Type_: **[General.MeasurementCategories](General.MeasurementCategories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,21 +9,14 @@ Represents a role, which can be assigned to POS operators (like Cashier, Manager
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pos.Roles.md#Id) | guid |  
-| [CanProcessMinusSales](Crm.Pos.Roles.md#CanProcessMinusSales) | boolean | Indicates whether the role is allowed to process minus (qty and/or value) sales. [Required] [Default(false)] [Filter(multi eq)] 
-| [CanVoidSales](Crm.Pos.Roles.md#CanVoidSales) | boolean | Indicates whether this role can void sales orders. [Required] [Default(false)] [Filter(multi eq)] 
-| [PosRoleCode](Crm.Pos.Roles.md#PosRoleCode) | string | Unique role code. [Required] [Filter(multi eq;like)] [ORD] 
-| [PosRoleName](Crm.Pos.Roles.md#PosRoleName) | [MultilanguageString](../data-types.md#MultilanguageString) | Multi-language name of the POS role. [Required] [Filter(multi eq;like)] 
+| [CanProcessMinusSales](Crm.Pos.Roles.md#canprocessminussales) | boolean | Indicates whether the role is allowed to process minus (qty and/or value) sales. [Required] [Default(false)] [Filter(multi eq)] 
+| [CanVoidSales](Crm.Pos.Roles.md#canvoidsales) | boolean | Indicates whether this role can void sales orders. [Required] [Default(false)] [Filter(multi eq)] 
+| [Id](Crm.Pos.Roles.md#id) | guid |  
+| [PosRoleCode](Crm.Pos.Roles.md#posrolecode) | string | Unique role code. [Required] [Filter(multi eq;like)] [ORD] 
+| [PosRoleName](Crm.Pos.Roles.md#posrolename) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the POS role. [Required] [Filter(multi eq;like)] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CanProcessMinusSales
 
@@ -43,6 +36,12 @@ _Supported Filters_: **Equals, EqualsIn**
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### PosRoleCode
 
 > Unique role code. [Required] [Filter(multi eq;like)] [ORD]
@@ -55,7 +54,7 @@ _Supports Order By_: **True**
 
 > Multi-language name of the POS role. [Required] [Filter(multi eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 

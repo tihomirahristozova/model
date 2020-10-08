@@ -9,14 +9,14 @@ Specifies additional options for document routes, generating Rental Transactions
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Rental.TransactionTemplates.md#Id) | guid |  
-| [TransactionType](Applications.Rental.TransactionTemplates.md#TransactionType) | [Applications.Rental.TransactionsRepository.TransactionType](Applications.Rental.TransactionTemplates.md#TransactionType) | Transaction type for the rent transaction that is to be created. [Required] 
+| [Id](Applications.Rental.TransactionTemplates.md#id) | guid |  
+| [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | Transaction type for the rent transaction that is to be created. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Applications.Rental.TransactionTemplates.md#Route) | [Systems.Workflow.Routes](Systems.Workflow.Routes.md) | The route for which the transaction template is defined. [Required] [Filter(multi eq)] |
+| [Route](Applications.Rental.TransactionTemplates.md#route) | [Systems.Workflow.Routes](Systems.Workflow.Routes.md) | The route for which the transaction template is defined. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -25,16 +25,15 @@ Specifies additional options for document routes, generating Rental Transactions
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### TransactionType
 
 > Transaction type for the rent transaction that is to be created. [Required]
 
-_Type_: **[Applications.Rental.TransactionsRepository.TransactionType](Applications.Rental.TransactionTemplates.md#TransactionType)**  
-Allowed values for the [TransactionType](Applications.Rental.Transactions.md#TransactionType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype)**  
+Allowed values for the [TransactionType](Applications.Rental.Transactions.md#transactiontype) data attribute  
+_Allowed Values (Applications.Rental.TransactionsRepository.TransactionType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -55,7 +54,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Workflow.Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

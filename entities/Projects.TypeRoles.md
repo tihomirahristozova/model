@@ -9,25 +9,18 @@ Contains the roles of the participants of each project type. Entity: Prj_Type_Ro
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.TypeRoles.md#Id) | guid |  
-| [Description](Projects.TypeRoles.md#Description) | string (nullable) | Description of the participant role. 
-| [RoleName](Projects.TypeRoles.md#RoleName) | string | The name of the participant role. [Required] [Filter(multi eq;like)] 
+| [Description](Projects.TypeRoles.md#description) | string (nullable) | Description of the participant role. 
+| [Id](Projects.TypeRoles.md#id) | guid |  
+| [RoleName](Projects.TypeRoles.md#rolename) | string | The name of the participant role. [Required] [Filter(multi eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectType](Projects.TypeRoles.md#ProjectType) | [Projects.ProjectTypes](Projects.ProjectTypes.md) | Project type. [Required] [Filter(multi eq)] [Owner] |
+| [ProjectType](Projects.TypeRoles.md#projecttype) | [Projects.ProjectTypes](Projects.ProjectTypes.md) | Project type. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, Like, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Description
 
@@ -36,6 +29,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, Like, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### RoleName
 
@@ -54,7 +53,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Projects.ProjectTypes](Projects.ProjectTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

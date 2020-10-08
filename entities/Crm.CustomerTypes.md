@@ -9,14 +9,14 @@ User defined customer type. Primarily used for customer definition security, bec
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.CustomerTypes.md#Id) | guid |  
-| [Name](Crm.CustomerTypes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this CustomerType. [Required] [Filter(eq;like)] 
+| [Id](Crm.CustomerTypes.md#id) | guid |  
+| [Name](Crm.CustomerTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this CustomerType. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Crm.CustomerTypes.md#AccessKey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this CustomerType. Null means that all users have unlimited permissions. [Filter(multi eq)] |
+| [AccessKey](Crm.CustomerTypes.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this CustomerType. Null means that all users have unlimited permissions. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -25,14 +25,13 @@ User defined customer type. Primarily used for customer definition security, bec
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Name
 
 > The name of this CustomerType. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -45,7 +44,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

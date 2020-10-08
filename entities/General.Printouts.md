@@ -9,46 +9,39 @@ Contains data about binding of printout layouts to specific user-defined documen
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Printouts.md#Id) | guid |  
-| [AllowPrintingOnState](General.Printouts.md#AllowPrintingOnState) | [General.PrintoutsRepository.AllowPrintingOnState](General.Printouts.md#AllowPrintingOnState) | The user can print documents only with state equal or greater than Allow_Printing_On_State. [Required] [Default(0)] 
-| [ApplicationName](General.Printouts.md#ApplicationName) | string | The application which stored and uses the printout. [Required] 
-| [BackwardCompatibility](General.Printouts.md#BackwardCompatibility) | boolean | Obsolete. Not used. [Required] [Default(false)] 
-| [Copies](General.Printouts.md#Copies) | int32 | Number of copies that should be printed when using direct printing. [Required] [Default(1)] 
-| [Definition](General.Printouts.md#Definition) | string (nullable) | Obsolete. Not used. 
-| [DefinitionFormat](General.Printouts.md#DefinitionFormat) | string (nullable) | Obsolete. Not used. [Default("default")] 
-| [IsDefault](General.Printouts.md#IsDefault) | boolean | True if this is the default printout for the application form. [Required] [Default(false)] [Filter(eq)] 
-| [Notes](General.Printouts.md#Notes) | string (nullable) | Notes for this Printout. 
-| [Ord](General.Printouts.md#Ord) | int32 | Order in the list of printouts when using direct printing. [Required] [Default(0)] 
-| [OrdFilterXml](General.Printouts.md#OrdFilterXml) | dataaccessfilter (nullable) | The condition, required to be matched in order for the printout to be executed upon "Print All" command. 
-| [OrdPriority](General.Printouts.md#OrdPriority) | int32 (nullable) | Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command. [Default(0)] 
-| [Name](General.Printouts.md#Name) | string | The name of the printout. Unique within the application form. [Required] [Filter(like)] 
+| [AllowPrintingOnState](General.Printouts.md#allowprintingonstate) | [AllowPrintingOnState](General.Printouts.md#allowprintingonstate) | The user can print documents only with state equal or greater than Allow_Printing_On_State. [Required] [Default(0)] 
+| [ApplicationName](General.Printouts.md#applicationname) | string | The application which stored and uses the printout. [Required] 
+| [BackwardCompatibility](General.Printouts.md#backwardcompatibility) | boolean | Obsolete. Not used. [Required] [Default(false)] 
+| [Copies](General.Printouts.md#copies) | int32 | Number of copies that should be printed when using direct printing. [Required] [Default(1)] 
+| [Definition](General.Printouts.md#definition) | string (nullable) | Obsolete. Not used. 
+| [DefinitionFormat](General.Printouts.md#definitionformat) | string (nullable) | Obsolete. Not used. [Default("default")] 
+| [Id](General.Printouts.md#id) | guid |  
+| [IsDefault](General.Printouts.md#isdefault) | boolean | True if this is the default printout for the application form. [Required] [Default(false)] [Filter(eq)] 
+| [Name](General.Printouts.md#name) | string | The name of the printout. Unique within the application form. [Required] [Filter(like)] 
+| [Notes](General.Printouts.md#notes) | string (nullable) | Notes for this Printout. 
+| [Ord](General.Printouts.md#ord) | int32 | Order in the list of printouts when using direct printing. [Required] [Default(0)] 
+| [OrdFilterXml](General.Printouts.md#ordfilterxml) | dataaccessfilter (nullable) | The condition, required to be matched in order for the printout to be executed upon "Print All" command. 
+| [OrdPriority](General.Printouts.md#ordpriority) | int32 (nullable) | Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command. [Default(0)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](General.Printouts.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The document type to which this printout layout is bound. [Required] [Filter(multi eq)] [Owner] |
-| [EnterpriseCompany](General.Printouts.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Printout applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
-| [PrintoutLayout](General.Printouts.md#PrintoutLayout) | [General.PrintoutLayouts](General.PrintoutLayouts.md) | The printout layout, that is bound to the document type. [Required] [Filter(multi eq)] |
-| [Report](General.Printouts.md#Report) | [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md) (nullable) | If not null points to a custom report that indicates which data will be loaded in the printout. [Filter(multi eq)] |
+| [DocumentType](General.Printouts.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type to which this printout layout is bound. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](General.Printouts.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Printout applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [PrintoutLayout](General.Printouts.md#printoutlayout) | [General.PrintoutLayouts](General.PrintoutLayouts.md) | The printout layout, that is bound to the document type. [Required] [Filter(multi eq)] |
+| [Report](General.Printouts.md#report) | [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md) (nullable) | If not null points to a custom report that indicates which data will be loaded in the printout. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### AllowPrintingOnState
 
 > The user can print documents only with state equal or greater than Allow_Printing_On_State. [Required] [Default(0)]
 
-_Type_: **[General.PrintoutsRepository.AllowPrintingOnState](General.Printouts.md#AllowPrintingOnState)**  
-Allowed values for the [AllowPrintingOnState](General.Printouts.md#AllowPrintingOnState) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[AllowPrintingOnState](General.Printouts.md#allowprintingonstate)**  
+Allowed values for the [AllowPrintingOnState](General.Printouts.md#allowprintingonstate) data attribute  
+_Allowed Values (General.PrintoutsRepository.AllowPrintingOnState Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -106,6 +99,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **default**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### IsDefault
 
 > True if this is the default printout for the application form. [Required] [Default(false)] [Filter(eq)]
@@ -114,6 +113,14 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### Name
+
+> The name of the printout. Unique within the application form. [Required] [Filter(like)]
+
+_Type_: **string**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
 
 ### Notes
 
@@ -149,14 +156,6 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **0**  
 
-### Name
-
-> The name of the printout. Unique within the application form. [Required] [Filter(like)]
-
-_Type_: **string**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-
 
 ## Reference Details
 
@@ -166,7 +165,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EnterpriseCompany
 
@@ -174,7 +172,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PrintoutLayout
 
@@ -182,7 +179,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.PrintoutLayouts](General.PrintoutLayouts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Report
 
@@ -190,7 +186,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Reporting.DataSources](Systems.Reporting.DataSources.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

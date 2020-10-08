@@ -9,14 +9,14 @@ Serial numbers, used by the items. Rows are created on first occurrence of the s
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.SerialNumbers.md#Id) | guid |  
-| [SerialNumberField](Logistics.Inventory.SerialNumbers.md#SerialNumberField) | string | The serial number text. [Required] [Filter(multi eq;like)] 
+| [Id](Logistics.Inventory.SerialNumbers.md#id) | guid |  
+| [SerialNumberField](Logistics.Inventory.SerialNumbers.md#serialnumberfield) | string | The serial number text. [Required] [Filter(multi eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](Logistics.Inventory.SerialNumbers.md#Product) | [General.Products.Products](General.Products.Products.md) | The product, to which the serial number is bound. [Required] [Filter(multi eq)] |
+| [Product](Logistics.Inventory.SerialNumbers.md#product) | [General.Products.Products](General.Products.Products.md) | The product, to which the serial number is bound. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ Serial numbers, used by the items. Rows are created on first occurrence of the s
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### SerialNumberField
@@ -45,7 +44,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

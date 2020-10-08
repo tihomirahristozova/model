@@ -9,15 +9,15 @@ Contains the data of a printout of a document as it was obtained from the data s
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentPrintImages.md#Id) | guid |  
-| [PrintImage](General.DocumentPrintImages.md#PrintImage) | byte[] | The data of the printout, stored in the format, specified in Print Image Format. [Required] 
-| [PrintImageFormat](General.DocumentPrintImages.md#PrintImageFormat) | string | The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. [Required] [Default("CDS")] 
+| [Id](General.DocumentPrintImages.md#id) | guid |  
+| [PrintImage](General.DocumentPrintImages.md#printimage) | byte[] | The data of the printout, stored in the format, specified in Print Image Format. [Required] 
+| [PrintImageFormat](General.DocumentPrintImages.md#printimageformat) | string | The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. [Required] [Default("CDS")] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PrintoutLayout](General.DocumentPrintImages.md#PrintoutLayout) | [General.PrintoutLayouts](General.PrintoutLayouts.md) | The print layout, which was used for the current printout. [Required] [Filter(multi eq)] [Owner] |
+| [PrintoutLayout](General.DocumentPrintImages.md#printoutlayout) | [General.PrintoutLayouts](General.PrintoutLayouts.md) | The print layout, which was used for the current printout. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ Contains the data of a printout of a document as it was obtained from the data s
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### PrintImage
@@ -55,7 +54,6 @@ _Default Value_: **CDS**
 
 _Type_: **[General.PrintoutLayouts](General.PrintoutLayouts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

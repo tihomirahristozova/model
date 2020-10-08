@@ -9,29 +9,22 @@ User-defined document statuses. Entity: Gen_Document_Type_User_Statuses
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentTypeUserStatuses.md#Id) | guid |  
-| [Active](General.DocumentTypeUserStatuses.md#Active) | boolean | Is the user status active for applying to documents. [Required] [Default(true)] [Filter(eq)] 
-| [DisplayOrder](General.DocumentTypeUserStatuses.md#DisplayOrder) | int32 | Consecutive display order of the status, with regard to other statuses within the same document type. [Required] [Filter(ge;le)] 
-| [Instructions](General.DocumentTypeUserStatuses.md#Instructions) | string (nullable) | Instructions what should be done when this user status is active (Rich Text). 
-| [IsExitStatus](General.DocumentTypeUserStatuses.md#IsExitStatus) | boolean | True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. [Required] [Default(true)] [Filter(eq)] 
-| [State](General.DocumentTypeUserStatuses.md#State) | [General.DocumentState](General.DocumentTypeUserStatuses.md#State) | The system state to which this user status is bound. [Required] [Filter(eq)] 
-| [UserStatusName](General.DocumentTypeUserStatuses.md#UserStatusName) | string | Multi-language name of the user status. [Required] [Filter(eq;like)] 
+| [Active](General.DocumentTypeUserStatuses.md#active) | boolean | Is the user status active for applying to documents. [Required] [Default(true)] [Filter(eq)] 
+| [DisplayOrder](General.DocumentTypeUserStatuses.md#displayorder) | int32 | Consecutive display order of the status, with regard to other statuses within the same document type. [Required] [Filter(ge;le)] 
+| [Id](General.DocumentTypeUserStatuses.md#id) | guid |  
+| [Instructions](General.DocumentTypeUserStatuses.md#instructions) | string (nullable) | Instructions what should be done when this user status is active (Rich Text). 
+| [IsExitStatus](General.DocumentTypeUserStatuses.md#isexitstatus) | boolean | True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. [Required] [Default(true)] [Filter(eq)] 
+| [State](General.DocumentTypeUserStatuses.md#state) | [DocumentState](General.DocumentTypeUserStatuses.md#state) | The system state to which this user status is bound. [Required] [Filter(eq)] 
+| [UserStatusName](General.DocumentTypeUserStatuses.md#userstatusname) | string | Multi-language name of the user status. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](General.DocumentTypeUserStatuses.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner] |
+| [DocumentType](General.DocumentTypeUserStatuses.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Active
 
@@ -55,6 +48,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `(obj.DocumentType.UserStatuses.Select(c => c.DisplayOrder).DefaultIfEmpty(0).Max() + 10)`
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Instructions
 
 > Instructions what should be done when this user status is active (Rich Text).
@@ -76,9 +75,9 @@ _Default Value_: **True**
 
 > The system state to which this user status is bound. [Required] [Filter(eq)]
 
-_Type_: **[General.DocumentState](General.DocumentTypeUserStatuses.md#State)**  
+_Type_: **[DocumentState](General.DocumentTypeUserStatuses.md#state)**  
 Enumeration of document system states  
-_Allowed Values (Enum Members)_  
+_Allowed Values (General.DocumentState Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -110,7 +109,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

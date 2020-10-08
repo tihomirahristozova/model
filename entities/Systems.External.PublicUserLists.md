@@ -9,15 +9,15 @@ Each list represents a unique collection of public users. Entity: Ext_Public_Use
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.External.PublicUserLists.md#Id) | guid |  
-| [Notes](Systems.External.PublicUserLists.md#Notes) | string (nullable) | Notes for this PublicUserList. 
-| [Name](Systems.External.PublicUserLists.md#Name) | string | The name of this PublicUserList. [Required] [Filter(like)] 
+| [Id](Systems.External.PublicUserLists.md#id) | guid |  
+| [Name](Systems.External.PublicUserLists.md#name) | string | The name of this PublicUserList. [Required] [Filter(like)] 
+| [Notes](Systems.External.PublicUserLists.md#notes) | string (nullable) | Notes for this PublicUserList. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Systems.External.PublicUserLists.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. [Filter(multi eq)] |
+| [EnterpriseCompany](Systems.External.PublicUserLists.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -26,16 +26,7 @@ Each list represents a unique collection of public users. Entity: Ext_Public_Use
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
-
-### Notes
-
-> Notes for this PublicUserList.
-
-_Type_: **string (nullable)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### Name
 
@@ -43,6 +34,14 @@ _Supports Order By_: **False**
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+
+### Notes
+
+> Notes for this PublicUserList.
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 
@@ -54,7 +53,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

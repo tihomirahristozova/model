@@ -9,30 +9,23 @@ Authorization of a trusted application to access the data on behalf of a context
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Security.TrustedApplicationAuthorizations.md#Id) | guid |  
-| [GrantTimeUtc](Systems.Security.TrustedApplicationAuthorizations.md#GrantTimeUtc) | datetime | The time (in UTC) when the authorization was granted. [Required] [Default(NowUtc)] 
-| [IsRevoked](Systems.Security.TrustedApplicationAuthorizations.md#IsRevoked) | boolean | Specifies whether the grant is explicitly revoked. [Required] [Default(false)] 
-| [Notes](Systems.Security.TrustedApplicationAuthorizations.md#Notes) | string (nullable) | Notes for this TrustedApplicationAuthorization. 
-| [ValidFromUtc](Systems.Security.TrustedApplicationAuthorizations.md#ValidFromUtc) | datetime (nullable) | The start of the validitiy of the authorization. null means that there is no restriction. 
-| [ValidUntilUtc](Systems.Security.TrustedApplicationAuthorizations.md#ValidUntilUtc) | datetime (nullable) | The time (in UTC) when the grant expires. null means that there is no time restriction. 
+| [GrantTimeUtc](Systems.Security.TrustedApplicationAuthorizations.md#granttimeutc) | datetime | The time (in UTC) when the authorization was granted. [Required] [Default(NowUtc)] 
+| [Id](Systems.Security.TrustedApplicationAuthorizations.md#id) | guid |  
+| [IsRevoked](Systems.Security.TrustedApplicationAuthorizations.md#isrevoked) | boolean | Specifies whether the grant is explicitly revoked. [Required] [Default(false)] 
+| [Notes](Systems.Security.TrustedApplicationAuthorizations.md#notes) | string (nullable) | Notes for this TrustedApplicationAuthorization. 
+| [ValidFromUtc](Systems.Security.TrustedApplicationAuthorizations.md#validfromutc) | datetime (nullable) | The start of the validitiy of the authorization. null means that there is no restriction. 
+| [ValidUntilUtc](Systems.Security.TrustedApplicationAuthorizations.md#validuntilutc) | datetime (nullable) | The time (in UTC) when the grant expires. null means that there is no time restriction. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContextUser](Systems.Security.TrustedApplicationAuthorizations.md#ContextUser) | [Systems.Security.Users](Systems.Security.Users.md) | The user, whose permissions are granted to the application. [Required] [Filter(multi eq)] |
-| [GrantingUser](Systems.Security.TrustedApplicationAuthorizations.md#GrantingUser) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who authorized the application. [Required] [Filter(multi eq)] |
-| [TrustedApplication](Systems.Security.TrustedApplicationAuthorizations.md#TrustedApplication) | [Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md) | The application, which is authorized. [Required] [Filter(multi eq)] [Owner] |
+| [ContextUser](Systems.Security.TrustedApplicationAuthorizations.md#contextuser) | [Systems.Security.Users](Systems.Security.Users.md) | The user, whose permissions are granted to the application. [Required] [Filter(multi eq)] |
+| [GrantingUser](Systems.Security.TrustedApplicationAuthorizations.md#grantinguser) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who authorized the application. [Required] [Filter(multi eq)] |
+| [TrustedApplication](Systems.Security.TrustedApplicationAuthorizations.md#trustedapplication) | [Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md) | The application, which is authorized. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### GrantTimeUtc
 
@@ -42,6 +35,12 @@ _Type_: **datetime**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTimeUtc**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsRevoked
 
@@ -85,7 +84,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### GrantingUser
 
@@ -93,7 +91,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### TrustedApplication
 
@@ -101,7 +98,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

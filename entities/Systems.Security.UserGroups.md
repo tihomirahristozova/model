@@ -9,14 +9,14 @@ Contains the user group members. Entity: Sec_User_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Security.UserGroups.md#Id) | guid |  
+| [Id](Systems.Security.UserGroups.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Group](Systems.Security.UserGroups.md#Group) | [Systems.Security.Groups](Systems.Security.Groups.md) | The group, in which the user is included. [Required] [Filter(multi eq)] |
-| [User](Systems.Security.UserGroups.md#User) | [Systems.Security.Users](Systems.Security.Users.md) | The [User](Systems.Security.UserGroups.md#User) to which this UserGroup belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Group](Systems.Security.UserGroups.md#group) | [Systems.Security.Groups](Systems.Security.Groups.md) | The group, in which the user is included. [Required] [Filter(multi eq)] |
+| [User](Systems.Security.UserGroups.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The [User](Systems.Security.UserGroups.md#user) to which this UserGroup belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ Contains the user group members. Entity: Sec_User_Groups
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -37,15 +36,13 @@ _Default Value_: **NewGuid**
 
 _Type_: **[Systems.Security.Groups](Systems.Security.Groups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### User
 
-> The [User](Systems.Security.UserGroups.md#User) to which this UserGroup belongs. [Required] [Filter(multi eq)] [Owner]
+> The [User](Systems.Security.UserGroups.md#user) to which this UserGroup belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

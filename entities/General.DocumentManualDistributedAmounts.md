@@ -9,21 +9,15 @@ Obsolete. Not used. Entity: Gen_Document_Manual_Distributed_Amounts
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentManualDistributedAmounts.md#Id) | guid |  
-| [DocumentAmountTypeId](General.DocumentManualDistributedAmounts.md#DocumentAmountTypeId) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
-| [DocumentId](General.DocumentManualDistributedAmounts.md#DocumentId) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
-| [DocumentLineId](General.DocumentManualDistributedAmounts.md#DocumentLineId) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
-| [LinePercent](General.DocumentManualDistributedAmounts.md#LinePercent) | decimal | Obsolete. Not used. [Required] 
-| [ProductId](General.DocumentManualDistributedAmounts.md#ProductId) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
+| [DocumentAmountTypeId](General.DocumentManualDistributedAmounts.md#documentamounttypeid) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
+| [DocumentId](General.DocumentManualDistributedAmounts.md#documentid) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
+| [DocumentLineId](General.DocumentManualDistributedAmounts.md#documentlineid) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
+| [Id](General.DocumentManualDistributedAmounts.md#id) | guid |  
+| [LinePercent](General.DocumentManualDistributedAmounts.md#linepercent) | decimal | Obsolete. Not used. [Required] 
+| [ProductId](General.DocumentManualDistributedAmounts.md#productid) | guid | Obsolete. Not used. [Required] [Filter(multi eq)] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DocumentAmountTypeId
 
@@ -31,7 +25,6 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DocumentId
 
@@ -39,7 +32,6 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DocumentLineId
 
@@ -47,7 +39,11 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### LinePercent
 
@@ -63,7 +59,6 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

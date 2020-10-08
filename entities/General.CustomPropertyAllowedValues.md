@@ -9,30 +9,23 @@ User-defined properties allowed values. Can be specified only for properties wit
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.CustomPropertyAllowedValues.md#Id) | guid |  
-| [Active](General.CustomPropertyAllowedValues.md#Active) | boolean | Specifies whether the allowed value is active and can be used when selecting property values. [Required] [Default(true)] [Filter(eq)] 
-| [Description](General.CustomPropertyAllowedValues.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. [Filter(eq;like)] 
-| [LongDescription](General.CustomPropertyAllowedValues.md#LongDescription) | string (nullable) | When not null, specifies a long description of the allowed value. This long description is only used as helper information when selecting values, it is not copied in the property value. 
-| [ParentAllowedValueId](General.CustomPropertyAllowedValues.md#ParentAllowedValueId) | guid (nullable) | The value of the parent property, for which this allowed value is valid. [Filter(multi eq)] 
-| [Picture](General.CustomPropertyAllowedValues.md#Picture) | byte[] (nullable) | When not null, specifies a picture representation of the allowed value. 
-| [PropertyAllowedValueField](General.CustomPropertyAllowedValues.md#PropertyAllowedValueField) | string | The actual allowed value. [Required] [Filter(eq;like)] 
+| [Active](General.CustomPropertyAllowedValues.md#active) | boolean | Specifies whether the allowed value is active and can be used when selecting property values. [Required] [Default(true)] [Filter(eq)] 
+| [Description](General.CustomPropertyAllowedValues.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. [Filter(eq;like)] 
+| [Id](General.CustomPropertyAllowedValues.md#id) | guid |  
+| [LongDescription](General.CustomPropertyAllowedValues.md#longdescription) | string (nullable) | When not null, specifies a long description of the allowed value. This long description is only used as helper information when selecting values, it is not copied in the property value. 
+| [ParentAllowedValueId](General.CustomPropertyAllowedValues.md#parentallowedvalueid) | guid (nullable) | The value of the parent property, for which this allowed value is valid. [Filter(multi eq)] 
+| [Picture](General.CustomPropertyAllowedValues.md#picture) | byte[] (nullable) | When not null, specifies a picture representation of the allowed value. 
+| [PropertyAllowedValueField](General.CustomPropertyAllowedValues.md#propertyallowedvaluefield) | string | The actual allowed value. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](General.CustomPropertyAllowedValues.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this CustomPropertyAllowedValue applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
-| [Property](General.CustomPropertyAllowedValues.md#Property) | [General.CustomProperties](General.CustomProperties.md) | The [CustomProperty](General.CustomProperties.md) to which this CustomPropertyAllowedValue belongs. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](General.CustomPropertyAllowedValues.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this CustomPropertyAllowedValue applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [Property](General.CustomPropertyAllowedValues.md#property) | [General.CustomProperties](General.CustomProperties.md) | The [CustomProperty](General.CustomProperties.md) to which this CustomPropertyAllowedValue belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Active
 
@@ -47,9 +40,15 @@ _Default Value_: **True**
 
 > The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### LongDescription
 
@@ -65,7 +64,6 @@ _Supports Order By_: **False**
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Picture
 
@@ -92,7 +90,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Property
 
@@ -100,7 +97,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

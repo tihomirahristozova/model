@@ -9,28 +9,21 @@ Contains the running instances of the processes. Entity: Bpm_Process_Instances
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.ProcessInstances.md#Id) | guid |  
-| [CreationTime](Systems.Bpm.ProcessInstances.md#CreationTime) | datetime | The date and time, when the process instance was created. [Required] [Default(Now)] [Filter(eq)] [ReadOnly] 
-| [FinishTime](Systems.Bpm.ProcessInstances.md#FinishTime) | datetime (nullable) | The date and time, when the process instance has finished its execution. null when the instance has not yet finished execution. [Filter(eq)] [ReadOnly] 
-| [StartTime](Systems.Bpm.ProcessInstances.md#StartTime) | datetime | The date and time, when the process instance was started. [Required] [Default(Now)] [Filter(eq)] [ReadOnly] 
-| [State](Systems.Bpm.ProcessInstances.md#State) | [Systems.Bpm.ProcessInstancesRepository.State](Systems.Bpm.ProcessInstances.md#State) | Instance state. 0=Created; 60=Completed. [Required] [Default(0)] [Filter(eq)] [ReadOnly] 
-| [Subject](Systems.Bpm.ProcessInstances.md#Subject) | string | The multilanguage subject (or title) of this process instance. [Required] [Filter(eq;like)] 
+| [CreationTime](Systems.Bpm.ProcessInstances.md#creationtime) | datetime | The date and time, when the process instance was created. [Required] [Default(Now)] [Filter(eq)] [ReadOnly] 
+| [FinishTime](Systems.Bpm.ProcessInstances.md#finishtime) | datetime (nullable) | The date and time, when the process instance has finished its execution. null when the instance has not yet finished execution. [Filter(eq)] [ReadOnly] 
+| [Id](Systems.Bpm.ProcessInstances.md#id) | guid |  
+| [StartTime](Systems.Bpm.ProcessInstances.md#starttime) | datetime | The date and time, when the process instance was started. [Required] [Default(Now)] [Filter(eq)] [ReadOnly] 
+| [State](Systems.Bpm.ProcessInstances.md#state) | [State](Systems.Bpm.ProcessInstances.md#state) | Instance state. 0=Created; 60=Completed. [Required] [Default(0)] [Filter(eq)] [ReadOnly] 
+| [Subject](Systems.Bpm.ProcessInstances.md#subject) | string | The multilanguage subject (or title) of this process instance. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Process](Systems.Bpm.ProcessInstances.md#Process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process on which this instance is based. [Required] [Filter(multi eq)] |
+| [Process](Systems.Bpm.ProcessInstances.md#process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process on which this instance is based. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CreationTime
 
@@ -49,6 +42,12 @@ _Type_: **datetime (nullable)**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### StartTime
 
 > The date and time, when the process instance was started. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]
@@ -62,9 +61,9 @@ _Default Value_: **CurrentDateTime**
 
 > Instance state. 0=Created; 60=Completed. [Required] [Default(0)] [Filter(eq)] [ReadOnly]
 
-_Type_: **[Systems.Bpm.ProcessInstancesRepository.State](Systems.Bpm.ProcessInstances.md#State)**  
-Allowed values for the [State](Systems.Bpm.ProcessInstances.md#State) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[State](Systems.Bpm.ProcessInstances.md#state)**  
+Allowed values for the [State](Systems.Bpm.ProcessInstances.md#state) data attribute  
+_Allowed Values (Systems.Bpm.ProcessInstancesRepository.State Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -94,7 +93,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Bpm.Processes](Systems.Bpm.Processes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

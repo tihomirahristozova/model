@@ -9,32 +9,25 @@ Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.AuditLogEntries.md#Id) | guid |  
-| [ApplicationName](Systems.Core.AuditLogEntries.md#ApplicationName) | string (nullable) | The client application that triggered the event. Null when unknown or N/A. [Filter(eq;like)] 
-| [Details](Systems.Core.AuditLogEntries.md#Details) | string (nullable) | Detailed contents of the event. Contents depend on the Event Type and Event Name. 
-| [EntityItemId](Systems.Core.AuditLogEntries.md#EntityItemId) | guid (nullable) | The Id of the record, which is referenced by the event. Null when unknown or N/A. [Filter(multi eq)] 
-| [EntityName](Systems.Core.AuditLogEntries.md#EntityName) | string (nullable) | The entity, which is being referenced by the event. Null when unknown or N/A. [Filter(eq;like)] 
-| [EventClass](Systems.Core.AuditLogEntries.md#EventClass) | [Systems.Core.AuditLogEntriesRepository.EventClass](Systems.Core.AuditLogEntries.md#EventClass) | The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. [Required] [Filter(multi eq)] 
-| [EventName](Systems.Core.AuditLogEntries.md#EventName) | string (nullable) | Specific event or method name. Contents depend on the Event Type. Null when N/A. [Filter(eq;like)] 
-| [EventTimeUtc](Systems.Core.AuditLogEntries.md#EventTimeUtc) | datetime | The exact date and time (in Utc) when the event occurred. [Required] [Default(Now)] [Filter(ge;le)] [ORD] 
-| [EventType](Systems.Core.AuditLogEntries.md#EventType) | [Systems.Core.AuditLogEntriesRepository.EventType](Systems.Core.AuditLogEntries.md#EventType) | Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. [Required] [Filter(multi eq)] 
+| [ApplicationName](Systems.Core.AuditLogEntries.md#applicationname) | string (nullable) | The client application that triggered the event. Null when unknown or N/A. [Filter(eq;like)] 
+| [Details](Systems.Core.AuditLogEntries.md#details) | string (nullable) | Detailed contents of the event. Contents depend on the Event Type and Event Name. 
+| [EntityItemId](Systems.Core.AuditLogEntries.md#entityitemid) | guid (nullable) | The Id of the record, which is referenced by the event. Null when unknown or N/A. [Filter(multi eq)] 
+| [EntityName](Systems.Core.AuditLogEntries.md#entityname) | string (nullable) | The entity, which is being referenced by the event. Null when unknown or N/A. [Filter(eq;like)] 
+| [EventClass](Systems.Core.AuditLogEntries.md#eventclass) | [EventClass](Systems.Core.AuditLogEntries.md#eventclass) | The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. [Required] [Filter(multi eq)] 
+| [EventName](Systems.Core.AuditLogEntries.md#eventname) | string (nullable) | Specific event or method name. Contents depend on the Event Type. Null when N/A. [Filter(eq;like)] 
+| [EventTimeUtc](Systems.Core.AuditLogEntries.md#eventtimeutc) | datetime | The exact date and time (in Utc) when the event occurred. [Required] [Default(Now)] [Filter(ge;le)] [ORD] 
+| [EventType](Systems.Core.AuditLogEntries.md#eventtype) | [EventType](Systems.Core.AuditLogEntries.md#eventtype) | Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. [Required] [Filter(multi eq)] 
+| [Id](Systems.Core.AuditLogEntries.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PersonalDataProcess](Systems.Core.AuditLogEntries.md#PersonalDataProcess) | [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. [Filter(multi eq)] |
-| [User](Systems.Core.AuditLogEntries.md#User) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user account under which the event has occurred. Null only for events which are not user-specific. [Filter(multi eq)] |
+| [PersonalDataProcess](Systems.Core.AuditLogEntries.md#personaldataprocess) | [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. [Filter(multi eq)] |
+| [User](Systems.Core.AuditLogEntries.md#user) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user account under which the event has occurred. Null only for events which are not user-specific. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ApplicationName
 
@@ -58,7 +51,6 @@ _Supports Order By_: **False**
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EntityName
 
@@ -72,9 +64,9 @@ _Supports Order By_: **False**
 
 > The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Core.AuditLogEntriesRepository.EventClass](Systems.Core.AuditLogEntries.md#EventClass)**  
-Allowed values for the [EventClass](Systems.Core.AuditLogEntries.md#EventClass) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[EventClass](Systems.Core.AuditLogEntries.md#eventclass)**  
+Allowed values for the [EventClass](Systems.Core.AuditLogEntries.md#eventclass) data attribute  
+_Allowed Values (Systems.Core.AuditLogEntriesRepository.EventClass Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -106,9 +98,9 @@ _Default Value_: **CurrentDateTime**
 
 > Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Core.AuditLogEntriesRepository.EventType](Systems.Core.AuditLogEntries.md#EventType)**  
-Allowed values for the [EventType](Systems.Core.AuditLogEntries.md#EventType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[EventType](Systems.Core.AuditLogEntries.md#eventtype)**  
+Allowed values for the [EventType](Systems.Core.AuditLogEntries.md#eventtype) data attribute  
+_Allowed Values (Systems.Core.AuditLogEntriesRepository.EventType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -130,6 +122,12 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 
 ## Reference Details
 
@@ -139,7 +137,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### User
 
@@ -147,7 +144,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

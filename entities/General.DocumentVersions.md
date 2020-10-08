@@ -9,30 +9,23 @@ History of each saved version of each document. Entity: Gen_Document_Versions
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentVersions.md#Id) | guid |  
-| [DocumentData](General.DocumentVersions.md#DocumentData) | byte[] (nullable) | Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). [ReadOnly] 
-| [DocumentDataFormat](General.DocumentVersions.md#DocumentDataFormat) | string | The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. [Required] [Default("U")] [ReadOnly] 
-| [DocumentDataXML](General.DocumentVersions.md#DocumentDataXML) | string (nullable) | The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). [ReadOnly] 
-| [State](General.DocumentVersions.md#State) | [General.DocumentVersionsRepository.State](General.DocumentVersions.md#State) | The state of the document by the time it was saved. [Required] [Default(0)] [Filter(multi eq)] [ReadOnly] 
-| [UpdateTime](General.DocumentVersions.md#UpdateTime) | datetime | The date and time when this version was saved. [Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly] 
-| [UpdateUser](General.DocumentVersions.md#UpdateUser) | string | The login name of the user that saved this version. [Required] [Filter(eq;like)] [ReadOnly] 
-| [Version](General.DocumentVersions.md#Version) | int32 | The version number that is stored in this row. [Required] [Filter(eq;ge;le)] [ReadOnly] 
+| [DocumentData](General.DocumentVersions.md#documentdata) | byte[] (nullable) | Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). [ReadOnly] 
+| [DocumentDataFormat](General.DocumentVersions.md#documentdataformat) | string | The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. [Required] [Default("U")] [ReadOnly] 
+| [DocumentDataXML](General.DocumentVersions.md#documentdataxml) | string (nullable) | The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). [ReadOnly] 
+| [Id](General.DocumentVersions.md#id) | guid |  
+| [State](General.DocumentVersions.md#state) | [State](General.DocumentVersions.md#state) | The state of the document by the time it was saved. [Required] [Default(0)] [Filter(multi eq)] [ReadOnly] 
+| [UpdateTime](General.DocumentVersions.md#updatetime) | datetime | The date and time when this version was saved. [Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly] 
+| [UpdateUser](General.DocumentVersions.md#updateuser) | string | The login name of the user that saved this version. [Required] [Filter(eq;like)] [ReadOnly] 
+| [Version](General.DocumentVersions.md#version) | int32 | The version number that is stored in this row. [Required] [Filter(eq;ge;le)] [ReadOnly] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentVersions.md#Document) | [General.Documents](General.Documents.md) | The document whoose version is stored in this row. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
+| [Document](General.DocumentVersions.md#document) | [General.Documents](General.Documents.md) | The document whoose version is stored in this row. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DocumentData
 
@@ -59,13 +52,19 @@ _Type_: **string (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### State
 
 > The state of the document by the time it was saved. [Required] [Default(0)] [Filter(multi eq)] [ReadOnly]
 
-_Type_: **[General.DocumentVersionsRepository.State](General.DocumentVersions.md#State)**  
-Allowed values for the [State](General.DocumentVersions.md#State) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[State](General.DocumentVersions.md#state)**  
+Allowed values for the [State](General.DocumentVersions.md#state) data attribute  
+_Allowed Values (General.DocumentVersionsRepository.State Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -115,7 +114,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

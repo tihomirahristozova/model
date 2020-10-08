@@ -9,16 +9,16 @@ Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Ty
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Rental.AssetTypes.md#Id) | guid |  
-| [Notes](Applications.Rental.AssetTypes.md#Notes) | string (nullable) | Notes for this AssetType. [Filter(like)] 
-| [RentalAssetTypeName](Applications.Rental.AssetTypes.md#RentalAssetTypeName) | string | The name of the rental asset type. [Required] [Filter(like)] 
+| [Id](Applications.Rental.AssetTypes.md#id) | guid |  
+| [Notes](Applications.Rental.AssetTypes.md#notes) | string (nullable) | Notes for this AssetType. [Filter(like)] 
+| [RentalAssetTypeName](Applications.Rental.AssetTypes.md#rentalassettypename) | string | The name of the rental asset type. [Required] [Filter(like)] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Consumables | [Applications.Rental.AssetTypeConsumables](Applications.Rental.AssetTypeConsumables.md) | List of [AssetTypeConsumable](Applications.Rental.AssetTypeConsumables.md) child objects, based on the [Applications.Rental.AssetTypeConsumable.RentalAssetType](Applications.Rental.AssetTypeConsumables.md#RentalAssetType) back reference 
-| AssetTypeProperties | [Applications.Rental.AssetTypeProperties](Applications.Rental.AssetTypeProperties.md) | List of [AssetTypeProperty](Applications.Rental.AssetTypeProperties.md) child objects, based on the [Applications.Rental.AssetTypeProperty.RentalAssetType](Applications.Rental.AssetTypeProperties.md#RentalAssetType) back reference 
+| AssetTypeProperties | [Applications.Rental.AssetTypeProperties](Applications.Rental.AssetTypeProperties.md) | List of [AssetTypeProperty](Applications.Rental.AssetTypeProperties.md) child objects, based on the [Applications.Rental.AssetTypeProperty.RentalAssetType](Applications.Rental.AssetTypeProperties.md#rentalassettype) back reference 
+| Consumables | [Applications.Rental.AssetTypeConsumables](Applications.Rental.AssetTypeConsumables.md) | List of [AssetTypeConsumable](Applications.Rental.AssetTypeConsumables.md) child objects, based on the [Applications.Rental.AssetTypeConsumable.RentalAssetType](Applications.Rental.AssetTypeConsumables.md#rentalassettype) back reference 
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Ty
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes

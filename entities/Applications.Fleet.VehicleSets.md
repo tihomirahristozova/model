@@ -9,31 +9,24 @@ Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Se
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Fleet.VehicleSets.md#Id) | guid |  
-| [Active](Applications.Fleet.VehicleSets.md#Active) | boolean | True if the vehicle set is active for choosing; false - otherwise. [Required] [Default(true)] [Filter(eq)] 
-| [Name](Applications.Fleet.VehicleSets.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the vehicle set (Multilanguage). [Required] [Filter(eq;like)] 
+| [Active](Applications.Fleet.VehicleSets.md#active) | boolean | True if the vehicle set is active for choosing; false - otherwise. [Required] [Default(true)] [Filter(eq)] 
+| [Id](Applications.Fleet.VehicleSets.md#id) | guid |  
+| [Name](Applications.Fleet.VehicleSets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the vehicle set (Multilanguage). [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.Fleet.VehicleSets.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the vehicle set. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](Applications.Fleet.VehicleSets.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the vehicle set. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Vehicles | [Applications.Fleet.VehicleSetVehicles](Applications.Fleet.VehicleSetVehicles.md) | List of [VehicleSetVehicle](Applications.Fleet.VehicleSetVehicles.md) child objects, based on the [Applications.Fleet.VehicleSetVehicle.VehicleSet](Applications.Fleet.VehicleSetVehicles.md#VehicleSet) back reference 
+| Vehicles | [Applications.Fleet.VehicleSetVehicles](Applications.Fleet.VehicleSetVehicles.md) | List of [VehicleSetVehicle](Applications.Fleet.VehicleSetVehicles.md) child objects, based on the [Applications.Fleet.VehicleSetVehicle.VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Active
 
@@ -44,11 +37,17 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Name
 
 > Name of the vehicle set (Multilanguage). [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -61,7 +60,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,16 +9,16 @@ Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicl
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Fleet.VehicleSetVehicles.md#Id) | guid |  
-| [Notes](Applications.Fleet.VehicleSetVehicles.md#Notes) | string (nullable) | Notes for this VehicleSetVehicle. [Filter(like)] 
-| [OrdinalPos](Applications.Fleet.VehicleSetVehicles.md#OrdinalPos) | int32 (nullable) | Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. [Filter(ge;le)] 
+| [Id](Applications.Fleet.VehicleSetVehicles.md#id) | guid |  
+| [Notes](Applications.Fleet.VehicleSetVehicles.md#notes) | string (nullable) | Notes for this VehicleSetVehicle. [Filter(like)] 
+| [OrdinalPos](Applications.Fleet.VehicleSetVehicles.md#ordinalpos) | int32 (nullable) | Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. [Filter(ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Vehicle](Applications.Fleet.VehicleSetVehicles.md#Vehicle) | [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md) | The Vehicle which is part of the vehicle set. [Required] [Filter(multi eq)] |
-| [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#VehicleSet) | [Applications.Fleet.VehicleSets](Applications.Fleet.VehicleSets.md) | The [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#VehicleSet) to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Vehicle](Applications.Fleet.VehicleSetVehicles.md#vehicle) | [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md) | The Vehicle which is part of the vehicle set. [Required] [Filter(multi eq)] |
+| [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) | [Applications.Fleet.VehicleSets](Applications.Fleet.VehicleSets.md) | The [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicl
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes
@@ -55,15 +54,13 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### VehicleSet
 
-> The [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#VehicleSet) to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner]
+> The [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Applications.Fleet.VehicleSets](Applications.Fleet.VehicleSets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

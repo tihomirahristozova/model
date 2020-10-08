@@ -9,26 +9,19 @@ Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Intr
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.AssetManagement.ManagedAssetGroups.md#Id) | guid |  
-| [Code](Applications.AssetManagement.ManagedAssetGroups.md#Code) | string | Unique (within all groups) code of the asset group. [Required] [Filter(multi eq;like)] [ORD] 
-| [Name](Applications.AssetManagement.ManagedAssetGroups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the asset group (multi-language). [Required] [Filter(eq;like)] 
-| [Notes](Applications.AssetManagement.ManagedAssetGroups.md#Notes) | string (nullable) | Notes for this ManagedAssetGroup. 
+| [Code](Applications.AssetManagement.ManagedAssetGroups.md#code) | string | Unique (within all groups) code of the asset group. [Required] [Filter(multi eq;like)] [ORD] 
+| [Id](Applications.AssetManagement.ManagedAssetGroups.md#id) | guid |  
+| [Name](Applications.AssetManagement.ManagedAssetGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the asset group (multi-language). [Required] [Filter(eq;like)] 
+| [Notes](Applications.AssetManagement.ManagedAssetGroups.md#notes) | string (nullable) | Notes for this ManagedAssetGroup. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.AssetManagement.ManagedAssetGroups.md#Parent) | [Applications.AssetManagement.ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) (nullable) | The parent asset group in the hierarchy. null means this is a root group. [Filter(multi eq)] |
+| [Parent](Applications.AssetManagement.ManagedAssetGroups.md#parent) | [Applications.AssetManagement.ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) (nullable) | The parent asset group in the hierarchy. null means this is a root group. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Code
 
@@ -38,11 +31,17 @@ _Type_: **string**
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Name
 
 > Name of the asset group (multi-language). [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -63,7 +62,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.AssetManagement.ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

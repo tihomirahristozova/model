@@ -9,28 +9,28 @@ Resource types available to production. Entity: Prd_Resources
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.Resources.md#Id) | guid |  
-| [Notes](Production.Resources.Resources.md#Notes) | string (nullable) | User notes for the resource. 
-| [Name](Production.Resources.Resources.md#Name) | string | Name of the resource. [Required] [Filter(like)] 
-| [SetupDurationHours](Production.Resources.Resources.md#SetupDurationHours) | decimal | The usual duration of setup when changing production. [Required] [Default(0)] 
-| [SetupScrapQuantity](Production.Resources.Resources.md#SetupScrapQuantity) | [Quantity](../data-types.md#Quantity) | The usual quantity of fixed scrap occurring when changing production. . [Unit: SetupScrapUnit] [Required] [Default(0)] 
-| [StandardCostPerHour](Production.Resources.Resources.md#StandardCostPerHour) | [Amount](../data-types.md#Amount) (nullable) | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. [Currency: ResourceCurrency] 
-| [StandardPricePerHour](Production.Resources.Resources.md#StandardPricePerHour) | [Amount](../data-types.md#Amount) (nullable) | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. [Currency: ResourceCurrency] 
+| [Id](Production.Resources.Resources.md#id) | guid |  
+| [Name](Production.Resources.Resources.md#name) | string | Name of the resource. [Required] [Filter(like)] 
+| [Notes](Production.Resources.Resources.md#notes) | string (nullable) | User notes for the resource. 
+| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal | The usual duration of setup when changing production. [Required] [Default(0)] 
+| [SetupScrapQuantity](Production.Resources.Resources.md#setupscrapquantity) | [Quantity](../data-types.md#quantity) | The usual quantity of fixed scrap occurring when changing production. . [Unit: SetupScrapUnit] [Required] [Default(0)] 
+| [StandardCostPerHour](Production.Resources.Resources.md#standardcostperhour) | [Amount](../data-types.md#amount) (nullable) | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. [Currency: ResourceCurrency] 
+| [StandardPricePerHour](Production.Resources.Resources.md#standardpriceperhour) | [Amount](../data-types.md#amount) (nullable) | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. [Currency: ResourceCurrency] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PrimaryUnit](Production.Resources.Resources.md#PrimaryUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for quantities of the resource. [Required] [Filter(multi eq)] |
-| [ResourceCurrency](Production.Resources.Resources.md#ResourceCurrency) | [General.Currencies](General.Currencies.md) (nullable) | Currency for this resource. This currency applies for the standard price and cost per hour. [Filter(multi eq)] |
-| [ResourceGroup](Production.Resources.Resources.md#ResourceGroup) | [Production.Resources.ResourceGroups](Production.Resources.ResourceGroups.md) | The Id of the containing resource group. [Required] [Filter(multi eq)] [Owner] |
-| [SetupScrapUnit](Production.Resources.Resources.md#SetupScrapUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement units of Setup_Scrap_Quantity. [Required] [Filter(multi eq)] |
+| [PrimaryUnit](Production.Resources.Resources.md#primaryunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for quantities of the resource. [Required] [Filter(multi eq)] |
+| [ResourceCurrency](Production.Resources.Resources.md#resourcecurrency) | [General.Currencies](General.Currencies.md) (nullable) | Currency for this resource. This currency applies for the standard price and cost per hour. [Filter(multi eq)] |
+| [ResourceGroup](Production.Resources.Resources.md#resourcegroup) | [Production.Resources.ResourceGroups](Production.Resources.ResourceGroups.md) | The Id of the containing resource group. [Required] [Filter(multi eq)] [Owner] |
+| [SetupScrapUnit](Production.Resources.Resources.md#setupscrapunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement units of Setup_Scrap_Quantity. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Functions | [Production.Resources.ResourceFunctions](Production.Resources.ResourceFunctions.md) | List of [ResourceFunction](Production.Resources.ResourceFunctions.md) child objects, based on the [Production.Resources.ResourceFunction.Resource](Production.Resources.ResourceFunctions.md#Resource) back reference 
+| Functions | [Production.Resources.ResourceFunctions](Production.Resources.ResourceFunctions.md) | List of [ResourceFunction](Production.Resources.ResourceFunctions.md) child objects, based on the [Production.Resources.ResourceFunction.Resource](Production.Resources.ResourceFunctions.md#resource) back reference 
 
 
 ## Attribute Details
@@ -39,16 +39,7 @@ Resource types available to production. Entity: Prd_Resources
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
-
-### Notes
-
-> User notes for the resource.
-
-_Type_: **string (nullable)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### Name
 
@@ -56,6 +47,14 @@ _Supports Order By_: **False**
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+
+### Notes
+
+> User notes for the resource.
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### SetupDurationHours
@@ -71,7 +70,7 @@ _Default Value_: **0**
 
 > The usual quantity of fixed scrap occurring when changing production. . [Unit: SetupScrapUnit] [Required] [Default(0)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -80,7 +79,7 @@ _Default Value_: **Constant**
 
 > Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. [Currency: ResourceCurrency]
 
-_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -88,7 +87,7 @@ _Supports Order By_: **False**
 
 > Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. [Currency: ResourceCurrency]
 
-_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -101,7 +100,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ResourceCurrency
 
@@ -109,7 +107,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ResourceGroup
 
@@ -117,7 +114,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.Resources.ResourceGroups](Production.Resources.ResourceGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### SetupScrapUnit
 
@@ -125,7 +121,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

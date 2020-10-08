@@ -9,29 +9,22 @@ Provides notification addresses to be notified upon occurrence of different docu
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentTypeNotifications.md#Id) | guid |  
-| [DocumentEvent](General.DocumentTypeNotifications.md#DocumentEvent) | string | The event which will trigger the notification. [Required] [Default("StateChanging")] [Filter(eq)] 
-| [FilterXML](General.DocumentTypeNotifications.md#FilterXML) | string (nullable) | Filtering condition for the document. Only documents which match the filter will trigger the event. 
-| [StateBitMask](General.DocumentTypeNotifications.md#StateBitMask) | int32 | The document states that will trigger the event. [Required] [Default(0)] 
-| [StatusChangeDirection](General.DocumentTypeNotifications.md#StatusChangeDirection) | [General.DocumentTypeNotificationsRepository.StatusChangeDirection](General.DocumentTypeNotifications.md#StatusChangeDirection) | Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'. [Required] [Default("*")] 
-| [ToEmailAddressList](General.DocumentTypeNotifications.md#ToEmailAddressList) | string | List of email addressess to be notified. [Required] 
+| [DocumentEvent](General.DocumentTypeNotifications.md#documentevent) | string | The event which will trigger the notification. [Required] [Default("StateChanging")] [Filter(eq)] 
+| [FilterXML](General.DocumentTypeNotifications.md#filterxml) | string (nullable) | Filtering condition for the document. Only documents which match the filter will trigger the event. 
+| [Id](General.DocumentTypeNotifications.md#id) | guid |  
+| [StateBitMask](General.DocumentTypeNotifications.md#statebitmask) | int32 | The document states that will trigger the event. [Required] [Default(0)] 
+| [StatusChangeDirection](General.DocumentTypeNotifications.md#statuschangedirection) | [StatusChangeDirection](General.DocumentTypeNotifications.md#statuschangedirection) | Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'. [Required] [Default("*")] 
+| [ToEmailAddressList](General.DocumentTypeNotifications.md#toemailaddresslist) | string | List of email addressess to be notified. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](General.DocumentTypeNotifications.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which this notification is set. [Required] [Filter(multi eq)] [Owner] |
-| [UserStatus](General.DocumentTypeNotifications.md#UserStatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | When not null, specifies that the event will be triggered only on this user status. [Filter(multi eq)] |
+| [DocumentType](General.DocumentTypeNotifications.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which this notification is set. [Required] [Filter(multi eq)] [Owner] |
+| [UserStatus](General.DocumentTypeNotifications.md#userstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | When not null, specifies that the event will be triggered only on this user status. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DocumentEvent
 
@@ -50,6 +43,12 @@ _Type_: **string (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### StateBitMask
 
 > The document states that will trigger the event. [Required] [Default(0)]
@@ -63,9 +62,9 @@ _Default Value_: **0**
 
 > Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'. [Required] [Default("*")]
 
-_Type_: **[General.DocumentTypeNotificationsRepository.StatusChangeDirection](General.DocumentTypeNotifications.md#StatusChangeDirection)**  
-Allowed values for the [StatusChangeDirection](General.DocumentTypeNotifications.md#StatusChangeDirection) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[StatusChangeDirection](General.DocumentTypeNotifications.md#statuschangedirection)**  
+Allowed values for the [StatusChangeDirection](General.DocumentTypeNotifications.md#statuschangedirection) data attribute  
+_Allowed Values (General.DocumentTypeNotificationsRepository.StatusChangeDirection Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -95,7 +94,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### UserStatus
 
@@ -103,7 +101,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

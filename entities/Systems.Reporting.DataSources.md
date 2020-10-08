@@ -9,27 +9,20 @@ Contains user-defined data sources, which retrieve rows from multiple queries. E
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Reporting.DataSources.md#Id) | guid |  
-| [BaseQueryName](Systems.Reporting.DataSources.md#BaseQueryName) | string | The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)] 
-| [Name](Systems.Reporting.DataSources.md#Name) | string | The name of the data source. [Required] [Filter(eq;like)] 
-| [DataSourceType](Systems.Reporting.DataSources.md#DataSourceType) | [Systems.Reporting.DataSourcesRepository.DataSourceType](Systems.Reporting.DataSources.md#DataSourceType) | 'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . [Required] [Default("M")] [Filter(eq)] 
-| [ShowParentTables](Systems.Reporting.DataSources.md#ShowParentTables) | boolean | Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. [Required] [Default(false)] 
+| [BaseQueryName](Systems.Reporting.DataSources.md#basequeryname) | string | The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)] 
+| [DataSourceType](Systems.Reporting.DataSources.md#datasourcetype) | [DataSourceType](Systems.Reporting.DataSources.md#datasourcetype) | 'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . [Required] [Default("M")] [Filter(eq)] 
+| [Id](Systems.Reporting.DataSources.md#id) | guid |  
+| [Name](Systems.Reporting.DataSources.md#name) | string | The name of the data source. [Required] [Filter(eq;like)] 
+| [ShowParentTables](Systems.Reporting.DataSources.md#showparenttables) | boolean | Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. [Required] [Default(false)] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Queries | [Systems.Reporting.DataSourceQueries](Systems.Reporting.DataSourceQueries.md) | List of [DataSourceQuery](Systems.Reporting.DataSourceQueries.md) child objects, based on the [Systems.Reporting.DataSourceQuery.DataSource](Systems.Reporting.DataSourceQueries.md#DataSource) back reference 
+| Queries | [Systems.Reporting.DataSourceQueries](Systems.Reporting.DataSourceQueries.md) | List of [DataSourceQuery](Systems.Reporting.DataSourceQueries.md) child objects, based on the [Systems.Reporting.DataSourceQuery.DataSource](Systems.Reporting.DataSourceQueries.md#datasource) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### BaseQueryName
 
@@ -39,21 +32,13 @@ _Type_: **string**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
-### Name
-
-> The name of the data source. [Required] [Filter(eq;like)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-
 ### DataSourceType
 
 > 'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . [Required] [Default("M")] [Filter(eq)]
 
-_Type_: **[Systems.Reporting.DataSourcesRepository.DataSourceType](Systems.Reporting.DataSources.md#DataSourceType)**  
-Allowed values for the [DataSourceType](Systems.Reporting.DataSources.md#DataSourceType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[DataSourceType](Systems.Reporting.DataSources.md#datasourcetype)**  
+Allowed values for the [DataSourceType](Systems.Reporting.DataSources.md#datasourcetype) data attribute  
+_Allowed Values (Systems.Reporting.DataSourcesRepository.DataSourceType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -64,6 +49,20 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **MultiTable**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
+### Name
+
+> The name of the data source. [Required] [Filter(eq;like)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
 
 ### ShowParentTables
 

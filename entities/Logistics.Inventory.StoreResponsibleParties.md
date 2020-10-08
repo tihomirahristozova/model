@@ -9,14 +9,14 @@ Contains the list of responsible parties (usually persons) for the stores. Store
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.StoreResponsibleParties.md#Id) | guid |  
+| [Id](Logistics.Inventory.StoreResponsibleParties.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ResponsibleParty](Logistics.Inventory.StoreResponsibleParties.md#ResponsibleParty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The responsible party (usually employee) of the store. [Required] [Filter(multi eq)] |
-| [Store](Logistics.Inventory.StoreResponsibleParties.md#Store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The store for which we specify the responsible party. [Required] [Filter(multi eq)] [Owner] |
+| [ResponsibleParty](Logistics.Inventory.StoreResponsibleParties.md#responsibleparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The responsible party (usually employee) of the store. [Required] [Filter(multi eq)] |
+| [Store](Logistics.Inventory.StoreResponsibleParties.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The store for which we specify the responsible party. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ Contains the list of responsible parties (usually persons) for the stores. Store
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -37,7 +36,6 @@ _Default Value_: **NewGuid**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Store
 
@@ -45,7 +43,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,25 +9,25 @@ Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Ta
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Distribution.SalesPersonTargetLines.md#Id) | guid |  
-| [PeriodDate](Crm.Distribution.SalesPersonTargetLines.md#PeriodDate) | datetime | Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). [Required] [ReadOnly] 
-| [PeriodMonth](Crm.Distribution.SalesPersonTargetLines.md#PeriodMonth) | byte | Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). [Required] [Filter(ge;le)] 
-| [PeriodYear](Crm.Distribution.SalesPersonTargetLines.md#PeriodYear) | int16 | Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). [Required] [Filter(ge;le)] 
-| [TargetAmount](Crm.Distribution.SalesPersonTargetLines.md#TargetAmount) | [Amount](../data-types.md#Amount) (nullable) | Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. [Currency: TargetAmountCurrency] 
-| [TargetType](Crm.Distribution.SalesPersonTargetLines.md#TargetType) | [Crm.Distribution.SalesPersonTargetLinesRepository.TargetType](Crm.Distribution.SalesPersonTargetLines.md#TargetType) | Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs. [Required] [Default("SALES")] [Filter(multi eq)] 
-| [TargetValue](Crm.Distribution.SalesPersonTargetLines.md#TargetValue) | decimal | Value of target. Meaning depends on target type. [Required] [Default(0)] 
-| [TargetWeight](Crm.Distribution.SalesPersonTargetLines.md#TargetWeight) | decimal | Relative weight of target, comparatively to other targets. [Required] [Default(1)] 
+| [Id](Crm.Distribution.SalesPersonTargetLines.md#id) | guid |  
+| [PeriodDate](Crm.Distribution.SalesPersonTargetLines.md#perioddate) | datetime | Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). [Required] [ReadOnly] 
+| [PeriodMonth](Crm.Distribution.SalesPersonTargetLines.md#periodmonth) | byte | Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). [Required] [Filter(ge;le)] 
+| [PeriodYear](Crm.Distribution.SalesPersonTargetLines.md#periodyear) | int16 | Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). [Required] [Filter(ge;le)] 
+| [TargetAmount](Crm.Distribution.SalesPersonTargetLines.md#targetamount) | [Amount](../data-types.md#amount) (nullable) | Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. [Currency: TargetAmountCurrency] 
+| [TargetType](Crm.Distribution.SalesPersonTargetLines.md#targettype) | [TargetType](Crm.Distribution.SalesPersonTargetLines.md#targettype) | Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs. [Required] [Default("SALES")] [Filter(multi eq)] 
+| [TargetValue](Crm.Distribution.SalesPersonTargetLines.md#targetvalue) | decimal | Value of target. Meaning depends on target type. [Required] [Default(0)] 
+| [TargetWeight](Crm.Distribution.SalesPersonTargetLines.md#targetweight) | decimal | Relative weight of target, comparatively to other targets. [Required] [Default(1)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BonusProgram](Crm.Distribution.SalesPersonTargetLines.md#BonusProgram) | [Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md) (nullable) | Bonus program Id when the target type is BONUS, null otherwise. [Filter(multi eq)] |
-| [ProductGroup](Crm.Distribution.SalesPersonTargetLines.md#ProductGroup) | [General.Products.ProductGroups](General.Products.ProductGroups.md) (nullable) | Product group for which the target is defined. [Filter(multi eq)] |
-| [PromotionalPackage](Crm.Distribution.SalesPersonTargetLines.md#PromotionalPackage) | [Crm.PromotionalPackages](Crm.PromotionalPackages.md) (nullable) | Promotional Package Id when the target type is PROMO, null otherwise. [Filter(multi eq)] |
-| [SalesPerson](Crm.Distribution.SalesPersonTargetLines.md#SalesPerson) | [Crm.SalesPersons](Crm.SalesPersons.md) | Sales person to whom the target is assigned. [Required] [Filter(multi eq)] |
-| [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#SalesPersonTarget) | [Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md) | The [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#SalesPersonTarget) to which this SalesPersonTargetLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [TargetAmountCurrency](Crm.Distribution.SalesPersonTargetLines.md#TargetAmountCurrency) | [General.Currencies](General.Currencies.md) (nullable) | Deprecated - use currency in document header. [Filter(multi eq)] |
+| [BonusProgram](Crm.Distribution.SalesPersonTargetLines.md#bonusprogram) | [Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md) (nullable) | Bonus program Id when the target type is BONUS, null otherwise. [Filter(multi eq)] |
+| [ProductGroup](Crm.Distribution.SalesPersonTargetLines.md#productgroup) | [General.Products.ProductGroups](General.Products.ProductGroups.md) (nullable) | Product group for which the target is defined. [Filter(multi eq)] |
+| [PromotionalPackage](Crm.Distribution.SalesPersonTargetLines.md#promotionalpackage) | [Crm.PromotionalPackages](Crm.PromotionalPackages.md) (nullable) | Promotional Package Id when the target type is PROMO, null otherwise. [Filter(multi eq)] |
+| [SalesPerson](Crm.Distribution.SalesPersonTargetLines.md#salesperson) | [Crm.SalesPersons](Crm.SalesPersons.md) | Sales person to whom the target is assigned. [Required] [Filter(multi eq)] |
+| [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#salespersontarget) | [Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md) | The [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#salespersontarget) to which this SalesPersonTargetLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [TargetAmountCurrency](Crm.Distribution.SalesPersonTargetLines.md#targetamountcurrency) | [General.Currencies](General.Currencies.md) (nullable) | Deprecated - use currency in document header. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -36,7 +36,6 @@ Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Ta
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### PeriodDate
@@ -67,7 +66,7 @@ _Supports Order By_: **False**
 
 > Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. [Currency: TargetAmountCurrency]
 
-_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -75,9 +74,9 @@ _Supports Order By_: **False**
 
 > Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs. [Required] [Default("SALES")] [Filter(multi eq)]
 
-_Type_: **[Crm.Distribution.SalesPersonTargetLinesRepository.TargetType](Crm.Distribution.SalesPersonTargetLines.md#TargetType)**  
-Allowed values for the [TargetType](Crm.Distribution.SalesPersonTargetLines.md#TargetType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[TargetType](Crm.Distribution.SalesPersonTargetLines.md#targettype)**  
+Allowed values for the [TargetType](Crm.Distribution.SalesPersonTargetLines.md#targettype) data attribute  
+_Allowed Values (Crm.Distribution.SalesPersonTargetLinesRepository.TargetType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -117,7 +116,6 @@ _Default Value_: **1**
 
 _Type_: **[Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProductGroup
 
@@ -125,7 +123,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.ProductGroups](General.Products.ProductGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.SalesPersonTarget.ProductGroup`
@@ -138,7 +135,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[Crm.PromotionalPackages](Crm.PromotionalPackages.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### SalesPerson
 
@@ -146,7 +142,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.SalesPersons](Crm.SalesPersons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.SalesPersonTarget.SalesPerson`
@@ -155,11 +150,10 @@ _Front-End Recalc Expressions:_
 `obj.SalesPersonTarget.SalesPerson`
 ### SalesPersonTarget
 
-> The [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#SalesPersonTarget) to which this SalesPersonTargetLine belongs. [Required] [Filter(multi eq)] [Owner]
+> The [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#salespersontarget) to which this SalesPersonTargetLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### TargetAmountCurrency
 
@@ -167,7 +161,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.SalesPersonTarget.TargetCurrency`

@@ -9,15 +9,15 @@ External login providers. Entity: Sec_User_Provider_Logins (Introduced in versio
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Security.UserProviderLogins.md#Id) | guid |  
-| [ProviderKey](Systems.Security.UserProviderLogins.md#ProviderKey) | string | The key, which the provider provided for logging the user. [Required] [Filter(multi eq)] 
-| [ProviderName](Systems.Security.UserProviderLogins.md#ProviderName) | [Systems.Security.DomainProvidersRepository.ProviderName](Systems.Security.UserProviderLogins.md#ProviderName) | The system name of the authentication provider. It should be already registered for the domain. [Required] [Filter(eq)] (Introduced in version 20.1.100.0) 
+| [Id](Systems.Security.UserProviderLogins.md#id) | guid |  
+| [ProviderKey](Systems.Security.UserProviderLogins.md#providerkey) | string | The key, which the provider provided for logging the user. [Required] [Filter(multi eq)] 
+| [ProviderName](Systems.Security.UserProviderLogins.md#providername) | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | The system name of the authentication provider. It should be already registered for the domain. [Required] [Filter(eq)] (Introduced in version 20.1.100.0) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Systems.Security.UserProviderLogins.md#User) | [Systems.Security.Users](Systems.Security.Users.md) | The user for which the login is defined. [Required] [Filter(multi eq)] [Owner] |
+| [User](Systems.Security.UserProviderLogins.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user for which the login is defined. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ External login providers. Entity: Sec_User_Provider_Logins (Introduced in versio
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### ProviderKey
@@ -41,9 +40,9 @@ _Supports Order By_: **False**
 
 > The system name of the authentication provider. It should be already registered for the domain. [Required] [Filter(eq)] (Introduced in version 20.1.100.0)
 
-_Type_: **[Systems.Security.DomainProvidersRepository.ProviderName](Systems.Security.UserProviderLogins.md#ProviderName)**  
-Allowed values for the [ProviderName](Systems.Security.DomainProviders.md#ProviderName) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ProviderName](Systems.Security.UserProviderLogins.md#providername)**  
+Allowed values for the [ProviderName](Systems.Security.DomainProviders.md#providername) data attribute  
+_Allowed Values (Systems.Security.DomainProvidersRepository.ProviderName Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -64,7 +63,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

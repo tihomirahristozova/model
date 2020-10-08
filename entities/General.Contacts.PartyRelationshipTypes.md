@@ -9,9 +9,9 @@ Defines the types of relationships possible between the parties. Entity: Cm_Part
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.PartyRelationshipTypes.md#Id) | guid |  
-| [Notes](General.Contacts.PartyRelationshipTypes.md#Notes) | string (nullable) | Notes for this PartyRelationshipType. 
-| [RelationshipTypeName](General.Contacts.PartyRelationshipTypes.md#RelationshipTypeName) | string | The name of the relationship type. [Required] [Filter(like)] 
+| [Id](General.Contacts.PartyRelationshipTypes.md#id) | guid |  
+| [Notes](General.Contacts.PartyRelationshipTypes.md#notes) | string (nullable) | Notes for this PartyRelationshipType. 
+| [RelationshipTypeName](General.Contacts.PartyRelationshipTypes.md#relationshiptypename) | string | The name of the relationship type. [Required] [Filter(like)] 
 
 
 ## Attribute Details
@@ -20,7 +20,6 @@ Defines the types of relationships possible between the parties. Entity: Cm_Part
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes

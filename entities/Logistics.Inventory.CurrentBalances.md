@@ -9,22 +9,22 @@ The current inventory balances, grouped by storage key (Store, Product, Lot, etc
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseCost](Logistics.Inventory.CurrentBalances.md#BaseCost) | [Amount](../data-types.md#Amount) | The cost of the inventory in base currency of the enterprise company. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Filter(ge;le)] 
-| [ProductCost](Logistics.Inventory.CurrentBalances.md#ProductCost) | [Amount](../data-types.md#Amount) | The cost of the inventory in the products currency. [Currency: Product.CostingCurrency] [Required] 
-| [QuantityBase](Logistics.Inventory.CurrentBalances.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] [ReadOnly] 
-| [StoreCost](Logistics.Inventory.CurrentBalances.md#StoreCost) | [Amount](../data-types.md#Amount) | The cost of the inventory in the stores currency. [Currency: Store.Currency] [Required] 
+| [BaseCost](Logistics.Inventory.CurrentBalances.md#basecost) | [Amount](../data-types.md#amount) | The cost of the inventory in base currency of the enterprise company. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Filter(ge;le)] 
+| [ProductCost](Logistics.Inventory.CurrentBalances.md#productcost) | [Amount](../data-types.md#amount) | The cost of the inventory in the products currency. [Currency: Product.CostingCurrency] [Required] 
+| [QuantityBase](Logistics.Inventory.CurrentBalances.md#quantitybase) | [Quantity](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] [ReadOnly] 
+| [StoreCost](Logistics.Inventory.CurrentBalances.md#storecost) | [Amount](../data-types.md#amount) | The cost of the inventory in the stores currency. [Currency: Store.Currency] [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Logistics.Inventory.CurrentBalances.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. [Required] [Filter(multi eq)] |
-| [Lot](Logistics.Inventory.CurrentBalances.md#Lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. [Filter(multi eq)] |
-| [Product](Logistics.Inventory.CurrentBalances.md#Product) | [General.Products.Products](General.Products.Products.md) | The item that was received/issued. [Required] [Filter(multi eq)] |
-| [ProductVariant](Logistics.Inventory.CurrentBalances.md#ProductVariant) | [General.ProductVariants](General.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. [Filter(multi eq)] |
-| [SerialNumber](Logistics.Inventory.CurrentBalances.md#SerialNumber) | [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Item serial number for serialized items. null for non-serialized items. [Filter(multi eq)] |
-| [StoreBin](Logistics.Inventory.CurrentBalances.md#StoreBin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | Store bin, from/to which the transaction was performed. [Filter(multi eq)] |
-| [Store](Logistics.Inventory.CurrentBalances.md#Store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The store from which the goods are received or issued. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Logistics.Inventory.CurrentBalances.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. [Required] [Filter(multi eq)] |
+| [Lot](Logistics.Inventory.CurrentBalances.md#lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. [Filter(multi eq)] |
+| [Product](Logistics.Inventory.CurrentBalances.md#product) | [General.Products.Products](General.Products.Products.md) | The item that was received/issued. [Required] [Filter(multi eq)] |
+| [ProductVariant](Logistics.Inventory.CurrentBalances.md#productvariant) | [General.ProductVariants](General.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. [Filter(multi eq)] |
+| [SerialNumber](Logistics.Inventory.CurrentBalances.md#serialnumber) | [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Item serial number for serialized items. null for non-serialized items. [Filter(multi eq)] |
+| [Store](Logistics.Inventory.CurrentBalances.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The store from which the goods are received or issued. [Required] [Filter(multi eq)] |
+| [StoreBin](Logistics.Inventory.CurrentBalances.md#storebin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | Store bin, from/to which the transaction was performed. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -33,7 +33,7 @@ The current inventory balances, grouped by storage key (Store, Product, Lot, etc
 
 > The cost of the inventory in base currency of the enterprise company. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Filter(ge;le)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -41,7 +41,7 @@ _Supports Order By_: **False**
 
 > The cost of the inventory in the products currency. [Currency: Product.CostingCurrency] [Required]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 > The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] [ReadOnly]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 > The cost of the inventory in the stores currency. [Currency: Store.Currency] [Required]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -70,7 +70,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Lot
 
@@ -78,7 +77,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Product
 
@@ -86,7 +84,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProductVariant
 
@@ -94,7 +91,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.ProductVariants](General.ProductVariants.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### SerialNumber
 
@@ -102,15 +98,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### StoreBin
-
-> Store bin, from/to which the transaction was performed. [Filter(multi eq)]
-
-_Type_: **[Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Store
 
@@ -118,7 +105,13 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### StoreBin
+
+> Store bin, from/to which the transaction was performed. [Filter(multi eq)]
+
+_Type_: **[Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 
 

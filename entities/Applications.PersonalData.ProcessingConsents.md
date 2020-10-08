@@ -9,41 +9,34 @@ Consents of data subjects for processing of their personal data. Entity: Pdm_Pro
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.PersonalData.ProcessingConsents.md#Id) | guid |  
-| [AllowAddress](Applications.PersonalData.ProcessingConsents.md#AllowAddress) | boolean | Allows the processing of the physical address. [Required] [Default(false)] [Filter(eq)] 
-| [AllowBasicData](Applications.PersonalData.ProcessingConsents.md#AllowBasicData) | boolean | Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc. [Required] [Default(false)] [Filter(eq)] 
-| [AllowEmail](Applications.PersonalData.ProcessingConsents.md#AllowEmail) | boolean | Allows the processing of the email address. [Required] [Default(false)] [Filter(eq)] 
-| [AllowOtherData](Applications.PersonalData.ProcessingConsents.md#AllowOtherData) | string (nullable) | Comma-separated list of other types of data, which was allowed for processing with this consent. [Filter(eq)] 
-| [AllowPhone](Applications.PersonalData.ProcessingConsents.md#AllowPhone) | boolean | Allows the processing of the telephone number. [Required] [Default(false)] [Filter(eq)] 
-| [ConsentImage](Applications.PersonalData.ProcessingConsents.md#ConsentImage) | byte[] (nullable) | If not null, it is a graphical image, containing additional information for the consent. 
-| [ConsentText](Applications.PersonalData.ProcessingConsents.md#ConsentText) | string (nullable) | The actual text of the consent. [Filter(like)] 
-| [ConsentType](Applications.PersonalData.ProcessingConsents.md#ConsentType) | [Applications.PersonalData.ProcessingConsentsRepository.ConsentType](Applications.PersonalData.ProcessingConsents.md#ConsentType) | The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). [Required] [Filter(eq)] 
-| [GivenOnUtc](Applications.PersonalData.ProcessingConsents.md#GivenOnUtc) | datetime | The date and time (in Utc), when the consent was given. [Required] [Filter(ge;le)] 
-| [IsActive](Applications.PersonalData.ProcessingConsents.md#IsActive) | boolean | Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. [Required] [Default(true)] [Filter(eq)] 
-| [IsChild](Applications.PersonalData.ProcessingConsents.md#IsChild) | boolean | Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child. [Required] [Default(false)] [Filter(eq)] 
-| [Notes](Applications.PersonalData.ProcessingConsents.md#Notes) | string (nullable) | Notes for this ProcessingConsent. 
-| [ParentEmail](Applications.PersonalData.ProcessingConsents.md#ParentEmail) | string (nullable) | When a parental rights holder gives a consent for a child, contains the email of the parent. [Filter(like)] 
-| [ParentName](Applications.PersonalData.ProcessingConsents.md#ParentName) | string (nullable) | When a parental rights holder gives a consent for a child, contains the name of the parent. [Filter(eq;like)] 
-| [ParentPhone](Applications.PersonalData.ProcessingConsents.md#ParentPhone) | string (nullable) | When a parental rights holder gives a consent for a child, contains the phone number of the parent. [Filter(like)] 
-| [RetractedOnUtc](Applications.PersonalData.ProcessingConsents.md#RetractedOnUtc) | datetime (nullable) | The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. [Filter(ge;le)] 
+| [AllowAddress](Applications.PersonalData.ProcessingConsents.md#allowaddress) | boolean | Allows the processing of the physical address. [Required] [Default(false)] [Filter(eq)] 
+| [AllowBasicData](Applications.PersonalData.ProcessingConsents.md#allowbasicdata) | boolean | Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc. [Required] [Default(false)] [Filter(eq)] 
+| [AllowEmail](Applications.PersonalData.ProcessingConsents.md#allowemail) | boolean | Allows the processing of the email address. [Required] [Default(false)] [Filter(eq)] 
+| [AllowOtherData](Applications.PersonalData.ProcessingConsents.md#allowotherdata) | string (nullable) | Comma-separated list of other types of data, which was allowed for processing with this consent. [Filter(eq)] 
+| [AllowPhone](Applications.PersonalData.ProcessingConsents.md#allowphone) | boolean | Allows the processing of the telephone number. [Required] [Default(false)] [Filter(eq)] 
+| [ConsentImage](Applications.PersonalData.ProcessingConsents.md#consentimage) | byte[] (nullable) | If not null, it is a graphical image, containing additional information for the consent. 
+| [ConsentText](Applications.PersonalData.ProcessingConsents.md#consenttext) | string (nullable) | The actual text of the consent. [Filter(like)] 
+| [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). [Required] [Filter(eq)] 
+| [GivenOnUtc](Applications.PersonalData.ProcessingConsents.md#givenonutc) | datetime | The date and time (in Utc), when the consent was given. [Required] [Filter(ge;le)] 
+| [Id](Applications.PersonalData.ProcessingConsents.md#id) | guid |  
+| [IsActive](Applications.PersonalData.ProcessingConsents.md#isactive) | boolean | Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. [Required] [Default(true)] [Filter(eq)] 
+| [IsChild](Applications.PersonalData.ProcessingConsents.md#ischild) | boolean | Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child. [Required] [Default(false)] [Filter(eq)] 
+| [Notes](Applications.PersonalData.ProcessingConsents.md#notes) | string (nullable) | Notes for this ProcessingConsent. 
+| [ParentEmail](Applications.PersonalData.ProcessingConsents.md#parentemail) | string (nullable) | When a parental rights holder gives a consent for a child, contains the email of the parent. [Filter(like)] 
+| [ParentName](Applications.PersonalData.ProcessingConsents.md#parentname) | string (nullable) | When a parental rights holder gives a consent for a child, contains the name of the parent. [Filter(eq;like)] 
+| [ParentPhone](Applications.PersonalData.ProcessingConsents.md#parentphone) | string (nullable) | When a parental rights holder gives a consent for a child, contains the phone number of the parent. [Filter(like)] 
+| [RetractedOnUtc](Applications.PersonalData.ProcessingConsents.md#retractedonutc) | datetime (nullable) | The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. [Filter(ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Person](Applications.PersonalData.ProcessingConsents.md#Person) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. [Filter(multi eq)] |
-| [PersonalDataProcess](Applications.PersonalData.ProcessingConsents.md#PersonalDataProcess) | [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. [Filter(multi eq)] |
-| [User](Applications.PersonalData.ProcessingConsents.md#User) | [Systems.Security.Users](Systems.Security.Users.md) | The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. [Required] [Filter(multi eq)] |
+| [Person](Applications.PersonalData.ProcessingConsents.md#person) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. [Filter(multi eq)] |
+| [PersonalDataProcess](Applications.PersonalData.ProcessingConsents.md#personaldataprocess) | [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. [Filter(multi eq)] |
+| [User](Applications.PersonalData.ProcessingConsents.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### AllowAddress
 
@@ -109,9 +102,9 @@ _Supports Order By_: **False**
 
 > The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). [Required] [Filter(eq)]
 
-_Type_: **[Applications.PersonalData.ProcessingConsentsRepository.ConsentType](Applications.PersonalData.ProcessingConsents.md#ConsentType)**  
-Allowed values for the [ConsentType](Applications.PersonalData.ProcessingConsents.md#ConsentType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype)**  
+Allowed values for the [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) data attribute  
+_Allowed Values (Applications.PersonalData.ProcessingConsentsRepository.ConsentType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -132,6 +125,12 @@ _Supports Order By_: **False**
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsActive
 
@@ -200,7 +199,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PersonalDataProcess
 
@@ -208,7 +206,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### User
 
@@ -216,7 +213,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

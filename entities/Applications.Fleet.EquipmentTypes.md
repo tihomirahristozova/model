@@ -9,8 +9,8 @@ Contains types of equipment, which can be installed on the vehicles. Entity: Fle
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Fleet.EquipmentTypes.md#Id) | guid |  
-| [Name](Applications.Fleet.EquipmentTypes.md#Name) | string | Name of the equipment type. [Required] [Filter(eq;like)] 
+| [Id](Applications.Fleet.EquipmentTypes.md#id) | guid |  
+| [Name](Applications.Fleet.EquipmentTypes.md#name) | string | Name of the equipment type. [Required] [Filter(eq;like)] 
 
 
 ## Attribute Details
@@ -19,7 +19,6 @@ Contains types of equipment, which can be installed on the vehicles. Entity: Fle
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Name

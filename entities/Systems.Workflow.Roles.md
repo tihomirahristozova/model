@@ -9,16 +9,16 @@ The various roles, which the users can play. Entity: Wf_Roles
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Workflow.Roles.md#Id) | guid |  
-| [RoleDescription](Systems.Workflow.Roles.md#RoleDescription) | string (nullable) | Description of the role. 
-| [Name](Systems.Workflow.Roles.md#Name) | string | The name of this Role. [Required] [Filter(eq;like)] [ORD] 
-| [VisualStyle](Systems.Workflow.Roles.md#VisualStyle) | string (nullable) | The default visual style for the user interface. 
+| [Id](Systems.Workflow.Roles.md#id) | guid |  
+| [Name](Systems.Workflow.Roles.md#name) | string | The name of this Role. [Required] [Filter(eq;like)] [ORD] 
+| [RoleDescription](Systems.Workflow.Roles.md#roledescription) | string (nullable) | Description of the role. 
+| [VisualStyle](Systems.Workflow.Roles.md#visualstyle) | string (nullable) | The default visual style for the user interface. 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Users | [Systems.Workflow.RoleUsers](Systems.Workflow.RoleUsers.md) | List of [RoleUser](Systems.Workflow.RoleUsers.md) child objects, based on the [Systems.Workflow.RoleUser.Role](Systems.Workflow.RoleUsers.md#Role) back reference 
+| Users | [Systems.Workflow.RoleUsers](Systems.Workflow.RoleUsers.md) | List of [RoleUser](Systems.Workflow.RoleUsers.md) child objects, based on the [Systems.Workflow.RoleUser.Role](Systems.Workflow.RoleUsers.md#role) back reference 
 
 
 ## Attribute Details
@@ -27,16 +27,7 @@ The various roles, which the users can play. Entity: Wf_Roles
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
-
-### RoleDescription
-
-> Description of the role.
-
-_Type_: **string (nullable)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### Name
 
@@ -45,6 +36,14 @@ _Supports Order By_: **False**
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+
+### RoleDescription
+
+> Description of the role.
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### VisualStyle
 

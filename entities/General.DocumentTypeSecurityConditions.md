@@ -9,27 +9,20 @@ Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentTypeSecurityConditions.md#Id) | guid |  
-| [ConditionFilterXml](General.DocumentTypeSecurityConditions.md#ConditionFilterXml) | dataaccessfilter | Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. [Required] 
-| [Description](General.DocumentTypeSecurityConditions.md#Description) | string | The description of this DocumentTypeSecurityCondition. [Required] [Filter(eq;like)] 
-| [Priority](General.DocumentTypeSecurityConditions.md#Priority) | [General.Priority](General.DocumentTypeSecurityConditions.md#Priority) | Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. [Required] [Default(3)] [Filter(ge;le)] 
+| [ConditionFilterXml](General.DocumentTypeSecurityConditions.md#conditionfilterxml) | dataaccessfilter | Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. [Required] 
+| [Description](General.DocumentTypeSecurityConditions.md#description) | string | The description of this DocumentTypeSecurityCondition. [Required] [Filter(eq;like)] 
+| [Id](General.DocumentTypeSecurityConditions.md#id) | guid |  
+| [Priority](General.DocumentTypeSecurityConditions.md#priority) | [Priority](General.DocumentTypeSecurityConditions.md#priority) | Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. [Required] [Default(3)] [Filter(ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAccessKey](General.DocumentTypeSecurityConditions.md#DocumentAccessKey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) | The access key, which will be used to secure new documents, when this rule is selected. [Required] [Filter(multi eq)] |
-| [DocumentType](General.DocumentTypeSecurityConditions.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The document type, whose documents will be secured by the current rule. [Required] [Filter(multi eq)] |
+| [DocumentAccessKey](General.DocumentTypeSecurityConditions.md#documentaccesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) | The access key, which will be used to secure new documents, when this rule is selected. [Required] [Filter(multi eq)] |
+| [DocumentType](General.DocumentTypeSecurityConditions.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type, whose documents will be secured by the current rule. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ConditionFilterXml
 
@@ -47,13 +40,19 @@ _Type_: **string**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Priority
 
 > Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. [Required] [Default(3)] [Filter(ge;le)]
 
-_Type_: **[General.Priority](General.DocumentTypeSecurityConditions.md#Priority)**  
+_Type_: **[Priority](General.DocumentTypeSecurityConditions.md#priority)**  
 Generic enum type for Priority properties  
-_Allowed Values (Enum Members)_  
+_Allowed Values (General.Priority Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -76,7 +75,6 @@ _Default Value_: **3**
 
 _Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DocumentType
 
@@ -84,7 +82,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

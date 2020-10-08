@@ -9,42 +9,27 @@ Contains deal types supported by the system as well as user-defined types. Entit
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Vat.DealTypes.md#Id) | guid |  
-| [Name](Finance.Vat.DealTypes.md#Name) | string | Description of the deal type. [Required] [Filter(eq;like)] 
-| [EntryType](Finance.Vat.DealTypes.md#EntryType) | [Finance.Vat.DealTypesRepository.EntryType](Finance.Vat.DealTypes.md#EntryType) | Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. [Required] [Filter(eq)] 
-| [IsSystem](Finance.Vat.DealTypes.md#IsSystem) | boolean | Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [EntryType](Finance.Vat.DealTypes.md#entrytype) | [EntryType](Finance.Vat.DealTypes.md#entrytype) | Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. [Required] [Filter(eq)] 
+| [Id](Finance.Vat.DealTypes.md#id) | guid |  
+| [IsSystem](Finance.Vat.DealTypes.md#issystem) | boolean | Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [Name](Finance.Vat.DealTypes.md#name) | string | Description of the deal type. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Country](Finance.Vat.DealTypes.md#Country) | [General.Geography.Countries](General.Geography.Countries.md) | The country for which this deal type applies. The country is matched against the country of the enterprise company. [Required] [Filter(multi eq)] |
+| [Country](Finance.Vat.DealTypes.md#country) | [General.Geography.Countries](General.Geography.Countries.md) | The country for which this deal type applies. The country is matched against the country of the enterprise company. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
-
-### Name
-
-> Description of the deal type. [Required] [Filter(eq;like)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
 
 ### EntryType
 
 > Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. [Required] [Filter(eq)]
 
-_Type_: **[Finance.Vat.DealTypesRepository.EntryType](Finance.Vat.DealTypes.md#EntryType)**  
-Allowed values for the [EntryType](Finance.Vat.DealTypes.md#EntryType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[EntryType](Finance.Vat.DealTypes.md#entrytype)**  
+Allowed values for the [EntryType](Finance.Vat.DealTypes.md#entrytype) data attribute  
+_Allowed Values (Finance.Vat.DealTypesRepository.EntryType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -53,6 +38,12 @@ _Allowed Values (Enum Members)_
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsSystem
 
@@ -63,6 +54,14 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
+### Name
+
+> Description of the deal type. [Required] [Filter(eq;like)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -72,7 +71,6 @@ _Default Value_: **False**
 
 _Type_: **[General.Geography.Countries](General.Geography.Countries.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

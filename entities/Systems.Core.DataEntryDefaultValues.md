@@ -9,32 +9,25 @@ Contains user-specified default values for columns in data entry forms. Entity: 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.DataEntryDefaultValues.md#Id) | guid |  
-| [ColumnName](Systems.Core.DataEntryDefaultValues.md#ColumnName) | string | The column for which the default is specified. [Required] [Filter(eq)] 
-| [ConditionFormName](Systems.Core.DataEntryDefaultValues.md#ConditionFormName) | string (nullable) | If not null specifies that the default should be applied only if Form_Name equals the specified value. [Filter(eq)] [ORD] 
-| [ConditionUserLogin](Systems.Core.DataEntryDefaultValues.md#ConditionUserLogin) | string (nullable) | If not null specifies that the default should be applied only if User_Login equals this value. [Filter(eq)] 
-| [ConditionUserMachine](Systems.Core.DataEntryDefaultValues.md#ConditionUserMachine) | string (nullable) | If not null specifies that the default should be applied only if User_Machine equals this value. [Filter(eq)] 
-| [DefaultValueField](Systems.Core.DataEntryDefaultValues.md#DefaultValueField) | string (nullable) | The default value for Column_Name. Should be applied only if the other conditions are met. null specifies null default. 
-| [PanelName](Systems.Core.DataEntryDefaultValues.md#PanelName) | string (nullable) | When not null, specifies the panel for which the default value applies. [Filter(eq;like)] 
-| [TableName](Systems.Core.DataEntryDefaultValues.md#TableName) | string (nullable) | The table, containing the column for which the default value is specified. [Filter(eq)] 
+| [ColumnName](Systems.Core.DataEntryDefaultValues.md#columnname) | string | The column for which the default is specified. [Required] [Filter(eq)] 
+| [ConditionFormName](Systems.Core.DataEntryDefaultValues.md#conditionformname) | string (nullable) | If not null specifies that the default should be applied only if Form_Name equals the specified value. [Filter(eq)] [ORD] 
+| [ConditionUserLogin](Systems.Core.DataEntryDefaultValues.md#conditionuserlogin) | string (nullable) | If not null specifies that the default should be applied only if User_Login equals this value. [Filter(eq)] 
+| [ConditionUserMachine](Systems.Core.DataEntryDefaultValues.md#conditionusermachine) | string (nullable) | If not null specifies that the default should be applied only if User_Machine equals this value. [Filter(eq)] 
+| [DefaultValueField](Systems.Core.DataEntryDefaultValues.md#defaultvaluefield) | string (nullable) | The default value for Column_Name. Should be applied only if the other conditions are met. null specifies null default. 
+| [Id](Systems.Core.DataEntryDefaultValues.md#id) | guid |  
+| [PanelName](Systems.Core.DataEntryDefaultValues.md#panelname) | string (nullable) | When not null, specifies the panel for which the default value applies. [Filter(eq;like)] 
+| [TableName](Systems.Core.DataEntryDefaultValues.md#tablename) | string (nullable) | The table, containing the column for which the default value is specified. [Filter(eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionDocumentType](Systems.Core.DataEntryDefaultValues.md#ConditionDocumentType) | [General.DocumentTypes](General.DocumentTypes.md) (nullable) | If not null specifies that the default should be applied only if Document_Type_Id equals this value. [Filter(multi eq)] |
-| [ConditionEnterpriseCompany](Systems.Core.DataEntryDefaultValues.md#ConditionEnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | If not null specifies that the default should be applied only if Enterprise_Company_Id equals this value. [Filter(multi eq)] |
-| [ConditionRole](Systems.Core.DataEntryDefaultValues.md#ConditionRole) | [Systems.Workflow.Roles](Systems.Workflow.Roles.md) (nullable) | When not null, specifies that the default value should be applied only when the user plays the specified role. [Filter(multi eq)] |
+| [ConditionDocumentType](Systems.Core.DataEntryDefaultValues.md#conditiondocumenttype) | [General.DocumentTypes](General.DocumentTypes.md) (nullable) | If not null specifies that the default should be applied only if Document_Type_Id equals this value. [Filter(multi eq)] |
+| [ConditionEnterpriseCompany](Systems.Core.DataEntryDefaultValues.md#conditionenterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | If not null specifies that the default should be applied only if Enterprise_Company_Id equals this value. [Filter(multi eq)] |
+| [ConditionRole](Systems.Core.DataEntryDefaultValues.md#conditionrole) | [Systems.Workflow.Roles](Systems.Workflow.Roles.md) (nullable) | When not null, specifies that the default value should be applied only when the user plays the specified role. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ColumnName
 
@@ -76,6 +69,12 @@ _Type_: **string (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### PanelName
 
 > When not null, specifies the panel for which the default value applies. [Filter(eq;like)]
@@ -101,7 +100,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ConditionEnterpriseCompany
 
@@ -109,7 +107,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ConditionRole
 
@@ -117,7 +114,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Workflow.Roles](Systems.Workflow.Roles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

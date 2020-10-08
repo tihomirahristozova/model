@@ -9,16 +9,16 @@ Contains the additional participants in the activities. These are the participat
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.ActivityParticipants.md#Id) | guid |  
-| [Notes](General.Contacts.ActivityParticipants.md#Notes) | string (nullable) | Notes for this ActivityParticipant. 
-| [WorkLoadPercent](General.Contacts.ActivityParticipants.md#WorkLoadPercent) | decimal | The planned work load of the participant for this activity. [Required] [Default(1)] 
+| [Id](General.Contacts.ActivityParticipants.md#id) | guid |  
+| [Notes](General.Contacts.ActivityParticipants.md#notes) | string (nullable) | Notes for this ActivityParticipant. 
+| [WorkLoadPercent](General.Contacts.ActivityParticipants.md#workloadpercent) | decimal | The planned work load of the participant for this activity. [Required] [Default(1)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Contacts.ActivityParticipants.md#Activity) | [General.Contacts.Activities](General.Contacts.Activities.md) | The [Activity](General.Contacts.ActivityParticipants.md#Activity) to which this ActivityParticipant belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ParticipantPerson](General.Contacts.ActivityParticipants.md#ParticipantPerson) | [General.Contacts.Persons](General.Contacts.Persons.md) | The person, participating in an activity. [Required] [Filter(multi eq)] |
+| [Activity](General.Contacts.ActivityParticipants.md#activity) | [General.Contacts.Activities](General.Contacts.Activities.md) | The [Activity](General.Contacts.ActivityParticipants.md#activity) to which this ActivityParticipant belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ParticipantPerson](General.Contacts.ActivityParticipants.md#participantperson) | [General.Contacts.Persons](General.Contacts.Persons.md) | The person, participating in an activity. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Contains the additional participants in the activities. These are the participat
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes
@@ -52,11 +51,10 @@ _Default Value_: **1**
 
 ### Activity
 
-> The [Activity](General.Contacts.ActivityParticipants.md#Activity) to which this ActivityParticipant belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Activity](General.Contacts.ActivityParticipants.md#activity) to which this ActivityParticipant belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[General.Contacts.Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ParticipantPerson
 
@@ -64,7 +62,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

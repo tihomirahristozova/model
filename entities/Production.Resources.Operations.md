@@ -9,36 +9,29 @@ The different steps performed to create products. Entity: Prd_Operations
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.Operations.md#Id) | guid |  
-| [Description](Production.Resources.Operations.md#Description) | string (nullable) | The description of this Operation. 
-| [MinimumConcurrentStartTimeMinutes](Production.Resources.Operations.md#MinimumConcurrentStartTimeMinutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
-| [MoveTimeMinutes](Production.Resources.Operations.md#MoveTimeMinutes) | int32 | The time required for the product to move to the next operation. During this time no resource is allocated. [Required] [Default(0)] 
-| [Name](Production.Resources.Operations.md#Name) | string | The name of this Operation. [Required] [Filter(like)] 
-| [RunTimeMinutes](Production.Resources.Operations.md#RunTimeMinutes) | int32 | The time required to process one product lot. The run time is calculated for each produced lot. [Required] [Default(0)] 
-| [ScrapRate](Production.Resources.Operations.md#ScrapRate) | decimal (nullable) | The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated. 
-| [SetupTimeMinutes](Production.Resources.Operations.md#SetupTimeMinutes) | int32 | The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity. [Required] [Default(0)] 
-| [StandardPricePerHour](Production.Resources.Operations.md#StandardPricePerHour) | decimal | Standard price for 1 hour work for this operation. [Required] [Default(0)] 
-| [Tooling](Production.Resources.Operations.md#Tooling) | string (nullable) | Short description of the needed instruments for the operation. 
-| [UseQuantityBase](Production.Resources.Operations.md#UseQuantityBase) | [Quantity](../data-types.md#Quantity) | Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] 
-| [WaitTimeMinutes](Production.Resources.Operations.md#WaitTimeMinutes) | int32 | The time required to wait after completing the operation. During this time, the resource is still allocated to the operation. [Required] [Default(0)] 
+| [Description](Production.Resources.Operations.md#description) | string (nullable) | The description of this Operation. 
+| [Id](Production.Resources.Operations.md#id) | guid |  
+| [MinimumConcurrentStartTimeMinutes](Production.Resources.Operations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
+| [MoveTimeMinutes](Production.Resources.Operations.md#movetimeminutes) | int32 | The time required for the product to move to the next operation. During this time no resource is allocated. [Required] [Default(0)] 
+| [Name](Production.Resources.Operations.md#name) | string | The name of this Operation. [Required] [Filter(like)] 
+| [RunTimeMinutes](Production.Resources.Operations.md#runtimeminutes) | int32 | The time required to process one product lot. The run time is calculated for each produced lot. [Required] [Default(0)] 
+| [ScrapRate](Production.Resources.Operations.md#scraprate) | decimal (nullable) | The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated. 
+| [SetupTimeMinutes](Production.Resources.Operations.md#setuptimeminutes) | int32 | The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity. [Required] [Default(0)] 
+| [StandardPricePerHour](Production.Resources.Operations.md#standardpriceperhour) | decimal | Standard price for 1 hour work for this operation. [Required] [Default(0)] 
+| [Tooling](Production.Resources.Operations.md#tooling) | string (nullable) | Short description of the needed instruments for the operation. 
+| [UseQuantityBase](Production.Resources.Operations.md#usequantitybase) | [Quantity](../data-types.md#quantity) | Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] 
+| [WaitTimeMinutes](Production.Resources.Operations.md#waittimeminutes) | int32 | The time required to wait after completing the operation. During this time, the resource is still allocated to the operation. [Required] [Default(0)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [OperationGroup](Production.Resources.Operations.md#OperationGroup) | [Production.Resources.OperationGroups](Production.Resources.OperationGroups.md) | The [OperationGroup](Production.Resources.Operations.md#OperationGroup) to which this Operation belongs. [Required] [Filter(multi eq)] [Owner] |
-| [OperationInstructions](Production.Resources.Operations.md#OperationInstructions) | [Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Full instructions for the operation. [Filter(multi eq)] |
-| [WorkgroupResource](Production.Resources.Operations.md#WorkgroupResource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable) | When not null, specifies the Workgroup Resource, which is required by the operation. [Filter(multi eq)] |
+| [OperationGroup](Production.Resources.Operations.md#operationgroup) | [Production.Resources.OperationGroups](Production.Resources.OperationGroups.md) | The [OperationGroup](Production.Resources.Operations.md#operationgroup) to which this Operation belongs. [Required] [Filter(multi eq)] [Owner] |
+| [OperationInstructions](Production.Resources.Operations.md#operationinstructions) | [Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Full instructions for the operation. [Filter(multi eq)] |
+| [WorkgroupResource](Production.Resources.Operations.md#workgroupresource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable) | When not null, specifies the Workgroup Resource, which is required by the operation. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Description
 
@@ -47,6 +40,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### MinimumConcurrentStartTimeMinutes
 
@@ -120,7 +119,7 @@ _Supports Order By_: **False**
 
 > Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -139,11 +138,10 @@ _Default Value_: **0**
 
 ### OperationGroup
 
-> The [OperationGroup](Production.Resources.Operations.md#OperationGroup) to which this Operation belongs. [Required] [Filter(multi eq)] [Owner]
+> The [OperationGroup](Production.Resources.Operations.md#operationgroup) to which this Operation belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Production.Resources.OperationGroups](Production.Resources.OperationGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### OperationInstructions
 
@@ -151,7 +149,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### WorkgroupResource
 
@@ -159,7 +156,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,27 +9,29 @@ Contains the connections between process elements. Part of the process model. En
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.ProcessConnections.md#Id) | guid |  
-| [ConditionFilterXml](Systems.Bpm.ProcessConnections.md#ConditionFilterXml) | dataaccessfilter (nullable) | When not null, specifies that the flow will be followed only if the condition is matched by the current values in the process instance. [Filter(eq;like)] 
-| [IsDefault](Systems.Bpm.ProcessConnections.md#IsDefault) | boolean | Denotes this flow as the default sequence flow. It is taken only when all other flows are not valid. For example, gateways usually are followed by several conditional flows and one default flow. [Required] [Default(false)] [Filter(eq)] 
-| [Code](Systems.Bpm.ProcessConnections.md#Code) | string | Connection code, unique within the process. Used as ID for XML serialization purposes. [Required] [Default(New Guid)] [Filter(eq;like)] 
-| [Name](Systems.Bpm.ProcessConnections.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage connection name. [Required] [Filter(eq;like)] 
+| [Code](Systems.Bpm.ProcessConnections.md#code) | string | Connection code, unique within the process. Used as ID for XML serialization purposes. [Required] [Default(New Guid)] [Filter(eq;like)] 
+| [ConditionFilterXml](Systems.Bpm.ProcessConnections.md#conditionfilterxml) | dataaccessfilter (nullable) | When not null, specifies that the flow will be followed only if the condition is matched by the current values in the process instance. [Filter(eq;like)] 
+| [Id](Systems.Bpm.ProcessConnections.md#id) | guid |  
+| [IsDefault](Systems.Bpm.ProcessConnections.md#isdefault) | boolean | Denotes this flow as the default sequence flow. It is taken only when all other flows are not valid. For example, gateways usually are followed by several conditional flows and one default flow. [Required] [Default(false)] [Filter(eq)] 
+| [Name](Systems.Bpm.ProcessConnections.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage connection name. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Process](Systems.Bpm.ProcessConnections.md#Process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process version to which this connection belongs. [Required] [Filter(multi eq)] [Owner] |
-| [SourceProcessNode](Systems.Bpm.ProcessConnections.md#SourceProcessNode) | [Systems.Bpm.ProcessNodes](Systems.Bpm.ProcessNodes.md) | The element, from which the connection starts. The element should be in the same process as the connection. [Required] [Filter(multi eq)] |
-| [TargetProcessNode](Systems.Bpm.ProcessConnections.md#TargetProcessNode) | [Systems.Bpm.ProcessNodes](Systems.Bpm.ProcessNodes.md) | The element, at which the connection ends. The element should be in the same process as the connection. [Required] [Filter(multi eq)] |
+| [Process](Systems.Bpm.ProcessConnections.md#process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process version to which this connection belongs. [Required] [Filter(multi eq)] [Owner] |
+| [SourceProcessNode](Systems.Bpm.ProcessConnections.md#sourceprocessnode) | [Systems.Bpm.ProcessNodes](Systems.Bpm.ProcessNodes.md) | The element, from which the connection starts. The element should be in the same process as the connection. [Required] [Filter(multi eq)] |
+| [TargetProcessNode](Systems.Bpm.ProcessConnections.md#targetprocessnode) | [Systems.Bpm.ProcessNodes](Systems.Bpm.ProcessNodes.md) | The element, at which the connection ends. The element should be in the same process as the connection. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
 
-### Id
+### Code
 
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
+> Connection code, unique within the process. Used as ID for XML serialization purposes. [Required] [Default(New Guid)] [Filter(eq;like)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
@@ -41,6 +43,12 @@ _Type_: **dataaccessfilter (nullable)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### IsDefault
 
 > Denotes this flow as the default sequence flow. It is taken only when all other flows are not valid. For example, gateways usually are followed by several conditional flows and one default flow. [Required] [Default(false)] [Filter(eq)]
@@ -50,20 +58,11 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
-### Code
-
-> Connection code, unique within the process. Used as ID for XML serialization purposes. [Required] [Default(New Guid)] [Filter(eq;like)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
-
 ### Name
 
 > Multilanguage connection name. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -76,7 +75,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Bpm.Processes](Systems.Bpm.Processes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### SourceProcessNode
 
@@ -84,7 +82,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Bpm.ProcessNodes](Systems.Bpm.ProcessNodes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### TargetProcessNode
 
@@ -92,7 +89,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Bpm.ProcessNodes](Systems.Bpm.ProcessNodes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

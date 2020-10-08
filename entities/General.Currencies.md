@@ -9,19 +9,26 @@ List of user-defined currencies. Entity: Gen_Currencies
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Currencies.md#Id) | guid |  
-| [Name](General.Currencies.md#Name) | string | The name of this Currency. [Required] [Filter(like)] 
-| [CurrencySign](General.Currencies.md#CurrencySign) | string | The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. [Required] [Filter(eq;like)] [ORD] 
-| [ShowOrder](General.Currencies.md#ShowOrder) | int32 | The order in which to show the currency in combo boxes, etc. [Required] [Default(0)] 
+| [CurrencySign](General.Currencies.md#currencysign) | string | The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. [Required] [Filter(eq;like)] [ORD] 
+| [Id](General.Currencies.md#id) | guid |  
+| [Name](General.Currencies.md#name) | string | The name of this Currency. [Required] [Filter(like)] 
+| [ShowOrder](General.Currencies.md#showorder) | int32 | The order in which to show the currency in combo boxes, etc. [Required] [Default(0)] 
 
 
 ## Attribute Details
+
+### CurrencySign
+
+> The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. [Required] [Filter(eq;like)] [ORD]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Name
@@ -31,14 +38,6 @@ _Default Value_: **NewGuid**
 _Type_: **string**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
-
-### CurrencySign
-
-> The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. [Required] [Filter(eq;like)] [ORD]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
 
 ### ShowOrder
 

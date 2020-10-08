@@ -9,26 +9,19 @@ Represents the hierarchy of the function groups. They group the multitude of res
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.FunctionGroups.md#Id) | guid |  
-| [FullPath](Production.Resources.FunctionGroups.md#FullPath) | string | The full path of the item. [Required] [Default("")] [Filter(eq;like)] 
-| [Name](Production.Resources.FunctionGroups.md#Name) | string | The name of this FunctionGroup. [Required] [Filter(like)] 
-| [Parent](Production.Resources.FunctionGroups.md#Parent) | string | The path of the parent item. [Required] [Default("/")] [Filter(eq;like)] [ORD] 
+| [FullPath](Production.Resources.FunctionGroups.md#fullpath) | string | The full path of the item. [Required] [Default("")] [Filter(eq;like)] 
+| [Id](Production.Resources.FunctionGroups.md#id) | guid |  
+| [Name](Production.Resources.FunctionGroups.md#name) | string | The name of this FunctionGroup. [Required] [Filter(like)] 
+| [Parent](Production.Resources.FunctionGroups.md#parent) | string | The path of the parent item. [Required] [Default("/")] [Filter(eq;like)] [ORD] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Functions | [Production.Resources.Functions](Production.Resources.Functions.md) | List of [Function](Production.Resources.Functions.md) child objects, based on the [Production.Resources.Function.FunctionGroup](Production.Resources.Functions.md#FunctionGroup) back reference 
+| Functions | [Production.Resources.Functions](Production.Resources.Functions.md) | List of [Function](Production.Resources.Functions.md) child objects, based on the [Production.Resources.Function.FunctionGroup](Production.Resources.Functions.md#functiongroup) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### FullPath
 
@@ -38,6 +31,12 @@ _Type_: **string**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Default Value_: ****  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Name
 

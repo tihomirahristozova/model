@@ -9,15 +9,15 @@ Summary with the social reactions per comment and dataobject. Entity: Cmm_Social
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Cnt](Communities.SocialReactionsSummary.md#Cnt) | int64 |  
-| [ReactionType](Communities.SocialReactionsSummary.md#ReactionType) | [Communities.SocialReactionsSummaryRepository.ReactionType](Communities.SocialReactionsSummary.md#ReactionType) | The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. [Required] 
+| [Cnt](Communities.SocialReactionsSummary.md#cnt) | int64 |  
+| [ReactionType](Communities.SocialReactionsSummary.md#reactiontype) | [ReactionType](Communities.SocialReactionsSummary.md#reactiontype) | The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](Communities.SocialReactionsSummary.md#DataObject) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | . [Required] [Default(New Guid)] [Filter(multi eq)] |
-| [SocialComment](Communities.SocialReactionsSummary.md#SocialComment) | [Communities.SocialComments](Communities.SocialComments.md) |  |
+| [DataObject](Communities.SocialReactionsSummary.md#dataobject) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | . [Required] [Default(New Guid)] [Filter(multi eq)] |
+| [SocialComment](Communities.SocialReactionsSummary.md#socialcomment) | [Communities.SocialComments](Communities.SocialComments.md) |  |
 
 
 ## Attribute Details
@@ -32,9 +32,9 @@ _Supports Order By_: **False**
 
 > The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. [Required]
 
-_Type_: **[Communities.SocialReactionsSummaryRepository.ReactionType](Communities.SocialReactionsSummary.md#ReactionType)**  
-Allowed values for the [ReactionType](Communities.SocialReactionsSummary.md#ReactionType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ReactionType](Communities.SocialReactionsSummary.md#reactiontype)**  
+Allowed values for the [ReactionType](Communities.SocialReactionsSummary.md#reactiontype) data attribute  
+_Allowed Values (Communities.SocialReactionsSummaryRepository.ReactionType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -57,14 +57,12 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### SocialComment
 
 _Type_: **[Communities.SocialComments](Communities.SocialComments.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 

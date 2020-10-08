@@ -9,27 +9,28 @@ Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Distribution.SalesPersonGroups.md#Id) | guid |  
-| [FullPath](Crm.Distribution.SalesPersonGroups.md#FullPath) | string (nullable) | Full path to this item in the form /root/child1/../leaf/. [Filter(eq;like)] [ReadOnly] 
-| [Code](Crm.Distribution.SalesPersonGroups.md#Code) | string | The unique code of the SalesPersonGroup. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Crm.Distribution.SalesPersonGroups.md#Name) | string | The name of this SalesPersonGroup. [Required] [Filter(eq;like)] 
+| [Code](Crm.Distribution.SalesPersonGroups.md#code) | string | The unique code of the SalesPersonGroup. [Required] [Filter(eq;like)] [ORD] 
+| [FullPath](Crm.Distribution.SalesPersonGroups.md#fullpath) | string (nullable) | Full path to this item in the form /root/child1/../leaf/. [Filter(eq;like)] [ReadOnly] 
+| [Id](Crm.Distribution.SalesPersonGroups.md#id) | guid |  
+| [Name](Crm.Distribution.SalesPersonGroups.md#name) | string | The name of this SalesPersonGroup. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ManagerPerson](Crm.Distribution.SalesPersonGroups.md#ManagerPerson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The manager of the group. null when there is no manager. [Filter(multi eq)] |
-| [Parent](Crm.Distribution.SalesPersonGroups.md#Parent) | [Crm.Distribution.SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md) (nullable) | The parent sales person group in the hierarchy. [Filter(multi eq)] |
+| [ManagerPerson](Crm.Distribution.SalesPersonGroups.md#managerperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The manager of the group. null when there is no manager. [Filter(multi eq)] |
+| [Parent](Crm.Distribution.SalesPersonGroups.md#parent) | [Crm.Distribution.SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md) (nullable) | The parent sales person group in the hierarchy. [Filter(multi eq)] |
 
 
 ## Attribute Details
 
-### Id
+### Code
 
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
+> The unique code of the SalesPersonGroup. [Required] [Filter(eq;like)] [ORD]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
 
 ### FullPath
 
@@ -39,13 +40,11 @@ _Type_: **string (nullable)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
-### Code
+### Id
 
-> The unique code of the SalesPersonGroup. [Required] [Filter(eq;like)] [ORD]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Name
 
@@ -64,7 +63,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Parent
 
@@ -72,7 +70,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Distribution.SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

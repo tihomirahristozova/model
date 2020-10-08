@@ -9,14 +9,14 @@ Contains the documents which are referenced by each document amount. Entity: Gen
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentAmountReferencedDocuments.md#Id) | guid |  
+| [Id](General.DocumentAmountReferencedDocuments.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAmount](General.DocumentAmountReferencedDocuments.md#DocumentAmount) | [General.DocumentAmounts](General.DocumentAmounts.md) | The document amount for which the referenced document is specified. [Required] [Filter(multi eq)] [Owner] |
-| [ReferencedDocument](General.DocumentAmountReferencedDocuments.md#ReferencedDocument) | [General.Documents](General.Documents.md) | The document which is referenced by the document amount. [Required] [Filter(multi eq)] |
+| [DocumentAmount](General.DocumentAmountReferencedDocuments.md#documentamount) | [General.DocumentAmounts](General.DocumentAmounts.md) | The document amount for which the referenced document is specified. [Required] [Filter(multi eq)] [Owner] |
+| [ReferencedDocument](General.DocumentAmountReferencedDocuments.md#referenceddocument) | [General.Documents](General.Documents.md) | The document which is referenced by the document amount. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ Contains the documents which are referenced by each document amount. Entity: Gen
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -37,7 +36,6 @@ _Default Value_: **NewGuid**
 
 _Type_: **[General.DocumentAmounts](General.DocumentAmounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ReferencedDocument
 
@@ -45,7 +43,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

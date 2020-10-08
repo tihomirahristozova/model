@@ -9,21 +9,21 @@ Resource groups categorize the resources. Entity: Gen_Resource_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Resources.ResourceGroups.md#Id) | guid |  
-| [Name](General.Resources.ResourceGroups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Resource group name. Unique within its parent. [Required] [Filter(eq;like)] 
+| [Id](General.Resources.ResourceGroups.md#id) | guid |  
+| [Name](General.Resources.ResourceGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Resource group name. Unique within its parent. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](General.Resources.ResourceGroups.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. [Filter(multi eq)] |
-| [Parent](General.Resources.ResourceGroups.md#Parent) | [General.Resources.ResourceGroups](General.Resources.ResourceGroups.md) (nullable) | The parent resource group or null if this is root group. [Filter(multi eq)] |
+| [EnterpriseCompany](General.Resources.ResourceGroups.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. [Filter(multi eq)] |
+| [Parent](General.Resources.ResourceGroups.md#parent) | [General.Resources.ResourceGroups](General.Resources.ResourceGroups.md) (nullable) | The parent resource group or null if this is root group. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Resources | [General.Resources.Resources](General.Resources.Resources.md) | List of [Resource](General.Resources.Resources.md) child objects, based on the [General.Resources.Resource.ResourceGroup](General.Resources.Resources.md#ResourceGroup) back reference 
+| Resources | [General.Resources.Resources](General.Resources.Resources.md) | List of [Resource](General.Resources.Resources.md) child objects, based on the [General.Resources.Resource.ResourceGroup](General.Resources.Resources.md#resourcegroup) back reference 
 
 
 ## Attribute Details
@@ -32,14 +32,13 @@ Resource groups categorize the resources. Entity: Gen_Resource_Groups
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Name
 
 > Resource group name. Unique within its parent. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -52,7 +51,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Parent
 
@@ -60,7 +58,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Resources.ResourceGroups](General.Resources.ResourceGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

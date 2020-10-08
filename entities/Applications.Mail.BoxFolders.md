@@ -9,42 +9,41 @@ Contains the folders inside the mailboxes. Entity: Mail_Box_Folders
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Mail.BoxFolders.md#Id) | guid |  
-| [FolderName](Applications.Mail.BoxFolders.md#FolderName) | [MultilanguageString](../data-types.md#MultilanguageString) | Multi-language folder name. [Required] [Filter(eq;like)] 
-| [ServerFolderID](Applications.Mail.BoxFolders.md#ServerFolderID) | string (nullable) | ID of the folder on the mail server in the format of the mail server. [Filter(eq)] 
-| [SyncState](Applications.Mail.BoxFolders.md#SyncState) | string (nullable) | The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState. 
-| [SystemPurpose](Applications.Mail.BoxFolders.md#SystemPurpose) | [Applications.Mail.BoxFoldersRepository.SystemPurpose](Applications.Mail.BoxFolders.md#SystemPurpose) (nullable) | When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. [Filter(eq)] [ReadOnly] 
+| [FolderName](Applications.Mail.BoxFolders.md#foldername) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language folder name. [Required] [Filter(eq;like)] 
+| [Id](Applications.Mail.BoxFolders.md#id) | guid |  
+| [ServerFolderID](Applications.Mail.BoxFolders.md#serverfolderid) | string (nullable) | ID of the folder on the mail server in the format of the mail server. [Filter(eq)] 
+| [SyncState](Applications.Mail.BoxFolders.md#syncstate) | string (nullable) | The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState. 
+| [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) | [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) (nullable) | When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. [Filter(eq)] [ReadOnly] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MailBox](Applications.Mail.BoxFolders.md#MailBox) | [Applications.Mail.Boxes](Applications.Mail.Boxes.md) | The [Box](Applications.Mail.Boxes.md) to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
-| [ParentFolder](Applications.Mail.BoxFolders.md#ParentFolder) | [Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md) (nullable) | The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)] |
+| [MailBox](Applications.Mail.BoxFolders.md#mailbox) | [Applications.Mail.Boxes](Applications.Mail.Boxes.md) | The [Box](Applications.Mail.Boxes.md) to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
+| [ParentFolder](Applications.Mail.BoxFolders.md#parentfolder) | [Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md) (nullable) | The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Messages | [Applications.Mail.Messages](Applications.Mail.Messages.md) | List of [Message](Applications.Mail.Messages.md) child objects, based on the [Applications.Mail.Message.MailBoxFolder](Applications.Mail.Messages.md#MailBoxFolder) back reference 
+| Messages | [Applications.Mail.Messages](Applications.Mail.Messages.md) | List of [Message](Applications.Mail.Messages.md) child objects, based on the [Applications.Mail.Message.MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### FolderName
 
 > Multi-language folder name. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### ServerFolderID
 
@@ -66,9 +65,9 @@ _Supports Order By_: **False**
 
 > When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. [Filter(eq)] [ReadOnly]
 
-_Type_: **[Applications.Mail.BoxFoldersRepository.SystemPurpose](Applications.Mail.BoxFolders.md#SystemPurpose) (nullable)**  
-Allowed values for the [SystemPurpose](Applications.Mail.BoxFolders.md#SystemPurpose) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) (nullable)**  
+Allowed values for the [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) data attribute  
+_Allowed Values (Applications.Mail.BoxFoldersRepository.SystemPurpose Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -91,7 +90,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Mail.Boxes](Applications.Mail.Boxes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ParentFolder
 
@@ -99,7 +97,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

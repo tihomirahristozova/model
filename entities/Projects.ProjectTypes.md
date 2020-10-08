@@ -9,23 +9,23 @@ Contains the types of projects, which can be executed by the enterprise company.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.ProjectTypes.md#Id) | guid |  
-| [Notes](Projects.ProjectTypes.md#Notes) | string (nullable) | Notes. 
-| [Name](Projects.ProjectTypes.md#Name) | string | The name of the project type. [Required] [Filter(eq;like)] 
+| [Id](Projects.ProjectTypes.md#id) | guid |  
+| [Name](Projects.ProjectTypes.md#name) | string | The name of the project type. [Required] [Filter(eq;like)] 
+| [Notes](Projects.ProjectTypes.md#notes) | string (nullable) | Notes. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Projects.ProjectTypes.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null means that the project type is specific to the enterprise company. [Filter(multi eq)] |
+| [EnterpriseCompany](Projects.ProjectTypes.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null means that the project type is specific to the enterprise company. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Roles | [Projects.TypeRoles](Projects.TypeRoles.md) | List of [TypeRole](Projects.TypeRoles.md) child objects, based on the [Projects.TypeRole.ProjectType](Projects.TypeRoles.md#ProjectType) back reference 
-| WorkElements | [Projects.TypeWorkElements](Projects.TypeWorkElements.md) | List of [TypeWorkElement](Projects.TypeWorkElements.md) child objects, based on the [Projects.TypeWorkElement.ProjectType](Projects.TypeWorkElements.md#ProjectType) back reference 
-| WorkTypes | [Projects.TypeWorkTypes](Projects.TypeWorkTypes.md) | List of [TypeWorkType](Projects.TypeWorkTypes.md) child objects, based on the [Projects.TypeWorkType.ProjectType](Projects.TypeWorkTypes.md#ProjectType) back reference 
+| Roles | [Projects.TypeRoles](Projects.TypeRoles.md) | List of [TypeRole](Projects.TypeRoles.md) child objects, based on the [Projects.TypeRole.ProjectType](Projects.TypeRoles.md#projecttype) back reference 
+| WorkElements | [Projects.TypeWorkElements](Projects.TypeWorkElements.md) | List of [TypeWorkElement](Projects.TypeWorkElements.md) child objects, based on the [Projects.TypeWorkElement.ProjectType](Projects.TypeWorkElements.md#projecttype) back reference 
+| WorkTypes | [Projects.TypeWorkTypes](Projects.TypeWorkTypes.md) | List of [TypeWorkType](Projects.TypeWorkTypes.md) child objects, based on the [Projects.TypeWorkType.ProjectType](Projects.TypeWorkTypes.md#projecttype) back reference 
 
 
 ## Attribute Details
@@ -34,16 +34,7 @@ Contains the types of projects, which can be executed by the enterprise company.
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
-
-### Notes
-
-> Notes.
-
-_Type_: **string (nullable)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### Name
 
@@ -51,6 +42,14 @@ _Supports Order By_: **False**
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
+### Notes
+
+> Notes.
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 
@@ -62,7 +61,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

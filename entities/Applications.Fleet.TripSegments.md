@@ -9,29 +9,22 @@ Represents the segments which comprise the route of the trips. Entity: Fleet_Tri
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Fleet.TripSegments.md#Id) | guid |  
-| [EndingTimestamp](Applications.Fleet.TripSegments.md#EndingTimestamp) | datetime (nullable) | The ending date and time of the travel on the segment. 
-| [Mileage](Applications.Fleet.TripSegments.md#Mileage) | decimal (nullable) | Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage. 
-| [Notes](Applications.Fleet.TripSegments.md#Notes) | string (nullable) | Notes for the segment. 
-| [StartingTimestamp](Applications.Fleet.TripSegments.md#StartingTimestamp) | datetime | The starting date and time of the travel on the segment. [Required] 
+| [EndingTimestamp](Applications.Fleet.TripSegments.md#endingtimestamp) | datetime (nullable) | The ending date and time of the travel on the segment. 
+| [Id](Applications.Fleet.TripSegments.md#id) | guid |  
+| [Mileage](Applications.Fleet.TripSegments.md#mileage) | decimal (nullable) | Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage. 
+| [Notes](Applications.Fleet.TripSegments.md#notes) | string (nullable) | Notes for the segment. 
+| [StartingTimestamp](Applications.Fleet.TripSegments.md#startingtimestamp) | datetime | The starting date and time of the travel on the segment. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndingMapPoint](Applications.Fleet.TripSegments.md#EndingMapPoint) | [General.Geography.MapPoints](General.Geography.MapPoints.md) | The ending geographical point of the route segment. [Required] [Filter(multi eq)] |
-| [StartingMapPoint](Applications.Fleet.TripSegments.md#StartingMapPoint) | [General.Geography.MapPoints](General.Geography.MapPoints.md) | The starting geographical point of the route segment. [Required] [Filter(multi eq)] |
-| [Trip](Applications.Fleet.TripSegments.md#Trip) | [Applications.Fleet.Trips](Applications.Fleet.Trips.md) | The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner] |
+| [EndingMapPoint](Applications.Fleet.TripSegments.md#endingmappoint) | [General.Geography.MapPoints](General.Geography.MapPoints.md) | The ending geographical point of the route segment. [Required] [Filter(multi eq)] |
+| [StartingMapPoint](Applications.Fleet.TripSegments.md#startingmappoint) | [General.Geography.MapPoints](General.Geography.MapPoints.md) | The starting geographical point of the route segment. [Required] [Filter(multi eq)] |
+| [Trip](Applications.Fleet.TripSegments.md#trip) | [Applications.Fleet.Trips](Applications.Fleet.Trips.md) | The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### EndingTimestamp
 
@@ -40,6 +33,12 @@ _Default Value_: **NewGuid**
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Mileage
 
@@ -74,7 +73,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Geography.MapPoints](General.Geography.MapPoints.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### StartingMapPoint
 
@@ -82,7 +80,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Geography.MapPoints](General.Geography.MapPoints.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Trip
 
@@ -90,7 +87,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Fleet.Trips](Applications.Fleet.Trips.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

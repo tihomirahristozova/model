@@ -9,26 +9,19 @@ Additional product codes, categorized by coding systems. Entity: Gen_Product_Cod
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.ProductCodes.md#Id) | guid |  
-| [Active](General.Products.ProductCodes.md#Active) | boolean | True when the code is active and can be selected in new documents. [Required] [Default(true)] [Filter(eq)] 
-| [ProductCodeField](General.Products.ProductCodes.md#ProductCodeField) | string | The code of the product in the specified coding system. [Required] [Filter(eq;like)] 
+| [Active](General.Products.ProductCodes.md#active) | boolean | True when the code is active and can be selected in new documents. [Required] [Default(true)] [Filter(eq)] 
+| [Id](General.Products.ProductCodes.md#id) | guid |  
+| [ProductCodeField](General.Products.ProductCodes.md#productcodefield) | string | The code of the product in the specified coding system. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CodingSystem](General.Products.ProductCodes.md#CodingSystem) | [General.Products.CodingSystems](General.Products.CodingSystems.md) | The coding system in which the product code is specified. [Required] [Filter(multi eq)] |
-| [Product](General.Products.ProductCodes.md#Product) | [General.Products.Products](General.Products.Products.md) | The product for which the code is specified. [Required] [Filter(multi eq)] [Owner] |
+| [CodingSystem](General.Products.ProductCodes.md#codingsystem) | [General.Products.CodingSystems](General.Products.CodingSystems.md) | The coding system in which the product code is specified. [Required] [Filter(multi eq)] |
+| [Product](General.Products.ProductCodes.md#product) | [General.Products.Products](General.Products.Products.md) | The product for which the code is specified. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Active
 
@@ -38,6 +31,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### ProductCodeField
 
@@ -56,7 +55,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.CodingSystems](General.Products.CodingSystems.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Product
 
@@ -64,7 +62,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

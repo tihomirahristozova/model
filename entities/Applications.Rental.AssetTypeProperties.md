@@ -9,26 +9,19 @@ Contains the properties, which are required for each asset category. Entity: Ren
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Rental.AssetTypeProperties.md#Id) | guid |  
-| [DefaultValue](Applications.Rental.AssetTypeProperties.md#DefaultValue) | string (nullable) | The default value of the property. [Filter(like)] 
-| [DefaultValueId](Applications.Rental.AssetTypeProperties.md#DefaultValueId) | guid (nullable) | The value id of the default value of the property. [Filter(multi eq)] 
+| [DefaultValue](Applications.Rental.AssetTypeProperties.md#defaultvalue) | string (nullable) | The default value of the property. [Filter(like)] 
+| [DefaultValueId](Applications.Rental.AssetTypeProperties.md#defaultvalueid) | guid (nullable) | The value id of the default value of the property. [Filter(multi eq)] 
+| [Id](Applications.Rental.AssetTypeProperties.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Property](Applications.Rental.AssetTypeProperties.md#Property) | [General.CustomProperties](General.CustomProperties.md) | The user-defined property, which is required for assets of the specified type. [Required] [Filter(multi eq)] |
-| [RentalAssetType](Applications.Rental.AssetTypeProperties.md#RentalAssetType) | [Applications.Rental.AssetTypes](Applications.Rental.AssetTypes.md) | The [AssetType](Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Property](Applications.Rental.AssetTypeProperties.md#property) | [General.CustomProperties](General.CustomProperties.md) | The user-defined property, which is required for assets of the specified type. [Required] [Filter(multi eq)] |
+| [RentalAssetType](Applications.Rental.AssetTypeProperties.md#rentalassettype) | [Applications.Rental.AssetTypes](Applications.Rental.AssetTypes.md) | The [AssetType](Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DefaultValue
 
@@ -44,7 +37,12 @@ _Supports Order By_: **False**
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 
 ## Reference Details
@@ -55,7 +53,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### RentalAssetType
 
@@ -63,7 +60,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Rental.AssetTypes](Applications.Rental.AssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

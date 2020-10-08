@@ -9,16 +9,16 @@ Contains exchange rate for a currency against the main currency of currency dire
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.CurrencyDirectoryLines.md#Id) | guid |  
-| [RateDivisor](General.CurrencyDirectoryLines.md#RateDivisor) | decimal | The divisor for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)] 
-| [RateMultiplier](General.CurrencyDirectoryLines.md#RateMultiplier) | decimal | The multiplier for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)] 
+| [Id](General.CurrencyDirectoryLines.md#id) | guid |  
+| [RateDivisor](General.CurrencyDirectoryLines.md#ratedivisor) | decimal | The divisor for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)] 
+| [RateMultiplier](General.CurrencyDirectoryLines.md#ratemultiplier) | decimal | The multiplier for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CurrencyDirectory](General.CurrencyDirectoryLines.md#CurrencyDirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) | The [CurrencyDirectory](General.CurrencyDirectoryLines.md#CurrencyDirectory) to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [FromCurrency](General.CurrencyDirectoryLines.md#FromCurrency) | [General.Currencies](General.Currencies.md) | The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)] |
+| [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) | The [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [FromCurrency](General.CurrencyDirectoryLines.md#fromcurrency) | [General.Currencies](General.Currencies.md) | The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Contains exchange rate for a currency against the main currency of currency dire
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### RateDivisor
@@ -53,11 +52,10 @@ _Default Value_: **1**
 
 ### CurrencyDirectory
 
-> The [CurrencyDirectory](General.CurrencyDirectoryLines.md#CurrencyDirectory) to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]
+> The [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[General.CurrencyDirectories](General.CurrencyDirectories.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### FromCurrency
 
@@ -65,7 +63,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

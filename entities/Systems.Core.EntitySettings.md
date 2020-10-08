@@ -9,20 +9,20 @@ Contains entities, which have secured access. Entity: Sys_Entities
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.EntitySettings.md#Id) | guid |  
-| [Name](Systems.Core.EntitySettings.md#Name) | string | The system name of the entity, which is being secured. [Required] [Filter(eq;like)] [ORD] 
-| [LogCreate](Systems.Core.EntitySettings.md#LogCreate) | boolean | Specifies whether to log every insert for this entity. [Required] [Default(false)] (Introduced in version 18.2.100.0) 
-| [LogDelete](Systems.Core.EntitySettings.md#LogDelete) | boolean | Specifies whether to log every delete for this entity. [Required] [Default(false)] (Introduced in version 18.2.100.0) 
-| [LogReadById](Systems.Core.EntitySettings.md#LogReadById) | boolean | Specifies whether to log every load by Id for this entity. [Required] [Default(false)] (Introduced in version 18.2.100.0) 
-| [LogReadMany](Systems.Core.EntitySettings.md#LogReadMany) | boolean | Specifies whether to log every load of many records for this entity. [Required] [Default(false)] (Introduced in version 18.2.100.0) 
-| [LogUpdate](Systems.Core.EntitySettings.md#LogUpdate) | boolean | Specifies whether to log every update for this entity. [Required] [Default(false)] (Introduced in version 18.2.100.0) 
-| [TrackChangesLevel](Systems.Core.EntitySettings.md#TrackChangesLevel) | [Systems.Core.TrackChangesLevel](Systems.Core.EntitySettings.md#TrackChangesLevel) | The track changes level for the entity. [Required] [Default(0)] [Filter(multi eq)] (Introduced in version 19.1.100.0) 
+| [Id](Systems.Core.EntitySettings.md#id) | guid |  
+| [LogCreate](Systems.Core.EntitySettings.md#logcreate) | boolean | Specifies whether to log every insert for this entity. [Required] [Default(false)] (Introduced in version 18.2.100.0) 
+| [LogDelete](Systems.Core.EntitySettings.md#logdelete) | boolean | Specifies whether to log every delete for this entity. [Required] [Default(false)] (Introduced in version 18.2.100.0) 
+| [LogReadById](Systems.Core.EntitySettings.md#logreadbyid) | boolean | Specifies whether to log every load by Id for this entity. [Required] [Default(false)] (Introduced in version 18.2.100.0) 
+| [LogReadMany](Systems.Core.EntitySettings.md#logreadmany) | boolean | Specifies whether to log every load of many records for this entity. [Required] [Default(false)] (Introduced in version 18.2.100.0) 
+| [LogUpdate](Systems.Core.EntitySettings.md#logupdate) | boolean | Specifies whether to log every update for this entity. [Required] [Default(false)] (Introduced in version 18.2.100.0) 
+| [Name](Systems.Core.EntitySettings.md#name) | string | The system name of the entity, which is being secured. [Required] [Filter(eq;like)] [ORD] 
+| [TrackChangesLevel](Systems.Core.EntitySettings.md#trackchangeslevel) | [TrackChangesLevel](Systems.Core.EntitySettings.md#trackchangeslevel) | The track changes level for the entity. [Required] [Default(0)] [Filter(multi eq)] (Introduced in version 19.1.100.0) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Core.EntitySettings.md#AccessKey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, required to access the secured entity. [Filter(multi eq)] |
+| [AccessKey](Systems.Core.EntitySettings.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, required to access the secured entity. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -31,16 +31,7 @@ Contains entities, which have secured access. Entity: Sys_Entities
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
-
-### Name
-
-> The system name of the entity, which is being secured. [Required] [Filter(eq;like)] [ORD]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
 
 ### LogCreate
 
@@ -87,13 +78,21 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
+### Name
+
+> The system name of the entity, which is being secured. [Required] [Filter(eq;like)] [ORD]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
+
 ### TrackChangesLevel
 
 > The track changes level for the entity. [Required] [Default(0)] [Filter(multi eq)] (Introduced in version 19.1.100.0)
 
-_Type_: **[Systems.Core.TrackChangesLevel](Systems.Core.EntitySettings.md#TrackChangesLevel)**  
+_Type_: **[TrackChangesLevel](Systems.Core.EntitySettings.md#trackchangeslevel)**  
 Represents the different levels of tracking changes for a specific entity.  
-_Allowed Values (Enum Members)_  
+_Allowed Values (Systems.Core.TrackChangesLevel Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -116,7 +115,6 @@ _Default Value_: **0**
 
 _Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

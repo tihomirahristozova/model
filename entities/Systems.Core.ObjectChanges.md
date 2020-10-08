@@ -9,35 +9,28 @@ Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.ObjectChanges.md#Id) | guid |  
-| [ChangeType](Systems.Core.ObjectChanges.md#ChangeType) | [Systems.Core.ObjectChangesRepository.ChangeType](Systems.Core.ObjectChanges.md#ChangeType) | Type of change - Create, Update or Delete. [Required] 
-| [EntityItemId](Systems.Core.ObjectChanges.md#EntityItemId) | guid | The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq)] 
-| [RepositoryName](Systems.Core.ObjectChanges.md#RepositoryName) | string | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)] 
+| [ChangeType](Systems.Core.ObjectChanges.md#changetype) | [ChangeType](Systems.Core.ObjectChanges.md#changetype) | Type of change - Create, Update or Delete. [Required] 
+| [EntityItemId](Systems.Core.ObjectChanges.md#entityitemid) | guid | The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq)] 
+| [Id](Systems.Core.ObjectChanges.md#id) | guid |  
+| [RepositoryName](Systems.Core.ObjectChanges.md#repositoryname) | string | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ObjectChangeset](Systems.Core.ObjectChanges.md#ObjectChangeset) | [Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md) | The changeset containing this change. [Required] [Filter(multi eq)] [Owner] |
-| [RootObject](Systems.Core.ObjectChanges.md#RootObject) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)] |
+| [ObjectChangeset](Systems.Core.ObjectChanges.md#objectchangeset) | [Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md) | The changeset containing this change. [Required] [Filter(multi eq)] [Owner] |
+| [RootObject](Systems.Core.ObjectChanges.md#rootobject) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ChangeType
 
 > Type of change - Create, Update or Delete. [Required]
 
-_Type_: **[Systems.Core.ObjectChangesRepository.ChangeType](Systems.Core.ObjectChanges.md#ChangeType)**  
-Allowed values for the [ChangeType](Systems.Core.ObjectChanges.md#ChangeType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ChangeType](Systems.Core.ObjectChanges.md#changetype)**  
+Allowed values for the [ChangeType](Systems.Core.ObjectChanges.md#changetype) data attribute  
+_Allowed Values (Systems.Core.ObjectChangesRepository.ChangeType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -54,7 +47,12 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### RepositoryName
 
@@ -73,7 +71,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### RootObject
 
@@ -81,7 +78,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

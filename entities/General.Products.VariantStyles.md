@@ -9,19 +9,12 @@ Contains the different styles, which can be assigned to product variants. Entity
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.VariantStyles.md#Id) | guid |  
-| [Code](General.Products.VariantStyles.md#Code) | string | Unique code of the style. Used to generate parts of bar-codes and in other coding schemes. [Required] [Filter(eq;like)] [ORD] 
-| [Name](General.Products.VariantStyles.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this VariantStyle. [Required] [Filter(eq;like)] [ORD] 
+| [Code](General.Products.VariantStyles.md#code) | string | Unique code of the style. Used to generate parts of bar-codes and in other coding schemes. [Required] [Filter(eq;like)] [ORD] 
+| [Id](General.Products.VariantStyles.md#id) | guid |  
+| [Name](General.Products.VariantStyles.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this VariantStyle. [Required] [Filter(eq;like)] [ORD] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Code
 
@@ -31,11 +24,17 @@ _Type_: **string**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Name
 
 > The name of this VariantStyle. [Required] [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

@@ -9,17 +9,17 @@ Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transact
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#BaseCostAdjustment) | [Amount](../data-types.md#Amount) | The cost correction in Base currency. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)] 
-| [CostCorrectionAmount](Logistics.Inventory.TransactionCostCorrectionsSummary.md#CostCorrectionAmount) | [Amount](../data-types.md#Amount) | The cost correction in the original currency of the store transaction. [Currency: TransactionObj.DocumentCurrency] [Required] [Filter(eq;ge;le)] 
-| [ProductCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#ProductCostAdjustment) | [Amount](../data-types.md#Amount) | The cost correction in Products currency. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Filter(eq;ge;le)] 
-| [StoreCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#StoreCostAdjustment) | [Amount](../data-types.md#Amount) | The cost correction in Stores currency. [Currency: TransactionObj.Store.Currency] [Required] [Filter(eq;ge;le)] 
+| [BaseCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#basecostadjustment) | [Amount](../data-types.md#amount) | The cost correction in Base currency. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)] 
+| [CostCorrectionAmount](Logistics.Inventory.TransactionCostCorrectionsSummary.md#costcorrectionamount) | [Amount](../data-types.md#amount) | The cost correction in the original currency of the store transaction. [Currency: TransactionObj.DocumentCurrency] [Required] [Filter(eq;ge;le)] 
+| [ProductCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#productcostadjustment) | [Amount](../data-types.md#amount) | The cost correction in Products currency. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Filter(eq;ge;le)] 
+| [StoreCostAdjustment](Logistics.Inventory.TransactionCostCorrectionsSummary.md#storecostadjustment) | [Amount](../data-types.md#amount) | The cost correction in Stores currency. [Currency: TransactionObj.Store.Currency] [Required] [Filter(eq;ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [TransactionObj](Logistics.Inventory.TransactionCostCorrectionsSummary.md#TransactionObj) | [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md) | The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner] |
-| [TransactionLine](Logistics.Inventory.TransactionCostCorrectionsSummary.md#TransactionLine) | [Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] |
+| [TransactionLine](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionline) | [Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] |
+| [TransactionObj](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionobj) | [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md) | The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -28,7 +28,7 @@ Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transact
 
 > The cost correction in Base currency. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -36,7 +36,7 @@ _Supports Order By_: **False**
 
 > The cost correction in the original currency of the store transaction. [Currency: TransactionObj.DocumentCurrency] [Required] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -44,7 +44,7 @@ _Supports Order By_: **False**
 
 > The cost correction in Products currency. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -52,20 +52,12 @@ _Supports Order By_: **False**
 
 > The cost correction in Stores currency. [Currency: TransactionObj.Store.Currency] [Required] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
 
 ## Reference Details
-
-### TransactionObj
-
-> The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]
-
-_Type_: **[Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### TransactionLine
 
@@ -73,8 +65,14 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
+
+### TransactionObj
+
+> The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]
+
+_Type_: **[Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 
 

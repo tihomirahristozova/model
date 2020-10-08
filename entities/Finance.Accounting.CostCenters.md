@@ -9,17 +9,17 @@ Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Cent
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Accounting.CostCenters.md#Id) | guid |  
-| [Name](Finance.Accounting.CostCenters.md#Name) | string | The name of this CostCenter. [Required] [Filter(like)] 
-| [Notes](Finance.Accounting.CostCenters.md#Notes) | string (nullable) | Notes for this CostCenter. 
-| [RelativeWeight](Finance.Accounting.CostCenters.md#RelativeWeight) | decimal | The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. [Required] [Default(1)] 
+| [Id](Finance.Accounting.CostCenters.md#id) | guid |  
+| [Name](Finance.Accounting.CostCenters.md#name) | string | The name of this CostCenter. [Required] [Filter(like)] 
+| [Notes](Finance.Accounting.CostCenters.md#notes) | string (nullable) | Notes for this CostCenter. 
+| [RelativeWeight](Finance.Accounting.CostCenters.md#relativeweight) | decimal | The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. [Required] [Default(1)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Finance.Accounting.CostCenters.md#Parent) | [Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Parent cost center, null if this is root cost center. [Filter(multi eq)] |
-| [TransferCostToProfitCenter](Finance.Accounting.CostCenters.md#TransferCostToProfitCenter) | [Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. [Filter(multi eq)] |
+| [Parent](Finance.Accounting.CostCenters.md#parent) | [Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Parent cost center, null if this is root cost center. [Filter(multi eq)] |
+| [TransferCostToProfitCenter](Finance.Accounting.CostCenters.md#transfercosttoprofitcenter) | [Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -28,7 +28,6 @@ Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Cent
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Name
@@ -65,7 +64,6 @@ _Default Value_: **1**
 
 _Type_: **[Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### TransferCostToProfitCenter
 
@@ -73,7 +71,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

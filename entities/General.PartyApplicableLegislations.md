@@ -9,33 +9,26 @@ Specifies a legislation, which is applicable for a party. A single party can hav
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.PartyApplicableLegislations.md#Id) | guid |  
-| [ApplicableLegislation](General.PartyApplicableLegislations.md#ApplicableLegislation) | [General.PartyApplicableLegislationsRepository.ApplicableLegislation](General.PartyApplicableLegislations.md#ApplicableLegislation) | A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. [Required] [Filter(multi eq)] [ORD] 
-| [Notes](General.PartyApplicableLegislations.md#Notes) | string (nullable) | Notes for this PartyApplicableLegislation. [Filter(like)] 
+| [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) | [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) | A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. [Required] [Filter(multi eq)] [ORD] 
+| [Id](General.PartyApplicableLegislations.md#id) | guid |  
+| [Notes](General.PartyApplicableLegislations.md#notes) | string (nullable) | Notes for this PartyApplicableLegislation. [Filter(like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](General.PartyApplicableLegislations.md#Party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.Parties.md) to which this PartyApplicableLegislation belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Party](General.PartyApplicableLegislations.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.Parties.md) to which this PartyApplicableLegislation belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ApplicableLegislation
 
 > A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. [Required] [Filter(multi eq)] [ORD]
 
-_Type_: **[General.PartyApplicableLegislationsRepository.ApplicableLegislation](General.PartyApplicableLegislations.md#ApplicableLegislation)**  
-Allowed values for the [ApplicableLegislation](General.PartyApplicableLegislations.md#ApplicableLegislation) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation)**  
+Allowed values for the [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) data attribute  
+_Allowed Values (General.PartyApplicableLegislationsRepository.ApplicableLegislation Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -68,6 +61,12 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Notes
 
 > Notes for this PartyApplicableLegislation. [Filter(like)]
@@ -85,7 +84,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

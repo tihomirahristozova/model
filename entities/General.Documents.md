@@ -9,74 +9,65 @@ Contains all documents issued by and to the enterprise
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentId](General.Documents.md#DocumentId) | guid |              Gets the Id of the document row, related to the domain object              
-| [CompleteTime](General.Documents.md#CompleteTime) | datetime (nullable) | Exact time, when the document was last completed[Filter(ge;le)] 
-| [CreationTime](General.Documents.md#CreationTime) | datetime | Date/Time when the document was created [Required][Filter(ge;le)] 
-| [CreationUser](General.Documents.md#CreationUser) | string | The login name of the user, who created the document [Required][Filter(like)] 
-| [DocumentDate](General.Documents.md#DocumentDate) | datetime | The date on which the document was issued [Required][Filter(eq;ge;le)][ORD] 
-| [DocumentNo](General.Documents.md#DocumentNo) | string | Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD] 
-| [DocumentVersion](General.Documents.md#DocumentVersion) | int32 | [Filter(eq;ge;le)] 
-| [DocumentNotes](General.Documents.md#DocumentNotes) | string (nullable) | Notes for this Document 
-| [ParentDocumentRelationshipType](General.Documents.md#ParentDocumentRelationshipType) | [General.ParentDocumentRelationshipType](General.Documents.md#ParentDocumentRelationshipType) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
-| [PlanningOnly](General.Documents.md#PlanningOnly) | boolean (nullable) | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required] 
-| [ReadOnly](General.Documents.md#ReadOnly) | boolean | True - the document is read only; false - the document is not read only [Required] 
-| [ReferenceDate](General.Documents.md#ReferenceDate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)] 
-| [ReferenceDocumentNo](General.Documents.md#ReferenceDocumentNo) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)] 
-| [ReleaseTime](General.Documents.md#ReleaseTime) | datetime (nullable) | Exact time, when the document was first released [Filter(ge;le)] 
-| [State](General.Documents.md#State) | [General.DocumentState](General.Documents.md#State) | 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)] 
-| [Void](General.Documents.md#Void) | boolean | True if the document is null and void [Required][Filter(eq)] 
-| [VoidReason](General.Documents.md#VoidReason) | string (nullable) | Reason for voiding the document, entered by the user 
-| [VoidTime](General.Documents.md#VoidTime) | datetime (nullable) | Date/time when the document has become void 
-| [VoidUser](General.Documents.md#VoidUser) | string (nullable) | The user who voided the document 
-| [EntityName](General.Documents.md#EntityName) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
+| [CompleteTime](General.Documents.md#completetime) | datetime (nullable) | Exact time, when the document was last completed[Filter(ge;le)] 
+| [CreationTime](General.Documents.md#creationtime) | datetime | Date/Time when the document was created [Required][Filter(ge;le)] 
+| [CreationUser](General.Documents.md#creationuser) | string | The login name of the user, who created the document [Required][Filter(like)] 
+| [DocumentDate](General.Documents.md#documentdate) | datetime | The date on which the document was issued [Required][Filter(eq;ge;le)][ORD] 
+| [DocumentId](General.Documents.md#documentid) | guid |              Gets the Id of the document row, related to the domain object              
+| [DocumentNo](General.Documents.md#documentno) | string | Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD] 
+| [DocumentNotes](General.Documents.md#documentnotes) | string (nullable) | Notes for this Document 
+| [DocumentVersion](General.Documents.md#documentversion) | int32 | [Filter(eq;ge;le)] 
+| [EntityName](General.Documents.md#entityname) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
+| [ParentDocumentRelationshipType](General.Documents.md#parentdocumentrelationshiptype) | [ParentDocumentRelationshipType](General.Documents.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
+| [PlanningOnly](General.Documents.md#planningonly) | boolean (nullable) | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required] 
+| [ReadOnly](General.Documents.md#readonly) | boolean | True - the document is read only; false - the document is not read only [Required] 
+| [ReferenceDate](General.Documents.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)] 
+| [ReferenceDocumentNo](General.Documents.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)] 
+| [ReleaseTime](General.Documents.md#releasetime) | datetime (nullable) | Exact time, when the document was first released [Filter(ge;le)] 
+| [State](General.Documents.md#state) | [DocumentState](General.Documents.md#state) | 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)] 
+| [Void](General.Documents.md#void) | boolean | True if the document is null and void [Required][Filter(eq)] 
+| [VoidReason](General.Documents.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user 
+| [VoidTime](General.Documents.md#voidtime) | datetime (nullable) | Date/time when the document has become void 
+| [VoidUser](General.Documents.md#voiduser) | string (nullable) | The user who voided the document 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](General.Documents.md#AccessKey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
-| [AdjustedDocument](General.Documents.md#AdjustedDocument) | [General.Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
-| [AssignedToUser](General.Documents.md#AssignedToUser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
-| [CurrencyDirectory](General.Documents.md#CurrencyDirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
-| [DocumentType](General.Documents.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
-| [EnterpriseCompany](General.Documents.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
-| [EnterpriseCompanyLocation](General.Documents.md#EnterpriseCompanyLocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
-| [FromCompanyDivision](General.Documents.md#FromCompanyDivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
-| [FromParty](General.Documents.md#FromParty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
-| [MasterDocument](General.Documents.md#MasterDocument) | [General.Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
-| [Parent](General.Documents.md#Parent) | [General.Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
-| [PrimeCauseDocument](General.Documents.md#PrimeCauseDocument) | [General.Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
-| [ResponsiblePerson](General.Documents.md#ResponsiblePerson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
-| [ReverseOfDocument](General.Documents.md#ReverseOfDocument) | [General.Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
-| [Sequence](General.Documents.md#Sequence) | [General.Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
-| [ToCompanyDivision](General.Documents.md#ToCompanyDivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
-| [ToParty](General.Documents.md#ToParty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
-| [UserStatus](General.Documents.md#UserStatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
+| [AccessKey](General.Documents.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
+| [AdjustedDocument](General.Documents.md#adjusteddocument) | [General.Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
+| [AssignedToUser](General.Documents.md#assignedtouser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
+| [CurrencyDirectory](General.Documents.md#currencydirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
+| [DocumentType](General.Documents.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
+| [EnterpriseCompany](General.Documents.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
+| [EnterpriseCompanyLocation](General.Documents.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
+| [FromCompanyDivision](General.Documents.md#fromcompanydivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
+| [FromParty](General.Documents.md#fromparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
+| [MasterDocument](General.Documents.md#masterdocument) | [General.Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
+| [Parent](General.Documents.md#parent) | [General.Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
+| [PrimeCauseDocument](General.Documents.md#primecausedocument) | [General.Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
+| [ResponsiblePerson](General.Documents.md#responsibleperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
+| [ReverseOfDocument](General.Documents.md#reverseofdocument) | [General.Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
+| [Sequence](General.Documents.md#sequence) | [General.Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
+| [ToCompanyDivision](General.Documents.md#tocompanydivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
+| [ToParty](General.Documents.md#toparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
+| [UserStatus](General.Documents.md#userstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| Comments | [General.DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
+| DistributedAmounts | [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributedAmount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference 
 | DocumentAmounts | [General.DocumentAmounts](General.DocumentAmounts.md) |  
-| Comments | [General.DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#Document) back reference 
-| DistributedAmounts | [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributedAmount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#Document) back reference 
-| FileAttachments | [General.DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#Document) back reference 
-| LineAmounts | [General.DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#Document) back reference 
-| Prints | [General.DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#Document) back reference 
-| StateChanges | [General.DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#Document) back reference 
-| Versions | [General.DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#DocumentVersion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#Document) back reference 
+| FileAttachments | [General.DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
+| LineAmounts | [General.DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
+| Prints | [General.DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
+| StateChanges | [General.DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
+| Versions | [General.DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
 
 
 ## Attribute Details
-
-### DocumentId
-
-> Gets the Id of the document row, related to the domain object
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CompleteTime
 
@@ -112,6 +103,14 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan**
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDate**  
 
+### DocumentId
+
+> Gets the Id of the document row, related to the domain object
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### DocumentNo
 
 > Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]
@@ -119,6 +118,14 @@ _Default Value_: **CurrentDate**
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+
+### DocumentNotes
+
+> Notes for this Document
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### DocumentVersion
 
@@ -129,21 +136,21 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 _Default Value_: **1**  
 
-### DocumentNotes
+### EntityName
 
-> Notes for this Document
+> The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
 
-_Type_: **string (nullable)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Type_: **string**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **True**  
 
 ### ParentDocumentRelationshipType
 
 > Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
 
-_Type_: **[General.ParentDocumentRelationshipType](General.Documents.md#ParentDocumentRelationshipType) (nullable)**  
+_Type_: **[ParentDocumentRelationshipType](General.Documents.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
-_Allowed Values (Enum Members)_  
+_Allowed Values (General.ParentDocumentRelationshipType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -199,9 +206,9 @@ _Supports Order By_: **False**
 
 > 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]
 
-_Type_: **[General.DocumentState](General.Documents.md#State)**  
+_Type_: **[DocumentState](General.Documents.md#state)**  
 Enumeration of document system states  
-_Allowed Values (Enum Members)_  
+_Allowed Values (General.DocumentState Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -250,14 +257,6 @@ _Type_: **string (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### EntityName
-
-> The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
-
-_Type_: **string**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **True**  
-
 
 ## Reference Details
 
@@ -267,7 +266,6 @@ _Supports Order By_: **True**
 
 _Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### AdjustedDocument
 
@@ -275,7 +273,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### AssignedToUser
 
@@ -283,7 +280,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### CurrencyDirectory
 
@@ -291,7 +287,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DocumentType
 
@@ -299,7 +294,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EnterpriseCompany
 
@@ -307,7 +301,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EnterpriseCompanyLocation
 
@@ -315,7 +308,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### FromCompanyDivision
 
@@ -323,7 +315,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### FromParty
 
@@ -331,7 +322,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### MasterDocument
 
@@ -339,7 +329,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Parent
 
@@ -347,7 +336,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PrimeCauseDocument
 
@@ -355,7 +343,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ResponsiblePerson
 
@@ -363,7 +350,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ReverseOfDocument
 
@@ -371,7 +357,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Sequence
 
@@ -379,7 +364,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Sequences](General.Sequences.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ToCompanyDivision
 
@@ -387,7 +371,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
 
 ### ToParty
 
@@ -395,7 +378,6 @@ _Supports Order By_: ****
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
 
 ### UserStatus
 
@@ -403,7 +385,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

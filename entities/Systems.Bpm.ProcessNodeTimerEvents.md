@@ -9,11 +9,11 @@ Timer event definition. Currently - not used. Entity: Bpm_Process_Node_Timer_Eve
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.ProcessNodeTimerEvents.md#Id) | guid |  
-| [ProcessNodeEventId](Systems.Bpm.ProcessNodeTimerEvents.md#ProcessNodeEventId) | guid | The process node event, which this timer defines. [Required] [Filter(multi eq)] 
-| [TimeCycle](Systems.Bpm.ProcessNodeTimerEvents.md#TimeCycle) | string (nullable) | Non-null when the timer is recurring. The value conforms to the ISO-8601 format for recurring time intervals. Mutually exclusive with the other Time fields. 
-| [TimeDate](Systems.Bpm.ProcessNodeTimerEvents.md#TimeDate) | datetime (nullable) | Non-null when the timer is for specific single date and time. Mutually exclusive with the other Time fields. 
-| [TimeDuration](Systems.Bpm.ProcessNodeTimerEvents.md#TimeDuration) | string (nullable) | Non-null when the timer event is for time duration. The value conforms to the ISO-8601 format for time interval representations. Mutually exclusive with the other Time fields. 
+| [Id](Systems.Bpm.ProcessNodeTimerEvents.md#id) | guid |  
+| [ProcessNodeEventId](Systems.Bpm.ProcessNodeTimerEvents.md#processnodeeventid) | guid | The process node event, which this timer defines. [Required] [Filter(multi eq)] 
+| [TimeCycle](Systems.Bpm.ProcessNodeTimerEvents.md#timecycle) | string (nullable) | Non-null when the timer is recurring. The value conforms to the ISO-8601 format for recurring time intervals. Mutually exclusive with the other Time fields. 
+| [TimeDate](Systems.Bpm.ProcessNodeTimerEvents.md#timedate) | datetime (nullable) | Non-null when the timer is for specific single date and time. Mutually exclusive with the other Time fields. 
+| [TimeDuration](Systems.Bpm.ProcessNodeTimerEvents.md#timeduration) | string (nullable) | Non-null when the timer event is for time duration. The value conforms to the ISO-8601 format for time interval representations. Mutually exclusive with the other Time fields. 
 
 
 ## Attribute Details
@@ -22,7 +22,6 @@ Timer event definition. Currently - not used. Entity: Bpm_Process_Node_Timer_Eve
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### ProcessNodeEventId
@@ -31,7 +30,6 @@ _Default Value_: **NewGuid**
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### TimeCycle
 

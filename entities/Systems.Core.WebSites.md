@@ -9,19 +9,19 @@ Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.WebSites.md#Id) | guid |  
-| [IsActive](Systems.Core.WebSites.md#IsActive) | boolean | Indicates whether the web site is active and will be instantiated upon next web server restart. [Required] [Default(true)] [Filter(eq)] 
-| [Notes](Systems.Core.WebSites.md#Notes) | string (nullable) | Notes for this WebSite. 
-| [RelativeUrl](Systems.Core.WebSites.md#RelativeUrl) | string (nullable) | The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. 
-| [WebSiteType](Systems.Core.WebSites.md#WebSiteType) | [Systems.Core.WebSitesRepository.WebSiteType](Systems.Core.WebSites.md#WebSiteType) | The type of web site - Api, Client Center, Id, etc. [Required] [Filter(multi eq)] 
+| [Id](Systems.Core.WebSites.md#id) | guid |  
+| [IsActive](Systems.Core.WebSites.md#isactive) | boolean | Indicates whether the web site is active and will be instantiated upon next web server restart. [Required] [Default(true)] [Filter(eq)] 
+| [Notes](Systems.Core.WebSites.md#notes) | string (nullable) | Notes for this WebSite. 
+| [RelativeUrl](Systems.Core.WebSites.md#relativeurl) | string (nullable) | The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. 
+| [WebSiteType](Systems.Core.WebSites.md#websitetype) | [WebSiteType](Systems.Core.WebSites.md#websitetype) | The type of web site - Api, Client Center, Id, etc. [Required] [Filter(multi eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Systems.Core.WebSites.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)] |
-| [TrustedApplication](Systems.Core.WebSites.md#TrustedApplication) | [Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md) (nullable) | The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1.100.0) |
-| [WebHost](Systems.Core.WebSites.md#WebHost) | [Systems.Core.WebHosts](Systems.Core.WebHosts.md) (nullable) | The web host in which to host the site. [Filter(multi eq)] |
+| [EnterpriseCompany](Systems.Core.WebSites.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)] |
+| [TrustedApplication](Systems.Core.WebSites.md#trustedapplication) | [Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md) (nullable) | The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1.100.0) |
+| [WebHost](Systems.Core.WebSites.md#webhost) | [Systems.Core.WebHosts](Systems.Core.WebHosts.md) (nullable) | The web host in which to host the site. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -30,7 +30,6 @@ Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsActive
@@ -62,9 +61,9 @@ _Supports Order By_: **False**
 
 > The type of web site - Api, Client Center, Id, etc. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Core.WebSitesRepository.WebSiteType](Systems.Core.WebSites.md#WebSiteType)**  
-Allowed values for the [WebSiteType](Systems.Core.WebSites.md#WebSiteType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[WebSiteType](Systems.Core.WebSites.md#websitetype)**  
+Allowed values for the [WebSiteType](Systems.Core.WebSites.md#websitetype) data attribute  
+_Allowed Values (Systems.Core.WebSitesRepository.WebSiteType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -93,7 +92,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### TrustedApplication
 
@@ -101,7 +99,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### WebHost
 
@@ -109,7 +106,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Core.WebHosts](Systems.Core.WebHosts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

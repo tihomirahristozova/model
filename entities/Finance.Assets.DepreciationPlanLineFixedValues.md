@@ -9,32 +9,25 @@ When specified, contains user-defined asset depreciation values for each depreci
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Assets.DepreciationPlanLineFixedValues.md#Id) | guid |  
-| [DepreciationValue](Finance.Assets.DepreciationPlanLineFixedValues.md#DepreciationValue) | [Amount](../data-types.md#Amount) | Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. [Currency: DepreciationPlanLine.Asset.ValuationCurrency] [Required] [Default(0)] 
-| [FixedValuePeriodMonth](Finance.Assets.DepreciationPlanLineFixedValues.md#FixedValuePeriodMonth) | byte | Month of the period for which the depreciation value is fixed. [Required] 
-| [FixedValuePeriodYear](Finance.Assets.DepreciationPlanLineFixedValues.md#FixedValuePeriodYear) | int16 | Year of the period for which the depreciation value is fixed. [Required] 
+| [DepreciationValue](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationvalue) | [Amount](../data-types.md#amount) | Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. [Currency: DepreciationPlanLine.Asset.ValuationCurrency] [Required] [Default(0)] 
+| [FixedValuePeriodMonth](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodmonth) | byte | Month of the period for which the depreciation value is fixed. [Required] 
+| [FixedValuePeriodYear](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodyear) | int16 | Year of the period for which the depreciation value is fixed. [Required] 
+| [Id](Finance.Assets.DepreciationPlanLineFixedValues.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#DepreciationPlanLine) | [Finance.Assets.DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md) | The [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#DepreciationPlanLine) to which this DepreciationPlanLineFixedValue belongs. [Required] [Filter(multi eq)] [Owner] |
+| [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationplanline) | [Finance.Assets.DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md) | The [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationplanline) to which this DepreciationPlanLineFixedValue belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DepreciationValue
 
 > Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. [Currency: DepreciationPlanLine.Asset.ValuationCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -55,16 +48,21 @@ _Type_: **int16**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 
 ## Reference Details
 
 ### DepreciationPlanLine
 
-> The [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#DepreciationPlanLine) to which this DepreciationPlanLineFixedValue belongs. [Required] [Filter(multi eq)] [Owner]
+> The [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationplanline) to which this DepreciationPlanLineFixedValue belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Finance.Assets.DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

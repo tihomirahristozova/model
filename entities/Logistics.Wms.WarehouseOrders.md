@@ -9,21 +9,21 @@ Contains order for internal warehouse operation or plan for execution of warehou
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Wms.WarehouseOrders.md#Id) | guid |  
+| [Id](Logistics.Wms.WarehouseOrders.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Wms.WarehouseOrders.md#Document) | [General.Documents](General.Documents.md) | The [Document](General.Documents.md) to which this WarehouseOrder belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Warehouse](Logistics.Wms.WarehouseOrders.md#Warehouse) | [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md) | The warehouse, where the order will be executed. [Required] [Filter(multi eq)] |
-| [WarehouseWorker](Logistics.Wms.WarehouseOrders.md#WarehouseWorker) | [Logistics.Wms.WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)] |
+| [Document](Logistics.Wms.WarehouseOrders.md#document) | [General.Documents](General.Documents.md) | The [Document](General.Documents.md) to which this WarehouseOrder belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Warehouse](Logistics.Wms.WarehouseOrders.md#warehouse) | [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md) | The warehouse, where the order will be executed. [Required] [Filter(multi eq)] |
+| [WarehouseWorker](Logistics.Wms.WarehouseOrders.md#warehouseworker) | [Logistics.Wms.WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Lines | [Logistics.Wms.WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) | List of [WarehouseOrderLine](Logistics.Wms.WarehouseOrderLines.md) child objects, based on the [Logistics.Wms.WarehouseOrderLine.WarehouseOrder](Logistics.Wms.WarehouseOrderLines.md#WarehouseOrder) back reference 
+| Lines | [Logistics.Wms.WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) | List of [WarehouseOrderLine](Logistics.Wms.WarehouseOrderLines.md) child objects, based on the [Logistics.Wms.WarehouseOrderLine.WarehouseOrder](Logistics.Wms.WarehouseOrderLines.md#warehouseorder) back reference 
 
 
 ## Attribute Details
@@ -32,7 +32,6 @@ Contains order for internal warehouse operation or plan for execution of warehou
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -44,7 +43,6 @@ _Default Value_: **NewGuid**
 
 _Type_: **[General.Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Warehouse
 
@@ -52,7 +50,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### WarehouseWorker
 
@@ -60,7 +57,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Wms.WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

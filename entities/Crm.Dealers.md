@@ -9,27 +9,20 @@ External dealers. Entity: Crm_Dealers
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Dealers.md#Id) | guid |  
-| [FromDate](Crm.Dealers.md#FromDate) | datetime (nullable) | Start of the dealer relationship. [Default(Today)] [Filter(ge;le)] 
-| [Notes](Crm.Dealers.md#Notes) | string (nullable) | Notes for this Dealer. 
-| [ThruDate](Crm.Dealers.md#ThruDate) | datetime (nullable) | Termination date of the dealership. null for active dealers. [Filter(ge;le)] 
+| [FromDate](Crm.Dealers.md#fromdate) | datetime (nullable) | Start of the dealer relationship. [Default(Today)] [Filter(ge;le)] 
+| [Id](Crm.Dealers.md#id) | guid |  
+| [Notes](Crm.Dealers.md#notes) | string (nullable) | Notes for this Dealer. 
+| [ThruDate](Crm.Dealers.md#thrudate) | datetime (nullable) | Termination date of the dealership. null for active dealers. [Filter(ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Dealers.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this dealer is recorded. [Filter(multi eq)] |
-| [Party](Crm.Dealers.md#Party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The base party record of the dealer. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](Crm.Dealers.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this dealer is recorded. [Filter(multi eq)] |
+| [Party](Crm.Dealers.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The base party record of the dealer. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### FromDate
 
@@ -39,6 +32,12 @@ _Type_: **datetime (nullable)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Notes
 
@@ -65,7 +64,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Party
 
@@ -73,7 +71,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

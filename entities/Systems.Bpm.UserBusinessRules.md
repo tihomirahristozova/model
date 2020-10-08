@@ -9,35 +9,36 @@ Represents user-defined business rule. Entity: Sys_User_Business_Rules
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.UserBusinessRules.md#Id) | guid |  
-| [Icon](Systems.Bpm.UserBusinessRules.md#Icon) | byte[] (nullable) | Visual icon of the rule in .PNG format. 
-| [IsActive](Systems.Bpm.UserBusinessRules.md#IsActive) | boolean | Specifies whether the rule is activated. [Required] [Default(false)] [Filter(eq)] 
-| [Layer](Systems.Bpm.UserBusinessRules.md#Layer) | [Systems.Bpm.UserBusinessRulesRepository.Layer](Systems.Bpm.UserBusinessRules.md#Layer) | Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). [Required] [Default("BKE")] [Filter(multi eq)] 
-| [Notes](Systems.Bpm.UserBusinessRules.md#Notes) | string (nullable) | Notes for this UserBusinessRule. 
-| [RepositoryName](Systems.Bpm.UserBusinessRules.md#RepositoryName) | string | The name of the repository, for which this business rule is defined. [Required] [Filter(eq;like)] 
-| [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#ScriptLanguage) | [Systems.Bpm.UserBusinessRulesRepository.ScriptLanguage](Systems.Bpm.UserBusinessRules.md#ScriptLanguage) | The programming language used to define the rule actions. [Required] [Default("Integrated")] 
-| [ScriptText](Systems.Bpm.UserBusinessRules.md#ScriptText) | string (nullable) | The program code used to define the rule actions. 
-| [Code](Systems.Bpm.UserBusinessRules.md#Code) | string | The unique code of the UserBusinessRule. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Systems.Bpm.UserBusinessRules.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this UserBusinessRule. [Required] [Filter(like)] 
-| [UserStartable](Systems.Bpm.UserBusinessRules.md#UserStartable) | boolean (nullable) | Specifies, that the rule can be manually started by the user. [Default(false)] [Filter(eq)] 
+| [Code](Systems.Bpm.UserBusinessRules.md#code) | string | The unique code of the UserBusinessRule. [Required] [Filter(eq;like)] [ORD] 
+| [Icon](Systems.Bpm.UserBusinessRules.md#icon) | byte[] (nullable) | Visual icon of the rule in .PNG format. 
+| [Id](Systems.Bpm.UserBusinessRules.md#id) | guid |  
+| [IsActive](Systems.Bpm.UserBusinessRules.md#isactive) | boolean | Specifies whether the rule is activated. [Required] [Default(false)] [Filter(eq)] 
+| [Layer](Systems.Bpm.UserBusinessRules.md#layer) | [Layer](Systems.Bpm.UserBusinessRules.md#layer) | Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). [Required] [Default("BKE")] [Filter(multi eq)] 
+| [Name](Systems.Bpm.UserBusinessRules.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this UserBusinessRule. [Required] [Filter(like)] 
+| [Notes](Systems.Bpm.UserBusinessRules.md#notes) | string (nullable) | Notes for this UserBusinessRule. 
+| [RepositoryName](Systems.Bpm.UserBusinessRules.md#repositoryname) | string | The name of the repository, for which this business rule is defined. [Required] [Filter(eq;like)] 
+| [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | The programming language used to define the rule actions. [Required] [Default("Integrated")] 
+| [ScriptText](Systems.Bpm.UserBusinessRules.md#scripttext) | string (nullable) | The program code used to define the rule actions. 
+| [UserStartable](Systems.Bpm.UserBusinessRules.md#userstartable) | boolean (nullable) | Specifies, that the rule can be manually started by the user. [Default(false)] [Filter(eq)] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Actions | [Systems.Bpm.UserBusinessRuleActions](Systems.Bpm.UserBusinessRuleActions.md) | List of [UserBusinessRuleAction](Systems.Bpm.UserBusinessRuleActions.md) child objects, based on the [Systems.Bpm.UserBusinessRuleAction.UserBusinessRule](Systems.Bpm.UserBusinessRuleActions.md#UserBusinessRule) back reference 
-| Conditions | [Systems.Bpm.UserBusinessRuleConditions](Systems.Bpm.UserBusinessRuleConditions.md) | List of [UserBusinessRuleCondition](Systems.Bpm.UserBusinessRuleConditions.md) child objects, based on the [Systems.Bpm.UserBusinessRuleCondition.UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#UserBusinessRule) back reference 
-| Events | [Systems.Bpm.UserBusinessRuleEvents](Systems.Bpm.UserBusinessRuleEvents.md) | List of [UserBusinessRuleEvent](Systems.Bpm.UserBusinessRuleEvents.md) child objects, based on the [Systems.Bpm.UserBusinessRuleEvent.UserBusinessRule](Systems.Bpm.UserBusinessRuleEvents.md#UserBusinessRule) back reference 
+| Actions | [Systems.Bpm.UserBusinessRuleActions](Systems.Bpm.UserBusinessRuleActions.md) | List of [UserBusinessRuleAction](Systems.Bpm.UserBusinessRuleActions.md) child objects, based on the [Systems.Bpm.UserBusinessRuleAction.UserBusinessRule](Systems.Bpm.UserBusinessRuleActions.md#userbusinessrule) back reference 
+| Conditions | [Systems.Bpm.UserBusinessRuleConditions](Systems.Bpm.UserBusinessRuleConditions.md) | List of [UserBusinessRuleCondition](Systems.Bpm.UserBusinessRuleConditions.md) child objects, based on the [Systems.Bpm.UserBusinessRuleCondition.UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#userbusinessrule) back reference 
+| Events | [Systems.Bpm.UserBusinessRuleEvents](Systems.Bpm.UserBusinessRuleEvents.md) | List of [UserBusinessRuleEvent](Systems.Bpm.UserBusinessRuleEvents.md) child objects, based on the [Systems.Bpm.UserBusinessRuleEvent.UserBusinessRule](Systems.Bpm.UserBusinessRuleEvents.md#userbusinessrule) back reference 
 
 
 ## Attribute Details
 
-### Id
+### Code
 
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
+> The unique code of the UserBusinessRule. [Required] [Filter(eq;like)] [ORD]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
 
 ### Icon
 
@@ -46,6 +47,12 @@ _Default Value_: **NewGuid**
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsActive
 
@@ -60,9 +67,9 @@ _Default Value_: **False**
 
 > Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). [Required] [Default("BKE")] [Filter(multi eq)]
 
-_Type_: **[Systems.Bpm.UserBusinessRulesRepository.Layer](Systems.Bpm.UserBusinessRules.md#Layer)**  
-Allowed values for the [Layer](Systems.Bpm.UserBusinessRules.md#Layer) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[Layer](Systems.Bpm.UserBusinessRules.md#layer)**  
+Allowed values for the [Layer](Systems.Bpm.UserBusinessRules.md#layer) data attribute  
+_Allowed Values (Systems.Bpm.UserBusinessRulesRepository.Layer Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -73,6 +80,14 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **BackEnd**  
+
+### Name
+
+> The name of this UserBusinessRule. [Required] [Filter(like)]
+
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
 
 ### Notes
 
@@ -94,9 +109,9 @@ _Supports Order By_: **False**
 
 > The programming language used to define the rule actions. [Required] [Default("Integrated")]
 
-_Type_: **[Systems.Bpm.UserBusinessRulesRepository.ScriptLanguage](Systems.Bpm.UserBusinessRules.md#ScriptLanguage)**  
-Allowed values for the [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#ScriptLanguage) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage)**  
+Allowed values for the [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) data attribute  
+_Allowed Values (Systems.Bpm.UserBusinessRulesRepository.ScriptLanguage Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -113,22 +128,6 @@ _Default Value_: **Integrated**
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### Code
-
-> The unique code of the UserBusinessRule. [Required] [Filter(eq;like)] [ORD]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-
-### Name
-
-> The name of this UserBusinessRule. [Required] [Filter(like)]
-
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
-_Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
 ### UserStartable

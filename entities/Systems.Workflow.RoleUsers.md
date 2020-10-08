@@ -9,14 +9,14 @@ The roles "played" by the security users. Entity: Wf_Role_Users
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Workflow.RoleUsers.md#Id) | guid |  
+| [Id](Systems.Workflow.RoleUsers.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Role](Systems.Workflow.RoleUsers.md#Role) | [Systems.Workflow.Roles](Systems.Workflow.Roles.md) | The [Role](Systems.Workflow.RoleUsers.md#Role) to which this RoleUser belongs. [Required] [Filter(multi eq)] [Owner] |
-| [User](Systems.Workflow.RoleUsers.md#User) | [Systems.Security.Users](Systems.Security.Users.md) | The user, which plays the role. [Required] [Filter(multi eq)] |
+| [Role](Systems.Workflow.RoleUsers.md#role) | [Systems.Workflow.Roles](Systems.Workflow.Roles.md) | The [Role](Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. [Required] [Filter(multi eq)] [Owner] |
+| [User](Systems.Workflow.RoleUsers.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user, which plays the role. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ The roles "played" by the security users. Entity: Wf_Role_Users
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -33,11 +32,10 @@ _Default Value_: **NewGuid**
 
 ### Role
 
-> The [Role](Systems.Workflow.RoleUsers.md#Role) to which this RoleUser belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Role](Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Systems.Workflow.Roles](Systems.Workflow.Roles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### User
 
@@ -45,7 +43,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

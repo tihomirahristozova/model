@@ -9,33 +9,26 @@ Represents the different types of tasks, which can be included in the projects. 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.TaskTypes.md#Id) | guid |  
-| [Description](Projects.TaskTypes.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Multilanguage description of the task type. 
-| [DisplayOrder](Projects.TaskTypes.md#DisplayOrder) | int32 | Display order position of the task. Lowest numbers are shown first (on top). [Required] [Default(1)] 
-| [Icon](Projects.TaskTypes.md#Icon) | byte[] (nullable) | Icon representing the task type. Preferrably 32x32 pixels. 
-| [Name](Projects.TaskTypes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The multilanguage task type name. [Required] [Filter(multi eq;like)] 
+| [Description](Projects.TaskTypes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Multilanguage description of the task type. 
+| [DisplayOrder](Projects.TaskTypes.md#displayorder) | int32 | Display order position of the task. Lowest numbers are shown first (on top). [Required] [Default(1)] 
+| [Icon](Projects.TaskTypes.md#icon) | byte[] (nullable) | Icon representing the task type. Preferrably 32x32 pixels. 
+| [Id](Projects.TaskTypes.md#id) | guid |  
+| [Name](Projects.TaskTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The multilanguage task type name. [Required] [Filter(multi eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectType](Projects.TaskTypes.md#ProjectType) | [Projects.ProjectTypes](Projects.ProjectTypes.md) (nullable) | When not null, specifies that this task type can be used only for projects of the specified type. [Filter(multi eq)] |
+| [ProjectType](Projects.TaskTypes.md#projecttype) | [Projects.ProjectTypes](Projects.ProjectTypes.md) (nullable) | When not null, specifies that this task type can be used only for projects of the specified type. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Description
 
 > Multilanguage description of the task type.
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -56,11 +49,17 @@ _Type_: **byte[] (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Name
 
 > The multilanguage task type name. [Required] [Filter(multi eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -73,7 +72,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Projects.ProjectTypes](Projects.ProjectTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

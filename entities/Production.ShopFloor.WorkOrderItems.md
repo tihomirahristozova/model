@@ -9,51 +9,44 @@ The different items that are produced with a work order. Entity: Prd_Work_Order_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.ShopFloor.WorkOrderItems.md#Id) | guid |  
-| [CompletionDate](Production.ShopFloor.WorkOrderItems.md#CompletionDate) | datetime (nullable) | The date, when the item should be completed. null means that there is no constraint for completion date. 
-| [LineOrd](Production.ShopFloor.WorkOrderItems.md#LineOrd) | int32 | The order of the line within the work order. [Required] [Filter(eq;like)] 
-| [LotSize](Production.ShopFloor.WorkOrderItems.md#LotSize) | [Quantity](../data-types.md#Quantity) | Quantity produced in one production run. [Unit: ProducedQuantityUnit] [Required] [Default(1)] 
-| [Notes](Production.ShopFloor.WorkOrderItems.md#Notes) | string (nullable) | Notes for this WorkOrderItem. 
-| [ParentLineId](Production.ShopFloor.WorkOrderItems.md#ParentLineId) | guid (nullable) | If not null contains the Id of the line of the parent document, that created the current row. [Filter(multi eq)] 
-| [ParentLineNo](Production.ShopFloor.WorkOrderItems.md#ParentLineNo) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. [Filter(eq)] 
-| [Priority](Production.ShopFloor.WorkOrderItems.md#Priority) | [Production.ShopFloor.WorkOrderItemsRepository.Priority](Production.ShopFloor.WorkOrderItems.md#Priority) | Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest. [Required] [Default(3)] 
-| [ProducedQuantity](Production.ShopFloor.WorkOrderItems.md#ProducedQuantity) | [Quantity](../data-types.md#Quantity) | The quantity produced in the operation. [Unit: ProducedQuantityUnit] [Required] [Default(1)] 
-| [ProducedQuantityBase](Production.ShopFloor.WorkOrderItems.md#ProducedQuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalence of Produced Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
-| [ProducedStandardQuantityBase](Production.ShopFloor.WorkOrderItems.md#ProducedStandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
-| [ReleaseDate](Production.ShopFloor.WorkOrderItems.md#ReleaseDate) | datetime (nullable) | The date, when the item is released to production. null means that still there is no plan when the item will be released to production. 
-| [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItems.md#ScheduledEndDateTime) | datetime (nullable) | Date and time when the production of this item is scheduled to end. 
-| [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItems.md#ScheduledStartDateTime) | datetime (nullable) | Date and time when the production of this item is scheduled to begin. 
+| [CompletionDate](Production.ShopFloor.WorkOrderItems.md#completiondate) | datetime (nullable) | The date, when the item should be completed. null means that there is no constraint for completion date. 
+| [Id](Production.ShopFloor.WorkOrderItems.md#id) | guid |  
+| [LineOrd](Production.ShopFloor.WorkOrderItems.md#lineord) | int32 | The order of the line within the work order. [Required] [Filter(eq;like)] 
+| [LotSize](Production.ShopFloor.WorkOrderItems.md#lotsize) | [Quantity](../data-types.md#quantity) | Quantity produced in one production run. [Unit: ProducedQuantityUnit] [Required] [Default(1)] 
+| [Notes](Production.ShopFloor.WorkOrderItems.md#notes) | string (nullable) | Notes for this WorkOrderItem. 
+| [ParentLineId](Production.ShopFloor.WorkOrderItems.md#parentlineid) | guid (nullable) | If not null contains the Id of the line of the parent document, that created the current row. [Filter(multi eq)] 
+| [ParentLineNo](Production.ShopFloor.WorkOrderItems.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. [Filter(eq)] 
+| [Priority](Production.ShopFloor.WorkOrderItems.md#priority) | [Priority](Production.ShopFloor.WorkOrderItems.md#priority) | Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest. [Required] [Default(3)] 
+| [ProducedQuantity](Production.ShopFloor.WorkOrderItems.md#producedquantity) | [Quantity](../data-types.md#quantity) | The quantity produced in the operation. [Unit: ProducedQuantityUnit] [Required] [Default(1)] 
+| [ProducedQuantityBase](Production.ShopFloor.WorkOrderItems.md#producedquantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Produced Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
+| [ProducedStandardQuantityBase](Production.ShopFloor.WorkOrderItems.md#producedstandardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [ReleaseDate](Production.ShopFloor.WorkOrderItems.md#releasedate) | datetime (nullable) | The date, when the item is released to production. null means that still there is no plan when the item will be released to production. 
+| [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItems.md#scheduledenddatetime) | datetime (nullable) | Date and time when the production of this item is scheduled to end. 
+| [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItems.md#scheduledstartdatetime) | datetime (nullable) | Date and time when the production of this item is scheduled to begin. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Lot](Production.ShopFloor.WorkOrderItems.md#Lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the produced product. [Filter(multi eq)] |
-| [OutputStore](Production.ShopFloor.WorkOrderItems.md#OutputStore) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | Output store for the production. [Filter(multi eq)] |
-| [ParentDocument](Production.ShopFloor.WorkOrderItems.md#ParentDocument) | [General.Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
-| [ProducedQuantityUnit](Production.ShopFloor.WorkOrderItems.md#ProducedQuantityUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of the quantity produced in the operation. [Required] [Filter(multi eq)] |
-| [ProductCode](Production.ShopFloor.WorkOrderItems.md#ProductCode) | [General.Products.ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. [Filter(multi eq)] |
-| [Product](Production.ShopFloor.WorkOrderItems.md#Product) | [General.Products.Products](General.Products.Products.md) | The Id of the produced product. [Required] [Filter(multi eq)] |
-| [Recipe](Production.ShopFloor.WorkOrderItems.md#Recipe) | [Production.Technologies.Recipes](Production.Technologies.Recipes.md) (nullable) | The base recipe. null means that the item is produced without recipe. [Filter(multi eq)] |
-| [SerialNumber](Production.ShopFloor.WorkOrderItems.md#SerialNumber) | [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | If not null, specifies that the product was (has to be) produced with specific serial number. [Filter(multi eq)] |
-| [StoreBin](Production.ShopFloor.WorkOrderItems.md#StoreBin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The store bin in which to store the products. [Filter(multi eq)] |
-| [WorkOrder](Production.ShopFloor.WorkOrderItems.md#WorkOrder) | [Production.ShopFloor.WorkOrders](Production.ShopFloor.WorkOrders.md) | The Id of the work order, containing the item. [Required] [Filter(multi eq)] [Owner] |
+| [Lot](Production.ShopFloor.WorkOrderItems.md#lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the produced product. [Filter(multi eq)] |
+| [OutputStore](Production.ShopFloor.WorkOrderItems.md#outputstore) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | Output store for the production. [Filter(multi eq)] |
+| [ParentDocument](Production.ShopFloor.WorkOrderItems.md#parentdocument) | [General.Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
+| [ProducedQuantityUnit](Production.ShopFloor.WorkOrderItems.md#producedquantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of the quantity produced in the operation. [Required] [Filter(multi eq)] |
+| [Product](Production.ShopFloor.WorkOrderItems.md#product) | [General.Products.Products](General.Products.Products.md) | The Id of the produced product. [Required] [Filter(multi eq)] |
+| [ProductCode](Production.ShopFloor.WorkOrderItems.md#productcode) | [General.Products.ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. [Filter(multi eq)] |
+| [Recipe](Production.ShopFloor.WorkOrderItems.md#recipe) | [Production.Technologies.Recipes](Production.Technologies.Recipes.md) (nullable) | The base recipe. null means that the item is produced without recipe. [Filter(multi eq)] |
+| [SerialNumber](Production.ShopFloor.WorkOrderItems.md#serialnumber) | [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | If not null, specifies that the product was (has to be) produced with specific serial number. [Filter(multi eq)] |
+| [StoreBin](Production.ShopFloor.WorkOrderItems.md#storebin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The store bin in which to store the products. [Filter(multi eq)] |
+| [WorkOrder](Production.ShopFloor.WorkOrderItems.md#workorder) | [Production.ShopFloor.WorkOrders](Production.ShopFloor.WorkOrders.md) | The Id of the work order, containing the item. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Operations | [Production.ShopFloor.WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) | List of [WorkOrderItemOperation](Production.ShopFloor.WorkOrderItemOperations.md) child objects, based on the [Production.ShopFloor.WorkOrderItemOperation.WorkOrderItem](Production.ShopFloor.WorkOrderItemOperations.md#WorkOrderItem) back reference 
+| Operations | [Production.ShopFloor.WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) | List of [WorkOrderItemOperation](Production.ShopFloor.WorkOrderItemOperations.md) child objects, based on the [Production.ShopFloor.WorkOrderItemOperation.WorkOrderItem](Production.ShopFloor.WorkOrderItemOperations.md#workorderitem) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CompletionDate
 
@@ -68,6 +61,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `obj.WorkOrder.CompletionDate`
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### LineOrd
 
 > The order of the line within the work order. [Required] [Filter(eq;like)]
@@ -85,7 +84,7 @@ _Front-End Recalc Expressions:_
 
 > Quantity produced in one production run. [Unit: ProducedQuantityUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -106,7 +105,6 @@ _Supports Order By_: **False**
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ParentLineNo
 
@@ -120,9 +118,9 @@ _Supports Order By_: **False**
 
 > Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest. [Required] [Default(3)]
 
-_Type_: **[Production.ShopFloor.WorkOrderItemsRepository.Priority](Production.ShopFloor.WorkOrderItems.md#Priority)**  
-Allowed values for the [Priority](Production.ShopFloor.WorkOrderItems.md#Priority) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[Priority](Production.ShopFloor.WorkOrderItems.md#priority)**  
+Allowed values for the [Priority](Production.ShopFloor.WorkOrderItems.md#priority) data attribute  
+_Allowed Values (Production.ShopFloor.WorkOrderItemsRepository.Priority Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -140,7 +138,7 @@ _Default Value_: **3**
 
 > The quantity produced in the operation. [Unit: ProducedQuantityUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -151,7 +149,7 @@ _Front-End Recalc Expressions:_
 
 > The equivalence of Produced Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -164,7 +162,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -211,7 +209,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `IIF((obj.Lot.Product != obj.Product), null, obj.Lot)`
@@ -224,7 +221,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.WorkOrder.DefaultOutputStore`
@@ -237,7 +233,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[General.Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProducedQuantityUnit
 
@@ -245,46 +240,42 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen(obj.Product.MeasurementUnit.IfNullThen(obj.ProducedQuantityUnit))`
 
 _Front-End Recalc Expressions:_  
 `obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen(obj.Product.MeasurementUnit.IfNullThen(obj.ProducedQuantityUnit))`
-### ProductCode
-
-> Selects the product thru some of the product codes. [Filter(multi eq)]
-
-_Type_: **[General.Products.ProductCodes](General.Products.ProductCodes.md) (nullable)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-_Back-End Default Expression:_  
-`IIF((obj.ProductCode.Product != obj.Product), null, obj.ProductCode)`
-
-_Front-End Recalc Expressions:_  
-`IIF((obj.ProductCode.Product != obj.Product), null, obj.ProductCode)`
 ### Product
 
 > The Id of the produced product. [Required] [Filter(multi eq)]
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.ProductCode.Product.IfNullThen(obj.Product)`
 
 _Front-End Recalc Expressions:_  
 `obj.ProductCode.Product.IfNullThen(obj.Product)`
+### ProductCode
+
+> Selects the product thru some of the product codes. [Filter(multi eq)]
+
+_Type_: **[General.Products.ProductCodes](General.Products.ProductCodes.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+_Back-End Default Expression:_  
+`IIF((obj.ProductCode.Product != obj.Product), null, obj.ProductCode)`
+
+_Front-End Recalc Expressions:_  
+`IIF((obj.ProductCode.Product != obj.Product), null, obj.ProductCode)`
 ### Recipe
 
 > The base recipe. null means that the item is produced without recipe. [Filter(multi eq)]
 
 _Type_: **[Production.Technologies.Recipes](Production.Technologies.Recipes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
 `obj.Product.GetDefaultRecipe((obj.ReleaseDate ?? obj.WorkOrder.DocumentDate), obj.OutputStore.IfNullThen(obj.WorkOrder.DefaultOutputStore))`
@@ -294,7 +285,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### StoreBin
 
@@ -302,7 +292,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### WorkOrder
 
@@ -310,7 +299,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.ShopFloor.WorkOrders](Production.ShopFloor.WorkOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

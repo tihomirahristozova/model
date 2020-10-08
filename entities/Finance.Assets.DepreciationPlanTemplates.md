@@ -9,26 +9,19 @@ Specifies the default depreciation methods for the asset categories. Different m
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Assets.DepreciationPlanTemplates.md#Id) | guid |  
-| [AssetLife](Finance.Assets.DepreciationPlanTemplates.md#AssetLife) | int32 (nullable) | Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created). 
+| [AssetLife](Finance.Assets.DepreciationPlanTemplates.md#assetlife) | int32 (nullable) | Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created). 
+| [Id](Finance.Assets.DepreciationPlanTemplates.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssetCategory](Finance.Assets.DepreciationPlanTemplates.md#AssetCategory) | [Finance.Assets.AssetCategories](Finance.Assets.AssetCategories.md) | Asset category for which this template is defined. [Required] [Filter(multi eq)] [Owner] |
-| [DepreciationMethod](Finance.Assets.DepreciationPlanTemplates.md#DepreciationMethod) | [Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md) | Depreciation method by default for the depreciation plans created by this template. [Required] [Filter(multi eq)] |
-| [ValuationModel](Finance.Assets.DepreciationPlanTemplates.md#ValuationModel) | [Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model for which this template is defined. [Required] [Filter(multi eq)] |
+| [AssetCategory](Finance.Assets.DepreciationPlanTemplates.md#assetcategory) | [Finance.Assets.AssetCategories](Finance.Assets.AssetCategories.md) | Asset category for which this template is defined. [Required] [Filter(multi eq)] [Owner] |
+| [DepreciationMethod](Finance.Assets.DepreciationPlanTemplates.md#depreciationmethod) | [Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md) | Depreciation method by default for the depreciation plans created by this template. [Required] [Filter(multi eq)] |
+| [ValuationModel](Finance.Assets.DepreciationPlanTemplates.md#valuationmodel) | [Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model for which this template is defined. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### AssetLife
 
@@ -37,6 +30,12 @@ _Default Value_: **NewGuid**
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 
 ## Reference Details
@@ -47,7 +46,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Assets.AssetCategories](Finance.Assets.AssetCategories.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DepreciationMethod
 
@@ -55,7 +53,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ValuationModel
 
@@ -63,7 +60,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,27 +9,34 @@ Describes the way of payment. For example: in cash, by bank transfer, with credi
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Payments.PaymentTypes.md#Id) | guid |  
-| [IsActive](Finance.Payments.PaymentTypes.md#IsActive) | boolean | Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1.100.0) 
-| [Code](Finance.Payments.PaymentTypes.md#Code) | string | The payment type unique code. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Finance.Payments.PaymentTypes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this PaymentType. [Required] [Filter(like)] [ORD] 
-| [SystemType](Finance.Payments.PaymentTypes.md#SystemType) | [Finance.Payments.PaymentTypesRepository.SystemType](Finance.Payments.PaymentTypes.md#SystemType) (nullable) | Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer. 
+| [Code](Finance.Payments.PaymentTypes.md#code) | string | The payment type unique code. [Required] [Filter(eq;like)] [ORD] 
+| [Id](Finance.Payments.PaymentTypes.md#id) | guid |  
+| [IsActive](Finance.Payments.PaymentTypes.md#isactive) | boolean | Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1.100.0) 
+| [Name](Finance.Payments.PaymentTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentType. [Required] [Filter(like)] [ORD] 
+| [SystemType](Finance.Payments.PaymentTypes.md#systemtype) | [SystemType](Finance.Payments.PaymentTypes.md#systemtype) (nullable) | Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultPaymentAccount](Finance.Payments.PaymentTypes.md#DefaultPaymentAccount) | [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null specifies the default payment account to use associated with this payment type. [Filter(multi eq)] |
-| [EnterpriseCompany](Finance.Payments.PaymentTypes.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this PaymentType applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [DefaultPaymentAccount](Finance.Payments.PaymentTypes.md#defaultpaymentaccount) | [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null specifies the default payment account to use associated with this payment type. [Filter(multi eq)] |
+| [EnterpriseCompany](Finance.Payments.PaymentTypes.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this PaymentType applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
 
 
 ## Attribute Details
+
+### Code
+
+> The payment type unique code. [Required] [Filter(eq;like)] [ORD]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsActive
@@ -41,19 +48,11 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
-### Code
-
-> The payment type unique code. [Required] [Filter(eq;like)] [ORD]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-
 ### Name
 
 > The name of this PaymentType. [Required] [Filter(like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
@@ -61,9 +60,9 @@ _Supports Order By_: **True**
 
 > Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer.
 
-_Type_: **[Finance.Payments.PaymentTypesRepository.SystemType](Finance.Payments.PaymentTypes.md#SystemType) (nullable)**  
-Allowed values for the [SystemType](Finance.Payments.PaymentTypes.md#SystemType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[SystemType](Finance.Payments.PaymentTypes.md#systemtype) (nullable)**  
+Allowed values for the [SystemType](Finance.Payments.PaymentTypes.md#systemtype) data attribute  
+_Allowed Values (Finance.Payments.PaymentTypesRepository.SystemType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -92,7 +91,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EnterpriseCompany
 
@@ -100,7 +98,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

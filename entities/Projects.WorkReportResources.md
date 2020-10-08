@@ -9,29 +9,22 @@ Each record contains usage of resource, reported by the related Work Report. Ent
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.WorkReportResources.md#Id) | guid |  
-| [ActualEndTime](Projects.WorkReportResources.md#ActualEndTime) | datetime (nullable) | Optionally, specifies the actual date and time when the resource usage ended. [Filter(eq;like)] 
-| [ActualStartTime](Projects.WorkReportResources.md#ActualStartTime) | datetime (nullable) | Optionally, specifies the actual date and time when the resource usage began. [Filter(eq;like)] 
-| [TotalResourceUsageHours](Projects.WorkReportResources.md#TotalResourceUsageHours) | decimal | The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. [Required] [Default(0)] [Filter(eq;like)] 
+| [ActualEndTime](Projects.WorkReportResources.md#actualendtime) | datetime (nullable) | Optionally, specifies the actual date and time when the resource usage ended. [Filter(eq;like)] 
+| [ActualStartTime](Projects.WorkReportResources.md#actualstarttime) | datetime (nullable) | Optionally, specifies the actual date and time when the resource usage began. [Filter(eq;like)] 
+| [Id](Projects.WorkReportResources.md#id) | guid |  
+| [TotalResourceUsageHours](Projects.WorkReportResources.md#totalresourceusagehours) | decimal | The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. [Required] [Default(0)] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectTask](Projects.WorkReportResources.md#ProjectTask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The project task for which the work is reported. [Required] [Filter(multi eq)] |
-| [Resource](Projects.WorkReportResources.md#Resource) | [General.Resources.Resources](General.Resources.Resources.md) | The resource, for which usage is reported. [Required] [Filter(multi eq)] |
-| [ResourceInstance](Projects.WorkReportResources.md#ResourceInstance) | [General.Resources.ResourceInstances](General.Resources.ResourceInstances.md) (nullable) | The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. [Filter(multi eq;like)] |
-| [WorkReport](Projects.WorkReportResources.md#WorkReport) | [Projects.WorkReports](Projects.WorkReports.md) | The [WorkReport](Projects.WorkReportResources.md#WorkReport) to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ProjectTask](Projects.WorkReportResources.md#projecttask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The project task for which the work is reported. [Required] [Filter(multi eq)] |
+| [Resource](Projects.WorkReportResources.md#resource) | [General.Resources.Resources](General.Resources.Resources.md) | The resource, for which usage is reported. [Required] [Filter(multi eq)] |
+| [ResourceInstance](Projects.WorkReportResources.md#resourceinstance) | [General.Resources.ResourceInstances](General.Resources.ResourceInstances.md) (nullable) | The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. [Filter(multi eq;like)] |
+| [WorkReport](Projects.WorkReportResources.md#workreport) | [Projects.WorkReports](Projects.WorkReports.md) | The [WorkReport](Projects.WorkReportResources.md#workreport) to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ActualEndTime
 
@@ -48,6 +41,12 @@ _Supports Order By_: **False**
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### TotalResourceUsageHours
 
@@ -67,7 +66,6 @@ _Default Value_: **0**
 
 _Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.WorkReport.ProjectTask`
@@ -80,7 +78,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[General.Resources.Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ResourceInstance
 
@@ -88,17 +85,15 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Resources.ResourceInstances](General.Resources.ResourceInstances.md) (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
 `IIF(((obj.ResourceInstance != null) AndAlso (obj.ResourceInstance.Resource != obj.Resource)), null, obj.ResourceInstance)`
 ### WorkReport
 
-> The [WorkReport](Projects.WorkReportResources.md#WorkReport) to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner]
+> The [WorkReport](Projects.WorkReportResources.md#workreport) to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Projects.WorkReports](Projects.WorkReports.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

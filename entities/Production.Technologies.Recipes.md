@@ -9,46 +9,39 @@ Contains the characteristics of operations used to create products. Entity: Prd_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Technologies.Recipes.md#Id) | guid |  
-| [CreationTime](Production.Technologies.Recipes.md#CreationTime) | datetime (nullable) | Date and time when the Recipe was created. [Filter(ge;le)] [ReadOnly] 
-| [CreationUser](Production.Technologies.Recipes.md#CreationUser) | string (nullable) | Login name of the user, who created the Recipe. [Filter(like)] [ReadOnly] 
-| [ExpiryDate](Production.Technologies.Recipes.md#ExpiryDate) | datetime (nullable) | The last date, when the recipe should be used. null means that the recipe might still be in use. [Filter(ge;le)] 
-| [IsDefault](Production.Technologies.Recipes.md#IsDefault) | boolean | Default for period: Release_Date - Expiry_Date. [Required] [Default(false)] [Filter(eq)] 
-| [Notes](Production.Technologies.Recipes.md#Notes) | string (nullable) | User comments for the recipe. 
-| [Price](Production.Technologies.Recipes.md#Price) | [Amount](../data-types.md#Amount) | The price for the specified Produce_Quantity. [Currency: Product.CostingCurrency] [Required] [Default(0)] 
-| [PricePerLot](Production.Technologies.Recipes.md#PricePerLot) | [Amount](../data-types.md#Amount) | Price for one lot of the product (according to Lot_Size_Quantity_Base). [Currency: Product.CostingCurrency] [Required] [Default(0)] 
-| [ProduceQuantity](Production.Technologies.Recipes.md#ProduceQuantity) | [Quantity](../data-types.md#Quantity) | Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] 
-| [Name](Production.Technologies.Recipes.md#Name) | string | The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. [Required] [Filter(like)] 
-| [ReleaseDate](Production.Technologies.Recipes.md#ReleaseDate) | datetime | The date, when the recipe was released to production. [Required] [Default(Today)] [Filter(ge;le)] 
-| [ScrapRate](Production.Technologies.Recipes.md#ScrapRate) | decimal | The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. [Required] [Default(0)] 
-| [UpdateTime](Production.Technologies.Recipes.md#UpdateTime) | datetime (nullable) | Date and time when the Recipe was last updated. [Filter(ge;le)] [ReadOnly] 
-| [UpdateUser](Production.Technologies.Recipes.md#UpdateUser) | string (nullable) | Login name of the user, who last updated the Recipe. [Filter(like)] [ReadOnly] 
+| [CreationTime](Production.Technologies.Recipes.md#creationtime) | datetime (nullable) | Date and time when the Recipe was created. [Filter(ge;le)] [ReadOnly] 
+| [CreationUser](Production.Technologies.Recipes.md#creationuser) | string (nullable) | Login name of the user, who created the Recipe. [Filter(like)] [ReadOnly] 
+| [ExpiryDate](Production.Technologies.Recipes.md#expirydate) | datetime (nullable) | The last date, when the recipe should be used. null means that the recipe might still be in use. [Filter(ge;le)] 
+| [Id](Production.Technologies.Recipes.md#id) | guid |  
+| [IsDefault](Production.Technologies.Recipes.md#isdefault) | boolean | Default for period: Release_Date - Expiry_Date. [Required] [Default(false)] [Filter(eq)] 
+| [Name](Production.Technologies.Recipes.md#name) | string | The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. [Required] [Filter(like)] 
+| [Notes](Production.Technologies.Recipes.md#notes) | string (nullable) | User comments for the recipe. 
+| [Price](Production.Technologies.Recipes.md#price) | [Amount](../data-types.md#amount) | The price for the specified Produce_Quantity. [Currency: Product.CostingCurrency] [Required] [Default(0)] 
+| [PricePerLot](Production.Technologies.Recipes.md#priceperlot) | [Amount](../data-types.md#amount) | Price for one lot of the product (according to Lot_Size_Quantity_Base). [Currency: Product.CostingCurrency] [Required] [Default(0)] 
+| [ProduceQuantity](Production.Technologies.Recipes.md#producequantity) | [Quantity](../data-types.md#quantity) | Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] 
+| [ReleaseDate](Production.Technologies.Recipes.md#releasedate) | datetime | The date, when the recipe was released to production. [Required] [Default(Today)] [Filter(ge;le)] 
+| [ScrapRate](Production.Technologies.Recipes.md#scraprate) | decimal | The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. [Required] [Default(0)] 
+| [UpdateTime](Production.Technologies.Recipes.md#updatetime) | datetime (nullable) | Date and time when the Recipe was last updated. [Filter(ge;le)] [ReadOnly] 
+| [UpdateUser](Production.Technologies.Recipes.md#updateuser) | string (nullable) | Login name of the user, who last updated the Recipe. [Filter(like)] [ReadOnly] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CurrencyDirectory](Production.Technologies.Recipes.md#CurrencyDirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. [Filter(multi eq)] |
-| [PrincipalRecipe](Production.Technologies.Recipes.md#PrincipalRecipe) | [Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) (nullable) | The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. [Filter(multi eq)] |
-| [Product](Production.Technologies.Recipes.md#Product) | [General.Products.Products](General.Products.Products.md) (nullable) | The Id of the produced product. [Filter(multi eq)] |
-| [Store](Production.Technologies.Recipes.md#Store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. [Filter(multi eq)] |
+| [CurrencyDirectory](Production.Technologies.Recipes.md#currencydirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. [Filter(multi eq)] |
+| [PrincipalRecipe](Production.Technologies.Recipes.md#principalrecipe) | [Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) (nullable) | The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. [Filter(multi eq)] |
+| [Product](Production.Technologies.Recipes.md#product) | [General.Products.Products](General.Products.Products.md) (nullable) | The Id of the produced product. [Filter(multi eq)] |
+| [Store](Production.Technologies.Recipes.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Ingredients | [Production.Technologies.RecipeIngredients](Production.Technologies.RecipeIngredients.md) | List of [RecipeIngredient](Production.Technologies.RecipeIngredients.md) child objects, based on the [Production.Technologies.RecipeIngredient.Recipe](Production.Technologies.RecipeIngredients.md#Recipe) back reference 
-| Operations | [Production.Technologies.RecipeOperations](Production.Technologies.RecipeOperations.md) | List of [RecipeOperation](Production.Technologies.RecipeOperations.md) child objects, based on the [Production.Technologies.RecipeOperation.Recipe](Production.Technologies.RecipeOperations.md#Recipe) back reference 
+| Ingredients | [Production.Technologies.RecipeIngredients](Production.Technologies.RecipeIngredients.md) | List of [RecipeIngredient](Production.Technologies.RecipeIngredients.md) child objects, based on the [Production.Technologies.RecipeIngredient.Recipe](Production.Technologies.RecipeIngredients.md#recipe) back reference 
+| Operations | [Production.Technologies.RecipeOperations](Production.Technologies.RecipeOperations.md) | List of [RecipeOperation](Production.Technologies.RecipeOperations.md) child objects, based on the [Production.Technologies.RecipeOperation.Recipe](Production.Technologies.RecipeOperations.md#recipe) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CreationTime
 
@@ -74,6 +67,12 @@ _Type_: **datetime (nullable)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### IsDefault
 
 > Default for period: Release_Date - Expiry_Date. [Required] [Default(false)] [Filter(eq)]
@@ -82,6 +81,14 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### Name
+
+> The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. [Required] [Filter(like)]
+
+_Type_: **string**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
 
 ### Notes
 
@@ -95,7 +102,7 @@ _Supports Order By_: **False**
 
 > The price for the specified Produce_Quantity. [Currency: Product.CostingCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -104,7 +111,7 @@ _Default Value_: **Constant**
 
 > Price for one lot of the product (according to Lot_Size_Quantity_Base). [Currency: Product.CostingCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -113,18 +120,10 @@ _Default Value_: **Constant**
 
 > Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
-
-### Name
-
-> The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. [Required] [Filter(like)]
-
-_Type_: **string**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
 
 ### ReleaseDate
 
@@ -169,7 +168,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PrincipalRecipe
 
@@ -177,7 +175,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Product
 
@@ -185,7 +182,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Store
 
@@ -193,7 +189,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

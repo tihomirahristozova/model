@@ -9,26 +9,19 @@ Contains the different working time periods within the work schedule. Entity: Ge
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Resources.WorkScheduleWorkingTime.md#Id) | guid |  
-| [DayNo](General.Resources.WorkScheduleWorkingTime.md#DayNo) | int32 | Consequtive day in the work schedule recurrence, starting at 1. [Required] 
-| [EndTime](General.Resources.WorkScheduleWorkingTime.md#EndTime) | time | End of working time period. [Required] 
-| [StartTime](General.Resources.WorkScheduleWorkingTime.md#StartTime) | time | Start of working time period on the day, specified by Day_No. [Required] 
+| [DayNo](General.Resources.WorkScheduleWorkingTime.md#dayno) | int32 | Consequtive day in the work schedule recurrence, starting at 1. [Required] 
+| [EndTime](General.Resources.WorkScheduleWorkingTime.md#endtime) | time | End of working time period. [Required] 
+| [Id](General.Resources.WorkScheduleWorkingTime.md#id) | guid |  
+| [StartTime](General.Resources.WorkScheduleWorkingTime.md#starttime) | time | Start of working time period on the day, specified by Day_No. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#WorkSchedule) | [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md) | The [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#WorkSchedule) to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner] |
+| [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) | [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md) | The [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DayNo
 
@@ -46,6 +39,12 @@ _Type_: **time**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### StartTime
 
 > Start of working time period on the day, specified by Day_No. [Required]
@@ -59,11 +58,10 @@ _Supports Order By_: **False**
 
 ### WorkSchedule
 
-> The [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#WorkSchedule) to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner]
+> The [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

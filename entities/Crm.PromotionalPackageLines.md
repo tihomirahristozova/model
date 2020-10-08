@@ -9,21 +9,21 @@ Detail records (lines) of promotional package definition. Entity: Crm_Promotiona
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.PromotionalPackageLines.md#Id) | guid |  
-| [LineNumber](Crm.PromotionalPackageLines.md#LineNumber) | int32 | Consecutive line number. [Required] 
-| [Quantity](Crm.PromotionalPackageLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | The quantity of the product in the package in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)] 
-| [StandardDiscountAdjustOrReplace](Crm.PromotionalPackageLines.md#StandardDiscountAdjustOrReplace) | [Crm.PromotionalPackageLinesRepository.StandardDiscountAdjustOrReplace](Crm.PromotionalPackageLines.md#StandardDiscountAdjustOrReplace) | Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. [Required] [Default("R")] 
-| [StandardDiscountPercentAdjust](Crm.PromotionalPackageLines.md#StandardDiscountPercentAdjust) | decimal | The value of change (in percents) for the standard discount. [Required] [Default(0)] 
-| [UnitPrice](Crm.PromotionalPackageLines.md#UnitPrice) | [Amount](../data-types.md#Amount) (nullable) | When not null specifies directly unit price for the product. When null, the package specifies only discount. [Currency: UnitPriceCurrency] 
+| [Id](Crm.PromotionalPackageLines.md#id) | guid |  
+| [LineNumber](Crm.PromotionalPackageLines.md#linenumber) | int32 | Consecutive line number. [Required] 
+| [Quantity](Crm.PromotionalPackageLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the product in the package in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [StandardDiscountAdjustOrReplace](Crm.PromotionalPackageLines.md#standarddiscountadjustorreplace) | [StandardDiscountAdjustOrReplace](Crm.PromotionalPackageLines.md#standarddiscountadjustorreplace) | Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. [Required] [Default("R")] 
+| [StandardDiscountPercentAdjust](Crm.PromotionalPackageLines.md#standarddiscountpercentadjust) | decimal | The value of change (in percents) for the standard discount. [Required] [Default(0)] 
+| [UnitPrice](Crm.PromotionalPackageLines.md#unitprice) | [Amount](../data-types.md#amount) (nullable) | When not null specifies directly unit price for the product. When null, the package specifies only discount. [Currency: UnitPriceCurrency] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Lot](Crm.PromotionalPackageLines.md#Lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | The Product lot number in the promotional package. [Filter(multi eq)] (Introduced in version 19.1.100.0) |
-| [Product](Crm.PromotionalPackageLines.md#Product) | [General.Products.Products](General.Products.Products.md) | The product, which is included in the promotional package. [Required] [Filter(multi eq)] |
-| [PromotionalPackage](Crm.PromotionalPackageLines.md#PromotionalPackage) | [Crm.PromotionalPackages](Crm.PromotionalPackages.md) | The [PromotionalPackage](Crm.PromotionalPackageLines.md#PromotionalPackage) to which this PromotionalPackageLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [UnitPriceCurrency](Crm.PromotionalPackageLines.md#UnitPriceCurrency) | [General.Currencies](General.Currencies.md) (nullable) | Currency of the unit price. null if the package specifies only discount. [Filter(multi eq)] |
+| [Lot](Crm.PromotionalPackageLines.md#lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | The Product lot number in the promotional package. [Filter(multi eq)] (Introduced in version 19.1.100.0) |
+| [Product](Crm.PromotionalPackageLines.md#product) | [General.Products.Products](General.Products.Products.md) | The product, which is included in the promotional package. [Required] [Filter(multi eq)] |
+| [PromotionalPackage](Crm.PromotionalPackageLines.md#promotionalpackage) | [Crm.PromotionalPackages](Crm.PromotionalPackages.md) | The [PromotionalPackage](Crm.PromotionalPackageLines.md#promotionalpackage) to which this PromotionalPackageLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [UnitPriceCurrency](Crm.PromotionalPackageLines.md#unitpricecurrency) | [General.Currencies](General.Currencies.md) (nullable) | Currency of the unit price. null if the package specifies only discount. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -32,7 +32,6 @@ Detail records (lines) of promotional package definition. Entity: Crm_Promotiona
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### LineNumber
@@ -52,7 +51,7 @@ _Front-End Recalc Expressions:_
 
 > The quantity of the product in the package in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -61,9 +60,9 @@ _Default Value_: **Constant**
 
 > Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. [Required] [Default("R")]
 
-_Type_: **[Crm.PromotionalPackageLinesRepository.StandardDiscountAdjustOrReplace](Crm.PromotionalPackageLines.md#StandardDiscountAdjustOrReplace)**  
-Allowed values for the [StandardDiscountAdjustOrReplace](Crm.PromotionalPackageLines.md#StandardDiscountAdjustOrReplace) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[StandardDiscountAdjustOrReplace](Crm.PromotionalPackageLines.md#standarddiscountadjustorreplace)**  
+Allowed values for the [StandardDiscountAdjustOrReplace](Crm.PromotionalPackageLines.md#standarddiscountadjustorreplace) data attribute  
+_Allowed Values (Crm.PromotionalPackageLinesRepository.StandardDiscountAdjustOrReplace Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -88,7 +87,7 @@ _Default Value_: **0**
 
 > When not null specifies directly unit price for the product. When null, the package specifies only discount. [Currency: UnitPriceCurrency]
 
-_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -101,7 +100,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Product
 
@@ -109,15 +107,13 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PromotionalPackage
 
-> The [PromotionalPackage](Crm.PromotionalPackageLines.md#PromotionalPackage) to which this PromotionalPackageLine belongs. [Required] [Filter(multi eq)] [Owner]
+> The [PromotionalPackage](Crm.PromotionalPackageLines.md#promotionalpackage) to which this PromotionalPackageLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Crm.PromotionalPackages](Crm.PromotionalPackages.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### UnitPriceCurrency
 
@@ -125,7 +121,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

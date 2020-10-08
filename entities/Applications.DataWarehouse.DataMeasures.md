@@ -9,29 +9,22 @@ Contains the data measures of the General data warehouse. Entity: Dw_Data_Measur
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.DataWarehouse.DataMeasures.md#Id) | guid |  
-| [Code](Applications.DataWarehouse.DataMeasures.md#Code) | string | Unique measure code. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Applications.DataWarehouse.DataMeasures.md#Name) | string | The name of the measure (multilanguage). [Required] [Filter(eq;like)] 
-| [GreenZoneSpreadPercent](Applications.DataWarehouse.DataMeasures.md#GreenZoneSpreadPercent) | decimal | The plus or minus percent, by which the goal can be missed, but still considered achieved. [Required] [Default(0.2)] [Filter(eq)] 
-| [HorizontalTrendSpreadPercent](Applications.DataWarehouse.DataMeasures.md#HorizontalTrendSpreadPercent) | decimal | The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. [Required] [Default(0.01)] [Filter(eq)] 
-| [Notes](Applications.DataWarehouse.DataMeasures.md#Notes) | string (nullable) | Notes for this DataMeasure. 
-| [Period](Applications.DataWarehouse.DataMeasures.md#Period) | [Applications.DataWarehouse.DataMeasuresRepository.Period](Applications.DataWarehouse.DataMeasures.md#Period) | The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year. [Required] [Default("Q")] [Filter(eq)] 
+| [Code](Applications.DataWarehouse.DataMeasures.md#code) | string | Unique measure code. [Required] [Filter(eq;like)] [ORD] 
+| [GreenZoneSpreadPercent](Applications.DataWarehouse.DataMeasures.md#greenzonespreadpercent) | decimal | The plus or minus percent, by which the goal can be missed, but still considered achieved. [Required] [Default(0.2)] [Filter(eq)] 
+| [HorizontalTrendSpreadPercent](Applications.DataWarehouse.DataMeasures.md#horizontaltrendspreadpercent) | decimal | The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. [Required] [Default(0.01)] [Filter(eq)] 
+| [Id](Applications.DataWarehouse.DataMeasures.md#id) | guid |  
+| [Name](Applications.DataWarehouse.DataMeasures.md#name) | string | The name of the measure (multilanguage). [Required] [Filter(eq;like)] 
+| [Notes](Applications.DataWarehouse.DataMeasures.md#notes) | string (nullable) | Notes for this DataMeasure. 
+| [Period](Applications.DataWarehouse.DataMeasures.md#period) | [Period](Applications.DataWarehouse.DataMeasures.md#period) | The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year. [Required] [Default("Q")] [Filter(eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataMeasureGroup](Applications.DataWarehouse.DataMeasures.md#DataMeasureGroup) | [Applications.DataWarehouse.DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md) | The group to which this measure belongs. [Required] [Filter(multi eq)] |
+| [DataMeasureGroup](Applications.DataWarehouse.DataMeasures.md#datameasuregroup) | [Applications.DataWarehouse.DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md) | The group to which this measure belongs. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Code
 
@@ -40,14 +33,6 @@ _Default Value_: **NewGuid**
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
-
-### Name
-
-> The name of the measure (multilanguage). [Required] [Filter(eq;like)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
 
 ### GreenZoneSpreadPercent
 
@@ -67,6 +52,20 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **0.01**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
+### Name
+
+> The name of the measure (multilanguage). [Required] [Filter(eq;like)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
 ### Notes
 
 > Notes for this DataMeasure.
@@ -79,9 +78,9 @@ _Supports Order By_: **False**
 
 > The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year. [Required] [Default("Q")] [Filter(eq)]
 
-_Type_: **[Applications.DataWarehouse.DataMeasuresRepository.Period](Applications.DataWarehouse.DataMeasures.md#Period)**  
-Allowed values for the [Period](Applications.DataWarehouse.DataMeasures.md#Period) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[Period](Applications.DataWarehouse.DataMeasures.md#period)**  
+Allowed values for the [Period](Applications.DataWarehouse.DataMeasures.md#period) data attribute  
+_Allowed Values (Applications.DataWarehouse.DataMeasuresRepository.Period Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -103,7 +102,6 @@ _Default Value_: **Quarter**
 
 _Type_: **[Applications.DataWarehouse.DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

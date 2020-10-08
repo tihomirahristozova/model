@@ -9,16 +9,16 @@ Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Cms.WebSiteLanguages.md#Id) | guid |  
-| [IsActive](Applications.Cms.WebSiteLanguages.md#IsActive) | boolean | Specifies whether the support for the language is activated and should be published on the web. [Required] [Default(false)] 
-| [LanguageCode](Applications.Cms.WebSiteLanguages.md#LanguageCode) | string | Two letter ISO language code. Sub-tags are currently not supported. [Required] 
-| [Notes](Applications.Cms.WebSiteLanguages.md#Notes) | string (nullable) | Notes for this WebSiteLanguage. 
+| [Id](Applications.Cms.WebSiteLanguages.md#id) | guid |  
+| [IsActive](Applications.Cms.WebSiteLanguages.md#isactive) | boolean | Specifies whether the support for the language is activated and should be published on the web. [Required] [Default(false)] 
+| [LanguageCode](Applications.Cms.WebSiteLanguages.md#languagecode) | string | Two letter ISO language code. Sub-tags are currently not supported. [Required] 
+| [Notes](Applications.Cms.WebSiteLanguages.md#notes) | string (nullable) | Notes for this WebSiteLanguage. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [WebSite](Applications.Cms.WebSiteLanguages.md#WebSite) | [Applications.Cms.WebSites](Applications.Cms.WebSites.md) | The web site, for which the language is specified. [Required] [Filter(multi eq)] [Owner] |
+| [WebSite](Applications.Cms.WebSiteLanguages.md#website) | [Applications.Cms.WebSites](Applications.Cms.WebSites.md) | The web site, for which the language is specified. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsActive
@@ -64,7 +63,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Cms.WebSites](Applications.Cms.WebSites.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

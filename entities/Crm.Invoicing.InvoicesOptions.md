@@ -9,28 +9,21 @@ Default options for user document types for Invoices. Entity: Crm_Invoices_Optio
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Invoicing.InvoicesOptions.md#Id) | guid |  
-| [CreatesVATEntries](Crm.Invoicing.InvoicesOptions.md#CreatesVATEntries) | boolean | Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided. [Required] [Default(true)] 
-| [SignRestriction](Crm.Invoicing.InvoicesOptions.md#SignRestriction) | [General.SignRestriction](Crm.Invoicing.InvoicesOptions.md#SignRestriction) | Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. [Required] [Default(0)] 
-| [TotalAmountSignRestriction](Crm.Invoicing.InvoicesOptions.md#TotalAmountSignRestriction) | [General.SignRestriction](Crm.Invoicing.InvoicesOptions.md#TotalAmountSignRestriction) | Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. [Required] [Default(0)] 
+| [CreatesVATEntries](Crm.Invoicing.InvoicesOptions.md#createsvatentries) | boolean | Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided. [Required] [Default(true)] 
+| [Id](Crm.Invoicing.InvoicesOptions.md#id) | guid |  
+| [SignRestriction](Crm.Invoicing.InvoicesOptions.md#signrestriction) | [SignRestriction](Crm.Invoicing.InvoicesOptions.md#signrestriction) | Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. [Required] [Default(0)] 
+| [TotalAmountSignRestriction](Crm.Invoicing.InvoicesOptions.md#totalamountsignrestriction) | [SignRestriction](Crm.Invoicing.InvoicesOptions.md#totalamountsignrestriction) | Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. [Required] [Default(0)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultDealType](Crm.Invoicing.InvoicesOptions.md#DefaultDealType) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable) | When not null, specifies default VAT deal type. [Filter(multi eq)] |
-| [DocumentType](Crm.Invoicing.InvoicesOptions.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the invoice option applies. [Required] [Filter(multi eq)] [Owner] |
-| [VATDeviationDocumentAmountType](Crm.Invoicing.InvoicesOptions.md#VATDeviationDocumentAmountType) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable) | Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)] |
+| [DefaultDealType](Crm.Invoicing.InvoicesOptions.md#defaultdealtype) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable) | When not null, specifies default VAT deal type. [Filter(multi eq)] |
+| [DocumentType](Crm.Invoicing.InvoicesOptions.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the invoice option applies. [Required] [Filter(multi eq)] [Owner] |
+| [VATDeviationDocumentAmountType](Crm.Invoicing.InvoicesOptions.md#vatdeviationdocumentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable) | Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CreatesVATEntries
 
@@ -41,13 +34,19 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### SignRestriction
 
 > Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. [Required] [Default(0)]
 
-_Type_: **[General.SignRestriction](Crm.Invoicing.InvoicesOptions.md#SignRestriction)**  
+_Type_: **[SignRestriction](Crm.Invoicing.InvoicesOptions.md#signrestriction)**  
 Generic enum type for SignRestriction properties  
-_Allowed Values (Enum Members)_  
+_Allowed Values (General.SignRestriction Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -63,9 +62,9 @@ _Default Value_: **0**
 
 > Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. [Required] [Default(0)]
 
-_Type_: **[General.SignRestriction](Crm.Invoicing.InvoicesOptions.md#TotalAmountSignRestriction)**  
+_Type_: **[SignRestriction](Crm.Invoicing.InvoicesOptions.md#totalamountsignrestriction)**  
 Generic enum type for SignRestriction properties  
-_Allowed Values (Enum Members)_  
+_Allowed Values (General.SignRestriction Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -86,7 +85,6 @@ _Default Value_: **0**
 
 _Type_: **[Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DocumentType
 
@@ -94,7 +92,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### VATDeviationDocumentAmountType
 
@@ -102,7 +99,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

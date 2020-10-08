@@ -9,15 +9,15 @@ List of functions that a specific resource is able to perform. Entity: Prd_Resou
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.ResourceFunctions.md#Id) | guid |  
-| [Notes](Production.Resources.ResourceFunctions.md#Notes) | string (nullable) | User notes on the resource function. 
+| [Id](Production.Resources.ResourceFunctions.md#id) | guid |  
+| [Notes](Production.Resources.ResourceFunctions.md#notes) | string (nullable) | User notes on the resource function. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Function](Production.Resources.ResourceFunctions.md#Function) | [Production.Resources.Functions](Production.Resources.Functions.md) | Function, which the resource can perform. [Required] [Filter(multi eq)] |
-| [Resource](Production.Resources.ResourceFunctions.md#Resource) | [Production.Resources.Resources](Production.Resources.Resources.md) | The [Resource](Production.Resources.ResourceFunctions.md#Resource) to which this ResourceFunction belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Function](Production.Resources.ResourceFunctions.md#function) | [Production.Resources.Functions](Production.Resources.Functions.md) | Function, which the resource can perform. [Required] [Filter(multi eq)] |
+| [Resource](Production.Resources.ResourceFunctions.md#resource) | [Production.Resources.Resources](Production.Resources.Resources.md) | The [Resource](Production.Resources.ResourceFunctions.md#resource) to which this ResourceFunction belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ List of functions that a specific resource is able to perform. Entity: Prd_Resou
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes
@@ -46,15 +45,13 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.Resources.Functions](Production.Resources.Functions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Resource
 
-> The [Resource](Production.Resources.ResourceFunctions.md#Resource) to which this ResourceFunction belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Resource](Production.Resources.ResourceFunctions.md#resource) to which this ResourceFunction belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Production.Resources.Resources](Production.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,92 +9,85 @@ Generic activity. Provides task management functionality. Activity can be one of
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.Activities.md#Id) | guid |  
-| [CompleteTime](General.Contacts.Activities.md#CompleteTime) | datetime (nullable) | Exact time, when the document was last completed[Filter(ge;le)] 
-| [CreationTime](General.Contacts.Activities.md#CreationTime) | datetime | Date/Time when the document was created [Required][Filter(ge;le)] 
-| [CreationUser](General.Contacts.Activities.md#CreationUser) | string | The login name of the user, who created the document [Required][Filter(like)] 
-| [DocumentDate](General.Contacts.Activities.md#DocumentDate) | datetime | The date on which the document was issued [Required][Filter(eq;ge;le)][ORD] 
-| [DocumentNo](General.Contacts.Activities.md#DocumentNo) | string | Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD] 
-| [DocumentVersion](General.Contacts.Activities.md#DocumentVersion) | int32 | [Filter(eq;ge;le)] 
-| [DocumentNotes](General.Contacts.Activities.md#DocumentNotes) | string (nullable) | Notes for this Document 
-| [ParentDocumentRelationshipType](General.Contacts.Activities.md#ParentDocumentRelationshipType) | [General.ParentDocumentRelationshipType](General.Contacts.Activities.md#ParentDocumentRelationshipType) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
-| [PlanningOnly](General.Contacts.Activities.md#PlanningOnly) | boolean (nullable) | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required] 
-| [ReadOnly](General.Contacts.Activities.md#ReadOnly) | boolean | True - the document is read only; false - the document is not read only [Required] 
-| [ReferenceDate](General.Contacts.Activities.md#ReferenceDate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)] 
-| [ReferenceDocumentNo](General.Contacts.Activities.md#ReferenceDocumentNo) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)] 
-| [ReleaseTime](General.Contacts.Activities.md#ReleaseTime) | datetime (nullable) | Exact time, when the document was first released [Filter(ge;le)] 
-| [State](General.Contacts.Activities.md#State) | [General.DocumentState](General.Contacts.Activities.md#State) | 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)] 
-| [Void](General.Contacts.Activities.md#Void) | boolean | True if the document is null and void [Required][Filter(eq)] 
-| [VoidReason](General.Contacts.Activities.md#VoidReason) | string (nullable) | Reason for voiding the document, entered by the user 
-| [VoidTime](General.Contacts.Activities.md#VoidTime) | datetime (nullable) | Date/time when the document has become void 
-| [VoidUser](General.Contacts.Activities.md#VoidUser) | string (nullable) | The user who voided the document 
-| [EntityName](General.Contacts.Activities.md#EntityName) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
-| [DeadlineTime](General.Contacts.Activities.md#DeadlineTime) | datetime (nullable) | The deadline for the task. null if there is no deadline. [Filter(ge;le)] 
-| [EndTime](General.Contacts.Activities.md#EndTime) | datetime (nullable) | Currently planned ending time of the task. [Filter(ge;le)] 
-| [IsReleased](General.Contacts.Activities.md#IsReleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [IsSingleExecution](General.Contacts.Activities.md#IsSingleExecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [Notes](General.Contacts.Activities.md#Notes) | string (nullable) | Notes for this Activity. 
-| [PlannedDurationMinutes](General.Contacts.Activities.md#PlannedDurationMinutes) | int32 (nullable) | Total planned duration of the activity, regardless of the current execution status. [Filter(ge;le)] 
-| [Priority](General.Contacts.Activities.md#Priority) | [General.Priority](General.Contacts.Activities.md#Priority) | Priority on the scale from 1 (least important) to 5 (very important). [Required] [Default(3)] 
-| [Private](General.Contacts.Activities.md#Private) | boolean | True if the task is visible only to its owner; false if this is publicly visible task. [Required] [Default(false)] 
-| [ReminderTime](General.Contacts.Activities.md#ReminderTime) | datetime (nullable) | When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. 
-| [StartTime](General.Contacts.Activities.md#StartTime) | datetime | Currently planned starting time of the task. [Required] [Default(Now)] [Filter(ge;le)] 
-| [Subject](General.Contacts.Activities.md#Subject) | string | Task primary subject (required). [Required] [Filter(eq;like)] 
-| [SystemType](General.Contacts.Activities.md#SystemType) | [General.Contacts.ActivitiesRepository.SystemType](General.Contacts.Activities.md#SystemType) | T=Task; C=Communication; M=Meeting. [Required] 
+| [CompleteTime](General.Contacts.Activities.md#completetime) | datetime (nullable) | Exact time, when the document was last completed[Filter(ge;le)] 
+| [CreationTime](General.Contacts.Activities.md#creationtime) | datetime | Date/Time when the document was created [Required][Filter(ge;le)] 
+| [CreationUser](General.Contacts.Activities.md#creationuser) | string | The login name of the user, who created the document [Required][Filter(like)] 
+| [DeadlineTime](General.Contacts.Activities.md#deadlinetime) | datetime (nullable) | The deadline for the task. null if there is no deadline. [Filter(ge;le)] 
+| [DocumentDate](General.Contacts.Activities.md#documentdate) | datetime | The date on which the document was issued [Required][Filter(eq;ge;le)][ORD] 
+| [DocumentNo](General.Contacts.Activities.md#documentno) | string | Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD] 
+| [DocumentNotes](General.Contacts.Activities.md#documentnotes) | string (nullable) | Notes for this Document 
+| [DocumentVersion](General.Contacts.Activities.md#documentversion) | int32 | [Filter(eq;ge;le)] 
+| [EndTime](General.Contacts.Activities.md#endtime) | datetime (nullable) | Currently planned ending time of the task. [Filter(ge;le)] 
+| [EntityName](General.Contacts.Activities.md#entityname) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
+| [Id](General.Contacts.Activities.md#id) | guid |  
+| [IsReleased](General.Contacts.Activities.md#isreleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [IsSingleExecution](General.Contacts.Activities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [Notes](General.Contacts.Activities.md#notes) | string (nullable) | Notes for this Activity. 
+| [ParentDocumentRelationshipType](General.Contacts.Activities.md#parentdocumentrelationshiptype) | [ParentDocumentRelationshipType](General.Contacts.Activities.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
+| [PlannedDurationMinutes](General.Contacts.Activities.md#planneddurationminutes) | int32 (nullable) | Total planned duration of the activity, regardless of the current execution status. [Filter(ge;le)] 
+| [PlanningOnly](General.Contacts.Activities.md#planningonly) | boolean (nullable) | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required] 
+| [Priority](General.Contacts.Activities.md#priority) | [Priority](General.Contacts.Activities.md#priority) | Priority on the scale from 1 (least important) to 5 (very important). [Required] [Default(3)] 
+| [Private](General.Contacts.Activities.md#private) | boolean | True if the task is visible only to its owner; false if this is publicly visible task. [Required] [Default(false)] 
+| [ReadOnly](General.Contacts.Activities.md#readonly) | boolean | True - the document is read only; false - the document is not read only [Required] 
+| [ReferenceDate](General.Contacts.Activities.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)] 
+| [ReferenceDocumentNo](General.Contacts.Activities.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)] 
+| [ReleaseTime](General.Contacts.Activities.md#releasetime) | datetime (nullable) | Exact time, when the document was first released [Filter(ge;le)] 
+| [ReminderTime](General.Contacts.Activities.md#remindertime) | datetime (nullable) | When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. 
+| [StartTime](General.Contacts.Activities.md#starttime) | datetime | Currently planned starting time of the task. [Required] [Default(Now)] [Filter(ge;le)] 
+| [State](General.Contacts.Activities.md#state) | [DocumentState](General.Contacts.Activities.md#state) | 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)] 
+| [Subject](General.Contacts.Activities.md#subject) | string | Task primary subject (required). [Required] [Filter(eq;like)] 
+| [SystemType](General.Contacts.Activities.md#systemtype) | [SystemType](General.Contacts.Activities.md#systemtype) | T=Task; C=Communication; M=Meeting. [Required] 
+| [Void](General.Contacts.Activities.md#void) | boolean | True if the document is null and void [Required][Filter(eq)] 
+| [VoidReason](General.Contacts.Activities.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user 
+| [VoidTime](General.Contacts.Activities.md#voidtime) | datetime (nullable) | Date/time when the document has become void 
+| [VoidUser](General.Contacts.Activities.md#voiduser) | string (nullable) | The user who voided the document 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](General.Contacts.Activities.md#AccessKey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
-| [AdjustedDocument](General.Contacts.Activities.md#AdjustedDocument) | [General.Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
-| [AssignedToUser](General.Contacts.Activities.md#AssignedToUser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
-| [CurrencyDirectory](General.Contacts.Activities.md#CurrencyDirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
-| [DocumentType](General.Contacts.Activities.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
-| [EnterpriseCompany](General.Contacts.Activities.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
-| [EnterpriseCompanyLocation](General.Contacts.Activities.md#EnterpriseCompanyLocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
-| [FromCompanyDivision](General.Contacts.Activities.md#FromCompanyDivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
-| [FromParty](General.Contacts.Activities.md#FromParty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
-| [MasterDocument](General.Contacts.Activities.md#MasterDocument) | [General.Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
-| [Parent](General.Contacts.Activities.md#Parent) | [General.Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
-| [PrimeCauseDocument](General.Contacts.Activities.md#PrimeCauseDocument) | [General.Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
-| [ResponsiblePerson](General.Contacts.Activities.md#ResponsiblePerson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
-| [ReverseOfDocument](General.Contacts.Activities.md#ReverseOfDocument) | [General.Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
-| [Sequence](General.Contacts.Activities.md#Sequence) | [General.Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
-| [ToCompanyDivision](General.Contacts.Activities.md#ToCompanyDivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
-| [ToParty](General.Contacts.Activities.md#ToParty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
-| [UserStatus](General.Contacts.Activities.md#UserStatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
-| [ContactPerson](General.Contacts.Activities.md#ContactPerson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The contact person, from the side of the Target Party. [Filter(multi eq)] |
-| [OwnerParty](General.Contacts.Activities.md#OwnerParty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. [Required] [Filter(multi eq)] |
-| [ProjectTask](General.Contacts.Activities.md#ProjectTask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) (nullable) | The project task for which the work is performed. null when the activity is not related to a project task. [Filter(multi eq)] |
-| [ResponsibleParty](General.Contacts.Activities.md#ResponsibleParty) | [General.Contacts.Parties](General.Contacts.Parties.md) | Who is responsible for executing the task. Initially this is the owner of the task. [Required] [Filter(multi eq)] |
-| [TargetParty](General.Contacts.Activities.md#TargetParty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | External participant or target of the task. [Filter(multi eq)] |
+| [AccessKey](General.Contacts.Activities.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
+| [AdjustedDocument](General.Contacts.Activities.md#adjusteddocument) | [General.Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
+| [AssignedToUser](General.Contacts.Activities.md#assignedtouser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
+| [ContactPerson](General.Contacts.Activities.md#contactperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The contact person, from the side of the Target Party. [Filter(multi eq)] |
+| [CurrencyDirectory](General.Contacts.Activities.md#currencydirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
+| [DocumentType](General.Contacts.Activities.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
+| [EnterpriseCompany](General.Contacts.Activities.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
+| [EnterpriseCompanyLocation](General.Contacts.Activities.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
+| [FromCompanyDivision](General.Contacts.Activities.md#fromcompanydivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
+| [FromParty](General.Contacts.Activities.md#fromparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
+| [MasterDocument](General.Contacts.Activities.md#masterdocument) | [General.Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
+| [OwnerParty](General.Contacts.Activities.md#ownerparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. [Required] [Filter(multi eq)] |
+| [Parent](General.Contacts.Activities.md#parent) | [General.Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
+| [PrimeCauseDocument](General.Contacts.Activities.md#primecausedocument) | [General.Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
+| [ProjectTask](General.Contacts.Activities.md#projecttask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) (nullable) | The project task for which the work is performed. null when the activity is not related to a project task. [Filter(multi eq)] |
+| [ResponsibleParty](General.Contacts.Activities.md#responsibleparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | Who is responsible for executing the task. Initially this is the owner of the task. [Required] [Filter(multi eq)] |
+| [ResponsiblePerson](General.Contacts.Activities.md#responsibleperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
+| [ReverseOfDocument](General.Contacts.Activities.md#reverseofdocument) | [General.Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
+| [Sequence](General.Contacts.Activities.md#sequence) | [General.Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
+| [TargetParty](General.Contacts.Activities.md#targetparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | External participant or target of the task. [Filter(multi eq)] |
+| [ToCompanyDivision](General.Contacts.Activities.md#tocompanydivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
+| [ToParty](General.Contacts.Activities.md#toparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
+| [UserStatus](General.Contacts.Activities.md#userstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| Comments | [General.DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
+| DistributedAmounts | [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributedAmount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference 
 | DocumentAmounts | [General.DocumentAmounts](General.DocumentAmounts.md) |  
-| Comments | [General.DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#Document) back reference 
-| DistributedAmounts | [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributedAmount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#Document) back reference 
-| FileAttachments | [General.DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#Document) back reference 
-| LineAmounts | [General.DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#Document) back reference 
-| Prints | [General.DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#Document) back reference 
-| StateChanges | [General.DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#Document) back reference 
-| Versions | [General.DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#DocumentVersion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#Document) back reference 
-| Participants | [General.Contacts.ActivityParticipants](General.Contacts.ActivityParticipants.md) | List of [ActivityParticipant](General.Contacts.ActivityParticipants.md) child objects, based on the [General.Contacts.ActivityParticipant.Activity](General.Contacts.ActivityParticipants.md#Activity) back reference 
-| Resources | [General.Contacts.ActivityResources](General.Contacts.ActivityResources.md) | List of [ActivityResource](General.Contacts.ActivityResources.md) child objects, based on the [General.Contacts.ActivityResource.Activity](General.Contacts.ActivityResources.md#Activity) back reference 
-| Reminders | [General.Contacts.Reminders](General.Contacts.Reminders.md) | List of [Reminder](General.Contacts.Reminders.md) child objects, based on the [General.Contacts.Reminder.Activity](General.Contacts.Reminders.md#Activity) back reference 
+| FileAttachments | [General.DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
+| LineAmounts | [General.DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
+| Participants | [General.Contacts.ActivityParticipants](General.Contacts.ActivityParticipants.md) | List of [ActivityParticipant](General.Contacts.ActivityParticipants.md) child objects, based on the [General.Contacts.ActivityParticipant.Activity](General.Contacts.ActivityParticipants.md#activity) back reference 
+| Prints | [General.DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
+| Reminders | [General.Contacts.Reminders](General.Contacts.Reminders.md) | List of [Reminder](General.Contacts.Reminders.md) child objects, based on the [General.Contacts.Reminder.Activity](General.Contacts.Reminders.md#activity) back reference 
+| Resources | [General.Contacts.ActivityResources](General.Contacts.ActivityResources.md) | List of [ActivityResource](General.Contacts.ActivityResources.md) child objects, based on the [General.Contacts.ActivityResource.Activity](General.Contacts.ActivityResources.md#activity) back reference 
+| StateChanges | [General.DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
+| Versions | [General.DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CompleteTime
 
@@ -121,6 +114,14 @@ _Type_: **string**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
+### DeadlineTime
+
+> The deadline for the task. null if there is no deadline. [Filter(ge;le)]
+
+_Type_: **datetime (nullable)**  
+_Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
 ### DocumentDate
 
 > The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]
@@ -138,6 +139,14 @@ _Type_: **string**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
+### DocumentNotes
+
+> Notes for this Document
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### DocumentVersion
 
 > [Filter(eq;ge;le)]
@@ -147,9 +156,49 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 _Default Value_: **1**  
 
-### DocumentNotes
+### EndTime
 
-> Notes for this Document
+> Currently planned ending time of the task. [Filter(ge;le)]
+
+_Type_: **datetime (nullable)**  
+_Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
+### EntityName
+
+> The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
+
+_Type_: **string**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **True**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
+### IsReleased
+
+> True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+
+_Type_: **boolean**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
+
+### IsSingleExecution
+
+> Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+
+_Type_: **boolean**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
+
+### Notes
+
+> Notes for this Activity.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -159,9 +208,9 @@ _Supports Order By_: **False**
 
 > Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
 
-_Type_: **[General.ParentDocumentRelationshipType](General.Contacts.Activities.md#ParentDocumentRelationshipType) (nullable)**  
+_Type_: **[ParentDocumentRelationshipType](General.Contacts.Activities.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
-_Allowed Values (Enum Members)_  
+_Allowed Values (General.ParentDocumentRelationshipType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -171,11 +220,48 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### PlannedDurationMinutes
+
+> Total planned duration of the activity, regardless of the current execution status. [Filter(ge;le)]
+
+_Type_: **int32 (nullable)**  
+_Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
 ### PlanningOnly
 
 > Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]
 
 _Type_: **boolean (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
+
+### Priority
+
+> Priority on the scale from 1 (least important) to 5 (very important). [Required] [Default(3)]
+
+_Type_: **[Priority](General.Contacts.Activities.md#priority)**  
+Generic enum type for Priority properties  
+_Allowed Values (General.Priority Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| Lowest | Lowest value. Stored as 1. <br /> _Database Value:_ 1 <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Lowest' |
+| Low | Low value. Stored as 2. <br /> _Database Value:_ 2 <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
+| Medium | Medium value. Stored as 3. <br /> _Database Value:_ 3 <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Medium' |
+| High | High value. Stored as 4. <br /> _Database Value:_ 4 <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
+| Highest | Highest value. Stored as 5. <br /> _Database Value:_ 5 <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Highest' |
+
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **3**  
+
+### Private
+
+> True if the task is visible only to its owner; false if this is publicly visible task. [Required] [Default(false)]
+
+_Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -213,13 +299,30 @@ _Type_: **datetime (nullable)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+### ReminderTime
+
+> When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.
+
+_Type_: **datetime (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### StartTime
+
+> Currently planned starting time of the task. [Required] [Default(Now)] [Filter(ge;le)]
+
+_Type_: **datetime**  
+_Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+_Default Value_: **CurrentDateTime**  
+
 ### State
 
 > 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]
 
-_Type_: **[General.DocumentState](General.Contacts.Activities.md#State)**  
+_Type_: **[DocumentState](General.Contacts.Activities.md#state)**  
 Enumeration of document system states  
-_Allowed Values (Enum Members)_  
+_Allowed Values (General.DocumentState Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -234,6 +337,34 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
+
+### Subject
+
+> Task primary subject (required). [Required] [Filter(eq;like)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
+_Back-End Default Expression:_  
+`GetSystemSubject(obj.SystemType, obj.TargetParty)`
+
+### SystemType
+
+> T=Task; C=Communication; M=Meeting. [Required]
+
+_Type_: **[SystemType](General.Contacts.Activities.md#systemtype)**  
+Allowed values for the [SystemType](General.Contacts.Activities.md#systemtype) data attribute  
+_Allowed Values (General.Contacts.ActivitiesRepository.SystemType Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| Communication | Communication value. Stored as 'C'. <br /> _Database Value:_ 'C' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Communication' |
+| Meeting | Meeting value. Stored as 'M'. <br /> _Database Value:_ 'M' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Meeting' |
+| Task | Task value. Stored as 'T'. <br /> _Database Value:_ 'T' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Task' |
+
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### Void
 
@@ -268,138 +399,6 @@ _Type_: **string (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### EntityName
-
-> The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
-
-_Type_: **string**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **True**  
-
-### DeadlineTime
-
-> The deadline for the task. null if there is no deadline. [Filter(ge;le)]
-
-_Type_: **datetime (nullable)**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-
-### EndTime
-
-> Currently planned ending time of the task. [Filter(ge;le)]
-
-_Type_: **datetime (nullable)**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-
-### IsReleased
-
-> True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
-
-_Type_: **boolean**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-
-### IsSingleExecution
-
-> Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
-
-_Type_: **boolean**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-
-### Notes
-
-> Notes for this Activity.
-
-_Type_: **string (nullable)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### PlannedDurationMinutes
-
-> Total planned duration of the activity, regardless of the current execution status. [Filter(ge;le)]
-
-_Type_: **int32 (nullable)**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-
-### Priority
-
-> Priority on the scale from 1 (least important) to 5 (very important). [Required] [Default(3)]
-
-_Type_: **[General.Priority](General.Contacts.Activities.md#Priority)**  
-Generic enum type for Priority properties  
-_Allowed Values (Enum Members)_  
-
-| Value | Description |
-| ---- | --- |
-| Lowest | Lowest value. Stored as 1. <br /> _Database Value:_ 1 <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Lowest' |
-| Low | Low value. Stored as 2. <br /> _Database Value:_ 2 <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-| Medium | Medium value. Stored as 3. <br /> _Database Value:_ 3 <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Medium' |
-| High | High value. Stored as 4. <br /> _Database Value:_ 4 <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-| Highest | Highest value. Stored as 5. <br /> _Database Value:_ 5 <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Highest' |
-
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **3**  
-
-### Private
-
-> True if the task is visible only to its owner; false if this is publicly visible task. [Required] [Default(false)]
-
-_Type_: **boolean**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-
-### ReminderTime
-
-> When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.
-
-_Type_: **datetime (nullable)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### StartTime
-
-> Currently planned starting time of the task. [Required] [Default(Now)] [Filter(ge;le)]
-
-_Type_: **datetime**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Default Value_: **CurrentDateTime**  
-
-### Subject
-
-> Task primary subject (required). [Required] [Filter(eq;like)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-
-_Back-End Default Expression:_  
-`GetSystemSubject(obj.SystemType, obj.TargetParty)`
-
-### SystemType
-
-> T=Task; C=Communication; M=Meeting. [Required]
-
-_Type_: **[General.Contacts.ActivitiesRepository.SystemType](General.Contacts.Activities.md#SystemType)**  
-Allowed values for the [SystemType](General.Contacts.Activities.md#SystemType) data attribute  
-_Allowed Values (Enum Members)_  
-
-| Value | Description |
-| ---- | --- |
-| Communication | Communication value. Stored as 'C'. <br /> _Database Value:_ 'C' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Communication' |
-| Meeting | Meeting value. Stored as 'M'. <br /> _Database Value:_ 'M' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Meeting' |
-| Task | Task value. Stored as 'T'. <br /> _Database Value:_ 'T' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Task' |
-
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 
 ## Reference Details
 
@@ -409,7 +408,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### AdjustedDocument
 
@@ -417,7 +415,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### AssignedToUser
 
@@ -425,127 +422,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### CurrencyDirectory
-
-> The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
-
-_Type_: **[General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### DocumentType
-
-> The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
-
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### EnterpriseCompany
-
-> The enterprise company which issued the document [Required]
-
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### EnterpriseCompanyLocation
-
-> The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
-
-_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### FromCompanyDivision
-
-> The division of the company, issuing the document. null when the document is not issued by any specific division
-
-_Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### FromParty
-
-> The party which issued the document [Required]
-
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### MasterDocument
-
-> In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
-
-_Type_: **[General.Documents](General.Documents.md)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### Parent
-
-> In a multi-document tree, this is the direct parent document. If this is the root it is null
-
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### PrimeCauseDocument
-
-> The document that is the prime cause for creation of the current document
-
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
-
-### ResponsiblePerson
-
-> The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
-
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
-
-### ReverseOfDocument
-
-> The document which the current document is reverse of
-
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
-
-### Sequence
-
-> The sequence that will be used to give new numbers to the documents of this type
-
-_Type_: **[General.Sequences](General.Sequences.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
-
-### ToCompanyDivision
-
-> The division of the company, receiving the document. null when the document is not received by any specific division
-
-_Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-
-### ToParty
-
-> The party which should receive the document
-
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
-
-### UserStatus
-
-> The user status of this document if applicable for this document type. null means unknown or not yet set
-
-_Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ContactPerson
 
@@ -553,7 +429,55 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### CurrencyDirectory
+
+> The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
+
+_Type_: **[General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### DocumentType
+
+> The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
+
+_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### EnterpriseCompany
+
+> The enterprise company which issued the document [Required]
+
+_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### EnterpriseCompanyLocation
+
+> The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
+
+_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### FromCompanyDivision
+
+> The division of the company, issuing the document. null when the document is not issued by any specific division
+
+_Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### FromParty
+
+> The party which issued the document [Required]
+
+_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### MasterDocument
+
+> In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
+
+_Type_: **[General.Documents](General.Documents.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### OwnerParty
 
@@ -561,7 +485,20 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### Parent
+
+> In a multi-document tree, this is the direct parent document. If this is the root it is null
+
+_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### PrimeCauseDocument
+
+> The document that is the prime cause for creation of the current document
+
+_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Supported Filters_: **EqualsIn**  
 
 ### ProjectTask
 
@@ -569,7 +506,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ResponsibleParty
 
@@ -577,7 +513,27 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### ResponsiblePerson
+
+> The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
+
+_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Supported Filters_: **EqualsIn**  
+
+### ReverseOfDocument
+
+> The document which the current document is reverse of
+
+_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Supported Filters_: **EqualsIn**  
+
+### Sequence
+
+> The sequence that will be used to give new numbers to the documents of this type
+
+_Type_: **[General.Sequences](General.Sequences.md) (nullable)**  
+_Supported Filters_: **EqualsIn**  
 
 ### TargetParty
 
@@ -585,7 +541,27 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### ToCompanyDivision
+
+> The division of the company, receiving the document. null when the document is not received by any specific division
+
+_Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
+_Supported Filters_: **NotFilterable**  
+
+### ToParty
+
+> The party which should receive the document
+
+_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Supported Filters_: **EqualsIn**  
+
+### UserStatus
+
+> The user status of this document if applicable for this document type. null means unknown or not yet set
+
+_Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Supported Filters_: **EqualsIn**  
 
 
 

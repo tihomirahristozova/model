@@ -9,27 +9,20 @@ Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.WorkgroupShifts.md#Id) | guid |  
-| [EfficiencyFactorPercent](Production.Resources.WorkgroupShifts.md#EfficiencyFactorPercent) | decimal | Efficiency factor of the routing steps for this shift, expressed as percentage. [Required] [Default(1)] 
-| [EstablishmentDate](Production.Resources.WorkgroupShifts.md#EstablishmentDate) | datetime | When the workgroup shift was established. Used as minimum date when generating calendar. [Required] [Default(Today)] [Filter(ge;le)] 
-| [ShiftName](Production.Resources.WorkgroupShifts.md#ShiftName) | string | The name of the workgroup shift. [Required] [Filter(like)] 
+| [EfficiencyFactorPercent](Production.Resources.WorkgroupShifts.md#efficiencyfactorpercent) | decimal | Efficiency factor of the routing steps for this shift, expressed as percentage. [Required] [Default(1)] 
+| [EstablishmentDate](Production.Resources.WorkgroupShifts.md#establishmentdate) | datetime | When the workgroup shift was established. Used as minimum date when generating calendar. [Required] [Default(Today)] [Filter(ge;le)] 
+| [Id](Production.Resources.WorkgroupShifts.md#id) | guid |  
+| [ShiftName](Production.Resources.WorkgroupShifts.md#shiftname) | string | The name of the workgroup shift. [Required] [Filter(like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [WorkSchedule](Production.Resources.WorkgroupShifts.md#WorkSchedule) | [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md) | The work schedule used to calculate the working time for the shift. [Required] [Filter(multi eq)] |
-| [Workgroup](Production.Resources.WorkgroupShifts.md#Workgroup) | [Production.Resources.Workgroups](Production.Resources.Workgroups.md) | The [Workgroup](Production.Resources.WorkgroupShifts.md#Workgroup) to which this WorkgroupShift belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Workgroup](Production.Resources.WorkgroupShifts.md#workgroup) | [Production.Resources.Workgroups](Production.Resources.Workgroups.md) | The [Workgroup](Production.Resources.WorkgroupShifts.md#workgroup) to which this WorkgroupShift belongs. [Required] [Filter(multi eq)] [Owner] |
+| [WorkSchedule](Production.Resources.WorkgroupShifts.md#workschedule) | [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md) | The work schedule used to calculate the working time for the shift. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### EfficiencyFactorPercent
 
@@ -49,6 +42,12 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### ShiftName
 
 > The name of the workgroup shift. [Required] [Filter(like)]
@@ -60,21 +59,19 @@ _Supports Order By_: **False**
 
 ## Reference Details
 
+### Workgroup
+
+> The [Workgroup](Production.Resources.WorkgroupShifts.md#workgroup) to which this WorkgroupShift belongs. [Required] [Filter(multi eq)] [Owner]
+
+_Type_: **[Production.Resources.Workgroups](Production.Resources.Workgroups.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
 ### WorkSchedule
 
 > The work schedule used to calculate the working time for the shift. [Required] [Filter(multi eq)]
 
 _Type_: **[General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### Workgroup
-
-> The [Workgroup](Production.Resources.WorkgroupShifts.md#Workgroup) to which this WorkgroupShift belongs. [Required] [Filter(multi eq)] [Owner]
-
-_Type_: **[Production.Resources.Workgroups](Production.Resources.Workgroups.md)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

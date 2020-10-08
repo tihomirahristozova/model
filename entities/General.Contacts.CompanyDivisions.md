@@ -9,55 +9,75 @@ Stores company divisions structure. The divisions are parties and as such, can b
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.CompanyDivisions.md#Id) | guid |  
-| [IsActive](General.Contacts.CompanyDivisions.md#IsActive) | boolean | Specifies whether the current party is active in the system or not [Required] 
-| [PartyCreationTime](General.Contacts.CompanyDivisions.md#PartyCreationTime) | datetime (nullable) | Date and time when the Party was created. 
-| [PartyCreationUser](General.Contacts.CompanyDivisions.md#PartyCreationUser) | string (nullable) | Login name of the user, who created the Party. 
-| [DefaultProductCodingSystemId](General.Contacts.CompanyDivisions.md#DefaultProductCodingSystemId) | guid (nullable) |  
-| [GLN](General.Contacts.CompanyDivisions.md#GLN) | string (nullable) | Global Location Number used by EDI systems 
-| [PartyNotes](General.Contacts.CompanyDivisions.md#PartyNotes) | string (nullable) | Notes for this Party 
-| [ParentPartyId](General.Contacts.CompanyDivisions.md#ParentPartyId) | guid (nullable) |  
-| [PartyCode](General.Contacts.CompanyDivisions.md#PartyCode) | string | The unique code of the Party [Required] 
-| [PartyName](General.Contacts.CompanyDivisions.md#PartyName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the party [Required] 
-| [PartyType](General.Contacts.CompanyDivisions.md#PartyType) | [General.Contacts.PartiesRepository.PartyType](General.Contacts.CompanyDivisions.md#PartyType) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required] 
-| [PartyUniqueNumber](General.Contacts.CompanyDivisions.md#PartyUniqueNumber) | string (nullable) | Unique number of the party (National number for persons, Registration number for companies) 
-| [PartyUpdateTime](General.Contacts.CompanyDivisions.md#PartyUpdateTime) | datetime (nullable) | Date and time when the Party was last updated. 
-| [PartyUpdateUser](General.Contacts.CompanyDivisions.md#PartyUpdateUser) | string (nullable) | Login name of the user, who last updated the Party. 
-| [Code](General.Contacts.CompanyDivisions.md#Code) | string | Company division code, unique within the company. [Required] [Filter(eq;like)] 
-| [Name](General.Contacts.CompanyDivisions.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multi-language company divsion name. [Required] [Filter(eq;like)] 
+| [Code](General.Contacts.CompanyDivisions.md#code) | string | Company division code, unique within the company. [Required] [Filter(eq;like)] 
+| [DefaultProductCodingSystemId](General.Contacts.CompanyDivisions.md#defaultproductcodingsystemid) | guid (nullable) |  
+| [GLN](General.Contacts.CompanyDivisions.md#gln) | string (nullable) | Global Location Number used by EDI systems 
+| [Id](General.Contacts.CompanyDivisions.md#id) | guid |  
+| [IsActive](General.Contacts.CompanyDivisions.md#isactive) | boolean | Specifies whether the current party is active in the system or not [Required] 
+| [Name](General.Contacts.CompanyDivisions.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language company divsion name. [Required] [Filter(eq;like)] 
+| [ParentPartyId](General.Contacts.CompanyDivisions.md#parentpartyid) | guid (nullable) |  
+| [PartyCode](General.Contacts.CompanyDivisions.md#partycode) | string | The unique code of the Party [Required] 
+| [PartyCreationTime](General.Contacts.CompanyDivisions.md#partycreationtime) | datetime (nullable) | Date and time when the Party was created. 
+| [PartyCreationUser](General.Contacts.CompanyDivisions.md#partycreationuser) | string (nullable) | Login name of the user, who created the Party. 
+| [PartyName](General.Contacts.CompanyDivisions.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the party [Required] 
+| [PartyNotes](General.Contacts.CompanyDivisions.md#partynotes) | string (nullable) | Notes for this Party 
+| [PartyType](General.Contacts.CompanyDivisions.md#partytype) | [PartyType](General.Contacts.CompanyDivisions.md#partytype) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required] 
+| [PartyUniqueNumber](General.Contacts.CompanyDivisions.md#partyuniquenumber) | string (nullable) | Unique number of the party (National number for persons, Registration number for companies) 
+| [PartyUpdateTime](General.Contacts.CompanyDivisions.md#partyupdatetime) | datetime (nullable) | Date and time when the Party was last updated. 
+| [PartyUpdateUser](General.Contacts.CompanyDivisions.md#partyupdateuser) | string (nullable) | Login name of the user, who last updated the Party. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdministrativeRegion](General.Contacts.CompanyDivisions.md#AdministrativeRegion) | [General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. |
-| [Area](General.Contacts.CompanyDivisions.md#Area) | [General.Geography.Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. |
-| [DefaultProductCodingSystem](General.Contacts.CompanyDivisions.md#DefaultProductCodingSystem) | [General.Products.CodingSystems](General.Products.CodingSystems.md) (nullable) | When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. |
-| [ParentParty](General.Contacts.CompanyDivisions.md#ParentParty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to |
-| [Company](General.Contacts.CompanyDivisions.md#Company) | [General.Contacts.Companies](General.Contacts.Companies.md) | The company to which this company division belongs. [Required] [Filter(multi eq)] |
+| [AdministrativeRegion](General.Contacts.CompanyDivisions.md#administrativeregion) | [General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. |
+| [Area](General.Contacts.CompanyDivisions.md#area) | [General.Geography.Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. |
+| [Company](General.Contacts.CompanyDivisions.md#company) | [General.Contacts.Companies](General.Contacts.Companies.md) | The company to which this company division belongs. [Required] [Filter(multi eq)] |
+| [DefaultProductCodingSystem](General.Contacts.CompanyDivisions.md#defaultproductcodingsystem) | [General.Products.CodingSystems](General.Products.CodingSystems.md) (nullable) | When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. |
+| [ParentParty](General.Contacts.CompanyDivisions.md#parentparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| ActivityTimeIntervals | [General.Contacts.ActivityTimeIntervals](General.Contacts.ActivityTimeIntervals.md) | List of [ActivityTimeInterval](General.Contacts.ActivityTimeIntervals.md) child objects, based on the [General.Contacts.ActivityTimeInterval.Party](General.Contacts.ActivityTimeIntervals.md#Party) back reference 
-| ContactMechanisms | [General.Contacts.PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | List of [PartyContactMechanism](General.Contacts.PartyContactMechanisms.md) child objects, based on the [General.Contacts.PartyContactMechanism.Party](General.Contacts.PartyContactMechanisms.md#Party) back reference 
-| Customers | [Crm.Customers](Crm.Customers.md) | List of [Customer](Crm.Customers.md) child objects, based on the [Crm.Customer.Party](Crm.Customers.md#Party) back reference 
-| Dealers | [Crm.Dealers](Crm.Dealers.md) | List of [Dealer](Crm.Dealers.md) child objects, based on the [Crm.Dealer.Party](Crm.Dealers.md#Party) back reference 
-| Distributors | [Crm.Distributors](Crm.Distributors.md) | List of [Distributor](Crm.Distributors.md) child objects, based on the [Crm.Distributor.Party](Crm.Distributors.md#Party) back reference 
-| TargetGroupMembers | [Crm.Marketing.TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.Party](Crm.Marketing.TargetGroupMembers.md#Party) back reference 
-| BankAccounts | [General.Contacts.PartyBankAccounts](General.Contacts.PartyBankAccounts.md) | List of [PartyBankAccount](General.Contacts.PartyBankAccounts.md) child objects, based on the [General.Contacts.PartyBankAccount.Party](General.Contacts.PartyBankAccounts.md#Party) back reference 
-| Pictures | [General.Contacts.PartyPictures](General.Contacts.PartyPictures.md) | List of [PartyPicture](General.Contacts.PartyPictures.md) child objects, based on the [General.Contacts.PartyPicture.Party](General.Contacts.PartyPictures.md#Party) back reference 
-| Suppliers | [Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md) | List of [Supplier](Logistics.Procurement.Suppliers.md) child objects, based on the [Logistics.Procurement.Supplier.Party](Logistics.Procurement.Suppliers.md#Party) back reference 
+| ActivityTimeIntervals | [General.Contacts.ActivityTimeIntervals](General.Contacts.ActivityTimeIntervals.md) | List of [ActivityTimeInterval](General.Contacts.ActivityTimeIntervals.md) child objects, based on the [General.Contacts.ActivityTimeInterval.Party](General.Contacts.ActivityTimeIntervals.md#party) back reference 
+| BankAccounts | [General.Contacts.PartyBankAccounts](General.Contacts.PartyBankAccounts.md) | List of [PartyBankAccount](General.Contacts.PartyBankAccounts.md) child objects, based on the [General.Contacts.PartyBankAccount.Party](General.Contacts.PartyBankAccounts.md#party) back reference 
+| ContactMechanisms | [General.Contacts.PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | List of [PartyContactMechanism](General.Contacts.PartyContactMechanisms.md) child objects, based on the [General.Contacts.PartyContactMechanism.Party](General.Contacts.PartyContactMechanisms.md#party) back reference 
+| Customers | [Crm.Customers](Crm.Customers.md) | List of [Customer](Crm.Customers.md) child objects, based on the [Crm.Customer.Party](Crm.Customers.md#party) back reference 
+| Dealers | [Crm.Dealers](Crm.Dealers.md) | List of [Dealer](Crm.Dealers.md) child objects, based on the [Crm.Dealer.Party](Crm.Dealers.md#party) back reference 
+| Distributors | [Crm.Distributors](Crm.Distributors.md) | List of [Distributor](Crm.Distributors.md) child objects, based on the [Crm.Distributor.Party](Crm.Distributors.md#party) back reference 
+| Pictures | [General.Contacts.PartyPictures](General.Contacts.PartyPictures.md) | List of [PartyPicture](General.Contacts.PartyPictures.md) child objects, based on the [General.Contacts.PartyPicture.Party](General.Contacts.PartyPictures.md#party) back reference 
+| Suppliers | [Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md) | List of [Supplier](Logistics.Procurement.Suppliers.md) child objects, based on the [Logistics.Procurement.Supplier.Party](Logistics.Procurement.Suppliers.md#party) back reference 
+| TargetGroupMembers | [Crm.Marketing.TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.Party](Crm.Marketing.TargetGroupMembers.md#party) back reference 
 
 
 ## Attribute Details
+
+### Code
+
+> Company division code, unique within the company. [Required] [Filter(eq;like)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
+### DefaultProductCodingSystemId
+
+_Type_: **guid (nullable)**  
+_Supported Filters_: **EqualsIn**  
+
+### GLN
+
+> Global Location Number used by EDI systems
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **EqualsIn**  
+_Supports Order By_: **False**  
 
 ### Id
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsActive
@@ -67,6 +87,27 @@ _Default Value_: **NewGuid**
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+
+### Name
+
+> Multi-language company divsion name. [Required] [Filter(eq;like)]
+
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
+### ParentPartyId
+
+_Type_: **guid (nullable)**  
+_Supported Filters_: **EqualsIn**  
+
+### PartyCode
+
+> The unique code of the Party [Required]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
 
 ### PartyCreationTime
 
@@ -84,19 +125,13 @@ _Type_: **string (nullable)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
-### DefaultProductCodingSystemId
+### PartyName
 
-_Type_: **guid (nullable)**  
-_Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
+> The name of the party [Required]
 
-### GLN
-
-> Global Location Number used by EDI systems
-
-_Type_: **string (nullable)**  
-_Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
 
 ### PartyNotes
 
@@ -106,35 +141,13 @@ _Type_: **string (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### ParentPartyId
-
-_Type_: **guid (nullable)**  
-_Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
-
-### PartyCode
-
-> The unique code of the Party [Required]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-
-### PartyName
-
-> The name of the party [Required]
-
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-
 ### PartyType
 
 > Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]
 
-_Type_: **[General.Contacts.PartiesRepository.PartyType](General.Contacts.CompanyDivisions.md#PartyType)**  
-Allowed values for the [PartyType](General.Contacts.Parties.md#PartyType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[PartyType](General.Contacts.CompanyDivisions.md#partytype)**  
+Allowed values for the [PartyType](General.Contacts.Parties.md#partytype) data attribute  
+_Allowed Values (General.Contacts.PartiesRepository.PartyType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -172,22 +185,6 @@ _Type_: **string (nullable)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
-### Code
-
-> Company division code, unique within the company. [Required] [Filter(eq;like)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-
-### Name
-
-> Multi-language company divsion name. [Required] [Filter(eq;like)]
-
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-
 
 ## Reference Details
 
@@ -197,7 +194,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Area
 
@@ -205,23 +201,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Geography.Areas](General.Geography.Areas.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
-
-### DefaultProductCodingSystem
-
-> When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
-
-_Type_: **[General.Products.CodingSystems](General.Products.CodingSystems.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
-
-### ParentParty
-
-> Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
-
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Company
 
@@ -229,7 +208,20 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Companies](General.Contacts.Companies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### DefaultProductCodingSystem
+
+> When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
+
+_Type_: **[General.Products.CodingSystems](General.Products.CodingSystems.md) (nullable)**  
+_Supported Filters_: **EqualsIn**  
+
+### ParentParty
+
+> Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
+
+_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Supported Filters_: **EqualsIn**  
 
 
 

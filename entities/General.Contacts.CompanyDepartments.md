@@ -9,26 +9,19 @@ Hierarchical structure of the company departments. The departments and divisions
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.CompanyDepartments.md#Id) | guid |  
-| [DepartmentName](General.Contacts.CompanyDepartments.md#DepartmentName) | string | The name of the department. [Required] [Filter(like)] 
-| [Notes](General.Contacts.CompanyDepartments.md#Notes) | string (nullable) | Notes for this CompanyDepartment. 
+| [DepartmentName](General.Contacts.CompanyDepartments.md#departmentname) | string | The name of the department. [Required] [Filter(like)] 
+| [Id](General.Contacts.CompanyDepartments.md#id) | guid |  
+| [Notes](General.Contacts.CompanyDepartments.md#notes) | string (nullable) | Notes for this CompanyDepartment. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Company](General.Contacts.CompanyDepartments.md#Company) | [General.Contacts.Companies](General.Contacts.Companies.md) | The [Company](General.Contacts.CompanyDepartments.md#Company) to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Parent](General.Contacts.CompanyDepartments.md#Parent) | [General.Contacts.CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The parent department. null if this is root department in the company. [Filter(multi eq)] |
+| [Company](General.Contacts.CompanyDepartments.md#company) | [General.Contacts.Companies](General.Contacts.Companies.md) | The [Company](General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Parent](General.Contacts.CompanyDepartments.md#parent) | [General.Contacts.CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The parent department. null if this is root department in the company. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DepartmentName
 
@@ -37,6 +30,12 @@ _Default Value_: **NewGuid**
 _Type_: **string**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Notes
 
@@ -51,11 +50,10 @@ _Supports Order By_: **False**
 
 ### Company
 
-> The [Company](General.Contacts.CompanyDepartments.md#Company) to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Company](General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[General.Contacts.Companies](General.Contacts.Companies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Parent
 
@@ -63,7 +61,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

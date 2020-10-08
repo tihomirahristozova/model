@@ -9,38 +9,31 @@ Contains one debit or credit posting within an accounting voucher. Entity: Acc_V
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Accounting.AccountingVoucherLines.md#Id) | guid |  
-| [CorrespondanceNo](Finance.Accounting.AccountingVoucherLines.md#CorrespondanceNo) | int32 | The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits. [Required] [Default(0)] 
-| [CorrespondantAmount](Finance.Accounting.AccountingVoucherLines.md#CorrespondantAmount) | decimal (nullable) | The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). [ReadOnly] 
-| [Credit](Finance.Accounting.AccountingVoucherLines.md#Credit) | [Amount](../data-types.md#Amount) | The amount of the credit in the currency of the account. 0 means that the account is not credited. [Currency: Currency] [Required] [Default(0)] 
-| [CreditBase](Finance.Accounting.AccountingVoucherLines.md#CreditBase) | [Amount](../data-types.md#Amount) | The amount of credit in base currency. [Currency: Voucher.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [Debit](Finance.Accounting.AccountingVoucherLines.md#Debit) | [Amount](../data-types.md#Amount) | The amount of the debit in the currency of the account. 0 means that the account is not debited. [Currency: Currency] [Required] [Default(0)] 
-| [DebitBase](Finance.Accounting.AccountingVoucherLines.md#DebitBase) | [Amount](../data-types.md#Amount) | The amount of debit in base currency. [Currency: Voucher.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [ItemKey](Finance.Accounting.AccountingVoucherLines.md#ItemKey) | string (nullable) | The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. [Filter(eq;like)] 
-| [LineNo](Finance.Accounting.AccountingVoucherLines.md#LineNo) | int32 | Consecutive number of the line within the voucher. [Required] 
-| [RateDivisor](Finance.Accounting.AccountingVoucherLines.md#RateDivisor) | decimal | The divisor for conversion from Debit/Credit to base currency. [Required] [Default(1)] 
-| [RateMultiplier](Finance.Accounting.AccountingVoucherLines.md#RateMultiplier) | decimal | The multiplier for conversion from Debit/Credit to base currency. [Required] [Default(1)] 
+| [CorrespondanceNo](Finance.Accounting.AccountingVoucherLines.md#correspondanceno) | int32 | The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits. [Required] [Default(0)] 
+| [CorrespondantAmount](Finance.Accounting.AccountingVoucherLines.md#correspondantamount) | decimal (nullable) | The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). [ReadOnly] 
+| [Credit](Finance.Accounting.AccountingVoucherLines.md#credit) | [Amount](../data-types.md#amount) | The amount of the credit in the currency of the account. 0 means that the account is not credited. [Currency: Currency] [Required] [Default(0)] 
+| [CreditBase](Finance.Accounting.AccountingVoucherLines.md#creditbase) | [Amount](../data-types.md#amount) | The amount of credit in base currency. [Currency: Voucher.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [Debit](Finance.Accounting.AccountingVoucherLines.md#debit) | [Amount](../data-types.md#amount) | The amount of the debit in the currency of the account. 0 means that the account is not debited. [Currency: Currency] [Required] [Default(0)] 
+| [DebitBase](Finance.Accounting.AccountingVoucherLines.md#debitbase) | [Amount](../data-types.md#amount) | The amount of debit in base currency. [Currency: Voucher.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [Id](Finance.Accounting.AccountingVoucherLines.md#id) | guid |  
+| [ItemKey](Finance.Accounting.AccountingVoucherLines.md#itemkey) | string (nullable) | The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. [Filter(eq;like)] 
+| [LineNo](Finance.Accounting.AccountingVoucherLines.md#lineno) | int32 | Consecutive number of the line within the voucher. [Required] 
+| [RateDivisor](Finance.Accounting.AccountingVoucherLines.md#ratedivisor) | decimal | The divisor for conversion from Debit/Credit to base currency. [Required] [Default(1)] 
+| [RateMultiplier](Finance.Accounting.AccountingVoucherLines.md#ratemultiplier) | decimal | The multiplier for conversion from Debit/Credit to base currency. [Required] [Default(1)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Account](Finance.Accounting.AccountingVoucherLines.md#Account) | [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md) | The account being debited or credited. [Required] [Filter(multi eq)] |
-| [CostCenter](Finance.Accounting.AccountingVoucherLines.md#CostCenter) | [Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable) | The cost center to which this cost is related. [Filter(multi eq)] |
-| [Currency](Finance.Accounting.AccountingVoucherLines.md#Currency) | [General.Currencies](General.Currencies.md) | The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field. [Required] [Filter(multi eq)] |
-| [ProfitCenter](Finance.Accounting.AccountingVoucherLines.md#ProfitCenter) | [Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | The profit center to which this revenue is related. [Filter(multi eq)] |
-| [ReferencedDocument](Finance.Accounting.AccountingVoucherLines.md#ReferencedDocument) | [General.Documents](General.Documents.md) | The document which is referenced by the line. By default, this is the document of the voucher. [Required] [Filter(multi eq)] |
-| [Voucher](Finance.Accounting.AccountingVoucherLines.md#Voucher) | [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md) | The voucher to which this line is attached. [Required] [Filter(multi eq)] [Owner] |
+| [Account](Finance.Accounting.AccountingVoucherLines.md#account) | [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md) | The account being debited or credited. [Required] [Filter(multi eq)] |
+| [CostCenter](Finance.Accounting.AccountingVoucherLines.md#costcenter) | [Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable) | The cost center to which this cost is related. [Filter(multi eq)] |
+| [Currency](Finance.Accounting.AccountingVoucherLines.md#currency) | [General.Currencies](General.Currencies.md) | The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field. [Required] [Filter(multi eq)] |
+| [ProfitCenter](Finance.Accounting.AccountingVoucherLines.md#profitcenter) | [Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | The profit center to which this revenue is related. [Filter(multi eq)] |
+| [ReferencedDocument](Finance.Accounting.AccountingVoucherLines.md#referenceddocument) | [General.Documents](General.Documents.md) | The document which is referenced by the line. By default, this is the document of the voucher. [Required] [Filter(multi eq)] |
+| [Voucher](Finance.Accounting.AccountingVoucherLines.md#voucher) | [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md) | The voucher to which this line is attached. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CorrespondanceNo
 
@@ -63,7 +56,7 @@ _Supports Order By_: **False**
 
 > The amount of the credit in the currency of the account. 0 means that the account is not credited. [Currency: Currency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -72,7 +65,7 @@ _Default Value_: **Constant**
 
 > The amount of credit in base currency. [Currency: Voucher.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -81,7 +74,7 @@ _Default Value_: **Constant**
 
 > The amount of the debit in the currency of the account. 0 means that the account is not debited. [Currency: Currency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -90,10 +83,16 @@ _Default Value_: **Constant**
 
 > The amount of debit in base currency. [Currency: Voucher.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### ItemKey
 
@@ -143,7 +142,6 @@ _Default Value_: **1**
 
 _Type_: **[Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### CostCenter
 
@@ -151,7 +149,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Currency
 
@@ -159,7 +156,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProfitCenter
 
@@ -167,7 +163,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ReferencedDocument
 
@@ -175,7 +170,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Voucher
 
@@ -183,7 +177,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

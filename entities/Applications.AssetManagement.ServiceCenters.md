@@ -9,15 +9,15 @@ Contains data about the service centers, which can maintain the assets. Entity: 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.AssetManagement.ServiceCenters.md#Id) | guid |  
-| [Notes](Applications.AssetManagement.ServiceCenters.md#Notes) | string (nullable) | Notes for this ServiceCenter. 
+| [Id](Applications.AssetManagement.ServiceCenters.md#id) | guid |  
+| [Notes](Applications.AssetManagement.ServiceCenters.md#notes) | string (nullable) | Notes for this ServiceCenter. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.AssetManagement.ServiceCenters.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. [Filter(multi eq)] |
-| [Party](Applications.AssetManagement.ServiceCenters.md#Party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The person or company, actually performing the maintenance. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Applications.AssetManagement.ServiceCenters.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. [Filter(multi eq)] |
+| [Party](Applications.AssetManagement.ServiceCenters.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The person or company, actually performing the maintenance. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ Contains data about the service centers, which can maintain the assets. Entity: 
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes
@@ -46,7 +45,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Party
 
@@ -54,7 +52,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

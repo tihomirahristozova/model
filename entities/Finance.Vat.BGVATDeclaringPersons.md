@@ -9,38 +9,31 @@ National data: Contains the persons, which are authorized to issue and sign VAT 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Vat.BGVATDeclaringPersons.md#Id) | guid |  
-| [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#DeclarerType) | [Finance.Vat.BGVATDeclaringPersonsRepository.DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#DeclarerType) | Type of the declaring person. A=Attorney, R=Representative. [Required] [Filter(eq)] 
-| [DeclaringPersonAddress](Finance.Vat.BGVATDeclaringPersons.md#DeclaringPersonAddress) | string | Address for correspondation of the declaring person. [Required] 
-| [DeclaringPersonCity](Finance.Vat.BGVATDeclaringPersons.md#DeclaringPersonCity) | string | City from the address for correspondation of the declaring person. [Required] 
-| [DeclaringPersonPosition](Finance.Vat.BGVATDeclaringPersons.md#DeclaringPersonPosition) | string (nullable) | Position of the declaring person in the enterprise company. 
-| [DeclaringPersonPostcode](Finance.Vat.BGVATDeclaringPersons.md#DeclaringPersonPostcode) | string | Postcode from the address for correspondation of the declaring person. [Required] 
-| [IsDefault](Finance.Vat.BGVATDeclaringPersons.md#IsDefault) | boolean | True if this is the default person, which issues VAT declarations for this Enterprise Company. [Required] [Default(true)] 
+| [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) | [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) | Type of the declaring person. A=Attorney, R=Representative. [Required] [Filter(eq)] 
+| [DeclaringPersonAddress](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonaddress) | string | Address for correspondation of the declaring person. [Required] 
+| [DeclaringPersonCity](Finance.Vat.BGVATDeclaringPersons.md#declaringpersoncity) | string | City from the address for correspondation of the declaring person. [Required] 
+| [DeclaringPersonPosition](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonposition) | string (nullable) | Position of the declaring person in the enterprise company. 
+| [DeclaringPersonPostcode](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonpostcode) | string | Postcode from the address for correspondation of the declaring person. [Required] 
+| [Id](Finance.Vat.BGVATDeclaringPersons.md#id) | guid |  
+| [IsDefault](Finance.Vat.BGVATDeclaringPersons.md#isdefault) | boolean | True if this is the default person, which issues VAT declarations for this Enterprise Company. [Required] [Default(true)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Finance.Vat.BGVATDeclaringPersons.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the person is presenting the declaration. [Required] [Filter(multi eq)] [Owner] |
-| [Person](Finance.Vat.BGVATDeclaringPersons.md#Person) | [General.Contacts.Persons](General.Contacts.Persons.md) | The person that is presenting the declaration. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Finance.Vat.BGVATDeclaringPersons.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the person is presenting the declaration. [Required] [Filter(multi eq)] [Owner] |
+| [Person](Finance.Vat.BGVATDeclaringPersons.md#person) | [General.Contacts.Persons](General.Contacts.Persons.md) | The person that is presenting the declaration. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DeclarerType
 
 > Type of the declaring person. A=Attorney, R=Representative. [Required] [Filter(eq)]
 
-_Type_: **[Finance.Vat.BGVATDeclaringPersonsRepository.DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#DeclarerType)**  
-Allowed values for the [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#DeclarerType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype)**  
+Allowed values for the [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) data attribute  
+_Allowed Values (Finance.Vat.BGVATDeclaringPersonsRepository.DeclarerType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -82,6 +75,12 @@ _Type_: **string**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### IsDefault
 
 > True if this is the default person, which issues VAT declarations for this Enterprise Company. [Required] [Default(true)]
@@ -100,7 +99,6 @@ _Default Value_: **True**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Person
 
@@ -108,7 +106,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

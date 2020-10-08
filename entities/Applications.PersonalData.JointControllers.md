@@ -9,15 +9,15 @@ Contains relationship between process and joint controllers. For processes with 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.PersonalData.JointControllers.md#Id) | guid |  
-| [Notes](Applications.PersonalData.JointControllers.md#Notes) | string (nullable) | Should usually contain a short description of the role of the joint controller. 
+| [Id](Applications.PersonalData.JointControllers.md#id) | guid |  
+| [Notes](Applications.PersonalData.JointControllers.md#notes) | string (nullable) | Should usually contain a short description of the role of the joint controller. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [JointControllerParty](Applications.PersonalData.JointControllers.md#JointControllerParty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party, controlling the process. [Required] [Filter(multi eq)] |
-| [PersonalDataProcess](Applications.PersonalData.JointControllers.md#PersonalDataProcess) | [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) | The process, which is managed jointly. [Required] [Filter(multi eq)] [Owner] |
+| [JointControllerParty](Applications.PersonalData.JointControllers.md#jointcontrollerparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party, controlling the process. [Required] [Filter(multi eq)] |
+| [PersonalDataProcess](Applications.PersonalData.JointControllers.md#personaldataprocess) | [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) | The process, which is managed jointly. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ Contains relationship between process and joint controllers. For processes with 
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes
@@ -46,7 +45,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PersonalDataProcess
 
@@ -54,7 +52,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

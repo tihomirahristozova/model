@@ -9,31 +9,24 @@ Contains user requests for application of user rights. Entity: Pdm_Data_Subject_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.PersonalData.DataSubjectRightRequests.md#Id) | guid |  
-| [CompletedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#CompletedOnUtc) | datetime (nullable) | Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented. 
-| [CreatedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#CreatedOnUtc) | datetime | The date and time (in UTC), when the request was created. [Required] [Default(Now)] 
-| [Notes](Applications.PersonalData.DataSubjectRightRequests.md#Notes) | string (nullable) | This should usually contain detailed implementation notes. 
-| [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#RequestedRight) | [Applications.PersonalData.DataSubjectRightRequestsRepository.RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#RequestedRight) | The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. [Required] [Filter(eq)] 
-| [Status](Applications.PersonalData.DataSubjectRightRequests.md#Status) | [Applications.PersonalData.DataSubjectRightRequestsRepository.Status](Applications.PersonalData.DataSubjectRightRequests.md#Status) | The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. [Required] 
+| [CompletedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#completedonutc) | datetime (nullable) | Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented. 
+| [CreatedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#createdonutc) | datetime | The date and time (in UTC), when the request was created. [Required] [Default(Now)] 
+| [Id](Applications.PersonalData.DataSubjectRightRequests.md#id) | guid |  
+| [Notes](Applications.PersonalData.DataSubjectRightRequests.md#notes) | string (nullable) | This should usually contain detailed implementation notes. 
+| [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright) | [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright) | The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. [Required] [Filter(eq)] 
+| [Status](Applications.PersonalData.DataSubjectRightRequests.md#status) | [Status](Applications.PersonalData.DataSubjectRightRequests.md#status) | The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedByUser](Applications.PersonalData.DataSubjectRightRequests.md#CompletedByUser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly] |
-| [CreatedByUser](Applications.PersonalData.DataSubjectRightRequests.md#CreatedByUser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly] |
-| [EnterpriseCompany](Applications.PersonalData.DataSubjectRightRequests.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, to which the request was made. [Required] [Filter(multi eq)] |
-| [Person](Applications.PersonalData.DataSubjectRightRequests.md#Person) | [General.Contacts.Persons](General.Contacts.Persons.md) | The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)] |
+| [CompletedByUser](Applications.PersonalData.DataSubjectRightRequests.md#completedbyuser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly] |
+| [CreatedByUser](Applications.PersonalData.DataSubjectRightRequests.md#createdbyuser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly] |
+| [EnterpriseCompany](Applications.PersonalData.DataSubjectRightRequests.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, to which the request was made. [Required] [Filter(multi eq)] |
+| [Person](Applications.PersonalData.DataSubjectRightRequests.md#person) | [General.Contacts.Persons](General.Contacts.Persons.md) | The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CompletedOnUtc
 
@@ -52,6 +45,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Notes
 
 > This should usually contain detailed implementation notes.
@@ -64,9 +63,9 @@ _Supports Order By_: **False**
 
 > The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. [Required] [Filter(eq)]
 
-_Type_: **[Applications.PersonalData.DataSubjectRightRequestsRepository.RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#RequestedRight)**  
-Allowed values for the [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#RequestedRight) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright)**  
+Allowed values for the [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright) data attribute  
+_Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.RequestedRight Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -84,9 +83,9 @@ _Supports Order By_: **False**
 
 > The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. [Required]
 
-_Type_: **[Applications.PersonalData.DataSubjectRightRequestsRepository.Status](Applications.PersonalData.DataSubjectRightRequests.md#Status)**  
-Allowed values for the [Status](Applications.PersonalData.DataSubjectRightRequests.md#Status) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[Status](Applications.PersonalData.DataSubjectRightRequests.md#status)**  
+Allowed values for the [Status](Applications.PersonalData.DataSubjectRightRequests.md#status) data attribute  
+_Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.Status Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -108,7 +107,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### CreatedByUser
 
@@ -116,7 +114,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EnterpriseCompany
 
@@ -124,7 +121,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Person
 
@@ -132,7 +128,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

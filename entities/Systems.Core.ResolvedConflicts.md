@@ -9,33 +9,32 @@ Contains records of conflicts, which were automatically resolved by update proce
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.ResolvedConflicts.md#Id) | guid |  
-| [ConflictDescription](Systems.Core.ResolvedConflicts.md#ConflictDescription) | [MultilanguageString](../data-types.md#MultilanguageString) | Description of the conflict. [Required] [ReadOnly] 
-| [ResolveConfirmedByUser](Systems.Core.ResolvedConflicts.md#ResolveConfirmedByUser) | boolean | True, when the conflict resolution was manually confirmed by user. [Required] [Default(false)] [Filter(eq)] 
-| [ResolveConfirmedTime](Systems.Core.ResolvedConflicts.md#ResolveConfirmedTime) | datetime (nullable) | Time when the conflict resolution was confirmed by the user. [ReadOnly] 
-| [ResolveDescription](Systems.Core.ResolvedConflicts.md#ResolveDescription) | [MultilanguageString](../data-types.md#MultilanguageString) | Description of the resolution of the conflict. [Required] [ReadOnly] 
-| [ResolvedTime](Systems.Core.ResolvedConflicts.md#ResolvedTime) | datetime | Time when the resolution of the conflict was made. [Required] [Default(Now)] [ReadOnly] 
-| [RevisedByUser](Systems.Core.ResolvedConflicts.md#RevisedByUser) | boolean | True, when the conflict resolution was revised (reviewed) manually by user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [TableName](Systems.Core.ResolvedConflicts.md#TableName) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the table in which the conflict has occurred. [Required] [Filter(like)] [ReadOnly] 
-| [URL](Systems.Core.ResolvedConflicts.md#URL) | string | URL of the item (the row) for which the conflict occurred. [Required] [ReadOnly] 
+| [ConflictDescription](Systems.Core.ResolvedConflicts.md#conflictdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | Description of the conflict. [Required] [ReadOnly] 
+| [Id](Systems.Core.ResolvedConflicts.md#id) | guid |  
+| [ResolveConfirmedByUser](Systems.Core.ResolvedConflicts.md#resolveconfirmedbyuser) | boolean | True, when the conflict resolution was manually confirmed by user. [Required] [Default(false)] [Filter(eq)] 
+| [ResolveConfirmedTime](Systems.Core.ResolvedConflicts.md#resolveconfirmedtime) | datetime (nullable) | Time when the conflict resolution was confirmed by the user. [ReadOnly] 
+| [ResolveDescription](Systems.Core.ResolvedConflicts.md#resolvedescription) | [MultilanguageString](../data-types.md#multilanguagestring) | Description of the resolution of the conflict. [Required] [ReadOnly] 
+| [ResolvedTime](Systems.Core.ResolvedConflicts.md#resolvedtime) | datetime | Time when the resolution of the conflict was made. [Required] [Default(Now)] [ReadOnly] 
+| [RevisedByUser](Systems.Core.ResolvedConflicts.md#revisedbyuser) | boolean | True, when the conflict resolution was revised (reviewed) manually by user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [TableName](Systems.Core.ResolvedConflicts.md#tablename) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the table in which the conflict has occurred. [Required] [Filter(like)] [ReadOnly] 
+| [URL](Systems.Core.ResolvedConflicts.md#url) | string | URL of the item (the row) for which the conflict occurred. [Required] [ReadOnly] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ConflictDescription
 
 > Description of the conflict. [Required] [ReadOnly]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### ResolveConfirmedByUser
 
@@ -58,7 +57,7 @@ _Supports Order By_: **False**
 
 > Description of the resolution of the conflict. [Required] [ReadOnly]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -84,7 +83,7 @@ _Default Value_: **False**
 
 > Name of the table in which the conflict has occurred. [Required] [Filter(like)] [ReadOnly]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 

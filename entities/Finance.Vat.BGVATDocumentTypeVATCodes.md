@@ -9,33 +9,26 @@ Contains the VAT codes, which should be used, when reporting VAT for the differe
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Vat.BGVATDocumentTypeVATCodes.md#Id) | guid |  
-| [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#CashReportingVATCode) | [Finance.Vat.BGVATDocumentTypeVATCodesRepository.CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#CashReportingVATCode) (nullable) | VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code. 
-| [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#VATCode) | [Finance.Vat.BGVATDocumentTypeVATCodesRepository.VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#VATCode) (nullable) | VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values. 
+| [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) | [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) (nullable) | VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code. 
+| [Id](Finance.Vat.BGVATDocumentTypeVATCodes.md#id) | guid |  
+| [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) | [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) (nullable) | VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Finance.Vat.BGVATDocumentTypeVATCodes.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | Document type that generates VAT entries. [Required] [Filter(multi eq)] |
+| [DocumentType](Finance.Vat.BGVATDocumentTypeVATCodes.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | Document type that generates VAT entries. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CashReportingVATCode
 
 > VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.
 
-_Type_: **[Finance.Vat.BGVATDocumentTypeVATCodesRepository.CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#CashReportingVATCode) (nullable)**  
-Allowed values for the [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#CashReportingVATCode) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) (nullable)**  
+Allowed values for the [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) data attribute  
+_Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.CashReportingVATCode Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -59,13 +52,19 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### VATCode
 
 > VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.
 
-_Type_: **[Finance.Vat.BGVATDocumentTypeVATCodesRepository.VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#VATCode) (nullable)**  
-Allowed values for the [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#VATCode) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) (nullable)**  
+Allowed values for the [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) data attribute  
+_Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.VATCode Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -98,7 +97,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

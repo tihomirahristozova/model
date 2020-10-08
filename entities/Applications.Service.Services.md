@@ -9,31 +9,38 @@ Contains the services, which can be performed. Entity: Srv_Services
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Service.Services.md#Id) | guid |  
-| [IsActive](Applications.Service.Services.md#IsActive) | boolean | Indicates wheather this service is currently used. [Required] [Default(true)] [Filter(eq)] 
-| [Code](Applications.Service.Services.md#Code) | string | Unique code of the service. [Required] [Filter(eq;like)] 
-| [Name](Applications.Service.Services.md#Name) | string | The name of the service. [Required] [Filter(eq;like)] 
+| [Code](Applications.Service.Services.md#code) | string | Unique code of the service. [Required] [Filter(eq;like)] 
+| [Id](Applications.Service.Services.md#id) | guid |  
+| [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates wheather this service is currently used. [Required] [Default(true)] [Filter(eq)] 
+| [Name](Applications.Service.Services.md#name) | string | The name of the service. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MeasurementUnit](Applications.Service.Services.md#MeasurementUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit in which the service rendered to the customer is quantified. [Required] [Filter(multi eq)] |
+| [MeasurementUnit](Applications.Service.Services.md#measurementunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit in which the service rendered to the customer is quantified. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Invoicing | [Applications.Service.ServiceInvoicing](Applications.Service.ServiceInvoicing.md) | List of [ServiceInvoicing](Applications.Service.ServiceInvoicing.md) child objects, based on the [Applications.Service.ServiceInvoicing.Service](Applications.Service.ServiceInvoicing.md#Service) back reference 
+| Invoicing | [Applications.Service.ServiceInvoicing](Applications.Service.ServiceInvoicing.md) | List of [ServiceInvoicing](Applications.Service.ServiceInvoicing.md) child objects, based on the [Applications.Service.ServiceInvoicing.Service](Applications.Service.ServiceInvoicing.md#service) back reference 
 
 
 ## Attribute Details
+
+### Code
+
+> Unique code of the service. [Required] [Filter(eq;like)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
 
 ### Id
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsActive
@@ -44,14 +51,6 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
-
-### Code
-
-> Unique code of the service. [Required] [Filter(eq;like)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
 
 ### Name
 
@@ -70,7 +69,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

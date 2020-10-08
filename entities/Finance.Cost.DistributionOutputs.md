@@ -9,16 +9,16 @@ Contains the output data for the specified period. This is the output on which c
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Cost.DistributionOutputs.md#Id) | guid |  
-| [LineNo](Finance.Cost.DistributionOutputs.md#LineNo) | int32 | Unique (within the document), consecutive line number of the output. [Required] 
-| [WeightCoefficient](Finance.Cost.DistributionOutputs.md#WeightCoefficient) | decimal | The weight coefficient for prorate distribution of cost over the current line. [Required] [Default(1)] 
+| [Id](Finance.Cost.DistributionOutputs.md#id) | guid |  
+| [LineNo](Finance.Cost.DistributionOutputs.md#lineno) | int32 | Unique (within the document), consecutive line number of the output. [Required] 
+| [WeightCoefficient](Finance.Cost.DistributionOutputs.md#weightcoefficient) | decimal | The weight coefficient for prorate distribution of cost over the current line. [Required] [Default(1)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostDistribution](Finance.Cost.DistributionOutputs.md#CostDistribution) | [Finance.Cost.Distributions](Finance.Cost.Distributions.md) | The [Distribution](Finance.Cost.Distributions.md) to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner] |
-| [StoreTransactionLine](Finance.Cost.DistributionOutputs.md#StoreTransactionLine) | [Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)] |
+| [CostDistribution](Finance.Cost.DistributionOutputs.md#costdistribution) | [Finance.Cost.Distributions](Finance.Cost.Distributions.md) | The [Distribution](Finance.Cost.Distributions.md) to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner] |
+| [StoreTransactionLine](Finance.Cost.DistributionOutputs.md#storetransactionline) | [Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Contains the output data for the specified period. This is the output on which c
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### LineNo
@@ -61,7 +60,6 @@ _Default Value_: **1**
 
 _Type_: **[Finance.Cost.Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### StoreTransactionLine
 
@@ -69,7 +67,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,15 +9,15 @@ Contains recipients, to which personal data is disclosed. Entity: Pdm_Personal_D
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.PersonalData.PersonalDataProcessRecipients.md#Id) | guid |  
-| [Notes](Applications.PersonalData.PersonalDataProcessRecipients.md#Notes) | string (nullable) | Notes for this PersonalDataProcessRecipient. 
+| [Id](Applications.PersonalData.PersonalDataProcessRecipients.md#id) | guid |  
+| [Notes](Applications.PersonalData.PersonalDataProcessRecipients.md#notes) | string (nullable) | Notes for this PersonalDataProcessRecipient. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PersonalDataProcess](Applications.PersonalData.PersonalDataProcessRecipients.md#PersonalDataProcess) | [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) | The process, whose data is disclosed to the recipient. [Required] [Filter(multi eq)] [Owner] |
-| [RecipientParty](Applications.PersonalData.PersonalDataProcessRecipients.md#RecipientParty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The recipient, to whom the data is disclosed. [Required] [Filter(multi eq)] |
+| [PersonalDataProcess](Applications.PersonalData.PersonalDataProcessRecipients.md#personaldataprocess) | [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) | The process, whose data is disclosed to the recipient. [Required] [Filter(multi eq)] [Owner] |
+| [RecipientParty](Applications.PersonalData.PersonalDataProcessRecipients.md#recipientparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The recipient, to whom the data is disclosed. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ Contains recipients, to which personal data is disclosed. Entity: Pdm_Personal_D
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes
@@ -46,7 +45,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### RecipientParty
 
@@ -54,7 +52,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

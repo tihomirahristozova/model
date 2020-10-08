@@ -9,38 +9,31 @@ Contains the managed assets. The management of assets include maintenance planni
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.AssetManagement.ManagedAssets.md#Id) | guid |  
-| [Code](Applications.AssetManagement.ManagedAssets.md#Code) | string | Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company. [Required] [Filter(eq;like)] 
-| [Name](Applications.AssetManagement.ManagedAssets.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the managed asset (multi-language). [Required] [Filter(eq;like)] 
-| [Notes](Applications.AssetManagement.ManagedAssets.md#Notes) | string (nullable) | Notes for this ManagedAsset. 
-| [RegistrationNumber](Applications.AssetManagement.ManagedAssets.md#RegistrationNumber) | string (nullable) | Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. [Filter(eq;like)] 
+| [Code](Applications.AssetManagement.ManagedAssets.md#code) | string | Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company. [Required] [Filter(eq;like)] 
+| [Id](Applications.AssetManagement.ManagedAssets.md#id) | guid |  
+| [Name](Applications.AssetManagement.ManagedAssets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the managed asset (multi-language). [Required] [Filter(eq;like)] 
+| [Notes](Applications.AssetManagement.ManagedAssets.md#notes) | string (nullable) | Notes for this ManagedAsset. 
+| [RegistrationNumber](Applications.AssetManagement.ManagedAssets.md#registrationnumber) | string (nullable) | Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.AssetManagement.ManagedAssets.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which the managed asset belongs. [Required] [Filter(multi eq)] |
-| [ManagedAssetGroup](Applications.AssetManagement.ManagedAssets.md#ManagedAssetGroup) | [Applications.AssetManagement.ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) | The organizational group of the asset. Used for organizational purposes only. [Required] [Filter(multi eq)] |
-| [ManagedAssetType](Applications.AssetManagement.ManagedAssets.md#ManagedAssetType) | [Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Applications.AssetManagement.ManagedAssets.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which the managed asset belongs. [Required] [Filter(multi eq)] |
+| [ManagedAssetGroup](Applications.AssetManagement.ManagedAssets.md#managedassetgroup) | [Applications.AssetManagement.ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) | The organizational group of the asset. Used for organizational purposes only. [Required] [Filter(multi eq)] |
+| [ManagedAssetType](Applications.AssetManagement.ManagedAssets.md#managedassettype) | [Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Locations | [Applications.AssetManagement.ManagedAssetLocations](Applications.AssetManagement.ManagedAssetLocations.md) | List of [ManagedAssetLocation](Applications.AssetManagement.ManagedAssetLocations.md) child objects, based on the [Applications.AssetManagement.ManagedAssetLocation.ManagedAsset](Applications.AssetManagement.ManagedAssetLocations.md#ManagedAsset) back reference 
-| MaintenanceSchedules | [Applications.AssetManagement.ManagedAssetMaintenanceSchedules](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md) | List of [ManagedAssetMaintenanceSchedule](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md) child objects, based on the [Applications.AssetManagement.ManagedAssetMaintenanceSchedule.ManagedAsset](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#ManagedAsset) back reference 
-| ParameterValues | [Applications.AssetManagement.ManagedAssetParameterValues](Applications.AssetManagement.ManagedAssetParameterValues.md) | List of [ManagedAssetParameterValue](Applications.AssetManagement.ManagedAssetParameterValues.md) child objects, based on the [Applications.AssetManagement.ManagedAssetParameterValue.ManagedAsset](Applications.AssetManagement.ManagedAssetParameterValues.md#ManagedAsset) back reference 
-| ScheduledMaintenances | [Applications.AssetManagement.ManagedAssetScheduledMaintenances](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md) | List of [ManagedAssetScheduledMaintenance](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md) child objects, based on the [Applications.AssetManagement.ManagedAssetScheduledMaintenance.ManagedAsset](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#ManagedAsset) back reference 
+| Locations | [Applications.AssetManagement.ManagedAssetLocations](Applications.AssetManagement.ManagedAssetLocations.md) | List of [ManagedAssetLocation](Applications.AssetManagement.ManagedAssetLocations.md) child objects, based on the [Applications.AssetManagement.ManagedAssetLocation.ManagedAsset](Applications.AssetManagement.ManagedAssetLocations.md#managedasset) back reference 
+| MaintenanceSchedules | [Applications.AssetManagement.ManagedAssetMaintenanceSchedules](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md) | List of [ManagedAssetMaintenanceSchedule](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md) child objects, based on the [Applications.AssetManagement.ManagedAssetMaintenanceSchedule.ManagedAsset](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#managedasset) back reference 
+| ParameterValues | [Applications.AssetManagement.ManagedAssetParameterValues](Applications.AssetManagement.ManagedAssetParameterValues.md) | List of [ManagedAssetParameterValue](Applications.AssetManagement.ManagedAssetParameterValues.md) child objects, based on the [Applications.AssetManagement.ManagedAssetParameterValue.ManagedAsset](Applications.AssetManagement.ManagedAssetParameterValues.md#managedasset) back reference 
+| ScheduledMaintenances | [Applications.AssetManagement.ManagedAssetScheduledMaintenances](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md) | List of [ManagedAssetScheduledMaintenance](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md) child objects, based on the [Applications.AssetManagement.ManagedAssetScheduledMaintenance.ManagedAsset](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#managedasset) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Code
 
@@ -50,11 +43,17 @@ _Type_: **string**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Name
 
 > Name of the managed asset (multi-language). [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -83,7 +82,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ManagedAssetGroup
 
@@ -91,7 +89,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.AssetManagement.ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ManagedAssetType
 
@@ -99,7 +96,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

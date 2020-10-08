@@ -9,27 +9,20 @@ Represents event registration of a business rule. Entity: Sys_User_Business_Rule
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.UserBusinessRuleEvents.md#Id) | guid |  
-| [EventParameter](Systems.Bpm.UserBusinessRuleEvents.md#EventParameter) | string (nullable) | Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc. 
-| [EventType](Systems.Bpm.UserBusinessRuleEvents.md#EventType) | [Systems.Bpm.UserBusinessRuleEventsRepository.EventType](Systems.Bpm.UserBusinessRuleEvents.md#EventType) | The event for which to register the business rule. [Required] 
-| [ExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#ExecutionPriority) | [Aloe.SystemFrameworks.Domain.BusinessLogic.RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#ExecutionPriority) | Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. [Required] [Default(50)] 
-| [Layer](Systems.Bpm.UserBusinessRuleEvents.md#Layer) | [Systems.Bpm.UserBusinessRuleEventsRepository.Layer](Systems.Bpm.UserBusinessRuleEvents.md#Layer) | Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. [Required] [Default("BKE")] 
+| [EventParameter](Systems.Bpm.UserBusinessRuleEvents.md#eventparameter) | string (nullable) | Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc. 
+| [EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype) | [EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype) | The event for which to register the business rule. [Required] 
+| [ExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority) | [RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority) | Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. [Required] [Default(50)] 
+| [Id](Systems.Bpm.UserBusinessRuleEvents.md#id) | guid |  
+| [Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer) | [Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer) | Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. [Required] [Default("BKE")] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [UserBusinessRule](Systems.Bpm.UserBusinessRuleEvents.md#UserBusinessRule) | [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The rule, which will be registered for the event. [Required] [Filter(multi eq)] [Owner] |
+| [UserBusinessRule](Systems.Bpm.UserBusinessRuleEvents.md#userbusinessrule) | [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The rule, which will be registered for the event. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### EventParameter
 
@@ -43,9 +36,9 @@ _Supports Order By_: **False**
 
 > The event for which to register the business rule. [Required]
 
-_Type_: **[Systems.Bpm.UserBusinessRuleEventsRepository.EventType](Systems.Bpm.UserBusinessRuleEvents.md#EventType)**  
-Allowed values for the [EventType](Systems.Bpm.UserBusinessRuleEvents.md#EventType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype)**  
+Allowed values for the [EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype) data attribute  
+_Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.EventType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -65,8 +58,8 @@ _Supports Order By_: **False**
 
 > Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. [Required] [Default(50)]
 
-_Type_: **[Aloe.SystemFrameworks.Domain.BusinessLogic.RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#ExecutionPriority)**  
-_Allowed Values (Enum Members)_  
+_Type_: **[RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority)**  
+_Allowed Values (Aloe.SystemFrameworks.Domain.BusinessLogic.RuleExecutionPriority Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -80,13 +73,19 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **50**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Layer
 
 > Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. [Required] [Default("BKE")]
 
-_Type_: **[Systems.Bpm.UserBusinessRuleEventsRepository.Layer](Systems.Bpm.UserBusinessRuleEvents.md#Layer)**  
-Allowed values for the [Layer](Systems.Bpm.UserBusinessRuleEvents.md#Layer) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer)**  
+Allowed values for the [Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer) data attribute  
+_Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.Layer Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -106,7 +105,6 @@ _Default Value_: **BackEnd**
 
 _Type_: **[Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

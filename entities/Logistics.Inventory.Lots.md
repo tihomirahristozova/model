@@ -9,41 +9,34 @@ Warehouse lots. They contain one row for each specific product, status, producti
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.Lots.md#Id) | guid |  
-| [Description](Logistics.Inventory.Lots.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | The description of this Lot. 
-| [ExpiryDate](Logistics.Inventory.Lots.md#ExpiryDate) | datetime (nullable) | Expiry date for this lot. 
-| [LicenseNo](Logistics.Inventory.Lots.md#LicenseNo) | string (nullable) | The license number for this lot. Null when license number is N/A or unknown. 
-| [Number](Logistics.Inventory.Lots.md#Number) | string | The unique number of the Lot. May contain characters, if required. [Required] [Filter(eq;like)] 
-| [ProductionBatchId](Logistics.Inventory.Lots.md#ProductionBatchId) | guid (nullable) | Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. [Filter(multi eq)] 
-| [PurchaseLotNumber](Logistics.Inventory.Lots.md#PurchaseLotNumber) | string (nullable) | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. [Filter(like)] 
-| [ReceiptDate](Logistics.Inventory.Lots.md#ReceiptDate) | date (nullable) | The date of the first receipt of products in this lot. [ReadOnly] 
-| [Status](Logistics.Inventory.Lots.md#Status) | [Logistics.Inventory.LotsRepository.Status](Logistics.Inventory.Lots.md#Status) | Status of the warehouse lot. Minus statuses describe blocked conditions. -3 blocked for document (sales or service order) -2 blocked for party -1 blocked for inspection 0 free to use. [Required] [Default(0)] [Filter(multi eq)] 
+| [Description](Logistics.Inventory.Lots.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The description of this Lot. 
+| [ExpiryDate](Logistics.Inventory.Lots.md#expirydate) | datetime (nullable) | Expiry date for this lot. 
+| [Id](Logistics.Inventory.Lots.md#id) | guid |  
+| [LicenseNo](Logistics.Inventory.Lots.md#licenseno) | string (nullable) | The license number for this lot. Null when license number is N/A or unknown. 
+| [Number](Logistics.Inventory.Lots.md#number) | string | The unique number of the Lot. May contain characters, if required. [Required] [Filter(eq;like)] 
+| [ProductionBatchId](Logistics.Inventory.Lots.md#productionbatchid) | guid (nullable) | Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. [Filter(multi eq)] 
+| [PurchaseLotNumber](Logistics.Inventory.Lots.md#purchaselotnumber) | string (nullable) | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. [Filter(like)] 
+| [ReceiptDate](Logistics.Inventory.Lots.md#receiptdate) | date (nullable) | The date of the first receipt of products in this lot. [ReadOnly] 
+| [Status](Logistics.Inventory.Lots.md#status) | [Status](Logistics.Inventory.Lots.md#status) | Status of the warehouse lot. Minus statuses describe blocked conditions. -3 blocked for document (sales or service order) -2 blocked for party -1 blocked for inspection 0 free to use. [Required] [Default(0)] [Filter(multi eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BlockedForDocument](Logistics.Inventory.Lots.md#BlockedForDocument) | [General.Documents](General.Documents.md) (nullable) | If non-null, contains the document for which the lot is blocked. [Filter(multi eq)] |
-| [BlockedForParty](Logistics.Inventory.Lots.md#BlockedForParty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Non-null when the warehouse lot is blocked specifically for some party. [Filter(multi eq)] |
-| [CertificateDocument](Logistics.Inventory.Lots.md#CertificateDocument) | [General.Documents](General.Documents.md) (nullable) | Document, containing the certificate for this lot. [Filter(multi eq)] |
-| [Product](Logistics.Inventory.Lots.md#Product) | [General.Products.Products](General.Products.Products.md) | The product to which the lot is bound. [Required] [Filter(multi eq)] |
-| [ReceiptStoreTransaction](Logistics.Inventory.Lots.md#ReceiptStoreTransaction) | [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable) | The store receipt transaction, which created the lot. null if the lot is manually created. [Filter(multi eq)] |
+| [BlockedForDocument](Logistics.Inventory.Lots.md#blockedfordocument) | [General.Documents](General.Documents.md) (nullable) | If non-null, contains the document for which the lot is blocked. [Filter(multi eq)] |
+| [BlockedForParty](Logistics.Inventory.Lots.md#blockedforparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Non-null when the warehouse lot is blocked specifically for some party. [Filter(multi eq)] |
+| [CertificateDocument](Logistics.Inventory.Lots.md#certificatedocument) | [General.Documents](General.Documents.md) (nullable) | Document, containing the certificate for this lot. [Filter(multi eq)] |
+| [Product](Logistics.Inventory.Lots.md#product) | [General.Products.Products](General.Products.Products.md) | The product to which the lot is bound. [Required] [Filter(multi eq)] |
+| [ReceiptStoreTransaction](Logistics.Inventory.Lots.md#receiptstoretransaction) | [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable) | The store receipt transaction, which created the lot. null if the lot is manually created. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Description
 
 > The description of this Lot.
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -54,6 +47,12 @@ _Supports Order By_: **False**
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### LicenseNo
 
@@ -77,7 +76,6 @@ _Supports Order By_: **False**
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PurchaseLotNumber
 
@@ -99,9 +97,9 @@ _Supports Order By_: **False**
 
 > Status of the warehouse lot. Minus statuses describe blocked conditions. -3 blocked for document (sales or service order) -2 blocked for party -1 blocked for inspection 0 free to use. [Required] [Default(0)] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.LotsRepository.Status](Logistics.Inventory.Lots.md#Status)**  
-Allowed values for the [Status](Logistics.Inventory.Lots.md#Status) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[Status](Logistics.Inventory.Lots.md#status)**  
+Allowed values for the [Status](Logistics.Inventory.Lots.md#status) data attribute  
+_Allowed Values (Logistics.Inventory.LotsRepository.Status Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -123,7 +121,6 @@ _Default Value_: **0**
 
 _Type_: **[General.Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### BlockedForParty
 
@@ -131,7 +128,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### CertificateDocument
 
@@ -139,7 +135,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Product
 
@@ -147,7 +142,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ReceiptStoreTransaction
 
@@ -155,7 +149,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,28 +9,21 @@ Contains the scheduled maintenances for the managed assets. Each maintenance can
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#Id) | guid |  
-| [Date](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#Date) | date (nullable) | The date, when the maintenance is planned. null means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)] 
-| [IsDismissed](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#IsDismissed) | boolean | Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. [Required] [Default(false)] [Filter(multi eq)] 
-| [Notes](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#Notes) | string (nullable) | Notes for this ManagedAssetScheduledMaintenance. 
-| [TrackedParameterValue](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#TrackedParameterValue) | int32 (nullable) | The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. null means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)] 
+| [Date](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#date) | date (nullable) | The date, when the maintenance is planned. null means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)] 
+| [Id](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#id) | guid |  
+| [IsDismissed](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#isdismissed) | boolean | Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. [Required] [Default(false)] [Filter(multi eq)] 
+| [Notes](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#notes) | string (nullable) | Notes for this ManagedAssetScheduledMaintenance. 
+| [TrackedParameterValue](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#trackedparametervalue) | int32 (nullable) | The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. null means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenanceType](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#MaintenanceType) | [Applications.AssetManagement.MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | The type of maintenance, which will be performed. [Required] [Filter(multi eq)] |
-| [ManagedAsset](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#ManagedAsset) | [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The asset, which will be maintained. [Required] [Filter(multi eq)] [Owner] |
+| [MaintenanceType](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#maintenancetype) | [Applications.AssetManagement.MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | The type of maintenance, which will be performed. [Required] [Filter(multi eq)] |
+| [ManagedAsset](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#managedasset) | [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The asset, which will be maintained. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Date
 
@@ -39,6 +32,12 @@ _Default Value_: **NewGuid**
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsDismissed
 
@@ -74,7 +73,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.AssetManagement.MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ManagedAsset
 
@@ -82,7 +80,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

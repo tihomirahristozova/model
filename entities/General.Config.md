@@ -9,23 +9,16 @@ Hierarchical repository of configuration options. Entity: Gen_Config
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Config.md#Id) | guid |  
-| [Description](General.Config.md#Description) | string (nullable) | The description of this Config. 
-| [IsActive](General.Config.md#IsActive) | boolean | Indicates whether this config entry is active. Inactive config entries are not taken into account. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1.100.0) 
-| [KeyPath](General.Config.md#KeyPath) | string | Full path of the configuration option. [Required] [Filter(eq)] [ORD] 
-| [KeyValue](General.Config.md#KeyValue) | string (nullable) | The value of the configuration option. 
-| [UserLogin](General.Config.md#UserLogin) | string (nullable) | If not null, the configuration option is specific to the user. [Filter(eq)] 
-| [UserMachine](General.Config.md#UserMachine) | string (nullable) | If not null, the configuration option is specific to the machine. [Filter(eq)] 
+| [Description](General.Config.md#description) | string (nullable) | The description of this Config. 
+| [Id](General.Config.md#id) | guid |  
+| [IsActive](General.Config.md#isactive) | boolean | Indicates whether this config entry is active. Inactive config entries are not taken into account. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1.100.0) 
+| [KeyPath](General.Config.md#keypath) | string | Full path of the configuration option. [Required] [Filter(eq)] [ORD] 
+| [KeyValue](General.Config.md#keyvalue) | string (nullable) | The value of the configuration option. 
+| [UserLogin](General.Config.md#userlogin) | string (nullable) | If not null, the configuration option is specific to the user. [Filter(eq)] 
+| [UserMachine](General.Config.md#usermachine) | string (nullable) | If not null, the configuration option is specific to the machine. [Filter(eq)] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Description
 
@@ -34,6 +27,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsActive
 

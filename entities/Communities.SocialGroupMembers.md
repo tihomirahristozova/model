@@ -9,15 +9,15 @@ Represents the membership of a user in a social group. Entity: Cmm_Social_Group_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Communities.SocialGroupMembers.md#Id) | guid |  
-| [JoinTimeUtc](Communities.SocialGroupMembers.md#JoinTimeUtc) | datetime | The exact server time (in UTC), when the user joined the group. [Required] [Default(NowUtc)] 
+| [Id](Communities.SocialGroupMembers.md#id) | guid |  
+| [JoinTimeUtc](Communities.SocialGroupMembers.md#jointimeutc) | datetime | The exact server time (in UTC), when the user joined the group. [Required] [Default(NowUtc)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [SocialGroup](Communities.SocialGroupMembers.md#SocialGroup) | [Communities.SocialGroups](Communities.SocialGroups.md) | The group in which the user participates. [Required] [Filter(multi eq)] [Owner] |
-| [User](Communities.SocialGroupMembers.md#User) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who is a member of the group. [Required] [Filter(multi eq)] |
+| [SocialGroup](Communities.SocialGroupMembers.md#socialgroup) | [Communities.SocialGroups](Communities.SocialGroups.md) | The group in which the user participates. [Required] [Filter(multi eq)] [Owner] |
+| [User](Communities.SocialGroupMembers.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who is a member of the group. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ Represents the membership of a user in a social group. Entity: Cmm_Social_Group_
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### JoinTimeUtc
@@ -47,7 +46,6 @@ _Default Value_: **CurrentDateTimeUtc**
 
 _Type_: **[Communities.SocialGroups](Communities.SocialGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### User
 
@@ -55,7 +53,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,28 +9,21 @@ Represents one condition for the execution of a business rule. Entity: Sys_User_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.UserBusinessRuleConditions.md#Id) | guid |  
-| [AttributeName](Systems.Bpm.UserBusinessRuleConditions.md#AttributeName) | string | The attribute, which will be tested. [Required] 
-| [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#ComparisonType) | [Systems.Bpm.UserBusinessRuleConditionsRepository.ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#ComparisonType) | How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. [Required] [Default("Equals")] 
-| [ConditionNo](Systems.Bpm.UserBusinessRuleConditions.md#ConditionNo) | int32 | Unique consecutive number of the condition within the business rule. [Required] 
-| [Notes](Systems.Bpm.UserBusinessRuleConditions.md#Notes) | string (nullable) | Notes for this UserBusinessRuleCondition. (Introduced in version 20.1.100.0) 
-| [Value](Systems.Bpm.UserBusinessRuleConditions.md#Value) | string (nullable) | The value against which the data attribute will be tested. 
+| [AttributeName](Systems.Bpm.UserBusinessRuleConditions.md#attributename) | string | The attribute, which will be tested. [Required] 
+| [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. [Required] [Default("Equals")] 
+| [ConditionNo](Systems.Bpm.UserBusinessRuleConditions.md#conditionno) | int32 | Unique consecutive number of the condition within the business rule. [Required] 
+| [Id](Systems.Bpm.UserBusinessRuleConditions.md#id) | guid |  
+| [Notes](Systems.Bpm.UserBusinessRuleConditions.md#notes) | string (nullable) | Notes for this UserBusinessRuleCondition. (Introduced in version 20.1.100.0) 
+| [Value](Systems.Bpm.UserBusinessRuleConditions.md#value) | string (nullable) | The value against which the data attribute will be tested. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#UserBusinessRule) | [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner] |
+| [UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#userbusinessrule) | [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### AttributeName
 
@@ -44,9 +37,9 @@ _Supports Order By_: **False**
 
 > How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. [Required] [Default("Equals")]
 
-_Type_: **[Systems.Bpm.UserBusinessRuleConditionsRepository.ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#ComparisonType)**  
-Allowed values for the [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#ComparisonType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype)**  
+Allowed values for the [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) data attribute  
+_Allowed Values (Systems.Bpm.UserBusinessRuleConditionsRepository.ComparisonType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -74,6 +67,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `(obj.UserBusinessRule.Conditions.Select(c => c.ConditionNo).DefaultIfEmpty(0).Max() + 10)`
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Notes
 
 > Notes for this UserBusinessRuleCondition. (Introduced in version 20.1.100.0)
@@ -99,7 +98,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

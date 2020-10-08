@@ -9,30 +9,30 @@ Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operati
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Technologies.RecipeOperations.md#Id) | guid |  
-| [LineOrd](Production.Technologies.RecipeOperations.md#LineOrd) | int32 | Order of the operation within the recipe. [Required] 
-| [MinimumConcurrentStartTimeMinutes](Production.Technologies.RecipeOperations.md#MinimumConcurrentStartTimeMinutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
-| [MoveTimeMinutes](Production.Technologies.RecipeOperations.md#MoveTimeMinutes) | int32 | Time to move the lot to the next operation in minutes. [Required] [Default(0)] 
-| [Notes](Production.Technologies.RecipeOperations.md#Notes) | string (nullable) | Notes for this RecipeOperation. 
-| [OperationDescription](Production.Technologies.RecipeOperations.md#OperationDescription) | string (nullable) | The description of the operation. 
-| [RunTimeMinutes](Production.Technologies.RecipeOperations.md#RunTimeMinutes) | int32 | Duration of the operation for standard lot of the product. [Required] [Default(0)] 
-| [ScrapRate](Production.Technologies.RecipeOperations.md#ScrapRate) | decimal | Standard rate of scrap during the operation. [Required] [Default(0)] 
-| [SetupTimeMinutes](Production.Technologies.RecipeOperations.md#SetupTimeMinutes) | int32 | Time needed to setup the equipment. [Required] [Default(0)] 
-| [StandardCostPerHour](Production.Technologies.RecipeOperations.md#StandardCostPerHour) | [Amount](../data-types.md#Amount) (nullable) | Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. [Currency: Recipe.Product.CostingCurrency] 
-| [StandardPricePerHour](Production.Technologies.RecipeOperations.md#StandardPricePerHour) | [Amount](../data-types.md#Amount) | Standard price for 1 hour work. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] 
-| [Tooling](Production.Technologies.RecipeOperations.md#Tooling) | string (nullable) | The tools needed for the routing step. 
-| [UseQuantity](Production.Technologies.RecipeOperations.md#UseQuantity) | [Quantity](../data-types.md#Quantity) | Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] 
-| [WaitTimeMinutes](Production.Technologies.RecipeOperations.md#WaitTimeMinutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)] 
+| [Id](Production.Technologies.RecipeOperations.md#id) | guid |  
+| [LineOrd](Production.Technologies.RecipeOperations.md#lineord) | int32 | Order of the operation within the recipe. [Required] 
+| [MinimumConcurrentStartTimeMinutes](Production.Technologies.RecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
+| [MoveTimeMinutes](Production.Technologies.RecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. [Required] [Default(0)] 
+| [Notes](Production.Technologies.RecipeOperations.md#notes) | string (nullable) | Notes for this RecipeOperation. 
+| [OperationDescription](Production.Technologies.RecipeOperations.md#operationdescription) | string (nullable) | The description of the operation. 
+| [RunTimeMinutes](Production.Technologies.RecipeOperations.md#runtimeminutes) | int32 | Duration of the operation for standard lot of the product. [Required] [Default(0)] 
+| [ScrapRate](Production.Technologies.RecipeOperations.md#scraprate) | decimal | Standard rate of scrap during the operation. [Required] [Default(0)] 
+| [SetupTimeMinutes](Production.Technologies.RecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment. [Required] [Default(0)] 
+| [StandardCostPerHour](Production.Technologies.RecipeOperations.md#standardcostperhour) | [Amount](../data-types.md#amount) (nullable) | Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. [Currency: Recipe.Product.CostingCurrency] 
+| [StandardPricePerHour](Production.Technologies.RecipeOperations.md#standardpriceperhour) | [Amount](../data-types.md#amount) | Standard price for 1 hour work. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] 
+| [Tooling](Production.Technologies.RecipeOperations.md#tooling) | string (nullable) | The tools needed for the routing step. 
+| [UseQuantity](Production.Technologies.RecipeOperations.md#usequantity) | [Quantity](../data-types.md#quantity) | Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] 
+| [WaitTimeMinutes](Production.Technologies.RecipeOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Operation](Production.Technologies.RecipeOperations.md#Operation) | [Production.Resources.Operations](Production.Resources.Operations.md) (nullable) | Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. [Filter(multi eq)] |
-| [OperationInstruction](Production.Technologies.RecipeOperations.md#OperationInstruction) | [Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Link to additional data, containing instructions in external format. [Filter(multi eq)] |
-| [Recipe](Production.Technologies.RecipeOperations.md#Recipe) | [Production.Technologies.Recipes](Production.Technologies.Recipes.md) | The [Recipe](Production.Technologies.RecipeOperations.md#Recipe) to which this RecipeOperation belongs. [Required] [Filter(multi eq)] [Owner] |
-| [UseQuantityUnit](Production.Technologies.RecipeOperations.md#UseQuantityUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Use_Quantity. [Required] [Filter(multi eq)] |
-| [WorkgroupResource](Production.Technologies.RecipeOperations.md#WorkgroupResource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) | The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. [Required] [Filter(multi eq)] |
+| [Operation](Production.Technologies.RecipeOperations.md#operation) | [Production.Resources.Operations](Production.Resources.Operations.md) (nullable) | Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. [Filter(multi eq)] |
+| [OperationInstruction](Production.Technologies.RecipeOperations.md#operationinstruction) | [Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Link to additional data, containing instructions in external format. [Filter(multi eq)] |
+| [Recipe](Production.Technologies.RecipeOperations.md#recipe) | [Production.Technologies.Recipes](Production.Technologies.Recipes.md) | The [Recipe](Production.Technologies.RecipeOperations.md#recipe) to which this RecipeOperation belongs. [Required] [Filter(multi eq)] [Owner] |
+| [UseQuantityUnit](Production.Technologies.RecipeOperations.md#usequantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Use_Quantity. [Required] [Filter(multi eq)] |
+| [WorkgroupResource](Production.Technologies.RecipeOperations.md#workgroupresource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) | The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -41,7 +41,6 @@ Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operati
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### LineOrd
@@ -121,7 +120,7 @@ _Default Value_: **0**
 
 > Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. [Currency: Recipe.Product.CostingCurrency]
 
-_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -129,7 +128,7 @@ _Supports Order By_: **False**
 
 > Standard price for 1 hour work. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -146,7 +145,7 @@ _Supports Order By_: **False**
 
 > Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -169,7 +168,6 @@ _Default Value_: **0**
 
 _Type_: **[Production.Resources.Operations](Production.Resources.Operations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### OperationInstruction
 
@@ -177,15 +175,13 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Recipe
 
-> The [Recipe](Production.Technologies.RecipeOperations.md#Recipe) to which this RecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Recipe](Production.Technologies.RecipeOperations.md#recipe) to which this RecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Production.Technologies.Recipes](Production.Technologies.Recipes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### UseQuantityUnit
 
@@ -193,7 +189,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### WorkgroupResource
 
@@ -201,7 +196,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

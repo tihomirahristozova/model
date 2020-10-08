@@ -9,32 +9,25 @@ Cost templates specify how to calculate and allocate costs. Entity: Cost_Templat
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Cost.Templates.md#Id) | guid |  
-| [CostTemplateCode](Finance.Cost.Templates.md#CostTemplateCode) | string | Unique code of the cost template. [Required] [Filter(eq)] 
-| [CostTemplateName](Finance.Cost.Templates.md#CostTemplateName) | string | Name of the cost template. [Required] [Filter(like)] 
+| [CostTemplateCode](Finance.Cost.Templates.md#costtemplatecode) | string | Unique code of the cost template. [Required] [Filter(eq)] 
+| [CostTemplateName](Finance.Cost.Templates.md#costtemplatename) | string | Name of the cost template. [Required] [Filter(like)] 
+| [Id](Finance.Cost.Templates.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Finance.Cost.Templates.md#Currency) | [General.Currencies](General.Currencies.md) | The currency of the calculations, based on the template. [Required] [Filter(multi eq)] |
+| [Currency](Finance.Cost.Templates.md#currency) | [General.Currencies](General.Currencies.md) | The currency of the calculations, based on the template. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| CostTypes | [Finance.Cost.TemplateCostTypes](Finance.Cost.TemplateCostTypes.md) | List of [TemplateCostType](Finance.Cost.TemplateCostTypes.md) child objects, based on the [Finance.Cost.TemplateCostType.CostTemplate](Finance.Cost.TemplateCostTypes.md#CostTemplate) back reference 
-| Levels | [Finance.Cost.TemplateLevels](Finance.Cost.TemplateLevels.md) | List of [TemplateLevel](Finance.Cost.TemplateLevels.md) child objects, based on the [Finance.Cost.TemplateLevel.CostTemplate](Finance.Cost.TemplateLevels.md#CostTemplate) back reference 
+| CostTypes | [Finance.Cost.TemplateCostTypes](Finance.Cost.TemplateCostTypes.md) | List of [TemplateCostType](Finance.Cost.TemplateCostTypes.md) child objects, based on the [Finance.Cost.TemplateCostType.CostTemplate](Finance.Cost.TemplateCostTypes.md#costtemplate) back reference 
+| Levels | [Finance.Cost.TemplateLevels](Finance.Cost.TemplateLevels.md) | List of [TemplateLevel](Finance.Cost.TemplateLevels.md) child objects, based on the [Finance.Cost.TemplateLevel.CostTemplate](Finance.Cost.TemplateLevels.md#costtemplate) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CostTemplateCode
 
@@ -52,6 +45,12 @@ _Type_: **string**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 
 ## Reference Details
 
@@ -61,7 +60,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

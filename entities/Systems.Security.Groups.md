@@ -9,33 +9,26 @@ Groups of users. Used for providing group access to secured data. Entity: Sec_Gr
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Security.Groups.md#Id) | guid |  
-| [EditPeriodDays](Systems.Security.Groups.md#EditPeriodDays) | int32 (nullable) | The number of days before which the documents can not be corrected, released or voided. 
-| [Name](Systems.Security.Groups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this Group. [Required] [Filter(like)] [ORD] 
-| [GroupType](Systems.Security.Groups.md#GroupType) | [Systems.Security.GroupsRepository.GroupType](Systems.Security.Groups.md#GroupType) | Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default("G")] [ReadOnly] 
-| [Notes](Systems.Security.Groups.md#Notes) | string (nullable) | Notes for this Group. 
+| [EditPeriodDays](Systems.Security.Groups.md#editperioddays) | int32 (nullable) | The number of days before which the documents can not be corrected, released or voided. 
+| [GroupType](Systems.Security.Groups.md#grouptype) | [GroupType](Systems.Security.Groups.md#grouptype) | Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default("G")] [ReadOnly] 
+| [Id](Systems.Security.Groups.md#id) | guid |  
+| [Name](Systems.Security.Groups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Group. [Required] [Filter(like)] [ORD] 
+| [Notes](Systems.Security.Groups.md#notes) | string (nullable) | Notes for this Group. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [GroupForUser](Systems.Security.Groups.md#GroupForUser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly] |
+| [GroupForUser](Systems.Security.Groups.md#groupforuser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| AccessKeys | [Systems.Security.GroupAccessKeys](Systems.Security.GroupAccessKeys.md) | List of [GroupAccessKey](Systems.Security.GroupAccessKeys.md) child objects, based on the [Systems.Security.GroupAccessKey.Group](Systems.Security.GroupAccessKeys.md#Group) back reference 
+| AccessKeys | [Systems.Security.GroupAccessKeys](Systems.Security.GroupAccessKeys.md) | List of [GroupAccessKey](Systems.Security.GroupAccessKeys.md) child objects, based on the [Systems.Security.GroupAccessKey.Group](Systems.Security.GroupAccessKeys.md#group) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### EditPeriodDays
 
@@ -45,21 +38,13 @@ _Type_: **int32 (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### Name
-
-> The name of this Group. [Required] [Filter(like)] [ORD]
-
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **True**  
-
 ### GroupType
 
 > Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default("G")] [ReadOnly]
 
-_Type_: **[Systems.Security.GroupsRepository.GroupType](Systems.Security.Groups.md#GroupType)**  
-Allowed values for the [GroupType](Systems.Security.Groups.md#GroupType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[GroupType](Systems.Security.Groups.md#grouptype)**  
+Allowed values for the [GroupType](Systems.Security.Groups.md#grouptype) data attribute  
+_Allowed Values (Systems.Security.GroupsRepository.GroupType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -71,6 +56,20 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **NormalUserDefinableGroup**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
+### Name
+
+> The name of this Group. [Required] [Filter(like)] [ORD]
+
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **True**  
 
 ### Notes
 
@@ -89,7 +88,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

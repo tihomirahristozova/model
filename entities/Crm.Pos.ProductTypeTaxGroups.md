@@ -9,34 +9,27 @@ Contains the tax group codes for the product types. The tax group codes are used
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pos.ProductTypeTaxGroups.md#Id) | guid |  
-| [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#ApplicableLegislation) | [General.PartyApplicableLegislationsRepository.ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#ApplicableLegislation) | The legislation, for which the tax group is applicable. [Required] [Filter(multi eq)] 
-| [Notes](Crm.Pos.ProductTypeTaxGroups.md#Notes) | string (nullable) | Notes for this ProductTypeTaxGroup. [Filter(eq;like)] 
-| [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#TaxGroup) | [Crm.Pos.ProductTypeTaxGroupsRepository.TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#TaxGroup) | The tax group of the product type within the specified applicable legislation. [Required] [Filter(multi eq)] 
+| [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | The legislation, for which the tax group is applicable. [Required] [Filter(multi eq)] 
+| [Id](Crm.Pos.ProductTypeTaxGroups.md#id) | guid |  
+| [Notes](Crm.Pos.ProductTypeTaxGroups.md#notes) | string (nullable) | Notes for this ProductTypeTaxGroup. [Filter(eq;like)] 
+| [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | The tax group of the product type within the specified applicable legislation. [Required] [Filter(multi eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductType](Crm.Pos.ProductTypeTaxGroups.md#ProductType) | [General.Products.ProductTypes](General.Products.ProductTypes.md) | The product type for which the tax group is specified. [Required] [Filter(multi eq)] [Owner] |
+| [ProductType](Crm.Pos.ProductTypeTaxGroups.md#producttype) | [General.Products.ProductTypes](General.Products.ProductTypes.md) | The product type for which the tax group is specified. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ApplicableLegislation
 
 > The legislation, for which the tax group is applicable. [Required] [Filter(multi eq)]
 
-_Type_: **[General.PartyApplicableLegislationsRepository.ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#ApplicableLegislation)**  
-Allowed values for the [ApplicableLegislation](General.PartyApplicableLegislations.md#ApplicableLegislation) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation)**  
+Allowed values for the [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) data attribute  
+_Allowed Values (General.PartyApplicableLegislationsRepository.ApplicableLegislation Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -69,6 +62,12 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Notes
 
 > Notes for this ProductTypeTaxGroup. [Filter(eq;like)]
@@ -81,9 +80,9 @@ _Supports Order By_: **False**
 
 > The tax group of the product type within the specified applicable legislation. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.Pos.ProductTypeTaxGroupsRepository.TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#TaxGroup)**  
-Allowed values for the [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#TaxGroup) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup)**  
+Allowed values for the [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) data attribute  
+_Allowed Values (Crm.Pos.ProductTypeTaxGroupsRepository.TaxGroup Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -108,7 +107,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.ProductTypes](General.Products.ProductTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

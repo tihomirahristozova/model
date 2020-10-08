@@ -9,30 +9,15 @@ Marketing campaigns. Used to treat target groups with marketing messages, plan b
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Marketing.Campaigns.md#Id) | guid |  
-| [Name](Crm.Marketing.Campaigns.md#Name) | string | Short name of the campaign. [Required] [Filter(like)] [ORD] 
-| [Description](Crm.Marketing.Campaigns.md#Description) | string (nullable) | Campaign description. 
-| [EndDate](Crm.Marketing.Campaigns.md#EndDate) | datetime (nullable) | End date of the campaign. null means that the end date is still unknown. 
-| [ForecastedCost](Crm.Marketing.Campaigns.md#ForecastedCost) | decimal | Forecasted total cost of the campaign. [Required] [Default(0)] 
-| [StartDate](Crm.Marketing.Campaigns.md#StartDate) | datetime | Starting date of the campaign. [Required] [Default(Today)] 
+| [Description](Crm.Marketing.Campaigns.md#description) | string (nullable) | Campaign description. 
+| [EndDate](Crm.Marketing.Campaigns.md#enddate) | datetime (nullable) | End date of the campaign. null means that the end date is still unknown. 
+| [ForecastedCost](Crm.Marketing.Campaigns.md#forecastedcost) | decimal | Forecasted total cost of the campaign. [Required] [Default(0)] 
+| [Id](Crm.Marketing.Campaigns.md#id) | guid |  
+| [Name](Crm.Marketing.Campaigns.md#name) | string | Short name of the campaign. [Required] [Filter(like)] [ORD] 
+| [StartDate](Crm.Marketing.Campaigns.md#startdate) | datetime | Starting date of the campaign. [Required] [Default(Today)] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
-
-### Name
-
-> Short name of the campaign. [Required] [Filter(like)] [ORD]
-
-_Type_: **string**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **True**  
 
 ### Description
 
@@ -58,6 +43,20 @@ _Type_: **decimal**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
+### Name
+
+> Short name of the campaign. [Required] [Filter(like)] [ORD]
+
+_Type_: **string**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **True**  
 
 ### StartDate
 

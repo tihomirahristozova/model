@@ -9,44 +9,37 @@ Contains files attached to objects. Entity: Sys_Object_Files
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.ObjectFiles.md#Id) | guid |  
-| [ContentLocation](Systems.Core.ObjectFiles.md#ContentLocation) | [Systems.Core.ObjectFilesRepository.ContentLocation](Systems.Core.ObjectFiles.md#ContentLocation) | The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] (Introduced in version 20.1.100.0) 
-| [CreationTimeUtc](Systems.Core.ObjectFiles.md#CreationTimeUtc) | datetime | Time (in UTC), when the file was created. [Required] [Default(NowUtc)] (Introduced in version 20.1.100.0) 
-| [EmbeddedFileContents](Systems.Core.ObjectFiles.md#EmbeddedFileContents) | byte[] (nullable) | Contains the contents of the file, when it is embedded in the database. null for linked files. 
-| [FileName](Systems.Core.ObjectFiles.md#FileName) | string | The file name of the linked or embedded file. [Required] [Filter(eq;like)] 
-| [LastUpdateTimeUtc](Systems.Core.ObjectFiles.md#LastUpdateTimeUtc) | datetime | Time (in UTC), when the file was last updated. [Required] [Default(NowUtc)] (Introduced in version 20.1.100.0) 
-| [LinkedFilePath](Systems.Core.ObjectFiles.md#LinkedFilePath) | string (nullable) | When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. [Filter(eq;like)] 
-| [MediaHeight](Systems.Core.ObjectFiles.md#MediaHeight) | int32 (nullable) | Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1.100.0) 
-| [MediaType](Systems.Core.ObjectFiles.md#MediaType) | string (nullable) | For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. (Introduced in version 20.1.100.0) 
-| [MediaWidth](Systems.Core.ObjectFiles.md#MediaWidth) | int32 (nullable) | Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1.100.0) 
-| [Notes](Systems.Core.ObjectFiles.md#Notes) | string (nullable) | User notes for the file attachment. 
-| [PurposeCode](Systems.Core.ObjectFiles.md#PurposeCode) | string (nullable) | Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. [Filter(eq)] 
+| [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] (Introduced in version 20.1.100.0) 
+| [CreationTimeUtc](Systems.Core.ObjectFiles.md#creationtimeutc) | datetime | Time (in UTC), when the file was created. [Required] [Default(NowUtc)] (Introduced in version 20.1.100.0) 
+| [EmbeddedFileContents](Systems.Core.ObjectFiles.md#embeddedfilecontents) | byte[] (nullable) | Contains the contents of the file, when it is embedded in the database. null for linked files. 
+| [FileName](Systems.Core.ObjectFiles.md#filename) | string | The file name of the linked or embedded file. [Required] [Filter(eq;like)] 
+| [Id](Systems.Core.ObjectFiles.md#id) | guid |  
+| [LastUpdateTimeUtc](Systems.Core.ObjectFiles.md#lastupdatetimeutc) | datetime | Time (in UTC), when the file was last updated. [Required] [Default(NowUtc)] (Introduced in version 20.1.100.0) 
+| [LinkedFilePath](Systems.Core.ObjectFiles.md#linkedfilepath) | string (nullable) | When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. [Filter(eq;like)] 
+| [MediaHeight](Systems.Core.ObjectFiles.md#mediaheight) | int32 (nullable) | Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1.100.0) 
+| [MediaType](Systems.Core.ObjectFiles.md#mediatype) | string (nullable) | For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. (Introduced in version 20.1.100.0) 
+| [MediaWidth](Systems.Core.ObjectFiles.md#mediawidth) | int32 (nullable) | Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1.100.0) 
+| [Notes](Systems.Core.ObjectFiles.md#notes) | string (nullable) | User notes for the file attachment. 
+| [PurposeCode](Systems.Core.ObjectFiles.md#purposecode) | string (nullable) | Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. [Filter(eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationUser](Systems.Core.ObjectFiles.md#CreationUser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user, who created the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1.100.0) |
-| [LastUpdateUser](Systems.Core.ObjectFiles.md#LastUpdateUser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user, who performed the last update to the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1.100.0) |
-| [Object](Systems.Core.ObjectFiles.md#Object) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object to which the file is attached. [Required] [Filter(multi eq)] [Owner] |
+| [CreationUser](Systems.Core.ObjectFiles.md#creationuser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user, who created the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1.100.0) |
+| [LastUpdateUser](Systems.Core.ObjectFiles.md#lastupdateuser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user, who performed the last update to the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1.100.0) |
+| [Object](Systems.Core.ObjectFiles.md#object) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object to which the file is attached. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ContentLocation
 
 > The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] (Introduced in version 20.1.100.0)
 
-_Type_: **[Systems.Core.ObjectFilesRepository.ContentLocation](Systems.Core.ObjectFiles.md#ContentLocation)**  
-Allowed values for the [ContentLocation](Systems.Core.ObjectFiles.md#ContentLocation) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ContentLocation](Systems.Core.ObjectFiles.md#contentlocation)**  
+Allowed values for the [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) data attribute  
+_Allowed Values (Systems.Core.ObjectFilesRepository.ContentLocation Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -82,6 +75,12 @@ _Supports Order By_: **False**
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### LastUpdateTimeUtc
 
@@ -149,7 +148,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### LastUpdateUser
 
@@ -157,7 +155,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Object
 
@@ -165,7 +162,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

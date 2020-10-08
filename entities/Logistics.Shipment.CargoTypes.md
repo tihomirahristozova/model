@@ -9,20 +9,13 @@ Represents a cargo type. Different cargo types might require different types of 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Shipment.CargoTypes.md#Id) | guid |  
-| [Code](Logistics.Shipment.CargoTypes.md#Code) | string | The unique code of the CargoType. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Logistics.Shipment.CargoTypes.md#Name) | string | The name of this CargoType. [Required] [Filter(eq;like)] 
-| [Notes](Logistics.Shipment.CargoTypes.md#Notes) | string (nullable) | Notes for this CargoType. 
+| [Code](Logistics.Shipment.CargoTypes.md#code) | string | The unique code of the CargoType. [Required] [Filter(eq;like)] [ORD] 
+| [Id](Logistics.Shipment.CargoTypes.md#id) | guid |  
+| [Name](Logistics.Shipment.CargoTypes.md#name) | string | The name of this CargoType. [Required] [Filter(eq;like)] 
+| [Notes](Logistics.Shipment.CargoTypes.md#notes) | string (nullable) | Notes for this CargoType. 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Code
 
@@ -31,6 +24,12 @@ _Default Value_: **NewGuid**
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Name
 

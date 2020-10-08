@@ -9,37 +9,38 @@ Contains the flow elements of the process model. Entity: Bpm_Process_Elements
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.ProcessElements.md#Id) | guid |  
-| [ElementSubtype](Systems.Bpm.ProcessElements.md#ElementSubtype) | [Systems.Bpm.ProcessElementsRepository.ElementSubtype](Systems.Bpm.ProcessElements.md#ElementSubtype) | Subtype of the element. Each type allows only certain types of sub-types. [Required] [Filter(eq;like)] 
-| [ElementType](Systems.Bpm.ProcessElements.md#ElementType) | [Systems.Bpm.ProcessElementsRepository.ElementType](Systems.Bpm.ProcessElements.md#ElementType) | Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact. [Required] [Filter(eq;like)] 
-| [InstructionsHtml](Systems.Bpm.ProcessElements.md#InstructionsHtml) | string (nullable) | Detailed instructions to the executor in HTML format. [Filter(eq;like)] 
-| [Code](Systems.Bpm.ProcessElements.md#Code) | string | Element code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)] 
-| [Name](Systems.Bpm.ProcessElements.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage process name. [Required] [Filter(eq;like)] 
+| [Code](Systems.Bpm.ProcessElements.md#code) | string | Element code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)] 
+| [ElementSubtype](Systems.Bpm.ProcessElements.md#elementsubtype) | [ElementSubtype](Systems.Bpm.ProcessElements.md#elementsubtype) | Subtype of the element. Each type allows only certain types of sub-types. [Required] [Filter(eq;like)] 
+| [ElementType](Systems.Bpm.ProcessElements.md#elementtype) | [ElementType](Systems.Bpm.ProcessElements.md#elementtype) | Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact. [Required] [Filter(eq;like)] 
+| [Id](Systems.Bpm.ProcessElements.md#id) | guid |  
+| [InstructionsHtml](Systems.Bpm.ProcessElements.md#instructionshtml) | string (nullable) | Detailed instructions to the executor in HTML format. [Filter(eq;like)] 
+| [Name](Systems.Bpm.ProcessElements.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage process name. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Process](Systems.Bpm.ProcessElements.md#Process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process, to which this element belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ProcessLane](Systems.Bpm.ProcessElements.md#ProcessLane) | [Systems.Bpm.ProcessLanes](Systems.Bpm.ProcessLanes.md) | The process lane to which this element belongs. [Required] [Filter(multi eq)] |
+| [Process](Systems.Bpm.ProcessElements.md#process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process, to which this element belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ProcessLane](Systems.Bpm.ProcessElements.md#processlane) | [Systems.Bpm.ProcessLanes](Systems.Bpm.ProcessLanes.md) | The process lane to which this element belongs. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
 
-### Id
+### Code
 
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
+> Element code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ElementSubtype
 
 > Subtype of the element. Each type allows only certain types of sub-types. [Required] [Filter(eq;like)]
 
-_Type_: **[Systems.Bpm.ProcessElementsRepository.ElementSubtype](Systems.Bpm.ProcessElements.md#ElementSubtype)**  
-Allowed values for the [ElementSubtype](Systems.Bpm.ProcessElements.md#ElementSubtype) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ElementSubtype](Systems.Bpm.ProcessElements.md#elementsubtype)**  
+Allowed values for the [ElementSubtype](Systems.Bpm.ProcessElements.md#elementsubtype) data attribute  
+_Allowed Values (Systems.Bpm.ProcessElementsRepository.ElementSubtype Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -73,9 +74,9 @@ _Supports Order By_: **False**
 
 > Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact. [Required] [Filter(eq;like)]
 
-_Type_: **[Systems.Bpm.ProcessElementsRepository.ElementType](Systems.Bpm.ProcessElements.md#ElementType)**  
-Allowed values for the [ElementType](Systems.Bpm.ProcessElements.md#ElementType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ElementType](Systems.Bpm.ProcessElements.md#elementtype)**  
+Allowed values for the [ElementType](Systems.Bpm.ProcessElements.md#elementtype) data attribute  
+_Allowed Values (Systems.Bpm.ProcessElementsRepository.ElementType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -87,6 +88,12 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### InstructionsHtml
 
 > Detailed instructions to the executor in HTML format. [Filter(eq;like)]
@@ -95,19 +102,11 @@ _Type_: **string (nullable)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
-### Code
-
-> Element code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-
 ### Name
 
 > Multilanguage process name. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -120,7 +119,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Bpm.Processes](Systems.Bpm.Processes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProcessLane
 
@@ -128,7 +126,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Bpm.ProcessLanes](Systems.Bpm.ProcessLanes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

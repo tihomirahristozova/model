@@ -9,42 +9,27 @@ Contains contacting mechanisms - telephone numbers, addresses, web sites, etc. C
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.ContactMechanisms.md#Id) | guid |  
-| [Name](General.Contacts.ContactMechanisms.md#Name) | string | Contact mechanism description. [Required] [Filter(eq;like)] 
-| [ContactMechanismType](General.Contacts.ContactMechanisms.md#ContactMechanismType) | [General.Contacts.ContactMechanismsRepository.ContactMechanismType](General.Contacts.ContactMechanisms.md#ContactMechanismType) | A=Address; E=e-mail; T=Telephone. [Required] [Default("A")] [Filter(multi eq)] 
+| [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) | A=Address; E=e-mail; T=Telephone. [Required] [Default("A")] [Filter(multi eq)] 
+| [Id](General.Contacts.ContactMechanisms.md#id) | guid |  
+| [Name](General.Contacts.ContactMechanisms.md#name) | string | Contact mechanism description. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdministrativeRegion](General.Contacts.ContactMechanisms.md#AdministrativeRegion) | [General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2.100.0) |
-| [GeoPoint](General.Contacts.ContactMechanisms.md#GeoPoint) | [General.Geography.GeoPoints](General.Geography.GeoPoints.md) (nullable) | The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2.100.0) |
+| [AdministrativeRegion](General.Contacts.ContactMechanisms.md#administrativeregion) | [General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2.100.0) |
+| [GeoPoint](General.Contacts.ContactMechanisms.md#geopoint) | [General.Geography.GeoPoints](General.Geography.GeoPoints.md) (nullable) | The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2.100.0) |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
-
-### Name
-
-> Contact mechanism description. [Required] [Filter(eq;like)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
 
 ### ContactMechanismType
 
 > A=Address; E=e-mail; T=Telephone. [Required] [Default("A")] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.ContactMechanismsRepository.ContactMechanismType](General.Contacts.ContactMechanisms.md#ContactMechanismType)**  
-Allowed values for the [ContactMechanismType](General.Contacts.ContactMechanisms.md#ContactMechanismType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype)**  
+Allowed values for the [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) data attribute  
+_Allowed Values (General.Contacts.ContactMechanismsRepository.ContactMechanismType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -60,6 +45,20 @@ _Supported Filters_: **Equals, EqualsIn**
 _Supports Order By_: **False**  
 _Default Value_: **Address**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
+### Name
+
+> Contact mechanism description. [Required] [Filter(eq;like)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -69,7 +68,6 @@ _Default Value_: **Address**
 
 _Type_: **[General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### GeoPoint
 
@@ -77,7 +75,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Geography.GeoPoints](General.Geography.GeoPoints.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

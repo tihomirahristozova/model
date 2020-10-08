@@ -9,41 +9,34 @@ The process lanes categorize elements in the process and contain logic for execu
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.ProcessLanes.md#Id) | guid |  
-| [AssignByUserCondition](Systems.Bpm.ProcessLanes.md#AssignByUserCondition) | [Systems.Bpm.ProcessLanesRepository.AssignByUserCondition](Systems.Bpm.ProcessLanes.md#AssignByUserCondition) | Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned. [Required] [Filter(eq;like)] 
-| [IsSystemExecuted](Systems.Bpm.ProcessLanes.md#IsSystemExecuted) | boolean | When set, specifies that the lane allows only system executed tasks and will never have human user as executor. [Required] [Default(false)] [Filter(eq)] 
-| [Locality](Systems.Bpm.ProcessLanes.md#Locality) | [Systems.Bpm.Locality](Systems.Bpm.ProcessLanes.md#Locality) | Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. [Required] [Filter(eq;like)] 
-| [Notes](Systems.Bpm.ProcessLanes.md#Notes) | string (nullable) | Notes for this ProcessLane. 
-| [Name](Systems.Bpm.ProcessLanes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage lane name. [Required] [Filter(eq;like)] 
-| [RestrictToSingleUser](Systems.Bpm.ProcessLanes.md#RestrictToSingleUser) | boolean | Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user. [Required] [Default(false)] [Filter(eq)] 
-| [UserConditionFilterXml](Systems.Bpm.ProcessLanes.md#UserConditionFilterXml) | dataaccessfilter (nullable) | User defined filter, used to select possible executors of tasks in the lane. [Filter(eq;like)] 
+| [AssignByUserCondition](Systems.Bpm.ProcessLanes.md#assignbyusercondition) | [AssignByUserCondition](Systems.Bpm.ProcessLanes.md#assignbyusercondition) | Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned. [Required] [Filter(eq;like)] 
+| [Id](Systems.Bpm.ProcessLanes.md#id) | guid |  
+| [IsSystemExecuted](Systems.Bpm.ProcessLanes.md#issystemexecuted) | boolean | When set, specifies that the lane allows only system executed tasks and will never have human user as executor. [Required] [Default(false)] [Filter(eq)] 
+| [Locality](Systems.Bpm.ProcessLanes.md#locality) | [Locality](Systems.Bpm.ProcessLanes.md#locality) | Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. [Required] [Filter(eq;like)] 
+| [Name](Systems.Bpm.ProcessLanes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage lane name. [Required] [Filter(eq;like)] 
+| [Notes](Systems.Bpm.ProcessLanes.md#notes) | string (nullable) | Notes for this ProcessLane. 
+| [RestrictToSingleUser](Systems.Bpm.ProcessLanes.md#restricttosingleuser) | boolean | Specifies whether the lane would be restricted to the first user, who is assigned an activity in the lane. Subsequent tasks are directly assigned to that user. [Required] [Default(false)] [Filter(eq)] 
+| [UserConditionFilterXml](Systems.Bpm.ProcessLanes.md#userconditionfilterxml) | dataaccessfilter (nullable) | User defined filter, used to select possible executors of tasks in the lane. [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssignByInstanceProperty](Systems.Bpm.ProcessLanes.md#AssignByInstanceProperty) | [General.CustomProperties](General.CustomProperties.md) (nullable) | When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User. [Filter(multi eq)] |
-| [AssignToUser](Systems.Bpm.ProcessLanes.md#AssignToUser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | When set, specifies that tasks from the lane are always assigned to specific user. [Filter(multi eq)] |
-| [OfferToRole](Systems.Bpm.ProcessLanes.md#OfferToRole) | [Systems.Workflow.Roles](Systems.Workflow.Roles.md) (nullable) | When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance. [Filter(multi eq)] |
-| [Process](Systems.Bpm.ProcessLanes.md#Process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process to which this lane belongs. [Required] [Filter(multi eq)] [Owner] |
+| [AssignByInstanceProperty](Systems.Bpm.ProcessLanes.md#assignbyinstanceproperty) | [General.CustomProperties](General.CustomProperties.md) (nullable) | When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User. [Filter(multi eq)] |
+| [AssignToUser](Systems.Bpm.ProcessLanes.md#assigntouser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | When set, specifies that tasks from the lane are always assigned to specific user. [Filter(multi eq)] |
+| [OfferToRole](Systems.Bpm.ProcessLanes.md#offertorole) | [Systems.Workflow.Roles](Systems.Workflow.Roles.md) (nullable) | When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance. [Filter(multi eq)] |
+| [Process](Systems.Bpm.ProcessLanes.md#process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process to which this lane belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### AssignByUserCondition
 
 > Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned. [Required] [Filter(eq;like)]
 
-_Type_: **[Systems.Bpm.ProcessLanesRepository.AssignByUserCondition](Systems.Bpm.ProcessLanes.md#AssignByUserCondition)**  
-Allowed values for the [AssignByUserCondition](Systems.Bpm.ProcessLanes.md#AssignByUserCondition) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[AssignByUserCondition](Systems.Bpm.ProcessLanes.md#assignbyusercondition)**  
+Allowed values for the [AssignByUserCondition](Systems.Bpm.ProcessLanes.md#assignbyusercondition) data attribute  
+_Allowed Values (Systems.Bpm.ProcessLanesRepository.AssignByUserCondition Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -53,6 +46,12 @@ _Allowed Values (Enum Members)_
 
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsSystemExecuted
 
@@ -67,9 +66,9 @@ _Default Value_: **False**
 
 > Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. [Required] [Filter(eq;like)]
 
-_Type_: **[Systems.Bpm.Locality](Systems.Bpm.ProcessLanes.md#Locality)**  
+_Type_: **[Locality](Systems.Bpm.ProcessLanes.md#locality)**  
 Generic enum type for Locality properties  
-_Allowed Values (Enum Members)_  
+_Allowed Values (Systems.Bpm.Locality Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -81,20 +80,20 @@ _Allowed Values (Enum Members)_
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
+### Name
+
+> Multilanguage lane name. [Required] [Filter(eq;like)]
+
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
 ### Notes
 
 > Notes for this ProcessLane.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### Name
-
-> Multilanguage lane name. [Required] [Filter(eq;like)]
-
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
-_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
 ### RestrictToSingleUser
@@ -123,7 +122,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.CustomProperties](General.CustomProperties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### AssignToUser
 
@@ -131,7 +129,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### OfferToRole
 
@@ -139,7 +136,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Workflow.Roles](Systems.Workflow.Roles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Process
 
@@ -147,7 +143,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Bpm.Processes](Systems.Bpm.Processes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

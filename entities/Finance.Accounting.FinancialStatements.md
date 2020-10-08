@@ -9,25 +9,18 @@ Contains the user-defined financial statement definitions. Entity: Acc_Financial
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Accounting.FinancialStatements.md#Id) | guid |  
-| [Code](Finance.Accounting.FinancialStatements.md#Code) | string | Unique identifying code of the financial statement. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Finance.Accounting.FinancialStatements.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the financial statement. [Required] [Filter(eq;like)] 
+| [Code](Finance.Accounting.FinancialStatements.md#code) | string | Unique identifying code of the financial statement. [Required] [Filter(eq;like)] [ORD] 
+| [Id](Finance.Accounting.FinancialStatements.md#id) | guid |  
+| [Name](Finance.Accounting.FinancialStatements.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the financial statement. [Required] [Filter(eq;like)] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Nodes | [Finance.Accounting.FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md) | List of [FinancialStatementNode](Finance.Accounting.FinancialStatementNodes.md) child objects, based on the [Finance.Accounting.FinancialStatementNode.FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#FinancialStatement) back reference 
+| Nodes | [Finance.Accounting.FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md) | List of [FinancialStatementNode](Finance.Accounting.FinancialStatementNodes.md) child objects, based on the [Finance.Accounting.FinancialStatementNode.FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Code
 
@@ -37,11 +30,17 @@ _Type_: **string**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Name
 
 > Name of the financial statement. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 

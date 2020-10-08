@@ -9,34 +9,33 @@ The cost types and their amounts which are distributed by a Cost Distribution do
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Cost.DistributionCosts.md#Id) | guid |  
-| [AmountBase](Finance.Cost.DistributionCosts.md#AmountBase) | [Amount](../data-types.md#Amount) | The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)] 
-| [Notes](Finance.Cost.DistributionCosts.md#Notes) | string (nullable) | Notes for this DistributionCost. 
+| [AmountBase](Finance.Cost.DistributionCosts.md#amountbase) | [Amount](../data-types.md#amount) | The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)] 
+| [Id](Finance.Cost.DistributionCosts.md#id) | guid |  
+| [Notes](Finance.Cost.DistributionCosts.md#notes) | string (nullable) | Notes for this DistributionCost. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostDistribution](Finance.Cost.DistributionCosts.md#CostDistribution) | [Finance.Cost.Distributions](Finance.Cost.Distributions.md) | The [Distribution](Finance.Cost.Distributions.md) to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner] |
-| [CostType](Finance.Cost.DistributionCosts.md#CostType) | [Finance.Cost.CostTypes](Finance.Cost.CostTypes.md) | The type of the cost, which will be distributed. [Required] [Filter(multi eq)] |
+| [CostDistribution](Finance.Cost.DistributionCosts.md#costdistribution) | [Finance.Cost.Distributions](Finance.Cost.Distributions.md) | The [Distribution](Finance.Cost.Distributions.md) to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CostType](Finance.Cost.DistributionCosts.md#costtype) | [Finance.Cost.CostTypes](Finance.Cost.CostTypes.md) | The type of the cost, which will be distributed. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### AmountBase
 
 > The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Notes
 
@@ -55,7 +54,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Cost.Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### CostType
 
@@ -63,7 +61,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Cost.CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

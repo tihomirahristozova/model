@@ -9,26 +9,19 @@ User-defined grouping of the assets. Entity: Ast_Asset_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Assets.AssetGroups.md#Id) | guid |  
-| [Code](Finance.Assets.AssetGroups.md#Code) | string | The unique code of the AssetGroup. [Required] [Filter(eq)] [ORD] 
-| [Name](Finance.Assets.AssetGroups.md#Name) | string | The name of this AssetGroup. [Required] [Filter(like)] 
+| [Code](Finance.Assets.AssetGroups.md#code) | string | The unique code of the AssetGroup. [Required] [Filter(eq)] [ORD] 
+| [Id](Finance.Assets.AssetGroups.md#id) | guid |  
+| [Name](Finance.Assets.AssetGroups.md#name) | string | The name of this AssetGroup. [Required] [Filter(like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultValuationModel](Finance.Assets.AssetGroups.md#DefaultValuationModel) | [Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md) (nullable) | Default valuation model when creating new assets from this group. [Filter(multi eq)] |
-| [Parent](Finance.Assets.AssetGroups.md#Parent) | [Finance.Assets.AssetGroups](Finance.Assets.AssetGroups.md) (nullable) | Parent asset group in the hierarchy. [Filter(multi eq)] |
+| [DefaultValuationModel](Finance.Assets.AssetGroups.md#defaultvaluationmodel) | [Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md) (nullable) | Default valuation model when creating new assets from this group. [Filter(multi eq)] |
+| [Parent](Finance.Assets.AssetGroups.md#parent) | [Finance.Assets.AssetGroups](Finance.Assets.AssetGroups.md) (nullable) | Parent asset group in the hierarchy. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Code
 
@@ -37,6 +30,12 @@ _Default Value_: **NewGuid**
 _Type_: **string**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Name
 
@@ -55,7 +54,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Parent
 
@@ -63,7 +61,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Assets.AssetGroups](Finance.Assets.AssetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

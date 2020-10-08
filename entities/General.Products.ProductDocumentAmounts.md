@@ -9,15 +9,15 @@ Contains custom percent ratios for additional amount distribution over products.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.ProductDocumentAmounts.md#Id) | guid |  
-| [LinePercent](General.Products.ProductDocumentAmounts.md#LinePercent) | decimal | The custom percent for the current product and amount type. [Required] [Default(0)] 
+| [Id](General.Products.ProductDocumentAmounts.md#id) | guid |  
+| [LinePercent](General.Products.ProductDocumentAmounts.md#linepercent) | decimal | The custom percent for the current product and amount type. [Required] [Default(0)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAmountType](General.Products.ProductDocumentAmounts.md#DocumentAmountType) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type for which the custom percent is defined. [Required] [Filter(multi eq)] |
-| [Product](General.Products.ProductDocumentAmounts.md#Product) | [General.Products.Products](General.Products.Products.md) | The [Product](General.Products.ProductDocumentAmounts.md#Product) to which this ProductDocumentAmount belongs. [Required] [Filter(multi eq)] [Owner] |
+| [DocumentAmountType](General.Products.ProductDocumentAmounts.md#documentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type for which the custom percent is defined. [Required] [Filter(multi eq)] |
+| [Product](General.Products.ProductDocumentAmounts.md#product) | [General.Products.Products](General.Products.Products.md) | The [Product](General.Products.ProductDocumentAmounts.md#product) to which this ProductDocumentAmount belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ Contains custom percent ratios for additional amount distribution over products.
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### LinePercent
@@ -47,15 +46,13 @@ _Default Value_: **0**
 
 _Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Product
 
-> The [Product](General.Products.ProductDocumentAmounts.md#Product) to which this ProductDocumentAmount belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Product](General.Products.ProductDocumentAmounts.md#product) to which this ProductDocumentAmount belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

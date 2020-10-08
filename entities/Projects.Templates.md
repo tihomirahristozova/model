@@ -9,16 +9,16 @@ Contains templates for creating new projects. Entity: Prj_Templates
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Templates.md#Id) | guid |  
-| [Notes](Projects.Templates.md#Notes) | string (nullable) | Notes for this Template. 
-| [ProjectTemplateName](Projects.Templates.md#ProjectTemplateName) | string | The name of the project template. [Required] 
+| [Id](Projects.Templates.md#id) | guid |  
+| [Notes](Projects.Templates.md#notes) | string (nullable) | Notes for this Template. 
+| [ProjectTemplateName](Projects.Templates.md#projecttemplatename) | string | The name of the project template. [Required] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Risks | [Projects.TemplateRisks](Projects.TemplateRisks.md) | List of [TemplateRisk](Projects.TemplateRisks.md) child objects, based on the [Projects.TemplateRisk.ProjectTemplate](Projects.TemplateRisks.md#ProjectTemplate) back reference 
-| WorkElements | [Projects.TemplateWorkElements](Projects.TemplateWorkElements.md) | List of [TemplateWorkElement](Projects.TemplateWorkElements.md) child objects, based on the [Projects.TemplateWorkElement.ProjectTemplate](Projects.TemplateWorkElements.md#ProjectTemplate) back reference 
+| Risks | [Projects.TemplateRisks](Projects.TemplateRisks.md) | List of [TemplateRisk](Projects.TemplateRisks.md) child objects, based on the [Projects.TemplateRisk.ProjectTemplate](Projects.TemplateRisks.md#projecttemplate) back reference 
+| WorkElements | [Projects.TemplateWorkElements](Projects.TemplateWorkElements.md) | List of [TemplateWorkElement](Projects.TemplateWorkElements.md) child objects, based on the [Projects.TemplateWorkElement.ProjectTemplate](Projects.TemplateWorkElements.md#projecttemplate) back reference 
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Contains templates for creating new projects. Entity: Prj_Templates
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes

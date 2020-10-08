@@ -9,16 +9,16 @@ When specified for a product type, contains the suggested user-defined propertie
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.ProductTypePurchaseInvoiceLineProperties.md#Id) | guid |  
-| [PropertyNo](General.Products.ProductTypePurchaseInvoiceLineProperties.md#PropertyNo) | int32 | The consecutive number (position) of the property within the current product type. [Required] 
-| [Required](General.Products.ProductTypePurchaseInvoiceLineProperties.md#Required) | boolean | True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. [Required] [Default(false)] 
+| [Id](General.Products.ProductTypePurchaseInvoiceLineProperties.md#id) | guid |  
+| [PropertyNo](General.Products.ProductTypePurchaseInvoiceLineProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the current product type. [Required] 
+| [Required](General.Products.ProductTypePurchaseInvoiceLineProperties.md#required) | boolean | True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. [Required] [Default(false)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#ProductType) | [General.Products.ProductTypes](General.Products.ProductTypes.md) | The [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#ProductType) to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Property](General.Products.ProductTypePurchaseInvoiceLineProperties.md#Property) | [General.CustomProperties](General.CustomProperties.md) | The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. [Required] [Filter(multi eq)] |
+| [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) | [General.Products.ProductTypes](General.Products.ProductTypes.md) | The [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Property](General.Products.ProductTypePurchaseInvoiceLineProperties.md#property) | [General.CustomProperties](General.CustomProperties.md) | The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ When specified for a product type, contains the suggested user-defined propertie
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### PropertyNo
@@ -57,11 +56,10 @@ _Default Value_: **False**
 
 ### ProductType
 
-> The [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#ProductType) to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner]
+> The [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[General.Products.ProductTypes](General.Products.ProductTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Property
 
@@ -69,7 +67,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

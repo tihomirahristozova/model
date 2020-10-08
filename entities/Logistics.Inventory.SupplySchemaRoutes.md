@@ -9,18 +9,18 @@ Obsolete. Not used. Entity: Inv_Supply_Schema_Routes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.SupplySchemaRoutes.md#Id) | guid |  
-| [Notes](Logistics.Inventory.SupplySchemaRoutes.md#Notes) | string (nullable) | Notes for this SupplySchemaRoute. 
-| [SchemaXML](Logistics.Inventory.SupplySchemaRoutes.md#SchemaXML) | string (nullable) | Obsolete. Not used. (Used by the schematic control). 
-| [TransitTimeDays](Logistics.Inventory.SupplySchemaRoutes.md#TransitTimeDays) | int32 | Obsolete. Not used. (Time needed for the delivery of the goods using this route). [Required] [Default(0)] 
+| [Id](Logistics.Inventory.SupplySchemaRoutes.md#id) | guid |  
+| [Notes](Logistics.Inventory.SupplySchemaRoutes.md#notes) | string (nullable) | Notes for this SupplySchemaRoute. 
+| [SchemaXML](Logistics.Inventory.SupplySchemaRoutes.md#schemaxml) | string (nullable) | Obsolete. Not used. (Used by the schematic control). 
+| [TransitTimeDays](Logistics.Inventory.SupplySchemaRoutes.md#transittimedays) | int32 | Obsolete. Not used. (Time needed for the delivery of the goods using this route). [Required] [Default(0)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DestinationStore](Logistics.Inventory.SupplySchemaRoutes.md#DestinationStore) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
-| [SourceStore](Logistics.Inventory.SupplySchemaRoutes.md#SourceStore) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
-| [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#SupplySchema) | [Logistics.Inventory.SupplySchemata](Logistics.Inventory.SupplySchemata.md) | The [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#SupplySchema) to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner] |
+| [DestinationStore](Logistics.Inventory.SupplySchemaRoutes.md#destinationstore) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
+| [SourceStore](Logistics.Inventory.SupplySchemaRoutes.md#sourcestore) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
+| [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) | [Logistics.Inventory.SupplySchemata](Logistics.Inventory.SupplySchemata.md) | The [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -29,7 +29,6 @@ Obsolete. Not used. Entity: Inv_Supply_Schema_Routes
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes
@@ -66,7 +65,6 @@ _Default Value_: **0**
 
 _Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### SourceStore
 
@@ -74,15 +72,13 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### SupplySchema
 
-> The [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#SupplySchema) to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner]
+> The [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Logistics.Inventory.SupplySchemata](Logistics.Inventory.SupplySchemata.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

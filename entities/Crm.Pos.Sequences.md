@@ -9,16 +9,16 @@ Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequ
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pos.Sequences.md#Id) | guid |  
-| [IsActive](Crm.Pos.Sequences.md#IsActive) | boolean | Indicates whether this sequence is active. [Required] [Default(true)] [Filter(multi eq)] 
-| [MaxNo](Crm.Pos.Sequences.md#MaxNo) | string (nullable) | Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. [Filter(multi eq;ge;le)] 
-| [NextNo](Crm.Pos.Sequences.md#NextNo) | string | The next consecutive number which will be assigned on the next request. [Required] [Filter(multi eq;ge;le)] 
+| [Id](Crm.Pos.Sequences.md#id) | guid |  
+| [IsActive](Crm.Pos.Sequences.md#isactive) | boolean | Indicates whether this sequence is active. [Required] [Default(true)] [Filter(multi eq)] 
+| [MaxNo](Crm.Pos.Sequences.md#maxno) | string (nullable) | Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. [Filter(multi eq;ge;le)] 
+| [NextNo](Crm.Pos.Sequences.md#nextno) | string | The next consecutive number which will be assigned on the next request. [Required] [Filter(multi eq;ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PosDevice](Crm.Pos.Sequences.md#PosDevice) | [Crm.Pos.Devices](Crm.Pos.Devices.md) | The POS device, for which the sequence is defined. [Required] [Filter(multi eq)] |
+| [PosDevice](Crm.Pos.Sequences.md#posdevice) | [Crm.Pos.Devices](Crm.Pos.Devices.md) | The POS device, for which the sequence is defined. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequ
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsActive
@@ -64,7 +63,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Pos.Devices](Crm.Pos.Devices.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

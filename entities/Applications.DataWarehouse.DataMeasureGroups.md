@@ -9,26 +9,19 @@ Contains the groups of measures in the general data warehouse. Entity: Dw_Data_M
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.DataWarehouse.DataMeasureGroups.md#Id) | guid |  
-| [Code](Applications.DataWarehouse.DataMeasureGroups.md#Code) | string | Unique group code. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Applications.DataWarehouse.DataMeasureGroups.md#Name) | string | Group name (multilanguage). [Required] [Filter(eq;like)] 
-| [Notes](Applications.DataWarehouse.DataMeasureGroups.md#Notes) | string (nullable) | Notes for this DataMeasureGroup. 
+| [Code](Applications.DataWarehouse.DataMeasureGroups.md#code) | string | Unique group code. [Required] [Filter(eq;like)] [ORD] 
+| [Id](Applications.DataWarehouse.DataMeasureGroups.md#id) | guid |  
+| [Name](Applications.DataWarehouse.DataMeasureGroups.md#name) | string | Group name (multilanguage). [Required] [Filter(eq;like)] 
+| [Notes](Applications.DataWarehouse.DataMeasureGroups.md#notes) | string (nullable) | Notes for this DataMeasureGroup. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.DataWarehouse.DataMeasureGroups.md#Parent) | [Applications.DataWarehouse.DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md) (nullable) | Parent data measure group in the hierarchy. Null when this is root node. [Filter(multi eq)] |
+| [Parent](Applications.DataWarehouse.DataMeasureGroups.md#parent) | [Applications.DataWarehouse.DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md) (nullable) | Parent data measure group in the hierarchy. Null when this is root node. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Code
 
@@ -37,6 +30,12 @@ _Default Value_: **NewGuid**
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Name
 
@@ -63,7 +62,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.DataWarehouse.DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

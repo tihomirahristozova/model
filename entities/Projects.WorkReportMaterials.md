@@ -9,18 +9,18 @@ Each record contains a consumed material, reported by the related Work Report. E
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.WorkReportMaterials.md#Id) | guid |  
-| [Quantity](Projects.WorkReportMaterials.md#Quantity) | decimal | The consumed quantity of the material. [Required] [Default(0)] [Filter(eq;like)] 
-| [QuantityBase](Projects.WorkReportMaterials.md#QuantityBase) | decimal | The equivalence of Quantity in the base measurement unit of the Material. [Required] [Default(0)] [Filter(eq;like)] [ReadOnly] 
+| [Id](Projects.WorkReportMaterials.md#id) | guid |  
+| [Quantity](Projects.WorkReportMaterials.md#quantity) | decimal | The consumed quantity of the material. [Required] [Default(0)] [Filter(eq;like)] 
+| [QuantityBase](Projects.WorkReportMaterials.md#quantitybase) | decimal | The equivalence of Quantity in the base measurement unit of the Material. [Required] [Default(0)] [Filter(eq;like)] [ReadOnly] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaterialProduct](Projects.WorkReportMaterials.md#MaterialProduct) | [General.Products.Products](General.Products.Products.md) | The consumed material. [Required] [Filter(multi eq)] |
-| [ProjectTask](Projects.WorkReportMaterials.md#ProjectTask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The project task for which the materials are reported. [Required] [Filter(multi eq)] |
-| [QuantityUnit](Projects.WorkReportMaterials.md#QuantityUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting. [Required] [Filter(multi eq)] |
-| [WorkReport](Projects.WorkReportMaterials.md#WorkReport) | [Projects.WorkReports](Projects.WorkReports.md) | The [WorkReport](Projects.WorkReportMaterials.md#WorkReport) to which this WorkReportMaterial belongs. [Required] [Filter(multi eq)] [Owner] |
+| [MaterialProduct](Projects.WorkReportMaterials.md#materialproduct) | [General.Products.Products](General.Products.Products.md) | The consumed material. [Required] [Filter(multi eq)] |
+| [ProjectTask](Projects.WorkReportMaterials.md#projecttask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The project task for which the materials are reported. [Required] [Filter(multi eq)] |
+| [QuantityUnit](Projects.WorkReportMaterials.md#quantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting. [Required] [Filter(multi eq)] |
+| [WorkReport](Projects.WorkReportMaterials.md#workreport) | [Projects.WorkReports](Projects.WorkReports.md) | The [WorkReport](Projects.WorkReportMaterials.md#workreport) to which this WorkReportMaterial belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -29,7 +29,6 @@ Each record contains a consumed material, reported by the related Work Report. E
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Quantity
@@ -61,7 +60,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProjectTask
 
@@ -69,7 +67,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.WorkReport.ProjectTask`
@@ -82,15 +79,13 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### WorkReport
 
-> The [WorkReport](Projects.WorkReportMaterials.md#WorkReport) to which this WorkReportMaterial belongs. [Required] [Filter(multi eq)] [Owner]
+> The [WorkReport](Projects.WorkReportMaterials.md#workreport) to which this WorkReportMaterial belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Projects.WorkReports](Projects.WorkReports.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

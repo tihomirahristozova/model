@@ -9,16 +9,16 @@ Stores verification tokens for users - e.g. tokens for email, phone or two-facto
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Security.UserProviderTokens.md#Id) | guid |  
-| [LoginProviderName](Systems.Security.UserProviderTokens.md#LoginProviderName) | string | Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. [Required] [Filter(eq)] 
-| [TokenName](Systems.Security.UserProviderTokens.md#TokenName) | string | What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). [Required] [Filter(eq)] 
-| [TokenValue](Systems.Security.UserProviderTokens.md#TokenValue) | string (nullable) | Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers. 
+| [Id](Systems.Security.UserProviderTokens.md#id) | guid |  
+| [LoginProviderName](Systems.Security.UserProviderTokens.md#loginprovidername) | string | Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. [Required] [Filter(eq)] 
+| [TokenName](Systems.Security.UserProviderTokens.md#tokenname) | string | What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). [Required] [Filter(eq)] 
+| [TokenValue](Systems.Security.UserProviderTokens.md#tokenvalue) | string (nullable) | Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Systems.Security.UserProviderTokens.md#User) | [Systems.Security.Users](Systems.Security.Users.md) | User for which we store tokens. [Required] [Filter(multi eq)] [Owner] |
+| [User](Systems.Security.UserProviderTokens.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | User for which we store tokens. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Stores verification tokens for users - e.g. tokens for email, phone or two-facto
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### LoginProviderName
@@ -63,7 +62,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,34 +9,19 @@ Represents a group of users, sharing interest in the group topic. Entity: Cmm_So
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Communities.SocialGroups.md#Id) | guid |  
-| [Notes](Communities.SocialGroups.md#Notes) | string (nullable) | Notes for this SocialGroup. 
-| [Code](Communities.SocialGroups.md#Code) | string | Unique code of the group. Also used as group slug for Internet URL purposes. [Required] [ORD] 
-| [Name](Communities.SocialGroups.md#Name) | string | Multilanguage name of the group. [Required] 
+| [Code](Communities.SocialGroups.md#code) | string | Unique code of the group. Also used as group slug for Internet URL purposes. [Required] [ORD] 
+| [Id](Communities.SocialGroups.md#id) | guid |  
+| [Name](Communities.SocialGroups.md#name) | string | Multilanguage name of the group. [Required] 
+| [Notes](Communities.SocialGroups.md#notes) | string (nullable) | Notes for this SocialGroup. 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Members | [Communities.SocialGroupMembers](Communities.SocialGroupMembers.md) | List of [SocialGroupMember](Communities.SocialGroupMembers.md) child objects, based on the [Communities.SocialGroupMember.SocialGroup](Communities.SocialGroupMembers.md#SocialGroup) back reference 
+| Members | [Communities.SocialGroupMembers](Communities.SocialGroupMembers.md) | List of [SocialGroupMember](Communities.SocialGroupMembers.md) child objects, based on the [Communities.SocialGroupMember.SocialGroup](Communities.SocialGroupMembers.md#socialgroup) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
-
-### Notes
-
-> Notes for this SocialGroup.
-
-_Type_: **string (nullable)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### Code
 
@@ -46,11 +31,25 @@ _Type_: **string**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **True**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Name
 
 > Multilanguage name of the group. [Required]
 
 _Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### Notes
+
+> Notes for this SocialGroup.
+
+_Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

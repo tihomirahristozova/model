@@ -9,27 +9,20 @@ The actual values in the general data warehouse. Entity: Dw_Data_Values (Introdu
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.DataWarehouse.DataValues.md#Id) | guid |  
-| [ActualValue](Applications.DataWarehouse.DataValues.md#ActualValue) | decimal | Accumulates actual value for the measure. [Required] [Default(0)] [Filter(eq)] 
-| [Date](Applications.DataWarehouse.DataValues.md#Date) | date | The date for which the measure is recorded. All records with dates within each period are summed. [Required] [Filter(eq;ge;le)] 
-| [TargetValue](Applications.DataWarehouse.DataValues.md#TargetValue) | decimal | Accumulates target value for the measure. [Required] [Default(0)] [Filter(eq)] 
+| [ActualValue](Applications.DataWarehouse.DataValues.md#actualvalue) | decimal | Accumulates actual value for the measure. [Required] [Default(0)] [Filter(eq)] 
+| [Date](Applications.DataWarehouse.DataValues.md#date) | date | The date for which the measure is recorded. All records with dates within each period are summed. [Required] [Filter(eq;ge;le)] 
+| [Id](Applications.DataWarehouse.DataValues.md#id) | guid |  
+| [TargetValue](Applications.DataWarehouse.DataValues.md#targetvalue) | decimal | Accumulates target value for the measure. [Required] [Default(0)] [Filter(eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataMeasure](Applications.DataWarehouse.DataValues.md#DataMeasure) | [Applications.DataWarehouse.DataMeasures](Applications.DataWarehouse.DataMeasures.md) | The measure for which the data is recorded. [Required] [Filter(multi eq)] |
-| [EnterpriseCompany](Applications.DataWarehouse.DataValues.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company for which the data is recorded. [Required] [Filter(multi eq)] |
+| [DataMeasure](Applications.DataWarehouse.DataValues.md#datameasure) | [Applications.DataWarehouse.DataMeasures](Applications.DataWarehouse.DataMeasures.md) | The measure for which the data is recorded. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Applications.DataWarehouse.DataValues.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company for which the data is recorded. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ActualValue
 
@@ -47,6 +40,12 @@ _Default Value_: **0**
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### TargetValue
 
@@ -66,7 +65,6 @@ _Default Value_: **0**
 
 _Type_: **[Applications.DataWarehouse.DataMeasures](Applications.DataWarehouse.DataMeasures.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EnterpriseCompany
 
@@ -74,7 +72,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

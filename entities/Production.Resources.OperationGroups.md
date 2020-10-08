@@ -9,26 +9,19 @@ Groups of operations. Entity: Prd_Operation_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.OperationGroups.md#Id) | guid |  
-| [FullPath](Production.Resources.OperationGroups.md#FullPath) | string | The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. [Required] [Default("")] [Filter(like)] 
-| [Name](Production.Resources.OperationGroups.md#Name) | string | The name of this OperationGroup. [Required] [Filter(like)] 
-| [Parent](Production.Resources.OperationGroups.md#Parent) | string | Path of parent group. [Required] [Default("/")] [Filter(like)] [ORD] 
+| [FullPath](Production.Resources.OperationGroups.md#fullpath) | string | The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. [Required] [Default("")] [Filter(like)] 
+| [Id](Production.Resources.OperationGroups.md#id) | guid |  
+| [Name](Production.Resources.OperationGroups.md#name) | string | The name of this OperationGroup. [Required] [Filter(like)] 
+| [Parent](Production.Resources.OperationGroups.md#parent) | string | Path of parent group. [Required] [Default("/")] [Filter(like)] [ORD] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Operations | [Production.Resources.Operations](Production.Resources.Operations.md) | List of [Operation](Production.Resources.Operations.md) child objects, based on the [Production.Resources.Operation.OperationGroup](Production.Resources.Operations.md#OperationGroup) back reference 
+| Operations | [Production.Resources.Operations](Production.Resources.Operations.md) | List of [Operation](Production.Resources.Operations.md) child objects, based on the [Production.Resources.Operation.OperationGroup](Production.Resources.Operations.md#operationgroup) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### FullPath
 
@@ -38,6 +31,12 @@ _Type_: **string**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Default Value_: ****  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Name
 

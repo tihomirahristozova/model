@@ -9,21 +9,36 @@ Price types. Entity: Crm_Price_Types
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.PriceTypes.md#Id) | guid |  
-| [Notes](Crm.PriceTypes.md#Notes) | string (nullable) | Notes for this PriceType. 
-| [OrdinalPos](Crm.PriceTypes.md#OrdinalPos) | int32 | Priority position of the price type, with respect to the other price types. [Required] [ORD] 
-| [Code](Crm.PriceTypes.md#Code) | string | Short identification code of the price type. [Required] [Filter(eq)] [ORD] 
-| [Name](Crm.PriceTypes.md#Name) | string | Full name of the price type. [Required] [Filter(eq;like)] 
+| [Code](Crm.PriceTypes.md#code) | string | Short identification code of the price type. [Required] [Filter(eq)] [ORD] 
+| [Id](Crm.PriceTypes.md#id) | guid |  
+| [Name](Crm.PriceTypes.md#name) | string | Full name of the price type. [Required] [Filter(eq;like)] 
+| [Notes](Crm.PriceTypes.md#notes) | string (nullable) | Notes for this PriceType. 
+| [OrdinalPos](Crm.PriceTypes.md#ordinalpos) | int32 | Priority position of the price type, with respect to the other price types. [Required] [ORD] 
 
 
 ## Attribute Details
+
+### Code
+
+> Short identification code of the price type. [Required] [Filter(eq)] [ORD]
+
+_Type_: **string**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
+
+### Name
+
+> Full name of the price type. [Required] [Filter(eq;like)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
 
 ### Notes
 
@@ -40,22 +55,6 @@ _Supports Order By_: **False**
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **True**  
-
-### Code
-
-> Short identification code of the price type. [Required] [Filter(eq)] [ORD]
-
-_Type_: **string**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **True**  
-
-### Name
-
-> Full name of the price type. [Required] [Filter(eq;like)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
 
 
 

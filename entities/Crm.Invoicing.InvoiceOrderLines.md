@@ -9,50 +9,43 @@ Detail records (lines) of Invoice Orders. Entity: Crm_Invoice_Order_Lines
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Invoicing.InvoiceOrderLines.md#Id) | guid |  
-| [BusinessReason](Crm.Invoicing.InvoiceOrderLines.md#BusinessReason) | [Crm.Invoicing.InvoicingBusinessReason](Crm.Invoicing.InvoiceOrderLines.md#BusinessReason) | Business reason for invoicing of this product or service. S=Shipment, P=Payment. [Required] [Default("S")] 
-| [LineAmount](Crm.Invoicing.InvoiceOrderLines.md#LineAmount) | [Amount](../data-types.md#Amount) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)] 
-| [LineCustomDiscountPercent](Crm.Invoicing.InvoiceOrderLines.md#LineCustomDiscountPercent) | decimal | User-defined discount for the line. [Required] [Default(0)] 
-| [LineNo](Crm.Invoicing.InvoiceOrderLines.md#LineNo) | int32 | Line number, unique within the InvoiceOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the InvoiceOrder (in order to allow insertions with adjustment documents). [Required] 
-| [LineStandardDiscountPercent](Crm.Invoicing.InvoiceOrderLines.md#LineStandardDiscountPercent) | decimal | Standard discount for the line. This is automatically computed according to discount conditions. [Required] [Default(0)] 
-| [ProductDescription](Crm.Invoicing.InvoiceOrderLines.md#ProductDescription) | [MultilanguageString](../data-types.md#MultilanguageString) | The description of Product. Initially copied from the name of the Product or from the generating document. [Required] 
-| [Quantity](Crm.Invoicing.InvoiceOrderLines.md#Quantity) | [Quantity](../data-types.md#Quantity) | The quantity of the product to invoice. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
-| [QuantityBase](Crm.Invoicing.InvoiceOrderLines.md#QuantityBase) | [Quantity](../data-types.md#Quantity) | The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
-| [StandardQuantityBase](Crm.Invoicing.InvoiceOrderLines.md#StandardQuantityBase) | [Quantity](../data-types.md#Quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
-| [UnitPrice](Crm.Invoicing.InvoiceOrderLines.md#UnitPrice) | [Amount](../data-types.md#Amount) | Unit selling price in the unit of measure, specified in Quantity Unit. [Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)] 
+| [BusinessReason](Crm.Invoicing.InvoiceOrderLines.md#businessreason) | [InvoicingBusinessReason](Crm.Invoicing.InvoiceOrderLines.md#businessreason) | Business reason for invoicing of this product or service. S=Shipment, P=Payment. [Required] [Default("S")] 
+| [Id](Crm.Invoicing.InvoiceOrderLines.md#id) | guid |  
+| [LineAmount](Crm.Invoicing.InvoiceOrderLines.md#lineamount) | [Amount](../data-types.md#amount) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)] 
+| [LineCustomDiscountPercent](Crm.Invoicing.InvoiceOrderLines.md#linecustomdiscountpercent) | decimal | User-defined discount for the line. [Required] [Default(0)] 
+| [LineNo](Crm.Invoicing.InvoiceOrderLines.md#lineno) | int32 | Line number, unique within the InvoiceOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the InvoiceOrder (in order to allow insertions with adjustment documents). [Required] 
+| [LineStandardDiscountPercent](Crm.Invoicing.InvoiceOrderLines.md#linestandarddiscountpercent) | decimal | Standard discount for the line. This is automatically computed according to discount conditions. [Required] [Default(0)] 
+| [ProductDescription](Crm.Invoicing.InvoiceOrderLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The description of Product. Initially copied from the name of the Product or from the generating document. [Required] 
+| [Quantity](Crm.Invoicing.InvoiceOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the product to invoice. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [QuantityBase](Crm.Invoicing.InvoiceOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
+| [StandardQuantityBase](Crm.Invoicing.InvoiceOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [UnitPrice](Crm.Invoicing.InvoiceOrderLines.md#unitprice) | [Amount](../data-types.md#amount) | Unit selling price in the unit of measure, specified in Quantity Unit. [Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [InvoiceOrder](Crm.Invoicing.InvoiceOrderLines.md#InvoiceOrder) | [Crm.Invoicing.InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) | The [InvoiceOrder](Crm.Invoicing.InvoiceOrderLines.md#InvoiceOrder) to which this InvoiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [LineDealType](Crm.Invoicing.InvoiceOrderLines.md#LineDealType) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice line. If deal type in the line is different from deal type in the header another VAT entry is created from the invoice. [Filter(multi eq)] |
-| [LineDiscount](Crm.Invoicing.InvoiceOrderLines.md#LineDiscount) | [Crm.LineDiscounts](Crm.LineDiscounts.md) (nullable) | The line discount type used to form the Line_Standard_Discount_Percent. [Filter(multi eq)] |
-| [PaymentTransaction](Crm.Invoicing.InvoiceOrderLines.md#PaymentTransaction) | [Finance.Payments.PaymentTransactions](Finance.Payments.PaymentTransactions.md) (nullable) | The payment transaction, which is to be invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)] |
-| [Product](Crm.Invoicing.InvoiceOrderLines.md#Product) | [General.Products.Products](General.Products.Products.md) (nullable) | The product, which is ordered for invoicing. [Filter(multi eq)] |
-| [QuantityUnit](Crm.Invoicing.InvoiceOrderLines.md#QuantityUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
-| [SalesOrder](Crm.Invoicing.InvoiceOrderLines.md#SalesOrder) | [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | When not null specifies the Sales Order that is ordered to be invoiced by this line. [Filter(multi eq)] |
-| [SalesOrderLine](Crm.Invoicing.InvoiceOrderLines.md#SalesOrderLine) | [Crm.Sales.SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable) | When not null specifies the Sales Order line that is ordered to be invoiced by this line. [Filter(multi eq)] |
-| [SerialNumber](Crm.Invoicing.InvoiceOrderLines.md#SerialNumber) | [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)] |
-| [TransactionLine](Crm.Invoicing.InvoiceOrderLines.md#TransactionLine) | [Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) (nullable) | The store transaction line that is to be invoiced by this line, for Business Reason = S. [Filter(multi eq)] |
+| [InvoiceOrder](Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) | [Crm.Invoicing.InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) | The [InvoiceOrder](Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) to which this InvoiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [LineDealType](Crm.Invoicing.InvoiceOrderLines.md#linedealtype) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice line. If deal type in the line is different from deal type in the header another VAT entry is created from the invoice. [Filter(multi eq)] |
+| [LineDiscount](Crm.Invoicing.InvoiceOrderLines.md#linediscount) | [Crm.LineDiscounts](Crm.LineDiscounts.md) (nullable) | The line discount type used to form the Line_Standard_Discount_Percent. [Filter(multi eq)] |
+| [PaymentTransaction](Crm.Invoicing.InvoiceOrderLines.md#paymenttransaction) | [Finance.Payments.PaymentTransactions](Finance.Payments.PaymentTransactions.md) (nullable) | The payment transaction, which is to be invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)] |
+| [Product](Crm.Invoicing.InvoiceOrderLines.md#product) | [General.Products.Products](General.Products.Products.md) (nullable) | The product, which is ordered for invoicing. [Filter(multi eq)] |
+| [QuantityUnit](Crm.Invoicing.InvoiceOrderLines.md#quantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
+| [SalesOrder](Crm.Invoicing.InvoiceOrderLines.md#salesorder) | [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | When not null specifies the Sales Order that is ordered to be invoiced by this line. [Filter(multi eq)] |
+| [SalesOrderLine](Crm.Invoicing.InvoiceOrderLines.md#salesorderline) | [Crm.Sales.SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable) | When not null specifies the Sales Order line that is ordered to be invoiced by this line. [Filter(multi eq)] |
+| [SerialNumber](Crm.Invoicing.InvoiceOrderLines.md#serialnumber) | [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)] |
+| [TransactionLine](Crm.Invoicing.InvoiceOrderLines.md#transactionline) | [Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) (nullable) | The store transaction line that is to be invoiced by this line, for Business Reason = S. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### BusinessReason
 
 > Business reason for invoicing of this product or service. S=Shipment, P=Payment. [Required] [Default("S")]
 
-_Type_: **[Crm.Invoicing.InvoicingBusinessReason](Crm.Invoicing.InvoiceOrderLines.md#BusinessReason)**  
+_Type_: **[InvoicingBusinessReason](Crm.Invoicing.InvoiceOrderLines.md#businessreason)**  
 Generic enum type for InvoicingBusinessReason properties  
-_Allowed Values (Enum Members)_  
+_Allowed Values (Crm.Invoicing.InvoicingBusinessReason Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -63,11 +56,17 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **Shipment**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### LineAmount
 
 > Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -111,7 +110,7 @@ _Front-End Recalc Expressions:_
 
 > The description of Product. Initially copied from the name of the Product or from the generating document. [Required]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -121,7 +120,7 @@ _Front-End Recalc Expressions:_
 
 > The quantity of the product to invoice. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -130,7 +129,7 @@ _Default Value_: **Constant**
 
 > The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -143,7 +142,7 @@ _Front-End Recalc Expressions:_
 
 > The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -156,7 +155,7 @@ _Front-End Recalc Expressions:_
 
 > Unit selling price in the unit of measure, specified in Quantity Unit. [Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -168,11 +167,10 @@ _Front-End Recalc Expressions:_
 
 ### InvoiceOrder
 
-> The [InvoiceOrder](Crm.Invoicing.InvoiceOrderLines.md#InvoiceOrder) to which this InvoiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
+> The [InvoiceOrder](Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) to which this InvoiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Crm.Invoicing.InvoiceOrders](Crm.Invoicing.InvoiceOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### LineDealType
 
@@ -180,7 +178,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.InvoiceOrder.DealType`
@@ -193,7 +190,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[Crm.LineDiscounts](Crm.LineDiscounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
 `obj.DetermineLineDiscount(Convert((obj.InvoiceOrder.DeliveryDate ?? obj.InvoiceOrder.DocumentDate), Nullable`1), obj.InvoiceOrder.Customer, obj.Product, obj.Quantity, obj.InvoiceOrder.EnterpriseCompany, obj.InvoiceOrder.EnterpriseCompanyLocation, IIF((obj.SalesOrder == null), null, obj.SalesOrder.DistributionChannel), IIF((obj.SalesOrder == null), null, obj.SalesOrder.PriceList))`
@@ -203,7 +199,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[Finance.Payments.PaymentTransactions](Finance.Payments.PaymentTransactions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Product
 
@@ -211,7 +206,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### QuantityUnit
 
@@ -219,7 +213,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
 `obj.Product.MeasurementUnit`
@@ -229,7 +222,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.InvoiceOrder.SalesOrder`
@@ -242,7 +234,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[Crm.Sales.SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### SerialNumber
 
@@ -250,7 +241,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### TransactionLine
 
@@ -258,7 +248,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

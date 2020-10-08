@@ -9,49 +9,42 @@ Hierarchical categorization of the products. Entity: Gen_Product_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.ProductGroups.md#Id) | guid |  
-| [Active](General.Products.ProductGroups.md#Active) | boolean | True if the product group is active, false - not to list in combo boxes for choosing in new documents. [Required] [Default(true)] [Filter(eq)] 
-| [ConfiguratorCreatesRecipe](General.Products.ProductGroups.md#ConfiguratorCreatesRecipe) | boolean | Whether the product configurator should create one default recipe. true=yes;false=no. [Required] [Default(false)] 
-| [ConfiguratorStatus](General.Products.ProductGroups.md#ConfiguratorStatus) | [General.Products.ProductGroupsRepository.ConfiguratorStatus](General.Products.ProductGroups.md#ConfiguratorStatus) | Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly. [Required] [Default(0)] 
-| [FullPath](General.Products.ProductGroups.md#FullPath) | string | Full tree path in the form /parent/.../leaf/. Contains the group names. [Required] [Default("")] [Filter(eq;like)] [ORD] 
-| [NextPartNumber](General.Products.ProductGroups.md#NextPartNumber) | string (nullable) | Contains the next part number to be auto-assigned to parts, created in the group or sub-groups. 
-| [NextSerialNumber](General.Products.ProductGroups.md#NextSerialNumber) | string (nullable) | When not null, specifies the next serial number, that should be assigned to new produced items. [Filter(eq;like)] 
-| [Notes](General.Products.ProductGroups.md#Notes) | string (nullable) | User notes for the item group. 
-| [Parent](General.Products.ProductGroups.md#Parent) | string | Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. [Required] [Default("/")] [Filter(eq)] [ORD] 
-| [Picture](General.Products.ProductGroups.md#Picture) | byte[] (nullable) | The picture of the product group. 
-| [PictureLastUpdateTime](General.Products.ProductGroups.md#PictureLastUpdateTime) | datetime (nullable) | Last update time of the Picture. [Filter(ge;le)] [ReadOnly] 
-| [ProductDescriptionMask](General.Products.ProductGroups.md#ProductDescriptionMask) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
-| [Code](General.Products.ProductGroups.md#Code) | string | The unique code of the ProductGroup. [Required] [Filter(eq;like)] [ORD] 
-| [Name](General.Products.ProductGroups.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Group name should be unique among the other groups within the same parent. [Required] [Filter(eq;like)] 
-| [ProductNameMask](General.Products.ProductGroups.md#ProductNameMask) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
-| [UseLots](General.Products.ProductGroups.md#UseLots) | [General.Products.ProductGroupsRepository.UseLots](General.Products.ProductGroups.md#UseLots) (nullable) | Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required. 
+| [Active](General.Products.ProductGroups.md#active) | boolean | True if the product group is active, false - not to list in combo boxes for choosing in new documents. [Required] [Default(true)] [Filter(eq)] 
+| [Code](General.Products.ProductGroups.md#code) | string | The unique code of the ProductGroup. [Required] [Filter(eq;like)] [ORD] 
+| [ConfiguratorCreatesRecipe](General.Products.ProductGroups.md#configuratorcreatesrecipe) | boolean | Whether the product configurator should create one default recipe. true=yes;false=no. [Required] [Default(false)] 
+| [ConfiguratorStatus](General.Products.ProductGroups.md#configuratorstatus) | [ConfiguratorStatus](General.Products.ProductGroups.md#configuratorstatus) | Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly. [Required] [Default(0)] 
+| [FullPath](General.Products.ProductGroups.md#fullpath) | string | Full tree path in the form /parent/.../leaf/. Contains the group names. [Required] [Default("")] [Filter(eq;like)] [ORD] 
+| [Id](General.Products.ProductGroups.md#id) | guid |  
+| [Name](General.Products.ProductGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Group name should be unique among the other groups within the same parent. [Required] [Filter(eq;like)] 
+| [NextPartNumber](General.Products.ProductGroups.md#nextpartnumber) | string (nullable) | Contains the next part number to be auto-assigned to parts, created in the group or sub-groups. 
+| [NextSerialNumber](General.Products.ProductGroups.md#nextserialnumber) | string (nullable) | When not null, specifies the next serial number, that should be assigned to new produced items. [Filter(eq;like)] 
+| [Notes](General.Products.ProductGroups.md#notes) | string (nullable) | User notes for the item group. 
+| [Parent](General.Products.ProductGroups.md#parent) | string | Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. [Required] [Default("/")] [Filter(eq)] [ORD] 
+| [Picture](General.Products.ProductGroups.md#picture) | byte[] (nullable) | The picture of the product group. 
+| [PictureLastUpdateTime](General.Products.ProductGroups.md#picturelastupdatetime) | datetime (nullable) | Last update time of the Picture. [Filter(ge;le)] [ReadOnly] 
+| [ProductDescriptionMask](General.Products.ProductGroups.md#productdescriptionmask) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
+| [ProductNameMask](General.Products.ProductGroups.md#productnamemask) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
+| [UseLots](General.Products.ProductGroups.md#uselots) | [UseLots](General.Products.ProductGroups.md#uselots) (nullable) | Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultMeasurementUnit](General.Products.ProductGroups.md#DefaultMeasurementUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | When not null, specifies default measurement unit, which should be assigned to new products in the group. [Filter(multi eq)] |
-| [DefaultProductType](General.Products.ProductGroups.md#DefaultProductType) | [General.Products.ProductTypes](General.Products.ProductTypes.md) (nullable) | When not null, specifies default product type, which should be assigned to new products in the group. [Filter(multi eq)] |
-| [EnterpriseCompany](General.Products.ProductGroups.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)] |
-| [PricingModel](General.Products.ProductGroups.md#PricingModel) | [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md) (nullable) | When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. [Filter(multi eq)] |
+| [DefaultMeasurementUnit](General.Products.ProductGroups.md#defaultmeasurementunit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | When not null, specifies default measurement unit, which should be assigned to new products in the group. [Filter(multi eq)] |
+| [DefaultProductType](General.Products.ProductGroups.md#defaultproducttype) | [General.Products.ProductTypes](General.Products.ProductTypes.md) (nullable) | When not null, specifies default product type, which should be assigned to new products in the group. [Filter(multi eq)] |
+| [EnterpriseCompany](General.Products.ProductGroups.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)] |
+| [PricingModel](General.Products.ProductGroups.md#pricingmodel) | [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md) (nullable) | When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| RangeProperties | [General.Products.ProductGroupRangeProperties](General.Products.ProductGroupRangeProperties.md) | List of [ProductGroupRangeProperty](General.Products.ProductGroupRangeProperties.md) child objects, based on the [General.Products.ProductGroupRangeProperty.ProductGroup](General.Products.ProductGroupRangeProperties.md#ProductGroup) back reference 
-| RequiredProperties | [General.Products.ProductGroupRequiredProperties](General.Products.ProductGroupRequiredProperties.md) | List of [ProductGroupRequiredProperty](General.Products.ProductGroupRequiredProperties.md) child objects, based on the [General.Products.ProductGroupRequiredProperty.ProductGroup](General.Products.ProductGroupRequiredProperties.md#ProductGroup) back reference 
-| PrincipalRecipes | [Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | List of [PrincipalRecipe](Production.Technologies.PrincipalRecipes.md) child objects, based on the [Production.Technologies.PrincipalRecipe.ProductGroup](Production.Technologies.PrincipalRecipes.md#ProductGroup) back reference 
+| PrincipalRecipes | [Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | List of [PrincipalRecipe](Production.Technologies.PrincipalRecipes.md) child objects, based on the [Production.Technologies.PrincipalRecipe.ProductGroup](Production.Technologies.PrincipalRecipes.md#productgroup) back reference 
+| RangeProperties | [General.Products.ProductGroupRangeProperties](General.Products.ProductGroupRangeProperties.md) | List of [ProductGroupRangeProperty](General.Products.ProductGroupRangeProperties.md) child objects, based on the [General.Products.ProductGroupRangeProperty.ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) back reference 
+| RequiredProperties | [General.Products.ProductGroupRequiredProperties](General.Products.ProductGroupRequiredProperties.md) | List of [ProductGroupRequiredProperty](General.Products.ProductGroupRequiredProperties.md) child objects, based on the [General.Products.ProductGroupRequiredProperty.ProductGroup](General.Products.ProductGroupRequiredProperties.md#productgroup) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Active
 
@@ -61,6 +54,14 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
+
+### Code
+
+> The unique code of the ProductGroup. [Required] [Filter(eq;like)] [ORD]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
 
 ### ConfiguratorCreatesRecipe
 
@@ -75,9 +76,9 @@ _Default Value_: **False**
 
 > Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly. [Required] [Default(0)]
 
-_Type_: **[General.Products.ProductGroupsRepository.ConfiguratorStatus](General.Products.ProductGroups.md#ConfiguratorStatus)**  
-Allowed values for the [ConfiguratorStatus](General.Products.ProductGroups.md#ConfiguratorStatus) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ConfiguratorStatus](General.Products.ProductGroups.md#configuratorstatus)**  
+Allowed values for the [ConfiguratorStatus](General.Products.ProductGroups.md#configuratorstatus) data attribute  
+_Allowed Values (General.Products.ProductGroupsRepository.ConfiguratorStatus Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -97,6 +98,20 @@ _Type_: **string**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Default Value_: ****  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
+### Name
+
+> Group name should be unique among the other groups within the same parent. [Required] [Filter(eq;like)]
+
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
 
 ### NextPartNumber
 
@@ -151,31 +166,15 @@ _Supports Order By_: **False**
 
 > When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### Code
-
-> The unique code of the ProductGroup. [Required] [Filter(eq;like)] [ORD]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-
-### Name
-
-> Group name should be unique among the other groups within the same parent. [Required] [Filter(eq;like)]
-
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
-_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
 ### ProductNameMask
 
 > When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -183,9 +182,9 @@ _Supports Order By_: **False**
 
 > Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required.
 
-_Type_: **[General.Products.ProductGroupsRepository.UseLots](General.Products.ProductGroups.md#UseLots) (nullable)**  
-Allowed values for the [UseLots](General.Products.ProductGroups.md#UseLots) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[UseLots](General.Products.ProductGroups.md#uselots) (nullable)**  
+Allowed values for the [UseLots](General.Products.ProductGroups.md#uselots) data attribute  
+_Allowed Values (General.Products.ProductGroupsRepository.UseLots Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -205,7 +204,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DefaultProductType
 
@@ -213,7 +211,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.ProductTypes](General.Products.ProductTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EnterpriseCompany
 
@@ -221,7 +218,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PricingModel
 
@@ -229,7 +225,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

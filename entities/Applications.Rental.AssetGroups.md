@@ -9,28 +9,21 @@ Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Gr
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Rental.AssetGroups.md#Id) | guid |  
-| [FullPath](Applications.Rental.AssetGroups.md#FullPath) | string (nullable) | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. [ORD] [ReadOnly] 
-| [Notes](Applications.Rental.AssetGroups.md#Notes) | string (nullable) | Notes for this AssetGroup. 
-| [ParentFullPath](Applications.Rental.AssetGroups.md#ParentFullPath) | string (nullable) | The full path of the parent node. [Filter(eq)] 
-| [RentalAssetGroupCode](Applications.Rental.AssetGroups.md#RentalAssetGroupCode) | string | Asset group code, unique within the parent node. [Required] [Filter(eq;like)] 
-| [RentalAssetGroupName](Applications.Rental.AssetGroups.md#RentalAssetGroupName) | string | Asset group name, unique within the parent node. [Required] [Filter(eq;like)] 
+| [FullPath](Applications.Rental.AssetGroups.md#fullpath) | string (nullable) | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. [ORD] [ReadOnly] 
+| [Id](Applications.Rental.AssetGroups.md#id) | guid |  
+| [Notes](Applications.Rental.AssetGroups.md#notes) | string (nullable) | Notes for this AssetGroup. 
+| [ParentFullPath](Applications.Rental.AssetGroups.md#parentfullpath) | string (nullable) | The full path of the parent node. [Filter(eq)] 
+| [RentalAssetGroupCode](Applications.Rental.AssetGroups.md#rentalassetgroupcode) | string | Asset group code, unique within the parent node. [Required] [Filter(eq;like)] 
+| [RentalAssetGroupName](Applications.Rental.AssetGroups.md#rentalassetgroupname) | string | Asset group name, unique within the parent node. [Required] [Filter(eq;like)] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Assets | [Applications.Rental.Assets](Applications.Rental.Assets.md) | List of [Asset](Applications.Rental.Assets.md) child objects, based on the [Applications.Rental.Asset.RentalAssetGroup](Applications.Rental.Assets.md#RentalAssetGroup) back reference 
+| Assets | [Applications.Rental.Assets](Applications.Rental.Assets.md) | List of [Asset](Applications.Rental.Assets.md) child objects, based on the [Applications.Rental.Asset.RentalAssetGroup](Applications.Rental.Assets.md#rentalassetgroup) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### FullPath
 
@@ -39,6 +32,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **True**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Notes
 

@@ -9,20 +9,13 @@ Contains purchase price list headers. Entity: Scm_Purchase_Price_Lists
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Procurement.PurchasePriceLists.md#Id) | guid |  
-| [FromDate](Logistics.Procurement.PurchasePriceLists.md#FromDate) | datetime (nullable) | Starting validity of the price list. [Filter(eq;ge;le)] 
-| [Name](Logistics.Procurement.PurchasePriceLists.md#Name) | string | The name of this PurchasePriceList. [Required] [Filter(eq;like)] [ORD] 
-| [ThruDate](Logistics.Procurement.PurchasePriceLists.md#ThruDate) | datetime (nullable) | Ending validity of the price list. [Filter(eq;ge;le)] 
+| [FromDate](Logistics.Procurement.PurchasePriceLists.md#fromdate) | datetime (nullable) | Starting validity of the price list. [Filter(eq;ge;le)] 
+| [Id](Logistics.Procurement.PurchasePriceLists.md#id) | guid |  
+| [Name](Logistics.Procurement.PurchasePriceLists.md#name) | string | The name of this PurchasePriceList. [Required] [Filter(eq;like)] [ORD] 
+| [ThruDate](Logistics.Procurement.PurchasePriceLists.md#thrudate) | datetime (nullable) | Ending validity of the price list. [Filter(eq;ge;le)] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### FromDate
 
@@ -31,6 +24,12 @@ _Default Value_: **NewGuid**
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Name
 

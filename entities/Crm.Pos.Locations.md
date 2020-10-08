@@ -9,16 +9,16 @@ Defines a company location as POS enabled location. Entity: Pos_Locations (Intro
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pos.Locations.md#Id) | guid |  
-| [IsActive](Crm.Pos.Locations.md#IsActive) | boolean (nullable) | Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. [Default(true)] [Filter(eq)] 
-| [PosLocationCode](Crm.Pos.Locations.md#PosLocationCode) | string | Unique (with the enterprise company) code of this POS location. [Required] [Filter(multi eq;like)] 
+| [Id](Crm.Pos.Locations.md#id) | guid |  
+| [IsActive](Crm.Pos.Locations.md#isactive) | boolean (nullable) | Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. [Default(true)] [Filter(eq)] 
+| [PosLocationCode](Crm.Pos.Locations.md#poslocationcode) | string | Unique (with the enterprise company) code of this POS location. [Required] [Filter(multi eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Pos.Locations.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company of the POS location. [Required] [Filter(multi eq)] |
-| [EnterpriseCompanyLocation](Crm.Pos.Locations.md#EnterpriseCompanyLocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) | The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Crm.Pos.Locations.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company of the POS location. [Required] [Filter(multi eq)] |
+| [EnterpriseCompanyLocation](Crm.Pos.Locations.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) | The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Defines a company location as POS enabled location. Entity: Pos_Locations (Intro
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsActive
@@ -56,7 +55,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EnterpriseCompanyLocation
 
@@ -64,7 +62,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

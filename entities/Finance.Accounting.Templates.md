@@ -9,22 +9,22 @@ Accounting templates are used to automate the postings for repetitive business t
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Accounting.Templates.md#Id) | guid |  
-| [Name](Finance.Accounting.Templates.md#Name) | string | The name of this Template. [Required] [Filter(like)] 
-| [VoucherDateSource](Finance.Accounting.Templates.md#VoucherDateSource) | string (nullable) | Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual. 
-| [VoucherDescriptionMask](Finance.Accounting.Templates.md#VoucherDescriptionMask) | string (nullable) | Template voucher description. Can use field substitutes, surrounded with square brackets. 
+| [Id](Finance.Accounting.Templates.md#id) | guid |  
+| [Name](Finance.Accounting.Templates.md#name) | string | The name of this Template. [Required] [Filter(like)] 
+| [VoucherDateSource](Finance.Accounting.Templates.md#voucherdatesource) | string (nullable) | Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual. 
+| [VoucherDescriptionMask](Finance.Accounting.Templates.md#voucherdescriptionmask) | string (nullable) | Template voucher description. Can use field substitutes, surrounded with square brackets. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Finance.Accounting.Templates.md#Route) | [Systems.Workflow.Routes](Systems.Workflow.Routes.md) | The route which activates the template. [Required] [Filter(multi eq)] [Owner] |
+| [Route](Finance.Accounting.Templates.md#route) | [Systems.Workflow.Routes](Systems.Workflow.Routes.md) | The route which activates the template. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Lines | [Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md) | List of [TemplateLine](Finance.Accounting.TemplateLines.md) child objects, based on the [Finance.Accounting.TemplateLine.Template](Finance.Accounting.TemplateLines.md#Template) back reference 
+| Lines | [Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md) | List of [TemplateLine](Finance.Accounting.TemplateLines.md) child objects, based on the [Finance.Accounting.TemplateLine.Template](Finance.Accounting.TemplateLines.md#template) back reference 
 
 
 ## Attribute Details
@@ -33,7 +33,6 @@ Accounting templates are used to automate the postings for repetitive business t
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Name
@@ -69,7 +68,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Workflow.Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

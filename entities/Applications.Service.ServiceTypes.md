@@ -9,28 +9,21 @@ Service levels. Entity: Srv_Service_Types
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Service.ServiceTypes.md#Id) | guid |  
-| [Description](Applications.Service.ServiceTypes.md#Description) | string (nullable) | The description of this ServiceType. 
-| [IsActive](Applications.Service.ServiceTypes.md#IsActive) | boolean | True when the service type is currently active and selectable in new documents. [Required] [Default(true)] [Filter(eq)] 
-| [IsDefault](Applications.Service.ServiceTypes.md#IsDefault) | boolean | True when this is the default service type for the service object type. false otherwise. [Required] [Default(false)] [Filter(eq)] 
-| [Name](Applications.Service.ServiceTypes.md#Name) | string | The name of this ServiceType. [Required] [Filter(like)] 
+| [Description](Applications.Service.ServiceTypes.md#description) | string (nullable) | The description of this ServiceType. 
+| [Id](Applications.Service.ServiceTypes.md#id) | guid |  
+| [IsActive](Applications.Service.ServiceTypes.md#isactive) | boolean | True when the service type is currently active and selectable in new documents. [Required] [Default(true)] [Filter(eq)] 
+| [IsDefault](Applications.Service.ServiceTypes.md#isdefault) | boolean | True when this is the default service type for the service object type. false otherwise. [Required] [Default(false)] [Filter(eq)] 
+| [Name](Applications.Service.ServiceTypes.md#name) | string | The name of this ServiceType. [Required] [Filter(like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PriceList](Applications.Service.ServiceTypes.md#PriceList) | [Crm.PriceLists](Crm.PriceLists.md) (nullable) | When not null, specifies the price list that should be applied when invoicing service activities. [Filter(multi eq)] |
-| [ServiceObjectType](Applications.Service.ServiceTypes.md#ServiceObjectType) | [Applications.Service.ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable) | The service object type to which this service type is applicable. [Filter(multi eq)] |
+| [PriceList](Applications.Service.ServiceTypes.md#pricelist) | [Crm.PriceLists](Crm.PriceLists.md) (nullable) | When not null, specifies the price list that should be applied when invoicing service activities. [Filter(multi eq)] |
+| [ServiceObjectType](Applications.Service.ServiceTypes.md#serviceobjecttype) | [Applications.Service.ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable) | The service object type to which this service type is applicable. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Description
 
@@ -39,6 +32,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsActive
 
@@ -75,7 +74,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.PriceLists](Crm.PriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ServiceObjectType
 
@@ -83,7 +81,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Service.ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

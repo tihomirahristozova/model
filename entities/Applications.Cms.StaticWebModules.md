@@ -9,30 +9,37 @@ A web module, which contains one web page with static text. Entity: Cms_Static_W
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Cms.StaticWebModules.md#Id) | guid |  
-| [IsPublished](Applications.Cms.StaticWebModules.md#IsPublished) | boolean | Specifies whether the module is published and will be showed in the web site. [Required] [Default(false)] [Filter(eq)] 
-| [LocalUrl](Applications.Cms.StaticWebModules.md#LocalUrl) | string (nullable) | The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. [Filter(like)] 
-| [ModulePicture](Applications.Cms.StaticWebModules.md#ModulePicture) | byte[] (nullable) | Default picture. Used for picture links, small module icons, etc. PNG format is suggested. 
-| [ModuleType](Applications.Cms.StaticWebModules.md#ModuleType) | [Applications.Cms.WebModulesRepository.ModuleType](Applications.Cms.StaticWebModules.md#ModuleType) | Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. [Required] [Filter(like)] 
-| [Name](Applications.Cms.StaticWebModules.md#Name) | string | Multilanguage Module name. This is used as a title when displaying the web Module. [Required] [Filter(like)] 
-| [ContentHtml](Applications.Cms.StaticWebModules.md#ContentHtml) | string (nullable) | The actual html content of the pade. Only the <BODY> of the html is stored. 
-| [LanguageCode](Applications.Cms.StaticWebModules.md#LanguageCode) | string | The language code of the content. [Required] [Default("EN")] 
+| [ContentHtml](Applications.Cms.StaticWebModules.md#contenthtml) | string (nullable) | The actual html content of the pade. Only the <BODY> of the html is stored. 
+| [Id](Applications.Cms.StaticWebModules.md#id) | guid |  
+| [IsPublished](Applications.Cms.StaticWebModules.md#ispublished) | boolean | Specifies whether the module is published and will be showed in the web site. [Required] [Default(false)] [Filter(eq)] 
+| [LanguageCode](Applications.Cms.StaticWebModules.md#languagecode) | string | The language code of the content. [Required] [Default("EN")] 
+| [LocalUrl](Applications.Cms.StaticWebModules.md#localurl) | string (nullable) | The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. [Filter(like)] 
+| [ModulePicture](Applications.Cms.StaticWebModules.md#modulepicture) | byte[] (nullable) | Default picture. Used for picture links, small module icons, etc. PNG format is suggested. 
+| [ModuleType](Applications.Cms.StaticWebModules.md#moduletype) | [ModuleType](Applications.Cms.StaticWebModules.md#moduletype) | Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. [Required] [Filter(like)] 
+| [Name](Applications.Cms.StaticWebModules.md#name) | string | Multilanguage Module name. This is used as a title when displaying the web Module. [Required] [Filter(like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.Cms.StaticWebModules.md#Parent) | [Applications.Cms.WebModules](Applications.Cms.WebModules.md) (nullable) | The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)] |
-| [WebSite](Applications.Cms.StaticWebModules.md#WebSite) | [Applications.Cms.WebSites](Applications.Cms.WebSites.md) | The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Parent](Applications.Cms.StaticWebModules.md#parent) | [Applications.Cms.WebModules](Applications.Cms.WebModules.md) (nullable) | The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)] |
+| [WebSite](Applications.Cms.StaticWebModules.md#website) | [Applications.Cms.WebSites](Applications.Cms.WebSites.md) | The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
+
+### ContentHtml
+
+> The actual html content of the pade. Only the <BODY> of the html is stored.
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### Id
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsPublished
@@ -43,6 +50,15 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### LanguageCode
+
+> The language code of the content. [Required] [Default("EN")]
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **EN**  
 
 ### LocalUrl
 
@@ -64,9 +80,9 @@ _Supports Order By_: **False**
 
 > Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. [Required] [Filter(like)]
 
-_Type_: **[Applications.Cms.WebModulesRepository.ModuleType](Applications.Cms.StaticWebModules.md#ModuleType)**  
-Allowed values for the [ModuleType](Applications.Cms.WebModules.md#ModuleType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ModuleType](Applications.Cms.StaticWebModules.md#moduletype)**  
+Allowed values for the [ModuleType](Applications.Cms.WebModules.md#moduletype) data attribute  
+_Allowed Values (Applications.Cms.WebModulesRepository.ModuleType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -85,23 +101,6 @@ _Type_: **string**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
-### ContentHtml
-
-> The actual html content of the pade. Only the <BODY> of the html is stored.
-
-_Type_: **string (nullable)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### LanguageCode
-
-> The language code of the content. [Required] [Default("EN")]
-
-_Type_: **string**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **EN**  
-
 
 ## Reference Details
 
@@ -111,7 +110,6 @@ _Default Value_: **EN**
 
 _Type_: **[Applications.Cms.WebModules](Applications.Cms.WebModules.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### WebSite
 
@@ -119,7 +117,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Cms.WebSites](Applications.Cms.WebSites.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

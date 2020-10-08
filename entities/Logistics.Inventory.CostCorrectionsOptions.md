@@ -9,15 +9,15 @@ Options per document type for the cost corrections. Entity: Inv_Cost_Corrections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.CostCorrectionsOptions.md#Id) | guid |  
-| [ResetTransactionsStateOnReleasing](Logistics.Inventory.CostCorrectionsOptions.md#ResetTransactionsStateOnReleasing) | boolean | When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents. [Required] [Default(false)] [Filter(eq)] 
-| [ScheduleDocumentEvents](Logistics.Inventory.CostCorrectionsOptions.md#ScheduleDocumentEvents) | boolean | Indicates wheather the document events caused by the cost correction should be scheduled for later procession. [Required] [Default(false)] 
+| [Id](Logistics.Inventory.CostCorrectionsOptions.md#id) | guid |  
+| [ResetTransactionsStateOnReleasing](Logistics.Inventory.CostCorrectionsOptions.md#resettransactionsstateonreleasing) | boolean | When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents. [Required] [Default(false)] [Filter(eq)] 
+| [ScheduleDocumentEvents](Logistics.Inventory.CostCorrectionsOptions.md#scheduledocumentevents) | boolean | Indicates wheather the document events caused by the cost correction should be scheduled for later procession. [Required] [Default(false)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Logistics.Inventory.CostCorrectionsOptions.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which we specify the options. [Required] [Filter(multi eq)] |
+| [DocumentType](Logistics.Inventory.CostCorrectionsOptions.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which we specify the options. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ Options per document type for the cost corrections. Entity: Inv_Cost_Corrections
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### ResetTransactionsStateOnReleasing
@@ -56,7 +55,6 @@ _Default Value_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

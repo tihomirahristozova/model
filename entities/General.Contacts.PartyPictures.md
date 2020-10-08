@@ -9,28 +9,21 @@ Party pictures - photos, logos, etc. Entity: Gen_Party_Pictures
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.PartyPictures.md#Id) | guid |  
-| [Comments](General.Contacts.PartyPictures.md#Comments) | string (nullable) | Notes for this party picture. 
-| [IsDefault](General.Contacts.PartyPictures.md#IsDefault) | boolean | True=This is the default picture for the party; false=otherwise. [Required] [Default(false)] [Filter(eq)] 
-| [IsLogo](General.Contacts.PartyPictures.md#IsLogo) | boolean | If checked specifies that this picture is used to visualize the logo of this party in the system. [Required] [Default(false)] [Filter(eq)] 
-| [Picture](General.Contacts.PartyPictures.md#Picture) | byte[] (nullable) | The actual party picture data. Can be null if we insert only some comments. 
-| [PictureNo](General.Contacts.PartyPictures.md#PictureNo) | int32 | Unique picture number within the party. Also used for sorting. [Required] [Filter(eq)] 
+| [Comments](General.Contacts.PartyPictures.md#comments) | string (nullable) | Notes for this party picture. 
+| [Id](General.Contacts.PartyPictures.md#id) | guid |  
+| [IsDefault](General.Contacts.PartyPictures.md#isdefault) | boolean | True=This is the default picture for the party; false=otherwise. [Required] [Default(false)] [Filter(eq)] 
+| [IsLogo](General.Contacts.PartyPictures.md#islogo) | boolean | If checked specifies that this picture is used to visualize the logo of this party in the system. [Required] [Default(false)] [Filter(eq)] 
+| [Picture](General.Contacts.PartyPictures.md#picture) | byte[] (nullable) | The actual party picture data. Can be null if we insert only some comments. 
+| [PictureNo](General.Contacts.PartyPictures.md#pictureno) | int32 | Unique picture number within the party. Also used for sorting. [Required] [Filter(eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](General.Contacts.PartyPictures.md#Party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.PartyPictures.md#Party) to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Party](General.Contacts.PartyPictures.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.PartyPictures.md#party) to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Comments
 
@@ -39,6 +32,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsDefault
 
@@ -86,11 +85,10 @@ _Front-End Recalc Expressions:_
 
 ### Party
 
-> The [Party](General.Contacts.PartyPictures.md#Party) to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Party](General.Contacts.PartyPictures.md#party) to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

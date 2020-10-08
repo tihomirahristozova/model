@@ -9,25 +9,18 @@ Represents named hierarchy levels within a cost calculation. The hierarchy level
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Cost.TemplateLevels.md#Id) | guid |  
-| [HierarchyLevel](Finance.Cost.TemplateLevels.md#HierarchyLevel) | int32 | The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9). [Required] [Default(0)] [Filter(ge;le)] 
-| [LevelName](Finance.Cost.TemplateLevels.md#LevelName) | string | The name of the hierarchy level. [Required] [Filter(like)] 
+| [HierarchyLevel](Finance.Cost.TemplateLevels.md#hierarchylevel) | int32 | The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9). [Required] [Default(0)] [Filter(ge;le)] 
+| [Id](Finance.Cost.TemplateLevels.md#id) | guid |  
+| [LevelName](Finance.Cost.TemplateLevels.md#levelname) | string | The name of the hierarchy level. [Required] [Filter(like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostTemplate](Finance.Cost.TemplateLevels.md#CostTemplate) | [Finance.Cost.Templates](Finance.Cost.Templates.md) | The [Template](Finance.Cost.Templates.md) to which this TemplateLevel belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CostTemplate](Finance.Cost.TemplateLevels.md#costtemplate) | [Finance.Cost.Templates](Finance.Cost.Templates.md) | The [Template](Finance.Cost.Templates.md) to which this TemplateLevel belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### HierarchyLevel
 
@@ -37,6 +30,12 @@ _Type_: **int32**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### LevelName
 
@@ -55,7 +54,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Cost.Templates](Finance.Cost.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

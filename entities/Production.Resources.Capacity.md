@@ -9,27 +9,20 @@ Contains capacity of workgroup resources available for production. Entity: Prd_C
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.Capacity.md#Id) | guid |  
-| [AvailableEndTime](Production.Resources.Capacity.md#AvailableEndTime) | datetime | End of availability period during Calendar_Date. [Required] 
-| [AvailableQuantity](Production.Resources.Capacity.md#AvailableQuantity) | [Quantity](../data-types.md#Quantity) | Quantity of the resource, available to production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] 
-| [AvailableStartTime](Production.Resources.Capacity.md#AvailableStartTime) | datetime | Start of availability period during Calendar_Date. [Required] 
-| [CalendarDate](Production.Resources.Capacity.md#CalendarDate) | datetime | Date of the availability period. [Required] [Filter(ge;le)] 
+| [AvailableEndTime](Production.Resources.Capacity.md#availableendtime) | datetime | End of availability period during Calendar_Date. [Required] 
+| [AvailableQuantity](Production.Resources.Capacity.md#availablequantity) | [Quantity](../data-types.md#quantity) | Quantity of the resource, available to production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] 
+| [AvailableStartTime](Production.Resources.Capacity.md#availablestarttime) | datetime | Start of availability period during Calendar_Date. [Required] 
+| [CalendarDate](Production.Resources.Capacity.md#calendardate) | datetime | Date of the availability period. [Required] [Filter(ge;le)] 
+| [Id](Production.Resources.Capacity.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [WorkgroupResource](Production.Resources.Capacity.md#WorkgroupResource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) | The capacity-constrained resource. [Required] [Filter(multi eq)] [Owner] |
+| [WorkgroupResource](Production.Resources.Capacity.md#workgroupresource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) | The capacity-constrained resource. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### AvailableEndTime
 
@@ -43,7 +36,7 @@ _Supports Order By_: **False**
 
 > Quantity of the resource, available to production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -63,6 +56,12 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 
 ## Reference Details
 
@@ -72,7 +71,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

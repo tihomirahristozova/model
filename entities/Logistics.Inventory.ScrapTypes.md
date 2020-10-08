@@ -9,19 +9,12 @@ Types of scrap. Used in store transactions to categorize scrap, when it occurs. 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.ScrapTypes.md#Id) | guid |  
-| [Description](Logistics.Inventory.ScrapTypes.md#Description) | string (nullable) | The description of this ScrapType. [Filter(like)] 
-| [IsPlanned](Logistics.Inventory.ScrapTypes.md#IsPlanned) | boolean | True=Planned (expected) scrap. Scrap of this type will be used to refine planned scrap for future operations. 2=Unexpected scrap. [Required] [Default(true)] [Filter(eq)] 
+| [Description](Logistics.Inventory.ScrapTypes.md#description) | string (nullable) | The description of this ScrapType. [Filter(like)] 
+| [Id](Logistics.Inventory.ScrapTypes.md#id) | guid |  
+| [IsPlanned](Logistics.Inventory.ScrapTypes.md#isplanned) | boolean | True=Planned (expected) scrap. Scrap of this type will be used to refine planned scrap for future operations. 2=Unexpected scrap. [Required] [Default(true)] [Filter(eq)] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Description
 
@@ -30,6 +23,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsPlanned
 

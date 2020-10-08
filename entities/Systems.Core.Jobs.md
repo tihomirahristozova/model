@@ -9,12 +9,12 @@ The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in ve
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.Jobs.md#Id) | guid |  
-| [IsActive](Systems.Core.Jobs.md#IsActive) | boolean | Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)] 
-| [Name](Systems.Core.Jobs.md#Name) | string | The name of the job. [Required] [Filter(eq;like)] [ORD] 
-| [JobType](Systems.Core.Jobs.md#JobType) | [Systems.Core.JobsRepository.JobType](Systems.Core.Jobs.md#JobType) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)] 
-| [Notes](Systems.Core.Jobs.md#Notes) | string (nullable) | Notes for this Job. 
-| [RunOnIdle](Systems.Core.Jobs.md#RunOnIdle) | boolean | Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)] 
+| [Id](Systems.Core.Jobs.md#id) | guid |  
+| [IsActive](Systems.Core.Jobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)] 
+| [JobType](Systems.Core.Jobs.md#jobtype) | [JobType](Systems.Core.Jobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)] 
+| [Name](Systems.Core.Jobs.md#name) | string | The name of the job. [Required] [Filter(eq;like)] [ORD] 
+| [Notes](Systems.Core.Jobs.md#notes) | string (nullable) | Notes for this Job. 
+| [RunOnIdle](Systems.Core.Jobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)] 
 
 
 ## Attribute Details
@@ -23,7 +23,6 @@ The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in ve
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsActive
@@ -35,21 +34,13 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
-### Name
-
-> The name of the job. [Required] [Filter(eq;like)] [ORD]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-
 ### JobType
 
 > The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Core.JobsRepository.JobType](Systems.Core.Jobs.md#JobType)**  
-Allowed values for the [JobType](Systems.Core.Jobs.md#JobType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[JobType](Systems.Core.Jobs.md#jobtype)**  
+Allowed values for the [JobType](Systems.Core.Jobs.md#jobtype) data attribute  
+_Allowed Values (Systems.Core.JobsRepository.JobType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -60,6 +51,14 @@ _Allowed Values (Enum Members)_
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
+
+### Name
+
+> The name of the job. [Required] [Filter(eq;like)] [ORD]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
 
 ### Notes
 

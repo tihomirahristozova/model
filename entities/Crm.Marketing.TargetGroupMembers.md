@@ -9,14 +9,14 @@ Member parties of a marketing target group. Entity: Crm_Target_Group_Members
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Marketing.TargetGroupMembers.md#Id) | guid |  
+| [Id](Crm.Marketing.TargetGroupMembers.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](Crm.Marketing.TargetGroupMembers.md#Party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The member party. [Required] [Filter(multi eq)] |
-| [TargetGroup](Crm.Marketing.TargetGroupMembers.md#TargetGroup) | [Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md) | The target group, which includes the member party. [Required] [Filter(multi eq)] [Owner] |
+| [Party](Crm.Marketing.TargetGroupMembers.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The member party. [Required] [Filter(multi eq)] |
+| [TargetGroup](Crm.Marketing.TargetGroupMembers.md#targetgroup) | [Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md) | The target group, which includes the member party. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ Member parties of a marketing target group. Entity: Crm_Target_Group_Members
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -37,7 +36,6 @@ _Default Value_: **NewGuid**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### TargetGroup
 
@@ -45,7 +43,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

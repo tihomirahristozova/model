@@ -9,33 +9,26 @@ Represents dependancy between project tasks. Entity: Prj_Project_Task_Dependanci
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.ProjectTaskDependancies.md#Id) | guid |  
-| [DependancyType](Projects.ProjectTaskDependancies.md#DependancyType) | [Projects.ProjectTaskDependanciesRepository.DependancyType](Projects.ProjectTaskDependancies.md#DependancyType) | FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). [Required] [Default("FS")] 
+| [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) | [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) | FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). [Required] [Default("FS")] 
+| [Id](Projects.ProjectTaskDependancies.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependsOnTask](Projects.ProjectTaskDependancies.md#DependsOnTask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The task on which Project_Task depends. [Required] [Filter(multi eq)] |
-| [ProjectTask](Projects.ProjectTaskDependancies.md#ProjectTask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The task which depends on another task. [Required] [Filter(multi eq)] [Owner] |
+| [DependsOnTask](Projects.ProjectTaskDependancies.md#dependsontask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The task on which Project_Task depends. [Required] [Filter(multi eq)] |
+| [ProjectTask](Projects.ProjectTaskDependancies.md#projecttask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The task which depends on another task. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DependancyType
 
 > FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). [Required] [Default("FS")]
 
-_Type_: **[Projects.ProjectTaskDependanciesRepository.DependancyType](Projects.ProjectTaskDependancies.md#DependancyType)**  
-Allowed values for the [DependancyType](Projects.ProjectTaskDependancies.md#DependancyType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[DependancyType](Projects.ProjectTaskDependancies.md#dependancytype)**  
+Allowed values for the [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) data attribute  
+_Allowed Values (Projects.ProjectTaskDependanciesRepository.DependancyType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -49,6 +42,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **FinishToStart**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 
 ## Reference Details
 
@@ -58,7 +57,6 @@ _Default Value_: **FinishToStart**
 
 _Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProjectTask
 
@@ -66,7 +64,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

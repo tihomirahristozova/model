@@ -9,15 +9,15 @@ Categories of measurement units. The units within a category are directly conver
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.MeasurementCategories.md#Id) | guid |  
-| [IsDefault](General.MeasurementCategories.md#IsDefault) | boolean | True=This category is the default category; false=otherwise. [Required] [Default(false)] [Filter(eq)] 
-| [Name](General.MeasurementCategories.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD] 
+| [Id](General.MeasurementCategories.md#id) | guid |  
+| [IsDefault](General.MeasurementCategories.md#isdefault) | boolean | True=This category is the default category; false=otherwise. [Required] [Default(false)] [Filter(eq)] 
+| [Name](General.MeasurementCategories.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| MeasurementUnits | [General.MeasurementUnits](General.MeasurementUnits.md) | List of [MeasurementUnit](General.MeasurementUnits.md) child objects, based on the [General.MeasurementUnit.MeasurementCategory](General.MeasurementUnits.md#MeasurementCategory) back reference 
+| MeasurementUnits | [General.MeasurementUnits](General.MeasurementUnits.md) | List of [MeasurementUnit](General.MeasurementUnits.md) child objects, based on the [General.MeasurementUnit.MeasurementCategory](General.MeasurementUnits.md#measurementcategory) back reference 
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ Categories of measurement units. The units within a category are directly conver
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsDefault
@@ -42,7 +41,7 @@ _Default Value_: **False**
 
 > The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

@@ -9,45 +9,43 @@ Contains the materials, which were agreed for this service activity (repair), be
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Service.ServiceActivityAgreedMaterials.md#Id) | guid |  
-| [AgreedQuantity](Applications.Service.ServiceActivityAgreedMaterials.md#AgreedQuantity) | [Quantity](../data-types.md#Quantity) | Quantity from the service agreement material line that is accounted for this service activity material line. [Unit: ServiceAgreementMaterial.QuantityUnit] [Required] [Default(0)] [ReadOnly] 
+| [AgreedQuantity](Applications.Service.ServiceActivityAgreedMaterials.md#agreedquantity) | [Quantity](../data-types.md#quantity) | Quantity from the service agreement material line that is accounted for this service activity material line. [Unit: ServiceAgreementMaterial.QuantityUnit] [Required] [Default(0)] [ReadOnly] 
+| [Id](Applications.Service.ServiceActivityAgreedMaterials.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#ServiceActivityMaterial) | [Applications.Service.ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md) | The [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#ServiceActivityMaterial) to which this ServiceActivityAgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
-| [ServiceAgreementMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#ServiceAgreementMaterial) | [Applications.Service.ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md) | Service agreement material line that records the paid or agreed in advance material. [Required] [Filter(multi eq)] [ReadOnly] |
+| [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) | [Applications.Service.ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md) | The [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivityAgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
+| [ServiceAgreementMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceagreementmaterial) | [Applications.Service.ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md) | Service agreement material line that records the paid or agreed in advance material. [Required] [Filter(multi eq)] [ReadOnly] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### AgreedQuantity
 
 > Quantity from the service agreement material line that is accounted for this service activity material line. [Unit: ServiceAgreementMaterial.QuantityUnit] [Required] [Default(0)] [ReadOnly]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 
 ## Reference Details
 
 ### ServiceActivityMaterial
 
-> The [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#ServiceActivityMaterial) to which this ServiceActivityAgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
+> The [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivityAgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
 _Type_: **[Applications.Service.ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ServiceAgreementMaterial
 
@@ -55,7 +53,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Service.ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

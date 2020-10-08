@@ -9,19 +9,19 @@ Represents assignment of a maintenance plan to a vehicle. Entity: Fleet_Vehicle_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Fleet.VehicleMaintenancePlanAssignments.md#Id) | guid |  
-| [IsActive](Applications.Fleet.VehicleMaintenancePlanAssignments.md#IsActive) | boolean | Specifies whether the plan is active. [Required] [Default(true)] 
-| [LastMaintenanceMileageKm](Applications.Fleet.VehicleMaintenancePlanAssignments.md#LastMaintenanceMileageKm) | int32 (nullable) | The mileage of the vehicle (in Kilometers), when the last maintenance of this type occurred. Should be specified for plans, which require mileage check. 
-| [LastMaintenanceTripCount](Applications.Fleet.VehicleMaintenancePlanAssignments.md#LastMaintenanceTripCount) | int32 (nullable) | The trip count of the vehicle, when the last maintenance of this type occurred. Should be specified for plans, which trip count check. 
-| [Notes](Applications.Fleet.VehicleMaintenancePlanAssignments.md#Notes) | string (nullable) | Notes for this VehicleMaintenancePlanAssignment. 
-| [StartingDate](Applications.Fleet.VehicleMaintenancePlanAssignments.md#StartingDate) | date | The date on which the periodic maintenance should start. [Required] 
+| [Id](Applications.Fleet.VehicleMaintenancePlanAssignments.md#id) | guid |  
+| [IsActive](Applications.Fleet.VehicleMaintenancePlanAssignments.md#isactive) | boolean | Specifies whether the plan is active. [Required] [Default(true)] 
+| [LastMaintenanceMileageKm](Applications.Fleet.VehicleMaintenancePlanAssignments.md#lastmaintenancemileagekm) | int32 (nullable) | The mileage of the vehicle (in Kilometers), when the last maintenance of this type occurred. Should be specified for plans, which require mileage check. 
+| [LastMaintenanceTripCount](Applications.Fleet.VehicleMaintenancePlanAssignments.md#lastmaintenancetripcount) | int32 (nullable) | The trip count of the vehicle, when the last maintenance of this type occurred. Should be specified for plans, which trip count check. 
+| [Notes](Applications.Fleet.VehicleMaintenancePlanAssignments.md#notes) | string (nullable) | Notes for this VehicleMaintenancePlanAssignment. 
+| [StartingDate](Applications.Fleet.VehicleMaintenancePlanAssignments.md#startingdate) | date | The date on which the periodic maintenance should start. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenancePlan](Applications.Fleet.VehicleMaintenancePlanAssignments.md#MaintenancePlan) | [Applications.Fleet.MaintenancePlans](Applications.Fleet.MaintenancePlans.md) | The assigned periodic maintenance type. [Required] [Filter(multi eq)] |
-| [Vehicle](Applications.Fleet.VehicleMaintenancePlanAssignments.md#Vehicle) | [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md) | The vehicle, to which a periodic maintenance plan is assigned. [Required] [Filter(multi eq)] |
+| [MaintenancePlan](Applications.Fleet.VehicleMaintenancePlanAssignments.md#maintenanceplan) | [Applications.Fleet.MaintenancePlans](Applications.Fleet.MaintenancePlans.md) | The assigned periodic maintenance type. [Required] [Filter(multi eq)] |
+| [Vehicle](Applications.Fleet.VehicleMaintenancePlanAssignments.md#vehicle) | [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md) | The vehicle, to which a periodic maintenance plan is assigned. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -30,7 +30,6 @@ Represents assignment of a maintenance plan to a vehicle. Entity: Fleet_Vehicle_
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsActive
@@ -83,7 +82,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Fleet.MaintenancePlans](Applications.Fleet.MaintenancePlans.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Vehicle
 
@@ -91,7 +89,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

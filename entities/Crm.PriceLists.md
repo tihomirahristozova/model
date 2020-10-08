@@ -9,27 +9,20 @@ Price Lists are used to manage multiple price records, assign to customers, etc.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.PriceLists.md#Id) | guid |  
-| [Description](Crm.PriceLists.md#Description) | string (nullable) | The description of this PriceList. 
-| [FromDate](Crm.PriceLists.md#FromDate) | datetime (nullable) | Starting validity of the price list. [Filter(eq;ge;le)] 
-| [Name](Crm.PriceLists.md#Name) | string | The name of this PriceList. [Required] [Filter(eq;like)] [ORD] 
-| [ThruDate](Crm.PriceLists.md#ThruDate) | datetime (nullable) | Ending validity of the price list. [Filter(eq;ge;le)] 
+| [Description](Crm.PriceLists.md#description) | string (nullable) | The description of this PriceList. 
+| [FromDate](Crm.PriceLists.md#fromdate) | datetime (nullable) | Starting validity of the price list. [Filter(eq;ge;le)] 
+| [Id](Crm.PriceLists.md#id) | guid |  
+| [Name](Crm.PriceLists.md#name) | string | The name of this PriceList. [Required] [Filter(eq;like)] [ORD] 
+| [ThruDate](Crm.PriceLists.md#thrudate) | datetime (nullable) | Ending validity of the price list. [Filter(eq;ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.PriceLists.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this PriceList applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [EnterpriseCompany](Crm.PriceLists.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this PriceList applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Description
 
@@ -46,6 +39,12 @@ _Supports Order By_: **False**
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Name
 
@@ -72,7 +71,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

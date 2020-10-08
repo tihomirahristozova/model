@@ -9,29 +9,22 @@ Channel assignments (listing) for products. Entity: Crm_Product_Distribution_Cha
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Marketing.ProductDistributionChannels.md#Id) | guid |  
-| [FromDate](Crm.Marketing.ProductDistributionChannels.md#FromDate) | date (nullable) | When the product was listed. null-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). [Default(Today)] [Filter(ge;le)] 
-| [IsActive](Crm.Marketing.ProductDistributionChannels.md#IsActive) | boolean | Is this product listing active? true=Yes, false=No. [Required] [Default(true)] [Filter(eq)] 
-| [MinimalSalesPricePerLot](Crm.Marketing.ProductDistributionChannels.md#MinimalSalesPricePerLot) | [Amount](../data-types.md#Amount) (nullable) | Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: Product.CostingCurrency] 
-| [MinimalSalesQuantityBase](Crm.Marketing.ProductDistributionChannels.md#MinimalSalesQuantityBase) | decimal (nullable) | Minimal base quantity of the current product that has to be specified in any sale for this distribution channel. 
-| [ToDate](Crm.Marketing.ProductDistributionChannels.md#ToDate) | date (nullable) | When the product was de-listed. null=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). [Filter(ge;le)] 
+| [FromDate](Crm.Marketing.ProductDistributionChannels.md#fromdate) | date (nullable) | When the product was listed. null-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). [Default(Today)] [Filter(ge;le)] 
+| [Id](Crm.Marketing.ProductDistributionChannels.md#id) | guid |  
+| [IsActive](Crm.Marketing.ProductDistributionChannels.md#isactive) | boolean | Is this product listing active? true=Yes, false=No. [Required] [Default(true)] [Filter(eq)] 
+| [MinimalSalesPricePerLot](Crm.Marketing.ProductDistributionChannels.md#minimalsalespriceperlot) | [Amount](../data-types.md#amount) (nullable) | Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: Product.CostingCurrency] 
+| [MinimalSalesQuantityBase](Crm.Marketing.ProductDistributionChannels.md#minimalsalesquantitybase) | decimal (nullable) | Minimal base quantity of the current product that has to be specified in any sale for this distribution channel. 
+| [ToDate](Crm.Marketing.ProductDistributionChannels.md#todate) | date (nullable) | When the product was de-listed. null=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). [Filter(ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DistributionChannel](Crm.Marketing.ProductDistributionChannels.md#DistributionChannel) | [Crm.Marketing.DistributionChannels](Crm.Marketing.DistributionChannels.md) | The distribution channel in which the product is listed. [Required] [Filter(multi eq)] |
-| [Product](Crm.Marketing.ProductDistributionChannels.md#Product) | [General.Products.Products](General.Products.Products.md) | The listed product. [Required] [Filter(multi eq)] [Owner] |
+| [DistributionChannel](Crm.Marketing.ProductDistributionChannels.md#distributionchannel) | [Crm.Marketing.DistributionChannels](Crm.Marketing.DistributionChannels.md) | The distribution channel in which the product is listed. [Required] [Filter(multi eq)] |
+| [Product](Crm.Marketing.ProductDistributionChannels.md#product) | [General.Products.Products](General.Products.Products.md) | The listed product. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### FromDate
 
@@ -41,6 +34,12 @@ _Type_: **date (nullable)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsActive
 
@@ -55,7 +54,7 @@ _Default Value_: **True**
 
 > Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: Product.CostingCurrency]
 
-_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
+_Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -84,7 +83,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Marketing.DistributionChannels](Crm.Marketing.DistributionChannels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Product
 
@@ -92,7 +90,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

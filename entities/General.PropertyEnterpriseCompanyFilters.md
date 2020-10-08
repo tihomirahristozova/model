@@ -9,25 +9,18 @@ Provides a way to apply different filtering of the property allowed values for t
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.PropertyEnterpriseCompanyFilters.md#Id) | guid |  
-| [FilterXml](General.PropertyEnterpriseCompanyFilters.md#FilterXml) | dataaccessfilter (nullable) | When not null, specifies a filter for the allowed values of the property for the specified enterprise company. 
+| [FilterXml](General.PropertyEnterpriseCompanyFilters.md#filterxml) | dataaccessfilter (nullable) | When not null, specifies a filter for the allowed values of the property for the specified enterprise company. 
+| [Id](General.PropertyEnterpriseCompanyFilters.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](General.PropertyEnterpriseCompanyFilters.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current filter is specifed. [Required] [Filter(multi eq)] |
-| [Property](General.PropertyEnterpriseCompanyFilters.md#Property) | [General.CustomProperties](General.CustomProperties.md) | The [CustomProperty](General.CustomProperties.md) to which this PropertyEnterpriseCompanyFilter belongs. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](General.PropertyEnterpriseCompanyFilters.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current filter is specifed. [Required] [Filter(multi eq)] |
+| [Property](General.PropertyEnterpriseCompanyFilters.md#property) | [General.CustomProperties](General.CustomProperties.md) | The [CustomProperty](General.CustomProperties.md) to which this PropertyEnterpriseCompanyFilter belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### FilterXml
 
@@ -36,6 +29,12 @@ _Default Value_: **NewGuid**
 _Type_: **dataaccessfilter (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 
 ## Reference Details
@@ -46,7 +45,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Property
 
@@ -54,7 +52,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

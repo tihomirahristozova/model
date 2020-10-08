@@ -9,16 +9,16 @@ Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Service.ServiceInvoicing.md#Id) | guid |  
-| [QuantityOfProduct](Applications.Service.ServiceInvoicing.md#QuantityOfProduct) | [Quantity](../data-types.md#Quantity) | The quantity to invoice. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)] 
-| [QuantityOfService](Applications.Service.ServiceInvoicing.md#QuantityOfService) | [Quantity](../data-types.md#Quantity) | The quantity of service for which the invoicing is specified. [Unit: Service.MeasurementUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [Id](Applications.Service.ServiceInvoicing.md#id) | guid |  
+| [QuantityOfProduct](Applications.Service.ServiceInvoicing.md#quantityofproduct) | [Quantity](../data-types.md#quantity) | The quantity to invoice. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [QuantityOfService](Applications.Service.ServiceInvoicing.md#quantityofservice) | [Quantity](../data-types.md#quantity) | The quantity of service for which the invoicing is specified. [Unit: Service.MeasurementUnit] [Required] [Default(1)] [Filter(ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](Applications.Service.ServiceInvoicing.md#Product) | [General.Products.Products](General.Products.Products.md) | The product that should be invoiced. [Required] [Filter(multi eq)] |
-| [Service](Applications.Service.ServiceInvoicing.md#Service) | [Applications.Service.Services](Applications.Service.Services.md) | The service for which the invoicing instructions are. [Required] [Filter(multi eq)] [Owner] |
+| [Product](Applications.Service.ServiceInvoicing.md#product) | [General.Products.Products](General.Products.Products.md) | The product that should be invoiced. [Required] [Filter(multi eq)] |
+| [Service](Applications.Service.ServiceInvoicing.md#service) | [Applications.Service.Services](Applications.Service.Services.md) | The service for which the invoicing instructions are. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -27,14 +27,13 @@ Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### QuantityOfProduct
 
 > The quantity to invoice. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -43,7 +42,7 @@ _Default Value_: **Constant**
 
 > The quantity of service for which the invoicing is specified. [Unit: Service.MeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -57,7 +56,6 @@ _Default Value_: **Constant**
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Service
 
@@ -65,7 +63,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Service.Services](Applications.Service.Services.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

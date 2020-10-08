@@ -9,25 +9,18 @@ Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.TransactionEntryTemplates.md#Id) | guid |  
-| [DocumentNotesFixedText](Logistics.Inventory.TransactionEntryTemplates.md#DocumentNotesFixedText) | string (nullable) | Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text. 
+| [DocumentNotesFixedText](Logistics.Inventory.TransactionEntryTemplates.md#documentnotesfixedtext) | string (nullable) | Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text. 
+| [Id](Logistics.Inventory.TransactionEntryTemplates.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DealType](Logistics.Inventory.TransactionEntryTemplates.md#DealType) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
-| [Route](Logistics.Inventory.TransactionEntryTemplates.md#Route) | [Systems.Workflow.Routes](Systems.Workflow.Routes.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
+| [DealType](Logistics.Inventory.TransactionEntryTemplates.md#dealtype) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
+| [Route](Logistics.Inventory.TransactionEntryTemplates.md#route) | [Systems.Workflow.Routes](Systems.Workflow.Routes.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DocumentNotesFixedText
 
@@ -36,6 +29,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 
 ## Reference Details
@@ -46,7 +45,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Vat.DealTypes](Finance.Vat.DealTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Route
 
@@ -54,7 +52,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Workflow.Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

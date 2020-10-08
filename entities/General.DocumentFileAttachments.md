@@ -9,28 +9,21 @@ Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentFileAttachments.md#Id) | guid |  
-| [EmbeddedFileContents](General.DocumentFileAttachments.md#EmbeddedFileContents) | byte[] (nullable) | The contents of the embedded file. null when the file is linked. 
-| [FileName](General.DocumentFileAttachments.md#FileName) | string | The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. [Required] 
-| [IsLinked](General.DocumentFileAttachments.md#IsLinked) | boolean | True when the document is linked (ony file name is kept). false when the document is embedded. [Required] [Default(false)] [Filter(eq)] 
-| [LinkedFilePath](General.DocumentFileAttachments.md#LinkedFilePath) | string (nullable) | Path to the linked file. null when the file is embedded. 
-| [Notes](General.DocumentFileAttachments.md#Notes) | string (nullable) | Notes for this DocumentFileAttachment. 
+| [EmbeddedFileContents](General.DocumentFileAttachments.md#embeddedfilecontents) | byte[] (nullable) | The contents of the embedded file. null when the file is linked. 
+| [FileName](General.DocumentFileAttachments.md#filename) | string | The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. [Required] 
+| [Id](General.DocumentFileAttachments.md#id) | guid |  
+| [IsLinked](General.DocumentFileAttachments.md#islinked) | boolean | True when the document is linked (ony file name is kept). false when the document is embedded. [Required] [Default(false)] [Filter(eq)] 
+| [LinkedFilePath](General.DocumentFileAttachments.md#linkedfilepath) | string (nullable) | Path to the linked file. null when the file is embedded. 
+| [Notes](General.DocumentFileAttachments.md#notes) | string (nullable) | Notes for this DocumentFileAttachment. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentFileAttachments.md#Document) | [General.Documents](General.Documents.md) | The [Document](General.DocumentFileAttachments.md#Document) to which this DocumentFileAttachment belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Document](General.DocumentFileAttachments.md#document) | [General.Documents](General.Documents.md) | The [Document](General.DocumentFileAttachments.md#document) to which this DocumentFileAttachment belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### EmbeddedFileContents
 
@@ -47,6 +40,12 @@ _Supports Order By_: **False**
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsLinked
 
@@ -78,11 +77,10 @@ _Supports Order By_: **False**
 
 ### Document
 
-> The [Document](General.DocumentFileAttachments.md#Document) to which this DocumentFileAttachment belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Document](General.DocumentFileAttachments.md#document) to which this DocumentFileAttachment belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[General.Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

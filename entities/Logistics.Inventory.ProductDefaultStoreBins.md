@@ -9,15 +9,15 @@ The default store bins in which products should be placed. Entity: Inv_Product_D
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.ProductDefaultStoreBins.md#Id) | guid |  
+| [Id](Logistics.Inventory.ProductDefaultStoreBins.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultBin](Logistics.Inventory.ProductDefaultStoreBins.md#DefaultBin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) | The default bin, which should be used for this product. [Required] [Filter(multi eq)] |
-| [Product](Logistics.Inventory.ProductDefaultStoreBins.md#Product) | [General.Products.Products](General.Products.Products.md) | The [Product](General.Products.Products.md) to which this ProductDefaultStoreBin belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Store](Logistics.Inventory.ProductDefaultStoreBins.md#Store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The store, for which the default bin is specified. [Required] [Filter(multi eq)] |
+| [DefaultBin](Logistics.Inventory.ProductDefaultStoreBins.md#defaultbin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) | The default bin, which should be used for this product. [Required] [Filter(multi eq)] |
+| [Product](Logistics.Inventory.ProductDefaultStoreBins.md#product) | [General.Products.Products](General.Products.Products.md) | The [Product](General.Products.Products.md) to which this ProductDefaultStoreBin belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Store](Logistics.Inventory.ProductDefaultStoreBins.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The store, for which the default bin is specified. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ The default store bins in which products should be placed. Entity: Inv_Product_D
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -38,7 +37,6 @@ _Default Value_: **NewGuid**
 
 _Type_: **[Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Product
 
@@ -46,7 +44,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Store
 
@@ -54,7 +51,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,16 +9,16 @@ Definition of the functions that the resources can perform. Entity: Prd_Function
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.Functions.md#Id) | guid |  
-| [Name](Production.Resources.Functions.md#Name) | string | The name of this Function. [Required] [Filter(like)] 
-| [Notes](Production.Resources.Functions.md#Notes) | string (nullable) | User comments on the function. 
+| [Id](Production.Resources.Functions.md#id) | guid |  
+| [Name](Production.Resources.Functions.md#name) | string | The name of this Function. [Required] [Filter(like)] 
+| [Notes](Production.Resources.Functions.md#notes) | string (nullable) | User comments on the function. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FunctionGroup](Production.Resources.Functions.md#FunctionGroup) | [Production.Resources.FunctionGroups](Production.Resources.FunctionGroups.md) | The [FunctionGroup](Production.Resources.Functions.md#FunctionGroup) to which this Function belongs. [Required] [Filter(multi eq)] [Owner] |
-| [PrimaryUnit](Production.Resources.Functions.md#PrimaryUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. [Required] [Filter(multi eq)] |
+| [FunctionGroup](Production.Resources.Functions.md#functiongroup) | [Production.Resources.FunctionGroups](Production.Resources.FunctionGroups.md) | The [FunctionGroup](Production.Resources.Functions.md#functiongroup) to which this Function belongs. [Required] [Filter(multi eq)] [Owner] |
+| [PrimaryUnit](Production.Resources.Functions.md#primaryunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Definition of the functions that the resources can perform. Entity: Prd_Function
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Name
@@ -51,11 +50,10 @@ _Supports Order By_: **False**
 
 ### FunctionGroup
 
-> The [FunctionGroup](Production.Resources.Functions.md#FunctionGroup) to which this Function belongs. [Required] [Filter(multi eq)] [Owner]
+> The [FunctionGroup](Production.Resources.Functions.md#functiongroup) to which this Function belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Production.Resources.FunctionGroups](Production.Resources.FunctionGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PrimaryUnit
 
@@ -63,7 +61,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

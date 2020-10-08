@@ -9,30 +9,30 @@ Represents the payment orders with their covered amounts. Entity: Cash_Payment_B
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Direction](Finance.Payments.OrderBalances.md#Direction) | [Finance.Payments.PaymentOrdersRepository.Direction](Finance.Payments.OrderBalances.md#Direction) | I for Payment issue, R for payment receipt. [Required] [Default("I")] [Filter(eq)] 
-| [DueDate](Finance.Payments.OrderBalances.md#DueDate) | datetime (nullable) | The due date of the payment. null means there is no due date. [Filter(eq;ge;le)] 
-| [DueStartDate](Finance.Payments.OrderBalances.md#DueStartDate) | date (nullable) | The date at which the payment becomes executable. null means the payment is executable at all times. [Filter(eq;ge;le)] 
-| [IsInvoiced](Finance.Payments.OrderBalances.md#IsInvoiced) | boolean | When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument. [Required] [Filter(multi eq)] 
-| [OrderAmount](Finance.Payments.OrderBalances.md#OrderAmount) | [Amount](../data-types.md#Amount) | The total amount of the payment order. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)] 
-| [PaidAmount](Finance.Payments.OrderBalances.md#PaidAmount) | [Amount](../data-types.md#Amount) | The paid amount. Taken from released payment transactions. [Currency: Currency] [Required] 
-| [RefDocumentDate](Finance.Payments.OrderBalances.md#RefDocumentDate) | datetime (nullable) | The date of the original document. null means that it is unknown. [Filter(eq)] 
-| [RefDocumentNo](Finance.Payments.OrderBalances.md#RefDocumentNo) | string | The number of the document which has created the payment order and is the basis for the payment. [Required] [Filter(eq)] 
-| [RefInvoiceDocumentDate](Finance.Payments.OrderBalances.md#RefInvoiceDocumentDate) | datetime (nullable) | The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. [Filter(eq;ge;le)] 
-| [RefInvoiceDocumentNo](Finance.Payments.OrderBalances.md#RefInvoiceDocumentNo) | string (nullable) | The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(eq)] 
+| [Direction](Finance.Payments.OrderBalances.md#direction) | [Direction](Finance.Payments.OrderBalances.md#direction) | I for Payment issue, R for payment receipt. [Required] [Default("I")] [Filter(eq)] 
+| [DueDate](Finance.Payments.OrderBalances.md#duedate) | datetime (nullable) | The due date of the payment. null means there is no due date. [Filter(eq;ge;le)] 
+| [DueStartDate](Finance.Payments.OrderBalances.md#duestartdate) | date (nullable) | The date at which the payment becomes executable. null means the payment is executable at all times. [Filter(eq;ge;le)] 
+| [IsInvoiced](Finance.Payments.OrderBalances.md#isinvoiced) | boolean | When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument. [Required] [Filter(multi eq)] 
+| [OrderAmount](Finance.Payments.OrderBalances.md#orderamount) | [Amount](../data-types.md#amount) | The total amount of the payment order. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)] 
+| [PaidAmount](Finance.Payments.OrderBalances.md#paidamount) | [Amount](../data-types.md#amount) | The paid amount. Taken from released payment transactions. [Currency: Currency] [Required] 
+| [RefDocumentDate](Finance.Payments.OrderBalances.md#refdocumentdate) | datetime (nullable) | The date of the original document. null means that it is unknown. [Filter(eq)] 
+| [RefDocumentNo](Finance.Payments.OrderBalances.md#refdocumentno) | string | The number of the document which has created the payment order and is the basis for the payment. [Required] [Filter(eq)] 
+| [RefInvoiceDocumentDate](Finance.Payments.OrderBalances.md#refinvoicedocumentdate) | datetime (nullable) | The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. [Filter(eq;ge;le)] 
+| [RefInvoiceDocumentNo](Finance.Payments.OrderBalances.md#refinvoicedocumentno) | string (nullable) | The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Finance.Payments.OrderBalances.md#Currency) | [General.Currencies](General.Currencies.md) | The currency of amounts. [Required] [Filter(multi eq)] |
-| [EnterpriseCompany](Finance.Payments.OrderBalances.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. [Required] [Filter(multi eq)] |
-| [LocationParty](Finance.Payments.OrderBalances.md#LocationParty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Location or sub-party of the Party_Id in the order. [Filter(multi eq)] |
-| [Party](Finance.Payments.OrderBalances.md#Party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party which is to pay or receive the amount. [Required] [Filter(multi eq)] |
-| [PaymentOrder](Finance.Payments.OrderBalances.md#PaymentOrder) | [Finance.Payments.PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order. [Required] [Default(New Guid)] [Filter(multi eq)] |
-| [RefDocument](Finance.Payments.OrderBalances.md#RefDocument) | [General.Documents](General.Documents.md) (nullable) | The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. [Filter(multi eq)] |
-| [RefDocumentType](Finance.Payments.OrderBalances.md#RefDocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The type of the document which has created the payment order and is the basis for the payment. [Required] [Filter(multi eq)] |
-| [RefInvoiceDocument](Finance.Payments.OrderBalances.md#RefInvoiceDocument) | [General.Documents](General.Documents.md) (nullable) | The invoice document which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document. [Filter(multi eq)] |
-| [RefInvoiceDocumentType](Finance.Payments.OrderBalances.md#RefInvoiceDocumentType) | [General.DocumentTypes](General.DocumentTypes.md) (nullable) | The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)] |
+| [Currency](Finance.Payments.OrderBalances.md#currency) | [General.Currencies](General.Currencies.md) | The currency of amounts. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Finance.Payments.OrderBalances.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. [Required] [Filter(multi eq)] |
+| [LocationParty](Finance.Payments.OrderBalances.md#locationparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Location or sub-party of the Party_Id in the order. [Filter(multi eq)] |
+| [Party](Finance.Payments.OrderBalances.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party which is to pay or receive the amount. [Required] [Filter(multi eq)] |
+| [PaymentOrder](Finance.Payments.OrderBalances.md#paymentorder) | [Finance.Payments.PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order. [Required] [Default(New Guid)] [Filter(multi eq)] |
+| [RefDocument](Finance.Payments.OrderBalances.md#refdocument) | [General.Documents](General.Documents.md) (nullable) | The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. [Filter(multi eq)] |
+| [RefDocumentType](Finance.Payments.OrderBalances.md#refdocumenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The type of the document which has created the payment order and is the basis for the payment. [Required] [Filter(multi eq)] |
+| [RefInvoiceDocument](Finance.Payments.OrderBalances.md#refinvoicedocument) | [General.Documents](General.Documents.md) (nullable) | The invoice document which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document. [Filter(multi eq)] |
+| [RefInvoiceDocumentType](Finance.Payments.OrderBalances.md#refinvoicedocumenttype) | [General.DocumentTypes](General.DocumentTypes.md) (nullable) | The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -41,9 +41,9 @@ Represents the payment orders with their covered amounts. Entity: Cash_Payment_B
 
 > I for Payment issue, R for payment receipt. [Required] [Default("I")] [Filter(eq)]
 
-_Type_: **[Finance.Payments.PaymentOrdersRepository.Direction](Finance.Payments.OrderBalances.md#Direction)**  
-Allowed values for the [Direction](Finance.Payments.PaymentOrders.md#Direction) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[Direction](Finance.Payments.OrderBalances.md#direction)**  
+Allowed values for the [Direction](Finance.Payments.PaymentOrders.md#direction) data attribute  
+_Allowed Values (Finance.Payments.PaymentOrdersRepository.Direction Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -82,7 +82,7 @@ _Supports Order By_: **False**
 
 > The total amount of the payment order. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -91,7 +91,7 @@ _Default Value_: **Constant**
 
 > The paid amount. Taken from released payment transactions. [Currency: Currency] [Required]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -156,7 +156,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[General.Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### EnterpriseCompany
 
@@ -164,7 +163,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### LocationParty
 
@@ -172,7 +170,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Party
 
@@ -180,7 +177,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PaymentOrder
 
@@ -188,7 +184,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Payments.PaymentOrders](Finance.Payments.PaymentOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### RefDocument
@@ -197,7 +192,6 @@ _Default Value_: **NewGuid**
 
 _Type_: **[General.Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### RefDocumentType
 
@@ -205,7 +199,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.RefDocument.DocumentType`
@@ -218,7 +211,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[General.Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### RefInvoiceDocumentType
 
@@ -226,7 +218,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.RefInvoiceDocument.DocumentType`

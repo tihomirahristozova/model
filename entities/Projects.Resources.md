@@ -9,25 +9,18 @@ Contains the enterprise resources, which are available for including in projects
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Resources.md#Id) | guid |  
-| [Description](Projects.Resources.md#Description) | string (nullable) | The description of this Resource. 
-| [Name](Projects.Resources.md#Name) | string | The name of this Resource. [Required] 
+| [Description](Projects.Resources.md#description) | string (nullable) | The description of this Resource. 
+| [Id](Projects.Resources.md#id) | guid |  
+| [Name](Projects.Resources.md#name) | string | The name of this Resource. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Projects.Resources.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company owning the resource. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](Projects.Resources.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company owning the resource. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Description
 
@@ -36,6 +29,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Name
 
@@ -54,7 +53,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

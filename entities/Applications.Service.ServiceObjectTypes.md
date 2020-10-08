@@ -9,8 +9,8 @@ Contins the types of serviceable objects. Entity: Srv_Service_Object_Types
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Service.ServiceObjectTypes.md#Id) | guid |  
-| [Name](Applications.Service.ServiceObjectTypes.md#Name) | string | The name of this ServiceObjectType. [Required] [Filter(eq;like)] 
+| [Id](Applications.Service.ServiceObjectTypes.md#id) | guid |  
+| [Name](Applications.Service.ServiceObjectTypes.md#name) | string | The name of this ServiceObjectType. [Required] [Filter(eq;like)] 
 
 
 ## Attribute Details
@@ -19,7 +19,6 @@ Contins the types of serviceable objects. Entity: Srv_Service_Object_Types
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Name

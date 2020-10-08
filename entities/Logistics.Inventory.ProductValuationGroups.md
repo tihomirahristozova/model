@@ -9,20 +9,13 @@ Contains the available valuation groups for products. They are used in reconcili
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.ProductValuationGroups.md#Id) | guid |  
-| [Description](Logistics.Inventory.ProductValuationGroups.md#Description) | string (nullable) | The description of this ProductValuationGroup. [Filter(like)] 
-| [ValuationGroupCode](Logistics.Inventory.ProductValuationGroups.md#ValuationGroupCode) | string | The unique code of the product valuation group. [Required] [Filter(eq;like)] [ORD] 
-| [ValuationGroupName](Logistics.Inventory.ProductValuationGroups.md#ValuationGroupName) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the product valuation group. [Required] [Filter(eq;like)] 
+| [Description](Logistics.Inventory.ProductValuationGroups.md#description) | string (nullable) | The description of this ProductValuationGroup. [Filter(like)] 
+| [Id](Logistics.Inventory.ProductValuationGroups.md#id) | guid |  
+| [ValuationGroupCode](Logistics.Inventory.ProductValuationGroups.md#valuationgroupcode) | string | The unique code of the product valuation group. [Required] [Filter(eq;like)] [ORD] 
+| [ValuationGroupName](Logistics.Inventory.ProductValuationGroups.md#valuationgroupname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the product valuation group. [Required] [Filter(eq;like)] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Description
 
@@ -31,6 +24,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### ValuationGroupCode
 
@@ -44,7 +43,7 @@ _Supports Order By_: **True**
 
 > The name of the product valuation group. [Required] [Filter(eq;like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 

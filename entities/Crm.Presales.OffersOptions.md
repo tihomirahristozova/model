@@ -9,14 +9,14 @@ Contains options for user defined document types for Offers. Entity: Crm_Offers_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Presales.OffersOptions.md#Id) | guid |  
+| [Id](Crm.Presales.OffersOptions.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DealDocumentType](Crm.Presales.OffersOptions.md#DealDocumentType) | [General.DocumentTypes](General.DocumentTypes.md) (nullable) | If filled then new opportunities (deals) from the specified type will be created automatically for the offers that aren't assigned to existing opportunities. Used for automating opportunity management. [Filter(multi eq)] |
-| [DocumentType](Crm.Presales.OffersOptions.md#DocumentType) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the offer option applies. [Required] [Filter(multi eq)] [Owner] |
+| [DealDocumentType](Crm.Presales.OffersOptions.md#dealdocumenttype) | [General.DocumentTypes](General.DocumentTypes.md) (nullable) | If filled then new opportunities (deals) from the specified type will be created automatically for the offers that aren't assigned to existing opportunities. Used for automating opportunity management. [Filter(multi eq)] |
+| [DocumentType](Crm.Presales.OffersOptions.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the offer option applies. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ Contains options for user defined document types for Offers. Entity: Crm_Offers_
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -37,7 +36,6 @@ _Default Value_: **NewGuid**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DocumentType
 
@@ -45,7 +43,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

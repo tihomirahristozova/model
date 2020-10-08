@@ -9,16 +9,16 @@ One physical location within a warehouse. Locations are the leaf elements of the
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Wms.WarehouseLocations.md#Id) | guid |  
-| [LocationAddress](Logistics.Wms.WarehouseLocations.md#LocationAddress) | string | The address of the location. Should be unique within the warehouse. [Required] [Filter(eq;like)] 
-| [Notes](Logistics.Wms.WarehouseLocations.md#Notes) | string (nullable) | Notes for this WarehouseLocation. 
+| [Id](Logistics.Wms.WarehouseLocations.md#id) | guid |  
+| [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string | The address of the location. Should be unique within the warehouse. [Required] [Filter(eq;like)] 
+| [Notes](Logistics.Wms.WarehouseLocations.md#notes) | string (nullable) | Notes for this WarehouseLocation. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Warehouse](Logistics.Wms.WarehouseLocations.md#Warehouse) | [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md) | The warehouse containing the location. [Required] [Filter(multi eq)] [Owner] |
-| [WarehouseZone](Logistics.Wms.WarehouseLocations.md#WarehouseZone) | [Logistics.Wms.WarehouseZones](Logistics.Wms.WarehouseZones.md) | The zone, which contains the location. [Required] [Filter(multi eq)] |
+| [Warehouse](Logistics.Wms.WarehouseLocations.md#warehouse) | [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md) | The warehouse containing the location. [Required] [Filter(multi eq)] [Owner] |
+| [WarehouseZone](Logistics.Wms.WarehouseLocations.md#warehousezone) | [Logistics.Wms.WarehouseZones](Logistics.Wms.WarehouseZones.md) | The zone, which contains the location. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ One physical location within a warehouse. Locations are the leaf elements of the
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### LocationAddress
@@ -55,7 +54,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### WarehouseZone
 
@@ -63,7 +61,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Wms.WarehouseZones](Logistics.Wms.WarehouseZones.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

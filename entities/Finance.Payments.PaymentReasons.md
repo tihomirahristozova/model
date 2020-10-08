@@ -9,10 +9,10 @@ Represents reasons for the payments. Contains both system and user-defined reaso
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Payments.PaymentReasons.md#Id) | guid |  
-| [IsActive](Finance.Payments.PaymentReasons.md#IsActive) | boolean | Specifies whether the payment reason is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] 
-| [IsSystem](Finance.Payments.PaymentReasons.md#IsSystem) | boolean | Specifies whether the payment reason is defined by the system. The system defined records are created by the system and are read-only for the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [Name](Finance.Payments.PaymentReasons.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this PaymentReason. [Required] [Filter(eq;like)] [ORD] 
+| [Id](Finance.Payments.PaymentReasons.md#id) | guid |  
+| [IsActive](Finance.Payments.PaymentReasons.md#isactive) | boolean | Specifies whether the payment reason is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] 
+| [IsSystem](Finance.Payments.PaymentReasons.md#issystem) | boolean | Specifies whether the payment reason is defined by the system. The system defined records are created by the system and are read-only for the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [Name](Finance.Payments.PaymentReasons.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentReason. [Required] [Filter(eq;like)] [ORD] 
 
 
 ## Attribute Details
@@ -21,7 +21,6 @@ Represents reasons for the payments. Contains both system and user-defined reaso
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsActive
@@ -46,7 +45,7 @@ _Default Value_: **False**
 
 > The name of this PaymentReason. [Required] [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

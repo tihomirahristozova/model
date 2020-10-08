@@ -9,34 +9,27 @@ Contains the public web sites. Entity: Cms_Web_Sites
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Cms.WebSites.md#Id) | guid |  
-| [BaseUrl](Applications.Cms.WebSites.md#BaseUrl) | string (nullable) | The base url (address) of the web site. [Filter(like)] 
-| [IsPublished](Applications.Cms.WebSites.md#IsPublished) | boolean | Specifies whether the site is published for public Internet access. [Required] [Default(false)] [Filter(eq)] 
-| [Name](Applications.Cms.WebSites.md#Name) | string | Multilanguage web site name. [Required] [Filter(like)] 
+| [BaseUrl](Applications.Cms.WebSites.md#baseurl) | string (nullable) | The base url (address) of the web site. [Filter(like)] 
+| [Id](Applications.Cms.WebSites.md#id) | guid |  
+| [IsPublished](Applications.Cms.WebSites.md#ispublished) | boolean | Specifies whether the site is published for public Internet access. [Required] [Default(false)] [Filter(eq)] 
+| [Name](Applications.Cms.WebSites.md#name) | string | Multilanguage web site name. [Required] [Filter(like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.Cms.WebSites.md#EnterpriseCompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which this web site belongs. [Required] [Filter(multi eq)] |
-| [PublicUserList](Applications.Cms.WebSites.md#PublicUserList) | [Systems.External.PublicUserLists](Systems.External.PublicUserLists.md) (nullable) | The list of users used to authorize the users on the site. [Filter(multi eq)] |
+| [EnterpriseCompany](Applications.Cms.WebSites.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which this web site belongs. [Required] [Filter(multi eq)] |
+| [PublicUserList](Applications.Cms.WebSites.md#publicuserlist) | [Systems.External.PublicUserLists](Systems.External.PublicUserLists.md) (nullable) | The list of users used to authorize the users on the site. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| WebModules | [Applications.Cms.WebModules](Applications.Cms.WebModules.md) | List of [WebModule](Applications.Cms.WebModules.md) child objects, based on the [Applications.Cms.WebModule.WebSite](Applications.Cms.WebModules.md#WebSite) back reference 
-| Languages | [Applications.Cms.WebSiteLanguages](Applications.Cms.WebSiteLanguages.md) | List of [WebSiteLanguage](Applications.Cms.WebSiteLanguages.md) child objects, based on the [Applications.Cms.WebSiteLanguage.WebSite](Applications.Cms.WebSiteLanguages.md#WebSite) back reference 
+| Languages | [Applications.Cms.WebSiteLanguages](Applications.Cms.WebSiteLanguages.md) | List of [WebSiteLanguage](Applications.Cms.WebSiteLanguages.md) child objects, based on the [Applications.Cms.WebSiteLanguage.WebSite](Applications.Cms.WebSiteLanguages.md#website) back reference 
+| WebModules | [Applications.Cms.WebModules](Applications.Cms.WebModules.md) | List of [WebModule](Applications.Cms.WebModules.md) child objects, based on the [Applications.Cms.WebModule.WebSite](Applications.Cms.WebModules.md#website) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### BaseUrl
 
@@ -45,6 +38,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsPublished
 
@@ -72,7 +71,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PublicUserList
 
@@ -80,7 +78,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.External.PublicUserLists](Systems.External.PublicUserLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

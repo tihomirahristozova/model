@@ -9,25 +9,18 @@ User permissions for accessing the system data columns. Entity: Sec_Column_Permi
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Security.ColumnPermissions.md#Id) | guid |  
-| [ColumnName](Systems.Security.ColumnPermissions.md#ColumnName) | string | The name of the secured column. [Required] [Filter(eq)] 
-| [TableName](Systems.Security.ColumnPermissions.md#TableName) | string | The table in which is the secured column. [Required] [Filter(eq)] [ORD] 
+| [ColumnName](Systems.Security.ColumnPermissions.md#columnname) | string | The name of the secured column. [Required] [Filter(eq)] 
+| [Id](Systems.Security.ColumnPermissions.md#id) | guid |  
+| [TableName](Systems.Security.ColumnPermissions.md#tablename) | string | The table in which is the secured column. [Required] [Filter(eq)] [ORD] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Security.ColumnPermissions.md#AccessKey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The required access key for accessing the column. [Filter(multi eq)] [ReadOnly] |
+| [AccessKey](Systems.Security.ColumnPermissions.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The required access key for accessing the column. [Filter(multi eq)] [ReadOnly] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ColumnName
 
@@ -36,6 +29,12 @@ _Default Value_: **NewGuid**
 _Type_: **string**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### TableName
 
@@ -54,7 +53,6 @@ _Supports Order By_: **True**
 
 _Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

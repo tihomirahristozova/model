@@ -9,30 +9,23 @@ The external authentication providers, linked to the domain. Contains data about
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Security.DomainProviders.md#Id) | guid |  
-| [ClientID](Systems.Security.DomainProviders.md#ClientID) | string (nullable) | This is the Client_ID of our registration within the provider. 
-| [ClientSecret](Systems.Security.DomainProviders.md#ClientSecret) | string (nullable) | This is the password, which we, as a client app, use to access the authentication provider. 
-| [DisplayName](Systems.Security.DomainProviders.md#DisplayName) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers. 
-| [IsActive](Systems.Security.DomainProviders.md#IsActive) | boolean | Specifies whether the provider is currently active for the domain. [Required] [Default(true)] [Filter(eq)] 
-| [Notes](Systems.Security.DomainProviders.md#Notes) | string (nullable) | Notes for this DomainProvider. 
-| [ProviderName](Systems.Security.DomainProviders.md#ProviderName) | [Systems.Security.DomainProvidersRepository.ProviderName](Systems.Security.DomainProviders.md#ProviderName) | The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc. [Required] [Filter(eq)] 
-| [TenantID](Systems.Security.DomainProviders.md#TenantID) | string (nullable) | When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant. 
+| [ClientID](Systems.Security.DomainProviders.md#clientid) | string (nullable) | This is the Client_ID of our registration within the provider. 
+| [ClientSecret](Systems.Security.DomainProviders.md#clientsecret) | string (nullable) | This is the password, which we, as a client app, use to access the authentication provider. 
+| [DisplayName](Systems.Security.DomainProviders.md#displayname) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers. 
+| [Id](Systems.Security.DomainProviders.md#id) | guid |  
+| [IsActive](Systems.Security.DomainProviders.md#isactive) | boolean | Specifies whether the provider is currently active for the domain. [Required] [Default(true)] [Filter(eq)] 
+| [Notes](Systems.Security.DomainProviders.md#notes) | string (nullable) | Notes for this DomainProvider. 
+| [ProviderName](Systems.Security.DomainProviders.md#providername) | [ProviderName](Systems.Security.DomainProviders.md#providername) | The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc. [Required] [Filter(eq)] 
+| [TenantID](Systems.Security.DomainProviders.md#tenantid) | string (nullable) | When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Domain](Systems.Security.DomainProviders.md#Domain) | [Systems.Security.Domains](Systems.Security.Domains.md) | The domain for which the provider is setup. [Required] [Filter(multi eq)] [Owner] |
+| [Domain](Systems.Security.DomainProviders.md#domain) | [Systems.Security.Domains](Systems.Security.Domains.md) | The domain for which the provider is setup. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ClientID
 
@@ -54,9 +47,15 @@ _Supports Order By_: **False**
 
 > Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers.
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsActive
 
@@ -79,9 +78,9 @@ _Supports Order By_: **False**
 
 > The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc. [Required] [Filter(eq)]
 
-_Type_: **[Systems.Security.DomainProvidersRepository.ProviderName](Systems.Security.DomainProviders.md#ProviderName)**  
-Allowed values for the [ProviderName](Systems.Security.DomainProviders.md#ProviderName) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[ProviderName](Systems.Security.DomainProviders.md#providername)**  
+Allowed values for the [ProviderName](Systems.Security.DomainProviders.md#providername) data attribute  
+_Allowed Values (Systems.Security.DomainProvidersRepository.ProviderName Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -110,7 +109,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Domains](Systems.Security.Domains.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

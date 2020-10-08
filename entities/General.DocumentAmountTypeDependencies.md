@@ -9,14 +9,14 @@ Specifies the base amounts on which an amount depends. . Entity: Gen_Document_Am
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentAmountTypeDependencies.md#Id) | guid |  
+| [Id](General.DocumentAmountTypeDependencies.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependsOnDocumentAmountType](General.DocumentAmountTypeDependencies.md#DependsOnDocumentAmountType) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The base amount type on which the current amount depends. [Required] [Filter(multi eq)] |
-| [DocumentAmountType](General.DocumentAmountTypeDependencies.md#DocumentAmountType) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount for which the base amount is specified. [Required] [Filter(multi eq)] [Owner] |
+| [DependsOnDocumentAmountType](General.DocumentAmountTypeDependencies.md#dependsondocumentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The base amount type on which the current amount depends. [Required] [Filter(multi eq)] |
+| [DocumentAmountType](General.DocumentAmountTypeDependencies.md#documentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount for which the base amount is specified. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ Specifies the base amounts on which an amount depends. . Entity: Gen_Document_Am
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -37,7 +36,6 @@ _Default Value_: **NewGuid**
 
 _Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### DocumentAmountType
 
@@ -45,7 +43,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

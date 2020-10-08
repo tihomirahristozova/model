@@ -9,36 +9,21 @@ List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pricing.PricingModelCosts.md#Id) | guid |  
-| [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#AmountPerUnit) | [Amount](../data-types.md#Amount) (nullable) | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency] 
-| [AmountPercent](Crm.Pricing.PricingModelCosts.md#AmountPercent) | decimal (nullable) | Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way. 
-| [LineNo](Crm.Pricing.PricingModelCosts.md#LineNo) | int32 | The consequtive number of the cost within the pricing model. [Required] 
+| [AmountPercent](Crm.Pricing.PricingModelCosts.md#amountpercent) | decimal (nullable) | Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way. 
+| [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#amountperunit) | [Amount](../data-types.md#amount) (nullable) | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency] 
+| [Id](Crm.Pricing.PricingModelCosts.md#id) | guid |  
+| [LineNo](Crm.Pricing.PricingModelCosts.md#lineno) | int32 | The consequtive number of the cost within the pricing model. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostType](Crm.Pricing.PricingModelCosts.md#CostType) | [Finance.Cost.CostTypes](Finance.Cost.CostTypes.md) | The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)] |
-| [MeasurementUnit](Crm.Pricing.PricingModelCosts.md#MeasurementUnit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)] |
-| [PricingModel](Crm.Pricing.PricingModelCosts.md#PricingModel) | [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md) | Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner] |
+| [CostType](Crm.Pricing.PricingModelCosts.md#costtype) | [Finance.Cost.CostTypes](Finance.Cost.CostTypes.md) | The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)] |
+| [MeasurementUnit](Crm.Pricing.PricingModelCosts.md#measurementunit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)] |
+| [PricingModel](Crm.Pricing.PricingModelCosts.md#pricingmodel) | [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md) | Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
-
-### AmountPerUnit
-
-> Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency]
-
-_Type_: **[Amount](../data-types.md#Amount) (nullable)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### AmountPercent
 
@@ -47,6 +32,20 @@ _Supports Order By_: **False**
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### AmountPerUnit
+
+> Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency]
+
+_Type_: **[Amount](../data-types.md#amount) (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### LineNo
 
@@ -70,7 +69,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[Finance.Cost.CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### MeasurementUnit
 
@@ -78,7 +76,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### PricingModel
 
@@ -86,7 +83,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

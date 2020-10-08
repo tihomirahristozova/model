@@ -9,31 +9,24 @@ Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.ReportQueries.md#Id) | guid |  
-| [DependsOnChildRows](General.ReportQueries.md#DependsOnChildRows) | boolean | If True the data in the current report table contains only the rows that have child rows in sub-tables. [Required] [Default(false)] 
-| [ExtensionsList](General.ReportQueries.md#ExtensionsList) | string (nullable) | A comma separated list of report extension names. An extension is set of additional fields that participate in the query. 
-| [FilterXml](General.ReportQueries.md#FilterXml) | dataaccessfilter (nullable) | Filter for the loaded table. 
-| [ReferencePath](General.ReportQueries.md#ReferencePath) | string | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. [Required] 
-| [ShowCustomProperties](General.ReportQueries.md#ShowCustomProperties) | boolean | True to include the custom properties. [Required] [Default(false)] 
-| [ShowTextColumns](General.ReportQueries.md#ShowTextColumns) | boolean | True to include text descriptions for certain columns. [Required] [Default(false)] 
-| [TableName](General.ReportQueries.md#TableName) | string (nullable) | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null. 
-| [UniqueName](General.ReportQueries.md#UniqueName) | string (nullable) | The name of the data table in the printout datasource. If null the Reference_Path is used. 
+| [DependsOnChildRows](General.ReportQueries.md#dependsonchildrows) | boolean | If True the data in the current report table contains only the rows that have child rows in sub-tables. [Required] [Default(false)] 
+| [ExtensionsList](General.ReportQueries.md#extensionslist) | string (nullable) | A comma separated list of report extension names. An extension is set of additional fields that participate in the query. 
+| [FilterXml](General.ReportQueries.md#filterxml) | dataaccessfilter (nullable) | Filter for the loaded table. 
+| [Id](General.ReportQueries.md#id) | guid |  
+| [ReferencePath](General.ReportQueries.md#referencepath) | string | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. [Required] 
+| [ShowCustomProperties](General.ReportQueries.md#showcustomproperties) | boolean | True to include the custom properties. [Required] [Default(false)] 
+| [ShowTextColumns](General.ReportQueries.md#showtextcolumns) | boolean | True to include text descriptions for certain columns. [Required] [Default(false)] 
+| [TableName](General.ReportQueries.md#tablename) | string (nullable) | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null. 
+| [UniqueName](General.ReportQueries.md#uniquename) | string (nullable) | The name of the data table in the printout datasource. If null the Reference_Path is used. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Report](General.ReportQueries.md#Report) | [General.Reports](General.Reports.md) | The [Report](General.ReportQueries.md#Report) to which this ReportQuery belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Report](General.ReportQueries.md#report) | [General.Reports](General.Reports.md) | The [Report](General.ReportQueries.md#report) to which this ReportQuery belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### DependsOnChildRows
 
@@ -59,6 +52,12 @@ _Supports Order By_: **False**
 _Type_: **dataaccessfilter (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### ReferencePath
 
@@ -107,11 +106,10 @@ _Supports Order By_: **False**
 
 ### Report
 
-> The [Report](General.ReportQueries.md#Report) to which this ReportQuery belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Report](General.ReportQueries.md#report) to which this ReportQuery belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[General.Reports](General.Reports.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

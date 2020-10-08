@@ -9,31 +9,24 @@ History of work efforts for executing activities (timesheet). Entity: Cm_Activit
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.ActivityTimeIntervals.md#Id) | guid |  
-| [Date](General.Contacts.ActivityTimeIntervals.md#Date) | date | The date on which the work was performed. [Required] [Filter(eq;ge;le)] 
-| [EndTime](General.Contacts.ActivityTimeIntervals.md#EndTime) | time | The ending time of the time interval within 'Date'. [Required] [Filter(ge;le)] 
-| [ExecutionCompletePercent](General.Contacts.ActivityTimeIntervals.md#ExecutionCompletePercent) | decimal | Percent of task completed. [Required] [Default(0)] [Filter(ge;le)] 
-| [Notes](General.Contacts.ActivityTimeIntervals.md#Notes) | string (nullable) | Notes for the time interval. 
-| [StartTime](General.Contacts.ActivityTimeIntervals.md#StartTime) | time | The starting time of the time interval within 'Date'. [Required] [Filter(ge;le)] 
-| [State](General.Contacts.ActivityTimeIntervals.md#State) | [General.DocumentState](General.Contacts.ActivityTimeIntervals.md#State) (nullable) | The state of the primary activity in the moment the time interval was created. null when the state is unknown. 
+| [Date](General.Contacts.ActivityTimeIntervals.md#date) | date | The date on which the work was performed. [Required] [Filter(eq;ge;le)] 
+| [EndTime](General.Contacts.ActivityTimeIntervals.md#endtime) | time | The ending time of the time interval within 'Date'. [Required] [Filter(ge;le)] 
+| [ExecutionCompletePercent](General.Contacts.ActivityTimeIntervals.md#executioncompletepercent) | decimal | Percent of task completed. [Required] [Default(0)] [Filter(ge;le)] 
+| [Id](General.Contacts.ActivityTimeIntervals.md#id) | guid |  
+| [Notes](General.Contacts.ActivityTimeIntervals.md#notes) | string (nullable) | Notes for the time interval. 
+| [StartTime](General.Contacts.ActivityTimeIntervals.md#starttime) | time | The starting time of the time interval within 'Date'. [Required] [Filter(ge;le)] 
+| [State](General.Contacts.ActivityTimeIntervals.md#state) | [DocumentState](General.Contacts.ActivityTimeIntervals.md#state) (nullable) | The state of the primary activity in the moment the time interval was created. null when the state is unknown. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Contacts.ActivityTimeIntervals.md#Activity) | [General.Contacts.Activities](General.Contacts.Activities.md) | The activity for which the time interval is recorded. [Required] [Filter(multi eq)] |
-| [Party](General.Contacts.ActivityTimeIntervals.md#Party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party for which the time interval is recorded. [Required] [Filter(multi eq)] [Owner] |
-| [UserStatus](General.Contacts.ActivityTimeIntervals.md#UserStatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. [Filter(multi eq)] |
+| [Activity](General.Contacts.ActivityTimeIntervals.md#activity) | [General.Contacts.Activities](General.Contacts.Activities.md) | The activity for which the time interval is recorded. [Required] [Filter(multi eq)] |
+| [Party](General.Contacts.ActivityTimeIntervals.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party for which the time interval is recorded. [Required] [Filter(multi eq)] [Owner] |
+| [UserStatus](General.Contacts.ActivityTimeIntervals.md#userstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Date
 
@@ -60,6 +53,12 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 _Default Value_: **0**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### Notes
 
 > Notes for the time interval.
@@ -80,9 +79,9 @@ _Supports Order By_: **False**
 
 > The state of the primary activity in the moment the time interval was created. null when the state is unknown.
 
-_Type_: **[General.DocumentState](General.Contacts.ActivityTimeIntervals.md#State) (nullable)**  
+_Type_: **[DocumentState](General.Contacts.ActivityTimeIntervals.md#state) (nullable)**  
 Enumeration of document system states  
-_Allowed Values (Enum Members)_  
+_Allowed Values (General.DocumentState Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -106,7 +105,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Party
 
@@ -114,7 +112,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### UserStatus
 
@@ -122,7 +119,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

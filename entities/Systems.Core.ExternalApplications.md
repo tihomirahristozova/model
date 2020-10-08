@@ -9,33 +9,26 @@ List of external applications. Used to run external applications. Entity: Sys_Ex
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.ExternalApplications.md#Id) | guid |  
-| [Address](Systems.Core.ExternalApplications.md#Address) | string | The address (path) to the application. The address is platform-dependant. [Required] 
-| [AvailableInMode](Systems.Core.ExternalApplications.md#AvailableInMode) | [Systems.Core.ExternalApplicationsRepository.AvailableInMode](Systems.Core.ExternalApplications.md#AvailableInMode) | Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. [Required] [Default("SINGLE")] [Filter(eq)] 
-| [EntityName](Systems.Core.ExternalApplications.md#EntityName) | string | The entity, for which the application is defined. [Required] [Filter(eq)] [ORD] 
-| [ExecuteForAllObjects](Systems.Core.ExternalApplications.md#ExecuteForAllObjects) | boolean | Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. [Required] [Default(true)] [Filter(eq)] 
-| [Name](Systems.Core.ExternalApplications.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of the external application. [Required] [Filter(eq;like)] 
-| [IsActive](Systems.Core.ExternalApplications.md#IsActive) | boolean (nullable) | Specifies whether the external application is currently used. [Default(true)] [Filter(eq)] 
-| [Notes](Systems.Core.ExternalApplications.md#Notes) | string (nullable) | Notes for this ExternalApplication. 
-| [Platform](Systems.Core.ExternalApplications.md#Platform) | [Systems.Core.ExternalApplicationsRepository.Platform](Systems.Core.ExternalApplications.md#Platform) | The execution platform of the application. [Required] [Filter(eq)] 
-| [RefreshAfterFinish](Systems.Core.ExternalApplications.md#RefreshAfterFinish) | boolean | Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification. [Required] [Default(true)] [Filter(eq)] 
-| [SaveBeforeStart](Systems.Core.ExternalApplications.md#SaveBeforeStart) | boolean | Whether to save the form data to the server before starting the application. [Required] [Default(true)] [Filter(eq)] 
+| [Address](Systems.Core.ExternalApplications.md#address) | string | The address (path) to the application. The address is platform-dependant. [Required] 
+| [AvailableInMode](Systems.Core.ExternalApplications.md#availableinmode) | [AvailableInMode](Systems.Core.ExternalApplications.md#availableinmode) | Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. [Required] [Default("SINGLE")] [Filter(eq)] 
+| [EntityName](Systems.Core.ExternalApplications.md#entityname) | string | The entity, for which the application is defined. [Required] [Filter(eq)] [ORD] 
+| [ExecuteForAllObjects](Systems.Core.ExternalApplications.md#executeforallobjects) | boolean | Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. [Required] [Default(true)] [Filter(eq)] 
+| [Id](Systems.Core.ExternalApplications.md#id) | guid |  
+| [IsActive](Systems.Core.ExternalApplications.md#isactive) | boolean (nullable) | Specifies whether the external application is currently used. [Default(true)] [Filter(eq)] 
+| [Name](Systems.Core.ExternalApplications.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the external application. [Required] [Filter(eq;like)] 
+| [Notes](Systems.Core.ExternalApplications.md#notes) | string (nullable) | Notes for this ExternalApplication. 
+| [Platform](Systems.Core.ExternalApplications.md#platform) | [Platform](Systems.Core.ExternalApplications.md#platform) | The execution platform of the application. [Required] [Filter(eq)] 
+| [RefreshAfterFinish](Systems.Core.ExternalApplications.md#refreshafterfinish) | boolean | Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification. [Required] [Default(true)] [Filter(eq)] 
+| [SaveBeforeStart](Systems.Core.ExternalApplications.md#savebeforestart) | boolean | Whether to save the form data to the server before starting the application. [Required] [Default(true)] [Filter(eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Core.ExternalApplications.md#AccessKey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. [Filter(multi eq)] |
+| [AccessKey](Systems.Core.ExternalApplications.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Address
 
@@ -49,9 +42,9 @@ _Supports Order By_: **False**
 
 > Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. [Required] [Default("SINGLE")] [Filter(eq)]
 
-_Type_: **[Systems.Core.ExternalApplicationsRepository.AvailableInMode](Systems.Core.ExternalApplications.md#AvailableInMode)**  
-Allowed values for the [AvailableInMode](Systems.Core.ExternalApplications.md#AvailableInMode) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[AvailableInMode](Systems.Core.ExternalApplications.md#availableinmode)**  
+Allowed values for the [AvailableInMode](Systems.Core.ExternalApplications.md#availableinmode) data attribute  
+_Allowed Values (Systems.Core.ExternalApplicationsRepository.AvailableInMode Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -80,13 +73,11 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
-### Name
+### Id
 
-> The name of the external application. [Required] [Filter(eq;like)]
-
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsActive
 
@@ -96,6 +87,14 @@ _Type_: **boolean (nullable)**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
+
+### Name
+
+> The name of the external application. [Required] [Filter(eq;like)]
+
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
 
 ### Notes
 
@@ -109,9 +108,9 @@ _Supports Order By_: **False**
 
 > The execution platform of the application. [Required] [Filter(eq)]
 
-_Type_: **[Systems.Core.ExternalApplicationsRepository.Platform](Systems.Core.ExternalApplications.md#Platform)**  
-Allowed values for the [Platform](Systems.Core.ExternalApplications.md#Platform) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[Platform](Systems.Core.ExternalApplications.md#platform)**  
+Allowed values for the [Platform](Systems.Core.ExternalApplications.md#platform) data attribute  
+_Allowed Values (Systems.Core.ExternalApplicationsRepository.Platform Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -151,7 +150,6 @@ _Default Value_: **True**
 
 _Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

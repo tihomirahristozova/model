@@ -9,17 +9,17 @@ Contains user-defined data-sources. The data sources is a user-defined way (simi
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Reports.md#Id) | guid |  
-| [IsTable](General.Reports.md#IsTable) | boolean | If True the Query_Name is name of a table, otherwise is name of a query that can be filtered with Filter_Xml. . [Required] [Default(true)] [Filter(eq)] 
-| [QueryName](General.Reports.md#QueryName) | string | The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)] 
-| [Name](General.Reports.md#Name) | string | The name of this Report. [Required] [Filter(eq;like)] 
-| [ShowParentTables](General.Reports.md#ShowParentTables) | boolean | Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. [Required] [Default(false)] 
+| [Id](General.Reports.md#id) | guid |  
+| [IsTable](General.Reports.md#istable) | boolean | If True the Query_Name is name of a table, otherwise is name of a query that can be filtered with Filter_Xml. . [Required] [Default(true)] [Filter(eq)] 
+| [Name](General.Reports.md#name) | string | The name of this Report. [Required] [Filter(eq;like)] 
+| [QueryName](General.Reports.md#queryname) | string | The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)] 
+| [ShowParentTables](General.Reports.md#showparenttables) | boolean | Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. [Required] [Default(false)] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Queries | [General.ReportQueries](General.ReportQueries.md) | List of [ReportQuery](General.ReportQueries.md) child objects, based on the [General.ReportQuery.Report](General.ReportQueries.md#Report) back reference 
+| Queries | [General.ReportQueries](General.ReportQueries.md) | List of [ReportQuery](General.ReportQueries.md) child objects, based on the [General.ReportQuery.Report](General.ReportQueries.md#report) back reference 
 
 
 ## Attribute Details
@@ -28,7 +28,6 @@ Contains user-defined data-sources. The data sources is a user-defined way (simi
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsTable
@@ -40,17 +39,17 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
-### QueryName
+### Name
 
-> The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)]
+> The name of this Report. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
-### Name
+### QueryName
 
-> The name of this Report. [Required] [Filter(eq;like)]
+> The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  

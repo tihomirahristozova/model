@@ -9,46 +9,39 @@ The operations that are performed to produce the product. Entity: Prd_Work_Order
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.ShopFloor.WorkOrderItemOperations.md#Id) | guid |  
-| [ActualEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#ActualEndDateTime) | datetime (nullable) | The date/time when the operation has completed. null means that the operation is not completed. 
-| [ActualStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#ActualStartDateTime) | datetime (nullable) | The date/time when the operation has started. null means that the has not started yet. 
-| [LineOrd](Production.ShopFloor.WorkOrderItemOperations.md#LineOrd) | int32 | Order of the line within the work order routing. [Required] [Filter(eq;like)] 
-| [MinimumConcurrentStartTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#MinimumConcurrentStartTimeMinutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
-| [MoveTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#MoveTimeMinutes) | int32 | Time to move the lot to the next operation in minutes. [Required] [Default(0)] 
-| [Notes](Production.ShopFloor.WorkOrderItemOperations.md#Notes) | string (nullable) | Notes for this WorkOrderItemOperation. 
-| [OperationDescription](Production.ShopFloor.WorkOrderItemOperations.md#OperationDescription) | string (nullable) | The short description of the operation. 
-| [RunTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#RunTimeMinutes) | int32 | Time for production of one lot of the produced item in minutes. [Required] [Default(0)] 
-| [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#ScheduledEndDateTime) | datetime (nullable) | The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only). 
-| [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#ScheduledStartDateTime) | datetime (nullable) | The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders). 
-| [ScrapRate](Production.ShopFloor.WorkOrderItemOperations.md#ScrapRate) | decimal | Projected scrap rate of the operation. [Required] [Default(0)] 
-| [SetupTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#SetupTimeMinutes) | int32 | Time needed to setup the equipment in minutes. [Required] [Default(0)] 
-| [Tooling](Production.ShopFloor.WorkOrderItemOperations.md#Tooling) | string (nullable) | The tools needed for the routing step. 
-| [UseQuantity](Production.ShopFloor.WorkOrderItemOperations.md#UseQuantity) | [Quantity](../data-types.md#Quantity) | Quantity of the resource, that should be allocated for the operation. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] 
-| [WaitTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#WaitTimeMinutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)] 
+| [ActualEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualenddatetime) | datetime (nullable) | The date/time when the operation has completed. null means that the operation is not completed. 
+| [ActualStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualstartdatetime) | datetime (nullable) | The date/time when the operation has started. null means that the has not started yet. 
+| [Id](Production.ShopFloor.WorkOrderItemOperations.md#id) | guid |  
+| [LineOrd](Production.ShopFloor.WorkOrderItemOperations.md#lineord) | int32 | Order of the line within the work order routing. [Required] [Filter(eq;like)] 
+| [MinimumConcurrentStartTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
+| [MoveTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. [Required] [Default(0)] 
+| [Notes](Production.ShopFloor.WorkOrderItemOperations.md#notes) | string (nullable) | Notes for this WorkOrderItemOperation. 
+| [OperationDescription](Production.ShopFloor.WorkOrderItemOperations.md#operationdescription) | string (nullable) | The short description of the operation. 
+| [RunTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#runtimeminutes) | int32 | Time for production of one lot of the produced item in minutes. [Required] [Default(0)] 
+| [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#scheduledenddatetime) | datetime (nullable) | The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only). 
+| [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#scheduledstartdatetime) | datetime (nullable) | The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders). 
+| [ScrapRate](Production.ShopFloor.WorkOrderItemOperations.md#scraprate) | decimal | Projected scrap rate of the operation. [Required] [Default(0)] 
+| [SetupTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment in minutes. [Required] [Default(0)] 
+| [Tooling](Production.ShopFloor.WorkOrderItemOperations.md#tooling) | string (nullable) | The tools needed for the routing step. 
+| [UseQuantity](Production.ShopFloor.WorkOrderItemOperations.md#usequantity) | [Quantity](../data-types.md#quantity) | Quantity of the resource, that should be allocated for the operation. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] 
+| [WaitTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Operation](Production.ShopFloor.WorkOrderItemOperations.md#Operation) | [Production.Resources.Operations](Production.Resources.Operations.md) (nullable) | The performed operation. [Filter(multi eq)] |
-| [WorkOrderItem](Production.ShopFloor.WorkOrderItemOperations.md#WorkOrderItem) | [Production.ShopFloor.WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item, containing the line. [Required] [Filter(multi eq)] [Owner] |
-| [WorkgroupResource](Production.ShopFloor.WorkOrderItemOperations.md#WorkgroupResource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) | The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)] |
+| [Operation](Production.ShopFloor.WorkOrderItemOperations.md#operation) | [Production.Resources.Operations](Production.Resources.Operations.md) (nullable) | The performed operation. [Filter(multi eq)] |
+| [WorkgroupResource](Production.ShopFloor.WorkOrderItemOperations.md#workgroupresource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) | The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)] |
+| [WorkOrderItem](Production.ShopFloor.WorkOrderItemOperations.md#workorderitem) | [Production.ShopFloor.WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item, containing the line. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Load | [Production.Resources.Load](Production.Resources.Load.md) | List of [Load](Production.Resources.Load.md) child objects, based on the [Production.Resources.Load.WorkOrderItemOperation](Production.Resources.Load.md#WorkOrderItemOperation) back reference 
+| Load | [Production.Resources.Load](Production.Resources.Load.md) | List of [Load](Production.Resources.Load.md) child objects, based on the [Production.Resources.Load.WorkOrderItemOperation](Production.Resources.Load.md#workorderitemoperation) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ActualEndDateTime
 
@@ -65,6 +58,12 @@ _Supports Order By_: **False**
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### LineOrd
 
@@ -169,7 +168,7 @@ _Supports Order By_: **False**
 
 > Quantity of the resource, that should be allocated for the operation. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -192,15 +191,6 @@ _Default Value_: **0**
 
 _Type_: **[Production.Resources.Operations](Production.Resources.Operations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### WorkOrderItem
-
-> The work order item, containing the line. [Required] [Filter(multi eq)] [Owner]
-
-_Type_: **[Production.ShopFloor.WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### WorkgroupResource
 
@@ -208,7 +198,13 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### WorkOrderItem
+
+> The work order item, containing the line. [Required] [Filter(multi eq)] [Owner]
+
+_Type_: **[Production.ShopFloor.WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 
 

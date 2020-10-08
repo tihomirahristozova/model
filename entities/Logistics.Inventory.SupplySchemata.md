@@ -9,14 +9,14 @@ Obsolete. Not used. Entity: Inv_Supply_Schemata
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.SupplySchemata.md#Id) | guid |  
-| [Name](Logistics.Inventory.SupplySchemata.md#Name) | string | The name of this SupplySchema. [Required] 
+| [Id](Logistics.Inventory.SupplySchemata.md#id) | guid |  
+| [Name](Logistics.Inventory.SupplySchemata.md#name) | string | The name of this SupplySchema. [Required] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Routes | [Logistics.Inventory.SupplySchemaRoutes](Logistics.Inventory.SupplySchemaRoutes.md) | List of [SupplySchemaRoute](Logistics.Inventory.SupplySchemaRoutes.md) child objects, based on the [Logistics.Inventory.SupplySchemaRoute.SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#SupplySchema) back reference 
+| Routes | [Logistics.Inventory.SupplySchemaRoutes](Logistics.Inventory.SupplySchemaRoutes.md) | List of [SupplySchemaRoute](Logistics.Inventory.SupplySchemaRoutes.md) child objects, based on the [Logistics.Inventory.SupplySchemaRoute.SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) back reference 
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ Obsolete. Not used. Entity: Inv_Supply_Schemata
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Name

@@ -9,26 +9,19 @@ Contains both historical and active steps in the execution of the business proce
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.ExecutionSteps.md#Id) | guid |  
-| [ExecutionState](Systems.Bpm.ExecutionSteps.md#ExecutionState) | int32 | Shows where the execution of the step has reached. 0=Ready; 10=Active; 20=Executing; 30=Completing; 40=Failing; 50=Terminating; 60=Completed; 70=Failed; 80=Terminated. [Required] [Default(0)] 
-| [StartTime](Systems.Bpm.ExecutionSteps.md#StartTime) | datetime | The date and time when the step execution started. [Required] [Default(Now)] 
+| [ExecutionState](Systems.Bpm.ExecutionSteps.md#executionstate) | int32 | Shows where the execution of the step has reached. 0=Ready; 10=Active; 20=Executing; 30=Completing; 40=Failing; 50=Terminating; 60=Completed; 70=Failed; 80=Terminated. [Required] [Default(0)] 
+| [Id](Systems.Bpm.ExecutionSteps.md#id) | guid |  
+| [StartTime](Systems.Bpm.ExecutionSteps.md#starttime) | datetime | The date and time when the step execution started. [Required] [Default(Now)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProcessElement](Systems.Bpm.ExecutionSteps.md#ProcessElement) | [Systems.Bpm.ProcessElements](Systems.Bpm.ProcessElements.md) | The process element, which is being executed for the instance. [Required] [Filter(multi eq)] |
-| [ProcessInstance](Systems.Bpm.ExecutionSteps.md#ProcessInstance) | [Systems.Bpm.ProcessInstances](Systems.Bpm.ProcessInstances.md) | The process instance, which is being executed. [Required] [Filter(multi eq)] |
+| [ProcessElement](Systems.Bpm.ExecutionSteps.md#processelement) | [Systems.Bpm.ProcessElements](Systems.Bpm.ProcessElements.md) | The process element, which is being executed for the instance. [Required] [Filter(multi eq)] |
+| [ProcessInstance](Systems.Bpm.ExecutionSteps.md#processinstance) | [Systems.Bpm.ProcessInstances](Systems.Bpm.ProcessInstances.md) | The process instance, which is being executed. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### ExecutionState
 
@@ -38,6 +31,12 @@ _Type_: **int32**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### StartTime
 
@@ -57,7 +56,6 @@ _Default Value_: **CurrentDateTime**
 
 _Type_: **[Systems.Bpm.ProcessElements](Systems.Bpm.ProcessElements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProcessInstance
 
@@ -65,7 +63,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Bpm.ProcessInstances](Systems.Bpm.ProcessInstances.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

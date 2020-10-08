@@ -9,15 +9,15 @@ Provides numbering sequences, applicable for use in a multi-threaded environment
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Sequences.md#Id) | guid |  
-| [Name](General.Sequences.md#Name) | string | The name of this Sequence. [Required] [Filter(like)] 
-| [SimultaneousTransactions](General.Sequences.md#SimultaneousTransactions) | boolean | When false, specifies that the users will wait in a queue for a single numbering sequence generator. When true, the system will allow parallel numbering, by using any of the available sequence generators. However, parallel numbering has the drawback that, if no sequence generator is free, it will immediately throw exception, instead of waiting. So before setting to true, make sure that enough sequence generators are available. [Required] [Default(false)] 
+| [Id](General.Sequences.md#id) | guid |  
+| [Name](General.Sequences.md#name) | string | The name of this Sequence. [Required] [Filter(like)] 
+| [SimultaneousTransactions](General.Sequences.md#simultaneoustransactions) | boolean | When false, specifies that the users will wait in a queue for a single numbering sequence generator. When true, the system will allow parallel numbering, by using any of the available sequence generators. However, parallel numbering has the drawback that, if no sequence generator is free, it will immediately throw exception, instead of waiting. So before setting to true, make sure that enough sequence generators are available. [Required] [Default(false)] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Generators | [General.SequenceGenerators](General.SequenceGenerators.md) | List of [SequenceGenerator](General.SequenceGenerators.md) child objects, based on the [General.SequenceGenerator.Sequence](General.SequenceGenerators.md#Sequence) back reference 
+| Generators | [General.SequenceGenerators](General.SequenceGenerators.md) | List of [SequenceGenerator](General.SequenceGenerators.md) child objects, based on the [General.SequenceGenerator.Sequence](General.SequenceGenerators.md#sequence) back reference 
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ Provides numbering sequences, applicable for use in a multi-threaded environment
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Name

@@ -9,22 +9,22 @@ User-defined reports. Reports retrieve data from data sources and present it in 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Reporting.Reports.md#Id) | guid |  
-| [LayoutFormat](Systems.Reporting.Reports.md#LayoutFormat) | string (nullable) | Format specifier of the layout. Recognized by the application. [Filter(multi eq)] 
-| [Notes](Systems.Reporting.Reports.md#Notes) | string (nullable) | Notes for this Report. 
-| [OneRow](Systems.Reporting.Reports.md#OneRow) | boolean | True means that report can be used for one-row forms only. False means that the report can be used for navigators only. [Required] [Default(false)] 
-| [QueryName](Systems.Reporting.Reports.md#QueryName) | string | The query on which the report is based. [Required] [Filter(eq)] 
-| [ReportBinaryLayout](Systems.Reporting.Reports.md#ReportBinaryLayout) | byte[] (nullable) | The printout layout, when the format requires binary storage. Alternative to Report_Layout. 
-| [ReportLayout](Systems.Reporting.Reports.md#ReportLayout) | string (nullable) | The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout. 
-| [Name](Systems.Reporting.Reports.md#Name) | string | Multi-language report name. [Required] [Filter(eq;like)] 
-| [TemplateFilterXml](Systems.Reporting.Reports.md#TemplateFilterXml) | string (nullable) | Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report. 
-| [TemplatePriority](Systems.Reporting.Reports.md#TemplatePriority) | int32 (nullable) | Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, null otherwise. 
+| [Id](Systems.Reporting.Reports.md#id) | guid |  
+| [LayoutFormat](Systems.Reporting.Reports.md#layoutformat) | string (nullable) | Format specifier of the layout. Recognized by the application. [Filter(multi eq)] 
+| [Name](Systems.Reporting.Reports.md#name) | string | Multi-language report name. [Required] [Filter(eq;like)] 
+| [Notes](Systems.Reporting.Reports.md#notes) | string (nullable) | Notes for this Report. 
+| [OneRow](Systems.Reporting.Reports.md#onerow) | boolean | True means that report can be used for one-row forms only. False means that the report can be used for navigators only. [Required] [Default(false)] 
+| [QueryName](Systems.Reporting.Reports.md#queryname) | string | The query on which the report is based. [Required] [Filter(eq)] 
+| [ReportBinaryLayout](Systems.Reporting.Reports.md#reportbinarylayout) | byte[] (nullable) | The printout layout, when the format requires binary storage. Alternative to Report_Layout. 
+| [ReportLayout](Systems.Reporting.Reports.md#reportlayout) | string (nullable) | The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout. 
+| [TemplateFilterXml](Systems.Reporting.Reports.md#templatefilterxml) | string (nullable) | Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report. 
+| [TemplatePriority](Systems.Reporting.Reports.md#templatepriority) | int32 (nullable) | Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, null otherwise. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataSource](Systems.Reporting.Reports.md#DataSource) | [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md) (nullable) | Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. [Filter(multi eq)] |
+| [DataSource](Systems.Reporting.Reports.md#datasource) | [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md) (nullable) | Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -33,7 +33,6 @@ User-defined reports. Reports retrieve data from data sources and present it in 
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### LayoutFormat
@@ -42,6 +41,14 @@ _Default Value_: **NewGuid**
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+
+### Name
+
+> Multi-language report name. [Required] [Filter(eq;like)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
 ### Notes
@@ -85,14 +92,6 @@ _Type_: **string (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### Name
-
-> Multi-language report name. [Required] [Filter(eq;like)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-
 ### TemplateFilterXml
 
 > Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report.
@@ -118,7 +117,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Reporting.DataSources](Systems.Reporting.DataSources.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

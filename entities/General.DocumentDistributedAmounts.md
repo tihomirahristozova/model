@@ -9,33 +9,26 @@ Contains the amounts which are distributed by the system over the document lines
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentDistributedAmounts.md#Id) | guid |  
-| [Amount](General.DocumentDistributedAmounts.md#Amount) | [Amount](../data-types.md#Amount) | The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)] 
-| [DocumentLineId](General.DocumentDistributedAmounts.md#DocumentLineId) | guid (nullable) | The Id of the line over which the amount is distributed. [Filter(multi eq)] 
+| [Amount](General.DocumentDistributedAmounts.md#amount) | [Amount](../data-types.md#amount) | The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)] 
+| [DocumentLineId](General.DocumentDistributedAmounts.md#documentlineid) | guid (nullable) | The Id of the line over which the amount is distributed. [Filter(multi eq)] 
+| [Id](General.DocumentDistributedAmounts.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAmountType](General.DocumentDistributedAmounts.md#DocumentAmountType) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The type of amount which is distributed. [Required] [Filter(multi eq)] |
-| [Document](General.DocumentDistributedAmounts.md#Document) | [General.Documents](General.Documents.md) | The [Document](General.DocumentDistributedAmounts.md#Document) to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ReferencedDocument](General.DocumentDistributedAmounts.md#ReferencedDocument) | [General.Documents](General.Documents.md) (nullable) | In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)] |
+| [Document](General.DocumentDistributedAmounts.md#document) | [General.Documents](General.Documents.md) | The [Document](General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner] |
+| [DocumentAmountType](General.DocumentDistributedAmounts.md#documentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The type of amount which is distributed. [Required] [Filter(multi eq)] |
+| [ReferencedDocument](General.DocumentDistributedAmounts.md#referenceddocument) | [General.Documents](General.Documents.md) (nullable) | In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Amount
 
 > The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -45,10 +38,22 @@ _Supports Order By_: **False**
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 
 ## Reference Details
+
+### Document
+
+> The [Document](General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]
+
+_Type_: **[General.Documents](General.Documents.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentAmountType
 
@@ -56,15 +61,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### Document
-
-> The [Document](General.DocumentDistributedAmounts.md#Document) to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]
-
-_Type_: **[General.Documents](General.Documents.md)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ReferencedDocument
 
@@ -72,7 +68,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,14 +9,14 @@ Contains the work elements from the work breakdown structure, which are included
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.ProjectWorkElements.md#Id) | guid |  
+| [Id](Projects.ProjectWorkElements.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Project](Projects.ProjectWorkElements.md#Project) | [Projects.Projects](Projects.Projects.md) | The [Project](Projects.ProjectWorkElements.md#Project) to which this ProjectWorkElement belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ProjectTypeWorkElement](Projects.ProjectWorkElements.md#ProjectTypeWorkElement) | [Projects.TypeWorkElements](Projects.TypeWorkElements.md) | The work element from the project type on which the current work element is based. [Required] [Filter(multi eq)] |
+| [Project](Projects.ProjectWorkElements.md#project) | [Projects.Projects](Projects.Projects.md) | The [Project](Projects.ProjectWorkElements.md#project) to which this ProjectWorkElement belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ProjectTypeWorkElement](Projects.ProjectWorkElements.md#projecttypeworkelement) | [Projects.TypeWorkElements](Projects.TypeWorkElements.md) | The work element from the project type on which the current work element is based. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ Contains the work elements from the work breakdown structure, which are included
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 
@@ -33,11 +32,10 @@ _Default Value_: **NewGuid**
 
 ### Project
 
-> The [Project](Projects.ProjectWorkElements.md#Project) to which this ProjectWorkElement belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Project](Projects.ProjectWorkElements.md#project) to which this ProjectWorkElement belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Projects.Projects](Projects.Projects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProjectTypeWorkElement
 
@@ -45,7 +43,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Projects.TypeWorkElements](Projects.TypeWorkElements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

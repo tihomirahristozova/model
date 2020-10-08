@@ -9,14 +9,14 @@ Supplier types are primarily used to differentiate the security level access to 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Procurement.SupplierTypes.md#Id) | guid |  
-| [Name](Logistics.Procurement.SupplierTypes.md#Name) | string | The name of this SupplierType. [Required] [Filter(eq;like)] 
+| [Id](Logistics.Procurement.SupplierTypes.md#id) | guid |  
+| [Name](Logistics.Procurement.SupplierTypes.md#name) | string | The name of this SupplierType. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Logistics.Procurement.SupplierTypes.md#AccessKey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key required for accessing all suppliers of this supplier type. [Filter(multi eq)] |
+| [AccessKey](Logistics.Procurement.SupplierTypes.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key required for accessing all suppliers of this supplier type. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -25,7 +25,6 @@ Supplier types are primarily used to differentiate the security level access to 
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Name
@@ -45,7 +44,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

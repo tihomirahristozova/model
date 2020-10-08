@@ -9,26 +9,27 @@ Marketing target group, containing a fixed list of parties. Entity: Crm_Target_G
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Marketing.TargetGroups.md#Id) | guid |  
-| [Description](Crm.Marketing.TargetGroups.md#Description) | string (nullable) | The description of this TargetGroup. 
-| [Code](Crm.Marketing.TargetGroups.md#Code) | string | Short code for identification of target groups. [Required] [Filter(eq;like)] [ORD] 
-| [Name](Crm.Marketing.TargetGroups.md#Name) | string | The name of this TargetGroup. [Required] [Filter(like)] 
+| [Code](Crm.Marketing.TargetGroups.md#code) | string | Short code for identification of target groups. [Required] [Filter(eq;like)] [ORD] 
+| [Description](Crm.Marketing.TargetGroups.md#description) | string (nullable) | The description of this TargetGroup. 
+| [Id](Crm.Marketing.TargetGroups.md#id) | guid |  
+| [Name](Crm.Marketing.TargetGroups.md#name) | string | The name of this TargetGroup. [Required] [Filter(like)] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Members | [Crm.Marketing.TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.TargetGroup](Crm.Marketing.TargetGroupMembers.md#TargetGroup) back reference 
+| Members | [Crm.Marketing.TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.TargetGroup](Crm.Marketing.TargetGroupMembers.md#targetgroup) back reference 
 
 
 ## Attribute Details
 
-### Id
+### Code
 
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
+> Short code for identification of target groups. [Required] [Filter(eq;like)] [ORD]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
 
 ### Description
 
@@ -38,13 +39,11 @@ _Type_: **string (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### Code
+### Id
 
-> Short code for identification of target groups. [Required] [Filter(eq;like)] [ORD]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Name
 

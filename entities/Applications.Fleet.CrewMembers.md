@@ -9,16 +9,16 @@ Contains the memnbers of vehicle crews. Entity: Fleet_Crew_Members
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Fleet.CrewMembers.md#Id) | guid |  
-| [Notes](Applications.Fleet.CrewMembers.md#Notes) | string (nullable) | Notes for this CrewMember. 
-| [OrdinalPos](Applications.Fleet.CrewMembers.md#OrdinalPos) | int32 (nullable) | Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader. 
+| [Id](Applications.Fleet.CrewMembers.md#id) | guid |  
+| [Notes](Applications.Fleet.CrewMembers.md#notes) | string (nullable) | Notes for this CrewMember. 
+| [OrdinalPos](Applications.Fleet.CrewMembers.md#ordinalpos) | int32 (nullable) | Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Crew](Applications.Fleet.CrewMembers.md#Crew) | [Applications.Fleet.Crews](Applications.Fleet.Crews.md) | The crew to which this member belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Person](Applications.Fleet.CrewMembers.md#Person) | [General.Contacts.Persons](General.Contacts.Persons.md) | The crew member person. [Required] [Filter(multi eq)] |
+| [Crew](Applications.Fleet.CrewMembers.md#crew) | [Applications.Fleet.Crews](Applications.Fleet.Crews.md) | The crew to which this member belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Person](Applications.Fleet.CrewMembers.md#person) | [General.Contacts.Persons](General.Contacts.Persons.md) | The crew member person. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Contains the memnbers of vehicle crews. Entity: Fleet_Crew_Members
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes
@@ -55,7 +54,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Fleet.Crews](Applications.Fleet.Crews.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Person
 
@@ -63,7 +61,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

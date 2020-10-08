@@ -9,41 +9,34 @@ Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Sales.SalesOrderPaymentPlans.md#Id) | guid |  
-| [Amount](Crm.Sales.SalesOrderPaymentPlans.md#Amount) | [Amount](../data-types.md#Amount) | Amount to be payed. [Currency: SalesOrder.DocumentCurrency] [Required] 
-| [AmountPercent](Crm.Sales.SalesOrderPaymentPlans.md#AmountPercent) | decimal (nullable) | Percent of the sales order amount to be payed. 
-| [DueDateFormMethod](Crm.Sales.SalesOrderPaymentPlans.md#DueDateFormMethod) | [Crm.PaymentPlanDueDateSource](Crm.Sales.SalesOrderPaymentPlans.md#DueDateFormMethod) | Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. [Required] 
-| [ExplicitPaymentDueDate](Crm.Sales.SalesOrderPaymentPlans.md#ExplicitPaymentDueDate) | datetime (nullable) | Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'. 
-| [ExplicitPaymentDueStartDate](Crm.Sales.SalesOrderPaymentPlans.md#ExplicitPaymentDueStartDate) | date (nullable) | Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'. 
-| [InstallmentNumber](Crm.Sales.SalesOrderPaymentPlans.md#InstallmentNumber) | int32 | Consequtive installment number. Used for identifying different payments generated according this payment plan. [Required] 
-| [Notes](Crm.Sales.SalesOrderPaymentPlans.md#Notes) | string (nullable) | Notes for this SalesOrderPaymentPlan. 
-| [PaymentStartDays](Crm.Sales.SalesOrderPaymentPlans.md#PaymentStartDays) | int32 | Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. [Required] [Default(0)] 
-| [PaymentTermDays](Crm.Sales.SalesOrderPaymentPlans.md#PaymentTermDays) | int32 | Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. [Required] [Default(0)] 
-| [Remainder](Crm.Sales.SalesOrderPaymentPlans.md#Remainder) | boolean | Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). [Required] [Default(false)] 
+| [Amount](Crm.Sales.SalesOrderPaymentPlans.md#amount) | [Amount](../data-types.md#amount) | Amount to be payed. [Currency: SalesOrder.DocumentCurrency] [Required] 
+| [AmountPercent](Crm.Sales.SalesOrderPaymentPlans.md#amountpercent) | decimal (nullable) | Percent of the sales order amount to be payed. 
+| [DueDateFormMethod](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod) | [PaymentPlanDueDateSource](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod) | Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. [Required] 
+| [ExplicitPaymentDueDate](Crm.Sales.SalesOrderPaymentPlans.md#explicitpaymentduedate) | datetime (nullable) | Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'. 
+| [ExplicitPaymentDueStartDate](Crm.Sales.SalesOrderPaymentPlans.md#explicitpaymentduestartdate) | date (nullable) | Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'. 
+| [Id](Crm.Sales.SalesOrderPaymentPlans.md#id) | guid |  
+| [InstallmentNumber](Crm.Sales.SalesOrderPaymentPlans.md#installmentnumber) | int32 | Consequtive installment number. Used for identifying different payments generated according this payment plan. [Required] 
+| [Notes](Crm.Sales.SalesOrderPaymentPlans.md#notes) | string (nullable) | Notes for this SalesOrderPaymentPlan. 
+| [PaymentStartDays](Crm.Sales.SalesOrderPaymentPlans.md#paymentstartdays) | int32 | Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. [Required] [Default(0)] 
+| [PaymentTermDays](Crm.Sales.SalesOrderPaymentPlans.md#paymenttermdays) | int32 | Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. [Required] [Default(0)] 
+| [Remainder](Crm.Sales.SalesOrderPaymentPlans.md#remainder) | boolean | Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). [Required] [Default(false)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PaymentAccount](Crm.Sales.SalesOrderPaymentPlans.md#PaymentAccount) | [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. [Filter(multi eq)] |
-| [PaymentType](Crm.Sales.SalesOrderPaymentPlans.md#PaymentType) | [Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. [Filter(multi eq)] |
-| [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#SalesOrder) | [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) | The [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#SalesOrder) to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner] |
+| [PaymentAccount](Crm.Sales.SalesOrderPaymentPlans.md#paymentaccount) | [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. [Filter(multi eq)] |
+| [PaymentType](Crm.Sales.SalesOrderPaymentPlans.md#paymenttype) | [Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. [Filter(multi eq)] |
+| [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) | [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) | The [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Amount
 
 > Amount to be payed. [Currency: SalesOrder.DocumentCurrency] [Required]
 
-_Type_: **[Amount](../data-types.md#Amount)**  
+_Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -59,9 +52,9 @@ _Supports Order By_: **False**
 
 > Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. [Required]
 
-_Type_: **[Crm.PaymentPlanDueDateSource](Crm.Sales.SalesOrderPaymentPlans.md#DueDateFormMethod)**  
+_Type_: **[PaymentPlanDueDateSource](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod)**  
 Generic enum type for PaymentPlanDueDateSource properties  
-_Allowed Values (Enum Members)_  
+_Allowed Values (Crm.PaymentPlanDueDateSource Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -94,6 +87,12 @@ _Supports Order By_: **False**
 
 _Front-End Recalc Expressions:_  
 `IIF((Convert(obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueStartDate)`
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### InstallmentNumber
 
 > Consequtive installment number. Used for identifying different payments generated according this payment plan. [Required]
@@ -161,7 +160,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.SalesOrder.PaymentAccount`
@@ -175,7 +173,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.SalesOrder.PaymentType`
@@ -184,11 +181,10 @@ _Front-End Recalc Expressions:_
 `obj.SalesOrder.PaymentType`
 ### SalesOrder
 
-> The [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#SalesOrder) to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]
+> The [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

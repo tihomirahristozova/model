@@ -9,19 +9,19 @@ History of document state changes. Entity: Gen_Document_State_Changes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.DocumentStateChanges.md#Id) | guid |  
-| [NewState](General.DocumentStateChanges.md#NewState) | [General.DocumentStateChangesRepository.NewState](General.DocumentStateChanges.md#NewState) | The new state after the change. [Required] [Filter(eq)] 
-| [SystemInitiated](General.DocumentStateChanges.md#SystemInitiated) | boolean | Specifies whether the state change was caused by system process or from user action. [Required] [Default(false)] [ReadOnly] 
-| [UpdateTime](General.DocumentStateChanges.md#UpdateTime) | datetime | The time when the change took effect. [Required] [Filter(ge;le)] [ORD] 
-| [UpdateUser](General.DocumentStateChanges.md#UpdateUser) | string | The login name of the user, who made the status change. [Required] [Filter(eq)] 
-| [Void](General.DocumentStateChanges.md#Void) | boolean | True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1.100.0) 
+| [Id](General.DocumentStateChanges.md#id) | guid |  
+| [NewState](General.DocumentStateChanges.md#newstate) | [NewState](General.DocumentStateChanges.md#newstate) | The new state after the change. [Required] [Filter(eq)] 
+| [SystemInitiated](General.DocumentStateChanges.md#systeminitiated) | boolean | Specifies whether the state change was caused by system process or from user action. [Required] [Default(false)] [ReadOnly] 
+| [UpdateTime](General.DocumentStateChanges.md#updatetime) | datetime | The time when the change took effect. [Required] [Filter(ge;le)] [ORD] 
+| [UpdateUser](General.DocumentStateChanges.md#updateuser) | string | The login name of the user, who made the status change. [Required] [Filter(eq)] 
+| [Void](General.DocumentStateChanges.md#void) | boolean | True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1.100.0) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentStateChanges.md#Document) | [General.Documents](General.Documents.md) | The document which has changed state. [Required] [Filter(multi eq)] [Owner] |
-| [UserStatus](General.DocumentStateChanges.md#UserStatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The new user status after the change. [Filter(multi eq)] |
+| [Document](General.DocumentStateChanges.md#document) | [General.Documents](General.Documents.md) | The document which has changed state. [Required] [Filter(multi eq)] [Owner] |
+| [UserStatus](General.DocumentStateChanges.md#userstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The new user status after the change. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -30,16 +30,15 @@ History of document state changes. Entity: Gen_Document_State_Changes
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### NewState
 
 > The new state after the change. [Required] [Filter(eq)]
 
-_Type_: **[General.DocumentStateChangesRepository.NewState](General.DocumentStateChanges.md#NewState)**  
-Allowed values for the [NewState](General.DocumentStateChanges.md#NewState) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[NewState](General.DocumentStateChanges.md#newstate)**  
+Allowed values for the [NewState](General.DocumentStateChanges.md#newstate) data attribute  
+_Allowed Values (General.DocumentStateChangesRepository.NewState Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -97,7 +96,6 @@ _Default Value_: **False**
 
 _Type_: **[General.Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### UserStatus
 
@@ -105,7 +103,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

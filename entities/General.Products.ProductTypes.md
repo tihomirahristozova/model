@@ -9,32 +9,39 @@ Categorization of the products by their nature. Entity: Gen_Product_Types
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.ProductTypes.md#Id) | guid |  
-| [IsDefault](General.Products.ProductTypes.md#IsDefault) | boolean | When checked specifies that this type is set by default for new products unless another type is specified in the product groups. [Required] [Default(false)] [Filter(eq)] 
-| [IsFixedAsset](General.Products.ProductTypes.md#IsFixedAsset) | boolean | True when assets are acquired or retired when products from this type are purchased or sold. [Required] [Default(false)] [Filter(eq)] 
-| [IsServiceActivityService](General.Products.ProductTypes.md#IsServiceActivityService) | boolean | True when the product corresponds to service used in service documents (like service activities). [Required] [Default(false)] [Filter(eq)] 
-| [IsServiced](General.Products.ProductTypes.md#IsServiced) | boolean | True when the products of this type create service agreements and can be serviced. [Required] [Default(false)] [Filter(eq)] 
-| [IsShipped](General.Products.ProductTypes.md#IsShipped) | boolean | True when the products from this type are being shipped after sales. [Required] [Default(false)] [Filter(eq)] 
-| [IsStocked](General.Products.ProductTypes.md#IsStocked) | boolean | True=The products of this type are stocked in a warehouse; false=otherwise (services). [Required] [Default(true)] [Filter(eq)] 
-| [LotAutoCreation](General.Products.ProductTypes.md#LotAutoCreation) | boolean | If checked specifies that lots are automatically created by the receiving orders with which the products are received. [Required] [Default(false)] 
-| [Code](General.Products.ProductTypes.md#Code) | string | The unique code of the ProductType. [Required] [Filter(eq)] 
-| [Name](General.Products.ProductTypes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this ProductType. [Required] [Filter(eq;like)] [ORD] 
+| [Code](General.Products.ProductTypes.md#code) | string | The unique code of the ProductType. [Required] [Filter(eq)] 
+| [Id](General.Products.ProductTypes.md#id) | guid |  
+| [IsDefault](General.Products.ProductTypes.md#isdefault) | boolean | When checked specifies that this type is set by default for new products unless another type is specified in the product groups. [Required] [Default(false)] [Filter(eq)] 
+| [IsFixedAsset](General.Products.ProductTypes.md#isfixedasset) | boolean | True when assets are acquired or retired when products from this type are purchased or sold. [Required] [Default(false)] [Filter(eq)] 
+| [IsServiceActivityService](General.Products.ProductTypes.md#isserviceactivityservice) | boolean | True when the product corresponds to service used in service documents (like service activities). [Required] [Default(false)] [Filter(eq)] 
+| [IsServiced](General.Products.ProductTypes.md#isserviced) | boolean | True when the products of this type create service agreements and can be serviced. [Required] [Default(false)] [Filter(eq)] 
+| [IsShipped](General.Products.ProductTypes.md#isshipped) | boolean | True when the products from this type are being shipped after sales. [Required] [Default(false)] [Filter(eq)] 
+| [IsStocked](General.Products.ProductTypes.md#isstocked) | boolean | True=The products of this type are stocked in a warehouse; false=otherwise (services). [Required] [Default(true)] [Filter(eq)] 
+| [LotAutoCreation](General.Products.ProductTypes.md#lotautocreation) | boolean | If checked specifies that lots are automatically created by the receiving orders with which the products are received. [Required] [Default(false)] 
+| [Name](General.Products.ProductTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this ProductType. [Required] [Filter(eq;like)] [ORD] 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| PurchaseInvoiceLineProperties | [General.Products.ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md) | List of [ProductTypePurchaseInvoiceLineProperty](General.Products.ProductTypePurchaseInvoiceLineProperties.md) child objects, based on the [General.Products.ProductTypePurchaseInvoiceLineProperty.ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#ProductType) back reference 
-| TaxGroups | [Crm.Pos.ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md) | List of [ProductTypeTaxGroup](Crm.Pos.ProductTypeTaxGroups.md) child objects, based on the [Crm.Pos.ProductTypeTaxGroup.ProductType](Crm.Pos.ProductTypeTaxGroups.md#ProductType) back reference 
+| PurchaseInvoiceLineProperties | [General.Products.ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md) | List of [ProductTypePurchaseInvoiceLineProperty](General.Products.ProductTypePurchaseInvoiceLineProperties.md) child objects, based on the [General.Products.ProductTypePurchaseInvoiceLineProperty.ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) back reference 
+| TaxGroups | [Crm.Pos.ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md) | List of [ProductTypeTaxGroup](Crm.Pos.ProductTypeTaxGroups.md) child objects, based on the [Crm.Pos.ProductTypeTaxGroup.ProductType](Crm.Pos.ProductTypeTaxGroups.md#producttype) back reference 
 
 
 ## Attribute Details
+
+### Code
+
+> The unique code of the ProductType. [Required] [Filter(eq)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
 
 ### Id
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsDefault
@@ -100,19 +107,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
-### Code
-
-> The unique code of the ProductType. [Required] [Filter(eq)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-
 ### Name
 
 > The name of this ProductType. [Required] [Filter(eq;like)] [ORD]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

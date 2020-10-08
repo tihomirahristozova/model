@@ -9,19 +9,12 @@ Types of costs. Entity: Cost_Types
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Cost.CostTypes.md#Id) | guid |  
-| [Code](Finance.Cost.CostTypes.md#Code) | string | Unique cost type code. Used for charting. [Required] [Filter(eq)] [ORD] 
-| [Name](Finance.Cost.CostTypes.md#Name) | string | Multilanguage cost type name. [Required] [Filter(like)] 
+| [Code](Finance.Cost.CostTypes.md#code) | string | Unique cost type code. Used for charting. [Required] [Filter(eq)] [ORD] 
+| [Id](Finance.Cost.CostTypes.md#id) | guid |  
+| [Name](Finance.Cost.CostTypes.md#name) | string | Multilanguage cost type name. [Required] [Filter(like)] 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Code
 
@@ -30,6 +23,12 @@ _Default Value_: **NewGuid**
 _Type_: **string**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Name
 

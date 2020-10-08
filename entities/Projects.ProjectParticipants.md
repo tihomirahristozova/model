@@ -9,16 +9,16 @@ Represents participant in a project, with a specific role. The same participant 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.ProjectParticipants.md#Id) | guid |  
-| [Notes](Projects.ProjectParticipants.md#Notes) | string (nullable) | Notes for this ProjectParticipant. 
+| [Id](Projects.ProjectParticipants.md#id) | guid |  
+| [Notes](Projects.ProjectParticipants.md#notes) | string (nullable) | Notes for this ProjectParticipant. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ParticipantParty](Projects.ProjectParticipants.md#ParticipantParty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party Id of the participant. [Required] [Filter(multi eq)] |
-| [Project](Projects.ProjectParticipants.md#Project) | [Projects.Projects](Projects.Projects.md) | The project in which the participant will participate. [Required] [Filter(multi eq)] [Owner] |
-| [ProjectTypeRole](Projects.ProjectParticipants.md#ProjectTypeRole) | [Projects.TypeRoles](Projects.TypeRoles.md) (nullable) | The role which the participant will play in the project. null means that the role is undefined. [Filter(multi eq)] |
+| [ParticipantParty](Projects.ProjectParticipants.md#participantparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party Id of the participant. [Required] [Filter(multi eq)] |
+| [Project](Projects.ProjectParticipants.md#project) | [Projects.Projects](Projects.Projects.md) | The project in which the participant will participate. [Required] [Filter(multi eq)] [Owner] |
+| [ProjectTypeRole](Projects.ProjectParticipants.md#projecttyperole) | [Projects.TypeRoles](Projects.TypeRoles.md) (nullable) | The role which the participant will play in the project. null means that the role is undefined. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -27,7 +27,6 @@ Represents participant in a project, with a specific role. The same participant 
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### Notes
@@ -47,7 +46,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Project
 
@@ -55,7 +53,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Projects.Projects](Projects.Projects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProjectTypeRole
 
@@ -63,7 +60,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Projects.TypeRoles](Projects.TypeRoles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

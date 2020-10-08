@@ -9,27 +9,20 @@ User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Communities.SocialPosts.md#Id) | guid |  
-| [CreationTimeUtc](Communities.SocialPosts.md#CreationTimeUtc) | datetime | The exact server time (in UTC), when the post was created. [Required] 
-| [LastInteractionTimeUtc](Communities.SocialPosts.md#LastInteractionTimeUtc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. [Required] 
-| [PostText](Communities.SocialPosts.md#PostText) | string | The post contents in clear text. [Required] 
+| [CreationTimeUtc](Communities.SocialPosts.md#creationtimeutc) | datetime | The exact server time (in UTC), when the post was created. [Required] 
+| [Id](Communities.SocialPosts.md#id) | guid |  
+| [LastInteractionTimeUtc](Communities.SocialPosts.md#lastinteractiontimeutc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. [Required] 
+| [PostText](Communities.SocialPosts.md#posttext) | string | The post contents in clear text. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [SocialGroup](Communities.SocialPosts.md#SocialGroup) | [Communities.SocialGroups](Communities.SocialGroups.md) | The group in which the post is made. [Required] [Filter(multi eq)] |
-| [User](Communities.SocialPosts.md#User) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who made the post. [Required] [Filter(multi eq)] |
+| [SocialGroup](Communities.SocialPosts.md#socialgroup) | [Communities.SocialGroups](Communities.SocialGroups.md) | The group in which the post is made. [Required] [Filter(multi eq)] |
+| [User](Communities.SocialPosts.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who made the post. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CreationTimeUtc
 
@@ -38,6 +31,12 @@ _Default Value_: **NewGuid**
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### LastInteractionTimeUtc
 
@@ -64,7 +63,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Communities.SocialGroups](Communities.SocialGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### User
 
@@ -72,7 +70,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

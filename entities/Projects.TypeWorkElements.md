@@ -9,28 +9,21 @@ The work elements of the work breakdown structure of each project type. Entity: 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.TypeWorkElements.md#Id) | guid |  
-| [FullPath](Projects.TypeWorkElements.md#FullPath) | string (nullable) | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. [Filter(eq;like)] [ReadOnly] 
-| [Notes](Projects.TypeWorkElements.md#Notes) | string (nullable) | Notes for this TypeWorkElement. 
-| [ParentFullPath](Projects.TypeWorkElements.md#ParentFullPath) | string (nullable) | The full path of the parent work element in this project type. null when this is root element. [Filter(eq;like)] 
-| [WorkElementCode](Projects.TypeWorkElements.md#WorkElementCode) | string | The code of the work element, unique among the sibling elements within the parent work element. [Required] [Filter(eq)] 
-| [WorkElementName](Projects.TypeWorkElements.md#WorkElementName) | string | The name of the work element, unique among the sibling elements within the parent work element. [Required] [Filter(eq)] 
+| [FullPath](Projects.TypeWorkElements.md#fullpath) | string (nullable) | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. [Filter(eq;like)] [ReadOnly] 
+| [Id](Projects.TypeWorkElements.md#id) | guid |  
+| [Notes](Projects.TypeWorkElements.md#notes) | string (nullable) | Notes for this TypeWorkElement. 
+| [ParentFullPath](Projects.TypeWorkElements.md#parentfullpath) | string (nullable) | The full path of the parent work element in this project type. null when this is root element. [Filter(eq;like)] 
+| [WorkElementCode](Projects.TypeWorkElements.md#workelementcode) | string | The code of the work element, unique among the sibling elements within the parent work element. [Required] [Filter(eq)] 
+| [WorkElementName](Projects.TypeWorkElements.md#workelementname) | string | The name of the work element, unique among the sibling elements within the parent work element. [Required] [Filter(eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectType](Projects.TypeWorkElements.md#ProjectType) | [Projects.ProjectTypes](Projects.ProjectTypes.md) | The [ProjectType](Projects.TypeWorkElements.md#ProjectType) to which this TypeWorkElement belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ProjectType](Projects.TypeWorkElements.md#projecttype) | [Projects.ProjectTypes](Projects.ProjectTypes.md) | The [ProjectType](Projects.TypeWorkElements.md#projecttype) to which this TypeWorkElement belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### FullPath
 
@@ -39,6 +32,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Notes
 
@@ -77,11 +76,10 @@ _Supports Order By_: **False**
 
 ### ProjectType
 
-> The [ProjectType](Projects.TypeWorkElements.md#ProjectType) to which this TypeWorkElement belongs. [Required] [Filter(multi eq)] [Owner]
+> The [ProjectType](Projects.TypeWorkElements.md#projecttype) to which this TypeWorkElement belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Projects.ProjectTypes](Projects.ProjectTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

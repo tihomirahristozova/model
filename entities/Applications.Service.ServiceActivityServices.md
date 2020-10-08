@@ -9,37 +9,30 @@ Contains the services, which were actually performed during the service activity
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Service.ServiceActivityServices.md#Id) | guid |  
-| [CoveredByGuarantee](Applications.Service.ServiceActivityServices.md#CoveredByGuarantee) | boolean | True when the performed service is covered by the guarantee. [Required] [Default(false)] 
-| [LineNo](Applications.Service.ServiceActivityServices.md#LineNo) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] 
-| [Notes](Applications.Service.ServiceActivityServices.md#Notes) | string (nullable) | Short notes for the service. 
-| [Quantity](Applications.Service.ServiceActivityServices.md#Quantity) | [Quantity](../data-types.md#Quantity) | The quantity of the service in the measurement unit of the service. [Unit: Service.MeasurementUnit] [Required] [Default(1)] 
-| [ServiceName](Applications.Service.ServiceActivityServices.md#ServiceName) | string | Description of the conducted service. The description may vary (contain additional information) from the standart name of the service. [Required] [Filter(like)] 
+| [CoveredByGuarantee](Applications.Service.ServiceActivityServices.md#coveredbyguarantee) | boolean | True when the performed service is covered by the guarantee. [Required] [Default(false)] 
+| [Id](Applications.Service.ServiceActivityServices.md#id) | guid |  
+| [LineNo](Applications.Service.ServiceActivityServices.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] 
+| [Notes](Applications.Service.ServiceActivityServices.md#notes) | string (nullable) | Short notes for the service. 
+| [Quantity](Applications.Service.ServiceActivityServices.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the service in the measurement unit of the service. [Unit: Service.MeasurementUnit] [Required] [Default(1)] 
+| [ServiceName](Applications.Service.ServiceActivityServices.md#servicename) | string | Description of the conducted service. The description may vary (contain additional information) from the standart name of the service. [Required] [Filter(like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PerformedByPerson](Applications.Service.ServiceActivityServices.md#PerformedByPerson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The id of the person from the enterprise company that actually performed the work. [Filter(multi eq)] |
-| [ServiceActivity](Applications.Service.ServiceActivityServices.md#ServiceActivity) | [Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md) | The [ServiceActivity](Applications.Service.ServiceActivityServices.md#ServiceActivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Service](Applications.Service.ServiceActivityServices.md#Service) | [Applications.Service.Services](Applications.Service.Services.md) | The type of service that is conducted. [Required] [Filter(multi eq)] |
-| [ServiceObject](Applications.Service.ServiceActivityServices.md#ServiceObject) | [Applications.Service.ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | The service object that was serviced. null means that it is unknown or N/A. [Filter(multi eq)] |
+| [PerformedByPerson](Applications.Service.ServiceActivityServices.md#performedbyperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The id of the person from the enterprise company that actually performed the work. [Filter(multi eq)] |
+| [Service](Applications.Service.ServiceActivityServices.md#service) | [Applications.Service.Services](Applications.Service.Services.md) | The type of service that is conducted. [Required] [Filter(multi eq)] |
+| [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) | [Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md) | The [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ServiceObject](Applications.Service.ServiceActivityServices.md#serviceobject) | [Applications.Service.ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | The service object that was serviced. null means that it is unknown or N/A. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| ServiceActivityAgreedServices | [Applications.Service.ServiceActivityAgreedServices](Applications.Service.ServiceActivityAgreedServices.md) | List of [ServiceActivityAgreedService](Applications.Service.ServiceActivityAgreedServices.md) child objects, based on the [Applications.Service.ServiceActivityAgreedService.ServiceActivityService](Applications.Service.ServiceActivityAgreedServices.md#ServiceActivityService) back reference 
+| ServiceActivityAgreedServices | [Applications.Service.ServiceActivityAgreedServices](Applications.Service.ServiceActivityAgreedServices.md) | List of [ServiceActivityAgreedService](Applications.Service.ServiceActivityAgreedServices.md) child objects, based on the [Applications.Service.ServiceActivityAgreedService.ServiceActivityService](Applications.Service.ServiceActivityAgreedServices.md#serviceactivityservice) back reference 
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### CoveredByGuarantee
 
@@ -49,6 +42,12 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### LineNo
 
@@ -75,7 +74,7 @@ _Supports Order By_: **False**
 
 > The quantity of the service in the measurement unit of the service. [Unit: Service.MeasurementUnit] [Required] [Default(1)]
 
-_Type_: **[Quantity](../data-types.md#Quantity)**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -99,15 +98,6 @@ _Front-End Recalc Expressions:_
 
 _Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-
-### ServiceActivity
-
-> The [ServiceActivity](Applications.Service.ServiceActivityServices.md#ServiceActivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] [Owner]
-
-_Type_: **[Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Service
 
@@ -115,7 +105,13 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Service.Services](Applications.Service.Services.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+
+### ServiceActivity
+
+> The [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] [Owner]
+
+_Type_: **[Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceObject
 
@@ -123,7 +119,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Applications.Service.ServiceObjects](Applications.Service.ServiceObjects.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
 `obj.ServiceActivity.DefaultServiceObject`

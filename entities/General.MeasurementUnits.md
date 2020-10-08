@@ -9,36 +9,37 @@ Contains all measurement units, grouped in categories. Each category has one bas
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.MeasurementUnits.md#Id) | guid |  
-| [Description](General.MeasurementUnits.md#Description) | [MultilanguageString](../data-types.md#MultilanguageString) (nullable) | Full multi-language description of the measurement unit. 
-| [Divisor](General.MeasurementUnits.md#Divisor) | decimal | Divisor of the relative value of the measurement unit against other units (divisor when converting to base). [Required] [Default(1)] 
-| [IsDefaultUnit](General.MeasurementUnits.md#IsDefaultUnit) | boolean | True if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category. [Required] [Default(false)] [Filter(eq)] 
-| [Code](General.MeasurementUnits.md#Code) | string (nullable) | When not null, contains unique measurement unit code. [Filter(eq;like)] [ORD] 
-| [Name](General.MeasurementUnits.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Name of the measurement unit. [Required] [Filter(eq;like)] [ORD] 
-| [Multiplier](General.MeasurementUnits.md#Multiplier) | decimal | Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base). [Required] [Default(1)] 
-| [SystemUnit](General.MeasurementUnits.md#SystemUnit) | [General.MeasurementUnitsRepository.SystemUnit](General.MeasurementUnits.md#SystemUnit) (nullable) | Not null only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH. [Filter(eq;like)] 
+| [Code](General.MeasurementUnits.md#code) | string (nullable) | When not null, contains unique measurement unit code. [Filter(eq;like)] [ORD] 
+| [Description](General.MeasurementUnits.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Full multi-language description of the measurement unit. 
+| [Divisor](General.MeasurementUnits.md#divisor) | decimal | Divisor of the relative value of the measurement unit against other units (divisor when converting to base). [Required] [Default(1)] 
+| [Id](General.MeasurementUnits.md#id) | guid |  
+| [IsDefaultUnit](General.MeasurementUnits.md#isdefaultunit) | boolean | True if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category. [Required] [Default(false)] [Filter(eq)] 
+| [Multiplier](General.MeasurementUnits.md#multiplier) | decimal | Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base). [Required] [Default(1)] 
+| [Name](General.MeasurementUnits.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the measurement unit. [Required] [Filter(eq;like)] [ORD] 
+| [SystemUnit](General.MeasurementUnits.md#systemunit) | [SystemUnit](General.MeasurementUnits.md#systemunit) (nullable) | Not null only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH. [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MeasurementCategory](General.MeasurementUnits.md#MeasurementCategory) | [General.MeasurementCategories](General.MeasurementCategories.md) | Base measurement category Id. [Required] [Filter(multi eq)] [Owner] |
+| [MeasurementCategory](General.MeasurementUnits.md#measurementcategory) | [General.MeasurementCategories](General.MeasurementCategories.md) | Base measurement category Id. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
 
-### Id
+### Code
 
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
+> When not null, contains unique measurement unit code. [Filter(eq;like)] [ORD]
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
 
 ### Description
 
 > Full multi-language description of the measurement unit.
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString) (nullable)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -51,6 +52,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **1**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 ### IsDefaultUnit
 
 > True if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category. [Required] [Default(false)] [Filter(eq)]
@@ -59,22 +66,6 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
-
-### Code
-
-> When not null, contains unique measurement unit code. [Filter(eq;like)] [ORD]
-
-_Type_: **string (nullable)**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-
-### Name
-
-> Name of the measurement unit. [Required] [Filter(eq;like)] [ORD]
-
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
 
 ### Multiplier
 
@@ -85,13 +76,21 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **1**  
 
+### Name
+
+> Name of the measurement unit. [Required] [Filter(eq;like)] [ORD]
+
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
+
 ### SystemUnit
 
 > Not null only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH. [Filter(eq;like)]
 
-_Type_: **[General.MeasurementUnitsRepository.SystemUnit](General.MeasurementUnits.md#SystemUnit) (nullable)**  
-Allowed values for the [SystemUnit](General.MeasurementUnits.md#SystemUnit) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[SystemUnit](General.MeasurementUnits.md#systemunit) (nullable)**  
+Allowed values for the [SystemUnit](General.MeasurementUnits.md#systemunit) data attribute  
+_Allowed Values (General.MeasurementUnitsRepository.SystemUnit Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -116,7 +115,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.MeasurementCategories](General.MeasurementCategories.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

@@ -9,27 +9,34 @@ Contains the flow Nodes of the process model. Entity: Bpm_Process_Nodes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.ProcessNodes.md#Id) | guid |  
-| [InstructionsHtml](Systems.Bpm.ProcessNodes.md#InstructionsHtml) | string (nullable) | Detailed instructions to the executor in HTML format. [Filter(eq;like)] 
-| [NodeType](Systems.Bpm.ProcessNodes.md#NodeType) | [Systems.Bpm.ProcessNodesRepository.NodeType](Systems.Bpm.ProcessNodes.md#NodeType) | Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. [Required] [Filter(eq;like)] 
-| [Code](Systems.Bpm.ProcessNodes.md#Code) | string | Node code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)] 
-| [Name](Systems.Bpm.ProcessNodes.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | Multilanguage process name. [Required] [Filter(eq;like)] 
+| [Code](Systems.Bpm.ProcessNodes.md#code) | string | Node code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)] 
+| [Id](Systems.Bpm.ProcessNodes.md#id) | guid |  
+| [InstructionsHtml](Systems.Bpm.ProcessNodes.md#instructionshtml) | string (nullable) | Detailed instructions to the executor in HTML format. [Filter(eq;like)] 
+| [Name](Systems.Bpm.ProcessNodes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage process name. [Required] [Filter(eq;like)] 
+| [NodeType](Systems.Bpm.ProcessNodes.md#nodetype) | [NodeType](Systems.Bpm.ProcessNodes.md#nodetype) | Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. [Required] [Filter(eq;like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Process](Systems.Bpm.ProcessNodes.md#Process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process, to which this Node belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ProcessLane](Systems.Bpm.ProcessNodes.md#ProcessLane) | [Systems.Bpm.ProcessLanes](Systems.Bpm.ProcessLanes.md) | The process lane to which this Node belongs. [Required] [Filter(multi eq)] |
+| [Process](Systems.Bpm.ProcessNodes.md#process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process, to which this Node belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ProcessLane](Systems.Bpm.ProcessNodes.md#processlane) | [Systems.Bpm.ProcessLanes](Systems.Bpm.ProcessLanes.md) | The process lane to which this Node belongs. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
+
+### Code
+
+> Node code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)]
+
+_Type_: **string**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
 
 ### Id
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### InstructionsHtml
@@ -40,13 +47,21 @@ _Type_: **string (nullable)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
+### Name
+
+> Multilanguage process name. [Required] [Filter(eq;like)]
+
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
 ### NodeType
 
 > Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. [Required] [Filter(eq;like)]
 
-_Type_: **[Systems.Bpm.ProcessNodesRepository.NodeType](Systems.Bpm.ProcessNodes.md#NodeType)**  
-Allowed values for the [NodeType](Systems.Bpm.ProcessNodes.md#NodeType) data attribute  
-_Allowed Values (Enum Members)_  
+_Type_: **[NodeType](Systems.Bpm.ProcessNodes.md#nodetype)**  
+Allowed values for the [NodeType](Systems.Bpm.ProcessNodes.md#nodetype) data attribute  
+_Allowed Values (Systems.Bpm.ProcessNodesRepository.NodeType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -55,22 +70,6 @@ _Allowed Values (Enum Members)_
 | Gateway | Gateway value. Stored as 'G'. <br /> _Database Value:_ 'G' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Gateway' |
 | Artifact | Artifact value. Stored as 'C'. <br /> _Database Value:_ 'C' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Artifact' |
 
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-
-### Code
-
-> Node code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)]
-
-_Type_: **string**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-
-### Name
-
-> Multilanguage process name. [Required] [Filter(eq;like)]
-
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -83,7 +82,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Bpm.Processes](Systems.Bpm.Processes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### ProcessLane
 
@@ -91,7 +89,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Systems.Bpm.ProcessLanes](Systems.Bpm.ProcessLanes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

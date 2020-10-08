@@ -9,15 +9,15 @@ Valuation models stand for the different valuations an asset can have. For examp
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Assets.ValuationModels.md#Id) | guid |  
-| [IsSystem](Finance.Assets.ValuationModels.md#IsSystem) | boolean | Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [Name](Finance.Assets.ValuationModels.md#Name) | [MultilanguageString](../data-types.md#MultilanguageString) | The name of this ValuationModel. [Required] [Filter(like)] 
+| [Id](Finance.Assets.ValuationModels.md#id) | guid |  
+| [IsSystem](Finance.Assets.ValuationModels.md#issystem) | boolean | Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [Name](Finance.Assets.ValuationModels.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this ValuationModel. [Required] [Filter(like)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultDepreciationMethod](Finance.Assets.ValuationModels.md#DefaultDepreciationMethod) | [Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable) | Obsolete. Not used. [Filter(multi eq)] |
+| [DefaultDepreciationMethod](Finance.Assets.ValuationModels.md#defaultdepreciationmethod) | [Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable) | Obsolete. Not used. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -26,7 +26,6 @@ Valuation models stand for the different valuations an asset can have. For examp
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 _Default Value_: **NewGuid**  
 
 ### IsSystem
@@ -42,7 +41,7 @@ _Default Value_: **False**
 
 > The name of this ValuationModel. [Required] [Filter(like)]
 
-_Type_: **[MultilanguageString](../data-types.md#MultilanguageString)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -55,7 +54,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

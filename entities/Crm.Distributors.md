@@ -9,24 +9,17 @@ Distributors are external for the enterprise persons or companies who obtain sal
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Distributors.md#Id) | guid |  
-| [FlatCommisionPercentage](Crm.Distributors.md#FlatCommisionPercentage) | decimal | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations. [Required] [Default(0)] 
+| [FlatCommisionPercentage](Crm.Distributors.md#flatcommisionpercentage) | decimal | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations. [Required] [Default(0)] 
+| [Id](Crm.Distributors.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](Crm.Distributors.md#Party) | [General.Contacts.Parties](General.Contacts.Parties.md) | Base party Id. [Required] [Filter(multi eq)] [Owner] |
+| [Party](Crm.Distributors.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | Base party Id. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### FlatCommisionPercentage
 
@@ -37,6 +30,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **0**  
 
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
 
 ## Reference Details
 
@@ -46,7 +45,6 @@ _Default Value_: **0**
 
 _Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

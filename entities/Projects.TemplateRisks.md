@@ -9,27 +9,20 @@ Contains project risks, which will be copied to projects, based on the template.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.TemplateRisks.md#Id) | guid |  
-| [Description](Projects.TemplateRisks.md#Description) | string (nullable) | The description of this TemplateRisk. 
-| [ImpactPercent](Projects.TemplateRisks.md#ImpactPercent) | decimal | The impact of the risk to the project, expressed as percentage of the total project value. [Required] [Default(0)] 
-| [ProbabilityPercent](Projects.TemplateRisks.md#ProbabilityPercent) | decimal | The probability of the risk occurring. [Required] [Default(0)] 
-| [RiskName](Projects.TemplateRisks.md#RiskName) | string | The name of the risk. [Required] 
+| [Description](Projects.TemplateRisks.md#description) | string (nullable) | The description of this TemplateRisk. 
+| [Id](Projects.TemplateRisks.md#id) | guid |  
+| [ImpactPercent](Projects.TemplateRisks.md#impactpercent) | decimal | The impact of the risk to the project, expressed as percentage of the total project value. [Required] [Default(0)] 
+| [ProbabilityPercent](Projects.TemplateRisks.md#probabilitypercent) | decimal | The probability of the risk occurring. [Required] [Default(0)] 
+| [RiskName](Projects.TemplateRisks.md#riskname) | string | The name of the risk. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectTemplate](Projects.TemplateRisks.md#ProjectTemplate) | [Projects.Templates](Projects.Templates.md) | The [Template](Projects.Templates.md) to which this TemplateRisk belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ProjectTemplate](Projects.TemplateRisks.md#projecttemplate) | [Projects.Templates](Projects.Templates.md) | The [Template](Projects.Templates.md) to which this TemplateRisk belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Description
 
@@ -38,6 +31,12 @@ _Default Value_: **NewGuid**
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### ImpactPercent
 
@@ -74,7 +73,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Projects.Templates](Projects.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 

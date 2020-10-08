@@ -9,32 +9,25 @@ Contains the calculated costs allocated to the different Cost Types. Entity: Cos
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Cost.CalculationCosts.md#Id) | guid |  
-| [Amount](Finance.Cost.CalculationCosts.md#Amount) | decimal | The allocated amount of costs in the currency of the calculation. [Required] [Default(0)] 
-| [LineNo](Finance.Cost.CalculationCosts.md#LineNo) | int32 | Consecutive number of the line within the calculation. [Required] 
-| [ProjectId](Finance.Cost.CalculationCosts.md#ProjectId) | guid (nullable) | The Project, which absorbed the cost. [Filter(multi eq)] 
+| [Amount](Finance.Cost.CalculationCosts.md#amount) | decimal | The allocated amount of costs in the currency of the calculation. [Required] [Default(0)] 
+| [Id](Finance.Cost.CalculationCosts.md#id) | guid |  
+| [LineNo](Finance.Cost.CalculationCosts.md#lineno) | int32 | Consecutive number of the line within the calculation. [Required] 
+| [ProjectId](Finance.Cost.CalculationCosts.md#projectid) | guid (nullable) | The Project, which absorbed the cost. [Filter(multi eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Calculation](Finance.Cost.CalculationCosts.md#Calculation) | [Finance.Cost.Calculations](Finance.Cost.Calculations.md) | The [Calculation](Finance.Cost.CalculationCosts.md#Calculation) to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner] |
-| [CostCenter](Finance.Cost.CalculationCosts.md#CostCenter) | [Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable) | The Cost Center, which absorbed the cost. [Filter(multi eq)] |
-| [CostType](Finance.Cost.CalculationCosts.md#CostType) | [Finance.Cost.CostTypes](Finance.Cost.CostTypes.md) | The Cost Type, which absorbed the cost. [Required] [Filter(multi eq)] |
-| [Lot](Finance.Cost.CalculationCosts.md#Lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, which absorbed the cost. [Filter(multi eq)] |
-| [Product](Finance.Cost.CalculationCosts.md#Product) | [General.Products.Products](General.Products.Products.md) (nullable) | The Product, which absorbed the cost. [Filter(multi eq)] |
-| [SalesOrder](Finance.Cost.CalculationCosts.md#SalesOrder) | [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | The Sales Order, which absorbed the cost. [Filter(multi eq)] |
-| [Workgroup](Finance.Cost.CalculationCosts.md#Workgroup) | [Production.Resources.Workgroups](Production.Resources.Workgroups.md) (nullable) | The Workgroup, which absorbed the cost. [Filter(multi eq)] |
+| [Calculation](Finance.Cost.CalculationCosts.md#calculation) | [Finance.Cost.Calculations](Finance.Cost.Calculations.md) | The [Calculation](Finance.Cost.CalculationCosts.md#calculation) to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CostCenter](Finance.Cost.CalculationCosts.md#costcenter) | [Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable) | The Cost Center, which absorbed the cost. [Filter(multi eq)] |
+| [CostType](Finance.Cost.CalculationCosts.md#costtype) | [Finance.Cost.CostTypes](Finance.Cost.CostTypes.md) | The Cost Type, which absorbed the cost. [Required] [Filter(multi eq)] |
+| [Lot](Finance.Cost.CalculationCosts.md#lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, which absorbed the cost. [Filter(multi eq)] |
+| [Product](Finance.Cost.CalculationCosts.md#product) | [General.Products.Products](General.Products.Products.md) (nullable) | The Product, which absorbed the cost. [Filter(multi eq)] |
+| [SalesOrder](Finance.Cost.CalculationCosts.md#salesorder) | [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | The Sales Order, which absorbed the cost. [Filter(multi eq)] |
+| [Workgroup](Finance.Cost.CalculationCosts.md#workgroup) | [Production.Resources.Workgroups](Production.Resources.Workgroups.md) (nullable) | The Workgroup, which absorbed the cost. [Filter(multi eq)] |
 
 
 ## Attribute Details
-
-### Id
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **NewGuid**  
 
 ### Amount
 
@@ -44,6 +37,12 @@ _Type_: **decimal**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
+
+### Id
+
+_Type_: **guid**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### LineNo
 
@@ -64,18 +63,16 @@ _Front-End Recalc Expressions:_
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details
 
 ### Calculation
 
-> The [Calculation](Finance.Cost.CalculationCosts.md#Calculation) to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner]
+> The [Calculation](Finance.Cost.CalculationCosts.md#calculation) to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Finance.Cost.Calculations](Finance.Cost.Calculations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### CostCenter
 
@@ -83,7 +80,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### CostType
 
@@ -91,7 +87,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Finance.Cost.CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Lot
 
@@ -99,7 +94,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Product
 
@@ -107,7 +101,6 @@ _Supports Order By_: **False**
 
 _Type_: **[General.Products.Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### SalesOrder
 
@@ -115,7 +108,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 ### Workgroup
 
@@ -123,7 +115,6 @@ _Supports Order By_: **False**
 
 _Type_: **[Production.Resources.Workgroups](Production.Resources.Workgroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
 
 
 
