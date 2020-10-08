@@ -1,0 +1,1070 @@
+ - name: Applications
+  items:
+  - name: AssetManagement
+   items:
+   - name: MaintenanceOrderLines
+     href: Applications.AssetManagement.MaintenanceOrderLines.md
+   - name: MaintenanceOrders
+     href: Applications.AssetManagement.MaintenanceOrders.md
+   - name: MaintenanceTypeGroups
+     href: Applications.AssetManagement.MaintenanceTypeGroups.md
+   - name: MaintenanceTypes
+     href: Applications.AssetManagement.MaintenanceTypes.md
+   - name: ManagedAssetGroups
+     href: Applications.AssetManagement.ManagedAssetGroups.md
+   - name: ManagedAssetLocations
+     href: Applications.AssetManagement.ManagedAssetLocations.md
+   - name: ManagedAssetMaintenanceSchedules
+     href: Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md
+   - name: ManagedAssetParameterValues
+     href: Applications.AssetManagement.ManagedAssetParameterValues.md
+   - name: ManagedAssets
+     href: Applications.AssetManagement.ManagedAssets.md
+   - name: ManagedAssetScheduledMaintenances
+     href: Applications.AssetManagement.ManagedAssetScheduledMaintenances.md
+   - name: ManagedAssetTypeMaintenanceTypes
+     href: Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md
+   - name: ManagedAssetTypes
+     href: Applications.AssetManagement.ManagedAssetTypes.md
+   - name: ManagedAssetTypeTrackedParameters
+     href: Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md
+   - name: ServiceCenters
+     href: Applications.AssetManagement.ServiceCenters.md
+   - name: TrackedParameters
+     href: Applications.AssetManagement.TrackedParameters.md
+  - name: Cms
+   items:
+   - name: NewsWebModuleArticles
+     href: Applications.Cms.NewsWebModuleArticles.md
+   - name: NewsWebModules
+     href: Applications.Cms.NewsWebModules.md
+   - name: ProductCatalogWebModules
+     href: Applications.Cms.ProductCatalogWebModules.md
+   - name: StaticWebModules
+     href: Applications.Cms.StaticWebModules.md
+   - name: WebModules
+     href: Applications.Cms.WebModules.md
+   - name: WebSiteLanguages
+     href: Applications.Cms.WebSiteLanguages.md
+   - name: WebSites
+     href: Applications.Cms.WebSites.md
+  - name: DataWarehouse
+   items:
+   - name: DataMeasureGroups
+     href: Applications.DataWarehouse.DataMeasureGroups.md
+   - name: DataMeasures
+     href: Applications.DataWarehouse.DataMeasures.md
+   - name: DataValues
+     href: Applications.DataWarehouse.DataValues.md
+  - name: Fleet
+   items:
+   - name: CrewMembers
+     href: Applications.Fleet.CrewMembers.md
+   - name: Crews
+     href: Applications.Fleet.Crews.md
+   - name: EquipmentTypes
+     href: Applications.Fleet.EquipmentTypes.md
+   - name: MaintenancePlans
+     href: Applications.Fleet.MaintenancePlans.md
+   - name: MaintenanceProfilePlans
+     href: Applications.Fleet.MaintenanceProfilePlans.md
+   - name: MaintenanceProfiles
+     href: Applications.Fleet.MaintenanceProfiles.md
+   - name: Trips
+     href: Applications.Fleet.Trips.md
+   - name: TripSegments
+     href: Applications.Fleet.TripSegments.md
+   - name: VehicleAlerts
+     href: Applications.Fleet.VehicleAlerts.md
+   - name: VehicleEquipment
+     href: Applications.Fleet.VehicleEquipment.md
+   - name: VehicleLocationHistoryRecords
+     href: Applications.Fleet.VehicleLocationHistoryRecords.md
+   - name: VehicleMaintenancePlanAssignments
+     href: Applications.Fleet.VehicleMaintenancePlanAssignments.md
+   - name: VehicleObdTroubles
+     href: Applications.Fleet.VehicleObdTroubles.md
+   - name: Vehicles
+     href: Applications.Fleet.Vehicles.md
+   - name: VehicleSets
+     href: Applications.Fleet.VehicleSets.md
+   - name: VehicleSetVehicles
+     href: Applications.Fleet.VehicleSetVehicles.md
+  - name: Mail
+   items:
+   - name: Boxes
+     href: Applications.Mail.Boxes.md
+   - name: BoxFolders
+     href: Applications.Mail.BoxFolders.md
+   - name: MessageAttachments
+     href: Applications.Mail.MessageAttachments.md
+   - name: Messages
+     href: Applications.Mail.Messages.md
+  - name: PersonalData
+   items:
+   - name: DataSubjectRightRequests
+     href: Applications.PersonalData.DataSubjectRightRequests.md
+   - name: JointControllers
+     href: Applications.PersonalData.JointControllers.md
+   - name: PersonalDataProcesses
+     href: Applications.PersonalData.PersonalDataProcesses.md
+   - name: PersonalDataProcessRecipients
+     href: Applications.PersonalData.PersonalDataProcessRecipients.md
+   - name: ProcessingConsents
+     href: Applications.PersonalData.ProcessingConsents.md
+  - name: Rental
+   items:
+   - name: AssetConsumables
+     href: Applications.Rental.AssetConsumables.md
+   - name: AssetGroups
+     href: Applications.Rental.AssetGroups.md
+   - name: Assets
+     href: Applications.Rental.Assets.md
+   - name: AssetTypeConsumables
+     href: Applications.Rental.AssetTypeConsumables.md
+   - name: AssetTypeProperties
+     href: Applications.Rental.AssetTypeProperties.md
+   - name: AssetTypes
+     href: Applications.Rental.AssetTypes.md
+   - name: LeaseContractLineConsumables
+     href: Applications.Rental.LeaseContractLineConsumables.md
+   - name: LeaseContractLines
+     href: Applications.Rental.LeaseContractLines.md
+   - name: LeaseContracts
+     href: Applications.Rental.LeaseContracts.md
+   - name: TransactionLines
+     href: Applications.Rental.TransactionLines.md
+   - name: Transactions
+     href: Applications.Rental.Transactions.md
+   - name: TransactionTemplates
+     href: Applications.Rental.TransactionTemplates.md
+  - name: Service
+   items:
+   - name: ServiceActivities
+     href: Applications.Service.ServiceActivities.md
+   - name: ServiceActivityAgreedMaterials
+     href: Applications.Service.ServiceActivityAgreedMaterials.md
+   - name: ServiceActivityAgreedServices
+     href: Applications.Service.ServiceActivityAgreedServices.md
+   - name: ServiceActivityMaterials
+     href: Applications.Service.ServiceActivityMaterials.md
+   - name: ServiceActivityServices
+     href: Applications.Service.ServiceActivityServices.md
+   - name: ServiceAgreementLines
+     href: Applications.Service.ServiceAgreementLines.md
+   - name: ServiceAgreementMaterials
+     href: Applications.Service.ServiceAgreementMaterials.md
+   - name: ServiceAgreements
+     href: Applications.Service.ServiceAgreements.md
+   - name: ServiceAgreementServices
+     href: Applications.Service.ServiceAgreementServices.md
+   - name: ServiceInvoicing
+     href: Applications.Service.ServiceInvoicing.md
+   - name: ServiceObjects
+     href: Applications.Service.ServiceObjects.md
+   - name: ServiceObjectTypes
+     href: Applications.Service.ServiceObjectTypes.md
+   - name: ServiceOrderLines
+     href: Applications.Service.ServiceOrderLines.md
+   - name: ServiceOrders
+     href: Applications.Service.ServiceOrders.md
+   - name: Services
+     href: Applications.Service.Services.md
+   - name: ServiceTypes
+     href: Applications.Service.ServiceTypes.md
+  - name: Telephony
+   items:
+   - name: CallDetails
+     href: Applications.Telephony.CallDetails.md
+ - name: Communities
+  items:
+  - name: Notifications
+    href: Communities.Notifications.md
+  - name: NotificationSettings
+    href: Communities.NotificationSettings.md
+  - name: SocialComments
+    href: Communities.SocialComments.md
+  - name: SocialGroupMembers
+    href: Communities.SocialGroupMembers.md
+  - name: SocialGroups
+    href: Communities.SocialGroups.md
+  - name: SocialPosts
+    href: Communities.SocialPosts.md
+  - name: SocialReactions
+    href: Communities.SocialReactions.md
+  - name: SocialReactionsSummary
+    href: Communities.SocialReactionsSummary.md
+ - name: Crm
+  items:
+  - name: CustomerProducts
+    href: Crm.CustomerProducts.md
+  - name: Customers
+    href: Crm.Customers.md
+  - name: CustomerTypes
+    href: Crm.CustomerTypes.md
+  - name: Dealers
+    href: Crm.Dealers.md
+  - name: DiscountTypes
+    href: Crm.DiscountTypes.md
+  - name: Distribution
+   items:
+   - name: SalesPersonGroups
+     href: Crm.Distribution.SalesPersonGroups.md
+   - name: SalesPersonTargetLines
+     href: Crm.Distribution.SalesPersonTargetLines.md
+   - name: SalesPersonTargets
+     href: Crm.Distribution.SalesPersonTargets.md
+  - name: Distributors
+    href: Crm.Distributors.md
+  - name: Invoicing
+   items:
+   - name: InvoiceLines
+     href: Crm.Invoicing.InvoiceLines.md
+   - name: InvoiceOrderLines
+     href: Crm.Invoicing.InvoiceOrderLines.md
+   - name: InvoiceOrders
+     href: Crm.Invoicing.InvoiceOrders.md
+   - name: Invoices
+     href: Crm.Invoicing.Invoices.md
+   - name: InvoicesOptions
+     href: Crm.Invoicing.InvoicesOptions.md
+  - name: LineDiscounts
+    href: Crm.LineDiscounts.md
+  - name: Marketing
+   items:
+   - name: BonusProgramProducts
+     href: Crm.Marketing.BonusProgramProducts.md
+   - name: BonusPrograms
+     href: Crm.Marketing.BonusPrograms.md
+   - name: Campaigns
+     href: Crm.Marketing.Campaigns.md
+   - name: DistributionChannels
+     href: Crm.Marketing.DistributionChannels.md
+   - name: ForecastItems
+     href: Crm.Marketing.ForecastItems.md
+   - name: MarketingActivities
+     href: Crm.Marketing.MarketingActivities.md
+   - name: ProductDistributionChannels
+     href: Crm.Marketing.ProductDistributionChannels.md
+   - name: TargetGroupMembers
+     href: Crm.Marketing.TargetGroupMembers.md
+   - name: TargetGroups
+     href: Crm.Marketing.TargetGroups.md
+  - name: Pos
+   items:
+   - name: Devices
+     href: Crm.Pos.Devices.md
+   - name: Locations
+     href: Crm.Pos.Locations.md
+   - name: Operators
+     href: Crm.Pos.Operators.md
+   - name: ProductTypeTaxGroups
+     href: Crm.Pos.ProductTypeTaxGroups.md
+   - name: Roles
+     href: Crm.Pos.Roles.md
+   - name: Sequences
+     href: Crm.Pos.Sequences.md
+   - name: Terminals
+     href: Crm.Pos.Terminals.md
+  - name: Presales
+   items:
+   - name: Deals
+     href: Crm.Presales.Deals.md
+   - name: OfferLines
+     href: Crm.Presales.OfferLines.md
+   - name: Offers
+     href: Crm.Presales.Offers.md
+   - name: OffersOptions
+     href: Crm.Presales.OffersOptions.md
+  - name: PriceLists
+    href: Crm.PriceLists.md
+  - name: PriceTypes
+    href: Crm.PriceTypes.md
+  - name: Pricing
+   items:
+   - name: PricingModelCosts
+     href: Crm.Pricing.PricingModelCosts.md
+   - name: PricingModelPriceLists
+     href: Crm.Pricing.PricingModelPriceLists.md
+   - name: PricingModels
+     href: Crm.Pricing.PricingModels.md
+  - name: ProductPrices
+    href: Crm.ProductPrices.md
+  - name: PromotionalPackageLines
+    href: Crm.PromotionalPackageLines.md
+  - name: PromotionalPackages
+    href: Crm.PromotionalPackages.md
+  - name: Sales
+   items:
+   - name: DefaultSalesOrderDocumentProperties
+     href: Crm.Sales.DefaultSalesOrderDocumentProperties.md
+   - name: DefaultSalesOrderPaymentPlans
+     href: Crm.Sales.DefaultSalesOrderPaymentPlans.md
+   - name: DocumentTypePaymentOptions
+     href: Crm.Sales.DocumentTypePaymentOptions.md
+   - name: SalesOrderLines
+     href: Crm.Sales.SalesOrderLines.md
+   - name: SalesOrderPaymentOrdersTemplates
+     href: Crm.Sales.SalesOrderPaymentOrdersTemplates.md
+   - name: SalesOrderPaymentPlans
+     href: Crm.Sales.SalesOrderPaymentPlans.md
+   - name: SalesOrderPromotionalPackages
+     href: Crm.Sales.SalesOrderPromotionalPackages.md
+   - name: SalesOrders
+     href: Crm.Sales.SalesOrders.md
+   - name: SalesOrdersOptions
+     href: Crm.Sales.SalesOrdersOptions.md
+  - name: SalesPersons
+    href: Crm.SalesPersons.md
+ - name: Finance
+  items:
+  - name: Accounting
+   items:
+   - name: AccountGroups
+     href: Finance.Accounting.AccountGroups.md
+   - name: AccountingVoucherLines
+     href: Finance.Accounting.AccountingVoucherLines.md
+   - name: AccountingVouchers
+     href: Finance.Accounting.AccountingVouchers.md
+   - name: AccountRequiredProperties
+     href: Finance.Accounting.AccountRequiredProperties.md
+   - name: Accounts
+     href: Finance.Accounting.Accounts.md
+   - name: CostCenters
+     href: Finance.Accounting.CostCenters.md
+   - name: FinancialStatementNodeCorrespondances
+     href: Finance.Accounting.FinancialStatementNodeCorrespondances.md
+   - name: FinancialStatementNodes
+     href: Finance.Accounting.FinancialStatementNodes.md
+   - name: FinancialStatements
+     href: Finance.Accounting.FinancialStatements.md
+   - name: Operations
+     href: Finance.Accounting.Operations.md
+   - name: ProfitCenters
+     href: Finance.Accounting.ProfitCenters.md
+   - name: TemplateLineProperties
+     href: Finance.Accounting.TemplateLineProperties.md
+   - name: TemplateLines
+     href: Finance.Accounting.TemplateLines.md
+   - name: TemplateRouteLinks
+     href: Finance.Accounting.TemplateRouteLinks.md
+   - name: Templates
+     href: Finance.Accounting.Templates.md
+   - name: VoucherCorrespondances
+     href: Finance.Accounting.VoucherCorrespondances.md
+  - name: Assets
+   items:
+   - name: AssetCategories
+     href: Finance.Assets.AssetCategories.md
+   - name: AssetGroups
+     href: Finance.Assets.AssetGroups.md
+   - name: AssetOrderLines
+     href: Finance.Assets.AssetOrderLines.md
+   - name: AssetOrders
+     href: Finance.Assets.AssetOrders.md
+   - name: Assets
+     href: Finance.Assets.Assets.md
+   - name: AssetTransactionLines
+     href: Finance.Assets.AssetTransactionLines.md
+   - name: AssetTransactions
+     href: Finance.Assets.AssetTransactions.md
+   - name: DepreciationAssets
+     href: Finance.Assets.DepreciationAssets.md
+   - name: DepreciationMethods
+     href: Finance.Assets.DepreciationMethods.md
+   - name: DepreciationPlanLineFixedValues
+     href: Finance.Assets.DepreciationPlanLineFixedValues.md
+   - name: DepreciationPlanLines
+     href: Finance.Assets.DepreciationPlanLines.md
+   - name: DepreciationPlans
+     href: Finance.Assets.DepreciationPlans.md
+   - name: DepreciationPlanTemplates
+     href: Finance.Assets.DepreciationPlanTemplates.md
+   - name: Depreciations
+     href: Finance.Assets.Depreciations.md
+   - name: ValuationModels
+     href: Finance.Assets.ValuationModels.md
+  - name: Cost
+   items:
+   - name: AllocationModels
+     href: Finance.Cost.AllocationModels.md
+   - name: CalculationCosts
+     href: Finance.Cost.CalculationCosts.md
+   - name: CalculationProductOutputs
+     href: Finance.Cost.CalculationProductOutputs.md
+   - name: CalculationResults
+     href: Finance.Cost.CalculationResults.md
+   - name: Calculations
+     href: Finance.Cost.Calculations.md
+   - name: CostTypes
+     href: Finance.Cost.CostTypes.md
+   - name: DistributionCosts
+     href: Finance.Cost.DistributionCosts.md
+   - name: DistributionOutputs
+     href: Finance.Cost.DistributionOutputs.md
+   - name: DistributionResults
+     href: Finance.Cost.DistributionResults.md
+   - name: Distributions
+     href: Finance.Cost.Distributions.md
+   - name: TemplateCostTypes
+     href: Finance.Cost.TemplateCostTypes.md
+   - name: TemplateLevels
+     href: Finance.Cost.TemplateLevels.md
+   - name: Templates
+     href: Finance.Cost.Templates.md
+  - name: Intrastat
+   items:
+   - name: CommodityCodes
+     href: Finance.Intrastat.CommodityCodes.md
+   - name: DeclarationLines
+     href: Finance.Intrastat.DeclarationLines.md
+   - name: Declarations
+     href: Finance.Intrastat.Declarations.md
+   - name: DocumentAmountTypeSettings
+     href: Finance.Intrastat.DocumentAmountTypeSettings.md
+  - name: Payments
+   items:
+   - name: BulkPaymentOrderLines
+     href: Finance.Payments.BulkPaymentOrderLines.md
+   - name: BulkPaymentOrders
+     href: Finance.Payments.BulkPaymentOrders.md
+   - name: OrderBalances
+     href: Finance.Payments.OrderBalances.md
+   - name: PaymentAccounts
+     href: Finance.Payments.PaymentAccounts.md
+   - name: PaymentOrders
+     href: Finance.Payments.PaymentOrders.md
+   - name: PaymentReasons
+     href: Finance.Payments.PaymentReasons.md
+   - name: PaymentSlipAmounts
+     href: Finance.Payments.PaymentSlipAmounts.md
+   - name: PaymentSlipLines
+     href: Finance.Payments.PaymentSlipLines.md
+   - name: PaymentSlipPaymentTransactionsTemplates
+     href: Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md
+   - name: PaymentSlips
+     href: Finance.Payments.PaymentSlips.md
+   - name: PaymentTransactionLines
+     href: Finance.Payments.PaymentTransactionLines.md
+   - name: PaymentTransactions
+     href: Finance.Payments.PaymentTransactions.md
+   - name: PaymentTypes
+     href: Finance.Payments.PaymentTypes.md
+   - name: Transfers
+     href: Finance.Payments.Transfers.md
+  - name: Vat
+   items:
+   - name: BGVATDeclarations
+     href: Finance.Vat.BGVATDeclarations.md
+   - name: BGVATDeclaringPersons
+     href: Finance.Vat.BGVATDeclaringPersons.md
+   - name: BGVATDocumentTypeVATCodes
+     href: Finance.Vat.BGVATDocumentTypeVATCodes.md
+   - name: DealTypes
+     href: Finance.Vat.DealTypes.md
+   - name: Entries
+     href: Finance.Vat.Entries.md
+ - name: General
+  items:
+  - name: Config
+    href: General.Config.md
+  - name: Contacts
+   items:
+   - name: Activities
+     href: General.Contacts.Activities.md
+   - name: ActivityParticipants
+     href: General.Contacts.ActivityParticipants.md
+   - name: ActivityResources
+     href: General.Contacts.ActivityResources.md
+   - name: ActivityTemplates
+     href: General.Contacts.ActivityTemplates.md
+   - name: ActivityTimeIntervals
+     href: General.Contacts.ActivityTimeIntervals.md
+   - name: Companies
+     href: General.Contacts.Companies.md
+   - name: CompanyDepartments
+     href: General.Contacts.CompanyDepartments.md
+   - name: CompanyDivisions
+     href: General.Contacts.CompanyDivisions.md
+   - name: CompanyEmployees
+     href: General.Contacts.CompanyEmployees.md
+   - name: CompanyLocations
+     href: General.Contacts.CompanyLocations.md
+   - name: ContactMechanismPurposes
+     href: General.Contacts.ContactMechanismPurposes.md
+   - name: ContactMechanisms
+     href: General.Contacts.ContactMechanisms.md
+   - name: Parties
+     href: General.Contacts.Parties.md
+   - name: PartyBankAccounts
+     href: General.Contacts.PartyBankAccounts.md
+   - name: PartyContactMechanisms
+     href: General.Contacts.PartyContactMechanisms.md
+   - name: PartyPictures
+     href: General.Contacts.PartyPictures.md
+   - name: PartyRelationships
+     href: General.Contacts.PartyRelationships.md
+   - name: PartyRelationshipTypes
+     href: General.Contacts.PartyRelationshipTypes.md
+   - name: Persons
+     href: General.Contacts.Persons.md
+   - name: Reminders
+     href: General.Contacts.Reminders.md
+  - name: Currencies
+    href: General.Currencies.md
+  - name: CurrencyDirectories
+    href: General.CurrencyDirectories.md
+  - name: CurrencyDirectoryLines
+    href: General.CurrencyDirectoryLines.md
+  - name: CustomProperties
+    href: General.CustomProperties.md
+  - name: CustomPropertyAllowedValues
+    href: General.CustomPropertyAllowedValues.md
+  - name: DocumentAmountReferencedDocuments
+    href: General.DocumentAmountReferencedDocuments.md
+  - name: DocumentAmounts
+    href: General.DocumentAmounts.md
+  - name: DocumentAmountTypeDependencies
+    href: General.DocumentAmountTypeDependencies.md
+  - name: DocumentAmountTypes
+    href: General.DocumentAmountTypes.md
+  - name: DocumentComments
+    href: General.DocumentComments.md
+  - name: DocumentDistributedAmounts
+    href: General.DocumentDistributedAmounts.md
+  - name: DocumentFileAttachments
+    href: General.DocumentFileAttachments.md
+  - name: DocumentJobs
+    href: General.DocumentJobs.md
+  - name: DocumentLineAmounts
+    href: General.DocumentLineAmounts.md
+  - name: DocumentLinks
+    href: General.DocumentLinks.md
+  - name: DocumentManualDistributedAmounts
+    href: General.DocumentManualDistributedAmounts.md
+  - name: DocumentPrintImages
+    href: General.DocumentPrintImages.md
+  - name: DocumentPrints
+    href: General.DocumentPrints.md
+  - name: Documents
+    href: General.Documents.md
+  - name: DocumentStateChanges
+    href: General.DocumentStateChanges.md
+  - name: DocumentTypeAmounts
+    href: General.DocumentTypeAmounts.md
+  - name: DocumentTypeEnterpriseCompanies
+    href: General.DocumentTypeEnterpriseCompanies.md
+  - name: DocumentTypeNotifications
+    href: General.DocumentTypeNotifications.md
+  - name: DocumentTypeProperties
+    href: General.DocumentTypeProperties.md
+  - name: DocumentTypes
+    href: General.DocumentTypes.md
+  - name: DocumentTypeSecurityConditions
+    href: General.DocumentTypeSecurityConditions.md
+  - name: DocumentTypeUserStatuses
+    href: General.DocumentTypeUserStatuses.md
+  - name: DocumentVersions
+    href: General.DocumentVersions.md
+  - name: EnterpriseCompanies
+    href: General.EnterpriseCompanies.md
+  - name: Geography
+   items:
+   - name: AdministrativeRegions
+     href: General.Geography.AdministrativeRegions.md
+   - name: Areas
+     href: General.Geography.Areas.md
+   - name: Countries
+     href: General.Geography.Countries.md
+   - name: GeoPoints
+     href: General.Geography.GeoPoints.md
+   - name: MapPoints
+     href: General.Geography.MapPoints.md
+  - name: LinkTypes
+    href: General.LinkTypes.md
+  - name: MeasurementCategories
+    href: General.MeasurementCategories.md
+  - name: MeasurementUnits
+    href: General.MeasurementUnits.md
+  - name: PartyApplicableLegislations
+    href: General.PartyApplicableLegislations.md
+  - name: PartyLocationNumbers
+    href: General.PartyLocationNumbers.md
+  - name: PrintoutLayouts
+    href: General.PrintoutLayouts.md
+  - name: Printouts
+    href: General.Printouts.md
+  - name: ProductCatalogs
+    href: General.ProductCatalogs.md
+  - name: Products
+   items:
+   - name: CodingSystems
+     href: General.Products.CodingSystems.md
+   - name: ProductCodes
+     href: General.Products.ProductCodes.md
+   - name: ProductDimensions
+     href: General.Products.ProductDimensions.md
+   - name: ProductDocumentAmounts
+     href: General.Products.ProductDocumentAmounts.md
+   - name: ProductGroupRangeProperties
+     href: General.Products.ProductGroupRangeProperties.md
+   - name: ProductGroupRequiredProperties
+     href: General.Products.ProductGroupRequiredProperties.md
+   - name: ProductGroups
+     href: General.Products.ProductGroups.md
+   - name: ProductPictures
+     href: General.Products.ProductPictures.md
+   - name: Products
+     href: General.Products.Products.md
+   - name: ProductSupply
+     href: General.Products.ProductSupply.md
+   - name: ProductTypePurchaseInvoiceLineProperties
+     href: General.Products.ProductTypePurchaseInvoiceLineProperties.md
+   - name: ProductTypes
+     href: General.Products.ProductTypes.md
+   - name: VariantColors
+     href: General.Products.VariantColors.md
+   - name: VariantSizes
+     href: General.Products.VariantSizes.md
+   - name: VariantStyles
+     href: General.Products.VariantStyles.md
+  - name: ProductVariants
+    href: General.ProductVariants.md
+  - name: PropertiesCategories
+    href: General.PropertiesCategories.md
+  - name: PropertyEnterpriseCompanyFilters
+    href: General.PropertyEnterpriseCompanyFilters.md
+  - name: PropertyValues
+    href: General.PropertyValues.md
+  - name: ReportQueries
+    href: General.ReportQueries.md
+  - name: Reports
+    href: General.Reports.md
+  - name: Resources
+   items:
+   - name: ResourceAvailability
+     href: General.Resources.ResourceAvailability.md
+   - name: ResourceCostRates
+     href: General.Resources.ResourceCostRates.md
+   - name: ResourceGroups
+     href: General.Resources.ResourceGroups.md
+   - name: ResourceInstances
+     href: General.Resources.ResourceInstances.md
+   - name: Resources
+     href: General.Resources.Resources.md
+   - name: WorkSchedules
+     href: General.Resources.WorkSchedules.md
+   - name: WorkScheduleWorkingTime
+     href: General.Resources.WorkScheduleWorkingTime.md
+  - name: ScheduledDocumentEvents
+    href: General.ScheduledDocumentEvents.md
+  - name: SequenceGenerators
+    href: General.SequenceGenerators.md
+  - name: Sequences
+    href: General.Sequences.md
+ - name: Logistics
+  items:
+  - name: Inventory
+   items:
+   - name: CostCorrectionLines
+     href: Logistics.Inventory.CostCorrectionLines.md
+   - name: CostCorrections
+     href: Logistics.Inventory.CostCorrections.md
+   - name: CostCorrectionsOptions
+     href: Logistics.Inventory.CostCorrectionsOptions.md
+   - name: CurrentBalances
+     href: Logistics.Inventory.CurrentBalances.md
+   - name: DemandManagement
+    items:
+    - name: AvailableToPromise
+      href: Logistics.Inventory.DemandManagement.AvailableToPromise.md
+    - name: AvailableToPromiseByLots
+      href: Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md
+   - name: Lots
+     href: Logistics.Inventory.Lots.md
+   - name: ProductDefaultStoreBins
+     href: Logistics.Inventory.ProductDefaultStoreBins.md
+   - name: ProductValuationGroups
+     href: Logistics.Inventory.ProductValuationGroups.md
+   - name: ReconciliationLines
+     href: Logistics.Inventory.ReconciliationLines.md
+   - name: ReconciliationOrderLines
+     href: Logistics.Inventory.ReconciliationOrderLines.md
+   - name: ReconciliationOrders
+     href: Logistics.Inventory.ReconciliationOrders.md
+   - name: Reconciliations
+     href: Logistics.Inventory.Reconciliations.md
+   - name: RequisitionPlan
+     href: Logistics.Inventory.RequisitionPlan.md
+   - name: ScrapTypes
+     href: Logistics.Inventory.ScrapTypes.md
+   - name: SerialNumbers
+     href: Logistics.Inventory.SerialNumbers.md
+   - name: StoreBins
+     href: Logistics.Inventory.StoreBins.md
+   - name: StoreGroups
+     href: Logistics.Inventory.StoreGroups.md
+   - name: StoreOrderLines
+     href: Logistics.Inventory.StoreOrderLines.md
+   - name: StoreOrderLinesUnfulfilledView
+     href: Logistics.Inventory.StoreOrderLinesUnfulfilledView.md
+   - name: StoreOrders
+     href: Logistics.Inventory.StoreOrders.md
+   - name: StoreResponsibleParties
+     href: Logistics.Inventory.StoreResponsibleParties.md
+   - name: Stores
+     href: Logistics.Inventory.Stores.md
+   - name: StoreTransactionLines
+     href: Logistics.Inventory.StoreTransactionLines.md
+   - name: StoreTransactions
+     href: Logistics.Inventory.StoreTransactions.md
+   - name: SupplySchemaRoutes
+     href: Logistics.Inventory.SupplySchemaRoutes.md
+   - name: SupplySchemata
+     href: Logistics.Inventory.SupplySchemata.md
+   - name: TransactionCostCorrectionsSummary
+     href: Logistics.Inventory.TransactionCostCorrectionsSummary.md
+   - name: TransactionEntryTemplates
+     href: Logistics.Inventory.TransactionEntryTemplates.md
+   - name: TransferOrderLines
+     href: Logistics.Inventory.TransferOrderLines.md
+   - name: TransferOrders
+     href: Logistics.Inventory.TransferOrders.md
+   - name: TransferOrdersOptions
+     href: Logistics.Inventory.TransferOrdersOptions.md
+  - name: Procurement
+   items:
+   - name: PurchaseControlDocumentLines
+     href: Logistics.Procurement.PurchaseControlDocumentLines.md
+   - name: PurchaseControlDocuments
+     href: Logistics.Procurement.PurchaseControlDocuments.md
+   - name: PurchaseInvoiceLines
+     href: Logistics.Procurement.PurchaseInvoiceLines.md
+   - name: PurchaseInvoices
+     href: Logistics.Procurement.PurchaseInvoices.md
+   - name: PurchaseInvoicesOptions
+     href: Logistics.Procurement.PurchaseInvoicesOptions.md
+   - name: PurchaseOperationTypes
+     href: Logistics.Procurement.PurchaseOperationTypes.md
+   - name: PurchaseOrderLines
+     href: Logistics.Procurement.PurchaseOrderLines.md
+   - name: PurchaseOrders
+     href: Logistics.Procurement.PurchaseOrders.md
+   - name: PurchasePriceLists
+     href: Logistics.Procurement.PurchasePriceLists.md
+   - name: PurchaseProductPrices
+     href: Logistics.Procurement.PurchaseProductPrices.md
+   - name: ReceivingOrderLines
+     href: Logistics.Procurement.ReceivingOrderLines.md
+   - name: ReceivingOrders
+     href: Logistics.Procurement.ReceivingOrders.md
+   - name: RequisitionLines
+     href: Logistics.Procurement.RequisitionLines.md
+   - name: Requisitions
+     href: Logistics.Procurement.Requisitions.md
+   - name: Suppliers
+     href: Logistics.Procurement.Suppliers.md
+   - name: SupplierTypes
+     href: Logistics.Procurement.SupplierTypes.md
+  - name: Shipment
+   items:
+   - name: CargoTypes
+     href: Logistics.Shipment.CargoTypes.md
+   - name: Carriers
+     href: Logistics.Shipment.Carriers.md
+   - name: ShipmentLines
+     href: Logistics.Shipment.ShipmentLines.md
+   - name: ShipmentOrderLines
+     href: Logistics.Shipment.ShipmentOrderLines.md
+   - name: ShipmentOrders
+     href: Logistics.Shipment.ShipmentOrders.md
+   - name: Shipments
+     href: Logistics.Shipment.Shipments.md
+   - name: TransportationExecutionLines
+     href: Logistics.Shipment.TransportationExecutionLines.md
+   - name: TransportationExecutions
+     href: Logistics.Shipment.TransportationExecutions.md
+   - name: TransportationModes
+     href: Logistics.Shipment.TransportationModes.md
+   - name: TransportationOrderLines
+     href: Logistics.Shipment.TransportationOrderLines.md
+   - name: TransportationOrders
+     href: Logistics.Shipment.TransportationOrders.md
+   - name: TransportationRequisitionLines
+     href: Logistics.Shipment.TransportationRequisitionLines.md
+   - name: TransportationRequisitions
+     href: Logistics.Shipment.TransportationRequisitions.md
+   - name: TransportationVehicles
+     href: Logistics.Shipment.TransportationVehicles.md
+  - name: Wms
+   items:
+   - name: WarehouseLocations
+     href: Logistics.Wms.WarehouseLocations.md
+   - name: WarehouseOrderLines
+     href: Logistics.Wms.WarehouseOrderLines.md
+   - name: WarehouseOrders
+     href: Logistics.Wms.WarehouseOrders.md
+   - name: WarehouseRequisitionExecutions
+     href: Logistics.Wms.WarehouseRequisitionExecutions.md
+   - name: WarehouseRequisitionLines
+     href: Logistics.Wms.WarehouseRequisitionLines.md
+   - name: WarehouseRequisitions
+     href: Logistics.Wms.WarehouseRequisitions.md
+   - name: Warehouses
+     href: Logistics.Wms.Warehouses.md
+   - name: WarehouseWorkers
+     href: Logistics.Wms.WarehouseWorkers.md
+   - name: WarehouseZones
+     href: Logistics.Wms.WarehouseZones.md
+ - name: Production
+  items:
+  - name: Resources
+   items:
+   - name: Capacity
+     href: Production.Resources.Capacity.md
+   - name: FunctionGroups
+     href: Production.Resources.FunctionGroups.md
+   - name: Functions
+     href: Production.Resources.Functions.md
+   - name: Load
+     href: Production.Resources.Load.md
+   - name: OperationGroups
+     href: Production.Resources.OperationGroups.md
+   - name: OperationInstructions
+     href: Production.Resources.OperationInstructions.md
+   - name: Operations
+     href: Production.Resources.Operations.md
+   - name: ResourceFunctions
+     href: Production.Resources.ResourceFunctions.md
+   - name: ResourceGroups
+     href: Production.Resources.ResourceGroups.md
+   - name: Resources
+     href: Production.Resources.Resources.md
+   - name: WorkgroupResources
+     href: Production.Resources.WorkgroupResources.md
+   - name: Workgroups
+     href: Production.Resources.Workgroups.md
+   - name: WorkgroupShifts
+     href: Production.Resources.WorkgroupShifts.md
+  - name: ShopFloor
+   items:
+   - name: ConsumptionOrderLines
+     href: Production.ShopFloor.ConsumptionOrderLines.md
+   - name: ConsumptionOrders
+     href: Production.ShopFloor.ConsumptionOrders.md
+   - name: OutputOrderConsumptionLines
+     href: Production.ShopFloor.OutputOrderConsumptionLines.md
+   - name: OutputOrderDistributedMaterialConsumptions
+     href: Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md
+   - name: OutputOrderLines
+     href: Production.ShopFloor.OutputOrderLines.md
+   - name: OutputOrders
+     href: Production.ShopFloor.OutputOrders.md
+   - name: WorkOrderItemIngredients
+     href: Production.ShopFloor.WorkOrderItemIngredients.md
+   - name: WorkOrderItemOperations
+     href: Production.ShopFloor.WorkOrderItemOperations.md
+   - name: WorkOrderItems
+     href: Production.ShopFloor.WorkOrderItems.md
+   - name: WorkOrders
+     href: Production.ShopFloor.WorkOrders.md
+  - name: Technologies
+   items:
+   - name: PrincipalRecipeIngredients
+     href: Production.Technologies.PrincipalRecipeIngredients.md
+   - name: PrincipalRecipeOperations
+     href: Production.Technologies.PrincipalRecipeOperations.md
+   - name: PrincipalRecipes
+     href: Production.Technologies.PrincipalRecipes.md
+   - name: RecipeIngredients
+     href: Production.Technologies.RecipeIngredients.md
+   - name: RecipeOperations
+     href: Production.Technologies.RecipeOperations.md
+   - name: Recipes
+     href: Production.Technologies.Recipes.md
+  - name: WorkOrderDocumentTypesOptions
+    href: Production.WorkOrderDocumentTypesOptions.md
+ - name: Projects
+  items:
+  - name: ProjectParticipants
+    href: Projects.ProjectParticipants.md
+  - name: ProjectRiskDiscussion
+    href: Projects.ProjectRiskDiscussion.md
+  - name: ProjectRisks
+    href: Projects.ProjectRisks.md
+  - name: Projects
+    href: Projects.Projects.md
+  - name: ProjectTaskDependancies
+    href: Projects.ProjectTaskDependancies.md
+  - name: ProjectTaskMaterials
+    href: Projects.ProjectTaskMaterials.md
+  - name: ProjectTaskParticipants
+    href: Projects.ProjectTaskParticipants.md
+  - name: ProjectTaskResources
+    href: Projects.ProjectTaskResources.md
+  - name: ProjectTasks
+    href: Projects.ProjectTasks.md
+  - name: ProjectTypes
+    href: Projects.ProjectTypes.md
+  - name: ProjectWorkElements
+    href: Projects.ProjectWorkElements.md
+  - name: Resources
+    href: Projects.Resources.md
+  - name: TaskTypes
+    href: Projects.TaskTypes.md
+  - name: TemplateRisks
+    href: Projects.TemplateRisks.md
+  - name: Templates
+    href: Projects.Templates.md
+  - name: TemplateWorkElements
+    href: Projects.TemplateWorkElements.md
+  - name: TypeRoles
+    href: Projects.TypeRoles.md
+  - name: TypeWorkElements
+    href: Projects.TypeWorkElements.md
+  - name: TypeWorkTypes
+    href: Projects.TypeWorkTypes.md
+  - name: WorkReportMaterials
+    href: Projects.WorkReportMaterials.md
+  - name: WorkReportResources
+    href: Projects.WorkReportResources.md
+  - name: WorkReports
+    href: Projects.WorkReports.md
+ - name: Systems
+  items:
+  - name: Bpm
+   items:
+   - name: CalculatedAttributeExpressions
+     href: Systems.Bpm.CalculatedAttributeExpressions.md
+   - name: CalculatedAttributes
+     href: Systems.Bpm.CalculatedAttributes.md
+   - name: ExecutionSteps
+     href: Systems.Bpm.ExecutionSteps.md
+   - name: ProcessConnections
+     href: Systems.Bpm.ProcessConnections.md
+   - name: ProcessElements
+     href: Systems.Bpm.ProcessElements.md
+   - name: Processes
+     href: Systems.Bpm.Processes.md
+   - name: ProcessGroups
+     href: Systems.Bpm.ProcessGroups.md
+   - name: ProcessInstances
+     href: Systems.Bpm.ProcessInstances.md
+   - name: ProcessLanes
+     href: Systems.Bpm.ProcessLanes.md
+   - name: ProcessNodeEvents
+     href: Systems.Bpm.ProcessNodeEvents.md
+   - name: ProcessNodes
+     href: Systems.Bpm.ProcessNodes.md
+   - name: ProcessNodeTimerEvents
+     href: Systems.Bpm.ProcessNodeTimerEvents.md
+   - name: UserBusinessRuleActions
+     href: Systems.Bpm.UserBusinessRuleActions.md
+   - name: UserBusinessRuleConditions
+     href: Systems.Bpm.UserBusinessRuleConditions.md
+   - name: UserBusinessRuleEvents
+     href: Systems.Bpm.UserBusinessRuleEvents.md
+   - name: UserBusinessRules
+     href: Systems.Bpm.UserBusinessRules.md
+  - name: Core
+   items:
+   - name: AttributeChanges
+     href: Systems.Core.AttributeChanges.md
+   - name: AttributeChangesHistory
+     href: Systems.Core.AttributeChangesHistory.md
+   - name: AuditLogEntries
+     href: Systems.Core.AuditLogEntries.md
+   - name: DataEntryDefaultValues
+     href: Systems.Core.DataEntryDefaultValues.md
+   - name: EntitySettings
+     href: Systems.Core.EntitySettings.md
+   - name: ExtensibleDataObjects
+     href: Systems.Core.ExtensibleDataObjects.md
+   - name: ExternalApplications
+     href: Systems.Core.ExternalApplications.md
+   - name: InformationMessages
+     href: Systems.Core.InformationMessages.md
+   - name: Jobs
+     href: Systems.Core.Jobs.md
+   - name: ObjectChanges
+     href: Systems.Core.ObjectChanges.md
+   - name: ObjectChangesets
+     href: Systems.Core.ObjectChangesets.md
+   - name: ObjectFiles
+     href: Systems.Core.ObjectFiles.md
+   - name: ObjectVersions
+     href: Systems.Core.ObjectVersions.md
+   - name: ResolvedConflicts
+     href: Systems.Core.ResolvedConflicts.md
+   - name: TextTranslations
+     href: Systems.Core.TextTranslations.md
+   - name: Translations
+     href: Systems.Core.Translations.md
+   - name: UpdateProcedureExecutes
+     href: Systems.Core.UpdateProcedureExecutes.md
+   - name: WebHosts
+     href: Systems.Core.WebHosts.md
+   - name: WebSites
+     href: Systems.Core.WebSites.md
+  - name: External
+   items:
+   - name: PublicUserLists
+     href: Systems.External.PublicUserLists.md
+   - name: PublicUsers
+     href: Systems.External.PublicUsers.md
+  - name: Reporting
+   items:
+   - name: DataSourceQueries
+     href: Systems.Reporting.DataSourceQueries.md
+   - name: DataSources
+     href: Systems.Reporting.DataSources.md
+   - name: Reports
+     href: Systems.Reporting.Reports.md
+  - name: Security
+   items:
+   - name: AccessKeys
+     href: Systems.Security.AccessKeys.md
+   - name: ColumnPermissions
+     href: Systems.Security.ColumnPermissions.md
+   - name: DomainProviders
+     href: Systems.Security.DomainProviders.md
+   - name: Domains
+     href: Systems.Security.Domains.md
+   - name: GroupAccessKeys
+     href: Systems.Security.GroupAccessKeys.md
+   - name: Groups
+     href: Systems.Security.Groups.md
+   - name: TrustedApplicationAuthorizations
+     href: Systems.Security.TrustedApplicationAuthorizations.md
+   - name: TrustedApplications
+     href: Systems.Security.TrustedApplications.md
+   - name: UserAccessKeys
+     href: Systems.Security.UserAccessKeys.md
+   - name: UserGroups
+     href: Systems.Security.UserGroups.md
+   - name: UserProviderLogins
+     href: Systems.Security.UserProviderLogins.md
+   - name: UserProviderTokens
+     href: Systems.Security.UserProviderTokens.md
+   - name: Users
+     href: Systems.Security.Users.md
+   - name: VisualPermissions
+     href: Systems.Security.VisualPermissions.md
+  - name: UI
+   items:
+   - name: FormLayouts
+     href: Systems.UI.FormLayouts.md
+  - name: Workflow
+   items:
+   - name: Processes
+     href: Systems.Workflow.Processes.md
+   - name: Roles
+     href: Systems.Workflow.Roles.md
+   - name: RoleUsers
+     href: Systems.Workflow.RoleUsers.md
+   - name: Routes
+     href: Systems.Workflow.Routes.md
+ - name: Wms
+  items:
+  - name: WarehouseOrderExecutions
+    href: Wms.WarehouseOrderExecutions.md
