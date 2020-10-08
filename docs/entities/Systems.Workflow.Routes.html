@@ -1,0 +1,610 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Systems.Workflow.Routes | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Systems.Workflow.Routes | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="systemsworkflowroutes">Systems.Workflow.Routes</h1>
+
+<p>Contains document routes, which specify which document generation procedures will be run upon document events. Entity: Wf_Routes</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#ActivationDate">ActivationDate</a></td>
+<td>date</td>
+<td>The date from which (including) the route is active. The date is matched against the document date of the generating document. [Required] [Default(Today)] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#Active">Active</a></td>
+<td>boolean</td>
+<td>True if the route is active, otherwise false. [Required] [Default(true)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#AllowObsoleteGeneration">AllowObsoleteGeneration</a></td>
+<td>boolean</td>
+<td>Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures. [Required] [Default(false)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#AllowedGenerationTypes">AllowedGenerationTypes</a></td>
+<td><a href="Systems.Workflow.Routes.html#AllowedGenerationTypes">Systems.Workflow.RoutesRepository.AllowedGenerationTypes</a></td>
+<td>Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual). [Required] [Default(&quot;B&quot;)] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#ConditionFilterXML">ConditionFilterXML</a></td>
+<td>dataaccessfilter (nullable)</td>
+<td>Contains filter condition, which the document must match in order to execute the route.</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#ConditionStatesBitMask">ConditionStatesBitMask</a></td>
+<td><a href="Systems.Workflow.Routes.html#ConditionStatesBitMask">General.DocumentStateFlags</a></td>
+<td>The system states for which to execute the specified route. [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#ConnectedPartyCondition">ConnectedPartyCondition</a></td>
+<td><a href="Systems.Workflow.Routes.html#ConnectedPartyCondition">Systems.Workflow.RoutesRepository.ConnectedPartyCondition</a></td>
+<td>A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. [Required] [Default(&quot;A&quot;)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#DeactivationDate">DeactivationDate</a></td>
+<td>date (nullable)</td>
+<td>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#DestinationState">DestinationState</a></td>
+<td><a href="Systems.Workflow.Routes.html#DestinationState">General.DocumentState</a></td>
+<td>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#NegativeConditionFilterXml">NegativeConditionFilterXml</a></td>
+<td>dataaccessfilter (nullable)</td>
+<td>The negative condition should NOT be matched by the document in order to execute the route.</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#Notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this Route.</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#ParentDocumentRelationshipType">ParentDocumentRelationshipType</a></td>
+<td><a href="Systems.Workflow.Routes.html#ParentDocumentRelationshipType">General.ParentDocumentRelationshipType</a></td>
+<td>Determines the default relationship type between the generated document and the parent document. [Required] [Default(&quot;S&quot;)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#ProcedureName">ProcedureName</a></td>
+<td>string</td>
+<td>The system name of the generation procedure, which must be executed by the route. [Required]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#ProcessEvent">ProcessEvent</a></td>
+<td>string</td>
+<td>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. [Required]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#ReadOnly">ReadOnly</a></td>
+<td>boolean</td>
+<td>Indicates wheather the destination document shoul be read only. true - the destination document is read only. [Required] [Default(false)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#ConditionEnterpriseCompany">ConditionEnterpriseCompany</a></td>
+<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td>The enterprise company for which this route is activated. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#ConditionUserStatus">ConditionUserStatus</a></td>
+<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
+<td>The user-defined status, for which the document route is activated. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#DestinationDocumentType">DestinationDocumentType</a></td>
+<td><a href="General.DocumentTypes.html">General.DocumentTypes</a> (nullable)</td>
+<td>The type of the document, that will be generated by executing the route. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#DestinationEnterpriseCompany">DestinationEnterpriseCompany</a></td>
+<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td>The enterprise company in which to generate the target document. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#DestinationEnterpriseCompanyLocation">DestinationEnterpriseCompanyLocation</a></td>
+<td><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</td>
+<td>The enterprise company location in which to generate the target document. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#DestinationUserStatus">DestinationUserStatus</a></td>
+<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
+<td>The user defined status to set to the generated document. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#DocumentType">DocumentType</a></td>
+<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
+<td>The document type from which this route originates. Documents from this type generate sub-documents using this route. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TemplateRouteLinks</td>
+<td><a href="Finance.Accounting.TemplateRouteLinks.html">Finance.Accounting.TemplateRouteLinks</a></td>
+<td>List of <a href="Finance.Accounting.TemplateRouteLinks.html">TemplateRouteLink</a> child objects, based on the <a href="Finance.Accounting.TemplateRouteLinks.html#Route">Finance.Accounting.TemplateRouteLink.Route</a> back reference</td>
+</tr>
+<tr>
+<td>Templates</td>
+<td><a href="Finance.Accounting.Templates.html">Finance.Accounting.Templates</a></td>
+<td>List of <a href="Finance.Accounting.Templates.html">Template</a> child objects, based on the <a href="Finance.Accounting.Templates.html#Route">Finance.Accounting.Template.Route</a> back reference</td>
+</tr>
+<tr>
+<td>SalesOrderPaymentOrdersTemplates</td>
+<td><a href="Crm.Sales.SalesOrderPaymentOrdersTemplates.html">Crm.Sales.SalesOrderPaymentOrdersTemplates</a></td>
+<td>List of <a href="Crm.Sales.SalesOrderPaymentOrdersTemplates.html">SalesOrderPaymentOrdersTemplate</a> child objects, based on the <a href="Crm.Sales.SalesOrderPaymentOrdersTemplates.html#Route">Crm.Sales.SalesOrderPaymentOrdersTemplate.Route</a> back reference</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="activationdate">ActivationDate</h3>
+<blockquote>
+<p>The date from which (including) the route is active. The date is matched against the document date of the generating document. [Required] [Default(Today)] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>date</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>CurrentDate</strong></p>
+<h3 id="active">Active</h3>
+<blockquote>
+<p>True if the route is active, otherwise false. [Required] [Default(true)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
+<h3 id="allowobsoletegeneration">AllowObsoleteGeneration</h3>
+<blockquote>
+<p>Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures. [Required] [Default(false)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="allowedgenerationtypes">AllowedGenerationTypes</h3>
+<blockquote>
+<p>Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual). [Required] [Default(&quot;B&quot;)] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html#AllowedGenerationTypes">Systems.Workflow.RoutesRepository.AllowedGenerationTypes</a></strong><br>
+Allowed values for the <a href="Systems.Workflow.Routes.html#AllowedGenerationTypes">AllowedGenerationTypes</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto</td>
+<td>Auto value. Stored as 'A'. <br> <em>Database Value:</em> 'A' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Auto'</td>
+</tr>
+<tr>
+<td>BothAutoAndManually</td>
+<td>BothAutoAndManually value. Stored as 'B'. <br> <em>Database Value:</em> 'B' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'BothAutoAndManually'</td>
+</tr>
+<tr>
+<td>Manually</td>
+<td>Manually value. Stored as 'M'. <br> <em>Database Value:</em> 'M' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Manually'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>BothAutoAndManually</strong></p>
+<h3 id="conditionfilterxml">ConditionFilterXML</h3>
+<blockquote>
+<p>Contains filter condition, which the document must match in order to execute the route.</p>
+</blockquote>
+<p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="conditionstatesbitmask">ConditionStatesBitMask</h3>
+<blockquote>
+<p>The system states for which to execute the specified route. [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html#ConditionStatesBitMask">General.DocumentStateFlags</a></strong><br>
+Enumeration of document system states that can be combined in bit mask<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>New document, just created. Can be edited. (Stored as 1). <br> <em>Database Value:</em> 1 <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'New'</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Planned by the system for future releasing. (Stored as 2). <br> <em>Database Value:</em> 2 <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Planned'</td>
+</tr>
+<tr>
+<td>FirmPlanned</td>
+<td>Planned by operator for future releasing. (Stored as 4). <br> <em>Database Value:</em> 4 <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+</tr>
+<tr>
+<td>Released</td>
+<td>Released document. Changes can be applied only through adjustment documents. (Stored as 8). <br> <em>Database Value:</em> 8 <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'Released'</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Work has completed. (Stored as 16). <br> <em>Database Value:</em> 16 <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'Completed'</td>
+</tr>
+<tr>
+<td>Adjustment</td>
+<td>Document which adjusts other released documents. (Stored as 32). <br> <em>Database Value:</em> 32 <br> <em>Model Value:</em> 32 <br> <em>Domain API Value:</em> 'Adjustment'</td>
+</tr>
+<tr>
+<td>Closed</td>
+<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 64). <br> <em>Database Value:</em> 64 <br> <em>Model Value:</em> 64 <br> <em>Domain API Value:</em> 'Closed'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h3 id="connectedpartycondition">ConnectedPartyCondition</h3>
+<blockquote>
+<p>A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. [Required] [Default(&quot;A&quot;)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html#ConnectedPartyCondition">Systems.Workflow.RoutesRepository.ConnectedPartyCondition</a></strong><br>
+Allowed values for the <a href="Systems.Workflow.Routes.html#ConnectedPartyCondition">ConnectedPartyCondition</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AnyParty</td>
+<td>AnyParty value. Stored as 'A'. <br> <em>Database Value:</em> 'A' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'AnyParty'</td>
+</tr>
+<tr>
+<td>ConnectedParty</td>
+<td>ConnectedParty value. Stored as 'C'. <br> <em>Database Value:</em> 'C' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'ConnectedParty'</td>
+</tr>
+<tr>
+<td>UnconnectedParty</td>
+<td>UnconnectedParty value. Stored as 'U'. <br> <em>Database Value:</em> 'U' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'UnconnectedParty'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>AnyParty</strong></p>
+<h3 id="deactivationdate">DeactivationDate</h3>
+<blockquote>
+<p>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>date (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="destinationstate">DestinationState</h3>
+<blockquote>
+<p>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html#DestinationState">General.DocumentState</a></strong><br>
+Enumeration of document system states<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>New document, just created. Can be edited. (Stored as 0). <br> <em>Database Value:</em> 0 <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+</tr>
+<tr>
+<td>Adjustment</td>
+<td>Document which adjusts other released documents. (Stored as 5). <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Adjustment'</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Planned by the system for future releasing. (Stored as 10). <br> <em>Database Value:</em> 10 <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Planned'</td>
+</tr>
+<tr>
+<td>FirmPlanned</td>
+<td>Planned by operator for future releasing. (Stored as 20). <br> <em>Database Value:</em> 20 <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+</tr>
+<tr>
+<td>Released</td>
+<td>Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br> <em>Database Value:</em> 30 <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Released'</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Work has completed. (Stored as 40). <br> <em>Database Value:</em> 40 <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'Completed'</td>
+</tr>
+<tr>
+<td>Closed</td>
+<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br> <em>Database Value:</em> 50 <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Closed'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="negativeconditionfilterxml">NegativeConditionFilterXml</h3>
+<blockquote>
+<p>The negative condition should NOT be matched by the document in order to execute the route.</p>
+</blockquote>
+<p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="notes">Notes</h3>
+<blockquote>
+<p>Notes for this Route.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
+<blockquote>
+<p>Determines the default relationship type between the generated document and the parent document. [Required] [Default(&quot;S&quot;)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html#ParentDocumentRelationshipType">General.ParentDocumentRelationshipType</a></strong><br>
+Relationship between parent and child documents<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subtask</td>
+<td>The child document is a sub-task of the parent document. (Complete child to complete parent) <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Subtask'</td>
+</tr>
+<tr>
+<td>NextTask</td>
+<td>The child document is next task of the parent document. (Complete parent to complete child) <br> <em>Database Value:</em> 'N' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'NextTask'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Subtask</strong></p>
+<h3 id="procedurename">ProcedureName</h3>
+<blockquote>
+<p>The system name of the generation procedure, which must be executed by the route. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="processevent">ProcessEvent</h3>
+<blockquote>
+<p>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="readonly">ReadOnly</h3>
+<blockquote>
+<p>Indicates wheather the destination document shoul be read only. true - the destination document is read only. [Required] [Default(false)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="conditionenterprisecompany">ConditionEnterpriseCompany</h3>
+<blockquote>
+<p>The enterprise company for which this route is activated. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="conditionuserstatus">ConditionUserStatus</h3>
+<blockquote>
+<p>The user-defined status, for which the document route is activated. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="destinationdocumenttype">DestinationDocumentType</h3>
+<blockquote>
+<p>The type of the document, that will be generated by executing the route. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="destinationenterprisecompany">DestinationEnterpriseCompany</h3>
+<blockquote>
+<p>The enterprise company in which to generate the target document. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="destinationenterprisecompanylocation">DestinationEnterpriseCompanyLocation</h3>
+<blockquote>
+<p>The enterprise company location in which to generate the target document. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="destinationuserstatus">DestinationUserStatus</h3>
+<blockquote>
+<p>The user defined status to set to the generated document. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="documenttype">DocumentType</h3>
+<blockquote>
+<p>The document type from which this route originates. Documents from this type generate sub-documents using this route. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Systems.Workflow.Routes erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Systems.Workflow.Routes erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Systems.Workflow.Routes erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Workflow_Routes?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Workflow_Routes?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Workflow_Routes?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Workflow_Routes?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Wf_Routes?$top=10">https://demodb.my.erp.net/api/domain/odata/Wf_Routes?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Systems.Workflow.Routes.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

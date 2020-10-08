@@ -1,0 +1,611 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Systems.Bpm.CalculatedAttributeExpressions | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Systems.Bpm.CalculatedAttributeExpressions | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="systemsbpmcalculatedattributeexpressions">Systems.Bpm.CalculatedAttributeExpressions</h1>
+
+<p>Represent an expression within the calculation of a calculated attribute. Entity: Sys_Calculated_Attribute_Expressions</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#ExpressionNo">ExpressionNo</a></td>
+<td>int32</td>
+<td>Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. [Required]</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this CalculatedAttributeExpression.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Operator">Operator</a></td>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Operator">Systems.Bpm.ExpressionOperator</a></td>
+<td>The exprssion operator. Available operators are limited to a pre-selected list of operators. [Required]</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Parameter1Type">Parameter1Type</a></td>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Parameter1Type">Systems.Bpm.ExpressionParameterType</a> (nullable)</td>
+<td>The type of the parameter specifies how to obtain the parameter value.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Parameter1Value">Parameter1Value</a></td>
+<td>string (nullable)</td>
+<td>The actual value of parameter 1.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Parameter2Type">Parameter2Type</a></td>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Parameter2Type">Systems.Bpm.ExpressionParameterType</a> (nullable)</td>
+<td>The type of the parameter specifies how to obtain the parameter value.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Parameter2Value">Parameter2Value</a></td>
+<td>string (nullable)</td>
+<td>The actual value of the parameter.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Parameter3Type">Parameter3Type</a></td>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Parameter3Type">Systems.Bpm.ExpressionParameterType</a> (nullable)</td>
+<td>The type of the parameter specifies how to obtain the parameter value.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Parameter3Value">Parameter3Value</a></td>
+<td>string (nullable)</td>
+<td>The actual value of the parameter.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#CalculatedAttribute">CalculatedAttribute</a></td>
+<td><a href="Systems.Bpm.CalculatedAttributes.html">Systems.Bpm.CalculatedAttributes</a></td>
+<td>The <a href="Systems.Bpm.CalculatedAttributeExpressions.html#CalculatedAttribute">CalculatedAttribute</a> to which this CalculatedAttributeExpression belongs. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="expressionno">ExpressionNo</h3>
+<blockquote>
+<p>Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>(obj.CalculatedAttribute.Expressions.Select(c =&gt; c.ExpressionNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>(obj.CalculatedAttribute.Expressions.Select(c =&gt; c.ExpressionNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<h3 id="notes">Notes</h3>
+<blockquote>
+<p>Notes for this CalculatedAttributeExpression.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="operator">Operator</h3>
+<blockquote>
+<p>The exprssion operator. Available operators are limited to a pre-selected list of operators. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Operator">Systems.Bpm.ExpressionOperator</a></strong><br>
+Generic enum type for ExpressionOperator properties<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADD</td>
+<td>ADD value. Stored as 'ADD'. <br> <em>Database Value:</em> 'ADD' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'ADD'</td>
+</tr>
+<tr>
+<td>ADDDAYS</td>
+<td>ADDDAYS value. Stored as 'ADDDAYS'. <br> <em>Database Value:</em> 'ADDDAYS' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'ADDDAYS'</td>
+</tr>
+<tr>
+<td>AND</td>
+<td>AND value. Stored as 'AND'. <br> <em>Database Value:</em> 'AND' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'AND'</td>
+</tr>
+<tr>
+<td>CAST</td>
+<td>CAST value. Stored as 'CAST'. <br> <em>Database Value:</em> 'CAST' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'CAST'</td>
+</tr>
+<tr>
+<td>CEILING</td>
+<td>CEILING value. Stored as 'CEILING'. <br> <em>Database Value:</em> 'CEILING' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'CEILING'</td>
+</tr>
+<tr>
+<td>CONCAT</td>
+<td>CONCAT value. Stored as 'CONCAT'. <br> <em>Database Value:</em> 'CONCAT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'CONCAT'</td>
+</tr>
+<tr>
+<td>CONVERT</td>
+<td>CONVERT value. Stored as 'CONVERT'. <br> <em>Database Value:</em> 'CONVERT' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'CONVERT'</td>
+</tr>
+<tr>
+<td>COUNT</td>
+<td>COUNT value. Stored as 'COUNT'. <br> <em>Database Value:</em> 'COUNT' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'COUNT'</td>
+</tr>
+<tr>
+<td>DIVIDE</td>
+<td>DIVIDE value. Stored as 'DIVIDE'. <br> <em>Database Value:</em> 'DIVIDE' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'DIVIDE'</td>
+</tr>
+<tr>
+<td>IN</td>
+<td>IN value. Stored as 'IN'. <br> <em>Database Value:</em> 'IN' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'IN'</td>
+</tr>
+<tr>
+<td>IIF</td>
+<td>IIF value. Stored as 'IIF'. <br> <em>Database Value:</em> 'IIF' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'IIF'</td>
+</tr>
+<tr>
+<td>INCNUM</td>
+<td>INCNUM value. Stored as 'INCNUM'. <br> <em>Database Value:</em> 'INCNUM' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'INCNUM'</td>
+</tr>
+<tr>
+<td>EQUAL</td>
+<td>EQUAL value. Stored as 'EQUAL'. <br> <em>Database Value:</em> 'EQUAL' <br> <em>Model Value:</em> 12 <br> <em>Domain API Value:</em> 'EQUAL'</td>
+</tr>
+<tr>
+<td>FILTER</td>
+<td>FILTER value. Stored as 'FILTER'. <br> <em>Database Value:</em> 'FILTER' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'FILTER'</td>
+</tr>
+<tr>
+<td>FIRST</td>
+<td>FIRST value. Stored as 'FIRST'. <br> <em>Database Value:</em> 'FIRST' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'FIRST'</td>
+</tr>
+<tr>
+<td>FLOOR</td>
+<td>FLOOR value. Stored as 'FLOOR'. <br> <em>Database Value:</em> 'FLOOR' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'FLOOR'</td>
+</tr>
+<tr>
+<td>FORMATSTRING</td>
+<td>FORMATSTRING value. Stored as 'FORMATSTRING'. <br> <em>Database Value:</em> 'FORMATSTRING' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'FORMATSTRING'</td>
+</tr>
+<tr>
+<td>GETVALUE</td>
+<td>GETVALUE value. Stored as 'GETVALUE'. <br> <em>Database Value:</em> 'GETVALUE' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GETVALUE'</td>
+</tr>
+<tr>
+<td>GETOBJVALUE</td>
+<td>GETOBJVALUE value. Stored as 'GETOBJVALUE'. <br> <em>Database Value:</em> 'GETOBJVALUE' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GETOBJVALUE'</td>
+</tr>
+<tr>
+<td>GT</td>
+<td>GT value. Stored as 'GT'. <br> <em>Database Value:</em> 'GT' <br> <em>Model Value:</em> 19 <br> <em>Domain API Value:</em> 'GT'</td>
+</tr>
+<tr>
+<td>GTE</td>
+<td>GTE value. Stored as 'GTE'. <br> <em>Database Value:</em> 'GTE' <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'GTE'</td>
+</tr>
+<tr>
+<td>LIKE</td>
+<td>Compare by mask. Use * (asterisk) as wildcard char.. Stored as 'LIKE'. <br> <em>Database Value:</em> 'LIKE' <br> <em>Model Value:</em> 21 <br> <em>Domain API Value:</em> 'LIKE'</td>
+</tr>
+<tr>
+<td>LIST</td>
+<td>LIST value. Stored as 'LIST'. <br> <em>Database Value:</em> 'LIST' <br> <em>Model Value:</em> 22 <br> <em>Domain API Value:</em> 'LIST'</td>
+</tr>
+<tr>
+<td>LEFT</td>
+<td>LEFT value. Stored as 'LEFT'. <br> <em>Database Value:</em> 'LEFT' <br> <em>Model Value:</em> 23 <br> <em>Domain API Value:</em> 'LEFT'</td>
+</tr>
+<tr>
+<td>LEN</td>
+<td>LEN value. Stored as 'LEN'. <br> <em>Database Value:</em> 'LEN' <br> <em>Model Value:</em> 24 <br> <em>Domain API Value:</em> 'LEN'</td>
+</tr>
+<tr>
+<td>LT</td>
+<td>LT value. Stored as 'LT'. <br> <em>Database Value:</em> 'LT' <br> <em>Model Value:</em> 25 <br> <em>Domain API Value:</em> 'LT'</td>
+</tr>
+<tr>
+<td>LTE</td>
+<td>LTE value. Stored as 'LTE'. <br> <em>Database Value:</em> 'LTE' <br> <em>Model Value:</em> 26 <br> <em>Domain API Value:</em> 'LTE'</td>
+</tr>
+<tr>
+<td>MULTIPLY</td>
+<td>MULTIPLY value. Stored as 'MULTIPLY'. <br> <em>Database Value:</em> 'MULTIPLY' <br> <em>Model Value:</em> 27 <br> <em>Domain API Value:</em> 'MULTIPLY'</td>
+</tr>
+<tr>
+<td>NOT</td>
+<td>NOT value. Stored as 'NOT'. <br> <em>Database Value:</em> 'NOT' <br> <em>Model Value:</em> 28 <br> <em>Domain API Value:</em> 'NOT'</td>
+</tr>
+<tr>
+<td>OR</td>
+<td>OR value. Stored as 'OR'. <br> <em>Database Value:</em> 'OR' <br> <em>Model Value:</em> 29 <br> <em>Domain API Value:</em> 'OR'</td>
+</tr>
+<tr>
+<td>ORDERBY</td>
+<td>ORDERBY value. Stored as 'ORDERBY'. <br> <em>Database Value:</em> 'ORDERBY' <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'ORDERBY'</td>
+</tr>
+<tr>
+<td>POS</td>
+<td>POS value. Stored as 'POS'. <br> <em>Database Value:</em> 'POS' <br> <em>Model Value:</em> 31 <br> <em>Domain API Value:</em> 'POS'</td>
+</tr>
+<tr>
+<td>REGEX</td>
+<td>REGEX value. Stored as 'REGEX'. <br> <em>Database Value:</em> 'REGEX' <br> <em>Model Value:</em> 32 <br> <em>Domain API Value:</em> 'REGEX'</td>
+</tr>
+<tr>
+<td>REPLACE</td>
+<td>REPLACE value. Stored as 'REPLACE'. <br> <em>Database Value:</em> 'REPLACE' <br> <em>Model Value:</em> 33 <br> <em>Domain API Value:</em> 'REPLACE'</td>
+</tr>
+<tr>
+<td>RIGHT</td>
+<td>RIGHT value. Stored as 'RIGHT'. <br> <em>Database Value:</em> 'RIGHT' <br> <em>Model Value:</em> 34 <br> <em>Domain API Value:</em> 'RIGHT'</td>
+</tr>
+<tr>
+<td>ROUND</td>
+<td>ROUND value. Stored as 'ROUND'. <br> <em>Database Value:</em> 'ROUND' <br> <em>Model Value:</em> 35 <br> <em>Domain API Value:</em> 'ROUND'</td>
+</tr>
+<tr>
+<td>SELECT</td>
+<td>SELECT value. Stored as 'SELECT'. <br> <em>Database Value:</em> 'SELECT' <br> <em>Model Value:</em> 36 <br> <em>Domain API Value:</em> 'SELECT'</td>
+</tr>
+<tr>
+<td>SORT</td>
+<td>SORT value. Stored as 'SORT'. <br> <em>Database Value:</em> 'SORT' <br> <em>Model Value:</em> 37 <br> <em>Domain API Value:</em> 'SORT'</td>
+</tr>
+<tr>
+<td>SUBSTRING</td>
+<td>SUBSTRING value. Stored as 'SUBSTRING'. <br> <em>Database Value:</em> 'SUBSTRING' <br> <em>Model Value:</em> 38 <br> <em>Domain API Value:</em> 'SUBSTRING'</td>
+</tr>
+<tr>
+<td>SUM</td>
+<td>SUM value. Stored as 'SUM'. <br> <em>Database Value:</em> 'SUM' <br> <em>Model Value:</em> 39 <br> <em>Domain API Value:</em> 'SUM'</td>
+</tr>
+<tr>
+<td>TODAY</td>
+<td>TODAY value. Stored as 'TODAY'. <br> <em>Database Value:</em> 'TODAY' <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'TODAY'</td>
+</tr>
+<tr>
+<td>TOLOWER</td>
+<td>TOLOWER value. Stored as 'TOLOWER'. <br> <em>Database Value:</em> 'TOLOWER' <br> <em>Model Value:</em> 41 <br> <em>Domain API Value:</em> 'TOLOWER'</td>
+</tr>
+<tr>
+<td>TOP</td>
+<td>TOP value. Stored as 'TOP'. <br> <em>Database Value:</em> 'TOP' <br> <em>Model Value:</em> 42 <br> <em>Domain API Value:</em> 'TOP'</td>
+</tr>
+<tr>
+<td>TOUPPER</td>
+<td>TOUPPER value. Stored as 'TOUPPER'. <br> <em>Database Value:</em> 'TOUPPER' <br> <em>Model Value:</em> 43 <br> <em>Domain API Value:</em> 'TOUPPER'</td>
+</tr>
+<tr>
+<td>WHERE</td>
+<td>WHERE value. Stored as 'WHERE'. <br> <em>Database Value:</em> 'WHERE' <br> <em>Model Value:</em> 44 <br> <em>Domain API Value:</em> 'WHERE'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parameter1type">Parameter1Type</h3>
+<blockquote>
+<p>The type of the parameter specifies how to obtain the parameter value.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Parameter1Type">Systems.Bpm.ExpressionParameterType</a> (nullable)</strong><br>
+Generic enum type for ExpressionParameterType properties<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constant</td>
+<td>Constant value. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>Attribute value. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>Reference value. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
+</tr>
+<tr>
+<td>ChildList</td>
+<td>ChildList value. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
+</tr>
+<tr>
+<td>Expression</td>
+<td>Expression value. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Expression'</td>
+</tr>
+<tr>
+<td>Input</td>
+<td>Input value. Stored as 'INPUT'. <br> <em>Database Value:</em> 'INPUT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Input'</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>Repository value. Stored as 'REPO'. <br> <em>Database Value:</em> 'REPO' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Repository'</td>
+</tr>
+<tr>
+<td>System</td>
+<td>System value. Stored as 'SYS'. <br> <em>Database Value:</em> 'SYS' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'System'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parameter1value">Parameter1Value</h3>
+<blockquote>
+<p>The actual value of parameter 1.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parameter2type">Parameter2Type</h3>
+<blockquote>
+<p>The type of the parameter specifies how to obtain the parameter value.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Parameter2Type">Systems.Bpm.ExpressionParameterType</a> (nullable)</strong><br>
+Generic enum type for ExpressionParameterType properties<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constant</td>
+<td>Constant value. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>Attribute value. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>Reference value. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
+</tr>
+<tr>
+<td>ChildList</td>
+<td>ChildList value. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
+</tr>
+<tr>
+<td>Expression</td>
+<td>Expression value. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Expression'</td>
+</tr>
+<tr>
+<td>Input</td>
+<td>Input value. Stored as 'INPUT'. <br> <em>Database Value:</em> 'INPUT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Input'</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>Repository value. Stored as 'REPO'. <br> <em>Database Value:</em> 'REPO' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Repository'</td>
+</tr>
+<tr>
+<td>System</td>
+<td>System value. Stored as 'SYS'. <br> <em>Database Value:</em> 'SYS' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'System'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parameter2value">Parameter2Value</h3>
+<blockquote>
+<p>The actual value of the parameter.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parameter3type">Parameter3Type</h3>
+<blockquote>
+<p>The type of the parameter specifies how to obtain the parameter value.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#Parameter3Type">Systems.Bpm.ExpressionParameterType</a> (nullable)</strong><br>
+Generic enum type for ExpressionParameterType properties<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constant</td>
+<td>Constant value. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>Attribute value. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>Reference value. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
+</tr>
+<tr>
+<td>ChildList</td>
+<td>ChildList value. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
+</tr>
+<tr>
+<td>Expression</td>
+<td>Expression value. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Expression'</td>
+</tr>
+<tr>
+<td>Input</td>
+<td>Input value. Stored as 'INPUT'. <br> <em>Database Value:</em> 'INPUT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Input'</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>Repository value. Stored as 'REPO'. <br> <em>Database Value:</em> 'REPO' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Repository'</td>
+</tr>
+<tr>
+<td>System</td>
+<td>System value. Stored as 'SYS'. <br> <em>Database Value:</em> 'SYS' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'System'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parameter3value">Parameter3Value</h3>
+<blockquote>
+<p>The actual value of the parameter.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="calculatedattribute">CalculatedAttribute</h3>
+<blockquote>
+<p>The <a href="Systems.Bpm.CalculatedAttributeExpressions.html#CalculatedAttribute">CalculatedAttribute</a> to which this CalculatedAttributeExpression belongs. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributes.html">Systems.Bpm.CalculatedAttributes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Systems.Bpm.CalculatedAttributeExpressions erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Systems.Bpm.CalculatedAttributeExpressions erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Systems.Bpm.CalculatedAttributeExpressions erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_CalculatedAttributeExpressions?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_CalculatedAttributeExpressions?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_CalculatedAttributeExpressions?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_CalculatedAttributeExpressions?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Sys_Calculated_Attribute_Expressions?$top=10">https://demodb.my.erp.net/api/domain/odata/Sys_Calculated_Attribute_Expressions?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Systems.Bpm.CalculatedAttributeExpressions.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

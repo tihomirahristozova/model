@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Systems.Bpm.UserBusinessRuleEvents | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Systems.Bpm.UserBusinessRuleEvents | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="systemsbpmuserbusinessruleevents">Systems.Bpm.UserBusinessRuleEvents</h1>
+
+<p>Represents event registration of a business rule. Entity: Sys_User_Business_Rule_Events</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleEvents.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleEvents.html#EventParameter">EventParameter</a></td>
+<td>string (nullable)</td>
+<td>Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleEvents.html#EventType">EventType</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleEvents.html#EventType">Systems.Bpm.UserBusinessRuleEventsRepository.EventType</a></td>
+<td>The event for which to register the business rule. [Required]</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleEvents.html#ExecutionPriority">ExecutionPriority</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleEvents.html#ExecutionPriority">Aloe.SystemFrameworks.Domain.BusinessLogic.RuleExecutionPriority</a></td>
+<td>Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. [Required] [Default(50)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleEvents.html#Layer">Layer</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleEvents.html#Layer">Systems.Bpm.UserBusinessRuleEventsRepository.Layer</a></td>
+<td>Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. [Required] [Default(&quot;BKE&quot;)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleEvents.html#UserBusinessRule">UserBusinessRule</a></td>
+<td><a href="Systems.Bpm.UserBusinessRules.html">Systems.Bpm.UserBusinessRules</a></td>
+<td>The rule, which will be registered for the event. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="eventparameter">EventParameter</h3>
+<blockquote>
+<p>Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="eventtype">EventType</h3>
+<blockquote>
+<p>The event for which to register the business rule. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleEvents.html#EventType">Systems.Bpm.UserBusinessRuleEventsRepository.EventType</a></strong><br>
+Allowed values for the <a href="Systems.Bpm.UserBusinessRuleEvents.html#EventType">EventType</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AGGREGATECLIENTCOMMIT</td>
+<td>Occurs for the aggregate root when saving a change of an aggregate object, but only when the change is made by a client application. If the change is made by the server, the event will not be triggered.. Stored as 'AGGREGATECLIENTCOMMIT'. <br> <em>Database Value:</em> 'AGGREGATECLIENTCOMMIT' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'AGGREGATECLIENTCOMMIT'</td>
+</tr>
+<tr>
+<td>ATTRIBUTECHANGED</td>
+<td>Occurs after the attribute's value is changed. The attribute's name is specified in the 'Event Parameter' field.. Stored as 'ATTRIBUTECHANGED'. <br> <em>Database Value:</em> 'ATTRIBUTECHANGED' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'ATTRIBUTECHANGED'</td>
+</tr>
+<tr>
+<td>ATTRIBUTECHANGING</td>
+<td>Occurs before the attribute's value is changed. The attribute's name is specified in the 'Event Parameter' field.. Stored as 'ATTRIBUTECHANGING'. <br> <em>Database Value:</em> 'ATTRIBUTECHANGING' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'ATTRIBUTECHANGING'</td>
+</tr>
+<tr>
+<td>CLIENTCOMMIT</td>
+<td>Occurs when saving a change of the object, when the change is made by a client application. If the change is made by the server, the event will not be triggered.. Stored as 'CLIENTCOMMIT'. <br> <em>Database Value:</em> 'CLIENTCOMMIT' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'CLIENTCOMMIT'</td>
+</tr>
+<tr>
+<td>COMMIT</td>
+<td>Occurs when saving a change of the object.. Stored as 'COMMIT'. <br> <em>Database Value:</em> 'COMMIT' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'COMMIT'</td>
+</tr>
+<tr>
+<td>STATECHANGED</td>
+<td>Occurs when the document state is changed. The state is specified in the 'Event Parameter' field. Possible parameter values are 'PLANNED', 'FIRMPLANNED', 'RELEASED', 'COMPLETED' and 'CLOSED'.. Stored as 'STATECHANGED'. <br> <em>Database Value:</em> 'STATECHANGED' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'STATECHANGED'</td>
+</tr>
+<tr>
+<td>STATECHANGING</td>
+<td>Occurs during the document state change. The state is specified in the 'Event Parameter' field. Possible parameter values are 'PLANNING', 'FIRMPLANNING', 'RELEASING', 'COMPLETING' and 'CLOSING'.. Stored as 'STATECHANGING'. <br> <em>Database Value:</em> 'STATECHANGING' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'STATECHANGING'</td>
+</tr>
+<tr>
+<td>VOIDING</td>
+<td>Occurs during the voiding of a document.. Stored as 'VOIDING'. <br> <em>Database Value:</em> 'VOIDING' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'VOIDING'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="executionpriority">ExecutionPriority</h3>
+<blockquote>
+<p>Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. [Required] [Default(50)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleEvents.html#ExecutionPriority">Aloe.SystemFrameworks.Domain.BusinessLogic.RuleExecutionPriority</a></strong><br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Early</td>
+<td><em>Database Value:</em> 30 <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Early'</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td><em>Database Value:</em> 50 <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Normal'</td>
+</tr>
+<tr>
+<td>Late</td>
+<td><em>Database Value:</em> 70 <br> <em>Model Value:</em> 70 <br> <em>Domain API Value:</em> 'Late'</td>
+</tr>
+<tr>
+<td>SystemLateUpdate</td>
+<td><em>Database Value:</em> 150 <br> <em>Model Value:</em> 150 <br> <em>Domain API Value:</em> 'SystemLateUpdate'</td>
+</tr>
+<tr>
+<td>SystemLateValidate</td>
+<td><em>Database Value:</em> 200 <br> <em>Model Value:</em> 200 <br> <em>Domain API Value:</em> 'SystemLateValidate'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>50</strong></p>
+<h3 id="layer">Layer</h3>
+<blockquote>
+<p>Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. [Required] [Default(&quot;BKE&quot;)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleEvents.html#Layer">Systems.Bpm.UserBusinessRuleEventsRepository.Layer</a></strong><br>
+Allowed values for the <a href="Systems.Bpm.UserBusinessRuleEvents.html#Layer">Layer</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FrontEnd</td>
+<td>FrontEnd value. Stored as 'FTE'. <br> <em>Database Value:</em> 'FTE' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'FrontEnd'</td>
+</tr>
+<tr>
+<td>BackEnd</td>
+<td>BackEnd value. Stored as 'BKE'. <br> <em>Database Value:</em> 'BKE' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'BackEnd'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>BackEnd</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="userbusinessrule">UserBusinessRule</h3>
+<blockquote>
+<p>The rule, which will be registered for the event. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html">Systems.Bpm.UserBusinessRules</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Systems.Bpm.UserBusinessRuleEvents erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Systems.Bpm.UserBusinessRuleEvents erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Systems.Bpm.UserBusinessRuleEvents erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_UserBusinessRuleEvents?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_UserBusinessRuleEvents?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_UserBusinessRuleEvents?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_UserBusinessRuleEvents?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Sys_User_Business_Rule_Events?$top=10">https://demodb.my.erp.net/api/domain/odata/Sys_User_Business_Rule_Events?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Systems.Bpm.UserBusinessRuleEvents.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Crm.Sales.SalesOrdersOptions | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Crm.Sales.SalesOrdersOptions | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="crmsalessalesordersoptions">Crm.Sales.SalesOrdersOptions</h1>
+
+<p>Options for sales orders of specific user defined document type. Entity: Crm_Sales_Orders_Options</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#AllowedDirections">AllowedDirections</a></td>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#AllowedDirections">Crm.Sales.SalesOrdersOptionsRepository.AllowedDirections</a></td>
+<td>Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default). [Required] [Default(&quot;A&quot;)] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#AvailableQuantityOnly">AvailableQuantityOnly</a></td>
+<td>boolean</td>
+<td>When true indicates that the sales order can be released only if there is sufficient available quantity (by ATP). [Required] [Default(false)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#MinimumAmount">MinimumAmount</a></td>
+<td><a href="../data-types/Amount.md">Amount</a> (nullable)</td>
+<td>When not null, specifies minimal total amount of the sales order, which is required for order releasing. [Currency: MinimumAmountCurrency]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#ShipmentAllowance">ShipmentAllowance</a></td>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#ShipmentAllowance">Crm.Sales.SalesOrdersOptionsRepository.ShipmentAllowance</a></td>
+<td>Terms on which the shipment of the products in the sales order is allowed. [Required] [Default(&quot;A&quot;)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#DealDocumentType">DealDocumentType</a></td>
+<td><a href="General.DocumentTypes.html">General.DocumentTypes</a> (nullable)</td>
+<td>If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#DocumentType">DocumentType</a></td>
+<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
+<td>The document type for which the sales order option applies. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#MinimumAmountCurrency">MinimumAmountCurrency</a></td>
+<td><a href="General.Currencies.html">General.Currencies</a> (nullable)</td>
+<td>The currency of Minimal Amount. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#VATDeviationDocumentAmountType">VATDeviationDocumentAmountType</a></td>
+<td><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a> (nullable)</td>
+<td>Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="alloweddirections">AllowedDirections</h3>
+<blockquote>
+<p>Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default). [Required] [Default(&quot;A&quot;)] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrdersOptions.html#AllowedDirections">Crm.Sales.SalesOrdersOptionsRepository.AllowedDirections</a></strong><br>
+Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#AllowedDirections">AllowedDirections</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NormalSale</td>
+<td>NormalSale value. Stored as 'S'. <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'NormalSale'</td>
+</tr>
+<tr>
+<td>SalesReturn</td>
+<td>SalesReturn value. Stored as 'R'. <br> <em>Database Value:</em> 'R' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'SalesReturn'</td>
+</tr>
+<tr>
+<td>NoLimit</td>
+<td>NoLimit value. Stored as '<em>'. <br> <em>Database Value:</em> '</em>' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'NoLimit'</td>
+</tr>
+<tr>
+<td>AllowAnyButNotBoth</td>
+<td>AllowAnyButNotBoth value. Stored as 'A'. <br> <em>Database Value:</em> 'A' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'AllowAnyButNotBoth'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>AllowAnyButNotBoth</strong></p>
+<h3 id="availablequantityonly">AvailableQuantityOnly</h3>
+<blockquote>
+<p>When true indicates that the sales order can be released only if there is sufficient available quantity (by ATP). [Required] [Default(false)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="minimumamount">MinimumAmount</h3>
+<blockquote>
+<p>When not null, specifies minimal total amount of the sales order, which is required for order releasing. [Currency: MinimumAmountCurrency]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="shipmentallowance">ShipmentAllowance</h3>
+<blockquote>
+<p>Terms on which the shipment of the products in the sales order is allowed. [Required] [Default(&quot;A&quot;)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrdersOptions.html#ShipmentAllowance">Crm.Sales.SalesOrdersOptionsRepository.ShipmentAllowance</a></strong><br>
+Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#ShipmentAllowance">ShipmentAllowance</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AlwaysAllow</td>
+<td>AlwaysAllow value. Stored as 'A'. <br> <em>Database Value:</em> 'A' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'AlwaysAllow'</td>
+</tr>
+<tr>
+<td>WaitForAnyPayment</td>
+<td>WaitForAnyPayment value. Stored as 'P'. <br> <em>Database Value:</em> 'P' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'WaitForAnyPayment'</td>
+</tr>
+<tr>
+<td>WaitForFullPayment</td>
+<td>WaitForFullPayment value. Stored as 'W'. <br> <em>Database Value:</em> 'W' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'WaitForFullPayment'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>AlwaysAllow</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="dealdocumenttype">DealDocumentType</h3>
+<blockquote>
+<p>If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="documenttype">DocumentType</h3>
+<blockquote>
+<p>The document type for which the sales order option applies. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="minimumamountcurrency">MinimumAmountCurrency</h3>
+<blockquote>
+<p>The currency of Minimal Amount. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="vatdeviationdocumentamounttype">VATDeviationDocumentAmountType</h3>
+<blockquote>
+<p>Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Crm.Sales.SalesOrdersOptions erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Crm.Sales.SalesOrdersOptions erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Crm.Sales.SalesOrdersOptions erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Crm_Sales_SalesOrdersOptions?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Sales_SalesOrdersOptions?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_SalesOrdersOptions?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Crm_Sales_SalesOrdersOptions?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Orders_Options?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Sales_Orders_Options?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Crm.Sales.SalesOrdersOptions.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

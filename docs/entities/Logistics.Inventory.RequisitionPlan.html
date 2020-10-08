@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Logistics.Inventory.RequisitionPlan | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Logistics.Inventory.RequisitionPlan | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="logisticsinventoryrequisitionplan">Logistics.Inventory.RequisitionPlan</h1>
+
+<p>The current requisition (MRP) plan. The data is deleted and re-created upon each planning. Entity: Inv_Requisition_Plan</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#CalendarDate">CalendarDate</a></td>
+<td>datetime</td>
+<td>The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning. [Required] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#CompletionDate">CompletionDate</a></td>
+<td>datetime (nullable)</td>
+<td>The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#ConfirmAction">ConfirmAction</a></td>
+<td>boolean</td>
+<td>True - generate firm planned orders for the current row; false- do not generate;. [Required] [Default(false)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#ExplanationMessage">ExplanationMessage</a></td>
+<td>string (nullable)</td>
+<td>A message that explains why the program has generated the planned orders for this row.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#FirmPlannedOrderReceipts">FirmPlannedOrderReceipts</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#FirmPlannedOrderReleases">FirmPlannedOrderReleases</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The order releases which were manually confirmed for release on the specified calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#GenerationDate">GenerationDate</a></td>
+<td>datetime</td>
+<td>Indicates the date on which the plan is generated. [Required] [Default(Now)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#GrossRequirements">GrossRequirements</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#NetRequirements">NetRequirements</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The net requirements for the date, which are in shortage for the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#PlannedOrderReceipts">PlannedOrderReceipts</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#PlannedOrderReleases">PlannedOrderReleases</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#ProjectedAvailableBalance">ProjectedAvailableBalance</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#Quantity">Quantity</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#ReleaseDate">ReleaseDate</a></td>
+<td>datetime (nullable)</td>
+<td>The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#ScheduledReceipts">ScheduledReceipts</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td>The Enterprise Company to which this RequisitionPlan applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#FromStore">FromStore</a></td>
+<td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</td>
+<td>When the order is for transfer, this is the store from which we shall transfer the product. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#Product">Product</a></td>
+<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td>The product, for which we are planning. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#Store">Store</a></td>
+<td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></td>
+<td>The store, which is planned. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#Supplier">Supplier</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html">Logistics.Procurement.Suppliers</a> (nullable)</td>
+<td>The default supplier in the default product supply for current store, if any. [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="calendardate">CalendarDate</h3>
+<blockquote>
+<p>The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning. [Required] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="completiondate">CompletionDate</h3>
+<blockquote>
+<p>The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated.</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="confirmaction">ConfirmAction</h3>
+<blockquote>
+<p>True - generate firm planned orders for the current row; false- do not generate;. [Required] [Default(false)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="explanationmessage">ExplanationMessage</h3>
+<blockquote>
+<p>A message that explains why the program has generated the planned orders for this row.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="firmplannedorderreceipts">FirmPlannedOrderReceipts</h3>
+<blockquote>
+<p>The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="firmplannedorderreleases">FirmPlannedOrderReleases</h3>
+<blockquote>
+<p>The order releases which were manually confirmed for release on the specified calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="generationdate">GenerationDate</h3>
+<blockquote>
+<p>Indicates the date on which the plan is generated. [Required] [Default(Now)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>CurrentDateTime</strong></p>
+<h3 id="grossrequirements">GrossRequirements</h3>
+<blockquote>
+<p>The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="netrequirements">NetRequirements</h3>
+<blockquote>
+<p>The net requirements for the date, which are in shortage for the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="plannedorderreceipts">PlannedOrderReceipts</h3>
+<blockquote>
+<p>The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="plannedorderreleases">PlannedOrderReleases</h3>
+<blockquote>
+<p>The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="projectedavailablebalance">ProjectedAvailableBalance</h3>
+<blockquote>
+<p>Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="quantity">Quantity</h3>
+<blockquote>
+<p>The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="releasedate">ReleaseDate</h3>
+<blockquote>
+<p>The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated.</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="scheduledreceipts">ScheduledReceipts</h3>
+<blockquote>
+<p>The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="enterprisecompany">EnterpriseCompany</h3>
+<blockquote>
+<p>The Enterprise Company to which this RequisitionPlan applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="fromstore">FromStore</h3>
+<blockquote>
+<p>When the order is for transfer, this is the store from which we shall transfer the product. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="product">Product</h3>
+<blockquote>
+<p>The product, for which we are planning. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="store">Store</h3>
+<blockquote>
+<p>The store, which is planned. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="supplier">Supplier</h3>
+<blockquote>
+<p>The default supplier in the default product supply for current store, if any. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.Suppliers.html">Logistics.Procurement.Suppliers</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Logistics.Inventory.RequisitionPlan erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Logistics.Inventory.RequisitionPlan erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Logistics.Inventory.RequisitionPlan erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_RequisitionPlan?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_RequisitionPlan?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_RequisitionPlan?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_RequisitionPlan?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Inv_Requisition_Plan?$top=10">https://demodb.my.erp.net/api/domain/odata/Inv_Requisition_Plan?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Logistics.Inventory.RequisitionPlan.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

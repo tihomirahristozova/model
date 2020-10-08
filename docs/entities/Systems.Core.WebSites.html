@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Systems.Core.WebSites | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Systems.Core.WebSites | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="systemscorewebsites">Systems.Core.WebSites</h1>
+
+<p>Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites (Introduced in version 19.1.100.0)</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Core.WebSites.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Core.WebSites.html#IsActive">IsActive</a></td>
+<td>boolean</td>
+<td>Indicates whether the web site is active and will be instantiated upon next web server restart. [Required] [Default(true)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Core.WebSites.html#Notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this WebSite.</td>
+</tr>
+<tr>
+<td><a href="Systems.Core.WebSites.html#RelativeUrl">RelativeUrl</a></td>
+<td>string (nullable)</td>
+<td>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host.</td>
+</tr>
+<tr>
+<td><a href="Systems.Core.WebSites.html#WebSiteType">WebSiteType</a></td>
+<td><a href="Systems.Core.WebSites.html#WebSiteType">Systems.Core.WebSitesRepository.WebSiteType</a></td>
+<td>The type of web site - Api, Client Center, Id, etc. [Required] [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Core.WebSites.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td>The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Core.WebSites.html#TrustedApplication">TrustedApplication</a></td>
+<td><a href="Systems.Security.TrustedApplications.html">Systems.Security.TrustedApplications</a> (nullable)</td>
+<td>The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1.100.0)</td>
+</tr>
+<tr>
+<td><a href="Systems.Core.WebSites.html#WebHost">WebHost</a></td>
+<td><a href="Systems.Core.WebHosts.html">Systems.Core.WebHosts</a> (nullable)</td>
+<td>The web host in which to host the site. [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="isactive">IsActive</h3>
+<blockquote>
+<p>Indicates whether the web site is active and will be instantiated upon next web server restart. [Required] [Default(true)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
+<h3 id="notes">Notes</h3>
+<blockquote>
+<p>Notes for this WebSite.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="relativeurl">RelativeUrl</h3>
+<blockquote>
+<p>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="websitetype">WebSiteType</h3>
+<blockquote>
+<p>The type of web site - Api, Client Center, Id, etc. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Core.WebSites.html#WebSiteType">Systems.Core.WebSitesRepository.WebSiteType</a></strong><br>
+Allowed values for the <a href="Systems.Core.WebSites.html#WebSiteType">WebSiteType</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API</td>
+<td>API value. Stored as 'API'. <br> <em>Database Value:</em> 'API' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'API'</td>
+</tr>
+<tr>
+<td>ClientCenter</td>
+<td>ClientCenter value. Stored as 'CC'. <br> <em>Database Value:</em> 'CC' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'ClientCenter'</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>ID value. Stored as 'ID'. <br> <em>Database Value:</em> 'ID' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'ID'</td>
+</tr>
+<tr>
+<td>ECommerce</td>
+<td>ECommerce value. Stored as 'EC'. <br> <em>Database Value:</em> 'EC' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ECommerce'</td>
+</tr>
+<tr>
+<td>LEGALBG</td>
+<td>LEGALBG value. Stored as 'LEG'. <br> <em>Database Value:</em> 'LEG' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'LEGALBG'</td>
+</tr>
+<tr>
+<td>SocialInteractions</td>
+<td>SocialInteractions value. Stored as 'SI'. <br> <em>Database Value:</em> 'SI' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'SocialInteractions'</td>
+</tr>
+<tr>
+<td>DigitalMarketplace</td>
+<td>DigitalMarketplace value. Stored as 'DM'. <br> <em>Database Value:</em> 'DM' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'DigitalMarketplace'</td>
+</tr>
+<tr>
+<td>UserProfile</td>
+<td>UserProfile value. Stored as 'PFL'. <br> <em>Database Value:</em> 'PFL' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'UserProfile'</td>
+</tr>
+<tr>
+<td>WebClientApplication</td>
+<td>WebClientApplication value. Stored as 'APP'. <br> <em>Database Value:</em> 'APP' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'WebClientApplication'</td>
+</tr>
+<tr>
+<td>TableAPI</td>
+<td>TableAPI value. Stored as 'TAP'. <br> <em>Database Value:</em> 'TAP' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'TableAPI'</td>
+</tr>
+<tr>
+<td>DataAccessAPI</td>
+<td>DataAccessAPI value. Stored as 'DAP'. <br> <em>Database Value:</em> 'DAP' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'DataAccessAPI'</td>
+</tr>
+<tr>
+<td>WMSMobileApp</td>
+<td>ERP.net WMS Mobile App. Stored as 'WMS'. <br> <em>Database Value:</em> 'WMS' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'WMSMobileApp'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="enterprisecompany">EnterpriseCompany</h3>
+<blockquote>
+<p>The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="trustedapplication">TrustedApplication</h3>
+<blockquote>
+<p>The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1.100.0)</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Security.TrustedApplications.html">Systems.Security.TrustedApplications</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="webhost">WebHost</h3>
+<blockquote>
+<p>The web host in which to host the site. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Core.WebHosts.html">Systems.Core.WebHosts</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Systems.Core.WebSites erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Systems.Core.WebSites erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Systems.Core.WebSites erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Core_WebSites?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Core_WebSites?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_WebSites?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Core_WebSites?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Sys_Web_Sites?$top=10">https://demodb.my.erp.net/api/domain/odata/Sys_Web_Sites?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Systems.Core.WebSites.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

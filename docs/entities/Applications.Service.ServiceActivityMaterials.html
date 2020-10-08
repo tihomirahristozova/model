@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Applications.Service.ServiceActivityMaterials | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Applications.Service.ServiceActivityMaterials | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="applicationsserviceserviceactivitymaterials">Applications.Service.ServiceActivityMaterials</h1>
+
+<p>Contains the materials, which were actually used during the service activity (repair). Entity: Srv_Service_Activity_Materials</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#CoveredByGuarantee">CoveredByGuarantee</a></td>
+<td>boolean</td>
+<td>True when the used material is covered by the guarantee. [Required] [Default(false)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#LineNo">LineNo</a></td>
+<td>int32</td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#Quantity">Quantity</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>Quantity of the product, that was used. [Unit: QuantityUnit] [Required]</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#QuantityBase">QuantityBase</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#StandardQuantityBase">StandardQuantityBase</a></td>
+<td><a href="../data-types/Quantity.md">Quantity</a></td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#LineStore">LineStore</a></td>
+<td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</td>
+<td>The store from which the product was taken. null = use the store from the header. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#Product">Product</a></td>
+<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td>The product, which was used as material. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#QuantityUnit">QuantityUnit</a></td>
+<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td>The measurement unit of Quantity. Initially is set to the default unit for the product. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#ServiceActivity">ServiceActivity</a></td>
+<td><a href="Applications.Service.ServiceActivities.html">Applications.Service.ServiceActivities</a></td>
+<td>The <a href="Applications.Service.ServiceActivityMaterials.html#ServiceActivity">ServiceActivity</a> to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#ServiceObject">ServiceObject</a></td>
+<td><a href="Applications.Service.ServiceObjects.html">Applications.Service.ServiceObjects</a> (nullable)</td>
+<td>The service object for which the material is used. null means unkown object or N/A. [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ServiceActivityAgreedMaterials</td>
+<td><a href="Applications.Service.ServiceActivityAgreedMaterials.html">Applications.Service.ServiceActivityAgreedMaterials</a></td>
+<td>List of <a href="Applications.Service.ServiceActivityAgreedMaterials.html">ServiceActivityAgreedMaterial</a> child objects, based on the <a href="Applications.Service.ServiceActivityAgreedMaterials.html#ServiceActivityMaterial">Applications.Service.ServiceActivityAgreedMaterial.ServiceActivityMaterial</a> back reference</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="coveredbyguarantee">CoveredByGuarantee</h3>
+<blockquote>
+<p>True when the used material is covered by the guarantee. [Required] [Default(false)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="lineno">LineNo</h3>
+<blockquote>
+<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>(obj.ServiceActivity.Materials.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>(obj.ServiceActivity.Materials.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<h3 id="quantity">Quantity</h3>
+<blockquote>
+<p>Quantity of the product, that was used. [Unit: QuantityUnit] [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="quantitybase">QuantityBase</h3>
+<blockquote>
+<p>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<h3 id="standardquantitybase">StandardQuantityBase</h3>
+<blockquote>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Quantity.md">Quantity</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="linestore">LineStore</h3>
+<blockquote>
+<p>The store from which the product was taken. null = use the store from the header. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.ServiceActivity.Store</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.ServiceActivity.Store</code></p>
+<h3 id="product">Product</h3>
+<blockquote>
+<p>The product, which was used as material. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="quantityunit">QuantityUnit</h3>
+<blockquote>
+<p>The measurement unit of Quantity. Initially is set to the default unit for the product. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Product.BaseUnit</code></p>
+<h3 id="serviceactivity">ServiceActivity</h3>
+<blockquote>
+<p>The <a href="Applications.Service.ServiceActivityMaterials.html#ServiceActivity">ServiceActivity</a> to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivities.html">Applications.Service.ServiceActivities</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="serviceobject">ServiceObject</h3>
+<blockquote>
+<p>The service object for which the material is used. null means unkown object or N/A. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">Applications.Service.ServiceObjects</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.ServiceActivity.DefaultServiceObject</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.ServiceActivity.DefaultServiceObject</code></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Applications.Service.ServiceActivityMaterials erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Applications.Service.ServiceActivityMaterials erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Applications.Service.ServiceActivityMaterials erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Applications_Service_ServiceActivityMaterials?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_Service_ServiceActivityMaterials?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceActivityMaterials?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Applications_Service_ServiceActivityMaterials?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Srv_Service_Activity_Materials?$top=10">https://demodb.my.erp.net/api/domain/odata/Srv_Service_Activity_Materials?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Applications.Service.ServiceActivityMaterials.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Systems.Bpm.ProcessElements | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Systems.Bpm.ProcessElements | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="systemsbpmprocesselements">Systems.Bpm.ProcessElements</h1>
+
+<p>Contains the flow elements of the process model. Entity: Bpm_Process_Elements</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Bpm.ProcessElements.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.ProcessElements.html#ElementSubtype">ElementSubtype</a></td>
+<td><a href="Systems.Bpm.ProcessElements.html#ElementSubtype">Systems.Bpm.ProcessElementsRepository.ElementSubtype</a></td>
+<td>Subtype of the element. Each type allows only certain types of sub-types. [Required] [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.ProcessElements.html#ElementType">ElementType</a></td>
+<td><a href="Systems.Bpm.ProcessElements.html#ElementType">Systems.Bpm.ProcessElementsRepository.ElementType</a></td>
+<td>Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact. [Required] [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.ProcessElements.html#InstructionsHtml">InstructionsHtml</a></td>
+<td>string (nullable)</td>
+<td>Detailed instructions to the executor in HTML format. [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.ProcessElements.html#Code">Code</a></td>
+<td>string</td>
+<td>Element code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.ProcessElements.html#Name">Name</a></td>
+<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td>Multilanguage process name. [Required] [Filter(eq;like)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Bpm.ProcessElements.html#Process">Process</a></td>
+<td><a href="Systems.Bpm.Processes.html">Systems.Bpm.Processes</a></td>
+<td>The process, to which this element belongs. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.ProcessElements.html#ProcessLane">ProcessLane</a></td>
+<td><a href="Systems.Bpm.ProcessLanes.html">Systems.Bpm.ProcessLanes</a></td>
+<td>The process lane to which this element belongs. [Required] [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="elementsubtype">ElementSubtype</h3>
+<blockquote>
+<p>Subtype of the element. Each type allows only certain types of sub-types. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessElements.html#ElementSubtype">Systems.Bpm.ProcessElementsRepository.ElementSubtype</a></strong><br>
+Allowed values for the <a href="Systems.Bpm.ProcessElements.html#ElementSubtype">ElementSubtype</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ActivityUserTask</td>
+<td>ActivityUserTask value. Stored as 'ATU'. <br> <em>Database Value:</em> 'ATU' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'ActivityUserTask'</td>
+</tr>
+<tr>
+<td>ActivityManualTask</td>
+<td>ActivityManualTask value. Stored as 'ATM'. <br> <em>Database Value:</em> 'ATM' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'ActivityManualTask'</td>
+</tr>
+<tr>
+<td>ActivityServiceTask</td>
+<td>ActivityServiceTask value. Stored as 'ATV'. <br> <em>Database Value:</em> 'ATV' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'ActivityServiceTask'</td>
+</tr>
+<tr>
+<td>ActivityScriptTask</td>
+<td>ActivityScriptTask value. Stored as 'ATC'. <br> <em>Database Value:</em> 'ATC' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ActivityScriptTask'</td>
+</tr>
+<tr>
+<td>ActivityBusinessRuleTask</td>
+<td>ActivityBusinessRuleTask value. Stored as 'ATB'. <br> <em>Database Value:</em> 'ATB' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'ActivityBusinessRuleTask'</td>
+</tr>
+<tr>
+<td>ActivitySendTask</td>
+<td>ActivitySendTask value. Stored as 'ATS'. <br> <em>Database Value:</em> 'ATS' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'ActivitySendTask'</td>
+</tr>
+<tr>
+<td>ActivityReceiveTask</td>
+<td>ActivityReceiveTask value. Stored as 'ATR'. <br> <em>Database Value:</em> 'ATR' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'ActivityReceiveTask'</td>
+</tr>
+<tr>
+<td>StartEvent</td>
+<td>StartEvent value. Stored as 'ES1'. <br> <em>Database Value:</em> 'ES1' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'StartEvent'</td>
+</tr>
+<tr>
+<td>StartEventMessage</td>
+<td>StartEventMessage value. Stored as 'ES2'. <br> <em>Database Value:</em> 'ES2' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'StartEventMessage'</td>
+</tr>
+<tr>
+<td>StartEventTimer</td>
+<td>StartEventTimer value. Stored as 'ES4'. <br> <em>Database Value:</em> 'ES4' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'StartEventTimer'</td>
+</tr>
+<tr>
+<td>EndEvent</td>
+<td>EndEvent value. Stored as 'EE1'. <br> <em>Database Value:</em> 'EE1' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'EndEvent'</td>
+</tr>
+<tr>
+<td>EndEventMessage</td>
+<td>EndEventMessage value. Stored as 'EE2'. <br> <em>Database Value:</em> 'EE2' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'EndEventMessage'</td>
+</tr>
+<tr>
+<td>EndEventError</td>
+<td>EndEventError value. Stored as 'EE5'. <br> <em>Database Value:</em> 'EE5' <br> <em>Model Value:</em> 12 <br> <em>Domain API Value:</em> 'EndEventError'</td>
+</tr>
+<tr>
+<td>EndEventTerminate</td>
+<td>EndEventTerminate value. Stored as 'EE9'. <br> <em>Database Value:</em> 'EE9' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'EndEventTerminate'</td>
+</tr>
+<tr>
+<td>IntermediateEventThrow</td>
+<td>IntermediateEventThrow value. Stored as 'EI1'. <br> <em>Database Value:</em> 'EI1' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'IntermediateEventThrow'</td>
+</tr>
+<tr>
+<td>IntermediateEventThrowMessage</td>
+<td>IntermediateEventThrowMessage value. Stored as 'EI2'. <br> <em>Database Value:</em> 'EI2' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'IntermediateEventThrowMessage'</td>
+</tr>
+<tr>
+<td>IntermediateEventCatchMessage</td>
+<td>IntermediateEventCatchMessage value. Stored as 'EI3'. <br> <em>Database Value:</em> 'EI3' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'IntermediateEventCatchMessage'</td>
+</tr>
+<tr>
+<td>IntermediateEventCatchTimer</td>
+<td>IntermediateEventCatchTimer value. Stored as 'EI4'. <br> <em>Database Value:</em> 'EI4' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'IntermediateEventCatchTimer'</td>
+</tr>
+<tr>
+<td>GatewayExclusive</td>
+<td>GatewayExclusive value. Stored as 'GEX'. <br> <em>Database Value:</em> 'GEX' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GatewayExclusive'</td>
+</tr>
+<tr>
+<td>GatewayInclusive</td>
+<td>GatewayInclusive value. Stored as 'GIN'. <br> <em>Database Value:</em> 'GIN' <br> <em>Model Value:</em> 19 <br> <em>Domain API Value:</em> 'GatewayInclusive'</td>
+</tr>
+<tr>
+<td>ArtifactTextAnnotation</td>
+<td>ArtifactTextAnnotation value. Stored as 'CAT'. <br> <em>Database Value:</em> 'CAT' <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'ArtifactTextAnnotation'</td>
+</tr>
+<tr>
+<td>ArtifactGroup</td>
+<td>ArtifactGroup value. Stored as 'CGP'. <br> <em>Database Value:</em> 'CGP' <br> <em>Model Value:</em> 21 <br> <em>Domain API Value:</em> 'ArtifactGroup'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="elementtype">ElementType</h3>
+<blockquote>
+<p>Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessElements.html#ElementType">Systems.Bpm.ProcessElementsRepository.ElementType</a></strong><br>
+Allowed values for the <a href="Systems.Bpm.ProcessElements.html#ElementType">ElementType</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activity</td>
+<td>Activity value. Stored as 'A'. <br> <em>Database Value:</em> 'A' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Activity'</td>
+</tr>
+<tr>
+<td>Event</td>
+<td>Event value. Stored as 'E'. <br> <em>Database Value:</em> 'E' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Event'</td>
+</tr>
+<tr>
+<td>Gateway</td>
+<td>Gateway value. Stored as 'G'. <br> <em>Database Value:</em> 'G' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Gateway'</td>
+</tr>
+<tr>
+<td>Artifact</td>
+<td>Artifact value. Stored as 'C'. <br> <em>Database Value:</em> 'C' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Artifact'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="instructionshtml">InstructionsHtml</h3>
+<blockquote>
+<p>Detailed instructions to the executor in HTML format. [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="code">Code</h3>
+<blockquote>
+<p>Element code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>Multilanguage process name. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="process">Process</h3>
+<blockquote>
+<p>The process, to which this element belongs. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.Processes.html">Systems.Bpm.Processes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="processlane">ProcessLane</h3>
+<blockquote>
+<p>The process lane to which this element belongs. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessLanes.html">Systems.Bpm.ProcessLanes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Systems.Bpm.ProcessElements erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Systems.Bpm.ProcessElements erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Systems.Bpm.ProcessElements erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_ProcessElements?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_ProcessElements?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_ProcessElements?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_ProcessElements?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Bpm_Process_Elements?$top=10">https://demodb.my.erp.net/api/domain/odata/Bpm_Process_Elements?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Systems.Bpm.ProcessElements.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

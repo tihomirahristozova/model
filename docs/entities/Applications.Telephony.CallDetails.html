@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Applications.Telephony.CallDetails | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Applications.Telephony.CallDetails | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="applicationstelephonycalldetails">Applications.Telephony.CallDetails</h1>
+
+<p>Contains call detail records. Calls are phone calls, video calls and SMS messages. Entity: Cm_Call_Details</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Applications.Telephony.CallDetails.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.Telephony.CallDetails.html#CallType">CallType</a></td>
+<td><a href="Applications.Telephony.CallDetails.html#CallType">Applications.Telephony.CallDetailsRepository.CallType</a></td>
+<td>P=Phone; V=Video; M=Message/SMS. [Required] [Default(&quot;P&quot;)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Telephony.CallDetails.html#CallUniqueId">CallUniqueId</a></td>
+<td>string (nullable)</td>
+<td>The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.</td>
+</tr>
+<tr>
+<td><a href="Applications.Telephony.CallDetails.html#CalledPartyNumber">CalledPartyNumber</a></td>
+<td>string</td>
+<td>The voice number of the party, which received the call. [Required] [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Telephony.CallDetails.html#CallingPartyNumber">CallingPartyNumber</a></td>
+<td>string</td>
+<td>The voice number of the originating party of the call. [Required] [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Telephony.CallDetails.html#DurationSeconds">DurationSeconds</a></td>
+<td>int32</td>
+<td>The duration of the call (in seconds). [Required] [Default(0)] [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Telephony.CallDetails.html#StartTime">StartTime</a></td>
+<td>datetime</td>
+<td>The starting date and time of the call. [Required] [Filter(ge;le)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Applications.Telephony.CallDetails.html#CalledParty">CalledParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td>The party, which received the call. null when the party was not determined successfully. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Telephony.CallDetails.html#CallingParty">CallingParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td>The party, which originated the call.  null when the party was not determined successfully. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Telephony.CallDetails.html#ExternalCompany">ExternalCompany</a></td>
+<td><a href="General.Contacts.Companies.html">General.Contacts.Companies</a> (nullable)</td>
+<td>The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Telephony.CallDetails.html#ExternalParty">ExternalParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td>It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="calltype">CallType</h3>
+<blockquote>
+<p>P=Phone; V=Video; M=Message/SMS. [Required] [Default(&quot;P&quot;)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Applications.Telephony.CallDetails.html#CallType">Applications.Telephony.CallDetailsRepository.CallType</a></strong><br>
+Allowed values for the <a href="Applications.Telephony.CallDetails.html#CallType">CallType</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phone</td>
+<td>Phone value. Stored as 'P'. <br> <em>Database Value:</em> 'P' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Phone'</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>Video value. Stored as 'V'. <br> <em>Database Value:</em> 'V' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Video'</td>
+</tr>
+<tr>
+<td>MessageOrSMS</td>
+<td>MessageOrSMS value. Stored as 'M'. <br> <em>Database Value:</em> 'M' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'MessageOrSMS'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Phone</strong></p>
+<h3 id="calluniqueid">CallUniqueId</h3>
+<blockquote>
+<p>The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="calledpartynumber">CalledPartyNumber</h3>
+<blockquote>
+<p>The voice number of the party, which received the call. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="callingpartynumber">CallingPartyNumber</h3>
+<blockquote>
+<p>The voice number of the originating party of the call. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="durationseconds">DurationSeconds</h3>
+<blockquote>
+<p>The duration of the call (in seconds). [Required] [Default(0)] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h3 id="starttime">StartTime</h3>
+<blockquote>
+<p>The starting date and time of the call. [Required] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="calledparty">CalledParty</h3>
+<blockquote>
+<p>The party, which received the call. null when the party was not determined successfully. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="callingparty">CallingParty</h3>
+<blockquote>
+<p>The party, which originated the call.  null when the party was not determined successfully. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="externalcompany">ExternalCompany</h3>
+<blockquote>
+<p>The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">General.Contacts.Companies</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="externalparty">ExternalParty</h3>
+<blockquote>
+<p>It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Applications.Telephony.CallDetails erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Applications.Telephony.CallDetails erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Applications.Telephony.CallDetails erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Applications_Telephony_CallDetails?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_Telephony_CallDetails?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Applications_Telephony_CallDetails?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Applications_Telephony_CallDetails?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Cm_Call_Details?$top=10">https://demodb.my.erp.net/api/domain/odata/Cm_Call_Details?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Applications.Telephony.CallDetails.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

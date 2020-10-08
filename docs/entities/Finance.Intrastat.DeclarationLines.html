@@ -1,0 +1,564 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Finance.Intrastat.DeclarationLines | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Finance.Intrastat.DeclarationLines | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="financeintrastatdeclarationlines">Finance.Intrastat.DeclarationLines</h1>
+
+<p>Contains the details of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declaration_Lines</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#DeliveryTerms">DeliveryTerms</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#DeliveryTerms">Finance.Intrastat.DeclarationLinesRepository.DeliveryTerms</a></td>
+<td>Delivery terms - classification according to Intrastat (which uses the common abbreviations). [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#InvoicedValueAmountBase">InvoicedValueAmountBase</a></td>
+<td><a href="../data-types/Amount.md">Amount</a></td>
+<td>Invoiced value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency] [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#LineAction">LineAction</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#LineAction">Finance.Intrastat.DeclarationLinesRepository.LineAction</a></td>
+<td>Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted. [Required] [Default(&quot;NEW&quot;)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#LineNo">LineNo</a></td>
+<td>int32</td>
+<td>Consequtive line number within the intrastat declaration. [Required] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#NetMassKg">NetMassKg</a></td>
+<td>decimal</td>
+<td>Net mass of the goods in kg. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#QuantitySupplementaryUnit">QuantitySupplementaryUnit</a></td>
+<td>decimal (nullable)</td>
+<td>Quantity of the goods in the supplementary unit. null when no supplementary unit is specified.</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#StatisticalValueAmountBase">StatisticalValueAmountBase</a></td>
+<td><a href="../data-types/Amount.md">Amount</a> (nullable)</td>
+<td>Statistical value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#TransactionNature">TransactionNature</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#TransactionNature">Finance.Intrastat.DeclarationLinesRepository.TransactionNature</a></td>
+<td>Transaction nature, according to the Intrastat classification. [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#TransportMode">TransportMode</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#TransportMode">Finance.Intrastat.DeclarationLinesRepository.TransportMode</a></td>
+<td>Transportation mode - type of transportation used. [Required]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#AdministrativeRegion">AdministrativeRegion</a></td>
+<td><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a></td>
+<td>Administrative region of the enterprise company at the time of the declaration. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#IntrastatCommodityCode">IntrastatCommodityCode</a></td>
+<td><a href="Finance.Intrastat.CommodityCodes.html">Finance.Intrastat.CommodityCodes</a></td>
+<td>The commodity code of the goods, according to the Intrastat commodity classification. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#IntrastatDeclaration">IntrastatDeclaration</a></td>
+<td><a href="Finance.Intrastat.Declarations.html">Finance.Intrastat.Declarations</a></td>
+<td>The intrastat declaration, to which this line belongs. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#OriginCountry">OriginCountry</a></td>
+<td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
+<td>The country of origin of the goods. null for outbound declarations. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#PartyCountry">PartyCountry</a></td>
+<td><a href="General.Geography.Countries.html">General.Geography.Countries</a></td>
+<td>The country of the partner. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#TransportCountry">TransportCountry</a></td>
+<td><a href="General.Geography.Countries.html">General.Geography.Countries</a></td>
+<td>The country of the transportation company. [Required] [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="deliveryterms">DeliveryTerms</h3>
+<blockquote>
+<p>Delivery terms - classification according to Intrastat (which uses the common abbreviations). [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Intrastat.DeclarationLines.html#DeliveryTerms">Finance.Intrastat.DeclarationLinesRepository.DeliveryTerms</a></strong><br>
+Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#DeliveryTerms">DeliveryTerms</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ExWorks</td>
+<td>ExWorks value. Stored as 'EXW'. <br> <em>Database Value:</em> 'EXW' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'ExWorks'</td>
+</tr>
+<tr>
+<td>FrancoCarrier</td>
+<td>FrancoCarrier value. Stored as 'FCA'. <br> <em>Database Value:</em> 'FCA' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'FrancoCarrier'</td>
+</tr>
+<tr>
+<td>FreeAlongsideShip</td>
+<td>FreeAlongsideShip value. Stored as 'FAS'. <br> <em>Database Value:</em> 'FAS' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'FreeAlongsideShip'</td>
+</tr>
+<tr>
+<td>FreeOnBoard</td>
+<td>FreeOnBoard value. Stored as 'FOB'. <br> <em>Database Value:</em> 'FOB' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'FreeOnBoard'</td>
+</tr>
+<tr>
+<td>CostAndFreightCF</td>
+<td>CostAndFreightCF value. Stored as 'CFR'. <br> <em>Database Value:</em> 'CFR' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'CostAndFreightCF'</td>
+</tr>
+<tr>
+<td>CostInsuranceAndFreight</td>
+<td>CostInsuranceAndFreight value. Stored as 'CIF'. <br> <em>Database Value:</em> 'CIF' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'CostInsuranceAndFreight'</td>
+</tr>
+<tr>
+<td>CarriagePaidTo</td>
+<td>CarriagePaidTo value. Stored as 'CPT'. <br> <em>Database Value:</em> 'CPT' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'CarriagePaidTo'</td>
+</tr>
+<tr>
+<td>CarriageAndInsurancePaidTo</td>
+<td>CarriageAndInsurancePaidTo value. Stored as 'CIP'. <br> <em>Database Value:</em> 'CIP' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'CarriageAndInsurancePaidTo'</td>
+</tr>
+<tr>
+<td>DeliveredAtPlace</td>
+<td>DeliveredAtPlace value. Stored as 'DAP'. <br> <em>Database Value:</em> 'DAP' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'DeliveredAtPlace'</td>
+</tr>
+<tr>
+<td>DeliveredAtTerminal</td>
+<td>DeliveredAtTerminal value. Stored as 'DAT'. <br> <em>Database Value:</em> 'DAT' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'DeliveredAtTerminal'</td>
+</tr>
+<tr>
+<td>DeliveredDutyPaid</td>
+<td>DeliveredDutyPaid value. Stored as 'DDP'. <br> <em>Database Value:</em> 'DDP' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'DeliveredDutyPaid'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="invoicedvalueamountbase">InvoicedValueAmountBase</h3>
+<blockquote>
+<p>Invoiced value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency] [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="lineaction">LineAction</h3>
+<blockquote>
+<p>Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted. [Required] [Default(&quot;NEW&quot;)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Intrastat.DeclarationLines.html#LineAction">Finance.Intrastat.DeclarationLinesRepository.LineAction</a></strong><br>
+Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#LineAction">LineAction</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>New value. Stored as 'NEW'. <br> <em>Database Value:</em> 'NEW' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+</tr>
+<tr>
+<td>EditedNew</td>
+<td>EditedNew value. Stored as 'EDN'. <br> <em>Database Value:</em> 'EDN' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'EditedNew'</td>
+</tr>
+<tr>
+<td>EditedOld</td>
+<td>EditedOld value. Stored as 'EDO'. <br> <em>Database Value:</em> 'EDO' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'EditedOld'</td>
+</tr>
+<tr>
+<td>Deleted</td>
+<td>Deleted value. Stored as 'DEL'. <br> <em>Database Value:</em> 'DEL' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Deleted'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>New</strong></p>
+<h3 id="lineno">LineNo</h3>
+<blockquote>
+<p>Consequtive line number within the intrastat declaration. [Required] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>(obj.IntrastatDeclaration.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>(obj.IntrastatDeclaration.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<h3 id="netmasskg">NetMassKg</h3>
+<blockquote>
+<p>Net mass of the goods in kg. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>decimal</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="quantitysupplementaryunit">QuantitySupplementaryUnit</h3>
+<blockquote>
+<p>Quantity of the goods in the supplementary unit. null when no supplementary unit is specified.</p>
+</blockquote>
+<p><em>Type</em>: <strong>decimal (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="statisticalvalueamountbase">StatisticalValueAmountBase</h3>
+<blockquote>
+<p>Statistical value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="transactionnature">TransactionNature</h3>
+<blockquote>
+<p>Transaction nature, according to the Intrastat classification. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Intrastat.DeclarationLines.html#TransactionNature">Finance.Intrastat.DeclarationLinesRepository.TransactionNature</a></strong><br>
+Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#TransactionNature">TransactionNature</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OutrightPurchaseOrSale</td>
+<td>OutrightPurchaseOrSale value. Stored as '11'. <br> <em>Database Value:</em> '11' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'OutrightPurchaseOrSale'</td>
+</tr>
+<tr>
+<td>SupplyForSale</td>
+<td>SupplyForSale value. Stored as '12'. <br> <em>Database Value:</em> '12' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'SupplyForSale'</td>
+</tr>
+<tr>
+<td>BarterTrade</td>
+<td>BarterTrade value. Stored as '13'. <br> <em>Database Value:</em> '13' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'BarterTrade'</td>
+</tr>
+<tr>
+<td>FinancialLeasing</td>
+<td>FinancialLeasing value. Stored as '14'. <br> <em>Database Value:</em> '14' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'FinancialLeasing'</td>
+</tr>
+<tr>
+<td>OtherTransactions</td>
+<td>OtherTransactions value. Stored as '19'. <br> <em>Database Value:</em> '19' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'OtherTransactions'</td>
+</tr>
+<tr>
+<td>ReturnStokilizing</td>
+<td>ReturnStokilizing value. Stored as '21'. <br> <em>Database Value:</em> '21' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'ReturnStokilizing'</td>
+</tr>
+<tr>
+<td>ReplacementForReturnedGoods</td>
+<td>ReplacementForReturnedGoods value. Stored as '22'. <br> <em>Database Value:</em> '22' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'ReplacementForReturnedGoods'</td>
+</tr>
+<tr>
+<td>ReplacementOfGoodsNotBeingReturned</td>
+<td>ReplacementOfGoodsNotBeingReturned value. Stored as '23'. <br> <em>Database Value:</em> '23' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'ReplacementOfGoodsNotBeingReturned'</td>
+</tr>
+<tr>
+<td>ReturnOrExchangeOfOtherGoods</td>
+<td>ReturnOrExchangeOfOtherGoods value. Stored as '29'. <br> <em>Database Value:</em> '29' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'ReturnOrExchangeOfOtherGoods'</td>
+</tr>
+<tr>
+<td>SpecificTransactions</td>
+<td>SpecificTransactions value. Stored as '60'. <br> <em>Database Value:</em> '60' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'SpecificTransactions'</td>
+</tr>
+<tr>
+<td>OperationsOnJointProjects</td>
+<td>OperationsOnJointProjects value. Stored as '70'. <br> <em>Database Value:</em> '70' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'OperationsOnJointProjects'</td>
+</tr>
+<tr>
+<td>TransactionsOfConstructionMaterialsAndEquipment</td>
+<td>TransactionsOfConstructionMaterialsAndEquipment value. Stored as '80'. <br> <em>Database Value:</em> '80' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'TransactionsOfConstructionMaterialsAndEquipment'</td>
+</tr>
+<tr>
+<td>OtherTransactionsLeasing</td>
+<td>OtherTransactionsLeasing value. Stored as '91'. <br> <em>Database Value:</em> '91' <br> <em>Model Value:</em> 12 <br> <em>Domain API Value:</em> 'OtherTransactionsLeasing'</td>
+</tr>
+<tr>
+<td>OtherTransactionsOther</td>
+<td>OtherTransactionsOther value. Stored as '99'. <br> <em>Database Value:</em> '99' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'OtherTransactionsOther'</td>
+</tr>
+<tr>
+<td>DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind</td>
+<td>DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind value. Stored as '30'. <br> <em>Database Value:</em> '30' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind'</td>
+</tr>
+<tr>
+<td>GoodsThatAreExpectedToBeReturnedToSender</td>
+<td>GoodsThatAreExpectedToBeReturnedToSender value. Stored as '41'. <br> <em>Database Value:</em> '41' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'GoodsThatAreExpectedToBeReturnedToSender'</td>
+</tr>
+<tr>
+<td>GoodsThatAreNotExpectedToBeReturnedToSender</td>
+<td>GoodsThatAreNotExpectedToBeReturnedToSender value. Stored as '42'. <br> <em>Database Value:</em> '42' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'GoodsThatAreNotExpectedToBeReturnedToSender'</td>
+</tr>
+<tr>
+<td>GoodsThatAreReturnedToSender</td>
+<td>GoodsThatAreReturnedToSender value. Stored as '51'. <br> <em>Database Value:</em> '51' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GoodsThatAreReturnedToSender'</td>
+</tr>
+<tr>
+<td>GoodsThatAreNotReturnedToSender</td>
+<td>GoodsThatAreNotReturnedToSender value. Stored as '52'. <br> <em>Database Value:</em> '52' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GoodsThatAreNotReturnedToSender'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="transportmode">TransportMode</h3>
+<blockquote>
+<p>Transportation mode - type of transportation used. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Intrastat.DeclarationLines.html#TransportMode">Finance.Intrastat.DeclarationLinesRepository.TransportMode</a></strong><br>
+Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#TransportMode">TransportMode</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shipping</td>
+<td>Shipping value. Stored as '1'. <br> <em>Database Value:</em> '1' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Shipping'</td>
+</tr>
+<tr>
+<td>RailwayTransport</td>
+<td>RailwayTransport value. Stored as '2'. <br> <em>Database Value:</em> '2' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'RailwayTransport'</td>
+</tr>
+<tr>
+<td>RoadTransport</td>
+<td>RoadTransport value. Stored as '3'. <br> <em>Database Value:</em> '3' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'RoadTransport'</td>
+</tr>
+<tr>
+<td>AirTransport</td>
+<td>AirTransport value. Stored as '4'. <br> <em>Database Value:</em> '4' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'AirTransport'</td>
+</tr>
+<tr>
+<td>Mail</td>
+<td>Mail value. Stored as '5'. <br> <em>Database Value:</em> '5' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Mail'</td>
+</tr>
+<tr>
+<td>FixedTransportInstallations</td>
+<td>FixedTransportInstallations value. Stored as '7'. <br> <em>Database Value:</em> '7' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'FixedTransportInstallations'</td>
+</tr>
+<tr>
+<td>RiverTransport</td>
+<td>RiverTransport value. Stored as '8'. <br> <em>Database Value:</em> '8' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'RiverTransport'</td>
+</tr>
+<tr>
+<td>SelfPropelled</td>
+<td>SelfPropelled value. Stored as '9'. <br> <em>Database Value:</em> '9' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'SelfPropelled'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="administrativeregion">AdministrativeRegion</h3>
+<blockquote>
+<p>Administrative region of the enterprise company at the time of the declaration. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="intrastatcommoditycode">IntrastatCommodityCode</h3>
+<blockquote>
+<p>The commodity code of the goods, according to the Intrastat commodity classification. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Intrastat.CommodityCodes.html">Finance.Intrastat.CommodityCodes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="intrastatdeclaration">IntrastatDeclaration</h3>
+<blockquote>
+<p>The intrastat declaration, to which this line belongs. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Intrastat.Declarations.html">Finance.Intrastat.Declarations</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="origincountry">OriginCountry</h3>
+<blockquote>
+<p>The country of origin of the goods. null for outbound declarations. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="partycountry">PartyCountry</h3>
+<blockquote>
+<p>The country of the partner. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="transportcountry">TransportCountry</h3>
+<blockquote>
+<p>The country of the transportation company. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Finance.Intrastat.DeclarationLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Finance.Intrastat.DeclarationLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Finance.Intrastat.DeclarationLines erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Finance_Intrastat_DeclarationLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Intrastat_DeclarationLines?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Finance_Intrastat_DeclarationLines?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Finance_Intrastat_DeclarationLines?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Its_Declaration_Lines?$top=10">https://demodb.my.erp.net/api/domain/odata/Its_Declaration_Lines?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Finance.Intrastat.DeclarationLines.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1024 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Finance.Payments.PaymentTransactions | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Finance.Payments.PaymentTransactions | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="financepaymentspaymenttransactions">Finance.Payments.PaymentTransactions</h1>
+
+<p>Represents actual payments, which increase or decrease the balance of a payment account. Entity: Cash_Payment_Transactions</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#CompleteTime">CompleteTime</a></td>
+<td>datetime (nullable)</td>
+<td>Exact time, when the document was last completed[Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#CreationTime">CreationTime</a></td>
+<td>datetime</td>
+<td>Date/Time when the document was created [Required][Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#CreationUser">CreationUser</a></td>
+<td>string</td>
+<td>The login name of the user, who created the document [Required][Filter(like)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#DocumentDate">DocumentDate</a></td>
+<td>datetime</td>
+<td>The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#DocumentNo">DocumentNo</a></td>
+<td>string</td>
+<td>Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#DocumentVersion">DocumentVersion</a></td>
+<td>int32</td>
+<td>[Filter(eq;ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#DocumentNotes">DocumentNotes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this Document</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#ParentDocumentRelationshipType">ParentDocumentRelationshipType</a></td>
+<td><a href="Finance.Payments.PaymentTransactions.html#ParentDocumentRelationshipType">General.ParentDocumentRelationshipType</a> (nullable)</td>
+<td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#PlanningOnly">PlanningOnly</a></td>
+<td>boolean (nullable)</td>
+<td>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#ReadOnly">ReadOnly</a></td>
+<td>boolean</td>
+<td>True - the document is read only; false - the document is not read only [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#ReferenceDate">ReferenceDate</a></td>
+<td>datetime (nullable)</td>
+<td>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#ReferenceDocumentNo">ReferenceDocumentNo</a></td>
+<td>string (nullable)</td>
+<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#ReleaseTime">ReleaseTime</a></td>
+<td>datetime (nullable)</td>
+<td>Exact time, when the document was first released [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#State">State</a></td>
+<td><a href="Finance.Payments.PaymentTransactions.html#State">General.DocumentState</a></td>
+<td>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#Void">Void</a></td>
+<td>boolean</td>
+<td>True if the document is null and void [Required][Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#VoidReason">VoidReason</a></td>
+<td>string (nullable)</td>
+<td>Reason for voiding the document, entered by the user</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#VoidTime">VoidTime</a></td>
+<td>datetime (nullable)</td>
+<td>Date/time when the document has become void</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#VoidUser">VoidUser</a></td>
+<td>string (nullable)</td>
+<td>The user who voided the document</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#EntityName">EntityName</a></td>
+<td>string</td>
+<td>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#Direction">Direction</a></td>
+<td><a href="Finance.Payments.PaymentTransactions.html#Direction">Finance.Payments.PaymentOrdersRepository.Direction</a></td>
+<td>I for Payment issue, R for payment receipt. [Required] [Default(&quot;R&quot;)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#IsReleased">IsReleased</a></td>
+<td>boolean</td>
+<td>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#IsSingleExecution">IsSingleExecution</a></td>
+<td>boolean</td>
+<td>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#Notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this PaymentTransaction.</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#PaymentSlipNo">PaymentSlipNo</a></td>
+<td>string (nullable)</td>
+<td>The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips. [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#RequiresAllocation">RequiresAllocation</a></td>
+<td>boolean</td>
+<td>True=The total amount should be allocated to payment orders; false=Payment orders are not required. [Required] [Default(true)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#ReversalReason">ReversalReason</a></td>
+<td><a href="Finance.Payments.PaymentTransactions.html#ReversalReason">Finance.Payments.PaymentTransactionsRepository.ReversalReason</a> (nullable)</td>
+<td>The reason for the reversal of the payment. (Introduced in version 20.1.100.0)</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#TotalAmount">TotalAmount</a></td>
+<td><a href="../data-types/Amount.md">Amount</a></td>
+<td>The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines. [Currency: TotalAmountCurrency] [Required] [Default(0)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#AccessKey">AccessKey</a></td>
+<td><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</td>
+<td>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#AdjustedDocument">AdjustedDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>The primary document, which the current document adjusts. null when this is not an adjustment document</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#AssignedToUser">AssignedToUser</a></td>
+<td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
+<td>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#CurrencyDirectory">CurrencyDirectory</a></td>
+<td><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</td>
+<td>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#DocumentType">DocumentType</a></td>
+<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
+<td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
+<td>The enterprise company which issued the document [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#EnterpriseCompanyLocation">EnterpriseCompanyLocation</a></td>
+<td><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</td>
+<td>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#FromCompanyDivision">FromCompanyDivision</a></td>
+<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</td>
+<td>The division of the company, issuing the document. null when the document is not issued by any specific division</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#FromParty">FromParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
+<td>The party which issued the document [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#MasterDocument">MasterDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a></td>
+<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#Parent">Parent</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>In a multi-document tree, this is the direct parent document. If this is the root it is null</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#PrimeCauseDocument">PrimeCauseDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>The document that is the prime cause for creation of the current document</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#ResponsiblePerson">ResponsiblePerson</a></td>
+<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
+<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#ReverseOfDocument">ReverseOfDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>The document which the current document is reverse of</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#Sequence">Sequence</a></td>
+<td><a href="General.Sequences.html">General.Sequences</a> (nullable)</td>
+<td>The sequence that will be used to give new numbers to the documents of this type</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#ToCompanyDivision">ToCompanyDivision</a></td>
+<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></td>
+<td>The division of the company, receiving the document. null when the document is not received by any specific division</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#ToParty">ToParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td>The party which should receive the document</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#UserStatus">UserStatus</a></td>
+<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
+<td>The user status of this document if applicable for this document type. null means unknown or not yet set</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#FiscalPrinterPosDevice">FiscalPrinterPosDevice</a></td>
+<td><a href="Crm.Pos.Devices.html">Crm.Pos.Devices</a> (nullable)</td>
+<td>For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order. [Filter(multi eq)] (Introduced in version 19.1.100.0)</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#OriginalPaymentTransaction">OriginalPaymentTransaction</a></td>
+<td><a href="Finance.Payments.PaymentTransactions.html">Finance.Payments.PaymentTransactions</a> (nullable)</td>
+<td>Original Payment Transaction. [Filter(multi eq)] (Introduced in version 20.1.100.0)</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#ParentPaymentSlipAmount">ParentPaymentSlipAmount</a></td>
+<td><a href="Finance.Payments.PaymentSlipAmounts.html">Finance.Payments.PaymentSlipAmounts</a> (nullable)</td>
+<td>The Payment Slip Amount, which the current payment transaction fulfills . null when the current document does not execute any Payment Slip Amount. [Filter(multi eq)] (Introduced in version 19.1.100.0)</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#Party">Party</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
+<td>The party that is paying or receiving the money. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#PaymentAccount">PaymentAccount</a></td>
+<td><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</td>
+<td>The account towards which the payment was effected. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#PaymentReason">PaymentReason</a></td>
+<td><a href="Finance.Payments.PaymentReasons.html">Finance.Payments.PaymentReasons</a> (nullable)</td>
+<td>The payment reason, as defined in Payment Reasons. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#PaymentSlip">PaymentSlip</a></td>
+<td><a href="Finance.Payments.PaymentSlips.html">Finance.Payments.PaymentSlips</a> (nullable)</td>
+<td>When not null specifies that this payment was part of a payment slip. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#PaymentType">PaymentType</a></td>
+<td><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</td>
+<td>Specifies the payment type used to pay, when using this payment account. null when the payment type is unknown or unspecified. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#PosLocation">PosLocation</a></td>
+<td><a href="Crm.Pos.Locations.html">Crm.Pos.Locations</a> (nullable)</td>
+<td>For POS Sales Order payments. Specifies the POS Location, in which the payment is performed. Null when the payment transaction is not created for a POS Sale Order. [Filter(multi eq)] (Introduced in version 19.1.100.0)</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#PosOperator">PosOperator</a></td>
+<td><a href="Crm.Pos.Operators.html">Crm.Pos.Operators</a> (nullable)</td>
+<td>For POS Sales Order payments. Specifies the POS Operator, who created the payment order. Null when the payment transaction is not created for a POS Sale Order. [Filter(multi eq)] (Introduced in version 19.1.100.0)</td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactions.html#TotalAmountCurrency">TotalAmountCurrency</a></td>
+<td><a href="General.Currencies.html">General.Currencies</a></td>
+<td>The currency of the total amount. [Required] [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DocumentAmounts</td>
+<td><a href="General.DocumentAmounts.html">General.DocumentAmounts</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Comments</td>
+<td><a href="General.DocumentComments.html">General.DocumentComments</a></td>
+<td>List of <a href="General.DocumentComments.html">DocumentComment</a> child objects, based on the <a href="General.DocumentComments.html#Document">DocumentComment.Document</a> back reference</td>
+</tr>
+<tr>
+<td>DistributedAmounts</td>
+<td><a href="General.DocumentDistributedAmounts.html">General.DocumentDistributedAmounts</a></td>
+<td>List of <a href="General.DocumentDistributedAmounts.html">DocumentDistributedAmount</a> child objects, based on the <a href="General.DocumentDistributedAmounts.html#Document">DocumentDistributedAmount.Document</a> back reference</td>
+</tr>
+<tr>
+<td>FileAttachments</td>
+<td><a href="General.DocumentFileAttachments.html">General.DocumentFileAttachments</a></td>
+<td>List of <a href="General.DocumentFileAttachments.html">DocumentFileAttachment</a> child objects, based on the <a href="General.DocumentFileAttachments.html#Document">DocumentFileAttachment.Document</a> back reference</td>
+</tr>
+<tr>
+<td>LineAmounts</td>
+<td><a href="General.DocumentLineAmounts.html">General.DocumentLineAmounts</a></td>
+<td>List of <a href="General.DocumentLineAmounts.html">DocumentLineAmount</a> child objects, based on the <a href="General.DocumentLineAmounts.html#Document">DocumentLineAmount.Document</a> back reference</td>
+</tr>
+<tr>
+<td>Prints</td>
+<td><a href="General.DocumentPrints.html">General.DocumentPrints</a></td>
+<td>List of <a href="General.DocumentPrints.html">DocumentPrint</a> child objects, based on the <a href="General.DocumentPrints.html#Document">DocumentPrint.Document</a> back reference</td>
+</tr>
+<tr>
+<td>StateChanges</td>
+<td><a href="General.DocumentStateChanges.html">General.DocumentStateChanges</a></td>
+<td>List of <a href="General.DocumentStateChanges.html">DocumentStateChange</a> child objects, based on the <a href="General.DocumentStateChanges.html#Document">DocumentStateChange.Document</a> back reference</td>
+</tr>
+<tr>
+<td>Versions</td>
+<td><a href="General.DocumentVersions.html">General.DocumentVersions</a></td>
+<td>List of <a href="General.Documents.html#DocumentVersion">DocumentVersion</a> child objects, based on the <a href="General.DocumentVersions.html#Document">DocumentVersion.Document</a> back reference</td>
+</tr>
+<tr>
+<td>Lines</td>
+<td><a href="Finance.Payments.PaymentTransactionLines.html">Finance.Payments.PaymentTransactionLines</a></td>
+<td>List of <a href="Finance.Payments.PaymentTransactionLines.html">PaymentTransactionLine</a> child objects, based on the <a href="Finance.Payments.PaymentTransactionLines.html#PaymentTransaction">Finance.Payments.PaymentTransactionLine.PaymentTransaction</a> back reference</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="completetime">CompleteTime</h3>
+<blockquote>
+<p>Exact time, when the document was last completed[Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="creationtime">CreationTime</h3>
+<blockquote>
+<p>Date/Time when the document was created [Required][Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>CurrentDateTime</strong></p>
+<h3 id="creationuser">CreationUser</h3>
+<blockquote>
+<p>The login name of the user, who created the document [Required][Filter(like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="documentdate">DocumentDate</h3>
+<blockquote>
+<p>The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Default Value</em>: <strong>CurrentDate</strong></p>
+<h3 id="documentno">DocumentNo</h3>
+<blockquote>
+<p>Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="documentversion">DocumentVersion</h3>
+<blockquote>
+<p>[Filter(eq;ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>1</strong></p>
+<h3 id="documentnotes">DocumentNotes</h3>
+<blockquote>
+<p>Notes for this Document</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
+<blockquote>
+<p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html#ParentDocumentRelationshipType">General.ParentDocumentRelationshipType</a> (nullable)</strong><br>
+Relationship between parent and child documents<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subtask</td>
+<td>The child document is a sub-task of the parent document. (Complete child to complete parent) <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Subtask'</td>
+</tr>
+<tr>
+<td>NextTask</td>
+<td>The child document is next task of the parent document. (Complete parent to complete child) <br> <em>Database Value:</em> 'N' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'NextTask'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="planningonly">PlanningOnly</h3>
+<blockquote>
+<p>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="readonly">ReadOnly</h3>
+<blockquote>
+<p>True - the document is read only; false - the document is not read only [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="referencedate">ReferenceDate</h3>
+<blockquote>
+<p>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="referencedocumentno">ReferenceDocumentNo</h3>
+<blockquote>
+<p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="releasetime">ReleaseTime</h3>
+<blockquote>
+<p>Exact time, when the document was first released [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="state">State</h3>
+<blockquote>
+<p>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html#State">General.DocumentState</a></strong><br>
+Enumeration of document system states<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>New document, just created. Can be edited. (Stored as 0). <br> <em>Database Value:</em> 0 <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+</tr>
+<tr>
+<td>Adjustment</td>
+<td>Document which adjusts other released documents. (Stored as 5). <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Adjustment'</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Planned by the system for future releasing. (Stored as 10). <br> <em>Database Value:</em> 10 <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Planned'</td>
+</tr>
+<tr>
+<td>FirmPlanned</td>
+<td>Planned by operator for future releasing. (Stored as 20). <br> <em>Database Value:</em> 20 <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+</tr>
+<tr>
+<td>Released</td>
+<td>Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br> <em>Database Value:</em> 30 <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Released'</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Work has completed. (Stored as 40). <br> <em>Database Value:</em> 40 <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'Completed'</td>
+</tr>
+<tr>
+<td>Closed</td>
+<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br> <em>Database Value:</em> 50 <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Closed'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h3 id="void">Void</h3>
+<blockquote>
+<p>True if the document is null and void [Required][Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="voidreason">VoidReason</h3>
+<blockquote>
+<p>Reason for voiding the document, entered by the user</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="voidtime">VoidTime</h3>
+<blockquote>
+<p>Date/time when the document has become void</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="voiduser">VoidUser</h3>
+<blockquote>
+<p>The user who voided the document</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="entityname">EntityName</h3>
+<blockquote>
+<p>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="direction">Direction</h3>
+<blockquote>
+<p>I for Payment issue, R for payment receipt. [Required] [Default(&quot;R&quot;)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html#Direction">Finance.Payments.PaymentOrdersRepository.Direction</a></strong><br>
+Allowed values for the <a href="Finance.Payments.PaymentOrders.html#Direction">Direction</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expense</td>
+<td>Expense value. Stored as 'I'. <br> <em>Database Value:</em> 'I' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Expense'</td>
+</tr>
+<tr>
+<td>Income</td>
+<td>Income value. Stored as 'R'. <br> <em>Database Value:</em> 'R' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Income'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Income</strong></p>
+<h3 id="isreleased">IsReleased</h3>
+<blockquote>
+<p>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="issingleexecution">IsSingleExecution</h3>
+<blockquote>
+<p>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="notes">Notes</h3>
+<blockquote>
+<p>Notes for this PaymentTransaction.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="paymentslipno">PaymentSlipNo</h3>
+<blockquote>
+<p>The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips. [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="requiresallocation">RequiresAllocation</h3>
+<blockquote>
+<p>True=The total amount should be allocated to payment orders; false=Payment orders are not required. [Required] [Default(true)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
+<h3 id="reversalreason">ReversalReason</h3>
+<blockquote>
+<p>The reason for the reversal of the payment. (Introduced in version 20.1.100.0)</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html#ReversalReason">Finance.Payments.PaymentTransactionsRepository.ReversalReason</a> (nullable)</strong><br>
+Allowed values for the <a href="Finance.Payments.PaymentTransactions.html#ReversalReason">ReversalReason</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OperatorError</td>
+<td>OperatorError value. Stored as 'OPE'. <br> <em>Database Value:</em> 'OPE' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'OperatorError'</td>
+</tr>
+<tr>
+<td>TaxBaseReduction</td>
+<td>TaxBaseReduction value. Stored as 'TBR'. <br> <em>Database Value:</em> 'TBR' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'TaxBaseReduction'</td>
+</tr>
+<tr>
+<td>Refund</td>
+<td>Refund value. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Refund'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="totalamount">TotalAmount</h3>
+<blockquote>
+<p>The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines. [Currency: TotalAmountCurrency] [Required] [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/Amount.md">Amount</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Constant</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.CalculateTotalAmountFromLines(obj.Direction)</code></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="accesskey">AccessKey</h3>
+<blockquote>
+<p>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="adjusteddocument">AdjustedDocument</h3>
+<blockquote>
+<p>The primary document, which the current document adjusts. null when this is not an adjustment document</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="assignedtouser">AssignedToUser</h3>
+<blockquote>
+<p>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="currencydirectory">CurrencyDirectory</h3>
+<blockquote>
+<p>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="documenttype">DocumentType</h3>
+<blockquote>
+<p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="enterprisecompany">EnterpriseCompany</h3>
+<blockquote>
+<p>The enterprise company which issued the document [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
+<blockquote>
+<p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="fromcompanydivision">FromCompanyDivision</h3>
+<blockquote>
+<p>The division of the company, issuing the document. null when the document is not issued by any specific division</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="fromparty">FromParty</h3>
+<blockquote>
+<p>The party which issued the document [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="masterdocument">MasterDocument</h3>
+<blockquote>
+<p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parent">Parent</h3>
+<blockquote>
+<p>In a multi-document tree, this is the direct parent document. If this is the root it is null</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="primecausedocument">PrimeCauseDocument</h3>
+<blockquote>
+<p>The document that is the prime cause for creation of the current document</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="responsibleperson">ResponsiblePerson</h3>
+<blockquote>
+<p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="reverseofdocument">ReverseOfDocument</h3>
+<blockquote>
+<p>The document which the current document is reverse of</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="sequence">Sequence</h3>
+<blockquote>
+<p>The sequence that will be used to give new numbers to the documents of this type</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Sequences.html">General.Sequences</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="tocompanydivision">ToCompanyDivision</h3>
+<blockquote>
+<p>The division of the company, receiving the document. null when the document is not received by any specific division</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
+<h3 id="toparty">ToParty</h3>
+<blockquote>
+<p>The party which should receive the document</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="userstatus">UserStatus</h3>
+<blockquote>
+<p>The user status of this document if applicable for this document type. null means unknown or not yet set</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="fiscalprinterposdevice">FiscalPrinterPosDevice</h3>
+<blockquote>
+<p>For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order. [Filter(multi eq)] (Introduced in version 19.1.100.0)</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html">Crm.Pos.Devices</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>IIF((((obj.PosOperator != null) AndAlso (obj.PosOperator.DefaultPosTerminal != null)) AndAlso (obj.PosOperator.DefaultPosTerminal.DefaultFiscalPrinterPosDevice != null)), obj.PosOperator.DefaultPosTerminal.DefaultFiscalPrinterPosDevice, obj.Transaction.Query().FirstOrDefault(d =&gt; (((Convert(d.DeviceType, Int32) == 2) AndAlso (d.PosTerminal == obj.PosOperator.DefaultPosTerminal)) AndAlso d.IsActive)))</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF((((obj.PosOperator != null) AndAlso (obj.PosOperator.DefaultPosTerminal != null)) AndAlso (obj.PosOperator.DefaultPosTerminal.DefaultFiscalPrinterPosDevice != null)), obj.PosOperator.DefaultPosTerminal.DefaultFiscalPrinterPosDevice, obj.Transaction.Query().FirstOrDefault(d =&gt; (((Convert(d.DeviceType, Int32) == 2) AndAlso (d.PosTerminal == obj.PosOperator.DefaultPosTerminal)) AndAlso d.IsActive)))</code></p>
+<h3 id="originalpaymenttransaction">OriginalPaymentTransaction</h3>
+<blockquote>
+<p>Original Payment Transaction. [Filter(multi eq)] (Introduced in version 20.1.100.0)</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">Finance.Payments.PaymentTransactions</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parentpaymentslipamount">ParentPaymentSlipAmount</h3>
+<blockquote>
+<p>The Payment Slip Amount, which the current payment transaction fulfills . null when the current document does not execute any Payment Slip Amount. [Filter(multi eq)] (Introduced in version 19.1.100.0)</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlipAmounts.html">Finance.Payments.PaymentSlipAmounts</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="party">Party</h3>
+<blockquote>
+<p>The party that is paying or receiving the money. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="paymentaccount">PaymentAccount</h3>
+<blockquote>
+<p>The account towards which the payment was effected. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.PaymentType.GetDefaultPaymentAccount().IfNullThen(obj.PaymentAccount)</code></p>
+<h3 id="paymentreason">PaymentReason</h3>
+<blockquote>
+<p>The payment reason, as defined in Payment Reasons. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentReasons.html">Finance.Payments.PaymentReasons</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="paymentslip">PaymentSlip</h3>
+<blockquote>
+<p>When not null specifies that this payment was part of a payment slip. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlips.html">Finance.Payments.PaymentSlips</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="paymenttype">PaymentType</h3>
+<blockquote>
+<p>Specifies the payment type used to pay, when using this payment account. null when the payment type is unknown or unspecified. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="poslocation">PosLocation</h3>
+<blockquote>
+<p>For POS Sales Order payments. Specifies the POS Location, in which the payment is performed. Null when the payment transaction is not created for a POS Sale Order. [Filter(multi eq)] (Introduced in version 19.1.100.0)</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Crm.Pos.Locations.html">Crm.Pos.Locations</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.Transaction.Query().OnlyIfSingle(l =&gt; ((l.EnterpriseCompanyLocation == obj.EnterpriseCompanyLocation) AndAlso l.IsActive))</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Transaction.Query().OnlyIfSingle(l =&gt; ((l.EnterpriseCompanyLocation == obj.EnterpriseCompanyLocation) AndAlso l.IsActive))</code></p>
+<h3 id="posoperator">PosOperator</h3>
+<blockquote>
+<p>For POS Sales Order payments. Specifies the POS Operator, who created the payment order. Null when the payment transaction is not created for a POS Sale Order. [Filter(multi eq)] (Introduced in version 19.1.100.0)</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Crm.Pos.Operators.html">Crm.Pos.Operators</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.Transaction.Query().OnlyIfSingle(op =&gt; (((((op.PosLocation == obj.PosLocation) AndAlso (op.User == obj.Transaction.CurrentUser)) AndAlso op.IsActive) AndAlso (op.StartingDate &lt;= DateTime.Today)) AndAlso Convert(op.TerminationDate, Object).GreaterEqualNull(Convert(DateTime.Today, Object))))</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Transaction.Query().OnlyIfSingle(op =&gt; (((((op.PosLocation == obj.PosLocation) AndAlso (op.User == obj.Transaction.CurrentUser)) AndAlso op.IsActive) AndAlso (op.StartingDate &lt;= DateTime.Today)) AndAlso Convert(op.TerminationDate, Object).GreaterEqualNull(Convert(DateTime.Today, Object))))</code></p>
+<h3 id="totalamountcurrency">TotalAmountCurrency</h3>
+<blockquote>
+<p>The currency of the total amount. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=Finance.Payments.PaymentTransactions erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=Finance.Payments.PaymentTransactions erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=Finance.Payments.PaymentTransactions erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Finance_Payments_PaymentTransactions?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Payments_PaymentTransactions?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentTransactions?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentTransactions?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Transactions?$top=10">https://demodb.my.erp.net/api/domain/odata/Cash_Payment_Transactions?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Finance.Payments.PaymentTransactions.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

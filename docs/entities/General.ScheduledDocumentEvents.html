@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>General.ScheduledDocumentEvents | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="General.ScheduledDocumentEvents | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="generalscheduleddocumentevents">General.ScheduledDocumentEvents</h1>
+
+<p>Contains postponed events, which will be executed later. Usually these are large number of recalculation events, resulting from other events. For example, releasing a cost correction, publishes postponed events for all affected documents. Entity: Gen_Scheduled_Document_Events</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="General.ScheduledDocumentEvents.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.ScheduledDocumentEvents.html#Cancelled">Cancelled</a></td>
+<td>boolean</td>
+<td>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. [Required] [Default(false)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="General.ScheduledDocumentEvents.html#CreationTime">CreationTime</a></td>
+<td>datetime</td>
+<td>Date and time when the ScheduledDocumentEvent was created. [Required] [Default(Now)] [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="General.ScheduledDocumentEvents.html#DocumentEvent">DocumentEvent</a></td>
+<td>string</td>
+<td>The type of the document event that is scheduled to be processed. [Required] [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="General.ScheduledDocumentEvents.html#LastProcessStatus">LastProcessStatus</a></td>
+<td>string (nullable)</td>
+<td>Status/information of the last attemp to process the event. Usually shows the cause in case of failure. [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="General.ScheduledDocumentEvents.html#LastProcessTime">LastProcessTime</a></td>
+<td>datetime (nullable)</td>
+<td>The time of the last attempt to process the event. [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="General.ScheduledDocumentEvents.html#Processed">Processed</a></td>
+<td>boolean</td>
+<td>Indicates wheather the event is already processed or not. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="General.ScheduledDocumentEvents.html#State">State</a></td>
+<td><a href="General.ScheduledDocumentEvents.html#State">General.ScheduledDocumentEventsRepository.State</a></td>
+<td>The state of the document for which the event will be processed. [Required] [ReadOnly]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="General.ScheduledDocumentEvents.html#Document">Document</a></td>
+<td><a href="General.Documents.html">General.Documents</a></td>
+<td>The document for which the event will be processed. [Required] [Filter(multi eq)] [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="General.ScheduledDocumentEvents.html#SourceDocument">SourceDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a></td>
+<td>The document that has caused this event to be scheduled. [Required] [Filter(multi eq)] [ReadOnly]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="cancelled">Cancelled</h3>
+<blockquote>
+<p>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. [Required] [Default(false)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="creationtime">CreationTime</h3>
+<blockquote>
+<p>Date and time when the ScheduledDocumentEvent was created. [Required] [Default(Now)] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>CurrentDateTime</strong></p>
+<h3 id="documentevent">DocumentEvent</h3>
+<blockquote>
+<p>The type of the document event that is scheduled to be processed. [Required] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="lastprocessstatus">LastProcessStatus</h3>
+<blockquote>
+<p>Status/information of the last attemp to process the event. Usually shows the cause in case of failure. [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="lastprocesstime">LastProcessTime</h3>
+<blockquote>
+<p>The time of the last attempt to process the event. [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="processed">Processed</h3>
+<blockquote>
+<p>Indicates wheather the event is already processed or not. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="state">State</h3>
+<blockquote>
+<p>The state of the document for which the event will be processed. [Required] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.ScheduledDocumentEvents.html#State">General.ScheduledDocumentEventsRepository.State</a></strong><br>
+Allowed values for the <a href="General.ScheduledDocumentEvents.html#State">State</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>New value. Stored as 0. <br> <em>Database Value:</em> 0 <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+</tr>
+<tr>
+<td>Corrective</td>
+<td>Corrective value. Stored as 5. <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Corrective'</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Planned value. Stored as 10. <br> <em>Database Value:</em> 10 <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Planned'</td>
+</tr>
+<tr>
+<td>FirmPlanned</td>
+<td>FirmPlanned value. Stored as 20. <br> <em>Database Value:</em> 20 <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+</tr>
+<tr>
+<td>Released</td>
+<td>Released value. Stored as 30. <br> <em>Database Value:</em> 30 <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Released'</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Completed value. Stored as 40. <br> <em>Database Value:</em> 40 <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'Completed'</td>
+</tr>
+<tr>
+<td>Closed</td>
+<td>Closed value. Stored as 50. <br> <em>Database Value:</em> 50 <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Closed'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="document">Document</h3>
+<blockquote>
+<p>The document for which the event will be processed. [Required] [Filter(multi eq)] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="sourcedocument">SourceDocument</h3>
+<blockquote>
+<p>The document that has caused this event to be scheduled. [Required] [Filter(multi eq)] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=General.ScheduledDocumentEvents erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=General.ScheduledDocumentEvents erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=General.ScheduledDocumentEvents erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/General_ScheduledDocumentEvents?$top=10">https://demodb.my.erp.net/api/domain/odata/General_ScheduledDocumentEvents?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#General_ScheduledDocumentEvents?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#General_ScheduledDocumentEvents?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Gen_Scheduled_Document_Events?$top=10">https://demodb.my.erp.net/api/domain/odata/Gen_Scheduled_Document_Events?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/General.ScheduledDocumentEvents.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

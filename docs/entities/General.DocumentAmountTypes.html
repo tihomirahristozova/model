@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>General.DocumentAmountTypes | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="General.DocumentAmountTypes | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="generaldocumentamounttypes">General.DocumentAmountTypes</h1>
+
+<p>Represents the different types of additional amounts which are calculated for the documents. Entity: Gen_Document_Amount_Types</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#Id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#AddToCustomer">AddToCustomer</a></td>
+<td>boolean</td>
+<td>True means that the amount will be charged to the primary customer of the document. [Required] [Default(true)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#AddToLine">AddToLine</a></td>
+<td>boolean</td>
+<td>True means that the resulting amount will be added to the amount of each respective line. [Required] [Default(true)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#AllowedDirections">AllowedDirections</a></td>
+<td><a href="General.DocumentAmountTypes.html#AllowedDirections">General.DocumentAmountTypesRepository.AllowedDirections</a> (nullable)</td>
+<td>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#AmountInputAllowed">AmountInputAllowed</a></td>
+<td>boolean</td>
+<td>True when the user is allowed to input fixed amount for distribution. [Required] [Default(false)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#AmountTypeCode">AmountTypeCode</a></td>
+<td>string</td>
+<td>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. [Required] [Filter(multi eq)] [ORD]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#AmountTypeName">AmountTypeName</a></td>
+<td><a href="../data-types/MultilanguageString.md">MultilanguageString</a></td>
+<td>The name of the amount type. [Required] [Filter(like)] [ORD]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#BaseOnLines">BaseOnLines</a></td>
+<td>boolean</td>
+<td>True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. [Required] [Default(true)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#DefaultPercent">DefaultPercent</a></td>
+<td>decimal (nullable)</td>
+<td>Default percent for amounts for which percent input is allowed; null otherwise.</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#Description">Description</a></td>
+<td>string (nullable)</td>
+<td>The description of this DocumentAmountType.</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#DistributeBy">DistributeBy</a></td>
+<td><a href="General.DocumentAmountTypes.html#DistributeBy">General.DocumentAmountTypesRepository.DistributeBy</a></td>
+<td>Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). [Required] [Default(&quot;AMOUNT&quot;)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#IsActive">IsActive</a></td>
+<td>boolean</td>
+<td>True when the amount type is active for new records; false - otherwise. [Required] [Default(true)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#PercentInputAllowed">PercentInputAllowed</a></td>
+<td>boolean</td>
+<td>True when the user is allowed to input percent of total for distribution. [Required] [Default(true)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#RoundScale">RoundScale</a></td>
+<td>int32 (nullable)</td>
+<td>The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.</td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#UnitAmountInputAllowed">UnitAmountInputAllowed</a></td>
+<td>boolean</td>
+<td>Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. [Required] [Default(false)] [Filter(eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="General.DocumentAmountTypes.html#DistributeByMeasurementCategory">DistributeByMeasurementCategory</a></td>
+<td><a href="General.MeasurementCategories.html">General.MeasurementCategories</a> (nullable)</td>
+<td>Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dependencies</td>
+<td><a href="General.DocumentAmountTypeDependencies.html">General.DocumentAmountTypeDependencies</a></td>
+<td>List of <a href="General.DocumentAmountTypeDependencies.html">DocumentAmountTypeDependency</a> child objects, based on the <a href="General.DocumentAmountTypeDependencies.html#DocumentAmountType">General.DocumentAmountTypeDependency.DocumentAmountType</a> back reference</td>
+</tr>
+<tr>
+<td>Settings</td>
+<td><a href="Finance.Intrastat.DocumentAmountTypeSettings.html">Finance.Intrastat.DocumentAmountTypeSettings</a></td>
+<td>List of <a href="Finance.Intrastat.DocumentAmountTypeSettings.html">DocumentAmountTypeSetting</a> child objects, based on the <a href="Finance.Intrastat.DocumentAmountTypeSettings.html#DocumentAmountType">Finance.Intrastat.DocumentAmountTypeSetting.DocumentAmountType</a> back reference</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="addtocustomer">AddToCustomer</h3>
+<blockquote>
+<p>True means that the amount will be charged to the primary customer of the document. [Required] [Default(true)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
+<h3 id="addtoline">AddToLine</h3>
+<blockquote>
+<p>True means that the resulting amount will be added to the amount of each respective line. [Required] [Default(true)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
+<h3 id="alloweddirections">AllowedDirections</h3>
+<blockquote>
+<p>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. [Default(0)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html#AllowedDirections">General.DocumentAmountTypesRepository.AllowedDirections</a> (nullable)</strong><br>
+Allowed values for the <a href="General.DocumentAmountTypes.html#AllowedDirections">AllowedDirections</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AllowAll</td>
+<td>AllowAll value. Stored as 0. <br> <em>Database Value:</em> 0 <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'AllowAll'</td>
+</tr>
+<tr>
+<td>AllowOnlyPositive</td>
+<td>AllowOnlyPositive value. Stored as 1. <br> <em>Database Value:</em> 1 <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'AllowOnlyPositive'</td>
+</tr>
+<tr>
+<td>AllowOnlyNegative</td>
+<td>AllowOnlyNegative value. Stored as (-1). <br> <em>Database Value:</em> -1 <br> <em>Model Value:</em> -1 <br> <em>Domain API Value:</em> 'AllowOnlyNegative'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h3 id="amountinputallowed">AmountInputAllowed</h3>
+<blockquote>
+<p>True when the user is allowed to input fixed amount for distribution. [Required] [Default(false)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="amounttypecode">AmountTypeCode</h3>
+<blockquote>
+<p>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. [Required] [Filter(multi eq)] [ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="amounttypename">AmountTypeName</h3>
+<blockquote>
+<p>The name of the amount type. [Required] [Filter(like)] [ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types/MultilanguageString.md">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="baseonlines">BaseOnLines</h3>
+<blockquote>
+<p>True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. [Required] [Default(true)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
+<h3 id="defaultpercent">DefaultPercent</h3>
+<blockquote>
+<p>Default percent for amounts for which percent input is allowed; null otherwise.</p>
+</blockquote>
+<p><em>Type</em>: <strong>decimal (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="description">Description</h3>
+<blockquote>
+<p>The description of this DocumentAmountType.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="distributeby">DistributeBy</h3>
+<blockquote>
+<p>Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). [Required] [Default(&quot;AMOUNT&quot;)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html#DistributeBy">General.DocumentAmountTypesRepository.DistributeBy</a></strong><br>
+Allowed values for the <a href="General.DocumentAmountTypes.html#DistributeBy">DistributeBy</a> data attribute<br>
+<em>Allowed Values (Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amount</td>
+<td>Amount value. Stored as 'AMOUNT'. <br> <em>Database Value:</em> 'AMOUNT' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Amount'</td>
+</tr>
+<tr>
+<td>Measurement</td>
+<td>Measurement value. Stored as 'MEASUREMENT'. <br> <em>Database Value:</em> 'MEASUREMENT' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Measurement'</td>
+</tr>
+<tr>
+<td>ProductDefinition</td>
+<td>ProductDefinition value. Stored as 'PRODUCT DEFINITION'. <br> <em>Database Value:</em> 'PRODUCT DEFINITION' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'ProductDefinition'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Amount</strong></p>
+<h3 id="isactive">IsActive</h3>
+<blockquote>
+<p>True when the amount type is active for new records; false - otherwise. [Required] [Default(true)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
+<h3 id="percentinputallowed">PercentInputAllowed</h3>
+<blockquote>
+<p>True when the user is allowed to input percent of total for distribution. [Required] [Default(true)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
+<h3 id="roundscale">RoundScale</h3>
+<blockquote>
+<p>The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.</p>
+</blockquote>
+<p><em>Type</em>: <strong>int32 (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="unitamountinputallowed">UnitAmountInputAllowed</h3>
+<blockquote>
+<p>Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. [Required] [Default(false)] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="distributebymeasurementcategory">DistributeByMeasurementCategory</h3>
+<blockquote>
+<p>Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.MeasurementCategories.html">General.MeasurementCategories</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>[!list erp.entity=General.DocumentAmountTypes erp.type=business-rule default-text=&quot;None&quot;]</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>[!list erp.entity=General.DocumentAmountTypes erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<h2 id="generations">Generations</h2>
+<p>[!list erp.entity=General.DocumentAmountTypes erp.type=generation default-text=&quot;None&quot;]</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/General_DocumentAmountTypes?$top=10">https://demodb.my.erp.net/api/domain/odata/General_DocumentAmountTypes?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentAmountTypes?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#General_DocumentAmountTypes?$top=10</a></p>
+<p>Table API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Gen_Document_Amount_Types?$top=10">https://demodb.my.erp.net/api/domain/odata/Gen_Document_Amount_Types?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/General.DocumentAmountTypes.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
