@@ -136,9 +136,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="changetype">ChangeType</h3>
-<blockquote>
 <p>Type of change - Create, Update or Delete. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Core.ObjectChanges.html#changetype">ChangeType</a></strong><br>
 Allowed values for the <a href="Systems.Core.ObjectChanges.html#changetype">ChangeType</a> data attribute<br>
 <em>Allowed Values (Systems.Core.ObjectChangesRepository.ChangeType Enum Members)</em></p>
@@ -167,9 +165,7 @@ Allowed values for the <a href="Systems.Core.ObjectChanges.html#changetype">Chan
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="entityitemid">EntityItemId</h3>
-<blockquote>
 <p>The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
@@ -177,23 +173,17 @@ Allowed values for the <a href="Systems.Core.ObjectChanges.html#changetype">Chan
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="repositoryname">RepositoryName</h3>
-<blockquote>
 <p>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="objectchangeset">ObjectChangeset</h3>
-<blockquote>
 <p>The changeset containing this change. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Core.ObjectChangesets.html">ObjectChangesets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="rootobject">RootObject</h3>
-<blockquote>
 <p>The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -155,57 +155,41 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>Indicates whether this operator is active and can be chosen for new records. [Required] [Default(true)] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="posoperatorcode">PosOperatorCode</h3>
-<blockquote>
 <p>Operator code. Unique within the Pos Location. [Required] [Filter(multi eq;like)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="startingdate">StartingDate</h3>
-<blockquote>
 <p>The first date, when the operator has started working for this POS location. [Required] [Filter(multi eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="terminationdate">TerminationDate</h3>
-<blockquote>
 <p>The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. [Filter(multi eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultposterminal">DefaultPosTerminal</h3>
-<blockquote>
 <p>The default POS terminal for this opertor. null when there is no default. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Terminals.html">Terminals</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="poslocation">PosLocation</h3>
-<blockquote>
 <p>The POS location where this operator works. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="posrole">PosRole</h3>
-<blockquote>
 <p>The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Roles.html">Roles</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
-<blockquote>
 <p>The login user for this POS operator. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -141,17 +141,13 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="basecostadjustment">BaseCostAdjustment</h3>
-<blockquote>
 <p>The amount of correction (plus or minus) for the Base Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="costcorrectionamount">CostCorrectionAmount</h3>
-<blockquote>
 <p>The amount of correction (plus or minus) for the Amount field of the transaction line. [Currency: TransactionLine.TransactionObj.DocumentCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -161,32 +157,24 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="productcostadjustment">ProductCostAdjustment</h3>
-<blockquote>
 <p>The amount of correction (plus or minus) for the Product Cost field of the transaction line. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="storecostadjustment">StoreCostAdjustment</h3>
-<blockquote>
 <p>The amount of correction (plus or minus) for the Store Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.Store.Currency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costcorrection">CostCorrection</h3>
-<blockquote>
 <p>The <a href="Logistics.Inventory.CostCorrectionLines.html#costcorrection">CostCorrection</a> to which this CostCorrectionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.CostCorrections.html">CostCorrections</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transactionline">TransactionLine</h3>
-<blockquote>
 <p>The transaction line, which is corrected. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

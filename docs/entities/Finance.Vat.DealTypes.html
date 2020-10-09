@@ -131,9 +131,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="entrytype">EntryType</h3>
-<blockquote>
 <p>Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html#entrytype">EntryType</a></strong><br>
 Allowed values for the <a href="Finance.Vat.DealTypes.html#entrytype">EntryType</a> data attribute<br>
 <em>Allowed Values (Finance.Vat.DealTypesRepository.EntryType Enum Members)</em></p>
@@ -162,25 +160,19 @@ Allowed values for the <a href="Finance.Vat.DealTypes.html#entrytype">EntryType<
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="issystem">IsSystem</h3>
-<blockquote>
 <p>Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>Description of the deal type. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="country">Country</h3>
-<blockquote>
 <p>The country for which this deal type applies. The country is matched against the country of the enterprise company. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

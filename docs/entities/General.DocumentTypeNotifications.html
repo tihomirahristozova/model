@@ -146,17 +146,13 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentevent">DocumentEvent</h3>
-<blockquote>
 <p>The event which will trigger the notification. [Required] [Default(&quot;StateChanging&quot;)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>StateChanging</strong></p>
 <h3 id="filterxml">FilterXML</h3>
-<blockquote>
 <p>Filtering condition for the document. Only documents which match the filter will trigger the event.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -165,17 +161,13 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="statebitmask">StateBitMask</h3>
-<blockquote>
 <p>The document states that will trigger the event. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="statuschangedirection">StatusChangeDirection</h3>
-<blockquote>
 <p>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '<em>'. [Required] [Default(&quot;</em>&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeNotifications.html#statuschangedirection">StatusChangeDirection</a></strong><br>
 Allowed values for the <a href="General.DocumentTypeNotifications.html#statuschangedirection">StatusChangeDirection</a> data attribute<br>
 <em>Allowed Values (General.DocumentTypeNotificationsRepository.StatusChangeDirection Enum Members)</em></p>
@@ -209,23 +201,17 @@ Allowed values for the <a href="General.DocumentTypeNotifications.html#statuscha
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>AnyChange</strong></p>
 <h3 id="toemailaddresslist">ToEmailAddressList</h3>
-<blockquote>
 <p>List of email addressess to be notified. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<blockquote>
 <p>The document type for which this notification is set. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="userstatus">UserStatus</h3>
-<blockquote>
 <p>When not null, specifies that the event will be triggered only on this user status. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -141,16 +141,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="description">Description</h3>
-<blockquote>
 <p>The actual description value of the property for the specified entity (the entity with the specified Id).</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="entityitemid">EntityItemId</h3>
-<blockquote>
 <p>The Id of the actual entity for which the value is specified. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
@@ -158,30 +154,22 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="picture">Picture</h3>
-<blockquote>
 <p>The actual picture of the property for the specified entity (the entity with the specified Id).</p>
-</blockquote>
 <p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="propertyvaluefield">PropertyValueField</h3>
-<blockquote>
 <p>The actual value of the property for the specified entity (the entity with the specified Id).</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="valueid">ValueId</h3>
-<blockquote>
 <p>The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original &quot;allowed value&quot; row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="property">Property</h3>
-<blockquote>
 <p>The property, whose value is stored here. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

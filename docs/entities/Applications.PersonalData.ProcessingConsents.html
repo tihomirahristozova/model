@@ -206,62 +206,46 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowaddress">AllowAddress</h3>
-<blockquote>
 <p>Allows the processing of the physical address. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="allowbasicdata">AllowBasicData</h3>
-<blockquote>
 <p>Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="allowemail">AllowEmail</h3>
-<blockquote>
 <p>Allows the processing of the email address. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="allowotherdata">AllowOtherData</h3>
-<blockquote>
 <p>Comma-separated list of other types of data, which was allowed for processing with this consent. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="allowphone">AllowPhone</h3>
-<blockquote>
 <p>Allows the processing of the telephone number. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="consentimage">ConsentImage</h3>
-<blockquote>
 <p>If not null, it is a graphical image, containing additional information for the consent.</p>
-</blockquote>
 <p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="consenttext">ConsentText</h3>
-<blockquote>
 <p>The actual text of the consent. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="consenttype">ConsentType</h3>
-<blockquote>
 <p>The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.ProcessingConsents.html#consenttype">ConsentType</a></strong><br>
 Allowed values for the <a href="Applications.PersonalData.ProcessingConsents.html#consenttype">ConsentType</a> data attribute<br>
 <em>Allowed Values (Applications.PersonalData.ProcessingConsentsRepository.ConsentType Enum Members)</em></p>
@@ -302,9 +286,7 @@ Allowed values for the <a href="Applications.PersonalData.ProcessingConsents.htm
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="givenonutc">GivenOnUtc</h3>
-<blockquote>
 <p>The date and time (in Utc), when the consent was given. [Required] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -313,73 +295,53 @@ Allowed values for the <a href="Applications.PersonalData.ProcessingConsents.htm
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. [Required] [Default(true)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="ischild">IsChild</h3>
-<blockquote>
 <p>Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this ProcessingConsent.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentemail">ParentEmail</h3>
-<blockquote>
 <p>When a parental rights holder gives a consent for a child, contains the email of the parent. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentname">ParentName</h3>
-<blockquote>
 <p>When a parental rights holder gives a consent for a child, contains the name of the parent. [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentphone">ParentPhone</h3>
-<blockquote>
 <p>When a parental rights holder gives a consent for a child, contains the phone number of the parent. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="retractedonutc">RetractedOnUtc</h3>
-<blockquote>
 <p>The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="person">Person</h3>
-<blockquote>
 <p>The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="personaldataprocess">PersonalDataProcess</h3>
-<blockquote>
 <p>The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html">PersonalDataProcesses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
-<blockquote>
 <p>The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

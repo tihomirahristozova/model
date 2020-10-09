@@ -136,17 +136,13 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actualvalue">ActualValue</h3>
-<blockquote>
 <p>Accumulates actual value for the measure. [Required] [Default(0)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="date">Date</h3>
-<blockquote>
 <p>The date for which the measure is recorded. All records with dates within each period are summed. [Required] [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -155,24 +151,18 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="targetvalue">TargetValue</h3>
-<blockquote>
 <p>Accumulates target value for the measure. [Required] [Default(0)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="datameasure">DataMeasure</h3>
-<blockquote>
 <p>The measure for which the data is recorded. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.DataWarehouse.DataMeasures.html">DataMeasures</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>The Enterprise Company for which the data is recorded. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

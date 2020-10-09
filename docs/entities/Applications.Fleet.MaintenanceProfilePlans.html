@@ -135,31 +135,23 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. [Required] [Default(true)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this MaintenanceProfilePlan.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="maintenanceplan">MaintenancePlan</h3>
-<blockquote>
 <p>The maintenance plan, which is included in the profile. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.MaintenancePlans.html">MaintenancePlans</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="maintenanceprofile">MaintenanceProfile</h3>
-<blockquote>
 <p>The maintenance profile, which includes the plan. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.MaintenanceProfiles.html">MaintenanceProfiles</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

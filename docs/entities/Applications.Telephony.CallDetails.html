@@ -161,23 +161,17 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="calledpartynumber">CalledPartyNumber</h3>
-<blockquote>
 <p>The voice number of the party, which received the call. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="callingpartynumber">CallingPartyNumber</h3>
-<blockquote>
 <p>The voice number of the originating party of the call. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="calltype">CallType</h3>
-<blockquote>
 <p>P=Phone; V=Video; M=Message/SMS. [Required] [Default(&quot;P&quot;)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Telephony.CallDetails.html#calltype">CallType</a></strong><br>
 Allowed values for the <a href="Applications.Telephony.CallDetails.html#calltype">CallType</a> data attribute<br>
 <em>Allowed Values (Applications.Telephony.CallDetailsRepository.CallType Enum Members)</em></p>
@@ -207,16 +201,12 @@ Allowed values for the <a href="Applications.Telephony.CallDetails.html#calltype
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Phone</strong></p>
 <h3 id="calluniqueid">CallUniqueId</h3>
-<blockquote>
 <p>The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="durationseconds">DurationSeconds</h3>
-<blockquote>
 <p>The duration of the call (in seconds). [Required] [Default(0)] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -226,35 +216,25 @@ Allowed values for the <a href="Applications.Telephony.CallDetails.html#calltype
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="starttime">StartTime</h3>
-<blockquote>
 <p>The starting date and time of the call. [Required] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="calledparty">CalledParty</h3>
-<blockquote>
 <p>The party, which received the call. null when the party was not determined successfully. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="callingparty">CallingParty</h3>
-<blockquote>
 <p>The party, which originated the call.  null when the party was not determined successfully. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="externalcompany">ExternalCompany</h3>
-<blockquote>
 <p>The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">Companies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="externalparty">ExternalParty</h3>
-<blockquote>
 <p>It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

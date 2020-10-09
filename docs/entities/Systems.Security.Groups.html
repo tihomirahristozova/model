@@ -153,16 +153,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="editperioddays">EditPeriodDays</h3>
-<blockquote>
 <p>The number of days before which the documents can not be corrected, released or voided.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="grouptype">GroupType</h3>
-<blockquote>
 <p>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default(&quot;G&quot;)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Groups.html#grouptype">GroupType</a></strong><br>
 Allowed values for the <a href="Systems.Security.Groups.html#grouptype">GroupType</a> data attribute<br>
 <em>Allowed Values (Systems.Security.GroupsRepository.GroupType Enum Members)</em></p>
@@ -200,24 +196,18 @@ Allowed values for the <a href="Systems.Security.Groups.html#grouptype">GroupTyp
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>The name of this Group. [Required] [Filter(like)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this Group.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="groupforuser">GroupForUser</h3>
-<blockquote>
 <p>When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

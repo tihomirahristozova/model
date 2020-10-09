@@ -161,9 +161,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fullcost">FullCost</h3>
-<blockquote>
 <p>The full cost of the specified quantity. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -173,9 +171,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Consecutive number of the line within the calculation. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -184,54 +180,38 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.Calculation.Results.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="projectid">ProjectId</h3>
-<blockquote>
 <p>The Project to which the cost was allocated. When null, the cost was not allocated to any specific Project. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantity">Quantity</h3>
-<blockquote>
 <p>The quantity of the product. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="calculation">Calculation</h3>
-<blockquote>
 <p>The <a href="Finance.Cost.CalculationResults.html#calculation">Calculation</a> to which this CalculationResult belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Calculations.html">Calculations</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
-<blockquote>
 <p>The Lot to which the cost was allocated. When null, the cost was not allocated to any specific Lot. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<blockquote>
 <p>The Product to which the cost was allocated. When null, the cost was not allocated to any specific Product. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="profitcenter">ProfitCenter</h3>
-<blockquote>
 <p>The Profit Center to which the cost was allocated. When null, the cost was not allocated to any specific Profit Center. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salesorder">SalesOrder</h3>
-<blockquote>
 <p>The Sales Order to which the cost was allocated. When null, the cost was not allocated to any specific Sales Order. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workgroup">Workgroup</h3>
-<blockquote>
 <p>The Workgroup to which the cost was allocated. When null, the cost was not allocated to any specific Workgroup. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.Workgroups.html">Workgroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

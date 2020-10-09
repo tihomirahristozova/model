@@ -191,9 +191,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowprintingonstate">AllowPrintingOnState</h3>
-<blockquote>
 <p>The user can print documents only with state equal or greater than Allow_Printing_On_State. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Printouts.html#allowprintingonstate">AllowPrintingOnState</a></strong><br>
 Allowed values for the <a href="General.Printouts.html#allowprintingonstate">AllowPrintingOnState</a> data attribute<br>
 <em>Allowed Values (General.PrintoutsRepository.AllowPrintingOnState Enum Members)</em></p>
@@ -235,39 +233,29 @@ Allowed values for the <a href="General.Printouts.html#allowprintingonstate">All
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="applicationname">ApplicationName</h3>
-<blockquote>
 <p>The application which stored and uses the printout. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="backwardcompatibility">BackwardCompatibility</h3>
-<blockquote>
 <p>Obsolete. Not used. [Required] [Default(false)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="copies">Copies</h3>
-<blockquote>
 <p>Number of copies that should be printed when using direct printing. [Required] [Default(1)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="definition">Definition</h3>
-<blockquote>
 <p>Obsolete. Not used.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="definitionformat">DefinitionFormat</h3>
-<blockquote>
 <p>Obsolete. Not used. [Default(&quot;default&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -277,73 +265,53 @@ Allowed values for the <a href="General.Printouts.html#allowprintingonstate">All
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<blockquote>
 <p>True if this is the default printout for the application form. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>The name of the printout. Unique within the application form. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this Printout.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="ord">Ord</h3>
-<blockquote>
 <p>Order in the list of printouts when using direct printing. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="ordfilterxml">OrdFilterXml</h3>
-<blockquote>
 <p>The condition, required to be matched in order for the printout to be executed upon &quot;Print All&quot; command.</p>
-</blockquote>
 <p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="ordpriority">OrdPriority</h3>
-<blockquote>
 <p>Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with &quot;Print All&quot; command. [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<blockquote>
 <p>The document type to which this printout layout is bound. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>The Enterprise Company to which this Printout applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="printoutlayout">PrintoutLayout</h3>
-<blockquote>
 <p>The printout layout, that is bound to the document type. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.PrintoutLayouts.html">PrintoutLayouts</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="report">Report</h3>
-<blockquote>
 <p>If not null points to a custom report that indicates which data will be loaded in the printout. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Reporting.DataSources.html">DataSources</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

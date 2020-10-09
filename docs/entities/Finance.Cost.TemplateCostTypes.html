@@ -126,9 +126,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="hierarchylevel">HierarchyLevel</h3>
-<blockquote>
 <p>The level in the hierarchy on which this cost is incurred (0..9). [Required] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -138,15 +136,11 @@
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costtemplate">CostTemplate</h3>
-<blockquote>
 <p>The <a href="Finance.Cost.Templates.html">Template</a> to which this TemplateCostType belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Templates.html">Templates</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costtype">CostType</h3>
-<blockquote>
 <p>The Cost Type for which the hierarchy is specified. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">CostTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

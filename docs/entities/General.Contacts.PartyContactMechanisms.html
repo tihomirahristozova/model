@@ -166,9 +166,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<blockquote>
 <p>The first date when the contact mechanism was valid. null means unknown date. [Default(Today)] [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -178,25 +176,19 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>True if the contact mechanism is currently active and can be used to contact the party. [Required] [Default(true)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<blockquote>
 <p>True - when this is the default contact mechanism for this party; false - otherwise. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<blockquote>
 <p>Consecutive number of the contact information. The number is unique within the party. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -205,50 +197,36 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.Party.ContactMechanisms.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="nonsolicitation">NonSolicitation</h3>
-<blockquote>
 <p>If true then Don't use the mechanism for solicitation purposes. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this PartyContactMechanism.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<blockquote>
 <p>The last date on which the contact mechanism was valid for the party. null if the contact mechanism is still valid. [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="contactmechanism">ContactMechanism</h3>
-<blockquote>
 <p>The contact mechanism of the party. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.ContactMechanisms.html">ContactMechanisms</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="contactmechanismpurpose">ContactMechanismPurpose</h3>
-<blockquote>
 <p>The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms. [Filter(multi eq)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.ContactMechanismPurposes.html">ContactMechanismPurposes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="party">Party</h3>
-<blockquote>
 <p>The party, having the contact mechanism. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="personaldataprocess">PersonalDataProcess</h3>
-<blockquote>
 <p>The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown. [Filter(multi eq)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html">PersonalDataProcesses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

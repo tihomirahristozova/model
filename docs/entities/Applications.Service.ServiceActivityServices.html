@@ -173,9 +173,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="coveredbyguarantee">CoveredByGuarantee</h3>
-<blockquote>
 <p>True when the performed service is covered by the guarantee. [Required] [Default(false)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -185,9 +183,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -196,24 +192,18 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.ServiceActivity.Services.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Short notes for the service.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantity">Quantity</h3>
-<blockquote>
 <p>The quantity of the service in the measurement unit of the service. [Unit: Service.MeasurementUnit] [Required] [Default(1)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="servicename">ServiceName</h3>
-<blockquote>
 <p>Description of the conducted service. The description may vary (contain additional information) from the standart name of the service. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -221,27 +211,19 @@
 <code>obj.Service.Name</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="performedbyperson">PerformedByPerson</h3>
-<blockquote>
 <p>The id of the person from the enterprise company that actually performed the work. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="service">Service</h3>
-<blockquote>
 <p>The type of service that is conducted. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.Services.html">Services</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceactivity">ServiceActivity</h3>
-<blockquote>
 <p>The <a href="Applications.Service.ServiceActivityServices.html#serviceactivity">ServiceActivity</a> to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceobject">ServiceObject</h3>
-<blockquote>
 <p>The service object that was serviced. null means that it is unknown or N/A. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>

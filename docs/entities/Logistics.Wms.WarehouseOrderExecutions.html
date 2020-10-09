@@ -151,23 +151,17 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<blockquote>
 <p>The exact time in UTC, when the execution was created in the system. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="date">Date</h3>
-<blockquote>
 <p>Date, when the execution occurred in the real world. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="executedquantity">ExecutedQuantity</h3>
-<blockquote>
 <p>Executed quantity in the measurement unit of the warehouse order line. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -176,36 +170,26 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isfinal">IsFinal</h3>
-<blockquote>
 <p>Specifies whether this execution will finalize the execution of the order line, regardless of any remaining quantities. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="time">Time</h3>
-<blockquote>
 <p>Time, when the execution occurred in the real world. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>time</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>
-<blockquote>
 <p>The user, who created the record. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouseorderline">WarehouseOrderLine</h3>
-<blockquote>
 <p>The line for which we record execution. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouseworker">WarehouseWorker</h3>
-<blockquote>
 <p>The worker, which executed the line. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

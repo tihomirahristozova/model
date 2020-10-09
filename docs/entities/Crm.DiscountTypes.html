@@ -134,9 +134,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actiontype">ActionType</h3>
-<blockquote>
 <p>Specifies the way the discount is applied over the previous discounts. [Required] [Default(&quot;A&quot;)] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.DiscountTypes.html#actiontype">ActionType</a></strong><br>
 Allowed values for the <a href="Crm.DiscountTypes.html#actiontype">ActionType</a> data attribute<br>
 <em>Allowed Values (Crm.DiscountTypesRepository.ActionType Enum Members)</em></p>
@@ -166,9 +164,7 @@ Allowed values for the <a href="Crm.DiscountTypes.html#actiontype">ActionType</a
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Add</strong></p>
 <h3 id="calculationmethod">CalculationMethod</h3>
-<blockquote>
 <p>Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.DiscountTypes.html#calculationmethod">CalculationMethod</a></strong><br>
 Allowed values for the <a href="Crm.DiscountTypes.html#calculationmethod">CalculationMethod</a> data attribute<br>
 <em>Allowed Values (Crm.DiscountTypesRepository.CalculationMethod Enum Members)</em></p>
@@ -197,9 +193,7 @@ Allowed values for the <a href="Crm.DiscountTypes.html#calculationmethod">Calcul
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="code">Code</h3>
-<blockquote>
 <p>The unique code of the DiscountType. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -208,31 +202,23 @@ Allowed values for the <a href="Crm.DiscountTypes.html#calculationmethod">Calcul
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="issystem">IsSystem</h3>
-<blockquote>
 <p>Specifies whether this discount type is created and managed by the system. [Required] [Default(false)] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>The name of this DiscountType. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this DiscountType.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="ord">Ord</h3>
-<blockquote>
 <p>Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. [Required] [Default(1)] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>

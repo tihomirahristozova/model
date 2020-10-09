@@ -338,31 +338,23 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="branchnumber">BranchNumber</h3>
-<blockquote>
 <p>Branch number of the company. Companies with equal names and/or registration numbers can be inserted only if their branch numbers are different. [Required] [Default(0)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="city">City</h3>
-<blockquote>
 <p>The city in which the company is registered. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationtime">CreationTime</h3>
-<blockquote>
 <p>Date and time when the Company was created. [Filter(ge;le)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
-<blockquote>
 <p>Login name of the user, who created the Company. [Filter(like)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -370,9 +362,7 @@
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="gln">GLN</h3>
-<blockquote>
 <p>Global Location Number used by EDI systems</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -381,32 +371,24 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>Specifies whether the current party is active in the system or not [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="isvatcashreportingregistered">IsVATCashReportingRegistered</h3>
-<blockquote>
 <p>When true, specifies that the company uses the special VAT Cash Reporting Mode. [Required] [Default(false)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="isvatregistered">IsVATRegistered</h3>
-<blockquote>
 <p>Determines wheather the company is included in VAT registers. [Required] [Default(false)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>The name of this Company. [Filter(eq;like)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
@@ -414,44 +396,32 @@
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="partycode">PartyCode</h3>
-<blockquote>
 <p>The unique code of the Party [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partycreationtime">PartyCreationTime</h3>
-<blockquote>
 <p>Date and time when the Party was created.</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partycreationuser">PartyCreationUser</h3>
-<blockquote>
 <p>Login name of the user, who created the Party.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyname">PartyName</h3>
-<blockquote>
 <p>The name of the party [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partynotes">PartyNotes</h3>
-<blockquote>
 <p>Notes for this Party</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partytype">PartyType</h3>
-<blockquote>
 <p>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html#partytype">PartyType</a></strong><br>
 Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyType</a> data attribute<br>
 <em>Allowed Values (General.Contacts.PartiesRepository.PartyType Enum Members)</em></p>
@@ -489,92 +459,66 @@ Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyTy
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Person</strong></p>
 <h3 id="partyuniquenumber">PartyUniqueNumber</h3>
-<blockquote>
 <p>Unique number of the party (National number for persons, Registration number for companies)</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyupdatetime">PartyUpdateTime</h3>
-<blockquote>
 <p>Date and time when the Party was last updated.</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyupdateuser">PartyUpdateUser</h3>
-<blockquote>
 <p>Login name of the user, who last updated the Party.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="registrationnumber">RegistrationNumber</h3>
-<blockquote>
 <p>Unique, government-assigned registration number. null means unknown. [Filter(eq;like)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="registrationprimaryaddress">RegistrationPrimaryAddress</h3>
-<blockquote>
 <p>The primary registration address of the company. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="registrationtype">RegistrationType</h3>
-<blockquote>
 <p>Legal registration type - like LTD., PLC, etc. null means unknown. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="registrationvatnumber">RegistrationVATNumber</h3>
-<blockquote>
 <p>VAT registration number where applicable. null means that VAT number is not applicable or unknown. [Filter(eq)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="responsiblepersonname">ResponsiblePersonName</h3>
-<blockquote>
 <p>Primary responsible person of the company. null means unknown. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<blockquote>
 <p>Date and time when the Company was last updated. [Filter(ge;le)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
-<blockquote>
 <p>Login name of the user, who last updated the Company. [Filter(like)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="administrativeregion">AdministrativeRegion</h3>
-<blockquote>
 <p>The administrative region in which the party is situated.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="area">Area</h3>
-<blockquote>
 <p>The area in which the party is situated.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Areas.html">Areas</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="country">Country</h3>
-<blockquote>
 <p>The country, where the company is registered. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -582,21 +526,15 @@ Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyTy
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Transaction.CurrentEnterpriseCompany.Company.Country</code></p>
 <h3 id="defaultproductcodingsystem">DefaultProductCodingSystem</h3>
-<blockquote>
 <p>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.CodingSystems.html">CodingSystems</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="parentparty">ParentParty</h3>
-<blockquote>
 <p>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="registrationresponsibleperson">RegistrationResponsiblePerson</h3>
-<blockquote>
 <p>The personal record of the primary responsible person as per registration. null means unknown. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

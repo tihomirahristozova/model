@@ -358,23 +358,17 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<blockquote>
 <p>The unique code of the Store. [Required] [Filter(eq;like)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="creationtime">CreationTime</h3>
-<blockquote>
 <p>Date and time when the Store was created. [Filter(ge;le)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
-<blockquote>
 <p>Login name of the user, who created the Store. [Filter(like)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -382,15 +376,11 @@
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="defaultsupplystoreid">DefaultSupplyStoreId</h3>
-<blockquote>
 <p>The store from which goods are usually supplied to this store. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="gln">GLN</h3>
-<blockquote>
 <p>Global Location Number used by EDI systems</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -399,23 +389,17 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>Specifies whether the current party is active in the system or not [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>Name of the store. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="numberofdimensions">NumberOfDimensions</h3>
-<blockquote>
 <p>Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended. [Required] [Default(0)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -424,44 +408,32 @@
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="partycode">PartyCode</h3>
-<blockquote>
 <p>The unique code of the Party [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partycreationtime">PartyCreationTime</h3>
-<blockquote>
 <p>Date and time when the Party was created.</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partycreationuser">PartyCreationUser</h3>
-<blockquote>
 <p>Login name of the user, who created the Party.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyname">PartyName</h3>
-<blockquote>
 <p>The name of the party [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partynotes">PartyNotes</h3>
-<blockquote>
 <p>Notes for this Party</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partytype">PartyType</h3>
-<blockquote>
 <p>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html#partytype">PartyType</a></strong><br>
 Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyType</a> data attribute<br>
 <em>Allowed Values (General.Contacts.PartiesRepository.PartyType Enum Members)</em></p>
@@ -499,134 +471,94 @@ Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyTy
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Person</strong></p>
 <h3 id="partyuniquenumber">PartyUniqueNumber</h3>
-<blockquote>
 <p>Unique number of the party (National number for persons, Registration number for companies)</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyupdatetime">PartyUpdateTime</h3>
-<blockquote>
 <p>Date and time when the Party was last updated.</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyupdateuser">PartyUpdateUser</h3>
-<blockquote>
 <p>Login name of the user, who last updated the Party.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="schemaxml">SchemaXML</h3>
-<blockquote>
 <p>Obsolete. Not used.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="unmanaged">Unmanaged</h3>
-<blockquote>
 <p>If false the system will expect the user to process the store transactions. If true the system will auto-generate them. [Required] [Default(true)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<blockquote>
 <p>Date and time when the Store was last updated. [Filter(ge;le)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
-<blockquote>
 <p>Login name of the user, who last updated the Store. [Filter(like)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
-<blockquote>
 <p>The access key, containing the user permissions for this Store. Null means that all users have unlimited permissions. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="administrativeregion">AdministrativeRegion</h3>
-<blockquote>
 <p>The administrative region in which the party is situated.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="area">Area</h3>
-<blockquote>
 <p>The area in which the party is situated.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Areas.html">Areas</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="currency">Currency</h3>
-<blockquote>
 <p>The currency for the warehouse cost calculations. When null, the base currency for the enterprise company will be used. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.EnterpriseCompany != null), obj.EnterpriseCompany.BaseCurrency, obj.Transaction.CurrentEnterpriseCompany.BaseCurrency)</code></p>
 <h3 id="defaultproductcodingsystem">DefaultProductCodingSystem</h3>
-<blockquote>
 <p>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.CodingSystems.html">CodingSystems</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="defaultstorebin">DefaultStoreBin</h3>
-<blockquote>
 <p>To be used when store bin is unknown. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>The Enterprise Company to which this Store applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<blockquote>
 <p>The Enterprise Company Location to which this Store applies, or null if it is for all enterprise company locations. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
-<blockquote>
 <p>Obsolete. Not used. (Hierarchy of the stores is now represented by the Store Groups entity). [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentparty">ParentParty</h3>
-<blockquote>
 <p>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="responsibleparty">ResponsibleParty</h3>
-<blockquote>
 <p>Primary responsible party (usually employee) for the stock in the store. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storegroup">StoreGroup</h3>
-<blockquote>
 <p>The store group, to which this store belongs. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreGroups.html">StoreGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouse">Warehouse</h3>
-<blockquote>
 <p>Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. [Filter(multi eq)] (Introduced in version 20.1)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

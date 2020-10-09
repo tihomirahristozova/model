@@ -135,9 +135,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Unique (within the document), consecutive line number of the output. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -146,24 +144,18 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.CostDistribution.Outputs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="weightcoefficient">WeightCoefficient</h3>
-<blockquote>
 <p>The weight coefficient for prorate distribution of cost over the current line. [Required] [Default(1)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costdistribution">CostDistribution</h3>
-<blockquote>
 <p>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Distributions.html">Distributions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storetransactionline">StoreTransactionLine</h3>
-<blockquote>
 <p>The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

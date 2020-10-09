@@ -136,16 +136,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amount">Amount</h3>
-<blockquote>
 <p>The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentlineid">DocumentLineId</h3>
-<blockquote>
 <p>The Id of the line over which the amount is distributed. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
@@ -154,21 +150,15 @@
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<blockquote>
 <p>The <a href="General.DocumentDistributedAmounts.html#document">Document</a> to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
-<blockquote>
 <p>The type of amount which is distributed. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">DocumentAmountTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="referenceddocument">ReferencedDocument</h3>
-<blockquote>
 <p>In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

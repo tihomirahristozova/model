@@ -156,9 +156,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actionno">ActionNo</h3>
-<blockquote>
 <p>Consecutive number of the action, unique within the business rule. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -167,9 +165,7 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.UserBusinessRule.Actions.Select( c =&gt; c.ActionNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="actiontype">ActionType</h3>
-<blockquote>
 <p>Specifies the type of action to perform. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleActions.html#actiontype">ActionType</a></strong><br>
 Allowed values for the <a href="Systems.Bpm.UserBusinessRuleActions.html#actiontype">ActionType</a> data attribute<br>
 <em>Allowed Values (Systems.Bpm.UserBusinessRuleActionsRepository.ActionType Enum Members)</em></p>
@@ -210,9 +206,7 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleActions.html#actiont
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="parameter1type">Parameter1Type</h3>
-<blockquote>
 <p>The type of the parameter specifies how to obtain the parameter value.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleActions.html#parameter1type">ActionParameterType</a> (nullable)</strong><br>
 Generic enum type for ActionParameterType properties<br>
 <em>Allowed Values (Systems.Bpm.ActionParameterType Enum Members)</em></p>
@@ -249,16 +243,12 @@ Generic enum type for ActionParameterType properties<br>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parameter1value">Parameter1Value</h3>
-<blockquote>
 <p>The actual value of the parameter.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parameter2type">Parameter2Type</h3>
-<blockquote>
 <p>The type of the parameter specifies how to obtain the parameter value.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleActions.html#parameter2type">ActionParameterType</a> (nullable)</strong><br>
 Generic enum type for ActionParameterType properties<br>
 <em>Allowed Values (Systems.Bpm.ActionParameterType Enum Members)</em></p>
@@ -295,16 +285,12 @@ Generic enum type for ActionParameterType properties<br>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parameter2value">Parameter2Value</h3>
-<blockquote>
 <p>The actual value of the parameter.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parameter3type">Parameter3Type</h3>
-<blockquote>
 <p>The type of the parameter specifies how to obtain the parameter value.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleActions.html#parameter3type">ActionParameterType</a> (nullable)</strong><br>
 Generic enum type for ActionParameterType properties<br>
 <em>Allowed Values (Systems.Bpm.ActionParameterType Enum Members)</em></p>
@@ -341,17 +327,13 @@ Generic enum type for ActionParameterType properties<br>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parameter3value">Parameter3Value</h3>
-<blockquote>
 <p>The actual value of the parameter.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="userbusinessrule">UserBusinessRule</h3>
-<blockquote>
 <p>The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html">UserBusinessRules</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -141,9 +141,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="comments">Comments</h3>
-<blockquote>
 <p>Notes for this party picture.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -152,9 +150,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<blockquote>
 <p>True=This is the default picture for the party; false=otherwise. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -162,24 +158,18 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.Party.Pictures.Take( 1).Count( ) == 0)</code></p>
 <h3 id="islogo">IsLogo</h3>
-<blockquote>
 <p>If checked specifies that this picture is used to visualize the logo of this party in the system. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="picture">Picture</h3>
-<blockquote>
 <p>The actual party picture data. Can be null if we insert only some comments.</p>
-</blockquote>
 <p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="pictureno">PictureNo</h3>
-<blockquote>
 <p>Unique picture number within the party. Also used for sorting. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -189,9 +179,7 @@
 <code>( obj.Party.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="party">Party</h3>
-<blockquote>
 <p>The <a href="General.Contacts.PartyPictures.html#party">Party</a> to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

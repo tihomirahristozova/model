@@ -256,16 +256,12 @@
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="gln">GLN</h3>
-<blockquote>
 <p>Global Location Number used by EDI systems</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>Specifies whether the current party is active in the system or not [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -273,50 +269,36 @@
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="partycode">PartyCode</h3>
-<blockquote>
 <p>The unique code of the Party [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partycreationtime">PartyCreationTime</h3>
-<blockquote>
 <p>Date and time when the Party was created.</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partycreationuser">PartyCreationUser</h3>
-<blockquote>
 <p>Login name of the user, who created the Party.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyid">PartyId</h3>
-<blockquote>
 <p>Gets the Id of the party row, related to the domain object</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong></p>
 <h3 id="partyname">PartyName</h3>
-<blockquote>
 <p>The name of the party [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partynotes">PartyNotes</h3>
-<blockquote>
 <p>Notes for this Party</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partytype">PartyType</h3>
-<blockquote>
 <p>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html#partytype">PartyType</a></strong><br>
 Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyType</a> data attribute<br>
 <em>Allowed Values (General.Contacts.PartiesRepository.PartyType Enum Members)</em></p>
@@ -354,49 +336,35 @@ Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyTy
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Person</strong></p>
 <h3 id="partyuniquenumber">PartyUniqueNumber</h3>
-<blockquote>
 <p>Unique number of the party (National number for persons, Registration number for companies)</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyupdatetime">PartyUpdateTime</h3>
-<blockquote>
 <p>Date and time when the Party was last updated.</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyupdateuser">PartyUpdateUser</h3>
-<blockquote>
 <p>Login name of the user, who last updated the Party.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="administrativeregion">AdministrativeRegion</h3>
-<blockquote>
 <p>The administrative region in which the party is situated.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="area">Area</h3>
-<blockquote>
 <p>The area in which the party is situated.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Areas.html">Areas</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="defaultproductcodingsystem">DefaultProductCodingSystem</h3>
-<blockquote>
 <p>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.CodingSystems.html">CodingSystems</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="parentparty">ParentParty</h3>
-<blockquote>
 <p>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

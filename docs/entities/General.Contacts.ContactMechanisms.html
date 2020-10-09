@@ -131,9 +131,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contactmechanismtype">ContactMechanismType</h3>
-<blockquote>
 <p>A=Address; E=e-mail; T=Telephone. [Required] [Default(&quot;A&quot;)] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.ContactMechanisms.html#contactmechanismtype">ContactMechanismType</a></strong><br>
 Allowed values for the <a href="General.Contacts.ContactMechanisms.html#contactmechanismtype">ContactMechanismType</a> data attribute<br>
 <em>Allowed Values (General.Contacts.ContactMechanismsRepository.ContactMechanismType Enum Members)</em></p>
@@ -183,23 +181,17 @@ Allowed values for the <a href="General.Contacts.ContactMechanisms.html#contactm
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>Contact mechanism description. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="administrativeregion">AdministrativeRegion</h3>
-<blockquote>
 <p>The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="geopoint">GeoPoint</h3>
-<blockquote>
 <p>The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.GeoPoints.html">GeoPoints</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

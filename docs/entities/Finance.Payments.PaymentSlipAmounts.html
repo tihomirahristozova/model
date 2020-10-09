@@ -178,16 +178,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="description">Description</h3>
-<blockquote>
 <p>Description of the payed amount. The numbers of the documents which are payed for example.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="direction">Direction</h3>
-<blockquote>
 <p>'I' for Payment issue, 'R' for payment receipt. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlipAmounts.html#direction">Direction</a></strong><br>
 Allowed values for the <a href="Finance.Payments.PaymentOrders.html#direction">Direction</a> data attribute<br>
 <em>Allowed Values (Finance.Payments.PaymentOrdersRepository.Direction Enum Members)</em></p>
@@ -216,17 +212,13 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#direction">D
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="ispartypayment">IsPartyPayment</h3>
-<blockquote>
 <p>Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). [Required] [Default(true)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>The number of the line within the payment. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -235,45 +227,33 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#direction">D
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.PaymentSlip.Amounts.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="partyname">PartyName</h3>
-<blockquote>
 <p>The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee).</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Party.ObtainPartyName( )</code></p>
 <h3 id="paymentdate">PaymentDate</h3>
-<blockquote>
 <p>The date on which the payment is done. [Required] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="totalamount">TotalAmount</h3>
-<blockquote>
 <p>The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. [Currency: PaymentSlip.DocumentCurrency]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="party">Party</h3>
-<blockquote>
 <p>The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentreason">PaymentReason</h3>
-<blockquote>
 <p>The reason for the payment, as defined in Payment Reasons. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentReasons.html">PaymentReasons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentslip">PaymentSlip</h3>
-<blockquote>
 <p>The <a href="Finance.Payments.PaymentSlipAmounts.html#paymentslip">PaymentSlip</a> to which this PaymentSlipAmount belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlips.html">PaymentSlips</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

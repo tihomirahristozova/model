@@ -233,23 +233,17 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<blockquote>
 <p>Unique process code. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="containssensitivedata">ContainsSensitiveData</h3>
-<blockquote>
 <p>True if sensitive personal data is processed (racial, political, criminal, biometric, etc). [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="datasubjectcategory">DataSubjectCategory</h3>
-<blockquote>
 <p>The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html#datasubjectcategory">DataSubjectCategory</a></strong><br>
 Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.html#datasubjectcategory">DataSubjectCategory</a> data attribute<br>
 <em>Allowed Values (Applications.PersonalData.PersonalDataProcessesRepository.DataSubjectCategory Enum Members)</em></p>
@@ -294,23 +288,17 @@ Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="description">Description</h3>
-<blockquote>
 <p>Description of the process.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="discontinuationdate">DiscontinuationDate</h3>
-<blockquote>
 <p>The date on which the process was discontinued. Null if the process is still active. [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="establishdate">EstablishDate</h3>
-<blockquote>
 <p>The data on which the process was established and started functioning. [Required] [Default(Now)] [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -320,9 +308,7 @@ Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="legalbasisforprocessing">LegalBasisForProcessing</h3>
-<blockquote>
 <p>The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html#legalbasisforprocessing">LegalBasisForProcessing</a></strong><br>
 Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.html#legalbasisforprocessing">LegalBasisForProcessing</a> data attribute<br>
 <em>Allowed Values (Applications.PersonalData.PersonalDataProcessesRepository.LegalBasisForProcessing Enum Members)</em></p>
@@ -363,65 +349,47 @@ Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="listofdatacategories">ListOfDataCategories</h3>
-<blockquote>
 <p>Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="listofdatarecipientcategories">ListOfDataRecipientCategories</h3>
-<blockquote>
 <p>Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="listofprocessingpurposes">ListOfProcessingPurposes</h3>
-<blockquote>
 <p>Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="listoftechnicalmeasures">ListOfTechnicalMeasures</h3>
-<blockquote>
 <p>Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="listoftransferstothirdcountries">ListOfTransfersToThirdCountries</h3>
-<blockquote>
 <p>Comma-separated list of third countries, to which data is sent. [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="listofusedsoftware">ListOfUsedSoftware</h3>
-<blockquote>
 <p>Comma-separated list of the names of the software products used to process the data. [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>Name of the process (Multilanguage). [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this PersonalDataProcess.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="processingrole">ProcessingRole</h3>
-<blockquote>
 <p>The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . [Required] [Default(&quot;C&quot;)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html#processingrole">ProcessingRole</a></strong><br>
 Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.html#processingrole">ProcessingRole</a> data attribute<br>
 <em>Allowed Values (Applications.PersonalData.PersonalDataProcessesRepository.ProcessingRole Enum Members)</em></p>
@@ -447,30 +415,22 @@ Allowed values for the <a href="Applications.PersonalData.PersonalDataProcesses.
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Controller</strong></p>
 <h3 id="retentionperiodmonths">RetentionPeriodMonths</h3>
-<blockquote>
 <p>The period in months, for which the data is kept. Null when the period is unknown or N/A. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="thirdcountrytransferssafeguards">ThirdCountryTransfersSafeguards</h3>
-<blockquote>
 <p>Description of safeguards, taken to protect personal data in case of third country transfers. [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>The enterprise company, which owns the process. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="processownerperson">ProcessOwnerPerson</h3>
-<blockquote>
 <p>The owner and responsible person for the process. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

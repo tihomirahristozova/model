@@ -178,9 +178,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="baseamount">BaseAmount</h3>
-<blockquote>
 <p>The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -189,18 +187,14 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="inputamount">InputAmount</h3>
-<blockquote>
 <p>When not null, specifies directly the amount of the additional amount. [Currency: GetInputAmountCurrency()] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( obj.DocumentAmountType.AmountInputAllowed, obj.InputAmount, null)</code></p>
 <h3 id="inputpercent">InputPercent</h3>
-<blockquote>
 <p>When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -209,54 +203,40 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.DocumentAmountType.DefaultPercent</code></p>
 <h3 id="inputunitamount">InputUnitAmount</h3>
-<blockquote>
 <p>Input unit amount for the calculation of the current amount. [Currency: GetInputAmountCurrency()] [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnitAmount, null)</code></p>
 <h3 id="totaldistributedamount">TotalDistributedAmount</h3>
-<blockquote>
 <p>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="usercanchangeinput">UserCanChangeInput</h3>
-<blockquote>
 <p>True if the user, entering the document is allowed to change the default input percent. [Required] [Default(true)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<blockquote>
 <p>The <a href="General.DocumentAmounts.html#document">Document</a> to which this DocumentAmount belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
-<blockquote>
 <p>The type of the amount. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">DocumentAmountTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="inputamountcurrency">InputAmountCurrency</h3>
-<blockquote>
 <p>When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( obj.DocumentAmountType.AmountInputAllowed, obj.InputAmountCurrency, null)</code></p>
 <h3 id="inputunit">InputUnit</h3>
-<blockquote>
 <p>Measurement unit of the input unit amount. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>

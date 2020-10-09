@@ -136,16 +136,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="eventparameter">EventParameter</h3>
-<blockquote>
 <p>Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="eventtype">EventType</h3>
-<blockquote>
 <p>The event for which to register the business rule. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleEvents.html#eventtype">EventType</a></strong><br>
 Allowed values for the <a href="Systems.Bpm.UserBusinessRuleEvents.html#eventtype">EventType</a> data attribute<br>
 <em>Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.EventType Enum Members)</em></p>
@@ -194,9 +190,7 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleEvents.html#eventtyp
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="executionpriority">ExecutionPriority</h3>
-<blockquote>
 <p>Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. [Required] [Default(50)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleEvents.html#executionpriority">RuleExecutionPriority</a></strong><br>
 <em>Allowed Values (Aloe.SystemFrameworks.Domain.BusinessLogic.RuleExecutionPriority Enum Members)</em></p>
 <table>
@@ -237,9 +231,7 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleEvents.html#eventtyp
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="layer">Layer</h3>
-<blockquote>
 <p>Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. [Required] [Default(&quot;BKE&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleEvents.html#layer">Layer</a></strong><br>
 Allowed values for the <a href="Systems.Bpm.UserBusinessRuleEvents.html#layer">Layer</a> data attribute<br>
 <em>Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.Layer Enum Members)</em></p>
@@ -266,9 +258,7 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleEvents.html#layer">L
 <em>Default Value</em>: <strong>BackEnd</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="userbusinessrule">UserBusinessRule</h3>
-<blockquote>
 <p>The rule, which will be registered for the event. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html">UserBusinessRules</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

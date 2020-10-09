@@ -136,16 +136,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="createforinvoicedamounts">CreateForInvoicedAmounts</h3>
-<blockquote>
 <p>True to add to the payment order, the part of the amount of the sales order, which is invoiced. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="createfornotinvoicedamounts">CreateForNotInvoicedAmounts</h3>
-<blockquote>
 <p>True to add to the payment order, the part of the amount of the sales order, which is not included in any invoice. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -154,24 +150,18 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isamountwithvat">IsAmountWithVAT</h3>
-<blockquote>
 <p>True to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = true. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateforinvoices">UpdateForInvoices</h3>
-<blockquote>
 <p>Update the payment order when invoices are issued for any of the sales orders lines. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="route">Route</h3>
-<blockquote>
 <p>The route to which the current option set is assigned. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html">Routes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

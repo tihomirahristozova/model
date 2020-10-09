@@ -135,9 +135,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="keyorder">KeyOrder</h3>
-<blockquote>
 <p>The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -146,24 +144,18 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.Account.RequiredProperties.Select( c =&gt; c.KeyOrder).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="keyproperty">KeyProperty</h3>
-<blockquote>
 <p>Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes. [Required] [Default(true)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="account">Account</h3>
-<blockquote>
 <p>The <a href="Finance.Accounting.AccountRequiredProperties.html#account">Account</a> to which this AccountRequiredProperty belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Accounts</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="property">Property</h3>
-<blockquote>
 <p>A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

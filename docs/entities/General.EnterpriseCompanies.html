@@ -228,16 +228,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="bistartdate">BIStartDate</h3>
-<blockquote>
 <p>Defines the period for which BI extracts data. BI includes documents with &quot;Document Date&quot; greater than or equal to &quot;BI Start Date&quot;. [Filter(eq)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultcostingmethod">DefaultCostingMethod</h3>
-<blockquote>
 <p>Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. [Required] [Default(&quot;AVG&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html#defaultcostingmethod">DefaultCostingMethod</a></strong><br>
 Allowed values for the <a href="General.EnterpriseCompanies.html#defaultcostingmethod">DefaultCostingMethod</a> data attribute<br>
 <em>Allowed Values (General.EnterpriseCompaniesRepository.DefaultCostingMethod Enum Members)</em></p>
@@ -267,16 +263,12 @@ Allowed values for the <a href="General.EnterpriseCompanies.html#defaultcostingm
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>AverageCost</strong></p>
 <h3 id="defaultcustomercreditlimitbase">DefaultCustomerCreditLimitBase</h3>
-<blockquote>
 <p>Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. [Currency: BaseCurrency] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultlanguage">DefaultLanguage</h3>
-<blockquote>
 <p>The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). [Default(&quot;en&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html#defaultlanguage">DefaultLanguage</a> (nullable)</strong><br>
 Allowed values for the <a href="General.EnterpriseCompanies.html#defaultlanguage">DefaultLanguage</a> data attribute<br>
 <em>Allowed Values (General.EnterpriseCompaniesRepository.DefaultLanguage Enum Members)</em></p>
@@ -302,9 +294,7 @@ Allowed values for the <a href="General.EnterpriseCompanies.html#defaultlanguage
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>English</strong></p>
 <h3 id="editperiodstartdate">EditPeriodStartDate</h3>
-<blockquote>
 <p>Start date of the priod when the documents can be edited.</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -313,69 +303,49 @@ Allowed values for the <a href="General.EnterpriseCompanies.html#defaultlanguage
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>Indicates whether the current Enterprise company  is active. [Required] [Default(true)] [Filter(multi eq)] (Introduced in version 20.1)</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="printimagesretentionmonths">PrintImagesRetentionMonths</h3>
-<blockquote>
 <p>A period of months for which the printed images of the documents will be kept. [Required] [Default(60)] [Filter(multi eq;ge;le)] (Introduced in version 20.1)</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>60</strong></p>
 <h3 id="uibasecolor">UIBaseColor</h3>
-<blockquote>
 <p>When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
-<blockquote>
 <p>The access key, containing the user permissions for this EnterpriseCompany. Null means that all users have unlimited permissions. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="advanceproduct">AdvanceProduct</h3>
-<blockquote>
 <p>Product that is used for handling advances in trade documents. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="basecurrency">BaseCurrency</h3>
-<blockquote>
 <p>The base currency for summary reporting for this company. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="company">Company</h3>
-<blockquote>
 <p>Contains the base company data on which this enterprise company is based. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">Companies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="exchangedifferencecreditaccount">ExchangeDifferenceCreditAccount</h3>
-<blockquote>
 <p>Account for balancing accounting vouchers with credit difference due to currency exchanges. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Accounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="exchangedifferencedebitaccount">ExchangeDifferenceDebitAccount</h3>
-<blockquote>
 <p>Account for balancing accounting vouchers with debit difference due to currency exchanges. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Accounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="vatdocumentamounttype">VATDocumentAmountType</h3>
-<blockquote>
 <p>The document amount that is used to determine the amount of the VAT entries when they are generated. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

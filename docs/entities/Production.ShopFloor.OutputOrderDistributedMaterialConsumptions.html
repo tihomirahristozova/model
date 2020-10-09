@@ -131,17 +131,13 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="consumedcost">ConsumedCost</h3>
-<blockquote>
 <p>Cost of the actually issued Consumed_Quantity. [Currency: ConsumptionOrderLine.GetIssueCurrency()] [Required] [Default(0)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="consumedquantity">ConsumedQuantity</h3>
-<blockquote>
 <p>Part of the quantity in the consumption order line which was used for the product in the output order line. [Unit: ConsumptionOrderLine.ConsumedQuantityUnit] [Required] [Default(0)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -152,15 +148,11 @@
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="consumptionorderline">ConsumptionOrderLine</h3>
-<blockquote>
 <p>Consumption order line which requested the Consumed_Quantity. [Required] [Filter(multi eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.ConsumptionOrderLines.html">ConsumptionOrderLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="outputorderline">OutputOrderLine</h3>
-<blockquote>
 <p>The output order line for which the distribution is recorded. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.OutputOrderLines.html">OutputOrderLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

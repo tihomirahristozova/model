@@ -151,9 +151,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="constantvalueid">ConstantValueId</h3>
-<blockquote>
 <p>The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
@@ -161,52 +159,38 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdebit">IsDebit</h3>
-<blockquote>
 <p>If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. [Required] [Default(true)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="propertydescription">PropertyDescription</h3>
-<blockquote>
 <p>Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant).</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="propertyno">PropertyNo</h3>
-<blockquote>
 <p>The ordinal position of the property value in the item key of the account. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="propertyvaluesource">PropertyValueSource</h3>
-<blockquote>
 <p>Source for the property value according to the chosen source type. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="propertyvaluesourcetype">PropertyValueSourceType</h3>
-<blockquote>
 <p>Type of source for the property value. For example: System properties, User properties for document, Constant, ... [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="property">Property</h3>
-<blockquote>
 <p>The property which value will be included in the item key of the account. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="templateline">TemplateLine</h3>
-<blockquote>
 <p>The <a href="Finance.Accounting.TemplateLineProperties.html#templateline">TemplateLine</a> to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.TemplateLines.html">TemplateLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

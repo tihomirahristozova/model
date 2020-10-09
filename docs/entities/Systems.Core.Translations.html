@@ -139,24 +139,18 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<blockquote>
 <p>True when the translation is verified and activated. [Required] [Default(true)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="applicationname">ApplicationName</h3>
-<blockquote>
 <p>The application, containing the resource. For base resource types (T,C,H), this is null. [Filter(eq)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="creationtime">CreationTime</h3>
-<blockquote>
 <p>Timestamp when the translation was first created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -166,24 +160,18 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="language">Language</h3>
-<blockquote>
 <p>The code of the language or language-culture pair. Standard Windows codes are used. English=&quot;en&quot;; US English = &quot;en-us&quot;. [Required] [Default(&quot;en&quot;)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>en</strong></p>
 <h3 id="resourceid">ResourceId</h3>
-<blockquote>
 <p>The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="resourcetype">ResourceType</h3>
-<blockquote>
 <p>T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. [Required] [Default(&quot;S&quot;)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Core.Translations.html#resourcetype">ResourceType</a></strong><br>
 Allowed values for the <a href="Systems.Core.Translations.html#resourcetype">ResourceType</a> data attribute<br>
 <em>Allowed Values (Systems.Core.TranslationsRepository.ResourceType Enum Members)</em></p>
@@ -229,16 +217,12 @@ Allowed values for the <a href="Systems.Core.Translations.html#resourcetype">Res
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>OtherApplicationSpecific</strong></p>
 <h3 id="translationfield">TranslationField</h3>
-<blockquote>
 <p>The translated text. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<blockquote>
 <p>When the translation was last updated. [Required] [Default(Now)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>

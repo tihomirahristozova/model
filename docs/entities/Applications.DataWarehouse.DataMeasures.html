@@ -146,24 +146,18 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<blockquote>
 <p>Unique measure code. [Required] [Filter(eq;like)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="greenzonespreadpercent">GreenZoneSpreadPercent</h3>
-<blockquote>
 <p>The plus or minus percent, by which the goal can be missed, but still considered achieved. [Required] [Default(0.2)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0.2</strong></p>
 <h3 id="horizontaltrendspreadpercent">HorizontalTrendSpreadPercent</h3>
-<blockquote>
 <p>The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. [Required] [Default(0.01)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -173,23 +167,17 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>The name of the measure (multilanguage). [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this DataMeasure.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="period">Period</h3>
-<blockquote>
 <p>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year. [Required] [Default(&quot;Q&quot;)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.DataWarehouse.DataMeasures.html#period">Period</a></strong><br>
 Allowed values for the <a href="Applications.DataWarehouse.DataMeasures.html#period">Period</a> data attribute<br>
 <em>Allowed Values (Applications.DataWarehouse.DataMeasuresRepository.Period Enum Members)</em></p>
@@ -224,9 +212,7 @@ Allowed values for the <a href="Applications.DataWarehouse.DataMeasures.html#per
 <em>Default Value</em>: <strong>Quarter</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="datameasuregroup">DataMeasureGroup</h3>
-<blockquote>
 <p>The group to which this measure belongs. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.DataWarehouse.DataMeasureGroups.html">DataMeasureGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

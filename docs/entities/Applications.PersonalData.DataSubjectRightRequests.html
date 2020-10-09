@@ -156,16 +156,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="completedonutc">CompletedOnUtc</h3>
-<blockquote>
 <p>Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="createdonutc">CreatedOnUtc</h3>
-<blockquote>
 <p>The date and time (in UTC), when the request was created. [Required] [Default(Now)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -175,16 +171,12 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>This should usually contain detailed implementation notes.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="requestedright">RequestedRight</h3>
-<blockquote>
 <p>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a></strong><br>
 Allowed values for the <a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a> data attribute<br>
 <em>Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.RequestedRight Enum Members)</em></p>
@@ -225,9 +217,7 @@ Allowed values for the <a href="Applications.PersonalData.DataSubjectRightReques
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="status">Status</h3>
-<blockquote>
 <p>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a></strong><br>
 Allowed values for the <a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a> data attribute<br>
 <em>Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.Status Enum Members)</em></p>
@@ -265,27 +255,19 @@ Allowed values for the <a href="Applications.PersonalData.DataSubjectRightReques
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="completedbyuser">CompletedByUser</h3>
-<blockquote>
 <p>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="createdbyuser">CreatedByUser</h3>
-<blockquote>
 <p>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>The enterprise company, to which the request was made. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
-<blockquote>
 <p>The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

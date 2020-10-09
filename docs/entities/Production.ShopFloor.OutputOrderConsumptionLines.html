@@ -171,25 +171,19 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="consumedquantityforrun">ConsumedQuantityForRun</h3>
-<blockquote>
 <p>The consumed quantity of the material for the operation. [Unit: QuantityUnit] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="consumedquantityforscrap">ConsumedQuantityForScrap</h3>
-<blockquote>
 <p>The scrapped quantity of the material for this operation. [Unit: QuantityUnit] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="consumedquantityforsetup">ConsumedQuantityForSetup</h3>
-<blockquote>
 <p>The consumed quantity of the material while setting up the operation. [Unit: QuantityUnit] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -199,9 +193,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Line number, unique within the OutputOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the OutputOrder (in order to allow insertions with adjustment documents). [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -210,57 +202,41 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.OutputOrder.ConsumptionLines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this OutputOrderConsumptionLine.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="lineworkorder">LineWorkOrder</h3>
-<blockquote>
 <p>Work order for the line. Initially copied from the header (if there work order is not null). [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.OutputOrder.WorkOrder</code></p>
 <h3 id="material">Material</h3>
-<blockquote>
 <p>The consumed material. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="outputorder">OutputOrder</h3>
-<blockquote>
 <p>The <a href="Production.ShopFloor.OutputOrderConsumptionLines.html#outputorder">OutputOrder</a> to which this OutputOrderConsumptionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.OutputOrders.html">OutputOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<blockquote>
 <p>The measurement unit for the consumed quantity for setup, run and scrap. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Material.MeasurementUnit</code></p>
 <h3 id="scraptype">ScrapType</h3>
-<blockquote>
 <p>When Consumed_Quantity_For_Scrap &lt;&gt; 0 denotes the reason for the scrap. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.ScrapTypes.html">ScrapTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workorderitem">WorkOrderItem</h3>
-<blockquote>
 <p>The work order item, for which the consumption is recorded. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workorderitemoperation">WorkOrderItemOperation</h3>
-<blockquote>
 <p>The operation in which the material was consumed. null = unknown. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItemOperations.html">WorkOrderItemOperations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

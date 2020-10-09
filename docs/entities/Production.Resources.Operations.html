@@ -181,9 +181,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="description">Description</h3>
-<blockquote>
 <p>The description of this Operation.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -192,98 +190,72 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="minimumconcurrentstarttimeminutes">MinimumConcurrentStartTimeMinutes</h3>
-<blockquote>
 <p>How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="movetimeminutes">MoveTimeMinutes</h3>
-<blockquote>
 <p>The time required for the product to move to the next operation. During this time no resource is allocated. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>The name of this Operation. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="runtimeminutes">RunTimeMinutes</h3>
-<blockquote>
 <p>The time required to process one product lot. The run time is calculated for each produced lot. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
-<blockquote>
 <p>The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated.</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="setuptimeminutes">SetupTimeMinutes</h3>
-<blockquote>
 <p>The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="standardpriceperhour">StandardPricePerHour</h3>
-<blockquote>
 <p>Standard price for 1 hour work for this operation. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="tooling">Tooling</h3>
-<blockquote>
 <p>Short description of the needed instruments for the operation.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="usequantitybase">UseQuantityBase</h3>
-<blockquote>
 <p>Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="waittimeminutes">WaitTimeMinutes</h3>
-<blockquote>
 <p>The time required to wait after completing the operation. During this time, the resource is still allocated to the operation. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="operationgroup">OperationGroup</h3>
-<blockquote>
 <p>The <a href="Production.Resources.Operations.html#operationgroup">OperationGroup</a> to which this Operation belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.OperationGroups.html">OperationGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="operationinstructions">OperationInstructions</h3>
-<blockquote>
 <p>Full instructions for the operation. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.OperationInstructions.html">OperationInstructions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workgroupresource">WorkgroupResource</h3>
-<blockquote>
 <p>When not null, specifies the Workgroup Resource, which is required by the operation. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

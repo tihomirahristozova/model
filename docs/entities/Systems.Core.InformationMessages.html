@@ -138,17 +138,13 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="informationmessagetime">InformationMessageTime</h3>
-<blockquote>
 <p>Date and time when thet message occurred. [Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="informationmessagetype">InformationMessageType</h3>
-<blockquote>
 <p>Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR'. [Required] [Default(&quot;INF&quot;)] [Filter(multi eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Core.InformationMessages.html#informationmessagetype">InformationMessageType</a></strong><br>
 Allowed values for the <a href="Systems.Core.InformationMessages.html#informationmessagetype">InformationMessageType</a> data attribute<br>
 <em>Allowed Values (Systems.Core.InformationMessagesRepository.InformationMessageType Enum Members)</em></p>
@@ -178,37 +174,27 @@ Allowed values for the <a href="Systems.Core.InformationMessages.html#informatio
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Information</strong></p>
 <h3 id="machinename">MachineName</h3>
-<blockquote>
 <p>Machine name of the computer from which the process which creates the message has been initiated. [Required] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="message">Message</h3>
-<blockquote>
 <p>The actual content of the information message. [Required] [Filter(like)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="processdescription">ProcessDescription</h3>
-<blockquote>
 <p>Name or description of the process that creates the message. [Required] [Filter(eq;like)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="url">URL</h3>
-<blockquote>
 <p>URL of the record that has posted the information message. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="username">UserName</h3>
-<blockquote>
 <p>Login name of the user that has initiated the process which creates the message. [Required] [Filter(eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>

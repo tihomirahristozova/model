@@ -150,37 +150,27 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="objectcontents">ObjectContents</h3>
-<blockquote>
 <p>The compressed contents of the object. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="serverversion">ServerVersion</h3>
-<blockquote>
 <p>The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="version">Version</h3>
-<blockquote>
 <p>The version number of the version, stored in the current row, starting from 1. [Required] [Filter(multi eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="versiontime">VersionTime</h3>
-<blockquote>
 <p>The timestamp when the version was saved. [Required] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="versiontype">VersionType</h3>
-<blockquote>
 <p>Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Core.ObjectVersions.html#versiontype">VersionType</a></strong><br>
 Allowed values for the <a href="Systems.Core.ObjectVersions.html#versiontype">VersionType</a> data attribute<br>
 <em>Allowed Values (Systems.Core.ObjectVersionsRepository.VersionType Enum Members)</em></p>
@@ -206,15 +196,11 @@ Allowed values for the <a href="Systems.Core.ObjectVersions.html#versiontype">Ve
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="object">Object</h3>
-<blockquote>
 <p>The object, for which a version is stored. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
-<blockquote>
 <p>The user, which saved the version. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

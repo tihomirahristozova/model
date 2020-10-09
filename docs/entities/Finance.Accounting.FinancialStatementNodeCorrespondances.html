@@ -135,30 +135,22 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="multiplier">Multiplier</h3>
-<blockquote>
 <p>Factor by which the correspondence balance will be multiplied. [Required] [Default(1)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accountgroup">AccountGroup</h3>
-<blockquote>
 <p>Main account group determining the correspondances for which the balances are summed. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="correspondantaccountgroup">CorrespondantAccountGroup</h3>
-<blockquote>
 <p>Correspondant account group determining the correspondances for which the balances are summed. If null means that the balances of all correspondances for the main account group are summed. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="financialstatementnode">FinancialStatementNode</h3>
-<blockquote>
 <p>The <a href="Finance.Accounting.FinancialStatementNodeCorrespondances.html#financialstatementnode">FinancialStatementNode</a> to which this FinancialStatementNodeCorrespondance belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.FinancialStatementNodes.html">FinancialStatementNodes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

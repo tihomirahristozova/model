@@ -193,17 +193,13 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<blockquote>
 <p>True when the mail box is active for mail sinchronization, sending and receiving. [Required] [Default(true)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="emailaddress">EmailAddress</h3>
-<blockquote>
 <p>The email address associated with this mail box. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -212,61 +208,45 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<blockquote>
 <p>True when this is the default mailbox for the user. [Required] [Default(true)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="isencrypted">IsEncrypted</h3>
-<blockquote>
 <p>True when the mailbox messages are stored in encrypted format. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="resetonnextsync">ResetOnNextSync</h3>
-<blockquote>
 <p>Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="sendserveraddress">SendServerAddress</h3>
-<blockquote>
 <p>The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="sentitemsfoldername">SentItemsFolderName</h3>
-<blockquote>
 <p>The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne).</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="signaturehtml">SignatureHtml</h3>
-<blockquote>
 <p>Html text of the default signature, when creating new emails from this mailbox. When is null, a default generic signature is attached.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="syncpassword">SyncPassword</h3>
-<blockquote>
 <p>The password to supply to the server when retrieving email. null when the connection is not setup or the server does not require user name.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="syncprotocol">SyncProtocol</h3>
-<blockquote>
 <p>Synchronization protocol, 'POP3' or 'IMAP'. null means that syncrhonization is not setup.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Mail.Boxes.html#syncprotocol">SyncProtocol</a> (nullable)</strong><br>
 Allowed values for the <a href="Applications.Mail.Boxes.html#syncprotocol">SyncProtocol</a> data attribute<br>
 <em>Allowed Values (Applications.Mail.BoxesRepository.SyncProtocol Enum Members)</em></p>
@@ -295,24 +275,18 @@ Allowed values for the <a href="Applications.Mail.Boxes.html#syncprotocol">SyncP
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="syncserveraddress">SyncServerAddress</h3>
-<blockquote>
 <p>Incoming and outgoing mail server internet address. null when synchronization is not setup.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="syncusername">SyncUserName</h3>
-<blockquote>
 <p>User name to supply to the server, when retrieving email. null when the connection is not setup or the server does not require user name.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="owneruser">OwnerUser</h3>
-<blockquote>
 <p>The user, who owns the mailbox. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

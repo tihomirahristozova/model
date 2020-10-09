@@ -136,16 +136,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="comment">Comment</h3>
-<blockquote>
 <p>The user comment. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="commenttimestamp">CommentTimestamp</h3>
-<blockquote>
 <p>The exact timestamp of the comment. [Required] [Default(Now)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -156,21 +152,15 @@
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="assigntouser">AssignToUser</h3>
-<blockquote>
 <p>When not null means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="document">Document</h3>
-<blockquote>
 <p>The document to which to attach the comment. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
-<blockquote>
 <p>The user, who created the comment. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

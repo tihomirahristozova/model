@@ -168,16 +168,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="depreciationenddate">DepreciationEndDate</h3>
-<blockquote>
 <p>End date of the depreciation plan for this asset. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="depreciationstartdate">DepreciationStartDate</h3>
-<blockquote>
 <p>Start date of the depreciation plan for this asset. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -186,9 +182,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Consecutive number of the line within the depreciation plan. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -197,36 +191,26 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.DepreciationPlan.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="plandepreciationvalue">PlanDepreciationValue</h3>
-<blockquote>
 <p>The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. [Currency: Asset.ValuationCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="asset">Asset</h3>
-<blockquote>
 <p>The asset that is planned for depreciation. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.Assets.html">Assets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="depreciationmethod">DepreciationMethod</h3>
-<blockquote>
 <p>Depreciation method by which the asset will be depreciated. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationMethods.html">DepreciationMethods</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="depreciationplan">DepreciationPlan</h3>
-<blockquote>
 <p>The <a href="Finance.Assets.DepreciationPlanLines.html#depreciationplan">DepreciationPlan</a> to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationPlans.html">DepreciationPlans</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="valuationmodel">ValuationModel</h3>
-<blockquote>
 <p>Valuation model in which the asset is accounted. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.ValuationModels.html">ValuationModels</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

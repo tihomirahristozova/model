@@ -156,16 +156,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicationname">ApplicationName</h3>
-<blockquote>
 <p>The application, which consumes the layout. [Required] [Filter(eq)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="formname">FormName</h3>
-<blockquote>
 <p>The form, for which the layout is applied. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -174,16 +170,12 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="layout">Layout</h3>
-<blockquote>
 <p>The byte storage of the layout.</p>
-</blockquote>
 <p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="layoutformat">LayoutFormat</h3>
-<blockquote>
 <p>The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed. [Required] [Default(&quot;U&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.UI.FormLayouts.html#layoutformat">LayoutFormat</a></strong><br>
 Allowed values for the <a href="Systems.UI.FormLayouts.html#layoutformat">LayoutFormat</a> data attribute<br>
 <em>Allowed Values (Systems.UI.FormLayoutsRepository.LayoutFormat Enum Members)</em></p>
@@ -213,38 +205,28 @@ Allowed values for the <a href="Systems.UI.FormLayouts.html#layoutformat">Layout
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Uncompressed</strong></p>
 <h3 id="layoutname">LayoutName</h3>
-<blockquote>
 <p>The name of a named layout. Standard layouts have empty string names. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="panelname">PanelName</h3>
-<blockquote>
 <p>The visual panel, for which the layout is applied. [Required] [Default(&quot;Form&quot;)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Form</strong></p>
 <h3 id="username">UserName</h3>
-<blockquote>
 <p>The user for which the layout is applied. null means that the layout is applied for all users. [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
-<blockquote>
 <p>The security access key which controls the access to the layout view. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="role">Role</h3>
-<blockquote>
 <p>The role, for which the layout is applied. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Roles.html">Roles</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

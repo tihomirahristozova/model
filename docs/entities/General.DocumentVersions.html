@@ -151,24 +151,18 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentdata">DocumentData</h3>
-<blockquote>
 <p>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentdataformat">DocumentDataFormat</h3>
-<blockquote>
 <p>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. [Required] [Default(&quot;U&quot;)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>U</strong></p>
 <h3 id="documentdataxml">DocumentDataXML</h3>
-<blockquote>
 <p>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -177,9 +171,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="state">State</h3>
-<blockquote>
 <p>The state of the document by the time it was saved. [Required] [Default(0)] [Filter(multi eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentVersions.html#state">State</a></strong><br>
 Allowed values for the <a href="General.DocumentVersions.html#state">State</a> data attribute<br>
 <em>Allowed Values (General.DocumentVersionsRepository.State Enum Members)</em></p>
@@ -225,32 +217,24 @@ Allowed values for the <a href="General.DocumentVersions.html#state">State</a> d
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<blockquote>
 <p>The date and time when this version was saved. [Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
-<blockquote>
 <p>The login name of the user that saved this version. [Required] [Filter(eq;like)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="version">Version</h3>
-<blockquote>
 <p>The version number that is stored in this row. [Required] [Filter(eq;ge;le)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<blockquote>
 <p>The document whoose version is stored in this row. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

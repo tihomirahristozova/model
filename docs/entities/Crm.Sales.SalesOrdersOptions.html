@@ -151,9 +151,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="alloweddirections">AllowedDirections</h3>
-<blockquote>
 <p>Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default). [Required] [Default(&quot;A&quot;)] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrdersOptions.html#alloweddirections">AllowedDirections</a></strong><br>
 Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#alloweddirections">AllowedDirections</a> data attribute<br>
 <em>Allowed Values (Crm.Sales.SalesOrdersOptionsRepository.AllowedDirections Enum Members)</em></p>
@@ -187,9 +185,7 @@ Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#alloweddirecti
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>AllowAnyButNotBoth</strong></p>
 <h3 id="availablequantityonly">AvailableQuantityOnly</h3>
-<blockquote>
 <p>When true indicates that the sales order can be released only if there is sufficient available quantity (by ATP). [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -199,16 +195,12 @@ Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#alloweddirecti
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="minimumamount">MinimumAmount</h3>
-<blockquote>
 <p>When not null, specifies minimal total amount of the sales order, which is required for order releasing. [Currency: MinimumAmountCurrency]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="shipmentallowance">ShipmentAllowance</h3>
-<blockquote>
 <p>Terms on which the shipment of the products in the sales order is allowed. [Required] [Default(&quot;A&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrdersOptions.html#shipmentallowance">ShipmentAllowance</a></strong><br>
 Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#shipmentallowance">ShipmentAllowance</a> data attribute<br>
 <em>Allowed Values (Crm.Sales.SalesOrdersOptionsRepository.ShipmentAllowance Enum Members)</em></p>
@@ -239,27 +231,19 @@ Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#shipmentallowa
 <em>Default Value</em>: <strong>AlwaysAllow</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dealdocumenttype">DealDocumentType</h3>
-<blockquote>
 <p>If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<blockquote>
 <p>The document type for which the sales order option applies. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="minimumamountcurrency">MinimumAmountCurrency</h3>
-<blockquote>
 <p>The currency of Minimal Amount. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="vatdeviationdocumentamounttype">VATDeviationDocumentAmountType</h3>
-<blockquote>
 <p>Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

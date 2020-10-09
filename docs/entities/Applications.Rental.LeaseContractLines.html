@@ -163,9 +163,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="enddate">EndDate</h3>
-<blockquote>
 <p>Ending date of lease of this asset. [Required] [Filter(multi eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -174,9 +172,7 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.LeaseContract.EndDate</code></p>
 <h3 id="guaranteeamount">GuaranteeAmount</h3>
-<blockquote>
 <p>Deposit amount in the currency of the document which is given for this asset during its period of lease. [Currency: LeaseContract.Currency]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -185,9 +181,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Consecutive number of the line within the lease contract. [Required] [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -196,16 +190,12 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.LeaseContract.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linenotes">LineNotes</h3>
-<blockquote>
 <p>Notes for this line.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startdate">StartDate</h3>
-<blockquote>
 <p>Starting date of lease for this asset. [Required] [Filter(multi eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -215,15 +205,11 @@
 <code>obj.LeaseContract.StartDate</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="leasecontract">LeaseContract</h3>
-<blockquote>
 <p>The <a href="Applications.Rental.LeaseContractLines.html#leasecontract">LeaseContract</a> to which this LeaseContractLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Rental.LeaseContracts.html">LeaseContracts</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="rentalasset">RentalAsset</h3>
-<blockquote>
 <p>The asset which is rented with the current contract. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Rental.Assets.html">Assets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

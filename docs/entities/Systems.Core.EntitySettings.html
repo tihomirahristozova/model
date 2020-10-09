@@ -155,56 +155,42 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="logcreate">LogCreate</h3>
-<blockquote>
 <p>Specifies whether to log every insert for this entity. [Required] [Default(false)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="logdelete">LogDelete</h3>
-<blockquote>
 <p>Specifies whether to log every delete for this entity. [Required] [Default(false)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="logreadbyid">LogReadById</h3>
-<blockquote>
 <p>Specifies whether to log every load by Id for this entity. [Required] [Default(false)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="logreadmany">LogReadMany</h3>
-<blockquote>
 <p>Specifies whether to log every load of many records for this entity. [Required] [Default(false)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="logupdate">LogUpdate</h3>
-<blockquote>
 <p>Specifies whether to log every update for this entity. [Required] [Default(false)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>The system name of the entity, which is being secured. [Required] [Filter(eq;like)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="trackchangeslevel">TrackChangesLevel</h3>
-<blockquote>
 <p>The track changes level for the entity. [Required] [Default(0)] [Filter(multi eq)] (Introduced in version 19.1)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Core.EntitySettings.html#trackchangeslevel">TrackChangesLevel</a></strong><br>
 Represents the different levels of tracking changes for a specific entity.<br>
 <em>Allowed Values (Systems.Core.TrackChangesLevel Enum Members)</em></p>
@@ -243,9 +229,7 @@ Represents the different levels of tracking changes for a specific entity.<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
-<blockquote>
 <p>The access key, required to access the secured entity. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

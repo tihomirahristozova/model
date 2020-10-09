@@ -79,12 +79,11 @@ This properties are of multi-language string type.</p>
 The language key is a CultureInfo two letter ISO language name, like &quot;en&quot;, &quot;de&quot;, etc.</p>
 <p>For example, the name of a product is a data attribute, which can simultaneously contain translation of the product name in many languages.</p>
 <p>When you retrieve the value of this attribute with the Domain API, you get values similar to:</p>
-<code>
-{
-  "en": "Apple",
-  "de": "Apfel"
+<pre><code class="lang-json">{
+  &quot;en&quot;: &quot;Apple&quot;,
+  &quot;de&quot;: &quot;Apfel&quot;
 }
-<code>
+</code></pre>
 <h3 id="all-translations-are-a-single-value">All translations are a single value</h3>
 <p>ALL translations in a multi-language string are treated as a single value.
 You cannot change only one language pair - all pairs are updated simultaneously.
@@ -96,7 +95,7 @@ The APIs generally do not support direct equality comparisons.</p>
 <h5>Note</h5>
 <p>Domain API supports only the filter function <strong>contains</strong>.</p>
 </div>
-<p>For example, the following is supported:</p>
+<p>For example, in Domain API, the following is supported:</p>
 <pre><code>~/General_Products_Products?$filter=contains(Name,'ppl')  
 </code></pre>
 <p>However, this is not valid:</p>
@@ -127,14 +126,14 @@ The APIs generally do not support direct equality comparisons.</p>
 </tr>
 </tbody>
 </table>
-<p>Domain API Example:<br>
-Example:</p>
-<p>{
-&quot;LineAmount&quot;: {
-&quot;Value&quot;: &quot;3.55&quot;,
-&quot;Currency&quot;: &quot;USD&quot;
+<p>Domain API Example:</p>
+<pre><code class="lang-json">{
+  &quot;LineAmount&quot;: {
+    &quot;Value&quot;: &quot;3.55&quot;,
+    &quot;Currency&quot;: &quot;USD&quot;
+  }
 }
-}</p>
+</code></pre>
 <h2 id="quantity">Quantity</h2>
 <p>The ERP domain model declares a special type for quantity properties.</p>
 <p>The quantity is represented by value and measurement unit.</p>
@@ -160,14 +159,14 @@ Example:</p>
 </tr>
 </tbody>
 </table>
-<p>Domain API Example:<br>
-Example:</p>
-<p>{
-&quot;LineAmount&quot;: {
-&quot;Value&quot;: &quot;5.555&quot;,
-&quot;Unit&quot;: &quot;PCS&quot;
+<p>Domain API Example:</p>
+<pre><code class="lang-json">{
+  &quot;LineAmount&quot;: {
+    &quot;Value&quot;: &quot;5.555&quot;,
+    &quot;Unit&quot;: &quot;PCS&quot;
+  }
 }
-}</p>
+</code></pre>
 <h2 id="custompropertyvalue">CustomPropertyValue</h2>
 <p>User-defined properties, which can supplement the system properties of almost all entities in the system.</p>
 <p>Custom properties are defined in General_CustomProperties entity.</p>
@@ -194,25 +193,27 @@ Example:</p>
 </tr>
 <tr>
 <td>Description</td>
-<td>[MultilanguageString]</td>
+<td>MultilanguageString</td>
 <td>The description of the property value.Can be null.</td>
 </tr>
 <tr>
 <td>ValueId</td>
-<td>guid (nullable)</td>
+<td>guid</td>
 <td>The Id of the entry represented by the property value. It's the id of the allowed value. Can be null.</td>
 </tr>
 </tbody>
 </table>
 <p>Domain API Example:</p>
-<p>&quot;CustomProperty_color&quot;: {
-&quot;Value&quot;: &quot;Син&quot;,
-&quot;ValueId&quot;: &quot;5263a2d3-88b0-41db-adae-31c76135719e&quot;,
-&quot;Description&quot;: {
-&quot;BG&quot;: &quot;Морско&quot;
+<pre><code class="lang-json">&quot;CustomProperty_color&quot;: {
+    &quot;Value&quot;: &quot;Apple&quot;,
+    &quot;ValueId&quot;: &quot;5263a2d3-88b0-41db-adae-31c76135719e&quot;,
+    &quot;Description&quot;: {
+        &quot;en&quot;: &quot;Apple&quot;,
+        &quot;de&quot;: &quot;Apfel&quot;
+    }
 }
-}</p>
-</code></code></article>
+</code></pre>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
