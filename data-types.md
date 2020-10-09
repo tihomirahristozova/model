@@ -15,12 +15,12 @@ For example, the name of a product is a data attribute, which can simultaneously
 
 When you retrieve the value of this attribute with the Domain API, you get values similar to:
 
-<code>
+```json
 {
   "en": "Apple",
   "de": "Apfel"
 }
-<code>
+```
 
 ### All translations are a single value
 
@@ -36,7 +36,7 @@ The APIs generally do not support direct equality comparisons.
 > [!note]
 > Domain API supports only the filter function **contains**.
 
-For example, the following is supported:
+For example, in Domain API, the following is supported:
 
     ~/General_Products_Products?$filter=contains(Name,'ppl')  
     
@@ -58,14 +58,15 @@ The amount is represented by value and currency.
 | Value | Decimal | The value of the amount. |
 
 Domain API Example:  
-Example:
 
+```json
 {
   "LineAmount": {
     "Value": "3.55",
     "Currency": "USD"
   }
 }
+```
 
 ## Quantity
 
@@ -81,14 +82,15 @@ The quantity is represented by value and measurement unit.
 | Value | Decimal | The value of the quantity. |
 
 Domain API Example:  
-Example:
 
+```json
 {
   "LineAmount": {
     "Value": "5.555",
     "Unit": "PCS"
   }
 }
+```
 
 ## CustomPropertyValue
 
