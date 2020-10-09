@@ -115,8 +115,8 @@ Each database contains different custom properties and that is why each database
 | Name | Type | Description |
 | --- | --- | --- |
 | Value | String | The short value |
-| Description | [MultilanguageString] | The description of the property value.Can be null. |
-| ValueId | guid (nullable) | The Id of the entry represented by the property value. It's the id of the allowed value. Can be null. |
+| Description | MultilanguageString | The description of the property value.Can be null. |
+| ValueId | guid | The Id of the entry represented by the property value. It's the id of the allowed value. Can be null. |
 
 Domain API Example:  
 
