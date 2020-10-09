@@ -1677,7 +1677,7 @@
   "entities/index.html": {
     "href": "entities/index.html",
     "title": "ERP.net Entities | ERP.net Domain Model",
-    "keywords": "ERP.net Entities !include<> Namespaces Applications Communities Crm Finance General Logistics Production Projects Systems"
+    "keywords": "ERP.net Entities [!include(../entities-overview.md)] Namespaces Applications Communities Crm Finance General Logistics Production Projects Systems"
   },
   "entities/Logistics.html": {
     "href": "entities/Logistics.html",
