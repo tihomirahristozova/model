@@ -39,7 +39,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Resource name. Unique within the resource group. [Required] [Filter(eq;like)]
+Resource name. Unique within the resource group. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -47,7 +47,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this Resource.
+Notes for this Resource.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -58,14 +58,14 @@ _Supports Order By_: **False**
 
 ### CostingCurrency
 
-> The currency in which resource costs are specified. Required only if resource costs will be specified. [Filter(multi eq)]
+The currency in which resource costs are specified. Required only if resource costs will be specified. [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResourceGroup
 
-> The [ResourceGroup](General.Resources.Resources.md#resourcegroup) to which this Resource belongs. [Required] [Filter(multi eq)] [Owner]
+The [ResourceGroup](General.Resources.Resources.md#resourcegroup) to which this Resource belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ResourceGroups](General.Resources.ResourceGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

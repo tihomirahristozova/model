@@ -25,7 +25,7 @@ Contains the different working time periods within the work schedule. Entity: Ge
 
 ### DayNo
 
-> Consequtive day in the work schedule recurrence, starting at 1. [Required]
+Consequtive day in the work schedule recurrence, starting at 1. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -33,7 +33,7 @@ _Supports Order By_: **False**
 
 ### EndTime
 
-> End of working time period. [Required]
+End of working time period. [Required]
 
 _Type_: **time**  
 _Supported Filters_: **NotFilterable**  
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### StartTime
 
-> Start of working time period on the day, specified by Day_No. [Required]
+Start of working time period on the day, specified by Day_No. [Required]
 
 _Type_: **time**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### WorkSchedule
 
-> The [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner]
+The [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[WorkSchedules](General.Resources.WorkSchedules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

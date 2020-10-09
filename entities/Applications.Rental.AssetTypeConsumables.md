@@ -27,7 +27,7 @@ Consumables are products, which are usually sold accompanying an asset rental. E
 
 ### ConsumableQuantity
 
-> Specifies what quantity of the consumable should be offered for each rented asset. [Unit: ConsumableQuantityUnit] [Required]
+Specifies what quantity of the consumable should be offered for each rented asset. [Unit: ConsumableQuantityUnit] [Required]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this AssetTypeConsumable.
+Notes for this AssetTypeConsumable.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -52,28 +52,28 @@ _Supports Order By_: **False**
 
 ### ConsumableQuantityUnit
 
-> The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The consumable which is offered accompanying the asset rental. [Required] [Filter(multi eq)]
+The consumable which is offered accompanying the asset rental. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RentalAssetType
 
-> The rental asset type for which the consumable would be offered. [Required] [Filter(multi eq)] [Owner]
+The rental asset type for which the consumable would be offered. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[AssetTypes](Applications.Rental.AssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-> The store which contains the consumable. [Required] [Filter(multi eq)]
+The store which contains the consumable. [Required] [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

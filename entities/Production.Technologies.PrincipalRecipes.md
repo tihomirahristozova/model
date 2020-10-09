@@ -37,7 +37,7 @@ List of base recipe models. Recipe models are used by the Product Configurator t
 
 ### DurationHour
 
-> The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time. [Required] [Default(0)]
+The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -46,7 +46,7 @@ _Default Value_: **0**
 
 ### ExpiryDate
 
-> The last date, when the recipe should be used. null means that there is no expiry date yet and the recipe model is still active. [Filter(ge;le)]
+The last date, when the recipe should be used. null means that there is no expiry date yet and the recipe model is still active. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -60,7 +60,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Name of the principal recipe. [Required] [Filter(like)]
+Name of the principal recipe. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -68,7 +68,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> User comments for the principal recipe.
+User comments for the principal recipe.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -76,7 +76,7 @@ _Supports Order By_: **False**
 
 ### ProduceQuantity
 
-> Suggested quantity to produce. Usually it is equal to 1. [Unit: ProduceUnit] [Required] [Default(1)] [Filter(ge;le)]
+Suggested quantity to produce. Usually it is equal to 1. [Unit: ProduceUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -85,7 +85,7 @@ _Default Value_: **Constant**
 
 ### ReleaseDate
 
-> The date, when the recipe model is released for use. [Required] [Default(Today)] [Filter(ge;le)]
+The date, when the recipe model is released for use. [Required] [Default(Today)] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -94,7 +94,7 @@ _Default Value_: **CurrentDate**
 
 ### ScrapRate
 
-> The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. [Required] [Default(0)]
+The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -106,14 +106,14 @@ _Default Value_: **0**
 
 ### ProduceUnit
 
-> The measurement unit of Produce_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)]
+The measurement unit of Produce_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup
 
-> The production group, whose production is defined by the principal recipe . [Required] [Filter(multi eq)] [Owner]
+The production group, whose production is defined by the principal recipe . [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

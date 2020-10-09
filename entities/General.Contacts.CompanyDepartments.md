@@ -25,7 +25,7 @@ Hierarchical structure of the company departments. The departments and divisions
 
 ### DepartmentName
 
-> The name of the department. [Required] [Filter(like)]
+The name of the department. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -39,7 +39,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this CompanyDepartment.
+Notes for this CompanyDepartment.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -50,14 +50,14 @@ _Supports Order By_: **False**
 
 ### Company
 
-> The [Company](General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner]
+The [Company](General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Companies](General.Contacts.Companies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-> The parent department. null if this is root department in the company. [Filter(multi eq)]
+The parent department. null if this is root department in the company. [Filter(multi eq)]
 
 _Type_: **[CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -33,21 +33,21 @@ _Default Value_: **NewGuid**
 
 ### CustomerProperty
 
-> The user-defined customer property that shall be copied. [Required] [Filter(multi eq)]
+The user-defined customer property that shall be copied. [Required] [Filter(multi eq)]
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentProperty
 
-> The user-defined document property in which to copy the customers property value. [Required] [Filter(multi eq)]
+The user-defined document property in which to copy the customers property value. [Required] [Filter(multi eq)]
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
-> The document type for which the current definitions apply. [Required] [Filter(multi eq)] [Owner]
+The document type for which the current definitions apply. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Indicates whether this sequence is active. [Required] [Default(true)] [Filter(multi eq)]
+Indicates whether this sequence is active. [Required] [Default(true)] [Filter(multi eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -40,7 +40,7 @@ _Default Value_: **True**
 
 ### MaxNo
 
-> Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. [Filter(multi eq;ge;le)]
+Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. [Filter(multi eq;ge;le)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### NextNo
 
-> The next consecutive number which will be assigned on the next request. [Required] [Filter(multi eq;ge;le)]
+The next consecutive number which will be assigned on the next request. [Required] [Filter(multi eq;ge;le)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### PosDevice
 
-> The POS device, for which the sequence is defined. [Required] [Filter(multi eq)]
+The POS device, for which the sequence is defined. [Required] [Filter(multi eq)]
 
 _Type_: **[Devices](Crm.Pos.Devices.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

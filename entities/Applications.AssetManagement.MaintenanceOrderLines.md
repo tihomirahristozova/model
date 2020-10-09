@@ -34,7 +34,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Consecutive line number, unique within the maintenance order. [Required]
+Consecutive line number, unique within the maintenance order. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -47,7 +47,7 @@ _Front-End Recalc Expressions:_
 `( obj.MaintenanceOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### NextServiceDate
 
-> Specifies, that the maintenance required a specific date for the next maintenance. null means that default scheduling should be used.
+Specifies, that the maintenance required a specific date for the next maintenance. null means that default scheduling should be used.
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### NextServiceTrackedParameterValue
 
-> Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. null means that default scheduling should be used.
+Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. null means that default scheduling should be used.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this MaintenanceOrderLine.
+Notes for this MaintenanceOrderLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -74,21 +74,21 @@ _Supports Order By_: **False**
 
 ### MaintenanceOrder
 
-> The [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) to which this MaintenanceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) to which this MaintenanceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaintenanceType
 
-> The type of maintenance performed. [Required] [Filter(multi eq)]
+The type of maintenance performed. [Required] [Filter(multi eq)]
 
 _Type_: **[MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAsset
 
-> The maintained asset. [Required] [Filter(multi eq)]
+The maintained asset. [Required] [Filter(multi eq)]
 
 _Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

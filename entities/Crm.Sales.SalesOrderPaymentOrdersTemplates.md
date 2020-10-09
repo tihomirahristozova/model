@@ -26,7 +26,7 @@ Contains options for generation of payment orders. Each option set is assigned t
 
 ### CreateForInvoicedAmounts
 
-> True to add to the payment order, the part of the amount of the sales order, which is invoiced. [Required]
+True to add to the payment order, the part of the amount of the sales order, which is invoiced. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -34,7 +34,7 @@ _Supports Order By_: **False**
 
 ### CreateForNotInvoicedAmounts
 
-> True to add to the payment order, the part of the amount of the sales order, which is not included in any invoice. [Required]
+True to add to the payment order, the part of the amount of the sales order, which is not included in any invoice. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### IsAmountWithVAT
 
-> True to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = true. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order. [Required]
+True to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = true. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 ### UpdateForInvoices
 
-> Update the payment order when invoices are issued for any of the sales orders lines. [Required]
+Update the payment order when invoices are issued for any of the sales orders lines. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### Route
 
-> The route to which the current option set is assigned. [Required] [Filter(multi eq)] [Owner]
+The route to which the current option set is assigned. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

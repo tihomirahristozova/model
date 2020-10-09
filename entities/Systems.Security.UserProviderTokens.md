@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### LoginProviderName
 
-> Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. [Required] [Filter(eq)]
+Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### TokenName
 
-> What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). [Required] [Filter(eq)]
+What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -47,7 +47,7 @@ _Supports Order By_: **False**
 
 ### TokenValue
 
-> Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers.
+Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### User
 
-> User for which we store tokens. [Required] [Filter(multi eq)] [Owner]
+User for which we store tokens. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

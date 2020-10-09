@@ -24,7 +24,7 @@ Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 
 ### DocumentNotesFixedText
 
-> Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text.
+Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -41,14 +41,14 @@ _Default Value_: **NewGuid**
 
 ### DealType
 
-> Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. [Required] [Filter(multi eq)]
 
 _Type_: **[DealTypes](Finance.Vat.DealTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Route
 
-> Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. [Required] [Filter(multi eq)]
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

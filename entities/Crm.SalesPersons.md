@@ -30,7 +30,7 @@ Sales persons (or representatives) are sellers inside the enterprise company who
 
 ### CommissionPercent
 
-> The percentage (0..1) of commission percent. null means that there is no commission percent.
+The percentage (0..1) of commission percent. null means that there is no commission percent.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -38,14 +38,14 @@ _Supports Order By_: **False**
 
 ### CommissionPolicyId
 
-> Current commission policy for the sales person. null means there is no commission policy. [Filter(multi eq)]
+Current commission policy for the sales person. null means there is no commission policy. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ContractEndDate
 
-> The ending date of the contract with the sales person. null when the sales person is still active. [Filter(ge;le)]
+The ending date of the contract with the sales person. null when the sales person is still active. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### ContractStartDate
 
-> The starting date of the contract with the sales person. null when it is unknown. [Filter(ge;le)]
+The starting date of the contract with the sales person. null when it is unknown. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -67,7 +67,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. [Required] [Default(true)] [Filter(eq)]
+Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -79,28 +79,28 @@ _Default Value_: **True**
 
 ### EnterpriseCompany
 
-> The Enterprise Company to which this SalesPerson applies, or null if it is for all enterprise companies. [Filter(multi eq)]
+The Enterprise Company to which this SalesPerson applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-> The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. [Filter(multi eq)]
+The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
-> Base personal record. [Required] [Filter(multi eq)] [Owner]
+Base personal record. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesPersonGroup
 
-> The sales person group to which this sales person is assigned. [Required] [Filter(multi eq)]
+The sales person group to which this sales person is assigned. [Required] [Filter(multi eq)]
 
 _Type_: **[SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

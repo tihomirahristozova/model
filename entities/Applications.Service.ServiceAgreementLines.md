@@ -35,7 +35,7 @@ _Default Value_: **NewGuid**
 
 ### LineEndDateTime
 
-> The ending date and time of the agreement coverage for the current line. [Required] [Filter(ge;le)]
+The ending date and time of the agreement coverage for the current line. [Required] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -43,7 +43,7 @@ _Supports Order By_: **False**
 
 ### LineNo
 
-> Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)]
+Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals**  
@@ -56,7 +56,7 @@ _Front-End Recalc Expressions:_
 `( obj.ServiceAgreement.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### LineStartDateTime
 
-> The starting date and time of the agreement coverage for the current line. [Required] [Filter(ge;le)]
+The starting date and time of the agreement coverage for the current line. [Required] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this ServiceAgreementLine.
+Notes for this ServiceAgreementLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -72,7 +72,7 @@ _Supports Order By_: **False**
 
 ### Quantity
 
-> The quantity of the service object that is included in the agreement. [Required] [Default(1)] [Filter(ge;le)]
+The quantity of the service object that is included in the agreement. [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **decimal**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -84,21 +84,21 @@ _Default Value_: **1**
 
 ### ServiceAgreement
 
-> The [ServiceAgreement](Applications.Service.ServiceAgreementLines.md#serviceagreement) to which this ServiceAgreementLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [ServiceAgreement](Applications.Service.ServiceAgreementLines.md#serviceagreement) to which this ServiceAgreementLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceObject
 
-> The service object, which is covered by the current agreement. [Required] [Filter(multi eq)]
+The service object, which is covered by the current agreement. [Required] [Filter(multi eq)]
 
 _Type_: **[ServiceObjects](Applications.Service.ServiceObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceType
 
-> The type (level) of service that is agreed. [Required] [Filter(multi eq)]
+The type (level) of service that is agreed. [Required] [Filter(multi eq)]
 
 _Type_: **[ServiceTypes](Applications.Service.ServiceTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

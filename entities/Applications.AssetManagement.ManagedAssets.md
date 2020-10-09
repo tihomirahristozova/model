@@ -37,7 +37,7 @@ Contains the managed assets. The management of assets include maintenance planni
 
 ### Code
 
-> Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company. [Required] [Filter(eq;like)]
+Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -51,7 +51,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Name of the managed asset (multi-language). [Required] [Filter(eq;like)]
+Name of the managed asset (multi-language). [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this ManagedAsset.
+Notes for this ManagedAsset.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### RegistrationNumber
 
-> Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. [Filter(eq;like)]
+Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -78,21 +78,21 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company to which the managed asset belongs. [Required] [Filter(multi eq)]
+The enterprise company to which the managed asset belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAssetGroup
 
-> The organizational group of the asset. Used for organizational purposes only. [Required] [Filter(multi eq)]
+The organizational group of the asset. Used for organizational purposes only. [Required] [Filter(multi eq)]
 
 _Type_: **[ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAssetType
 
-> The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. [Required] [Filter(multi eq)]
+The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. [Required] [Filter(multi eq)]
 
 _Type_: **[ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

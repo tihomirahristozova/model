@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Unique (within the document), consecutive line number of the output. [Required]
+Unique (within the document), consecutive line number of the output. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -44,7 +44,7 @@ _Front-End Recalc Expressions:_
 `( obj.CostDistribution.Outputs.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### WeightCoefficient
 
-> The weight coefficient for prorate distribution of cost over the current line. [Required] [Default(1)]
+The weight coefficient for prorate distribution of cost over the current line. [Required] [Default(1)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -56,14 +56,14 @@ _Default Value_: **1**
 
 ### CostDistribution
 
-> The [Distribution](Finance.Cost.Distributions.md) to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner]
+The [Distribution](Finance.Cost.Distributions.md) to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreTransactionLine
 
-> The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)]
+The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)]
 
 _Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

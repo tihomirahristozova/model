@@ -23,7 +23,7 @@ Depreciation methods. Contains both system-defined and user-defined methods. Ent
 
 ### DepreciationFunction
 
-> Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table. [Required] [Default("STL")]
+Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table. [Required] [Default("STL")]
 
 _Type_: **[DepreciationFunction](Finance.Assets.DepreciationMethods.md#depreciationfunction)**  
 Allowed values for the [DepreciationFunction](Finance.Assets.DepreciationMethods.md#depreciationfunction) data attribute  
@@ -42,7 +42,7 @@ _Default Value_: **StraightLine**
 
 ### Factor
 
-> Factor used in factor depreciation function. Factor < 1 means declining depreciation; >1 - increasing. The depreciation is multiplied for each period by the factor. [Required] [Default(1)]
+Factor used in factor depreciation function. Factor < 1 means declining depreciation; >1 - increasing. The depreciation is multiplied for each period by the factor. [Required] [Default(1)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -57,7 +57,7 @@ _Default Value_: **NewGuid**
 
 ### IsSystem
 
-> Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -66,7 +66,7 @@ _Default Value_: **False**
 
 ### MonthsInAPeriod
 
-> Number of equal valued months calculated with single application of the function. [Required] [Default(12)]
+Number of equal valued months calculated with single application of the function. [Required] [Default(12)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -75,7 +75,7 @@ _Default Value_: **12**
 
 ### Name
 
-> The name of this DepreciationMethod. [Required] [Filter(like)]
+The name of this DepreciationMethod. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -83,7 +83,7 @@ _Supports Order By_: **False**
 
 ### PeriodDeterminationMethod
 
-> Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days. [Required]
+Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days. [Required]
 
 _Type_: **[PeriodDeterminationMethod](Finance.Assets.DepreciationMethods.md#perioddeterminationmethod)**  
 Allowed values for the [PeriodDeterminationMethod](Finance.Assets.DepreciationMethods.md#perioddeterminationmethod) data attribute  
@@ -100,7 +100,7 @@ _Supports Order By_: **False**
 
 ### StartFromNextMonth
 
-> When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month. [Required] [Default(true)] [ReadOnly]
+When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month. [Required] [Default(true)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  

@@ -25,7 +25,7 @@ Marketing target group, containing a fixed list of parties. Entity: Crm_Target_G
 
 ### Code
 
-> Short code for identification of target groups. [Required] [Filter(eq;like)] [ORD]
+Short code for identification of target groups. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -33,7 +33,7 @@ _Supports Order By_: **True**
 
 ### Description
 
-> The description of this TargetGroup.
+The description of this TargetGroup.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this TargetGroup. [Required] [Filter(like)]
+The name of this TargetGroup. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  

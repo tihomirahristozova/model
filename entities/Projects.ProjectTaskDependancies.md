@@ -24,7 +24,7 @@ Represents dependancy between project tasks. Entity: Prj_Project_Task_Dependanci
 
 ### DependancyType
 
-> FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). [Required] [Default("FS")]
+FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). [Required] [Default("FS")]
 
 _Type_: **[DependancyType](Projects.ProjectTaskDependancies.md#dependancytype)**  
 Allowed values for the [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) data attribute  
@@ -53,14 +53,14 @@ _Default Value_: **NewGuid**
 
 ### DependsOnTask
 
-> The task on which Project_Task depends. [Required] [Filter(multi eq)]
+The task on which Project_Task depends. [Required] [Filter(multi eq)]
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTask
 
-> The task which depends on another task. [Required] [Filter(multi eq)] [Owner]
+The task which depends on another task. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

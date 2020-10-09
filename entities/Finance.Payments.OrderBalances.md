@@ -39,7 +39,7 @@ Represents the payment orders with their covered amounts. Entity: Cash_Payment_B
 
 ### Direction
 
-> I for Payment issue, R for payment receipt. [Required] [Default("I")] [Filter(eq)]
+I for Payment issue, R for payment receipt. [Required] [Default("I")] [Filter(eq)]
 
 _Type_: **[Direction](Finance.Payments.OrderBalances.md#direction)**  
 Allowed values for the [Direction](Finance.Payments.PaymentOrders.md#direction) data attribute  
@@ -56,7 +56,7 @@ _Default Value_: **Expense**
 
 ### DueDate
 
-> The due date of the payment. null means there is no due date. [Filter(eq;ge;le)]
+The due date of the payment. null means there is no due date. [Filter(eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### DueStartDate
 
-> The date at which the payment becomes executable. null means the payment is executable at all times. [Filter(eq;ge;le)]
+The date at which the payment becomes executable. null means the payment is executable at all times. [Filter(eq;ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -72,7 +72,7 @@ _Supports Order By_: **False**
 
 ### IsInvoiced
 
-> When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument. [Required] [Filter(multi eq)]
+When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument. [Required] [Filter(multi eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -80,7 +80,7 @@ _Supports Order By_: **False**
 
 ### OrderAmount
 
-> The total amount of the payment order. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]
+The total amount of the payment order. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -89,7 +89,7 @@ _Default Value_: **Constant**
 
 ### PaidAmount
 
-> The paid amount. Taken from released payment transactions. [Currency: Currency] [Required]
+The paid amount. Taken from released payment transactions. [Currency: Currency] [Required]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -97,7 +97,7 @@ _Supports Order By_: **False**
 
 ### RefDocumentDate
 
-> The date of the original document. null means that it is unknown. [Filter(eq)]
+The date of the original document. null means that it is unknown. [Filter(eq)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals**  
@@ -110,7 +110,7 @@ _Front-End Recalc Expressions:_
 `obj.RefDocument.DocumentDate`
 ### RefDocumentNo
 
-> The number of the document which has created the payment order and is the basis for the payment. [Required] [Filter(eq)]
+The number of the document which has created the payment order and is the basis for the payment. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -123,7 +123,7 @@ _Front-End Recalc Expressions:_
 `obj.RefDocument.DocumentNo`
 ### RefInvoiceDocumentDate
 
-> The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. [Filter(eq;ge;le)]
+The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. [Filter(eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -136,7 +136,7 @@ _Front-End Recalc Expressions:_
 `obj.RefInvoiceDocument.DocumentDate`
 ### RefInvoiceDocumentNo
 
-> The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(eq)]
+The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -152,35 +152,35 @@ _Front-End Recalc Expressions:_
 
 ### Currency
 
-> The currency of amounts. [Required] [Filter(multi eq)]
+The currency of amounts. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The enterprise company which issued the document. [Required] [Filter(multi eq)]
+The enterprise company which issued the document. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LocationParty
 
-> Location or sub-party of the Party_Id in the order. [Filter(multi eq)]
+Location or sub-party of the Party_Id in the order. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
-> The party which is to pay or receive the amount. [Required] [Filter(multi eq)]
+The party which is to pay or receive the amount. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentOrder
 
-> The payment order. [Required] [Default(New Guid)] [Filter(multi eq)]
+The payment order. [Required] [Default(New Guid)] [Filter(multi eq)]
 
 _Type_: **[PaymentOrders](Finance.Payments.PaymentOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -188,14 +188,14 @@ _Default Value_: **NewGuid**
 
 ### RefDocument
 
-> The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. [Filter(multi eq)]
+The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefDocumentType
 
-> The type of the document which has created the payment order and is the basis for the payment. [Required] [Filter(multi eq)]
+The type of the document which has created the payment order and is the basis for the payment. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -207,14 +207,14 @@ _Front-End Recalc Expressions:_
 `obj.RefDocument.DocumentType`
 ### RefInvoiceDocument
 
-> The invoice document which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document. [Filter(multi eq)]
+The invoice document which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefInvoiceDocumentType
 
-> The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)]
+The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

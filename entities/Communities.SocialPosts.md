@@ -26,7 +26,7 @@ User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.
 
 ### CreationTimeUtc
 
-> The exact server time (in UTC), when the post was created. [Required]
+The exact server time (in UTC), when the post was created. [Required]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Default Value_: **NewGuid**
 
 ### LastInteractionTimeUtc
 
-> The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. [Required]
+The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. [Required]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### PostText
 
-> The post contents in clear text. [Required]
+The post contents in clear text. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -59,14 +59,14 @@ _Supports Order By_: **False**
 
 ### SocialGroup
 
-> The group in which the post is made. [Required] [Filter(multi eq)]
+The group in which the post is made. [Required] [Filter(multi eq)]
 
 _Type_: **[SocialGroups](Communities.SocialGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
-> The user, who made the post. [Required] [Filter(multi eq)]
+The user, who made the post. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

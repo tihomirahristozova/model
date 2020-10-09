@@ -26,7 +26,7 @@ External dealers. Entity: Crm_Dealers
 
 ### FromDate
 
-> Start of the dealer relationship. [Default(Today)] [Filter(ge;le)]
+Start of the dealer relationship. [Default(Today)] [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this Dealer.
+Notes for this Dealer.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### ThruDate
 
-> Termination date of the dealership. null for active dealers. [Filter(ge;le)]
+Termination date of the dealership. null for active dealers. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -60,14 +60,14 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company for which this dealer is recorded. [Filter(multi eq)]
+The enterprise company for which this dealer is recorded. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
-> The base party record of the dealer. [Required] [Filter(multi eq)] [Owner]
+The base party record of the dealer. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

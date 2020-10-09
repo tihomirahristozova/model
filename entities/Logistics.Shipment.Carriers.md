@@ -28,7 +28,7 @@ Represents a carrier agreement. One actual carrier can have different agreements
 
 ### AgreementEndDate
 
-> The ending date of the agreement with this carrier. null for agreements which are still active. [Filter(eq;ge;le)]
+The ending date of the agreement with this carrier. null for agreements which are still active. [Filter(eq;ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -36,7 +36,7 @@ _Supports Order By_: **False**
 
 ### AgreementStartDate
 
-> The start date of the agreement with this carrier. [Required] [Default(Today)] [Filter(eq;ge;le)]
+The start date of the agreement with this carrier. [Required] [Default(Today)] [Filter(eq;ge;le)]
 
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -45,7 +45,7 @@ _Default Value_: **CurrentDate**
 
 ### Code
 
-> Unique carrier code (or call sign). The code is unique within all enterprise companies. [Required] [Filter(eq;like)] [ORD]
+Unique carrier code (or call sign). The code is unique within all enterprise companies. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -59,7 +59,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Specifies whether the carrier agreement is active. [Required] [Default(true)] [Filter(eq)]
+Specifies whether the carrier agreement is active. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -68,7 +68,7 @@ _Default Value_: **True**
 
 ### Notes
 
-> Notes for this Carrier.
+Notes for this Carrier.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -79,14 +79,14 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company which signed the carrier agreement. [Required] [Filter(multi eq)]
+The enterprise company which signed the carrier agreement. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Supplier
 
-> The supplier contract with the carrier. [Required] [Filter(multi eq)]
+The supplier contract with the carrier. [Required] [Filter(multi eq)]
 
 _Type_: **[Suppliers](Logistics.Procurement.Suppliers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

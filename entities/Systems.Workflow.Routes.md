@@ -51,7 +51,7 @@ Contains document routes, which specify which document generation procedures wil
 
 ### ActivationDate
 
-> The date from which (including) the route is active. The date is matched against the document date of the generating document. [Required] [Default(Today)] [Filter(ge;le)]
+The date from which (including) the route is active. The date is matched against the document date of the generating document. [Required] [Default(Today)] [Filter(ge;le)]
 
 _Type_: **date**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -60,7 +60,7 @@ _Default Value_: **CurrentDate**
 
 ### Active
 
-> True if the route is active, otherwise false. [Required] [Default(true)] [Filter(eq)]
+True if the route is active, otherwise false. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -69,7 +69,7 @@ _Default Value_: **True**
 
 ### AllowedGenerationTypes
 
-> Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual). [Required] [Default("B")] [Filter(multi eq)]
+Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual). [Required] [Default("B")] [Filter(multi eq)]
 
 _Type_: **[AllowedGenerationTypes](Systems.Workflow.Routes.md#allowedgenerationtypes)**  
 Allowed values for the [AllowedGenerationTypes](Systems.Workflow.Routes.md#allowedgenerationtypes) data attribute  
@@ -87,7 +87,7 @@ _Default Value_: **BothAutoAndManually**
 
 ### AllowObsoleteGeneration
 
-> Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures. [Required] [Default(false)]
+Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -96,7 +96,7 @@ _Default Value_: **False**
 
 ### ConditionFilterXML
 
-> Contains filter condition, which the document must match in order to execute the route.
+Contains filter condition, which the document must match in order to execute the route.
 
 _Type_: **dataaccessfilter (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -104,7 +104,7 @@ _Supports Order By_: **False**
 
 ### ConditionStatesBitMask
 
-> The system states for which to execute the specified route. [Required] [Default(0)]
+The system states for which to execute the specified route. [Required] [Default(0)]
 
 _Type_: **[DocumentStateFlags](Systems.Workflow.Routes.md#conditionstatesbitmask)**  
 Enumeration of document system states that can be combined in bit mask  
@@ -126,7 +126,7 @@ _Default Value_: **0**
 
 ### ConnectedPartyCondition
 
-> A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. [Required] [Default("A")]
+A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. [Required] [Default("A")]
 
 _Type_: **[ConnectedPartyCondition](Systems.Workflow.Routes.md#connectedpartycondition)**  
 Allowed values for the [ConnectedPartyCondition](Systems.Workflow.Routes.md#connectedpartycondition) data attribute  
@@ -144,7 +144,7 @@ _Default Value_: **AnyParty**
 
 ### DeactivationDate
 
-> The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. [Filter(ge;le)]
+The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. [Filter(ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -152,7 +152,7 @@ _Supports Order By_: **False**
 
 ### DestinationState
 
-> 0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required]
+0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required]
 
 _Type_: **[DocumentState](Systems.Workflow.Routes.md#destinationstate)**  
 Enumeration of document system states  
@@ -179,7 +179,7 @@ _Default Value_: **NewGuid**
 
 ### NegativeConditionFilterXml
 
-> The negative condition should NOT be matched by the document in order to execute the route.
+The negative condition should NOT be matched by the document in order to execute the route.
 
 _Type_: **dataaccessfilter (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -187,7 +187,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this Route.
+Notes for this Route.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -195,7 +195,7 @@ _Supports Order By_: **False**
 
 ### ParentDocumentRelationshipType
 
-> Determines the default relationship type between the generated document and the parent document. [Required] [Default("S")]
+Determines the default relationship type between the generated document and the parent document. [Required] [Default("S")]
 
 _Type_: **[ParentDocument<br />RelationshipType](Systems.Workflow.Routes.md#parentdocumentrelationshiptype)**  
 Relationship between parent and child documents  
@@ -212,7 +212,7 @@ _Default Value_: **Subtask**
 
 ### ProcedureName
 
-> The system name of the generation procedure, which must be executed by the route. [Required]
+The system name of the generation procedure, which must be executed by the route. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -220,7 +220,7 @@ _Supports Order By_: **False**
 
 ### ProcessEvent
 
-> Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. [Required]
+Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -228,7 +228,7 @@ _Supports Order By_: **False**
 
 ### ReadOnly
 
-> Indicates wheather the destination document shoul be read only. true - the destination document is read only. [Required] [Default(false)]
+Indicates wheather the destination document shoul be read only. true - the destination document is read only. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -240,49 +240,49 @@ _Default Value_: **False**
 
 ### ConditionEnterpriseCompany
 
-> The enterprise company for which this route is activated. [Filter(multi eq)]
+The enterprise company for which this route is activated. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionUserStatus
 
-> The user-defined status, for which the document route is activated. [Filter(multi eq)]
+The user-defined status, for which the document route is activated. [Filter(multi eq)]
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DestinationDocumentType
 
-> The type of the document, that will be generated by executing the route. [Filter(multi eq)]
+The type of the document, that will be generated by executing the route. [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DestinationEnterpriseCompany
 
-> The enterprise company in which to generate the target document. [Filter(multi eq)]
+The enterprise company in which to generate the target document. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DestinationEnterpriseCompanyLocation
 
-> The enterprise company location in which to generate the target document. [Filter(multi eq)]
+The enterprise company location in which to generate the target document. [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DestinationUserStatus
 
-> The user defined status to set to the generated document. [Filter(multi eq)]
+The user defined status to set to the generated document. [Filter(multi eq)]
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
-> The document type from which this route originates. Documents from this type generate sub-documents using this route. [Required] [Filter(multi eq)] [Owner]
+The document type from which this route originates. Documents from this type generate sub-documents using this route. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

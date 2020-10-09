@@ -43,7 +43,7 @@ Represents the different types of additional amounts which are calculated for th
 
 ### AddToCustomer
 
-> True means that the amount will be charged to the primary customer of the document. [Required] [Default(true)]
+True means that the amount will be charged to the primary customer of the document. [Required] [Default(true)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -52,7 +52,7 @@ _Default Value_: **True**
 
 ### AddToLine
 
-> True means that the resulting amount will be added to the amount of each respective line. [Required] [Default(true)]
+True means that the resulting amount will be added to the amount of each respective line. [Required] [Default(true)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -61,7 +61,7 @@ _Default Value_: **True**
 
 ### AllowedDirections
 
-> Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. [Default(0)]
+Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. [Default(0)]
 
 _Type_: **[AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) (nullable)**  
 Allowed values for the [AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) data attribute  
@@ -79,7 +79,7 @@ _Default Value_: **0**
 
 ### AmountInputAllowed
 
-> True when the user is allowed to input fixed amount for distribution. [Required] [Default(false)] [Filter(eq)]
+True when the user is allowed to input fixed amount for distribution. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -88,7 +88,7 @@ _Default Value_: **False**
 
 ### AmountTypeCode
 
-> A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. [Required] [Filter(multi eq)] [ORD]
+A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. [Required] [Filter(multi eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -96,7 +96,7 @@ _Supports Order By_: **True**
 
 ### AmountTypeName
 
-> The name of the amount type. [Required] [Filter(like)] [ORD]
+The name of the amount type. [Required] [Filter(like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -104,7 +104,7 @@ _Supports Order By_: **True**
 
 ### BaseOnLines
 
-> True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. [Required] [Default(true)]
+True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. [Required] [Default(true)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -113,7 +113,7 @@ _Default Value_: **True**
 
 ### DefaultPercent
 
-> Default percent for amounts for which percent input is allowed; null otherwise.
+Default percent for amounts for which percent input is allowed; null otherwise.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -121,7 +121,7 @@ _Supports Order By_: **False**
 
 ### Description
 
-> The description of this DocumentAmountType.
+The description of this DocumentAmountType.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -129,7 +129,7 @@ _Supports Order By_: **False**
 
 ### DistributeBy
 
-> Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). [Required] [Default("AMOUNT")] [Filter(eq)]
+Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). [Required] [Default("AMOUNT")] [Filter(eq)]
 
 _Type_: **[DistributeBy](General.DocumentAmountTypes.md#distributeby)**  
 Allowed values for the [DistributeBy](General.DocumentAmountTypes.md#distributeby) data attribute  
@@ -153,7 +153,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> True when the amount type is active for new records; false - otherwise. [Required] [Default(true)] [Filter(eq)]
+True when the amount type is active for new records; false - otherwise. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -162,7 +162,7 @@ _Default Value_: **True**
 
 ### PercentInputAllowed
 
-> True when the user is allowed to input percent of total for distribution. [Required] [Default(true)] [Filter(eq)]
+True when the user is allowed to input percent of total for distribution. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -171,7 +171,7 @@ _Default Value_: **True**
 
 ### RoundScale
 
-> The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.
+The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -179,7 +179,7 @@ _Supports Order By_: **False**
 
 ### UnitAmountInputAllowed
 
-> Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. [Required] [Default(false)] [Filter(eq)]
+Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -191,7 +191,7 @@ _Default Value_: **False**
 
 ### DistributeByMeasurementCategory
 
-> Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)]
+Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)]
 
 _Type_: **[MeasurementCategories](General.MeasurementCategories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

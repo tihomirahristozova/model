@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### Multiplier
 
-> Factor by which the correspondence balance will be multiplied. [Required] [Default(1)]
+Factor by which the correspondence balance will be multiplied. [Required] [Default(1)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -43,21 +43,21 @@ _Default Value_: **1**
 
 ### AccountGroup
 
-> Main account group determining the correspondances for which the balances are summed. [Required] [Filter(multi eq)]
+Main account group determining the correspondances for which the balances are summed. [Required] [Filter(multi eq)]
 
 _Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CorrespondantAccountGroup
 
-> Correspondant account group determining the correspondances for which the balances are summed. If null means that the balances of all correspondances for the main account group are summed. [Filter(multi eq)]
+Correspondant account group determining the correspondances for which the balances are summed. If null means that the balances of all correspondances for the main account group are summed. [Filter(multi eq)]
 
 _Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FinancialStatementNode
 
-> The [FinancialStatementNode](Finance.Accounting.FinancialStatementNodeCorrespondances.md#financialstatementnode) to which this FinancialStatementNodeCorrespondance belongs. [Required] [Filter(multi eq)] [Owner]
+The [FinancialStatementNode](Finance.Accounting.FinancialStatementNodeCorrespondances.md#financialstatementnode) to which this FinancialStatementNodeCorrespondance belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

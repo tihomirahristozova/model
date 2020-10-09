@@ -43,7 +43,7 @@ Bulk payment order document line. Each line usually creates one payment order. E
 
 ### BillTo
 
-> If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified.
+If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified.
 
 _Type_: **[BillTo](Finance.Payments.BulkPaymentOrderLines.md#billto) (nullable)**  
 Allowed values for the [BillTo](Finance.Payments.BulkPaymentOrderLines.md#billto) data attribute  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### Direction
 
-> I for Payment issue, R for payment receipt. [Required] [Default("I")] [Filter(eq)]
+I for Payment issue, R for payment receipt. [Required] [Default("I")] [Filter(eq)]
 
 _Type_: **[Direction](Finance.Payments.BulkPaymentOrderLines.md#direction)**  
 Allowed values for the [Direction](Finance.Payments.BulkPaymentOrderLines.md#direction) data attribute  
@@ -76,7 +76,7 @@ _Default Value_: **Expense**
 
 ### DueDate
 
-> The due date of the payment. null means there is no due date. [Filter(ge;le)]
+The due date of the payment. null means there is no due date. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -90,7 +90,7 @@ _Default Value_: **NewGuid**
 
 ### InstallmentNumber
 
-> Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan.
+Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -98,7 +98,7 @@ _Supports Order By_: **False**
 
 ### InvoiceAmount
 
-> The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). [Currency: InvoiceAmountCurrency]
+The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). [Currency: InvoiceAmountCurrency]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -106,7 +106,7 @@ _Supports Order By_: **False**
 
 ### IsAmountWithVAT
 
-> Is_Amount_With_VAT=true if the requested amount includes VAT. [Required] [Default(true)] [Filter(eq)]
+Is_Amount_With_VAT=true if the requested amount includes VAT. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -115,7 +115,7 @@ _Default Value_: **True**
 
 ### Notes
 
-> Notes for this BulkPaymentOrderLine.
+Notes for this BulkPaymentOrderLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -123,7 +123,7 @@ _Supports Order By_: **False**
 
 ### RefDocumentDate
 
-> The date of the base document. null means that it is unknown.
+The date of the base document. null means that it is unknown.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -131,7 +131,7 @@ _Supports Order By_: **False**
 
 ### RefDocumentNo
 
-> The number of the document which is the basis for the payment. [Required]
+The number of the document which is the basis for the payment. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -139,7 +139,7 @@ _Supports Order By_: **False**
 
 ### RefInvoiceApplyDate
 
-> The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.
+The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -147,7 +147,7 @@ _Supports Order By_: **False**
 
 ### RefInvoiceDocumentDate
 
-> The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown.
+The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -155,7 +155,7 @@ _Supports Order By_: **False**
 
 ### RefInvoiceDocumentNo
 
-> The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice.
+The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -163,7 +163,7 @@ _Supports Order By_: **False**
 
 ### TotalAmount
 
-> Total amount that should be payed. [Currency: TotalAmountCurrency] [Required] [Default(0)]
+Total amount that should be payed. [Currency: TotalAmountCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -175,28 +175,28 @@ _Default Value_: **Constant**
 
 ### BulkPaymentOrder
 
-> The [BulkPaymentOrder](Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) to which this BulkPaymentOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [BulkPaymentOrder](Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) to which this BulkPaymentOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### InvoiceAmountCurrency
 
-> The currency of Invoice Amount. [Filter(multi eq)]
+The currency of Invoice Amount. [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LocationParty
 
-> Location or sub-party of the Party_Id. [Filter(multi eq)]
+Location or sub-party of the Party_Id. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
-> The party which is to pay or receive the amount. [Required] [Filter(multi eq)]
+The party which is to pay or receive the amount. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -205,7 +205,7 @@ _Front-End Recalc Expressions:_
 `obj.LocationParty.ParentParty`
 ### PaymentAccount
 
-> When not null, specifies the payment account that is expected or will be used by the payment transaction. [Filter(multi eq)]
+When not null, specifies the payment account that is expected or will be used by the payment transaction. [Filter(multi eq)]
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -214,28 +214,28 @@ _Front-End Recalc Expressions:_
 `obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)`
 ### PaymentType
 
-> Expected payment type. When null, there is no expectation for payment type. [Filter(multi eq)]
+Expected payment type. When null, there is no expectation for payment type. [Filter(multi eq)]
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefDocumentType
 
-> The type of the document which is the basis for the payment. [Required] [Filter(multi eq)]
+The type of the document which is the basis for the payment. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefInvoiceDocumentType
 
-> The document type of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)]
+The document type of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TotalAmountCurrency
 
-> The currency of Total Amount. [Required] [Filter(multi eq)]
+The currency of Total Amount. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

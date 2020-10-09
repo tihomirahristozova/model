@@ -36,7 +36,7 @@ Extends data in other tables with attached files, custom properties, etc. Each r
 
 ### CreationTimeUtc
 
-> The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. [Filter(ge;le)] (Introduced in version 19.1)
+The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. [Filter(ge;le)] (Introduced in version 19.1)
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -44,14 +44,14 @@ _Supports Order By_: **False**
 
 ### EntityItemId
 
-> The Id of the primary row to which the object is bound. [Required] [Filter(multi eq)]
+The Id of the primary row to which the object is bound. [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EntityType
 
-> The entity type of the row to which the object is bound. [Required] [Default(" ")] [Filter(eq)] [ORD]
+The entity type of the row to which the object is bound. [Required] [Default(" ")] [Filter(eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -66,7 +66,7 @@ _Default Value_: **NewGuid**
 
 ### IsDeleted
 
-> Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1)
+Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1)
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -75,7 +75,7 @@ _Default Value_: **False**
 
 ### LastUpdateTimeUtc
 
-> The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] (Introduced in version 19.1)
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] (Introduced in version 19.1)
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -83,7 +83,7 @@ _Supports Order By_: **False**
 
 ### LatestVersion
 
-> The latest saved version of the object. Starts from 1 and increments with 1 for each new version. [Required] [Default(1)]
+The latest saved version of the object. Starts from 1 and increments with 1 for each new version. [Required] [Default(1)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -95,14 +95,14 @@ _Default Value_: **1**
 
 ### CreationUser
 
-> The user, who created the object represented by this system object . null means that it is unknown. [Filter(multi eq)] (Introduced in version 19.1)
+The user, who created the object represented by this system object . null means that it is unknown. [Filter(multi eq)] (Introduced in version 19.1)
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LastUpdateUser
 
-> The user, who made the last modification of the object represented by this system object . null means that it is unknown. [Filter(multi eq)] (Introduced in version 19.1)
+The user, who made the last modification of the object represented by this system object . null means that it is unknown. [Filter(multi eq)] (Introduced in version 19.1)
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

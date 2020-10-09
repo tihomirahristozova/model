@@ -23,7 +23,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this PropertiesCategory. [Required] [Filter(eq;like)] [ORD]
+The name of this PropertiesCategory. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  

@@ -43,7 +43,7 @@ The detail line of purchase control data. The purchase control is used to tally 
 
 ### ConfirmedAmountBase
 
-> The amount (in base currency) of the ordered items, confirmed by the supplier (usually with Purchase Confirmation). Null when the logged operation did not involve confirming ordered items.
+The amount (in base currency) of the ordered items, confirmed by the supplier (usually with Purchase Confirmation). Null when the logged operation did not involve confirming ordered items.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -51,7 +51,7 @@ _Supports Order By_: **False**
 
 ### ConfirmedStandardQuantityBase
 
-> The standard quantity of the ordered items, confirmed by the supplier (usually with Purchase Confirmation) in base measurement unit. Null when the logged operation did not involve confirming ordered items.
+The standard quantity of the ordered items, confirmed by the supplier (usually with Purchase Confirmation) in base measurement unit. Null when the logged operation did not involve confirming ordered items.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -65,7 +65,7 @@ _Default Value_: **NewGuid**
 
 ### InvoicedAmountBase
 
-> The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items.
+The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 ### InvoicedStandardQuantityBase
 
-> The standard quantity of the invoiced items (usually with Purchase Invoice) in base measurement unit. Null when the logged operation did not involve invoicing items.
+The standard quantity of the invoiced items (usually with Purchase Invoice) in base measurement unit. Null when the logged operation did not involve invoicing items.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 ### LineNo
 
-> The consecutive line number within the control document. [Required]
+The consecutive line number within the control document. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -89,7 +89,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this PurchaseControlDocumentLine.
+Notes for this PurchaseControlDocumentLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -97,7 +97,7 @@ _Supports Order By_: **False**
 
 ### OrderedAmountBase
 
-> The amount (in base currency) of the ordered items (usually with Purchase Order). Null when the logged operation did not involve ordering items.
+The amount (in base currency) of the ordered items (usually with Purchase Order). Null when the logged operation did not involve ordering items.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -105,7 +105,7 @@ _Supports Order By_: **False**
 
 ### OrderedStandardQuantityBase
 
-> The standard quantity of the ordered items (usually with Purchase Order) in base measurement unit. Null when the logged operation did not involve ordering items.
+The standard quantity of the ordered items (usually with Purchase Order) in base measurement unit. Null when the logged operation did not involve ordering items.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -113,7 +113,7 @@ _Supports Order By_: **False**
 
 ### ReceivedAmountBase
 
-> The amount (in base currency) of the received items (usually with Receiving Order). Null when the logged operation did not involve receiving items.
+The amount (in base currency) of the received items (usually with Receiving Order). Null when the logged operation did not involve receiving items.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -121,7 +121,7 @@ _Supports Order By_: **False**
 
 ### ReceivedStandardQuantityBase
 
-> The standard quantity of the received items (usually with Receiving Order) in base measurement unit. Null when the logged operation did not involve receiving items.
+The standard quantity of the received items (usually with Receiving Order) in base measurement unit. Null when the logged operation did not involve receiving items.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -129,7 +129,7 @@ _Supports Order By_: **False**
 
 ### RequestedAmountBase
 
-> The amount (in base currency) of the requested items (usually with Purchase Requisition). Null when the logged operation did not involve requesting items.
+The amount (in base currency) of the requested items (usually with Purchase Requisition). Null when the logged operation did not involve requesting items.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -137,7 +137,7 @@ _Supports Order By_: **False**
 
 ### RequestedStandardQuantityBase
 
-> The standard quantity of the requested items (usually with Purchase Requisition) in base measurement unit. Null when the logged operation did not involve requesting items.
+The standard quantity of the requested items (usually with Purchase Requisition) in base measurement unit. Null when the logged operation did not involve requesting items.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -148,70 +148,70 @@ _Supports Order By_: **False**
 
 ### PurchaseControlDocument
 
-> The [PurchaseControlDocument](Logistics.Procurement.PurchaseControlDocumentLines.md#purchasecontroldocument) to which this PurchaseControlDocumentLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [PurchaseControlDocument](Logistics.Procurement.PurchaseControlDocumentLines.md#purchasecontroldocument) to which this PurchaseControlDocumentLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseInvoice
 
-> The purchase invoice which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
+The purchase invoice which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
 
 _Type_: **[PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseInvoiceLine
 
-> The purchase invoice line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
+The purchase invoice line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
 
 _Type_: **[PurchaseInvoiceLines](Logistics.Procurement.PurchaseInvoiceLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseOperationType
 
-> The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. [Filter(multi eq)]
+The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. [Filter(multi eq)]
 
 _Type_: **[PurchaseOperationTypes](Logistics.Procurement.PurchaseOperationTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseOrder
 
-> The purchase order which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
+The purchase order which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
 
 _Type_: **[PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseOrderLine
 
-> The purchase order line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
+The purchase order line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
 
 _Type_: **[PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseRequisition
 
-> The purchase requisition which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
+The purchase requisition which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
 
 _Type_: **[Requisitions](Logistics.Procurement.Requisitions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseRequisitionLine
 
-> The purchase requisition line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
+The purchase requisition line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
 
 _Type_: **[RequisitionLines](Logistics.Procurement.RequisitionLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReceivingOrder
 
-> The receiving order which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
+The receiving order which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
 
 _Type_: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReceivingOrderLine
 
-> The receiving order line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
+The receiving order line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)]
 
 _Type_: **[ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

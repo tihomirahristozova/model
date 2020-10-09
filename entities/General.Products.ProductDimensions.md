@@ -29,7 +29,7 @@ Contains convertion ratios between the supported measument categories for each p
 
 ### ConvertToBaseDivisor
 
-> This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. [Required]
+This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. [Required]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -42,7 +42,7 @@ _Front-End Recalc Expressions:_
 `( ( obj.DestQuantity.Value * obj.DestQuantityUnit.Multiplier) * obj.SourceQuantityUnit.Divisor)`
 ### ConvertToBaseMultiplier
 
-> This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. [Required]
+This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. [Required]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -55,7 +55,7 @@ _Front-End Recalc Expressions:_
 `( ( obj.SourceQuantity.Value * obj.SourceQuantityUnit.Multiplier) * obj.DestQuantityUnit.Divisor)`
 ### DestQuantity
 
-> Quantity in some of the base units, that equals Source_Quantity. [Unit: DestQuantityUnit] [Required] [Default(1)]
+Quantity in some of the base units, that equals Source_Quantity. [Unit: DestQuantityUnit] [Required] [Default(1)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -70,7 +70,7 @@ _Default Value_: **NewGuid**
 
 ### SourceQuantity
 
-> The quantity in the non-base unit. [Unit: SourceQuantityUnit] [Required] [Default(1)]
+The quantity in the non-base unit. [Unit: SourceQuantityUnit] [Required] [Default(1)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -82,14 +82,14 @@ _Default Value_: **Constant**
 
 ### DestQuantityUnit
 
-> The measurement unit of Dest_Quantity. Should be one of the units of the base measurement category of the product. [Required] [Filter(multi eq)]
+The measurement unit of Dest_Quantity. Should be one of the units of the base measurement category of the product. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MeasurementCategory
 
-> The measurement category of Source Quantity Unit. For each product, only one conversion ratio can be specified for a measurement category. [Required] [Filter(multi eq)] [ReadOnly]
+The measurement category of Source Quantity Unit. For each product, only one conversion ratio can be specified for a measurement category. [Required] [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[MeasurementCategories](General.MeasurementCategories.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -101,14 +101,14 @@ _Front-End Recalc Expressions:_
 `obj.SourceQuantityUnit.MeasurementCategory`
 ### Product
 
-> The product for which we specify conversion ratios. [Required] [Filter(multi eq)] [Owner]
+The product for which we specify conversion ratios. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SourceQuantityUnit
 
-> The non-base measurement unit for which we specify convertion ratio. [Required] [Filter(multi eq)]
+The non-base measurement unit for which we specify convertion ratio. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

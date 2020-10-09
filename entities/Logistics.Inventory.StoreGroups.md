@@ -27,7 +27,7 @@ Hierarchy of store groups. Entity: Inv_Store_Groups
 
 ### Code
 
-> The unique code of the StoreGroup. [Required] [Filter(eq;like)]
+The unique code of the StoreGroup. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -35,7 +35,7 @@ _Supports Order By_: **False**
 
 ### FullPath
 
-> The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. [Filter(eq;like)] [ORD] [ReadOnly]
+The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. [Filter(eq;like)] [ORD] [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this StoreGroup. [Required] [Filter(like)]
+The name of this StoreGroup. [Required] [Filter(like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 ### ParentFullPath
 
-> The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. [Filter(eq;like)]
+The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -68,14 +68,14 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The Enterprise Company to which this StoreGroup applies, or null if it is for all enterprise companies. [Filter(multi eq)]
+The Enterprise Company to which this StoreGroup applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-> The Enterprise Company Location to which this StoreGroup applies, or null if it is for all enterprise company locations. [Filter(multi eq)]
+The Enterprise Company Location to which this StoreGroup applies, or null if it is for all enterprise company locations. [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -23,7 +23,7 @@ User-defined models for cost allocation. Entity: Cost_Allocation_Models
 
 ### CostAllocationModelName
 
-> Multilanguage allocation model name. [Required]
+Multilanguage allocation model name. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Default Value_: **NewGuid**
 
 ### Currency
 
-> The currency in which the calculation is done. This is applied to the production and the results. [Required] [Filter(multi eq)]
+The currency in which the calculation is done. This is applied to the production and the results. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -44,7 +44,7 @@ uid: Systems.External.PublicUsers
 
 ### AboutMeText
 
-> About me text, written by the user.
+About me text, written by the user.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -52,7 +52,7 @@ _Supports Order By_: **False**
 
 ### Address
 
-> The primary address of the user. Can be specified with latin or local characters. [Filter(like)]
+The primary address of the user. Can be specified with latin or local characters. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 ### AlternateEmail
 
-> Alternate email of the user. Can be used for backup email for password restore. [Filter(like)]
+Alternate email of the user. Can be used for backup email for password restore. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -68,7 +68,7 @@ _Supports Order By_: **False**
 
 ### City
 
-> The state of residence of the user. Can be specified with latin or local letters. [Filter(like)]
+The state of residence of the user. Can be specified with latin or local letters. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -76,7 +76,7 @@ _Supports Order By_: **False**
 
 ### CompanyName
 
-> The name of the company, for which the user works, as specified by the user. [Filter(like)]
+The name of the company, for which the user works, as specified by the user. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -84,7 +84,7 @@ _Supports Order By_: **False**
 
 ### Country
 
-> The country of residence of the user, with latin letters. [Filter(like)]
+The country of residence of the user, with latin letters. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -92,7 +92,7 @@ _Supports Order By_: **False**
 
 ### CreatedOn
 
-> The date and time when the user was created. [Default(Now)]
+The date and time when the user was created. [Default(Now)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -101,7 +101,7 @@ _Default Value_: **CurrentDateTime**
 
 ### Email
 
-> The primary email of the user. Used for notifications and password restore. [Required] [Filter(like)]
+The primary email of the user. Used for notifications and password restore. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -109,7 +109,7 @@ _Supports Order By_: **False**
 
 ### FirstName
 
-> First name of the user. [Required] [Filter(like)]
+First name of the user. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -123,7 +123,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Specifies whether the user account is active and access should be allowed. [Required] [Default(true)] [Filter(eq)]
+Specifies whether the user account is active and access should be allowed. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -132,7 +132,7 @@ _Default Value_: **True**
 
 ### LastName
 
-> Last name of the user. [Required] [Filter(like)]
+Last name of the user. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -140,7 +140,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this PublicUser.
+Notes for this PublicUser.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -148,7 +148,7 @@ _Supports Order By_: **False**
 
 ### PasswordAlgorithm
 
-> Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. [Required] [Filter(like)]
+Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -156,7 +156,7 @@ _Supports Order By_: **False**
 
 ### PasswordHash
 
-> Actual password storage. The format of the contents is determined by Password Algorithm. [Required] [Filter(like)]
+Actual password storage. The format of the contents is determined by Password Algorithm. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -164,14 +164,14 @@ _Supports Order By_: **False**
 
 ### PasswordRecoveryCode
 
-> Automatically generated unique code for the last password recovery attempt. [Filter(multi eq)] [ReadOnly]
+Automatically generated unique code for the last password recovery attempt. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PasswordRecoveryCreationTime
 
-> Date and time when the last password recovery code was created. [ReadOnly]
+Date and time when the last password recovery code was created. [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -179,7 +179,7 @@ _Supports Order By_: **False**
 
 ### PhoneNumber
 
-> The primary phone number of the user. [Filter(like)]
+The primary phone number of the user. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -187,7 +187,7 @@ _Supports Order By_: **False**
 
 ### PostalCode
 
-> The postal code of the default address of the user. [Filter(like)]
+The postal code of the default address of the user. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -195,7 +195,7 @@ _Supports Order By_: **False**
 
 ### ProfilePicture
 
-> Profile picture of the user.
+Profile picture of the user.
 
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -203,7 +203,7 @@ _Supports Order By_: **False**
 
 ### State
 
-> The state of residence of the user within the country. Can be specified with latin or local characters. [Filter(like)]
+The state of residence of the user within the country. Can be specified with latin or local characters. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -214,21 +214,21 @@ _Supports Order By_: **False**
 
 ### Company
 
-> Link to an internal company record, specified by internal employee. [Filter(multi eq)]
+Link to an internal company record, specified by internal employee. [Filter(multi eq)]
 
 _Type_: **[Companies](General.Contacts.Companies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
-> Link to an internal person record. Usually specified by internal employee, but can also be an automated process. [Filter(multi eq)]
+Link to an internal person record. Usually specified by internal employee, but can also be an automated process. [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PublicUserList
 
-> The list in which the user account is saved. [Required] [Filter(multi eq)]
+The list in which the user account is saved. [Required] [Filter(multi eq)]
 
 _Type_: **[PublicUserLists](Systems.External.PublicUserLists.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -32,7 +32,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this ProjectTaskParticipant.
+Notes for this ProjectTaskParticipant.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Supports Order By_: **False**
 
 ### NotifyOnStatusChange
 
-> Specifies whether the participant should be notified on task status changes. [Required] [Default(true)]
+Specifies whether the participant should be notified on task status changes. [Required] [Default(true)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Default Value_: **True**
 
 ### WorkLoadPercent
 
-> The planned work load (in percents) of the participant for this task. [Required] [Default(1)] [Filter(eq)]
+The planned work load (in percents) of the participant for this task. [Required] [Default(1)] [Filter(eq)]
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals**  
@@ -61,14 +61,14 @@ _Default Value_: **1**
 
 ### ParticipantPerson
 
-> The person, who is planned to participate in the project task. [Required] [Filter(multi eq)]
+The person, who is planned to participate in the project task. [Required] [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTask
 
-> The project task for which the participant is planned. [Required] [Filter(multi eq)] [Owner]
+The project task for which the participant is planned. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

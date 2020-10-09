@@ -70,7 +70,7 @@ Personal records. Requires related party record. Entity: Cm_Persons
 
 ### BirthDate
 
-> Birth date. null means unknown. [Filter(ge;le)]
+Birth date. null means unknown. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -78,7 +78,7 @@ _Supports Order By_: **False**
 
 ### City
 
-> City from the legal registration address for the person. [Filter(like)]
+City from the legal registration address for the person. [Filter(like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Like**  
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 ### CreationTime
 
-> Date and time when the Person was created. [Filter(ge;le)] [ReadOnly]
+Date and time when the Person was created. [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -94,7 +94,7 @@ _Supports Order By_: **False**
 
 ### CreationUser
 
-> Login name of the user, who created the Person. [Filter(like)] [ReadOnly]
+Login name of the user, who created the Person. [Filter(like)] [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -107,7 +107,7 @@ _Supported Filters_: **EqualsIn**
 
 ### FirstName
 
-> First name of the person. [Filter(eq;like)]
+First name of the person. [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -115,7 +115,7 @@ _Supports Order By_: **False**
 
 ### Gender
 
-> Person gender. M=Male;F=Female;null=not known/not provided. [Filter(eq)]
+Person gender. M=Male;F=Female;null=not known/not provided. [Filter(eq)]
 
 _Type_: **[Gender](General.Contacts.Persons.md#gender) (nullable)**  
 Allowed values for the [Gender](General.Contacts.Persons.md#gender) data attribute  
@@ -131,7 +131,7 @@ _Supports Order By_: **False**
 
 ### GLN
 
-> Global Location Number used by EDI systems
+Global Location Number used by EDI systems
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **EqualsIn**  
@@ -145,7 +145,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Specifies whether the current party is active in the system or not [Required]
+Specifies whether the current party is active in the system or not [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -153,7 +153,7 @@ _Supports Order By_: **False**
 
 ### LastName
 
-> Last name of the person. [Filter(eq;like)]
+Last name of the person. [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -161,7 +161,7 @@ _Supports Order By_: **False**
 
 ### MiddleName
 
-> Middle name of the person. [Filter(eq;like)]
+Middle name of the person. [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -169,7 +169,7 @@ _Supports Order By_: **False**
 
 ### NationalNumber
 
-> Government assigned unique personal number. null means unknown. [Filter(eq;like)]
+Government assigned unique personal number. null means unknown. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -177,7 +177,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Internal notes for the person.
+Internal notes for the person.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -190,7 +190,7 @@ _Supported Filters_: **EqualsIn**
 
 ### PartyCode
 
-> The unique code of the Party [Required]
+The unique code of the Party [Required]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -198,7 +198,7 @@ _Supports Order By_: **True**
 
 ### PartyCreationTime
 
-> Date and time when the Party was created.
+Date and time when the Party was created.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -206,7 +206,7 @@ _Supports Order By_: **False**
 
 ### PartyCreationUser
 
-> Login name of the user, who created the Party.
+Login name of the user, who created the Party.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -214,7 +214,7 @@ _Supports Order By_: **False**
 
 ### PartyName
 
-> The name of the party [Required]
+The name of the party [Required]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -222,7 +222,7 @@ _Supports Order By_: **True**
 
 ### PartyNotes
 
-> Notes for this Party
+Notes for this Party
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -230,7 +230,7 @@ _Supports Order By_: **False**
 
 ### PartyType
 
-> Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]
+Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]
 
 _Type_: **[PartyType](General.Contacts.Persons.md#partytype)**  
 Allowed values for the [PartyType](General.Contacts.Parties.md#partytype) data attribute  
@@ -250,7 +250,7 @@ _Default Value_: **Person**
 
 ### PartyUniqueNumber
 
-> Unique number of the party (National number for persons, Registration number for companies)
+Unique number of the party (National number for persons, Registration number for companies)
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -258,7 +258,7 @@ _Supports Order By_: **False**
 
 ### PartyUpdateTime
 
-> Date and time when the Party was last updated.
+Date and time when the Party was last updated.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -266,7 +266,7 @@ _Supports Order By_: **False**
 
 ### PartyUpdateUser
 
-> Login name of the user, who last updated the Party.
+Login name of the user, who last updated the Party.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -274,7 +274,7 @@ _Supports Order By_: **False**
 
 ### PassportIssuingDate
 
-> Date of issuing the passport. null means unknown. [Filter(ge;le)]
+Date of issuing the passport. null means unknown. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -282,7 +282,7 @@ _Supports Order By_: **False**
 
 ### PassportNumber
 
-> Current passport number. null means unknown. [Filter(eq)]
+Current passport number. null means unknown. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -290,7 +290,7 @@ _Supports Order By_: **False**
 
 ### Title
 
-> The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.
+The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -298,7 +298,7 @@ _Supports Order By_: **False**
 
 ### UpdateTime
 
-> Date and time when the Person was last updated. [Filter(ge;le)] [ReadOnly]
+Date and time when the Person was last updated. [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -306,7 +306,7 @@ _Supports Order By_: **False**
 
 ### UpdateUser
 
-> Login name of the user, who last updated the Person. [Filter(like)] [ReadOnly]
+Login name of the user, who last updated the Person. [Filter(like)] [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -317,35 +317,35 @@ _Supports Order By_: **False**
 
 ### AdministrativeRegion
 
-> The administrative region in which the party is situated.
+The administrative region in which the party is situated.
 
 _Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Area
 
-> The area in which the party is situated.
+The area in which the party is situated.
 
 _Type_: **[Areas](General.Geography.Areas.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### DefaultProductCodingSystem
 
-> When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
+When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
 
 _Type_: **[CodingSystems](General.Products.CodingSystems.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Nationality
 
-> Person's nationality. null means the default (same as enterprise) nationality. [Filter(multi eq)]
+Person's nationality. null means the default (same as enterprise) nationality. [Filter(multi eq)]
 
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentParty
 
-> Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
+Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  

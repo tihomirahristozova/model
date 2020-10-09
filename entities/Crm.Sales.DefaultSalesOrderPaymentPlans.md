@@ -31,7 +31,7 @@ Default payment plan for new documents of the specified document type. Entity: C
 
 ### AmountPercent
 
-> Percent of the sales order amount to be payed.
+Percent of the sales order amount to be payed.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### DueDateFormMethod
 
-> Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. [Required]
+Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. [Required]
 
 _Type_: **[PaymentPlanDueDateSource](Crm.Sales.DefaultSalesOrderPaymentPlans.md#duedateformmethod)**  
 Generic enum type for PaymentPlanDueDateSource properties  
@@ -64,7 +64,7 @@ _Default Value_: **NewGuid**
 
 ### InstallmentNumber
 
-> Consequtive installment number. Used for identifying different payments generated according this payment plan. [Required]
+Consequtive installment number. Used for identifying different payments generated according this payment plan. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -77,7 +77,7 @@ _Front-End Recalc Expressions:_
 `( obj.DocumentType.DefaultSalesOrderPaymentPlans.Select( c => c.InstallmentNumber).DefaultIfEmpty( 0).Max( ) + 10)`
 ### PaymentTermDays
 
-> Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. [Required] [Default(0)]
+Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -86,7 +86,7 @@ _Default Value_: **0**
 
 ### Remainder
 
-> Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent). [Required] [Default(false)]
+Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent). [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -98,35 +98,35 @@ _Default Value_: **False**
 
 ### DocumentType
 
-> The [DocumentType](General.DocumentTypes.md) to which this DefaultSalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]
+The [DocumentType](General.DocumentTypes.md) to which this DefaultSalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies. [Filter(multi eq)]
+Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-> Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations. [Filter(multi eq)]
+Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations. [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentAccount
 
-> Default payment account for the current installment. null means that there is no default account. [Filter(multi eq)]
+Default payment account for the current installment. null means that there is no default account. [Filter(multi eq)]
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentType
 
-> Default payment type for the current installment. null means that there is no default payment type. [Filter(multi eq)]
+Default payment type for the current installment. null means that there is no default payment type. [Filter(multi eq)]
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -29,7 +29,7 @@ Represents a query within a data source. Entity: Sys_Data_Source_Queries
 
 ### DependsOnChildRows
 
-> Determines the visibility of rows in this table. 0 - allways visible; 1 - the row is visible if there is at least one child row; 2 - the row is visible if all sub-tables contain child rows. [Required] [Default(0)]
+Determines the visibility of rows in this table. 0 - allways visible; 1 - the row is visible if there is at least one child row; 2 - the row is visible if all sub-tables contain child rows. [Required] [Default(0)]
 
 _Type_: **[DependsOnChildRows](Systems.Reporting.DataSourceQueries.md#dependsonchildrows)**  
 Allowed values for the [DependsOnChildRows](Systems.Reporting.DataSourceQueries.md#dependsonchildrows) data attribute  
@@ -47,7 +47,7 @@ _Default Value_: **0**
 
 ### ExtensionsList
 
-> A comma separated list of report extension names. An extension is set of additional fields that participate in the query.
+A comma separated list of report extension names. An extension is set of additional fields that participate in the query.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### FilterXml
 
-> Filter for the loaded table.
+Filter for the loaded table.
 
 _Type_: **dataaccessfilter (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 ### FirstRow
 
-> Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable. [Required] [Default(false)]
+Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -78,7 +78,7 @@ _Default Value_: **NewGuid**
 
 ### ReferencePath
 
-> A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. [Required]
+A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 ### TableName
 
-> The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null.
+The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -94,7 +94,7 @@ _Supports Order By_: **False**
 
 ### UniqueName
 
-> The name of the data table in the printout datasource. If null the Reference_Path is used.
+The name of the data table in the printout datasource. If null the Reference_Path is used.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -105,7 +105,7 @@ _Supports Order By_: **False**
 
 ### DataSource
 
-> The report of the query. [Required] [Filter(multi eq)] [Owner]
+The report of the query. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DataSources](Systems.Reporting.DataSources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

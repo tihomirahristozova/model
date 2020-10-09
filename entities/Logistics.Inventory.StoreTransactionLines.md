@@ -51,7 +51,7 @@ Details records of Transactions. Each detail contains the movement for one produ
 
 ### AllowOverExecution
 
-> When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line. [Required] [Default(false)]
+When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -60,7 +60,7 @@ _Default Value_: **False**
 
 ### Finished
 
-> True if this transaction entry completes the operation. false if there might be more entries. [Default(false)] [Filter(eq)]
+True if this transaction entry completes the operation. false if there might be more entries. [Default(false)] [Filter(eq)]
 
 _Type_: **boolean (nullable)**  
 _Supported Filters_: **Equals**  
@@ -69,7 +69,7 @@ _Default Value_: **False**
 
 ### GuaranteePeriodDays
 
-> Guarantee period in days for the offered product. null for non-serviced products.
+Guarantee period in days for the offered product. null for non-serviced products.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -85,7 +85,7 @@ _Default Value_: **NewGuid**
 
 ### LineBaseCost
 
-> The cost of the transaction in the currency of the enterprise company. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+The cost of the transaction in the currency of the enterprise company. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -94,7 +94,7 @@ _Default Value_: **Constant**
 
 ### LineCost
 
-> Total cost for the line. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]
+Total cost for the line. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -103,7 +103,7 @@ _Default Value_: **Constant**
 
 ### LineDocumentCost
 
-> The cost of the transaction in the currency of the document. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] [ReadOnly]
+The cost of the transaction in the currency of the document. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] [ReadOnly]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -112,7 +112,7 @@ _Default Value_: **Constant**
 
 ### LineNo
 
-> Line number, unique within the store transaction. [Required]
+Line number, unique within the store transaction. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -125,7 +125,7 @@ _Front-End Recalc Expressions:_
 `( obj.TransactionObj.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### LineProductCost
 
-> The cost of the transaction in the currency of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)] [ReadOnly]
+The cost of the transaction in the currency of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)] [ReadOnly]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -134,7 +134,7 @@ _Default Value_: **Constant**
 
 ### LineStoreCost
 
-> The cost of the transaction in the currency of the warehouse. [Currency: TransactionObj.Store.Currency] [Required] [Default(0)] [ReadOnly]
+The cost of the transaction in the currency of the warehouse. [Currency: TransactionObj.Store.Currency] [Required] [Default(0)] [ReadOnly]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -143,7 +143,7 @@ _Default Value_: **Constant**
 
 ### Notes
 
-> Notes for this StoreTransactionLine.
+Notes for this StoreTransactionLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -151,14 +151,14 @@ _Supports Order By_: **False**
 
 ### ParentLineId
 
-> Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line. [Filter(multi eq)]
+Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentLineNo
 
-> The number of the line within the parent document, which the current line executes. null when the current line does not execute line.
+The number of the line within the parent document, which the current line executes. null when the current line does not execute line.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -166,7 +166,7 @@ _Supports Order By_: **False**
 
 ### Quantity
 
-> The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. [Unit: QuantityUnit] [Required] [Default(0)]
+The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. [Unit: QuantityUnit] [Required] [Default(0)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -175,7 +175,7 @@ _Default Value_: **Constant**
 
 ### QuantityBase
 
-> The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]
+The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -189,7 +189,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -202,7 +202,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### TempOrderNo
 
-> Obsolete. Not used. [Filter(eq)]
+Obsolete. Not used. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -210,7 +210,7 @@ _Supports Order By_: **False**
 
 ### TransactionTimestamp
 
-> Exact time when the transaction changes the cost of the product. [Filter(ge;le)] [ORD]
+Exact time when the transaction changes the cost of the product. [Filter(ge;le)] [ORD]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -218,7 +218,7 @@ _Supports Order By_: **True**
 
 ### UnitCost
 
-> Cost for 1 of the specified quantity. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]
+Cost for 1 of the specified quantity. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -230,21 +230,21 @@ _Default Value_: **Constant**
 
 ### Document
 
-> The transaction to which the transaction line belongs. [Required] [Filter(multi eq)]
+The transaction to which the transaction line belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 
-> If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]
+If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OriginalProduct
 
-> When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead. [Filter(multi eq)]
+When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead. [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -253,21 +253,21 @@ _Front-End Recalc Expressions:_
 `obj.Product`
 ### ParentDocument
 
-> The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
+The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentStoreOrderLine
 
-> The line, containing the ordered quantity, which this execution line executes. [Filter(multi eq)]
+The line, containing the ordered quantity, which this execution line executes. [Filter(multi eq)]
 
 _Type_: **[StoreOrderLines](Logistics.Inventory.StoreOrderLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The item that was received/issued. [Required] [Filter(multi eq)]
+The item that was received/issued. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -276,42 +276,42 @@ _Front-End Recalc Expressions:_
 `obj.OriginalProduct`
 ### ProductCode
 
-> Used to set the Product_Id thru the coding systems. [Filter(multi eq)]
+Used to set the Product_Id thru the coding systems. [Filter(multi eq)]
 
 _Type_: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductVariant
 
-> If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]
+If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]
 
 _Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
-> The measurement unit of Quantity. null means that the quantity is specified only in base measurement unit. [Required] [Filter(multi eq)]
+The measurement unit of Quantity. null means that the quantity is specified only in base measurement unit. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
 
-> Item serial number for serialized items. null for non-serialized items. [Filter(multi eq)]
+Item serial number for serialized items. null for non-serialized items. [Filter(multi eq)]
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreBin
 
-> Store bin, from/to which the transaction was performed. [Filter(multi eq)]
+Store bin, from/to which the transaction was performed. [Filter(multi eq)]
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransactionObj
 
-> The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]
+The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -25,7 +25,7 @@ Specifies the additional amounts, which are added to the invoiced and statistica
 
 ### AddToInvoicedValue
 
-> True= to add the amount to the invoiced value, false=otherwise. [Required] [Default(false)]
+True= to add the amount to the invoiced value, false=otherwise. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -34,7 +34,7 @@ _Default Value_: **False**
 
 ### AddToStatisticalValue
 
-> True= to add the amount to the statistical value, false=otherwise. [Required] [Default(false)]
+True= to add the amount to the statistical value, false=otherwise. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -52,14 +52,14 @@ _Default Value_: **NewGuid**
 
 ### DocumentAmountType
 
-> The amount type which will be added to the invoiced or the statistical value. [Required] [Filter(multi eq)] [Owner]
+The amount type which will be added to the invoiced or the statistical value. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The enterprise company for which the setting is valid. [Required] [Filter(multi eq)]
+The enterprise company for which the setting is valid. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

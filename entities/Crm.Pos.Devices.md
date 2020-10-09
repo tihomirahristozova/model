@@ -28,7 +28,7 @@ Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Intr
 
 ### DeviceRegistrationNo
 
-> The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. [Filter(multi eq;like)]
+The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. [Filter(multi eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -36,7 +36,7 @@ _Supports Order By_: **False**
 
 ### DeviceType
 
-> Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. [Required] [Default("OTH")] [Filter(multi eq)]
+Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. [Required] [Default("OTH")] [Filter(multi eq)]
 
 _Type_: **[DeviceType](Crm.Pos.Devices.md#devicetype)**  
 Allowed values for the [DeviceType](Crm.Pos.Devices.md#devicetype) data attribute  
@@ -55,7 +55,7 @@ _Default Value_: **Other**
 
 ### ElectronicAddress
 
-> The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc. [Filter(multi eq;like)]
+The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc. [Filter(multi eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -69,7 +69,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Indicates whether the device is currently active and can be choosen from drop-downs in new records. [Required] [Default(true)] [Filter(multi eq)]
+Indicates whether the device is currently active and can be choosen from drop-downs in new records. [Required] [Default(true)] [Filter(multi eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -78,7 +78,7 @@ _Default Value_: **True**
 
 ### ProtocolName
 
-> The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed.
+The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed.
 
 _Type_: **[ProtocolName](Crm.Pos.Devices.md#protocolname) (nullable)**  
 Allowed values for the [ProtocolName](Crm.Pos.Devices.md#protocolname) data attribute  
@@ -93,7 +93,7 @@ _Supports Order By_: **False**
 
 ### SettingsJson
 
-> Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device.
+Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -104,7 +104,7 @@ _Supports Order By_: **False**
 
 ### PosTerminal
 
-> The POS terminal, to which this device is attached. [Required] [Filter(multi eq)] [Owner]
+The POS terminal, to which this device is attached. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Terminals](Crm.Pos.Terminals.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

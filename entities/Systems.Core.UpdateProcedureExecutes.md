@@ -20,7 +20,7 @@ Contains data about the execution of Upgrade Procedures. Contains status message
 
 ### ExecuteTime
 
-> The time, when the update procedure was executed. [Required] [Default(Now)]
+The time, when the update procedure was executed. [Required] [Default(Now)]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -35,7 +35,7 @@ _Default Value_: **NewGuid**
 
 ### ResultMessage
 
-> Error or success message.
+Error or success message.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -43,7 +43,7 @@ _Supports Order By_: **False**
 
 ### Successful
 
-> True when the execution was successfull. [Required] [Default(true)]
+True when the execution was successfull. [Required] [Default(true)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -52,7 +52,7 @@ _Default Value_: **True**
 
 ### UpdateProcedure
 
-> The system name of the executed update procedure. [Required]
+The system name of the executed update procedure. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  

@@ -19,7 +19,7 @@ Obsolete. Not used. Entity: Gen_Link_Types
 
 ### FromDocTypeId
 
-> From which type of documents the link originates. null means that it might originate from any document type. [Filter(multi eq)]
+From which type of documents the link originates. null means that it might originate from any document type. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -31,7 +31,7 @@ _Supported Filters_: **NotFilterable**
 
 ### Name
 
-> Obsolete. Not used. [Required]
+Obsolete. Not used. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### ToDocTypeId
 
-> To what type of documents the link points. null means that it might point to any document type. [Filter(multi eq)]
+To what type of documents the link points. null means that it might point to any document type. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

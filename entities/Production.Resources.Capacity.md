@@ -26,7 +26,7 @@ Contains capacity of workgroup resources available for production. Entity: Prd_C
 
 ### AvailableEndTime
 
-> End of availability period during Calendar_Date. [Required]
+End of availability period during Calendar_Date. [Required]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -34,7 +34,7 @@ _Supports Order By_: **False**
 
 ### AvailableQuantity
 
-> Quantity of the resource, available to production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required]
+Quantity of the resource, available to production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,7 +42,7 @@ _Supports Order By_: **False**
 
 ### AvailableStartTime
 
-> Start of availability period during Calendar_Date. [Required]
+Start of availability period during Calendar_Date. [Required]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### CalendarDate
 
-> Date of the availability period. [Required] [Filter(ge;le)]
+Date of the availability period. [Required] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -67,7 +67,7 @@ _Default Value_: **NewGuid**
 
 ### WorkgroupResource
 
-> The capacity-constrained resource. [Required] [Filter(multi eq)] [Owner]
+The capacity-constrained resource. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

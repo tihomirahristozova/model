@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### RateDivisor
 
-> The divisor for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]
+The divisor for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Default Value_: **1**
 
 ### RateMultiplier
 
-> The multiplier for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]
+The multiplier for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -52,14 +52,14 @@ _Default Value_: **1**
 
 ### CurrencyDirectory
 
-> The [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCurrency
 
-> The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)]
+The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -31,7 +31,7 @@ Describes the availability of resources in the active workgroups. Entity: Prd_Wo
 
 ### AvailableQuantity
 
-> Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. [Unit: Resource.PrimaryUnit] [Required] [Default(0)]
+Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. [Unit: Resource.PrimaryUnit] [Required] [Default(0)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -46,7 +46,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> User notes for the workgroup resource.
+User notes for the workgroup resource.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -57,14 +57,14 @@ _Supports Order By_: **False**
 
 ### Resource
 
-> The contained resource type. [Required] [Filter(multi eq)]
+The contained resource type. [Required] [Filter(multi eq)]
 
 _Type_: **[Resources](Production.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Workgroup
 
-> Id of the workgroup, containing the resource. [Required] [Filter(multi eq)] [Owner]
+Id of the workgroup, containing the resource. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Workgroups](Production.Resources.Workgroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

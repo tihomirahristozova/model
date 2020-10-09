@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### DocumentAmount
 
-> The document amount for which the referenced document is specified. [Required] [Filter(multi eq)] [Owner]
+The document amount for which the referenced document is specified. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentAmounts](General.DocumentAmounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReferencedDocument
 
-> The document which is referenced by the document amount. [Required] [Filter(multi eq)]
+The document which is referenced by the document amount. [Required] [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

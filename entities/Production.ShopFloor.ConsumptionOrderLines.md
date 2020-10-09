@@ -36,7 +36,7 @@ Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_L
 
 ### ConsumedQuantity
 
-> Requested quantity of the material. [Unit: ConsumedQuantityUnit] [Required] [Filter(ge;le)]
+Requested quantity of the material. [Unit: ConsumedQuantityUnit] [Required] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -46,7 +46,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( obj.ConsumedQuantityUnit == null), null, IIF( ( obj.WorkOrderItemIngredient != null), obj.WorkOrderItemIngredient.GetSumConsumedQuantity( obj.ConsumedQuantityUnit), obj.ConsumedQuantity))`
 ### ConsumedQuantityBase
 
-> The requested quantity equivalence in the base measurement category of the requested material. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
+The requested quantity equivalence in the base measurement category of the requested material. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.ConsumedQuantity == null) OrElse ( obj.ConsumedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConsumedQuantityBase, obj.ConsumedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### ConsumedStandardQuantityBase
 
-> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -72,7 +72,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.ConsumedQuantity == null) OrElse ( obj.ConsumedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConsumedStandardQuantityBase, obj.ConsumedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### ConsumptionType
 
-> Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). [Required] [Filter(eq)] [ReadOnly]
+Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). [Required] [Filter(eq)] [ReadOnly]
 
 _Type_: **[ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype)**  
 Allowed values for the [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) data attribute  
@@ -96,7 +96,7 @@ _Default Value_: **NewGuid**
 
 ### LineOrd
 
-> Non-unique line number within the order. [Required]
+Non-unique line number within the order. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -109,7 +109,7 @@ _Front-End Recalc Expressions:_
 `( obj.ConsumptionOrder.Lines.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-> Notes for this ConsumptionOrderLine.
+Notes for this ConsumptionOrderLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -117,7 +117,7 @@ _Supports Order By_: **False**
 
 ### ScheduledDateTime
 
-> The scheduled date, when the material is needed. [Filter(ge;le)]
+The scheduled date, when the material is needed. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -128,7 +128,7 @@ _Supports Order By_: **False**
 
 ### ConsumedQuantityUnit
 
-> Measurement unit of the requested quantity. [Required] [Filter(multi eq)]
+Measurement unit of the requested quantity. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -137,21 +137,21 @@ _Front-End Recalc Expressions:_
 `obj.Product.MeasurementUnit`
 ### ConsumptionOrder
 
-> The [ConsumptionOrder](Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) to which this ConsumptionOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [ConsumptionOrder](Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) to which this ConsumptionOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 
-> If not null, specifies that the material has to be consumed from specific lot. [Filter(multi eq)]
+If not null, specifies that the material has to be consumed from specific lot. [Filter(multi eq)]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The requested material. [Required] [Filter(multi eq)]
+The requested material. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -160,14 +160,14 @@ _Front-End Recalc Expressions:_
 `obj.WorkOrderItemIngredient.Material`
 ### SerialNumber
 
-> If not null, specifies that the material has to be consumed with specific serial number. [Filter(multi eq)]
+If not null, specifies that the material has to be consumed with specific serial number. [Filter(multi eq)]
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-> The store, from which the material is requested. [Filter(multi eq)]
+The store, from which the material is requested. [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -179,14 +179,14 @@ _Front-End Recalc Expressions:_
 `obj.ConsumptionOrder.Store`
 ### StoreBin
 
-> If not null, specifies that the material has to be consumed from specific store bin. [Filter(multi eq)]
+If not null, specifies that the material has to be consumed from specific store bin. [Filter(multi eq)]
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItemIngredient
 
-> The Work Order Item Ingredient for which we are ordering materials. [Required] [Filter(multi eq)]
+The Work Order Item Ingredient for which we are ordering materials. [Required] [Filter(multi eq)]
 
 _Type_: **[WorkOrderItemIngredients](Production.ShopFloor.WorkOrderItemIngredients.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

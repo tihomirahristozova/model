@@ -32,7 +32,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this ManagedAssetParameterValue.
+Notes for this ManagedAssetParameterValue.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Supports Order By_: **False**
 
 ### TimeUtc
 
-> The date and time for which the parameter value is recorded. [Required] [Default(NowUtc)] [Filter(multi eq;ge;le)]
+The date and time for which the parameter value is recorded. [Required] [Default(NowUtc)] [Filter(multi eq;ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -49,7 +49,7 @@ _Default Value_: **CurrentDateTimeUtc**
 
 ### Value
 
-> The value of the parameter for the specified time. [Required] [Filter(multi eq;ge;le)]
+The value of the parameter for the specified time. [Required] [Filter(multi eq;ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -60,14 +60,14 @@ _Supports Order By_: **False**
 
 ### ManagedAsset
 
-> The managed asset for which the parameter value is recorded. [Required] [Filter(multi eq)] [Owner]
+The managed asset for which the parameter value is recorded. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrackedParameter
 
-> The paramater, whose value is recorded. [Required] [Filter(multi eq)]
+The paramater, whose value is recorded. [Required] [Filter(multi eq)]
 
 _Type_: **[TrackedParameters](Applications.AssetManagement.TrackedParameters.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

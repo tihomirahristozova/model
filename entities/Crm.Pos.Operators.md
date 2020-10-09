@@ -35,7 +35,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Indicates whether this operator is active and can be chosen for new records. [Required] [Default(true)] [Filter(multi eq)]
+Indicates whether this operator is active and can be chosen for new records. [Required] [Default(true)] [Filter(multi eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -44,7 +44,7 @@ _Default Value_: **True**
 
 ### PosOperatorCode
 
-> Operator code. Unique within the Pos Location. [Required] [Filter(multi eq;like)] [ORD]
+Operator code. Unique within the Pos Location. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -52,7 +52,7 @@ _Supports Order By_: **True**
 
 ### StartingDate
 
-> The first date, when the operator has started working for this POS location. [Required] [Filter(multi eq;ge;le)]
+The first date, when the operator has started working for this POS location. [Required] [Filter(multi eq;ge;le)]
 
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 ### TerminationDate
 
-> The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. [Filter(multi eq;ge;le)]
+The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. [Filter(multi eq;ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -71,28 +71,28 @@ _Supports Order By_: **False**
 
 ### DefaultPosTerminal
 
-> The default POS terminal for this opertor. null when there is no default. [Filter(multi eq)]
+The default POS terminal for this opertor. null when there is no default. [Filter(multi eq)]
 
 _Type_: **[Terminals](Crm.Pos.Terminals.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosLocation
 
-> The POS location where this operator works. [Required] [Filter(multi eq)]
+The POS location where this operator works. [Required] [Filter(multi eq)]
 
 _Type_: **[Locations](Crm.Pos.Locations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosRole
 
-> The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. [Required] [Filter(multi eq)]
+The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. [Required] [Filter(multi eq)]
 
 _Type_: **[Roles](Crm.Pos.Roles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
-> The login user for this POS operator. [Required] [Filter(multi eq)]
+The login user for this POS operator. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

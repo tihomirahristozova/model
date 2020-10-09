@@ -21,7 +21,7 @@ Contains the approved Intrastat commodity codes for each period. Entity: Its_Com
 
 ### CommodityCodeField
 
-> Product code from the Intrastat Combined nomenclature. [Required] [Filter(eq;like)] [ORD]
+Product code from the Intrastat Combined nomenclature. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -29,7 +29,7 @@ _Supports Order By_: **True**
 
 ### Description
 
-> Description of the product code from the Intrastat Combined nomenclature. [Required] [Filter(like)]
+Description of the product code from the Intrastat Combined nomenclature. [Required] [Filter(like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -43,7 +43,7 @@ _Default Value_: **NewGuid**
 
 ### SupplementaryUnit
 
-> If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. [Required]
+If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -51,7 +51,7 @@ _Supports Order By_: **False**
 
 ### ValidFrom
 
-> The starting date of validity of this code. [Filter(ge;le)]
+The starting date of validity of this code. [Filter(ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### ValidTo
 
-> The ending date of validity of this code. [Filter(ge;le)]
+The ending date of validity of this code. [Filter(ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  

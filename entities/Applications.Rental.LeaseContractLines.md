@@ -34,7 +34,7 @@ The detail lines of rental contracts. Each line contains rental conditions for o
 
 ### EndDate
 
-> Ending date of lease of this asset. [Required] [Filter(multi eq;ge;le)]
+Ending date of lease of this asset. [Required] [Filter(multi eq;ge;le)]
 
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -47,7 +47,7 @@ _Front-End Recalc Expressions:_
 `obj.LeaseContract.EndDate`
 ### GuaranteeAmount
 
-> Deposit amount in the currency of the document which is given for this asset during its period of lease. [Currency: LeaseContract.Currency]
+Deposit amount in the currency of the document which is given for this asset during its period of lease. [Currency: LeaseContract.Currency]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -61,7 +61,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Consecutive number of the line within the lease contract. [Required] [Filter(eq;ge;le)]
+Consecutive number of the line within the lease contract. [Required] [Filter(eq;ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -74,7 +74,7 @@ _Front-End Recalc Expressions:_
 `( obj.LeaseContract.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### LineNotes
 
-> Notes for this line.
+Notes for this line.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -82,7 +82,7 @@ _Supports Order By_: **False**
 
 ### StartDate
 
-> Starting date of lease for this asset. [Required] [Filter(multi eq;ge;le)]
+Starting date of lease for this asset. [Required] [Filter(multi eq;ge;le)]
 
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -98,14 +98,14 @@ _Front-End Recalc Expressions:_
 
 ### LeaseContract
 
-> The [LeaseContract](Applications.Rental.LeaseContractLines.md#leasecontract) to which this LeaseContractLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [LeaseContract](Applications.Rental.LeaseContractLines.md#leasecontract) to which this LeaseContractLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[LeaseContracts](Applications.Rental.LeaseContracts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RentalAsset
 
-> The asset which is rented with the current contract. [Required] [Filter(multi eq)]
+The asset which is rented with the current contract. [Required] [Filter(multi eq)]
 
 _Type_: **[Assets](Applications.Rental.Assets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

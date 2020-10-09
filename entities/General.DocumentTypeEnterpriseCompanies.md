@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### DocumentType
 
-> The document type for which visibility (availability) is set. [Required] [Filter(multi eq)] [Owner]
+The document type for which visibility (availability) is set. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The enterprise company for which the current document type is visible (available). [Required] [Filter(multi eq)]
+The enterprise company for which the current document type is visible (available). [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

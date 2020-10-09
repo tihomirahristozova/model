@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this ActivityParticipant.
+Notes for this ActivityParticipant.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### WorkLoadPercent
 
-> The planned work load of the participant for this activity. [Required] [Default(1)]
+The planned work load of the participant for this activity. [Required] [Default(1)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -51,14 +51,14 @@ _Default Value_: **1**
 
 ### Activity
 
-> The [Activity](General.Contacts.ActivityParticipants.md#activity) to which this ActivityParticipant belongs. [Required] [Filter(multi eq)] [Owner]
+The [Activity](General.Contacts.ActivityParticipants.md#activity) to which this ActivityParticipant belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParticipantPerson
 
-> The person, participating in an activity. [Required] [Filter(multi eq)]
+The person, participating in an activity. [Required] [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -84,7 +84,7 @@ National data: Contains the VAT declarations, issued by the enterprise company, 
 
 ### CoefficientVATLArticle73
 
-> Field 01 - 33 from the declaration. Must be between 0.00 and 1.00. [Required] [Default(0)]
+Field 01 - 33 from the declaration. Must be between 0.00 and 1.00. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -93,7 +93,7 @@ _Default Value_: **0**
 
 ### CompleteTime
 
-> Exact time, when the document was last completed[Filter(ge;le)]
+Exact time, when the document was last completed[Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -101,7 +101,7 @@ _Supports Order By_: **False**
 
 ### CreationTime
 
-> Date/Time when the document was created [Required][Filter(ge;le)]
+Date/Time when the document was created [Required][Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -110,7 +110,7 @@ _Default Value_: **CurrentDateTime**
 
 ### CreationUser
 
-> The login name of the user, who created the document [Required][Filter(like)]
+The login name of the user, who created the document [Required][Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -118,7 +118,7 @@ _Supports Order By_: **False**
 
 ### DeductedVATAmountArticle92Paragraph1
 
-> Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -127,7 +127,7 @@ _Default Value_: **Constant**
 
 ### DepositedVATAmount
 
-> Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -136,7 +136,7 @@ _Default Value_: **Constant**
 
 ### DocumentDate
 
-> The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]
+The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -145,7 +145,7 @@ _Default Value_: **CurrentDate**
 
 ### DocumentNo
 
-> Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]
+Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -153,7 +153,7 @@ _Supports Order By_: **True**
 
 ### DocumentNotes
 
-> Notes for this Document
+Notes for this Document
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -161,7 +161,7 @@ _Supports Order By_: **False**
 
 ### DocumentVersion
 
-> [Filter(eq;ge;le)]
+[Filter(eq;ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -170,7 +170,7 @@ _Default Value_: **1**
 
 ### EntityName
 
-> The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
+The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -184,7 +184,7 @@ _Default Value_: **NewGuid**
 
 ### IsReleased
 
-> True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -193,7 +193,7 @@ _Default Value_: **False**
 
 ### IsSingleExecution
 
-> Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -202,7 +202,7 @@ _Default Value_: **False**
 
 ### ParentDocumentRelationshipType
 
-> Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
+Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
 
 _Type_: **[ParentDocument<br />RelationshipType](Finance.Vat.BGVATDeclarations.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
@@ -218,7 +218,7 @@ _Supports Order By_: **False**
 
 ### PlanningOnly
 
-> Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]
+Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]
 
 _Type_: **boolean (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -227,7 +227,7 @@ _Default Value_: **False**
 
 ### ReadOnly
 
-> True - the document is read only; false - the document is not read only [Required]
+True - the document is read only; false - the document is not read only [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -236,7 +236,7 @@ _Default Value_: **False**
 
 ### ReferenceDate
 
-> The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]
+The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -244,7 +244,7 @@ _Supports Order By_: **False**
 
 ### ReferenceDocumentNo
 
-> The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -252,7 +252,7 @@ _Supports Order By_: **False**
 
 ### ReleaseTime
 
-> Exact time, when the document was first released [Filter(ge;le)]
+Exact time, when the document was first released [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -260,7 +260,7 @@ _Supports Order By_: **False**
 
 ### State
 
-> 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]
+0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]
 
 _Type_: **[DocumentState](Finance.Vat.BGVATDeclarations.md#state)**  
 Enumeration of document system states  
@@ -282,7 +282,7 @@ _Default Value_: **0**
 
 ### VATAmountToRecoupArticle92Paragraph1
 
-> Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -291,7 +291,7 @@ _Default Value_: **Constant**
 
 ### VATAmountToRecoupArticle92Paragraph3
 
-> Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -300,7 +300,7 @@ _Default Value_: **Constant**
 
 ### VATAmountToRecoupArticle92Paragraph4
 
-> Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -309,7 +309,7 @@ _Default Value_: **Constant**
 
 ### VATDeclarationRepresentingPersonPosition
 
-> Position of the representing person for the purposes of submitting of VAT declarations.
+Position of the representing person for the purposes of submitting of VAT declarations.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -317,7 +317,7 @@ _Supports Order By_: **False**
 
 ### VATPeriodEnd
 
-> End date of the period fot which the VAT declaration is made. [Required] [Filter(ge;le)]
+End date of the period fot which the VAT declaration is made. [Required] [Filter(ge;le)]
 
 _Type_: **date**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -325,7 +325,7 @@ _Supports Order By_: **False**
 
 ### VATPeriodStart
 
-> Start date of the period fot which the VAT declaration is made. [Required] [Filter(ge;le)]
+Start date of the period fot which the VAT declaration is made. [Required] [Filter(ge;le)]
 
 _Type_: **date**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -333,7 +333,7 @@ _Supports Order By_: **False**
 
 ### Void
 
-> True if the document is null and void [Required][Filter(eq)]
+True if the document is null and void [Required][Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -342,7 +342,7 @@ _Default Value_: **False**
 
 ### VoidReason
 
-> Reason for voiding the document, entered by the user
+Reason for voiding the document, entered by the user
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -350,7 +350,7 @@ _Supports Order By_: **False**
 
 ### VoidTime
 
-> Date/time when the document has become void
+Date/time when the document has become void
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -358,7 +358,7 @@ _Supports Order By_: **False**
 
 ### VoidUser
 
-> The user who voided the document
+The user who voided the document
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -369,140 +369,140 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-> The access key, containing the user permissions for this document. null means that all users have unlimited permissions
+The access key, containing the user permissions for this document. null means that all users have unlimited permissions
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
 
-> The primary document, which the current document adjusts. null when this is not an adjustment document
+The primary document, which the current document adjusts. null when this is not an adjustment document
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
 
-> The user to which this document is assigned for handling. null means that the document is not assigned to specific user
+The user to which this document is assigned for handling. null means that the document is not assigned to specific user
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
 
-> The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
+The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DeclaringPerson
 
-> Specific declaring person for this declaration. If the declaring person isn't specified then the default declaring person for the enterprise company is used. [Filter(multi eq)]
+Specific declaring person for this declaration. If the declaring person isn't specified then the default declaring person for the enterprise company is used. [Filter(multi eq)]
 
 _Type_: **[BGVATDeclaringPersons](Finance.Vat.BGVATDeclaringPersons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
-> The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
+The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The enterprise company which issued the document [Required]
+The enterprise company which issued the document [Required]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-> The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
+The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
 
-> The division of the company, issuing the document. null when the document is not issued by any specific division
+The division of the company, issuing the document. null when the document is not issued by any specific division
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
 
-> The party which issued the document [Required]
+The party which issued the document [Required]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MasterDocument
 
-> In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
+In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-> In a multi-document tree, this is the direct parent document. If this is the root it is null
+In a multi-document tree, this is the direct parent document. If this is the root it is null
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimeCauseDocument
 
-> The document that is the prime cause for creation of the current document
+The document that is the prime cause for creation of the current document
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ResponsiblePerson
 
-> The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
+The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ReverseOfDocument
 
-> The document which the current document is reverse of
+The document which the current document is reverse of
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Sequence
 
-> The sequence that will be used to give new numbers to the documents of this type
+The sequence that will be used to give new numbers to the documents of this type
 
 _Type_: **[Sequences](General.Sequences.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ToCompanyDivision
 
-> The division of the company, receiving the document. null when the document is not received by any specific division
+The division of the company, receiving the document. null when the document is not received by any specific division
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
 _Supported Filters_: **NotFilterable**  
 
 ### ToParty
 
-> The party which should receive the document
+The party which should receive the document
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### UserStatus
 
-> The user status of this document if applicable for this document type. null means unknown or not yet set
+The user status of this document if applicable for this document type. null means unknown or not yet set
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### VATDeclarationRepresentingPerson
 
-> Representing person for the purposes of submitting of VAT declarations. [Filter(multi eq)]
+Representing person for the purposes of submitting of VAT declarations. [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

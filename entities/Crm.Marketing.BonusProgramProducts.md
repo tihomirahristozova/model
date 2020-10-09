@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### BonusProgram
 
-> The [BonusProgram](Crm.Marketing.BonusProgramProducts.md#bonusprogram) to which this BonusProgramProduct belongs. [Required] [Filter(multi eq)] [Owner]
+The [BonusProgram](Crm.Marketing.BonusProgramProducts.md#bonusprogram) to which this BonusProgramProduct belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[BonusPrograms](Crm.Marketing.BonusPrograms.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The product which is required to exist in the final sales document in order for the bonus program to be applied. [Required] [Filter(multi eq)]
+The product which is required to exist in the final sales document in order for the bonus program to be applied. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

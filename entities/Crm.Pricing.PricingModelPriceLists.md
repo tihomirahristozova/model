@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> The consecutive number of this price list within the pricing model. [Required]
+The consecutive number of this price list within the pricing model. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -44,7 +44,7 @@ _Front-End Recalc Expressions:_
 `( obj.PricingModel.PriceLists.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### MarginPercent
 
-> Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way.
+Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -55,14 +55,14 @@ _Supports Order By_: **False**
 
 ### PriceList
 
-> The price list, which is included in the pricing model. [Required] [Filter(multi eq)]
+The price list, which is included in the pricing model. [Required] [Filter(multi eq)]
 
 _Type_: **[PriceLists](Crm.PriceLists.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PricingModel
 
-> The pricing model, for which the price list is listed. [Required] [Filter(multi eq)] [Owner]
+The pricing model, for which the price list is listed. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PricingModels](Crm.Pricing.PricingModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

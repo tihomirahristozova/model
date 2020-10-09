@@ -23,7 +23,7 @@ Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_O
 
 ### AvailableQuantityOnly
 
-> Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity. [Required] [Default(false)] [Filter(eq)]
+Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### DocumentType
 
-> The document type, for which these options apply. [Required] [Filter(multi eq)]
+The document type, for which these options apply. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

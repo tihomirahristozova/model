@@ -45,7 +45,7 @@ Contains the characteristics of operations used to create products. Entity: Prd_
 
 ### CreationTime
 
-> Date and time when the Recipe was created. [Filter(ge;le)] [ReadOnly]
+Date and time when the Recipe was created. [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### CreationUser
 
-> Login name of the user, who created the Recipe. [Filter(like)] [ReadOnly]
+Login name of the user, who created the Recipe. [Filter(like)] [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 ### ExpiryDate
 
-> The last date, when the recipe should be used. null means that the recipe might still be in use. [Filter(ge;le)]
+The last date, when the recipe should be used. null means that the recipe might still be in use. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -75,7 +75,7 @@ _Default Value_: **NewGuid**
 
 ### IsDefault
 
-> Default for period: Release_Date - Expiry_Date. [Required] [Default(false)] [Filter(eq)]
+Default for period: Release_Date - Expiry_Date. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -84,7 +84,7 @@ _Default Value_: **False**
 
 ### Name
 
-> The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. [Required] [Filter(like)]
+The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -92,7 +92,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> User comments for the recipe.
+User comments for the recipe.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -100,7 +100,7 @@ _Supports Order By_: **False**
 
 ### Price
 
-> The price for the specified Produce_Quantity. [Currency: Product.CostingCurrency] [Required] [Default(0)]
+The price for the specified Produce_Quantity. [Currency: Product.CostingCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -109,7 +109,7 @@ _Default Value_: **Constant**
 
 ### PricePerLot
 
-> Price for one lot of the product (according to Lot_Size_Quantity_Base). [Currency: Product.CostingCurrency] [Required] [Default(0)]
+Price for one lot of the product (according to Lot_Size_Quantity_Base). [Currency: Product.CostingCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -118,7 +118,7 @@ _Default Value_: **Constant**
 
 ### ProduceQuantity
 
-> Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
+Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -127,7 +127,7 @@ _Default Value_: **Constant**
 
 ### ReleaseDate
 
-> The date, when the recipe was released to production. [Required] [Default(Today)] [Filter(ge;le)]
+The date, when the recipe was released to production. [Required] [Default(Today)] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -136,7 +136,7 @@ _Default Value_: **CurrentDate**
 
 ### ScrapRate
 
-> The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. [Required] [Default(0)]
+The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -145,7 +145,7 @@ _Default Value_: **0**
 
 ### UpdateTime
 
-> Date and time when the Recipe was last updated. [Filter(ge;le)] [ReadOnly]
+Date and time when the Recipe was last updated. [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -153,7 +153,7 @@ _Supports Order By_: **False**
 
 ### UpdateUser
 
-> Login name of the user, who last updated the Recipe. [Filter(like)] [ReadOnly]
+Login name of the user, who last updated the Recipe. [Filter(like)] [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -164,28 +164,28 @@ _Supports Order By_: **False**
 
 ### CurrencyDirectory
 
-> Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. [Filter(multi eq)]
+Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. [Filter(multi eq)]
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrincipalRecipe
 
-> The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. [Filter(multi eq)]
+The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. [Filter(multi eq)]
 
 _Type_: **[PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The Id of the produced product. [Filter(multi eq)]
+The Id of the produced product. [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-> The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. [Filter(multi eq)]
+The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

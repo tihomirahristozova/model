@@ -27,14 +27,14 @@ Abstract root of all process node events. Currently - not used. Entity: Bpm_Proc
 
 ### BoundaryOfProcessNodeId
 
-> When the event is boundary, contains the node to which the event is bound. Otherwise contains null. [Filter(multi eq)]
+When the event is boundary, contains the node to which the event is bound. Otherwise contains null. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EventKey
 
-> The unique event key, which is thrown or caught. [Required]
+The unique event key, which is thrown or caught. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -42,7 +42,7 @@ _Supports Order By_: **False**
 
 ### EventType
 
-> Event type. S=Start, T=Intermediate Throw, C=Intermediate Catch, B=Boundary, E=End. [Required]
+Event type. S=Start, T=Intermediate Throw, C=Intermediate Catch, B=Boundary, E=End. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### IsCancel
 
-> True if this is cancel event. [Required]
+True if this is cancel event. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### IsCompensation
 
-> True if this is compensation event. [Required]
+True if this is compensation event. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -72,7 +72,7 @@ _Supports Order By_: **False**
 
 ### IsError
 
-> True if this is error event. [Required]
+True if this is error event. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -80,7 +80,7 @@ _Supports Order By_: **False**
 
 ### IsEscalation
 
-> True if this is escalation event. [Required]
+True if this is escalation event. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -88,7 +88,7 @@ _Supports Order By_: **False**
 
 ### IsMessage
 
-> True if this is message event. [Required]
+True if this is message event. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -96,7 +96,7 @@ _Supports Order By_: **False**
 
 ### IsSignal
 
-> True if this is signal event. [Required]
+True if this is signal event. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -104,7 +104,7 @@ _Supports Order By_: **False**
 
 ### IsTimer
 
-> True if this is timer event. [Required]
+True if this is timer event. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -112,7 +112,7 @@ _Supports Order By_: **False**
 
 ### ProcessNodeId
 
-> The node of this node event. [Required] [Filter(multi eq)]
+The node of this node event. [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  

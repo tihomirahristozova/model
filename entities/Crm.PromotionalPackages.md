@@ -42,7 +42,7 @@ Promotional packages are packages of products, which are sold together at a spec
 
 ### Active
 
-> Package status: true = the offer is available for new documents; false = otherwise. [Required] [Default(true)] [Filter(eq)]
+Package status: true = the offer is available for new documents; false = otherwise. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -51,7 +51,7 @@ _Default Value_: **True**
 
 ### Code
 
-> Unique code of the promotional package. [Required] [Filter(eq;like)] [ORD]
+Unique code of the promotional package. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -65,7 +65,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this PromotionalPackage. [Required] [Filter(eq;like)] [ORD]
+The name of this PromotionalPackage. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -73,7 +73,7 @@ _Supports Order By_: **True**
 
 ### ValidForCustomerFilterXML
 
-> When not null, the package is valid only for the customers, that match the filter.
+When not null, the package is valid only for the customers, that match the filter.
 
 _Type_: **dataaccessfilter (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 ### ValidForDistributionChannelFilterXML
 
-> When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria.
+When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria.
 
 _Type_: **dataaccessfilter (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -89,7 +89,7 @@ _Supports Order By_: **False**
 
 ### ValidForShipToCustomerFilterXML
 
-> When not null, specifies validity condition for the Ship To Customer of the sales document.
+When not null, specifies validity condition for the Ship To Customer of the sales document.
 
 _Type_: **dataaccessfilter (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -97,7 +97,7 @@ _Supports Order By_: **False**
 
 ### ValidFromDate
 
-> When not null specifies the first date when the package is valid for offering. The date is compared against the document date. [Filter(eq;ge;le)]
+When not null specifies the first date when the package is valid for offering. The date is compared against the document date. [Filter(eq;ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -105,7 +105,7 @@ _Supports Order By_: **False**
 
 ### ValidToDate
 
-> When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. [Filter(eq;ge;le)]
+When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. [Filter(eq;ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -116,49 +116,49 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> When not null, indicates that the package is valid only for the specified enterprise company. [Filter(multi eq)]
+When not null, indicates that the package is valid only for the specified enterprise company. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-> The Enterprise Company Location to which this PromotionalPackage applies, or null if it is for all enterprise company locations. [Filter(multi eq)]
+The Enterprise Company Location to which this PromotionalPackage applies, or null if it is for all enterprise company locations. [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValidForCustomer
 
-> When not null, the package is valid only for the specified customer. [Filter(multi eq)]
+When not null, the package is valid only for the specified customer. [Filter(multi eq)]
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValidForDistributionChannel
 
-> When not null, the package is valid only for the specified distribution channel of the sales order. [Filter(multi eq)]
+When not null, the package is valid only for the specified distribution channel of the sales order. [Filter(multi eq)]
 
 _Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValidForPriceList
 
-> When not null, the package is valid only for the specified price list. [Filter(multi eq)]
+When not null, the package is valid only for the specified price list. [Filter(multi eq)]
 
 _Type_: **[PriceLists](Crm.PriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValidForShipToCustomer
 
-> When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. [Filter(multi eq)]
+When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. [Filter(multi eq)]
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValidForTargetGroup
 
-> When not null, the package is valid only for the specified customer target group. [Filter(multi eq)]
+When not null, the package is valid only for the specified customer target group. [Filter(multi eq)]
 
 _Type_: **[TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

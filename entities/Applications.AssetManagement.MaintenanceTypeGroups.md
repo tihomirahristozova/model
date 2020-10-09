@@ -25,7 +25,7 @@ Represents the hierarchy of the groups of maintenance types. Entity: Eam_Mainten
 
 ### Code
 
-> Unique code of the group. [Required] [Filter(eq;like)] [ORD]
+Unique code of the group. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -39,7 +39,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Multilanguage name of the group. [Required] [Filter(eq;like)]
+Multilanguage name of the group. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -47,7 +47,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this MaintenanceTypeGroup.
+Notes for this MaintenanceTypeGroup.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### Parent
 
-> Parent group. null denotes a root group. [Filter(multi eq)]
+Parent group. null denotes a root group. [Filter(multi eq)]
 
 _Type_: **[MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

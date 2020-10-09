@@ -30,7 +30,7 @@ Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Se
 
 ### Active
 
-> True if the vehicle set is active for choosing; false - otherwise. [Required] [Default(true)] [Filter(eq)]
+True if the vehicle set is active for choosing; false - otherwise. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -45,7 +45,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Name of the vehicle set (Multilanguage). [Required] [Filter(eq;like)]
+Name of the vehicle set (Multilanguage). [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company operating the vehicle set. [Required] [Filter(multi eq)] [Owner]
+The enterprise company operating the vehicle set. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

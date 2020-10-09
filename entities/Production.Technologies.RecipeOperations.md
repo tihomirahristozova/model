@@ -45,7 +45,7 @@ _Default Value_: **NewGuid**
 
 ### LineOrd
 
-> Order of the operation within the recipe. [Required]
+Order of the operation within the recipe. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Front-End Recalc Expressions:_
 `( obj.Recipe.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### MinimumConcurrentStartTimeMinutes
 
-> How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
+How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### MoveTimeMinutes
 
-> Time to move the lot to the next operation in minutes. [Required] [Default(0)]
+Time to move the lot to the next operation in minutes. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -75,7 +75,7 @@ _Default Value_: **0**
 
 ### Notes
 
-> Notes for this RecipeOperation.
+Notes for this RecipeOperation.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -83,7 +83,7 @@ _Supports Order By_: **False**
 
 ### OperationDescription
 
-> The description of the operation.
+The description of the operation.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -91,7 +91,7 @@ _Supports Order By_: **False**
 
 ### RunTimeMinutes
 
-> Duration of the operation for standard lot of the product. [Required] [Default(0)]
+Duration of the operation for standard lot of the product. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -100,7 +100,7 @@ _Default Value_: **0**
 
 ### ScrapRate
 
-> Standard rate of scrap during the operation. [Required] [Default(0)]
+Standard rate of scrap during the operation. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -109,7 +109,7 @@ _Default Value_: **0**
 
 ### SetupTimeMinutes
 
-> Time needed to setup the equipment. [Required] [Default(0)]
+Time needed to setup the equipment. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -118,7 +118,7 @@ _Default Value_: **0**
 
 ### StandardCostPerHour
 
-> Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. [Currency: Recipe.Product.CostingCurrency]
+Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. [Currency: Recipe.Product.CostingCurrency]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -126,7 +126,7 @@ _Supports Order By_: **False**
 
 ### StandardPricePerHour
 
-> Standard price for 1 hour work. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)]
+Standard price for 1 hour work. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -135,7 +135,7 @@ _Default Value_: **Constant**
 
 ### Tooling
 
-> The tools needed for the routing step.
+The tools needed for the routing step.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -143,7 +143,7 @@ _Supports Order By_: **False**
 
 ### UseQuantity
 
-> Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)]
+Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -152,7 +152,7 @@ _Default Value_: **Constant**
 
 ### WaitTimeMinutes
 
-> Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)]
+Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -164,35 +164,35 @@ _Default Value_: **0**
 
 ### Operation
 
-> Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. [Filter(multi eq)]
+Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. [Filter(multi eq)]
 
 _Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OperationInstruction
 
-> Link to additional data, containing instructions in external format. [Filter(multi eq)]
+Link to additional data, containing instructions in external format. [Filter(multi eq)]
 
 _Type_: **[OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Recipe
 
-> The [Recipe](Production.Technologies.RecipeOperations.md#recipe) to which this RecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]
+The [Recipe](Production.Technologies.RecipeOperations.md#recipe) to which this RecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Recipes](Production.Technologies.Recipes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UseQuantityUnit
 
-> The measurement unit of Use_Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Use_Quantity. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkgroupResource
 
-> The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. [Required] [Filter(multi eq)]
+The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. [Required] [Filter(multi eq)]
 
 _Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

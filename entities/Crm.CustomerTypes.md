@@ -29,7 +29,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this CustomerType. [Required] [Filter(eq;like)]
+The name of this CustomerType. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -40,7 +40,7 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-> The access key, containing the user permissions for this CustomerType. Null means that all users have unlimited permissions. [Filter(multi eq)]
+The access key, containing the user permissions for this CustomerType. Null means that all users have unlimited permissions. [Filter(multi eq)]
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

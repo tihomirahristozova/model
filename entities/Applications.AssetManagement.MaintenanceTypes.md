@@ -29,7 +29,7 @@ Types of maintenances which can be scheduled and performed on the managed assets
 
 ### Code
 
-> Unique code of the maintenance type. [Required] [Filter(eq;like)] [ORD]
+Unique code of the maintenance type. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -37,7 +37,7 @@ _Supports Order By_: **True**
 
 ### DefaultParameterChange
 
-> Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change.
+Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -45,7 +45,7 @@ _Supports Order By_: **False**
 
 ### DefaultScheduleDays
 
-> Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days.
+Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### DefaultScheduleMonths
 
-> Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months.
+Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 ### Description
 
-> Detailed description of the maintenance (multilanguage).
+Detailed description of the maintenance (multilanguage).
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -75,7 +75,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Multilanguage name of the maintenance type. [Required] [Filter(eq;like)]
+Multilanguage name of the maintenance type. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -86,14 +86,14 @@ _Supports Order By_: **False**
 
 ### MaintenanceTypeGroup
 
-> The group, to which this maintenance type belongs. [Required] [Filter(multi eq)]
+The group, to which this maintenance type belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrackedParameter
 
-> Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. [Filter(multi eq)]
+Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. [Filter(multi eq)]
 
 _Type_: **[TrackedParameters](Applications.AssetManagement.TrackedParameters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

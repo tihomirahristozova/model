@@ -34,7 +34,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Specifies whether the plan is active. [Required] [Default(true)]
+Specifies whether the plan is active. [Required] [Default(true)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -43,7 +43,7 @@ _Default Value_: **True**
 
 ### LastMaintenanceMileageKm
 
-> The mileage of the vehicle (in Kilometers), when the last maintenance of this type occurred. Should be specified for plans, which require mileage check.
+The mileage of the vehicle (in Kilometers), when the last maintenance of this type occurred. Should be specified for plans, which require mileage check.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -51,7 +51,7 @@ _Supports Order By_: **False**
 
 ### LastMaintenanceTripCount
 
-> The trip count of the vehicle, when the last maintenance of this type occurred. Should be specified for plans, which trip count check.
+The trip count of the vehicle, when the last maintenance of this type occurred. Should be specified for plans, which trip count check.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this VehicleMaintenancePlanAssignment.
+Notes for this VehicleMaintenancePlanAssignment.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### StartingDate
 
-> The date on which the periodic maintenance should start. [Required]
+The date on which the periodic maintenance should start. [Required]
 
 _Type_: **date**  
 _Supported Filters_: **NotFilterable**  
@@ -78,14 +78,14 @@ _Supports Order By_: **False**
 
 ### MaintenancePlan
 
-> The assigned periodic maintenance type. [Required] [Filter(multi eq)]
+The assigned periodic maintenance type. [Required] [Filter(multi eq)]
 
 _Type_: **[MaintenancePlans](Applications.Fleet.MaintenancePlans.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Vehicle
 
-> The vehicle, to which a periodic maintenance plan is assigned. [Required] [Filter(multi eq)]
+The vehicle, to which a periodic maintenance plan is assigned. [Required] [Filter(multi eq)]
 
 _Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### Route
 
-> Route for which the specified template will be activated. [Required] [Filter(multi eq)] [Owner]
+Route for which the specified template will be activated. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Template
 
-> Template that will be activated for the specified route. [Required] [Filter(multi eq)]
+Template that will be activated for the specified route. [Required] [Filter(multi eq)]
 
 _Type_: **[Templates](Finance.Accounting.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

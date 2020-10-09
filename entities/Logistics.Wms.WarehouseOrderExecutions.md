@@ -29,7 +29,7 @@ Execution of a warehouse order line. Entity: Wms_Warehouse_Order_Executions (Int
 
 ### CreationTimeUtc
 
-> The exact time in UTC, when the execution was created in the system. [Required]
+The exact time in UTC, when the execution was created in the system. [Required]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -37,7 +37,7 @@ _Supports Order By_: **False**
 
 ### Date
 
-> Date, when the execution occurred in the real world. [Required]
+Date, when the execution occurred in the real world. [Required]
 
 _Type_: **date**  
 _Supported Filters_: **NotFilterable**  
@@ -45,7 +45,7 @@ _Supports Order By_: **False**
 
 ### ExecutedQuantity
 
-> Executed quantity in the measurement unit of the warehouse order line. [Required]
+Executed quantity in the measurement unit of the warehouse order line. [Required]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Default Value_: **NewGuid**
 
 ### IsFinal
 
-> Specifies whether this execution will finalize the execution of the order line, regardless of any remaining quantities. [Required]
+Specifies whether this execution will finalize the execution of the order line, regardless of any remaining quantities. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### Time
 
-> Time, when the execution occurred in the real world. [Required]
+Time, when the execution occurred in the real world. [Required]
 
 _Type_: **time**  
 _Supported Filters_: **NotFilterable**  
@@ -78,21 +78,21 @@ _Supports Order By_: **False**
 
 ### CreationUser
 
-> The user, who created the record. [Required] [Filter(multi eq)]
+The user, who created the record. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseOrderLine
 
-> The line for which we record execution. [Required] [Filter(multi eq)]
+The line for which we record execution. [Required] [Filter(multi eq)]
 
 _Type_: **[WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseWorker
 
-> The worker, which executed the line. [Required] [Filter(multi eq)]
+The worker, which executed the line. [Required] [Filter(multi eq)]
 
 _Type_: **[WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

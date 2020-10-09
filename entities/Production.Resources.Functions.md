@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this Function. [Required] [Filter(like)]
+The name of this Function. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> User comments on the function.
+User comments on the function.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -50,14 +50,14 @@ _Supports Order By_: **False**
 
 ### FunctionGroup
 
-> The [FunctionGroup](Production.Resources.Functions.md#functiongroup) to which this Function belongs. [Required] [Filter(multi eq)] [Owner]
+The [FunctionGroup](Production.Resources.Functions.md#functiongroup) to which this Function belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[FunctionGroups](Production.Resources.FunctionGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimaryUnit
 
-> Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. [Required] [Filter(multi eq)]
+Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -31,7 +31,7 @@ Cost templates specify how to calculate and allocate costs. Entity: Cost_Templat
 
 ### CostTemplateCode
 
-> Unique code of the cost template. [Required] [Filter(eq)]
+Unique code of the cost template. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### CostTemplateName
 
-> Name of the cost template. [Required] [Filter(like)]
+Name of the cost template. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### Currency
 
-> The currency of the calculations, based on the template. [Required] [Filter(multi eq)]
+The currency of the calculations, based on the template. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

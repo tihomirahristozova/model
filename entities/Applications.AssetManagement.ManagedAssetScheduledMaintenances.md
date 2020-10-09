@@ -27,7 +27,7 @@ Contains the scheduled maintenances for the managed assets. Each maintenance can
 
 ### Date
 
-> The date, when the maintenance is planned. null means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)]
+The date, when the maintenance is planned. null means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### IsDismissed
 
-> Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. [Required] [Default(false)] [Filter(multi eq)]
+Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. [Required] [Default(false)] [Filter(multi eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -50,7 +50,7 @@ _Default Value_: **False**
 
 ### Notes
 
-> Notes for this ManagedAssetScheduledMaintenance.
+Notes for this ManagedAssetScheduledMaintenance.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### TrackedParameterValue
 
-> The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. null means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)]
+The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. null means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -69,14 +69,14 @@ _Supports Order By_: **False**
 
 ### MaintenanceType
 
-> The type of maintenance, which will be performed. [Required] [Filter(multi eq)]
+The type of maintenance, which will be performed. [Required] [Filter(multi eq)]
 
 _Type_: **[MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAsset
 
-> The asset, which will be maintained. [Required] [Filter(multi eq)] [Owner]
+The asset, which will be maintained. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

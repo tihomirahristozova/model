@@ -34,7 +34,7 @@ Represents user-defined business rule. Entity: Sys_User_Business_Rules
 
 ### Code
 
-> The unique code of the UserBusinessRule. [Required] [Filter(eq;like)] [ORD]
+The unique code of the UserBusinessRule. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -42,7 +42,7 @@ _Supports Order By_: **True**
 
 ### Icon
 
-> Visual icon of the rule in .PNG format.
+Visual icon of the rule in .PNG format.
 
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Specifies whether the rule is activated. [Required] [Default(false)] [Filter(eq)]
+Specifies whether the rule is activated. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -65,7 +65,7 @@ _Default Value_: **False**
 
 ### Layer
 
-> Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). [Required] [Default("BKE")] [Filter(multi eq)]
+Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). [Required] [Default("BKE")] [Filter(multi eq)]
 
 _Type_: **[Layer](Systems.Bpm.UserBusinessRules.md#layer)**  
 Allowed values for the [Layer](Systems.Bpm.UserBusinessRules.md#layer) data attribute  
@@ -83,7 +83,7 @@ _Default Value_: **BackEnd**
 
 ### Name
 
-> The name of this UserBusinessRule. [Required] [Filter(like)]
+The name of this UserBusinessRule. [Required] [Filter(like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -91,7 +91,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this UserBusinessRule.
+Notes for this UserBusinessRule.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -99,7 +99,7 @@ _Supports Order By_: **False**
 
 ### RepositoryName
 
-> The name of the repository, for which this business rule is defined. [Required] [Filter(eq;like)]
+The name of the repository, for which this business rule is defined. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -107,7 +107,7 @@ _Supports Order By_: **False**
 
 ### ScriptLanguage
 
-> The programming language used to define the rule actions. [Required] [Default("Integrated")]
+The programming language used to define the rule actions. [Required] [Default("Integrated")]
 
 _Type_: **[ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage)**  
 Allowed values for the [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) data attribute  
@@ -124,7 +124,7 @@ _Default Value_: **Integrated**
 
 ### ScriptText
 
-> The program code used to define the rule actions.
+The program code used to define the rule actions.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -132,7 +132,7 @@ _Supports Order By_: **False**
 
 ### UserStartable
 
-> Specifies, that the rule can be manually started by the user. [Default(false)] [Filter(eq)]
+Specifies, that the rule can be manually started by the user. [Default(false)] [Filter(eq)]
 
 _Type_: **boolean (nullable)**  
 _Supported Filters_: **Equals**  

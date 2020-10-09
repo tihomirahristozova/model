@@ -33,21 +33,21 @@ _Default Value_: **NewGuid**
 
 ### DefaultBin
 
-> The default bin, which should be used for this product. [Required] [Filter(multi eq)]
+The default bin, which should be used for this product. [Required] [Filter(multi eq)]
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The [Product](General.Products.Products.md) to which this ProductDefaultStoreBin belongs. [Required] [Filter(multi eq)] [Owner]
+The [Product](General.Products.Products.md) to which this ProductDefaultStoreBin belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-> The store, for which the default bin is specified. [Required] [Filter(multi eq)]
+The store, for which the default bin is specified. [Required] [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

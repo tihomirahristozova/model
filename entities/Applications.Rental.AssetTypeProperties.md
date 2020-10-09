@@ -25,7 +25,7 @@ Contains the properties, which are required for each asset category. Entity: Ren
 
 ### DefaultValue
 
-> The default value of the property. [Filter(like)]
+The default value of the property. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -33,7 +33,7 @@ _Supports Order By_: **False**
 
 ### DefaultValueId
 
-> The value id of the default value of the property. [Filter(multi eq)]
+The value id of the default value of the property. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -49,14 +49,14 @@ _Default Value_: **NewGuid**
 
 ### Property
 
-> The user-defined property, which is required for assets of the specified type. [Required] [Filter(multi eq)]
+The user-defined property, which is required for assets of the specified type. [Required] [Filter(multi eq)]
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RentalAssetType
 
-> The [AssetType](Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. [Required] [Filter(multi eq)] [Owner]
+The [AssetType](Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[AssetTypes](Applications.Rental.AssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -30,7 +30,7 @@ Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
 
 ### ApplicationName
 
-> The application, which consumes the layout. [Required] [Filter(eq)] [ORD]
+The application, which consumes the layout. [Required] [Filter(eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -38,7 +38,7 @@ _Supports Order By_: **True**
 
 ### FormName
 
-> The form, for which the layout is applied. [Required] [Filter(eq;like)]
+The form, for which the layout is applied. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -52,7 +52,7 @@ _Default Value_: **NewGuid**
 
 ### Layout
 
-> The byte storage of the layout.
+The byte storage of the layout.
 
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 ### LayoutFormat
 
-> The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed. [Required] [Default("U")]
+The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed. [Required] [Default("U")]
 
 _Type_: **[LayoutFormat](Systems.UI.FormLayouts.md#layoutformat)**  
 Allowed values for the [LayoutFormat](Systems.UI.FormLayouts.md#layoutformat) data attribute  
@@ -78,7 +78,7 @@ _Default Value_: **Uncompressed**
 
 ### LayoutName
 
-> The name of a named layout. Standard layouts have empty string names. [Required] [Filter(eq;like)]
+The name of a named layout. Standard layouts have empty string names. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 ### PanelName
 
-> The visual panel, for which the layout is applied. [Required] [Default("Form")] [Filter(eq)]
+The visual panel, for which the layout is applied. [Required] [Default("Form")] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -95,7 +95,7 @@ _Default Value_: **Form**
 
 ### UserName
 
-> The user for which the layout is applied. null means that the layout is applied for all users. [Filter(eq;like)]
+The user for which the layout is applied. null means that the layout is applied for all users. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -106,14 +106,14 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-> The security access key which controls the access to the layout view. [Filter(multi eq)]
+The security access key which controls the access to the layout view. [Filter(multi eq)]
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Role
 
-> The role, for which the layout is applied. [Filter(multi eq)]
+The role, for which the layout is applied. [Filter(multi eq)]
 
 _Type_: **[Roles](Systems.Workflow.Roles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -33,7 +33,7 @@ The fixed assets. Entity: Ast_Assets
 
 ### Code
 
-> The unique code of the Asset. [Required] [Filter(eq;like)] [ORD]
+The unique code of the Asset. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -41,7 +41,7 @@ _Supports Order By_: **True**
 
 ### DeploymentDate
 
-> Date, when the asset is first deployed. Null if the asset is not deployed yet.
+Date, when the asset is first deployed. Null if the asset is not deployed yet.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -55,7 +55,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. [Required] [Default(true)] [Filter(eq)]
+Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -64,7 +64,7 @@ _Default Value_: **True**
 
 ### Name
 
-> The name of this Asset. [Required] [Filter(like)]
+The name of this Asset. [Required] [Filter(like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -72,7 +72,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this Asset.
+Notes for this Asset.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -80,7 +80,7 @@ _Supports Order By_: **False**
 
 ### PurchaseDate
 
-> Original purchase date of the asset. [Required]
+Original purchase date of the asset. [Required]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -88,7 +88,7 @@ _Supports Order By_: **False**
 
 ### SerialNumber
 
-> Serial number of the asset. [Filter(eq)]
+Serial number of the asset. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -99,35 +99,35 @@ _Supports Order By_: **False**
 
 ### AssetCategory
 
-> The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset. [Required] [Filter(multi eq)]
+The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset. [Required] [Filter(multi eq)]
 
 _Type_: **[AssetCategories](Finance.Assets.AssetCategories.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssetGroup
 
-> The asset group to which this asset belongs. [Filter(multi eq)]
+The asset group to which this asset belongs. [Filter(multi eq)]
 
 _Type_: **[AssetGroups](Finance.Assets.AssetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The Enterprise Company to which this Asset applies. [Required] [Filter(multi eq)] [Owner]
+The Enterprise Company to which this Asset applies. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimaryValuationModel
 
-> Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. [Required] [Filter(multi eq)]
 
 _Type_: **[ValuationModels](Finance.Assets.ValuationModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationCurrency
 
-> Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored. [Required] [Filter(multi eq)]
+Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -30,7 +30,7 @@ Represents an action within a business rule. Entity: Sys_User_Business_Rule_Acti
 
 ### ActionNo
 
-> Consecutive number of the action, unique within the business rule. [Required]
+Consecutive number of the action, unique within the business rule. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -43,7 +43,7 @@ _Front-End Recalc Expressions:_
 `( obj.UserBusinessRule.Actions.Select( c => c.ActionNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### ActionType
 
-> Specifies the type of action to perform. [Required]
+Specifies the type of action to perform. [Required]
 
 _Type_: **[ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype)**  
 Allowed values for the [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) data attribute  
@@ -68,7 +68,7 @@ _Default Value_: **NewGuid**
 
 ### Parameter1Type
 
-> The type of the parameter specifies how to obtain the parameter value.
+The type of the parameter specifies how to obtain the parameter value.
 
 _Type_: **[ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) (nullable)**  
 Generic enum type for ActionParameterType properties  
@@ -87,7 +87,7 @@ _Supports Order By_: **False**
 
 ### Parameter1Value
 
-> The actual value of the parameter.
+The actual value of the parameter.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -95,7 +95,7 @@ _Supports Order By_: **False**
 
 ### Parameter2Type
 
-> The type of the parameter specifies how to obtain the parameter value.
+The type of the parameter specifies how to obtain the parameter value.
 
 _Type_: **[ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter2type) (nullable)**  
 Generic enum type for ActionParameterType properties  
@@ -114,7 +114,7 @@ _Supports Order By_: **False**
 
 ### Parameter2Value
 
-> The actual value of the parameter.
+The actual value of the parameter.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -122,7 +122,7 @@ _Supports Order By_: **False**
 
 ### Parameter3Type
 
-> The type of the parameter specifies how to obtain the parameter value.
+The type of the parameter specifies how to obtain the parameter value.
 
 _Type_: **[ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter3type) (nullable)**  
 Generic enum type for ActionParameterType properties  
@@ -141,7 +141,7 @@ _Supports Order By_: **False**
 
 ### Parameter3Value
 
-> The actual value of the parameter.
+The actual value of the parameter.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -152,7 +152,7 @@ _Supports Order By_: **False**
 
 ### UserBusinessRule
 
-> The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner]
+The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

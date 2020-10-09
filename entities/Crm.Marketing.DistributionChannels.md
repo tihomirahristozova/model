@@ -20,7 +20,7 @@ General list of distribution channels. Used to control prices and availability o
 
 ### Code
 
-> Unique distribution channel code. [Required] [Filter(eq;like)]
+Unique distribution channel code. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -28,7 +28,7 @@ _Supports Order By_: **False**
 
 ### Description
 
-> Full description of the distribution channel.
+Full description of the distribution channel.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,7 +42,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Is the channel active for new sales? true=Yes, false=No. [Required] [Default(true)] [Filter(eq)]
+Is the channel active for new sales? true=Yes, false=No. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -51,7 +51,7 @@ _Default Value_: **True**
 
 ### Name
 
-> Multi-language name of the distribution channel. [Required] [Filter(eq;like)]
+Multi-language name of the distribution channel. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  

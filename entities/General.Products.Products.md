@@ -82,7 +82,7 @@ Products are the different items in the enterprise, which can be purchased, stor
 
 ### ABCClass
 
-> Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. [Required] [Default("B ")] [Filter(eq)]
+Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. [Required] [Default("B ")] [Filter(eq)]
 
 _Type_: **[ABCClass](General.Products.Products.md#abcclass)**  
 Allowed values for the [ABCClass](General.Products.Products.md#abcclass) data attribute  
@@ -100,7 +100,7 @@ _Default Value_: **B**
 
 ### Active
 
-> True if the product is active, false - not to list in combo boxes for choosing in new documents. [Required] [Default(true)] [Filter(eq)]
+True if the product is active, false - not to list in combo boxes for choosing in new documents. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -109,7 +109,7 @@ _Default Value_: **True**
 
 ### AllowVariableMeasurementRatios
 
-> Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. [Required] [Default(false)] [Filter(eq)]
+Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -118,7 +118,7 @@ _Default Value_: **False**
 
 ### CatalogDescriptionHtml
 
-> Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.
+Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -126,7 +126,7 @@ _Supports Order By_: **False**
 
 ### CostingMethod
 
-> Specifies the costing method for the product. null means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost.
+Specifies the costing method for the product. null means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost.
 
 _Type_: **[CostingMethod](General.Products.Products.md#costingmethod) (nullable)**  
 Allowed values for the [CostingMethod](General.Products.Products.md#costingmethod) data attribute  
@@ -143,7 +143,7 @@ _Supports Order By_: **False**
 
 ### CreationTime
 
-> Date and time when the Product was created. [Filter(ge;le)] [ReadOnly]
+Date and time when the Product was created. [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -151,7 +151,7 @@ _Supports Order By_: **False**
 
 ### CreationUser
 
-> Login name of the user, who created the Product. [Filter(like)] [ReadOnly]
+Login name of the user, who created the Product. [Filter(like)] [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -159,7 +159,7 @@ _Supports Order By_: **False**
 
 ### Description
 
-> The description of the product.
+The description of the product.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -167,7 +167,7 @@ _Supports Order By_: **False**
 
 ### ExpiryPeriodDays
 
-> Total default expiry period for the product (in days) from the date of production to the date of expiry.
+Total default expiry period for the product (in days) from the date of production to the date of expiry.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -175,7 +175,7 @@ _Supports Order By_: **False**
 
 ### FlushingMethod
 
-> Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). [Required] [Default("M")]
+Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). [Required] [Default("M")]
 
 _Type_: **[FlushingMethod](General.Products.Products.md#flushingmethod)**  
 Allowed values for the [FlushingMethod](General.Products.Products.md#flushingmethod) data attribute  
@@ -193,7 +193,7 @@ _Default Value_: **Manual**
 
 ### GuaranteePeriodDays
 
-> Default guarantee period length in days. 0 means no guarantee. Should be non-null for serviced products and null for the others.
+Default guarantee period length in days. 0 means no guarantee. Should be non-null for serviced products and null for the others.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -207,7 +207,7 @@ _Default Value_: **NewGuid**
 
 ### IsFeatured
 
-> Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. [Required] [Default(false)] [Filter(eq)]
+Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -216,7 +216,7 @@ _Default Value_: **False**
 
 ### IsSerialized
 
-> True if the parts use/require serial numbers. [Required] [Default(false)] [Filter(eq)]
+True if the parts use/require serial numbers. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -225,7 +225,7 @@ _Default Value_: **False**
 
 ### LotsIssue
 
-> Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO).
+Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO).
 
 _Type_: **[LotsIssue](General.Products.Products.md#lotsissue) (nullable)**  
 Allowed values for the [LotsIssue](General.Products.Products.md#lotsissue) data attribute  
@@ -242,7 +242,7 @@ _Supports Order By_: **False**
 
 ### ManufacturingPolicy
 
-> Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. [Required] [Default("MTS")]
+Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. [Required] [Default("MTS")]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -251,7 +251,7 @@ _Default Value_: **MTS**
 
 ### MinimalSalesPricePerLot
 
-> Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: CostingCurrency]
+Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: CostingCurrency]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -259,7 +259,7 @@ _Supports Order By_: **False**
 
 ### MinimalSalesQuantityBase
 
-> Minimal base quantity of this product that has to be specified in any sale.
+Minimal base quantity of this product that has to be specified in any sale.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -267,7 +267,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-> Name of the item. [Required] [Filter(eq;like)]
+Name of the item. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -275,7 +275,7 @@ _Supports Order By_: **False**
 
 ### PartNumber
 
-> Unique part number of the product. [Required] [Filter(multi eq;like)] [ORD]
+Unique part number of the product. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -283,7 +283,7 @@ _Supports Order By_: **True**
 
 ### PlanningDemandTimeFenceDays
 
-> Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days).
+Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days).
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -291,7 +291,7 @@ _Supports Order By_: **False**
 
 ### PlanningHorizonDays
 
-> Number of days in the future for which to plan the demand and supply (null = Default of 180 days).
+Number of days in the future for which to plan the demand and supply (null = Default of 180 days).
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -299,7 +299,7 @@ _Supports Order By_: **False**
 
 ### PlanningTimeFenceDays
 
-> Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days).
+Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days).
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -307,7 +307,7 @@ _Supports Order By_: **False**
 
 ### ScrapRate
 
-> Default scrap rate for the recipe, when this product is used as ingredient. [Required] [Default(0)]
+Default scrap rate for the recipe, when this product is used as ingredient. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -316,7 +316,7 @@ _Default Value_: **0**
 
 ### ShortName
 
-> Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. [Filter(eq;like)]
+Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -324,7 +324,7 @@ _Supports Order By_: **False**
 
 ### ShowInCatalog
 
-> Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. [Required] [Default(false)] [Filter(multi eq)]
+Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. [Required] [Default(false)] [Filter(multi eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -333,7 +333,7 @@ _Default Value_: **False**
 
 ### StandardCostPerLot
 
-> Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]
+Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -342,7 +342,7 @@ _Default Value_: **Constant**
 
 ### StandardLotSizeBase
 
-> The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. [Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
+The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. [Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -351,7 +351,7 @@ _Default Value_: **Constant**
 
 ### StandardPricePerLot
 
-> Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]
+Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. [Currency: ProductCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -360,14 +360,14 @@ _Default Value_: **Constant**
 
 ### SupplySchemaId
 
-> The supply schema to use for the distribution of the product among warehouses. [Filter(multi eq)]
+The supply schema to use for the distribution of the product among warehouses. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UpdateTime
 
-> Date and time when the Product was last updated. [Filter(ge;le)] [ReadOnly]
+Date and time when the Product was last updated. [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -375,7 +375,7 @@ _Supports Order By_: **False**
 
 ### UpdateUser
 
-> Login name of the user, who last updated the Product. [Filter(like)] [ReadOnly]
+Login name of the user, who last updated the Product. [Filter(like)] [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -383,7 +383,7 @@ _Supports Order By_: **False**
 
 ### UseLots
 
-> Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. [Required] [Default("A")]
+Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. [Required] [Default("A")]
 
 _Type_: **[UseLots](General.Products.Products.md#uselots)**  
 Allowed values for the [UseLots](General.Products.Products.md#uselots) data attribute  
@@ -404,7 +404,7 @@ _Default Value_: **Allowed**
 
 ### BaseMeasurementCategory
 
-> The base measurement category for quantities of this product. [Required] [Filter(multi eq)]
+The base measurement category for quantities of this product. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementCategories](General.MeasurementCategories.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -413,21 +413,21 @@ _Front-End Recalc Expressions:_
 `obj.ProductGroup.DefaultMeasurementUnit.MeasurementCategory`
 ### CargoType
 
-> Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. [Filter(multi eq)]
+Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. [Filter(multi eq)]
 
 _Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostingCurrency
 
-> Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. [Filter(multi eq)]
+Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)]
+When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -436,21 +436,21 @@ _Front-End Recalc Expressions:_
 `obj.ProductGroup.EnterpriseCompany`
 ### IntrastatCommodityCode
 
-> Product code from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)]
+Product code from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)]
 
 _Type_: **[CommodityCodes](Finance.Intrastat.CommodityCodes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatSupplementaryUnit
 
-> Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)]
+Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MeasurementUnit
 
-> Default measurement unit, when creating new documents with this product. [Required] [Filter(multi eq)]
+Default measurement unit, when creating new documents with this product. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -459,21 +459,21 @@ _Front-End Recalc Expressions:_
 `obj.ProductGroup.DefaultMeasurementUnit`
 ### OriginCountry
 
-> Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. [Filter(multi eq)]
+Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. [Filter(multi eq)]
 
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup
 
-> The product group, under which the product is categorized. [Required] [Filter(multi eq)]
+The product group, under which the product is categorized. [Required] [Filter(multi eq)]
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductType
 
-> The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. [Required] [Filter(multi eq)]
+The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. [Required] [Filter(multi eq)]
 
 _Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -482,14 +482,14 @@ _Front-End Recalc Expressions:_
 `obj.ProductGroup.GetDefaultProductTypeForNewProduct( )`
 ### PurchaseMeasurementUnit
 
-> Default measurement unit to use, when creating new purchase documents with this product. [Filter(multi eq)]
+Default measurement unit to use, when creating new purchase documents with this product. [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationGroup
 
-> Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. [Filter(multi eq)]
+Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. [Filter(multi eq)]
 
 _Type_: **[ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

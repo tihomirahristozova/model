@@ -24,7 +24,7 @@ Contains the VAT codes, which should be used, when reporting VAT for the differe
 
 ### CashReportingVATCode
 
-> VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.
+VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.
 
 _Type_: **[CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) (nullable)**  
 Allowed values for the [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) data attribute  
@@ -60,7 +60,7 @@ _Default Value_: **NewGuid**
 
 ### VATCode
 
-> VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.
+VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.
 
 _Type_: **[VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) (nullable)**  
 Allowed values for the [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) data attribute  
@@ -93,7 +93,7 @@ _Supports Order By_: **False**
 
 ### DocumentType
 
-> Document type that generates VAT entries. [Required] [Filter(multi eq)]
+Document type that generates VAT entries. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -23,7 +23,7 @@ Distributors are external for the enterprise persons or companies who obtain sal
 
 ### FlatCommisionPercentage
 
-> Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations. [Required] [Default(0)]
+Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### Party
 
-> Base party Id. [Required] [Filter(multi eq)] [Owner]
+Base party Id. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

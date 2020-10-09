@@ -29,7 +29,7 @@ The external authentication providers, linked to the domain. Contains data about
 
 ### ClientID
 
-> This is the Client_ID of our registration within the provider.
+This is the Client_ID of our registration within the provider.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -37,7 +37,7 @@ _Supports Order By_: **False**
 
 ### ClientSecret
 
-> This is the password, which we, as a client app, use to access the authentication provider.
+This is the password, which we, as a client app, use to access the authentication provider.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -45,7 +45,7 @@ _Supports Order By_: **False**
 
 ### DisplayName
 
-> Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers.
+Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Specifies whether the provider is currently active for the domain. [Required] [Default(true)] [Filter(eq)]
+Specifies whether the provider is currently active for the domain. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -68,7 +68,7 @@ _Default Value_: **True**
 
 ### Notes
 
-> Notes for this DomainProvider.
+Notes for this DomainProvider.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -76,7 +76,7 @@ _Supports Order By_: **False**
 
 ### ProviderName
 
-> The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc. [Required] [Filter(eq)]
+The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc. [Required] [Filter(eq)]
 
 _Type_: **[ProviderName](Systems.Security.DomainProviders.md#providername)**  
 Allowed values for the [ProviderName](Systems.Security.DomainProviders.md#providername) data attribute  
@@ -94,7 +94,7 @@ _Supports Order By_: **False**
 
 ### TenantID
 
-> When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant.
+When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -105,7 +105,7 @@ _Supports Order By_: **False**
 
 ### Domain
 
-> The domain for which the provider is setup. [Required] [Filter(multi eq)] [Owner]
+The domain for which the provider is setup. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Domains](Systems.Security.Domains.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -30,7 +30,7 @@ Contains user requests for application of user rights. Entity: Pdm_Data_Subject_
 
 ### CompletedOnUtc
 
-> Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.
+Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -38,7 +38,7 @@ _Supports Order By_: **False**
 
 ### CreatedOnUtc
 
-> The date and time (in UTC), when the request was created. [Required] [Default(Now)]
+The date and time (in UTC), when the request was created. [Required] [Default(Now)]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -53,7 +53,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> This should usually contain detailed implementation notes.
+This should usually contain detailed implementation notes.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 ### RequestedRight
 
-> The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. [Required] [Filter(eq)]
+The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. [Required] [Filter(eq)]
 
 _Type_: **[RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright)**  
 Allowed values for the [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright) data attribute  
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 ### Status
 
-> The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. [Required]
+The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. [Required]
 
 _Type_: **[Status](Applications.PersonalData.DataSubjectRightRequests.md#status)**  
 Allowed values for the [Status](Applications.PersonalData.DataSubjectRightRequests.md#status) data attribute  
@@ -103,28 +103,28 @@ _Supports Order By_: **False**
 
 ### CompletedByUser
 
-> The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly]
+The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CreatedByUser
 
-> The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly]
+The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The enterprise company, to which the request was made. [Required] [Filter(multi eq)]
+The enterprise company, to which the request was made. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
-> The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)]
+The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

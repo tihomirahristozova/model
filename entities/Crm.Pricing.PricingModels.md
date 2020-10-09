@@ -32,7 +32,7 @@ Pricing models are assigned to product groups and are used to automate creation 
 
 ### DefaultMarginPercent
 
-> Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price. [Required] [Default(0)]
+Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of the pricing model. [Required] [Filter(eq;like)]
+The name of the pricing model. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -58,14 +58,14 @@ _Supports Order By_: **False**
 
 ### Currency
 
-> The currency in which the prices will be calculated. [Required] [Filter(multi eq)]
+The currency in which the prices will be calculated. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchasePriceList
 
-> Purchase price list Id, which will be used to get the purchase price of the products. [Required] [Filter(multi eq)]
+Purchase price list Id, which will be used to get the purchase price of the products. [Required] [Filter(multi eq)]
 
 _Type_: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

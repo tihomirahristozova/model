@@ -58,7 +58,7 @@ Contains vehicle definitions. Entity: Fleet_Vehicles
 
 ### ActiveFrom
 
-> The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. (Introduced in version 18.2)
+The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. (Introduced in version 18.2)
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### ActiveTill
 
-> The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. (Introduced in version 18.2)
+The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. (Introduced in version 18.2)
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -74,7 +74,7 @@ _Supports Order By_: **False**
 
 ### AuthorityMaximumLadenMassKg
 
-> Maximum permissible laden mass, as determined by the registration authority.
+Maximum permissible laden mass, as determined by the registration authority.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -82,7 +82,7 @@ _Supports Order By_: **False**
 
 ### CrewCount
 
-> Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts. [Default(1)] [Filter(eq;ge;le)]
+Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts. [Default(1)] [Filter(eq;ge;le)]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -91,7 +91,7 @@ _Default Value_: **1**
 
 ### EngineIdentificationNumber
 
-> Engine identification number. [Filter(eq;like)]
+Engine identification number. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -99,7 +99,7 @@ _Supports Order By_: **False**
 
 ### EnginePowerhp
 
-> Engine output power in horse power. null means that the value is unknown or not applicable for this type of engine. [Filter(eq;ge;le)]
+Engine output power in horse power. null means that the value is unknown or not applicable for this type of engine. [Filter(eq;ge;le)]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -107,7 +107,7 @@ _Supports Order By_: **False**
 
 ### EngineSizecc
 
-> Engine size in cubic centimeters (cm3). null means that the value is unknown or not applicable for this type of engine (e.g. electric motors). [Filter(eq;ge;le)]
+Engine size in cubic centimeters (cm3). null means that the value is unknown or not applicable for this type of engine (e.g. electric motors). [Filter(eq;ge;le)]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -115,7 +115,7 @@ _Supports Order By_: **False**
 
 ### FuelCapacity
 
-> Maximum fuel capacity of the engine or the battery in the fuel measurement unit.
+Maximum fuel capacity of the engine or the battery in the fuel measurement unit.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -123,7 +123,7 @@ _Supports Order By_: **False**
 
 ### FuelCompsumption
 
-> Average fuel consumption in the fuel measurement unit for 1 operational unit.
+Average fuel consumption in the fuel measurement unit for 1 operational unit.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -131,7 +131,7 @@ _Supports Order By_: **False**
 
 ### FuelType
 
-> Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc. [Filter(eq;like)]
+Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -145,7 +145,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> True if the vehicle is still owned and managed by the enterprise. [Required] [Default(true)] (Introduced in version 18.2)
+True if the vehicle is still owned and managed by the enterprise. [Required] [Default(true)] (Introduced in version 18.2)
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -154,7 +154,7 @@ _Default Value_: **True**
 
 ### IssuingAuthority
 
-> The country or state issuing the registration number. null (not recommended) means that the authority is unknown or not applicable. [Filter(eq;like)]
+The country or state issuing the registration number. null (not recommended) means that the authority is unknown or not applicable. [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -162,7 +162,7 @@ _Supports Order By_: **False**
 
 ### Make
 
-> The name of the manufacturer of the vehicle. null means that the value is unknown. [Filter(eq;like)]
+The name of the manufacturer of the vehicle. null means that the value is unknown. [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -170,7 +170,7 @@ _Supports Order By_: **False**
 
 ### ManufactureYear
 
-> The year when the vehicle was manufactured or first registered - whichever is known. null means that the value is unknown. [Filter(eq;ge;le)]
+The year when the vehicle was manufactured or first registered - whichever is known. null means that the value is unknown. [Filter(eq;ge;le)]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -178,7 +178,7 @@ _Supports Order By_: **False**
 
 ### MaximumSpeedKmH
 
-> Maximum speed in km/h.
+Maximum speed in km/h.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -186,7 +186,7 @@ _Supports Order By_: **False**
 
 ### Model
 
-> The model of the vehicle. [Filter(eq;like)]
+The model of the vehicle. [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -194,7 +194,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this Vehicle.
+Notes for this Vehicle.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -202,7 +202,7 @@ _Supports Order By_: **False**
 
 ### PrimaryColor
 
-> The primary color of the vehicle. null means that the value is unknown or not applicable. [Filter(eq;like)]
+The primary color of the vehicle. null means that the value is unknown or not applicable. [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -210,7 +210,7 @@ _Supports Order By_: **False**
 
 ### SeatingPlacesCount
 
-> Number of seating places, excluding driver. [Filter(eq;ge;le)]
+Number of seating places, excluding driver. [Filter(eq;ge;le)]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -218,7 +218,7 @@ _Supports Order By_: **False**
 
 ### StandingPlacesCount
 
-> Number of standing places, if applicable.
+Number of standing places, if applicable.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -226,7 +226,7 @@ _Supports Order By_: **False**
 
 ### TechnicalMaximumLadenMassKg
 
-> Maximum technically permissible laden mass in kg.
+Maximum technically permissible laden mass in kg.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -234,7 +234,7 @@ _Supports Order By_: **False**
 
 ### TrainsetMaximumLadenMassKg
 
-> Maximum permissible laden mass of a whole trainset, including the vehicle.
+Maximum permissible laden mass of a whole trainset, including the vehicle.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -242,7 +242,7 @@ _Supports Order By_: **False**
 
 ### VehicleIdentificationNumber
 
-> VIN, aka Chassis number. [Filter(eq;like)]
+VIN, aka Chassis number. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -250,7 +250,7 @@ _Supports Order By_: **False**
 
 ### VehicleMassKg
 
-> Vehicle own mass in kg.
+Vehicle own mass in kg.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -258,7 +258,7 @@ _Supports Order By_: **False**
 
 ### VehicleRegistrationNumber
 
-> The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority. [Required] [Filter(eq;like)]
+The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -266,7 +266,7 @@ _Supports Order By_: **False**
 
 ### VehicleType
 
-> Type of vehicle - e.g. automobile, bus, etc. null means the value is unknown. [Filter(eq;like)]
+Type of vehicle - e.g. automobile, bus, etc. null means the value is unknown. [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -277,28 +277,28 @@ _Supports Order By_: **False**
 
 ### FuelMeasurementUnit
 
-> The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. null means unknown. [Filter(multi eq)]
+The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. null means unknown. [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaintenanceProfile
 
-> When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans. [Filter(multi eq)]
+When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans. [Filter(multi eq)]
 
 _Type_: **[MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OperationalMeasurementUnit
 
-> The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. null means that the unit is unknown. [Filter(multi eq)]
+The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. null means that the unit is unknown. [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OwnerParty
 
-> Vehicle owner. [Filter(multi eq)]
+Vehicle owner. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this AssetType. [Filter(like)]
+Notes for this AssetType. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### RentalAssetTypeName
 
-> The name of the rental asset type. [Required] [Filter(like)]
+The name of the rental asset type. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  

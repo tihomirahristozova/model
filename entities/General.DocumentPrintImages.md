@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### PrintImage
 
-> The data of the printout, stored in the format, specified in Print Image Format. [Required]
+The data of the printout, stored in the format, specified in Print Image Format. [Required]
 
 _Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
@@ -38,7 +38,7 @@ _Supports Order By_: **False**
 
 ### PrintImageFormat
 
-> The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. [Required] [Default("CDS")]
+The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. [Required] [Default("CDS")]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -50,7 +50,7 @@ _Default Value_: **CDS**
 
 ### PrintoutLayout
 
-> The print layout, which was used for the current printout. [Required] [Filter(multi eq)] [Owner]
+The print layout, which was used for the current printout. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PrintoutLayouts](General.PrintoutLayouts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

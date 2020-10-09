@@ -18,7 +18,7 @@ Long (full) instructions for performing an operation. The operations point to th
 
 ### Description
 
-> Short description or notes for the instructions. [Filter(like)]
+Short description or notes for the instructions. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -31,7 +31,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Instructions
 
-> The operation instructions in OLE format.
+The operation instructions in OLE format.
 
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  

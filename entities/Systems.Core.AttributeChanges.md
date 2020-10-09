@@ -23,7 +23,7 @@ Attribute values of an object change. Entity: Sys_Attribute_Changes_View
 
 ### AttributeName
 
-> The attribute name. [Required] [Filter(eq)]
+The attribute name. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -31,7 +31,7 @@ _Supports Order By_: **False**
 
 ### NewValue
 
-> The new value. [Filter(eq;like)]
+The new value. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -42,7 +42,7 @@ _Supports Order By_: **False**
 
 ### ObjectChange
 
-> The object change. [Required] [Filter(multi eq)] [Owner]
+The object change. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ObjectChanges](Systems.Core.ObjectChanges.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

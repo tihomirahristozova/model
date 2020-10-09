@@ -30,7 +30,7 @@ Contains scheduled operations usage of the resources. Entity: Prd_Load
 
 ### CalendarDate
 
-> Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. [Required] [Filter(ge;le)]
+Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. [Required] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -44,7 +44,7 @@ _Default Value_: **NewGuid**
 
 ### Priority
 
-> Priority of the allocation. 1=Lowest ... 5=Highest. [Required] [Default(3)]
+Priority of the allocation. 1=Lowest ... 5=Highest. [Required] [Default(3)]
 
 _Type_: **[Priority](Production.Resources.Load.md#priority)**  
 Allowed values for the [Priority](Production.Resources.Load.md#priority) data attribute  
@@ -64,7 +64,7 @@ _Default Value_: **3**
 
 ### TimeType
 
-> S=Setup; R=Run; W=Wait; M=Move. [Required] [Default("R")]
+S=Setup; R=Run; W=Wait; M=Move. [Required] [Default("R")]
 
 _Type_: **[TimeType](Production.Resources.Load.md#timetype)**  
 Allowed values for the [TimeType](Production.Resources.Load.md#timetype) data attribute  
@@ -83,7 +83,7 @@ _Default Value_: **Run**
 
 ### UsageEndTime
 
-> The ending time of the planned usage. [Required] [Filter(ge;le)]
+The ending time of the planned usage. [Required] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -91,7 +91,7 @@ _Supports Order By_: **False**
 
 ### UsageQuantity
 
-> Quantity of the resource, which will be used for production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] [Filter(ge;le)]
+Quantity of the resource, which will be used for production. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -100,7 +100,7 @@ _Default Value_: **Constant**
 
 ### UsageStartTime
 
-> The starting time of the planned usage. [Required] [Filter(ge;le)]
+The starting time of the planned usage. [Required] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -108,7 +108,7 @@ _Supports Order By_: **False**
 
 ### UsageTimeMinutes
 
-> Time allocated for the operation in minutes. [Required] [Default(0)] [Filter(ge;le)]
+Time allocated for the operation in minutes. [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -120,14 +120,14 @@ _Default Value_: **0**
 
 ### WorkgroupResource
 
-> The exact resource being utilised. [Required] [Filter(multi eq)]
+The exact resource being utilised. [Required] [Filter(multi eq)]
 
 _Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItemOperation
 
-> The [WorkOrderItemOperation](Production.ShopFloor.WorkOrderItemOperations.md) to which this Load belongs. [Required] [Filter(multi eq)] [Owner]
+The [WorkOrderItemOperation](Production.ShopFloor.WorkOrderItemOperations.md) to which this Load belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

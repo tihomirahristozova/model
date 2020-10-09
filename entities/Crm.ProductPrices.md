@@ -40,7 +40,7 @@ Specific prices of products. A price is applied after matching the specified cri
 
 ### FromDate
 
-> Starting date of validity of the price. [Filter(eq;ge;le)]
+Starting date of validity of the price. [Filter(eq;ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -54,7 +54,7 @@ _Default Value_: **NewGuid**
 
 ### MaxQuantity
 
-> Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]
+Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -62,7 +62,7 @@ _Supports Order By_: **False**
 
 ### MinQuantity
 
-> Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]
+Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -70,7 +70,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this ProductPrice.
+Notes for this ProductPrice.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -78,7 +78,7 @@ _Supports Order By_: **False**
 
 ### Price
 
-> Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]
+Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -87,7 +87,7 @@ _Default Value_: **Constant**
 
 ### PriceQuantity
 
-> The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]
+The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -96,7 +96,7 @@ _Default Value_: **Constant**
 
 ### Priority
 
-> Priority of the price comparative to other prices. Only the highest priority price is applied. [Required] [Default(2)] [Filter(multi eq)]
+Priority of the price comparative to other prices. Only the highest priority price is applied. [Required] [Default(2)] [Filter(multi eq)]
 
 _Type_: **[Priority](Crm.ProductPrices.md#priority)**  
 Generic enum type for Priority properties  
@@ -116,7 +116,7 @@ _Default Value_: **2**
 
 ### ThruDate
 
-> Ending date (inclusive) of the validity of the price. [Filter(eq;ge;le)]
+Ending date (inclusive) of the validity of the price. [Filter(eq;ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -127,35 +127,35 @@ _Supports Order By_: **False**
 
 ### Currency
 
-> The currency of the price. [Required] [Filter(multi eq)]
+The currency of the price. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
 
-> When not null, specifies that the customer of the sales document must be the specified customer. [Filter(multi eq)]
+When not null, specifies that the customer of the sales document must be the specified customer. [Filter(multi eq)]
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DistributionChannel
 
-> Use the price only when selling through the specified channel. [Filter(multi eq)]
+Use the price only when selling through the specified channel. [Filter(multi eq)]
 
 _Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> When not null, specifies that the sales document must be in the specified enterprise company. [Filter(multi eq)]
+When not null, specifies that the sales document must be in the specified enterprise company. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-> When set, specifies that the sales document must be of the specified enterprise company location. [Filter(multi eq)]
+When set, specifies that the sales document must be of the specified enterprise company location. [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -164,14 +164,14 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( obj.EnterpriseCompanyLocation != null) AndAlso ( obj.EnterpriseCompanyLocation.Company != obj.EnterpriseCompany)), null, obj.EnterpriseCompanyLocation.Company)`
 ### PriceList
 
-> When not null, specifies that the sales document must have the specified price list. [Filter(multi eq)]
+When not null, specifies that the sales document must have the specified price list. [Filter(multi eq)]
 
 _Type_: **[PriceLists](Crm.PriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PriceQuantityMeasurementUnit
 
-> The measurement unit of Price_Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Price_Quantity. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -180,21 +180,21 @@ _Front-End Recalc Expressions:_
 `IIF( ( obj.Product != null), obj.Product.MeasurementUnit, obj.PriceQuantityMeasurementUnit)`
 ### PriceType
 
-> Price type of the current product price. The price types are used to set additional priority condition for the prices. [Filter(multi eq)]
+Price type of the current product price. The price types are used to set additional priority condition for the prices. [Filter(multi eq)]
 
 _Type_: **[PriceTypes](Crm.PriceTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The product for which a price will be defined. [Required] [Filter(multi eq)]
+The product for which a price will be defined. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ShipToCustomer
 
-> When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer. [Filter(multi eq)]
+When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer. [Filter(multi eq)]
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -203,7 +203,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( obj.ShipToCustomer.Party.ParentParty != obj.Customer), null, obj.ShipToCustomer)`
 ### TargetGroup
 
-> When not null, specifies a criteria, which is matched only when the customer of the sales document is included in the group. [Filter(multi eq)]
+When not null, specifies a criteria, which is matched only when the customer of the sales document is included in the group. [Filter(multi eq)]
 
 _Type_: **[TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

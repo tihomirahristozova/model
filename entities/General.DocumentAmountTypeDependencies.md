@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### DependsOnDocumentAmountType
 
-> The base amount type on which the current amount depends. [Required] [Filter(multi eq)]
+The base amount type on which the current amount depends. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentAmountType
 
-> The amount for which the base amount is specified. [Required] [Filter(multi eq)] [Owner]
+The amount for which the base amount is specified. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

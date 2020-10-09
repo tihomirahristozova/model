@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### IsSystem
 
-> Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -39,7 +39,7 @@ _Default Value_: **False**
 
 ### Name
 
-> The name of this ValuationModel. [Required] [Filter(like)]
+The name of this ValuationModel. [Required] [Filter(like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### DefaultDepreciationMethod
 
-> Obsolete. Not used. [Filter(multi eq)]
+Obsolete. Not used. [Filter(multi eq)]
 
 _Type_: **[DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

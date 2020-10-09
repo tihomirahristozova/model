@@ -28,7 +28,7 @@ Contains the products, that are contracted (listed) with a customer. Entity: Crm
 
 ### FromDate
 
-> The initial date of the listing. null when the initial date is unknown. [Filter(eq;ge;le)]
+The initial date of the listing. null when the initial date is unknown. [Filter(eq;ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -42,7 +42,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for the listing.
+Notes for the listing.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### ToDate
 
-> The final date of the listing. null when the final date is unknown. [Filter(eq;ge;le)]
+The final date of the listing. null when the final date is unknown. [Filter(eq;ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -61,28 +61,28 @@ _Supports Order By_: **False**
 
 ### CompanyDivision
 
-> When the customer is a company, denotes the division for which the product is listed. null when the customer is not a company or when the listing is not division specific. [Filter(multi eq)]
+When the customer is a company, denotes the division for which the product is listed. null when the customer is not a company or when the listing is not division specific. [Filter(multi eq)]
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CompanyLocation
 
-> When the customer is a company, denotes the location for which the product is listed. null when the customer is not a company or when the listing is not location specific. [Filter(multi eq)]
+When the customer is a company, denotes the location for which the product is listed. null when the customer is not a company or when the listing is not location specific. [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
 
-> Customer, for which the product is listed. [Required] [Filter(multi eq)] [Owner]
+Customer, for which the product is listed. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Customers](Crm.Customers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The product, which is listed for the customer. [Required] [Filter(multi eq)]
+The product, which is listed for the customer. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

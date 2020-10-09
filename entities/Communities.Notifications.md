@@ -27,7 +27,7 @@ A single notification of a user. Entity: Cmm_Notifications (Introduced in versio
 
 ### CreationTimeUtc
 
-> The exact server time (in UTC), when the notification was created. [Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly]
+The exact server time (in UTC), when the notification was created. [Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -42,7 +42,7 @@ _Default Value_: **NewGuid**
 
 ### IsRead
 
-> Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again. [Required] [Default(false)] [Filter(eq)]
+Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -51,7 +51,7 @@ _Default Value_: **False**
 
 ### NotificationClass
 
-> The class of the notification from a predefined list of system classes. [Required] [Filter(multi eq)]
+The class of the notification from a predefined list of system classes. [Required] [Filter(multi eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### Subject
 
-> The short subject of the notification (in the Default Culture of the user). [Filter(eq;like)]
+The short subject of the notification (in the Default Culture of the user). [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -70,14 +70,14 @@ _Supports Order By_: **False**
 
 ### DataObject
 
-> The data object about which the notification is created. Null means that the notification is not about any specific data object. [Filter(multi eq)]
+The data object about which the notification is created. Null means that the notification is not about any specific data object. [Filter(multi eq)]
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
-> The user, who is notified. [Required] [Filter(multi eq)]
+The user, who is notified. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

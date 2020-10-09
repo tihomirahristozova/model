@@ -26,7 +26,7 @@ Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in 
 
 ### ChangeType
 
-> Type of change - Create, Update or Delete. [Required]
+Type of change - Create, Update or Delete. [Required]
 
 _Type_: **[ChangeType](Systems.Core.ObjectChanges.md#changetype)**  
 Allowed values for the [ChangeType](Systems.Core.ObjectChanges.md#changetype) data attribute  
@@ -43,7 +43,7 @@ _Supports Order By_: **False**
 
 ### EntityItemId
 
-> The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq)]
+The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### RepositoryName
 
-> The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)]
+The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -67,14 +67,14 @@ _Supports Order By_: **False**
 
 ### ObjectChangeset
 
-> The changeset containing this change. [Required] [Filter(multi eq)] [Owner]
+The changeset containing this change. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ObjectChangesets](Systems.Core.ObjectChangesets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RootObject
 
-> The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)]
+The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)]
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

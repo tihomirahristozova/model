@@ -36,7 +36,7 @@ Contains the details of the Intrastat declarations, issued by the enterprise com
 
 ### DeliveryTerms
 
-> Delivery terms - classification according to Intrastat (which uses the common abbreviations). [Required]
+Delivery terms - classification according to Intrastat (which uses the common abbreviations). [Required]
 
 _Type_: **[DeliveryTerms](Finance.Intrastat.DeclarationLines.md#deliveryterms)**  
 Allowed values for the [DeliveryTerms](Finance.Intrastat.DeclarationLines.md#deliveryterms) data attribute  
@@ -67,7 +67,7 @@ _Default Value_: **NewGuid**
 
 ### InvoicedValueAmountBase
 
-> Invoiced value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency] [Required]
+Invoiced value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency] [Required]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -75,7 +75,7 @@ _Supports Order By_: **False**
 
 ### LineAction
 
-> Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted. [Required] [Default("NEW")]
+Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted. [Required] [Default("NEW")]
 
 _Type_: **[LineAction](Finance.Intrastat.DeclarationLines.md#lineaction)**  
 Allowed values for the [LineAction](Finance.Intrastat.DeclarationLines.md#lineaction) data attribute  
@@ -94,7 +94,7 @@ _Default Value_: **New**
 
 ### LineNo
 
-> Consequtive line number within the intrastat declaration. [Required] [Filter(eq)]
+Consequtive line number within the intrastat declaration. [Required] [Filter(eq)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals**  
@@ -107,7 +107,7 @@ _Front-End Recalc Expressions:_
 `( obj.IntrastatDeclaration.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### NetMassKg
 
-> Net mass of the goods in kg. [Required] [Filter(multi eq)]
+Net mass of the goods in kg. [Required] [Filter(multi eq)]
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -115,7 +115,7 @@ _Supports Order By_: **False**
 
 ### QuantitySupplementaryUnit
 
-> Quantity of the goods in the supplementary unit. null when no supplementary unit is specified.
+Quantity of the goods in the supplementary unit. null when no supplementary unit is specified.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -123,7 +123,7 @@ _Supports Order By_: **False**
 
 ### StatisticalValueAmountBase
 
-> Statistical value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency]
+Statistical value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -131,7 +131,7 @@ _Supports Order By_: **False**
 
 ### TransactionNature
 
-> Transaction nature, according to the Intrastat classification. [Required]
+Transaction nature, according to the Intrastat classification. [Required]
 
 _Type_: **[TransactionNature](Finance.Intrastat.DeclarationLines.md#transactionnature)**  
 Allowed values for the [TransactionNature](Finance.Intrastat.DeclarationLines.md#transactionnature) data attribute  
@@ -164,7 +164,7 @@ _Supports Order By_: **False**
 
 ### TransportMode
 
-> Transportation mode - type of transportation used. [Required]
+Transportation mode - type of transportation used. [Required]
 
 _Type_: **[TransportMode](Finance.Intrastat.DeclarationLines.md#transportmode)**  
 Allowed values for the [TransportMode](Finance.Intrastat.DeclarationLines.md#transportmode) data attribute  
@@ -189,42 +189,42 @@ _Supports Order By_: **False**
 
 ### AdministrativeRegion
 
-> Administrative region of the enterprise company at the time of the declaration. [Required] [Filter(multi eq)]
+Administrative region of the enterprise company at the time of the declaration. [Required] [Filter(multi eq)]
 
 _Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatCommodityCode
 
-> The commodity code of the goods, according to the Intrastat commodity classification. [Required] [Filter(multi eq)]
+The commodity code of the goods, according to the Intrastat commodity classification. [Required] [Filter(multi eq)]
 
 _Type_: **[CommodityCodes](Finance.Intrastat.CommodityCodes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatDeclaration
 
-> The intrastat declaration, to which this line belongs. [Required] [Filter(multi eq)] [Owner]
+The intrastat declaration, to which this line belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Declarations](Finance.Intrastat.Declarations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OriginCountry
 
-> The country of origin of the goods. null for outbound declarations. [Filter(multi eq)]
+The country of origin of the goods. null for outbound declarations. [Filter(multi eq)]
 
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PartyCountry
 
-> The country of the partner. [Required] [Filter(multi eq)]
+The country of the partner. [Required] [Filter(multi eq)]
 
 _Type_: **[Countries](General.Geography.Countries.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransportCountry
 
-> The country of the transportation company. [Required] [Filter(multi eq)]
+The country of the transportation company. [Required] [Filter(multi eq)]
 
 _Type_: **[Countries](General.Geography.Countries.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

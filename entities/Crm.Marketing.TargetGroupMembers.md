@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### Party
 
-> The member party. [Required] [Filter(multi eq)]
+The member party. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TargetGroup
 
-> The target group, which includes the member party. [Required] [Filter(multi eq)] [Owner]
+The target group, which includes the member party. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[TargetGroups](Crm.Marketing.TargetGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

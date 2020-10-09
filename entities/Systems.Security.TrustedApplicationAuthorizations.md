@@ -29,7 +29,7 @@ Authorization of a trusted application to access the data on behalf of a context
 
 ### GrantTimeUtc
 
-> The time (in UTC) when the authorization was granted. [Required] [Default(NowUtc)]
+The time (in UTC) when the authorization was granted. [Required] [Default(NowUtc)]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -44,7 +44,7 @@ _Default Value_: **NewGuid**
 
 ### IsRevoked
 
-> Specifies whether the grant is explicitly revoked. [Required] [Default(false)]
+Specifies whether the grant is explicitly revoked. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -53,7 +53,7 @@ _Default Value_: **False**
 
 ### Notes
 
-> Notes for this TrustedApplicationAuthorization.
+Notes for this TrustedApplicationAuthorization.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 ### ValidFromUtc
 
-> The start of the validitiy of the authorization. null means that there is no restriction.
+The start of the validitiy of the authorization. null means that there is no restriction.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 ### ValidUntilUtc
 
-> The time (in UTC) when the grant expires. null means that there is no time restriction.
+The time (in UTC) when the grant expires. null means that there is no time restriction.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -80,21 +80,21 @@ _Supports Order By_: **False**
 
 ### ContextUser
 
-> The user, whose permissions are granted to the application. [Required] [Filter(multi eq)]
+The user, whose permissions are granted to the application. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### GrantingUser
 
-> The user, who authorized the application. [Required] [Filter(multi eq)]
+The user, who authorized the application. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrustedApplication
 
-> The application, which is authorized. [Required] [Filter(multi eq)] [Owner]
+The application, which is authorized. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[TrustedApplications](Systems.Security.TrustedApplications.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

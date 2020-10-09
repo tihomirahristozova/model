@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### JoinTimeUtc
 
-> The exact server time (in UTC), when the user joined the group. [Required] [Default(NowUtc)]
+The exact server time (in UTC), when the user joined the group. [Required] [Default(NowUtc)]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -42,14 +42,14 @@ _Default Value_: **CurrentDateTimeUtc**
 
 ### SocialGroup
 
-> The group in which the user participates. [Required] [Filter(multi eq)] [Owner]
+The group in which the user participates. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[SocialGroups](Communities.SocialGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
-> The user, who is a member of the group. [Required] [Filter(multi eq)]
+The user, who is a member of the group. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this PersonalDataProcessRecipient.
+Notes for this PersonalDataProcessRecipient.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -41,14 +41,14 @@ _Supports Order By_: **False**
 
 ### PersonalDataProcess
 
-> The process, whose data is disclosed to the recipient. [Required] [Filter(multi eq)] [Owner]
+The process, whose data is disclosed to the recipient. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RecipientParty
 
-> The recipient, to whom the data is disclosed. [Required] [Filter(multi eq)]
+The recipient, to whom the data is disclosed. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

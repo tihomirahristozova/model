@@ -31,7 +31,7 @@ Contains the calculated costs allocated to the different Cost Types. Entity: Cos
 
 ### Amount
 
-> The allocated amount of costs in the currency of the calculation. [Required] [Default(0)]
+The allocated amount of costs in the currency of the calculation. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -46,7 +46,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Consecutive number of the line within the calculation. [Required]
+Consecutive number of the line within the calculation. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Front-End Recalc Expressions:_
 `( obj.Calculation.Costs.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### ProjectId
 
-> The Project, which absorbed the cost. [Filter(multi eq)]
+The Project, which absorbed the cost. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -69,49 +69,49 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Calculation
 
-> The [Calculation](Finance.Cost.CalculationCosts.md#calculation) to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner]
+The [Calculation](Finance.Cost.CalculationCosts.md#calculation) to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Calculations](Finance.Cost.Calculations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostCenter
 
-> The Cost Center, which absorbed the cost. [Filter(multi eq)]
+The Cost Center, which absorbed the cost. [Filter(multi eq)]
 
 _Type_: **[CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostType
 
-> The Cost Type, which absorbed the cost. [Required] [Filter(multi eq)]
+The Cost Type, which absorbed the cost. [Required] [Filter(multi eq)]
 
 _Type_: **[CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 
-> The Lot, which absorbed the cost. [Filter(multi eq)]
+The Lot, which absorbed the cost. [Filter(multi eq)]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The Product, which absorbed the cost. [Filter(multi eq)]
+The Product, which absorbed the cost. [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesOrder
 
-> The Sales Order, which absorbed the cost. [Filter(multi eq)]
+The Sales Order, which absorbed the cost. [Filter(multi eq)]
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Workgroup
 
-> The Workgroup, which absorbed the cost. [Filter(multi eq)]
+The Workgroup, which absorbed the cost. [Filter(multi eq)]
 
 _Type_: **[Workgroups](Production.Resources.Workgroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

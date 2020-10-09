@@ -55,7 +55,7 @@ Stores company divisions structure. The divisions are parties and as such, can b
 
 ### Code
 
-> Company division code, unique within the company. [Required] [Filter(eq;like)]
+Company division code, unique within the company. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -68,7 +68,7 @@ _Supported Filters_: **EqualsIn**
 
 ### GLN
 
-> Global Location Number used by EDI systems
+Global Location Number used by EDI systems
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **EqualsIn**  
@@ -82,7 +82,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Specifies whether the current party is active in the system or not [Required]
+Specifies whether the current party is active in the system or not [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -90,7 +90,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-> Multi-language company divsion name. [Required] [Filter(eq;like)]
+Multi-language company divsion name. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -103,7 +103,7 @@ _Supported Filters_: **EqualsIn**
 
 ### PartyCode
 
-> The unique code of the Party [Required]
+The unique code of the Party [Required]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -111,7 +111,7 @@ _Supports Order By_: **True**
 
 ### PartyCreationTime
 
-> Date and time when the Party was created.
+Date and time when the Party was created.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -119,7 +119,7 @@ _Supports Order By_: **False**
 
 ### PartyCreationUser
 
-> Login name of the user, who created the Party.
+Login name of the user, who created the Party.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -127,7 +127,7 @@ _Supports Order By_: **False**
 
 ### PartyName
 
-> The name of the party [Required]
+The name of the party [Required]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -135,7 +135,7 @@ _Supports Order By_: **True**
 
 ### PartyNotes
 
-> Notes for this Party
+Notes for this Party
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -143,7 +143,7 @@ _Supports Order By_: **False**
 
 ### PartyType
 
-> Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]
+Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]
 
 _Type_: **[PartyType](General.Contacts.CompanyDivisions.md#partytype)**  
 Allowed values for the [PartyType](General.Contacts.Parties.md#partytype) data attribute  
@@ -163,7 +163,7 @@ _Default Value_: **Person**
 
 ### PartyUniqueNumber
 
-> Unique number of the party (National number for persons, Registration number for companies)
+Unique number of the party (National number for persons, Registration number for companies)
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -171,7 +171,7 @@ _Supports Order By_: **False**
 
 ### PartyUpdateTime
 
-> Date and time when the Party was last updated.
+Date and time when the Party was last updated.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -179,7 +179,7 @@ _Supports Order By_: **False**
 
 ### PartyUpdateUser
 
-> Login name of the user, who last updated the Party.
+Login name of the user, who last updated the Party.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -190,35 +190,35 @@ _Supports Order By_: **False**
 
 ### AdministrativeRegion
 
-> The administrative region in which the party is situated.
+The administrative region in which the party is situated.
 
 _Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Area
 
-> The area in which the party is situated.
+The area in which the party is situated.
 
 _Type_: **[Areas](General.Geography.Areas.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Company
 
-> The company to which this company division belongs. [Required] [Filter(multi eq)]
+The company to which this company division belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[Companies](General.Contacts.Companies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultProductCodingSystem
 
-> When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
+When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
 
 _Type_: **[CodingSystems](General.Products.CodingSystems.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ParentParty
 
-> Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
+Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  

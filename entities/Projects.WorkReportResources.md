@@ -28,7 +28,7 @@ Each record contains usage of resource, reported by the related Work Report. Ent
 
 ### ActualEndTime
 
-> Optionally, specifies the actual date and time when the resource usage ended. [Filter(eq;like)]
+Optionally, specifies the actual date and time when the resource usage ended. [Filter(eq;like)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -36,7 +36,7 @@ _Supports Order By_: **False**
 
 ### ActualStartTime
 
-> Optionally, specifies the actual date and time when the resource usage began. [Filter(eq;like)]
+Optionally, specifies the actual date and time when the resource usage began. [Filter(eq;like)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 ### TotalResourceUsageHours
 
-> The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. [Required] [Default(0)] [Filter(eq;like)]
+The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. [Required] [Default(0)] [Filter(eq;like)]
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals, Like**  
@@ -62,7 +62,7 @@ _Default Value_: **0**
 
 ### ProjectTask
 
-> The project task for which the work is reported. [Required] [Filter(multi eq)]
+The project task for which the work is reported. [Required] [Filter(multi eq)]
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -74,14 +74,14 @@ _Front-End Recalc Expressions:_
 `obj.WorkReport.ProjectTask`
 ### Resource
 
-> The resource, for which usage is reported. [Required] [Filter(multi eq)]
+The resource, for which usage is reported. [Required] [Filter(multi eq)]
 
 _Type_: **[Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResourceInstance
 
-> The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. [Filter(multi eq;like)]
+The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. [Filter(multi eq;like)]
 
 _Type_: **[ResourceInstances](General.Resources.ResourceInstances.md) (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -90,7 +90,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( obj.ResourceInstance != null) AndAlso ( obj.ResourceInstance.Resource != obj.Resource)), null, obj.ResourceInstance)`
 ### WorkReport
 
-> The [WorkReport](Projects.WorkReportResources.md#workreport) to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner]
+The [WorkReport](Projects.WorkReportResources.md#workreport) to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[WorkReports](Projects.WorkReports.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

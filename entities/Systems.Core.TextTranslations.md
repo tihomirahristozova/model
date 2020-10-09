@@ -21,7 +21,7 @@ Obsolete. Not used. Entity: Gen_Text_Translations
 
 ### ColumnName
 
-> Obsolete. Not used. [Required] [Filter(eq)]
+Obsolete. Not used. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -35,7 +35,7 @@ _Default Value_: **NewGuid**
 
 ### Language
 
-> Obsolete. Not used. [Required] [Filter(eq)]
+Obsolete. Not used. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -43,14 +43,14 @@ _Supports Order By_: **False**
 
 ### RowId
 
-> Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TableName
 
-> Obsolete. Not used. [Required] [Filter(eq)] [ORD] [ReadOnly]
+Obsolete. Not used. [Required] [Filter(eq)] [ORD] [ReadOnly]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -58,7 +58,7 @@ _Supports Order By_: **True**
 
 ### TranslatedText
 
-> Obsolete. Not used. [Filter(eq)]
+Obsolete. Not used. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  

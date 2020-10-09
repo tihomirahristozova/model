@@ -55,7 +55,7 @@ Contains supply rules, which are used by the procurement planning system. Entity
 
 ### BuyerName
 
-> The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy.
+The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 ### FixedOrderQuantityBase
 
-> Fixed order quantity under the FOQ & EOQ replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
+Fixed order quantity under the FOQ & EOQ replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -78,7 +78,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> True if this product supply is active. [Required] [Default(true)] [Filter(eq)]
+True if this product supply is active. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -87,7 +87,7 @@ _Default Value_: **True**
 
 ### IsDefault
 
-> Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information. [Required] [Default(true)] [Filter(eq)]
+Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -96,7 +96,7 @@ _Default Value_: **True**
 
 ### ManufacturingPolicy
 
-> MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order. [Required] [Default("MTS")]
+MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order. [Required] [Default("MTS")]
 
 _Type_: **[ManufacturingPolicy](General.Products.ProductSupply.md#manufacturingpolicy)**  
 Allowed values for the [ManufacturingPolicy](General.Products.ProductSupply.md#manufacturingpolicy) data attribute  
@@ -115,7 +115,7 @@ _Default Value_: **MakeToStock**
 
 ### OrderLotSizeQuantityBase
 
-> The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
+The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -124,7 +124,7 @@ _Default Value_: **Constant**
 
 ### OrderLotSizingMethod
 
-> LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;. [Required] [Default("ROP")]
+LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;. [Required] [Default("ROP")]
 
 _Type_: **[OrderLotSizingMethod](General.Products.ProductSupply.md#orderlotsizingmethod)**  
 Allowed values for the [OrderLotSizingMethod](General.Products.ProductSupply.md#orderlotsizingmethod) data attribute  
@@ -145,7 +145,7 @@ _Default Value_: **ReorderPoint**
 
 ### OrderMaximum
 
-> Order maximum when buying or making. null means no maximum. [Unit: Product.BaseMeasurementCategory.BaseUnit]
+Order maximum when buying or making. null means no maximum. [Unit: Product.BaseMeasurementCategory.BaseUnit]
 
 _Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -153,7 +153,7 @@ _Supports Order By_: **False**
 
 ### OrderMinimum
 
-> Minimum order quantity both for buying and making. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
+Minimum order quantity both for buying and making. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -162,7 +162,7 @@ _Default Value_: **Constant**
 
 ### OrderMultiple
 
-> True if the order qty should be multiple of lot size when buying or making. [Required] [Default(false)]
+True if the order qty should be multiple of lot size when buying or making. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -171,7 +171,7 @@ _Default Value_: **False**
 
 ### OrderPeriodPlanningDays
 
-> For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified.
+For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -179,7 +179,7 @@ _Supports Order By_: **False**
 
 ### OrderPeriodStartDate
 
-> Start date of the first period under fixed period replenishment system. null - not yet specified.
+Start date of the first period under fixed period replenishment system. null - not yet specified.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -187,7 +187,7 @@ _Supports Order By_: **False**
 
 ### OrderPointQuantityBase
 
-> Order point quantity under the OP replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
+Order point quantity under the OP replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -196,7 +196,7 @@ _Default Value_: **Constant**
 
 ### OrderPolicy
 
-> Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning. [Required] [Default("OPS")]
+Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning. [Required] [Default("OPS")]
 
 _Type_: **[OrderPolicy](General.Products.ProductSupply.md#orderpolicy)**  
 Allowed values for the [OrderPolicy](General.Products.ProductSupply.md#orderpolicy) data attribute  
@@ -215,7 +215,7 @@ _Default Value_: **OrderPointSystem**
 
 ### PlanningAnnualCarryingCostPercent
 
-> The expected carrying cost as percentage of inventory cost. null means unknown.
+The expected carrying cost as percentage of inventory cost. null means unknown.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -223,7 +223,7 @@ _Supports Order By_: **False**
 
 ### PlanningAnnualUsageQuantityBase
 
-> Average usage of the product for 1 year. NUL means unknown. [Unit: Product.BaseMeasurementCategory.BaseUnit]
+Average usage of the product for 1 year. NUL means unknown. [Unit: Product.BaseMeasurementCategory.BaseUnit]
 
 _Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -231,7 +231,7 @@ _Supports Order By_: **False**
 
 ### PlanningHorizonDays
 
-> Number of days in the future for which to plan the demand and supply. [Required] [Default(0)]
+Number of days in the future for which to plan the demand and supply. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -240,7 +240,7 @@ _Default Value_: **0**
 
 ### PlanningLeadTimeDays
 
-> The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components. [Required] [Default(0)]
+The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -251,7 +251,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( Convert( obj.PreferredSupplier.DefaultDeliveryTermDays, Nullable`1) != null), obj.PreferredSupplier.DefaultDeliveryTermDays, obj.PlanningLeadTimeDays)`
 ### PlanningMaximumInventoryQuantityBase
 
-> Maximum inventory. null if N/A. [Unit: Product.BaseMeasurementCategory.BaseUnit]
+Maximum inventory. null if N/A. [Unit: Product.BaseMeasurementCategory.BaseUnit]
 
 _Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -259,7 +259,7 @@ _Supports Order By_: **False**
 
 ### PlanningOrderCostBaseCurrency
 
-> Projected cost to place an order and set-up equipment. [Currency: EnterpriseCompany.BaseCurrency]
+Projected cost to place an order and set-up equipment. [Currency: EnterpriseCompany.BaseCurrency]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -267,7 +267,7 @@ _Supports Order By_: **False**
 
 ### PlanningOrderCycleDays
 
-> Number of days in one period under fixed period replenishment system. null - not yet specified.
+Number of days in one period under fixed period replenishment system. null - not yet specified.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -275,7 +275,7 @@ _Supports Order By_: **False**
 
 ### PlanningSafetyStockQuantityBase
 
-> Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
+Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -284,7 +284,7 @@ _Default Value_: **Constant**
 
 ### PlanningTimeFenceDays
 
-> Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. [Required] [Default(1)]
+Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. [Required] [Default(1)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -293,7 +293,7 @@ _Default Value_: **1**
 
 ### ProcurementType
 
-> M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought. [Required] [Default("B")]
+M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought. [Required] [Default("B")]
 
 _Type_: **[ProcurementType](General.Products.ProductSupply.md#procurementtype)**  
 Allowed values for the [ProcurementType](General.Products.ProductSupply.md#procurementtype) data attribute  
@@ -311,7 +311,7 @@ _Default Value_: **Buy**
 
 ### StandardCostPerLot
 
-> Standard cost for one lot of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)]
+Standard cost for one lot of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -320,7 +320,7 @@ _Default Value_: **Constant**
 
 ### SupplySchemaId
 
-> The supply schema to use for the distribution of the product among warehouses. [Filter(multi eq)]
+The supply schema to use for the distribution of the product among warehouses. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -330,56 +330,56 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### DefaultStoreBin
 
-> Default store bin for new deliveries using this supply scheme. [Filter(multi eq)]
+Default store bin for new deliveries using this supply scheme. [Filter(multi eq)]
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The Enterprise Company to which this ProductSupply applies, or null if it is for all enterprise companies. [Filter(multi eq)]
+The Enterprise Company to which this ProductSupply applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromStore
 
-> Used when the Procurement_Type is Transfer. [Filter(multi eq)]
+Used when the Procurement_Type is Transfer. [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### GenerateDocumentType
 
-> Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule. [Filter(multi eq)]
+Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule. [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PreferredSupplier
 
-> Preferred supplier for the product. null if there is no preferred supplier. [Filter(multi eq)]
+Preferred supplier for the product. null if there is no preferred supplier. [Filter(multi eq)]
 
 _Type_: **[Suppliers](Logistics.Procurement.Suppliers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The [Product](General.Products.ProductSupply.md#product) to which this ProductSupply belongs. [Filter(multi eq)]
+The [Product](General.Products.ProductSupply.md#product) to which this ProductSupply belongs. [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup
 
-> Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings. [Filter(multi eq)]
+Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings. [Filter(multi eq)]
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-> The store for which this rule is defined. When null, the rule is valid for all stores. [Filter(multi eq)]
+The store for which this rule is defined. When null, the rule is valid for all stores. [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

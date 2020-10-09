@@ -19,7 +19,7 @@ Contains the available valuation groups for products. They are used in reconcili
 
 ### Description
 
-> The description of this ProductValuationGroup. [Filter(like)]
+The description of this ProductValuationGroup. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -33,7 +33,7 @@ _Default Value_: **NewGuid**
 
 ### ValuationGroupCode
 
-> The unique code of the product valuation group. [Required] [Filter(eq;like)] [ORD]
+The unique code of the product valuation group. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -41,7 +41,7 @@ _Supports Order By_: **True**
 
 ### ValuationGroupName
 
-> The name of the product valuation group. [Required] [Filter(eq;like)]
+The name of the product valuation group. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  

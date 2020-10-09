@@ -30,7 +30,7 @@ One line in a client requisition for transportation. Different lines usually rep
 
 ### ContentsDescription
 
-> Textual description of the cargo contents. [Required]
+Textual description of the cargo contents. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -44,7 +44,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Line number, unique within the TransportationRequisition. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationRequisition (in order to allow insertions with adjustment documents). [Required] [Filter(eq)]
+Line number, unique within the TransportationRequisition. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationRequisition (in order to allow insertions with adjustment documents). [Required] [Filter(eq)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals**  
@@ -57,7 +57,7 @@ _Front-End Recalc Expressions:_
 `( obj.TransportationRequisition.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### PalletsCount
 
-> Number of palettes comprising the cargo. null when it is unknown.
+Number of palettes comprising the cargo. null when it is unknown.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -65,7 +65,7 @@ _Supports Order By_: **False**
 
 ### ParentLineNo
 
-> The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. [Filter(eq)]
+The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. [Filter(eq)]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 ### VolumeCbm
 
-> The volume of the cargo, in CBM (cubic meters). null when it is unknown.
+The volume of the cargo, in CBM (cubic meters). null when it is unknown.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 ### WeightKg
 
-> The weight of the cargo, in KG (kilogramms). null when it is unknown.
+The weight of the cargo, in KG (kilogramms). null when it is unknown.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -92,21 +92,21 @@ _Supports Order By_: **False**
 
 ### CargoType
 
-> The type of the transported cargo. [Required] [Filter(multi eq)]
+The type of the transported cargo. [Required] [Filter(multi eq)]
 
 _Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
 
-> The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
+The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransportationRequisition
 
-> The [TransportationRequisition](Logistics.Shipment.TransportationRequisitionLines.md#transportationrequisition) to which this TransportationRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [TransportationRequisition](Logistics.Shipment.TransportationRequisitionLines.md#transportationrequisition) to which this TransportationRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

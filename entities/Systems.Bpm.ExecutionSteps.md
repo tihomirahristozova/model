@@ -25,7 +25,7 @@ Contains both historical and active steps in the execution of the business proce
 
 ### ExecutionState
 
-> Shows where the execution of the step has reached. 0=Ready; 10=Active; 20=Executing; 30=Completing; 40=Failing; 50=Terminating; 60=Completed; 70=Failed; 80=Terminated. [Required] [Default(0)]
+Shows where the execution of the step has reached. 0=Ready; 10=Active; 20=Executing; 30=Completing; 40=Failing; 50=Terminating; 60=Completed; 70=Failed; 80=Terminated. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Default Value_: **NewGuid**
 
 ### StartTime
 
-> The date and time when the step execution started. [Required] [Default(Now)]
+The date and time when the step execution started. [Required] [Default(Now)]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -52,14 +52,14 @@ _Default Value_: **CurrentDateTime**
 
 ### ProcessElement
 
-> The process element, which is being executed for the instance. [Required] [Filter(multi eq)]
+The process element, which is being executed for the instance. [Required] [Filter(multi eq)]
 
 _Type_: **[ProcessElements](Systems.Bpm.ProcessElements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProcessInstance
 
-> The process instance, which is being executed. [Required] [Filter(multi eq)]
+The process instance, which is being executed. [Required] [Filter(multi eq)]
 
 _Type_: **[ProcessInstances](Systems.Bpm.ProcessInstances.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

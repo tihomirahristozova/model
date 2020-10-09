@@ -26,7 +26,7 @@ Profiles contain multiple maintenance plans and can be assigned directly to a ve
 
 ### Code
 
-> The unique code of the MaintenanceProfile. [Required]
+The unique code of the MaintenanceProfile. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> True if the profile is active and can be assigned to vehicles. However, if a profile is already assigned to a vehicle, it will still work even if it is de-activated. [Required] [Default(true)] (Introduced in version 18.2)
+True if the profile is active and can be assigned to vehicles. However, if a profile is already assigned to a vehicle, it will still work even if it is de-activated. [Required] [Default(true)] (Introduced in version 18.2)
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Default Value_: **True**
 
 ### Name
 
-> Name of the maintenance profile (Multilanguage). [Required]
+Name of the maintenance profile (Multilanguage). [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this MaintenanceProfile.
+Notes for this MaintenanceProfile.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  

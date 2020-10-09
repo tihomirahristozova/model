@@ -36,7 +36,7 @@ _Default Value_: **NewGuid**
 
 ### LineNumber
 
-> Consecutive line number. [Required]
+Consecutive line number. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Front-End Recalc Expressions:_
 `( obj.PromotionalPackage.Lines.Select( c => c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Quantity
 
-> The quantity of the product in the package in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]
+The quantity of the product in the package in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -58,7 +58,7 @@ _Default Value_: **Constant**
 
 ### StandardDiscountAdjustOrReplace
 
-> Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. [Required] [Default("R")]
+Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. [Required] [Default("R")]
 
 _Type_: **[StandardDiscount<br />AdjustOrReplace](Crm.PromotionalPackageLines.md#standarddiscountadjustorreplace)**  
 Allowed values for the [StandardDiscountAdjustOrReplace](Crm.PromotionalPackageLines.md#standarddiscountadjustorreplace) data attribute  
@@ -76,7 +76,7 @@ _Default Value_: **Replace**
 
 ### StandardDiscountPercentAdjust
 
-> The value of change (in percents) for the standard discount. [Required] [Default(0)]
+The value of change (in percents) for the standard discount. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -85,7 +85,7 @@ _Default Value_: **0**
 
 ### UnitPrice
 
-> When not null specifies directly unit price for the product. When null, the package specifies only discount. [Currency: UnitPriceCurrency]
+When not null specifies directly unit price for the product. When null, the package specifies only discount. [Currency: UnitPriceCurrency]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -96,28 +96,28 @@ _Supports Order By_: **False**
 
 ### Lot
 
-> The Product lot number in the promotional package. [Filter(multi eq)] (Introduced in version 19.1)
+The Product lot number in the promotional package. [Filter(multi eq)] (Introduced in version 19.1)
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The product, which is included in the promotional package. [Required] [Filter(multi eq)]
+The product, which is included in the promotional package. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PromotionalPackage
 
-> The [PromotionalPackage](Crm.PromotionalPackageLines.md#promotionalpackage) to which this PromotionalPackageLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [PromotionalPackage](Crm.PromotionalPackageLines.md#promotionalpackage) to which this PromotionalPackageLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PromotionalPackages](Crm.PromotionalPackages.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UnitPriceCurrency
 
-> Currency of the unit price. null if the package specifies only discount. [Filter(multi eq)]
+Currency of the unit price. null if the package specifies only discount. [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

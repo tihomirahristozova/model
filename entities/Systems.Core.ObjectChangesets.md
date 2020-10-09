@@ -31,7 +31,7 @@ A set of changes, performed in one request. Entity: Sys_Object_Changesets (Intro
 
 ### ApplicationName
 
-> The application which requested the change. null when it is unknown. [Filter(eq)]
+The application which requested the change. null when it is unknown. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -45,7 +45,7 @@ _Default Value_: **NewGuid**
 
 ### ServerVersion
 
-> The version of the application server at the time of the change. [Required]
+The version of the application server at the time of the change. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### TimeUtc
 
-> Date and time (in Utc) when the changeset was processed by the server. [Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD]
+Date and time (in Utc) when the changeset was processed by the server. [Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -65,7 +65,7 @@ _Default Value_: **CurrentDateTimeUtc**
 
 ### User
 
-> The user which initiated the change. null when it is unknown. [Filter(multi eq)]
+The user which initiated the change. null when it is unknown. [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

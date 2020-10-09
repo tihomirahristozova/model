@@ -34,7 +34,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Indicates whether the web site is active and will be instantiated upon next web server restart. [Required] [Default(true)] [Filter(eq)]
+Indicates whether the web site is active and will be instantiated upon next web server restart. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -43,7 +43,7 @@ _Default Value_: **True**
 
 ### Notes
 
-> Notes for this WebSite.
+Notes for this WebSite.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -51,7 +51,7 @@ _Supports Order By_: **False**
 
 ### RelativeUrl
 
-> The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host.
+The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### WebSiteType
 
-> The type of web site - Api, Client Center, Id, etc. [Required] [Filter(multi eq)]
+The type of web site - Api, Client Center, Id, etc. [Required] [Filter(multi eq)]
 
 _Type_: **[WebSiteType](Systems.Core.WebSites.md#websitetype)**  
 Allowed values for the [WebSiteType](Systems.Core.WebSites.md#websitetype) data attribute  
@@ -88,21 +88,21 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)]
+The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrustedApplication
 
-> The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1)
+The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1)
 
 _Type_: **[TrustedApplications](Systems.Security.TrustedApplications.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WebHost
 
-> The web host in which to host the site. [Filter(multi eq)]
+The web host in which to host the site. [Filter(multi eq)]
 
 _Type_: **[WebHosts](Systems.Core.WebHosts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

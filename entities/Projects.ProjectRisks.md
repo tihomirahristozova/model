@@ -37,7 +37,7 @@ Contains risks, associated to projects. Entity: Prj_Project_Risks
 
 ### CreateDate
 
-> The creation date of the project risk. [Required] [Default(Now)] [Filter(eq)]
+The creation date of the project risk. [Required] [Default(Now)] [Filter(eq)]
 
 _Type_: **date**  
 _Supported Filters_: **Equals**  
@@ -46,7 +46,7 @@ _Default Value_: **CurrentDateTime**
 
 ### Description
 
-> The description of this ProjectRisk. [Filter(like)]
+The description of this ProjectRisk. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -60,7 +60,7 @@ _Default Value_: **NewGuid**
 
 ### ImpactPercent
 
-> The impact of the risk to the project, expressed as percentage of the total project value. [Required] [Default(0)]
+The impact of the risk to the project, expressed as percentage of the total project value. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -69,7 +69,7 @@ _Default Value_: **0**
 
 ### ProbabilityPercent
 
-> The probability of the risk occurring. [Required] [Default(0)]
+The probability of the risk occurring. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -78,7 +78,7 @@ _Default Value_: **0**
 
 ### ResolutionStrategy
 
-> The strategy chosen to handle the risk. [Filter(eq)]
+The strategy chosen to handle the risk. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 ### Resolved
 
-> True if the risk is resolved. [Required] [Default(false)] [Filter(eq)]
+True if the risk is resolved. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -95,7 +95,7 @@ _Default Value_: **False**
 
 ### ResolveDate
 
-> The date on which the risk is resolved. [Filter(eq)]
+The date on which the risk is resolved. [Filter(eq)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals**  
@@ -103,7 +103,7 @@ _Supports Order By_: **False**
 
 ### RiskName
 
-> The short name of the risk. [Required] [Filter(multi eq)]
+The short name of the risk. [Required] [Filter(multi eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -114,14 +114,14 @@ _Supports Order By_: **False**
 
 ### Project
 
-> The project for which this risk applies. [Required] [Filter(multi eq)] [Owner]
+The project for which this risk applies. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Projects](Projects.Projects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
 
-> The person who is responsible for handling the risk. [Filter(multi eq)]
+The person who is responsible for handling the risk. [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

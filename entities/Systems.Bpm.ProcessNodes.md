@@ -27,7 +27,7 @@ Contains the flow Nodes of the process model. Entity: Bpm_Process_Nodes
 
 ### Code
 
-> Node code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)]
+Node code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### InstructionsHtml
 
-> Detailed instructions to the executor in HTML format. [Filter(eq;like)]
+Detailed instructions to the executor in HTML format. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-> Multilanguage process name. [Required] [Filter(eq;like)]
+Multilanguage process name. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 ### NodeType
 
-> Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. [Required] [Filter(eq;like)]
+Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. [Required] [Filter(eq;like)]
 
 _Type_: **[NodeType](Systems.Bpm.ProcessNodes.md#nodetype)**  
 Allowed values for the [NodeType](Systems.Bpm.ProcessNodes.md#nodetype) data attribute  
@@ -78,14 +78,14 @@ _Supports Order By_: **False**
 
 ### Process
 
-> The process, to which this Node belongs. [Required] [Filter(multi eq)] [Owner]
+The process, to which this Node belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Processes](Systems.Bpm.Processes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProcessLane
 
-> The process lane to which this Node belongs. [Required] [Filter(multi eq)]
+The process lane to which this Node belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[ProcessLanes](Systems.Bpm.ProcessLanes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

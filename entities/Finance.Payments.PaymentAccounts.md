@@ -30,7 +30,7 @@ Payment accounts are cash, bank and other accounts, which are used in payments. 
 
 ### Code
 
-> The unique code of the PaymentAccount. [Required] [Filter(eq;like)] [ORD]
+The unique code of the PaymentAccount. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -44,7 +44,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Indicates wheather the payment account is currently used (active). [Required] [Default(true)] [Filter(eq)]
+Indicates wheather the payment account is currently used (active). [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -53,7 +53,7 @@ _Default Value_: **True**
 
 ### Name
 
-> The name of this PaymentAccount. [Required] [Filter(like)]
+The name of this PaymentAccount. [Required] [Filter(like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -64,42 +64,42 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-> The access key, containing the user permissions for this PaymentAccount. Null means that all users have unlimited permissions. [Filter(multi eq)]
+The access key, containing the user permissions for this PaymentAccount. Null means that all users have unlimited permissions. [Filter(multi eq)]
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### BankAccount
 
-> The bank account, which is represented by this payment account. [Filter(multi eq)]
+The bank account, which is represented by this payment account. [Filter(multi eq)]
 
 _Type_: **[PartyBankAccounts](General.Contacts.PartyBankAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Currency
 
-> The currency in which the movements for this payment account will be recorded. [Required] [Filter(multi eq)]
+The currency in which the movements for this payment account will be recorded. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The Enterprise Company to which this PaymentAccount applies, or null if it is for all enterprise companies. [Filter(multi eq)]
+The Enterprise Company to which this PaymentAccount applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-> The Enterprise Company Location to which this PaymentAccount applies, or null if it is for all enterprise company locations. [Filter(multi eq)]
+The Enterprise Company Location to which this PaymentAccount applies, or null if it is for all enterprise company locations. [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentType
 
-> Specifies the payment type used to pay, when using this payment account. null when the payment type is unknown or unspecified. [Filter(multi eq)]
+Specifies the payment type used to pay, when using this payment account. null when the payment type is unknown or unspecified. [Filter(multi eq)]
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

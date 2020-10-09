@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### ResponsibleParty
 
-> The responsible party (usually employee) of the store. [Required] [Filter(multi eq)]
+The responsible party (usually employee) of the store. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-> The store for which we specify the responsible party. [Required] [Filter(multi eq)] [Owner]
+The store for which we specify the responsible party. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

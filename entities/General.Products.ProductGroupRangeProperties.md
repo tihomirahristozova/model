@@ -27,7 +27,7 @@ When specified for a product group, provides a way for automatical creation of n
 
 ### FromPropertyValue
 
-> Starting value of the range of alternative values. Used only when Rage Type = R (range).
+Starting value of the range of alternative values. Used only when Rage Type = R (range).
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### PropertyValuesList
 
-> Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).
+Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### RangeType
 
-> Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. [Required] [Default("R")]
+Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. [Required] [Default("R")]
 
 _Type_: **[RangeType](General.Products.ProductGroupRangeProperties.md#rangetype)**  
 Allowed values for the [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) data attribute  
@@ -66,7 +66,7 @@ _Default Value_: **Range**
 
 ### ToPropertyValue
 
-> Ending value of the range of alternative values. Used only when Rage Type = R (range).
+Ending value of the range of alternative values. Used only when Rage Type = R (range).
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -77,14 +77,14 @@ _Supports Order By_: **False**
 
 ### ProductGroup
 
-> The [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner]
+The [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property
 
-> The property whose values will be altered. [Required] [Filter(multi eq)]
+The property whose values will be altered. [Required] [Filter(multi eq)]
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

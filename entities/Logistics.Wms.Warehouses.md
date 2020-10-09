@@ -32,7 +32,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Name of the warehouse (multilanguage). [Required] [Filter(eq;like)]
+Name of the warehouse (multilanguage). [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -40,7 +40,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this Warehouse.
+Notes for this Warehouse.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  

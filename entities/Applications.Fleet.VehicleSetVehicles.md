@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this VehicleSetVehicle. [Filter(like)]
+Notes for this VehicleSetVehicle. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### OrdinalPos
 
-> Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. [Filter(ge;le)]
+Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. [Filter(ge;le)]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -50,14 +50,14 @@ _Supports Order By_: **False**
 
 ### Vehicle
 
-> The Vehicle which is part of the vehicle set. [Required] [Filter(multi eq)]
+The Vehicle which is part of the vehicle set. [Required] [Filter(multi eq)]
 
 _Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VehicleSet
 
-> The [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner]
+The [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[VehicleSets](Applications.Fleet.VehicleSets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

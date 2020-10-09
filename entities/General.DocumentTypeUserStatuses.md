@@ -28,7 +28,7 @@ User-defined document statuses. Entity: Gen_Document_Type_User_Statuses
 
 ### Active
 
-> Is the user status active for applying to documents. [Required] [Default(true)] [Filter(eq)]
+Is the user status active for applying to documents. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -37,7 +37,7 @@ _Default Value_: **True**
 
 ### DisplayOrder
 
-> Consecutive display order of the status, with regard to other statuses within the same document type. [Required] [Filter(ge;le)]
+Consecutive display order of the status, with regard to other statuses within the same document type. [Required] [Filter(ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### Instructions
 
-> Instructions what should be done when this user status is active (Rich Text).
+Instructions what should be done when this user status is active (Rich Text).
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### IsExitStatus
 
-> True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. [Required] [Default(true)] [Filter(eq)]
+True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -73,7 +73,7 @@ _Default Value_: **True**
 
 ### State
 
-> The system state to which this user status is bound. [Required] [Filter(eq)]
+The system state to which this user status is bound. [Required] [Filter(eq)]
 
 _Type_: **[DocumentState](General.DocumentTypeUserStatuses.md#state)**  
 Enumeration of document system states  
@@ -94,7 +94,7 @@ _Supports Order By_: **False**
 
 ### UserStatusName
 
-> Multi-language name of the user status. [Required] [Filter(eq;like)]
+Multi-language name of the user status. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -105,7 +105,7 @@ _Supports Order By_: **False**
 
 ### DocumentType
 
-> The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner]
+The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

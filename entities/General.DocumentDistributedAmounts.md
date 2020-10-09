@@ -26,7 +26,7 @@ Contains the amounts which are distributed by the system over the document lines
 
 ### Amount
 
-> The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]
+The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -34,7 +34,7 @@ _Supports Order By_: **False**
 
 ### DocumentLineId
 
-> The Id of the line over which the amount is distributed. [Filter(multi eq)]
+The Id of the line over which the amount is distributed. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -50,21 +50,21 @@ _Default Value_: **NewGuid**
 
 ### Document
 
-> The [Document](General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]
+The [Document](General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentAmountType
 
-> The type of amount which is distributed. [Required] [Filter(multi eq)]
+The type of amount which is distributed. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReferencedDocument
 
-> In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)]
+In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

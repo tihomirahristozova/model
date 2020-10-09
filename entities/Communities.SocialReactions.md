@@ -26,7 +26,7 @@ Reaction of a user to any social comment to an object of the system. Entity: Cmm
 
 ### CreationTimeUtc
 
-> The exact server time (in UTC), when the reaction was created. [Required] [Default(NowUtc)]
+The exact server time (in UTC), when the reaction was created. [Required] [Default(NowUtc)]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### ReactionType
 
-> The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. [Required] [Filter(multi eq)]
+The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. [Required] [Filter(multi eq)]
 
 _Type_: **[ReactionType](Communities.SocialReactions.md#reactiontype)**  
 Allowed values for the [ReactionType](Communities.SocialReactions.md#reactiontype) data attribute  
@@ -64,21 +64,21 @@ _Supports Order By_: **False**
 
 ### DataObject
 
-> The root data object (post, marketplace product, document, etc), for which the reaction is. [Required] [Filter(multi eq)]
+The root data object (post, marketplace product, document, etc), for which the reaction is. [Required] [Filter(multi eq)]
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SocialComment
 
-> When not null, specifies that the reaction is for the specified comment within the data object. [Filter(multi eq)]
+When not null, specifies that the reaction is for the specified comment within the data object. [Filter(multi eq)]
 
 _Type_: **[SocialComments](Communities.SocialComments.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
-> The user, who reacted. [Required] [Filter(multi eq)]
+The user, who reacted. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

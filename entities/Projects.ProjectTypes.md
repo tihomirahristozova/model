@@ -38,7 +38,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of the project type. [Required] [Filter(eq;like)]
+The name of the project type. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -46,7 +46,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes.
+Notes.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> When not null means that the project type is specific to the enterprise company. [Filter(multi eq)]
+When not null means that the project type is specific to the enterprise company. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

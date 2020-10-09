@@ -24,7 +24,7 @@ Defines the periodic maintenance plans and the conditions for performing the nex
 
 ### CheckDays
 
-> When not null, specifies the number of days between maintenances.
+When not null, specifies the number of days between maintenances.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -32,7 +32,7 @@ _Supports Order By_: **False**
 
 ### CheckMonths
 
-> When not null, specifies the number of months between maintenances.
+When not null, specifies the number of months between maintenances.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Supports Order By_: **False**
 
 ### Code
 
-> The unique code of the MaintenancePlan. [Required]
+The unique code of the MaintenancePlan. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -54,7 +54,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> True if the plan is active and can be selected from drop-downs. [Required] [Default(true)] (Introduced in version 18.2)
+True if the plan is active and can be selected from drop-downs. [Required] [Default(true)] (Introduced in version 18.2)
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -63,7 +63,7 @@ _Default Value_: **True**
 
 ### MileageKm
 
-> When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur.
+When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -71,7 +71,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-> Maintenance plan name (Multilanguage). [Required]
+Maintenance plan name (Multilanguage). [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -79,7 +79,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this MaintenancePlan.
+Notes for this MaintenancePlan.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -87,7 +87,7 @@ _Supports Order By_: **False**
 
 ### TripCount
 
-> When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur.
+When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  

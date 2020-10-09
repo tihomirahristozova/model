@@ -28,7 +28,7 @@ Contains definitions of different variants of a product. The variants are differ
 
 ### BarCode
 
-> When specified, it contains a bar code which uniquely identifies the product variant. [Filter(eq;like)] [ORD]
+When specified, it contains a bar code which uniquely identifies the product variant. [Filter(eq;like)] [ORD]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -36,7 +36,7 @@ _Supports Order By_: **True**
 
 ### Code
 
-> The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. [Required] [Filter(eq;like)] [ReadOnly]
+The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. [Required] [Filter(eq;like)] [ReadOnly]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Product variant name. It is the concatenation of the names of the color, size and style. [ReadOnly]
+Product variant name. It is the concatenation of the names of the color, size and style. [ReadOnly]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -66,28 +66,28 @@ _Front-End Recalc Expressions:_
 
 ### Product
 
-> The product for which this variant is defined. [Required] [Filter(multi eq)] [Owner]
+The product for which this variant is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VariantColor
 
-> The color of the variant. null means that the variant does not have a specific color. [Filter(multi eq)]
+The color of the variant. null means that the variant does not have a specific color. [Filter(multi eq)]
 
 _Type_: **[VariantColors](General.Products.VariantColors.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VariantSize
 
-> The size of the variant. null means that the variant does not have a specific size. [Filter(multi eq)]
+The size of the variant. null means that the variant does not have a specific size. [Filter(multi eq)]
 
 _Type_: **[VariantSizes](General.Products.VariantSizes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VariantStyle
 
-> The style of the variant. null means that the variant does not have a specific style. [Filter(multi eq)]
+The style of the variant. null means that the variant does not have a specific style. [Filter(multi eq)]
 
 _Type_: **[VariantStyles](General.Products.VariantStyles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

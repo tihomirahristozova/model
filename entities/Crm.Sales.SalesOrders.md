@@ -111,7 +111,7 @@ Sales order document headers. Entity: Crm_Sales_Orders
 
 ### CompleteTime
 
-> Exact time, when the document was last completed[Filter(ge;le)]
+Exact time, when the document was last completed[Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -119,7 +119,7 @@ _Supports Order By_: **False**
 
 ### CreationTime
 
-> Date/Time when the document was created [Required][Filter(ge;le)]
+Date/Time when the document was created [Required][Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -128,7 +128,7 @@ _Default Value_: **CurrentDateTime**
 
 ### CreationUser
 
-> The login name of the user, who created the document [Required][Filter(like)]
+The login name of the user, who created the document [Required][Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -136,7 +136,7 @@ _Supports Order By_: **False**
 
 ### CreditLimitOverride
 
-> Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables. [Required] [Default(false)] [Filter(eq)]
+Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -145,7 +145,7 @@ _Default Value_: **False**
 
 ### CustomerPurchaseOrderDate
 
-> Issue date of the referent customer purchase order. [Filter(ge;le)]
+Issue date of the referent customer purchase order. [Filter(ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -153,7 +153,7 @@ _Supports Order By_: **False**
 
 ### CustomerPurchaseOrderNo
 
-> Reference number of the customer's purchase order. [Filter(eq;like)]
+Reference number of the customer's purchase order. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -161,7 +161,7 @@ _Supports Order By_: **False**
 
 ### DeliveryTermsCode
 
-> Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.
+Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.
 
 _Type_: **[DeliveryTerms](Crm.Sales.SalesOrders.md#deliverytermscode) (nullable)**  
 Generic enum type for DeliveryTerms properties  
@@ -188,7 +188,7 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => SalesOrderLinesRepository.DeliveryTermsCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### DocumentDate
 
-> The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]
+The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -197,7 +197,7 @@ _Default Value_: **CurrentDate**
 
 ### DocumentNo
 
-> Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]
+Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -205,7 +205,7 @@ _Supports Order By_: **True**
 
 ### DocumentNotes
 
-> Notes for this Document
+Notes for this Document
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -213,7 +213,7 @@ _Supports Order By_: **False**
 
 ### DocumentVersion
 
-> [Filter(eq;ge;le)]
+[Filter(eq;ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -222,7 +222,7 @@ _Default Value_: **1**
 
 ### EntityName
 
-> The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
+The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -230,7 +230,7 @@ _Supports Order By_: **True**
 
 ### FiscalSalesNumber
 
-> Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. [Filter(multi eq;like)] [ReadOnly] (Introduced in version 19.1)
+Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. [Filter(multi eq;like)] [ReadOnly] (Introduced in version 19.1)
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -238,7 +238,7 @@ _Supports Order By_: **False**
 
 ### FromDate
 
-> When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. (Introduced in version 20.1)
+When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. (Introduced in version 20.1)
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -254,7 +254,7 @@ _Default Value_: **NewGuid**
 
 ### IntrastatTransactionNatureCode
 
-> Transaction nature; used for Intrastat reporting.
+Transaction nature; used for Intrastat reporting.
 
 _Type_: **[TransactionNature](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) (nullable)**  
 Generic enum type for TransactionNature properties  
@@ -289,7 +289,7 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => SalesOrderLinesRepository.IntrastatTransactionNatureCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IntrastatTransportModeCode
 
-> Transport mode; used for Intrastat reporting.
+Transport mode; used for Intrastat reporting.
 
 _Type_: **[TransportMode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) (nullable)**  
 Generic enum type for TransportMode properties  
@@ -313,7 +313,7 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => SalesOrderLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IsReleased
 
-> True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -322,7 +322,7 @@ _Default Value_: **False**
 
 ### IsSingleExecution
 
-> Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -331,7 +331,7 @@ _Default Value_: **False**
 
 ### IsValidField
 
-> True when the order is valid (e.g. released and not void). Used for internal processing. [Required] [Default(false)] [ReadOnly]
+True when the order is valid (e.g. released and not void). Used for internal processing. [Required] [Default(false)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -340,7 +340,7 @@ _Default Value_: **False**
 
 ### Notes
 
-> Notes for this SalesOrder.
+Notes for this SalesOrder.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -348,7 +348,7 @@ _Supports Order By_: **False**
 
 ### ParentDocumentRelationshipType
 
-> Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
+Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
 
 _Type_: **[ParentDocument<br />RelationshipType](Crm.Sales.SalesOrders.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
@@ -364,7 +364,7 @@ _Supports Order By_: **False**
 
 ### PaymentDueDate
 
-> The last term for the payment of the sales order. [Filter(ge;le)]
+The last term for the payment of the sales order. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -374,7 +374,7 @@ _Front-End Recalc Expressions:_
 `obj.DocumentDate.AddDays( Convert( IIF( ( obj.ShipToCustomer.DefaultPaymentTermDays != 0), obj.ShipToCustomer.DefaultPaymentTermDays, obj.Customer.DefaultPaymentTermDays), Double))`
 ### PaymentDueStartDate
 
-> The date when the payment becomes due for documents with one installment. null when the document is with multiple installments.
+The date when the payment becomes due for documents with one installment. null when the document is with multiple installments.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -384,7 +384,7 @@ _Front-End Recalc Expressions:_
 `obj.DocumentDate.AddDays( Convert( IIF( ( obj.ShipToCustomer.DefaultPaymentStartDays != 0), obj.ShipToCustomer.DefaultPaymentStartDays, obj.Customer.DefaultPaymentStartDays), Double))`
 ### PlanningOnly
 
-> Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]
+Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]
 
 _Type_: **boolean (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -393,7 +393,7 @@ _Default Value_: **False**
 
 ### ReadOnly
 
-> True - the document is read only; false - the document is not read only [Required]
+True - the document is read only; false - the document is not read only [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -402,7 +402,7 @@ _Default Value_: **False**
 
 ### ReferenceDate
 
-> The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]
+The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -410,7 +410,7 @@ _Supports Order By_: **False**
 
 ### ReferenceDocumentNo
 
-> The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -418,7 +418,7 @@ _Supports Order By_: **False**
 
 ### ReleaseTime
 
-> Exact time, when the document was first released [Filter(ge;le)]
+Exact time, when the document was first released [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -426,7 +426,7 @@ _Supports Order By_: **False**
 
 ### RequiredDeliveryDate
 
-> The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term. [Filter(ge;le)]
+The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term. [Filter(ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -437,7 +437,7 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => SalesOrderLinesRepository.RequiredDeliveryDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### State
 
-> 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]
+0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]
 
 _Type_: **[DocumentState](Crm.Sales.SalesOrders.md#state)**  
 Enumeration of document system states  
@@ -459,7 +459,7 @@ _Default Value_: **0**
 
 ### ToDate
 
-> When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. (Introduced in version 20.1)
+When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. (Introduced in version 20.1)
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -469,7 +469,7 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => SalesOrderLinesRepository.LineToDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### Void
 
-> True if the document is null and void [Required][Filter(eq)]
+True if the document is null and void [Required][Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -478,7 +478,7 @@ _Default Value_: **False**
 
 ### VoidReason
 
-> Reason for voiding the document, entered by the user
+Reason for voiding the document, entered by the user
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -486,7 +486,7 @@ _Supports Order By_: **False**
 
 ### VoidTime
 
-> Date/time when the document has become void
+Date/time when the document has become void
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -494,7 +494,7 @@ _Supports Order By_: **False**
 
 ### VoidUser
 
-> The user who voided the document
+The user who voided the document
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -505,56 +505,56 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-> The access key, containing the user permissions for this document. null means that all users have unlimited permissions
+The access key, containing the user permissions for this document. null means that all users have unlimited permissions
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
 
-> The primary document, which the current document adjusts. null when this is not an adjustment document
+The primary document, which the current document adjusts. null when this is not an adjustment document
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
 
-> The user to which this document is assigned for handling. null means that the document is not assigned to specific user
+The user to which this document is assigned for handling. null means that the document is not assigned to specific user
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
 
-> The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
+The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
 
-> The primary customer, which placed the sales order. [Required] [Filter(multi eq)]
+The primary customer, which placed the sales order. [Required] [Filter(multi eq)]
 
 _Type_: **[Customers](Crm.Customers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Deal
 
-> The opportunity (deal) on which this order is based. [Filter(multi eq)]
+The opportunity (deal) on which this order is based. [Filter(multi eq)]
 
 _Type_: **[Deals](Crm.Presales.Deals.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Dealer
 
-> The external dealer, associated with the sales order. [Filter(multi eq)]
+The external dealer, associated with the sales order. [Filter(multi eq)]
 
 _Type_: **[Dealers](Crm.Dealers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DealType
 
-> Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. [Filter(multi eq)]
+Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. [Filter(multi eq)]
 
 _Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -563,7 +563,7 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => c.LineDealType).Distinct( ).OnlyIfSingle( )`
 ### DistributionChannel
 
-> The distribution channel, that is used to deliver the products. [Filter(multi eq)]
+The distribution channel, that is used to deliver the products. [Filter(multi eq)]
 
 _Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -572,7 +572,7 @@ _Front-End Recalc Expressions:_
 `obj.ShipToCustomer.DefaultDistributionChannel.IfNullThen( obj.Customer.DefaultDistributionChannel).IfNullThen( obj.DistributionChannel)`
 ### DocumentCurrency
 
-> The currency of the document; e.g. the currency of the amounts in the document. [Required] [Filter(multi eq)]
+The currency of the document; e.g. the currency of the amounts in the document. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -584,14 +584,14 @@ _Front-End Recalc Expressions:_
 `obj.ShipToCustomer.DefaultCurrency.IfNullThen( obj.Customer.DefaultCurrency).IfNullThen( obj.DocumentCurrency).IfNullThen( obj.EnterpriseCompany.BaseCurrency)`
 ### DocumentType
 
-> The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
+The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EndCustomerParty
 
-> The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. [Filter(multi eq)] (Introduced in version 20.1)
+The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. [Filter(multi eq)] (Introduced in version 20.1)
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -600,42 +600,42 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => c.LineEndCustomerParty).Distinct( ).OnlyIfSingle( )`
 ### EnterpriseCompany
 
-> The enterprise company which issued the document [Required]
+The enterprise company which issued the document [Required]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-> The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
+The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FiscalPrinterPosDevice
 
-> For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1)
+For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1)
 
 _Type_: **[Devices](Crm.Pos.Devices.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
 
-> The division of the company, issuing the document. null when the document is not issued by any specific division
+The division of the company, issuing the document. null when the document is not issued by any specific division
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
 
-> The party which issued the document [Required]
+The party which issued the document [Required]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatTransportCountry
 
-> Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]
+Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]
 
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -644,21 +644,21 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => c.IntrastatTransportCountry).Distinct( ).OnlyIfSingle( )`
 ### MasterDocument
 
-> In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
+In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-> In a multi-document tree, this is the direct parent document. If this is the root it is null
+In a multi-document tree, this is the direct parent document. If this is the root it is null
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentAccount
 
-> When not null, the payment account, where the payment is expected. null=no expectation for account. [Filter(multi eq)]
+When not null, the payment account, where the payment is expected. null=no expectation for account. [Filter(multi eq)]
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -668,7 +668,7 @@ _Front-End Recalc Expressions:_
 `obj.PaymentPlans.Select( c => c.PaymentAccount).Distinct( ).OnlyIfSingle( )`
 ### PaymentType
 
-> When not null specifies the payment type for the sales order. [Filter(multi eq)]
+When not null specifies the payment type for the sales order. [Filter(multi eq)]
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -678,70 +678,70 @@ _Front-End Recalc Expressions:_
 `obj.PaymentPlans.Select( c => c.PaymentType).Distinct( ).OnlyIfSingle( )`
 ### PosLocation
 
-> For POS sales, specifies the POS location, in which the sale is performed. null when the sales is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1)
+For POS sales, specifies the POS location, in which the sale is performed. null when the sales is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1)
 
 _Type_: **[Locations](Crm.Pos.Locations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosOperator
 
-> For POS sales, specifies the POS operator, who created the sale. null when the sale is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1)
+For POS sales, specifies the POS operator, who created the sale. null when the sale is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1)
 
 _Type_: **[Operators](Crm.Pos.Operators.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosTerminal
 
-> For POS sales, specifies the POS terminal, on which the sale is entered. null when the sales is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1)
+For POS sales, specifies the POS terminal, on which the sale is entered. null when the sales is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1)
 
 _Type_: **[Terminals](Crm.Pos.Terminals.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PriceList
 
-> The price list to be used for determining product prices in the lines. [Filter(multi eq)]
+The price list to be used for determining product prices in the lines. [Filter(multi eq)]
 
 _Type_: **[PriceLists](Crm.PriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimeCauseDocument
 
-> The document that is the prime cause for creation of the current document
+The document that is the prime cause for creation of the current document
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ResponsiblePerson
 
-> The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
+The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ReturnForInvoice
 
-> When specified indicates that some of the goods sold in the sales orders invoiced with Return_For_Invoice_Id are returned with the current document. [Filter(multi eq)]
+When specified indicates that some of the goods sold in the sales orders invoiced with Return_For_Invoice_Id are returned with the current document. [Filter(multi eq)]
 
 _Type_: **[Invoices](Crm.Invoicing.Invoices.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReturnForSalesOrder
 
-> When specified indicates that some of the goods sold in Return_For_Sales_Order_Id are returned with the current document. [Filter(multi eq;like)]
+When specified indicates that some of the goods sold in Return_For_Sales_Order_Id are returned with the current document. [Filter(multi eq;like)]
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 
 ### ReverseOfDocument
 
-> The document which the current document is reverse of
+The document which the current document is reverse of
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### SalesPerson
 
-> Internal company sales person. [Filter(multi eq)]
+Internal company sales person. [Filter(multi eq)]
 
 _Type_: **[SalesPersons](Crm.SalesPersons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -750,14 +750,14 @@ _Front-End Recalc Expressions:_
 `DetermineSalesPerson( obj.Transaction, obj.EnterpriseCompany, new [] {obj.Customer, obj.ShipToCustomer})`
 ### Sequence
 
-> The sequence that will be used to give new numbers to the documents of this type
+The sequence that will be used to give new numbers to the documents of this type
 
 _Type_: **[Sequences](General.Sequences.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ShipToCustomer
 
-> The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. [Filter(multi eq)]
+The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. [Filter(multi eq)]
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -766,7 +766,7 @@ _Front-End Recalc Expressions:_
 `DetermineShipToCustomer( obj.Transaction, obj.EnterpriseCompany, obj.EnterpriseCompanyLocation, obj.Customer, obj.ShipToCustomer)`
 ### ShipToPartyContactMechanism
 
-> The contact mechanism (address) to whih to ship the sales order. [Filter(multi eq)]
+The contact mechanism (address) to whih to ship the sales order. [Filter(multi eq)]
 
 _Type_: **[PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -775,7 +775,7 @@ _Front-End Recalc Expressions:_
 `obj.ShipToCustomer.Party.DefaultContactMechanism.IfNullThen( obj.Customer.Party.DefaultContactMechanism)`
 ### Store
 
-> The store from which to issue the sales order. null means that there is no store associated with the sales order or there are different stores for some of the lines. [Filter(multi eq)]
+The store from which to issue the sales order. null means that there is no store associated with the sales order or there are different stores for some of the lines. [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -784,21 +784,21 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => c.LineStore).Distinct( ).OnlyIfSingle( )`
 ### ToCompanyDivision
 
-> The division of the company, receiving the document. null when the document is not received by any specific division
+The division of the company, receiving the document. null when the document is not received by any specific division
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
 _Supported Filters_: **NotFilterable**  
 
 ### ToParty
 
-> The party which should receive the document
+The party which should receive the document
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### UserStatus
 
-> The user status of this document if applicable for this document type. null means unknown or not yet set
+The user status of this document if applicable for this document type. null means unknown or not yet set
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  

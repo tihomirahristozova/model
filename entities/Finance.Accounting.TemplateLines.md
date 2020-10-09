@@ -42,7 +42,7 @@ Each template line contains the posting to a single set of debit and credit acco
 
 ### AmountColumnName
 
-> The name of the column within the amount rowset where the amount is located. [Required]
+The name of the column within the amount rowset where the amount is located. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### AmountCondition
 
-> Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.
+Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.
 
 _Type_: **[AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) (nullable)**  
 Allowed values for the [AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) data attribute  
@@ -66,14 +66,14 @@ _Supports Order By_: **False**
 
 ### AmountRowId
 
-> The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. [Filter(multi eq)]
+The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AmountRowName
 
-> The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name.
+The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 ### AmountSourceFilter
 
-> Filter that further specifies which rows from the amount rowset determine the amount.
+Filter that further specifies which rows from the amount rowset determine the amount.
 
 _Type_: **dataaccessfilter (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -89,7 +89,7 @@ _Supports Order By_: **False**
 
 ### AmountSourceName
 
-> The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. [Required]
+The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -97,7 +97,7 @@ _Supports Order By_: **False**
 
 ### FilterXML
 
-> The line is accounted only when the filter is satisfied compared with the source document header.
+The line is accounted only when the filter is satisfied compared with the source document header.
 
 _Type_: **dataaccessfilter (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -111,7 +111,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Consecutive number of the line within the template. Determines the order of execution of the template lines. [Required]
+Consecutive number of the line within the template. Determines the order of execution of the template lines. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -124,7 +124,7 @@ _Front-End Recalc Expressions:_
 `( obj.Template.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Multiplier
 
-> Factor by which the amount from the source will be multiplied. [Required] [Default(1)]
+Factor by which the amount from the source will be multiplied. [Required] [Default(1)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -133,7 +133,7 @@ _Default Value_: **1**
 
 ### Notes
 
-> Notes for this TemplateLine.
+Notes for this TemplateLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -141,7 +141,7 @@ _Supports Order By_: **False**
 
 ### ValidFromDate
 
-> Start date from which the accounting template line is valid. [Filter(multi eq;ge;le)]
+Start date from which the accounting template line is valid. [Filter(multi eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -149,7 +149,7 @@ _Supports Order By_: **False**
 
 ### ValidToDate
 
-> End date to which the accounting template line is valid. [Filter(multi eq;ge;le)]
+End date to which the accounting template line is valid. [Filter(multi eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -160,21 +160,21 @@ _Supports Order By_: **False**
 
 ### CreditAccount
 
-> The account which should be credited. [Required] [Filter(multi eq)]
+The account which should be credited. [Required] [Filter(multi eq)]
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DebitAccount
 
-> The account which should be debited. [Required] [Filter(multi eq)]
+The account which should be debited. [Required] [Filter(multi eq)]
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Template
 
-> The [Template](Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [Template](Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Templates](Finance.Accounting.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

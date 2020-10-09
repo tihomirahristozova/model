@@ -33,7 +33,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this SupplySchemaRoute.
+Notes for this SupplySchemaRoute.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -41,7 +41,7 @@ _Supports Order By_: **False**
 
 ### SchemaXML
 
-> Obsolete. Not used. (Used by the schematic control).
+Obsolete. Not used. (Used by the schematic control).
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### TransitTimeDays
 
-> Obsolete. Not used. (Time needed for the delivery of the goods using this route). [Required] [Default(0)]
+Obsolete. Not used. (Time needed for the delivery of the goods using this route). [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -61,21 +61,21 @@ _Default Value_: **0**
 
 ### DestinationStore
 
-> Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. [Required] [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SourceStore
 
-> Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. [Required] [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SupplySchema
 
-> The [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner]
+The [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[SupplySchemata](Logistics.Inventory.SupplySchemata.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

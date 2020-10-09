@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this ProjectParticipant.
+Notes for this ProjectParticipant.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,21 +42,21 @@ _Supports Order By_: **False**
 
 ### ParticipantParty
 
-> The party Id of the participant. [Required] [Filter(multi eq)]
+The party Id of the participant. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Project
 
-> The project in which the participant will participate. [Required] [Filter(multi eq)] [Owner]
+The project in which the participant will participate. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Projects](Projects.Projects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTypeRole
 
-> The role which the participant will play in the project. null means that the role is undefined. [Filter(multi eq)]
+The role which the participant will play in the project. null means that the role is undefined. [Filter(multi eq)]
 
 _Type_: **[TypeRoles](Projects.TypeRoles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -45,7 +45,7 @@ Represents detail lines of orders for shipment of sales orders to customers. Eac
 
 ### BoxCount
 
-> The count of boxes in which the goods are packaged. null means unknown.
+The count of boxes in which the goods are packaged. null means unknown.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### Finished
 
-> True if this shipment should prohibit further shipments for the sales order line. [Required] [Default(false)] [Filter(eq)]
+True if this shipment should prohibit further shipments for the sales order line. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -62,7 +62,7 @@ _Default Value_: **False**
 
 ### GrossWeightkg
 
-> The gross weight of the whole line in kilogramms. null means unknown.
+The gross weight of the whole line in kilogramms. null means unknown.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -70,7 +70,7 @@ _Supports Order By_: **False**
 
 ### GuaranteePeriodDays
 
-> Guarantee period in days for the offered product. null for non-serviced products.
+Guarantee period in days for the offered product. null for non-serviced products.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -80,7 +80,7 @@ _Front-End Recalc Expressions:_
 `IIF( obj.ParentSalesOrderLine.Product.ProductType.IsServiced, obj.ParentSalesOrderLine.Product.GuaranteePeriodDays, null)`
 ### Heightm
 
-> The height of the package in meters. null means unknown.
+The height of the package in meters. null means unknown.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -94,7 +94,7 @@ _Default Value_: **NewGuid**
 
 ### Lengthm
 
-> The length of the package in meters. null means unknown.
+The length of the package in meters. null means unknown.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -102,7 +102,7 @@ _Supports Order By_: **False**
 
 ### LineNo
 
-> Line number, unique for the shipment. [Required]
+Line number, unique for the shipment. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -115,7 +115,7 @@ _Front-End Recalc Expressions:_
 `( obj.ShipmentOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### NetWeightkg
 
-> The net weight of the entire batch of goods in kilograms. null means unknown.
+The net weight of the entire batch of goods in kilograms. null means unknown.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -123,7 +123,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Specific notes for this line.
+Specific notes for this line.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -131,7 +131,7 @@ _Supports Order By_: **False**
 
 ### PalletNo
 
-> The number of the pallet in which the goods are packaged. null means unknown.
+The number of the pallet in which the goods are packaged. null means unknown.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -139,7 +139,7 @@ _Supports Order By_: **False**
 
 ### ParentLineNo
 
-> The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line.
+The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -147,7 +147,7 @@ _Supports Order By_: **False**
 
 ### PersistLot
 
-> If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. [Required] [Default(false)] [Filter(eq)]
+If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -156,7 +156,7 @@ _Default Value_: **False**
 
 ### Quantity
 
-> The quantity to be shipped. [Unit: QuantityUnit] [Required] [Default(1)]
+The quantity to be shipped. [Unit: QuantityUnit] [Required] [Default(1)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -167,7 +167,7 @@ _Front-End Recalc Expressions:_
 `new Quantity( obj.ParentSalesOrderLine.Quantity.Value, obj.QuantityUnit)`
 ### QuantityBase
 
-> The equivalence of Quantity in the base measurement category of the product. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required]
+The equivalence of Quantity in the base measurement category of the product. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -180,7 +180,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -193,7 +193,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### Volumel
 
-> The volume in litres of the whole batch. null means unknown.
+The volume in litres of the whole batch. null means unknown.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -201,7 +201,7 @@ _Supports Order By_: **False**
 
 ### Widthm
 
-> The width of the package in meters. null means unknown.
+The width of the package in meters. null means unknown.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -212,7 +212,7 @@ _Supports Order By_: **False**
 
 ### Lot
 
-> The store lot from which to take the goods. [Filter(multi eq)]
+The store lot from which to take the goods. [Filter(multi eq)]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -221,21 +221,21 @@ _Front-End Recalc Expressions:_
 `obj.ParentSalesOrderLine.Lot`
 ### ParentDocument
 
-> The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
+The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentSalesOrderLine
 
-> Sales order line which is shipped. [Required] [Filter(multi eq)]
+Sales order line which is shipped. [Required] [Filter(multi eq)]
 
 _Type_: **[SalesOrderLines](Crm.Sales.SalesOrderLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
-> The measurement unit of Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Quantity. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -244,21 +244,21 @@ _Front-End Recalc Expressions:_
 `obj.ParentSalesOrderLine.QuantityUnit`
 ### SerialNumber
 
-> The serial number of the shipped product. null means that serial number is unknown or not applicable. [Filter(multi eq)]
+The serial number of the shipped product. null means that serial number is unknown or not applicable. [Filter(multi eq)]
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ShipmentOrder
 
-> The [ShipmentOrder](Logistics.Shipment.ShipmentOrderLines.md#shipmentorder) to which this ShipmentOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [ShipmentOrder](Logistics.Shipment.ShipmentOrderLines.md#shipmentorder) to which this ShipmentOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ShipmentOrders](Logistics.Shipment.ShipmentOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreBin
 
-> The store bin from which to take the goods. [Filter(multi eq)]
+The store bin from which to take the goods. [Filter(multi eq)]
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

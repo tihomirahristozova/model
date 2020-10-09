@@ -37,7 +37,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this Template. [Required] [Filter(like)]
+The name of this Template. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -45,7 +45,7 @@ _Supports Order By_: **False**
 
 ### VoucherDateSource
 
-> Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual.
+Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### VoucherDescriptionMask
 
-> Template voucher description. Can use field substitutes, surrounded with square brackets.
+Template voucher description. Can use field substitutes, surrounded with square brackets.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### Route
 
-> The route which activates the template. [Required] [Filter(multi eq)] [Owner]
+The route which activates the template. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

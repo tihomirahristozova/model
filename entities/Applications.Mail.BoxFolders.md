@@ -33,7 +33,7 @@ Contains the folders inside the mailboxes. Entity: Mail_Box_Folders
 
 ### FolderName
 
-> Multi-language folder name. [Required] [Filter(eq;like)]
+Multi-language folder name. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### ServerFolderID
 
-> ID of the folder on the mail server in the format of the mail server. [Filter(eq)]
+ID of the folder on the mail server in the format of the mail server. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### SyncState
 
-> The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.
+The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 ### SystemPurpose
 
-> When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. [Filter(eq)] [ReadOnly]
+When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. [Filter(eq)] [ReadOnly]
 
 _Type_: **[SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) (nullable)**  
 Allowed values for the [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) data attribute  
@@ -86,14 +86,14 @@ _Supports Order By_: **False**
 
 ### MailBox
 
-> The [Box](Applications.Mail.Boxes.md) to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
+The [Box](Applications.Mail.Boxes.md) to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
 _Type_: **[Boxes](Applications.Mail.Boxes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentFolder
 
-> The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)]
+The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)]
 
 _Type_: **[BoxFolders](Applications.Mail.BoxFolders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

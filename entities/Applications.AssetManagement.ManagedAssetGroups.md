@@ -25,7 +25,7 @@ Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Intr
 
 ### Code
 
-> Unique (within all groups) code of the asset group. [Required] [Filter(multi eq;like)] [ORD]
+Unique (within all groups) code of the asset group. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -39,7 +39,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Name of the asset group (multi-language). [Required] [Filter(eq;like)]
+Name of the asset group (multi-language). [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -47,7 +47,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this ManagedAssetGroup.
+Notes for this ManagedAssetGroup.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### Parent
 
-> The parent asset group in the hierarchy. null means this is a root group. [Filter(multi eq)]
+The parent asset group in the hierarchy. null means this is a root group. [Filter(multi eq)]
 
 _Type_: **[ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

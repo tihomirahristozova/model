@@ -26,7 +26,7 @@ Contains project risks, which will be copied to projects, based on the template.
 
 ### Description
 
-> The description of this TemplateRisk.
+The description of this TemplateRisk.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Default Value_: **NewGuid**
 
 ### ImpactPercent
 
-> The impact of the risk to the project, expressed as percentage of the total project value. [Required] [Default(0)]
+The impact of the risk to the project, expressed as percentage of the total project value. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Default Value_: **0**
 
 ### ProbabilityPercent
 
-> The probability of the risk occurring. [Required] [Default(0)]
+The probability of the risk occurring. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Default Value_: **0**
 
 ### RiskName
 
-> The name of the risk. [Required]
+The name of the risk. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 ### ProjectTemplate
 
-> The [Template](Projects.Templates.md) to which this TemplateRisk belongs. [Required] [Filter(multi eq)] [Owner]
+The [Template](Projects.Templates.md) to which this TemplateRisk belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Templates](Projects.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

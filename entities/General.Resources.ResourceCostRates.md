@@ -28,7 +28,7 @@ Contains cost rates for different periods for resources. Each record is valid un
 
 ### FromDate
 
-> Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined. [Required] [Filter(eq;ge;le)]
+Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined. [Required] [Filter(eq;ge;le)]
 
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -42,7 +42,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this ResourceCostRate.
+Notes for this ResourceCostRate.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### OvertimeRatePerHour
 
-> The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. null means that there is no special overtime rate and the standard rate should be applied. [Currency: Resource.CostingCurrency] [Filter(eq;like)]
+The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. null means that there is no special overtime rate and the standard rate should be applied. [Currency: Resource.CostingCurrency] [Filter(eq;like)]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### PerUseCost
 
-> One-time cost for each usage of the resource in the resources costing currency. [Currency: Resource.CostingCurrency] [Required] [Default(0)] [Filter(eq;like)]
+One-time cost for each usage of the resource in the resources costing currency. [Currency: Resource.CostingCurrency] [Required] [Default(0)] [Filter(eq;like)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, Like**  
@@ -67,7 +67,7 @@ _Default Value_: **Constant**
 
 ### StandardRatePerHour
 
-> The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours. [Currency: Resource.CostingCurrency] [Required] [Filter(eq;like)]
+The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours. [Currency: Resource.CostingCurrency] [Required] [Filter(eq;like)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, Like**  
@@ -78,14 +78,14 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company for which the cost is defined. [Required] [Filter(multi eq)]
+The enterprise company for which the cost is defined. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Resource
 
-> The resource for which the cost rate is defined. [Required] [Filter(multi eq)] [Owner]
+The resource for which the cost rate is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### LineNumber
 
-> Consecutive line number of the package, unique within the document. [Required] [Filter(eq)]
+Consecutive line number of the package, unique within the document. [Required] [Filter(eq)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals**  
@@ -44,7 +44,7 @@ _Front-End Recalc Expressions:_
 `( obj.SalesOrder.PromotionalPackages.Select( c => c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)`
 ### NumberOfPackages
 
-> Number of packages sold. [Required] [Default(0)]
+Number of packages sold. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -56,14 +56,14 @@ _Default Value_: **0**
 
 ### PromotionalPackage
 
-> The type of promotional package sold. [Required] [Filter(multi eq)]
+The type of promotional package sold. [Required] [Filter(multi eq)]
 
 _Type_: **[PromotionalPackages](Crm.PromotionalPackages.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesOrder
 
-> The [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) to which this SalesOrderPromotionalPackage belongs. [Required] [Filter(multi eq)] [Owner]
+The [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) to which this SalesOrderPromotionalPackage belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

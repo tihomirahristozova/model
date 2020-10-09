@@ -34,7 +34,7 @@ Contains design layouts for document printouts. Entity: Gen_Printout_Layouts
 
 ### BinaryLayout
 
-> The printout layout, when the format requires binary storage. Alternative to Layout.
+The printout layout, when the format requires binary storage. Alternative to Layout.
 
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,7 +42,7 @@ _Supports Order By_: **False**
 
 ### DocumentEntityName
 
-> The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. [Required] [Filter(eq)]
+The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### Layout
 
-> The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout.
+The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### LayoutFormat
 
-> Format specifier of the layout. Recognized by the application. [Required] [Filter(multi eq)]
+Format specifier of the layout. Recognized by the application. [Required] [Filter(multi eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -72,7 +72,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-> The name of this PrintoutLayout. [Required] [Filter(eq;like)] [ORD]
+The name of this PrintoutLayout. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -80,7 +80,7 @@ _Supports Order By_: **True**
 
 ### Notes
 
-> Notes for this PrintoutLayout.
+Notes for this PrintoutLayout.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -91,7 +91,7 @@ _Supports Order By_: **False**
 
 ### DataSource
 
-> The data source for the printout. [Filter(multi eq)]
+The data source for the printout. [Filter(multi eq)]
 
 _Type_: **[DataSources](Systems.Reporting.DataSources.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

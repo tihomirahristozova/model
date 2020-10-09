@@ -18,7 +18,7 @@ Contains the different colors, which can be assigned to product variants. Entity
 
 ### Code
 
-> Unique code of the color. Used to generate parts of bar-codes and in other coding schemes. [Required] [Filter(eq;like)] [ORD]
+Unique code of the color. Used to generate parts of bar-codes and in other coding schemes. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -32,7 +32,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this VariantColor. [Required] [Filter(eq;like)] [ORD]
+The name of this VariantColor. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  

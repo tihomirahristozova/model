@@ -44,7 +44,7 @@ Represents one task of a project. Entity: Prj_Project_Tasks
 
 ### BudgetLaborAmount
 
-> Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. [Currency: Project.BudgetingCurrency]
+Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. [Currency: Project.BudgetingCurrency]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -54,7 +54,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( obj.PlannedDurationHours != 0) AndAlso ( obj.WorkType != null)), obj.CalculateBudgetLaborAmount( ), new Amount( 0, obj.Project.BudgetingCurrency))`
 ### FinishDateTime
 
-> The date and time when the task is planned to finish. [Required] [Default(Now)] [Filter(eq;ge;le)]
+The date and time when the task is planned to finish. [Required] [Default(Now)] [Filter(eq;ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -69,7 +69,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this ProjectTask.
+Notes for this ProjectTask.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -77,7 +77,7 @@ _Supports Order By_: **False**
 
 ### PlannedDurationHours
 
-> Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. [Required] [Default(0)]
+Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -86,7 +86,7 @@ _Default Value_: **0**
 
 ### ProjectTaskNo
 
-> Consecutive task number, unique within the project. [Required]
+Consecutive task number, unique within the project. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -94,7 +94,7 @@ _Supports Order By_: **False**
 
 ### StartDateTime
 
-> The date and time when the task is planned to start. [Required] [Default(Now)] [Filter(eq;ge;le)]
+The date and time when the task is planned to start. [Required] [Default(Now)] [Filter(eq;ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -103,7 +103,7 @@ _Default Value_: **CurrentDateTime**
 
 ### TaskName
 
-> The short name of the task. It is best practice to contain the target of the task. [Required] [Filter(multi eq;like)]
+The short name of the task. It is best practice to contain the target of the task. [Required] [Filter(multi eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -114,49 +114,49 @@ _Supports Order By_: **False**
 
 ### Activity
 
-> The Id of the Cm_Activity created for this task. null means that activity is still not created. [Filter(multi eq)]
+The Id of the Cm_Activity created for this task. null means that activity is still not created. [Filter(multi eq)]
 
 _Type_: **[Activities](General.Contacts.Activities.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Project
 
-> The project, to which this task belongs. [Required] [Filter(multi eq)]
+The project, to which this task belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[Projects](Projects.Projects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectWorkElement
 
-> The work element under which the task is filed. [Required] [Filter(multi eq)]
+The work element under which the task is filed. [Required] [Filter(multi eq)]
 
 _Type_: **[ProjectWorkElements](Projects.ProjectWorkElements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Resource
 
-> The resource, which is required for the task. null means - do not plan any resource. [Filter(multi eq)]
+The resource, which is required for the task. null means - do not plan any resource. [Filter(multi eq)]
 
 _Type_: **[Resources](Projects.Resources.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsibleParty
 
-> The responsible party. Usually a person and usually one of the project participants. null means that responsible is not yet determined. [Filter(multi eq)]
+The responsible party. Usually a person and usually one of the project participants. null means that responsible is not yet determined. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TaskType
 
-> The type of the task. Determines the work type of the tasks, default billing rules, etc. [Required] [Filter(multi eq)]
+The type of the task. Determines the work type of the tasks, default billing rules, etc. [Required] [Filter(multi eq)]
 
 _Type_: **[TaskTypes](Projects.TaskTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkType
 
-> Type of work to be done. null means that type of work is undetermined yet. [Filter(multi eq)]
+Type of work to be done. null means that type of work is undetermined yet. [Filter(multi eq)]
 
 _Type_: **[TypeWorkTypes](Projects.TypeWorkTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -29,7 +29,7 @@ _Default Value_: **NewGuid**
 
 ### SerialNumberField
 
-> The serial number text. [Required] [Filter(multi eq;like)]
+The serial number text. [Required] [Filter(multi eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -40,7 +40,7 @@ _Supports Order By_: **False**
 
 ### Product
 
-> The product, to which the serial number is bound. [Required] [Filter(multi eq)]
+The product, to which the serial number is bound. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

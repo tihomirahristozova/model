@@ -32,7 +32,7 @@ Specifies the contact mechanisms, which are attached to the parties. Currently e
 
 ### FromDate
 
-> The first date when the contact mechanism was valid. null means unknown date. [Default(Today)] [Filter(eq;ge;le)]
+The first date when the contact mechanism was valid. null means unknown date. [Default(Today)] [Filter(eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> True if the contact mechanism is currently active and can be used to contact the party. [Required] [Default(true)] [Filter(eq)]
+True if the contact mechanism is currently active and can be used to contact the party. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -56,7 +56,7 @@ _Default Value_: **True**
 
 ### IsDefault
 
-> True - when this is the default contact mechanism for this party; false - otherwise. [Required] [Default(false)] [Filter(eq)]
+True - when this is the default contact mechanism for this party; false - otherwise. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -65,7 +65,7 @@ _Default Value_: **False**
 
 ### LineOrd
 
-> Consecutive number of the contact information. The number is unique within the party. [Required]
+Consecutive number of the contact information. The number is unique within the party. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -78,7 +78,7 @@ _Front-End Recalc Expressions:_
 `( obj.Party.ContactMechanisms.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### NonSolicitation
 
-> If true then Don't use the mechanism for solicitation purposes. [Required] [Default(false)] [Filter(eq)]
+If true then Don't use the mechanism for solicitation purposes. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -87,7 +87,7 @@ _Default Value_: **False**
 
 ### Notes
 
-> Notes for this PartyContactMechanism.
+Notes for this PartyContactMechanism.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -95,7 +95,7 @@ _Supports Order By_: **False**
 
 ### ThruDate
 
-> The last date on which the contact mechanism was valid for the party. null if the contact mechanism is still valid. [Filter(eq;ge;le)]
+The last date on which the contact mechanism was valid for the party. null if the contact mechanism is still valid. [Filter(eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -106,28 +106,28 @@ _Supports Order By_: **False**
 
 ### ContactMechanism
 
-> The contact mechanism of the party. [Required] [Filter(multi eq)]
+The contact mechanism of the party. [Required] [Filter(multi eq)]
 
 _Type_: **[ContactMechanisms](General.Contacts.ContactMechanisms.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ContactMechanismPurpose
 
-> The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms. [Filter(multi eq)] (Introduced in version 18.2)
+The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms. [Filter(multi eq)] (Introduced in version 18.2)
 
 _Type_: **[ContactMechanismPurposes](General.Contacts.ContactMechanismPurposes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
-> The party, having the contact mechanism. [Required] [Filter(multi eq)] [Owner]
+The party, having the contact mechanism. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PersonalDataProcess
 
-> The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown. [Filter(multi eq)] (Introduced in version 18.2)
+The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown. [Filter(multi eq)] (Introduced in version 18.2)
 
 _Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

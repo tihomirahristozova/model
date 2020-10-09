@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### Group
 
-> The group, in which the user is included. [Required] [Filter(multi eq)]
+The group, in which the user is included. [Required] [Filter(multi eq)]
 
 _Type_: **[Groups](Systems.Security.Groups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
-> The [User](Systems.Security.UserGroups.md#user) to which this UserGroup belongs. [Required] [Filter(multi eq)] [Owner]
+The [User](Systems.Security.UserGroups.md#user) to which this UserGroup belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

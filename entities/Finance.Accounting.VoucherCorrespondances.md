@@ -27,7 +27,7 @@ Obsolete. Not used. Entity: Acc_Voucher_Correspondances
 
 ### AmountBase
 
-> Obsolete. Not used. [Required] [Default(0)]
+Obsolete. Not used. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -36,7 +36,7 @@ _Default Value_: **0**
 
 ### CreditAmount
 
-> Obsolete. Not used. [Required] [Default(0)]
+Obsolete. Not used. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -45,14 +45,14 @@ _Default Value_: **0**
 
 ### CreditVoucherLineId
 
-> Obsolete. Not used. (The voucher line which contains the credited account). [Required] [Filter(multi eq)]
+Obsolete. Not used. (The voucher line which contains the credited account). [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DebitAmount
 
-> Obsolete. Not used. [Required] [Default(0)]
+Obsolete. Not used. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -61,7 +61,7 @@ _Default Value_: **0**
 
 ### DebitVoucherLineId
 
-> Obsolete. Not used. (The voucher line which contains the debited account). [Required] [Filter(multi eq)]
+Obsolete. Not used. (The voucher line which contains the debited account). [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -77,7 +77,7 @@ _Default Value_: **NewGuid**
 
 ### Voucher
 
-> The [AccountingVoucher](Finance.Accounting.AccountingVouchers.md) to which this VoucherCorrespondance belongs. [Required] [Filter(multi eq)] [Owner]
+The [AccountingVoucher](Finance.Accounting.AccountingVouchers.md) to which this VoucherCorrespondance belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[AccountingVouchers](Finance.Accounting.AccountingVouchers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

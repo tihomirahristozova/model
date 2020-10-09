@@ -38,7 +38,7 @@ Details of Transfer Orders. Each line contains order for the movement of one pro
 
 ### DueDateIn
 
-> The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header. [Required] [Filter(ge;le)]
+The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header. [Required] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -51,7 +51,7 @@ _Front-End Recalc Expressions:_
 `obj.TransferOrder.DefaultDueDateIn`
 ### DueDateOut
 
-> When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header. [Required] [Filter(ge;le)]
+When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header. [Required] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -70,7 +70,7 @@ _Default Value_: **NewGuid**
 
 ### LineOrd
 
-> Line ordinal position within the transaction. Duplicates are allowed, but not advised. [Required]
+Line ordinal position within the transaction. Duplicates are allowed, but not advised. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -83,7 +83,7 @@ _Front-End Recalc Expressions:_
 `( obj.TransferOrder.Lines.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-> Notes for this TransferOrderLine.
+Notes for this TransferOrderLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -91,7 +91,7 @@ _Supports Order By_: **False**
 
 ### Quantity
 
-> Quantity ordered for transfer. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
+Quantity ordered for transfer. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -100,7 +100,7 @@ _Default Value_: **Constant**
 
 ### QuantityBase
 
-> Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)]
+Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -113,7 +113,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -126,7 +126,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardUnitPrice
 
-> Standard unit price of the product during the creation of the transfer order line. [Currency: TransferOrder.DocumentCurrency]
+Standard unit price of the product during the creation of the transfer order line. [Currency: TransferOrder.DocumentCurrency]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -139,21 +139,21 @@ _Front-End Recalc Expressions:_
 
 ### FromStoreBin
 
-> From which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)]
+From which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)]
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 
-> If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]
+If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The product which will be transferred. [Required] [Filter(multi eq)]
+The product which will be transferred. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -162,7 +162,7 @@ _Front-End Recalc Expressions:_
 `obj.ProductCode.Product.IfNullThen( obj.Product)`
 ### ProductCode
 
-> Selects the product thru some of the product codes. [Filter(multi eq)]
+Selects the product thru some of the product codes. [Filter(multi eq)]
 
 _Type_: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -171,14 +171,14 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Product != null) AndAlso ( obj.ProductCode != null)) AndAlso ( obj.Product != obj.ProductCode.Product)), null, obj.ProductCode)`
 ### ProductVariant
 
-> If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]
+If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]
 
 _Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
-> The measurement unit of Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Quantity. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -187,21 +187,21 @@ _Front-End Recalc Expressions:_
 `obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen( obj.Product.MeasurementUnit.IfNullThen( obj.QuantityUnit))`
 ### SerialNumber
 
-> Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]
+Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToStoreBin
 
-> To which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)]
+To which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)]
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransferOrder
 
-> The parent transfer order. [Required] [Filter(multi eq)] [Owner]
+The parent transfer order. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[TransferOrders](Logistics.Inventory.TransferOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

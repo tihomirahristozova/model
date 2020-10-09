@@ -31,7 +31,7 @@ Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log
 
 ### ApplicationName
 
-> The client application that triggered the event. Null when unknown or N/A. [Filter(eq;like)]
+The client application that triggered the event. Null when unknown or N/A. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### Details
 
-> Detailed contents of the event. Contents depend on the Event Type and Event Name.
+Detailed contents of the event. Contents depend on the Event Type and Event Name.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -47,14 +47,14 @@ _Supports Order By_: **False**
 
 ### EntityItemId
 
-> The Id of the record, which is referenced by the event. Null when unknown or N/A. [Filter(multi eq)]
+The Id of the record, which is referenced by the event. Null when unknown or N/A. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EntityName
 
-> The entity, which is being referenced by the event. Null when unknown or N/A. [Filter(eq;like)]
+The entity, which is being referenced by the event. Null when unknown or N/A. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -62,7 +62,7 @@ _Supports Order By_: **False**
 
 ### EventClass
 
-> The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. [Required] [Filter(multi eq)]
+The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. [Required] [Filter(multi eq)]
 
 _Type_: **[EventClass](Systems.Core.AuditLogEntries.md#eventclass)**  
 Allowed values for the [EventClass](Systems.Core.AuditLogEntries.md#eventclass) data attribute  
@@ -79,7 +79,7 @@ _Supports Order By_: **False**
 
 ### EventName
 
-> Specific event or method name. Contents depend on the Event Type. Null when N/A. [Filter(eq;like)]
+Specific event or method name. Contents depend on the Event Type. Null when N/A. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -87,7 +87,7 @@ _Supports Order By_: **False**
 
 ### EventTimeUtc
 
-> The exact date and time (in Utc) when the event occurred. [Required] [Default(Now)] [Filter(ge;le)] [ORD]
+The exact date and time (in Utc) when the event occurred. [Required] [Default(Now)] [Filter(ge;le)] [ORD]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -96,7 +96,7 @@ _Default Value_: **CurrentDateTime**
 
 ### EventType
 
-> Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. [Required] [Filter(multi eq)]
+Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. [Required] [Filter(multi eq)]
 
 _Type_: **[EventType](Systems.Core.AuditLogEntries.md#eventtype)**  
 Allowed values for the [EventType](Systems.Core.AuditLogEntries.md#eventtype) data attribute  
@@ -133,14 +133,14 @@ _Default Value_: **NewGuid**
 
 ### PersonalDataProcess
 
-> The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. [Filter(multi eq)]
+The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. [Filter(multi eq)]
 
 _Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
-> The user account under which the event has occurred. Null only for events which are not user-specific. [Filter(multi eq)]
+The user account under which the event has occurred. Null only for events which are not user-specific. [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

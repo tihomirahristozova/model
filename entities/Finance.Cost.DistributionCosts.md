@@ -25,7 +25,7 @@ The cost types and their amounts which are distributed by a Cost Distribution do
 
 ### AmountBase
 
-> The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]
+The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals**  
@@ -39,7 +39,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this DistributionCost.
+Notes for this DistributionCost.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -50,14 +50,14 @@ _Supports Order By_: **False**
 
 ### CostDistribution
 
-> The [Distribution](Finance.Cost.Distributions.md) to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner]
+The [Distribution](Finance.Cost.Distributions.md) to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostType
 
-> The type of the cost, which will be distributed. [Required] [Filter(multi eq)]
+The type of the cost, which will be distributed. [Required] [Filter(multi eq)]
 
 _Type_: **[CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

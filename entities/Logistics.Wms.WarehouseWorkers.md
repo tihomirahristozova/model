@@ -28,7 +28,7 @@ Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_
 
 ### ActiveFrom
 
-> The date, from which the worker record has become active in the warehouse. [Required] [Default(Today)] [Filter(eq;ge;le)]
+The date, from which the worker record has become active in the warehouse. [Required] [Default(Today)] [Filter(eq;ge;le)]
 
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -37,7 +37,7 @@ _Default Value_: **CurrentDate**
 
 ### ActiveTo
 
-> The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. [Filter(eq;ge;le)]
+The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. [Filter(eq;ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -51,7 +51,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Specifies whether the worker is active and can execute new warehouse tasks. [Required] [Default(true)] [Filter(eq)]
+Specifies whether the worker is active and can execute new warehouse tasks. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -60,7 +60,7 @@ _Default Value_: **True**
 
 ### Name
 
-> Name of the worker (multi-language). [Required] [Filter(multi eq;like)]
+Name of the worker (multi-language). [Required] [Filter(multi eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -68,7 +68,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this WarehouseWorker.
+Notes for this WarehouseWorker.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -79,14 +79,14 @@ _Supports Order By_: **False**
 
 ### Person
 
-> The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. [Filter(multi eq)]
+The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Warehouse
 
-> The warehouse, where the worker works. [Required] [Filter(multi eq)] [Owner]
+The warehouse, where the worker works. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

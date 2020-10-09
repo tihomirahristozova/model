@@ -25,7 +25,7 @@ Represents the hierarchy of the function groups. They group the multitude of res
 
 ### FullPath
 
-> The full path of the item. [Required] [Default("")] [Filter(eq;like)]
+The full path of the item. [Required] [Default("")] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -40,7 +40,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this FunctionGroup. [Required] [Filter(like)]
+The name of this FunctionGroup. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### Parent
 
-> The path of the parent item. [Required] [Default("/")] [Filter(eq;like)] [ORD]
+The path of the parent item. [Required] [Default("/")] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  

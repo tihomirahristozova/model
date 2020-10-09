@@ -23,7 +23,7 @@ Contains the different types of discounts, which can be applied to sales lines. 
 
 ### ActionType
 
-> Specifies the way the discount is applied over the previous discounts. [Required] [Default("A")] [Filter(multi eq)]
+Specifies the way the discount is applied over the previous discounts. [Required] [Default("A")] [Filter(multi eq)]
 
 _Type_: **[ActionType](Crm.DiscountTypes.md#actiontype)**  
 Allowed values for the [ActionType](Crm.DiscountTypes.md#actiontype) data attribute  
@@ -41,7 +41,7 @@ _Default Value_: **Add**
 
 ### CalculationMethod
 
-> Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. [Required] [Filter(multi eq)]
+Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. [Required] [Filter(multi eq)]
 
 _Type_: **[CalculationMethod](Crm.DiscountTypes.md#calculationmethod)**  
 Allowed values for the [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) data attribute  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### Code
 
-> The unique code of the DiscountType. [Required] [Filter(eq)]
+The unique code of the DiscountType. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -72,7 +72,7 @@ _Default Value_: **NewGuid**
 
 ### IsSystem
 
-> Specifies whether this discount type is created and managed by the system. [Required] [Default(false)] [Filter(multi eq)]
+Specifies whether this discount type is created and managed by the system. [Required] [Default(false)] [Filter(multi eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -81,7 +81,7 @@ _Default Value_: **False**
 
 ### Name
 
-> The name of this DiscountType. [Required] [Filter(like)]
+The name of this DiscountType. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -89,7 +89,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this DiscountType.
+Notes for this DiscountType.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -97,7 +97,7 @@ _Supports Order By_: **False**
 
 ### Ord
 
-> Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. [Required] [Default(1)] [Filter(ge;le)]
+Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  

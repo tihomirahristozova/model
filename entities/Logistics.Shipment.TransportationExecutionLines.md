@@ -33,7 +33,7 @@ Contains details of executions of transportation order lines. Entity: Log_Transp
 
 ### ExecutionDate
 
-> The date when the operation was executed. [Required]
+The date when the operation was executed. [Required]
 
 _Type_: **date**  
 _Supported Filters_: **NotFilterable**  
@@ -46,7 +46,7 @@ _Front-End Recalc Expressions:_
 `obj.TransportationExecution.ExecutionDate`
 ### ExecutionTime
 
-> The time when the operation was executed. [Required]
+The time when the operation was executed. [Required]
 
 _Type_: **time**  
 _Supported Filters_: **NotFilterable**  
@@ -65,7 +65,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Consecutive line number within this execution. [Required]
+Consecutive line number within this execution. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -78,7 +78,7 @@ _Front-End Recalc Expressions:_
 `( obj.TransportationExecution.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-> Notes for this TransportationExecutionLine.
+Notes for this TransportationExecutionLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 ### OperationType
 
-> The type of operation being executed. L=Loading; U=Unloading; O=Other. [Required]
+The type of operation being executed. L=Loading; U=Unloading; O=Other. [Required]
 
 _Type_: **[OperationType](Logistics.Shipment.TransportationExecutionLines.md#operationtype)**  
 Allowed values for the [OperationType](Logistics.Shipment.TransportationExecutionLines.md#operationtype) data attribute  
@@ -103,7 +103,7 @@ _Supports Order By_: **False**
 
 ### PalletNumber
 
-> Pallet number, when applicable. null when unknown or not applicable.
+Pallet number, when applicable. null when unknown or not applicable.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -111,7 +111,7 @@ _Supports Order By_: **False**
 
 ### PalletsCount
 
-> Number of pallets affected by this operation. null when unknown or N/A.
+Number of pallets affected by this operation. null when unknown or N/A.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -119,7 +119,7 @@ _Supports Order By_: **False**
 
 ### VolumeCbm
 
-> Cargo volume in cubic meters, affected by this operation. null when unknown or N/A.
+Cargo volume in cubic meters, affected by this operation. null when unknown or N/A.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -127,7 +127,7 @@ _Supports Order By_: **False**
 
 ### WeightKg
 
-> Cargo weight in kg, affected by this operation. null when unknown or N/A.
+Cargo weight in kg, affected by this operation. null when unknown or N/A.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -138,14 +138,14 @@ _Supports Order By_: **False**
 
 ### ExecutionOfTransportationOrderLine
 
-> The transportation order line, which is executed. [Required] [Filter(multi eq)]
+The transportation order line, which is executed. [Required] [Filter(multi eq)]
 
 _Type_: **[TransportationOrderLines](Logistics.Shipment.TransportationOrderLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### GeoPoint
 
-> The geographic point, where the operation is executed. [Required] [Filter(multi eq)]
+The geographic point, where the operation is executed. [Required] [Filter(multi eq)]
 
 _Type_: **[GeoPoints](General.Geography.GeoPoints.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -157,7 +157,7 @@ _Front-End Recalc Expressions:_
 `obj.TransportationExecution.GeoPoint`
 ### TransportationExecution
 
-> The [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) to which this TransportationExecutionLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) to which this TransportationExecutionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

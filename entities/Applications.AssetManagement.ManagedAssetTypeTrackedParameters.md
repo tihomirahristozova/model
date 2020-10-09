@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this ManagedAssetTypeTrackedParameter.
+Notes for this ManagedAssetTypeTrackedParameter.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -41,14 +41,14 @@ _Supports Order By_: **False**
 
 ### ManagedAssetType
 
-> The asset type for which the tracked parameter is defined. [Required] [Filter(multi eq)] [Owner]
+The asset type for which the tracked parameter is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrackedParameter
 
-> The parameter, which will be tracked for assets of the specified type. [Required] [Filter(multi eq)]
+The parameter, which will be tracked for assets of the specified type. [Required] [Filter(multi eq)]
 
 _Type_: **[TrackedParameters](Applications.AssetManagement.TrackedParameters.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

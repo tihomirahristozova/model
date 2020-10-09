@@ -25,7 +25,7 @@ Contains the resources availability for the different periods. Each period is a 
 
 ### AvailableResources
 
-> The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. [Required] [Default(1)]
+The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. [Required] [Default(1)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -34,7 +34,7 @@ _Default Value_: **1**
 
 ### FromDate
 
-> The date from which availability starts. [Required]
+The date from which availability starts. [Required]
 
 _Type_: **date**  
 _Supported Filters_: **NotFilterable**  
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### ToDate
 
-> The date to which the availability continues. When null, the availability continues infinitely.
+The date to which the availability continues. When null, the availability continues infinitely.
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### Resource
 
-> The resource, for which we provide availability. [Required] [Filter(multi eq)] [Owner]
+The resource, for which we provide availability. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

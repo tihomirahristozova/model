@@ -51,7 +51,7 @@ User logins. Entity: Sec_Users
 
 ### AccessFailedCount
 
-> Indicates how many times the user has failed to login. May be used for locking out the user. [Required] [Default(0)] [Filter(eq;ge;le)] (Introduced in version 18.2)
+Indicates how many times the user has failed to login. May be used for locking out the user. [Required] [Default(0)] [Filter(eq;ge;le)] (Introduced in version 18.2)
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -60,7 +60,7 @@ _Default Value_: **0**
 
 ### Active
 
-> True when the login is currently active and the user can log in. [Required] [Default(true)] [Filter(eq)]
+True when the login is currently active and the user can log in. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -69,7 +69,7 @@ _Default Value_: **True**
 
 ### CreationTimeUtc
 
-> The date and time (in UTC), when the user was created. [Required] [Default(Now)] [ReadOnly] (Introduced in version 18.2)
+The date and time (in UTC), when the user was created. [Required] [Default(Now)] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -78,7 +78,7 @@ _Default Value_: **CurrentDateTime**
 
 ### DefaultCulture
 
-> The preferred default culture of the user for UI, notifications, etc. null means "en-US". (Introduced in version 20.1)
+The preferred default culture of the user for UI, notifications, etc. null means "en-US". (Introduced in version 20.1)
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 ### Email
 
-> Unique email of the user. Can be null because there may be login providers that don't use emails. [Filter(multi eq;like)] [ORD] (Introduced in version 18.2)
+Unique email of the user. Can be null because there may be login providers that don't use emails. [Filter(multi eq;like)] [ORD] (Introduced in version 18.2)
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -94,7 +94,7 @@ _Supports Order By_: **True**
 
 ### EmailConfirmed
 
-> Indicates whether the email address for the specified user has been verified. [Required] [Default(false)] [Filter(eq)] (Introduced in version 18.2)
+Indicates whether the email address for the specified user has been verified. [Required] [Default(false)] [Filter(eq)] (Introduced in version 18.2)
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -109,7 +109,7 @@ _Default Value_: **NewGuid**
 
 ### IsAdmin
 
-> True if the user is administrator, otherwise false. [Required] [Default(false)] [Filter(eq)]
+True if the user is administrator, otherwise false. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -118,7 +118,7 @@ _Default Value_: **False**
 
 ### LockoutEndUtc
 
-> Contains the date and time (in UTC) until the user is locked. null when the user is not locked. [Filter(eq;ge;le;like)] (Introduced in version 18.2)
+Contains the date and time (in UTC) until the user is locked. null when the user is not locked. [Filter(eq;ge;le;like)] (Introduced in version 18.2)
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, Like**  
@@ -126,7 +126,7 @@ _Supports Order By_: **False**
 
 ### Login
 
-> The login name of the user, which is usually the email. [Required] [Filter(multi eq;like)] [ORD]
+The login name of the user, which is usually the email. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -134,7 +134,7 @@ _Supports Order By_: **True**
 
 ### Name
 
-> The full name of the user. [Required] [Filter(like)]
+The full name of the user. [Required] [Filter(like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -142,7 +142,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this User.
+Notes for this User.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -150,7 +150,7 @@ _Supports Order By_: **False**
 
 ### Password
 
-> The password hash of the user, stored in the format, specified in Password Format.
+The password hash of the user, stored in the format, specified in Password Format.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -158,7 +158,7 @@ _Supports Order By_: **False**
 
 ### PasswordFormat
 
-> The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. [Required] [Default("MD5")] [Filter(eq)] (Introduced in version 18.2)
+The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. [Required] [Default("MD5")] [Filter(eq)] (Introduced in version 18.2)
 
 _Type_: **[PasswordFormat](Systems.Security.Users.md#passwordformat)**  
 Allowed values for the [PasswordFormat](Systems.Security.Users.md#passwordformat) data attribute  
@@ -175,7 +175,7 @@ _Default Value_: **MD5**
 
 ### PhoneNumber
 
-> Used only for two-factor authentication. null when phone-based two-factor is not used. [Filter(eq;like)] (Introduced in version 18.2)
+Used only for two-factor authentication. null when phone-based two-factor is not used. [Filter(eq;like)] (Introduced in version 18.2)
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -183,7 +183,7 @@ _Supports Order By_: **False**
 
 ### PhoneNumberConfirmed
 
-> Indicates whether the Phone Number has been verified. [Required] [Default(false)] [Filter(eq)] (Introduced in version 18.2)
+Indicates whether the Phone Number has been verified. [Required] [Default(false)] [Filter(eq)] (Introduced in version 18.2)
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -192,7 +192,7 @@ _Default Value_: **False**
 
 ### TwoFactorEnabled
 
-> Indicates whether two-factor authentication has been enabled. [Required] [Default(false)] [Filter(eq)] (Introduced in version 18.2)
+Indicates whether two-factor authentication has been enabled. [Required] [Default(false)] [Filter(eq)] (Introduced in version 18.2)
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -201,7 +201,7 @@ _Default Value_: **False**
 
 ### UserType
 
-> Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. [Required] [Default("INT")] [Filter(multi eq)] (Introduced in version 18.2)
+Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. [Required] [Default("INT")] [Filter(multi eq)] (Introduced in version 18.2)
 
 _Type_: **[UserType](Systems.Security.Users.md#usertype)**  
 Allowed values for the [UserType](Systems.Security.Users.md#usertype) data attribute  
@@ -221,7 +221,7 @@ _Default Value_: **InternalUser**
 
 ### VoiceExtensionNumbers
 
-> Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration.
+Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -229,7 +229,7 @@ _Supports Order By_: **False**
 
 ### WindowsUserName
 
-> The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user.
+The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -240,14 +240,14 @@ _Supports Order By_: **False**
 
 ### Domain
 
-> The domain, to which the user belongs. [Filter(multi eq)] (Introduced in version 20.1)
+The domain, to which the user belongs. [Filter(multi eq)] (Introduced in version 20.1)
 
 _Type_: **[Domains](Systems.Security.Domains.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
-> The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. [Filter(multi eq)]
+The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

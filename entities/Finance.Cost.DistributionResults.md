@@ -26,7 +26,7 @@ Contains the results of a cost distribution calculation. Entity: Cost_Distributi
 
 ### DistributedAmountBase
 
-> The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required]
+The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Consecutive line number (within the cost distribution document) of the result. [Required]
+Consecutive line number (within the cost distribution document) of the result. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -53,7 +53,7 @@ _Front-End Recalc Expressions:_
 `( obj.CostDistribution.Results.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### OutputLineNo
 
-> The line number (within the document) of the output over which the cost is distributed. [Required]
+The line number (within the document) of the output over which the cost is distributed. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -64,14 +64,14 @@ _Supports Order By_: **False**
 
 ### CostDistribution
 
-> The [Distribution](Finance.Cost.Distributions.md) to which this DistributionResult belongs. [Required] [Filter(multi eq)] [Owner]
+The [Distribution](Finance.Cost.Distributions.md) to which this DistributionResult belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostType
 
-> The cost type for which the current distribution is calculated. [Required] [Filter(multi eq)]
+The cost type for which the current distribution is calculated. [Required] [Filter(multi eq)]
 
 _Type_: **[CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -24,7 +24,7 @@ Contains records of conflicts, which were automatically resolved by update proce
 
 ### ConflictDescription
 
-> Description of the conflict. [Required] [ReadOnly]
+Description of the conflict. [Required] [ReadOnly]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
@@ -38,7 +38,7 @@ _Default Value_: **NewGuid**
 
 ### ResolveConfirmedByUser
 
-> True, when the conflict resolution was manually confirmed by user. [Required] [Default(false)] [Filter(eq)]
+True, when the conflict resolution was manually confirmed by user. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -47,7 +47,7 @@ _Default Value_: **False**
 
 ### ResolveConfirmedTime
 
-> Time when the conflict resolution was confirmed by the user. [ReadOnly]
+Time when the conflict resolution was confirmed by the user. [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### ResolveDescription
 
-> Description of the resolution of the conflict. [Required] [ReadOnly]
+Description of the resolution of the conflict. [Required] [ReadOnly]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 ### ResolvedTime
 
-> Time when the resolution of the conflict was made. [Required] [Default(Now)] [ReadOnly]
+Time when the resolution of the conflict was made. [Required] [Default(Now)] [ReadOnly]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -72,7 +72,7 @@ _Default Value_: **CurrentDateTime**
 
 ### RevisedByUser
 
-> True, when the conflict resolution was revised (reviewed) manually by user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+True, when the conflict resolution was revised (reviewed) manually by user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -81,7 +81,7 @@ _Default Value_: **False**
 
 ### TableName
 
-> Name of the table in which the conflict has occurred. [Required] [Filter(like)] [ReadOnly]
+Name of the table in which the conflict has occurred. [Required] [Filter(like)] [ReadOnly]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -89,7 +89,7 @@ _Supports Order By_: **False**
 
 ### URL
 
-> URL of the item (the row) for which the conflict occurred. [Required] [ReadOnly]
+URL of the item (the row) for which the conflict occurred. [Required] [ReadOnly]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  

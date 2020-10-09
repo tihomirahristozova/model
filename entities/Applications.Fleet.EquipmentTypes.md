@@ -23,7 +23,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Name of the equipment type. [Required] [Filter(eq;like)]
+Name of the equipment type. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  

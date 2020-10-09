@@ -25,7 +25,7 @@ Contains payment options for user documnet types for sales orders. Entity: Crm_D
 
 ### DeferredPaymentMinimalAmmount
 
-> The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPaymentMinimalAmmountCurrency] [Required]
+The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPaymentMinimalAmmountCurrency] [Required]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,21 +42,21 @@ _Default Value_: **NewGuid**
 
 ### DeferredPaymentMinimalAmmountCurrency
 
-> The currency of Deferred Payment Minimal Amount. [Required] [Filter(multi eq)]
+The currency of Deferred Payment Minimal Amount. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
-> The document type for which the payment option applies. [Required] [Filter(multi eq)]
+The document type for which the payment option applies. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The enterprise company for which the payment options are specified. [Required] [Filter(multi eq)]
+The enterprise company for which the payment options are specified. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

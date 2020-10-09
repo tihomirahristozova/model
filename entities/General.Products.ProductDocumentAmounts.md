@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### LinePercent
 
-> The custom percent for the current product and amount type. [Required] [Default(0)]
+The custom percent for the current product and amount type. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -42,14 +42,14 @@ _Default Value_: **0**
 
 ### DocumentAmountType
 
-> The amount type for which the custom percent is defined. [Required] [Filter(multi eq)]
+The amount type for which the custom percent is defined. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The [Product](General.Products.ProductDocumentAmounts.md#product) to which this ProductDocumentAmount belongs. [Required] [Filter(multi eq)] [Owner]
+The [Product](General.Products.ProductDocumentAmounts.md#product) to which this ProductDocumentAmount belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

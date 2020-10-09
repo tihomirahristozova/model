@@ -27,7 +27,7 @@ Specifies user-defined distribution pattern of additonal amount for specific doc
 
 ### DocumentLineId
 
-> The line for which the distribution pattern is specified. [Required] [Filter(multi eq)]
+The line for which the distribution pattern is specified. [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -40,7 +40,7 @@ _Default Value_: **NewGuid**
 
 ### LinePercent
 
-> The percent of the additional amount which should be distributed over the current line. [Required] [Default(0)]
+The percent of the additional amount which should be distributed over the current line. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -52,28 +52,28 @@ _Default Value_: **0**
 
 ### Document
 
-> The [Document](General.DocumentLineAmounts.md#document) to which this DocumentLineAmount belongs. [Required] [Filter(multi eq)] [Owner]
+The [Document](General.DocumentLineAmounts.md#document) to which this DocumentLineAmount belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentAmountType
 
-> The type of amount for which the distribution pattern is specified. [Required] [Filter(multi eq)]
+The type of amount for which the distribution pattern is specified. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes. [Required] [Filter(multi eq)]
+The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReferencedDocument
 
-> When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated). [Filter(multi eq)]
+When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated). [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

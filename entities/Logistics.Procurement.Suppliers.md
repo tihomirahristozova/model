@@ -39,7 +39,7 @@ Contains supplier conditions (contracts). Entity: Scm_Suppliers
 
 ### CreationTime
 
-> Date and time when the Supplier was created. [Filter(ge;le)] [ReadOnly]
+Date and time when the Supplier was created. [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -47,7 +47,7 @@ _Supports Order By_: **False**
 
 ### CreationUser
 
-> Login name of the user, who created the Supplier. [Filter(like)] [ReadOnly]
+Login name of the user, who created the Supplier. [Filter(like)] [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### DefaultDeliveryTermDays
 
-> Default term in days for goods delivery, starting at the day of sending the purchase order. [Required] [Default(0)]
+Default term in days for goods delivery, starting at the day of sending the purchase order. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -64,7 +64,7 @@ _Default Value_: **0**
 
 ### DefaultPaymentStartDays
 
-> Default number of days until the payment becomes executable. 0 means that the payment is executable at all times. [Required] [Default(0)]
+Default number of days until the payment becomes executable. 0 means that the payment is executable at all times. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -73,7 +73,7 @@ _Default Value_: **0**
 
 ### DefaultPaymentTermDays
 
-> Default payment term in days, starting from the date of receiving the invoice. [Required] [Default(0)]
+Default payment term in days, starting from the date of receiving the invoice. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -82,7 +82,7 @@ _Default Value_: **0**
 
 ### FromDate
 
-> The date on which this party became a supplier or the date, when the supplier contract was signed. [Filter(ge;le)]
+The date on which this party became a supplier or the date, when the supplier contract was signed. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -96,7 +96,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Indicates whether the current supplier is active. [Required] [Default(true)] [Filter(eq)]
+Indicates whether the current supplier is active. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -105,7 +105,7 @@ _Default Value_: **True**
 
 ### Number
 
-> The unique supplier number. [Filter(eq)] [ORD]
+The unique supplier number. [Filter(eq)] [ORD]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -113,7 +113,7 @@ _Supports Order By_: **True**
 
 ### ThruDate
 
-> The date (inclusive) on which this party ceased to be a supplier. [Filter(ge;le)]
+The date (inclusive) on which this party ceased to be a supplier. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -121,7 +121,7 @@ _Supports Order By_: **False**
 
 ### UpdateTime
 
-> Date and time when the Supplier was last updated. [Filter(ge;le)] [ReadOnly]
+Date and time when the Supplier was last updated. [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -129,7 +129,7 @@ _Supports Order By_: **False**
 
 ### UpdateUser
 
-> Login name of the user, who last updated the Supplier. [Filter(like)] [ReadOnly]
+Login name of the user, who last updated the Supplier. [Filter(like)] [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -140,49 +140,49 @@ _Supports Order By_: **False**
 
 ### DefaultCurrency
 
-> The default currency for purchases from this supplier. null means there is no default. [Filter(multi eq)]
+The default currency for purchases from this supplier. null means there is no default. [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPaymentAccount
 
-> When not null, specifies the default payment account which should be used for new purchase document for this supplier. [Filter(multi eq)]
+When not null, specifies the default payment account which should be used for new purchase document for this supplier. [Filter(multi eq)]
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPaymentType
 
-> When not null, specifies the default payment type which should be used for new purchase document for this supplier. [Filter(multi eq)]
+When not null, specifies the default payment type which should be used for new purchase document for this supplier. [Filter(multi eq)]
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPurchasePriceList
 
-> The default purchase price list, which shall be used for new purchase documents for this supplier. [Filter(multi eq)]
+The default purchase price list, which shall be used for new purchase documents for this supplier. [Filter(multi eq)]
 
 _Type_: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The Enterprise Company to which this Supplier applies, or null if it is for all enterprise companies. [Filter(multi eq)]
+The Enterprise Company to which this Supplier applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
-> The [Party](General.Contacts.Parties.md) to which this Supplier belongs. [Required] [Filter(multi eq)] [Owner]
+The [Party](General.Contacts.Parties.md) to which this Supplier belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SupplierType
 
-> When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. [Filter(multi eq)]
+When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. [Filter(multi eq)]
 
 _Type_: **[SupplierTypes](Logistics.Procurement.SupplierTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

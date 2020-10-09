@@ -24,7 +24,7 @@ Provides a way to apply different filtering of the property allowed values for t
 
 ### FilterXml
 
-> When not null, specifies a filter for the allowed values of the property for the specified enterprise company.
+When not null, specifies a filter for the allowed values of the property for the specified enterprise company.
 
 _Type_: **dataaccessfilter (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -41,14 +41,14 @@ _Default Value_: **NewGuid**
 
 ### EnterpriseCompany
 
-> The enterprise company for which the current filter is specifed. [Required] [Filter(multi eq)]
+The enterprise company for which the current filter is specifed. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property
 
-> The [CustomProperty](General.CustomProperties.md) to which this PropertyEnterpriseCompanyFilter belongs. [Required] [Filter(multi eq)] [Owner]
+The [CustomProperty](General.CustomProperties.md) to which this PropertyEnterpriseCompanyFilter belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

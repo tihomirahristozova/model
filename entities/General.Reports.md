@@ -32,7 +32,7 @@ _Default Value_: **NewGuid**
 
 ### IsTable
 
-> If True the Query_Name is name of a table, otherwise is name of a query that can be filtered with Filter_Xml. . [Required] [Default(true)] [Filter(eq)]
+If True the Query_Name is name of a table, otherwise is name of a query that can be filtered with Filter_Xml. . [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -41,7 +41,7 @@ _Default Value_: **True**
 
 ### Name
 
-> The name of this Report. [Required] [Filter(eq;like)]
+The name of this Report. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### QueryName
 
-> The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)]
+The name of the query or table that is used for root reference point of the loaded data. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 ### ShowParentTables
 
-> Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. [Required] [Default(false)]
+Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  

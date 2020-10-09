@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. [Default(true)] [Filter(eq)]
+Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. [Default(true)] [Filter(eq)]
 
 _Type_: **boolean (nullable)**  
 _Supported Filters_: **Equals**  
@@ -40,7 +40,7 @@ _Default Value_: **True**
 
 ### PosLocationCode
 
-> Unique (with the enterprise company) code of this POS location. [Required] [Filter(multi eq;like)]
+Unique (with the enterprise company) code of this POS location. [Required] [Filter(multi eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -51,14 +51,14 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company of the POS location. [Required] [Filter(multi eq)]
+The enterprise company of the POS location. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-> The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. [Required] [Filter(multi eq)]
+The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. [Required] [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

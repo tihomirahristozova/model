@@ -34,7 +34,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes.
+Notes.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,7 +42,7 @@ _Supports Order By_: **False**
 
 ### TransactionTimestamp
 
-> Transaction Timestamp. [Required] [Filter(multi eq;ge;le)]
+Transaction Timestamp. [Required] [Filter(multi eq;ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### TransactionType
 
-> Transaction Type. [Required] [Filter(eq;like)]
+Transaction Type. [Required] [Filter(eq;like)]
 
 _Type_: **[TransactionType](Applications.Rental.TransactionLines.md#transactiontype)**  
 Allowed values for the [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) data attribute  
@@ -71,28 +71,28 @@ _Supports Order By_: **False**
 
 ### LeaseContract
 
-> Lease Contract. [Required] [Filter(multi eq)]
+Lease Contract. [Required] [Filter(multi eq)]
 
 _Type_: **[LeaseContracts](Applications.Rental.LeaseContracts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LesseeCustomer
 
-> Lessee Customer. [Required] [Filter(multi eq)]
+Lessee Customer. [Required] [Filter(multi eq)]
 
 _Type_: **[Customers](Crm.Customers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RentalAsset
 
-> Rental asset. [Required] [Filter(multi eq)]
+Rental asset. [Required] [Filter(multi eq)]
 
 _Type_: **[Assets](Applications.Rental.Assets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RentTransaction
 
-> The [Transaction](Applications.Rental.Transactions.md) to which this TransactionLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [Transaction](Applications.Rental.Transactions.md) to which this TransactionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Transactions](Applications.Rental.Transactions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

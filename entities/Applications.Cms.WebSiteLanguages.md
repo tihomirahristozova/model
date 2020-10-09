@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Specifies whether the support for the language is activated and should be published on the web. [Required] [Default(false)]
+Specifies whether the support for the language is activated and should be published on the web. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Default Value_: **False**
 
 ### LanguageCode
 
-> Two letter ISO language code. Sub-tags are currently not supported. [Required]
+Two letter ISO language code. Sub-tags are currently not supported. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this WebSiteLanguage.
+Notes for this WebSiteLanguage.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### WebSite
 
-> The web site, for which the language is specified. [Required] [Filter(multi eq)] [Owner]
+The web site, for which the language is specified. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[WebSites](Applications.Cms.WebSites.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

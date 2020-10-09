@@ -26,7 +26,7 @@ Geographical (geo) points are used as points of interest on the map. They are us
 
 ### Address
 
-> The descriptive physical address, related to this geo point. [Filter(eq;like)]
+The descriptive physical address, related to this geo point. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -40,7 +40,7 @@ _Default Value_: **NewGuid**
 
 ### Latitude
 
-> Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90]. [Required] [Default(0)] [Filter(eq;ge;le)]
+Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90]. [Required] [Default(0)] [Filter(eq;ge;le)]
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -49,7 +49,7 @@ _Default Value_: **0**
 
 ### Longitude
 
-> Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180]. [Required] [Default(0)] [Filter(eq;ge;le)]
+Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180]. [Required] [Default(0)] [Filter(eq;ge;le)]
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -58,7 +58,7 @@ _Default Value_: **0**
 
 ### Name
 
-> Geo point short name (Multilanguage). [Required] [Filter(eq;like)]
+Geo point short name (Multilanguage). [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company for which the name of the geo point has meaning. Null for geo points not related to specific enterprise company. [Filter(multi eq)]
+The enterprise company for which the name of the geo point has meaning. Null for geo points not related to specific enterprise company. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

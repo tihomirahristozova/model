@@ -31,7 +31,7 @@ Represent an expression within the calculation of a calculated attribute. Entity
 
 ### ExpressionNo
 
-> Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. [Required]
+Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this CalculatedAttributeExpression.
+Notes for this CalculatedAttributeExpression.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### Operator
 
-> The exprssion operator. Available operators are limited to a pre-selected list of operators. [Required]
+The exprssion operator. Available operators are limited to a pre-selected list of operators. [Required]
 
 _Type_: **[ExpressionOperator](Systems.Bpm.CalculatedAttributeExpressions.md#operator)**  
 Generic enum type for ExpressionOperator properties  
@@ -117,7 +117,7 @@ _Supports Order By_: **False**
 
 ### Parameter1Type
 
-> The type of the parameter specifies how to obtain the parameter value.
+The type of the parameter specifies how to obtain the parameter value.
 
 _Type_: **[ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1type) (nullable)**  
 Generic enum type for ExpressionParameterType properties  
@@ -139,7 +139,7 @@ _Supports Order By_: **False**
 
 ### Parameter1Value
 
-> The actual value of parameter 1.
+The actual value of parameter 1.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -147,7 +147,7 @@ _Supports Order By_: **False**
 
 ### Parameter2Type
 
-> The type of the parameter specifies how to obtain the parameter value.
+The type of the parameter specifies how to obtain the parameter value.
 
 _Type_: **[ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter2type) (nullable)**  
 Generic enum type for ExpressionParameterType properties  
@@ -169,7 +169,7 @@ _Supports Order By_: **False**
 
 ### Parameter2Value
 
-> The actual value of the parameter.
+The actual value of the parameter.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -177,7 +177,7 @@ _Supports Order By_: **False**
 
 ### Parameter3Type
 
-> The type of the parameter specifies how to obtain the parameter value.
+The type of the parameter specifies how to obtain the parameter value.
 
 _Type_: **[ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter3type) (nullable)**  
 Generic enum type for ExpressionParameterType properties  
@@ -199,7 +199,7 @@ _Supports Order By_: **False**
 
 ### Parameter3Value
 
-> The actual value of the parameter.
+The actual value of the parameter.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -210,7 +210,7 @@ _Supports Order By_: **False**
 
 ### CalculatedAttribute
 
-> The [CalculatedAttribute](Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) to which this CalculatedAttributeExpression belongs. [Required] [Filter(multi eq)] [Owner]
+The [CalculatedAttribute](Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) to which this CalculatedAttributeExpression belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this ServiceCenter.
+Notes for this ServiceCenter.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -41,14 +41,14 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. [Filter(multi eq)]
+The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
-> The person or company, actually performing the maintenance. [Required] [Filter(multi eq)]
+The person or company, actually performing the maintenance. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

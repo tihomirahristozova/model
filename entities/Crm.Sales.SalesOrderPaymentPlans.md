@@ -34,7 +34,7 @@ Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 
 ### Amount
 
-> Amount to be payed. [Currency: SalesOrder.DocumentCurrency] [Required]
+Amount to be payed. [Currency: SalesOrder.DocumentCurrency] [Required]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,7 +42,7 @@ _Supports Order By_: **False**
 
 ### AmountPercent
 
-> Percent of the sales order amount to be payed.
+Percent of the sales order amount to be payed.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### DueDateFormMethod
 
-> Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. [Required]
+Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. [Required]
 
 _Type_: **[PaymentPlanDueDateSource](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod)**  
 Generic enum type for PaymentPlanDueDateSource properties  
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 ### ExplicitPaymentDueDate
 
-> Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'.
+Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -79,7 +79,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( Convert( obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueDate)`
 ### ExplicitPaymentDueStartDate
 
-> Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.
+Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -95,7 +95,7 @@ _Default Value_: **NewGuid**
 
 ### InstallmentNumber
 
-> Consequtive installment number. Used for identifying different payments generated according this payment plan. [Required]
+Consequtive installment number. Used for identifying different payments generated according this payment plan. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -108,7 +108,7 @@ _Front-End Recalc Expressions:_
 `( obj.SalesOrder.PaymentPlans.Select( c => c.InstallmentNumber).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-> Notes for this SalesOrderPaymentPlan.
+Notes for this SalesOrderPaymentPlan.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -116,7 +116,7 @@ _Supports Order By_: **False**
 
 ### PaymentStartDays
 
-> Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. [Required] [Default(0)]
+Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -125,7 +125,7 @@ _Default Value_: **0**
 
 ### PaymentTermDays
 
-> Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. [Required] [Default(0)]
+Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -139,7 +139,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( Convert( obj.DueDateFormMethod, Int32) == 3) OrElse ( Convert( obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)`
 ### Remainder
 
-> Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). [Required] [Default(false)]
+Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -156,7 +156,7 @@ _Front-End Recalc Expressions:_
 
 ### PaymentAccount
 
-> Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. [Filter(multi eq)]
+Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. [Filter(multi eq)]
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -169,7 +169,7 @@ _Front-End Recalc Expressions:_
 `obj.SalesOrder.PaymentAccount`
 ### PaymentType
 
-> Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. [Filter(multi eq)]
+Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. [Filter(multi eq)]
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -181,7 +181,7 @@ _Front-End Recalc Expressions:_
 `obj.SalesOrder.PaymentType`
 ### SalesOrder
 
-> The [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]
+The [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

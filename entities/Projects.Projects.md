@@ -40,7 +40,7 @@ Contains the planned, running and completed projects of the enterprises. Entity:
 
 ### Code
 
-> Short code for identification of projects. [Required] [Filter(eq;like)] [ORD]
+Short code for identification of projects. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -48,7 +48,7 @@ _Supports Order By_: **True**
 
 ### FinishDate
 
-> The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. [Filter(eq)]
+The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. [Filter(eq)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals**  
@@ -62,7 +62,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this Project. [Required] [Filter(eq;like)]
+The name of this Project. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -70,7 +70,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this Project.
+Notes for this Project.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -78,7 +78,7 @@ _Supports Order By_: **False**
 
 ### ProjectStatus
 
-> Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). [Required] [Default(0)] [Filter(multi eq)]
+Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). [Required] [Default(0)] [Filter(multi eq)]
 
 _Type_: **[ProjectStatus](Projects.Projects.md#projectstatus)**  
 Allowed values for the [ProjectStatus](Projects.Projects.md#projectstatus) data attribute  
@@ -101,7 +101,7 @@ _Default Value_: **0**
 
 ### StartDate
 
-> Expected date, when the execution of the tasks will start. null means that the start date is still unknown. [Filter(eq)]
+Expected date, when the execution of the tasks will start. null means that the start date is still unknown. [Filter(eq)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals**  
@@ -112,35 +112,35 @@ _Supports Order By_: **False**
 
 ### BudgetingCurrency
 
-> The currency in which the project budget is calculated. [Filter(multi eq)]
+The currency in which the project budget is calculated. [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ClientParty
 
-> The external or internal client of the project. [Filter(multi eq)]
+The external or internal client of the project. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. [Filter(multi eq)]
+The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectManagerPerson
 
-> The project manager. [Filter(multi eq)]
+The project manager. [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectType
 
-> The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. [Required] [Filter(multi eq)]
+The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. [Required] [Filter(multi eq)]
 
 _Type_: **[ProjectTypes](Projects.ProjectTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

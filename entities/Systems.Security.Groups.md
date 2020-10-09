@@ -32,7 +32,7 @@ Groups of users. Used for providing group access to secured data. Entity: Sec_Gr
 
 ### EditPeriodDays
 
-> The number of days before which the documents can not be corrected, released or voided.
+The number of days before which the documents can not be corrected, released or voided.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Supports Order By_: **False**
 
 ### GroupType
 
-> Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default("G")] [ReadOnly]
+Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. [Required] [Default("G")] [ReadOnly]
 
 _Type_: **[GroupType](Systems.Security.Groups.md#grouptype)**  
 Allowed values for the [GroupType](Systems.Security.Groups.md#grouptype) data attribute  
@@ -65,7 +65,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this Group. [Required] [Filter(like)] [ORD]
+The name of this Group. [Required] [Filter(like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -73,7 +73,7 @@ _Supports Order By_: **True**
 
 ### Notes
 
-> Notes for this Group.
+Notes for this Group.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -84,7 +84,7 @@ _Supports Order By_: **False**
 
 ### GroupForUser
 
-> When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly]
+When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

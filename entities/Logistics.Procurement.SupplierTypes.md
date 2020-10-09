@@ -29,7 +29,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this SupplierType. [Required] [Filter(eq;like)]
+The name of this SupplierType. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -40,7 +40,7 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-> The access key required for accessing all suppliers of this supplier type. [Filter(multi eq)]
+The access key required for accessing all suppliers of this supplier type. [Filter(multi eq)]
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

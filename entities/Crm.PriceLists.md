@@ -26,7 +26,7 @@ Price Lists are used to manage multiple price records, assign to customers, etc.
 
 ### Description
 
-> The description of this PriceList.
+The description of this PriceList.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -34,7 +34,7 @@ _Supports Order By_: **False**
 
 ### FromDate
 
-> Starting validity of the price list. [Filter(eq;ge;le)]
+Starting validity of the price list. [Filter(eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this PriceList. [Required] [Filter(eq;like)] [ORD]
+The name of this PriceList. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -56,7 +56,7 @@ _Supports Order By_: **True**
 
 ### ThruDate
 
-> Ending validity of the price list. [Filter(eq;ge;le)]
+Ending validity of the price list. [Filter(eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The Enterprise Company to which this PriceList applies, or null if it is for all enterprise companies. [Filter(multi eq)]
+The Enterprise Company to which this PriceList applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

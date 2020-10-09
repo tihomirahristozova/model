@@ -27,7 +27,7 @@ Defines the types of maintenances, which are allowed for assets of the different
 
 ### DefaultParameterChange
 
-> Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means, that maintenances are not scheduled based on parameter change.
+Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means, that maintenances are not scheduled based on parameter change.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -35,7 +35,7 @@ _Supports Order By_: **False**
 
 ### DefaultScheduleDays
 
-> Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in days.
+Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in days.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -43,7 +43,7 @@ _Supports Order By_: **False**
 
 ### DefaultScheduleMonths
 
-> Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in months.
+Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in months.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -57,7 +57,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this ManagedAssetTypeMaintenanceType.
+Notes for this ManagedAssetTypeMaintenanceType.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -68,14 +68,14 @@ _Supports Order By_: **False**
 
 ### MaintenanceType
 
-> The allowed maintenance type for the asset type. [Required] [Filter(multi eq)]
+The allowed maintenance type for the asset type. [Required] [Filter(multi eq)]
 
 _Type_: **[MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAssetType
 
-> The asset type for which the allowed maintenance type is defined. [Required] [Filter(multi eq)] [Owner]
+The asset type for which the allowed maintenance type is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

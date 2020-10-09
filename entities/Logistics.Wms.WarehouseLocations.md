@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### LocationAddress
 
-> The address of the location. Should be unique within the warehouse. [Required] [Filter(eq;like)]
+The address of the location. Should be unique within the warehouse. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this WarehouseLocation.
+Notes for this WarehouseLocation.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -50,14 +50,14 @@ _Supports Order By_: **False**
 
 ### Warehouse
 
-> The warehouse containing the location. [Required] [Filter(multi eq)] [Owner]
+The warehouse containing the location. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseZone
 
-> The zone, which contains the location. [Required] [Filter(multi eq)]
+The zone, which contains the location. [Required] [Filter(multi eq)]
 
 _Type_: **[WarehouseZones](Logistics.Wms.WarehouseZones.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

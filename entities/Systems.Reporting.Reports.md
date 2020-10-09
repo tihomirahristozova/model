@@ -37,7 +37,7 @@ _Default Value_: **NewGuid**
 
 ### LayoutFormat
 
-> Format specifier of the layout. Recognized by the application. [Filter(multi eq)]
+Format specifier of the layout. Recognized by the application. [Filter(multi eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -45,7 +45,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-> Multi-language report name. [Required] [Filter(eq;like)]
+Multi-language report name. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this Report.
+Notes for this Report.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 ### OneRow
 
-> True means that report can be used for one-row forms only. False means that the report can be used for navigators only. [Required] [Default(false)]
+True means that report can be used for one-row forms only. False means that the report can be used for navigators only. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -70,7 +70,7 @@ _Default Value_: **False**
 
 ### QueryName
 
-> The query on which the report is based. [Required] [Filter(eq)]
+The query on which the report is based. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -78,7 +78,7 @@ _Supports Order By_: **False**
 
 ### ReportBinaryLayout
 
-> The printout layout, when the format requires binary storage. Alternative to Report_Layout.
+The printout layout, when the format requires binary storage. Alternative to Report_Layout.
 
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 ### ReportLayout
 
-> The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout.
+The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -94,7 +94,7 @@ _Supports Order By_: **False**
 
 ### TemplateFilterXml
 
-> Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report.
+Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -102,7 +102,7 @@ _Supports Order By_: **False**
 
 ### TemplatePriority
 
-> Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, null otherwise.
+Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, null otherwise.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -113,7 +113,7 @@ _Supports Order By_: **False**
 
 ### DataSource
 
-> Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. [Filter(multi eq)]
+Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. [Filter(multi eq)]
 
 _Type_: **[DataSources](Systems.Reporting.DataSources.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

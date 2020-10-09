@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### Asset
 
-> Specifies the asset, whose depreciation should be calculated with the current document. [Required] [Filter(multi eq)]
+Specifies the asset, whose depreciation should be calculated with the current document. [Required] [Filter(multi eq)]
 
 _Type_: **[Assets](Finance.Assets.Assets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Depreciation
 
-> The [Depreciation](Finance.Assets.DepreciationAssets.md#depreciation) to which this DepreciationAsset belongs. [Required] [Filter(multi eq)] [Owner]
+The [Depreciation](Finance.Assets.DepreciationAssets.md#depreciation) to which this DepreciationAsset belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Depreciations](Finance.Assets.Depreciations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

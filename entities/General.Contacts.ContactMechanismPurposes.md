@@ -20,7 +20,7 @@ Contains user-defined purposes for processing contact mechanisms. Used for perso
 
 ### Code
 
-> The unique code of the ContactMechanismPurpos. [Required] [Filter(eq;like)] [ORD]
+The unique code of the ContactMechanismPurpos. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -28,7 +28,7 @@ _Supports Order By_: **True**
 
 ### ContactMechanismType
 
-> When specified, allows the purpose to be specified only for contact mechanisms of the specified type. [Filter(multi eq)]
+When specified, allows the purpose to be specified only for contact mechanisms of the specified type. [Filter(multi eq)]
 
 _Type_: **[ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) (nullable)**  
 Allowed values for the [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) data attribute  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### Description
 
-> The description of this ContactMechanismPurpos. [Filter(like)]
+The description of this ContactMechanismPurpos. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -63,7 +63,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Name of the contact mechanism purpose (Multilanguage). [Required] [Filter(like)]
+Name of the contact mechanism purpose (Multilanguage). [Required] [Filter(like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  

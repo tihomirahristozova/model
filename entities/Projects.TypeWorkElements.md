@@ -27,7 +27,7 @@ The work elements of the work breakdown structure of each project type. Entity: 
 
 ### FullPath
 
-> The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. [Filter(eq;like)] [ReadOnly]
+The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. [Filter(eq;like)] [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this TypeWorkElement.
+Notes for this TypeWorkElement.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### ParentFullPath
 
-> The full path of the parent work element in this project type. null when this is root element. [Filter(eq;like)]
+The full path of the parent work element in this project type. null when this is root element. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 ### WorkElementCode
 
-> The code of the work element, unique among the sibling elements within the parent work element. [Required] [Filter(eq)]
+The code of the work element, unique among the sibling elements within the parent work element. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -65,7 +65,7 @@ _Supports Order By_: **False**
 
 ### WorkElementName
 
-> The name of the work element, unique among the sibling elements within the parent work element. [Required] [Filter(eq)]
+The name of the work element, unique among the sibling elements within the parent work element. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -76,7 +76,7 @@ _Supports Order By_: **False**
 
 ### ProjectType
 
-> The [ProjectType](Projects.TypeWorkElements.md#projecttype) to which this TypeWorkElement belongs. [Required] [Filter(multi eq)] [Owner]
+The [ProjectType](Projects.TypeWorkElements.md#projecttype) to which this TypeWorkElement belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProjectTypes](Projects.ProjectTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

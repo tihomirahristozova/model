@@ -26,7 +26,7 @@ Represents attachments to mail messages. Entity: Mail_Message_Attachments
 
 ### AttachmentContent
 
-> The actual content of the attachment. null when the content is not downloaded or is unknown for some other reason.
+The actual content of the attachment. null when the content is not downloaded or is unknown for some other reason.
 
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -34,7 +34,7 @@ _Supports Order By_: **False**
 
 ### ContentDescriptors
 
-> Content flags, like "Content-Type: text/plain; charset=utf-8".
+Content flags, like "Content-Type: text/plain; charset=utf-8".
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,7 +42,7 @@ _Supports Order By_: **False**
 
 ### ContentDownloaded
 
-> True when the content is included, false when this is only an empty container. Content should be included when sending mail. [Required] [Default(false)] [Filter(eq)]
+True when the content is included, false when this is only an empty container. Content should be included when sending mail. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -57,7 +57,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this MessageAttachment. [Filter(eq;like)]
+The name of this MessageAttachment. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -68,7 +68,7 @@ _Supports Order By_: **False**
 
 ### MailMessage
 
-> The [Message](Applications.Mail.Messages.md) to which this MessageAttachment belongs. [Required] [Filter(multi eq)] [Owner]
+The [Message](Applications.Mail.Messages.md) to which this MessageAttachment belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Messages](Applications.Mail.Messages.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

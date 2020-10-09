@@ -25,7 +25,7 @@ Specifies the default depreciation methods for the asset categories. Different m
 
 ### AssetLife
 
-> Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).
+Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,21 +42,21 @@ _Default Value_: **NewGuid**
 
 ### AssetCategory
 
-> Asset category for which this template is defined. [Required] [Filter(multi eq)] [Owner]
+Asset category for which this template is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[AssetCategories](Finance.Assets.AssetCategories.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DepreciationMethod
 
-> Depreciation method by default for the depreciation plans created by this template. [Required] [Filter(multi eq)]
+Depreciation method by default for the depreciation plans created by this template. [Required] [Filter(multi eq)]
 
 _Type_: **[DepreciationMethods](Finance.Assets.DepreciationMethods.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationModel
 
-> Valuation model for which this template is defined. [Required] [Filter(multi eq)]
+Valuation model for which this template is defined. [Required] [Filter(multi eq)]
 
 _Type_: **[ValuationModels](Finance.Assets.ValuationModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

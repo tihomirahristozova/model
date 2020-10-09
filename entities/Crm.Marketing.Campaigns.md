@@ -21,7 +21,7 @@ Marketing campaigns. Used to treat target groups with marketing messages, plan b
 
 ### Description
 
-> Campaign description.
+Campaign description.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -29,7 +29,7 @@ _Supports Order By_: **False**
 
 ### EndDate
 
-> End date of the campaign. null means that the end date is still unknown.
+End date of the campaign. null means that the end date is still unknown.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -37,7 +37,7 @@ _Supports Order By_: **False**
 
 ### ForecastedCost
 
-> Forecasted total cost of the campaign. [Required] [Default(0)]
+Forecasted total cost of the campaign. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -52,7 +52,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Short name of the campaign. [Required] [Filter(like)] [ORD]
+Short name of the campaign. [Required] [Filter(like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -60,7 +60,7 @@ _Supports Order By_: **True**
 
 ### StartDate
 
-> Starting date of the campaign. [Required] [Default(Today)]
+Starting date of the campaign. [Required] [Default(Today)]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  

@@ -19,7 +19,7 @@ Represents a cargo type. Different cargo types might require different types of 
 
 ### Code
 
-> The unique code of the CargoType. [Required] [Filter(eq;like)] [ORD]
+The unique code of the CargoType. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -33,7 +33,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this CargoType. [Required] [Filter(eq;like)]
+The name of this CargoType. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -41,7 +41,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this CargoType.
+Notes for this CargoType.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  

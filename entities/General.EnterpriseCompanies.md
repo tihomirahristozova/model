@@ -47,7 +47,7 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 
 ### BIStartDate
 
-> Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". [Filter(eq)] (Introduced in version 18.2)
+Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". [Filter(eq)] (Introduced in version 18.2)
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals**  
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### DefaultCostingMethod
 
-> Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. [Required] [Default("AVG")]
+Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. [Required] [Default("AVG")]
 
 _Type_: **[DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod)**  
 Allowed values for the [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) data attribute  
@@ -73,7 +73,7 @@ _Default Value_: **AverageCost**
 
 ### DefaultCustomerCreditLimitBase
 
-> Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. [Currency: BaseCurrency] [Filter(eq;like)]
+Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. [Currency: BaseCurrency] [Filter(eq;like)]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 ### DefaultLanguage
 
-> The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). [Default("en")]
+The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). [Default("en")]
 
 _Type_: **[DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) (nullable)**  
 Allowed values for the [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) data attribute  
@@ -98,7 +98,7 @@ _Default Value_: **English**
 
 ### EditPeriodStartDate
 
-> Start date of the priod when the documents can be edited.
+Start date of the priod when the documents can be edited.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -112,7 +112,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Indicates whether the current Enterprise company  is active. [Required] [Default(true)] [Filter(multi eq)] (Introduced in version 20.1)
+Indicates whether the current Enterprise company  is active. [Required] [Default(true)] [Filter(multi eq)] (Introduced in version 20.1)
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -121,7 +121,7 @@ _Default Value_: **True**
 
 ### PrintImagesRetentionMonths
 
-> A period of months for which the printed images of the documents will be kept. [Required] [Default(60)] [Filter(multi eq;ge;le)] (Introduced in version 20.1)
+A period of months for which the printed images of the documents will be kept. [Required] [Default(60)] [Filter(multi eq;ge;le)] (Introduced in version 20.1)
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -130,7 +130,7 @@ _Default Value_: **60**
 
 ### UIBaseColor
 
-> When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. (Introduced in version 18.2)
+When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. (Introduced in version 18.2)
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -141,49 +141,49 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-> The access key, containing the user permissions for this EnterpriseCompany. Null means that all users have unlimited permissions. [Filter(multi eq)]
+The access key, containing the user permissions for this EnterpriseCompany. Null means that all users have unlimited permissions. [Filter(multi eq)]
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdvanceProduct
 
-> Product that is used for handling advances in trade documents. [Filter(multi eq)]
+Product that is used for handling advances in trade documents. [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### BaseCurrency
 
-> The base currency for summary reporting for this company. [Required] [Filter(multi eq)]
+The base currency for summary reporting for this company. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Company
 
-> Contains the base company data on which this enterprise company is based. [Required] [Filter(multi eq)]
+Contains the base company data on which this enterprise company is based. [Required] [Filter(multi eq)]
 
 _Type_: **[Companies](General.Contacts.Companies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExchangeDifferenceCreditAccount
 
-> Account for balancing accounting vouchers with credit difference due to currency exchanges. [Filter(multi eq)]
+Account for balancing accounting vouchers with credit difference due to currency exchanges. [Filter(multi eq)]
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExchangeDifferenceDebitAccount
 
-> Account for balancing accounting vouchers with debit difference due to currency exchanges. [Filter(multi eq)]
+Account for balancing accounting vouchers with debit difference due to currency exchanges. [Filter(multi eq)]
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VATDocumentAmountType
 
-> The document amount that is used to determine the amount of the VAT entries when they are generated. [Filter(multi eq)]
+The document amount that is used to determine the amount of the VAT entries when they are generated. [Filter(multi eq)]
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

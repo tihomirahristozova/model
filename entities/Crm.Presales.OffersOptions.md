@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### DealDocumentType
 
-> If filled then new opportunities (deals) from the specified type will be created automatically for the offers that aren't assigned to existing opportunities. Used for automating opportunity management. [Filter(multi eq)]
+If filled then new opportunities (deals) from the specified type will be created automatically for the offers that aren't assigned to existing opportunities. Used for automating opportunity management. [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
-> The document type for which the offer option applies. [Required] [Filter(multi eq)] [Owner]
+The document type for which the offer option applies. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

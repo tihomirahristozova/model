@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### Role
 
-> The [Role](Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. [Required] [Filter(multi eq)] [Owner]
+The [Role](Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Roles](Systems.Workflow.Roles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
-> The user, which plays the role. [Required] [Filter(multi eq)]
+The user, which plays the role. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

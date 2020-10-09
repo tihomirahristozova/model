@@ -19,7 +19,7 @@ Contains purchase price list headers. Entity: Scm_Purchase_Price_Lists
 
 ### FromDate
 
-> Starting validity of the price list. [Filter(eq;ge;le)]
+Starting validity of the price list. [Filter(eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -33,7 +33,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this PurchasePriceList. [Required] [Filter(eq;like)] [ORD]
+The name of this PurchasePriceList. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -41,7 +41,7 @@ _Supports Order By_: **True**
 
 ### ThruDate
 
-> Ending validity of the price list. [Filter(eq;ge;le)]
+Ending validity of the price list. [Filter(eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  

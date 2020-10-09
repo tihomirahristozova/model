@@ -26,7 +26,7 @@ Represents one user domain. The users in a domain have different emails. But one
 
 ### AllowLocalAccounts
 
-> Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended). [Required] [Default(true)]
+Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended). [Required] [Default(true)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -35,7 +35,7 @@ _Default Value_: **True**
 
 ### Description
 
-> Multi-language description of the domain.
+Multi-language description of the domain.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 ### IsDefault
 
-> Specifies whether this is the default domain for the database. [Required] [Default(true)] [Filter(eq)]
+Specifies whether this is the default domain for the database. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -58,7 +58,7 @@ _Default Value_: **True**
 
 ### Name
 
-> The name of the domain (restricted for URL usage). [Required] [Filter(eq;like)] [ORD]
+The name of the domain (restricted for URL usage). [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  

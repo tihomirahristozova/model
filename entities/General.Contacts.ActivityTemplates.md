@@ -28,7 +28,7 @@ Templates for automatical generation of activity from any document. Entity: Cm_A
 
 ### ActivitySubjectMask
 
-> A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.
+A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -36,7 +36,7 @@ _Supports Order By_: **False**
 
 ### AdditionalDays
 
-> The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. [Required] [Default(0)]
+The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -51,7 +51,7 @@ _Default Value_: **NewGuid**
 
 ### ReminderTime
 
-> Time of the day for the reminder.
+Time of the day for the reminder.
 
 _Type_: **time (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### SourceDateField
 
-> A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. [Required]
+A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### StartTime
 
-> The time of the day when the activity starts. [Required]
+The time of the day when the activity starts. [Required]
 
 _Type_: **time**  
 _Supported Filters_: **NotFilterable**  
@@ -78,14 +78,14 @@ _Supports Order By_: **False**
 
 ### ResponsibleParty
 
-> If Null the user that starts the generation route is responsible party of the activity. [Filter(multi eq)]
+If Null the user that starts the generation route is responsible party of the activity. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Route
 
-> Document generation route that uses this template. [Required] [Filter(multi eq)]
+Document generation route that uses this template. [Required] [Filter(multi eq)]
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

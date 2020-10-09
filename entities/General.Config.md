@@ -22,7 +22,7 @@ Hierarchical repository of configuration options. Entity: Gen_Config
 
 ### Description
 
-> The description of this Config.
+The description of this Config.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -36,7 +36,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Indicates whether this config entry is active. Inactive config entries are not taken into account. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1)
+Indicates whether this config entry is active. Inactive config entries are not taken into account. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1)
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -45,7 +45,7 @@ _Default Value_: **True**
 
 ### KeyPath
 
-> Full path of the configuration option. [Required] [Filter(eq)] [ORD]
+Full path of the configuration option. [Required] [Filter(eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -53,7 +53,7 @@ _Supports Order By_: **True**
 
 ### KeyValue
 
-> The value of the configuration option.
+The value of the configuration option.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 ### UserLogin
 
-> If not null, the configuration option is specific to the user. [Filter(eq)]
+If not null, the configuration option is specific to the user. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 ### UserMachine
 
-> If not null, the configuration option is specific to the machine. [Filter(eq)]
+If not null, the configuration option is specific to the machine. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  

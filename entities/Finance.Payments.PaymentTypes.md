@@ -27,7 +27,7 @@ Describes the way of payment. For example: in cash, by bank transfer, with credi
 
 ### Code
 
-> The payment type unique code. [Required] [Filter(eq;like)] [ORD]
+The payment type unique code. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1)
+Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1)
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -50,7 +50,7 @@ _Default Value_: **True**
 
 ### Name
 
-> The name of this PaymentType. [Required] [Filter(like)] [ORD]
+The name of this PaymentType. [Required] [Filter(like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -58,7 +58,7 @@ _Supports Order By_: **True**
 
 ### SystemType
 
-> Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer.
+Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer.
 
 _Type_: **[SystemType](Finance.Payments.PaymentTypes.md#systemtype) (nullable)**  
 Allowed values for the [SystemType](Finance.Payments.PaymentTypes.md#systemtype) data attribute  
@@ -87,14 +87,14 @@ _Supports Order By_: **False**
 
 ### DefaultPaymentAccount
 
-> When not null specifies the default payment account to use associated with this payment type. [Filter(multi eq)]
+When not null specifies the default payment account to use associated with this payment type. [Filter(multi eq)]
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The Enterprise Company to which this PaymentType applies, or null if it is for all enterprise companies. [Filter(multi eq)]
+The Enterprise Company to which this PaymentType applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

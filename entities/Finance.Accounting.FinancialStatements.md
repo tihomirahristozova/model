@@ -24,7 +24,7 @@ Contains the user-defined financial statement definitions. Entity: Acc_Financial
 
 ### Code
 
-> Unique identifying code of the financial statement. [Required] [Filter(eq;like)] [ORD]
+Unique identifying code of the financial statement. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -38,7 +38,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Name of the financial statement. [Required] [Filter(eq;like)]
+Name of the financial statement. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  

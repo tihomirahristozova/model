@@ -27,7 +27,7 @@ Types of managed assets. Used to categorize the assets and the tracked parameter
 
 ### Code
 
-> Unique code of the asset type. [Required] [Filter(multi eq;like)] [ORD]
+Unique code of the asset type. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Specifies whether the asset type is active for choosing in drop-down choices. [Required] [Default(true)]
+Specifies whether the asset type is active for choosing in drop-down choices. [Required] [Default(true)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -50,7 +50,7 @@ _Default Value_: **True**
 
 ### Name
 
-> Multilanguage name of the asset type. [Required] [Filter(multi eq;like)]
+Multilanguage name of the asset type. [Required] [Filter(multi eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this ManagedAssetType.
+Notes for this ManagedAssetType.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  

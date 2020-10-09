@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### ResetTransactionsStateOnReleasing
 
-> When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents. [Required] [Default(false)] [Filter(eq)]
+When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -39,7 +39,7 @@ _Default Value_: **False**
 
 ### ScheduleDocumentEvents
 
-> Indicates wheather the document events caused by the cost correction should be scheduled for later procession. [Required] [Default(false)]
+Indicates wheather the document events caused by the cost correction should be scheduled for later procession. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -51,7 +51,7 @@ _Default Value_: **False**
 
 ### DocumentType
 
-> The document type for which we specify the options. [Required] [Filter(multi eq)]
+The document type for which we specify the options. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

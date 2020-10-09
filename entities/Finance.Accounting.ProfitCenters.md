@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this ProfitCenter. [Required] [Filter(like)]
+The name of this ProfitCenter. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this ProfitCenter.
+Notes for this ProfitCenter.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -47,7 +47,7 @@ _Supports Order By_: **False**
 
 ### RelativeWeight
 
-> The weight of this profit center, relative to the other profit centers within the same parent. The weight is used during profit distribution calculations. The sum of weights of all profit centers within a parent does not need to be 100, the ratio of total weight over weight is used. [Required] [Default(1)]
+The weight of this profit center, relative to the other profit centers within the same parent. The weight is used during profit distribution calculations. The sum of weights of all profit centers within a parent does not need to be 100, the ratio of total weight over weight is used. [Required] [Default(1)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Default Value_: **1**
 
 ### Parent
 
-> Parent profit center, null if this is root profit center. [Filter(multi eq)]
+Parent profit center, null if this is root profit center. [Filter(multi eq)]
 
 _Type_: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

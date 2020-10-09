@@ -32,7 +32,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this CostCenter. [Required] [Filter(like)]
+The name of this CostCenter. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -40,7 +40,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this CostCenter.
+Notes for this CostCenter.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### RelativeWeight
 
-> The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. [Required] [Default(1)]
+The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. [Required] [Default(1)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -60,14 +60,14 @@ _Default Value_: **1**
 
 ### Parent
 
-> Parent cost center, null if this is root cost center. [Filter(multi eq)]
+Parent cost center, null if this is root cost center. [Filter(multi eq)]
 
 _Type_: **[CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransferCostToProfitCenter
 
-> Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. [Filter(multi eq)]
+Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. [Filter(multi eq)]
 
 _Type_: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

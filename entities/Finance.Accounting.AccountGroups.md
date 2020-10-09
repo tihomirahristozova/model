@@ -27,7 +27,7 @@ Hierarchical chart of account groups. Entity: Acc_Account_Groups
 
 ### Description
 
-> The description of this AccountGroup.
+The description of this AccountGroup.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -35,7 +35,7 @@ _Supports Order By_: **False**
 
 ### Discontinued
 
-> True means that the account group won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)]
+True means that the account group won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -44,7 +44,7 @@ _Default Value_: **False**
 
 ### FullPath
 
-> Full path to the group. Contains delimited list of group numbers of parent groups. [Filter(like)]
+Full path to the group. Contains delimited list of group numbers of parent groups. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -58,7 +58,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Account group name, required. Must be unique within the parent group. [Required] [Filter(like)]
+Account group name, required. Must be unique within the parent group. [Required] [Filter(like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### Number
 
-> Unique account group number. May contain characters, if required. [Required] [Filter(like)] [ORD]
+Unique account group number. May contain characters, if required. [Required] [Filter(like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -77,7 +77,7 @@ _Supports Order By_: **True**
 
 ### Parent
 
-> Parent account group. null if this is root group. [Filter(multi eq)]
+Parent account group. null if this is root group. [Filter(multi eq)]
 
 _Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

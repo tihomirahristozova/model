@@ -28,7 +28,7 @@ Contains the materials, which are required for a project task. Entity: Prj_Proje
 
 ### BudgetedMaterialAmount
 
-> Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. [Currency: ProjectTask.Project.BudgetingCurrency]
+Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. [Currency: ProjectTask.Project.BudgetingCurrency]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -44,7 +44,7 @@ _Default Value_: **NewGuid**
 
 ### LineNumber
 
-> Line number within the task, increased in steps of 10. Used for sorting purposes. [Required] [Default(0)]
+Line number within the task, increased in steps of 10. Used for sorting purposes. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Front-End Recalc Expressions:_
 `( obj.ProjectTask.Materials.Select( c => c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Quantity
 
-> The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)]
+The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -67,7 +67,7 @@ _Default Value_: **Constant**
 
 ### QuantityBase
 
-> The equivalence of Quantity in the base measurement unit of the Material. [Required] [Default(0)] [ReadOnly]
+The equivalence of Quantity in the base measurement unit of the Material. [Required] [Default(0)] [ReadOnly]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -81,21 +81,21 @@ _Front-End Recalc Expressions:_
 
 ### MaterialProduct
 
-> The product Id of the required material. [Required] [Filter(multi eq)]
+The product Id of the required material. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTask
 
-> The task for which is the material requirement. [Required] [Filter(multi eq)] [Owner]
+The task for which is the material requirement. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
-> The measurement unit of the required quantity. [Required] [Filter(multi eq)]
+The measurement unit of the required quantity. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

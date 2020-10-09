@@ -25,7 +25,7 @@ Represents a group of users, sharing interest in the group topic. Entity: Cmm_So
 
 ### Code
 
-> Unique code of the group. Also used as group slug for Internet URL purposes. [Required] [ORD]
+Unique code of the group. Also used as group slug for Internet URL purposes. [Required] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -39,7 +39,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Multilanguage name of the group. [Required]
+Multilanguage name of the group. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -47,7 +47,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this SocialGroup.
+Notes for this SocialGroup.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  

@@ -40,7 +40,7 @@ Represents email messages. Entity: Mail_Messages
 
 ### Body
 
-> The body of the message.
+The body of the message.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### CcEmailAddressList
 
-> Semicolon-separated list of Cc email addresses. [Filter(like)]
+Semicolon-separated list of Cc email addresses. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 ### CreationDateTime
 
-> Date and time when the message was created. [Required] [Default(Now)] [Filter(ge;le)]
+Date and time when the message was created. [Required] [Default(Now)] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -65,7 +65,7 @@ _Default Value_: **CurrentDateTime**
 
 ### FromEmailAddress
 
-> Sending email address. [Required] [Filter(like)]
+Sending email address. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -79,7 +79,7 @@ _Default Value_: **NewGuid**
 
 ### IsEncrypted
 
-> True when the message is stored in encrypted format. [Required] [Default(false)] [Filter(eq)]
+True when the message is stored in encrypted format. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -88,7 +88,7 @@ _Default Value_: **False**
 
 ### IsRead
 
-> True when the message was read by the user. [Required] [Default(false)] [Filter(eq)]
+True when the message was read by the user. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -97,7 +97,7 @@ _Default Value_: **False**
 
 ### ReceivedDateTime
 
-> Date and time when the message was received. [Filter(ge;le)]
+Date and time when the message was received. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -105,7 +105,7 @@ _Supports Order By_: **False**
 
 ### SentDateTime
 
-> Date and time when the message was sent. [Filter(ge;le)]
+Date and time when the message was sent. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -113,7 +113,7 @@ _Supports Order By_: **False**
 
 ### ServerMessageID
 
-> Message ID as it appears on the mail server. [Filter(eq)]
+Message ID as it appears on the mail server. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -121,7 +121,7 @@ _Supports Order By_: **False**
 
 ### Subject
 
-> The message subject. [Filter(like)]
+The message subject. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -129,7 +129,7 @@ _Supports Order By_: **False**
 
 ### ToEmailAddressList
 
-> Semicolon-separated list of receiving email addresses. [Filter(like)]
+Semicolon-separated list of receiving email addresses. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -140,14 +140,14 @@ _Supports Order By_: **False**
 
 ### MailBoxFolder
 
-> The [BoxFolder](Applications.Mail.BoxFolders.md) to which this Message belongs. [Required] [Filter(multi eq)] [Owner]
+The [BoxFolder](Applications.Mail.BoxFolders.md) to which this Message belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[BoxFolders](Applications.Mail.BoxFolders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RelatedToParty
 
-> The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. [Filter(multi eq)]
+The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

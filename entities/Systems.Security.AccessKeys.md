@@ -19,7 +19,7 @@ Access keys provide the basic locking mechanism for data security. Each record c
 
 ### Code
 
-> Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries. [Filter(eq;like)]
+Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -27,7 +27,7 @@ _Supports Order By_: **False**
 
 ### EntityName
 
-> What entitity the key secures. Can be null for private, legacy keys. [Filter(eq;like)] [ORD]
+What entitity the key secures. Can be null for private, legacy keys. [Filter(eq;like)] [ORD]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Multilanguage descriptive name of the security key. Can be null for legacy keys. [Filter(eq;like)]
+Multilanguage descriptive name of the security key. Can be null for legacy keys. [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like**  

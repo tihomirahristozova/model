@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> User notes on the resource function.
+User notes on the resource function.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -41,14 +41,14 @@ _Supports Order By_: **False**
 
 ### Function
 
-> Function, which the resource can perform. [Required] [Filter(multi eq)]
+Function, which the resource can perform. [Required] [Filter(multi eq)]
 
 _Type_: **[Functions](Production.Resources.Functions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Resource
 
-> The [Resource](Production.Resources.ResourceFunctions.md#resource) to which this ResourceFunction belongs. [Required] [Filter(multi eq)] [Owner]
+The [Resource](Production.Resources.ResourceFunctions.md#resource) to which this ResourceFunction belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Resources](Production.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

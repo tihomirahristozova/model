@@ -25,7 +25,7 @@ Mass payment line, which is distribution of an amount among payment orders. Each
 
 ### Amount
 
-> The part of the total amount in the payment slip amount, that is distributed to the specified payment order. [Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency] [Required] [Default(0)]
+The part of the total amount in the payment slip amount, that is distributed to the specified payment order. [Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -36,7 +36,7 @@ _Front-End Recalc Expressions:_
 `obj.CoveredOrderAmount.ConvertTo( obj.PaymentSlipAmount.PaymentSlip.DocumentCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)`
 ### CoveredOrderAmount
 
-> The part of the original payment order amount, that is covered by this payment slip line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]
+The part of the original payment order amount, that is covered by this payment slip line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -56,14 +56,14 @@ _Default Value_: **NewGuid**
 
 ### PaymentOrder
 
-> The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)]
+The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)]
 
 _Type_: **[PaymentOrders](Finance.Payments.PaymentOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentSlipAmount
 
-> The [PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
+The [PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
 _Type_: **[PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

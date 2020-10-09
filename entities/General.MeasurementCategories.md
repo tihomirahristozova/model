@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### IsDefault
 
-> True=This category is the default category; false=otherwise. [Required] [Default(false)] [Filter(eq)]
+True=This category is the default category; false=otherwise. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -39,7 +39,7 @@ _Default Value_: **False**
 
 ### Name
 
-> The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD]
+The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  

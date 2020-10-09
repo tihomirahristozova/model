@@ -48,7 +48,7 @@ Represents processes, which process personal data, regulated by GDPR and other a
 
 ### Code
 
-> Unique process code. [Required] [Filter(eq;like)]
+Unique process code. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 ### ContainsSensitiveData
 
-> True if sensitive personal data is processed (racial, political, criminal, biometric, etc). [Required] [Filter(eq)]
+True if sensitive personal data is processed (racial, political, criminal, biometric, etc). [Required] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### DataSubjectCategory
 
-> The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. [Required]
+The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. [Required]
 
 _Type_: **[DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory)**  
 Allowed values for the [DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory) data attribute  
@@ -85,7 +85,7 @@ _Supports Order By_: **False**
 
 ### Description
 
-> Description of the process.
+Description of the process.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -93,7 +93,7 @@ _Supports Order By_: **False**
 
 ### DiscontinuationDate
 
-> The date on which the process was discontinued. Null if the process is still active. [Filter(eq;ge;le)]
+The date on which the process was discontinued. Null if the process is still active. [Filter(eq;ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -101,7 +101,7 @@ _Supports Order By_: **False**
 
 ### EstablishDate
 
-> The data on which the process was established and started functioning. [Required] [Default(Now)] [Filter(eq;ge;le)]
+The data on which the process was established and started functioning. [Required] [Default(Now)] [Filter(eq;ge;le)]
 
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -116,7 +116,7 @@ _Default Value_: **NewGuid**
 
 ### LegalBasisForProcessing
 
-> The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;. [Required] [Filter(eq)]
+The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;. [Required] [Filter(eq)]
 
 _Type_: **[LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing)**  
 Allowed values for the [LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing) data attribute  
@@ -136,7 +136,7 @@ _Supports Order By_: **False**
 
 ### ListOfDataCategories
 
-> Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. [Required] [Filter(eq)]
+Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -144,7 +144,7 @@ _Supports Order By_: **False**
 
 ### ListOfDataRecipientCategories
 
-> Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. [Filter(eq;like)]
+Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -152,7 +152,7 @@ _Supports Order By_: **False**
 
 ### ListOfProcessingPurposes
 
-> Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. [Filter(eq;like)]
+Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -160,7 +160,7 @@ _Supports Order By_: **False**
 
 ### ListOfTechnicalMeasures
 
-> Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. [Filter(eq)]
+Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -168,7 +168,7 @@ _Supports Order By_: **False**
 
 ### ListOfTransfersToThirdCountries
 
-> Comma-separated list of third countries, to which data is sent. [Filter(eq;like)]
+Comma-separated list of third countries, to which data is sent. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -176,7 +176,7 @@ _Supports Order By_: **False**
 
 ### ListOfUsedSoftware
 
-> Comma-separated list of the names of the software products used to process the data. [Filter(eq;like)]
+Comma-separated list of the names of the software products used to process the data. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -184,7 +184,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-> Name of the process (Multilanguage). [Required] [Filter(eq;like)]
+Name of the process (Multilanguage). [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -192,7 +192,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this PersonalDataProcess.
+Notes for this PersonalDataProcess.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -200,7 +200,7 @@ _Supports Order By_: **False**
 
 ### ProcessingRole
 
-> The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . [Required] [Default("C")] [Filter(eq)]
+The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . [Required] [Default("C")] [Filter(eq)]
 
 _Type_: **[ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole)**  
 Allowed values for the [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole) data attribute  
@@ -217,7 +217,7 @@ _Default Value_: **Controller**
 
 ### RetentionPeriodMonths
 
-> The period in months, for which the data is kept. Null when the period is unknown or N/A. [Filter(eq)]
+The period in months, for which the data is kept. Null when the period is unknown or N/A. [Filter(eq)]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals**  
@@ -225,7 +225,7 @@ _Supports Order By_: **False**
 
 ### ThirdCountryTransfersSafeguards
 
-> Description of safeguards, taken to protect personal data in case of third country transfers. [Filter(eq;like)]
+Description of safeguards, taken to protect personal data in case of third country transfers. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -236,14 +236,14 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company, which owns the process. [Required] [Filter(multi eq)]
+The enterprise company, which owns the process. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProcessOwnerPerson
 
-> The owner and responsible person for the process. [Required] [Filter(multi eq)]
+The owner and responsible person for the process. [Required] [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

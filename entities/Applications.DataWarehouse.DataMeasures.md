@@ -28,7 +28,7 @@ Contains the data measures of the General data warehouse. Entity: Dw_Data_Measur
 
 ### Code
 
-> Unique measure code. [Required] [Filter(eq;like)] [ORD]
+Unique measure code. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -36,7 +36,7 @@ _Supports Order By_: **True**
 
 ### GreenZoneSpreadPercent
 
-> The plus or minus percent, by which the goal can be missed, but still considered achieved. [Required] [Default(0.2)] [Filter(eq)]
+The plus or minus percent, by which the goal can be missed, but still considered achieved. [Required] [Default(0.2)] [Filter(eq)]
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals**  
@@ -45,7 +45,7 @@ _Default Value_: **0.2**
 
 ### HorizontalTrendSpreadPercent
 
-> The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. [Required] [Default(0.01)] [Filter(eq)]
+The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. [Required] [Default(0.01)] [Filter(eq)]
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals**  
@@ -60,7 +60,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of the measure (multilanguage). [Required] [Filter(eq;like)]
+The name of the measure (multilanguage). [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -68,7 +68,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this DataMeasure.
+Notes for this DataMeasure.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -76,7 +76,7 @@ _Supports Order By_: **False**
 
 ### Period
 
-> The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year. [Required] [Default("Q")] [Filter(eq)]
+The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year. [Required] [Default("Q")] [Filter(eq)]
 
 _Type_: **[Period](Applications.DataWarehouse.DataMeasures.md#period)**  
 Allowed values for the [Period](Applications.DataWarehouse.DataMeasures.md#period) data attribute  
@@ -98,7 +98,7 @@ _Default Value_: **Quarter**
 
 ### DataMeasureGroup
 
-> The group to which this measure belongs. [Required] [Filter(multi eq)]
+The group to which this measure belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

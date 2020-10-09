@@ -43,7 +43,7 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 
 ### ApplicationSecretHash
 
-> Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. (Introduced in version 20.1)
+Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. (Introduced in version 20.1)
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -51,7 +51,7 @@ _Supports Order By_: **False**
 
 ### ApplicationUri
 
-> Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app". [Required] [Filter(eq)]
+Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app". [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### BasicAuthenticationAllowed
 
-> Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user. [Required] [Default(false)] [Filter(eq)]
+Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -68,7 +68,7 @@ _Default Value_: **False**
 
 ### ClientType
 
-> Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). [Required] [Default("C")] (Introduced in version 20.1)
+Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). [Required] [Default("C")] (Introduced in version 20.1)
 
 _Type_: **[ClientType](Systems.Security.TrustedApplications.md#clienttype)**  
 Allowed values for the [ClientType](Systems.Security.TrustedApplications.md#clienttype) data attribute  
@@ -85,7 +85,7 @@ _Default Value_: **Confidential**
 
 ### CreationTimeUtc
 
-> Date and time (in UTC) when the application was registered. [Required] [Default(NowUtc)] [Filter(eq;ge;le)]
+Date and time (in UTC) when the application was registered. [Required] [Default(NowUtc)] [Filter(eq;ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -100,7 +100,7 @@ _Default Value_: **NewGuid**
 
 ### ImpersonateAsCommunityUserAllowed
 
-> Allows the application to request login from external users and operate on their behalf. [Required] [Default(false)] [Filter(eq)]
+Allows the application to request login from external users and operate on their behalf. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -109,7 +109,7 @@ _Default Value_: **False**
 
 ### ImpersonateAsInternalUserAllowed
 
-> Allows the application to request login from internal users and operate on their behalf. [Required] [Default(false)] [Filter(eq)]
+Allows the application to request login from internal users and operate on their behalf. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -118,7 +118,7 @@ _Default Value_: **False**
 
 ### ImpersonateLoginUrl
 
-> The login Url used when an application is impersonated as (usually community) user.
+The login Url used when an application is impersonated as (usually community) user.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -126,7 +126,7 @@ _Supports Order By_: **False**
 
 ### ImpersonateLogoutUrl
 
-> The logout Url used when an application is impersonated as (usually community) user.
+The logout Url used when an application is impersonated as (usually community) user.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -134,7 +134,7 @@ _Supports Order By_: **False**
 
 ### IsEnabled
 
-> Specifies whether the application is enabled for login. [Required] [Default(true)] [Filter(eq)]
+Specifies whether the application is enabled for login. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -143,7 +143,7 @@ _Default Value_: **True**
 
 ### Name
 
-> The multi-language name of the application. [Required] [Filter(eq;like)]
+The multi-language name of the application. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -151,7 +151,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this TrustedApplication.
+Notes for this TrustedApplication.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -159,7 +159,7 @@ _Supports Order By_: **False**
 
 ### Scope
 
-> The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). (Introduced in version 20.1)
+The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). (Introduced in version 20.1)
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -167,7 +167,7 @@ _Supports Order By_: **False**
 
 ### SystemUserAllowed
 
-> Allows this application to logon as a service. [Required] [Default(false)] [Filter(eq)]
+Allows this application to logon as a service. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -176,7 +176,7 @@ _Default Value_: **False**
 
 ### SystemUserLoginUrl
 
-> The URL, which will be used by the login process, when the application logs in as a service.
+The URL, which will be used by the login process, when the application logs in as a service.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -187,7 +187,7 @@ _Supports Order By_: **False**
 
 ### SystemUser
 
-> The user, which will be used when the application logins as a service. [Filter(multi eq)]
+The user, which will be used when the application logins as a service. [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

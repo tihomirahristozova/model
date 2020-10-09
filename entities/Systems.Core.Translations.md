@@ -24,7 +24,7 @@ Contains user-defined translations for non-english languages of the user interfa
 
 ### Active
 
-> True when the translation is verified and activated. [Required] [Default(true)] [Filter(eq)]
+True when the translation is verified and activated. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -33,7 +33,7 @@ _Default Value_: **True**
 
 ### ApplicationName
 
-> The application, containing the resource. For base resource types (T,C,H), this is null. [Filter(eq)] [ORD]
+The application, containing the resource. For base resource types (T,C,H), this is null. [Filter(eq)] [ORD]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -41,7 +41,7 @@ _Supports Order By_: **True**
 
 ### CreationTime
 
-> Timestamp when the translation was first created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly]
+Timestamp when the translation was first created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -56,7 +56,7 @@ _Default Value_: **NewGuid**
 
 ### Language
 
-> The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us". [Required] [Default("en")] [Filter(eq)]
+The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us". [Required] [Default("en")] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -65,7 +65,7 @@ _Default Value_: **en**
 
 ### ResourceId
 
-> The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. [Required] [Filter(eq;like)]
+The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 ### ResourceType
 
-> T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. [Required] [Default("S")] [Filter(eq)]
+T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. [Required] [Default("S")] [Filter(eq)]
 
 _Type_: **[ResourceType](Systems.Core.Translations.md#resourcetype)**  
 Allowed values for the [ResourceType](Systems.Core.Translations.md#resourcetype) data attribute  
@@ -95,7 +95,7 @@ _Default Value_: **OtherApplicationSpecific**
 
 ### TranslationField
 
-> The translated text. [Required]
+The translated text. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -103,7 +103,7 @@ _Supports Order By_: **False**
 
 ### UpdateTime
 
-> When the translation was last updated. [Required] [Default(Now)] [ReadOnly]
+When the translation was last updated. [Required] [Default(Now)] [ReadOnly]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  

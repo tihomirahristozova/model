@@ -23,7 +23,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this ServiceObjectType. [Required] [Filter(eq;like)]
+The name of this ServiceObjectType. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  

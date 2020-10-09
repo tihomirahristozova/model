@@ -27,7 +27,7 @@ Production workgroups. Entity: Prd_Workgroups
 
 ### FullPath
 
-> The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'. [Default("")]
+The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'. [Default("")]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,7 +42,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Name of the workgroup. [Required] [Filter(like)]
+Name of the workgroup. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> User notes for the workgroup.
+User notes for the workgroup.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### Parent
 
-> Path-like parent workgroup name. [Required] [Default("/")] [Filter(like)] [ORD]
+Path-like parent workgroup name. [Required] [Default("/")] [Filter(like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  

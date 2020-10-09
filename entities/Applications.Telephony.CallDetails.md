@@ -31,7 +31,7 @@ Contains call detail records. Calls are phone calls, video calls and SMS message
 
 ### CalledPartyNumber
 
-> The voice number of the party, which received the call. [Required] [Filter(eq;like)]
+The voice number of the party, which received the call. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### CallingPartyNumber
 
-> The voice number of the originating party of the call. [Required] [Filter(eq;like)]
+The voice number of the originating party of the call. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -47,7 +47,7 @@ _Supports Order By_: **False**
 
 ### CallType
 
-> P=Phone; V=Video; M=Message/SMS. [Required] [Default("P")] [Filter(eq)]
+P=Phone; V=Video; M=Message/SMS. [Required] [Default("P")] [Filter(eq)]
 
 _Type_: **[CallType](Applications.Telephony.CallDetails.md#calltype)**  
 Allowed values for the [CallType](Applications.Telephony.CallDetails.md#calltype) data attribute  
@@ -65,7 +65,7 @@ _Default Value_: **Phone**
 
 ### CallUniqueId
 
-> The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.
+The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 ### DurationSeconds
 
-> The duration of the call (in seconds). [Required] [Default(0)] [Filter(ge;le)]
+The duration of the call (in seconds). [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -88,7 +88,7 @@ _Default Value_: **NewGuid**
 
 ### StartTime
 
-> The starting date and time of the call. [Required] [Filter(ge;le)]
+The starting date and time of the call. [Required] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -99,28 +99,28 @@ _Supports Order By_: **False**
 
 ### CalledParty
 
-> The party, which received the call. null when the party was not determined successfully. [Filter(multi eq)]
+The party, which received the call. null when the party was not determined successfully. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CallingParty
 
-> The party, which originated the call.  null when the party was not determined successfully. [Filter(multi eq)]
+The party, which originated the call.  null when the party was not determined successfully. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExternalCompany
 
-> The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. [Filter(multi eq)]
+The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. [Filter(multi eq)]
 
 _Type_: **[Companies](General.Contacts.Companies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExternalParty
 
-> It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. [Filter(multi eq)]
+It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

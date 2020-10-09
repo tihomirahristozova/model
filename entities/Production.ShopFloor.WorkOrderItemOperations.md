@@ -45,7 +45,7 @@ The operations that are performed to produce the product. Entity: Prd_Work_Order
 
 ### ActualEndDateTime
 
-> The date/time when the operation has completed. null means that the operation is not completed.
+The date/time when the operation has completed. null means that the operation is not completed.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### ActualStartDateTime
 
-> The date/time when the operation has started. null means that the has not started yet.
+The date/time when the operation has started. null means that the has not started yet.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -67,7 +67,7 @@ _Default Value_: **NewGuid**
 
 ### LineOrd
 
-> Order of the line within the work order routing. [Required] [Filter(eq;like)]
+Order of the line within the work order routing. [Required] [Filter(eq;like)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, Like**  
@@ -80,7 +80,7 @@ _Front-End Recalc Expressions:_
 `( obj.WorkOrderItem.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### MinimumConcurrentStartTimeMinutes
 
-> How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
+How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -88,7 +88,7 @@ _Supports Order By_: **False**
 
 ### MoveTimeMinutes
 
-> Time to move the lot to the next operation in minutes. [Required] [Default(0)]
+Time to move the lot to the next operation in minutes. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -97,7 +97,7 @@ _Default Value_: **0**
 
 ### Notes
 
-> Notes for this WorkOrderItemOperation.
+Notes for this WorkOrderItemOperation.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -105,7 +105,7 @@ _Supports Order By_: **False**
 
 ### OperationDescription
 
-> The short description of the operation.
+The short description of the operation.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -115,7 +115,7 @@ _Front-End Recalc Expressions:_
 `obj.Operation.Name`
 ### RunTimeMinutes
 
-> Time for production of one lot of the produced item in minutes. [Required] [Default(0)]
+Time for production of one lot of the produced item in minutes. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -124,7 +124,7 @@ _Default Value_: **0**
 
 ### ScheduledEndDateTime
 
-> The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only).
+The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only).
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -132,7 +132,7 @@ _Supports Order By_: **False**
 
 ### ScheduledStartDateTime
 
-> The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders).
+The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders).
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -140,7 +140,7 @@ _Supports Order By_: **False**
 
 ### ScrapRate
 
-> Projected scrap rate of the operation. [Required] [Default(0)]
+Projected scrap rate of the operation. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -149,7 +149,7 @@ _Default Value_: **0**
 
 ### SetupTimeMinutes
 
-> Time needed to setup the equipment in minutes. [Required] [Default(0)]
+Time needed to setup the equipment in minutes. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -158,7 +158,7 @@ _Default Value_: **0**
 
 ### Tooling
 
-> The tools needed for the routing step.
+The tools needed for the routing step.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -166,7 +166,7 @@ _Supports Order By_: **False**
 
 ### UseQuantity
 
-> Quantity of the resource, that should be allocated for the operation. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]
+Quantity of the resource, that should be allocated for the operation. [Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -175,7 +175,7 @@ _Default Value_: **Constant**
 
 ### WaitTimeMinutes
 
-> Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)]
+Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -187,21 +187,21 @@ _Default Value_: **0**
 
 ### Operation
 
-> The performed operation. [Filter(multi eq)]
+The performed operation. [Filter(multi eq)]
 
 _Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkgroupResource
 
-> The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)]
+The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)]
 
 _Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItem
 
-> The work order item, containing the line. [Required] [Filter(multi eq)] [Owner]
+The work order item, containing the line. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

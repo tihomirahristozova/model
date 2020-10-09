@@ -37,7 +37,7 @@ Contains the materials, which were actually used during the service activity (re
 
 ### CoveredByGuarantee
 
-> True when the used material is covered by the guarantee. [Required] [Default(false)]
+True when the used material is covered by the guarantee. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -52,7 +52,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]
+Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -65,7 +65,7 @@ _Front-End Recalc Expressions:_
 `( obj.ServiceActivity.Materials.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Quantity
 
-> Quantity of the product, that was used. [Unit: QuantityUnit] [Required]
+Quantity of the product, that was used. [Unit: QuantityUnit] [Required]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 ### QuantityBase
 
-> The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
+The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -86,7 +86,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -102,7 +102,7 @@ _Front-End Recalc Expressions:_
 
 ### LineStore
 
-> The store from which the product was taken. null = use the store from the header. [Filter(multi eq)]
+The store from which the product was taken. null = use the store from the header. [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -114,14 +114,14 @@ _Front-End Recalc Expressions:_
 `obj.ServiceActivity.Store`
 ### Product
 
-> The product, which was used as material. [Required] [Filter(multi eq)]
+The product, which was used as material. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
-> The measurement unit of Quantity. Initially is set to the default unit for the product. [Required] [Filter(multi eq)]
+The measurement unit of Quantity. Initially is set to the default unit for the product. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -130,14 +130,14 @@ _Front-End Recalc Expressions:_
 `obj.Product.BaseUnit`
 ### ServiceActivity
 
-> The [ServiceActivity](Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]
+The [ServiceActivity](Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceObject
 
-> The service object for which the material is used. null means unkown object or N/A. [Filter(multi eq)]
+The service object for which the material is used. null means unkown object or N/A. [Filter(multi eq)]
 
 _Type_: **[ServiceObjects](Applications.Service.ServiceObjects.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

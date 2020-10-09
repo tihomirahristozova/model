@@ -99,7 +99,7 @@ Each payment order contains a receivable or payable amount. Entity: Cash_Payment
 
 ### AllowCloseNotPaid
 
-> True to allow closing of payment orders, that are not fully paid. [Required] [Default(false)] [Filter(eq)]
+True to allow closing of payment orders, that are not fully paid. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -108,7 +108,7 @@ _Default Value_: **False**
 
 ### BillTo
 
-> If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified. [Filter(eq)]
+If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified. [Filter(eq)]
 
 _Type_: **[BillTo](Finance.Payments.PaymentOrders.md#billto) (nullable)**  
 Allowed values for the [BillTo](Finance.Payments.PaymentOrders.md#billto) data attribute  
@@ -124,7 +124,7 @@ _Supports Order By_: **False**
 
 ### CompleteTime
 
-> Exact time, when the document was last completed[Filter(ge;le)]
+Exact time, when the document was last completed[Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -132,7 +132,7 @@ _Supports Order By_: **False**
 
 ### CreationTime
 
-> Date/Time when the document was created [Required][Filter(ge;le)]
+Date/Time when the document was created [Required][Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -141,7 +141,7 @@ _Default Value_: **CurrentDateTime**
 
 ### CreationUser
 
-> The login name of the user, who created the document [Required][Filter(like)]
+The login name of the user, who created the document [Required][Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -149,7 +149,7 @@ _Supports Order By_: **False**
 
 ### Direction
 
-> I for Payment issue, R for payment receipt. [Required] [Default("I")] [Filter(eq)]
+I for Payment issue, R for payment receipt. [Required] [Default("I")] [Filter(eq)]
 
 _Type_: **[Direction](Finance.Payments.PaymentOrders.md#direction)**  
 Allowed values for the [Direction](Finance.Payments.PaymentOrders.md#direction) data attribute  
@@ -166,7 +166,7 @@ _Default Value_: **Expense**
 
 ### DocumentDate
 
-> The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]
+The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -175,7 +175,7 @@ _Default Value_: **CurrentDate**
 
 ### DocumentNo
 
-> Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]
+Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -183,7 +183,7 @@ _Supports Order By_: **True**
 
 ### DocumentNotes
 
-> Notes for this Document
+Notes for this Document
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -191,7 +191,7 @@ _Supports Order By_: **False**
 
 ### DocumentVersion
 
-> [Filter(eq;ge;le)]
+[Filter(eq;ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -200,7 +200,7 @@ _Default Value_: **1**
 
 ### DueDate
 
-> The due date of the payment. null means there is no due date. [Filter(eq;ge;le)]
+The due date of the payment. null means there is no due date. [Filter(eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -208,7 +208,7 @@ _Supports Order By_: **False**
 
 ### DueStartDate
 
-> The date at which the payment becomes executable. null means the payment is executable at all times. [Filter(eq;ge;le)] [ORD]
+The date at which the payment becomes executable. null means the payment is executable at all times. [Filter(eq;ge;le)] [ORD]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -216,7 +216,7 @@ _Supports Order By_: **True**
 
 ### EntityName
 
-> The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
+The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -230,7 +230,7 @@ _Default Value_: **NewGuid**
 
 ### InstallmentNumber
 
-> Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. [Filter(eq)]
+Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. [Filter(eq)]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **Equals**  
@@ -238,7 +238,7 @@ _Supports Order By_: **False**
 
 ### InvoiceAmount
 
-> The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). [Currency: InvoiceAmountCurrency]
+The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). [Currency: InvoiceAmountCurrency]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -246,7 +246,7 @@ _Supports Order By_: **False**
 
 ### IsAmountWithVAT
 
-> Is_Amount_With_VAT=true if the requested amount includes VAT. [Required] [Default(true)] [Filter(eq)]
+Is_Amount_With_VAT=true if the requested amount includes VAT. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -255,7 +255,7 @@ _Default Value_: **True**
 
 ### IsReleased
 
-> True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -264,7 +264,7 @@ _Default Value_: **False**
 
 ### IsSingleExecution
 
-> Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -273,7 +273,7 @@ _Default Value_: **False**
 
 ### Notes
 
-> Notes for this PaymentOrder.
+Notes for this PaymentOrder.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -281,7 +281,7 @@ _Supports Order By_: **False**
 
 ### ParentDocumentRelationshipType
 
-> Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
+Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
 
 _Type_: **[ParentDocument<br />RelationshipType](Finance.Payments.PaymentOrders.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
@@ -297,7 +297,7 @@ _Supports Order By_: **False**
 
 ### PlanningOnly
 
-> Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]
+Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]
 
 _Type_: **boolean (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -306,7 +306,7 @@ _Default Value_: **False**
 
 ### ReadOnly
 
-> True - the document is read only; false - the document is not read only [Required]
+True - the document is read only; false - the document is not read only [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -315,7 +315,7 @@ _Default Value_: **False**
 
 ### RefDocumentDate
 
-> The date of the original document. null means that it is unknown. [Filter(eq)]
+The date of the original document. null means that it is unknown. [Filter(eq)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals**  
@@ -328,7 +328,7 @@ _Front-End Recalc Expressions:_
 `obj.RefDocument.DocumentDate`
 ### RefDocumentNo
 
-> The number of the document which has created the payment order and is the basis for the payment. [Required] [Filter(eq)]
+The number of the document which has created the payment order and is the basis for the payment. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -341,7 +341,7 @@ _Front-End Recalc Expressions:_
 `obj.RefDocument.DocumentNo`
 ### ReferenceDate
 
-> The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]
+The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -349,7 +349,7 @@ _Supports Order By_: **False**
 
 ### ReferenceDocumentNo
 
-> The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -357,7 +357,7 @@ _Supports Order By_: **False**
 
 ### RefInvoiceApplyDate
 
-> The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. [Filter(eq;ge;le)]
+The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. [Filter(eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -370,7 +370,7 @@ _Front-End Recalc Expressions:_
 `Convert( obj.RefInvoiceDocument, IInvoiceDocument).ApplyDate`
 ### RefInvoiceDocumentDate
 
-> The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. [Filter(eq;ge;le)]
+The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. [Filter(eq;ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -383,7 +383,7 @@ _Front-End Recalc Expressions:_
 `obj.RefInvoiceDocument.DocumentDate`
 ### RefInvoiceDocumentNo
 
-> The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(eq)]
+The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -396,7 +396,7 @@ _Front-End Recalc Expressions:_
 `obj.RefInvoiceDocument.DocumentNo`
 ### ReleaseTime
 
-> Exact time, when the document was first released [Filter(ge;le)]
+Exact time, when the document was first released [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -404,7 +404,7 @@ _Supports Order By_: **False**
 
 ### State
 
-> 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]
+0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]
 
 _Type_: **[DocumentState](Finance.Payments.PaymentOrders.md#state)**  
 Enumeration of document system states  
@@ -426,7 +426,7 @@ _Default Value_: **0**
 
 ### TotalAmount
 
-> Total amount that should be payed. [Currency: TotalAmountCurrency] [Required] [Default(0)] [Filter(eq;ge;le)]
+Total amount that should be payed. [Currency: TotalAmountCurrency] [Required] [Default(0)] [Filter(eq;ge;le)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -435,7 +435,7 @@ _Default Value_: **Constant**
 
 ### Void
 
-> True if the document is null and void [Required][Filter(eq)]
+True if the document is null and void [Required][Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -444,7 +444,7 @@ _Default Value_: **False**
 
 ### VoidReason
 
-> Reason for voiding the document, entered by the user
+Reason for voiding the document, entered by the user
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -452,7 +452,7 @@ _Supports Order By_: **False**
 
 ### VoidTime
 
-> Date/time when the document has become void
+Date/time when the document has become void
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -460,7 +460,7 @@ _Supports Order By_: **False**
 
 ### VoidUser
 
-> The user who voided the document
+The user who voided the document
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -471,105 +471,105 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-> The access key, containing the user permissions for this document. null means that all users have unlimited permissions
+The access key, containing the user permissions for this document. null means that all users have unlimited permissions
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
 
-> The primary document, which the current document adjusts. null when this is not an adjustment document
+The primary document, which the current document adjusts. null when this is not an adjustment document
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
 
-> The user to which this document is assigned for handling. null means that the document is not assigned to specific user
+The user to which this document is assigned for handling. null means that the document is not assigned to specific user
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
 
-> The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
+The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
-> The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
+The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The enterprise company which issued the document [Required]
+The enterprise company which issued the document [Required]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-> The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
+The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FiscalPrinterPosDevice
 
-> When not null, contains suggested fiscal printer for printing fiscal notes upon payment. [Filter(multi eq)] (Introduced in version 19.1)
+When not null, contains suggested fiscal printer for printing fiscal notes upon payment. [Filter(multi eq)] (Introduced in version 19.1)
 
 _Type_: **[Devices](Crm.Pos.Devices.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
 
-> The division of the company, issuing the document. null when the document is not issued by any specific division
+The division of the company, issuing the document. null when the document is not issued by any specific division
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
 
-> The party which issued the document [Required]
+The party which issued the document [Required]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### InvoiceAmountCurrency
 
-> The currency of Invoice Amount. [Filter(multi eq)]
+The currency of Invoice Amount. [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LocationParty
 
-> Location or sub-party of the Party_Id in the order. [Filter(multi eq)]
+Location or sub-party of the Party_Id in the order. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MasterDocument
 
-> In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
+In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-> In a multi-document tree, this is the direct parent document. If this is the root it is null
+In a multi-document tree, this is the direct parent document. If this is the root it is null
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
-> The party which is to pay or receive the amount. [Required] [Filter(multi eq)]
+The party which is to pay or receive the amount. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -579,7 +579,7 @@ _Back-End Default Expression:_
 
 ### PaymentAccount
 
-> When not null, specifies the payment account that is expected or will be used by the payment transaction. [Filter(multi eq)]
+When not null, specifies the payment account that is expected or will be used by the payment transaction. [Filter(multi eq)]
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -588,28 +588,28 @@ _Front-End Recalc Expressions:_
 `obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)`
 ### PaymentType
 
-> Expected payment type. Null when there is no expectation. Can also specify default payment account. [Filter(multi eq)]
+Expected payment type. Null when there is no expectation. Can also specify default payment account. [Filter(multi eq)]
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimeCauseDocument
 
-> The document that is the prime cause for creation of the current document
+The document that is the prime cause for creation of the current document
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### RefDocument
 
-> The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. [Filter(multi eq)]
+The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefDocumentType
 
-> The type of the document which has created the payment order and is the basis for the payment. [Required] [Filter(multi eq)]
+The type of the document which has created the payment order and is the basis for the payment. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -621,14 +621,14 @@ _Front-End Recalc Expressions:_
 `obj.RefDocument.DocumentType`
 ### RefInvoiceDocument
 
-> The invoice document which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document. [Filter(multi eq)]
+The invoice document which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefInvoiceDocumentType
 
-> The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)]
+The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -640,42 +640,42 @@ _Front-End Recalc Expressions:_
 `obj.RefInvoiceDocument.DocumentType`
 ### ResponsiblePerson
 
-> The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
+The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ReverseOfDocument
 
-> The document which the current document is reverse of
+The document which the current document is reverse of
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Sequence
 
-> The sequence that will be used to give new numbers to the documents of this type
+The sequence that will be used to give new numbers to the documents of this type
 
 _Type_: **[Sequences](General.Sequences.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ToCompanyDivision
 
-> The division of the company, receiving the document. null when the document is not received by any specific division
+The division of the company, receiving the document. null when the document is not received by any specific division
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
 _Supported Filters_: **NotFilterable**  
 
 ### ToParty
 
-> The party which should receive the document
+The party which should receive the document
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### TotalAmountCurrency
 
-> The currency of Total Amount. [Required] [Filter(multi eq)]
+The currency of Total Amount. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -685,7 +685,7 @@ _Back-End Default Expression:_
 
 ### UserStatus
 
-> The user status of this document if applicable for this document type. null means unknown or not yet set
+The user status of this document if applicable for this document type. null means unknown or not yet set
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  

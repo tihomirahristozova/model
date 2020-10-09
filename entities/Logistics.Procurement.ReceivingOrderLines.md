@@ -44,7 +44,7 @@ Contains detail records of Receiving Orders. Each line contains the receiving of
 
 ### ConfirmedQuantity
 
-> The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. [Unit: QuantityUnit]
+The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. [Unit: QuantityUnit]
 
 _Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -52,7 +52,7 @@ _Supports Order By_: **False**
 
 ### ConfirmedQuantityBase
 
-> The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit]
+The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit]
 
 _Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -62,7 +62,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.ConfirmedQuantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConfirmedQuantityBase, obj.ConfirmedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### ConfirmedStandardQuantityBase
 
-> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -72,7 +72,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.ConfirmedQuantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConfirmedStandardQuantityBase, obj.ConfirmedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### Finished
 
-> When true, denotes that this is the last receivement for this purchase order line and further receivements are not expected. [Required] [Default(false)]
+When true, denotes that this is the last receivement for this purchase order line and further receivements are not expected. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -87,7 +87,7 @@ _Default Value_: **NewGuid**
 
 ### LineAmount
 
-> The total amount for the line. Equals to Quantity * Price_Per_Unit. [Currency: ReceivingOrder.DocumentCurrency] [Required] [Default(0)]
+The total amount for the line. Equals to Quantity * Price_Per_Unit. [Currency: ReceivingOrder.DocumentCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -101,7 +101,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( obj.PricePerUnit == null)), obj.LineAmount, ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit).Round( ))`
 ### LineNo
 
-> Line number, unique within the ReceivingOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the ReceivingOrder (in order to allow insertions with adjustment documents). [Required]
+Line number, unique within the ReceivingOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the ReceivingOrder (in order to allow insertions with adjustment documents). [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -114,7 +114,7 @@ _Front-End Recalc Expressions:_
 `( obj.ReceivingOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-> Notes for this ReceivingOrderLine.
+Notes for this ReceivingOrderLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -122,7 +122,7 @@ _Supports Order By_: **False**
 
 ### PricePerUnit
 
-> The unit price of the received products, in the documents currency. [Currency: ReceivingOrder.DocumentCurrency] [Required] [Default(0)]
+The unit price of the received products, in the documents currency. [Currency: ReceivingOrder.DocumentCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -133,7 +133,7 @@ _Front-End Recalc Expressions:_
 `obj.GetPurchasePriceFromPurchasePriceList( obj.PurchaseProductPrice, obj.QuantityUnit)`
 ### ProductDescription
 
-> The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. [Required]
+The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. [Required]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
@@ -146,7 +146,7 @@ _Front-End Recalc Expressions:_
 `obj.Product.Name`
 ### Quantity
 
-> The received quantity. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
+The received quantity. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -155,7 +155,7 @@ _Default Value_: **Constant**
 
 ### QuantityBase
 
-> The equivalence of Quantity, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
+The equivalence of Quantity, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -168,7 +168,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -184,7 +184,7 @@ _Front-End Recalc Expressions:_
 
 ### LineStore
 
-> The store in which the goods are received. [Filter(multi eq)]
+The store in which the goods are received. [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -196,42 +196,42 @@ _Front-End Recalc Expressions:_
 `obj.ReceivingOrder.Store`
 ### Lot
 
-> The lot of the received goods. [Filter(multi eq)]
+The lot of the received goods. [Filter(multi eq)]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The received product. [Required] [Filter(multi eq)]
+The received product. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductCode
 
-> When not null, specifies that the product was selected using the specified product code record. [Filter(multi eq)]
+When not null, specifies that the product was selected using the specified product code record. [Filter(multi eq)]
 
 _Type_: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductVariant
 
-> If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]
+If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]
 
 _Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseOrderLine
 
-> The purchase order line for which we are receiving quantity. [Filter(multi eq)]
+The purchase order line for which we are receiving quantity. [Filter(multi eq)]
 
 _Type_: **[PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseProductPrice
 
-> When not null, specifies that the purchase unit price is loaded automatically from the specified purchase price record. [Filter(multi eq)]
+When not null, specifies that the purchase unit price is loaded automatically from the specified purchase price record. [Filter(multi eq)]
 
 _Type_: **[PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -240,7 +240,7 @@ _Front-End Recalc Expressions:_
 `obj.DeterminePurchaseProductPrice( Convert( obj.ReceivingOrder.DocumentDate, Nullable`1), obj.ReceivingOrder.Supplier, obj.Product, ( obj.ConfirmedQuantity ?? obj.Quantity), obj.ReceivingOrder.EnterpriseCompany, obj.ReceivingOrder.PurchasePriceList)`
 ### QuantityUnit
 
-> The measurement unit of Quantity. Initially copied from the Default Measurement Unit of the Product. [Required] [Filter(multi eq)]
+The measurement unit of Quantity. Initially copied from the Default Measurement Unit of the Product. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -252,21 +252,21 @@ _Front-End Recalc Expressions:_
 `obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen( obj.Product.PurchaseMeasurementUnit).IfNullThen( obj.Product.MeasurementUnit).IfNullThen( obj.QuantityUnit)`
 ### ReceivingOrder
 
-> The [ReceivingOrder](Logistics.Procurement.ReceivingOrderLines.md#receivingorder) to which this ReceivingOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [ReceivingOrder](Logistics.Procurement.ReceivingOrderLines.md#receivingorder) to which this ReceivingOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
 
-> Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]
+Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreBin
 
-> The store bin in which to receive the goods. [Filter(multi eq)]
+The store bin in which to receive the goods. [Filter(multi eq)]
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

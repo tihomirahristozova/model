@@ -26,7 +26,7 @@ Contains the locations to which the assets are assigned at various moments in ti
 
 ### FromDate
 
-> The date on which the asset is assigned to the location. [Required] [Default(Now)]
+The date on which the asset is assigned to the location. [Required] [Default(Now)]
 
 _Type_: **date**  
 _Supported Filters_: **NotFilterable**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Might contain additional notes for the exact location of the asset within the enterprise company location.
+Might contain additional notes for the exact location of the asset within the enterprise company location.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -52,21 +52,21 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompanyLocation
 
-> The enterprise company location, where the asset is assigned. [Required] [Filter(multi eq)]
+The enterprise company location, where the asset is assigned. [Required] [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAsset
 
-> The asset, whose location is recorded. [Required] [Filter(multi eq)] [Owner]
+The asset, whose location is recorded. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
 
-> The responsible person, to which the asset is assigned. null when the asset is not assigned to any particular responsible person. [Filter(multi eq)]
+The responsible person, to which the asset is assigned. null when the asset is not assigned to any particular responsible person. [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### ProviderKey
 
-> The key, which the provider provided for logging the user. [Required] [Filter(multi eq)]
+The key, which the provider provided for logging the user. [Required] [Filter(multi eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -38,7 +38,7 @@ _Supports Order By_: **False**
 
 ### ProviderName
 
-> The system name of the authentication provider. It should be already registered for the domain. [Required] [Filter(eq)] (Introduced in version 20.1)
+The system name of the authentication provider. It should be already registered for the domain. [Required] [Filter(eq)] (Introduced in version 20.1)
 
 _Type_: **[ProviderName](Systems.Security.UserProviderLogins.md#providername)**  
 Allowed values for the [ProviderName](Systems.Security.DomainProviders.md#providername) data attribute  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### User
 
-> The user for which the login is defined. [Required] [Filter(multi eq)] [Owner]
+The user for which the login is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

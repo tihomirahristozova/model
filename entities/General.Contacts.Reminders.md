@@ -32,7 +32,7 @@ _Default Value_: **NewGuid**
 
 ### IsDefault
 
-> True when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form. [Required] [Default(false)] [Filter(eq)]
+True when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -41,7 +41,7 @@ _Default Value_: **False**
 
 ### IsDismissed
 
-> When true the reminder was dismissed by the user; the initial value is false. [Required] [Default(false)] [Filter(eq)]
+When true the reminder was dismissed by the user; the initial value is false. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -50,7 +50,7 @@ _Default Value_: **False**
 
 ### Notes
 
-> Notes that describe this specific reminder for the task.
+Notes that describe this specific reminder for the task.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### ReminderTime
 
-> The time when the alarm should snooze to the user. [Required] [Filter(ge;le)]
+The time when the alarm should snooze to the user. [Required] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 ### Activity
 
-> The activity to which this reminder is attached. [Required] [Filter(multi eq)] [Owner]
+The activity to which this reminder is attached. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

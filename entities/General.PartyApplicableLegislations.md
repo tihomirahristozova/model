@@ -24,7 +24,7 @@ Specifies a legislation, which is applicable for a party. A single party can hav
 
 ### ApplicableLegislation
 
-> A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. [Required] [Filter(multi eq)] [ORD]
+A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. [Required] [Filter(multi eq)] [ORD]
 
 _Type_: **[ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation)**  
 Allowed values for the [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) data attribute  
@@ -69,7 +69,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this PartyApplicableLegislation. [Filter(like)]
+Notes for this PartyApplicableLegislation. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -80,7 +80,7 @@ _Supports Order By_: **False**
 
 ### Party
 
-> The [Party](General.Contacts.Parties.md) to which this PartyApplicableLegislation belongs. [Required] [Filter(multi eq)] [Owner]
+The [Party](General.Contacts.Parties.md) to which this PartyApplicableLegislation belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

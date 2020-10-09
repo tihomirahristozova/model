@@ -20,7 +20,7 @@ Represents a role, which can be assigned to POS operators (like Cashier, Manager
 
 ### CanProcessMinusSales
 
-> Indicates whether the role is allowed to process minus (qty and/or value) sales. [Required] [Default(false)] [Filter(multi eq)]
+Indicates whether the role is allowed to process minus (qty and/or value) sales. [Required] [Default(false)] [Filter(multi eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -29,7 +29,7 @@ _Default Value_: **False**
 
 ### CanVoidSales
 
-> Indicates whether this role can void sales orders. [Required] [Default(false)] [Filter(multi eq)]
+Indicates whether this role can void sales orders. [Required] [Default(false)] [Filter(multi eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -44,7 +44,7 @@ _Default Value_: **NewGuid**
 
 ### PosRoleCode
 
-> Unique role code. [Required] [Filter(multi eq;like)] [ORD]
+Unique role code. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -52,7 +52,7 @@ _Supports Order By_: **True**
 
 ### PosRoleName
 
-> Multi-language name of the POS role. [Required] [Filter(multi eq;like)]
+Multi-language name of the POS role. [Required] [Filter(multi eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  

@@ -24,7 +24,7 @@ User permissions for accessing the system data columns. Entity: Sec_Column_Permi
 
 ### ColumnName
 
-> The name of the secured column. [Required] [Filter(eq)]
+The name of the secured column. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -38,7 +38,7 @@ _Default Value_: **NewGuid**
 
 ### TableName
 
-> The table in which is the secured column. [Required] [Filter(eq)] [ORD]
+The table in which is the secured column. [Required] [Filter(eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -49,7 +49,7 @@ _Supports Order By_: **True**
 
 ### AccessKey
 
-> The required access key for accessing the column. [Filter(multi eq)] [ReadOnly]
+The required access key for accessing the column. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

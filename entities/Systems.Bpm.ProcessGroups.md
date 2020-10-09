@@ -25,7 +25,7 @@ Represents a node in the hierarchy of process groups. Entity: Bpm_Process_Groups
 
 ### Code
 
-> Group code, unique within the parent group. [Required] [Filter(eq;like)]
+Group code, unique within the parent group. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -39,7 +39,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Multilanguage process group name. [Required] [Filter(eq;like)]
+Multilanguage process group name. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -47,7 +47,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this ProcessGroup.
+Notes for this ProcessGroup.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### Parent
 
-> Parent process group in the hierarchy. null means this is a root group. [Filter(multi eq)]
+Parent process group in the hierarchy. null means this is a root group. [Filter(multi eq)]
 
 _Type_: **[ProcessGroups](Systems.Bpm.ProcessGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -37,7 +37,7 @@ Represents one business process version. All process model elements and executio
 
 ### Code
 
-> Unique process code. [Required] [Filter(multi eq)] [ORD]
+Unique process code. [Required] [Filter(multi eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -45,7 +45,7 @@ _Supports Order By_: **True**
 
 ### Description
 
-> The description of this Process. [Filter(eq;like)]
+The description of this Process. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -59,7 +59,7 @@ _Default Value_: **NewGuid**
 
 ### IsExecutable
 
-> Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed. [Required] [Default(false)] [Filter(eq)]
+Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -68,7 +68,7 @@ _Default Value_: **False**
 
 ### IsPublished
 
-> Specifies whether the process is currently published for new instances. [Required] [Default(false)] [Filter(eq)]
+Specifies whether the process is currently published for new instances. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -77,7 +77,7 @@ _Default Value_: **False**
 
 ### Locality
 
-> Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. [Required] [Default("L")] [Filter(like)]
+Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company. [Required] [Default("L")] [Filter(like)]
 
 _Type_: **[Locality](Systems.Bpm.Processes.md#locality)**  
 Generic enum type for Locality properties  
@@ -96,7 +96,7 @@ _Default Value_: **Location**
 
 ### Name
 
-> The name of this Process. [Required] [Filter(eq;like)]
+The name of this Process. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -107,7 +107,7 @@ _Supports Order By_: **False**
 
 ### ProcessGroup
 
-> The process group, to which this process belongs. [Required] [Filter(multi eq)]
+The process group, to which this process belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[ProcessGroups](Systems.Bpm.ProcessGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -27,7 +27,7 @@ Defines the relationships between the parties. The data is preserved over time. 
 
 ### FromDate
 
-> The starting date of the relationship. null means the date is the begining of the time. [Filter(ge;le)]
+The starting date of the relationship. null means the date is the begining of the time. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this PartyRelationship.
+Notes for this PartyRelationship.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### ToDate
 
-> The ending date of the relationship. null means the relationship is still active. [Filter(ge;le)]
+The ending date of the relationship. null means the relationship is still active. [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -60,21 +60,21 @@ _Supports Order By_: **False**
 
 ### FromParty
 
-> The first party in the relationship. [Required] [Filter(multi eq)]
+The first party in the relationship. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RelationshipType
 
-> The type of the relationship. [Required] [Filter(multi eq)]
+The type of the relationship. [Required] [Filter(multi eq)]
 
 _Type_: **[PartyRelationshipTypes](General.Contacts.PartyRelationshipTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToParty
 
-> The second party in the relationship. [Required] [Filter(multi eq)]
+The second party in the relationship. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

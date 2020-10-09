@@ -27,7 +27,7 @@ List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs
 
 ### AmountPercent
 
-> Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way.
+Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -35,7 +35,7 @@ _Supports Order By_: **False**
 
 ### AmountPerUnit
 
-> Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency]
+Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency]
 
 _Type_: **[Amount](../data-types.md#amount) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> The consequtive number of the cost within the pricing model. [Required]
+The consequtive number of the cost within the pricing model. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -65,21 +65,21 @@ _Front-End Recalc Expressions:_
 
 ### CostType
 
-> The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)]
+The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)]
 
 _Type_: **[CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MeasurementUnit
 
-> The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)]
+The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PricingModel
 
-> Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner]
+Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PricingModels](Crm.Pricing.PricingModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

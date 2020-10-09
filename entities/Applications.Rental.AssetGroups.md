@@ -27,7 +27,7 @@ Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Gr
 
 ### FullPath
 
-> The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. [ORD] [ReadOnly]
+The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. [ORD] [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this AssetGroup.
+Notes for this AssetGroup.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### ParentFullPath
 
-> The full path of the parent node. [Filter(eq)]
+The full path of the parent node. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 ### RentalAssetGroupCode
 
-> Asset group code, unique within the parent node. [Required] [Filter(eq;like)]
+Asset group code, unique within the parent node. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -65,7 +65,7 @@ _Supports Order By_: **False**
 
 ### RentalAssetGroupName
 
-> Asset group name, unique within the parent node. [Required] [Filter(eq;like)]
+Asset group name, unique within the parent node. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  

@@ -26,7 +26,7 @@ One zone within a warehouse. Each zone can have different rack structure and dif
 
 ### Code
 
-> Zone code, unique within the warehouse. [Required] [Filter(multi eq)]
+Zone code, unique within the warehouse. [Required] [Filter(multi eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -45,7 +45,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Multi-language name of the zone. [Required] [Filter(eq;like)]
+Multi-language name of the zone. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this WarehouseZone.
+Notes for this WarehouseZone.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -64,14 +64,14 @@ _Supports Order By_: **False**
 
 ### Parent
 
-> The parent Warehouse Zone of the current Warehouse Zone. [Filter(multi eq)]
+The parent Warehouse Zone of the current Warehouse Zone. [Filter(multi eq)]
 
 _Type_: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Warehouse
 
-> The warehouse in which the zone is located. [Required] [Filter(multi eq)] [Owner]
+The warehouse in which the zone is located. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

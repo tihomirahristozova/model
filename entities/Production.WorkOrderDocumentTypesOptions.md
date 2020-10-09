@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### CompletingOutputOrderDocumentType
 
-> User-defined Completing Output Order document type. [Filter(multi eq)]
+User-defined Completing Output Order document type. [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
-> User-defined Work Order document type. [Required] [Filter(multi eq)]
+User-defined Work Order document type. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

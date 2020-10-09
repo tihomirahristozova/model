@@ -39,7 +39,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Line number, unique within the Requisition. Usually is increasing number like 10, 20, 30, ... when initially entering the Requisition (in order to allow insertions with adjustment documents). [Required]
+Line number, unique within the Requisition. Usually is increasing number like 10, 20, 30, ... when initially entering the Requisition (in order to allow insertions with adjustment documents). [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -52,7 +52,7 @@ _Front-End Recalc Expressions:_
 `( obj.Requisition.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-> Notes for this RequisitionLine.
+Notes for this RequisitionLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 ### ProductDescription
 
-> The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product.
+The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -70,7 +70,7 @@ _Front-End Recalc Expressions:_
 `obj.Product.Name`
 ### Quantity
 
-> The required quantity of the product. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)]
+The required quantity of the product. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -79,7 +79,7 @@ _Default Value_: **Constant**
 
 ### QuantityBase
 
-> The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]
+The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -93,7 +93,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### RequiredDeliveryDate
 
-> The desired delivery date. Initially set to the required delivery date in the requisition header or if it is empty - to the document date plus the products lead time. [Required] [Filter(ge;le)]
+The desired delivery date. Initially set to the required delivery date in the requisition header or if it is empty - to the document date plus the products lead time. [Required] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -101,7 +101,7 @@ _Supports Order By_: **False**
 
 ### StandardQuantityBase
 
-> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -117,35 +117,35 @@ _Front-End Recalc Expressions:_
 
 ### Lot
 
-> When not null, indicates a specific lot should be purchased. [Filter(multi eq)]
+When not null, indicates a specific lot should be purchased. [Filter(multi eq)]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The required product. When null, the product is unknown to the requisitor and only a description is supplied to the purchase department. [Filter(multi eq)]
+The required product. When null, the product is unknown to the requisitor and only a description is supplied to the purchase department. [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
-> The measurement unit of Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Quantity. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Requisition
 
-> The [Requisition](Logistics.Procurement.RequisitionLines.md#requisition) to which this RequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [Requisition](Logistics.Procurement.RequisitionLines.md#requisition) to which this RequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Requisitions](Logistics.Procurement.Requisitions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SuggestedSupplier
 
-> When the requisitor knows the supplier or has a supplier preference it is denoted in this field. [Filter(multi eq)]
+When the requisitor knows the supplier or has a supplier preference it is denoted in this field. [Filter(multi eq)]
 
 _Type_: **[Suppliers](Logistics.Procurement.Suppliers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

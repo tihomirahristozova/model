@@ -31,7 +31,7 @@ Obsolete. Not used. (Orders for store reconciliations. After an order is execute
 
 ### DueDate
 
-> Date, when the transaction is scheduled to occur. [Required] [Default(Today)]
+Date, when the transaction is scheduled to occur. [Required] [Default(Today)]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -46,7 +46,7 @@ _Default Value_: **NewGuid**
 
 ### IsReleased
 
-> True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -55,7 +55,7 @@ _Default Value_: **False**
 
 ### IsSingleExecution
 
-> Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -67,7 +67,7 @@ _Default Value_: **False**
 
 ### Document
 
-> The Id of the base document. [Required] [Filter(multi eq)] [Owner]
+The Id of the base document. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### QuantityOfProduct
 
-> The quantity to invoice. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]
+The quantity to invoice. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -40,7 +40,7 @@ _Default Value_: **Constant**
 
 ### QuantityOfService
 
-> The quantity of service for which the invoicing is specified. [Unit: Service.MeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]
+The quantity of service for which the invoicing is specified. [Unit: Service.MeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -52,14 +52,14 @@ _Default Value_: **Constant**
 
 ### Product
 
-> The product that should be invoiced. [Required] [Filter(multi eq)]
+The product that should be invoiced. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Service
 
-> The service for which the invoicing instructions are. [Required] [Filter(multi eq)] [Owner]
+The service for which the invoicing instructions are. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Services](Applications.Service.Services.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

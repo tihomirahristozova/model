@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this Role. [Required] [Filter(eq;like)] [ORD]
+The name of this Role. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -39,7 +39,7 @@ _Supports Order By_: **True**
 
 ### RoleDescription
 
-> Description of the role.
+Description of the role.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -47,7 +47,7 @@ _Supports Order By_: **False**
 
 ### VisualStyle
 
-> The default visual style for the user interface.
+The default visual style for the user interface.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  

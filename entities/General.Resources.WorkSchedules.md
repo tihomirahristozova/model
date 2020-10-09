@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this WorkSchedule. [Required] [Filter(like)]
+The name of this WorkSchedule. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### NumberOfDays
 
-> Number of days in a recurring period. Valid only when Recurrence_Type=D.
+Number of days in a recurring period. Valid only when Recurrence_Type=D.
 
 _Type_: **int16 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -47,7 +47,7 @@ _Supports Order By_: **False**
 
 ### RecurrenceType
 
-> D=recurring each X days; W=recurring each week; M=recurring each month. [Required] [Filter(multi eq)]
+D=recurring each X days; W=recurring each week; M=recurring each month. [Required] [Filter(multi eq)]
 
 _Type_: **[RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype)**  
 Allowed values for the [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) data attribute  

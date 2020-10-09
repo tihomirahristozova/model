@@ -30,7 +30,7 @@ _Supports Order By_: **False**
 
 ### ReactionType
 
-> The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. [Required]
+The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. [Required]
 
 _Type_: **[ReactionType](Communities.SocialReactionsSummary.md#reactiontype)**  
 Allowed values for the [ReactionType](Communities.SocialReactionsSummary.md#reactiontype) data attribute  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### DataObject
 
-> . [Required] [Default(New Guid)] [Filter(multi eq)]
+. [Required] [Default(New Guid)] [Filter(multi eq)]
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

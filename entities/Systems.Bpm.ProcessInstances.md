@@ -27,7 +27,7 @@ Contains the running instances of the processes. Entity: Bpm_Process_Instances
 
 ### CreationTime
 
-> The date and time, when the process instance was created. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]
+The date and time, when the process instance was created. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals**  
@@ -36,7 +36,7 @@ _Default Value_: **CurrentDateTime**
 
 ### FinishTime
 
-> The date and time, when the process instance has finished its execution. null when the instance has not yet finished execution. [Filter(eq)] [ReadOnly]
+The date and time, when the process instance has finished its execution. null when the instance has not yet finished execution. [Filter(eq)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals**  
@@ -50,7 +50,7 @@ _Default Value_: **NewGuid**
 
 ### StartTime
 
-> The date and time, when the process instance was started. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]
+The date and time, when the process instance was started. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals**  
@@ -59,7 +59,7 @@ _Default Value_: **CurrentDateTime**
 
 ### State
 
-> Instance state. 0=Created; 60=Completed. [Required] [Default(0)] [Filter(eq)] [ReadOnly]
+Instance state. 0=Created; 60=Completed. [Required] [Default(0)] [Filter(eq)] [ReadOnly]
 
 _Type_: **[State](Systems.Bpm.ProcessInstances.md#state)**  
 Allowed values for the [State](Systems.Bpm.ProcessInstances.md#state) data attribute  
@@ -78,7 +78,7 @@ _Default Value_: **0**
 
 ### Subject
 
-> The multilanguage subject (or title) of this process instance. [Required] [Filter(eq;like)]
+The multilanguage subject (or title) of this process instance. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -89,7 +89,7 @@ _Supports Order By_: **False**
 
 ### Process
 
-> The process on which this instance is based. [Required] [Filter(multi eq)]
+The process on which this instance is based. [Required] [Filter(multi eq)]
 
 _Type_: **[Processes](Systems.Bpm.Processes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

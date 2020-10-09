@@ -29,7 +29,7 @@ Contains the free services, included in the service agreement. Entity: Srv_Servi
 
 ### EndDate
 
-> End date to which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.
+End date to which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -43,7 +43,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]
+Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -56,7 +56,7 @@ _Front-End Recalc Expressions:_
 `( obj.ServiceAgreement.Services.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Quantity
 
-> Quantity of the agreed servcice or product. [Unit: QuantityUnit] [Required]
+Quantity of the agreed servcice or product. [Unit: QuantityUnit] [Required]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### StartDate
 
-> Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.
+Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -75,28 +75,28 @@ _Supports Order By_: **False**
 
 ### QuantityUnit
 
-> The measurement unit of Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Quantity. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Service
 
-> Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). [Filter(multi eq)]
+Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). [Filter(multi eq)]
 
 _Type_: **[Services](Applications.Service.Services.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceAgreement
 
-> The [ServiceAgreement](Applications.Service.ServiceAgreementServices.md#serviceagreement) to which this ServiceAgreementService belongs. [Required] [Filter(multi eq)] [Owner]
+The [ServiceAgreement](Applications.Service.ServiceAgreementServices.md#serviceagreement) to which this ServiceAgreementService belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceProduct
 
-> Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). [Filter(multi eq)]
+Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

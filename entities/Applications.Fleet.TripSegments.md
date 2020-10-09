@@ -28,7 +28,7 @@ Represents the segments which comprise the route of the trips. Entity: Fleet_Tri
 
 ### EndingTimestamp
 
-> The ending date and time of the travel on the segment.
+The ending date and time of the travel on the segment.
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,7 +42,7 @@ _Default Value_: **NewGuid**
 
 ### Mileage
 
-> Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage.
+Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for the segment.
+Notes for the segment.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### StartingTimestamp
 
-> The starting date and time of the travel on the segment. [Required]
+The starting date and time of the travel on the segment. [Required]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -69,21 +69,21 @@ _Supports Order By_: **False**
 
 ### EndingMapPoint
 
-> The ending geographical point of the route segment. [Required] [Filter(multi eq)]
+The ending geographical point of the route segment. [Required] [Filter(multi eq)]
 
 _Type_: **[MapPoints](General.Geography.MapPoints.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StartingMapPoint
 
-> The starting geographical point of the route segment. [Required] [Filter(multi eq)]
+The starting geographical point of the route segment. [Required] [Filter(multi eq)]
 
 _Type_: **[MapPoints](General.Geography.MapPoints.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Trip
 
-> The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner]
+The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Trips](Applications.Fleet.Trips.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

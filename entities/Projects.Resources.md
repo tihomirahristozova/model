@@ -24,7 +24,7 @@ Contains the enterprise resources, which are available for including in projects
 
 ### Description
 
-> The description of this Resource.
+The description of this Resource.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -38,7 +38,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this Resource. [Required]
+The name of this Resource. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company owning the resource. [Required] [Filter(multi eq)] [Owner]
+The enterprise company owning the resource. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

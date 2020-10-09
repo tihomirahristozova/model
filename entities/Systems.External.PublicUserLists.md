@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this PublicUserList. [Required] [Filter(like)]
+The name of this PublicUserList. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -38,7 +38,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this PublicUserList.
+Notes for this PublicUserList.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. [Filter(multi eq)]
+The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

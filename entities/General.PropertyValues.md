@@ -27,7 +27,7 @@ The actual values of the user-defined properties for each actual entity. Entity:
 
 ### Description
 
-> The actual description value of the property for the specified entity (the entity with the specified Id).
+The actual description value of the property for the specified entity (the entity with the specified Id).
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -35,7 +35,7 @@ _Supports Order By_: **False**
 
 ### EntityItemId
 
-> The Id of the actual entity for which the value is specified. [Required] [Filter(multi eq)]
+The Id of the actual entity for which the value is specified. [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -48,7 +48,7 @@ _Default Value_: **NewGuid**
 
 ### Picture
 
-> The actual picture of the property for the specified entity (the entity with the specified Id).
+The actual picture of the property for the specified entity (the entity with the specified Id).
 
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 ### PropertyValueField
 
-> The actual value of the property for the specified entity (the entity with the specified Id).
+The actual value of the property for the specified entity (the entity with the specified Id).
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### ValueId
 
-> The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original "allowed value" row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. [Filter(multi eq)]
+The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original "allowed value" row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -74,7 +74,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Property
 
-> The property, whose value is stored here. [Required] [Filter(multi eq)]
+The property, whose value is stored here. [Required] [Filter(multi eq)]
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

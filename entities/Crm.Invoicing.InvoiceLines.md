@@ -50,7 +50,7 @@ Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines
 
 ### BusinessReason
 
-> Business reason for invoicing of this product or service. S=Shipment, P=Payment. [Required] [Default("S")]
+Business reason for invoicing of this product or service. S=Shipment, P=Payment. [Required] [Default("S")]
 
 _Type_: **[InvoicingBusinessReason](Crm.Invoicing.InvoiceLines.md#businessreason)**  
 Generic enum type for InvoicingBusinessReason properties  
@@ -67,7 +67,7 @@ _Default Value_: **Shipment**
 
 ### DeliveryTermsCode
 
-> Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.
+Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.
 
 _Type_: **[DeliveryTerms](Crm.Invoicing.InvoiceLines.md#deliverytermscode) (nullable)**  
 Generic enum type for DeliveryTerms properties  
@@ -103,7 +103,7 @@ _Default Value_: **NewGuid**
 
 ### IntrastatTransactionNatureCode
 
-> Transaction nature; used for Intrastat reporting.
+Transaction nature; used for Intrastat reporting.
 
 _Type_: **[TransactionNature](Crm.Invoicing.InvoiceLines.md#intrastattransactionnaturecode) (nullable)**  
 Generic enum type for TransactionNature properties  
@@ -141,7 +141,7 @@ _Front-End Recalc Expressions:_
 `obj.Invoice.IntrastatTransactionNatureCode`
 ### IntrastatTransportModeCode
 
-> Transport mode; used for Intrastat reporting.
+Transport mode; used for Intrastat reporting.
 
 _Type_: **[TransportMode](Crm.Invoicing.InvoiceLines.md#intrastattransportmodecode) (nullable)**  
 Generic enum type for TransportMode properties  
@@ -168,7 +168,7 @@ _Front-End Recalc Expressions:_
 `obj.Invoice.IntrastatTransportModeCode`
 ### LineAmount
 
-> Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]
+Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -179,7 +179,7 @@ _Front-End Recalc Expressions:_
 `obj.CalculateLineAmount( obj.Quantity, obj.UnitPrice, Convert( obj.LineStandardDiscountPercent, Nullable`1), Convert( obj.LineCustomDiscountPercent, Nullable`1), obj.Invoice.DocumentCurrency)`
 ### LineCustomDiscountPercent
 
-> User-defined discount for the line. [Required] [Default(0)] [Filter(ge;le)]
+User-defined discount for the line. [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **decimal**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -188,7 +188,7 @@ _Default Value_: **0**
 
 ### LineNo
 
-> Consecutive line number, unique within the invoice. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)]
+Consecutive line number, unique within the invoice. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals**  
@@ -201,7 +201,7 @@ _Front-End Recalc Expressions:_
 `( obj.Invoice.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### LineStandardDiscountPercent
 
-> Standard discount for the line. This is automatically computed according to discount conditions. [Required] [Default(0)]
+Standard discount for the line. This is automatically computed according to discount conditions. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -212,7 +212,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( obj.LineDiscount != null), obj.LineDiscount.DiscountPercent, 0)`
 ### Notes
 
-> Notes for this InvoiceLine.
+Notes for this InvoiceLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -220,7 +220,7 @@ _Supports Order By_: **False**
 
 ### ParentLineNo
 
-> The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2)
+The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2)
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -228,7 +228,7 @@ _Supports Order By_: **False**
 
 ### ProductDescription
 
-> The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document. [Required]
+The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document. [Required]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
@@ -238,7 +238,7 @@ _Front-End Recalc Expressions:_
 `obj.Product.Name`
 ### Quantity
 
-> The quantity of the invoiced product. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
+The quantity of the invoiced product. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -247,7 +247,7 @@ _Default Value_: **Constant**
 
 ### QuantityBase
 
-> The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
+The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -260,7 +260,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### SalesOrderAmount
 
-> Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing.
+Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing.
 
 _Type_: **decimal (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -268,7 +268,7 @@ _Supports Order By_: **False**
 
 ### StandardQuantityBase
 
-> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -281,7 +281,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### UnitPrice
 
-> The unit selling price of Quantity. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]
+The unit selling price of Quantity. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -293,7 +293,7 @@ _Default Value_: **Constant**
 
 ### IntrastatTransportCountry
 
-> Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]
+Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]
 
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -305,21 +305,21 @@ _Front-End Recalc Expressions:_
 `obj.Invoice.IntrastatTransportCountry`
 ### Invoice
 
-> The [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Invoices](Crm.Invoicing.Invoices.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### InvoiceOrderLine
 
-> Invoice order line which is invoiced by this line. [Filter(multi eq)]
+Invoice order line which is invoiced by this line. [Filter(multi eq)]
 
 _Type_: **[InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LineDealType
 
-> Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)]
+Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)]
 
 _Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -331,7 +331,7 @@ _Front-End Recalc Expressions:_
 `obj.Invoice.DealType`
 ### LineDiscount
 
-> The line discount type used to form the Line_Standard_Discount_Percent. [Filter(multi eq)]
+The line discount type used to form the Line_Standard_Discount_Percent. [Filter(multi eq)]
 
 _Type_: **[LineDiscounts](Crm.LineDiscounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -340,35 +340,35 @@ _Front-End Recalc Expressions:_
 `obj.DetermineLineDiscount( Convert( ( obj.Invoice.DeliveryDate ?? obj.Invoice.DocumentDate), Nullable`1), obj.Invoice.Customer, obj.Product, obj.Quantity, obj.Invoice.EnterpriseCompany, obj.Invoice.EnterpriseCompanyLocation, IIF( ( obj.SalesOrder == null), null, obj.SalesOrder.DistributionChannel), IIF( ( obj.SalesOrder == null), null, obj.SalesOrder.PriceList))`
 ### ParentDocument
 
-> The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2)
+The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2)
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentSalesOrderLine
 
-> When not null specifies the Sales Order line that is invoiced by this invoice line. [Filter(multi eq)]
+When not null specifies the Sales Order line that is invoiced by this invoice line. [Filter(multi eq)]
 
 _Type_: **[SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentTransaction
 
-> The payment transaction, which is invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)]
+The payment transaction, which is invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)]
 
 _Type_: **[PaymentTransactions](Finance.Payments.PaymentTransactions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The invoiced product. When null, although rarely used, the invoice line is still valid and the Product Description contains the invoiced item. [Filter(multi eq)]
+The invoiced product. When null, although rarely used, the invoice line is still valid and the Product Description contains the invoiced item. [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
-> The measurement unit of Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Quantity. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -377,7 +377,7 @@ _Front-End Recalc Expressions:_
 `obj.Product.MeasurementUnit`
 ### SalesOrder
 
-> When not null specifies the Sales Order that is invoiced by this line. [Filter(multi eq;like)]
+When not null specifies the Sales Order that is invoiced by this line. [Filter(multi eq;like)]
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -386,14 +386,14 @@ _Front-End Recalc Expressions:_
 `IIF( ( obj.ParentSalesOrderLine != null), obj.ParentSalesOrderLine.SalesOrder, null)`
 ### SerialNumber
 
-> Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]
+Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransactionLine
 
-> The store transaction line that is invoiced by this line, for Business Reason = S. [Filter(multi eq)]
+The store transaction line that is invoiced by this line, for Business Reason = S. [Filter(multi eq)]
 
 _Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

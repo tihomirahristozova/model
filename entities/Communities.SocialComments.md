@@ -26,7 +26,7 @@ User comment to any object in the system. Entity: Cmm_Social_Comments (Introduce
 
 ### CommentText
 
-> The comment contents in clear text. [Required]
+The comment contents in clear text. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -34,7 +34,7 @@ _Supports Order By_: **False**
 
 ### CreationTimeUtc
 
-> The exact server time (in UTC), when the comment was created. [Required] [ORD]
+The exact server time (in UTC), when the comment was created. [Required] [ORD]
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -51,21 +51,21 @@ _Default Value_: **NewGuid**
 
 ### DataObject
 
-> The root data object (post, marketplace product, document, etc), for which the comment is made. [Required] [Filter(multi eq)]
+The root data object (post, marketplace product, document, etc), for which the comment is made. [Required] [Filter(multi eq)]
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReplyToComment
 
-> When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object. [Filter(multi eq)]
+When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object. [Filter(multi eq)]
 
 _Type_: **[SocialComments](Communities.SocialComments.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
-> The user, who made the comment. [Required] [Filter(multi eq)]
+The user, who made the comment. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

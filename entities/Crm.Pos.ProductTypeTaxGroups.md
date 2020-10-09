@@ -25,7 +25,7 @@ Contains the tax group codes for the product types. The tax group codes are used
 
 ### ApplicableLegislation
 
-> The legislation, for which the tax group is applicable. [Required] [Filter(multi eq)]
+The legislation, for which the tax group is applicable. [Required] [Filter(multi eq)]
 
 _Type_: **[ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation)**  
 Allowed values for the [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) data attribute  
@@ -70,7 +70,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this ProductTypeTaxGroup. [Filter(eq;like)]
+Notes for this ProductTypeTaxGroup. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -78,7 +78,7 @@ _Supports Order By_: **False**
 
 ### TaxGroup
 
-> The tax group of the product type within the specified applicable legislation. [Required] [Filter(multi eq)]
+The tax group of the product type within the specified applicable legislation. [Required] [Filter(multi eq)]
 
 _Type_: **[TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup)**  
 Allowed values for the [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) data attribute  
@@ -103,7 +103,7 @@ _Supports Order By_: **False**
 
 ### ProductType
 
-> The product type for which the tax group is specified. [Required] [Filter(multi eq)] [Owner]
+The product type for which the tax group is specified. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

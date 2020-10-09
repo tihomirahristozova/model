@@ -24,7 +24,7 @@ Contains the materials, which were agreed for this service activity (repair), be
 
 ### AgreedQuantity
 
-> Quantity from the service agreement material line that is accounted for this service activity material line. [Unit: ServiceAgreementMaterial.QuantityUnit] [Required] [Default(0)] [ReadOnly]
+Quantity from the service agreement material line that is accounted for this service activity material line. [Unit: ServiceAgreementMaterial.QuantityUnit] [Required] [Default(0)] [ReadOnly]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,14 +42,14 @@ _Default Value_: **NewGuid**
 
 ### ServiceActivityMaterial
 
-> The [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivityAgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
+The [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivityAgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
 _Type_: **[ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceAgreementMaterial
 
-> Service agreement material line that records the paid or agreed in advance material. [Required] [Filter(multi eq)] [ReadOnly]
+Service agreement material line that records the paid or agreed in advance material. [Required] [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

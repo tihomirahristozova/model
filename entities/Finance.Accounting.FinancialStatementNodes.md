@@ -32,7 +32,7 @@ Contains the hierarchical structure of the user-defined financial statements. En
 
 ### Code
 
-> Identifying code of the financial statement node. Unique within the parent financial statement node. [Required] [Filter(eq;like)]
+Identifying code of the financial statement node. Unique within the parent financial statement node. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -40,7 +40,7 @@ _Supports Order By_: **False**
 
 ### FullPath
 
-> Full identification path of the financial statement node. [Filter(like)] [ReadOnly]
+Full identification path of the financial statement node. [Filter(like)] [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -54,7 +54,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Name of the financial statement node. [Required] [Filter(like)]
+Name of the financial statement node. [Required] [Filter(like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -62,7 +62,7 @@ _Supports Order By_: **False**
 
 ### ParentFullPath
 
-> Parent financial statement node specified through its full identification path. [Filter(like)]
+Parent financial statement node specified through its full identification path. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -73,7 +73,7 @@ _Supports Order By_: **False**
 
 ### FinancialStatement
 
-> The [FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) to which this FinancialStatementNode belongs. [Required] [Filter(multi eq)] [Owner]
+The [FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) to which this FinancialStatementNode belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[FinancialStatements](Finance.Accounting.FinancialStatements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

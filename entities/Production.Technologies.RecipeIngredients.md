@@ -36,7 +36,7 @@ Contains the materials of a recipe that make up the product. Entity: Prd_Recipe_
 
 ### Cost
 
-> The cost of the specified quantity of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]
+The cost of the specified quantity of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -45,7 +45,7 @@ _Default Value_: **Constant**
 
 ### FixedScrapQuantity
 
-> Fixed scrap quantity of the material, needed for setup. [Unit: UsageUnit] [Required] [Default(0)]
+Fixed scrap quantity of the material, needed for setup. [Unit: UsageUnit] [Required] [Default(0)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -60,7 +60,7 @@ _Default Value_: **NewGuid**
 
 ### LineOrd
 
-> The order of this line in the recipe. [Required]
+The order of this line in the recipe. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -73,7 +73,7 @@ _Front-End Recalc Expressions:_
 `( obj.Recipe.Ingredients.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-> Notes for this RecipeIngredient.
+Notes for this RecipeIngredient.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 ### Price
 
-> Total price of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]
+Total price of the ingredient. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -90,7 +90,7 @@ _Default Value_: **Constant**
 
 ### ScrapRate
 
-> The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. [Required] [Default(0)]
+The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -99,7 +99,7 @@ _Default Value_: **0**
 
 ### UnitCost
 
-> Cost of 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]
+Cost of 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -108,7 +108,7 @@ _Default Value_: **Constant**
 
 ### UnitPrice
 
-> Price for 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]
+Price for 1 of Usage_Unit_Id. [Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -117,7 +117,7 @@ _Default Value_: **Constant**
 
 ### UsageQuantity
 
-> Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. [Unit: UsageUnit] [Default(1.000)] [Filter(ge;le)]
+Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. [Unit: UsageUnit] [Default(1.000)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity) (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -129,42 +129,42 @@ _Default Value_: **Constant**
 
 ### Material
 
-> The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)]
+The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Operation
 
-> Specifies for which operation this ingredient will be used. [Filter(multi eq)]
+Specifies for which operation this ingredient will be used. [Filter(multi eq)]
 
 _Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrincipalRecipeIngredient
 
-> The principal recipe ingredient which was used to create this recipe ingredient. null means that this ingredient is standalone, not created with principal recipe ingredient. [Filter(multi eq)]
+The principal recipe ingredient which was used to create this recipe ingredient. null means that this ingredient is standalone, not created with principal recipe ingredient. [Filter(multi eq)]
 
 _Type_: **[PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Recipe
 
-> The [Recipe](Production.Technologies.RecipeIngredients.md#recipe) to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner]
+The [Recipe](Production.Technologies.RecipeIngredients.md#recipe) to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Recipes](Production.Technologies.Recipes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-> The store from which to retrieve the material. [Filter(multi eq)]
+The store from which to retrieve the material. [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UsageUnit
 
-> The measurement unit of Usage_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)]
+The measurement unit of Usage_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

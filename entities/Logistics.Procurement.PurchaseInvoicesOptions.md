@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### SignRestriction
 
-> This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type. [Required] [Default(0)]
+This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type. [Required] [Default(0)]
 
 _Type_: **[SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction)**  
 Allowed values for the [SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction) data attribute  
@@ -48,7 +48,7 @@ _Default Value_: **0**
 
 ### TotalAmountSignRestriction
 
-> This option can restrict the sign of the Total Amounts of the purchase invoices of the specified document type. The restriction is applied upon document Release. [Required] [Default(0)]
+This option can restrict the sign of the Total Amounts of the purchase invoices of the specified document type. The restriction is applied upon document Release. [Required] [Default(0)]
 
 _Type_: **[TotalAmountSignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction)**  
 Allowed values for the [TotalAmountSignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction) data attribute  
@@ -69,7 +69,7 @@ _Default Value_: **0**
 
 ### DocumentType
 
-> The document type, for which the options are specified. [Required] [Filter(multi eq)]
+The document type, for which the options are specified. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

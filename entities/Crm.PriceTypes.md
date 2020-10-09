@@ -20,7 +20,7 @@ Price types. Entity: Crm_Price_Types
 
 ### Code
 
-> Short identification code of the price type. [Required] [Filter(eq)] [ORD]
+Short identification code of the price type. [Required] [Filter(eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -34,7 +34,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Full name of the price type. [Required] [Filter(eq;like)]
+Full name of the price type. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -42,7 +42,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this PriceType.
+Notes for this PriceType.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### OrdinalPos
 
-> Priority position of the price type, with respect to the other price types. [Required] [ORD]
+Priority position of the price type, with respect to the other price types. [Required] [ORD]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

@@ -40,7 +40,7 @@ Represents user mailboxes. Entity: Mail_Boxes
 
 ### Active
 
-> True when the mail box is active for mail sinchronization, sending and receiving. [Required] [Default(true)] [Filter(eq)]
+True when the mail box is active for mail sinchronization, sending and receiving. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -49,7 +49,7 @@ _Default Value_: **True**
 
 ### EmailAddress
 
-> The email address associated with this mail box. [Required] [Filter(eq)]
+The email address associated with this mail box. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -63,7 +63,7 @@ _Default Value_: **NewGuid**
 
 ### IsDefault
 
-> True when this is the default mailbox for the user. [Required] [Default(true)] [Filter(eq)]
+True when this is the default mailbox for the user. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -72,7 +72,7 @@ _Default Value_: **True**
 
 ### IsEncrypted
 
-> True when the mailbox messages are stored in encrypted format. [Required] [Default(false)] [Filter(eq)]
+True when the mailbox messages are stored in encrypted format. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -81,7 +81,7 @@ _Default Value_: **False**
 
 ### ResetOnNextSync
 
-> Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -90,7 +90,7 @@ _Default Value_: **False**
 
 ### SendServerAddress
 
-> The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server.
+The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -98,7 +98,7 @@ _Supports Order By_: **False**
 
 ### SentItemsFolderName
 
-> The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne).
+The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne).
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -106,7 +106,7 @@ _Supports Order By_: **False**
 
 ### SignatureHtml
 
-> Html text of the default signature, when creating new emails from this mailbox. When is null, a default generic signature is attached.
+Html text of the default signature, when creating new emails from this mailbox. When is null, a default generic signature is attached.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -114,7 +114,7 @@ _Supports Order By_: **False**
 
 ### SyncPassword
 
-> The password to supply to the server when retrieving email. null when the connection is not setup or the server does not require user name.
+The password to supply to the server when retrieving email. null when the connection is not setup or the server does not require user name.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -122,7 +122,7 @@ _Supports Order By_: **False**
 
 ### SyncProtocol
 
-> Synchronization protocol, 'POP3' or 'IMAP'. null means that syncrhonization is not setup.
+Synchronization protocol, 'POP3' or 'IMAP'. null means that syncrhonization is not setup.
 
 _Type_: **[SyncProtocol](Applications.Mail.Boxes.md#syncprotocol) (nullable)**  
 Allowed values for the [SyncProtocol](Applications.Mail.Boxes.md#syncprotocol) data attribute  
@@ -139,7 +139,7 @@ _Supports Order By_: **False**
 
 ### SyncServerAddress
 
-> Incoming and outgoing mail server internet address. null when synchronization is not setup.
+Incoming and outgoing mail server internet address. null when synchronization is not setup.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -147,7 +147,7 @@ _Supports Order By_: **False**
 
 ### SyncUserName
 
-> User name to supply to the server, when retrieving email. null when the connection is not setup or the server does not require user name.
+User name to supply to the server, when retrieving email. null when the connection is not setup or the server does not require user name.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -158,7 +158,7 @@ _Supports Order By_: **False**
 
 ### OwnerUser
 
-> The user, who owns the mailbox. [Required] [Filter(multi eq)]
+The user, who owns the mailbox. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

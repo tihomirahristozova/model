@@ -29,7 +29,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this SupplySchema. [Required]
+The name of this SupplySchema. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  

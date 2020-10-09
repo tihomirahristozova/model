@@ -28,7 +28,7 @@ User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 
 ### Caption
 
-> The multi-language caption, used to display the attribute. [Required]
+The multi-language caption, used to display the attribute. [Required]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,7 +42,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> True if the attribute is activated and added to the repository. [Required] [Default(false)]
+True if the attribute is activated and added to the repository. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -51,7 +51,7 @@ _Default Value_: **False**
 
 ### Name
 
-> The unique name of the attribute within the repository. [Required] [Filter(eq;like)]
+The unique name of the attribute within the repository. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this CalculatedAttribute.
+Notes for this CalculatedAttribute.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### RepositoryName
 
-> The repository, for which the attribute is defined. [Required] [Filter(multi eq)] [ORD]
+The repository, for which the attribute is defined. [Required] [Filter(multi eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -75,7 +75,7 @@ _Supports Order By_: **True**
 
 ### StartingExpressionNo
 
-> The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute. [Required] [Default(10)]
+The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute. [Required] [Default(10)]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

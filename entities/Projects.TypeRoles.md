@@ -24,7 +24,7 @@ Contains the roles of the participants of each project type. Entity: Prj_Type_Ro
 
 ### Description
 
-> Description of the participant role.
+Description of the participant role.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -38,7 +38,7 @@ _Default Value_: **NewGuid**
 
 ### RoleName
 
-> The name of the participant role. [Required] [Filter(multi eq;like)]
+The name of the participant role. [Required] [Filter(multi eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### ProjectType
 
-> Project type. [Required] [Filter(multi eq)] [Owner]
+Project type. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProjectTypes](Projects.ProjectTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -33,7 +33,7 @@ Contains the public web sites. Entity: Cms_Web_Sites
 
 ### BaseUrl
 
-> The base url (address) of the web site. [Filter(like)]
+The base url (address) of the web site. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### IsPublished
 
-> Specifies whether the site is published for public Internet access. [Required] [Default(false)] [Filter(eq)]
+Specifies whether the site is published for public Internet access. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -56,7 +56,7 @@ _Default Value_: **False**
 
 ### Name
 
-> Multilanguage web site name. [Required] [Filter(like)]
+Multilanguage web site name. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -67,14 +67,14 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company to which this web site belongs. [Required] [Filter(multi eq)]
+The enterprise company to which this web site belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PublicUserList
 
-> The list of users used to authorize the users on the site. [Filter(multi eq)]
+The list of users used to authorize the users on the site. [Filter(multi eq)]
 
 _Type_: **[PublicUserLists](Systems.External.PublicUserLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

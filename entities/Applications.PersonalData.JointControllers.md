@@ -30,7 +30,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Should usually contain a short description of the role of the joint controller.
+Should usually contain a short description of the role of the joint controller.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -41,14 +41,14 @@ _Supports Order By_: **False**
 
 ### JointControllerParty
 
-> The party, controlling the process. [Required] [Filter(multi eq)]
+The party, controlling the process. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PersonalDataProcess
 
-> The process, which is managed jointly. [Required] [Filter(multi eq)] [Owner]
+The process, which is managed jointly. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

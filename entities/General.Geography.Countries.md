@@ -19,7 +19,7 @@ List of countries, listed by their internet suffix code. Entity: Gen_Countries
 
 ### Code
 
-> Internet suffix code of the country. [Required] [Filter(eq;like)] [ORD]
+Internet suffix code of the country. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -33,7 +33,7 @@ _Default Value_: **NewGuid**
 
 ### IntrastatCode
 
-> This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. (Introduced in version 20.1)
+This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. (Introduced in version 20.1)
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -41,7 +41,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-> Name of the country. [Required] [Filter(like)]
+Name of the country. [Required] [Filter(like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  

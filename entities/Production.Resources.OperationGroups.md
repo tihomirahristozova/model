@@ -25,7 +25,7 @@ Groups of operations. Entity: Prd_Operation_Groups
 
 ### FullPath
 
-> The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. [Required] [Default("")] [Filter(like)]
+The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. [Required] [Default("")] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -40,7 +40,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this OperationGroup. [Required] [Filter(like)]
+The name of this OperationGroup. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### Parent
 
-> Path of parent group. [Required] [Default("/")] [Filter(like)] [ORD]
+Path of parent group. [Required] [Default("/")] [Filter(like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  

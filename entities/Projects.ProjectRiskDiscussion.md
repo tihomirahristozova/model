@@ -26,7 +26,7 @@ Contains discussions on project risks. Entity: Prj_Project_Risk_Discussion
 
 ### ContributionTime
 
-> The time, when the message was contributed. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]
+The time, when the message was contributed. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### LastEditTime
 
-> Contains the last edit time of the message. null if the message was never edited. [Filter(eq)] [ReadOnly]
+Contains the last edit time of the message. null if the message was never edited. [Filter(eq)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### Message
 
-> The contents of the message. [Required]
+The contents of the message. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -60,14 +60,14 @@ _Supports Order By_: **False**
 
 ### ContributedByUser
 
-> The user, who contributed (wrote) the message. [Required] [Filter(multi eq)] [ReadOnly]
+The user, who contributed (wrote) the message. [Required] [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectRisk
 
-> The [ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) to which this ProjectRiskDiscussion belongs. [Required] [Filter(multi eq)] [Owner]
+The [ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) to which this ProjectRiskDiscussion belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProjectRisks](Projects.ProjectRisks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

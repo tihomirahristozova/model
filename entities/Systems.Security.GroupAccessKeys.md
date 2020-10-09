@@ -36,7 +36,7 @@ Specifies the access keys for which the user groups have permissions. The exista
 
 ### CanAdminister
 
-> When true, the group is granted with administrative permission (allowance to change access key) for the entity, protected by the access key. [Required] [Default(false)]
+When true, the group is granted with administrative permission (allowance to change access key) for the entity, protected by the access key. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -45,7 +45,7 @@ _Default Value_: **False**
 
 ### CanDelete
 
-> When true, the group is granted with delete permission for the entity, protected by the access key. [Required]
+When true, the group is granted with delete permission for the entity, protected by the access key. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### CanUpdate
 
-> When true, the group is granted with update permission for the entity, protected by the access key. [Required]
+When true, the group is granted with update permission for the entity, protected by the access key. [Required]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -67,7 +67,7 @@ _Default Value_: **NewGuid**
 
 ### Permission1
 
-> When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -76,7 +76,7 @@ _Default Value_: **False**
 
 ### Permission10
 
-> When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -85,7 +85,7 @@ _Default Value_: **False**
 
 ### Permission2
 
-> When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -94,7 +94,7 @@ _Default Value_: **False**
 
 ### Permission3
 
-> When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -103,7 +103,7 @@ _Default Value_: **False**
 
 ### Permission4
 
-> When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -112,7 +112,7 @@ _Default Value_: **False**
 
 ### Permission5
 
-> When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -121,7 +121,7 @@ _Default Value_: **False**
 
 ### Permission6
 
-> When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -130,7 +130,7 @@ _Default Value_: **False**
 
 ### Permission7
 
-> When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -139,7 +139,7 @@ _Default Value_: **False**
 
 ### Permission8
 
-> When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -148,7 +148,7 @@ _Default Value_: **False**
 
 ### Permission9
 
-> When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -160,14 +160,14 @@ _Default Value_: **False**
 
 ### AccessKey
 
-> This access key, to which we are granting access permissions. [Required] [Filter(multi eq)]
+This access key, to which we are granting access permissions. [Required] [Filter(multi eq)]
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Group
 
-> The group, which is granted with access permission. [Required] [Filter(multi eq)] [Owner]
+The group, which is granted with access permission. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Groups](Systems.Security.Groups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

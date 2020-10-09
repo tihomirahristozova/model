@@ -25,7 +25,7 @@ Contains the quantity of materials distributed over the output order lines. Enti
 
 ### ConsumedCost
 
-> Cost of the actually issued Consumed_Quantity. [Currency: ConsumptionOrderLine.GetIssueCurrency()] [Required] [Default(0)] [ReadOnly]
+Cost of the actually issued Consumed_Quantity. [Currency: ConsumptionOrderLine.GetIssueCurrency()] [Required] [Default(0)] [ReadOnly]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -34,7 +34,7 @@ _Default Value_: **Constant**
 
 ### ConsumedQuantity
 
-> Part of the quantity in the consumption order line which was used for the product in the output order line. [Unit: ConsumptionOrderLine.ConsumedQuantityUnit] [Required] [Default(0)] [ReadOnly]
+Part of the quantity in the consumption order line which was used for the product in the output order line. [Unit: ConsumptionOrderLine.ConsumedQuantityUnit] [Required] [Default(0)] [ReadOnly]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -52,14 +52,14 @@ _Default Value_: **NewGuid**
 
 ### ConsumptionOrderLine
 
-> Consumption order line which requested the Consumed_Quantity. [Required] [Filter(multi eq)] [ReadOnly]
+Consumption order line which requested the Consumed_Quantity. [Required] [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OutputOrderLine
 
-> The output order line for which the distribution is recorded. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
+The output order line for which the distribution is recorded. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
 _Type_: **[OutputOrderLines](Production.ShopFloor.OutputOrderLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

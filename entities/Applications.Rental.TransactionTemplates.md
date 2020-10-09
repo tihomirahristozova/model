@@ -29,7 +29,7 @@ _Default Value_: **NewGuid**
 
 ### TransactionType
 
-> Transaction type for the rent transaction that is to be created. [Required]
+Transaction type for the rent transaction that is to be created. [Required]
 
 _Type_: **[TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype)**  
 Allowed values for the [TransactionType](Applications.Rental.Transactions.md#transactiontype) data attribute  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### Route
 
-> The route for which the transaction template is defined. [Required] [Filter(multi eq)]
+The route for which the transaction template is defined. [Required] [Filter(multi eq)]
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

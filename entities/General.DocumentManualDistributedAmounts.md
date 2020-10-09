@@ -21,21 +21,21 @@ Obsolete. Not used. Entity: Gen_Document_Manual_Distributed_Amounts
 
 ### DocumentAmountTypeId
 
-> Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentId
 
-> Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentLineId
 
-> Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -47,7 +47,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### LinePercent
 
-> Obsolete. Not used. [Required]
+Obsolete. Not used. [Required]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### ProductId
 
-> Obsolete. Not used. [Required] [Filter(multi eq)]
+Obsolete. Not used. [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  

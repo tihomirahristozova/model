@@ -25,7 +25,7 @@ User-defined grouping of the assets. Entity: Ast_Asset_Groups
 
 ### Code
 
-> The unique code of the AssetGroup. [Required] [Filter(eq)] [ORD]
+The unique code of the AssetGroup. [Required] [Filter(eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -39,7 +39,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this AssetGroup. [Required] [Filter(like)]
+The name of this AssetGroup. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -50,14 +50,14 @@ _Supports Order By_: **False**
 
 ### DefaultValuationModel
 
-> Default valuation model when creating new assets from this group. [Filter(multi eq)]
+Default valuation model when creating new assets from this group. [Filter(multi eq)]
 
 _Type_: **[ValuationModels](Finance.Assets.ValuationModels.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-> Parent asset group in the hierarchy. [Filter(multi eq)]
+Parent asset group in the hierarchy. [Filter(multi eq)]
 
 _Type_: **[AssetGroups](Finance.Assets.AssetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

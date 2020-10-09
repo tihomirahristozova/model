@@ -26,7 +26,7 @@ The actual values in the general data warehouse. Entity: Dw_Data_Values (Introdu
 
 ### ActualValue
 
-> Accumulates actual value for the measure. [Required] [Default(0)] [Filter(eq)]
+Accumulates actual value for the measure. [Required] [Default(0)] [Filter(eq)]
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals**  
@@ -35,7 +35,7 @@ _Default Value_: **0**
 
 ### Date
 
-> The date for which the measure is recorded. All records with dates within each period are summed. [Required] [Filter(eq;ge;le)]
+The date for which the measure is recorded. All records with dates within each period are summed. [Required] [Filter(eq;ge;le)]
 
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -49,7 +49,7 @@ _Default Value_: **NewGuid**
 
 ### TargetValue
 
-> Accumulates target value for the measure. [Required] [Default(0)] [Filter(eq)]
+Accumulates target value for the measure. [Required] [Default(0)] [Filter(eq)]
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals**  
@@ -61,14 +61,14 @@ _Default Value_: **0**
 
 ### DataMeasure
 
-> The measure for which the data is recorded. [Required] [Filter(multi eq)]
+The measure for which the data is recorded. [Required] [Filter(multi eq)]
 
 _Type_: **[DataMeasures](Applications.DataWarehouse.DataMeasures.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-> The Enterprise Company for which the data is recorded. [Required] [Filter(multi eq)]
+The Enterprise Company for which the data is recorded. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

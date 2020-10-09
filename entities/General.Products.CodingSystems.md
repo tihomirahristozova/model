@@ -25,7 +25,7 @@ Coding systems categorize additional product codes. Entity: Gen_Coding_Systems
 
 ### Description
 
-> The description of this CodingSystem.
+The description of this CodingSystem.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -39,7 +39,7 @@ _Default Value_: **NewGuid**
 
 ### IsUnique
 
-> True when the coding system can contain only unique product codes. false - duplicate product codes are allowed. [Required] [Default(true)] [Filter(eq)]
+True when the coding system can contain only unique product codes. false - duplicate product codes are allowed. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -48,7 +48,7 @@ _Default Value_: **True**
 
 ### Name
 
-> The name of this CodingSystem. [Required] [Filter(eq;like)]
+The name of this CodingSystem. [Required] [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### DefaultMeasurementUnit
 
-> When not null, specifies a measurement unit to be used as default, instead of the products default unit. [Filter(multi eq)]
+When not null, specifies a measurement unit to be used as default, instead of the products default unit. [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

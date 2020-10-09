@@ -33,14 +33,14 @@ _Supports Order By_: **False**
 
 ### EntityItemId
 
-> The id of the actual changed object, described by this change. [Required] [Filter(multi eq)]
+The id of the actual changed object, described by this change. [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### NewValue
 
-> The new value. [Filter(eq;like)]
+The new value. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### PreviousValue
 
-> The previous value. [Required] [Filter(eq)]
+The previous value. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 ### RepositoryName
 
-> The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)]
+The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -64,7 +64,7 @@ _Supports Order By_: **False**
 
 ### TimeUtc
 
-> Date and time (in Utc) when the changeset was processed by the server. [Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD]
+Date and time (in Utc) when the changeset was processed by the server. [Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -76,7 +76,7 @@ _Default Value_: **CurrentDateTimeUtc**
 
 ### User
 
-> The user which initiated the change. null when it is unknown. [Filter(multi eq)]
+The user which initiated the change. null when it is unknown. [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

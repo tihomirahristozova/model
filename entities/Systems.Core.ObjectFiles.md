@@ -35,7 +35,7 @@ Contains files attached to objects. Entity: Sys_Object_Files
 
 ### ContentLocation
 
-> The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] (Introduced in version 20.1)
+The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] (Introduced in version 20.1)
 
 _Type_: **[ContentLocation](Systems.Core.ObjectFiles.md#contentlocation)**  
 Allowed values for the [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) data attribute  
@@ -53,7 +53,7 @@ _Default Value_: **Embedded**
 
 ### CreationTimeUtc
 
-> Time (in UTC), when the file was created. [Required] [Default(NowUtc)] (Introduced in version 20.1)
+Time (in UTC), when the file was created. [Required] [Default(NowUtc)] (Introduced in version 20.1)
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -62,7 +62,7 @@ _Default Value_: **CurrentDateTimeUtc**
 
 ### EmbeddedFileContents
 
-> Contains the contents of the file, when it is embedded in the database. null for linked files.
+Contains the contents of the file, when it is embedded in the database. null for linked files.
 
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -70,7 +70,7 @@ _Supports Order By_: **False**
 
 ### FileName
 
-> The file name of the linked or embedded file. [Required] [Filter(eq;like)]
+The file name of the linked or embedded file. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -84,7 +84,7 @@ _Default Value_: **NewGuid**
 
 ### LastUpdateTimeUtc
 
-> Time (in UTC), when the file was last updated. [Required] [Default(NowUtc)] (Introduced in version 20.1)
+Time (in UTC), when the file was last updated. [Required] [Default(NowUtc)] (Introduced in version 20.1)
 
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
@@ -93,7 +93,7 @@ _Default Value_: **CurrentDateTimeUtc**
 
 ### LinkedFilePath
 
-> When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. [Filter(eq;like)]
+When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -101,7 +101,7 @@ _Supports Order By_: **False**
 
 ### MediaHeight
 
-> Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1)
+Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1)
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -109,7 +109,7 @@ _Supports Order By_: **False**
 
 ### MediaType
 
-> For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. (Introduced in version 20.1)
+For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. (Introduced in version 20.1)
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -117,7 +117,7 @@ _Supports Order By_: **False**
 
 ### MediaWidth
 
-> Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1)
+Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1)
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -125,7 +125,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> User notes for the file attachment.
+User notes for the file attachment.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -133,7 +133,7 @@ _Supports Order By_: **False**
 
 ### PurposeCode
 
-> Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. [Filter(eq)]
+Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -144,21 +144,21 @@ _Supports Order By_: **False**
 
 ### CreationUser
 
-> The user, who created the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1)
+The user, who created the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1)
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LastUpdateUser
 
-> The user, who performed the last update to the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1)
+The user, who performed the last update to the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1)
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Object
 
-> The object to which the file is attached. [Required] [Filter(multi eq)] [Owner]
+The object to which the file is attached. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

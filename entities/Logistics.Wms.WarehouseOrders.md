@@ -39,21 +39,21 @@ _Default Value_: **NewGuid**
 
 ### Document
 
-> The [Document](General.Documents.md) to which this WarehouseOrder belongs. [Required] [Filter(multi eq)] [Owner]
+The [Document](General.Documents.md) to which this WarehouseOrder belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Warehouse
 
-> The warehouse, where the order will be executed. [Required] [Filter(multi eq)]
+The warehouse, where the order will be executed. [Required] [Filter(multi eq)]
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseWorker
 
-> When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)]
+When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)]
 
 _Type_: **[WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

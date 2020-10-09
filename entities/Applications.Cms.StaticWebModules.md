@@ -30,7 +30,7 @@ A web module, which contains one web page with static text. Entity: Cms_Static_W
 
 ### ContentHtml
 
-> The actual html content of the pade. Only the <BODY> of the html is stored.
+The actual html content of the pade. Only the <BODY> of the html is stored.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -44,7 +44,7 @@ _Default Value_: **NewGuid**
 
 ### IsPublished
 
-> Specifies whether the module is published and will be showed in the web site. [Required] [Default(false)] [Filter(eq)]
+Specifies whether the module is published and will be showed in the web site. [Required] [Default(false)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -53,7 +53,7 @@ _Default Value_: **False**
 
 ### LanguageCode
 
-> The language code of the content. [Required] [Default("EN")]
+The language code of the content. [Required] [Default("EN")]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -62,7 +62,7 @@ _Default Value_: **EN**
 
 ### LocalUrl
 
-> The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. [Filter(like)]
+The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. [Filter(like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Like**  
@@ -70,7 +70,7 @@ _Supports Order By_: **False**
 
 ### ModulePicture
 
-> Default picture. Used for picture links, small module icons, etc. PNG format is suggested.
+Default picture. Used for picture links, small module icons, etc. PNG format is suggested.
 
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -78,7 +78,7 @@ _Supports Order By_: **False**
 
 ### ModuleType
 
-> Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. [Required] [Filter(like)]
+Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. [Required] [Filter(like)]
 
 _Type_: **[ModuleType](Applications.Cms.StaticWebModules.md#moduletype)**  
 Allowed values for the [ModuleType](Applications.Cms.WebModules.md#moduletype) data attribute  
@@ -95,7 +95,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-> Multilanguage Module name. This is used as a title when displaying the web Module. [Required] [Filter(like)]
+Multilanguage Module name. This is used as a title when displaying the web Module. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -106,14 +106,14 @@ _Supports Order By_: **False**
 
 ### Parent
 
-> The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)]
+The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)]
 
 _Type_: **[WebModules](Applications.Cms.WebModules.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WebSite
 
-> The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner]
+The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[WebSites](Applications.Cms.WebSites.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

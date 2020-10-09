@@ -27,7 +27,7 @@ Represents concrete instances of resources. Entity: Gen_Resource_Instances
 
 ### Code
 
-> Code of the instance, unique within the resource. [Required] [Filter(eq;like)]
+Code of the instance, unique within the resource. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Multilanguage resource instance name. [Required] [Filter(eq;like)]
+Multilanguage resource instance name. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this ResourceInstance.
+Notes for this ResourceInstance.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -60,21 +60,21 @@ _Supports Order By_: **False**
 
 ### Asset
 
-> The asset, which is represented by this resource instance. null, when the resource instance is not an asset. [Filter(multi eq)]
+The asset, which is represented by this resource instance. null, when the resource instance is not an asset. [Filter(multi eq)]
 
 _Type_: **[Assets](Finance.Assets.Assets.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
-> The party, which is represented by this resource instance. null, when the resource instance is not a party. [Filter(multi eq)]
+The party, which is represented by this resource instance. null, when the resource instance is not a party. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Resource
 
-> The resource of which this is instance. [Required] [Filter(multi eq)] [Owner]
+The resource of which this is instance. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

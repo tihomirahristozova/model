@@ -29,7 +29,7 @@ User-defined properties allowed values. Can be specified only for properties wit
 
 ### Active
 
-> Specifies whether the allowed value is active and can be used when selecting property values. [Required] [Default(true)] [Filter(eq)]
+Specifies whether the allowed value is active and can be used when selecting property values. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -38,7 +38,7 @@ _Default Value_: **True**
 
 ### Description
 
-> The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. [Filter(eq;like)]
+The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. [Filter(eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -52,7 +52,7 @@ _Default Value_: **NewGuid**
 
 ### LongDescription
 
-> When not null, specifies a long description of the allowed value. This long description is only used as helper information when selecting values, it is not copied in the property value.
+When not null, specifies a long description of the allowed value. This long description is only used as helper information when selecting values, it is not copied in the property value.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -60,14 +60,14 @@ _Supports Order By_: **False**
 
 ### ParentAllowedValueId
 
-> The value of the parent property, for which this allowed value is valid. [Filter(multi eq)]
+The value of the parent property, for which this allowed value is valid. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Picture
 
-> When not null, specifies a picture representation of the allowed value.
+When not null, specifies a picture representation of the allowed value.
 
 _Type_: **byte[] (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -75,7 +75,7 @@ _Supports Order By_: **False**
 
 ### PropertyAllowedValueField
 
-> The actual allowed value. [Required] [Filter(eq;like)]
+The actual allowed value. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -86,14 +86,14 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The Enterprise Company to which this CustomPropertyAllowedValue applies, or null if it is for all enterprise companies. [Filter(multi eq)]
+The Enterprise Company to which this CustomPropertyAllowedValue applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property
 
-> The [CustomProperty](General.CustomProperties.md) to which this CustomPropertyAllowedValue belongs. [Required] [Filter(multi eq)] [Owner]
+The [CustomProperty](General.CustomProperties.md) to which this CustomPropertyAllowedValue belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

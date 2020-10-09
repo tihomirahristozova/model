@@ -26,7 +26,7 @@ Represents event registration of a business rule. Entity: Sys_User_Business_Rule
 
 ### EventParameter
 
-> Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.
+Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -34,7 +34,7 @@ _Supports Order By_: **False**
 
 ### EventType
 
-> The event for which to register the business rule. [Required]
+The event for which to register the business rule. [Required]
 
 _Type_: **[EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype)**  
 Allowed values for the [EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype) data attribute  
@@ -56,7 +56,7 @@ _Supports Order By_: **False**
 
 ### ExecutionPriority
 
-> Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. [Required] [Default(50)]
+Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. [Required] [Default(50)]
 
 _Type_: **[RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority)**  
 _Allowed Values (Aloe.SystemFrameworks.Domain.BusinessLogic.RuleExecutionPriority Enum Members)_  
@@ -81,7 +81,7 @@ _Default Value_: **NewGuid**
 
 ### Layer
 
-> Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. [Required] [Default("BKE")]
+Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. [Required] [Default("BKE")]
 
 _Type_: **[Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer)**  
 Allowed values for the [Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer) data attribute  
@@ -101,7 +101,7 @@ _Default Value_: **BackEnd**
 
 ### UserBusinessRule
 
-> The rule, which will be registered for the event. [Required] [Filter(multi eq)] [Owner]
+The rule, which will be registered for the event. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

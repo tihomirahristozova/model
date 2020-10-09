@@ -25,7 +25,7 @@ Contains the groups of measures in the general data warehouse. Entity: Dw_Data_M
 
 ### Code
 
-> Unique group code. [Required] [Filter(eq;like)] [ORD]
+Unique group code. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -39,7 +39,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Group name (multilanguage). [Required] [Filter(eq;like)]
+Group name (multilanguage). [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -47,7 +47,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this DataMeasureGroup.
+Notes for this DataMeasureGroup.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 ### Parent
 
-> Parent data measure group in the hierarchy. Null when this is root node. [Filter(multi eq)]
+Parent data measure group in the hierarchy. Null when this is root node. [Filter(multi eq)]
 
 _Type_: **[DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

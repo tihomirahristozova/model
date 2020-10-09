@@ -31,7 +31,7 @@ Contains the services, which can be performed. Entity: Srv_Services
 
 ### Code
 
-> Unique code of the service. [Required] [Filter(eq;like)]
+Unique code of the service. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -45,7 +45,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Indicates wheather this service is currently used. [Required] [Default(true)] [Filter(eq)]
+Indicates wheather this service is currently used. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -54,7 +54,7 @@ _Default Value_: **True**
 
 ### Name
 
-> The name of the service. [Required] [Filter(eq;like)]
+The name of the service. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -65,7 +65,7 @@ _Supports Order By_: **False**
 
 ### MeasurementUnit
 
-> The measurement unit in which the service rendered to the customer is quantified. [Required] [Filter(multi eq)]
+The measurement unit in which the service rendered to the customer is quantified. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

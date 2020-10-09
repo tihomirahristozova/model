@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this CrewMember.
+Notes for this CrewMember.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### OrdinalPos
 
-> Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader.
+Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -50,14 +50,14 @@ _Supports Order By_: **False**
 
 ### Crew
 
-> The crew to which this member belongs. [Required] [Filter(multi eq)] [Owner]
+The crew to which this member belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Crews](Applications.Fleet.Crews.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
-> The crew member person. [Required] [Filter(multi eq)]
+The crew member person. [Required] [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

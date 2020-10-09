@@ -27,7 +27,7 @@ Contains the actual and history of equipment, installed on the vehicles. Entity:
 
 ### EndDate
 
-> The date when the equipment was removed. null when the equipment is still installed on the vehicle. [Filter(ge;le)]
+The date when the equipment was removed. null when the equipment is still installed on the vehicle. [Filter(ge;le)]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for the installed equipment.
+Notes for the installed equipment.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### Quantity
 
-> Quantity of the equipment. [Required] [Default(1)] [Filter(ge;le)]
+Quantity of the equipment. [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -58,7 +58,7 @@ _Default Value_: **1**
 
 ### StartDate
 
-> The installation date of the equipment. [Required] [Filter(ge;le)]
+The installation date of the equipment. [Required] [Filter(ge;le)]
 
 _Type_: **date**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -69,14 +69,14 @@ _Supports Order By_: **False**
 
 ### EquipmentType
 
-> The type of equipment installed on the vehicle. [Required] [Filter(multi eq)]
+The type of equipment installed on the vehicle. [Required] [Filter(multi eq)]
 
 _Type_: **[EquipmentTypes](Applications.Fleet.EquipmentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Vehicle
 
-> The vehicle that is holding the equipment. [Required] [Filter(multi eq)] [Owner]
+The vehicle that is holding the equipment. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

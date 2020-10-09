@@ -29,7 +29,7 @@ National data: Contains the persons, which are authorized to issue and sign VAT 
 
 ### DeclarerType
 
-> Type of the declaring person. A=Attorney, R=Representative. [Required] [Filter(eq)]
+Type of the declaring person. A=Attorney, R=Representative. [Required] [Filter(eq)]
 
 _Type_: **[DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype)**  
 Allowed values for the [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) data attribute  
@@ -45,7 +45,7 @@ _Supports Order By_: **False**
 
 ### DeclaringPersonAddress
 
-> Address for correspondation of the declaring person. [Required]
+Address for correspondation of the declaring person. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### DeclaringPersonCity
 
-> City from the address for correspondation of the declaring person. [Required]
+City from the address for correspondation of the declaring person. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 ### DeclaringPersonPosition
 
-> Position of the declaring person in the enterprise company.
+Position of the declaring person in the enterprise company.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 ### DeclaringPersonPostcode
 
-> Postcode from the address for correspondation of the declaring person. [Required]
+Postcode from the address for correspondation of the declaring person. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -83,7 +83,7 @@ _Default Value_: **NewGuid**
 
 ### IsDefault
 
-> True if this is the default person, which issues VAT declarations for this Enterprise Company. [Required] [Default(true)]
+True if this is the default person, which issues VAT declarations for this Enterprise Company. [Required] [Default(true)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -95,14 +95,14 @@ _Default Value_: **True**
 
 ### EnterpriseCompany
 
-> The enterprise company for which the person is presenting the declaration. [Required] [Filter(multi eq)] [Owner]
+The enterprise company for which the person is presenting the declaration. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
-> The person that is presenting the declaration. [Required] [Filter(multi eq)]
+The person that is presenting the declaration. [Required] [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

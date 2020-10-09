@@ -30,7 +30,7 @@ Categorization of the assets, which specifies their depreciation plans. Entity: 
 
 ### Code
 
-> The unique code of the AssetCategory. [Required] [Filter(eq)] [ORD]
+The unique code of the AssetCategory. [Required] [Filter(eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -44,7 +44,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> The name of this AssetCategory. [Required] [Filter(like)]
+The name of this AssetCategory. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### ProductType
 
-> Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. [Required] [Filter(multi eq)]
+Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. [Required] [Filter(multi eq)]
 
 _Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

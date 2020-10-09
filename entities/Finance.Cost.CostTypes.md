@@ -18,7 +18,7 @@ Types of costs. Entity: Cost_Types
 
 ### Code
 
-> Unique cost type code. Used for charting. [Required] [Filter(eq)] [ORD]
+Unique cost type code. Used for charting. [Required] [Filter(eq)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -32,7 +32,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Multilanguage cost type name. [Required] [Filter(like)]
+Multilanguage cost type name. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  

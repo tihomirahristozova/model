@@ -19,7 +19,7 @@ User-defined categorization of the purchase operations. Used to group the purcha
 
 ### Code
 
-> Unique code of the purchase operation type. [Required] [Filter(multi eq;like)]
+Unique code of the purchase operation type. [Required] [Filter(multi eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -33,7 +33,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Name of the purchase operation type (multilanguage). [Required] [Filter(multi eq;like)]
+Name of the purchase operation type (multilanguage). [Required] [Filter(multi eq;like)]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -41,7 +41,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-> Notes for this PurchaseOperationType. [Filter(eq;like)]
+Notes for this PurchaseOperationType. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  

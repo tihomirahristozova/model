@@ -24,7 +24,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this PartyRelationshipType.
+Notes for this PartyRelationshipType.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -32,7 +32,7 @@ _Supports Order By_: **False**
 
 ### RelationshipTypeName
 
-> The name of the relationship type. [Required] [Filter(like)]
+The name of the relationship type. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  

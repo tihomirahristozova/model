@@ -26,7 +26,7 @@ Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transact
 
 ### BaseCostAdjustment
 
-> The cost correction in Base currency. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)]
+The cost correction in Base currency. [Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -34,7 +34,7 @@ _Supports Order By_: **False**
 
 ### CostCorrectionAmount
 
-> The cost correction in the original currency of the store transaction. [Currency: TransactionObj.DocumentCurrency] [Required] [Filter(eq;ge;le)]
+The cost correction in the original currency of the store transaction. [Currency: TransactionObj.DocumentCurrency] [Required] [Filter(eq;ge;le)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -42,7 +42,7 @@ _Supports Order By_: **False**
 
 ### ProductCostAdjustment
 
-> The cost correction in Products currency. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Filter(eq;ge;le)]
+The cost correction in Products currency. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Filter(eq;ge;le)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 
 ### StoreCostAdjustment
 
-> The cost correction in Stores currency. [Currency: TransactionObj.Store.Currency] [Required] [Filter(eq;ge;le)]
+The cost correction in Stores currency. [Currency: TransactionObj.Store.Currency] [Required] [Filter(eq;ge;le)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 ### TransactionLine
 
-> Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)]
+Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)]
 
 _Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -69,7 +69,7 @@ _Default Value_: **NewGuid**
 
 ### TransactionObj
 
-> The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]
+The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -25,7 +25,7 @@ Contains deal types supported by the system as well as user-defined types. Entit
 
 ### EntryType
 
-> Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. [Required] [Filter(eq)]
+Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. [Required] [Filter(eq)]
 
 _Type_: **[EntryType](Finance.Vat.DealTypes.md#entrytype)**  
 Allowed values for the [EntryType](Finance.Vat.DealTypes.md#entrytype) data attribute  
@@ -47,7 +47,7 @@ _Default Value_: **NewGuid**
 
 ### IsSystem
 
-> Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -56,7 +56,7 @@ _Default Value_: **False**
 
 ### Name
 
-> Description of the deal type. [Required] [Filter(eq;like)]
+Description of the deal type. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### Country
 
-> The country for which this deal type applies. The country is matched against the country of the enterprise company. [Required] [Filter(multi eq)]
+The country for which this deal type applies. The country is matched against the country of the enterprise company. [Required] [Filter(multi eq)]
 
 _Type_: **[Countries](General.Geography.Countries.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

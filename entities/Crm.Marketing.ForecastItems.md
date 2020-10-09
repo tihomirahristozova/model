@@ -29,7 +29,7 @@ Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 
 ### Date
 
-> The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period. [Required] [Filter(ge;le)]
+The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period. [Required] [Filter(ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -43,7 +43,7 @@ _Default Value_: **NewGuid**
 
 ### Quantity
 
-> The forecasted sales quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]
+The forecasted sales quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -55,42 +55,42 @@ _Default Value_: **Constant**
 
 ### Country
 
-> The country for which the forecast is made. When null, the forecast is country neutral. [Filter(multi eq)]
+The country for which the forecast is made. When null, the forecast is country neutral. [Filter(multi eq)]
 
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
 
-> The customer for which the forecast is made. When null, the forecast is not for any specfic customer. [Filter(multi eq)]
+The customer for which the forecast is made. When null, the forecast is not for any specfic customer. [Filter(multi eq)]
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Dealer
 
-> The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. [Filter(multi eq)]
+The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. [Filter(multi eq)]
 
 _Type_: **[Dealers](Crm.Dealers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The product for which the forecast is made. [Required] [Filter(multi eq)]
+The product for which the forecast is made. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesPerson
 
-> The sales person for which the forecast is made. When null, the forecast is not for any specfic sales person. [Filter(multi eq)]
+The sales person for which the forecast is made. When null, the forecast is not for any specfic sales person. [Filter(multi eq)]
 
 _Type_: **[SalesPersons](Crm.SalesPersons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-> The store which is expected to sell the products. [Required] [Filter(multi eq)]
+The store which is expected to sell the products. [Required] [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

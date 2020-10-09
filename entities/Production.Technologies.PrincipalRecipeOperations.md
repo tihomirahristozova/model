@@ -40,7 +40,7 @@ Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_
 
 ### ConditionalPropertyDescription
 
-> The desired description of the Conditional Property. .
+The desired description of the Conditional Property. .
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -48,7 +48,7 @@ _Supports Order By_: **False**
 
 ### ConditionalPropertyValue
 
-> The desired value of the Conditional Property. .
+The desired value of the Conditional Property. .
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -62,7 +62,7 @@ _Default Value_: **NewGuid**
 
 ### LineOrd
 
-> Consecutive line number within the principal recipe. [Required]
+Consecutive line number within the principal recipe. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -75,7 +75,7 @@ _Front-End Recalc Expressions:_
 `( obj.PrincipalRecipe.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### MinimumConcurrentStartTimeMinutes
 
-> How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting.
+How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting.
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -83,7 +83,7 @@ _Supports Order By_: **False**
 
 ### MoveTimeMinutes
 
-> Time to move the lot to the next operation in minutes. [Required] [Default(0)] [Filter(ge;le)]
+Time to move the lot to the next operation in minutes. [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -94,7 +94,7 @@ _Front-End Recalc Expressions:_
 `obj.Operation.MoveTimeMinutes`
 ### Notes
 
-> Notes for this PrincipalRecipeOperation.
+Notes for this PrincipalRecipeOperation.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -102,7 +102,7 @@ _Supports Order By_: **False**
 
 ### OperationDescription
 
-> The description of the operation. Initially copied from the generic operation definition.
+The description of the operation. Initially copied from the generic operation definition.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -112,7 +112,7 @@ _Front-End Recalc Expressions:_
 `obj.Operation.Description`
 ### RunTimeMinutes
 
-> Duration of the operation for one piece in the standard measurement unit of the product. [Required] [Default(0)] [Filter(ge;le)]
+Duration of the operation for one piece in the standard measurement unit of the product. [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -123,7 +123,7 @@ _Front-End Recalc Expressions:_
 `obj.Operation.RunTimeMinutes`
 ### ScrapRate
 
-> Standard rate of scrap during the operation. [Required] [Default(0)]
+Standard rate of scrap during the operation. [Required] [Default(0)]
 
 _Type_: **decimal**  
 _Supported Filters_: **NotFilterable**  
@@ -132,7 +132,7 @@ _Default Value_: **0**
 
 ### SetupTimeMinutes
 
-> Time needed to setup the equipment. [Required] [Default(0)] [Filter(ge;le)]
+Time needed to setup the equipment. [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -143,7 +143,7 @@ _Front-End Recalc Expressions:_
 `obj.Operation.SetupTimeMinutes`
 ### Tooling
 
-> The tools needed for the routing step.
+The tools needed for the routing step.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -151,7 +151,7 @@ _Supports Order By_: **False**
 
 ### UseQuantity
 
-> Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
+Quantity of the workgroup resource that should be allocated for the operation. [Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -162,7 +162,7 @@ _Front-End Recalc Expressions:_
 `obj.Operation.UseQuantityBase`
 ### WaitTimeMinutes
 
-> Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)] [Filter(ge;le)]
+Wait time (drying, cooling, etc.) after the operation in minutes. [Required] [Default(0)] [Filter(ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -176,35 +176,35 @@ _Front-End Recalc Expressions:_
 
 ### ConditionalProperty
 
-> When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. [Filter(multi eq)]
+When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. [Filter(multi eq)]
 
 _Type_: **[CustomProperties](General.CustomProperties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Operation
 
-> The generic operation definition. The data is copied locally and can be modified for this specific record. [Filter(multi eq)]
+The generic operation definition. The data is copied locally and can be modified for this specific record. [Filter(multi eq)]
 
 _Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OperationInstruction
 
-> Link to additional data, containing instructions in external format. [Filter(multi eq)]
+Link to additional data, containing instructions in external format. [Filter(multi eq)]
 
 _Type_: **[OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrincipalRecipe
 
-> The [PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) to which this PrincipalRecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]
+The [PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) to which this PrincipalRecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UseQuantityUnit
 
-> The measurement unit of Use_Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Use_Quantity. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -213,7 +213,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( obj.WorkgroupResource.Resource != null), obj.WorkgroupResource.Resource.PrimaryUnit, obj.UseQuantityUnit)`
 ### WorkgroupResource
 
-> Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. [Required] [Filter(multi eq)]
+Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. [Required] [Filter(multi eq)]
 
 _Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

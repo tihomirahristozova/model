@@ -19,7 +19,7 @@ Represents a mode of transportation, like water, air, road, etc. Entity: Log_Tra
 
 ### Code
 
-> Unique transportation mode code. [Required] [Filter(eq;like)] [ORD]
+Unique transportation mode code. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -33,7 +33,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Multilanguage name of the mode of transportation. [Required] [Filter(eq;like)]
+Multilanguage name of the mode of transportation. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -41,7 +41,7 @@ _Supports Order By_: **False**
 
 ### SystemIcon
 
-> Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. [Required] [Default("O")]
+Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. [Required] [Default("O")]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  

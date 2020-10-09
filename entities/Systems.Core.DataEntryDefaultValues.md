@@ -31,7 +31,7 @@ Contains user-specified default values for columns in data entry forms. Entity: 
 
 ### ColumnName
 
-> The column for which the default is specified. [Required] [Filter(eq)]
+The column for which the default is specified. [Required] [Filter(eq)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### ConditionFormName
 
-> If not null specifies that the default should be applied only if Form_Name equals the specified value. [Filter(eq)] [ORD]
+If not null specifies that the default should be applied only if Form_Name equals the specified value. [Filter(eq)] [ORD]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -47,7 +47,7 @@ _Supports Order By_: **True**
 
 ### ConditionUserLogin
 
-> If not null specifies that the default should be applied only if User_Login equals this value. [Filter(eq)]
+If not null specifies that the default should be applied only if User_Login equals this value. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### ConditionUserMachine
 
-> If not null specifies that the default should be applied only if User_Machine equals this value. [Filter(eq)]
+If not null specifies that the default should be applied only if User_Machine equals this value. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 ### DefaultValueField
 
-> The default value for Column_Name. Should be applied only if the other conditions are met. null specifies null default.
+The default value for Column_Name. Should be applied only if the other conditions are met. null specifies null default.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -77,7 +77,7 @@ _Default Value_: **NewGuid**
 
 ### PanelName
 
-> When not null, specifies the panel for which the default value applies. [Filter(eq;like)]
+When not null, specifies the panel for which the default value applies. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -85,7 +85,7 @@ _Supports Order By_: **False**
 
 ### TableName
 
-> The table, containing the column for which the default value is specified. [Filter(eq)]
+The table, containing the column for which the default value is specified. [Filter(eq)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
@@ -96,21 +96,21 @@ _Supports Order By_: **False**
 
 ### ConditionDocumentType
 
-> If not null specifies that the default should be applied only if Document_Type_Id equals this value. [Filter(multi eq)]
+If not null specifies that the default should be applied only if Document_Type_Id equals this value. [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionEnterpriseCompany
 
-> If not null specifies that the default should be applied only if Enterprise_Company_Id equals this value. [Filter(multi eq)]
+If not null specifies that the default should be applied only if Enterprise_Company_Id equals this value. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionRole
 
-> When not null, specifies that the default value should be applied only when the user plays the specified role. [Filter(multi eq)]
+When not null, specifies that the default value should be applied only when the user plays the specified role. [Filter(multi eq)]
 
 _Type_: **[Roles](Systems.Workflow.Roles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

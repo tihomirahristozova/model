@@ -24,7 +24,7 @@ Contains the cost types and their hierachy positions within a cost calculation. 
 
 ### HierarchyLevel
 
-> The level in the hierarchy on which this cost is incurred (0..9). [Required] [Filter(ge;le)]
+The level in the hierarchy on which this cost is incurred (0..9). [Required] [Filter(ge;le)]
 
 _Type_: **int32**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -41,14 +41,14 @@ _Default Value_: **NewGuid**
 
 ### CostTemplate
 
-> The [Template](Finance.Cost.Templates.md) to which this TemplateCostType belongs. [Required] [Filter(multi eq)] [Owner]
+The [Template](Finance.Cost.Templates.md) to which this TemplateCostType belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Templates](Finance.Cost.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostType
 
-> The Cost Type for which the hierarchy is specified. [Required] [Filter(multi eq)]
+The Cost Type for which the hierarchy is specified. [Required] [Filter(multi eq)]
 
 _Type_: **[CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

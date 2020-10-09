@@ -25,7 +25,7 @@ Contains contacting mechanisms - telephone numbers, addresses, web sites, etc. C
 
 ### ContactMechanismType
 
-> A=Address; E=e-mail; T=Telephone. [Required] [Default("A")] [Filter(multi eq)]
+A=Address; E=e-mail; T=Telephone. [Required] [Default("A")] [Filter(multi eq)]
 
 _Type_: **[ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype)**  
 Allowed values for the [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) data attribute  
@@ -53,7 +53,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-> Contact mechanism description. [Required] [Filter(eq;like)]
+Contact mechanism description. [Required] [Filter(eq;like)]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -64,14 +64,14 @@ _Supports Order By_: **False**
 
 ### AdministrativeRegion
 
-> The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2)
+The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2)
 
 _Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### GeoPoint
 
-> The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2)
+The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2)
 
 _Type_: **[GeoPoints](General.Geography.GeoPoints.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

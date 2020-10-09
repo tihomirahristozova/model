@@ -29,7 +29,7 @@ Contains the way to obtain the values for each required property of both the deb
 
 ### ConstantValueId
 
-> The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. [Filter(multi eq)]
+The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -42,7 +42,7 @@ _Default Value_: **NewGuid**
 
 ### IsDebit
 
-> If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. [Required] [Default(true)] [Filter(eq)]
+If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. [Required] [Default(true)] [Filter(eq)]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -51,7 +51,7 @@ _Default Value_: **True**
 
 ### PropertyDescription
 
-> Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant).
+Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant).
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 ### PropertyNo
 
-> The ordinal position of the property value in the item key of the account. [Required] [Filter(eq)]
+The ordinal position of the property value in the item key of the account. [Required] [Filter(eq)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals**  
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 ### PropertyValueSource
 
-> Source for the property value according to the chosen source type. [Required]
+Source for the property value according to the chosen source type. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -75,7 +75,7 @@ _Supports Order By_: **False**
 
 ### PropertyValueSourceType
 
-> Type of source for the property value. For example: System properties, User properties for document, Constant, ... [Required]
+Type of source for the property value. For example: System properties, User properties for document, Constant, ... [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -86,14 +86,14 @@ _Supports Order By_: **False**
 
 ### Property
 
-> The property which value will be included in the item key of the account. [Required] [Filter(multi eq)]
+The property which value will be included in the item key of the account. [Required] [Filter(multi eq)]
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TemplateLine
 
-> The [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner]
+The [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[TemplateLines](Finance.Accounting.TemplateLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

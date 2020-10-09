@@ -33,7 +33,7 @@ The internal production consumption of materials. Used only for control purposes
 
 ### ConsumedQuantityForRun
 
-> The consumed quantity of the material for the operation. [Unit: QuantityUnit] [Required] [Default(0)]
+The consumed quantity of the material for the operation. [Unit: QuantityUnit] [Required] [Default(0)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -42,7 +42,7 @@ _Default Value_: **Constant**
 
 ### ConsumedQuantityForScrap
 
-> The scrapped quantity of the material for this operation. [Unit: QuantityUnit] [Required] [Default(0)]
+The scrapped quantity of the material for this operation. [Unit: QuantityUnit] [Required] [Default(0)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -51,7 +51,7 @@ _Default Value_: **Constant**
 
 ### ConsumedQuantityForSetup
 
-> The consumed quantity of the material while setting up the operation. [Unit: QuantityUnit] [Required] [Default(0)]
+The consumed quantity of the material while setting up the operation. [Unit: QuantityUnit] [Required] [Default(0)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -66,7 +66,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Line number, unique within the OutputOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the OutputOrder (in order to allow insertions with adjustment documents). [Required]
+Line number, unique within the OutputOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the OutputOrder (in order to allow insertions with adjustment documents). [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -79,7 +79,7 @@ _Front-End Recalc Expressions:_
 `( obj.OutputOrder.ConsumptionLines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-> Notes for this OutputOrderConsumptionLine.
+Notes for this OutputOrderConsumptionLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -90,7 +90,7 @@ _Supports Order By_: **False**
 
 ### LineWorkOrder
 
-> Work order for the line. Initially copied from the header (if there work order is not null). [Required] [Filter(multi eq)]
+Work order for the line. Initially copied from the header (if there work order is not null). [Required] [Filter(multi eq)]
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -99,21 +99,21 @@ _Front-End Recalc Expressions:_
 `obj.OutputOrder.WorkOrder`
 ### Material
 
-> The consumed material. [Required] [Filter(multi eq)]
+The consumed material. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OutputOrder
 
-> The [OutputOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) to which this OutputOrderConsumptionLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [OutputOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) to which this OutputOrderConsumptionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
-> The measurement unit for the consumed quantity for setup, run and scrap. [Required] [Filter(multi eq)]
+The measurement unit for the consumed quantity for setup, run and scrap. [Required] [Filter(multi eq)]
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -122,21 +122,21 @@ _Front-End Recalc Expressions:_
 `obj.Material.MeasurementUnit`
 ### ScrapType
 
-> When Consumed_Quantity_For_Scrap <> 0 denotes the reason for the scrap. [Filter(multi eq)]
+When Consumed_Quantity_For_Scrap <> 0 denotes the reason for the scrap. [Filter(multi eq)]
 
 _Type_: **[ScrapTypes](Logistics.Inventory.ScrapTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItem
 
-> The work order item, for which the consumption is recorded. [Required] [Filter(multi eq)]
+The work order item, for which the consumption is recorded. [Required] [Filter(multi eq)]
 
 _Type_: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItemOperation
 
-> The operation in which the material was consumed. null = unknown. [Filter(multi eq)]
+The operation in which the material was consumed. null = unknown. [Filter(multi eq)]
 
 _Type_: **[WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

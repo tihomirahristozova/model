@@ -27,7 +27,7 @@ Contains the distibution of the payments' amounts among the source payment order
 
 ### AllowOverpayment
 
-> True-Allows overpayment for the payment order; false=Does not allow (default). [Required] [Default(false)]
+True-Allows overpayment for the payment order; false=Does not allow (default). [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -36,7 +36,7 @@ _Default Value_: **False**
 
 ### Amount
 
-> The part of the total payed amount by the transaction, that is distributed to the specified payment order. [Currency: PaymentTransaction.TotalAmountCurrency] [Required] [Default(0)]
+The part of the total payed amount by the transaction, that is distributed to the specified payment order. [Currency: PaymentTransaction.TotalAmountCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -47,7 +47,7 @@ _Front-End Recalc Expressions:_
 `obj.CoveredOrderAmount.ConvertTo( obj.PaymentTransaction.TotalAmountCurrency, obj.PaymentTransaction.CurrencyDirectory)`
 ### CoveredOrderAmount
 
-> The part of the original payment order amount, that is covered by this transaction line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]
+The part of the original payment order amount, that is covered by this transaction line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]
 
 _Type_: **[Amount](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
@@ -64,7 +64,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this PaymentTransactionLine.
+Notes for this PaymentTransactionLine.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -75,14 +75,14 @@ _Supports Order By_: **False**
 
 ### PaymentOrder
 
-> The payment order, that is covered by this transaction amount distribution (tr.line). [Required] [Filter(multi eq)]
+The payment order, that is covered by this transaction amount distribution (tr.line). [Required] [Filter(multi eq)]
 
 _Type_: **[PaymentOrders](Finance.Payments.PaymentOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentTransaction
 
-> The [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)] [Owner]
+The [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PaymentTransactions](Finance.Payments.PaymentTransactions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

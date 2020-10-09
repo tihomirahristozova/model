@@ -36,7 +36,7 @@ Contains the services, which were actually performed during the service activity
 
 ### CoveredByGuarantee
 
-> True when the performed service is covered by the guarantee. [Required] [Default(false)]
+True when the performed service is covered by the guarantee. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -51,7 +51,7 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-> Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]
+Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -64,7 +64,7 @@ _Front-End Recalc Expressions:_
 `( obj.ServiceActivity.Services.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-> Short notes for the service.
+Short notes for the service.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -72,7 +72,7 @@ _Supports Order By_: **False**
 
 ### Quantity
 
-> The quantity of the service in the measurement unit of the service. [Unit: Service.MeasurementUnit] [Required] [Default(1)]
+The quantity of the service in the measurement unit of the service. [Unit: Service.MeasurementUnit] [Required] [Default(1)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -81,7 +81,7 @@ _Default Value_: **Constant**
 
 ### ServiceName
 
-> Description of the conducted service. The description may vary (contain additional information) from the standart name of the service. [Required] [Filter(like)]
+Description of the conducted service. The description may vary (contain additional information) from the standart name of the service. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -94,28 +94,28 @@ _Front-End Recalc Expressions:_
 
 ### PerformedByPerson
 
-> The id of the person from the enterprise company that actually performed the work. [Filter(multi eq)]
+The id of the person from the enterprise company that actually performed the work. [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Service
 
-> The type of service that is conducted. [Required] [Filter(multi eq)]
+The type of service that is conducted. [Required] [Filter(multi eq)]
 
 _Type_: **[Services](Applications.Service.Services.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceActivity
 
-> The [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] [Owner]
+The [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceObject
 
-> The service object that was serviced. null means that it is unknown or N/A. [Filter(multi eq)]
+The service object that was serviced. null means that it is unknown or N/A. [Filter(multi eq)]
 
 _Type_: **[ServiceObjects](Applications.Service.ServiceObjects.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

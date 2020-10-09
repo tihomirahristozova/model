@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### IsDefault
 
-> True, when this is the default storage bin for the specified store. [Required] [Default(false)]
+True, when this is the default storage bin for the specified store. [Required] [Default(false)]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -40,7 +40,7 @@ _Default Value_: **False**
 
 ### Name
 
-> Name of the store bin. [Required] [Filter(like)]
+Name of the store bin. [Required] [Filter(like)]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -51,14 +51,14 @@ _Supports Order By_: **False**
 
 ### BlockedForParty
 
-> If not null, the goods can only be used by the specified party. [Filter(multi eq)]
+If not null, the goods can only be used by the specified party. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-> The id of the containing store. [Required] [Filter(multi eq)] [Owner]
+The id of the containing store. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

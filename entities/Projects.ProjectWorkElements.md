@@ -32,14 +32,14 @@ _Default Value_: **NewGuid**
 
 ### Project
 
-> The [Project](Projects.ProjectWorkElements.md#project) to which this ProjectWorkElement belongs. [Required] [Filter(multi eq)] [Owner]
+The [Project](Projects.ProjectWorkElements.md#project) to which this ProjectWorkElement belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Projects](Projects.Projects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTypeWorkElement
 
-> The work element from the project type on which the current work element is based. [Required] [Filter(multi eq)]
+The work element from the project type on which the current work element is based. [Required] [Filter(multi eq)]
 
 _Type_: **[TypeWorkElements](Projects.TypeWorkElements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

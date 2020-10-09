@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this Template.
+Notes for this Template.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -39,7 +39,7 @@ _Supports Order By_: **False**
 
 ### ProjectTemplateName
 
-> The name of the project template. [Required]
+The name of the project template. [Required]
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  

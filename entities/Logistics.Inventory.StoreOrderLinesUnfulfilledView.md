@@ -32,7 +32,7 @@ Returns the remaining (unfulfilled) quantity and cost for each Store Order Line 
 
 ### DocumentDate
 
-> The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)]
+The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -41,7 +41,7 @@ _Default Value_: **CurrentDate**
 
 ### IsFulfilled
 
-> Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. [Required] [Filter(multi eq)]
+Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. [Required] [Filter(multi eq)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 
 ### IsQuantityFulfilled
 
-> Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. [Required] [Filter(multi eq)]
+Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. [Required] [Filter(multi eq)]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 ### OrderRemainingLineCost
 
-> The remaining (unfulfilled) line cost of the order line. [Required] [Filter(multi eq;ge;le)]
+The remaining (unfulfilled) line cost of the order line. [Required] [Filter(multi eq;ge;le)]
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -65,7 +65,7 @@ _Supports Order By_: **False**
 
 ### OrderRemainingQuantityBase
 
-> The remaining (unfulfilled) quantity of the order line in base measurement unit. [Required] [Filter(multi eq;ge;le)]
+The remaining (unfulfilled) quantity of the order line in base measurement unit. [Required] [Filter(multi eq;ge;le)]
 
 _Type_: **decimal**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -76,49 +76,49 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> The enterprise company which issued the document. [Required] [Filter(multi eq)]
+The enterprise company which issued the document. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 
-> If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]
+If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The product which should be received/issued. [Required] [Filter(multi eq)]
+The product which should be received/issued. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductVariant
 
-> If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]
+If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]
 
 _Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
 
-> Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]
+Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-> The designated warehouse for the operation. [Required] [Filter(multi eq)]
+The designated warehouse for the operation. [Required] [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreOrderLine
 
-> Store order line Id. [Required] [Default(New Guid)] [Filter(multi eq)]
+Store order line Id. [Required] [Default(New Guid)] [Filter(multi eq)]
 
 _Type_: **[StoreOrderLines](Logistics.Inventory.StoreOrderLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

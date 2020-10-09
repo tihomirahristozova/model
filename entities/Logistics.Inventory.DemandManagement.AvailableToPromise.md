@@ -29,7 +29,7 @@ Quantities available to promise for the different date periods. Also contains th
 
 ### ATPBase
 
-> Indicates the quantity available to promise (in a base unit). It is valid from this date on. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
+Indicates the quantity available to promise (in a base unit). It is valid from this date on. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -37,7 +37,7 @@ _Supports Order By_: **False**
 
 ### CurrentAvailabilityBase
 
-> The current availability in а base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
+The current availability in а base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -45,7 +45,7 @@ _Supports Order By_: **False**
 
 ### FromDate
 
-> Тhe date from which the available to promise quantity is valid. [Required] [Filter(eq;ge;le)]
+Тhe date from which the available to promise quantity is valid. [Required] [Filter(eq;ge;le)]
 
 _Type_: **datetime**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -53,7 +53,7 @@ _Supports Order By_: **False**
 
 ### MovementsBase
 
-> The sum of the quantity of all planned stock movements on this date in а base measurement unit. . [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
+The sum of the quantity of all planned stock movements on this date in а base measurement unit. . [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 ### MovementsToDateBase
 
-> The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
+The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 ### ProjectedAvailabilityBase
 
-> Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
+Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -80,21 +80,21 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-> Тhe Enterprise Company, for which the quantities are calculated. [Required] [Filter(multi eq)]
+Тhe Enterprise Company, for which the quantities are calculated. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-> The Product, for which the quantities are calculated. [Required] [Filter(multi eq)]
+The Product, for which the quantities are calculated. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-> The Store, for which the quantities are calculated. [Required] [Filter(multi eq)]
+The Store, for which the quantities are calculated. [Required] [Filter(multi eq)]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
