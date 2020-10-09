@@ -72,37 +72,40 @@
             <article class="content wrap" id="_content" data-uid="data-types">
 <h1 id="data-types">Data Types</h1>
 
-<h2 id="simple-types">Simple Types</h2>
-<h2 id="complex-types">Complex Types</h2>
-<h3 id="multilanguagestring">MultilanguageString</h3>
-<p>Multi-language strings - <a href="https://enterpriseone.atlassian.net/wiki/display/techdoc/Multi-language">https://enterpriseone.atlassian.net/wiki/display/techdoc/Multi-language</a></p>
-<p>Some text properties support value in more than one language. This properties are of multi-language string type.</p>
-<p>Example: General_Products_Products.Name property.</p>
-<p>The multi-language string can store many language strings, indexing them by language key. The language key is a CultureInfo two letter ISO language name, like &quot;en&quot;, &quot;de&quot;, etc.</p>
-<p>For example the Name property of General_Products_Products entity is displayed as:
+<h2 id="multilanguagestring">MultilanguageString</h2>
+<p>Some text properties support value in more than one language.
+This properties are of multi-language string type.</p>
+<p>The multi-language string can store many language strings, indexing them by language key.
+The language key is a CultureInfo two letter ISO language name, like &quot;en&quot;, &quot;de&quot;, etc.</p>
+<p>For example, the name of a product is a data attribute, which can simultaneously contain translation of the product name in many languages.</p>
+<p>When you retrieve the value of this attribute with the Domain API, you get values similar to:</p>
 <code>
 {
-&quot;Name&quot;: {
-&quot;bg&quot;: &quot;Ябълка&quot;,
-&quot;en&quot;: &quot;Apple&quot;
+  "en": "Apple",
+  "de": "Apfel"
 }
-}
-<code><p>
-<blockquote>
-<p>ALL multi-language values are treated as a single value. You cannot GET/PUT/PATCH only some multi-language values - they are treated as a single piece of data.</p>
-</blockquote>
-<blockquote>
-<p><strong>Note!</strong><br>
-Multi-language properties support only filter function <strong>contains</strong>:<br>
-Domain API:
-~/General_Products_Products?$filter=contains(Name,'ppl')<br>
-This is an invalid filter:<br>
-~/General_Products_Products?$filter=Name eq 'Apple'</p>
-</blockquote>
-<h3 id="amount">Amount</h3>
+<code>
+<h3 id="all-translations-are-a-single-value">All translations are a single value</h3>
+<p>ALL translations in a multi-language string are treated as a single value.
+You cannot change only one language pair - all pairs are updated simultaneously.
+The client applications are responsible for managing all language pairs.</p>
+<h3 id="filtering">Filtering</h3>
+<p>The equality comparison for multi-language string is ambiguous.
+The APIs generally do not support direct equality comparisons.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Domain API supports only the filter function <strong>contains</strong>.</p>
+</div>
+<p>For example, the following is supported:</p>
+<pre><code>~/General_Products_Products?$filter=contains(Name,'ppl')  
+</code></pre>
+<p>However, this is not valid:</p>
+<pre><code>~/General_Products_Products?$filter=Name eq 'Apple'  
+</code></pre>
+<h2 id="amount">Amount</h2>
 <p>The ERP domain model declares a special type for amount (currency) properties.</p>
 <p>The amount is represented by value and currency.</p>
-<p><strong>Properties</strong></p>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -132,10 +135,10 @@ Example:</p>
 &quot;Currency&quot;: &quot;USD&quot;
 }
 }</p>
-<h3 id="quantity">Quantity</h3>
+<h2 id="quantity">Quantity</h2>
 <p>The ERP domain model declares a special type for quantity properties.</p>
 <p>The quantity is represented by value and measurement unit.</p>
-<p><strong>Properties</strong></p>
+<h3 id="properties-1">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -165,7 +168,7 @@ Example:</p>
 &quot;Unit&quot;: &quot;PCS&quot;
 }
 }</p>
-<h3 id="custompropertyvalue">CustomPropertyValue</h3>
+<h2 id="custompropertyvalue">CustomPropertyValue</h2>
 <p>User-defined properties, which can supplement the system properties of almost all entities in the system.</p>
 <p>Custom properties are defined in General_CustomProperties entity.</p>
 <p>EntityName specifies the entity for which the property is applicable.</p>
@@ -174,7 +177,7 @@ Example:</p>
 <p>AllowedValuesEntityName specifies that the allowed values are retrieved from the specified entity. If null the allowed values are retrieved from General_CustomPropertyAllowedValues</p>
 <p>In EnterpriseOne REST API custom properties are properties of type General_CustomPropertyValue. The API name of the custom property starts with 'CustomProperty_' followed by the user defined property code.</p>
 <p>Each database contains different custom properties and that is why each database have different EDM model ($metadata).</p>
-<p><strong>Properties</strong></p>
+<h3 id="properties-2">Properties</h3>
 <table>
 <thead>
 <tr>
