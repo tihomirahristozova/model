@@ -1,4 +1,4 @@
-# ErpNet Entities
+# ERP.net Entities
 
 ## Namespaces
 - [Applications](Applications.md)  
