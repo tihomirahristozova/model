@@ -114,10 +114,6 @@ _Default Value_: **1**
 
 [!list erp.entity=Crm.DiscountTypes erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Crm.DiscountTypes erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

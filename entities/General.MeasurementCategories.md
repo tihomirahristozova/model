@@ -55,10 +55,6 @@ _Supports Order By_: **True**
 
 [!list erp.entity=General.MeasurementCategories erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=General.MeasurementCategories erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

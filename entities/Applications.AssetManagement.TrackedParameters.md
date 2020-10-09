@@ -67,10 +67,6 @@ _Supports Order By_: **False**
 
 [!list erp.entity=Applications.AssetManagement.TrackedParameters erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Applications.AssetManagement.TrackedParameters erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

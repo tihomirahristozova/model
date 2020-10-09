@@ -149,10 +149,6 @@ _Default Value_: **False**
 
 [!list erp.entity=Systems.Bpm.UserBusinessRules erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Systems.Bpm.UserBusinessRules erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

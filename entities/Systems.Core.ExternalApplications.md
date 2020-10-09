@@ -161,10 +161,6 @@ _Supported Filters_: **Equals, EqualsIn**
 
 [!list erp.entity=Systems.Core.ExternalApplications erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Systems.Core.ExternalApplications erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

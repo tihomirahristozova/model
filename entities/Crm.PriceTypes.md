@@ -66,10 +66,6 @@ _Supports Order By_: **True**
 
 [!list erp.entity=Crm.PriceTypes erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Crm.PriceTypes erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

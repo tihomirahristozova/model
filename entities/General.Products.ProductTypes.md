@@ -125,10 +125,6 @@ _Supports Order By_: **True**
 
 [!list erp.entity=General.Products.ProductTypes erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=General.Products.ProductTypes erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

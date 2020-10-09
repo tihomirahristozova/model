@@ -58,10 +58,6 @@ _Default Value_: **O**
 
 [!list erp.entity=Logistics.Shipment.TransportationModes erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Logistics.Shipment.TransportationModes erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

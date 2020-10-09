@@ -72,10 +72,6 @@ _Supports Order By_: **False**
 
 [!list erp.entity=General.Resources.WorkSchedules erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=General.Resources.WorkSchedules erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

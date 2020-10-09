@@ -117,10 +117,6 @@ _Default Value_: **True**
 
 [!list erp.entity=Finance.Assets.DepreciationMethods erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Finance.Assets.DepreciationMethods erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

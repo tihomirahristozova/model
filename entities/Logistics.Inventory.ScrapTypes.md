@@ -49,10 +49,6 @@ _Default Value_: **True**
 
 [!list erp.entity=Logistics.Inventory.ScrapTypes erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Logistics.Inventory.ScrapTypes erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

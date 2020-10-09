@@ -114,10 +114,6 @@ _Supported Filters_: **Equals, EqualsIn**
 
 [!list erp.entity=Finance.Payments.PaymentAccounts erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Finance.Payments.PaymentAccounts erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

@@ -102,10 +102,6 @@ _Supported Filters_: **Equals, EqualsIn**
 
 [!list erp.entity=General.ProductVariants erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=General.ProductVariants erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

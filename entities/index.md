@@ -1,5 +1,7 @@
 # ERP.net Entities
 
+[!include](../entities-overview.md)
+
 ## Namespaces
 - [Applications](Applications.md)  
 - [Communities](Communities.md)  

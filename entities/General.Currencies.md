@@ -58,10 +58,6 @@ _Default Value_: **0**
 
 [!list erp.entity=General.Currencies erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=General.Currencies erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

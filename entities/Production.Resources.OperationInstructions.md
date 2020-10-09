@@ -47,10 +47,6 @@ _Supports Order By_: **False**
 
 [!list erp.entity=Production.Resources.OperationInstructions erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Production.Resources.OperationInstructions erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

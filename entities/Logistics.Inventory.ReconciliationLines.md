@@ -190,10 +190,6 @@ _Front-End Recalc Expressions:_
 
 [!list erp.entity=Logistics.Inventory.ReconciliationLines erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Logistics.Inventory.ReconciliationLines erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

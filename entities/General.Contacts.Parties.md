@@ -208,10 +208,6 @@ _Supported Filters_: **EqualsIn**
 
 [!list erp.entity=General.Contacts.Parties erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=General.Contacts.Parties erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

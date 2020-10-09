@@ -39,10 +39,6 @@ _Supports Order By_: **False**
 
 [!list erp.entity=Applications.Service.ServiceObjectTypes erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Applications.Service.ServiceObjectTypes erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

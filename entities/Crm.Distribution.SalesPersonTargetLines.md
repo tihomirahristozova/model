@@ -177,10 +177,6 @@ _Front-End Recalc Expressions:_
 
 [!list erp.entity=Crm.Distribution.SalesPersonTargetLines erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Crm.Distribution.SalesPersonTargetLines erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

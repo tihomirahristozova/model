@@ -48,10 +48,6 @@ _Supports Order By_: **False**
 
 [!list erp.entity=General.Contacts.PartyRelationshipTypes erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=General.Contacts.PartyRelationshipTypes erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

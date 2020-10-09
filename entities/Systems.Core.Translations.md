@@ -120,10 +120,6 @@ _Default Value_: **CurrentDateTime**
 
 [!list erp.entity=Systems.Core.Translations erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Systems.Core.Translations erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

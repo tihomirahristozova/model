@@ -157,10 +157,6 @@ _Front-End Recalc Expressions:_
 
 [!list erp.entity=Applications.Service.ServiceActivityMaterials erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Applications.Service.ServiceActivityMaterials erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

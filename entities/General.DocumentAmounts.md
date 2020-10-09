@@ -144,10 +144,6 @@ _Front-End Recalc Expressions:_
 
 [!list erp.entity=General.DocumentAmounts erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=General.DocumentAmounts erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

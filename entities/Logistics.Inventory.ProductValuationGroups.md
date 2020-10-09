@@ -57,10 +57,6 @@ _Supports Order By_: **False**
 
 [!list erp.entity=Logistics.Inventory.ProductValuationGroups erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Logistics.Inventory.ProductValuationGroups erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:

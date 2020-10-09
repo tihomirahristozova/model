@@ -59,10 +59,6 @@ _Supports Order By_: **True**
 
 [!list erp.entity=Finance.Payments.PaymentReasons erp.type=front-end-business-rule default-text="None"]
 
-## Generations
-
-[!list erp.entity=Finance.Payments.PaymentReasons erp.type=generation default-text="None"]
-
 ## API
 
 Domain API Query:
