@@ -1,6 +1,9 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Applications
+  name: Applications
+  href: entities/Applications.html
 - uid: Applications.AssetManagement.MaintenanceOrderLines
   name: Applications.AssetManagement.MaintenanceOrderLines
   href: entities/Applications.AssetManagement.MaintenanceOrderLines.html
@@ -238,6 +241,9 @@ references:
 - uid: Applications.Telephony.CallDetails
   name: Applications.Telephony.CallDetails
   href: entities/Applications.Telephony.CallDetails.html
+- uid: Communities
+  name: Communities
+  href: entities/Communities.html
 - uid: Communities.Notifications
   name: Communities.Notifications
   href: entities/Communities.Notifications.html
@@ -262,6 +268,9 @@ references:
 - uid: Communities.SocialReactionsSummary
   name: Communities.SocialReactionsSummary
   href: entities/Communities.SocialReactionsSummary.html
+- uid: Crm
+  name: Crm
+  href: entities/Crm.html
 - uid: Crm.CustomerProducts
   name: Crm.CustomerProducts
   href: entities/Crm.CustomerProducts.html
@@ -424,6 +433,9 @@ references:
 - uid: data-types
   name: Data Types
   href: data-types.html
+- uid: Finance
+  name: Finance
+  href: entities/Finance.html
 - uid: Finance.Accounting.AccountGroups
   name: Finance.Accounting.AccountGroups
   href: entities/Finance.Accounting.AccountGroups.html
@@ -625,6 +637,9 @@ references:
 - uid: Finance.Vat.Entries
   name: Finance.Vat.Entries
   href: entities/Finance.Vat.Entries.html
+- uid: General
+  name: General
+  href: entities/General.html
 - uid: General.Config
   name: General.Config
   href: entities/General.Config.html
@@ -907,6 +922,9 @@ references:
 - uid: General.Sequences
   name: General.Sequences
   href: entities/General.Sequences.html
+- uid: Logistics
+  name: Logistics
+  href: entities/Logistics.html
 - uid: Logistics.Inventory.CostCorrectionLines
   name: Logistics.Inventory.CostCorrectionLines
   href: entities/Logistics.Inventory.CostCorrectionLines.html
@@ -1123,6 +1141,9 @@ references:
 - uid: Logistics.Wms.WarehouseZones
   name: Logistics.Wms.WarehouseZones
   href: entities/Logistics.Wms.WarehouseZones.html
+- uid: Production
+  name: Production
+  href: entities/Production.html
 - uid: Production.Resources.Capacity
   name: Production.Resources.Capacity
   href: entities/Production.Resources.Capacity.html
@@ -1213,6 +1234,9 @@ references:
 - uid: Production.WorkOrderDocumentTypesOptions
   name: Production.WorkOrderDocumentTypesOptions
   href: entities/Production.WorkOrderDocumentTypesOptions.html
+- uid: Projects
+  name: Projects
+  href: entities/Projects.html
 - uid: Projects.ProjectParticipants
   name: Projects.ProjectParticipants
   href: entities/Projects.ProjectParticipants.html
@@ -1279,6 +1303,9 @@ references:
 - uid: Projects.WorkReports
   name: Projects.WorkReports
   href: entities/Projects.WorkReports.html
+- uid: Systems
+  name: Systems
+  href: entities/Systems.html
 - uid: Systems.Bpm.CalculatedAttributeExpressions
   name: Systems.Bpm.CalculatedAttributeExpressions
   href: entities/Systems.Bpm.CalculatedAttributeExpressions.html
