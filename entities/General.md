@@ -1,0 +1,60 @@
+---
+uid: General
+---
+# General
+
+## Namespaces
+- @General.Contacts  
+- @General.Geography  
+- @General.Products  
+- @General.Resources  
+
+## Entities
+- @General.Config  
+- @General.Currencies  
+- @General.CurrencyDirectories  
+- @General.CurrencyDirectoryLines  
+- @General.CustomProperties  
+- @General.CustomPropertyAllowedValues  
+- @General.DocumentAmountReferencedDocuments  
+- @General.DocumentAmounts  
+- @General.DocumentAmountTypeDependencies  
+- @General.DocumentAmountTypes  
+- @General.DocumentComments  
+- @General.DocumentDistributedAmounts  
+- @General.DocumentFileAttachments  
+- @General.DocumentJobs  
+- @General.DocumentLineAmounts  
+- @General.DocumentLinks  
+- @General.DocumentManualDistributedAmounts  
+- @General.DocumentPrintImages  
+- @General.DocumentPrints  
+- @General.Documents  
+- @General.DocumentStateChanges  
+- @General.DocumentTypeAmounts  
+- @General.DocumentTypeEnterpriseCompanies  
+- @General.DocumentTypeNotifications  
+- @General.DocumentTypeProperties  
+- @General.DocumentTypes  
+- @General.DocumentTypeSecurityConditions  
+- @General.DocumentTypeUserStatuses  
+- @General.DocumentVersions  
+- @General.EnterpriseCompanies  
+- @General.LinkTypes  
+- @General.MeasurementCategories  
+- @General.MeasurementUnits  
+- @General.PartyApplicableLegislations  
+- @General.PartyLocationNumbers  
+- @General.PrintoutLayouts  
+- @General.Printouts  
+- @General.ProductCatalogs  
+- @General.ProductVariants  
+- @General.PropertiesCategories  
+- @General.PropertyEnterpriseCompanyFilters  
+- @General.PropertyValues  
+- @General.ReportQueries  
+- @General.Reports  
+- @General.ScheduledDocumentEvents  
+- @General.SequenceGenerators  
+- @General.Sequences  
+

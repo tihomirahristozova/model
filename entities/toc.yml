@@ -1,6 +1,8 @@
 - name: Applications
+  href: Applications.md
   items:
   - name: AssetManagement
+    href: Applications.AssetManagement.md
     items:
     - name: MaintenanceOrderLines
       href: Applications.AssetManagement.MaintenanceOrderLines.md
@@ -33,6 +35,7 @@
     - name: TrackedParameters
       href: Applications.AssetManagement.TrackedParameters.md
   - name: Cms
+    href: Applications.Cms.md
     items:
     - name: NewsWebModuleArticles
       href: Applications.Cms.NewsWebModuleArticles.md
@@ -49,6 +52,7 @@
     - name: WebSites
       href: Applications.Cms.WebSites.md
   - name: DataWarehouse
+    href: Applications.DataWarehouse.md
     items:
     - name: DataMeasureGroups
       href: Applications.DataWarehouse.DataMeasureGroups.md
@@ -57,6 +61,7 @@
     - name: DataValues
       href: Applications.DataWarehouse.DataValues.md
   - name: Fleet
+    href: Applications.Fleet.md
     items:
     - name: CrewMembers
       href: Applications.Fleet.CrewMembers.md
@@ -91,6 +96,7 @@
     - name: VehicleSetVehicles
       href: Applications.Fleet.VehicleSetVehicles.md
   - name: Mail
+    href: Applications.Mail.md
     items:
     - name: Boxes
       href: Applications.Mail.Boxes.md
@@ -101,6 +107,7 @@
     - name: Messages
       href: Applications.Mail.Messages.md
   - name: PersonalData
+    href: Applications.PersonalData.md
     items:
     - name: DataSubjectRightRequests
       href: Applications.PersonalData.DataSubjectRightRequests.md
@@ -113,6 +120,7 @@
     - name: ProcessingConsents
       href: Applications.PersonalData.ProcessingConsents.md
   - name: Rental
+    href: Applications.Rental.md
     items:
     - name: AssetConsumables
       href: Applications.Rental.AssetConsumables.md
@@ -139,6 +147,7 @@
     - name: TransactionTemplates
       href: Applications.Rental.TransactionTemplates.md
   - name: Service
+    href: Applications.Service.md
     items:
     - name: ServiceActivities
       href: Applications.Service.ServiceActivities.md
@@ -173,10 +182,12 @@
     - name: ServiceTypes
       href: Applications.Service.ServiceTypes.md
   - name: Telephony
+    href: Applications.Telephony.md
     items:
     - name: CallDetails
       href: Applications.Telephony.CallDetails.md
 - name: Communities
+  href: Communities.md
   items:
   - name: Notifications
     href: Communities.Notifications.md
@@ -195,6 +206,7 @@
   - name: SocialReactionsSummary
     href: Communities.SocialReactionsSummary.md
 - name: Crm
+  href: Crm.md
   items:
   - name: CustomerProducts
     href: Crm.CustomerProducts.md
@@ -207,6 +219,7 @@
   - name: DiscountTypes
     href: Crm.DiscountTypes.md
   - name: Distribution
+    href: Crm.Distribution.md
     items:
     - name: SalesPersonGroups
       href: Crm.Distribution.SalesPersonGroups.md
@@ -217,6 +230,7 @@
   - name: Distributors
     href: Crm.Distributors.md
   - name: Invoicing
+    href: Crm.Invoicing.md
     items:
     - name: InvoiceLines
       href: Crm.Invoicing.InvoiceLines.md
@@ -231,6 +245,7 @@
   - name: LineDiscounts
     href: Crm.LineDiscounts.md
   - name: Marketing
+    href: Crm.Marketing.md
     items:
     - name: BonusProgramProducts
       href: Crm.Marketing.BonusProgramProducts.md
@@ -251,6 +266,7 @@
     - name: TargetGroups
       href: Crm.Marketing.TargetGroups.md
   - name: Pos
+    href: Crm.Pos.md
     items:
     - name: Devices
       href: Crm.Pos.Devices.md
@@ -267,6 +283,7 @@
     - name: Terminals
       href: Crm.Pos.Terminals.md
   - name: Presales
+    href: Crm.Presales.md
     items:
     - name: Deals
       href: Crm.Presales.Deals.md
@@ -281,6 +298,7 @@
   - name: PriceTypes
     href: Crm.PriceTypes.md
   - name: Pricing
+    href: Crm.Pricing.md
     items:
     - name: PricingModelCosts
       href: Crm.Pricing.PricingModelCosts.md
@@ -295,6 +313,7 @@
   - name: PromotionalPackages
     href: Crm.PromotionalPackages.md
   - name: Sales
+    href: Crm.Sales.md
     items:
     - name: DefaultSalesOrderDocumentProperties
       href: Crm.Sales.DefaultSalesOrderDocumentProperties.md
@@ -317,8 +336,10 @@
   - name: SalesPersons
     href: Crm.SalesPersons.md
 - name: Finance
+  href: Finance.md
   items:
   - name: Accounting
+    href: Finance.Accounting.md
     items:
     - name: AccountGroups
       href: Finance.Accounting.AccountGroups.md
@@ -353,6 +374,7 @@
     - name: VoucherCorrespondances
       href: Finance.Accounting.VoucherCorrespondances.md
   - name: Assets
+    href: Finance.Assets.md
     items:
     - name: AssetCategories
       href: Finance.Assets.AssetCategories.md
@@ -385,6 +407,7 @@
     - name: ValuationModels
       href: Finance.Assets.ValuationModels.md
   - name: Cost
+    href: Finance.Cost.md
     items:
     - name: AllocationModels
       href: Finance.Cost.AllocationModels.md
@@ -413,6 +436,7 @@
     - name: Templates
       href: Finance.Cost.Templates.md
   - name: Intrastat
+    href: Finance.Intrastat.md
     items:
     - name: CommodityCodes
       href: Finance.Intrastat.CommodityCodes.md
@@ -423,6 +447,7 @@
     - name: DocumentAmountTypeSettings
       href: Finance.Intrastat.DocumentAmountTypeSettings.md
   - name: Payments
+    href: Finance.Payments.md
     items:
     - name: BulkPaymentOrderLines
       href: Finance.Payments.BulkPaymentOrderLines.md
@@ -453,6 +478,7 @@
     - name: Transfers
       href: Finance.Payments.Transfers.md
   - name: Vat
+    href: Finance.Vat.md
     items:
     - name: BGVATDeclarations
       href: Finance.Vat.BGVATDeclarations.md
@@ -465,10 +491,12 @@
     - name: Entries
       href: Finance.Vat.Entries.md
 - name: General
+  href: General.md
   items:
   - name: Config
     href: General.Config.md
   - name: Contacts
+    href: General.Contacts.md
     items:
     - name: Activities
       href: General.Contacts.Activities.md
@@ -569,6 +597,7 @@
   - name: EnterpriseCompanies
     href: General.EnterpriseCompanies.md
   - name: Geography
+    href: General.Geography.md
     items:
     - name: AdministrativeRegions
       href: General.Geography.AdministrativeRegions.md
@@ -597,6 +626,7 @@
   - name: ProductCatalogs
     href: General.ProductCatalogs.md
   - name: Products
+    href: General.Products.md
     items:
     - name: CodingSystems
       href: General.Products.CodingSystems.md
@@ -641,6 +671,7 @@
   - name: Reports
     href: General.Reports.md
   - name: Resources
+    href: General.Resources.md
     items:
     - name: ResourceAvailability
       href: General.Resources.ResourceAvailability.md
@@ -663,8 +694,10 @@
   - name: Sequences
     href: General.Sequences.md
 - name: Logistics
+  href: Logistics.md
   items:
   - name: Inventory
+    href: Logistics.Inventory.md
     items:
     - name: CostCorrectionLines
       href: Logistics.Inventory.CostCorrectionLines.md
@@ -675,6 +708,7 @@
     - name: CurrentBalances
       href: Logistics.Inventory.CurrentBalances.md
     - name: DemandManagement
+      href: Logistics.Inventory.DemandManagement.md
       items:
       - name: AvailableToPromise
         href: Logistics.Inventory.DemandManagement.AvailableToPromise.md
@@ -733,6 +767,7 @@
     - name: TransferOrdersOptions
       href: Logistics.Inventory.TransferOrdersOptions.md
   - name: Procurement
+    href: Logistics.Procurement.md
     items:
     - name: PurchaseControlDocumentLines
       href: Logistics.Procurement.PurchaseControlDocumentLines.md
@@ -767,6 +802,7 @@
     - name: SupplierTypes
       href: Logistics.Procurement.SupplierTypes.md
   - name: Shipment
+    href: Logistics.Shipment.md
     items:
     - name: CargoTypes
       href: Logistics.Shipment.CargoTypes.md
@@ -797,6 +833,7 @@
     - name: TransportationVehicles
       href: Logistics.Shipment.TransportationVehicles.md
   - name: Wms
+    href: Logistics.Wms.md
     items:
     - name: WarehouseLocations
       href: Logistics.Wms.WarehouseLocations.md
@@ -819,8 +856,10 @@
     - name: WarehouseZones
       href: Logistics.Wms.WarehouseZones.md
 - name: Production
+  href: Production.md
   items:
   - name: Resources
+    href: Production.Resources.md
     items:
     - name: Capacity
       href: Production.Resources.Capacity.md
@@ -849,6 +888,7 @@
     - name: WorkgroupShifts
       href: Production.Resources.WorkgroupShifts.md
   - name: ShopFloor
+    href: Production.ShopFloor.md
     items:
     - name: ConsumptionOrderLines
       href: Production.ShopFloor.ConsumptionOrderLines.md
@@ -871,6 +911,7 @@
     - name: WorkOrders
       href: Production.ShopFloor.WorkOrders.md
   - name: Technologies
+    href: Production.Technologies.md
     items:
     - name: PrincipalRecipeIngredients
       href: Production.Technologies.PrincipalRecipeIngredients.md
@@ -887,6 +928,7 @@
   - name: WorkOrderDocumentTypesOptions
     href: Production.WorkOrderDocumentTypesOptions.md
 - name: Projects
+  href: Projects.md
   items:
   - name: ProjectParticipants
     href: Projects.ProjectParticipants.md
@@ -933,8 +975,10 @@
   - name: WorkReports
     href: Projects.WorkReports.md
 - name: Systems
+  href: Systems.md
   items:
   - name: Bpm
+    href: Systems.Bpm.md
     items:
     - name: CalculatedAttributeExpressions
       href: Systems.Bpm.CalculatedAttributeExpressions.md
@@ -969,6 +1013,7 @@
     - name: UserBusinessRules
       href: Systems.Bpm.UserBusinessRules.md
   - name: Core
+    href: Systems.Core.md
     items:
     - name: AttributeChanges
       href: Systems.Core.AttributeChanges.md
@@ -1009,12 +1054,14 @@
     - name: WebSites
       href: Systems.Core.WebSites.md
   - name: External
+    href: Systems.External.md
     items:
     - name: PublicUserLists
       href: Systems.External.PublicUserLists.md
     - name: PublicUsers
       href: Systems.External.PublicUsers.md
   - name: Reporting
+    href: Systems.Reporting.md
     items:
     - name: DataSourceQueries
       href: Systems.Reporting.DataSourceQueries.md
@@ -1023,6 +1070,7 @@
     - name: Reports
       href: Systems.Reporting.Reports.md
   - name: Security
+    href: Systems.Security.md
     items:
     - name: AccessKeys
       href: Systems.Security.AccessKeys.md
@@ -1053,10 +1101,12 @@
     - name: VisualPermissions
       href: Systems.Security.VisualPermissions.md
   - name: UI
+    href: Systems.UI.md
     items:
     - name: FormLayouts
       href: Systems.UI.FormLayouts.md
   - name: Workflow
+    href: Systems.Workflow.md
     items:
     - name: Processes
       href: Systems.Workflow.Processes.md
