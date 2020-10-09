@@ -15,8 +15,8 @@ Specifies the visibility (availability) of the document type for the different e
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](General.DocumentTypeEnterpriseCompanies.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which visibility (availability) is set. [Required] [Filter(multi eq)] [Owner] |
-| [EnterpriseCompany](General.DocumentTypeEnterpriseCompanies.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current document type is visible (available). [Required] [Filter(multi eq)] |
+| [DocumentType](General.DocumentTypeEnterpriseCompanies.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which visibility (availability) is set. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](General.DocumentTypeEnterpriseCompanies.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current document type is visible (available). [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -34,14 +34,14 @@ _Default Value_: **NewGuid**
 
 > The document type for which visibility (availability) is set. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The enterprise company for which the current document type is visible (available). [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

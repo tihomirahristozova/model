@@ -18,7 +18,7 @@ When specified, contains user-defined asset depreciation values for each depreci
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationplanline) | [Finance.Assets.DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md) | The [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationplanline) to which this DepreciationPlanLineFixedValue belongs. [Required] [Filter(multi eq)] [Owner] |
+| [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationplanline) | [DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md) | The [DepreciationPlanLine](Finance.Assets.DepreciationPlan<br />LineFixedValues.md#depreciationplanline) to which this DepreciationPlan<br />LineFixedValue belongs. [Required] [Filter(multi eq)]  |
 
 
 ## Attribute Details
@@ -61,7 +61,7 @@ _Default Value_: **NewGuid**
 
 > The [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationplanline) to which this DepreciationPlanLineFixedValue belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Assets.DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md)**  
+_Type_: **[DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

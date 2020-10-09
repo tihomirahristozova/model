@@ -3,7 +3,7 @@ uid: Crm.Pos.Locations
 ---
 # Crm.Pos.Locations
 
-Defines a company location as POS enabled location. Entity: Pos_Locations (Introduced in version 19.1.100.0)
+Defines a company location as POS enabled location. Entity: Pos_Locations (Introduced in version 19.1)
 
 ## Attributes
 
@@ -17,8 +17,8 @@ Defines a company location as POS enabled location. Entity: Pos_Locations (Intro
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Pos.Locations.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company of the POS location. [Required] [Filter(multi eq)] |
-| [EnterpriseCompanyLocation](Crm.Pos.Locations.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) | The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Crm.Pos.Locations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company of the POS location. [Required] [Filter(multi eq)] |
+| [EnterpriseCompanyLocation](Crm.Pos.Locations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -53,14 +53,14 @@ _Supports Order By_: **False**
 
 > The enterprise company of the POS location. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
 > The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md)**  
+_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

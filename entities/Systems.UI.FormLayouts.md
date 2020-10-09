@@ -22,8 +22,8 @@ Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.UI.FormLayouts.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The security access key which controls the access to the layout view. [Filter(multi eq)] |
-| [Role](Systems.UI.FormLayouts.md#role) | [Systems.Workflow.Roles](Systems.Workflow.Roles.md) (nullable) | The role, for which the layout is applied. [Filter(multi eq)] |
+| [AccessKey](Systems.UI.FormLayouts.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The security access key which controls the access to the layout view. [Filter(multi eq)] |
+| [Role](Systems.UI.FormLayouts.md#role) | [Roles](Systems.Workflow.Roles.md) (nullable) | The role, for which the layout is applied. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -108,14 +108,14 @@ _Supports Order By_: **False**
 
 > The security access key which controls the access to the layout view. [Filter(multi eq)]
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Role
 
 > The role, for which the layout is applied. [Filter(multi eq)]
 
-_Type_: **[Systems.Workflow.Roles](Systems.Workflow.Roles.md) (nullable)**  
+_Type_: **[Roles](Systems.Workflow.Roles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

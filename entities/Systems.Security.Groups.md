@@ -19,13 +19,13 @@ Groups of users. Used for providing group access to secured data. Entity: Sec_Gr
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [GroupForUser](Systems.Security.Groups.md#groupforuser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly] |
+| [GroupForUser](Systems.Security.Groups.md#groupforuser) | [Users](Systems.Security.Users.md) (nullable) | When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| AccessKeys | [Systems.Security.GroupAccessKeys](Systems.Security.GroupAccessKeys.md) | List of [GroupAccessKey](Systems.Security.GroupAccessKeys.md) child objects, based on the [Systems.Security.GroupAccessKey.Group](Systems.Security.GroupAccessKeys.md#group) back reference 
+| AccessKeys | [GroupAccessKeys](Systems.Security.GroupAccessKeys.md) | List of [GroupAccessKey](Systems.Security.GroupAccessKeys.md) child objects, based on the [Systems.Security.GroupAccessKey.Group](Systems.Security.GroupAccessKeys.md#group) back reference 
 
 
 ## Attribute Details
@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 
 > When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

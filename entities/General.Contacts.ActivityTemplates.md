@@ -20,8 +20,8 @@ Templates for automatical generation of activity from any document. Entity: Cm_A
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ResponsibleParty](General.Contacts.ActivityTemplates.md#responsibleparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | If Null the user that starts the generation route is responsible party of the activity. [Filter(multi eq)] |
-| [Route](General.Contacts.ActivityTemplates.md#route) | [Systems.Workflow.Routes](Systems.Workflow.Routes.md) | Document generation route that uses this template. [Required] [Filter(multi eq)] |
+| [ResponsibleParty](General.Contacts.ActivityTemplates.md#responsibleparty) | [Parties](General.Contacts.Parties.md) (nullable) | If Null the user that starts the generation route is responsible party of the activity. [Filter(multi eq)] |
+| [Route](General.Contacts.ActivityTemplates.md#route) | [Routes](Systems.Workflow.Routes.md) | Document generation route that uses this template. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -80,14 +80,14 @@ _Supports Order By_: **False**
 
 > If Null the user that starts the generation route is responsible party of the activity. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Route
 
 > Document generation route that uses this template. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Workflow.Routes](Systems.Workflow.Routes.md)**  
+_Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

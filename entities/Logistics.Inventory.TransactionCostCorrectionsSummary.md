@@ -18,8 +18,8 @@ Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transact
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [TransactionLine](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionline) | [Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] |
-| [TransactionObj](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionobj) | [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md) | The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner] |
+| [TransactionLine](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] |
+| [TransactionObj](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionobj) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) | The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 > Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
+_Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -71,7 +71,7 @@ _Default Value_: **NewGuid**
 
 > The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
+_Type_: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -28,17 +28,17 @@ Contains the characteristics of operations used to create products. Entity: Prd_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CurrencyDirectory](Production.Technologies.Recipes.md#currencydirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. [Filter(multi eq)] |
-| [PrincipalRecipe](Production.Technologies.Recipes.md#principalrecipe) | [Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) (nullable) | The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. [Filter(multi eq)] |
-| [Product](Production.Technologies.Recipes.md#product) | [General.Products.Products](General.Products.Products.md) (nullable) | The Id of the produced product. [Filter(multi eq)] |
-| [Store](Production.Technologies.Recipes.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. [Filter(multi eq)] |
+| [CurrencyDirectory](Production.Technologies.Recipes.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. [Filter(multi eq)] |
+| [PrincipalRecipe](Production.Technologies.Recipes.md#principalrecipe) | [PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) (nullable) | The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. [Filter(multi eq)] |
+| [Product](Production.Technologies.Recipes.md#product) | [Products](General.Products.Products.md) (nullable) | The Id of the produced product. [Filter(multi eq)] |
+| [Store](Production.Technologies.Recipes.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Ingredients | [Production.Technologies.RecipeIngredients](Production.Technologies.RecipeIngredients.md) | List of [RecipeIngredient](Production.Technologies.RecipeIngredients.md) child objects, based on the [Production.Technologies.RecipeIngredient.Recipe](Production.Technologies.RecipeIngredients.md#recipe) back reference 
-| Operations | [Production.Technologies.RecipeOperations](Production.Technologies.RecipeOperations.md) | List of [RecipeOperation](Production.Technologies.RecipeOperations.md) child objects, based on the [Production.Technologies.RecipeOperation.Recipe](Production.Technologies.RecipeOperations.md#recipe) back reference 
+| Ingredients | [RecipeIngredients](Production.Technologies.RecipeIngredients.md) | List of [RecipeIngredient](Production.Technologies.RecipeIngredients.md) child objects, based on the [Production.Technologies.RecipeIngredient.Recipe](Production.Technologies.RecipeIngredients.md#recipe) back reference 
+| Operations | [RecipeOperations](Production.Technologies.RecipeOperations.md) | List of [RecipeOperation](Production.Technologies.RecipeOperations.md) child objects, based on the [Production.Technologies.RecipeOperation.Recipe](Production.Technologies.RecipeOperations.md#recipe) back reference 
 
 
 ## Attribute Details
@@ -166,28 +166,28 @@ _Supports Order By_: **False**
 
 > Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. [Filter(multi eq)]
 
-_Type_: **[General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
+_Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrincipalRecipe
 
 > The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. [Filter(multi eq)]
 
-_Type_: **[Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) (nullable)**  
+_Type_: **[PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The Id of the produced product. [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md) (nullable)**  
+_Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
 > The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -22,15 +22,15 @@ List of base recipe models. Recipe models are used by the Product Configurator t
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProduceUnit](Production.Technologies.PrincipalRecipes.md#produceunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Produce_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)] |
-| [ProductGroup](Production.Technologies.PrincipalRecipes.md#productgroup) | [General.Products.ProductGroups](General.Products.ProductGroups.md) | The production group, whose production is defined by the principal recipe . [Required] [Filter(multi eq)] [Owner] |
+| [ProduceUnit](Production.Technologies.PrincipalRecipes.md#produceunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Produce_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)] |
+| [ProductGroup](Production.Technologies.PrincipalRecipes.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The production group, whose production is defined by the principal recipe . [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Ingredients | [Production.Technologies.PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) | List of [PrincipalRecipeIngredient](Production.Technologies.PrincipalRecipeIngredients.md) child objects, based on the [Production.Technologies.PrincipalRecipeIngredient.PrincipalRecipe](Production.Technologies.PrincipalRecipeIngredients.md#principalrecipe) back reference 
-| Operations | [Production.Technologies.PrincipalRecipeOperations](Production.Technologies.PrincipalRecipeOperations.md) | List of [PrincipalRecipeOperation](Production.Technologies.PrincipalRecipeOperations.md) child objects, based on the [Production.Technologies.PrincipalRecipeOperation.PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) back reference 
+| Ingredients | [PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) | List of [PrincipalRecipe<br />Ingredient](Production.Technologies.PrincipalRecipeIngredients.md) child objects, based on the [Production.Technologies.PrincipalRecipeIngredient.PrincipalRecipe](Production.Technologies.PrincipalRecipeIngredients.md#principalrecipe) back nce 
+| Operations | [PrincipalRecipeOperations](Production.Technologies.PrincipalRecipeOperations.md) | List of [PrincipalRecipeOperation](Production.Technologies.PrincipalRecipeOperations.md) child objects, based on the [Production.Technologies.PrincipalRecipeOperation.PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) back reference 
 
 
 ## Attribute Details
@@ -108,14 +108,14 @@ _Default Value_: **0**
 
 > The measurement unit of Produce_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup
 
 > The production group, whose production is defined by the principal recipe . [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Products.ProductGroups](General.Products.ProductGroups.md)**  
+_Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -3,7 +3,7 @@ uid: Logistics.Wms.WarehouseOrders
 ---
 # Logistics.Wms.WarehouseOrders
 
-Contains order for internal warehouse operation or plan for execution of warehouse requisition. Entity: Wms_Warehouse_Orders (Introduced in version 20.1.100.0)
+Contains order for internal warehouse operation or plan for execution of warehouse requisition. Entity: Wms_Warehouse_Orders (Introduced in version 20.1)
 
 ## Attributes
 
@@ -15,15 +15,15 @@ Contains order for internal warehouse operation or plan for execution of warehou
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Wms.WarehouseOrders.md#document) | [General.Documents](General.Documents.md) | The [Document](General.Documents.md) to which this WarehouseOrder belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Warehouse](Logistics.Wms.WarehouseOrders.md#warehouse) | [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md) | The warehouse, where the order will be executed. [Required] [Filter(multi eq)] |
-| [WarehouseWorker](Logistics.Wms.WarehouseOrders.md#warehouseworker) | [Logistics.Wms.WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)] |
+| [Document](Logistics.Wms.WarehouseOrders.md#document) | [Documents](General.Documents.md) | The [Document](General.Documents.md) to which this WarehouseOrder belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Warehouse](Logistics.Wms.WarehouseOrders.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse, where the order will be executed. [Required] [Filter(multi eq)] |
+| [WarehouseWorker](Logistics.Wms.WarehouseOrders.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Lines | [Logistics.Wms.WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) | List of [WarehouseOrderLine](Logistics.Wms.WarehouseOrderLines.md) child objects, based on the [Logistics.Wms.WarehouseOrderLine.WarehouseOrder](Logistics.Wms.WarehouseOrderLines.md#warehouseorder) back reference 
+| Lines | [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) | List of [WarehouseOrderLine](Logistics.Wms.WarehouseOrderLines.md) child objects, based on the [Logistics.Wms.WarehouseOrderLine.WarehouseOrder](Logistics.Wms.WarehouseOrderLines.md#warehouseorder) back reference 
 
 
 ## Attribute Details
@@ -41,21 +41,21 @@ _Default Value_: **NewGuid**
 
 > The [Document](General.Documents.md) to which this WarehouseOrder belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Warehouse
 
 > The warehouse, where the order will be executed. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)**  
+_Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseWorker
 
 > When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)]
 
-_Type_: **[Logistics.Wms.WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable)**  
+_Type_: **[WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

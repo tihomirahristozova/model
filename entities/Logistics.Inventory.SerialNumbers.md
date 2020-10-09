@@ -16,7 +16,7 @@ Serial numbers, used by the items. Rows are created on first occurrence of the s
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](Logistics.Inventory.SerialNumbers.md#product) | [General.Products.Products](General.Products.Products.md) | The product, to which the serial number is bound. [Required] [Filter(multi eq)] |
+| [Product](Logistics.Inventory.SerialNumbers.md#product) | [Products](General.Products.Products.md) | The product, to which the serial number is bound. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -42,7 +42,7 @@ _Supports Order By_: **False**
 
 > The product, to which the serial number is bound. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

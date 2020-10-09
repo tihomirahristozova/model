@@ -3,7 +3,7 @@ uid: Systems.Security.UserProviderTokens
 ---
 # Systems.Security.UserProviderTokens
 
-Stores verification tokens for users - e.g. tokens for email, phone or two-factor authentication. Entity: Sec_User_Provider_Tokens (Introduced in version 18.2.100.0)
+Stores verification tokens for users - e.g. tokens for email, phone or two-factor authentication. Entity: Sec_User_Provider_Tokens (Introduced in version 18.2)
 
 ## Attributes
 
@@ -18,7 +18,7 @@ Stores verification tokens for users - e.g. tokens for email, phone or two-facto
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Systems.Security.UserProviderTokens.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | User for which we store tokens. [Required] [Filter(multi eq)] [Owner] |
+| [User](Systems.Security.UserProviderTokens.md#user) | [Users](Systems.Security.Users.md) | User for which we store tokens. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 > User for which we store tokens. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

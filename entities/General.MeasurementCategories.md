@@ -17,7 +17,7 @@ Categories of measurement units. The units within a category are directly conver
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| MeasurementUnits | [General.MeasurementUnits](General.MeasurementUnits.md) | List of [MeasurementUnit](General.MeasurementUnits.md) child objects, based on the [General.MeasurementUnit.MeasurementCategory](General.MeasurementUnits.md#measurementcategory) back reference 
+| MeasurementUnits | [MeasurementUnits](General.MeasurementUnits.md) | List of [MeasurementUnit](General.MeasurementUnits.md) child objects, based on the [General.MeasurementUnit.MeasurementCategory](General.MeasurementUnits.md#measurementcategory) back reference 
 
 
 ## Attribute Details

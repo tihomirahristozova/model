@@ -20,7 +20,7 @@ Party pictures - photos, logos, etc. Entity: Gen_Party_Pictures
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](General.Contacts.PartyPictures.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.PartyPictures.md#party) to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Party](General.Contacts.PartyPictures.md#party) | [Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.PartyPictures.md#party) to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -49,7 +49,7 @@ _Supports Order By_: **False**
 _Default Value_: **False**  
 
 _Front-End Recalc Expressions:_  
-`(obj.Party.Pictures.Take(1).Count() == 0)`
+`( obj.Party.Pictures.Take( 1).Count( ) == 0)`
 ### IsLogo
 
 > If checked specifies that this picture is used to visualize the logo of this party in the system. [Required] [Default(false)] [Filter(eq)]
@@ -76,10 +76,10 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.Party.Pictures.Select(c => c.PictureNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Party.Pictures.Select( c => c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.Party.Pictures.Select(c => c.PictureNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Party.Pictures.Select( c => c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 ## Reference Details
 
@@ -87,7 +87,7 @@ _Front-End Recalc Expressions:_
 
 > The [Party](General.Contacts.PartyPictures.md#party) to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

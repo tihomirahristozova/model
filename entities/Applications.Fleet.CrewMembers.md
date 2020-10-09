@@ -17,8 +17,8 @@ Contains the memnbers of vehicle crews. Entity: Fleet_Crew_Members
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Crew](Applications.Fleet.CrewMembers.md#crew) | [Applications.Fleet.Crews](Applications.Fleet.Crews.md) | The crew to which this member belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Person](Applications.Fleet.CrewMembers.md#person) | [General.Contacts.Persons](General.Contacts.Persons.md) | The crew member person. [Required] [Filter(multi eq)] |
+| [Crew](Applications.Fleet.CrewMembers.md#crew) | [Crews](Applications.Fleet.Crews.md) | The crew to which this member belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Person](Applications.Fleet.CrewMembers.md#person) | [Persons](General.Contacts.Persons.md) | The crew member person. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -52,14 +52,14 @@ _Supports Order By_: **False**
 
 > The crew to which this member belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Fleet.Crews](Applications.Fleet.Crews.md)**  
+_Type_: **[Crews](Applications.Fleet.Crews.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
 > The crew member person. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md)**  
+_Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

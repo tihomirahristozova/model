@@ -17,7 +17,7 @@ Contains the VAT codes, which should be used, when reporting VAT for the differe
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Finance.Vat.BGVATDocumentTypeVATCodes.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | Document type that generates VAT entries. [Required] [Filter(multi eq)] |
+| [DocumentType](Finance.Vat.BGVATDocumentTypeVATCodes.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | Document type that generates VAT entries. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -35,8 +35,8 @@ _Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.CashReportingVA
 | Invoice | Invoice value. Stored as '01'. <br /> _Database Value:_ '01' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Invoice' |
 | DebitNote | DebitNote value. Stored as '02'. <br /> _Database Value:_ '02' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'DebitNote' |
 | CreditNote | CreditNote value. Stored as '03'. <br /> _Database Value:_ '03' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'CreditNote' |
-| CallOffStockRegisterTheGoodsAreSentOrTransportedFromTheCountryToAnotherEUCountry | CallOffStockRegisterTheGoodsAreSentOrTransportedFromTheCountryToAnotherEUCountry value. Stored as '04'. <br /> _Database Value:_ '04' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'CallOffStockRegisterTheGoodsAreSentOrTransportedFromTheCountryToAnotherEUCountry' |
-| CallOffStockRegisterTheGoodsAreReceivedInTheCountry | CallOffStockRegisterTheGoodsAreReceivedInTheCountry value. Stored as '05'. <br /> _Database Value:_ '05' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'CallOffStockRegisterTheGoodsAreReceivedInTheCountry' |
+| CallOffStockRegister<br />TheGoodsAreSent<br />OrTransportedFrom<br />TheCountryToAnother<br />EUCountry | CallOffStockRegister<br />TheGoodsAreSent<br />OrTransportedFrom<br />TheCountryToAnother<br />EUCountry value. Stored as '04'. <br /> _Database Value:_ '04' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'CallOffStockRegister<br />TheGoodsAreSent<br />OrTransportedFrom<br />TheCountryToAnother<br />EUCountry' |
+| CallOffStockRegister<br />TheGoodsAreReceived<br />InTheCountry | CallOffStockRegister<br />TheGoodsAreReceived<br />InTheCountry value. Stored as '05'. <br /> _Database Value:_ '05' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'CallOffStockRegister<br />TheGoodsAreReceived<br />InTheCountry' |
 | CustomHouseEntry | CustomHouseEntry value. Stored as '07'. <br /> _Database Value:_ '07' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'CustomHouseEntry' |
 | Protocol | Protocol value. Stored as '09'. <br /> _Database Value:_ '09' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'Protocol' |
 | InvoiceCashReporting | InvoiceCashReporting value. Stored as '11'. <br /> _Database Value:_ '11' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'InvoiceCashReporting' |
@@ -44,10 +44,10 @@ _Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.CashReportingVA
 | CreditNoteCashReporting | CreditNoteCashReporting value. Stored as '13'. <br /> _Database Value:_ '13' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'CreditNoteCashReporting' |
 | SalesReport | SalesReport value. Stored as '81'. <br /> _Database Value:_ '81' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'SalesReport' |
 | SpecialTaxOrderSalesReport | SpecialTaxOrderSalesReport value. Stored as '82'. <br /> _Database Value:_ '82' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'SpecialTaxOrderSalesReport' |
-| RecordForRecoverableTaxByArticle151vAl3OfBGVATLaw | RecordForRecoverableTaxByArticle151vAl3OfBGVATLaw value. Stored as '91'. <br /> _Database Value:_ '91' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'RecordForRecoverableTaxByArticle151vAl3OfBGVATLaw' |
-| RecordForTaxCreditByArticle151gAl3OfBGVATLawOrReportByArt104zhAl14 | RecordForTaxCreditByArticle151gAl3OfBGVATLawOrReportByArt104zhAl14 value. Stored as '92'. <br /> _Database Value:_ '92' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'RecordForTaxCreditByArticle151gAl3OfBGVATLawOrReportByArt104zhAl14' |
-| RecordForRecoverableTaxByArticle151vAl7OfBGVATLawWithNoCashReportingReceiver | RecordForRecoverableTaxByArticle151vAl7OfBGVATLawWithNoCashReportingReceiver value. Stored as '93'. <br /> _Database Value:_ '93' <br /> _Model Value:_ 14 <br /> _Domain API Value:_ 'RecordForRecoverableTaxByArticle151vAl7OfBGVATLawWithNoCashReportingReceiver' |
-| RecordForRecoverableTaxByArticle151vAl7OfBGVATLawWithCashReportingReceiver | RecordForRecoverableTaxByArticle151vAl7OfBGVATLawWithCashReportingReceiver value. Stored as '94'. <br /> _Database Value:_ '94' <br /> _Model Value:_ 15 <br /> _Domain API Value:_ 'RecordForRecoverableTaxByArticle151vAl7OfBGVATLawWithCashReportingReceiver' |
+| RecordForRecoverable<br />TaxByArticle151v<br />Al3OfBGVATLaw | RecordForRecoverable<br />TaxByArticle151v<br />Al3OfBGVATLaw value. Stored as '91'. <br /> _Database Value:_ '91' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'RecordForRecoverable<br />TaxByArticle151v<br />Al3OfBGVATLaw' |
+| RecordForTaxCredit<br />ByArticle151gAl3<br />OfBGVATLawOrReport<br />ByArt104zhAl14 | RecordForTaxCredit<br />ByArticle151gAl3<br />OfBGVATLawOrReport<br />ByArt104zhAl14 value. Stored as '92'. <br /> _Database Value:_ '92' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'RecordForTaxCredit<br />ByArticle151gAl3<br />OfBGVATLawOrReport<br />ByArt104zhAl14' |
+| RecordForRecoverable<br />TaxByArticle151v<br />Al7OfBGVATLawWith<br />NoCashReporting<br />Receiver | RecordForRecoverable<br />TaxByArticle151v<br />Al7OfBGVATLawWith<br />NoCashReporting<br />Receiver value. Stored as '93'. <br /> _Database Value:_ '93' <br /> _Model Value:_ 14 <br /> _Domain API Value:_ 'RecordForRecoverable<br />TaxByArticle151v<br />Al7OfBGVATLawWith<br />NoCashReporting<br />Receiver' |
+| RecordForRecoverable<br />TaxByArticle151v<br />Al7OfBGVATLawWith<br />CashReportingReceiver | RecordForRecoverable<br />TaxByArticle151v<br />Al7OfBGVATLawWith<br />CashReportingReceiver value. Stored as '94'. <br /> _Database Value:_ '94' <br /> _Model Value:_ 15 <br /> _Domain API Value:_ 'RecordForRecoverable<br />TaxByArticle151v<br />Al7OfBGVATLawWith<br />CashReportingReceiver' |
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
@@ -71,8 +71,8 @@ _Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.VATCode Enum Me
 | Invoice | Invoice value. Stored as '01'. <br /> _Database Value:_ '01' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Invoice' |
 | DebitNote | DebitNote value. Stored as '02'. <br /> _Database Value:_ '02' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'DebitNote' |
 | CreditNote | CreditNote value. Stored as '03'. <br /> _Database Value:_ '03' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'CreditNote' |
-| CallOffStockRegisterTheGoodsAreSentOrTransportedFromTheCountryToAnotherEUCountry | CallOffStockRegisterTheGoodsAreSentOrTransportedFromTheCountryToAnotherEUCountry value. Stored as '04'. <br /> _Database Value:_ '04' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'CallOffStockRegisterTheGoodsAreSentOrTransportedFromTheCountryToAnotherEUCountry' |
-| CallOffStockRegisterTheGoodsAreReceivedInTheCountry | CallOffStockRegisterTheGoodsAreReceivedInTheCountry value. Stored as '05'. <br /> _Database Value:_ '05' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'CallOffStockRegisterTheGoodsAreReceivedInTheCountry' |
+| CallOffStockRegister<br />TheGoodsAreSent<br />OrTransportedFrom<br />TheCountryToAnother<br />EUCountry | CallOffStockRegister<br />TheGoodsAreSent<br />OrTransportedFrom<br />TheCountryToAnother<br />EUCountry value. Stored as '04'. <br /> _Database Value:_ '04' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'CallOffStockRegister<br />TheGoodsAreSent<br />OrTransportedFrom<br />TheCountryToAnother<br />EUCountry' |
+| CallOffStockRegister<br />TheGoodsAreReceived<br />InTheCountry | CallOffStockRegister<br />TheGoodsAreReceived<br />InTheCountry value. Stored as '05'. <br /> _Database Value:_ '05' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'CallOffStockRegister<br />TheGoodsAreReceived<br />InTheCountry' |
 | CustomHouseEntry | CustomHouseEntry value. Stored as '07'. <br /> _Database Value:_ '07' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'CustomHouseEntry' |
 | Protocol | Protocol value. Stored as '09'. <br /> _Database Value:_ '09' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'Protocol' |
 | InvoiceCashReporting | InvoiceCashReporting value. Stored as '11'. <br /> _Database Value:_ '11' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'InvoiceCashReporting' |
@@ -80,10 +80,10 @@ _Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.VATCode Enum Me
 | CreditNoteCashReporting | CreditNoteCashReporting value. Stored as '13'. <br /> _Database Value:_ '13' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'CreditNoteCashReporting' |
 | SalesReport | SalesReport value. Stored as '81'. <br /> _Database Value:_ '81' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'SalesReport' |
 | SpecialTaxOrderSalesReport | SpecialTaxOrderSalesReport value. Stored as '82'. <br /> _Database Value:_ '82' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'SpecialTaxOrderSalesReport' |
-| RecordForRecoverableTaxByArticle151vAl3OfBGVATLaw | RecordForRecoverableTaxByArticle151vAl3OfBGVATLaw value. Stored as '91'. <br /> _Database Value:_ '91' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'RecordForRecoverableTaxByArticle151vAl3OfBGVATLaw' |
-| RecordForTaxCreditByArticle151gAl3OfBGVATLawOrReportByArt104zhAl14 | RecordForTaxCreditByArticle151gAl3OfBGVATLawOrReportByArt104zhAl14 value. Stored as '92'. <br /> _Database Value:_ '92' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'RecordForTaxCreditByArticle151gAl3OfBGVATLawOrReportByArt104zhAl14' |
-| RecordForRecoverableTaxByArticle151vAl7OfBGVATLawWithNoCashReportingReceiver | RecordForRecoverableTaxByArticle151vAl7OfBGVATLawWithNoCashReportingReceiver value. Stored as '93'. <br /> _Database Value:_ '93' <br /> _Model Value:_ 14 <br /> _Domain API Value:_ 'RecordForRecoverableTaxByArticle151vAl7OfBGVATLawWithNoCashReportingReceiver' |
-| RecordForRecoverableTaxByArticle151vAl7OfBGVATLawWithCashReportingReceiver | RecordForRecoverableTaxByArticle151vAl7OfBGVATLawWithCashReportingReceiver value. Stored as '94'. <br /> _Database Value:_ '94' <br /> _Model Value:_ 15 <br /> _Domain API Value:_ 'RecordForRecoverableTaxByArticle151vAl7OfBGVATLawWithCashReportingReceiver' |
+| RecordForRecoverable<br />TaxByArticle151v<br />Al3OfBGVATLaw | RecordForRecoverable<br />TaxByArticle151v<br />Al3OfBGVATLaw value. Stored as '91'. <br /> _Database Value:_ '91' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'RecordForRecoverable<br />TaxByArticle151v<br />Al3OfBGVATLaw' |
+| RecordForTaxCredit<br />ByArticle151gAl3<br />OfBGVATLawOrReport<br />ByArt104zhAl14 | RecordForTaxCredit<br />ByArticle151gAl3<br />OfBGVATLawOrReport<br />ByArt104zhAl14 value. Stored as '92'. <br /> _Database Value:_ '92' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'RecordForTaxCredit<br />ByArticle151gAl3<br />OfBGVATLawOrReport<br />ByArt104zhAl14' |
+| RecordForRecoverable<br />TaxByArticle151v<br />Al7OfBGVATLawWith<br />NoCashReporting<br />Receiver | RecordForRecoverable<br />TaxByArticle151v<br />Al7OfBGVATLawWith<br />NoCashReporting<br />Receiver value. Stored as '93'. <br /> _Database Value:_ '93' <br /> _Model Value:_ 14 <br /> _Domain API Value:_ 'RecordForRecoverable<br />TaxByArticle151v<br />Al7OfBGVATLawWith<br />NoCashReporting<br />Receiver' |
+| RecordForRecoverable<br />TaxByArticle151v<br />Al7OfBGVATLawWith<br />CashReportingReceiver | RecordForRecoverable<br />TaxByArticle151v<br />Al7OfBGVATLawWith<br />CashReportingReceiver value. Stored as '94'. <br /> _Database Value:_ '94' <br /> _Model Value:_ 15 <br /> _Domain API Value:_ 'RecordForRecoverable<br />TaxByArticle151v<br />Al7OfBGVATLawWith<br />CashReportingReceiver' |
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
@@ -95,7 +95,7 @@ _Supports Order By_: **False**
 
 > Document type that generates VAT entries. [Required] [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

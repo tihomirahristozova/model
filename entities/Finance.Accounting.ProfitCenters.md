@@ -18,7 +18,7 @@ Defines company profit centers and their relative weight for automatic balance t
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Finance.Accounting.ProfitCenters.md#parent) | [Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | Parent profit center, null if this is root profit center. [Filter(multi eq)] |
+| [Parent](Finance.Accounting.ProfitCenters.md#parent) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | Parent profit center, null if this is root profit center. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -61,7 +61,7 @@ _Default Value_: **1**
 
 > Parent profit center, null if this is root profit center. [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
+_Type_: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

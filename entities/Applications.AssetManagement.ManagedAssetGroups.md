@@ -3,7 +3,7 @@ uid: Applications.AssetManagement.ManagedAssetGroups
 ---
 # Applications.AssetManagement.ManagedAssetGroups
 
-Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Introduced in version 19.1.100.0)
+Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Introduced in version 19.1)
 
 ## Attributes
 
@@ -18,7 +18,7 @@ Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Intr
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.AssetManagement.ManagedAssetGroups.md#parent) | [Applications.AssetManagement.ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) (nullable) | The parent asset group in the hierarchy. null means this is a root group. [Filter(multi eq)] |
+| [Parent](Applications.AssetManagement.ManagedAssetGroups.md#parent) | [ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) (nullable) | The parent asset group in the hierarchy. null means this is a root group. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 > The parent asset group in the hierarchy. null means this is a root group. [Filter(multi eq)]
 
-_Type_: **[Applications.AssetManagement.ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) (nullable)**  
+_Type_: **[ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

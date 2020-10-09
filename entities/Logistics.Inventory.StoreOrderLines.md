@@ -21,7 +21,7 @@ Detail lines of store orders. Each line represents one planned stock transaction
 | [PersistLot](Logistics.Inventory.StoreOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. [Required] [Default(false)] [Filter(eq)] 
 | [Quantity](Logistics.Inventory.StoreOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity ordered for receipt/issue. [Unit: QuantityUnit] [Required] [Default(0)] 
 | [QuantityBase](Logistics.Inventory.StoreOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] 
-| [StandardQuantityBase](Logistics.Inventory.StoreOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [StandardQuantityBase](Logistics.Inventory.StoreOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2) 
 | [TransactionTimestamp](Logistics.Inventory.StoreOrderLines.md#transactiontimestamp) | datetime (nullable) | Exact time when the transaction for this store order line changes the cost of the product. [ReadOnly] 
 | [UnitCost](Logistics.Inventory.StoreOrderLines.md#unitcost) | [Amount](../data-types.md#amount) (nullable) | Cost for 1 unit of measure in the currency of the document. [Currency: StoreOrder.DocumentCurrency] 
 
@@ -29,16 +29,16 @@ Detail lines of store orders. Each line represents one planned stock transaction
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Inventory.StoreOrderLines.md#document) | [Logistics.Inventory.StoreOrders](Logistics.Inventory.StoreOrders.md) | The [StoreOrder](Logistics.Inventory.StoreOrderLines.md#storeorder) to which this StoreOrderLine belongs. [Required] [Filter(multi eq)] |
-| [Lot](Logistics.Inventory.StoreOrderLines.md#lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. [Filter(multi eq)] |
-| [ParentDocument](Logistics.Inventory.StoreOrderLines.md#parentdocument) | [General.Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
-| [Product](Logistics.Inventory.StoreOrderLines.md#product) | [General.Products.Products](General.Products.Products.md) | The product which should be received/issued. [Required] [Filter(multi eq)] |
-| [ProductVariant](Logistics.Inventory.StoreOrderLines.md#productvariant) | [General.ProductVariants](General.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. [Filter(multi eq)] |
-| [QuantityUnit](Logistics.Inventory.StoreOrderLines.md#quantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
-| [SalesOrderLine](Logistics.Inventory.StoreOrderLines.md#salesorderline) | [Crm.Sales.SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable) | Sales order line which is managed by this store order line. When specified sales order line is used to make the margin analysis. [Filter(multi eq)] |
-| [SerialNumber](Logistics.Inventory.StoreOrderLines.md#serialnumber) | [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)] |
-| [StoreBin](Logistics.Inventory.StoreOrderLines.md#storebin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | From/to which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)] |
-| [StoreOrder](Logistics.Inventory.StoreOrderLines.md#storeorder) | [Logistics.Inventory.StoreOrders](Logistics.Inventory.StoreOrders.md) | The [StoreOrder](Logistics.Inventory.StoreOrderLines.md#storeorder) to which this StoreOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Document](Logistics.Inventory.StoreOrderLines.md#document) | [StoreOrders](Logistics.Inventory.StoreOrders.md) | The [StoreOrder](Logistics.Inventory.StoreOrderLines.md#storeorder) to which this StoreOrderLine belongs. [Required] [Filter(multi eq)] |
+| [Lot](Logistics.Inventory.StoreOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. [Filter(multi eq)] |
+| [ParentDocument](Logistics.Inventory.StoreOrderLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
+| [Product](Logistics.Inventory.StoreOrderLines.md#product) | [Products](General.Products.Products.md) | The product which should be received/issued. [Required] [Filter(multi eq)] |
+| [ProductVariant](Logistics.Inventory.StoreOrderLines.md#productvariant) | [ProductVariants](General.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. [Filter(multi eq)] |
+| [QuantityUnit](Logistics.Inventory.StoreOrderLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
+| [SalesOrderLine](Logistics.Inventory.StoreOrderLines.md#salesorderline) | [SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable) | Sales order line which is managed by this store order line. When specified sales order line is used to make the margin analysis. [Filter(multi eq)] |
+| [SerialNumber](Logistics.Inventory.StoreOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)] |
+| [StoreBin](Logistics.Inventory.StoreOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | From/to which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)] |
+| [StoreOrder](Logistics.Inventory.StoreOrderLines.md#storeorder) | [StoreOrders](Logistics.Inventory.StoreOrders.md) | The [StoreOrder](Logistics.Inventory.StoreOrderLines.md#storeorder) to which this StoreOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -61,7 +61,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF(obj.Product.ProductType.IsServiced, obj.Product.GuaranteePeriodDays, null)`
+`IIF( obj.Product.ProductType.IsServiced, obj.Product.GuaranteePeriodDays, null)`
 ### Id
 
 _Type_: **guid**  
@@ -85,10 +85,10 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.StoreOrder.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.StoreOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.StoreOrder.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.StoreOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### LotNumber
 
 > Obsolete. Not used.
@@ -148,23 +148,23 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Back-End Default Expression:_  
-`IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 
 _Front-End Recalc Expressions:_  
-`IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
+> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 
 _Front-End Recalc Expressions:_  
-`IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### TransactionTimestamp
 
 > Exact time when the transaction for this store order line changes the cost of the product. [ReadOnly]
@@ -188,42 +188,42 @@ _Supports Order By_: **False**
 
 > The [StoreOrder](Logistics.Inventory.StoreOrderLines.md#storeorder) to which this StoreOrderLine belongs. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreOrders](Logistics.Inventory.StoreOrders.md)**  
+_Type_: **[StoreOrders](Logistics.Inventory.StoreOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 
 > If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
 
 > The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The product which should be received/issued. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductVariant
 
 > If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]
 
-_Type_: **[General.ProductVariants](General.ProductVariants.md) (nullable)**  
+_Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
 > The measurement unit of Quantity. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -232,28 +232,28 @@ _Front-End Recalc Expressions:_
 
 > Sales order line which is managed by this store order line. When specified sales order line is used to make the margin analysis. [Filter(multi eq)]
 
-_Type_: **[Crm.Sales.SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable)**  
+_Type_: **[SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
 
 > Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreBin
 
 > From/to which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreOrder
 
 > The [StoreOrder](Logistics.Inventory.StoreOrderLines.md#storeorder) to which this StoreOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Logistics.Inventory.StoreOrders](Logistics.Inventory.StoreOrders.md)**  
+_Type_: **[StoreOrders](Logistics.Inventory.StoreOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

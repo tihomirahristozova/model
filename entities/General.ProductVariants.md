@@ -18,10 +18,10 @@ Contains definitions of different variants of a product. The variants are differ
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](General.ProductVariants.md#product) | [General.Products.Products](General.Products.Products.md) | The product for which this variant is defined. [Required] [Filter(multi eq)] [Owner] |
-| [VariantColor](General.ProductVariants.md#variantcolor) | [General.Products.VariantColors](General.Products.VariantColors.md) (nullable) | The color of the variant. null means that the variant does not have a specific color. [Filter(multi eq)] |
-| [VariantSize](General.ProductVariants.md#variantsize) | [General.Products.VariantSizes](General.Products.VariantSizes.md) (nullable) | The size of the variant. null means that the variant does not have a specific size. [Filter(multi eq)] |
-| [VariantStyle](General.ProductVariants.md#variantstyle) | [General.Products.VariantStyles](General.Products.VariantStyles.md) (nullable) | The style of the variant. null means that the variant does not have a specific style. [Filter(multi eq)] |
+| [Product](General.ProductVariants.md#product) | [Products](General.Products.Products.md) | The product for which this variant is defined. [Required] [Filter(multi eq)] [Owner] |
+| [VariantColor](General.ProductVariants.md#variantcolor) | [VariantColors](General.Products.VariantColors.md) (nullable) | The color of the variant. null means that the variant does not have a specific color. [Filter(multi eq)] |
+| [VariantSize](General.ProductVariants.md#variantsize) | [VariantSizes](General.Products.VariantSizes.md) (nullable) | The size of the variant. null means that the variant does not have a specific size. [Filter(multi eq)] |
+| [VariantStyle](General.ProductVariants.md#variantstyle) | [VariantStyles](General.Products.VariantStyles.md) (nullable) | The style of the variant. null means that the variant does not have a specific style. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -57,10 +57,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`Join(" ", new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})`
+`Join( " ", new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})`
 
 _Front-End Recalc Expressions:_  
-`Join(" ", new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})`
+`Join( " ", new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})`
 
 ## Reference Details
 
@@ -68,28 +68,28 @@ _Front-End Recalc Expressions:_
 
 > The product for which this variant is defined. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VariantColor
 
 > The color of the variant. null means that the variant does not have a specific color. [Filter(multi eq)]
 
-_Type_: **[General.Products.VariantColors](General.Products.VariantColors.md) (nullable)**  
+_Type_: **[VariantColors](General.Products.VariantColors.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VariantSize
 
 > The size of the variant. null means that the variant does not have a specific size. [Filter(multi eq)]
 
-_Type_: **[General.Products.VariantSizes](General.Products.VariantSizes.md) (nullable)**  
+_Type_: **[VariantSizes](General.Products.VariantSizes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VariantStyle
 
 > The style of the variant. null means that the variant does not have a specific style. [Filter(multi eq)]
 
-_Type_: **[General.Products.VariantStyles](General.Products.VariantStyles.md) (nullable)**  
+_Type_: **[VariantStyles](General.Products.VariantStyles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

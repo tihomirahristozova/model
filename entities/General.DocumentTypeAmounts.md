@@ -19,8 +19,8 @@ Specifies amount types, that should be automatically added to documents of a giv
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAmountType](General.DocumentTypeAmounts.md#documentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type that should be automatically added to the documents of the specified type. [Required] [Filter(multi eq)] |
-| [DocumentType](General.DocumentTypeAmounts.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the amount type is specified. [Required] [Filter(multi eq)] [Owner] |
+| [DocumentAmountType](General.DocumentTypeAmounts.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type that should be automatically added to the documents of the specified type. [Required] [Filter(multi eq)] |
+| [DocumentType](General.DocumentTypeAmounts.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which the amount type is specified. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -71,14 +71,14 @@ _Default Value_: **True**
 
 > The amount type that should be automatically added to the documents of the specified type. [Required] [Filter(multi eq)]
 
-_Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md)**  
+_Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
 > The document type for which the amount type is specified. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -9,11 +9,11 @@ Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionalPropertyDescription](Production.Technologies.PrincipalRecipeOperations.md#conditionalpropertydescription) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The desired description of the Conditional Property. . 
+| [ConditionalProperty<br />Description](Production.Technologies.PrincipalRecipeOperations.md#conditionalpropertydescription) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The desired description of the Conditional Property. . 
 | [ConditionalPropertyValue](Production.Technologies.PrincipalRecipeOperations.md#conditionalpropertyvalue) | string (nullable) | The desired value of the Conditional Property. . 
 | [Id](Production.Technologies.PrincipalRecipeOperations.md#id) | guid |  
 | [LineOrd](Production.Technologies.PrincipalRecipeOperations.md#lineord) | int32 | Consecutive line number within the principal recipe. [Required] 
-| [MinimumConcurrentStartTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting. 
+| [MinimumConcurrent<br />StartTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting. 
 | [MoveTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. [Required] [Default(0)] [Filter(ge;le)] 
 | [Notes](Production.Technologies.PrincipalRecipeOperations.md#notes) | string (nullable) | Notes for this PrincipalRecipeOperation. 
 | [OperationDescription](Production.Technologies.PrincipalRecipeOperations.md#operationdescription) | string (nullable) | The description of the operation. Initially copied from the generic operation definition. 
@@ -28,12 +28,12 @@ Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionalProperty](Production.Technologies.PrincipalRecipeOperations.md#conditionalproperty) | [General.CustomProperties](General.CustomProperties.md) (nullable) | When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. [Filter(multi eq)] |
-| [Operation](Production.Technologies.PrincipalRecipeOperations.md#operation) | [Production.Resources.Operations](Production.Resources.Operations.md) (nullable) | The generic operation definition. The data is copied locally and can be modified for this specific record. [Filter(multi eq)] |
-| [OperationInstruction](Production.Technologies.PrincipalRecipeOperations.md#operationinstruction) | [Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Link to additional data, containing instructions in external format. [Filter(multi eq)] |
-| [PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) | [Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | The [PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) to which this PrincipalRecipeOperation belongs. [Required] [Filter(multi eq)] [Owner] |
-| [UseQuantityUnit](Production.Technologies.PrincipalRecipeOperations.md#usequantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Use_Quantity. [Required] [Filter(multi eq)] |
-| [WorkgroupResource](Production.Technologies.PrincipalRecipeOperations.md#workgroupresource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) | Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. [Required] [Filter(multi eq)] |
+| [ConditionalProperty](Production.Technologies.PrincipalRecipeOperations.md#conditionalproperty) | [CustomProperties](General.CustomProperties.md) (nullable) | When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. [Filter(multi eq)] |
+| [Operation](Production.Technologies.PrincipalRecipeOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | The generic operation definition. The data is copied locally and can be modified for this specific record. [Filter(multi eq)] |
+| [OperationInstruction](Production.Technologies.PrincipalRecipeOperations.md#operationinstruction) | [OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Link to additional data, containing instructions in external format. [Filter(multi eq)] |
+| [PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) | [PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | The [PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) to which this PrincipalRecipeOperation belongs. [Required] [Filter(multi eq)] [Owner] |
+| [UseQuantityUnit](Production.Technologies.PrincipalRecipeOperations.md#usequantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Use_Quantity. [Required] [Filter(multi eq)] |
+| [WorkgroupResource](Production.Technologies.PrincipalRecipeOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -69,10 +69,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.PrincipalRecipe.Operations.Select(c => c.LineOrd).DefaultIfEmpty(0).Max() + 10)`
+`( obj.PrincipalRecipe.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.PrincipalRecipe.Operations.Select(c => c.LineOrd).DefaultIfEmpty(0).Max() + 10)`
+`( obj.PrincipalRecipe.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### MinimumConcurrentStartTimeMinutes
 
 > How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting.
@@ -178,44 +178,44 @@ _Front-End Recalc Expressions:_
 
 > When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md) (nullable)**  
+_Type_: **[CustomProperties](General.CustomProperties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Operation
 
 > The generic operation definition. The data is copied locally and can be modified for this specific record. [Filter(multi eq)]
 
-_Type_: **[Production.Resources.Operations](Production.Resources.Operations.md) (nullable)**  
+_Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OperationInstruction
 
 > Link to additional data, containing instructions in external format. [Filter(multi eq)]
 
-_Type_: **[Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
+_Type_: **[OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrincipalRecipe
 
 > The [PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) to which this PrincipalRecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)**  
+_Type_: **[PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UseQuantityUnit
 
 > The measurement unit of Use_Quantity. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.WorkgroupResource.Resource != null), obj.WorkgroupResource.Resource.PrimaryUnit, obj.UseQuantityUnit)`
+`IIF( ( obj.WorkgroupResource.Resource != null), obj.WorkgroupResource.Resource.PrimaryUnit, obj.UseQuantityUnit)`
 ### WorkgroupResource
 
 > Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. [Required] [Filter(multi eq)]
 
-_Type_: **[Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
+_Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

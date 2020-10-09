@@ -21,7 +21,7 @@ User-defined document statuses. Entity: Gen_Document_Type_User_Statuses
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](General.DocumentTypeUserStatuses.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner] |
+| [DocumentType](General.DocumentTypeUserStatuses.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -44,10 +44,10 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.DocumentType.UserStatuses.Select(c => c.DisplayOrder).DefaultIfEmpty(0).Max() + 10)`
+`( obj.DocumentType.UserStatuses.Select( c => c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.DocumentType.UserStatuses.Select(c => c.DisplayOrder).DefaultIfEmpty(0).Max() + 10)`
+`( obj.DocumentType.UserStatuses.Select( c => c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Id
 
 _Type_: **guid**  
@@ -107,7 +107,7 @@ _Supports Order By_: **False**
 
 > The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

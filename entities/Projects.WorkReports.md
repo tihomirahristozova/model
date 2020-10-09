@@ -20,7 +20,7 @@ Contains project work report documents. Each work report contains consumed mater
 | [Id](Projects.WorkReports.md#id) | guid |  
 | [IsReleased](Projects.WorkReports.md#isreleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [IsSingleExecution](Projects.WorkReports.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [ParentDocumentRelationshipType](Projects.WorkReports.md#parentdocumentrelationshiptype) | [ParentDocumentRelationshipType](Projects.WorkReports.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
+| [ParentDocument<br />RelationshipType](Projects.WorkReports.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Projects.WorkReports.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
 | [PlanningOnly](Projects.WorkReports.md#planningonly) | boolean (nullable) | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required] 
 | [ReadOnly](Projects.WorkReports.md#readonly) | boolean | True - the document is read only; false - the document is not read only [Required] 
 | [ReferenceDate](Projects.WorkReports.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)] 
@@ -36,41 +36,41 @@ Contains project work report documents. Each work report contains consumed mater
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Projects.WorkReports.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
-| [AdjustedDocument](Projects.WorkReports.md#adjusteddocument) | [General.Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
-| [AssignedToUser](Projects.WorkReports.md#assignedtouser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
-| [CurrencyDirectory](Projects.WorkReports.md#currencydirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
-| [DocumentType](Projects.WorkReports.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
-| [EnterpriseCompany](Projects.WorkReports.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
-| [EnterpriseCompanyLocation](Projects.WorkReports.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
-| [FromCompanyDivision](Projects.WorkReports.md#fromcompanydivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
-| [FromParty](Projects.WorkReports.md#fromparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
-| [MasterDocument](Projects.WorkReports.md#masterdocument) | [General.Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
-| [Parent](Projects.WorkReports.md#parent) | [General.Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
-| [PrimeCauseDocument](Projects.WorkReports.md#primecausedocument) | [General.Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
-| [Project](Projects.WorkReports.md#project) | [Projects.Projects](Projects.Projects.md) | The project for which the work report is recorded. [Required] [Filter(multi eq)] |
-| [ProjectTask](Projects.WorkReports.md#projecttask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) (nullable) | The project task for which the work report is recorded. null means that the report contains entries for many project tasks. [Filter(multi eq)] |
-| [ResponsiblePerson](Projects.WorkReports.md#responsibleperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
-| [ReverseOfDocument](Projects.WorkReports.md#reverseofdocument) | [General.Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
-| [Sequence](Projects.WorkReports.md#sequence) | [General.Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
-| [ToCompanyDivision](Projects.WorkReports.md#tocompanydivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
-| [ToParty](Projects.WorkReports.md#toparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
-| [UserStatus](Projects.WorkReports.md#userstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
+| [AccessKey](Projects.WorkReports.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
+| [AdjustedDocument](Projects.WorkReports.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
+| [AssignedToUser](Projects.WorkReports.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
+| [CurrencyDirectory](Projects.WorkReports.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
+| [DocumentType](Projects.WorkReports.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
+| [EnterpriseCompany](Projects.WorkReports.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
+| [EnterpriseCompanyLocation](Projects.WorkReports.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
+| [FromCompanyDivision](Projects.WorkReports.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
+| [FromParty](Projects.WorkReports.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
+| [MasterDocument](Projects.WorkReports.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
+| [Parent](Projects.WorkReports.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
+| [PrimeCauseDocument](Projects.WorkReports.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
+| [Project](Projects.WorkReports.md#project) | [Projects](Projects.Projects.md) | The project for which the work report is recorded. [Required] [Filter(multi eq)] |
+| [ProjectTask](Projects.WorkReports.md#projecttask) | [ProjectTasks](Projects.ProjectTasks.md) (nullable) | The project task for which the work report is recorded. null means that the report contains entries for many project tasks. [Filter(multi eq)] |
+| [ResponsiblePerson](Projects.WorkReports.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
+| [ReverseOfDocument](Projects.WorkReports.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
+| [Sequence](Projects.WorkReports.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
+| [ToCompanyDivision](Projects.WorkReports.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
+| [ToParty](Projects.WorkReports.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
+| [UserStatus](Projects.WorkReports.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Comments | [General.DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
-| DistributedAmounts | [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributedAmount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference 
-| DocumentAmounts | [General.DocumentAmounts](General.DocumentAmounts.md) |  
-| FileAttachments | [General.DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
-| LineAmounts | [General.DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
-| Materials | [Projects.WorkReportMaterials](Projects.WorkReportMaterials.md) | List of [WorkReportMaterial](Projects.WorkReportMaterials.md) child objects, based on the [Projects.WorkReportMaterial.WorkReport](Projects.WorkReportMaterials.md#workreport) back reference 
-| Prints | [General.DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
-| Resources | [Projects.WorkReportResources](Projects.WorkReportResources.md) | List of [WorkReportResource](Projects.WorkReportResources.md) child objects, based on the [Projects.WorkReportResource.WorkReport](Projects.WorkReportResources.md#workreport) back reference 
-| StateChanges | [General.DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
-| Versions | [General.DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
+| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
+| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back nce 
+| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) |  
+| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
+| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
+| Materials | [WorkReportMaterials](Projects.WorkReportMaterials.md) | List of [WorkReportMaterial](Projects.WorkReportMaterials.md) child objects, based on the [Projects.WorkReportMaterial.WorkReport](Projects.WorkReportMaterials.md#workreport) back reference 
+| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
+| Resources | [WorkReportResources](Projects.WorkReportResources.md) | List of [WorkReportResource](Projects.WorkReportResources.md) child objects, based on the [Projects.WorkReportResource.WorkReport](Projects.WorkReportResources.md#workreport) back reference 
+| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
+| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
 
 
 ## Attribute Details
@@ -170,7 +170,7 @@ _Default Value_: **False**
 
 > Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
 
-_Type_: **[ParentDocumentRelationshipType](Projects.WorkReports.md#parentdocumentrelationshiptype) (nullable)**  
+_Type_: **[ParentDocument<br />RelationshipType](Projects.WorkReports.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
 _Allowed Values (General.ParentDocumentRelationshipType Enum Members)_  
 
@@ -286,142 +286,142 @@ _Supports Order By_: **False**
 
 > The access key, containing the user permissions for this document. null means that all users have unlimited permissions
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
 
 > The primary document, which the current document adjusts. null when this is not an adjustment document
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
 
 > The user to which this document is assigned for handling. null means that the document is not assigned to specific user
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
 
 > The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
 
-_Type_: **[General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
+_Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
 > The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The enterprise company which issued the document [Required]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
 > The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
 
-_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
 
 > The division of the company, issuing the document. null when the document is not issued by any specific division
 
-_Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
 
 > The party which issued the document [Required]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MasterDocument
 
 > In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
 > In a multi-document tree, this is the direct parent document. If this is the root it is null
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimeCauseDocument
 
 > The document that is the prime cause for creation of the current document
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Project
 
 > The project for which the work report is recorded. [Required] [Filter(multi eq)]
 
-_Type_: **[Projects.Projects](Projects.Projects.md)**  
+_Type_: **[Projects](Projects.Projects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTask
 
 > The project task for which the work report is recorded. null means that the report contains entries for many project tasks. [Filter(multi eq)]
 
-_Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md) (nullable)**  
+_Type_: **[ProjectTasks](Projects.ProjectTasks.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.Materials.Select(c => c.ProjectTask).Distinct().OnlyIfSingle()`
+`obj.Materials.Select( c => c.ProjectTask).Distinct( ).OnlyIfSingle( )`
 ### ResponsiblePerson
 
 > The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ReverseOfDocument
 
 > The document which the current document is reverse of
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Sequence
 
 > The sequence that will be used to give new numbers to the documents of this type
 
-_Type_: **[General.Sequences](General.Sequences.md) (nullable)**  
+_Type_: **[Sequences](General.Sequences.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ToCompanyDivision
 
 > The division of the company, receiving the document. null when the document is not received by any specific division
 
-_Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
+_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
 _Supported Filters_: **NotFilterable**  
 
 ### ToParty
 
 > The party which should receive the document
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### UserStatus
 
 > The user status of this document if applicable for this document type. null means unknown or not yet set
 
-_Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 

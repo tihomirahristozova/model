@@ -20,7 +20,7 @@ The actual values of the user-defined properties for each actual entity. Entity:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Property](General.PropertyValues.md#property) | [General.CustomProperties](General.CustomProperties.md) | The property, whose value is stored here. [Required] [Filter(multi eq)] |
+| [Property](General.PropertyValues.md#property) | [CustomProperties](General.CustomProperties.md) | The property, whose value is stored here. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -76,7 +76,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 > The property, whose value is stored here. [Required] [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md)**  
+_Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -17,7 +17,7 @@ Represents named hierarchy levels within a cost calculation. The hierarchy level
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostTemplate](Finance.Cost.TemplateLevels.md#costtemplate) | [Finance.Cost.Templates](Finance.Cost.Templates.md) | The [Template](Finance.Cost.Templates.md) to which this TemplateLevel belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CostTemplate](Finance.Cost.TemplateLevels.md#costtemplate) | [Templates](Finance.Cost.Templates.md) | The [Template](Finance.Cost.Templates.md) to which this TemplateLevel belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -52,7 +52,7 @@ _Supports Order By_: **False**
 
 > The [Template](Finance.Cost.Templates.md) to which this TemplateLevel belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Cost.Templates](Finance.Cost.Templates.md)**  
+_Type_: **[Templates](Finance.Cost.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

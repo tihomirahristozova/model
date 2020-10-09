@@ -23,13 +23,13 @@ Invoices issued by the enterprise companies. Entity: Crm_Invoices
 | [DocumentVersion](Crm.Invoicing.Invoices.md#documentversion) | int32 | [Filter(eq;ge;le)] 
 | [EntityName](Crm.Invoicing.Invoices.md#entityname) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
 | [Id](Crm.Invoicing.Invoices.md#id) | guid |  
-| [IntrastatTransactionNatureCode](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) (nullable) | Transaction nature; used for Intrastat reporting. 
+| [IntrastatTransaction<br />NatureCode](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) (nullable) | Transaction nature; used for Intrastat reporting. 
 | [IntrastatTransportModeCode](Crm.Invoicing.Invoices.md#intrastattransportmodecode) | [TransportMode](Crm.Invoicing.Invoices.md#intrastattransportmodecode) (nullable) | Transport mode; used for Intrastat reporting. 
 | [IsReleased](Crm.Invoicing.Invoices.md#isreleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [IsSingleExecution](Crm.Invoicing.Invoices.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [IsValidField](Crm.Invoicing.Invoices.md#isvalidfield) | boolean | Used for internal purposes. true when the invoice is valid (released and not void) for summing. [Required] [Default(false)] [ReadOnly] 
 | [Notes](Crm.Invoicing.Invoices.md#notes) | string (nullable) | Notes for this Invoice. 
-| [ParentDocumentRelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) | [ParentDocumentRelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
+| [ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
 | [PaymentDueDate](Crm.Invoicing.Invoices.md#paymentduedate) | datetime (nullable) | When not null specifies due date for the payment. 
 | [PaymentDueStartDate](Crm.Invoicing.Invoices.md#paymentduestartdate) | datetime (nullable) | The date when the payment becomes due for documents with one installment. 
 | [PaymentTypeDescription](Crm.Invoicing.Invoices.md#paymenttypedescription) | [MultilanguageString](../data-types.md#multilanguagestring) | Description of the payment type. Initially copied from the name of the Payment Type. [Required] 
@@ -50,45 +50,45 @@ Invoices issued by the enterprise companies. Entity: Crm_Invoices
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Crm.Invoicing.Invoices.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
-| [AdjustedDocument](Crm.Invoicing.Invoices.md#adjusteddocument) | [General.Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
-| [AssignedToUser](Crm.Invoicing.Invoices.md#assignedtouser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
-| [CreditNoteOriginalInvoice](Crm.Invoicing.Invoices.md#creditnoteoriginalinvoice) | [Crm.Invoicing.Invoices](Crm.Invoicing.Invoices.md) (nullable) | When this is credit note, may contain the original Invoice. null for normal invoices or when the original document is unknown. [Filter(multi eq)] |
-| [CurrencyDirectory](Crm.Invoicing.Invoices.md#currencydirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
-| [Customer](Crm.Invoicing.Invoices.md#customer) | [Crm.Customers](Crm.Customers.md) | The customer to which the invoice is issued. [Required] [Filter(multi eq)] |
-| [DealType](Crm.Invoicing.Invoices.md#dealtype) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable) | VAT deal type for this invoice. If deal type in entered then VAT entry is created for this deal type. [Filter(multi eq)] |
-| [DocumentCurrency](Crm.Invoicing.Invoices.md#documentcurrency) | [General.Currencies](General.Currencies.md) | The currency in which the document is issued. All amounts are in this currency. [Required] [Filter(multi eq)] |
-| [DocumentType](Crm.Invoicing.Invoices.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
-| [EnterpriseCompany](Crm.Invoicing.Invoices.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
-| [EnterpriseCompanyLocation](Crm.Invoicing.Invoices.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
-| [FromCompanyDivision](Crm.Invoicing.Invoices.md#fromcompanydivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
-| [FromParty](Crm.Invoicing.Invoices.md#fromparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
-| [IntrastatTransportCountry](Crm.Invoicing.Invoices.md#intrastattransportcountry) | [General.Geography.Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)] |
-| [MasterDocument](Crm.Invoicing.Invoices.md#masterdocument) | [General.Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
-| [Parent](Crm.Invoicing.Invoices.md#parent) | [General.Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
-| [PaymentAccount](Crm.Invoicing.Invoices.md#paymentaccount) | [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, specifies the default payment account for the payment order. [Filter(multi eq)] |
-| [PaymentType](Crm.Invoicing.Invoices.md#paymenttype) | [Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null specifies the payment type for the invoice. [Filter(multi eq)] |
-| [PrimeCauseDocument](Crm.Invoicing.Invoices.md#primecausedocument) | [General.Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
-| [ResponsiblePerson](Crm.Invoicing.Invoices.md#responsibleperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
-| [ReverseOfDocument](Crm.Invoicing.Invoices.md#reverseofdocument) | [General.Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
-| [Sequence](Crm.Invoicing.Invoices.md#sequence) | [General.Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
-| [ToCompanyDivision](Crm.Invoicing.Invoices.md#tocompanydivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
-| [ToParty](Crm.Invoicing.Invoices.md#toparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
-| [UserStatus](Crm.Invoicing.Invoices.md#userstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
+| [AccessKey](Crm.Invoicing.Invoices.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
+| [AdjustedDocument](Crm.Invoicing.Invoices.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
+| [AssignedToUser](Crm.Invoicing.Invoices.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
+| [CreditNoteOriginalInvoice](Crm.Invoicing.Invoices.md#creditnoteoriginalinvoice) | [Invoices](Crm.Invoicing.Invoices.md) (nullable) | When this is credit note, may contain the original Invoice. null for normal invoices or when the original document is unknown. [Filter(multi eq)] |
+| [CurrencyDirectory](Crm.Invoicing.Invoices.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
+| [Customer](Crm.Invoicing.Invoices.md#customer) | [Customers](Crm.Customers.md) | The customer to which the invoice is issued. [Required] [Filter(multi eq)] |
+| [DealType](Crm.Invoicing.Invoices.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | VAT deal type for this invoice. If deal type in entered then VAT entry is created for this deal type. [Filter(multi eq)] |
+| [DocumentCurrency](Crm.Invoicing.Invoices.md#documentcurrency) | [Currencies](General.Currencies.md) | The currency in which the document is issued. All amounts are in this currency. [Required] [Filter(multi eq)] |
+| [DocumentType](Crm.Invoicing.Invoices.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
+| [EnterpriseCompany](Crm.Invoicing.Invoices.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
+| [EnterpriseCompanyLocation](Crm.Invoicing.Invoices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
+| [FromCompanyDivision](Crm.Invoicing.Invoices.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
+| [FromParty](Crm.Invoicing.Invoices.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
+| [IntrastatTransportCountry](Crm.Invoicing.Invoices.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)] |
+| [MasterDocument](Crm.Invoicing.Invoices.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
+| [Parent](Crm.Invoicing.Invoices.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
+| [PaymentAccount](Crm.Invoicing.Invoices.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, specifies the default payment account for the payment order. [Filter(multi eq)] |
+| [PaymentType](Crm.Invoicing.Invoices.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null specifies the payment type for the invoice. [Filter(multi eq)] |
+| [PrimeCauseDocument](Crm.Invoicing.Invoices.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
+| [ResponsiblePerson](Crm.Invoicing.Invoices.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
+| [ReverseOfDocument](Crm.Invoicing.Invoices.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
+| [Sequence](Crm.Invoicing.Invoices.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
+| [ToCompanyDivision](Crm.Invoicing.Invoices.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
+| [ToParty](Crm.Invoicing.Invoices.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
+| [UserStatus](Crm.Invoicing.Invoices.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Comments | [General.DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
-| DistributedAmounts | [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributedAmount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference 
-| DocumentAmounts | [General.DocumentAmounts](General.DocumentAmounts.md) | List of [DocumentAmount](General.DocumentAmounts.md) child objects, based on the [DocumentAmount.Document](General.DocumentAmounts.md#document) back reference 
-| FileAttachments | [General.DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
-| LineAmounts | [General.DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
-| Lines | [Crm.Invoicing.InvoiceLines](Crm.Invoicing.InvoiceLines.md) | List of [InvoiceLine](Crm.Invoicing.InvoiceLines.md) child objects, based on the [Crm.Invoicing.InvoiceLine.Invoice](Crm.Invoicing.InvoiceLines.md#invoice) back reference 
-| Prints | [General.DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
-| StateChanges | [General.DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
-| Versions | [General.DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
+| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
+| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back nce 
+| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of [DocumentAmount](General.DocumentAmounts.md) child objects, based on the [DocumentAmount.Document](General.DocumentAmounts.md#document) back reference 
+| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
+| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
+| Lines | [InvoiceLines](Crm.Invoicing.InvoiceLines.md) | List of [InvoiceLine](Crm.Invoicing.InvoiceLines.md) child objects, based on the [Crm.Invoicing.InvoiceLine.Invoice](Crm.Invoicing.InvoiceLines.md#invoice) back reference 
+| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
+| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
+| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
 
 
 ## Attribute Details
@@ -179,7 +179,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`obj.Lines.Select(c => InvoiceLinesRepository.DeliveryTermsCodeAttribute.GetUntypedValue(c, False)).Distinct().OnlyIfSingle()`
+`obj.Lines.Select( c => InvoiceLinesRepository.DeliveryTermsCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### DocumentDate
 
 > The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]
@@ -244,25 +244,25 @@ _Allowed Values (Finance.Intrastat.TransactionNature Enum Members)_
 | FinancialLeasing | FinancialLeasing value. Stored as '14'. <br /> _Database Value:_ '14' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'FinancialLeasing' |
 | OtherTransactions | OtherTransactions value. Stored as '19'. <br /> _Database Value:_ '19' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'OtherTransactions' |
 | ReturnStokilizing | ReturnStokilizing value. Stored as '21'. <br /> _Database Value:_ '21' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'ReturnStokilizing' |
-| ReplacementForReturnedGoods | ReplacementForReturnedGoods value. Stored as '22'. <br /> _Database Value:_ '22' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'ReplacementForReturnedGoods' |
-| ReplacementOfGoodsNotBeingReturned | ReplacementOfGoodsNotBeingReturned value. Stored as '23'. <br /> _Database Value:_ '23' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'ReplacementOfGoodsNotBeingReturned' |
-| ReturnOrExchangeOfOtherGoods | ReturnOrExchangeOfOtherGoods value. Stored as '29'. <br /> _Database Value:_ '29' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'ReturnOrExchangeOfOtherGoods' |
+| ReplacementFor<br />ReturnedGoods | ReplacementFor<br />ReturnedGoods value. Stored as '22'. <br /> _Database Value:_ '22' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'ReplacementFor<br />ReturnedGoods' |
+| ReplacementOfGoods<br />NotBeingReturned | ReplacementOfGoods<br />NotBeingReturned value. Stored as '23'. <br /> _Database Value:_ '23' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'ReplacementOfGoods<br />NotBeingReturned' |
+| ReturnOrExchange<br />OfOtherGoods | ReturnOrExchange<br />OfOtherGoods value. Stored as '29'. <br /> _Database Value:_ '29' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'ReturnOrExchange<br />OfOtherGoods' |
 | SpecificTransactions | SpecificTransactions value. Stored as '60'. <br /> _Database Value:_ '60' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'SpecificTransactions' |
 | OperationsOnJointProjects | OperationsOnJointProjects value. Stored as '70'. <br /> _Database Value:_ '70' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'OperationsOnJointProjects' |
-| TransactionsOfConstructionMaterialsAndEquipment | TransactionsOfConstructionMaterialsAndEquipment value. Stored as '80'. <br /> _Database Value:_ '80' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'TransactionsOfConstructionMaterialsAndEquipment' |
+| TransactionsOf<br />ConstructionMaterials<br />AndEquipment | TransactionsOf<br />ConstructionMaterials<br />AndEquipment value. Stored as '80'. <br /> _Database Value:_ '80' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'TransactionsOf<br />ConstructionMaterials<br />AndEquipment' |
 | OtherTransactionsLeasing | OtherTransactionsLeasing value. Stored as '91'. <br /> _Database Value:_ '91' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'OtherTransactionsLeasing' |
 | OtherTransactionsOther | OtherTransactionsOther value. Stored as '99'. <br /> _Database Value:_ '99' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'OtherTransactionsOther' |
-| DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind | DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind value. Stored as '30'. <br /> _Database Value:_ '30' <br /> _Model Value:_ 14 <br /> _Domain API Value:_ 'DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind' |
-| GoodsThatAreExpectedToBeReturnedToSender | GoodsThatAreExpectedToBeReturnedToSender value. Stored as '41'. <br /> _Database Value:_ '41' <br /> _Model Value:_ 15 <br /> _Domain API Value:_ 'GoodsThatAreExpectedToBeReturnedToSender' |
-| GoodsThatAreNotExpectedToBeReturnedToSender | GoodsThatAreNotExpectedToBeReturnedToSender value. Stored as '42'. <br /> _Database Value:_ '42' <br /> _Model Value:_ 16 <br /> _Domain API Value:_ 'GoodsThatAreNotExpectedToBeReturnedToSender' |
-| GoodsThatAreReturnedToSender | GoodsThatAreReturnedToSender value. Stored as '51'. <br /> _Database Value:_ '51' <br /> _Model Value:_ 17 <br /> _Domain API Value:_ 'GoodsThatAreReturnedToSender' |
-| GoodsThatAreNotReturnedToSender | GoodsThatAreNotReturnedToSender value. Stored as '52'. <br /> _Database Value:_ '52' <br /> _Model Value:_ 18 <br /> _Domain API Value:_ 'GoodsThatAreNotReturnedToSender' |
+| DealsThatInclude<br />PropertyTransfers<br />WithoutFinancial<br />CompensationOr<br />CompensationIn<br />Kind | DealsThatInclude<br />PropertyTransfers<br />WithoutFinancial<br />CompensationOr<br />CompensationIn<br />Kind value. Stored as '30'. <br /> _Database Value:_ '30' <br /> _Model Value:_ 14 <br /> _Domain API Value:_ 'DealsThatInclude<br />PropertyTransfers<br />WithoutFinancial<br />CompensationOr<br />CompensationIn<br />Kind' |
+| GoodsThatAreExpected<br />ToBeReturnedTo<br />Sender | GoodsThatAreExpected<br />ToBeReturnedTo<br />Sender value. Stored as '41'. <br /> _Database Value:_ '41' <br /> _Model Value:_ 15 <br /> _Domain API Value:_ 'GoodsThatAreExpected<br />ToBeReturnedTo<br />Sender' |
+| GoodsThatAreNot<br />ExpectedToBeReturned<br />ToSender | GoodsThatAreNot<br />ExpectedToBeReturned<br />ToSender value. Stored as '42'. <br /> _Database Value:_ '42' <br /> _Model Value:_ 16 <br /> _Domain API Value:_ 'GoodsThatAreNot<br />ExpectedToBeReturned<br />ToSender' |
+| GoodsThatAreReturned<br />ToSender | GoodsThatAreReturned<br />ToSender value. Stored as '51'. <br /> _Database Value:_ '51' <br /> _Model Value:_ 17 <br /> _Domain API Value:_ 'GoodsThatAreReturned<br />ToSender' |
+| GoodsThatAreNot<br />ReturnedToSender | GoodsThatAreNot<br />ReturnedToSender value. Stored as '52'. <br /> _Database Value:_ '52' <br /> _Model Value:_ 18 <br /> _Domain API Value:_ 'GoodsThatAreNot<br />ReturnedToSender' |
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`obj.Lines.Select(c => InvoiceLinesRepository.IntrastatTransactionNatureCodeAttribute.GetUntypedValue(c, False)).Distinct().OnlyIfSingle()`
+`obj.Lines.Select( c => InvoiceLinesRepository.IntrastatTransactionNatureCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IntrastatTransportModeCode
 
 > Transport mode; used for Intrastat reporting.
@@ -278,7 +278,7 @@ _Allowed Values (Finance.Intrastat.TransportMode Enum Members)_
 | RoadTransport | RoadTransport value. Stored as '3'. <br /> _Database Value:_ '3' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'RoadTransport' |
 | AirTransport | AirTransport value. Stored as '4'. <br /> _Database Value:_ '4' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'AirTransport' |
 | Mail | Mail value. Stored as '5'. <br /> _Database Value:_ '5' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Mail' |
-| FixedTransportInstallations | FixedTransportInstallations value. Stored as '6'. <br /> _Database Value:_ '6' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'FixedTransportInstallations' |
+| FixedTransport<br />Installations | FixedTransport<br />Installations value. Stored as '6'. <br /> _Database Value:_ '6' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'FixedTransport<br />Installations' |
 | RiverTransport | RiverTransport value. Stored as '7'. <br /> _Database Value:_ '7' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'RiverTransport' |
 | SelfPropelled | SelfPropelled value. Stored as '8'. <br /> _Database Value:_ '8' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'SelfPropelled' |
 
@@ -286,7 +286,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`obj.Lines.Select(c => InvoiceLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue(c, False)).Distinct().OnlyIfSingle()`
+`obj.Lines.Select( c => InvoiceLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IsReleased
 
 > True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
@@ -326,7 +326,7 @@ _Supports Order By_: **False**
 
 > Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
 
-_Type_: **[ParentDocumentRelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) (nullable)**  
+_Type_: **[ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
 _Allowed Values (General.ParentDocumentRelationshipType Enum Members)_  
 
@@ -347,7 +347,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`obj.DocumentDate.AddDays(Convert(obj.Customer.DefaultPaymentTermDays, Double))`
+`obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentTermDays, Double))`
 ### PaymentDueStartDate
 
 > The date when the payment becomes due for documents with one installment.
@@ -357,7 +357,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`obj.DocumentDate.AddDays(Convert(obj.Customer.DefaultPaymentStartDays, Double))`
+`obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentStartDays, Double))`
 ### PaymentTypeDescription
 
 > Description of the payment type. Initially copied from the name of the Payment Type. [Required]
@@ -442,7 +442,7 @@ _Supports Order By_: **False**
 _Default Value_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.EnterpriseCompany == null), False, obj.EnterpriseCompany.Company.IsVATCashReportingRegistered)`
+`IIF( ( obj.EnterpriseCompany == null), False, obj.EnterpriseCompany.Company.IsVATCashReportingRegistered)`
 ### VATNotes
 
 > Description of the operation that will be entered in the VAT ledgers.
@@ -491,135 +491,135 @@ _Supports Order By_: **False**
 
 > The access key, containing the user permissions for this document. null means that all users have unlimited permissions
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
 
 > The primary document, which the current document adjusts. null when this is not an adjustment document
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
 
 > The user to which this document is assigned for handling. null means that the document is not assigned to specific user
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CreditNoteOriginalInvoice
 
 > When this is credit note, may contain the original Invoice. null for normal invoices or when the original document is unknown. [Filter(multi eq)]
 
-_Type_: **[Crm.Invoicing.Invoices](Crm.Invoicing.Invoices.md) (nullable)**  
+_Type_: **[Invoices](Crm.Invoicing.Invoices.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
 
 > The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
 
-_Type_: **[General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
+_Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
 
 > The customer to which the invoice is issued. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.Customers](Crm.Customers.md)**  
+_Type_: **[Customers](Crm.Customers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DealType
 
 > VAT deal type for this invoice. If deal type in entered then VAT entry is created for this deal type. [Filter(multi eq)]
 
-_Type_: **[Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
+_Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
-`obj.DocumentType.InvoicesOptions.FirstOrDefault().DefaultDealType`
+`obj.DocumentType.InvoicesOptions.FirstOrDefault( ).DefaultDealType`
 
 _Front-End Recalc Expressions:_  
-`obj.Lines.Select(c => c.LineDealType).Distinct().OnlyIfSingle()`
+`obj.Lines.Select( c => c.LineDealType).Distinct( ).OnlyIfSingle( )`
 ### DocumentCurrency
 
 > The currency in which the document is issued. All amounts are in this currency. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md)**  
+_Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
 > The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The enterprise company which issued the document [Required]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
 > The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
 
-_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
 
 > The division of the company, issuing the document. null when the document is not issued by any specific division
 
-_Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
 
 > The party which issued the document [Required]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatTransportCountry
 
 > Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]
 
-_Type_: **[General.Geography.Countries](General.Geography.Countries.md) (nullable)**  
+_Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.Lines.Select(c => c.IntrastatTransportCountry).Distinct().OnlyIfSingle()`
+`obj.Lines.Select( c => c.IntrastatTransportCountry).Distinct( ).OnlyIfSingle( )`
 ### MasterDocument
 
 > In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
 > In a multi-document tree, this is the direct parent document. If this is the root it is null
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentAccount
 
 > When not null, specifies the default payment account for the payment order. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.PaymentType.GetDefaultPaymentAccount().IfNullThen(obj.PaymentAccount)`
+`obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)`
 ### PaymentType
 
 > When not null specifies the payment type for the invoice. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -628,49 +628,49 @@ _Front-End Recalc Expressions:_
 
 > The document that is the prime cause for creation of the current document
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ResponsiblePerson
 
 > The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ReverseOfDocument
 
 > The document which the current document is reverse of
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Sequence
 
 > The sequence that will be used to give new numbers to the documents of this type
 
-_Type_: **[General.Sequences](General.Sequences.md) (nullable)**  
+_Type_: **[Sequences](General.Sequences.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ToCompanyDivision
 
 > The division of the company, receiving the document. null when the document is not received by any specific division
 
-_Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
+_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
 _Supported Filters_: **NotFilterable**  
 
 ### ToParty
 
 > The party which should receive the document
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### UserStatus
 
 > The user status of this document if applicable for this document type. null means unknown or not yet set
 
-_Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 

@@ -17,16 +17,16 @@ Enterprise resources, categorized by groups. Entity: Gen_Resources
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostingCurrency](General.Resources.Resources.md#costingcurrency) | [General.Currencies](General.Currencies.md) (nullable) | The currency in which resource costs are specified. Required only if resource costs will be specified. [Filter(multi eq)] |
-| [ResourceGroup](General.Resources.Resources.md#resourcegroup) | [General.Resources.ResourceGroups](General.Resources.ResourceGroups.md) | The [ResourceGroup](General.Resources.Resources.md#resourcegroup) to which this Resource belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CostingCurrency](General.Resources.Resources.md#costingcurrency) | [Currencies](General.Currencies.md) (nullable) | The currency in which resource costs are specified. Required only if resource costs will be specified. [Filter(multi eq)] |
+| [ResourceGroup](General.Resources.Resources.md#resourcegroup) | [ResourceGroups](General.Resources.ResourceGroups.md) | The [ResourceGroup](General.Resources.Resources.md#resourcegroup) to which this Resource belongs. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Availability | [General.Resources.ResourceAvailability](General.Resources.ResourceAvailability.md) | List of [ResourceAvailability](General.Resources.ResourceAvailability.md) child objects, based on the [General.Resources.ResourceAvailability.Resource](General.Resources.ResourceAvailability.md#resource) back reference 
-| CostRates | [General.Resources.ResourceCostRates](General.Resources.ResourceCostRates.md) | List of [ResourceCostRate](General.Resources.ResourceCostRates.md) child objects, based on the [General.Resources.ResourceCostRate.Resource](General.Resources.ResourceCostRates.md#resource) back reference 
-| Instances | [General.Resources.ResourceInstances](General.Resources.ResourceInstances.md) | List of [ResourceInstance](General.Resources.ResourceInstances.md) child objects, based on the [General.Resources.ResourceInstance.Resource](General.Resources.ResourceInstances.md#resource) back reference 
+| Availability | [ResourceAvailability](General.Resources.ResourceAvailability.md) | List of [ResourceAvailability](General.Resources.ResourceAvailability.md) child objects, based on the [General.Resources.ResourceAvailability.Resource](General.Resources.ResourceAvailability.md#resource) back reference 
+| CostRates | [ResourceCostRates](General.Resources.ResourceCostRates.md) | List of [ResourceCostRate](General.Resources.ResourceCostRates.md) child objects, based on the [General.Resources.ResourceCostRate.Resource](General.Resources.ResourceCostRates.md#resource) back reference 
+| Instances | [ResourceInstances](General.Resources.ResourceInstances.md) | List of [ResourceInstance](General.Resources.ResourceInstances.md) child objects, based on the [General.Resources.ResourceInstance.Resource](General.Resources.ResourceInstances.md#resource) back reference 
 
 
 ## Attribute Details
@@ -60,14 +60,14 @@ _Supports Order By_: **False**
 
 > The currency in which resource costs are specified. Required only if resource costs will be specified. [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
+_Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResourceGroup
 
 > The [ResourceGroup](General.Resources.Resources.md#resourcegroup) to which this Resource belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Resources.ResourceGroups](General.Resources.ResourceGroups.md)**  
+_Type_: **[ResourceGroups](General.Resources.ResourceGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

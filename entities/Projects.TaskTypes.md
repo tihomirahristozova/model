@@ -19,7 +19,7 @@ Represents the different types of tasks, which can be included in the projects. 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectType](Projects.TaskTypes.md#projecttype) | [Projects.ProjectTypes](Projects.ProjectTypes.md) (nullable) | When not null, specifies that this task type can be used only for projects of the specified type. [Filter(multi eq)] |
+| [ProjectType](Projects.TaskTypes.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) (nullable) | When not null, specifies that this task type can be used only for projects of the specified type. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -70,7 +70,7 @@ _Supports Order By_: **False**
 
 > When not null, specifies that this task type can be used only for projects of the specified type. [Filter(multi eq)]
 
-_Type_: **[Projects.ProjectTypes](Projects.ProjectTypes.md) (nullable)**  
+_Type_: **[ProjectTypes](Projects.ProjectTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -17,7 +17,7 @@ Each list represents a unique collection of public users. Entity: Ext_Public_Use
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Systems.External.PublicUserLists.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. [Filter(multi eq)] |
+| [EnterpriseCompany](Systems.External.PublicUserLists.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -51,7 +51,7 @@ _Supports Order By_: **False**
 
 > The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

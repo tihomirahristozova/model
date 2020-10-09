@@ -3,7 +3,7 @@ uid: Applications.AssetManagement.ManagedAssetScheduledMaintenances
 ---
 # Applications.AssetManagement.ManagedAssetScheduledMaintenances
 
-Contains the scheduled maintenances for the managed assets. Each maintenance can be planned based on date, parameter value or both. Past maintenance plans are kept only for reference and can be deleted at any time. Entity: Eam_Managed_Asset_Scheduled_Maintenances (Introduced in version 19.1.100.0)
+Contains the scheduled maintenances for the managed assets. Each maintenance can be planned based on date, parameter value or both. Past maintenance plans are kept only for reference and can be deleted at any time. Entity: Eam_Managed_Asset_Scheduled_Maintenances (Introduced in version 19.1)
 
 ## Attributes
 
@@ -12,15 +12,15 @@ Contains the scheduled maintenances for the managed assets. Each maintenance can
 | [Date](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#date) | date (nullable) | The date, when the maintenance is planned. null means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)] 
 | [Id](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#id) | guid |  
 | [IsDismissed](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#isdismissed) | boolean | Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. [Required] [Default(false)] [Filter(multi eq)] 
-| [Notes](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#notes) | string (nullable) | Notes for this ManagedAssetScheduledMaintenance. 
+| [Notes](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#notes) | string (nullable) | Notes for this ManagedAssetScheduled<br />Maintenance. 
 | [TrackedParameterValue](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#trackedparametervalue) | int32 (nullable) | The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. null means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. [Filter(multi eq;ge;le)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenanceType](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#maintenancetype) | [Applications.AssetManagement.MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | The type of maintenance, which will be performed. [Required] [Filter(multi eq)] |
-| [ManagedAsset](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#managedasset) | [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The asset, which will be maintained. [Required] [Filter(multi eq)] [Owner] |
+| [MaintenanceType](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | The type of maintenance, which will be performed. [Required] [Filter(multi eq)] |
+| [ManagedAsset](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The asset, which will be maintained. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -71,14 +71,14 @@ _Supports Order By_: **False**
 
 > The type of maintenance, which will be performed. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.AssetManagement.MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
+_Type_: **[MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAsset
 
 > The asset, which will be maintained. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
+_Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

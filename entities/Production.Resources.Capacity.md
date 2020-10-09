@@ -19,7 +19,7 @@ Contains capacity of workgroup resources available for production. Entity: Prd_C
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [WorkgroupResource](Production.Resources.Capacity.md#workgroupresource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) | The capacity-constrained resource. [Required] [Filter(multi eq)] [Owner] |
+| [WorkgroupResource](Production.Resources.Capacity.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | The capacity-constrained resource. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -69,7 +69,7 @@ _Default Value_: **NewGuid**
 
 > The capacity-constrained resource. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
+_Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

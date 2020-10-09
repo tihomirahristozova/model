@@ -17,8 +17,8 @@ User-defined grouping of the assets. Entity: Ast_Asset_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultValuationModel](Finance.Assets.AssetGroups.md#defaultvaluationmodel) | [Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md) (nullable) | Default valuation model when creating new assets from this group. [Filter(multi eq)] |
-| [Parent](Finance.Assets.AssetGroups.md#parent) | [Finance.Assets.AssetGroups](Finance.Assets.AssetGroups.md) (nullable) | Parent asset group in the hierarchy. [Filter(multi eq)] |
+| [DefaultValuationModel](Finance.Assets.AssetGroups.md#defaultvaluationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) (nullable) | Default valuation model when creating new assets from this group. [Filter(multi eq)] |
+| [Parent](Finance.Assets.AssetGroups.md#parent) | [AssetGroups](Finance.Assets.AssetGroups.md) (nullable) | Parent asset group in the hierarchy. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -52,14 +52,14 @@ _Supports Order By_: **False**
 
 > Default valuation model when creating new assets from this group. [Filter(multi eq)]
 
-_Type_: **[Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md) (nullable)**  
+_Type_: **[ValuationModels](Finance.Assets.ValuationModels.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
 > Parent asset group in the hierarchy. [Filter(multi eq)]
 
-_Type_: **[Finance.Assets.AssetGroups](Finance.Assets.AssetGroups.md) (nullable)**  
+_Type_: **[AssetGroups](Finance.Assets.AssetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -20,11 +20,11 @@ Default payment plan for new documents of the specified document type. Entity: C
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Crm.Sales.DefaultSalesOrderPaymentPlans.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The [DocumentType](General.DocumentTypes.md) to which this DefaultSalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner] |
-| [EnterpriseCompany](Crm.Sales.DefaultSalesOrderPaymentPlans.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies. [Filter(multi eq)] |
-| [EnterpriseCompanyLocation](Crm.Sales.DefaultSalesOrderPaymentPlans.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations. [Filter(multi eq)] |
-| [PaymentAccount](Crm.Sales.DefaultSalesOrderPaymentPlans.md#paymentaccount) | [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Default payment account for the current installment. null means that there is no default account. [Filter(multi eq)] |
-| [PaymentType](Crm.Sales.DefaultSalesOrderPaymentPlans.md#paymenttype) | [Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Default payment type for the current installment. null means that there is no default payment type. [Filter(multi eq)] |
+| [DocumentType](Crm.Sales.DefaultSalesOrderPaymentPlans.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The [DocumentType](General.DocumentTypes.md) to which this DefaultSalesOrder<br />PaymentPlan belongs. [Required] [Filter(multi eq)] ] |
+| [EnterpriseCompany](Crm.Sales.DefaultSalesOrderPaymentPlans.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies. [Filter(multi eq)] |
+| [EnterpriseCompanyLocation](Crm.Sales.DefaultSalesOrderPaymentPlans.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations. [Filter(multi eq)] |
+| [PaymentAccount](Crm.Sales.DefaultSalesOrderPaymentPlans.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Default payment account for the current installment. null means that there is no default account. [Filter(multi eq)] |
+| [PaymentType](Crm.Sales.DefaultSalesOrderPaymentPlans.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Default payment type for the current installment. null means that there is no default payment type. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -71,10 +71,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.DocumentType.DefaultSalesOrderPaymentPlans.Select(c => c.InstallmentNumber).DefaultIfEmpty(0).Max() + 10)`
+`( obj.DocumentType.DefaultSalesOrderPaymentPlans.Select( c => c.InstallmentNumber).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.DocumentType.DefaultSalesOrderPaymentPlans.Select(c => c.InstallmentNumber).DefaultIfEmpty(0).Max() + 10)`
+`( obj.DocumentType.DefaultSalesOrderPaymentPlans.Select( c => c.InstallmentNumber).DefaultIfEmpty( 0).Max( ) + 10)`
 ### PaymentTermDays
 
 > Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. [Required] [Default(0)]
@@ -100,35 +100,35 @@ _Default Value_: **False**
 
 > The [DocumentType](General.DocumentTypes.md) to which this DefaultSalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
 > Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentAccount
 
 > Default payment account for the current installment. null means that there is no default account. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentType
 
 > Default payment type for the current installment. null means that there is no default payment type. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

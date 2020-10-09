@@ -17,13 +17,13 @@ Categorization of the assets, which specifies their depreciation plans. Entity: 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductType](Finance.Assets.AssetCategories.md#producttype) | [General.Products.ProductTypes](General.Products.ProductTypes.md) | Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. [Required] [Filter(multi eq)] |
+| [ProductType](Finance.Assets.AssetCategories.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| DepreciationPlanTemplates | [Finance.Assets.DepreciationPlanTemplates](Finance.Assets.DepreciationPlanTemplates.md) | List of [DepreciationPlanTemplate](Finance.Assets.DepreciationPlanTemplates.md) child objects, based on the [Finance.Assets.DepreciationPlanTemplate.AssetCategory](Finance.Assets.DepreciationPlanTemplates.md#assetcategory) back reference 
+| DepreciationPlanTemplates | [DepreciationPlanTemplates](Finance.Assets.DepreciationPlanTemplates.md) | List of [DepreciationPlanTemplate](Finance.Assets.DepreciationPlanTemplates.md) child objects, based on the [Finance.Assets.DepreciationPlanTemplate.AssetCategory](Finance.Assets.DepreciationPlanTemplates.md#assetcategory) back reference 
 
 
 ## Attribute Details
@@ -57,7 +57,7 @@ _Supports Order By_: **False**
 
 > Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.ProductTypes](General.Products.ProductTypes.md)**  
+_Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

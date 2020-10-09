@@ -17,10 +17,10 @@ Consumables are products, which are usually sold accompanying an asset rental. E
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumableQuantityUnit](Applications.Rental.AssetTypeConsumables.md#consumablequantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)] |
-| [Product](Applications.Rental.AssetTypeConsumables.md#product) | [General.Products.Products](General.Products.Products.md) | The consumable which is offered accompanying the asset rental. [Required] [Filter(multi eq)] |
-| [RentalAssetType](Applications.Rental.AssetTypeConsumables.md#rentalassettype) | [Applications.Rental.AssetTypes](Applications.Rental.AssetTypes.md) | The rental asset type for which the consumable would be offered. [Required] [Filter(multi eq)] [Owner] |
-| [Store](Applications.Rental.AssetTypeConsumables.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The store which contains the consumable. [Required] [Filter(multi eq)] |
+| [ConsumableQuantityUnit](Applications.Rental.AssetTypeConsumables.md#consumablequantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)] |
+| [Product](Applications.Rental.AssetTypeConsumables.md#product) | [Products](General.Products.Products.md) | The consumable which is offered accompanying the asset rental. [Required] [Filter(multi eq)] |
+| [RentalAssetType](Applications.Rental.AssetTypeConsumables.md#rentalassettype) | [AssetTypes](Applications.Rental.AssetTypes.md) | The rental asset type for which the consumable would be offered. [Required] [Filter(multi eq)] [Owner] |
+| [Store](Applications.Rental.AssetTypeConsumables.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store which contains the consumable. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -54,28 +54,28 @@ _Supports Order By_: **False**
 
 > The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The consumable which is offered accompanying the asset rental. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RentalAssetType
 
 > The rental asset type for which the consumable would be offered. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Rental.AssetTypes](Applications.Rental.AssetTypes.md)**  
+_Type_: **[AssetTypes](Applications.Rental.AssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
 > The store which contains the consumable. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

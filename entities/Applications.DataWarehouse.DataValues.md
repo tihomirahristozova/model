@@ -3,7 +3,7 @@ uid: Applications.DataWarehouse.DataValues
 ---
 # Applications.DataWarehouse.DataValues
 
-The actual values in the general data warehouse. Entity: Dw_Data_Values (Introduced in version 18.2.100.0)
+The actual values in the general data warehouse. Entity: Dw_Data_Values (Introduced in version 18.2)
 
 ## Attributes
 
@@ -18,8 +18,8 @@ The actual values in the general data warehouse. Entity: Dw_Data_Values (Introdu
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataMeasure](Applications.DataWarehouse.DataValues.md#datameasure) | [Applications.DataWarehouse.DataMeasures](Applications.DataWarehouse.DataMeasures.md) | The measure for which the data is recorded. [Required] [Filter(multi eq)] |
-| [EnterpriseCompany](Applications.DataWarehouse.DataValues.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company for which the data is recorded. [Required] [Filter(multi eq)] |
+| [DataMeasure](Applications.DataWarehouse.DataValues.md#datameasure) | [DataMeasures](Applications.DataWarehouse.DataMeasures.md) | The measure for which the data is recorded. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Applications.DataWarehouse.DataValues.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company for which the data is recorded. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -63,14 +63,14 @@ _Default Value_: **0**
 
 > The measure for which the data is recorded. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.DataWarehouse.DataMeasures](Applications.DataWarehouse.DataMeasures.md)**  
+_Type_: **[DataMeasures](Applications.DataWarehouse.DataMeasures.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The Enterprise Company for which the data is recorded. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

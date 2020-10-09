@@ -3,7 +3,7 @@ uid: Applications.DataWarehouse.DataMeasures
 ---
 # Applications.DataWarehouse.DataMeasures
 
-Contains the data measures of the General data warehouse. Entity: Dw_Data_Measures (Introduced in version 18.2.100.0)
+Contains the data measures of the General data warehouse. Entity: Dw_Data_Measures (Introduced in version 18.2)
 
 ## Attributes
 
@@ -11,7 +11,7 @@ Contains the data measures of the General data warehouse. Entity: Dw_Data_Measur
 | ---- | ---- | --- |
 | [Code](Applications.DataWarehouse.DataMeasures.md#code) | string | Unique measure code. [Required] [Filter(eq;like)] [ORD] 
 | [GreenZoneSpreadPercent](Applications.DataWarehouse.DataMeasures.md#greenzonespreadpercent) | decimal | The plus or minus percent, by which the goal can be missed, but still considered achieved. [Required] [Default(0.2)] [Filter(eq)] 
-| [HorizontalTrendSpreadPercent](Applications.DataWarehouse.DataMeasures.md#horizontaltrendspreadpercent) | decimal | The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. [Required] [Default(0.01)] [Filter(eq)] 
+| [HorizontalTrend<br />SpreadPercent](Applications.DataWarehouse.DataMeasures.md#horizontaltrendspreadpercent) | decimal | The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. [Required] [Default(0.01)] [Filter(eq)] 
 | [Id](Applications.DataWarehouse.DataMeasures.md#id) | guid |  
 | [Name](Applications.DataWarehouse.DataMeasures.md#name) | string | The name of the measure (multilanguage). [Required] [Filter(eq;like)] 
 | [Notes](Applications.DataWarehouse.DataMeasures.md#notes) | string (nullable) | Notes for this DataMeasure. 
@@ -21,7 +21,7 @@ Contains the data measures of the General data warehouse. Entity: Dw_Data_Measur
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataMeasureGroup](Applications.DataWarehouse.DataMeasures.md#datameasuregroup) | [Applications.DataWarehouse.DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md) | The group to which this measure belongs. [Required] [Filter(multi eq)] |
+| [DataMeasureGroup](Applications.DataWarehouse.DataMeasures.md#datameasuregroup) | [DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md) | The group to which this measure belongs. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -100,7 +100,7 @@ _Default Value_: **Quarter**
 
 > The group to which this measure belongs. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.DataWarehouse.DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md)**  
+_Type_: **[DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

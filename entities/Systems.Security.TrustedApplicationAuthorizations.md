@@ -3,7 +3,7 @@ uid: Systems.Security.TrustedApplicationAuthorizations
 ---
 # Systems.Security.TrustedApplicationAuthorizations
 
-Authorization of a trusted application to access the data on behalf of a context user. Entity: Sec_Trusted_Application_Authorizations (Introduced in version 20.1.100.0)
+Authorization of a trusted application to access the data on behalf of a context user. Entity: Sec_Trusted_Application_Authorizations (Introduced in version 20.1)
 
 ## Attributes
 
@@ -12,7 +12,7 @@ Authorization of a trusted application to access the data on behalf of a context
 | [GrantTimeUtc](Systems.Security.TrustedApplicationAuthorizations.md#granttimeutc) | datetime | The time (in UTC) when the authorization was granted. [Required] [Default(NowUtc)] 
 | [Id](Systems.Security.TrustedApplicationAuthorizations.md#id) | guid |  
 | [IsRevoked](Systems.Security.TrustedApplicationAuthorizations.md#isrevoked) | boolean | Specifies whether the grant is explicitly revoked. [Required] [Default(false)] 
-| [Notes](Systems.Security.TrustedApplicationAuthorizations.md#notes) | string (nullable) | Notes for this TrustedApplicationAuthorization. 
+| [Notes](Systems.Security.TrustedApplicationAuthorizations.md#notes) | string (nullable) | Notes for this TrustedApplication<br />Authorization. 
 | [ValidFromUtc](Systems.Security.TrustedApplicationAuthorizations.md#validfromutc) | datetime (nullable) | The start of the validitiy of the authorization. null means that there is no restriction. 
 | [ValidUntilUtc](Systems.Security.TrustedApplicationAuthorizations.md#validuntilutc) | datetime (nullable) | The time (in UTC) when the grant expires. null means that there is no time restriction. 
 
@@ -20,9 +20,9 @@ Authorization of a trusted application to access the data on behalf of a context
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContextUser](Systems.Security.TrustedApplicationAuthorizations.md#contextuser) | [Systems.Security.Users](Systems.Security.Users.md) | The user, whose permissions are granted to the application. [Required] [Filter(multi eq)] |
-| [GrantingUser](Systems.Security.TrustedApplicationAuthorizations.md#grantinguser) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who authorized the application. [Required] [Filter(multi eq)] |
-| [TrustedApplication](Systems.Security.TrustedApplicationAuthorizations.md#trustedapplication) | [Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md) | The application, which is authorized. [Required] [Filter(multi eq)] [Owner] |
+| [ContextUser](Systems.Security.TrustedApplicationAuthorizations.md#contextuser) | [Users](Systems.Security.Users.md) | The user, whose permissions are granted to the application. [Required] [Filter(multi eq)] |
+| [GrantingUser](Systems.Security.TrustedApplicationAuthorizations.md#grantinguser) | [Users](Systems.Security.Users.md) | The user, who authorized the application. [Required] [Filter(multi eq)] |
+| [TrustedApplication](Systems.Security.TrustedApplicationAuthorizations.md#trustedapplication) | [TrustedApplications](Systems.Security.TrustedApplications.md) | The application, which is authorized. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -82,21 +82,21 @@ _Supports Order By_: **False**
 
 > The user, whose permissions are granted to the application. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### GrantingUser
 
 > The user, who authorized the application. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrustedApplication
 
 > The application, which is authorized. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md)**  
+_Type_: **[TrustedApplications](Systems.Security.TrustedApplications.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

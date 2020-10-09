@@ -3,7 +3,7 @@ uid: Communities.SocialGroups
 ---
 # Communities.SocialGroups
 
-Represents a group of users, sharing interest in the group topic. Entity: Cmm_Social_Groups (Introduced in version 20.1.100.0)
+Represents a group of users, sharing interest in the group topic. Entity: Cmm_Social_Groups (Introduced in version 20.1)
 
 ## Attributes
 
@@ -18,7 +18,7 @@ Represents a group of users, sharing interest in the group topic. Entity: Cmm_So
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Members | [Communities.SocialGroupMembers](Communities.SocialGroupMembers.md) | List of [SocialGroupMember](Communities.SocialGroupMembers.md) child objects, based on the [Communities.SocialGroupMember.SocialGroup](Communities.SocialGroupMembers.md#socialgroup) back reference 
+| Members | [SocialGroupMembers](Communities.SocialGroupMembers.md) | List of [SocialGroupMember](Communities.SocialGroupMembers.md) child objects, based on the [Communities.SocialGroupMember.SocialGroup](Communities.SocialGroupMembers.md#socialgroup) back reference 
 
 
 ## Attribute Details

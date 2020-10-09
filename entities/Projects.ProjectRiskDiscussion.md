@@ -18,8 +18,8 @@ Contains discussions on project risks. Entity: Prj_Project_Risk_Discussion
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContributedByUser](Projects.ProjectRiskDiscussion.md#contributedbyuser) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who contributed (wrote) the message. [Required] [Filter(multi eq)] [ReadOnly] |
-| [ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) | [Projects.ProjectRisks](Projects.ProjectRisks.md) | The [ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) to which this ProjectRiskDiscussion belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ContributedByUser](Projects.ProjectRiskDiscussion.md#contributedbyuser) | [Users](Systems.Security.Users.md) | The user, who contributed (wrote) the message. [Required] [Filter(multi eq)] [ReadOnly] |
+| [ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) | [ProjectRisks](Projects.ProjectRisks.md) | The [ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) to which this ProjectRiskDiscussion belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -62,14 +62,14 @@ _Supports Order By_: **False**
 
 > The user, who contributed (wrote) the message. [Required] [Filter(multi eq)] [ReadOnly]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectRisk
 
 > The [ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) to which this ProjectRiskDiscussion belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Projects.ProjectRisks](Projects.ProjectRisks.md)**  
+_Type_: **[ProjectRisks](Projects.ProjectRisks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

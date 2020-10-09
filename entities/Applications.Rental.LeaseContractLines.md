@@ -20,14 +20,14 @@ The detail lines of rental contracts. Each line contains rental conditions for o
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LeaseContract](Applications.Rental.LeaseContractLines.md#leasecontract) | [Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md) | The [LeaseContract](Applications.Rental.LeaseContractLines.md#leasecontract) to which this LeaseContractLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [RentalAsset](Applications.Rental.LeaseContractLines.md#rentalasset) | [Applications.Rental.Assets](Applications.Rental.Assets.md) | The asset which is rented with the current contract. [Required] [Filter(multi eq)] |
+| [LeaseContract](Applications.Rental.LeaseContractLines.md#leasecontract) | [LeaseContracts](Applications.Rental.LeaseContracts.md) | The [LeaseContract](Applications.Rental.LeaseContractLines.md#leasecontract) to which this LeaseContractLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [RentalAsset](Applications.Rental.LeaseContractLines.md#rentalasset) | [Assets](Applications.Rental.Assets.md) | The asset which is rented with the current contract. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Consumables | [Applications.Rental.LeaseContractLineConsumables](Applications.Rental.LeaseContractLineConsumables.md) | List of [LeaseContractLineConsumable](Applications.Rental.LeaseContractLineConsumables.md) child objects, based on the [Applications.Rental.LeaseContractLineConsumable.LeaseLine](Applications.Rental.LeaseContractLineConsumables.md#leaseline) back reference 
+| Consumables | [LeaseContractLineConsumables](Applications.Rental.LeaseContractLineConsumables.md) | List of [LeaseContract<br />LineConsumable](Applications.Rental.LeaseContractLine<br />Consumables.md) child objects, based on the [Applications.Rental.LeaseContractLine<br />Consumable.LeaseLine](Applications.Rental.LeaseContractLine<br />Consumables.md#leaseline) back  
 
 
 ## Attribute Details
@@ -68,10 +68,10 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.LeaseContract.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.LeaseContract.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.LeaseContract.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.LeaseContract.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### LineNotes
 
 > Notes for this line.
@@ -100,14 +100,14 @@ _Front-End Recalc Expressions:_
 
 > The [LeaseContract](Applications.Rental.LeaseContractLines.md#leasecontract) to which this LeaseContractLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md)**  
+_Type_: **[LeaseContracts](Applications.Rental.LeaseContracts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RentalAsset
 
 > The asset which is rented with the current contract. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Rental.Assets](Applications.Rental.Assets.md)**  
+_Type_: **[Assets](Applications.Rental.Assets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

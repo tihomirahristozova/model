@@ -18,11 +18,11 @@ Contains the serviceable objects. The service objects can be covered by service 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.Service.ServiceObjects.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this ServiceObject applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
-| [Product](Applications.Service.ServiceObjects.md#product) | [General.Products.Products](General.Products.Products.md) (nullable) | When not-null identifies the product, from which the service object was created. [Filter(multi eq)] |
-| [SerialNumberObj](Applications.Service.ServiceObjects.md#serialnumberobj) | [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. [Filter(multi eq)] |
-| [ServicedProduct](Applications.Service.ServiceObjects.md#servicedproduct) | [General.Products.Products](General.Products.Products.md) (nullable) | The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. [Filter(multi eq)] |
-| [ServiceObjectType](Applications.Service.ServiceObjects.md#serviceobjecttype) | [Applications.Service.ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable) | When not null specifies the type of the service object. [Filter(multi eq)] |
+| [EnterpriseCompany](Applications.Service.ServiceObjects.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this ServiceObject applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [Product](Applications.Service.ServiceObjects.md#product) | [Products](General.Products.Products.md) (nullable) | When not-null identifies the product, from which the service object was created. [Filter(multi eq)] |
+| [SerialNumberObj](Applications.Service.ServiceObjects.md#serialnumberobj) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. [Filter(multi eq)] |
+| [ServicedProduct](Applications.Service.ServiceObjects.md#servicedproduct) | [Products](General.Products.Products.md) (nullable) | The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. [Filter(multi eq)] |
+| [ServiceObjectType](Applications.Service.ServiceObjects.md#serviceobjecttype) | [ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable) | When not null specifies the type of the service object. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -60,7 +60,7 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.SerialNumberObj != null), null, obj.SerialNumber)`
+`IIF( ( obj.SerialNumberObj != null), null, obj.SerialNumber)`
 
 ## Reference Details
 
@@ -68,37 +68,37 @@ _Front-End Recalc Expressions:_
 
 > The Enterprise Company to which this ServiceObject applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > When not-null identifies the product, from which the service object was created. [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md) (nullable)**  
+_Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumberObj
 
 > Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.SerialNumber != null), null, obj.SerialNumberObj)`
+`IIF( ( obj.SerialNumber != null), null, obj.SerialNumberObj)`
 ### ServicedProduct
 
 > The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md) (nullable)**  
+_Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceObjectType
 
 > When not null specifies the type of the service object. [Filter(multi eq)]
 
-_Type_: **[Applications.Service.ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable)**  
+_Type_: **[ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

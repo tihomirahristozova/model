@@ -16,7 +16,7 @@ Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_O
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Logistics.Inventory.TransferOrdersOptions.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type, for which these options apply. [Required] [Filter(multi eq)] |
+| [DocumentType](Logistics.Inventory.TransferOrdersOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, for which these options apply. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -43,7 +43,7 @@ _Default Value_: **NewGuid**
 
 > The document type, for which these options apply. [Required] [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -18,8 +18,8 @@ Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ManagerPerson](Crm.Distribution.SalesPersonGroups.md#managerperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The manager of the group. null when there is no manager. [Filter(multi eq)] |
-| [Parent](Crm.Distribution.SalesPersonGroups.md#parent) | [Crm.Distribution.SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md) (nullable) | The parent sales person group in the hierarchy. [Filter(multi eq)] |
+| [ManagerPerson](Crm.Distribution.SalesPersonGroups.md#managerperson) | [Persons](General.Contacts.Persons.md) (nullable) | The manager of the group. null when there is no manager. [Filter(multi eq)] |
+| [Parent](Crm.Distribution.SalesPersonGroups.md#parent) | [SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md) (nullable) | The parent sales person group in the hierarchy. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -61,14 +61,14 @@ _Supports Order By_: **False**
 
 > The manager of the group. null when there is no manager. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
 > The parent sales person group in the hierarchy. [Filter(multi eq)]
 
-_Type_: **[Crm.Distribution.SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md) (nullable)**  
+_Type_: **[SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -18,7 +18,7 @@ The various roles, which the users can play. Entity: Wf_Roles
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Users | [Systems.Workflow.RoleUsers](Systems.Workflow.RoleUsers.md) | List of [RoleUser](Systems.Workflow.RoleUsers.md) child objects, based on the [Systems.Workflow.RoleUser.Role](Systems.Workflow.RoleUsers.md#role) back reference 
+| Users | [RoleUsers](Systems.Workflow.RoleUsers.md) | List of [RoleUser](Systems.Workflow.RoleUsers.md) child objects, based on the [Systems.Workflow.RoleUser.Role](Systems.Workflow.RoleUsers.md#role) back reference 
 
 
 ## Attribute Details

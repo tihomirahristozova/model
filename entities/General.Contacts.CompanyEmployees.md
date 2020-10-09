@@ -19,9 +19,9 @@ Contains the company employee contracts. Entity: Cm_Company_Employees
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Company](General.Contacts.CompanyEmployees.md#company) | [General.Contacts.Companies](General.Contacts.Companies.md) | The company for which this employee works. [Required] [Filter(multi eq)] |
-| [CompanyDepartment](General.Contacts.CompanyEmployees.md#companydepartment) | [General.Contacts.CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The department in which this employee is working. null means this information is unknown. [Filter(multi eq)] |
-| [Person](General.Contacts.CompanyEmployees.md#person) | [General.Contacts.Persons](General.Contacts.Persons.md) | The personal data of the employee. [Required] [Filter(multi eq)] [Owner] |
+| [Company](General.Contacts.CompanyEmployees.md#company) | [Companies](General.Contacts.Companies.md) | The company for which this employee works. [Required] [Filter(multi eq)] |
+| [CompanyDepartment](General.Contacts.CompanyEmployees.md#companydepartment) | [CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The department in which this employee is working. null means this information is unknown. [Filter(multi eq)] |
+| [Person](General.Contacts.CompanyEmployees.md#person) | [Persons](General.Contacts.Persons.md) | The personal data of the employee. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -71,21 +71,21 @@ _Supports Order By_: **False**
 
 > The company for which this employee works. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Companies](General.Contacts.Companies.md)**  
+_Type_: **[Companies](General.Contacts.Companies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CompanyDepartment
 
 > The department in which this employee is working. null means this information is unknown. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable)**  
+_Type_: **[CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
 > The personal data of the employee. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md)**  
+_Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

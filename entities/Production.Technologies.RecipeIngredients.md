@@ -24,12 +24,12 @@ Contains the materials of a recipe that make up the product. Entity: Prd_Recipe_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Material](Production.Technologies.RecipeIngredients.md#material) | [General.Products.Products](General.Products.Products.md) | The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)] |
-| [Operation](Production.Technologies.RecipeIngredients.md#operation) | [Production.Resources.Operations](Production.Resources.Operations.md) (nullable) | Specifies for which operation this ingredient will be used. [Filter(multi eq)] |
-| [PrincipalRecipeIngredient](Production.Technologies.RecipeIngredients.md#principalrecipeingredient) | [Production.Technologies.PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) (nullable) | The principal recipe ingredient which was used to create this recipe ingredient. null means that this ingredient is standalone, not created with principal recipe ingredient. [Filter(multi eq)] |
-| [Recipe](Production.Technologies.RecipeIngredients.md#recipe) | [Production.Technologies.Recipes](Production.Technologies.Recipes.md) | The [Recipe](Production.Technologies.RecipeIngredients.md#recipe) to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Store](Production.Technologies.RecipeIngredients.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which to retrieve the material. [Filter(multi eq)] |
-| [UsageUnit](Production.Technologies.RecipeIngredients.md#usageunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Usage_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)] |
+| [Material](Production.Technologies.RecipeIngredients.md#material) | [Products](General.Products.Products.md) | The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)] |
+| [Operation](Production.Technologies.RecipeIngredients.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Specifies for which operation this ingredient will be used. [Filter(multi eq)] |
+| [PrincipalRecipeIngredient](Production.Technologies.RecipeIngredients.md#principalrecipeingredient) | [PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) (nullable) | The principal recipe ingredient which was used to create this recipe ingredient. null means that this ingredient is standalone, not created with principal recipe ingredient. [Filter(multi eq)] |
+| [Recipe](Production.Technologies.RecipeIngredients.md#recipe) | [Recipes](Production.Technologies.Recipes.md) | The [Recipe](Production.Technologies.RecipeIngredients.md#recipe) to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Store](Production.Technologies.RecipeIngredients.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which to retrieve the material. [Filter(multi eq)] |
+| [UsageUnit](Production.Technologies.RecipeIngredients.md#usageunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Usage_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -67,10 +67,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.Recipe.Ingredients.Select(c => c.LineOrd).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Recipe.Ingredients.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.Recipe.Ingredients.Select(c => c.LineOrd).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Recipe.Ingredients.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
 > Notes for this RecipeIngredient.
@@ -131,42 +131,42 @@ _Default Value_: **Constant**
 
 > The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Operation
 
 > Specifies for which operation this ingredient will be used. [Filter(multi eq)]
 
-_Type_: **[Production.Resources.Operations](Production.Resources.Operations.md) (nullable)**  
+_Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrincipalRecipeIngredient
 
 > The principal recipe ingredient which was used to create this recipe ingredient. null means that this ingredient is standalone, not created with principal recipe ingredient. [Filter(multi eq)]
 
-_Type_: **[Production.Technologies.PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) (nullable)**  
+_Type_: **[PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Recipe
 
 > The [Recipe](Production.Technologies.RecipeIngredients.md#recipe) to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Production.Technologies.Recipes](Production.Technologies.Recipes.md)**  
+_Type_: **[Recipes](Production.Technologies.Recipes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
 > The store from which to retrieve the material. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UsageUnit
 
 > The measurement unit of Usage_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

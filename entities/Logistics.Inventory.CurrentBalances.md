@@ -18,13 +18,13 @@ The current inventory balances, grouped by storage key (Store, Product, Lot, etc
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Logistics.Inventory.CurrentBalances.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. [Required] [Filter(multi eq)] |
-| [Lot](Logistics.Inventory.CurrentBalances.md#lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. [Filter(multi eq)] |
-| [Product](Logistics.Inventory.CurrentBalances.md#product) | [General.Products.Products](General.Products.Products.md) | The item that was received/issued. [Required] [Filter(multi eq)] |
-| [ProductVariant](Logistics.Inventory.CurrentBalances.md#productvariant) | [General.ProductVariants](General.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. [Filter(multi eq)] |
-| [SerialNumber](Logistics.Inventory.CurrentBalances.md#serialnumber) | [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Item serial number for serialized items. null for non-serialized items. [Filter(multi eq)] |
-| [Store](Logistics.Inventory.CurrentBalances.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The store from which the goods are received or issued. [Required] [Filter(multi eq)] |
-| [StoreBin](Logistics.Inventory.CurrentBalances.md#storebin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | Store bin, from/to which the transaction was performed. [Filter(multi eq)] |
+| [EnterpriseCompany](Logistics.Inventory.CurrentBalances.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. [Required] [Filter(multi eq)] |
+| [Lot](Logistics.Inventory.CurrentBalances.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. [Filter(multi eq)] |
+| [Product](Logistics.Inventory.CurrentBalances.md#product) | [Products](General.Products.Products.md) | The item that was received/issued. [Required] [Filter(multi eq)] |
+| [ProductVariant](Logistics.Inventory.CurrentBalances.md#productvariant) | [ProductVariants](General.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. [Filter(multi eq)] |
+| [SerialNumber](Logistics.Inventory.CurrentBalances.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Item serial number for serialized items. null for non-serialized items. [Filter(multi eq)] |
+| [Store](Logistics.Inventory.CurrentBalances.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store from which the goods are received or issued. [Required] [Filter(multi eq)] |
+| [StoreBin](Logistics.Inventory.CurrentBalances.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | Store bin, from/to which the transaction was performed. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -68,49 +68,49 @@ _Supports Order By_: **False**
 
 > The enterprise company which issued the document. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 
 > If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The item that was received/issued. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductVariant
 
 > If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]
 
-_Type_: **[General.ProductVariants](General.ProductVariants.md) (nullable)**  
+_Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
 
 > Item serial number for serialized items. null for non-serialized items. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
 > The store from which the goods are received or issued. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreBin
 
 > Store bin, from/to which the transaction was performed. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -27,10 +27,10 @@ Contains data about binding of printout layouts to specific user-defined documen
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](General.Printouts.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type to which this printout layout is bound. [Required] [Filter(multi eq)] [Owner] |
-| [EnterpriseCompany](General.Printouts.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Printout applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
-| [PrintoutLayout](General.Printouts.md#printoutlayout) | [General.PrintoutLayouts](General.PrintoutLayouts.md) | The printout layout, that is bound to the document type. [Required] [Filter(multi eq)] |
-| [Report](General.Printouts.md#report) | [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md) (nullable) | If not null points to a custom report that indicates which data will be loaded in the printout. [Filter(multi eq)] |
+| [DocumentType](General.Printouts.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type to which this printout layout is bound. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](General.Printouts.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Printout applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [PrintoutLayout](General.Printouts.md#printoutlayout) | [PrintoutLayouts](General.PrintoutLayouts.md) | The printout layout, that is bound to the document type. [Required] [Filter(multi eq)] |
+| [Report](General.Printouts.md#report) | [DataSources](Systems.Reporting.DataSources.md) (nullable) | If not null points to a custom report that indicates which data will be loaded in the printout. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -163,28 +163,28 @@ _Default Value_: **0**
 
 > The document type to which this printout layout is bound. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The Enterprise Company to which this Printout applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrintoutLayout
 
 > The printout layout, that is bound to the document type. [Required] [Filter(multi eq)]
 
-_Type_: **[General.PrintoutLayouts](General.PrintoutLayouts.md)**  
+_Type_: **[PrintoutLayouts](General.PrintoutLayouts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Report
 
 > If not null points to a custom report that indicates which data will be loaded in the printout. [Filter(multi eq)]
 
-_Type_: **[Systems.Reporting.DataSources](Systems.Reporting.DataSources.md) (nullable)**  
+_Type_: **[DataSources](Systems.Reporting.DataSources.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -18,7 +18,7 @@ Groups of resource types. Entity: Prd_Resource_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Resources | [Production.Resources.Resources](Production.Resources.Resources.md) | List of [Resource](Production.Resources.Resources.md) child objects, based on the [Production.Resources.Resource.ResourceGroup](Production.Resources.Resources.md#resourcegroup) back reference 
+| Resources | [Resources](Production.Resources.Resources.md) | List of [Resource](Production.Resources.Resources.md) child objects, based on the [Production.Resources.Resource.ResourceGroup](Production.Resources.Resources.md#resourcegroup) back reference 
 
 
 ## Attribute Details

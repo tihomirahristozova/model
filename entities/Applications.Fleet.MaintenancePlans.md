@@ -13,7 +13,7 @@ Defines the periodic maintenance plans and the conditions for performing the nex
 | [CheckMonths](Applications.Fleet.MaintenancePlans.md#checkmonths) | int32 (nullable) | When not null, specifies the number of months between maintenances. 
 | [Code](Applications.Fleet.MaintenancePlans.md#code) | string | The unique code of the MaintenancePlan. [Required] 
 | [Id](Applications.Fleet.MaintenancePlans.md#id) | guid |  
-| [IsActive](Applications.Fleet.MaintenancePlans.md#isactive) | boolean | True if the plan is active and can be selected from drop-downs. [Required] [Default(true)] (Introduced in version 18.2.100.0) 
+| [IsActive](Applications.Fleet.MaintenancePlans.md#isactive) | boolean | True if the plan is active and can be selected from drop-downs. [Required] [Default(true)] (Introduced in version 18.2) 
 | [MileageKm](Applications.Fleet.MaintenancePlans.md#mileagekm) | int32 (nullable) | When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur. 
 | [Name](Applications.Fleet.MaintenancePlans.md#name) | string | Maintenance plan name (Multilanguage). [Required] 
 | [Notes](Applications.Fleet.MaintenancePlans.md#notes) | string (nullable) | Notes for this MaintenancePlan. 
@@ -54,7 +54,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> True if the plan is active and can be selected from drop-downs. [Required] [Default(true)] (Introduced in version 18.2.100.0)
+> True if the plan is active and can be selected from drop-downs. [Required] [Default(true)] (Introduced in version 18.2)
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  

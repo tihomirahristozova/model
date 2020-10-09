@@ -22,12 +22,12 @@ Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Ta
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BonusProgram](Crm.Distribution.SalesPersonTargetLines.md#bonusprogram) | [Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md) (nullable) | Bonus program Id when the target type is BONUS, null otherwise. [Filter(multi eq)] |
-| [ProductGroup](Crm.Distribution.SalesPersonTargetLines.md#productgroup) | [General.Products.ProductGroups](General.Products.ProductGroups.md) (nullable) | Product group for which the target is defined. [Filter(multi eq)] |
-| [PromotionalPackage](Crm.Distribution.SalesPersonTargetLines.md#promotionalpackage) | [Crm.PromotionalPackages](Crm.PromotionalPackages.md) (nullable) | Promotional Package Id when the target type is PROMO, null otherwise. [Filter(multi eq)] |
-| [SalesPerson](Crm.Distribution.SalesPersonTargetLines.md#salesperson) | [Crm.SalesPersons](Crm.SalesPersons.md) | Sales person to whom the target is assigned. [Required] [Filter(multi eq)] |
-| [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#salespersontarget) | [Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md) | The [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#salespersontarget) to which this SalesPersonTargetLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [TargetAmountCurrency](Crm.Distribution.SalesPersonTargetLines.md#targetamountcurrency) | [General.Currencies](General.Currencies.md) (nullable) | Deprecated - use currency in document header. [Filter(multi eq)] |
+| [BonusProgram](Crm.Distribution.SalesPersonTargetLines.md#bonusprogram) | [BonusPrograms](Crm.Marketing.BonusPrograms.md) (nullable) | Bonus program Id when the target type is BONUS, null otherwise. [Filter(multi eq)] |
+| [ProductGroup](Crm.Distribution.SalesPersonTargetLines.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | Product group for which the target is defined. [Filter(multi eq)] |
+| [PromotionalPackage](Crm.Distribution.SalesPersonTargetLines.md#promotionalpackage) | [PromotionalPackages](Crm.PromotionalPackages.md) (nullable) | Promotional Package Id when the target type is PROMO, null otherwise. [Filter(multi eq)] |
+| [SalesPerson](Crm.Distribution.SalesPersonTargetLines.md#salesperson) | [SalesPersons](Crm.SalesPersons.md) | Sales person to whom the target is assigned. [Required] [Filter(multi eq)] |
+| [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#salespersontarget) | [SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md) | The [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#salespersontarget) to which this SalesPersonTargetLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [TargetAmountCurrency](Crm.Distribution.SalesPersonTargetLines.md#targetamountcurrency) | [Currencies](General.Currencies.md) (nullable) | Deprecated - use currency in document header. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -81,8 +81,8 @@ _Allowed Values (Crm.Distribution.SalesPersonTargetLinesRepository.TargetType En
 | Value | Description |
 | ---- | --- |
 | SalesAmount | SalesAmount value. Stored as 'SALES'. <br /> _Database Value:_ 'SALES' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'SalesAmount' |
-| NumberOfAppliedBonusPrograms | NumberOfAppliedBonusPrograms value. Stored as 'BONUS'. <br /> _Database Value:_ 'BONUS' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'NumberOfAppliedBonusPrograms' |
-| NumberOfPromotionalPackages | NumberOfPromotionalPackages value. Stored as 'PROMO'. <br /> _Database Value:_ 'PROMO' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'NumberOfPromotionalPackages' |
+| NumberOfApplied<br />BonusPrograms | NumberOfApplied<br />BonusPrograms value. Stored as 'BONUS'. <br /> _Database Value:_ 'BONUS' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'NumberOfApplied<br />BonusPrograms' |
+| NumberOfPromotional<br />Packages | NumberOfPromotional<br />Packages value. Stored as 'PROMO'. <br /> _Database Value:_ 'PROMO' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'NumberOfPromotional<br />Packages' |
 | LocationsCount | LocationsCount value. Stored as 'LOCNT'. <br /> _Database Value:_ 'LOCNT' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'LocationsCount' |
 
 _Supported Filters_: **Equals, EqualsIn**  
@@ -114,14 +114,14 @@ _Default Value_: **1**
 
 > Bonus program Id when the target type is BONUS, null otherwise. [Filter(multi eq)]
 
-_Type_: **[Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md) (nullable)**  
+_Type_: **[BonusPrograms](Crm.Marketing.BonusPrograms.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup
 
 > Product group for which the target is defined. [Filter(multi eq)]
 
-_Type_: **[General.Products.ProductGroups](General.Products.ProductGroups.md) (nullable)**  
+_Type_: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -133,14 +133,14 @@ _Front-End Recalc Expressions:_
 
 > Promotional Package Id when the target type is PROMO, null otherwise. [Filter(multi eq)]
 
-_Type_: **[Crm.PromotionalPackages](Crm.PromotionalPackages.md) (nullable)**  
+_Type_: **[PromotionalPackages](Crm.PromotionalPackages.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesPerson
 
 > Sales person to whom the target is assigned. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.SalesPersons](Crm.SalesPersons.md)**  
+_Type_: **[SalesPersons](Crm.SalesPersons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -152,14 +152,14 @@ _Front-End Recalc Expressions:_
 
 > The [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#salespersontarget) to which this SalesPersonTargetLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)**  
+_Type_: **[SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TargetAmountCurrency
 
 > Deprecated - use currency in document header. [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
+_Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  

@@ -3,7 +3,7 @@ uid: Systems.Core.AuditLogEntries
 ---
 # Systems.Core.AuditLogEntries
 
-Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log_Entries (Introduced in version 18.2.100.0)
+Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log_Entries (Introduced in version 18.2)
 
 ## Attributes
 
@@ -23,8 +23,8 @@ Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PersonalDataProcess](Systems.Core.AuditLogEntries.md#personaldataprocess) | [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. [Filter(multi eq)] |
-| [User](Systems.Core.AuditLogEntries.md#user) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user account under which the event has occurred. Null only for events which are not user-specific. [Filter(multi eq)] |
+| [PersonalDataProcess](Systems.Core.AuditLogEntries.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. [Filter(multi eq)] |
+| [User](Systems.Core.AuditLogEntries.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user account under which the event has occurred. Null only for events which are not user-specific. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -135,14 +135,14 @@ _Default Value_: **NewGuid**
 
 > The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. [Filter(multi eq)]
 
-_Type_: **[Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
+_Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
 > The user account under which the event has occurred. Null only for events which are not user-specific. [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

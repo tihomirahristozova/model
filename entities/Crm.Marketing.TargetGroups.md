@@ -18,7 +18,7 @@ Marketing target group, containing a fixed list of parties. Entity: Crm_Target_G
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Members | [Crm.Marketing.TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.TargetGroup](Crm.Marketing.TargetGroupMembers.md#targetgroup) back reference 
+| Members | [TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.TargetGroup](Crm.Marketing.TargetGroupMembers.md#targetgroup) back reference 
 
 
 ## Attribute Details

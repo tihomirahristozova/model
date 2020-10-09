@@ -11,7 +11,7 @@ Represent an expression within the calculation of a calculated attribute. Entity
 | ---- | ---- | --- |
 | [ExpressionNo](Systems.Bpm.CalculatedAttributeExpressions.md#expressionno) | int32 | Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. [Required] 
 | [Id](Systems.Bpm.CalculatedAttributeExpressions.md#id) | guid |  
-| [Notes](Systems.Bpm.CalculatedAttributeExpressions.md#notes) | string (nullable) | Notes for this CalculatedAttributeExpression. 
+| [Notes](Systems.Bpm.CalculatedAttributeExpressions.md#notes) | string (nullable) | Notes for this CalculatedAttribute<br />Expression. 
 | [Operator](Systems.Bpm.CalculatedAttributeExpressions.md#operator) | [ExpressionOperator](Systems.Bpm.CalculatedAttributeExpressions.md#operator) | The exprssion operator. Available operators are limited to a pre-selected list of operators. [Required] 
 | [Parameter1Type](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1type) | [ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1type) (nullable) | The type of the parameter specifies how to obtain the parameter value. 
 | [Parameter1Value](Systems.Bpm.CalculatedAttributeExpressions.md#parameter1value) | string (nullable) | The actual value of parameter 1. 
@@ -24,7 +24,7 @@ Represent an expression within the calculation of a calculated attribute. Entity
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalculatedAttribute](Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) | [Systems.Bpm.CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md) | The [CalculatedAttribute](Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) to which this CalculatedAttributeExpression belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CalculatedAttribute](Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) | [CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md) | The [CalculatedAttribute](Systems.Bpm.CalculatedAttribute<br />Expressions.md#calculatedattribute) to which this CalculatedAttribute<br />Expression belongs. [Required] [Filter(multi eq)]  |
 
 
 ## Attribute Details
@@ -38,10 +38,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.CalculatedAttribute.Expressions.Select(c => c.ExpressionNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.CalculatedAttribute.Expressions.Select( c => c.ExpressionNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.CalculatedAttribute.Expressions.Select(c => c.ExpressionNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.CalculatedAttribute.Expressions.Select( c => c.ExpressionNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Id
 
 _Type_: **guid**  
@@ -212,7 +212,7 @@ _Supports Order By_: **False**
 
 > The [CalculatedAttribute](Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) to which this CalculatedAttributeExpression belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Bpm.CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)**  
+_Type_: **[CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

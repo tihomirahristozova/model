@@ -28,15 +28,15 @@ Bulk payment order document line. Each line usually creates one payment order. E
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BulkPaymentOrder](Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) | [Finance.Payments.BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md) | The [BulkPaymentOrder](Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) to which this BulkPaymentOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [InvoiceAmountCurrency](Finance.Payments.BulkPaymentOrderLines.md#invoiceamountcurrency) | [General.Currencies](General.Currencies.md) (nullable) | The currency of Invoice Amount. [Filter(multi eq)] |
-| [LocationParty](Finance.Payments.BulkPaymentOrderLines.md#locationparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Location or sub-party of the Party_Id. [Filter(multi eq)] |
-| [Party](Finance.Payments.BulkPaymentOrderLines.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party which is to pay or receive the amount. [Required] [Filter(multi eq)] |
-| [PaymentAccount](Finance.Payments.BulkPaymentOrderLines.md#paymentaccount) | [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, specifies the payment account that is expected or will be used by the payment transaction. [Filter(multi eq)] |
-| [PaymentType](Finance.Payments.BulkPaymentOrderLines.md#paymenttype) | [Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Expected payment type. When null, there is no expectation for payment type. [Filter(multi eq)] |
-| [RefDocumentType](Finance.Payments.BulkPaymentOrderLines.md#refdocumenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The type of the document which is the basis for the payment. [Required] [Filter(multi eq)] |
-| [RefInvoiceDocumentType](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumenttype) | [General.DocumentTypes](General.DocumentTypes.md) (nullable) | The document type of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)] |
-| [TotalAmountCurrency](Finance.Payments.BulkPaymentOrderLines.md#totalamountcurrency) | [General.Currencies](General.Currencies.md) | The currency of Total Amount. [Required] [Filter(multi eq)] |
+| [BulkPaymentOrder](Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) | [BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md) | The [BulkPaymentOrder](Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) to which this BulkPaymentOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [InvoiceAmountCurrency](Finance.Payments.BulkPaymentOrderLines.md#invoiceamountcurrency) | [Currencies](General.Currencies.md) (nullable) | The currency of Invoice Amount. [Filter(multi eq)] |
+| [LocationParty](Finance.Payments.BulkPaymentOrderLines.md#locationparty) | [Parties](General.Contacts.Parties.md) (nullable) | Location or sub-party of the Party_Id. [Filter(multi eq)] |
+| [Party](Finance.Payments.BulkPaymentOrderLines.md#party) | [Parties](General.Contacts.Parties.md) | The party which is to pay or receive the amount. [Required] [Filter(multi eq)] |
+| [PaymentAccount](Finance.Payments.BulkPaymentOrderLines.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, specifies the payment account that is expected or will be used by the payment transaction. [Filter(multi eq)] |
+| [PaymentType](Finance.Payments.BulkPaymentOrderLines.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Expected payment type. When null, there is no expectation for payment type. [Filter(multi eq)] |
+| [RefDocumentType](Finance.Payments.BulkPaymentOrderLines.md#refdocumenttype) | [DocumentTypes](General.DocumentTypes.md) | The type of the document which is the basis for the payment. [Required] [Filter(multi eq)] |
+| [RefInvoiceDocumentType](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumenttype) | [DocumentTypes](General.DocumentTypes.md) (nullable) | The document type of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)] |
+| [TotalAmountCurrency](Finance.Payments.BulkPaymentOrderLines.md#totalamountcurrency) | [Currencies](General.Currencies.md) | The currency of Total Amount. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -177,28 +177,28 @@ _Default Value_: **Constant**
 
 > The [BulkPaymentOrder](Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) to which this BulkPaymentOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Payments.BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)**  
+_Type_: **[BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### InvoiceAmountCurrency
 
 > The currency of Invoice Amount. [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
+_Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LocationParty
 
 > Location or sub-party of the Party_Id. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
 > The party which is to pay or receive the amount. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -207,37 +207,37 @@ _Front-End Recalc Expressions:_
 
 > When not null, specifies the payment account that is expected or will be used by the payment transaction. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.PaymentType.GetDefaultPaymentAccount().IfNullThen(obj.PaymentAccount)`
+`obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)`
 ### PaymentType
 
 > Expected payment type. When null, there is no expectation for payment type. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefDocumentType
 
 > The type of the document which is the basis for the payment. [Required] [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefInvoiceDocumentType
 
 > The document type of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md) (nullable)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TotalAmountCurrency
 
 > The currency of Total Amount. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md)**  
+_Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

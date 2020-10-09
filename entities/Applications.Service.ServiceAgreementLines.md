@@ -20,9 +20,9 @@ Service agreement lines represent the individual serviced objects that are cover
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ServiceAgreement](Applications.Service.ServiceAgreementLines.md#serviceagreement) | [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md) | The [ServiceAgreement](Applications.Service.ServiceAgreementLines.md#serviceagreement) to which this ServiceAgreementLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ServiceObject](Applications.Service.ServiceAgreementLines.md#serviceobject) | [Applications.Service.ServiceObjects](Applications.Service.ServiceObjects.md) | The service object, which is covered by the current agreement. [Required] [Filter(multi eq)] |
-| [ServiceType](Applications.Service.ServiceAgreementLines.md#servicetype) | [Applications.Service.ServiceTypes](Applications.Service.ServiceTypes.md) | The type (level) of service that is agreed. [Required] [Filter(multi eq)] |
+| [ServiceAgreement](Applications.Service.ServiceAgreementLines.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The [ServiceAgreement](Applications.Service.ServiceAgreementLines.md#serviceagreement) to which this ServiceAgreementLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ServiceObject](Applications.Service.ServiceAgreementLines.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) | The service object, which is covered by the current agreement. [Required] [Filter(multi eq)] |
+| [ServiceType](Applications.Service.ServiceAgreementLines.md#servicetype) | [ServiceTypes](Applications.Service.ServiceTypes.md) | The type (level) of service that is agreed. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -50,10 +50,10 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.ServiceAgreement.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.ServiceAgreement.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.ServiceAgreement.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.ServiceAgreement.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### LineStartDateTime
 
 > The starting date and time of the agreement coverage for the current line. [Required] [Filter(ge;le)]
@@ -86,21 +86,21 @@ _Default Value_: **1**
 
 > The [ServiceAgreement](Applications.Service.ServiceAgreementLines.md#serviceagreement) to which this ServiceAgreementLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
+_Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceObject
 
 > The service object, which is covered by the current agreement. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Service.ServiceObjects](Applications.Service.ServiceObjects.md)**  
+_Type_: **[ServiceObjects](Applications.Service.ServiceObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceType
 
 > The type (level) of service that is agreed. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Service.ServiceTypes](Applications.Service.ServiceTypes.md)**  
+_Type_: **[ServiceTypes](Applications.Service.ServiceTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

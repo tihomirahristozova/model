@@ -3,7 +3,7 @@ uid: General.PartyLocationNumbers
 ---
 # General.PartyLocationNumbers
 
-Location numbers for a party. Depending on the partner with which we are doing an exchange, our location number might be different. Entity: Gen_Party_Location_Numbers (Introduced in version 19.1.100.0)
+Location numbers for a party. Depending on the partner with which we are doing an exchange, our location number might be different. Entity: Gen_Party_Location_Numbers (Introduced in version 19.1)
 
 ## Attributes
 
@@ -19,8 +19,8 @@ Location numbers for a party. Depending on the partner with which we are doing a
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PartnerParty](General.PartyLocationNumbers.md#partnerparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. null means that the location number is not dependent on the Partner Party. [Filter(multi eq)] |
-| [Party](General.PartyLocationNumbers.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party for which we are defining the location number. [Required] [Filter(multi eq)] [Owner] |
+| [PartnerParty](General.PartyLocationNumbers.md#partnerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. null means that the location number is not dependent on the Partner Party. [Filter(multi eq)] |
+| [Party](General.PartyLocationNumbers.md#party) | [Parties](General.Contacts.Parties.md) | The party for which we are defining the location number. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -80,14 +80,14 @@ _Default Value_: **0**
 
 > The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. null means that the location number is not dependent on the Partner Party. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
 > The party for which we are defining the location number. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

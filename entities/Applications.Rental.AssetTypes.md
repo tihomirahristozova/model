@@ -17,8 +17,8 @@ Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Ty
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| AssetTypeProperties | [Applications.Rental.AssetTypeProperties](Applications.Rental.AssetTypeProperties.md) | List of [AssetTypeProperty](Applications.Rental.AssetTypeProperties.md) child objects, based on the [Applications.Rental.AssetTypeProperty.RentalAssetType](Applications.Rental.AssetTypeProperties.md#rentalassettype) back reference 
-| Consumables | [Applications.Rental.AssetTypeConsumables](Applications.Rental.AssetTypeConsumables.md) | List of [AssetTypeConsumable](Applications.Rental.AssetTypeConsumables.md) child objects, based on the [Applications.Rental.AssetTypeConsumable.RentalAssetType](Applications.Rental.AssetTypeConsumables.md#rentalassettype) back reference 
+| AssetTypeProperties | [AssetTypeProperties](Applications.Rental.AssetTypeProperties.md) | List of [AssetTypeProperty](Applications.Rental.AssetTypeProperties.md) child objects, based on the [Applications.Rental.AssetTypeProperty.RentalAssetType](Applications.Rental.AssetTypeProperties.md#rentalassettype) back reference 
+| Consumables | [AssetTypeConsumables](Applications.Rental.AssetTypeConsumables.md) | List of [AssetTypeConsumable](Applications.Rental.AssetTypeConsumables.md) child objects, based on the [Applications.Rental.AssetTypeConsumable.RentalAssetType](Applications.Rental.AssetTypeConsumables.md#rentalassettype) back reference 
 
 
 ## Attribute Details

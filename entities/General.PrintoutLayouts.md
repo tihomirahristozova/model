@@ -21,13 +21,13 @@ Contains design layouts for document printouts. Entity: Gen_Printout_Layouts
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataSource](General.PrintoutLayouts.md#datasource) | [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md) (nullable) | The data source for the printout. [Filter(multi eq)] |
+| [DataSource](General.PrintoutLayouts.md#datasource) | [DataSources](Systems.Reporting.DataSources.md) (nullable) | The data source for the printout. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| DocumentPrintImages | [General.DocumentPrintImages](General.DocumentPrintImages.md) | List of [DocumentPrintImage](General.DocumentPrintImages.md) child objects, based on the [General.DocumentPrintImage.PrintoutLayout](General.DocumentPrintImages.md#printoutlayout) back reference 
+| DocumentPrintImages | [DocumentPrintImages](General.DocumentPrintImages.md) | List of [DocumentPrintImage](General.DocumentPrintImages.md) child objects, based on the [General.DocumentPrintImage.PrintoutLayout](General.DocumentPrintImages.md#printoutlayout) back reference 
 
 
 ## Attribute Details
@@ -93,7 +93,7 @@ _Supports Order By_: **False**
 
 > The data source for the printout. [Filter(multi eq)]
 
-_Type_: **[Systems.Reporting.DataSources](Systems.Reporting.DataSources.md) (nullable)**  
+_Type_: **[DataSources](Systems.Reporting.DataSources.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

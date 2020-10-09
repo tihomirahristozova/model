@@ -21,7 +21,7 @@ Hierarchical structure of the legally defined administrative regions. Administra
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Country](General.Geography.AdministrativeRegions.md#country) | [General.Geography.Countries](General.Geography.Countries.md) | Country of the territorial subdivision. [Required] [Filter(multi eq)] |
+| [Country](General.Geography.AdministrativeRegions.md#country) | [Countries](General.Geography.Countries.md) | Country of the territorial subdivision. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -87,7 +87,7 @@ _Supports Order By_: **False**
 
 > Country of the territorial subdivision. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Geography.Countries](General.Geography.Countries.md)**  
+_Type_: **[Countries](General.Geography.Countries.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

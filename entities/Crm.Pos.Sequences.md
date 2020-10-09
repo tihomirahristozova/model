@@ -3,7 +3,7 @@ uid: Crm.Pos.Sequences
 ---
 # Crm.Pos.Sequences
 
-Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequences (Introduced in version 19.1.100.0)
+Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequences (Introduced in version 19.1)
 
 ## Attributes
 
@@ -18,7 +18,7 @@ Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequ
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PosDevice](Crm.Pos.Sequences.md#posdevice) | [Crm.Pos.Devices](Crm.Pos.Devices.md) | The POS device, for which the sequence is defined. [Required] [Filter(multi eq)] |
+| [PosDevice](Crm.Pos.Sequences.md#posdevice) | [Devices](Crm.Pos.Devices.md) | The POS device, for which the sequence is defined. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 > The POS device, for which the sequence is defined. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.Pos.Devices](Crm.Pos.Devices.md)**  
+_Type_: **[Devices](Crm.Pos.Devices.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

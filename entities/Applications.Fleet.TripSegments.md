@@ -19,9 +19,9 @@ Represents the segments which comprise the route of the trips. Entity: Fleet_Tri
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndingMapPoint](Applications.Fleet.TripSegments.md#endingmappoint) | [General.Geography.MapPoints](General.Geography.MapPoints.md) | The ending geographical point of the route segment. [Required] [Filter(multi eq)] |
-| [StartingMapPoint](Applications.Fleet.TripSegments.md#startingmappoint) | [General.Geography.MapPoints](General.Geography.MapPoints.md) | The starting geographical point of the route segment. [Required] [Filter(multi eq)] |
-| [Trip](Applications.Fleet.TripSegments.md#trip) | [Applications.Fleet.Trips](Applications.Fleet.Trips.md) | The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner] |
+| [EndingMapPoint](Applications.Fleet.TripSegments.md#endingmappoint) | [MapPoints](General.Geography.MapPoints.md) | The ending geographical point of the route segment. [Required] [Filter(multi eq)] |
+| [StartingMapPoint](Applications.Fleet.TripSegments.md#startingmappoint) | [MapPoints](General.Geography.MapPoints.md) | The starting geographical point of the route segment. [Required] [Filter(multi eq)] |
+| [Trip](Applications.Fleet.TripSegments.md#trip) | [Trips](Applications.Fleet.Trips.md) | The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -71,21 +71,21 @@ _Supports Order By_: **False**
 
 > The ending geographical point of the route segment. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Geography.MapPoints](General.Geography.MapPoints.md)**  
+_Type_: **[MapPoints](General.Geography.MapPoints.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StartingMapPoint
 
 > The starting geographical point of the route segment. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Geography.MapPoints](General.Geography.MapPoints.md)**  
+_Type_: **[MapPoints](General.Geography.MapPoints.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Trip
 
 > The trip for which the segment is defined. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Fleet.Trips](Applications.Fleet.Trips.md)**  
+_Type_: **[Trips](Applications.Fleet.Trips.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

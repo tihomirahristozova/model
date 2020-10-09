@@ -17,10 +17,10 @@ Contains the consumables, which are sold accompanying asset rentals. Entity: Ren
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumableQuantityUnit](Applications.Rental.LeaseContractLineConsumables.md#consumablequantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)] |
-| [LeaseLine](Applications.Rental.LeaseContractLineConsumables.md#leaseline) | [Applications.Rental.LeaseContractLines](Applications.Rental.LeaseContractLines.md) | Lease line with which the current consumable is given. [Required] [Filter(multi eq)] [Owner] |
-| [Product](Applications.Rental.LeaseContractLineConsumables.md#product) | [General.Products.Products](General.Products.Products.md) | The consumable to be sold accompanying the asset. [Required] [Filter(multi eq)] |
-| [Store](Applications.Rental.LeaseContractLineConsumables.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | Store from which the consumable is issued. [Required] [Filter(multi eq)] |
+| [ConsumableQuantityUnit](Applications.Rental.LeaseContractLineConsumables.md#consumablequantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)] |
+| [LeaseLine](Applications.Rental.LeaseContractLineConsumables.md#leaseline) | [LeaseContractLines](Applications.Rental.LeaseContractLines.md) | Lease line with which the current consumable is given. [Required] [Filter(multi eq)] [Owner] |
+| [Product](Applications.Rental.LeaseContractLineConsumables.md#product) | [Products](General.Products.Products.md) | The consumable to be sold accompanying the asset. [Required] [Filter(multi eq)] |
+| [Store](Applications.Rental.LeaseContractLineConsumables.md#store) | [Stores](Logistics.Inventory.Stores.md) | Store from which the consumable is issued. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -49,10 +49,10 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.LeaseLine.Consumables.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.LeaseLine.Consumables.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.LeaseLine.Consumables.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.LeaseLine.Consumables.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 ## Reference Details
 
@@ -60,28 +60,28 @@ _Front-End Recalc Expressions:_
 
 > The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LeaseLine
 
 > Lease line with which the current consumable is given. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Rental.LeaseContractLines](Applications.Rental.LeaseContractLines.md)**  
+_Type_: **[LeaseContractLines](Applications.Rental.LeaseContractLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The consumable to be sold accompanying the asset. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
 > Store from which the consumable is issued. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

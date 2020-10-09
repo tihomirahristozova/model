@@ -26,9 +26,9 @@ Asset value transaction lines. Each line changes the values of one asset in one 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Asset](Finance.Assets.AssetTransactionLines.md#asset) | [Finance.Assets.Assets](Finance.Assets.Assets.md) | Asset for which changes in values have occurred. [Required] [Filter(multi eq)] |
-| [AssetTransaction](Finance.Assets.AssetTransactionLines.md#assettransaction) | [Finance.Assets.AssetTransactions](Finance.Assets.AssetTransactions.md) | The [AssetTransaction](Finance.Assets.AssetTransactionLines.md#assettransaction) to which this AssetTransactionLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ValuationModel](Finance.Assets.AssetTransactionLines.md#valuationmodel) | [Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model in which the changes of the asset values have occurred (Taxation model or Accounting model or other). [Required] [Filter(multi eq)] |
+| [Asset](Finance.Assets.AssetTransactionLines.md#asset) | [Assets](Finance.Assets.Assets.md) | Asset for which changes in values have occurred. [Required] [Filter(multi eq)] |
+| [AssetTransaction](Finance.Assets.AssetTransactionLines.md#assettransaction) | [AssetTransactions](Finance.Assets.AssetTransactions.md) | The [AssetTransaction](Finance.Assets.AssetTransactionLines.md#assettransaction) to which this AssetTransactionLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ValuationModel](Finance.Assets.AssetTransactionLines.md#valuationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model in which the changes of the asset values have occurred (Taxation model or Accounting model or other). [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -156,21 +156,21 @@ _Default Value_: **Constant**
 
 > Asset for which changes in values have occurred. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Assets.Assets](Finance.Assets.Assets.md)**  
+_Type_: **[Assets](Finance.Assets.Assets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssetTransaction
 
 > The [AssetTransaction](Finance.Assets.AssetTransactionLines.md#assettransaction) to which this AssetTransactionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Assets.AssetTransactions](Finance.Assets.AssetTransactions.md)**  
+_Type_: **[AssetTransactions](Finance.Assets.AssetTransactions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationModel
 
 > Valuation model in which the changes of the asset values have occurred (Taxation model or Accounting model or other). [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md)**  
+_Type_: **[ValuationModels](Finance.Assets.ValuationModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

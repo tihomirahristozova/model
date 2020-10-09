@@ -18,7 +18,7 @@ Areas are user-defined division of the sales territories. Entity: Gen_Areas
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](General.Geography.Areas.md#parent) | [General.Geography.Areas](General.Geography.Areas.md) (nullable) | Parent area in the hierarchy. [Filter(multi eq)] |
+| [Parent](General.Geography.Areas.md#parent) | [Areas](General.Geography.Areas.md) (nullable) | Parent area in the hierarchy. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -60,7 +60,7 @@ _Supports Order By_: **True**
 
 > Parent area in the hierarchy. [Filter(multi eq)]
 
-_Type_: **[General.Geography.Areas](General.Geography.Areas.md) (nullable)**  
+_Type_: **[Areas](General.Geography.Areas.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

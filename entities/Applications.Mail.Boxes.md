@@ -27,13 +27,13 @@ Represents user mailboxes. Entity: Mail_Boxes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [OwnerUser](Applications.Mail.Boxes.md#owneruser) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who owns the mailbox. [Required] [Filter(multi eq)] |
+| [OwnerUser](Applications.Mail.Boxes.md#owneruser) | [Users](Systems.Security.Users.md) | The user, who owns the mailbox. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Folders | [Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md) | List of [BoxFolder](Applications.Mail.BoxFolders.md) child objects, based on the [Applications.Mail.BoxFolder.MailBox](Applications.Mail.BoxFolders.md#mailbox) back reference 
+| Folders | [BoxFolders](Applications.Mail.BoxFolders.md) | List of [BoxFolder](Applications.Mail.BoxFolders.md) child objects, based on the [Applications.Mail.BoxFolder.MailBox](Applications.Mail.BoxFolders.md#mailbox) back reference 
 
 
 ## Attribute Details
@@ -160,7 +160,7 @@ _Supports Order By_: **False**
 
 > The user, who owns the mailbox. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

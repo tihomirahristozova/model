@@ -26,14 +26,14 @@ Represents email messages. Entity: Mail_Messages
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) | [Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md) | The [BoxFolder](Applications.Mail.BoxFolders.md) to which this Message belongs. [Required] [Filter(multi eq)] [Owner] |
-| [RelatedToParty](Applications.Mail.Messages.md#relatedtoparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. [Filter(multi eq)] |
+| [MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) | The [BoxFolder](Applications.Mail.BoxFolders.md) to which this Message belongs. [Required] [Filter(multi eq)] [Owner] |
+| [RelatedToParty](Applications.Mail.Messages.md#relatedtoparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Attachments | [Applications.Mail.MessageAttachments](Applications.Mail.MessageAttachments.md) | List of [MessageAttachment](Applications.Mail.MessageAttachments.md) child objects, based on the [Applications.Mail.MessageAttachment.MailMessage](Applications.Mail.MessageAttachments.md#mailmessage) back reference 
+| Attachments | [MessageAttachments](Applications.Mail.MessageAttachments.md) | List of [MessageAttachment](Applications.Mail.MessageAttachments.md) child objects, based on the [Applications.Mail.MessageAttachment.MailMessage](Applications.Mail.MessageAttachments.md#mailmessage) back reference 
 
 
 ## Attribute Details
@@ -142,14 +142,14 @@ _Supports Order By_: **False**
 
 > The [BoxFolder](Applications.Mail.BoxFolders.md) to which this Message belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md)**  
+_Type_: **[BoxFolders](Applications.Mail.BoxFolders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RelatedToParty
 
 > The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

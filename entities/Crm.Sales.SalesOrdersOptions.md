@@ -19,10 +19,10 @@ Options for sales orders of specific user defined document type. Entity: Crm_Sal
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DealDocumentType](Crm.Sales.SalesOrdersOptions.md#dealdocumenttype) | [General.DocumentTypes](General.DocumentTypes.md) (nullable) | If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. [Filter(multi eq)] |
-| [DocumentType](Crm.Sales.SalesOrdersOptions.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the sales order option applies. [Required] [Filter(multi eq)] [Owner] |
-| [MinimumAmountCurrency](Crm.Sales.SalesOrdersOptions.md#minimumamountcurrency) | [General.Currencies](General.Currencies.md) (nullable) | The currency of Minimal Amount. [Filter(multi eq)] |
-| [VATDeviationDocumentAmountType](Crm.Sales.SalesOrdersOptions.md#vatdeviationdocumentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable) | Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)] |
+| [DealDocumentType](Crm.Sales.SalesOrdersOptions.md#dealdocumenttype) | [DocumentTypes](General.DocumentTypes.md) (nullable) | If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. [Filter(multi eq)] |
+| [DocumentType](Crm.Sales.SalesOrdersOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which the sales order option applies. [Required] [Filter(multi eq)] [Owner] |
+| [MinimumAmountCurrency](Crm.Sales.SalesOrdersOptions.md#minimumamountcurrency) | [Currencies](General.Currencies.md) (nullable) | The currency of Minimal Amount. [Filter(multi eq)] |
+| [VATDeviationDocument<br />AmountType](Crm.Sales.SalesOrdersOptions.md#vatdeviationdocumentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable) | Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -94,28 +94,28 @@ _Default Value_: **AlwaysAllow**
 
 > If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md) (nullable)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
 > The document type for which the sales order option applies. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MinimumAmountCurrency
 
 > The currency of Minimal Amount. [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
+_Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VATDeviationDocumentAmountType
 
 > Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)]
 
-_Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable)**  
+_Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

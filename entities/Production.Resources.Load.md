@@ -22,8 +22,8 @@ Contains scheduled operations usage of the resources. Entity: Prd_Load
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [WorkgroupResource](Production.Resources.Load.md#workgroupresource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) | The exact resource being utilised. [Required] [Filter(multi eq)] |
-| [WorkOrderItemOperation](Production.Resources.Load.md#workorderitemoperation) | [Production.ShopFloor.WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) | The [WorkOrderItemOperation](Production.ShopFloor.WorkOrderItemOperations.md) to which this Load belongs. [Required] [Filter(multi eq)] [Owner] |
+| [WorkgroupResource](Production.Resources.Load.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | The exact resource being utilised. [Required] [Filter(multi eq)] |
+| [WorkOrderItemOperation](Production.Resources.Load.md#workorderitemoperation) | [WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) | The [WorkOrderItemOperation](Production.ShopFloor.WorkOrderItemOperations.md) to which this Load belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -122,14 +122,14 @@ _Default Value_: **0**
 
 > The exact resource being utilised. [Required] [Filter(multi eq)]
 
-_Type_: **[Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
+_Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItemOperation
 
 > The [WorkOrderItemOperation](Production.ShopFloor.WorkOrderItemOperations.md) to which this Load belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Production.ShopFloor.WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md)**  
+_Type_: **[WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

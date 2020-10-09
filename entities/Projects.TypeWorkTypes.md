@@ -17,8 +17,8 @@ Contains the work types, that can be performed in projects of this project type.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BilledWithProduct](Projects.TypeWorkTypes.md#billedwithproduct) | [General.Products.Products](General.Products.Products.md) (nullable) | The product, which is used for billing purposes for this work type. The price of the product is also used for project budgeting. null means that the work type cannot be billed. [Filter(multi eq)] |
-| [ProjectType](Projects.TypeWorkTypes.md#projecttype) | [Projects.ProjectTypes](Projects.ProjectTypes.md) | The [ProjectType](Projects.TypeWorkTypes.md#projecttype) to which this TypeWorkType belongs. [Required] [Filter(multi eq)] [Owner] |
+| [BilledWithProduct](Projects.TypeWorkTypes.md#billedwithproduct) | [Products](General.Products.Products.md) (nullable) | The product, which is used for billing purposes for this work type. The price of the product is also used for project budgeting. null means that the work type cannot be billed. [Filter(multi eq)] |
+| [ProjectType](Projects.TypeWorkTypes.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) | The [ProjectType](Projects.TypeWorkTypes.md#projecttype) to which this TypeWorkType belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -53,14 +53,14 @@ _Supports Order By_: **False**
 
 > The product, which is used for billing purposes for this work type. The price of the product is also used for project budgeting. null means that the work type cannot be billed. [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md) (nullable)**  
+_Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectType
 
 > The [ProjectType](Projects.TypeWorkTypes.md#projecttype) to which this TypeWorkType belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Projects.ProjectTypes](Projects.ProjectTypes.md)**  
+_Type_: **[ProjectTypes](Projects.ProjectTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

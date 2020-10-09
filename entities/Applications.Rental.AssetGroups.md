@@ -20,7 +20,7 @@ Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Gr
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Assets | [Applications.Rental.Assets](Applications.Rental.Assets.md) | List of [Asset](Applications.Rental.Assets.md) child objects, based on the [Applications.Rental.Asset.RentalAssetGroup](Applications.Rental.Assets.md#rentalassetgroup) back reference 
+| Assets | [Assets](Applications.Rental.Assets.md) | List of [Asset](Applications.Rental.Assets.md) child objects, based on the [Applications.Rental.Asset.RentalAssetGroup](Applications.Rental.Assets.md#rentalassetgroup) back reference 
 
 
 ## Attribute Details

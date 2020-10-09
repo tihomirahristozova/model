@@ -3,7 +3,7 @@ uid: Logistics.Wms.WarehouseLocations
 ---
 # Logistics.Wms.WarehouseLocations
 
-One physical location within a warehouse. Locations are the leaf elements of the rack structure of the warehouse. Entity: Wms_Warehouse_Locations (Introduced in version 20.1.100.0)
+One physical location within a warehouse. Locations are the leaf elements of the rack structure of the warehouse. Entity: Wms_Warehouse_Locations (Introduced in version 20.1)
 
 ## Attributes
 
@@ -17,8 +17,8 @@ One physical location within a warehouse. Locations are the leaf elements of the
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Warehouse](Logistics.Wms.WarehouseLocations.md#warehouse) | [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md) | The warehouse containing the location. [Required] [Filter(multi eq)] [Owner] |
-| [WarehouseZone](Logistics.Wms.WarehouseLocations.md#warehousezone) | [Logistics.Wms.WarehouseZones](Logistics.Wms.WarehouseZones.md) | The zone, which contains the location. [Required] [Filter(multi eq)] |
+| [Warehouse](Logistics.Wms.WarehouseLocations.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse containing the location. [Required] [Filter(multi eq)] [Owner] |
+| [WarehouseZone](Logistics.Wms.WarehouseLocations.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) | The zone, which contains the location. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -52,14 +52,14 @@ _Supports Order By_: **False**
 
 > The warehouse containing the location. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)**  
+_Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseZone
 
 > The zone, which contains the location. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Wms.WarehouseZones](Logistics.Wms.WarehouseZones.md)**  
+_Type_: **[WarehouseZones](Logistics.Wms.WarehouseZones.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

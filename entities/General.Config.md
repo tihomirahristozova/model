@@ -11,7 +11,7 @@ Hierarchical repository of configuration options. Entity: Gen_Config
 | ---- | ---- | --- |
 | [Description](General.Config.md#description) | string (nullable) | The description of this Config. 
 | [Id](General.Config.md#id) | guid |  
-| [IsActive](General.Config.md#isactive) | boolean | Indicates whether this config entry is active. Inactive config entries are not taken into account. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1.100.0) 
+| [IsActive](General.Config.md#isactive) | boolean | Indicates whether this config entry is active. Inactive config entries are not taken into account. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1) 
 | [KeyPath](General.Config.md#keypath) | string | Full path of the configuration option. [Required] [Filter(eq)] [ORD] 
 | [KeyValue](General.Config.md#keyvalue) | string (nullable) | The value of the configuration option. 
 | [UserLogin](General.Config.md#userlogin) | string (nullable) | If not null, the configuration option is specific to the user. [Filter(eq)] 
@@ -36,7 +36,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> Indicates whether this config entry is active. Inactive config entries are not taken into account. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1.100.0)
+> Indicates whether this config entry is active. Inactive config entries are not taken into account. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1)
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  

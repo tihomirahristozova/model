@@ -20,10 +20,10 @@ Quantities available to promise for the different date periods. Also contains th
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | Тhe Enterprise Company, for which the quantities are calculated. [Required] [Filter(multi eq)] |
-| [Lot](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, for which the quantities are calculated. [Filter(multi eq)] |
-| [Product](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#product) | [General.Products.Products](General.Products.Products.md) | The Product, for which the quantities are calculated. [Required] [Filter(multi eq)] |
-| [Store](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The Store, for which the quantities are calculated. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Тhe Enterprise Company, for which the quantities are calculated. [Required] [Filter(multi eq)] |
+| [Lot](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, for which the quantities are calculated. [Filter(multi eq)] |
+| [Product](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#product) | [Products](General.Products.Products.md) | The Product, for which the quantities are calculated. [Required] [Filter(multi eq)] |
+| [Store](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#store) | [Stores](Logistics.Inventory.Stores.md) | The Store, for which the quantities are calculated. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -83,28 +83,28 @@ _Supports Order By_: **False**
 
 > Тhe Enterprise Company, for which the quantities are calculated. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 
 > The Lot, for which the quantities are calculated. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The Product, for which the quantities are calculated. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
 > The Store, for which the quantities are calculated. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

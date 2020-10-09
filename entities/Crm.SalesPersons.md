@@ -20,10 +20,10 @@ Sales persons (or representatives) are sellers inside the enterprise company who
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.SalesPersons.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this SalesPerson applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
-| [EnterpriseCompanyLocation](Crm.SalesPersons.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. [Filter(multi eq)] |
-| [Person](Crm.SalesPersons.md#person) | [General.Contacts.Persons](General.Contacts.Persons.md) | Base personal record. [Required] [Filter(multi eq)] [Owner] |
-| [SalesPersonGroup](Crm.SalesPersons.md#salespersongroup) | [Crm.Distribution.SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md) | The sales person group to which this sales person is assigned. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Crm.SalesPersons.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this SalesPerson applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [EnterpriseCompanyLocation](Crm.SalesPersons.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. [Filter(multi eq)] |
+| [Person](Crm.SalesPersons.md#person) | [Persons](General.Contacts.Persons.md) | Base personal record. [Required] [Filter(multi eq)] [Owner] |
+| [SalesPersonGroup](Crm.SalesPersons.md#salespersongroup) | [SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md) | The sales person group to which this sales person is assigned. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -81,28 +81,28 @@ _Default Value_: **True**
 
 > The Enterprise Company to which this SalesPerson applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
 > The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
 > Base personal record. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md)**  
+_Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesPersonGroup
 
 > The sales person group to which this sales person is assigned. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.Distribution.SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md)**  
+_Type_: **[SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

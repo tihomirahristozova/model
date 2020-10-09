@@ -16,11 +16,11 @@ Obsolete. Not used. Entity: Inv_Reconciliation_Order_Lines
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](Logistics.Inventory.ReconciliationOrderLines.md#product) | [General.Products.Products](General.Products.Products.md) | The item which quantity should be reconciled. [Required] [Filter(multi eq)] |
-| [ReconciliationOrder](Logistics.Inventory.ReconciliationOrderLines.md#reconciliationorder) | [Logistics.Inventory.ReconciliationOrders](Logistics.Inventory.ReconciliationOrders.md) | Reconciliation order header. [Required] [Filter(multi eq)] [Owner] |
-| [SerialNumber](Logistics.Inventory.ReconciliationOrderLines.md#serialnumber) | [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the product, which should be reconciled. [Filter(multi eq)] |
-| [Store](Logistics.Inventory.ReconciliationOrderLines.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | Store, which should be checked. [Required] [Filter(multi eq)] |
-| [StoreBin](Logistics.Inventory.ReconciliationOrderLines.md#storebin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | Specifies store bin, that should be reconciled. null means to reconcile all or any bin. [Filter(multi eq)] |
+| [Product](Logistics.Inventory.ReconciliationOrderLines.md#product) | [Products](General.Products.Products.md) | The item which quantity should be reconciled. [Required] [Filter(multi eq)] |
+| [ReconciliationOrder](Logistics.Inventory.ReconciliationOrderLines.md#reconciliationorder) | [ReconciliationOrders](Logistics.Inventory.ReconciliationOrders.md) | Reconciliation order header. [Required] [Filter(multi eq)] [Owner] |
+| [SerialNumber](Logistics.Inventory.ReconciliationOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the product, which should be reconciled. [Filter(multi eq)] |
+| [Store](Logistics.Inventory.ReconciliationOrderLines.md#store) | [Stores](Logistics.Inventory.Stores.md) | Store, which should be checked. [Required] [Filter(multi eq)] |
+| [StoreBin](Logistics.Inventory.ReconciliationOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | Specifies store bin, that should be reconciled. null means to reconcile all or any bin. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -40,10 +40,10 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.ReconciliationOrder.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.ReconciliationOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.ReconciliationOrder.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.ReconciliationOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 ## Reference Details
 
@@ -51,35 +51,35 @@ _Front-End Recalc Expressions:_
 
 > The item which quantity should be reconciled. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReconciliationOrder
 
 > Reconciliation order header. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Logistics.Inventory.ReconciliationOrders](Logistics.Inventory.ReconciliationOrders.md)**  
+_Type_: **[ReconciliationOrders](Logistics.Inventory.ReconciliationOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
 
 > Serial number of the product, which should be reconciled. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
 > Store, which should be checked. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreBin
 
 > Specifies store bin, that should be reconciled. null means to reconcile all or any bin. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

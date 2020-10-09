@@ -3,7 +3,7 @@ uid: Applications.AssetManagement.MaintenanceTypes
 ---
 # Applications.AssetManagement.MaintenanceTypes
 
-Types of maintenances which can be scheduled and performed on the managed assets. Maintenances can be scheduled based on date and tracked parameter change. Entity: Eam_Maintenance_Types (Introduced in version 19.1.100.0)
+Types of maintenances which can be scheduled and performed on the managed assets. Maintenances can be scheduled based on date and tracked parameter change. Entity: Eam_Maintenance_Types (Introduced in version 19.1)
 
 ## Attributes
 
@@ -21,8 +21,8 @@ Types of maintenances which can be scheduled and performed on the managed assets
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenanceTypeGroup](Applications.AssetManagement.MaintenanceTypes.md#maintenancetypegroup) | [Applications.AssetManagement.MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) | The group, to which this maintenance type belongs. [Required] [Filter(multi eq)] |
-| [TrackedParameter](Applications.AssetManagement.MaintenanceTypes.md#trackedparameter) | [Applications.AssetManagement.TrackedParameters](Applications.AssetManagement.TrackedParameters.md) (nullable) | Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. [Filter(multi eq)] |
+| [MaintenanceTypeGroup](Applications.AssetManagement.MaintenanceTypes.md#maintenancetypegroup) | [MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) | The group, to which this maintenance type belongs. [Required] [Filter(multi eq)] |
+| [TrackedParameter](Applications.AssetManagement.MaintenanceTypes.md#trackedparameter) | [TrackedParameters](Applications.AssetManagement.TrackedParameters.md) (nullable) | Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -88,14 +88,14 @@ _Supports Order By_: **False**
 
 > The group, to which this maintenance type belongs. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.AssetManagement.MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md)**  
+_Type_: **[MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrackedParameter
 
 > Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. [Filter(multi eq)]
 
-_Type_: **[Applications.AssetManagement.TrackedParameters](Applications.AssetManagement.TrackedParameters.md) (nullable)**  
+_Type_: **[TrackedParameters](Applications.AssetManagement.TrackedParameters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

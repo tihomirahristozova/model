@@ -21,7 +21,7 @@ Pictures of products. Entity: Gen_Product_Pictures
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](General.Products.ProductPictures.md#product) | [General.Products.Products](General.Products.Products.md) | The [Product](General.Products.ProductPictures.md#product) to which this ProductPicture belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Product](General.Products.ProductPictures.md#product) | [Products](General.Products.Products.md) | The [Product](General.Products.ProductPictures.md#product) to which this ProductPicture belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -50,7 +50,7 @@ _Supports Order By_: **False**
 _Default Value_: **False**  
 
 _Front-End Recalc Expressions:_  
-`(obj.Product.Pictures.Take(1).Count() == 0)`
+`( obj.Product.Pictures.Take( 1).Count( ) == 0)`
 ### LastUpdateTime
 
 > The exact server time, when the picture was last updated. Set automatically. [Filter(ge;le)] [ReadOnly]
@@ -76,10 +76,10 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.Product.Pictures.Select(c => c.PictureNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Product.Pictures.Select( c => c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.Product.Pictures.Select(c => c.PictureNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Product.Pictures.Select( c => c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### PictureSizeClass
 
 > Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.
@@ -103,7 +103,7 @@ _Supports Order By_: **False**
 
 > The [Product](General.Products.ProductPictures.md#product) to which this ProductPicture belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

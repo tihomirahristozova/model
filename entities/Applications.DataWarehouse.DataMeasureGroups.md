@@ -3,7 +3,7 @@ uid: Applications.DataWarehouse.DataMeasureGroups
 ---
 # Applications.DataWarehouse.DataMeasureGroups
 
-Contains the groups of measures in the general data warehouse. Entity: Dw_Data_Measure_Groups (Introduced in version 18.2.100.0)
+Contains the groups of measures in the general data warehouse. Entity: Dw_Data_Measure_Groups (Introduced in version 18.2)
 
 ## Attributes
 
@@ -18,7 +18,7 @@ Contains the groups of measures in the general data warehouse. Entity: Dw_Data_M
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.DataWarehouse.DataMeasureGroups.md#parent) | [Applications.DataWarehouse.DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md) (nullable) | Parent data measure group in the hierarchy. Null when this is root node. [Filter(multi eq)] |
+| [Parent](Applications.DataWarehouse.DataMeasureGroups.md#parent) | [DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md) (nullable) | Parent data measure group in the hierarchy. Null when this is root node. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 > Parent data measure group in the hierarchy. Null when this is root node. [Filter(multi eq)]
 
-_Type_: **[Applications.DataWarehouse.DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md) (nullable)**  
+_Type_: **[DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

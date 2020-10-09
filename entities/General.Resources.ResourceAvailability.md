@@ -18,7 +18,7 @@ Contains the resources availability for the different periods. Each period is a 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Resource](General.Resources.ResourceAvailability.md#resource) | [General.Resources.Resources](General.Resources.Resources.md) | The resource, for which we provide availability. [Required] [Filter(multi eq)] [Owner] |
+| [Resource](General.Resources.ResourceAvailability.md#resource) | [Resources](General.Resources.Resources.md) | The resource, for which we provide availability. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 > The resource, for which we provide availability. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Resources.Resources](General.Resources.Resources.md)**  
+_Type_: **[Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

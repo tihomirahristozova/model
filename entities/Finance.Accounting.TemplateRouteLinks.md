@@ -15,8 +15,8 @@ When specified denotes that another route uses the template, initially bound to 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Finance.Accounting.TemplateRouteLinks.md#route) | [Systems.Workflow.Routes](Systems.Workflow.Routes.md) | Route for which the specified template will be activated. [Required] [Filter(multi eq)] [Owner] |
-| [Template](Finance.Accounting.TemplateRouteLinks.md#template) | [Finance.Accounting.Templates](Finance.Accounting.Templates.md) | Template that will be activated for the specified route. [Required] [Filter(multi eq)] |
+| [Route](Finance.Accounting.TemplateRouteLinks.md#route) | [Routes](Systems.Workflow.Routes.md) | Route for which the specified template will be activated. [Required] [Filter(multi eq)] [Owner] |
+| [Template](Finance.Accounting.TemplateRouteLinks.md#template) | [Templates](Finance.Accounting.Templates.md) | Template that will be activated for the specified route. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -34,14 +34,14 @@ _Default Value_: **NewGuid**
 
 > Route for which the specified template will be activated. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Workflow.Routes](Systems.Workflow.Routes.md)**  
+_Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Template
 
 > Template that will be activated for the specified route. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.Templates](Finance.Accounting.Templates.md)**  
+_Type_: **[Templates](Finance.Accounting.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

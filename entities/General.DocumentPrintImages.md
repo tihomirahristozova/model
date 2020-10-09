@@ -17,7 +17,7 @@ Contains the data of a printout of a document as it was obtained from the data s
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PrintoutLayout](General.DocumentPrintImages.md#printoutlayout) | [General.PrintoutLayouts](General.PrintoutLayouts.md) | The print layout, which was used for the current printout. [Required] [Filter(multi eq)] [Owner] |
+| [PrintoutLayout](General.DocumentPrintImages.md#printoutlayout) | [PrintoutLayouts](General.PrintoutLayouts.md) | The print layout, which was used for the current printout. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -52,7 +52,7 @@ _Default Value_: **CDS**
 
 > The print layout, which was used for the current printout. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.PrintoutLayouts](General.PrintoutLayouts.md)**  
+_Type_: **[PrintoutLayouts](General.PrintoutLayouts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

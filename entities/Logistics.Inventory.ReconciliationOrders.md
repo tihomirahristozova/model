@@ -18,13 +18,13 @@ Obsolete. Not used. (Orders for store reconciliations. After an order is execute
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Inventory.ReconciliationOrders.md#document) | [General.Documents](General.Documents.md) | The Id of the base document. [Required] [Filter(multi eq)] [Owner] |
+| [Document](Logistics.Inventory.ReconciliationOrders.md#document) | [Documents](General.Documents.md) | The Id of the base document. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Lines | [Logistics.Inventory.ReconciliationOrderLines](Logistics.Inventory.ReconciliationOrderLines.md) | List of [ReconciliationOrderLine](Logistics.Inventory.ReconciliationOrderLines.md) child objects, based on the [Logistics.Inventory.ReconciliationOrderLine.ReconciliationOrder](Logistics.Inventory.ReconciliationOrderLines.md#reconciliationorder) back reference 
+| Lines | [ReconciliationOrderLines](Logistics.Inventory.ReconciliationOrderLines.md) | List of [ReconciliationOrderLine](Logistics.Inventory.ReconciliationOrderLines.md) child objects, based on the [Logistics.Inventory.ReconciliationOrderLine.ReconciliationOrder](Logistics.Inventory.ReconciliationOrderLines.md#reconciliationorder) back reference 
 
 
 ## Attribute Details
@@ -69,7 +69,7 @@ _Default Value_: **False**
 
 > The Id of the base document. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

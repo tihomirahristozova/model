@@ -16,8 +16,8 @@ Represents dependancy between project tasks. Entity: Prj_Project_Task_Dependanci
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependsOnTask](Projects.ProjectTaskDependancies.md#dependsontask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The task on which Project_Task depends. [Required] [Filter(multi eq)] |
-| [ProjectTask](Projects.ProjectTaskDependancies.md#projecttask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The task which depends on another task. [Required] [Filter(multi eq)] [Owner] |
+| [DependsOnTask](Projects.ProjectTaskDependancies.md#dependsontask) | [ProjectTasks](Projects.ProjectTasks.md) | The task on which Project_Task depends. [Required] [Filter(multi eq)] |
+| [ProjectTask](Projects.ProjectTaskDependancies.md#projecttask) | [ProjectTasks](Projects.ProjectTasks.md) | The task which depends on another task. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -55,14 +55,14 @@ _Default Value_: **NewGuid**
 
 > The task on which Project_Task depends. [Required] [Filter(multi eq)]
 
-_Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md)**  
+_Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTask
 
 > The task which depends on another task. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md)**  
+_Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -18,7 +18,7 @@ Represents the hierarchy of the function groups. They group the multitude of res
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Functions | [Production.Resources.Functions](Production.Resources.Functions.md) | List of [Function](Production.Resources.Functions.md) child objects, based on the [Production.Resources.Function.FunctionGroup](Production.Resources.Functions.md#functiongroup) back reference 
+| Functions | [Functions](Production.Resources.Functions.md) | List of [Function](Production.Resources.Functions.md) child objects, based on the [Production.Resources.Function.FunctionGroup](Production.Resources.Functions.md#functiongroup) back reference 
 
 
 ## Attribute Details

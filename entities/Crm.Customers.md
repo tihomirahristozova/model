@@ -31,23 +31,23 @@ Customer contracts list. For each combination of Enterprise Company and external
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CollectionsResponsibleEmployee](Crm.Customers.md#collectionsresponsibleemployee) | [General.Contacts.CompanyEmployees](General.Contacts.CompanyEmployees.md) (nullable) | The employee, who is responsible for the collections from the customer. [Filter(multi eq)] |
-| [CustomerType](Crm.Customers.md#customertype) | [Crm.CustomerTypes](Crm.CustomerTypes.md) (nullable) | The user-defined type of this customer. null when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes. [Filter(multi eq)] |
-| [DefaultCurrency](Crm.Customers.md#defaultcurrency) | [General.Currencies](General.Currencies.md) (nullable) | The primary currency for value calculations for this customer - for credit limit, due amounts, etc. [Filter(multi eq)] |
-| [DefaultDistributionChannel](Crm.Customers.md#defaultdistributionchannel) | [Crm.Marketing.DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | The default distribution channel used when selling to the customer. [Filter(multi eq)] |
-| [DefaultPaymentAccount](Crm.Customers.md#defaultpaymentaccount) | [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | The default payment account to use when creating new documents for this customer. [Filter(multi eq)] |
-| [DefaultPaymentType](Crm.Customers.md#defaultpaymenttype) | [Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | If not null, specifies default payment type for the sales, offers and invoices for this customer. [Filter(multi eq)] |
-| [DefaultPriceList](Crm.Customers.md#defaultpricelist) | [Crm.PriceLists](Crm.PriceLists.md) (nullable) | If not null, specifies default price list when selling to this customer. [Filter(multi eq)] |
-| [EnterpriseCompany](Crm.Customers.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies. [Filter(multi eq)] |
-| [Party](Crm.Customers.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | Base party Id. [Required] [Filter(multi eq)] [Owner] |
-| [SalesPerson](Crm.Customers.md#salesperson) | [Crm.SalesPersons](Crm.SalesPersons.md) (nullable) | The default sales person for new sales documents for this customer. [Filter(multi eq)] |
-| [ServicedByEnterpriseCompanyLocation](Crm.Customers.md#servicedbyenterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location, which sells to this client by default. [Filter(multi eq)] |
+| [CollectionsResponsible<br />Employee](Crm.Customers.md#collectionsresponsibleemployee) | [CompanyEmployees](General.Contacts.CompanyEmployees.md) (nullable) | The employee, who is responsible for the collections from the customer. [Filter(multi eq)] |
+| [CustomerType](Crm.Customers.md#customertype) | [CustomerTypes](Crm.CustomerTypes.md) (nullable) | The user-defined type of this customer. null when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes. [Filter(multi eq)] |
+| [DefaultCurrency](Crm.Customers.md#defaultcurrency) | [Currencies](General.Currencies.md) (nullable) | The primary currency for value calculations for this customer - for credit limit, due amounts, etc. [Filter(multi eq)] |
+| [DefaultDistributionChannel](Crm.Customers.md#defaultdistributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | The default distribution channel used when selling to the customer. [Filter(multi eq)] |
+| [DefaultPaymentAccount](Crm.Customers.md#defaultpaymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | The default payment account to use when creating new documents for this customer. [Filter(multi eq)] |
+| [DefaultPaymentType](Crm.Customers.md#defaultpaymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | If not null, specifies default payment type for the sales, offers and invoices for this customer. [Filter(multi eq)] |
+| [DefaultPriceList](Crm.Customers.md#defaultpricelist) | [PriceLists](Crm.PriceLists.md) (nullable) | If not null, specifies default price list when selling to this customer. [Filter(multi eq)] |
+| [EnterpriseCompany](Crm.Customers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies. [Filter(multi eq)] |
+| [Party](Crm.Customers.md#party) | [Parties](General.Contacts.Parties.md) | Base party Id. [Required] [Filter(multi eq)] [Owner] |
+| [SalesPerson](Crm.Customers.md#salesperson) | [SalesPersons](Crm.SalesPersons.md) (nullable) | The default sales person for new sales documents for this customer. [Filter(multi eq)] |
+| [ServicedByEnterprise<br />CompanyLocation](Crm.Customers.md#servicedbyenterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location, which sells to this client by default. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Products | [Crm.CustomerProducts](Crm.CustomerProducts.md) | List of [CustomerProduct](Crm.CustomerProducts.md) child objects, based on the [Crm.CustomerProduct.Customer](Crm.CustomerProducts.md#customer) back reference 
+| Products | [CustomerProducts](Crm.CustomerProducts.md) | List of [CustomerProduct](Crm.CustomerProducts.md) child objects, based on the [Crm.CustomerProduct.Customer](Crm.CustomerProducts.md#customer) back reference 
 
 
 ## Attribute Details
@@ -104,10 +104,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`IIF((obj.DefaultCurrency != null), obj.EnterpriseCompany.DefaultCustomerCreditLimitBase, obj.CreditLimit)`
+`IIF( ( obj.DefaultCurrency != null), obj.EnterpriseCompany.DefaultCustomerCreditLimitBase, obj.CreditLimit)`
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.DefaultCurrency != null), obj.EnterpriseCompany.DefaultCustomerCreditLimitBase, obj.CreditLimit)`
+`IIF( ( obj.DefaultCurrency != null), obj.EnterpriseCompany.DefaultCustomerCreditLimitBase, obj.CreditLimit)`
 ### DefaultDeliveryTermDays
 
 > Default term in days for goods delivery, starting at the day of sale. [Required] [Default(0)]
@@ -207,21 +207,21 @@ _Supports Order By_: **False**
 
 > The employee, who is responsible for the collections from the customer. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.CompanyEmployees](General.Contacts.CompanyEmployees.md) (nullable)**  
+_Type_: **[CompanyEmployees](General.Contacts.CompanyEmployees.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CustomerType
 
 > The user-defined type of this customer. null when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes. [Filter(multi eq)]
 
-_Type_: **[Crm.CustomerTypes](Crm.CustomerTypes.md) (nullable)**  
+_Type_: **[CustomerTypes](Crm.CustomerTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultCurrency
 
 > The primary currency for value calculations for this customer - for credit limit, due amounts, etc. [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
+_Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -230,37 +230,37 @@ _Front-End Recalc Expressions:_
 
 > The default distribution channel used when selling to the customer. [Filter(multi eq)]
 
-_Type_: **[Crm.Marketing.DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
+_Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPaymentAccount
 
 > The default payment account to use when creating new documents for this customer. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.DefaultPaymentType.GetDefaultPaymentAccount().IfNullThen(obj.DefaultPaymentAccount)`
+`obj.DefaultPaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.DefaultPaymentAccount)`
 ### DefaultPaymentType
 
 > If not null, specifies default payment type for the sales, offers and invoices for this customer. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPriceList
 
 > If not null, specifies default price list when selling to this customer. [Filter(multi eq)]
 
-_Type_: **[Crm.PriceLists](Crm.PriceLists.md) (nullable)**  
+_Type_: **[PriceLists](Crm.PriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -269,21 +269,21 @@ _Front-End Recalc Expressions:_
 
 > Base party Id. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesPerson
 
 > The default sales person for new sales documents for this customer. [Filter(multi eq)]
 
-_Type_: **[Crm.SalesPersons](Crm.SalesPersons.md) (nullable)**  
+_Type_: **[SalesPersons](Crm.SalesPersons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServicedByEnterpriseCompanyLocation
 
 > The enterprise company location, which sells to this client by default. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

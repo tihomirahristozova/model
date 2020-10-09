@@ -15,8 +15,8 @@ Options for user-defined Work Order document types. Entity: Prd_Work_Order_Docum
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletingOutputOrderDocumentType](Production.WorkOrderDocumentTypesOptions.md#completingoutputorderdocumenttype) | [General.DocumentTypes](General.DocumentTypes.md) (nullable) | User-defined Completing Output Order document type. [Filter(multi eq)] |
-| [DocumentType](Production.WorkOrderDocumentTypesOptions.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | User-defined Work Order document type. [Required] [Filter(multi eq)] |
+| [CompletingOutput<br />OrderDocumentType](Production.WorkOrderDocumentTypesOptions.md#completingoutputorderdocumenttype) | [DocumentTypes](General.DocumentTypes.md) (nullable) | User-defined Completing Output Order document type. [Filter(multi eq)] |
+| [DocumentType](Production.WorkOrderDocumentTypesOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | User-defined Work Order document type. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -34,14 +34,14 @@ _Default Value_: **NewGuid**
 
 > User-defined Completing Output Order document type. [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md) (nullable)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
 > User-defined Work Order document type. [Required] [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

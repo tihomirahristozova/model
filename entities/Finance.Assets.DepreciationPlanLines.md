@@ -19,16 +19,16 @@ Each record contains one depreciation plan for one valuation model of one asset.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Asset](Finance.Assets.DepreciationPlanLines.md#asset) | [Finance.Assets.Assets](Finance.Assets.Assets.md) | The asset that is planned for depreciation. [Required] [Filter(multi eq)] |
-| [DepreciationMethod](Finance.Assets.DepreciationPlanLines.md#depreciationmethod) | [Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md) | Depreciation method by which the asset will be depreciated. [Required] [Filter(multi eq)] |
-| [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) | [Finance.Assets.DepreciationPlans](Finance.Assets.DepreciationPlans.md) | The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ValuationModel](Finance.Assets.DepreciationPlanLines.md#valuationmodel) | [Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model in which the asset is accounted. [Required] [Filter(multi eq)] |
+| [Asset](Finance.Assets.DepreciationPlanLines.md#asset) | [Assets](Finance.Assets.Assets.md) | The asset that is planned for depreciation. [Required] [Filter(multi eq)] |
+| [DepreciationMethod](Finance.Assets.DepreciationPlanLines.md#depreciationmethod) | [DepreciationMethods](Finance.Assets.DepreciationMethods.md) | Depreciation method by which the asset will be depreciated. [Required] [Filter(multi eq)] |
+| [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) | [DepreciationPlans](Finance.Assets.DepreciationPlans.md) | The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ValuationModel](Finance.Assets.DepreciationPlanLines.md#valuationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model in which the asset is accounted. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| FixedValues | [Finance.Assets.DepreciationPlanLineFixedValues](Finance.Assets.DepreciationPlanLineFixedValues.md) | List of [DepreciationPlanLineFixedValue](Finance.Assets.DepreciationPlanLineFixedValues.md) child objects, based on the [Finance.Assets.DepreciationPlanLineFixedValue.DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationplanline) back reference 
+| FixedValues | [DepreciationPlanLineFixedValues](Finance.Assets.DepreciationPlanLineFixedValues.md) | List of [DepreciationPlan<br />LineFixedValue](Finance.Assets.DepreciationPlan<br />LineFixedValues.md) child objects, based on the [Finance.Assets.DepreciationPlan<br />LineFixedValue.DepreciationPlanLine](Finance.Assets.DepreciationPlan<br />LineFixedValues.md#depreciationplanline) back  
 
 
 ## Attribute Details
@@ -64,10 +64,10 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.DepreciationPlan.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.DepreciationPlan.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.DepreciationPlan.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.DepreciationPlan.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### PlanDepreciationValue
 
 > The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. [Currency: Asset.ValuationCurrency] [Required] [Default(0)]
@@ -84,28 +84,28 @@ _Default Value_: **Constant**
 
 > The asset that is planned for depreciation. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Assets.Assets](Finance.Assets.Assets.md)**  
+_Type_: **[Assets](Finance.Assets.Assets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DepreciationMethod
 
 > Depreciation method by which the asset will be depreciated. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md)**  
+_Type_: **[DepreciationMethods](Finance.Assets.DepreciationMethods.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DepreciationPlan
 
 > The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Assets.DepreciationPlans](Finance.Assets.DepreciationPlans.md)**  
+_Type_: **[DepreciationPlans](Finance.Assets.DepreciationPlans.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationModel
 
 > Valuation model in which the asset is accounted. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md)**  
+_Type_: **[ValuationModels](Finance.Assets.ValuationModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

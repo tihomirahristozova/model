@@ -20,7 +20,7 @@ Service Orders are issued when a new servicing is required. Entity: Srv_Service_
 | [Id](Applications.Service.ServiceOrders.md#id) | guid |  
 | [IsReleased](Applications.Service.ServiceOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [IsSingleExecution](Applications.Service.ServiceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [ParentDocumentRelationshipType](Applications.Service.ServiceOrders.md#parentdocumentrelationshiptype) | [ParentDocumentRelationshipType](Applications.Service.ServiceOrders.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
+| [ParentDocument<br />RelationshipType](Applications.Service.ServiceOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Applications.Service.ServiceOrders.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
 | [PlanningOnly](Applications.Service.ServiceOrders.md#planningonly) | boolean (nullable) | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required] 
 | [ReadOnly](Applications.Service.ServiceOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only [Required] 
 | [ReferenceDate](Applications.Service.ServiceOrders.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)] 
@@ -36,42 +36,42 @@ Service Orders are issued when a new servicing is required. Entity: Srv_Service_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Applications.Service.ServiceOrders.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
-| [AdjustedDocument](Applications.Service.ServiceOrders.md#adjusteddocument) | [General.Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
-| [AssignedToUser](Applications.Service.ServiceOrders.md#assignedtouser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
-| [CurrencyDirectory](Applications.Service.ServiceOrders.md#currencydirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
-| [Customer](Applications.Service.ServiceOrders.md#customer) | [Crm.Customers](Crm.Customers.md) | The client, requesting servicing. [Required] [Filter(multi eq)] |
-| [DocumentType](Applications.Service.ServiceOrders.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
-| [EnterpriseCompany](Applications.Service.ServiceOrders.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
-| [EnterpriseCompanyLocation](Applications.Service.ServiceOrders.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
-| [FromCompanyDivision](Applications.Service.ServiceOrders.md#fromcompanydivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
-| [FromParty](Applications.Service.ServiceOrders.md#fromparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
-| [MasterDocument](Applications.Service.ServiceOrders.md#masterdocument) | [General.Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
-| [Parent](Applications.Service.ServiceOrders.md#parent) | [General.Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
-| [PrimeCauseDocument](Applications.Service.ServiceOrders.md#primecausedocument) | [General.Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
-| [ResponsiblePerson](Applications.Service.ServiceOrders.md#responsibleperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
-| [ReverseOfDocument](Applications.Service.ServiceOrders.md#reverseofdocument) | [General.Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
-| [Sequence](Applications.Service.ServiceOrders.md#sequence) | [General.Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
-| [ServiceAgreement](Applications.Service.ServiceOrders.md#serviceagreement) | [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable) | When not null denotes that the order will be bound to the terms in the specified agreement. [Filter(multi eq)] |
-| [ShipToCustomer](Applications.Service.ServiceOrders.md#shiptocustomer) | [Crm.Customers](Crm.Customers.md) (nullable) | Customer location of the main customer from which the service object is taken. [Filter(multi eq)] |
-| [Store](Applications.Service.ServiceOrders.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null. [Filter(multi eq)] |
-| [ToCompanyDivision](Applications.Service.ServiceOrders.md#tocompanydivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
-| [ToParty](Applications.Service.ServiceOrders.md#toparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
-| [UserStatus](Applications.Service.ServiceOrders.md#userstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
+| [AccessKey](Applications.Service.ServiceOrders.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
+| [AdjustedDocument](Applications.Service.ServiceOrders.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
+| [AssignedToUser](Applications.Service.ServiceOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
+| [CurrencyDirectory](Applications.Service.ServiceOrders.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
+| [Customer](Applications.Service.ServiceOrders.md#customer) | [Customers](Crm.Customers.md) | The client, requesting servicing. [Required] [Filter(multi eq)] |
+| [DocumentType](Applications.Service.ServiceOrders.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
+| [EnterpriseCompany](Applications.Service.ServiceOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
+| [EnterpriseCompanyLocation](Applications.Service.ServiceOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
+| [FromCompanyDivision](Applications.Service.ServiceOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
+| [FromParty](Applications.Service.ServiceOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
+| [MasterDocument](Applications.Service.ServiceOrders.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
+| [Parent](Applications.Service.ServiceOrders.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
+| [PrimeCauseDocument](Applications.Service.ServiceOrders.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
+| [ResponsiblePerson](Applications.Service.ServiceOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
+| [ReverseOfDocument](Applications.Service.ServiceOrders.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
+| [Sequence](Applications.Service.ServiceOrders.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
+| [ServiceAgreement](Applications.Service.ServiceOrders.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable) | When not null denotes that the order will be bound to the terms in the specified agreement. [Filter(multi eq)] |
+| [ShipToCustomer](Applications.Service.ServiceOrders.md#shiptocustomer) | [Customers](Crm.Customers.md) (nullable) | Customer location of the main customer from which the service object is taken. [Filter(multi eq)] |
+| [Store](Applications.Service.ServiceOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null. [Filter(multi eq)] |
+| [ToCompanyDivision](Applications.Service.ServiceOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
+| [ToParty](Applications.Service.ServiceOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
+| [UserStatus](Applications.Service.ServiceOrders.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Comments | [General.DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
-| DistributedAmounts | [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributedAmount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference 
-| DocumentAmounts | [General.DocumentAmounts](General.DocumentAmounts.md) |  
-| FileAttachments | [General.DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
-| LineAmounts | [General.DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
-| Lines | [Applications.Service.ServiceOrderLines](Applications.Service.ServiceOrderLines.md) | List of [ServiceOrderLine](Applications.Service.ServiceOrderLines.md) child objects, based on the [Applications.Service.ServiceOrderLine.ServiceOrder](Applications.Service.ServiceOrderLines.md#serviceorder) back reference 
-| Prints | [General.DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
-| StateChanges | [General.DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
-| Versions | [General.DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
+| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
+| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back nce 
+| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) |  
+| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
+| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
+| Lines | [ServiceOrderLines](Applications.Service.ServiceOrderLines.md) | List of [ServiceOrderLine](Applications.Service.ServiceOrderLines.md) child objects, based on the [Applications.Service.ServiceOrderLine.ServiceOrder](Applications.Service.ServiceOrderLines.md#serviceorder) back reference 
+| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
+| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
+| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
 
 
 ## Attribute Details
@@ -171,7 +171,7 @@ _Default Value_: **False**
 
 > Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
 
-_Type_: **[ParentDocumentRelationshipType](Applications.Service.ServiceOrders.md#parentdocumentrelationshiptype) (nullable)**  
+_Type_: **[ParentDocument<br />RelationshipType](Applications.Service.ServiceOrders.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
 _Allowed Values (General.ParentDocumentRelationshipType Enum Members)_  
 
@@ -287,158 +287,158 @@ _Supports Order By_: **False**
 
 > The access key, containing the user permissions for this document. null means that all users have unlimited permissions
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
 
 > The primary document, which the current document adjusts. null when this is not an adjustment document
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
 
 > The user to which this document is assigned for handling. null means that the document is not assigned to specific user
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
 
 > The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
 
-_Type_: **[General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
+_Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
 
 > The client, requesting servicing. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.Customers](Crm.Customers.md)**  
+_Type_: **[Customers](Crm.Customers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.ShipToCustomer.DetermineCustomerFromShipToCustomer(obj.EnterpriseCompany, obj.Customer)`
+`obj.ShipToCustomer.DetermineCustomerFromShipToCustomer( obj.EnterpriseCompany, obj.Customer)`
 ### DocumentType
 
 > The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The enterprise company which issued the document [Required]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
 > The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
 
-_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
 
 > The division of the company, issuing the document. null when the document is not issued by any specific division
 
-_Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
 
 > The party which issued the document [Required]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MasterDocument
 
 > In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
 > In a multi-document tree, this is the direct parent document. If this is the root it is null
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimeCauseDocument
 
 > The document that is the prime cause for creation of the current document
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ResponsiblePerson
 
 > The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ReverseOfDocument
 
 > The document which the current document is reverse of
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Sequence
 
 > The sequence that will be used to give new numbers to the documents of this type
 
-_Type_: **[General.Sequences](General.Sequences.md) (nullable)**  
+_Type_: **[Sequences](General.Sequences.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ServiceAgreement
 
 > When not null denotes that the order will be bound to the terms in the specified agreement. [Filter(multi eq)]
 
-_Type_: **[Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable)**  
+_Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ShipToCustomer
 
 > Customer location of the main customer from which the service object is taken. [Filter(multi eq)]
 
-_Type_: **[Crm.Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Customers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.Customer.DetermineShipToCustomer(obj.EnterpriseCompany, obj.EnterpriseCompanyLocation, obj.ShipToCustomer)`
+`obj.Customer.DetermineShipToCustomer( obj.EnterpriseCompany, obj.EnterpriseCompanyLocation, obj.ShipToCustomer)`
 ### Store
 
 > The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToCompanyDivision
 
 > The division of the company, receiving the document. null when the document is not received by any specific division
 
-_Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
+_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
 _Supported Filters_: **NotFilterable**  
 
 ### ToParty
 
 > The party which should receive the document
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### UserStatus
 
 > The user status of this document if applicable for this document type. null means unknown or not yet set
 
-_Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 

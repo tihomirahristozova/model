@@ -19,7 +19,7 @@ Geographical map points are used as points of interest on the map. They are used
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](General.Geography.MapPoints.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for within the name of the map point has meaning. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](General.Geography.MapPoints.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for within the name of the map point has meaning. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -71,7 +71,7 @@ _Supports Order By_: **False**
 
 > The enterprise company for within the name of the map point has meaning. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -17,8 +17,8 @@ Contains exchange rate for a currency against the main currency of currency dire
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) | The [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [FromCurrency](General.CurrencyDirectoryLines.md#fromcurrency) | [General.Currencies](General.Currencies.md) | The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)] |
+| [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) | The [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [FromCurrency](General.CurrencyDirectoryLines.md#fromcurrency) | [Currencies](General.Currencies.md) | The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -54,14 +54,14 @@ _Default Value_: **1**
 
 > The [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.CurrencyDirectories](General.CurrencyDirectories.md)**  
+_Type_: **[CurrencyDirectories](General.CurrencyDirectories.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCurrency
 
 > The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md)**  
+_Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

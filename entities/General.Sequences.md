@@ -17,7 +17,7 @@ Provides numbering sequences, applicable for use in a multi-threaded environment
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Generators | [General.SequenceGenerators](General.SequenceGenerators.md) | List of [SequenceGenerator](General.SequenceGenerators.md) child objects, based on the [General.SequenceGenerator.Sequence](General.SequenceGenerators.md#sequence) back reference 
+| Generators | [SequenceGenerators](General.SequenceGenerators.md) | List of [SequenceGenerator](General.SequenceGenerators.md) child objects, based on the [General.SequenceGenerator.Sequence](General.SequenceGenerators.md#sequence) back reference 
 
 
 ## Attribute Details

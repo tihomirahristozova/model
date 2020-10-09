@@ -18,10 +18,10 @@ Contains all transactions of Record of Handover / Handing-Over Record lines. Ent
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LeaseContract](Applications.Rental.TransactionLines.md#leasecontract) | [Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md) | Lease Contract. [Required] [Filter(multi eq)] |
-| [LesseeCustomer](Applications.Rental.TransactionLines.md#lesseecustomer) | [Crm.Customers](Crm.Customers.md) | Lessee Customer. [Required] [Filter(multi eq)] |
-| [RentalAsset](Applications.Rental.TransactionLines.md#rentalasset) | [Applications.Rental.Assets](Applications.Rental.Assets.md) | Rental asset. [Required] [Filter(multi eq)] |
-| [RentTransaction](Applications.Rental.TransactionLines.md#renttransaction) | [Applications.Rental.Transactions](Applications.Rental.Transactions.md) | The [Transaction](Applications.Rental.Transactions.md) to which this TransactionLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [LeaseContract](Applications.Rental.TransactionLines.md#leasecontract) | [LeaseContracts](Applications.Rental.LeaseContracts.md) | Lease Contract. [Required] [Filter(multi eq)] |
+| [LesseeCustomer](Applications.Rental.TransactionLines.md#lesseecustomer) | [Customers](Crm.Customers.md) | Lessee Customer. [Required] [Filter(multi eq)] |
+| [RentalAsset](Applications.Rental.TransactionLines.md#rentalasset) | [Assets](Applications.Rental.Assets.md) | Rental asset. [Required] [Filter(multi eq)] |
+| [RentTransaction](Applications.Rental.TransactionLines.md#renttransaction) | [Transactions](Applications.Rental.Transactions.md) | The [Transaction](Applications.Rental.Transactions.md) to which this TransactionLine belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -73,28 +73,28 @@ _Supports Order By_: **False**
 
 > Lease Contract. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md)**  
+_Type_: **[LeaseContracts](Applications.Rental.LeaseContracts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LesseeCustomer
 
 > Lessee Customer. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.Customers](Crm.Customers.md)**  
+_Type_: **[Customers](Crm.Customers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RentalAsset
 
 > Rental asset. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Rental.Assets](Applications.Rental.Assets.md)**  
+_Type_: **[Assets](Applications.Rental.Assets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RentTransaction
 
 > The [Transaction](Applications.Rental.Transactions.md) to which this TransactionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Rental.Transactions](Applications.Rental.Transactions.md)**  
+_Type_: **[Transactions](Applications.Rental.Transactions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

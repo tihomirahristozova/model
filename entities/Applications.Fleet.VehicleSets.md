@@ -17,13 +17,13 @@ Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Se
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.Fleet.VehicleSets.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the vehicle set. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](Applications.Fleet.VehicleSets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the vehicle set. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Vehicles | [Applications.Fleet.VehicleSetVehicles](Applications.Fleet.VehicleSetVehicles.md) | List of [VehicleSetVehicle](Applications.Fleet.VehicleSetVehicles.md) child objects, based on the [Applications.Fleet.VehicleSetVehicle.VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) back reference 
+| Vehicles | [VehicleSetVehicles](Applications.Fleet.VehicleSetVehicles.md) | List of [VehicleSetVehicle](Applications.Fleet.VehicleSetVehicles.md) child objects, based on the [Applications.Fleet.VehicleSetVehicle.VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) back reference 
 
 
 ## Attribute Details
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 > The enterprise company operating the vehicle set. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

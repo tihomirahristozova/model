@@ -10,7 +10,7 @@ Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AccountFullNumber](Finance.Accounting.Accounts.md#accountfullnumber) | string | The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. [Required] [Filter(like)] [ReadOnly] 
-| [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document. [Required] [Default("ACB")] 
+| [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_<br />Directory, BRD=Balance_Reference_<br />Document. [Required] [Default("ACB") 
 | [Description](Finance.Accounting.Accounts.md#description) | string (nullable) | The description of this Account. 
 | [Discontinued](Finance.Accounting.Accounts.md#discontinued) | boolean | True means that the account won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)] 
 | [Id](Finance.Accounting.Accounts.md#id) | guid |  
@@ -21,15 +21,15 @@ Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountGroup](Finance.Accounting.Accounts.md#accountgroup) | [Finance.Accounting.AccountGroups](Finance.Accounting.AccountGroups.md) | The account group to which this account belongs. [Required] [Filter(multi eq)] |
-| [Currency](Finance.Accounting.Accounts.md#currency) | [General.Currencies](General.Currencies.md) (nullable) | The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. [Filter(multi eq)] |
-| [EnterpriseCompany](Finance.Accounting.Accounts.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [AccountGroup](Finance.Accounting.Accounts.md#accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | The account group to which this account belongs. [Required] [Filter(multi eq)] |
+| [Currency](Finance.Accounting.Accounts.md#currency) | [Currencies](General.Currencies.md) (nullable) | The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. [Filter(multi eq)] |
+| [EnterpriseCompany](Finance.Accounting.Accounts.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| RequiredProperties | [Finance.Accounting.AccountRequiredProperties](Finance.Accounting.AccountRequiredProperties.md) | List of [AccountRequiredProperty](Finance.Accounting.AccountRequiredProperties.md) child objects, based on the [Finance.Accounting.AccountRequiredProperty.Account](Finance.Accounting.AccountRequiredProperties.md#account) back reference 
+| RequiredProperties | [AccountRequiredProperties](Finance.Accounting.AccountRequiredProperties.md) | List of [AccountRequiredProperty](Finance.Accounting.AccountRequiredProperties.md) child objects, based on the [Finance.Accounting.AccountRequiredProperty.Account](Finance.Accounting.AccountRequiredProperties.md#account) back reference 
 
 
 ## Attribute Details
@@ -106,21 +106,21 @@ _Supports Order By_: **False**
 
 > The account group to which this account belongs. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.AccountGroups](Finance.Accounting.AccountGroups.md)**  
+_Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Currency
 
 > The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
+_Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

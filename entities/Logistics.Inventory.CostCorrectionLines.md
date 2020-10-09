@@ -19,8 +19,8 @@ Cost correction detail lines. One line is created for each corrected transaction
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostCorrection](Logistics.Inventory.CostCorrectionLines.md#costcorrection) | [Logistics.Inventory.CostCorrections](Logistics.Inventory.CostCorrections.md) | The [CostCorrection](Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [TransactionLine](Logistics.Inventory.CostCorrectionLines.md#transactionline) | [Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | The transaction line, which is corrected. [Required] [Filter(multi eq)] |
+| [CostCorrection](Logistics.Inventory.CostCorrectionLines.md#costcorrection) | [CostCorrections](Logistics.Inventory.CostCorrections.md) | The [CostCorrection](Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [TransactionLine](Logistics.Inventory.CostCorrectionLines.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | The transaction line, which is corrected. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -74,14 +74,14 @@ _Default Value_: **Constant**
 
 > The [CostCorrection](Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Logistics.Inventory.CostCorrections](Logistics.Inventory.CostCorrections.md)**  
+_Type_: **[CostCorrections](Logistics.Inventory.CostCorrections.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransactionLine
 
 > The transaction line, which is corrected. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
+_Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

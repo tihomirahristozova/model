@@ -15,9 +15,9 @@ The default store bins in which products should be placed. Entity: Inv_Product_D
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultBin](Logistics.Inventory.ProductDefaultStoreBins.md#defaultbin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) | The default bin, which should be used for this product. [Required] [Filter(multi eq)] |
-| [Product](Logistics.Inventory.ProductDefaultStoreBins.md#product) | [General.Products.Products](General.Products.Products.md) | The [Product](General.Products.Products.md) to which this ProductDefaultStoreBin belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Store](Logistics.Inventory.ProductDefaultStoreBins.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The store, for which the default bin is specified. [Required] [Filter(multi eq)] |
+| [DefaultBin](Logistics.Inventory.ProductDefaultStoreBins.md#defaultbin) | [StoreBins](Logistics.Inventory.StoreBins.md) | The default bin, which should be used for this product. [Required] [Filter(multi eq)] |
+| [Product](Logistics.Inventory.ProductDefaultStoreBins.md#product) | [Products](General.Products.Products.md) | The [Product](General.Products.Products.md) to which this ProductDefaultStoreBin belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Store](Logistics.Inventory.ProductDefaultStoreBins.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store, for which the default bin is specified. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -35,21 +35,21 @@ _Default Value_: **NewGuid**
 
 > The default bin, which should be used for this product. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md)**  
+_Type_: **[StoreBins](Logistics.Inventory.StoreBins.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The [Product](General.Products.Products.md) to which this ProductDefaultStoreBin belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
 > The store, for which the default bin is specified. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

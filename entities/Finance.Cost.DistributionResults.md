@@ -18,8 +18,8 @@ Contains the results of a cost distribution calculation. Entity: Cost_Distributi
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostDistribution](Finance.Cost.DistributionResults.md#costdistribution) | [Finance.Cost.Distributions](Finance.Cost.Distributions.md) | The [Distribution](Finance.Cost.Distributions.md) to which this DistributionResult belongs. [Required] [Filter(multi eq)] [Owner] |
-| [CostType](Finance.Cost.DistributionResults.md#costtype) | [Finance.Cost.CostTypes](Finance.Cost.CostTypes.md) | The cost type for which the current distribution is calculated. [Required] [Filter(multi eq)] |
+| [CostDistribution](Finance.Cost.DistributionResults.md#costdistribution) | [Distributions](Finance.Cost.Distributions.md) | The [Distribution](Finance.Cost.Distributions.md) to which this DistributionResult belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CostType](Finance.Cost.DistributionResults.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The cost type for which the current distribution is calculated. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -47,10 +47,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.CostDistribution.Results.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.CostDistribution.Results.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.CostDistribution.Results.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.CostDistribution.Results.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### OutputLineNo
 
 > The line number (within the document) of the output over which the cost is distributed. [Required]
@@ -66,14 +66,14 @@ _Supports Order By_: **False**
 
 > The [Distribution](Finance.Cost.Distributions.md) to which this DistributionResult belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Cost.Distributions](Finance.Cost.Distributions.md)**  
+_Type_: **[Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostType
 
 > The cost type for which the current distribution is calculated. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Cost.CostTypes](Finance.Cost.CostTypes.md)**  
+_Type_: **[CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

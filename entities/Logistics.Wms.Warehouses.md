@@ -3,7 +3,7 @@ uid: Logistics.Wms.Warehouses
 ---
 # Logistics.Wms.Warehouses
 
-Physical warehouse. Entity: Wms_Warehouses (Introduced in version 20.1.100.0)
+Physical warehouse. Entity: Wms_Warehouses (Introduced in version 20.1)
 
 ## Attributes
 
@@ -17,9 +17,9 @@ Physical warehouse. Entity: Wms_Warehouses (Introduced in version 20.1.100.0)
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Locations | [Logistics.Wms.WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | List of [WarehouseLocation](Logistics.Wms.WarehouseLocations.md) child objects, based on the [Logistics.Wms.WarehouseLocation.Warehouse](Logistics.Wms.WarehouseLocations.md#warehouse) back reference 
-| Workers | [Logistics.Wms.WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) | List of [WarehouseWorker](Logistics.Wms.WarehouseWorkers.md) child objects, based on the [Logistics.Wms.WarehouseWorker.Warehouse](Logistics.Wms.WarehouseWorkers.md#warehouse) back reference 
-| Zones | [Logistics.Wms.WarehouseZones](Logistics.Wms.WarehouseZones.md) | List of [WarehouseZone](Logistics.Wms.WarehouseZones.md) child objects, based on the [Logistics.Wms.WarehouseZone.Warehouse](Logistics.Wms.WarehouseZones.md#warehouse) back reference 
+| Locations | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | List of [WarehouseLocation](Logistics.Wms.WarehouseLocations.md) child objects, based on the [Logistics.Wms.WarehouseLocation.Warehouse](Logistics.Wms.WarehouseLocations.md#warehouse) back reference 
+| Workers | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) | List of [WarehouseWorker](Logistics.Wms.WarehouseWorkers.md) child objects, based on the [Logistics.Wms.WarehouseWorker.Warehouse](Logistics.Wms.WarehouseWorkers.md#warehouse) back reference 
+| Zones | [WarehouseZones](Logistics.Wms.WarehouseZones.md) | List of [WarehouseZone](Logistics.Wms.WarehouseZones.md) child objects, based on the [Logistics.Wms.WarehouseZone.Warehouse](Logistics.Wms.WarehouseZones.md#warehouse) back reference 
 
 
 ## Attribute Details

@@ -18,7 +18,7 @@ Contains the different working time periods within the work schedule. Entity: Ge
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) | [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md) | The [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner] |
+| [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) | [WorkSchedules](General.Resources.WorkSchedules.md) | The [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 > The [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)**  
+_Type_: **[WorkSchedules](General.Resources.WorkSchedules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

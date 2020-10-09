@@ -800,6 +800,8 @@
     items:
     - name: WarehouseLocations
       href: Logistics.Wms.WarehouseLocations.md
+    - name: WarehouseOrderExecutions
+      href: Logistics.Wms.WarehouseOrderExecutions.md
     - name: WarehouseOrderLines
       href: Logistics.Wms.WarehouseOrderLines.md
     - name: WarehouseOrders
@@ -1064,7 +1066,3 @@
       href: Systems.Workflow.RoleUsers.md
     - name: Routes
       href: Systems.Workflow.Routes.md
-- name: Wms
-  items:
-  - name: WarehouseOrderExecutions
-    href: Wms.WarehouseOrderExecutions.md

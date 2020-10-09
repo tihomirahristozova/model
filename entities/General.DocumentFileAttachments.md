@@ -20,7 +20,7 @@ Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentFileAttachments.md#document) | [General.Documents](General.Documents.md) | The [Document](General.DocumentFileAttachments.md#document) to which this DocumentFileAttachment belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Document](General.DocumentFileAttachments.md#document) | [Documents](General.Documents.md) | The [Document](General.DocumentFileAttachments.md#document) to which this DocumentFileAttachment belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -79,7 +79,7 @@ _Supports Order By_: **False**
 
 > The [Document](General.DocumentFileAttachments.md#document) to which this DocumentFileAttachment belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

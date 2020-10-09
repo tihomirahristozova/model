@@ -22,15 +22,15 @@ Mass payment amount. Each record generates one payment transaction. Entity: Cash
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](Finance.Payments.PaymentSlipAmounts.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. [Filter(multi eq)] |
-| [PaymentReason](Finance.Payments.PaymentSlipAmounts.md#paymentreason) | [Finance.Payments.PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable) | The reason for the payment, as defined in Payment Reasons. [Filter(multi eq)] |
-| [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) | [Finance.Payments.PaymentSlips](Finance.Payments.PaymentSlips.md) | The [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) to which this PaymentSlipAmount belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Party](Finance.Payments.PaymentSlipAmounts.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. [Filter(multi eq)] |
+| [PaymentReason](Finance.Payments.PaymentSlipAmounts.md#paymentreason) | [PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable) | The reason for the payment, as defined in Payment Reasons. [Filter(multi eq)] |
+| [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) | [PaymentSlips](Finance.Payments.PaymentSlips.md) | The [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) to which this PaymentSlipAmount belongs. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| PaymentSlipLines | [Finance.Payments.PaymentSlipLines](Finance.Payments.PaymentSlipLines.md) | List of [PaymentSlipLine](Finance.Payments.PaymentSlipLines.md) child objects, based on the [Finance.Payments.PaymentSlipLine.PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) back reference 
+| PaymentSlipLines | [PaymentSlipLines](Finance.Payments.PaymentSlipLines.md) | List of [PaymentSlipLine](Finance.Payments.PaymentSlipLines.md) child objects, based on the [Finance.Payments.PaymentSlipLine.PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) back reference 
 
 
 ## Attribute Details
@@ -83,10 +83,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.PaymentSlip.Amounts.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.PaymentSlip.Amounts.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.PaymentSlip.Amounts.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.PaymentSlip.Amounts.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### PartyName
 
 > The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee).
@@ -96,7 +96,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`obj.Party.ObtainPartyName()`
+`obj.Party.ObtainPartyName( )`
 ### PaymentDate
 
 > The date on which the payment is done. [Required] [Filter(ge;le)]
@@ -120,21 +120,21 @@ _Supports Order By_: **False**
 
 > The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentReason
 
 > The reason for the payment, as defined in Payment Reasons. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable)**  
+_Type_: **[PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentSlip
 
 > The [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) to which this PaymentSlipAmount belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Payments.PaymentSlips](Finance.Payments.PaymentSlips.md)**  
+_Type_: **[PaymentSlips](Finance.Payments.PaymentSlips.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

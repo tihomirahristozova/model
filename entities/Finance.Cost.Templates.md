@@ -17,14 +17,14 @@ Cost templates specify how to calculate and allocate costs. Entity: Cost_Templat
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Finance.Cost.Templates.md#currency) | [General.Currencies](General.Currencies.md) | The currency of the calculations, based on the template. [Required] [Filter(multi eq)] |
+| [Currency](Finance.Cost.Templates.md#currency) | [Currencies](General.Currencies.md) | The currency of the calculations, based on the template. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| CostTypes | [Finance.Cost.TemplateCostTypes](Finance.Cost.TemplateCostTypes.md) | List of [TemplateCostType](Finance.Cost.TemplateCostTypes.md) child objects, based on the [Finance.Cost.TemplateCostType.CostTemplate](Finance.Cost.TemplateCostTypes.md#costtemplate) back reference 
-| Levels | [Finance.Cost.TemplateLevels](Finance.Cost.TemplateLevels.md) | List of [TemplateLevel](Finance.Cost.TemplateLevels.md) child objects, based on the [Finance.Cost.TemplateLevel.CostTemplate](Finance.Cost.TemplateLevels.md#costtemplate) back reference 
+| CostTypes | [TemplateCostTypes](Finance.Cost.TemplateCostTypes.md) | List of [TemplateCostType](Finance.Cost.TemplateCostTypes.md) child objects, based on the [Finance.Cost.TemplateCostType.CostTemplate](Finance.Cost.TemplateCostTypes.md#costtemplate) back reference 
+| Levels | [TemplateLevels](Finance.Cost.TemplateLevels.md) | List of [TemplateLevel](Finance.Cost.TemplateLevels.md) child objects, based on the [Finance.Cost.TemplateLevel.CostTemplate](Finance.Cost.TemplateLevels.md#costtemplate) back reference 
 
 
 ## Attribute Details
@@ -58,7 +58,7 @@ _Default Value_: **NewGuid**
 
 > The currency of the calculations, based on the template. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md)**  
+_Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

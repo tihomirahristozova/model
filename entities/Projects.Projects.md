@@ -21,19 +21,19 @@ Contains the planned, running and completed projects of the enterprises. Entity:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BudgetingCurrency](Projects.Projects.md#budgetingcurrency) | [General.Currencies](General.Currencies.md) (nullable) | The currency in which the project budget is calculated. [Filter(multi eq)] |
-| [ClientParty](Projects.Projects.md#clientparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The external or internal client of the project. [Filter(multi eq)] |
-| [EnterpriseCompany](Projects.Projects.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
-| [ProjectManagerPerson](Projects.Projects.md#projectmanagerperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The project manager. [Filter(multi eq)] |
-| [ProjectType](Projects.Projects.md#projecttype) | [Projects.ProjectTypes](Projects.ProjectTypes.md) | The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. [Required] [Filter(multi eq)] |
+| [BudgetingCurrency](Projects.Projects.md#budgetingcurrency) | [Currencies](General.Currencies.md) (nullable) | The currency in which the project budget is calculated. [Filter(multi eq)] |
+| [ClientParty](Projects.Projects.md#clientparty) | [Parties](General.Contacts.Parties.md) (nullable) | The external or internal client of the project. [Filter(multi eq)] |
+| [EnterpriseCompany](Projects.Projects.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [ProjectManagerPerson](Projects.Projects.md#projectmanagerperson) | [Persons](General.Contacts.Persons.md) (nullable) | The project manager. [Filter(multi eq)] |
+| [ProjectType](Projects.Projects.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) | The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Participants | [Projects.ProjectParticipants](Projects.ProjectParticipants.md) | List of [ProjectParticipant](Projects.ProjectParticipants.md) child objects, based on the [Projects.ProjectParticipant.Project](Projects.ProjectParticipants.md#project) back reference 
-| Risks | [Projects.ProjectRisks](Projects.ProjectRisks.md) | List of [ProjectRisk](Projects.ProjectRisks.md) child objects, based on the [Projects.ProjectRisk.Project](Projects.ProjectRisks.md#project) back reference 
-| WorkElements | [Projects.ProjectWorkElements](Projects.ProjectWorkElements.md) | List of [ProjectWorkElement](Projects.ProjectWorkElements.md) child objects, based on the [Projects.ProjectWorkElement.Project](Projects.ProjectWorkElements.md#project) back reference 
+| Participants | [ProjectParticipants](Projects.ProjectParticipants.md) | List of [ProjectParticipant](Projects.ProjectParticipants.md) child objects, based on the [Projects.ProjectParticipant.Project](Projects.ProjectParticipants.md#project) back reference 
+| Risks | [ProjectRisks](Projects.ProjectRisks.md) | List of [ProjectRisk](Projects.ProjectRisks.md) child objects, based on the [Projects.ProjectRisk.Project](Projects.ProjectRisks.md#project) back reference 
+| WorkElements | [ProjectWorkElements](Projects.ProjectWorkElements.md) | List of [ProjectWorkElement](Projects.ProjectWorkElements.md) child objects, based on the [Projects.ProjectWorkElement.Project](Projects.ProjectWorkElements.md#project) back reference 
 
 
 ## Attribute Details
@@ -114,35 +114,35 @@ _Supports Order By_: **False**
 
 > The currency in which the project budget is calculated. [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
+_Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ClientParty
 
 > The external or internal client of the project. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectManagerPerson
 
 > The project manager. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectType
 
 > The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. [Required] [Filter(multi eq)]
 
-_Type_: **[Projects.ProjectTypes](Projects.ProjectTypes.md)**  
+_Type_: **[ProjectTypes](Projects.ProjectTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

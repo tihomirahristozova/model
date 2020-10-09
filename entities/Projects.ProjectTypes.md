@@ -17,15 +17,15 @@ Contains the types of projects, which can be executed by the enterprise company.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Projects.ProjectTypes.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null means that the project type is specific to the enterprise company. [Filter(multi eq)] |
+| [EnterpriseCompany](Projects.ProjectTypes.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null means that the project type is specific to the enterprise company. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Roles | [Projects.TypeRoles](Projects.TypeRoles.md) | List of [TypeRole](Projects.TypeRoles.md) child objects, based on the [Projects.TypeRole.ProjectType](Projects.TypeRoles.md#projecttype) back reference 
-| WorkElements | [Projects.TypeWorkElements](Projects.TypeWorkElements.md) | List of [TypeWorkElement](Projects.TypeWorkElements.md) child objects, based on the [Projects.TypeWorkElement.ProjectType](Projects.TypeWorkElements.md#projecttype) back reference 
-| WorkTypes | [Projects.TypeWorkTypes](Projects.TypeWorkTypes.md) | List of [TypeWorkType](Projects.TypeWorkTypes.md) child objects, based on the [Projects.TypeWorkType.ProjectType](Projects.TypeWorkTypes.md#projecttype) back reference 
+| Roles | [TypeRoles](Projects.TypeRoles.md) | List of [TypeRole](Projects.TypeRoles.md) child objects, based on the [Projects.TypeRole.ProjectType](Projects.TypeRoles.md#projecttype) back reference 
+| WorkElements | [TypeWorkElements](Projects.TypeWorkElements.md) | List of [TypeWorkElement](Projects.TypeWorkElements.md) child objects, based on the [Projects.TypeWorkElement.ProjectType](Projects.TypeWorkElements.md#projecttype) back reference 
+| WorkTypes | [TypeWorkTypes](Projects.TypeWorkTypes.md) | List of [TypeWorkType](Projects.TypeWorkTypes.md) child objects, based on the [Projects.TypeWorkType.ProjectType](Projects.TypeWorkTypes.md#projecttype) back reference 
 
 
 ## Attribute Details
@@ -59,7 +59,7 @@ _Supports Order By_: **False**
 
 > When not null means that the project type is specific to the enterprise company. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

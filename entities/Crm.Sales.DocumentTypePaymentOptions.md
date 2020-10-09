@@ -9,16 +9,16 @@ Contains payment options for user documnet types for sales orders. Entity: Crm_D
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeferredPaymentMinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammount) | [Amount](../data-types.md#amount) | The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPaymentMinimalAmmountCurrency] [Required] 
+| [DeferredPayment<br />MinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammount) | [Amount](../data-types.md#amount) | The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPayment<br />MinimalAmmount<br />Currency]  
 | [Id](Crm.Sales.DocumentTypePaymentOptions.md#id) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeferredPaymentMinimalAmmountCurrency](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammountcurrency) | [General.Currencies](General.Currencies.md) | The currency of Deferred Payment Minimal Amount. [Required] [Filter(multi eq)] |
-| [DocumentType](Crm.Sales.DocumentTypePaymentOptions.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the payment option applies. [Required] [Filter(multi eq)] |
-| [EnterpriseCompany](Crm.Sales.DocumentTypePaymentOptions.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the payment options are specified. [Required] [Filter(multi eq)] |
+| [DeferredPayment<br />MinimalAmmount<br />Currency](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammountcurrency) | [Currencies](General.Currencies.md) | The currency of Deferred Payment Minimal Amount. [Required] [Filter(multi eq)] |
+| [DocumentType](Crm.Sales.DocumentTypePaymentOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which the payment option applies. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Crm.Sales.DocumentTypePaymentOptions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the payment options are specified. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -44,21 +44,21 @@ _Default Value_: **NewGuid**
 
 > The currency of Deferred Payment Minimal Amount. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md)**  
+_Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
 > The document type for which the payment option applies. [Required] [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The enterprise company for which the payment options are specified. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -3,7 +3,7 @@ uid: Logistics.Shipment.TransportationExecutionLines
 ---
 # Logistics.Shipment.TransportationExecutionLines
 
-Contains details of executions of transportation order lines. Entity: Log_Transportation_Execution_Lines (Introduced in version 18.2.100.0)
+Contains details of executions of transportation order lines. Entity: Log_Transportation_Execution_Lines (Introduced in version 18.2)
 
 ## Attributes
 
@@ -13,7 +13,7 @@ Contains details of executions of transportation order lines. Entity: Log_Transp
 | [ExecutionTime](Logistics.Shipment.TransportationExecutionLines.md#executiontime) | time | The time when the operation was executed. [Required] 
 | [Id](Logistics.Shipment.TransportationExecutionLines.md#id) | guid |  
 | [LineNo](Logistics.Shipment.TransportationExecutionLines.md#lineno) | int32 | Consecutive line number within this execution. [Required] 
-| [Notes](Logistics.Shipment.TransportationExecutionLines.md#notes) | string (nullable) | Notes for this TransportationExecutionLine. 
+| [Notes](Logistics.Shipment.TransportationExecutionLines.md#notes) | string (nullable) | Notes for this Transportation<br />ExecutionLine. 
 | [OperationType](Logistics.Shipment.TransportationExecutionLines.md#operationtype) | [OperationType](Logistics.Shipment.TransportationExecutionLines.md#operationtype) | The type of operation being executed. L=Loading; U=Unloading; O=Other. [Required] 
 | [PalletNumber](Logistics.Shipment.TransportationExecutionLines.md#palletnumber) | string (nullable) | Pallet number, when applicable. null when unknown or not applicable. 
 | [PalletsCount](Logistics.Shipment.TransportationExecutionLines.md#palletscount) | int32 (nullable) | Number of pallets affected by this operation. null when unknown or N/A. 
@@ -24,9 +24,9 @@ Contains details of executions of transportation order lines. Entity: Log_Transp
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExecutionOfTransportationOrderLine](Logistics.Shipment.TransportationExecutionLines.md#executionoftransportationorderline) | [Logistics.Shipment.TransportationOrderLines](Logistics.Shipment.TransportationOrderLines.md) | The transportation order line, which is executed. [Required] [Filter(multi eq)] |
-| [GeoPoint](Logistics.Shipment.TransportationExecutionLines.md#geopoint) | [General.Geography.GeoPoints](General.Geography.GeoPoints.md) | The geographic point, where the operation is executed. [Required] [Filter(multi eq)] |
-| [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) | [Logistics.Shipment.TransportationExecutions](Logistics.Shipment.TransportationExecutions.md) | The [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) to which this TransportationExecutionLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ExecutionOfTransportation<br />OrderLine](Logistics.Shipment.TransportationExecutionLines.md#executionoftransportationorderline) | [TransportationOrderLines](Logistics.Shipment.TransportationOrderLines.md) | The transportation order line, which is executed. [Required] [Filter(multi eq)] |
+| [GeoPoint](Logistics.Shipment.TransportationExecutionLines.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) | The geographic point, where the operation is executed. [Required] [Filter(multi eq)] |
+| [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) | [TransportationExecutions](Logistics.Shipment.TransportationExecutions.md) | The [TransportationExecution](Logistics.Shipment.Transportation<br />ExecutionLines.md#transportationexecution) to which this Transportation<br />ExecutionLine belongs. [Required] [Filter(multi eq)]  |
 
 
 ## Attribute Details
@@ -72,10 +72,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.TransportationExecution.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.TransportationExecution.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.TransportationExecution.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.TransportationExecution.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
 > Notes for this TransportationExecutionLine.
@@ -140,14 +140,14 @@ _Supports Order By_: **False**
 
 > The transportation order line, which is executed. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Shipment.TransportationOrderLines](Logistics.Shipment.TransportationOrderLines.md)**  
+_Type_: **[TransportationOrderLines](Logistics.Shipment.TransportationOrderLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### GeoPoint
 
 > The geographic point, where the operation is executed. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Geography.GeoPoints](General.Geography.GeoPoints.md)**  
+_Type_: **[GeoPoints](General.Geography.GeoPoints.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -159,7 +159,7 @@ _Front-End Recalc Expressions:_
 
 > The [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) to which this TransportationExecutionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Logistics.Shipment.TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)**  
+_Type_: **[TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

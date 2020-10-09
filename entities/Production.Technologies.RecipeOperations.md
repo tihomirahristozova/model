@@ -11,7 +11,7 @@ Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operati
 | ---- | ---- | --- |
 | [Id](Production.Technologies.RecipeOperations.md#id) | guid |  
 | [LineOrd](Production.Technologies.RecipeOperations.md#lineord) | int32 | Order of the operation within the recipe. [Required] 
-| [MinimumConcurrentStartTimeMinutes](Production.Technologies.RecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
+| [MinimumConcurrent<br />StartTimeMinutes](Production.Technologies.RecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
 | [MoveTimeMinutes](Production.Technologies.RecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. [Required] [Default(0)] 
 | [Notes](Production.Technologies.RecipeOperations.md#notes) | string (nullable) | Notes for this RecipeOperation. 
 | [OperationDescription](Production.Technologies.RecipeOperations.md#operationdescription) | string (nullable) | The description of the operation. 
@@ -28,11 +28,11 @@ Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operati
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Operation](Production.Technologies.RecipeOperations.md#operation) | [Production.Resources.Operations](Production.Resources.Operations.md) (nullable) | Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. [Filter(multi eq)] |
-| [OperationInstruction](Production.Technologies.RecipeOperations.md#operationinstruction) | [Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Link to additional data, containing instructions in external format. [Filter(multi eq)] |
-| [Recipe](Production.Technologies.RecipeOperations.md#recipe) | [Production.Technologies.Recipes](Production.Technologies.Recipes.md) | The [Recipe](Production.Technologies.RecipeOperations.md#recipe) to which this RecipeOperation belongs. [Required] [Filter(multi eq)] [Owner] |
-| [UseQuantityUnit](Production.Technologies.RecipeOperations.md#usequantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Use_Quantity. [Required] [Filter(multi eq)] |
-| [WorkgroupResource](Production.Technologies.RecipeOperations.md#workgroupresource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) | The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. [Required] [Filter(multi eq)] |
+| [Operation](Production.Technologies.RecipeOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. [Filter(multi eq)] |
+| [OperationInstruction](Production.Technologies.RecipeOperations.md#operationinstruction) | [OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Link to additional data, containing instructions in external format. [Filter(multi eq)] |
+| [Recipe](Production.Technologies.RecipeOperations.md#recipe) | [Recipes](Production.Technologies.Recipes.md) | The [Recipe](Production.Technologies.RecipeOperations.md#recipe) to which this RecipeOperation belongs. [Required] [Filter(multi eq)] [Owner] |
+| [UseQuantityUnit](Production.Technologies.RecipeOperations.md#usequantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Use_Quantity. [Required] [Filter(multi eq)] |
+| [WorkgroupResource](Production.Technologies.RecipeOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -52,10 +52,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.Recipe.Operations.Select(c => c.LineOrd).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Recipe.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.Recipe.Operations.Select(c => c.LineOrd).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Recipe.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### MinimumConcurrentStartTimeMinutes
 
 > How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
@@ -166,35 +166,35 @@ _Default Value_: **0**
 
 > Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. [Filter(multi eq)]
 
-_Type_: **[Production.Resources.Operations](Production.Resources.Operations.md) (nullable)**  
+_Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OperationInstruction
 
 > Link to additional data, containing instructions in external format. [Filter(multi eq)]
 
-_Type_: **[Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
+_Type_: **[OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Recipe
 
 > The [Recipe](Production.Technologies.RecipeOperations.md#recipe) to which this RecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Production.Technologies.Recipes](Production.Technologies.Recipes.md)**  
+_Type_: **[Recipes](Production.Technologies.Recipes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UseQuantityUnit
 
 > The measurement unit of Use_Quantity. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkgroupResource
 
 > The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. [Required] [Filter(multi eq)]
 
-_Type_: **[Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
+_Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

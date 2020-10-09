@@ -20,8 +20,8 @@ Represents a carrier agreement. One actual carrier can have different agreements
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Logistics.Shipment.Carriers.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which signed the carrier agreement. [Required] [Filter(multi eq)] |
-| [Supplier](Logistics.Shipment.Carriers.md#supplier) | [Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md) | The supplier contract with the carrier. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Logistics.Shipment.Carriers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which signed the carrier agreement. [Required] [Filter(multi eq)] |
+| [Supplier](Logistics.Shipment.Carriers.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) | The supplier contract with the carrier. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -81,14 +81,14 @@ _Supports Order By_: **False**
 
 > The enterprise company which signed the carrier agreement. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Supplier
 
 > The supplier contract with the carrier. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md)**  
+_Type_: **[Suppliers](Logistics.Procurement.Suppliers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

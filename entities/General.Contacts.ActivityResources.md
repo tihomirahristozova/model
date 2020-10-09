@@ -17,8 +17,8 @@ Contains the resources, allocated to the activities. Entity: Cm_Activity_Resourc
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Contacts.ActivityResources.md#activity) | [General.Contacts.Activities](General.Contacts.Activities.md) | The [Activity](General.Contacts.ActivityResources.md#activity) to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Resource](General.Contacts.ActivityResources.md#resource) | [General.Resources.Resources](General.Resources.Resources.md) | The resource, which is required by the activity. [Required] [Filter(multi eq)] |
+| [Activity](General.Contacts.ActivityResources.md#activity) | [Activities](General.Contacts.Activities.md) | The [Activity](General.Contacts.ActivityResources.md#activity) to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Resource](General.Contacts.ActivityResources.md#resource) | [Resources](General.Resources.Resources.md) | The resource, which is required by the activity. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -53,14 +53,14 @@ _Default Value_: **1**
 
 > The [Activity](General.Contacts.ActivityResources.md#activity) to which this ActivityResource belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Activities](General.Contacts.Activities.md)**  
+_Type_: **[Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Resource
 
 > The resource, which is required by the activity. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Resources.Resources](General.Resources.Resources.md)**  
+_Type_: **[Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

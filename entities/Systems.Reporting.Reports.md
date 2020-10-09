@@ -24,7 +24,7 @@ User-defined reports. Reports retrieve data from data sources and present it in 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataSource](Systems.Reporting.Reports.md#datasource) | [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md) (nullable) | Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. [Filter(multi eq)] |
+| [DataSource](Systems.Reporting.Reports.md#datasource) | [DataSources](Systems.Reporting.DataSources.md) (nullable) | Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -115,7 +115,7 @@ _Supports Order By_: **False**
 
 > Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. [Filter(multi eq)]
 
-_Type_: **[Systems.Reporting.DataSources](Systems.Reporting.DataSources.md) (nullable)**  
+_Type_: **[DataSources](Systems.Reporting.DataSources.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

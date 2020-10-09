@@ -24,8 +24,8 @@ Categorization of the products by their nature. Entity: Gen_Product_Types
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| PurchaseInvoiceLineProperties | [General.Products.ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md) | List of [ProductTypePurchaseInvoiceLineProperty](General.Products.ProductTypePurchaseInvoiceLineProperties.md) child objects, based on the [General.Products.ProductTypePurchaseInvoiceLineProperty.ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) back reference 
-| TaxGroups | [Crm.Pos.ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md) | List of [ProductTypeTaxGroup](Crm.Pos.ProductTypeTaxGroups.md) child objects, based on the [Crm.Pos.ProductTypeTaxGroup.ProductType](Crm.Pos.ProductTypeTaxGroups.md#producttype) back reference 
+| PurchaseInvoice<br />LineProperties | [ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md) | List of [ProductTypePurchase<br />InvoiceLineProperty](General.Products.ProductTypePurchase<br />InvoiceLineProperties.md) child objects, based on the [General.Products.ProductTypePurchase<br />InvoiceLineProperty.ProductType](General.Products.ProductTypePurchase<br />InvoiceLineProperties.md#producttype) back  
+| TaxGroups | [ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md) | List of [ProductTypeTaxGroup](Crm.Pos.ProductTypeTaxGroups.md) child objects, based on the [Crm.Pos.ProductTypeTaxGroup.ProductType](Crm.Pos.ProductTypeTaxGroups.md#producttype) back reference 
 
 
 ## Attribute Details

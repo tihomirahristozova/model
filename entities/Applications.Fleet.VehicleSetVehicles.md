@@ -17,8 +17,8 @@ Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicl
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Vehicle](Applications.Fleet.VehicleSetVehicles.md#vehicle) | [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md) | The Vehicle which is part of the vehicle set. [Required] [Filter(multi eq)] |
-| [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) | [Applications.Fleet.VehicleSets](Applications.Fleet.VehicleSets.md) | The [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Vehicle](Applications.Fleet.VehicleSetVehicles.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The Vehicle which is part of the vehicle set. [Required] [Filter(multi eq)] |
+| [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) | [VehicleSets](Applications.Fleet.VehicleSets.md) | The [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -52,14 +52,14 @@ _Supports Order By_: **False**
 
 > The Vehicle which is part of the vehicle set. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)**  
+_Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VehicleSet
 
 > The [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Fleet.VehicleSets](Applications.Fleet.VehicleSets.md)**  
+_Type_: **[VehicleSets](Applications.Fleet.VehicleSets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

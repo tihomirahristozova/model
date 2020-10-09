@@ -17,7 +17,7 @@ User permissions for accessing the system data columns. Entity: Sec_Column_Permi
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Security.ColumnPermissions.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The required access key for accessing the column. [Filter(multi eq)] [ReadOnly] |
+| [AccessKey](Systems.Security.ColumnPermissions.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The required access key for accessing the column. [Filter(multi eq)] [ReadOnly] |
 
 
 ## Attribute Details
@@ -51,7 +51,7 @@ _Supports Order By_: **True**
 
 > The required access key for accessing the column. [Filter(multi eq)] [ReadOnly]
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

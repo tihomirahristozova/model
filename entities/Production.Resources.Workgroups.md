@@ -19,8 +19,8 @@ Production workgroups. Entity: Prd_Workgroups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Resources | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) | List of [WorkgroupResource](Production.Resources.WorkgroupResources.md) child objects, based on the [Production.Resources.WorkgroupResource.Workgroup](Production.Resources.WorkgroupResources.md#workgroup) back reference 
-| Shifts | [Production.Resources.WorkgroupShifts](Production.Resources.WorkgroupShifts.md) | List of [WorkgroupShift](Production.Resources.WorkgroupShifts.md) child objects, based on the [Production.Resources.WorkgroupShift.Workgroup](Production.Resources.WorkgroupShifts.md#workgroup) back reference 
+| Resources | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | List of [WorkgroupResource](Production.Resources.WorkgroupResources.md) child objects, based on the [Production.Resources.WorkgroupResource.Workgroup](Production.Resources.WorkgroupResources.md#workgroup) back reference 
+| Shifts | [WorkgroupShifts](Production.Resources.WorkgroupShifts.md) | List of [WorkgroupShift](Production.Resources.WorkgroupShifts.md) child objects, based on the [Production.Resources.WorkgroupShift.Workgroup](Production.Resources.WorkgroupShifts.md#workgroup) back reference 
 
 
 ## Attribute Details

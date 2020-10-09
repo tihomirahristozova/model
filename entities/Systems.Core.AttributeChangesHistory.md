@@ -20,7 +20,7 @@ Each entry represents an entity attribute change with previous and new value. En
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Systems.Core.AttributeChangesHistory.md#user) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user which initiated the change. null when it is unknown. [Filter(multi eq)] |
+| [User](Systems.Core.AttributeChangesHistory.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user which initiated the change. null when it is unknown. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -78,7 +78,7 @@ _Default Value_: **CurrentDateTimeUtc**
 
 > The user which initiated the change. null when it is unknown. [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

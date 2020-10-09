@@ -17,7 +17,7 @@ Contains the roles of the participants of each project type. Entity: Prj_Type_Ro
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectType](Projects.TypeRoles.md#projecttype) | [Projects.ProjectTypes](Projects.ProjectTypes.md) | Project type. [Required] [Filter(multi eq)] [Owner] |
+| [ProjectType](Projects.TypeRoles.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) | Project type. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -51,7 +51,7 @@ _Supports Order By_: **False**
 
 > Project type. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Projects.ProjectTypes](Projects.ProjectTypes.md)**  
+_Type_: **[ProjectTypes](Projects.ProjectTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

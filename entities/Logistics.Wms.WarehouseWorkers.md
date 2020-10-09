@@ -3,7 +3,7 @@ uid: Logistics.Wms.WarehouseWorkers
 ---
 # Logistics.Wms.WarehouseWorkers
 
-Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_Workers (Introduced in version 20.1.100.0)
+Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_Workers (Introduced in version 20.1)
 
 ## Attributes
 
@@ -20,8 +20,8 @@ Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Person](Logistics.Wms.WarehouseWorkers.md#person) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. [Filter(multi eq)] |
-| [Warehouse](Logistics.Wms.WarehouseWorkers.md#warehouse) | [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md) | The warehouse, where the worker works. [Required] [Filter(multi eq)] [Owner] |
+| [Person](Logistics.Wms.WarehouseWorkers.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. [Filter(multi eq)] |
+| [Warehouse](Logistics.Wms.WarehouseWorkers.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse, where the worker works. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -81,14 +81,14 @@ _Supports Order By_: **False**
 
 > The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Warehouse
 
 > The warehouse, where the worker works. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)**  
+_Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -17,14 +17,14 @@ Describes the availability of resources in the active workgroups. Entity: Prd_Wo
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Resource](Production.Resources.WorkgroupResources.md#resource) | [Production.Resources.Resources](Production.Resources.Resources.md) | The contained resource type. [Required] [Filter(multi eq)] |
-| [Workgroup](Production.Resources.WorkgroupResources.md#workgroup) | [Production.Resources.Workgroups](Production.Resources.Workgroups.md) | Id of the workgroup, containing the resource. [Required] [Filter(multi eq)] [Owner] |
+| [Resource](Production.Resources.WorkgroupResources.md#resource) | [Resources](Production.Resources.Resources.md) | The contained resource type. [Required] [Filter(multi eq)] |
+| [Workgroup](Production.Resources.WorkgroupResources.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) | Id of the workgroup, containing the resource. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Capacity | [Production.Resources.Capacity](Production.Resources.Capacity.md) | List of [Capacity](Production.Resources.Capacity.md) child objects, based on the [Production.Resources.Capacity.WorkgroupResource](Production.Resources.Capacity.md#workgroupresource) back reference 
+| Capacity | [Capacity](Production.Resources.Capacity.md) | List of [Capacity](Production.Resources.Capacity.md) child objects, based on the [Production.Resources.Capacity.WorkgroupResource](Production.Resources.Capacity.md#workgroupresource) back reference 
 
 
 ## Attribute Details
@@ -59,14 +59,14 @@ _Supports Order By_: **False**
 
 > The contained resource type. [Required] [Filter(multi eq)]
 
-_Type_: **[Production.Resources.Resources](Production.Resources.Resources.md)**  
+_Type_: **[Resources](Production.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Workgroup
 
 > Id of the workgroup, containing the resource. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Production.Resources.Workgroups](Production.Resources.Workgroups.md)**  
+_Type_: **[Workgroups](Production.Resources.Workgroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

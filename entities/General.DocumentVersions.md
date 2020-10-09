@@ -22,7 +22,7 @@ History of each saved version of each document. Entity: Gen_Document_Versions
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentVersions.md#document) | [General.Documents](General.Documents.md) | The document whoose version is stored in this row. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
+| [Document](General.DocumentVersions.md#document) | [Documents](General.Documents.md) | The document whoose version is stored in this row. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
 
 
 ## Attribute Details
@@ -112,7 +112,7 @@ _Supports Order By_: **False**
 
 > The document whoose version is stored in this row. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

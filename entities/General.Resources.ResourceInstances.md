@@ -18,9 +18,9 @@ Represents concrete instances of resources. Entity: Gen_Resource_Instances
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Asset](General.Resources.ResourceInstances.md#asset) | [Finance.Assets.Assets](Finance.Assets.Assets.md) (nullable) | The asset, which is represented by this resource instance. null, when the resource instance is not an asset. [Filter(multi eq)] |
-| [Party](General.Resources.ResourceInstances.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party, which is represented by this resource instance. null, when the resource instance is not a party. [Filter(multi eq)] |
-| [Resource](General.Resources.ResourceInstances.md#resource) | [General.Resources.Resources](General.Resources.Resources.md) | The resource of which this is instance. [Required] [Filter(multi eq)] [Owner] |
+| [Asset](General.Resources.ResourceInstances.md#asset) | [Assets](Finance.Assets.Assets.md) (nullable) | The asset, which is represented by this resource instance. null, when the resource instance is not an asset. [Filter(multi eq)] |
+| [Party](General.Resources.ResourceInstances.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which is represented by this resource instance. null, when the resource instance is not a party. [Filter(multi eq)] |
+| [Resource](General.Resources.ResourceInstances.md#resource) | [Resources](General.Resources.Resources.md) | The resource of which this is instance. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -62,21 +62,21 @@ _Supports Order By_: **False**
 
 > The asset, which is represented by this resource instance. null, when the resource instance is not an asset. [Filter(multi eq)]
 
-_Type_: **[Finance.Assets.Assets](Finance.Assets.Assets.md) (nullable)**  
+_Type_: **[Assets](Finance.Assets.Assets.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
 > The party, which is represented by this resource instance. null, when the resource instance is not a party. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Resource
 
 > The resource of which this is instance. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Resources.Resources](General.Resources.Resources.md)**  
+_Type_: **[Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

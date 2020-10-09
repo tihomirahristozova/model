@@ -3,7 +3,7 @@ uid: Applications.AssetManagement.MaintenanceTypeGroups
 ---
 # Applications.AssetManagement.MaintenanceTypeGroups
 
-Represents the hierarchy of the groups of maintenance types. Entity: Eam_Maintenance_Type_Groups (Introduced in version 19.1.100.0)
+Represents the hierarchy of the groups of maintenance types. Entity: Eam_Maintenance_Type_Groups (Introduced in version 19.1)
 
 ## Attributes
 
@@ -18,7 +18,7 @@ Represents the hierarchy of the groups of maintenance types. Entity: Eam_Mainten
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.AssetManagement.MaintenanceTypeGroups.md#parent) | [Applications.AssetManagement.MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) (nullable) | Parent group. null denotes a root group. [Filter(multi eq)] |
+| [Parent](Applications.AssetManagement.MaintenanceTypeGroups.md#parent) | [MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) (nullable) | Parent group. null denotes a root group. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 > Parent group. null denotes a root group. [Filter(multi eq)]
 
-_Type_: **[Applications.AssetManagement.MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) (nullable)**  
+_Type_: **[MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

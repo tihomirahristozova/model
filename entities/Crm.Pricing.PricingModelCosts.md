@@ -18,9 +18,9 @@ List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostType](Crm.Pricing.PricingModelCosts.md#costtype) | [Finance.Cost.CostTypes](Finance.Cost.CostTypes.md) | The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)] |
-| [MeasurementUnit](Crm.Pricing.PricingModelCosts.md#measurementunit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)] |
-| [PricingModel](Crm.Pricing.PricingModelCosts.md#pricingmodel) | [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md) | Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner] |
+| [CostType](Crm.Pricing.PricingModelCosts.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)] |
+| [MeasurementUnit](Crm.Pricing.PricingModelCosts.md#measurementunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)] |
+| [PricingModel](Crm.Pricing.PricingModelCosts.md#pricingmodel) | [PricingModels](Crm.Pricing.PricingModels.md) | Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -56,10 +56,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.PricingModel.Costs.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.PricingModel.Costs.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.PricingModel.Costs.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.PricingModel.Costs.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 ## Reference Details
 
@@ -67,21 +67,21 @@ _Front-End Recalc Expressions:_
 
 > The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Cost.CostTypes](Finance.Cost.CostTypes.md)**  
+_Type_: **[CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MeasurementUnit
 
 > The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PricingModel
 
 > Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md)**  
+_Type_: **[PricingModels](Crm.Pricing.PricingModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

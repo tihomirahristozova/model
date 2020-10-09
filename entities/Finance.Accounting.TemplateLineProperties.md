@@ -21,8 +21,8 @@ Contains the way to obtain the values for each required property of both the deb
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Property](Finance.Accounting.TemplateLineProperties.md#property) | [General.CustomProperties](General.CustomProperties.md) | The property which value will be included in the item key of the account. [Required] [Filter(multi eq)] |
-| [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) | [Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md) | The [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Property](Finance.Accounting.TemplateLineProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The property which value will be included in the item key of the account. [Required] [Filter(multi eq)] |
+| [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) | [TemplateLines](Finance.Accounting.TemplateLines.md) | The [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -88,14 +88,14 @@ _Supports Order By_: **False**
 
 > The property which value will be included in the item key of the account. [Required] [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md)**  
+_Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TemplateLine
 
 > The [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md)**  
+_Type_: **[TemplateLines](Finance.Accounting.TemplateLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

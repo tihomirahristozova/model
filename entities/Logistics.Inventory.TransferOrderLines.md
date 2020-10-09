@@ -16,22 +16,22 @@ Details of Transfer Orders. Each line contains order for the movement of one pro
 | [Notes](Logistics.Inventory.TransferOrderLines.md#notes) | string (nullable) | Notes for this TransferOrderLine. 
 | [Quantity](Logistics.Inventory.TransferOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity ordered for transfer. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
 | [QuantityBase](Logistics.Inventory.TransferOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] 
-| [StandardQuantityBase](Logistics.Inventory.TransferOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [StandardQuantityBase](Logistics.Inventory.TransferOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2) 
 | [StandardUnitPrice](Logistics.Inventory.TransferOrderLines.md#standardunitprice) | [Amount](../data-types.md#amount) (nullable) | Standard unit price of the product during the creation of the transfer order line. [Currency: TransferOrder.DocumentCurrency] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromStoreBin](Logistics.Inventory.TransferOrderLines.md#fromstorebin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | From which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)] |
-| [Lot](Logistics.Inventory.TransferOrderLines.md#lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. [Filter(multi eq)] |
-| [Product](Logistics.Inventory.TransferOrderLines.md#product) | [General.Products.Products](General.Products.Products.md) | The product which will be transferred. [Required] [Filter(multi eq)] |
-| [ProductCode](Logistics.Inventory.TransferOrderLines.md#productcode) | [General.Products.ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. [Filter(multi eq)] |
-| [ProductVariant](Logistics.Inventory.TransferOrderLines.md#productvariant) | [General.ProductVariants](General.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. [Filter(multi eq)] |
-| [QuantityUnit](Logistics.Inventory.TransferOrderLines.md#quantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
-| [SerialNumber](Logistics.Inventory.TransferOrderLines.md#serialnumber) | [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)] |
-| [ToStoreBin](Logistics.Inventory.TransferOrderLines.md#tostorebin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | To which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)] |
-| [TransferOrder](Logistics.Inventory.TransferOrderLines.md#transferorder) | [Logistics.Inventory.TransferOrders](Logistics.Inventory.TransferOrders.md) | The parent transfer order. [Required] [Filter(multi eq)] [Owner] |
+| [FromStoreBin](Logistics.Inventory.TransferOrderLines.md#fromstorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | From which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)] |
+| [Lot](Logistics.Inventory.TransferOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. [Filter(multi eq)] |
+| [Product](Logistics.Inventory.TransferOrderLines.md#product) | [Products](General.Products.Products.md) | The product which will be transferred. [Required] [Filter(multi eq)] |
+| [ProductCode](Logistics.Inventory.TransferOrderLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. [Filter(multi eq)] |
+| [ProductVariant](Logistics.Inventory.TransferOrderLines.md#productvariant) | [ProductVariants](General.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. [Filter(multi eq)] |
+| [QuantityUnit](Logistics.Inventory.TransferOrderLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
+| [SerialNumber](Logistics.Inventory.TransferOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)] |
+| [ToStoreBin](Logistics.Inventory.TransferOrderLines.md#tostorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | To which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)] |
+| [TransferOrder](Logistics.Inventory.TransferOrderLines.md#transferorder) | [TransferOrders](Logistics.Inventory.TransferOrders.md) | The parent transfer order. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -77,10 +77,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.TransferOrder.Lines.Select(c => c.LineOrd).DefaultIfEmpty(0).Max() + 10)`
+`( obj.TransferOrder.Lines.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.TransferOrder.Lines.Select(c => c.LineOrd).DefaultIfEmpty(0).Max() + 10)`
+`( obj.TransferOrder.Lines.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
 > Notes for this TransferOrderLine.
@@ -107,23 +107,23 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 
 _Front-End Recalc Expressions:_  
-`IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
+> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 
 _Front-End Recalc Expressions:_  
-`IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardUnitPrice
 
 > Standard unit price of the product during the creation of the transfer order line. [Currency: TransferOrder.DocumentCurrency]
@@ -133,7 +133,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF(((obj.Product != null) AndAlso (obj.QuantityUnit != null)), obj.Product.GetStandardUnitPrice(obj.QuantityUnit, obj.TransferOrder.ToStore.Currency, obj.TransferOrder.CurrencyDirectory), obj.StandardUnitPrice)`
+`IIF( ( ( obj.Product != null) AndAlso ( obj.QuantityUnit != null)), obj.Product.GetStandardUnitPrice( obj.QuantityUnit, obj.TransferOrder.ToStore.Currency, obj.TransferOrder.CurrencyDirectory), obj.StandardUnitPrice)`
 
 ## Reference Details
 
@@ -141,69 +141,69 @@ _Front-End Recalc Expressions:_
 
 > From which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 
 > If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The product which will be transferred. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.ProductCode.Product.IfNullThen(obj.Product)`
+`obj.ProductCode.Product.IfNullThen( obj.Product)`
 ### ProductCode
 
 > Selects the product thru some of the product codes. [Filter(multi eq)]
 
-_Type_: **[General.Products.ProductCodes](General.Products.ProductCodes.md) (nullable)**  
+_Type_: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`IIF((((obj.Product != null) AndAlso (obj.ProductCode != null)) AndAlso (obj.Product != obj.ProductCode.Product)), null, obj.ProductCode)`
+`IIF( ( ( ( obj.Product != null) AndAlso ( obj.ProductCode != null)) AndAlso ( obj.Product != obj.ProductCode.Product)), null, obj.ProductCode)`
 ### ProductVariant
 
 > If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]
 
-_Type_: **[General.ProductVariants](General.ProductVariants.md) (nullable)**  
+_Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
 > The measurement unit of Quantity. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen(obj.Product.MeasurementUnit.IfNullThen(obj.QuantityUnit))`
+`obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen( obj.Product.MeasurementUnit.IfNullThen( obj.QuantityUnit))`
 ### SerialNumber
 
 > Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToStoreBin
 
 > To which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransferOrder
 
 > The parent transfer order. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Logistics.Inventory.TransferOrders](Logistics.Inventory.TransferOrders.md)**  
+_Type_: **[TransferOrders](Logistics.Inventory.TransferOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

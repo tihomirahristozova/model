@@ -18,8 +18,8 @@ Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Cent
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Finance.Accounting.CostCenters.md#parent) | [Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Parent cost center, null if this is root cost center. [Filter(multi eq)] |
-| [TransferCostToProfitCenter](Finance.Accounting.CostCenters.md#transfercosttoprofitcenter) | [Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. [Filter(multi eq)] |
+| [Parent](Finance.Accounting.CostCenters.md#parent) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Parent cost center, null if this is root cost center. [Filter(multi eq)] |
+| [TransferCostToProfitCenter](Finance.Accounting.CostCenters.md#transfercosttoprofitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -62,14 +62,14 @@ _Default Value_: **1**
 
 > Parent cost center, null if this is root cost center. [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
+_Type_: **[CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransferCostToProfitCenter
 
 > Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
+_Type_: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

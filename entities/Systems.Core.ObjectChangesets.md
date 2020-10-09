@@ -3,7 +3,7 @@ uid: Systems.Core.ObjectChangesets
 ---
 # Systems.Core.ObjectChangesets
 
-A set of changes, performed in one request. Entity: Sys_Object_Changesets (Introduced in version 19.1.100.0)
+A set of changes, performed in one request. Entity: Sys_Object_Changesets (Introduced in version 19.1)
 
 ## Attributes
 
@@ -18,13 +18,13 @@ A set of changes, performed in one request. Entity: Sys_Object_Changesets (Intro
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Systems.Core.ObjectChangesets.md#user) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user which initiated the change. null when it is unknown. [Filter(multi eq)] |
+| [User](Systems.Core.ObjectChangesets.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user which initiated the change. null when it is unknown. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| ObjectChanges | [Systems.Core.ObjectChanges](Systems.Core.ObjectChanges.md) | List of [ObjectChange](Systems.Core.ObjectChanges.md) child objects, based on the [Systems.Core.ObjectChange.ObjectChangeset](Systems.Core.ObjectChanges.md#objectchangeset) back reference 
+| ObjectChanges | [ObjectChanges](Systems.Core.ObjectChanges.md) | List of [ObjectChange](Systems.Core.ObjectChanges.md) child objects, based on the [Systems.Core.ObjectChange.ObjectChangeset](Systems.Core.ObjectChanges.md#objectchangeset) back reference 
 
 
 ## Attribute Details
@@ -67,7 +67,7 @@ _Default Value_: **CurrentDateTimeUtc**
 
 > The user which initiated the change. null when it is unknown. [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

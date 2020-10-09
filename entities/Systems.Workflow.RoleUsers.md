@@ -15,8 +15,8 @@ The roles "played" by the security users. Entity: Wf_Role_Users
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Role](Systems.Workflow.RoleUsers.md#role) | [Systems.Workflow.Roles](Systems.Workflow.Roles.md) | The [Role](Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. [Required] [Filter(multi eq)] [Owner] |
-| [User](Systems.Workflow.RoleUsers.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user, which plays the role. [Required] [Filter(multi eq)] |
+| [Role](Systems.Workflow.RoleUsers.md#role) | [Roles](Systems.Workflow.Roles.md) | The [Role](Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. [Required] [Filter(multi eq)] [Owner] |
+| [User](Systems.Workflow.RoleUsers.md#user) | [Users](Systems.Security.Users.md) | The user, which plays the role. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -34,14 +34,14 @@ _Default Value_: **NewGuid**
 
 > The [Role](Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Workflow.Roles](Systems.Workflow.Roles.md)**  
+_Type_: **[Roles](Systems.Workflow.Roles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
 > The user, which plays the role. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

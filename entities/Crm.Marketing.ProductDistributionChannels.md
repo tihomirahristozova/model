@@ -20,8 +20,8 @@ Channel assignments (listing) for products. Entity: Crm_Product_Distribution_Cha
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DistributionChannel](Crm.Marketing.ProductDistributionChannels.md#distributionchannel) | [Crm.Marketing.DistributionChannels](Crm.Marketing.DistributionChannels.md) | The distribution channel in which the product is listed. [Required] [Filter(multi eq)] |
-| [Product](Crm.Marketing.ProductDistributionChannels.md#product) | [General.Products.Products](General.Products.Products.md) | The listed product. [Required] [Filter(multi eq)] [Owner] |
+| [DistributionChannel](Crm.Marketing.ProductDistributionChannels.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) | The distribution channel in which the product is listed. [Required] [Filter(multi eq)] |
+| [Product](Crm.Marketing.ProductDistributionChannels.md#product) | [Products](General.Products.Products.md) | The listed product. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -81,14 +81,14 @@ _Supports Order By_: **False**
 
 > The distribution channel in which the product is listed. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.Marketing.DistributionChannels](Crm.Marketing.DistributionChannels.md)**  
+_Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The listed product. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

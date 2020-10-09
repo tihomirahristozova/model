@@ -18,7 +18,7 @@ Represents a node in the hierarchy of process groups. Entity: Bpm_Process_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Systems.Bpm.ProcessGroups.md#parent) | [Systems.Bpm.ProcessGroups](Systems.Bpm.ProcessGroups.md) (nullable) | Parent process group in the hierarchy. null means this is a root group. [Filter(multi eq)] |
+| [Parent](Systems.Bpm.ProcessGroups.md#parent) | [ProcessGroups](Systems.Bpm.ProcessGroups.md) (nullable) | Parent process group in the hierarchy. null means this is a root group. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 
 > Parent process group in the hierarchy. null means this is a root group. [Filter(multi eq)]
 
-_Type_: **[Systems.Bpm.ProcessGroups](Systems.Bpm.ProcessGroups.md) (nullable)**  
+_Type_: **[ProcessGroups](Systems.Bpm.ProcessGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

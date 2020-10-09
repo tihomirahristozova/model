@@ -13,7 +13,7 @@ The operations that are performed to produce the product. Entity: Prd_Work_Order
 | [ActualStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualstartdatetime) | datetime (nullable) | The date/time when the operation has started. null means that the has not started yet. 
 | [Id](Production.ShopFloor.WorkOrderItemOperations.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.WorkOrderItemOperations.md#lineord) | int32 | Order of the line within the work order routing. [Required] [Filter(eq;like)] 
-| [MinimumConcurrentStartTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
+| [MinimumConcurrent<br />StartTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
 | [MoveTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. [Required] [Default(0)] 
 | [Notes](Production.ShopFloor.WorkOrderItemOperations.md#notes) | string (nullable) | Notes for this WorkOrderItemOperation. 
 | [OperationDescription](Production.ShopFloor.WorkOrderItemOperations.md#operationdescription) | string (nullable) | The short description of the operation. 
@@ -30,15 +30,15 @@ The operations that are performed to produce the product. Entity: Prd_Work_Order
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Operation](Production.ShopFloor.WorkOrderItemOperations.md#operation) | [Production.Resources.Operations](Production.Resources.Operations.md) (nullable) | The performed operation. [Filter(multi eq)] |
-| [WorkgroupResource](Production.ShopFloor.WorkOrderItemOperations.md#workgroupresource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) | The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)] |
-| [WorkOrderItem](Production.ShopFloor.WorkOrderItemOperations.md#workorderitem) | [Production.ShopFloor.WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item, containing the line. [Required] [Filter(multi eq)] [Owner] |
+| [Operation](Production.ShopFloor.WorkOrderItemOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | The performed operation. [Filter(multi eq)] |
+| [WorkgroupResource](Production.ShopFloor.WorkOrderItemOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)] |
+| [WorkOrderItem](Production.ShopFloor.WorkOrderItemOperations.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item, containing the line. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Load | [Production.Resources.Load](Production.Resources.Load.md) | List of [Load](Production.Resources.Load.md) child objects, based on the [Production.Resources.Load.WorkOrderItemOperation](Production.Resources.Load.md#workorderitemoperation) back reference 
+| Load | [Load](Production.Resources.Load.md) | List of [Load](Production.Resources.Load.md) child objects, based on the [Production.Resources.Load.WorkOrderItemOperation](Production.Resources.Load.md#workorderitemoperation) back reference 
 
 
 ## Attribute Details
@@ -74,10 +74,10 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.WorkOrderItem.Operations.Select(c => c.LineOrd).DefaultIfEmpty(0).Max() + 10)`
+`( obj.WorkOrderItem.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.WorkOrderItem.Operations.Select(c => c.LineOrd).DefaultIfEmpty(0).Max() + 10)`
+`( obj.WorkOrderItem.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### MinimumConcurrentStartTimeMinutes
 
 > How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
@@ -189,21 +189,21 @@ _Default Value_: **0**
 
 > The performed operation. [Filter(multi eq)]
 
-_Type_: **[Production.Resources.Operations](Production.Resources.Operations.md) (nullable)**  
+_Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkgroupResource
 
 > The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)]
 
-_Type_: **[Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
+_Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItem
 
 > The work order item, containing the line. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Production.ShopFloor.WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
+_Type_: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

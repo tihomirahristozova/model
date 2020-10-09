@@ -3,7 +3,7 @@ uid: Crm.Pos.Roles
 ---
 # Crm.Pos.Roles
 
-Represents a role, which can be assigned to POS operators (like Cashier, Manager, etc.). The role indicates the operations, which are allowed to be performed by the operators. Entity: Pos_Roles (Introduced in version 19.1.100.0)
+Represents a role, which can be assigned to POS operators (like Cashier, Manager, etc.). The role indicates the operations, which are allowed to be performed by the operators. Entity: Pos_Roles (Introduced in version 19.1)
 
 ## Attributes
 

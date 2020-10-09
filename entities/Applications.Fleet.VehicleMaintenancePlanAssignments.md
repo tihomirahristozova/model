@@ -13,15 +13,15 @@ Represents assignment of a maintenance plan to a vehicle. Entity: Fleet_Vehicle_
 | [IsActive](Applications.Fleet.VehicleMaintenancePlanAssignments.md#isactive) | boolean | Specifies whether the plan is active. [Required] [Default(true)] 
 | [LastMaintenanceMileageKm](Applications.Fleet.VehicleMaintenancePlanAssignments.md#lastmaintenancemileagekm) | int32 (nullable) | The mileage of the vehicle (in Kilometers), when the last maintenance of this type occurred. Should be specified for plans, which require mileage check. 
 | [LastMaintenanceTripCount](Applications.Fleet.VehicleMaintenancePlanAssignments.md#lastmaintenancetripcount) | int32 (nullable) | The trip count of the vehicle, when the last maintenance of this type occurred. Should be specified for plans, which trip count check. 
-| [Notes](Applications.Fleet.VehicleMaintenancePlanAssignments.md#notes) | string (nullable) | Notes for this VehicleMaintenancePlanAssignment. 
+| [Notes](Applications.Fleet.VehicleMaintenancePlanAssignments.md#notes) | string (nullable) | Notes for this VehicleMaintenance<br />PlanAssignment. 
 | [StartingDate](Applications.Fleet.VehicleMaintenancePlanAssignments.md#startingdate) | date | The date on which the periodic maintenance should start. [Required] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenancePlan](Applications.Fleet.VehicleMaintenancePlanAssignments.md#maintenanceplan) | [Applications.Fleet.MaintenancePlans](Applications.Fleet.MaintenancePlans.md) | The assigned periodic maintenance type. [Required] [Filter(multi eq)] |
-| [Vehicle](Applications.Fleet.VehicleMaintenancePlanAssignments.md#vehicle) | [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md) | The vehicle, to which a periodic maintenance plan is assigned. [Required] [Filter(multi eq)] |
+| [MaintenancePlan](Applications.Fleet.VehicleMaintenancePlanAssignments.md#maintenanceplan) | [MaintenancePlans](Applications.Fleet.MaintenancePlans.md) | The assigned periodic maintenance type. [Required] [Filter(multi eq)] |
+| [Vehicle](Applications.Fleet.VehicleMaintenancePlanAssignments.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The vehicle, to which a periodic maintenance plan is assigned. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -80,14 +80,14 @@ _Supports Order By_: **False**
 
 > The assigned periodic maintenance type. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Fleet.MaintenancePlans](Applications.Fleet.MaintenancePlans.md)**  
+_Type_: **[MaintenancePlans](Applications.Fleet.MaintenancePlans.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Vehicle
 
 > The vehicle, to which a periodic maintenance plan is assigned. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)**  
+_Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

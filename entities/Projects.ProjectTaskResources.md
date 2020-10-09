@@ -23,9 +23,9 @@ Contains the resources, required by the project tasks. Entity: Prj_Project_Task_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectTask](Projects.ProjectTaskResources.md#projecttask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The task for which the resource is planned. [Required] [Filter(multi eq)] [Owner] |
-| [Resource](Projects.ProjectTaskResources.md#resource) | [General.Resources.Resources](General.Resources.Resources.md) | The planned resource. [Required] [Filter(multi eq)] |
-| [ResourceInstance](Projects.ProjectTaskResources.md#resourceinstance) | [General.Resources.ResourceInstances](General.Resources.ResourceInstances.md) (nullable) | The concrete resource instance, which should be used. null when no specific resource instance is required. [Filter(multi eq)] |
+| [ProjectTask](Projects.ProjectTaskResources.md#projecttask) | [ProjectTasks](Projects.ProjectTasks.md) | The task for which the resource is planned. [Required] [Filter(multi eq)] [Owner] |
+| [Resource](Projects.ProjectTaskResources.md#resource) | [Resources](General.Resources.Resources.md) | The planned resource. [Required] [Filter(multi eq)] |
+| [ResourceInstance](Projects.ProjectTaskResources.md#resourceinstance) | [ResourceInstances](General.Resources.ResourceInstances.md) (nullable) | The concrete resource instance, which should be used. null when no specific resource instance is required. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -39,7 +39,7 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF(((obj.BillingTotalAmount != null) AndAlso (obj.BillingPricePerHour != null)), null, obj.BillingPricePerHour)`
+`IIF( ( ( obj.BillingTotalAmount != null) AndAlso ( obj.BillingPricePerHour != null)), null, obj.BillingPricePerHour)`
 ### BillingTotalAmount
 
 > When not null, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). null means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour. [Filter(eq)]
@@ -49,7 +49,7 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF(((obj.BillingTotalAmount != null) AndAlso (obj.BillingPricePerHour != null)), null, obj.BillingTotalAmount)`
+`IIF( ( ( obj.BillingTotalAmount != null) AndAlso ( obj.BillingPricePerHour != null)), null, obj.BillingTotalAmount)`
 ### CostPerHour
 
 > Cost per hour for the resource usage for this task (in the currency of the project). [Required] [Default(0)] [Filter(eq)]
@@ -60,7 +60,7 @@ _Supports Order By_: **False**
 _Default Value_: **0**  
 
 _Front-End Recalc Expressions:_  
-`IIF(((obj.PerUseCost != null) AndAlso (obj.ResourceUsageHours != 0)), ((obj.TaskTotalCost - obj.PerUseCost.Value) / obj.ResourceUsageHours), obj.CostPerHour)`
+`IIF( ( ( obj.PerUseCost != null) AndAlso ( obj.ResourceUsageHours != 0)), ( ( obj.TaskTotalCost - obj.PerUseCost.Value) / obj.ResourceUsageHours), obj.CostPerHour)`
 ### Id
 
 _Type_: **guid**  
@@ -93,7 +93,7 @@ _Supports Order By_: **False**
 _Default Value_: **0**  
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.ProjectTask != null), (obj.ProjectTask.PlannedDurationHours * obj.ResourceUsagePercent), obj.ResourceUsageHours)`
+`IIF( ( obj.ProjectTask != null), ( obj.ProjectTask.PlannedDurationHours * obj.ResourceUsagePercent), obj.ResourceUsageHours)`
 ### ResourceUsagePercent
 
 > The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. [Required] [Default(1)] [Filter(eq)]
@@ -104,7 +104,7 @@ _Supports Order By_: **False**
 _Default Value_: **1**  
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.ProjectTask.PlannedDurationHours == 0), 0, (obj.ResourceUsageHours / obj.ProjectTask.PlannedDurationHours))`
+`IIF( ( obj.ProjectTask.PlannedDurationHours == 0), 0, ( obj.ResourceUsageHours / obj.ProjectTask.PlannedDurationHours))`
 ### TaskTotalCost
 
 > Total cost for this task (in the currency of the project). [Required] [Default(0)] [Filter(eq)]
@@ -115,10 +115,10 @@ _Supports Order By_: **False**
 _Default Value_: **0**  
 
 _Back-End Default Expression:_  
-`((obj.ResourceUsageHours * obj.CostPerHour) + obj.PerUseCost.Value)`
+`( ( obj.ResourceUsageHours * obj.CostPerHour) + obj.PerUseCost.Value)`
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.PerUseCost != null), ((obj.ResourceUsageHours * obj.CostPerHour) + obj.PerUseCost.Value), obj.TaskTotalCost)`
+`IIF( ( obj.PerUseCost != null), ( ( obj.ResourceUsageHours * obj.CostPerHour) + obj.PerUseCost.Value), obj.TaskTotalCost)`
 
 ## Reference Details
 
@@ -126,21 +126,21 @@ _Front-End Recalc Expressions:_
 
 > The task for which the resource is planned. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md)**  
+_Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Resource
 
 > The planned resource. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Resources.Resources](General.Resources.Resources.md)**  
+_Type_: **[Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResourceInstance
 
 > The concrete resource instance, which should be used. null when no specific resource instance is required. [Filter(multi eq)]
 
-_Type_: **[General.Resources.ResourceInstances](General.Resources.ResourceInstances.md) (nullable)**  
+_Type_: **[ResourceInstances](General.Resources.ResourceInstances.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

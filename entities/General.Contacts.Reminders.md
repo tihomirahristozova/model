@@ -19,7 +19,7 @@ Reminders for activities. The reminders are alarms, which can be turned off. Eac
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Contacts.Reminders.md#activity) | [General.Contacts.Activities](General.Contacts.Activities.md) | The activity to which this reminder is attached. [Required] [Filter(multi eq)] [Owner] |
+| [Activity](General.Contacts.Reminders.md#activity) | [Activities](General.Contacts.Activities.md) | The activity to which this reminder is attached. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -71,7 +71,7 @@ _Supports Order By_: **False**
 
 > The activity to which this reminder is attached. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Activities](General.Contacts.Activities.md)**  
+_Type_: **[Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -13,14 +13,14 @@ Represents one condition for the execution of a business rule. Entity: Sys_User_
 | [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. [Required] [Default("Equals")] 
 | [ConditionNo](Systems.Bpm.UserBusinessRuleConditions.md#conditionno) | int32 | Unique consecutive number of the condition within the business rule. [Required] 
 | [Id](Systems.Bpm.UserBusinessRuleConditions.md#id) | guid |  
-| [Notes](Systems.Bpm.UserBusinessRuleConditions.md#notes) | string (nullable) | Notes for this UserBusinessRuleCondition. (Introduced in version 20.1.100.0) 
+| [Notes](Systems.Bpm.UserBusinessRuleConditions.md#notes) | string (nullable) | Notes for this UserBusinessRuleCondition. (Introduced in version 20.1) 
 | [Value](Systems.Bpm.UserBusinessRuleConditions.md#value) | string (nullable) | The value against which the data attribute will be tested. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#userbusinessrule) | [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner] |
+| [UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#userbusinessrule) | [UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -63,10 +63,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.UserBusinessRule.Conditions.Select(c => c.ConditionNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.UserBusinessRule.Conditions.Select( c => c.ConditionNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.UserBusinessRule.Conditions.Select(c => c.ConditionNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.UserBusinessRule.Conditions.Select( c => c.ConditionNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Id
 
 _Type_: **guid**  
@@ -75,7 +75,7 @@ _Default Value_: **NewGuid**
 
 ### Notes
 
-> Notes for this UserBusinessRuleCondition. (Introduced in version 20.1.100.0)
+> Notes for this UserBusinessRuleCondition. (Introduced in version 20.1)
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -96,7 +96,7 @@ _Supports Order By_: **False**
 
 > The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
+_Type_: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

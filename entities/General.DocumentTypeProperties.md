@@ -10,7 +10,7 @@ Default user-defined properties, which should be added to new documents. Entity:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DefaultPropertyValue](General.DocumentTypeProperties.md#defaultpropertyvalue) | string (nullable) | The default value of the property when creating new documents. 
-| [DefaultPropertyValueDescription](General.DocumentTypeProperties.md#defaultpropertyvaluedescription) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Default description value of the property when creating new documents. 
+| [DefaultProperty<br />ValueDescription](General.DocumentTypeProperties.md#defaultpropertyvaluedescription) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Default description value of the property when creating new documents. 
 | [DefaultValueId](General.DocumentTypeProperties.md#defaultvalueid) | guid (nullable) | Internal Id of the default value of the property. [Filter(multi eq)] 
 | [Id](General.DocumentTypeProperties.md#id) | guid |  
 | [LineNo](General.DocumentTypeProperties.md#lineno) | int32 | Line number, unique within the document type. [Required] [Filter(ge;le)] [ORD] 
@@ -22,9 +22,9 @@ Default user-defined properties, which should be added to new documents. Entity:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](General.DocumentTypeProperties.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type, for which to add user-defined properties. [Required] [Filter(multi eq)] [Owner] |
-| [EnterpriseCompany](General.DocumentTypeProperties.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the current rule is valid only for the specified company. [Filter(multi eq)] |
-| [Property](General.DocumentTypeProperties.md#property) | [General.CustomProperties](General.CustomProperties.md) | The user-defined property, which should be added. [Required] [Filter(multi eq)] |
+| [DocumentType](General.DocumentTypeProperties.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, for which to add user-defined properties. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](General.DocumentTypeProperties.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the current rule is valid only for the specified company. [Filter(multi eq)] |
+| [Property](General.DocumentTypeProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The user-defined property, which should be added. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -67,10 +67,10 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **True**  
 
 _Back-End Default Expression:_  
-`(obj.DocumentType.DocumentTypeProperties.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.DocumentType.DocumentTypeProperties.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.DocumentType.DocumentTypeProperties.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.DocumentType.DocumentTypeProperties.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Required
 
 > True if the property is required when creating documents of this type. [Required] [Default(false)] [Filter(eq)]
@@ -103,21 +103,21 @@ _Supports Order By_: **False**
 
 > The document type, for which to add user-defined properties. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > When not null, specifies that the current rule is valid only for the specified company. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property
 
 > The user-defined property, which should be added. [Required] [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md)**  
+_Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

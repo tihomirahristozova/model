@@ -17,8 +17,8 @@ The storage locations within a store. If there are no differentiated storage loc
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BlockedForParty](Logistics.Inventory.StoreBins.md#blockedforparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | If not null, the goods can only be used by the specified party. [Filter(multi eq)] |
-| [Store](Logistics.Inventory.StoreBins.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The id of the containing store. [Required] [Filter(multi eq)] [Owner] |
+| [BlockedForParty](Logistics.Inventory.StoreBins.md#blockedforparty) | [Parties](General.Contacts.Parties.md) (nullable) | If not null, the goods can only be used by the specified party. [Filter(multi eq)] |
+| [Store](Logistics.Inventory.StoreBins.md#store) | [Stores](Logistics.Inventory.Stores.md) | The id of the containing store. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -53,14 +53,14 @@ _Supports Order By_: **False**
 
 > If not null, the goods can only be used by the specified party. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
 > The id of the containing store. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

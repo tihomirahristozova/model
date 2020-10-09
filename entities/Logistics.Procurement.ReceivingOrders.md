@@ -22,7 +22,7 @@ Contains the received quantities from a supplier. Entity: Scm_Receiving_Orders
 | [IsReleased](Logistics.Procurement.ReceivingOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [IsSingleExecution](Logistics.Procurement.ReceivingOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [Notes](Logistics.Procurement.ReceivingOrders.md#notes) | string (nullable) | Notes for this ReceivingOrder. 
-| [ParentDocumentRelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) | [ParentDocumentRelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
+| [ParentDocument<br />RelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
 | [PaymentDueDate](Logistics.Procurement.ReceivingOrders.md#paymentduedate) | datetime (nullable) | Due date for the payment. When null, the payment due date is the documents date. [Filter(ge;le)] 
 | [PlannedDeliveryDate](Logistics.Procurement.ReceivingOrders.md#planneddeliverydate) | datetime (nullable) | When not null, specifies the planned delivery date for all lines. [Filter(ge;le)] 
 | [PlannedReleaseDate](Logistics.Procurement.ReceivingOrders.md#plannedreleasedate) | datetime (nullable) | The date, when the document is planned to be realeased. [Filter(ge;le)] 
@@ -42,45 +42,45 @@ Contains the received quantities from a supplier. Entity: Scm_Receiving_Orders
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Logistics.Procurement.ReceivingOrders.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
-| [AdjustedDocument](Logistics.Procurement.ReceivingOrders.md#adjusteddocument) | [General.Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
-| [AssignedToUser](Logistics.Procurement.ReceivingOrders.md#assignedtouser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
-| [CurrencyDirectory](Logistics.Procurement.ReceivingOrders.md#currencydirectory) | [General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
-| [DocumentCurrency](Logistics.Procurement.ReceivingOrders.md#documentcurrency) | [General.Currencies](General.Currencies.md) | The currency of the unit prices and amounts in the document. [Required] [Filter(multi eq)] |
-| [DocumentType](Logistics.Procurement.ReceivingOrders.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
-| [EnterpriseCompany](Logistics.Procurement.ReceivingOrders.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
-| [EnterpriseCompanyLocation](Logistics.Procurement.ReceivingOrders.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
-| [FromCompanyDivision](Logistics.Procurement.ReceivingOrders.md#fromcompanydivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
-| [FromParty](Logistics.Procurement.ReceivingOrders.md#fromparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
-| [MasterDocument](Logistics.Procurement.ReceivingOrders.md#masterdocument) | [General.Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
-| [Parent](Logistics.Procurement.ReceivingOrders.md#parent) | [General.Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
-| [PaymentAccount](Logistics.Procurement.ReceivingOrders.md#paymentaccount) | [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Payment account that is used for the payments of this delivery. [Filter(multi eq)] |
-| [PaymentType](Logistics.Procurement.ReceivingOrders.md#paymenttype) | [Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null specifies the payment type for the sales order. [Filter(multi eq)] |
-| [PrimeCauseDocument](Logistics.Procurement.ReceivingOrders.md#primecausedocument) | [General.Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
-| [PurchaseOrder](Logistics.Procurement.ReceivingOrders.md#purchaseorder) | [Logistics.Procurement.PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable) | The purchase order which is received with this receiving order. [Filter(multi eq)] |
-| [PurchasePriceList](Logistics.Procurement.ReceivingOrders.md#purchasepricelist) | [Logistics.Procurement.PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable) | The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. [Filter(multi eq)] |
-| [ResponsiblePerson](Logistics.Procurement.ReceivingOrders.md#responsibleperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
-| [ReverseOfDocument](Logistics.Procurement.ReceivingOrders.md#reverseofdocument) | [General.Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
-| [Sequence](Logistics.Procurement.ReceivingOrders.md#sequence) | [General.Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
-| [Store](Logistics.Procurement.ReceivingOrders.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which the goods were received. [Filter(multi eq)] |
-| [Supplier](Logistics.Procurement.ReceivingOrders.md#supplier) | [Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md) | The supplier of the products for this receiving order. [Required] [Filter(multi eq)] |
-| [ToCompanyDivision](Logistics.Procurement.ReceivingOrders.md#tocompanydivision) | [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
-| [ToParty](Logistics.Procurement.ReceivingOrders.md#toparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
-| [UserStatus](Logistics.Procurement.ReceivingOrders.md#userstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
+| [AccessKey](Logistics.Procurement.ReceivingOrders.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
+| [AdjustedDocument](Logistics.Procurement.ReceivingOrders.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
+| [AssignedToUser](Logistics.Procurement.ReceivingOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
+| [CurrencyDirectory](Logistics.Procurement.ReceivingOrders.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
+| [DocumentCurrency](Logistics.Procurement.ReceivingOrders.md#documentcurrency) | [Currencies](General.Currencies.md) | The currency of the unit prices and amounts in the document. [Required] [Filter(multi eq)] |
+| [DocumentType](Logistics.Procurement.ReceivingOrders.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
+| [EnterpriseCompany](Logistics.Procurement.ReceivingOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
+| [EnterpriseCompanyLocation](Logistics.Procurement.ReceivingOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
+| [FromCompanyDivision](Logistics.Procurement.ReceivingOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
+| [FromParty](Logistics.Procurement.ReceivingOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
+| [MasterDocument](Logistics.Procurement.ReceivingOrders.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
+| [Parent](Logistics.Procurement.ReceivingOrders.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
+| [PaymentAccount](Logistics.Procurement.ReceivingOrders.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Payment account that is used for the payments of this delivery. [Filter(multi eq)] |
+| [PaymentType](Logistics.Procurement.ReceivingOrders.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null specifies the payment type for the sales order. [Filter(multi eq)] |
+| [PrimeCauseDocument](Logistics.Procurement.ReceivingOrders.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
+| [PurchaseOrder](Logistics.Procurement.ReceivingOrders.md#purchaseorder) | [PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable) | The purchase order which is received with this receiving order. [Filter(multi eq)] |
+| [PurchasePriceList](Logistics.Procurement.ReceivingOrders.md#purchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable) | The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. [Filter(multi eq)] |
+| [ResponsiblePerson](Logistics.Procurement.ReceivingOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
+| [ReverseOfDocument](Logistics.Procurement.ReceivingOrders.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
+| [Sequence](Logistics.Procurement.ReceivingOrders.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
+| [Store](Logistics.Procurement.ReceivingOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which the goods were received. [Filter(multi eq)] |
+| [Supplier](Logistics.Procurement.ReceivingOrders.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) | The supplier of the products for this receiving order. [Required] [Filter(multi eq)] |
+| [ToCompanyDivision](Logistics.Procurement.ReceivingOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
+| [ToParty](Logistics.Procurement.ReceivingOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
+| [UserStatus](Logistics.Procurement.ReceivingOrders.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Comments | [General.DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
-| DistributedAmounts | [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributedAmount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference 
-| DocumentAmounts | [General.DocumentAmounts](General.DocumentAmounts.md) | List of [DocumentAmount](General.DocumentAmounts.md) child objects, based on the [DocumentAmount.Document](General.DocumentAmounts.md#document) back reference 
-| FileAttachments | [General.DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
-| LineAmounts | [General.DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
-| Lines | [Logistics.Procurement.ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md) | List of [ReceivingOrderLine](Logistics.Procurement.ReceivingOrderLines.md) child objects, based on the [Logistics.Procurement.ReceivingOrderLine.ReceivingOrder](Logistics.Procurement.ReceivingOrderLines.md#receivingorder) back reference 
-| Prints | [General.DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
-| StateChanges | [General.DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
-| Versions | [General.DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
+| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
+| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back nce 
+| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of [DocumentAmount](General.DocumentAmounts.md) child objects, based on the [DocumentAmount.Document](General.DocumentAmounts.md#document) back reference 
+| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
+| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
+| Lines | [ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md) | List of [ReceivingOrderLine](Logistics.Procurement.ReceivingOrderLines.md) child objects, based on the [Logistics.Procurement.ReceivingOrderLine.ReceivingOrder](Logistics.Procurement.ReceivingOrderLines.md#receivingorder) back reference 
+| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
+| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
+| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
 
 
 ## Attribute Details
@@ -196,7 +196,7 @@ _Supports Order By_: **False**
 
 > Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
 
-_Type_: **[ParentDocumentRelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) (nullable)**  
+_Type_: **[ParentDocument<br />RelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
 _Allowed Values (General.ParentDocumentRelationshipType Enum Members)_  
 
@@ -217,10 +217,10 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`obj.DocumentDate.AddDays(Convert(obj.Supplier.DefaultPaymentTermDays, Double))`
+`obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultPaymentTermDays, Double))`
 
 _Front-End Recalc Expressions:_  
-`obj.DocumentDate.AddDays(Convert(obj.Supplier.DefaultPaymentTermDays, Double))`
+`obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultPaymentTermDays, Double))`
 ### PlannedDeliveryDate
 
 > When not null, specifies the planned delivery date for all lines. [Filter(ge;le)]
@@ -230,10 +230,10 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`obj.DocumentDate.AddDays(Convert(obj.Supplier.DefaultDeliveryTermDays, Double))`
+`obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultDeliveryTermDays, Double))`
 
 _Front-End Recalc Expressions:_  
-`obj.DocumentDate.AddDays(Convert(obj.Supplier.DefaultDeliveryTermDays, Double))`
+`obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultDeliveryTermDays, Double))`
 ### PlannedReleaseDate
 
 > The date, when the document is planned to be realeased. [Filter(ge;le)]
@@ -354,108 +354,108 @@ _Supports Order By_: **False**
 
 > The access key, containing the user permissions for this document. null means that all users have unlimited permissions
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
 
 > The primary document, which the current document adjusts. null when this is not an adjustment document
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
 
 > The user to which this document is assigned for handling. null means that the document is not assigned to specific user
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
 
 > The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
 
-_Type_: **[General.CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
+_Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentCurrency
 
 > The currency of the unit prices and amounts in the document. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md)**  
+_Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
-`obj.Supplier.DefaultCurrency.IfNullThen(obj.EnterpriseCompany.BaseCurrency).IfNullThen(obj.DocumentCurrency)`
+`obj.Supplier.DefaultCurrency.IfNullThen( obj.EnterpriseCompany.BaseCurrency).IfNullThen( obj.DocumentCurrency)`
 
 _Front-End Recalc Expressions:_  
-`obj.Supplier.DefaultCurrency.IfNullThen(obj.EnterpriseCompany.BaseCurrency).IfNullThen(obj.DocumentCurrency)`
+`obj.Supplier.DefaultCurrency.IfNullThen( obj.EnterpriseCompany.BaseCurrency).IfNullThen( obj.DocumentCurrency)`
 ### DocumentType
 
 > The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The enterprise company which issued the document [Required]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
 > The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
 
-_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
 
 > The division of the company, issuing the document. null when the document is not issued by any specific division
 
-_Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
 
 > The party which issued the document [Required]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MasterDocument
 
 > In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
 > In a multi-document tree, this is the direct parent document. If this is the root it is null
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentAccount
 
 > Payment account that is used for the payments of this delivery. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
-`obj.Supplier.DefaultPaymentAccount.IfNullThen(obj.PaymentType.GetDefaultPaymentAccount())`
+`obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))`
 
 _Front-End Recalc Expressions:_  
-`obj.Supplier.DefaultPaymentAccount.IfNullThen(obj.PaymentType.GetDefaultPaymentAccount())`
+`obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))`
 ### PaymentType
 
 > When not null specifies the payment type for the sales order. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -464,79 +464,79 @@ _Front-End Recalc Expressions:_
 
 > The document that is the prime cause for creation of the current document
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### PurchaseOrder
 
 > The purchase order which is received with this receiving order. [Filter(multi eq)]
 
-_Type_: **[Logistics.Procurement.PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable)**  
+_Type_: **[PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchasePriceList
 
 > The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. [Filter(multi eq)]
 
-_Type_: **[Logistics.Procurement.PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
+_Type_: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
 
 > The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ReverseOfDocument
 
 > The document which the current document is reverse of
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Sequence
 
 > The sequence that will be used to give new numbers to the documents of this type
 
-_Type_: **[General.Sequences](General.Sequences.md) (nullable)**  
+_Type_: **[Sequences](General.Sequences.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Store
 
 > The store in which the goods were received. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.Lines.Select(c => c.LineStore).Distinct().OnlyIfSingle()`
+`obj.Lines.Select( c => c.LineStore).Distinct( ).OnlyIfSingle( )`
 ### Supplier
 
 > The supplier of the products for this receiving order. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md)**  
+_Type_: **[Suppliers](Logistics.Procurement.Suppliers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToCompanyDivision
 
 > The division of the company, receiving the document. null when the document is not received by any specific division
 
-_Type_: **[General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
+_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
 _Supported Filters_: **NotFilterable**  
 
 ### ToParty
 
 > The party which should receive the document
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### UserStatus
 
 > The user status of this document if applicable for this document type. null means unknown or not yet set
 
-_Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 

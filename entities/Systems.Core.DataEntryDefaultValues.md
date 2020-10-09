@@ -22,9 +22,9 @@ Contains user-specified default values for columns in data entry forms. Entity: 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionDocumentType](Systems.Core.DataEntryDefaultValues.md#conditiondocumenttype) | [General.DocumentTypes](General.DocumentTypes.md) (nullable) | If not null specifies that the default should be applied only if Document_Type_Id equals this value. [Filter(multi eq)] |
-| [ConditionEnterpriseCompany](Systems.Core.DataEntryDefaultValues.md#conditionenterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | If not null specifies that the default should be applied only if Enterprise_Company_Id equals this value. [Filter(multi eq)] |
-| [ConditionRole](Systems.Core.DataEntryDefaultValues.md#conditionrole) | [Systems.Workflow.Roles](Systems.Workflow.Roles.md) (nullable) | When not null, specifies that the default value should be applied only when the user plays the specified role. [Filter(multi eq)] |
+| [ConditionDocumentType](Systems.Core.DataEntryDefaultValues.md#conditiondocumenttype) | [DocumentTypes](General.DocumentTypes.md) (nullable) | If not null specifies that the default should be applied only if Document_Type_Id equals this value. [Filter(multi eq)] |
+| [ConditionEnterpriseCompany](Systems.Core.DataEntryDefaultValues.md#conditionenterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | If not null specifies that the default should be applied only if Enterprise_Company_Id equals this value. [Filter(multi eq)] |
+| [ConditionRole](Systems.Core.DataEntryDefaultValues.md#conditionrole) | [Roles](Systems.Workflow.Roles.md) (nullable) | When not null, specifies that the default value should be applied only when the user plays the specified role. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -98,21 +98,21 @@ _Supports Order By_: **False**
 
 > If not null specifies that the default should be applied only if Document_Type_Id equals this value. [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md) (nullable)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionEnterpriseCompany
 
 > If not null specifies that the default should be applied only if Enterprise_Company_Id equals this value. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionRole
 
 > When not null, specifies that the default value should be applied only when the user plays the specified role. [Filter(multi eq)]
 
-_Type_: **[Systems.Workflow.Roles](Systems.Workflow.Roles.md) (nullable)**  
+_Type_: **[Roles](Systems.Workflow.Roles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

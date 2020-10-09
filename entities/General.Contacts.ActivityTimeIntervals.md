@@ -21,9 +21,9 @@ History of work efforts for executing activities (timesheet). Entity: Cm_Activit
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Contacts.ActivityTimeIntervals.md#activity) | [General.Contacts.Activities](General.Contacts.Activities.md) | The activity for which the time interval is recorded. [Required] [Filter(multi eq)] |
-| [Party](General.Contacts.ActivityTimeIntervals.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party for which the time interval is recorded. [Required] [Filter(multi eq)] [Owner] |
-| [UserStatus](General.Contacts.ActivityTimeIntervals.md#userstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. [Filter(multi eq)] |
+| [Activity](General.Contacts.ActivityTimeIntervals.md#activity) | [Activities](General.Contacts.Activities.md) | The activity for which the time interval is recorded. [Required] [Filter(multi eq)] |
+| [Party](General.Contacts.ActivityTimeIntervals.md#party) | [Parties](General.Contacts.Parties.md) | The party for which the time interval is recorded. [Required] [Filter(multi eq)] [Owner] |
+| [UserStatus](General.Contacts.ActivityTimeIntervals.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -103,21 +103,21 @@ _Supports Order By_: **False**
 
 > The activity for which the time interval is recorded. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Activities](General.Contacts.Activities.md)**  
+_Type_: **[Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
 > The party for which the time interval is recorded. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UserStatus
 
 > The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -30,11 +30,11 @@ The current requisition (MRP) plan. The data is deleted and re-created upon each
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Logistics.Inventory.RequisitionPlan.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this RequisitionPlan applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
-| [FromStore](Logistics.Inventory.RequisitionPlan.md#fromstore) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | When the order is for transfer, this is the store from which we shall transfer the product. [Filter(multi eq)] |
-| [Product](Logistics.Inventory.RequisitionPlan.md#product) | [General.Products.Products](General.Products.Products.md) | The product, for which we are planning. [Required] [Filter(multi eq)] |
-| [Store](Logistics.Inventory.RequisitionPlan.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The store, which is planned. [Required] [Filter(multi eq)] |
-| [Supplier](Logistics.Inventory.RequisitionPlan.md#supplier) | [Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md) (nullable) | The default supplier in the default product supply for current store, if any. [Filter(multi eq)] |
+| [EnterpriseCompany](Logistics.Inventory.RequisitionPlan.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this RequisitionPlan applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [FromStore](Logistics.Inventory.RequisitionPlan.md#fromstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | When the order is for transfer, this is the store from which we shall transfer the product. [Filter(multi eq)] |
+| [Product](Logistics.Inventory.RequisitionPlan.md#product) | [Products](General.Products.Products.md) | The product, for which we are planning. [Required] [Filter(multi eq)] |
+| [Store](Logistics.Inventory.RequisitionPlan.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store, which is planned. [Required] [Filter(multi eq)] |
+| [Supplier](Logistics.Inventory.RequisitionPlan.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) (nullable) | The default supplier in the default product supply for current store, if any. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -182,35 +182,35 @@ _Default Value_: **Constant**
 
 > The Enterprise Company to which this RequisitionPlan applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromStore
 
 > When the order is for transfer, this is the store from which we shall transfer the product. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The product, for which we are planning. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
 > The store, which is planned. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Supplier
 
 > The default supplier in the default product supply for current store, if any. [Filter(multi eq)]
 
-_Type_: **[Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md) (nullable)**  
+_Type_: **[Suppliers](Logistics.Procurement.Suppliers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

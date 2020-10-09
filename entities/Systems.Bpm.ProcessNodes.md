@@ -19,8 +19,8 @@ Contains the flow Nodes of the process model. Entity: Bpm_Process_Nodes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Process](Systems.Bpm.ProcessNodes.md#process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process, to which this Node belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ProcessLane](Systems.Bpm.ProcessNodes.md#processlane) | [Systems.Bpm.ProcessLanes](Systems.Bpm.ProcessLanes.md) | The process lane to which this Node belongs. [Required] [Filter(multi eq)] |
+| [Process](Systems.Bpm.ProcessNodes.md#process) | [Processes](Systems.Bpm.Processes.md) | The process, to which this Node belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ProcessLane](Systems.Bpm.ProcessNodes.md#processlane) | [ProcessLanes](Systems.Bpm.ProcessLanes.md) | The process lane to which this Node belongs. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -80,14 +80,14 @@ _Supports Order By_: **False**
 
 > The process, to which this Node belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Bpm.Processes](Systems.Bpm.Processes.md)**  
+_Type_: **[Processes](Systems.Bpm.Processes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProcessLane
 
 > The process lane to which this Node belongs. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Bpm.ProcessLanes](Systems.Bpm.ProcessLanes.md)**  
+_Type_: **[ProcessLanes](Systems.Bpm.ProcessLanes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

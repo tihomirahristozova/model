@@ -18,9 +18,9 @@ Defines the relationships between the parties. The data is preserved over time. 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromParty](General.Contacts.PartyRelationships.md#fromparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The first party in the relationship. [Required] [Filter(multi eq)] |
-| [RelationshipType](General.Contacts.PartyRelationships.md#relationshiptype) | [General.Contacts.PartyRelationshipTypes](General.Contacts.PartyRelationshipTypes.md) | The type of the relationship. [Required] [Filter(multi eq)] |
-| [ToParty](General.Contacts.PartyRelationships.md#toparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The second party in the relationship. [Required] [Filter(multi eq)] |
+| [FromParty](General.Contacts.PartyRelationships.md#fromparty) | [Parties](General.Contacts.Parties.md) | The first party in the relationship. [Required] [Filter(multi eq)] |
+| [RelationshipType](General.Contacts.PartyRelationships.md#relationshiptype) | [PartyRelationshipTypes](General.Contacts.PartyRelationshipTypes.md) | The type of the relationship. [Required] [Filter(multi eq)] |
+| [ToParty](General.Contacts.PartyRelationships.md#toparty) | [Parties](General.Contacts.Parties.md) | The second party in the relationship. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -62,21 +62,21 @@ _Supports Order By_: **False**
 
 > The first party in the relationship. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RelationshipType
 
 > The type of the relationship. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.PartyRelationshipTypes](General.Contacts.PartyRelationshipTypes.md)**  
+_Type_: **[PartyRelationshipTypes](General.Contacts.PartyRelationshipTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToParty
 
 > The second party in the relationship. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

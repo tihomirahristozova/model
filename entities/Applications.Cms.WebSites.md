@@ -18,15 +18,15 @@ Contains the public web sites. Entity: Cms_Web_Sites
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.Cms.WebSites.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which this web site belongs. [Required] [Filter(multi eq)] |
-| [PublicUserList](Applications.Cms.WebSites.md#publicuserlist) | [Systems.External.PublicUserLists](Systems.External.PublicUserLists.md) (nullable) | The list of users used to authorize the users on the site. [Filter(multi eq)] |
+| [EnterpriseCompany](Applications.Cms.WebSites.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which this web site belongs. [Required] [Filter(multi eq)] |
+| [PublicUserList](Applications.Cms.WebSites.md#publicuserlist) | [PublicUserLists](Systems.External.PublicUserLists.md) (nullable) | The list of users used to authorize the users on the site. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Languages | [Applications.Cms.WebSiteLanguages](Applications.Cms.WebSiteLanguages.md) | List of [WebSiteLanguage](Applications.Cms.WebSiteLanguages.md) child objects, based on the [Applications.Cms.WebSiteLanguage.WebSite](Applications.Cms.WebSiteLanguages.md#website) back reference 
-| WebModules | [Applications.Cms.WebModules](Applications.Cms.WebModules.md) | List of [WebModule](Applications.Cms.WebModules.md) child objects, based on the [Applications.Cms.WebModule.WebSite](Applications.Cms.WebModules.md#website) back reference 
+| Languages | [WebSiteLanguages](Applications.Cms.WebSiteLanguages.md) | List of [WebSiteLanguage](Applications.Cms.WebSiteLanguages.md) child objects, based on the [Applications.Cms.WebSiteLanguage.WebSite](Applications.Cms.WebSiteLanguages.md#website) back reference 
+| WebModules | [WebModules](Applications.Cms.WebModules.md) | List of [WebModule](Applications.Cms.WebModules.md) child objects, based on the [Applications.Cms.WebModule.WebSite](Applications.Cms.WebModules.md#website) back reference 
 
 
 ## Attribute Details
@@ -69,14 +69,14 @@ _Supports Order By_: **False**
 
 > The enterprise company to which this web site belongs. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PublicUserList
 
 > The list of users used to authorize the users on the site. [Filter(multi eq)]
 
-_Type_: **[Systems.External.PublicUserLists](Systems.External.PublicUserLists.md) (nullable)**  
+_Type_: **[PublicUserLists](Systems.External.PublicUserLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

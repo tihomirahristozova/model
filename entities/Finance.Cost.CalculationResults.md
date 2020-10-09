@@ -19,12 +19,12 @@ Contains the results of cost calculations. Entity: Cost_Calculation_Results
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Calculation](Finance.Cost.CalculationResults.md#calculation) | [Finance.Cost.Calculations](Finance.Cost.Calculations.md) | The [Calculation](Finance.Cost.CalculationResults.md#calculation) to which this CalculationResult belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Lot](Finance.Cost.CalculationResults.md#lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot to which the cost was allocated. When null, the cost was not allocated to any specific Lot. [Filter(multi eq)] |
-| [Product](Finance.Cost.CalculationResults.md#product) | [General.Products.Products](General.Products.Products.md) | The Product to which the cost was allocated. When null, the cost was not allocated to any specific Product. [Required] [Filter(multi eq)] |
-| [ProfitCenter](Finance.Cost.CalculationResults.md#profitcenter) | [Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | The Profit Center to which the cost was allocated. When null, the cost was not allocated to any specific Profit Center. [Filter(multi eq)] |
-| [SalesOrder](Finance.Cost.CalculationResults.md#salesorder) | [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | The Sales Order to which the cost was allocated. When null, the cost was not allocated to any specific Sales Order. [Filter(multi eq)] |
-| [Workgroup](Finance.Cost.CalculationResults.md#workgroup) | [Production.Resources.Workgroups](Production.Resources.Workgroups.md) (nullable) | The Workgroup to which the cost was allocated. When null, the cost was not allocated to any specific Workgroup. [Filter(multi eq)] |
+| [Calculation](Finance.Cost.CalculationResults.md#calculation) | [Calculations](Finance.Cost.Calculations.md) | The [Calculation](Finance.Cost.CalculationResults.md#calculation) to which this CalculationResult belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Lot](Finance.Cost.CalculationResults.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot to which the cost was allocated. When null, the cost was not allocated to any specific Lot. [Filter(multi eq)] |
+| [Product](Finance.Cost.CalculationResults.md#product) | [Products](General.Products.Products.md) | The Product to which the cost was allocated. When null, the cost was not allocated to any specific Product. [Required] [Filter(multi eq)] |
+| [ProfitCenter](Finance.Cost.CalculationResults.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | The Profit Center to which the cost was allocated. When null, the cost was not allocated to any specific Profit Center. [Filter(multi eq)] |
+| [SalesOrder](Finance.Cost.CalculationResults.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | The Sales Order to which the cost was allocated. When null, the cost was not allocated to any specific Sales Order. [Filter(multi eq)] |
+| [Workgroup](Finance.Cost.CalculationResults.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) (nullable) | The Workgroup to which the cost was allocated. When null, the cost was not allocated to any specific Workgroup. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -53,10 +53,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.Calculation.Results.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Calculation.Results.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.Calculation.Results.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Calculation.Results.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### ProjectId
 
 > The Project to which the cost was allocated. When null, the cost was not allocated to any specific Project. [Filter(multi eq)]
@@ -80,42 +80,42 @@ _Default Value_: **0**
 
 > The [Calculation](Finance.Cost.CalculationResults.md#calculation) to which this CalculationResult belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Cost.Calculations](Finance.Cost.Calculations.md)**  
+_Type_: **[Calculations](Finance.Cost.Calculations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 
 > The Lot to which the cost was allocated. When null, the cost was not allocated to any specific Lot. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The Product to which the cost was allocated. When null, the cost was not allocated to any specific Product. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProfitCenter
 
 > The Profit Center to which the cost was allocated. When null, the cost was not allocated to any specific Profit Center. [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
+_Type_: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesOrder
 
 > The Sales Order to which the cost was allocated. When null, the cost was not allocated to any specific Sales Order. [Filter(multi eq)]
 
-_Type_: **[Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
+_Type_: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Workgroup
 
 > The Workgroup to which the cost was allocated. When null, the cost was not allocated to any specific Workgroup. [Filter(multi eq)]
 
-_Type_: **[Production.Resources.Workgroups](Production.Resources.Workgroups.md) (nullable)**  
+_Type_: **[Workgroups](Production.Resources.Workgroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

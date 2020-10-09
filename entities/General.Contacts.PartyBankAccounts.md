@@ -22,7 +22,7 @@ The bank accounts of a party. Entity: Gen_Party_Bank_Accounts
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](General.Contacts.PartyBankAccounts.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.PartyBankAccounts.md#party) to which this PartyBankAccount belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Party](General.Contacts.PartyBankAccounts.md#party) | [Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.PartyBankAccounts.md#party) to which this PartyBankAccount belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -97,7 +97,7 @@ _Supports Order By_: **False**
 
 > The [Party](General.Contacts.PartyBankAccounts.md#party) to which this PartyBankAccount belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

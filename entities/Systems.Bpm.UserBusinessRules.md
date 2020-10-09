@@ -25,9 +25,9 @@ Represents user-defined business rule. Entity: Sys_User_Business_Rules
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Actions | [Systems.Bpm.UserBusinessRuleActions](Systems.Bpm.UserBusinessRuleActions.md) | List of [UserBusinessRuleAction](Systems.Bpm.UserBusinessRuleActions.md) child objects, based on the [Systems.Bpm.UserBusinessRuleAction.UserBusinessRule](Systems.Bpm.UserBusinessRuleActions.md#userbusinessrule) back reference 
-| Conditions | [Systems.Bpm.UserBusinessRuleConditions](Systems.Bpm.UserBusinessRuleConditions.md) | List of [UserBusinessRuleCondition](Systems.Bpm.UserBusinessRuleConditions.md) child objects, based on the [Systems.Bpm.UserBusinessRuleCondition.UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#userbusinessrule) back reference 
-| Events | [Systems.Bpm.UserBusinessRuleEvents](Systems.Bpm.UserBusinessRuleEvents.md) | List of [UserBusinessRuleEvent](Systems.Bpm.UserBusinessRuleEvents.md) child objects, based on the [Systems.Bpm.UserBusinessRuleEvent.UserBusinessRule](Systems.Bpm.UserBusinessRuleEvents.md#userbusinessrule) back reference 
+| Actions | [UserBusinessRuleActions](Systems.Bpm.UserBusinessRuleActions.md) | List of [UserBusinessRuleAction](Systems.Bpm.UserBusinessRuleActions.md) child objects, based on the [Systems.Bpm.UserBusinessRuleAction.UserBusinessRule](Systems.Bpm.UserBusinessRuleActions.md#userbusinessrule) back reference 
+| Conditions | [UserBusinessRuleConditions](Systems.Bpm.UserBusinessRuleConditions.md) | List of [UserBusinessRule<br />Condition](Systems.Bpm.UserBusinessRuleConditions.md) child objects, based on the [Systems.Bpm.UserBusinessRuleCondition.UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#userbusinessrule) back nce 
+| Events | [UserBusinessRuleEvents](Systems.Bpm.UserBusinessRuleEvents.md) | List of [UserBusinessRuleEvent](Systems.Bpm.UserBusinessRuleEvents.md) child objects, based on the [Systems.Bpm.UserBusinessRuleEvent.UserBusinessRule](Systems.Bpm.UserBusinessRuleEvents.md#userbusinessrule) back reference 
 
 
 ## Attribute Details

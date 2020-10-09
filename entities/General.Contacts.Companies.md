@@ -13,11 +13,11 @@ Contains company definitions. Entity: Cm_Companies
 | [City](General.Contacts.Companies.md#city) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The city in which the company is registered. [Filter(like)] 
 | [CreationTime](General.Contacts.Companies.md#creationtime) | datetime (nullable) | Date and time when the Company was created. [Filter(ge;le)] [ReadOnly] 
 | [CreationUser](General.Contacts.Companies.md#creationuser) | string (nullable) | Login name of the user, who created the Company. [Filter(like)] [ReadOnly] 
-| [DefaultProductCodingSystemId](General.Contacts.Companies.md#defaultproductcodingsystemid) | guid (nullable) |  
+| [DefaultProduct<br />CodingSystemId](General.Contacts.Companies.md#defaultproductcodingsystemid) | guid (nullable) |  
 | [GLN](General.Contacts.Companies.md#gln) | string (nullable) | Global Location Number used by EDI systems 
 | [Id](General.Contacts.Companies.md#id) | guid |  
 | [IsActive](General.Contacts.Companies.md#isactive) | boolean | Specifies whether the current party is active in the system or not [Required] 
-| [IsVATCashReportingRegistered](General.Contacts.Companies.md#isvatcashreportingregistered) | boolean | When true, specifies that the company uses the special VAT Cash Reporting Mode. [Required] [Default(false)] 
+| [IsVATCashReporting<br />Registered](General.Contacts.Companies.md#isvatcashreportingregistered) | boolean | When true, specifies that the company uses the special VAT Cash Reporting Mode. [Required] [Default(false)] 
 | [IsVATRegistered](General.Contacts.Companies.md#isvatregistered) | boolean | Determines wheather the company is included in VAT registers. [Required] [Default(false)] 
 | [Name](General.Contacts.Companies.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The name of this Company. [Filter(eq;like)] [ORD] 
 | [ParentPartyId](General.Contacts.Companies.md#parentpartyid) | guid (nullable) |  
@@ -42,27 +42,27 @@ Contains company definitions. Entity: Cm_Companies
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdministrativeRegion](General.Contacts.Companies.md#administrativeregion) | [General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. |
-| [Area](General.Contacts.Companies.md#area) | [General.Geography.Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. |
-| [Country](General.Contacts.Companies.md#country) | [General.Geography.Countries](General.Geography.Countries.md) (nullable) | The country, where the company is registered. [Filter(multi eq)] |
-| [DefaultProductCodingSystem](General.Contacts.Companies.md#defaultproductcodingsystem) | [General.Products.CodingSystems](General.Products.CodingSystems.md) (nullable) | When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. |
-| [ParentParty](General.Contacts.Companies.md#parentparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to |
-| [RegistrationResponsiblePerson](General.Contacts.Companies.md#registrationresponsibleperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The personal record of the primary responsible person as per registration. null means unknown. [Filter(multi eq)] |
+| [AdministrativeRegion](General.Contacts.Companies.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. |
+| [Area](General.Contacts.Companies.md#area) | [Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. |
+| [Country](General.Contacts.Companies.md#country) | [Countries](General.Geography.Countries.md) (nullable) | The country, where the company is registered. [Filter(multi eq)] |
+| [DefaultProductCodingSystem](General.Contacts.Companies.md#defaultproductcodingsystem) | [CodingSystems](General.Products.CodingSystems.md) (nullable) | When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. |
+| [ParentParty](General.Contacts.Companies.md#parentparty) | [Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to |
+| [RegistrationResponsible<br />Person](General.Contacts.Companies.md#registrationresponsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The personal record of the primary responsible person as per registration. null means unknown. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| ActivityTimeIntervals | [General.Contacts.ActivityTimeIntervals](General.Contacts.ActivityTimeIntervals.md) | List of [ActivityTimeInterval](General.Contacts.ActivityTimeIntervals.md) child objects, based on the [General.Contacts.ActivityTimeInterval.Party](General.Contacts.ActivityTimeIntervals.md#party) back reference 
-| BankAccounts | [General.Contacts.PartyBankAccounts](General.Contacts.PartyBankAccounts.md) | List of [PartyBankAccount](General.Contacts.PartyBankAccounts.md) child objects, based on the [General.Contacts.PartyBankAccount.Party](General.Contacts.PartyBankAccounts.md#party) back reference 
-| ContactMechanisms | [General.Contacts.PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | List of [PartyContactMechanism](General.Contacts.PartyContactMechanisms.md) child objects, based on the [General.Contacts.PartyContactMechanism.Party](General.Contacts.PartyContactMechanisms.md#party) back reference 
-| Customers | [Crm.Customers](Crm.Customers.md) | List of [Customer](Crm.Customers.md) child objects, based on the [Crm.Customer.Party](Crm.Customers.md#party) back reference 
-| Dealers | [Crm.Dealers](Crm.Dealers.md) | List of [Dealer](Crm.Dealers.md) child objects, based on the [Crm.Dealer.Party](Crm.Dealers.md#party) back reference 
-| Departments | [General.Contacts.CompanyDepartments](General.Contacts.CompanyDepartments.md) | List of [CompanyDepartment](General.Contacts.CompanyDepartments.md) child objects, based on the [General.Contacts.CompanyDepartment.Company](General.Contacts.CompanyDepartments.md#company) back reference 
-| Distributors | [Crm.Distributors](Crm.Distributors.md) | List of [Distributor](Crm.Distributors.md) child objects, based on the [Crm.Distributor.Party](Crm.Distributors.md#party) back reference 
-| Pictures | [General.Contacts.PartyPictures](General.Contacts.PartyPictures.md) | List of [PartyPicture](General.Contacts.PartyPictures.md) child objects, based on the [General.Contacts.PartyPicture.Party](General.Contacts.PartyPictures.md#party) back reference 
-| Suppliers | [Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md) | List of [Supplier](Logistics.Procurement.Suppliers.md) child objects, based on the [Logistics.Procurement.Supplier.Party](Logistics.Procurement.Suppliers.md#party) back reference 
-| TargetGroupMembers | [Crm.Marketing.TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.Party](Crm.Marketing.TargetGroupMembers.md#party) back reference 
+| ActivityTimeIntervals | [ActivityTimeIntervals](General.Contacts.ActivityTimeIntervals.md) | List of [ActivityTimeInterval](General.Contacts.ActivityTimeIntervals.md) child objects, based on the [General.Contacts.ActivityTimeInterval.Party](General.Contacts.ActivityTimeIntervals.md#party) back reference 
+| BankAccounts | [PartyBankAccounts](General.Contacts.PartyBankAccounts.md) | List of [PartyBankAccount](General.Contacts.PartyBankAccounts.md) child objects, based on the [General.Contacts.PartyBankAccount.Party](General.Contacts.PartyBankAccounts.md#party) back reference 
+| ContactMechanisms | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | List of [PartyContactMechanism](General.Contacts.PartyContactMechanisms.md) child objects, based on the [General.Contacts.PartyContactMechanism.Party](General.Contacts.PartyContactMechanisms.md#party) back reference 
+| Customers | [Customers](Crm.Customers.md) | List of [Customer](Crm.Customers.md) child objects, based on the [Crm.Customer.Party](Crm.Customers.md#party) back reference 
+| Dealers | [Dealers](Crm.Dealers.md) | List of [Dealer](Crm.Dealers.md) child objects, based on the [Crm.Dealer.Party](Crm.Dealers.md#party) back reference 
+| Departments | [CompanyDepartments](General.Contacts.CompanyDepartments.md) | List of [CompanyDepartment](General.Contacts.CompanyDepartments.md) child objects, based on the [General.Contacts.CompanyDepartment.Company](General.Contacts.CompanyDepartments.md#company) back reference 
+| Distributors | [Distributors](Crm.Distributors.md) | List of [Distributor](Crm.Distributors.md) child objects, based on the [Crm.Distributor.Party](Crm.Distributors.md#party) back reference 
+| Pictures | [PartyPictures](General.Contacts.PartyPictures.md) | List of [PartyPicture](General.Contacts.PartyPictures.md) child objects, based on the [General.Contacts.PartyPicture.Party](General.Contacts.PartyPictures.md#party) back reference 
+| Suppliers | [Suppliers](Logistics.Procurement.Suppliers.md) | List of [Supplier](Logistics.Procurement.Suppliers.md) child objects, based on the [Logistics.Procurement.Supplier.Party](Logistics.Procurement.Suppliers.md#party) back reference 
+| TargetGroupMembers | [TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.Party](Crm.Marketing.TargetGroupMembers.md#party) back reference 
 
 
 ## Attribute Details
@@ -305,21 +305,21 @@ _Supports Order By_: **False**
 
 > The administrative region in which the party is situated.
 
-_Type_: **[General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
+_Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Area
 
 > The area in which the party is situated.
 
-_Type_: **[General.Geography.Areas](General.Geography.Areas.md) (nullable)**  
+_Type_: **[Areas](General.Geography.Areas.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Country
 
 > The country, where the company is registered. [Filter(multi eq)]
 
-_Type_: **[General.Geography.Countries](General.Geography.Countries.md) (nullable)**  
+_Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -331,21 +331,21 @@ _Front-End Recalc Expressions:_
 
 > When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
 
-_Type_: **[General.Products.CodingSystems](General.Products.CodingSystems.md) (nullable)**  
+_Type_: **[CodingSystems](General.Products.CodingSystems.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ParentParty
 
 > Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### RegistrationResponsiblePerson
 
 > The personal record of the primary responsible person as per registration. null means unknown. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

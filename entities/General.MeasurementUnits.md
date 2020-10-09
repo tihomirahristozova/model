@@ -22,7 +22,7 @@ Contains all measurement units, grouped in categories. Each category has one bas
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MeasurementCategory](General.MeasurementUnits.md#measurementcategory) | [General.MeasurementCategories](General.MeasurementCategories.md) | Base measurement category Id. [Required] [Filter(multi eq)] [Owner] |
+| [MeasurementCategory](General.MeasurementUnits.md#measurementcategory) | [MeasurementCategories](General.MeasurementCategories.md) | Base measurement category Id. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -113,7 +113,7 @@ _Supports Order By_: **False**
 
 > Base measurement category Id. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.MeasurementCategories](General.MeasurementCategories.md)**  
+_Type_: **[MeasurementCategories](General.MeasurementCategories.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

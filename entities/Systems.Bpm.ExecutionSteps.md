@@ -17,8 +17,8 @@ Contains both historical and active steps in the execution of the business proce
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProcessElement](Systems.Bpm.ExecutionSteps.md#processelement) | [Systems.Bpm.ProcessElements](Systems.Bpm.ProcessElements.md) | The process element, which is being executed for the instance. [Required] [Filter(multi eq)] |
-| [ProcessInstance](Systems.Bpm.ExecutionSteps.md#processinstance) | [Systems.Bpm.ProcessInstances](Systems.Bpm.ProcessInstances.md) | The process instance, which is being executed. [Required] [Filter(multi eq)] |
+| [ProcessElement](Systems.Bpm.ExecutionSteps.md#processelement) | [ProcessElements](Systems.Bpm.ProcessElements.md) | The process element, which is being executed for the instance. [Required] [Filter(multi eq)] |
+| [ProcessInstance](Systems.Bpm.ExecutionSteps.md#processinstance) | [ProcessInstances](Systems.Bpm.ProcessInstances.md) | The process instance, which is being executed. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -54,14 +54,14 @@ _Default Value_: **CurrentDateTime**
 
 > The process element, which is being executed for the instance. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Bpm.ProcessElements](Systems.Bpm.ProcessElements.md)**  
+_Type_: **[ProcessElements](Systems.Bpm.ProcessElements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProcessInstance
 
 > The process instance, which is being executed. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Bpm.ProcessInstances](Systems.Bpm.ProcessInstances.md)**  
+_Type_: **[ProcessInstances](Systems.Bpm.ProcessInstances.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

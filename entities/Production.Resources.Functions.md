@@ -17,8 +17,8 @@ Definition of the functions that the resources can perform. Entity: Prd_Function
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FunctionGroup](Production.Resources.Functions.md#functiongroup) | [Production.Resources.FunctionGroups](Production.Resources.FunctionGroups.md) | The [FunctionGroup](Production.Resources.Functions.md#functiongroup) to which this Function belongs. [Required] [Filter(multi eq)] [Owner] |
-| [PrimaryUnit](Production.Resources.Functions.md#primaryunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. [Required] [Filter(multi eq)] |
+| [FunctionGroup](Production.Resources.Functions.md#functiongroup) | [FunctionGroups](Production.Resources.FunctionGroups.md) | The [FunctionGroup](Production.Resources.Functions.md#functiongroup) to which this Function belongs. [Required] [Filter(multi eq)] [Owner] |
+| [PrimaryUnit](Production.Resources.Functions.md#primaryunit) | [MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -52,14 +52,14 @@ _Supports Order By_: **False**
 
 > The [FunctionGroup](Production.Resources.Functions.md#functiongroup) to which this Function belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Production.Resources.FunctionGroups](Production.Resources.FunctionGroups.md)**  
+_Type_: **[FunctionGroups](Production.Resources.FunctionGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimaryUnit
 
 > Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

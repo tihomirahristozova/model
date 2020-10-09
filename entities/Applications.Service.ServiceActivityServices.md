@@ -20,16 +20,16 @@ Contains the services, which were actually performed during the service activity
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PerformedByPerson](Applications.Service.ServiceActivityServices.md#performedbyperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The id of the person from the enterprise company that actually performed the work. [Filter(multi eq)] |
-| [Service](Applications.Service.ServiceActivityServices.md#service) | [Applications.Service.Services](Applications.Service.Services.md) | The type of service that is conducted. [Required] [Filter(multi eq)] |
-| [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) | [Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md) | The [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ServiceObject](Applications.Service.ServiceActivityServices.md#serviceobject) | [Applications.Service.ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | The service object that was serviced. null means that it is unknown or N/A. [Filter(multi eq)] |
+| [PerformedByPerson](Applications.Service.ServiceActivityServices.md#performedbyperson) | [Persons](General.Contacts.Persons.md) (nullable) | The id of the person from the enterprise company that actually performed the work. [Filter(multi eq)] |
+| [Service](Applications.Service.ServiceActivityServices.md#service) | [Services](Applications.Service.Services.md) | The type of service that is conducted. [Required] [Filter(multi eq)] |
+| [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ServiceObject](Applications.Service.ServiceActivityServices.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | The service object that was serviced. null means that it is unknown or N/A. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| ServiceActivityAgreedServices | [Applications.Service.ServiceActivityAgreedServices](Applications.Service.ServiceActivityAgreedServices.md) | List of [ServiceActivityAgreedService](Applications.Service.ServiceActivityAgreedServices.md) child objects, based on the [Applications.Service.ServiceActivityAgreedService.ServiceActivityService](Applications.Service.ServiceActivityAgreedServices.md#serviceactivityservice) back reference 
+| ServiceActivity<br />AgreedServices | [ServiceActivityAgreedServices](Applications.Service.ServiceActivityAgreedServices.md) | List of [ServiceActivity<br />AgreedService](Applications.Service.ServiceActivity<br />AgreedServices.md) child objects, based on the [Applications.Service.ServiceActivity<br />AgreedService.ServiceActivityService](Applications.Service.ServiceActivity<br />AgreedServices.md#serviceactivityservice) back  
 
 
 ## Attribute Details
@@ -58,10 +58,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.ServiceActivity.Services.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.ServiceActivity.Services.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.ServiceActivity.Services.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.ServiceActivity.Services.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
 > Short notes for the service.
@@ -96,28 +96,28 @@ _Front-End Recalc Expressions:_
 
 > The id of the person from the enterprise company that actually performed the work. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Service
 
 > The type of service that is conducted. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Service.Services](Applications.Service.Services.md)**  
+_Type_: **[Services](Applications.Service.Services.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceActivity
 
 > The [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)**  
+_Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceObject
 
 > The service object that was serviced. null means that it is unknown or N/A. [Filter(multi eq)]
 
-_Type_: **[Applications.Service.ServiceObjects](Applications.Service.ServiceObjects.md) (nullable)**  
+_Type_: **[ServiceObjects](Applications.Service.ServiceObjects.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  

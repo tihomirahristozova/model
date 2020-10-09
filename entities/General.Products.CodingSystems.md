@@ -18,7 +18,7 @@ Coding systems categorize additional product codes. Entity: Gen_Coding_Systems
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultMeasurementUnit](General.Products.CodingSystems.md#defaultmeasurementunit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | When not null, specifies a measurement unit to be used as default, instead of the products default unit. [Filter(multi eq)] |
+| [DefaultMeasurementUnit](General.Products.CodingSystems.md#defaultmeasurementunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | When not null, specifies a measurement unit to be used as default, instead of the products default unit. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 > When not null, specifies a measurement unit to be used as default, instead of the products default unit. [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

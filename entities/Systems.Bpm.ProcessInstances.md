@@ -20,7 +20,7 @@ Contains the running instances of the processes. Entity: Bpm_Process_Instances
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Process](Systems.Bpm.ProcessInstances.md#process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process on which this instance is based. [Required] [Filter(multi eq)] |
+| [Process](Systems.Bpm.ProcessInstances.md#process) | [Processes](Systems.Bpm.Processes.md) | The process on which this instance is based. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -91,7 +91,7 @@ _Supports Order By_: **False**
 
 > The process on which this instance is based. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Bpm.Processes](Systems.Bpm.Processes.md)**  
+_Type_: **[Processes](Systems.Bpm.Processes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

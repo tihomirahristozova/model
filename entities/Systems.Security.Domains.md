@@ -3,7 +3,7 @@ uid: Systems.Security.Domains
 ---
 # Systems.Security.Domains
 
-Represents one user domain. The users in a domain have different emails. But one user can use the same email to register in different domains. Entity: Sec_Domains (Introduced in version 20.1.100.0)
+Represents one user domain. The users in a domain have different emails. But one user can use the same email to register in different domains. Entity: Sec_Domains (Introduced in version 20.1)
 
 ## Attributes
 
@@ -19,7 +19,7 @@ Represents one user domain. The users in a domain have different emails. But one
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Providers | [Systems.Security.DomainProviders](Systems.Security.DomainProviders.md) | List of [DomainProvider](Systems.Security.DomainProviders.md) child objects, based on the [Systems.Security.DomainProvider.Domain](Systems.Security.DomainProviders.md#domain) back reference 
+| Providers | [DomainProviders](Systems.Security.DomainProviders.md) | List of [DomainProvider](Systems.Security.DomainProviders.md) child objects, based on the [Systems.Security.DomainProvider.Domain](Systems.Security.DomainProviders.md#domain) back reference 
 
 
 ## Attribute Details

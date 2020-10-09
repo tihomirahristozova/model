@@ -18,7 +18,7 @@ Groups of operations. Entity: Prd_Operation_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Operations | [Production.Resources.Operations](Production.Resources.Operations.md) | List of [Operation](Production.Resources.Operations.md) child objects, based on the [Production.Resources.Operation.OperationGroup](Production.Resources.Operations.md#operationgroup) back reference 
+| Operations | [Operations](Production.Resources.Operations.md) | List of [Operation](Production.Resources.Operations.md) child objects, based on the [Production.Resources.Operation.OperationGroup](Production.Resources.Operations.md#operationgroup) back reference 
 
 
 ## Attribute Details

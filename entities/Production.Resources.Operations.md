@@ -11,7 +11,7 @@ The different steps performed to create products. Entity: Prd_Operations
 | ---- | ---- | --- |
 | [Description](Production.Resources.Operations.md#description) | string (nullable) | The description of this Operation. 
 | [Id](Production.Resources.Operations.md#id) | guid |  
-| [MinimumConcurrentStartTimeMinutes](Production.Resources.Operations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
+| [MinimumConcurrent<br />StartTimeMinutes](Production.Resources.Operations.md#minimumconcurrentstarttimeminutes) | int32 (nullable) | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
 | [MoveTimeMinutes](Production.Resources.Operations.md#movetimeminutes) | int32 | The time required for the product to move to the next operation. During this time no resource is allocated. [Required] [Default(0)] 
 | [Name](Production.Resources.Operations.md#name) | string | The name of this Operation. [Required] [Filter(like)] 
 | [RunTimeMinutes](Production.Resources.Operations.md#runtimeminutes) | int32 | The time required to process one product lot. The run time is calculated for each produced lot. [Required] [Default(0)] 
@@ -26,9 +26,9 @@ The different steps performed to create products. Entity: Prd_Operations
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [OperationGroup](Production.Resources.Operations.md#operationgroup) | [Production.Resources.OperationGroups](Production.Resources.OperationGroups.md) | The [OperationGroup](Production.Resources.Operations.md#operationgroup) to which this Operation belongs. [Required] [Filter(multi eq)] [Owner] |
-| [OperationInstructions](Production.Resources.Operations.md#operationinstructions) | [Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Full instructions for the operation. [Filter(multi eq)] |
-| [WorkgroupResource](Production.Resources.Operations.md#workgroupresource) | [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable) | When not null, specifies the Workgroup Resource, which is required by the operation. [Filter(multi eq)] |
+| [OperationGroup](Production.Resources.Operations.md#operationgroup) | [OperationGroups](Production.Resources.OperationGroups.md) | The [OperationGroup](Production.Resources.Operations.md#operationgroup) to which this Operation belongs. [Required] [Filter(multi eq)] [Owner] |
+| [OperationInstructions](Production.Resources.Operations.md#operationinstructions) | [OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Full instructions for the operation. [Filter(multi eq)] |
+| [WorkgroupResource](Production.Resources.Operations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable) | When not null, specifies the Workgroup Resource, which is required by the operation. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -140,21 +140,21 @@ _Default Value_: **0**
 
 > The [OperationGroup](Production.Resources.Operations.md#operationgroup) to which this Operation belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Production.Resources.OperationGroups](Production.Resources.OperationGroups.md)**  
+_Type_: **[OperationGroups](Production.Resources.OperationGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OperationInstructions
 
 > Full instructions for the operation. [Filter(multi eq)]
 
-_Type_: **[Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
+_Type_: **[OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkgroupResource
 
 > When not null, specifies the Workgroup Resource, which is required by the operation. [Filter(multi eq)]
 
-_Type_: **[Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable)**  
+_Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -18,10 +18,10 @@ Each record contains usage of resource, reported by the related Work Report. Ent
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectTask](Projects.WorkReportResources.md#projecttask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The project task for which the work is reported. [Required] [Filter(multi eq)] |
-| [Resource](Projects.WorkReportResources.md#resource) | [General.Resources.Resources](General.Resources.Resources.md) | The resource, for which usage is reported. [Required] [Filter(multi eq)] |
-| [ResourceInstance](Projects.WorkReportResources.md#resourceinstance) | [General.Resources.ResourceInstances](General.Resources.ResourceInstances.md) (nullable) | The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. [Filter(multi eq;like)] |
-| [WorkReport](Projects.WorkReportResources.md#workreport) | [Projects.WorkReports](Projects.WorkReports.md) | The [WorkReport](Projects.WorkReportResources.md#workreport) to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ProjectTask](Projects.WorkReportResources.md#projecttask) | [ProjectTasks](Projects.ProjectTasks.md) | The project task for which the work is reported. [Required] [Filter(multi eq)] |
+| [Resource](Projects.WorkReportResources.md#resource) | [Resources](General.Resources.Resources.md) | The resource, for which usage is reported. [Required] [Filter(multi eq)] |
+| [ResourceInstance](Projects.WorkReportResources.md#resourceinstance) | [ResourceInstances](General.Resources.ResourceInstances.md) (nullable) | The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. [Filter(multi eq;like)] |
+| [WorkReport](Projects.WorkReportResources.md#workreport) | [WorkReports](Projects.WorkReports.md) | The [WorkReport](Projects.WorkReportResources.md#workreport) to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -64,7 +64,7 @@ _Default Value_: **0**
 
 > The project task for which the work is reported. [Required] [Filter(multi eq)]
 
-_Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md)**  
+_Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -76,23 +76,23 @@ _Front-End Recalc Expressions:_
 
 > The resource, for which usage is reported. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Resources.Resources](General.Resources.Resources.md)**  
+_Type_: **[Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResourceInstance
 
 > The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. [Filter(multi eq;like)]
 
-_Type_: **[General.Resources.ResourceInstances](General.Resources.ResourceInstances.md) (nullable)**  
+_Type_: **[ResourceInstances](General.Resources.ResourceInstances.md) (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`IIF(((obj.ResourceInstance != null) AndAlso (obj.ResourceInstance.Resource != obj.Resource)), null, obj.ResourceInstance)`
+`IIF( ( ( obj.ResourceInstance != null) AndAlso ( obj.ResourceInstance.Resource != obj.Resource)), null, obj.ResourceInstance)`
 ### WorkReport
 
 > The [WorkReport](Projects.WorkReportResources.md#workreport) to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Projects.WorkReports](Projects.WorkReports.md)**  
+_Type_: **[WorkReports](Projects.WorkReports.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

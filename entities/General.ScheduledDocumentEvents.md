@@ -22,8 +22,8 @@ Contains postponed events, which will be executed later. Usually these are large
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.ScheduledDocumentEvents.md#document) | [General.Documents](General.Documents.md) | The document for which the event will be processed. [Required] [Filter(multi eq)] [ReadOnly] |
-| [SourceDocument](General.ScheduledDocumentEvents.md#sourcedocument) | [General.Documents](General.Documents.md) | The document that has caused this event to be scheduled. [Required] [Filter(multi eq)] [ReadOnly] |
+| [Document](General.ScheduledDocumentEvents.md#document) | [Documents](General.Documents.md) | The document for which the event will be processed. [Required] [Filter(multi eq)] [ReadOnly] |
+| [SourceDocument](General.ScheduledDocumentEvents.md#sourcedocument) | [Documents](General.Documents.md) | The document that has caused this event to be scheduled. [Required] [Filter(multi eq)] [ReadOnly] |
 
 
 ## Attribute Details
@@ -113,14 +113,14 @@ _Supports Order By_: **False**
 
 > The document for which the event will be processed. [Required] [Filter(multi eq)] [ReadOnly]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SourceDocument
 
 > The document that has caused this event to be scheduled. [Required] [Filter(multi eq)] [ReadOnly]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

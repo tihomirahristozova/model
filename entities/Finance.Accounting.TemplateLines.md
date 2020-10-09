@@ -27,15 +27,15 @@ Each template line contains the posting to a single set of debit and credit acco
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreditAccount](Finance.Accounting.TemplateLines.md#creditaccount) | [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md) | The account which should be credited. [Required] [Filter(multi eq)] |
-| [DebitAccount](Finance.Accounting.TemplateLines.md#debitaccount) | [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md) | The account which should be debited. [Required] [Filter(multi eq)] |
-| [Template](Finance.Accounting.TemplateLines.md#template) | [Finance.Accounting.Templates](Finance.Accounting.Templates.md) | The [Template](Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CreditAccount](Finance.Accounting.TemplateLines.md#creditaccount) | [Accounts](Finance.Accounting.Accounts.md) | The account which should be credited. [Required] [Filter(multi eq)] |
+| [DebitAccount](Finance.Accounting.TemplateLines.md#debitaccount) | [Accounts](Finance.Accounting.Accounts.md) | The account which should be debited. [Required] [Filter(multi eq)] |
+| [Template](Finance.Accounting.TemplateLines.md#template) | [Templates](Finance.Accounting.Templates.md) | The [Template](Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| TemplateLineProperties | [Finance.Accounting.TemplateLineProperties](Finance.Accounting.TemplateLineProperties.md) | List of [TemplateLineProperty](Finance.Accounting.TemplateLineProperties.md) child objects, based on the [Finance.Accounting.TemplateLineProperty.TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) back reference 
+| TemplateLineProperties | [TemplateLineProperties](Finance.Accounting.TemplateLineProperties.md) | List of [TemplateLineProperty](Finance.Accounting.TemplateLineProperties.md) child objects, based on the [Finance.Accounting.TemplateLineProperty.TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) back reference 
 
 
 ## Attribute Details
@@ -118,10 +118,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.Template.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Template.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.Template.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Template.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Multiplier
 
 > Factor by which the amount from the source will be multiplied. [Required] [Default(1)]
@@ -162,21 +162,21 @@ _Supports Order By_: **False**
 
 > The account which should be credited. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)**  
+_Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DebitAccount
 
 > The account which should be debited. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)**  
+_Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Template
 
 > The [Template](Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Accounting.Templates](Finance.Accounting.Templates.md)**  
+_Type_: **[Templates](Finance.Accounting.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

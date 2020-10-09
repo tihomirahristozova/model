@@ -19,7 +19,7 @@ Represents attachments to mail messages. Entity: Mail_Message_Attachments
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MailMessage](Applications.Mail.MessageAttachments.md#mailmessage) | [Applications.Mail.Messages](Applications.Mail.Messages.md) | The [Message](Applications.Mail.Messages.md) to which this MessageAttachment belongs. [Required] [Filter(multi eq)] [Owner] |
+| [MailMessage](Applications.Mail.MessageAttachments.md#mailmessage) | [Messages](Applications.Mail.Messages.md) | The [Message](Applications.Mail.Messages.md) to which this MessageAttachment belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -70,7 +70,7 @@ _Supports Order By_: **False**
 
 > The [Message](Applications.Mail.Messages.md) to which this MessageAttachment belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Mail.Messages](Applications.Mail.Messages.md)**  
+_Type_: **[Messages](Applications.Mail.Messages.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

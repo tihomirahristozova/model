@@ -16,7 +16,7 @@ Supplier types are primarily used to differentiate the security level access to 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Logistics.Procurement.SupplierTypes.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key required for accessing all suppliers of this supplier type. [Filter(multi eq)] |
+| [AccessKey](Logistics.Procurement.SupplierTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key required for accessing all suppliers of this supplier type. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -42,7 +42,7 @@ _Supports Order By_: **False**
 
 > The access key required for accessing all suppliers of this supplier type. [Filter(multi eq)]
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

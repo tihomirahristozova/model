@@ -19,8 +19,8 @@ Represents an article in a news web module. Entity: Cms_News_Web_Module_Articles
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AuthorPublicUser](Applications.Cms.NewsWebModuleArticles.md#authorpublicuser) | [Systems.External.PublicUsers](Systems.External.PublicUsers.md) | The author of the news article. [Required] [Filter(multi eq)] |
-| [NewsWebModule](Applications.Cms.NewsWebModuleArticles.md#newswebmodule) | [Applications.Cms.NewsWebModules](Applications.Cms.NewsWebModules.md) | The News Web Module, to which the current article is added. [Required] [Filter(multi eq)] |
+| [AuthorPublicUser](Applications.Cms.NewsWebModuleArticles.md#authorpublicuser) | [PublicUsers](Systems.External.PublicUsers.md) | The author of the news article. [Required] [Filter(multi eq)] |
+| [NewsWebModule](Applications.Cms.NewsWebModuleArticles.md#newswebmodule) | [NewsWebModules](Applications.Cms.NewsWebModules.md) | The News Web Module, to which the current article is added. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -72,14 +72,14 @@ _Default Value_: **CurrentDateTime**
 
 > The author of the news article. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.External.PublicUsers](Systems.External.PublicUsers.md)**  
+_Type_: **[PublicUsers](Systems.External.PublicUsers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### NewsWebModule
 
 > The News Web Module, to which the current article is added. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Cms.NewsWebModules](Applications.Cms.NewsWebModules.md)**  
+_Type_: **[NewsWebModules](Applications.Cms.NewsWebModules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

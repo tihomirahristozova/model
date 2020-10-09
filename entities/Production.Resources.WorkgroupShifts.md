@@ -18,8 +18,8 @@ Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Workgroup](Production.Resources.WorkgroupShifts.md#workgroup) | [Production.Resources.Workgroups](Production.Resources.Workgroups.md) | The [Workgroup](Production.Resources.WorkgroupShifts.md#workgroup) to which this WorkgroupShift belongs. [Required] [Filter(multi eq)] [Owner] |
-| [WorkSchedule](Production.Resources.WorkgroupShifts.md#workschedule) | [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md) | The work schedule used to calculate the working time for the shift. [Required] [Filter(multi eq)] |
+| [Workgroup](Production.Resources.WorkgroupShifts.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) | The [Workgroup](Production.Resources.WorkgroupShifts.md#workgroup) to which this WorkgroupShift belongs. [Required] [Filter(multi eq)] [Owner] |
+| [WorkSchedule](Production.Resources.WorkgroupShifts.md#workschedule) | [WorkSchedules](General.Resources.WorkSchedules.md) | The work schedule used to calculate the working time for the shift. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -63,14 +63,14 @@ _Supports Order By_: **False**
 
 > The [Workgroup](Production.Resources.WorkgroupShifts.md#workgroup) to which this WorkgroupShift belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Production.Resources.Workgroups](Production.Resources.Workgroups.md)**  
+_Type_: **[Workgroups](Production.Resources.Workgroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkSchedule
 
 > The work schedule used to calculate the working time for the shift. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)**  
+_Type_: **[WorkSchedules](General.Resources.WorkSchedules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

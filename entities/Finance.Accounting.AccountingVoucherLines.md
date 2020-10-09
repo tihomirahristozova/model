@@ -25,12 +25,12 @@ Contains one debit or credit posting within an accounting voucher. Entity: Acc_V
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Account](Finance.Accounting.AccountingVoucherLines.md#account) | [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md) | The account being debited or credited. [Required] [Filter(multi eq)] |
-| [CostCenter](Finance.Accounting.AccountingVoucherLines.md#costcenter) | [Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable) | The cost center to which this cost is related. [Filter(multi eq)] |
-| [Currency](Finance.Accounting.AccountingVoucherLines.md#currency) | [General.Currencies](General.Currencies.md) | The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field. [Required] [Filter(multi eq)] |
-| [ProfitCenter](Finance.Accounting.AccountingVoucherLines.md#profitcenter) | [Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | The profit center to which this revenue is related. [Filter(multi eq)] |
-| [ReferencedDocument](Finance.Accounting.AccountingVoucherLines.md#referenceddocument) | [General.Documents](General.Documents.md) | The document which is referenced by the line. By default, this is the document of the voucher. [Required] [Filter(multi eq)] |
-| [Voucher](Finance.Accounting.AccountingVoucherLines.md#voucher) | [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md) | The voucher to which this line is attached. [Required] [Filter(multi eq)] [Owner] |
+| [Account](Finance.Accounting.AccountingVoucherLines.md#account) | [Accounts](Finance.Accounting.Accounts.md) | The account being debited or credited. [Required] [Filter(multi eq)] |
+| [CostCenter](Finance.Accounting.AccountingVoucherLines.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | The cost center to which this cost is related. [Filter(multi eq)] |
+| [Currency](Finance.Accounting.AccountingVoucherLines.md#currency) | [Currencies](General.Currencies.md) | The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field. [Required] [Filter(multi eq)] |
+| [ProfitCenter](Finance.Accounting.AccountingVoucherLines.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | The profit center to which this revenue is related. [Filter(multi eq)] |
+| [ReferencedDocument](Finance.Accounting.AccountingVoucherLines.md#referenceddocument) | [Documents](General.Documents.md) | The document which is referenced by the line. By default, this is the document of the voucher. [Required] [Filter(multi eq)] |
+| [Voucher](Finance.Accounting.AccountingVoucherLines.md#voucher) | [AccountingVouchers](Finance.Accounting.AccountingVouchers.md) | The voucher to which this line is attached. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -111,10 +111,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.Voucher.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Voucher.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.Voucher.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Voucher.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### RateDivisor
 
 > The divisor for conversion from Debit/Credit to base currency. [Required] [Default(1)]
@@ -140,42 +140,42 @@ _Default Value_: **1**
 
 > The account being debited or credited. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)**  
+_Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostCenter
 
 > The cost center to which this cost is related. [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
+_Type_: **[CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Currency
 
 > The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md)**  
+_Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProfitCenter
 
 > The profit center to which this revenue is related. [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
+_Type_: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReferencedDocument
 
 > The document which is referenced by the line. By default, this is the document of the voucher. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Voucher
 
 > The voucher to which this line is attached. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)**  
+_Type_: **[AccountingVouchers](Finance.Accounting.AccountingVouchers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -3,7 +3,7 @@ uid: Systems.Core.WebSites
 ---
 # Systems.Core.WebSites
 
-Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites (Introduced in version 19.1.100.0)
+Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites (Introduced in version 19.1)
 
 ## Attributes
 
@@ -19,9 +19,9 @@ Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Systems.Core.WebSites.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)] |
-| [TrustedApplication](Systems.Core.WebSites.md#trustedapplication) | [Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md) (nullable) | The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1.100.0) |
-| [WebHost](Systems.Core.WebSites.md#webhost) | [Systems.Core.WebHosts](Systems.Core.WebHosts.md) (nullable) | The web host in which to host the site. [Filter(multi eq)] |
+| [EnterpriseCompany](Systems.Core.WebSites.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)] |
+| [TrustedApplication](Systems.Core.WebSites.md#trustedapplication) | [TrustedApplications](Systems.Security.TrustedApplications.md) (nullable) | The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1) |
+| [WebHost](Systems.Core.WebSites.md#webhost) | [WebHosts](Systems.Core.WebHosts.md) (nullable) | The web host in which to host the site. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -90,21 +90,21 @@ _Supports Order By_: **False**
 
 > The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrustedApplication
 
-> The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1.100.0)
+> The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1)
 
-_Type_: **[Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md) (nullable)**  
+_Type_: **[TrustedApplications](Systems.Security.TrustedApplications.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WebHost
 
 > The web host in which to host the site. [Filter(multi eq)]
 
-_Type_: **[Systems.Core.WebHosts](Systems.Core.WebHosts.md) (nullable)**  
+_Type_: **[WebHosts](Systems.Core.WebHosts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

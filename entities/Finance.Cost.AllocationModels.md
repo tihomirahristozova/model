@@ -16,7 +16,7 @@ User-defined models for cost allocation. Entity: Cost_Allocation_Models
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Finance.Cost.AllocationModels.md#currency) | [General.Currencies](General.Currencies.md) | The currency in which the calculation is done. This is applied to the production and the results. [Required] [Filter(multi eq)] |
+| [Currency](Finance.Cost.AllocationModels.md#currency) | [Currencies](General.Currencies.md) | The currency in which the calculation is done. This is applied to the production and the results. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -42,7 +42,7 @@ _Default Value_: **NewGuid**
 
 > The currency in which the calculation is done. This is applied to the production and the results. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md)**  
+_Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -3,7 +3,7 @@ uid: Communities.Notifications
 ---
 # Communities.Notifications
 
-A single notification of a user. Entity: Cmm_Notifications (Introduced in version 20.1.100.0)
+A single notification of a user. Entity: Cmm_Notifications (Introduced in version 20.1)
 
 ## Attributes
 
@@ -19,8 +19,8 @@ A single notification of a user. Entity: Cmm_Notifications (Introduced in versio
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](Communities.Notifications.md#dataobject) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable) | The data object about which the notification is created. Null means that the notification is not about any specific data object. [Filter(multi eq)] |
-| [User](Communities.Notifications.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who is notified. [Required] [Filter(multi eq)] |
+| [DataObject](Communities.Notifications.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable) | The data object about which the notification is created. Null means that the notification is not about any specific data object. [Filter(multi eq)] |
+| [User](Communities.Notifications.md#user) | [Users](Systems.Security.Users.md) | The user, who is notified. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -72,14 +72,14 @@ _Supports Order By_: **False**
 
 > The data object about which the notification is created. Null means that the notification is not about any specific data object. [Filter(multi eq)]
 
-_Type_: **[Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable)**  
+_Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
 > The user, who is notified. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

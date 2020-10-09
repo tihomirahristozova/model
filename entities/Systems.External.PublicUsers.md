@@ -25,7 +25,7 @@ uid: Systems.External.PublicUsers
 | [PasswordAlgorithm](Systems.External.PublicUsers.md#passwordalgorithm) | string | Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. [Required] [Filter(like)] 
 | [PasswordHash](Systems.External.PublicUsers.md#passwordhash) | string | Actual password storage. The format of the contents is determined by Password Algorithm. [Required] [Filter(like)] 
 | [PasswordRecoveryCode](Systems.External.PublicUsers.md#passwordrecoverycode) | guid (nullable) | Automatically generated unique code for the last password recovery attempt. [Filter(multi eq)] [ReadOnly] 
-| [PasswordRecoveryCreationTime](Systems.External.PublicUsers.md#passwordrecoverycreationtime) | datetime (nullable) | Date and time when the last password recovery code was created. [ReadOnly] 
+| [PasswordRecovery<br />CreationTime](Systems.External.PublicUsers.md#passwordrecoverycreationtime) | datetime (nullable) | Date and time when the last password recovery code was created. [ReadOnly] 
 | [PhoneNumber](Systems.External.PublicUsers.md#phonenumber) | string (nullable) | The primary phone number of the user. [Filter(like)] 
 | [PostalCode](Systems.External.PublicUsers.md#postalcode) | string (nullable) | The postal code of the default address of the user. [Filter(like)] 
 | [ProfilePicture](Systems.External.PublicUsers.md#profilepicture) | byte[] (nullable) | Profile picture of the user. 
@@ -35,9 +35,9 @@ uid: Systems.External.PublicUsers
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Company](Systems.External.PublicUsers.md#company) | [General.Contacts.Companies](General.Contacts.Companies.md) (nullable) | Link to an internal company record, specified by internal employee. [Filter(multi eq)] |
-| [Person](Systems.External.PublicUsers.md#person) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | Link to an internal person record. Usually specified by internal employee, but can also be an automated process. [Filter(multi eq)] |
-| [PublicUserList](Systems.External.PublicUsers.md#publicuserlist) | [Systems.External.PublicUserLists](Systems.External.PublicUserLists.md) | The list in which the user account is saved. [Required] [Filter(multi eq)] |
+| [Company](Systems.External.PublicUsers.md#company) | [Companies](General.Contacts.Companies.md) (nullable) | Link to an internal company record, specified by internal employee. [Filter(multi eq)] |
+| [Person](Systems.External.PublicUsers.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | Link to an internal person record. Usually specified by internal employee, but can also be an automated process. [Filter(multi eq)] |
+| [PublicUserList](Systems.External.PublicUsers.md#publicuserlist) | [PublicUserLists](Systems.External.PublicUserLists.md) | The list in which the user account is saved. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -216,21 +216,21 @@ _Supports Order By_: **False**
 
 > Link to an internal company record, specified by internal employee. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Companies](General.Contacts.Companies.md) (nullable)**  
+_Type_: **[Companies](General.Contacts.Companies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
 > Link to an internal person record. Usually specified by internal employee, but can also be an automated process. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PublicUserList
 
 > The list in which the user account is saved. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.External.PublicUserLists](Systems.External.PublicUserLists.md)**  
+_Type_: **[PublicUserLists](Systems.External.PublicUserLists.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

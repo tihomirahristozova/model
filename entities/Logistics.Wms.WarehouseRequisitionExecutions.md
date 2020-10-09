@@ -3,7 +3,7 @@ uid: Logistics.Wms.WarehouseRequisitionExecutions
 ---
 # Logistics.Wms.WarehouseRequisitionExecutions
 
-Execution ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition_Executions (Introduced in version 20.1.100.0)
+Execution ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition_Executions (Introduced in version 20.1)
 
 ## Attributes
 
@@ -20,8 +20,8 @@ Execution ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition_E
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationUser](Logistics.Wms.WarehouseRequisitionExecutions.md#creationuser) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who created the record. [Required] [Filter(multi eq)] |
-| [WarehouseRequisitionLine](Logistics.Wms.WarehouseRequisitionExecutions.md#warehouserequisitionline) | [Logistics.Wms.WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md) | The requisition line, which is executed. [Required] [Filter(multi eq)] |
+| [CreationUser](Logistics.Wms.WarehouseRequisitionExecutions.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the record. [Required] [Filter(multi eq)] |
+| [WarehouseRequisitionLine](Logistics.Wms.WarehouseRequisitionExecutions.md#warehouserequisitionline) | [WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md) | The requisition line, which is executed. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -79,14 +79,14 @@ _Supports Order By_: **False**
 
 > The user, who created the record. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseRequisitionLine
 
 > The requisition line, which is executed. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Wms.WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md)**  
+_Type_: **[WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

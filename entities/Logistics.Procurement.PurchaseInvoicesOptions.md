@@ -17,7 +17,7 @@ Contains purchase invoice specific options for the different document types. Ent
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Logistics.Procurement.PurchaseInvoicesOptions.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type, for which the options are specified. [Required] [Filter(multi eq)] |
+| [DocumentType](Logistics.Procurement.PurchaseInvoicesOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, for which the options are specified. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -71,7 +71,7 @@ _Default Value_: **0**
 
 > The document type, for which the options are specified. [Required] [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

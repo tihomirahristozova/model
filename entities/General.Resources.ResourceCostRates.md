@@ -20,8 +20,8 @@ Contains cost rates for different periods for resources. Each record is valid un
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](General.Resources.ResourceCostRates.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the cost is defined. [Required] [Filter(multi eq)] |
-| [Resource](General.Resources.ResourceCostRates.md#resource) | [General.Resources.Resources](General.Resources.Resources.md) | The resource for which the cost rate is defined. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](General.Resources.ResourceCostRates.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the cost is defined. [Required] [Filter(multi eq)] |
+| [Resource](General.Resources.ResourceCostRates.md#resource) | [Resources](General.Resources.Resources.md) | The resource for which the cost rate is defined. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -80,14 +80,14 @@ _Supports Order By_: **False**
 
 > The enterprise company for which the cost is defined. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Resource
 
 > The resource for which the cost rate is defined. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Resources.Resources](General.Resources.Resources.md)**  
+_Type_: **[Resources](General.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -20,9 +20,9 @@ Execution of a warehouse order line. Entity: Wms_Warehouse_Order_Executions (Int
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationUser](Wms.WarehouseOrderExecutions.md#creationuser) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who created the record. [Required] [Filter(multi eq)] |
-| [WarehouseOrderLine](Wms.WarehouseOrderExecutions.md#warehouseorderline) | [Logistics.Wms.WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) | The line for which we record execution. [Required] [Filter(multi eq)] |
-| [WarehouseWorker](Wms.WarehouseOrderExecutions.md#warehouseworker) | [Logistics.Wms.WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) | The worker, which executed the line. [Required] [Filter(multi eq)] |
+| [CreationUser](Wms.WarehouseOrderExecutions.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the record. [Required] [Filter(multi eq)] |
+| [WarehouseOrderLine](Wms.WarehouseOrderExecutions.md#warehouseorderline) | [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) | The line for which we record execution. [Required] [Filter(multi eq)] |
+| [WarehouseWorker](Wms.WarehouseOrderExecutions.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) | The worker, which executed the line. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -80,21 +80,21 @@ _Supports Order By_: **False**
 
 > The user, who created the record. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseOrderLine
 
 > The line for which we record execution. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Wms.WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md)**  
+_Type_: **[WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseWorker
 
 > The worker, which executed the line. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Wms.WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md)**  
+_Type_: **[WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

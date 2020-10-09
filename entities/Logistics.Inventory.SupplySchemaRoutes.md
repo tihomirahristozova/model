@@ -18,9 +18,9 @@ Obsolete. Not used. Entity: Inv_Supply_Schema_Routes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DestinationStore](Logistics.Inventory.SupplySchemaRoutes.md#destinationstore) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
-| [SourceStore](Logistics.Inventory.SupplySchemaRoutes.md#sourcestore) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
-| [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) | [Logistics.Inventory.SupplySchemata](Logistics.Inventory.SupplySchemata.md) | The [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner] |
+| [DestinationStore](Logistics.Inventory.SupplySchemaRoutes.md#destinationstore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
+| [SourceStore](Logistics.Inventory.SupplySchemaRoutes.md#sourcestore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
+| [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) | [SupplySchemata](Logistics.Inventory.SupplySchemata.md) | The [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -63,21 +63,21 @@ _Default Value_: **0**
 
 > Obsolete. Not used. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SourceStore
 
 > Obsolete. Not used. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SupplySchema
 
 > The [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Logistics.Inventory.SupplySchemata](Logistics.Inventory.SupplySchemata.md)**  
+_Type_: **[SupplySchemata](Logistics.Inventory.SupplySchemata.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

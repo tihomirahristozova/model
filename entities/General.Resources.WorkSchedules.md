@@ -18,7 +18,7 @@ Represents the different working schedules, used by the employees and resources.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| WorkingTime | [General.Resources.WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md) | List of [WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md) child objects, based on the [General.Resources.WorkScheduleWorkingTime.WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) back reference 
+| WorkingTime | [WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md) | List of [WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md) child objects, based on the [General.Resources.WorkScheduleWorkingTime.WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) back reference 
 
 
 ## Attribute Details

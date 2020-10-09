@@ -9,7 +9,7 @@ Template for material usage of a principal recipe. Entity: Prd_Principal_Recipe_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionalPropertyDescription](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertydescription) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The desired description of Conditional Property in order for the template line to match. 
+| [ConditionalProperty<br />Description](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertydescription) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The desired description of Conditional Property in order for the template line to match. 
 | [ConditionalPropertyValue](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertyvalue) | string (nullable) | The desired value of Conditional Property in order for the template line to match. 
 | [FixedScrapQuantity](Production.Technologies.PrincipalRecipeIngredients.md#fixedscrapquantity) | [Quantity](../data-types.md#quantity) | Fixed scrap quantity for setup. [Unit: UsageUnit] [Required] [Default(0)] 
 | [Id](Production.Technologies.PrincipalRecipeIngredients.md#id) | guid |  
@@ -23,15 +23,15 @@ Template for material usage of a principal recipe. Entity: Prd_Principal_Recipe_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionalProperty](Production.Technologies.PrincipalRecipeIngredients.md#conditionalproperty) | [General.CustomProperties](General.CustomProperties.md) (nullable) | When not null, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product. [Filter(multi eq)] |
-| [ConditionalPropertyAllowedValue](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertyallowedvalue) | [General.CustomPropertyAllowedValues](General.CustomPropertyAllowedValues.md) (nullable) | When not null, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in Conditional_Property_Id equals the specified value. [Filter(multi eq)] |
-| [DefaultMaterial](Production.Technologies.PrincipalRecipeIngredients.md#defaultmaterial) | [General.Products.Products](General.Products.Products.md) (nullable) | If not null, points to default product for this ingredient. [Filter(multi eq)] |
-| [DefaultStore](Production.Technologies.PrincipalRecipeIngredients.md#defaultstore) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | The default store from which to retrieve the material. [Filter(multi eq)] |
-| [MaterialFromProperty](Production.Technologies.PrincipalRecipeIngredients.md#materialfromproperty) | [General.CustomProperties](General.CustomProperties.md) (nullable) | When not null, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain. [Filter(multi eq)] |
-| [MaterialGroup](Production.Technologies.PrincipalRecipeIngredients.md#materialgroup) | [General.Products.ProductGroups](General.Products.ProductGroups.md) | Filter for choosing specific material in the recipe (Gen_Product_Groups_Table). [Required] [Filter(multi eq)] |
-| [Operation](Production.Technologies.PrincipalRecipeIngredients.md#operation) | [Production.Resources.Operations](Production.Resources.Operations.md) (nullable) | Specifies for which operation this ingredient will be used. [Filter(multi eq)] |
-| [PrincipalRecipe](Production.Technologies.PrincipalRecipeIngredients.md#principalrecipe) | [Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | The [PrincipalRecipe](Production.Technologies.PrincipalRecipeIngredients.md#principalrecipe) to which this PrincipalRecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner] |
-| [UsageUnit](Production.Technologies.PrincipalRecipeIngredients.md#usageunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Usage_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)] |
+| [ConditionalProperty](Production.Technologies.PrincipalRecipeIngredients.md#conditionalproperty) | [CustomProperties](General.CustomProperties.md) (nullable) | When not null, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product. [Filter(multi eq)] |
+| [ConditionalProperty<br />AllowedValue](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertyallowedvalue) | [CustomPropertyAllowedValues](General.CustomPropertyAllowedValues.md) (nullable) | When not null, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in Conditional_Property_Id equals the specified value. [Filter(multi eq)] |
+| [DefaultMaterial](Production.Technologies.PrincipalRecipeIngredients.md#defaultmaterial) | [Products](General.Products.Products.md) (nullable) | If not null, points to default product for this ingredient. [Filter(multi eq)] |
+| [DefaultStore](Production.Technologies.PrincipalRecipeIngredients.md#defaultstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The default store from which to retrieve the material. [Filter(multi eq)] |
+| [MaterialFromProperty](Production.Technologies.PrincipalRecipeIngredients.md#materialfromproperty) | [CustomProperties](General.CustomProperties.md) (nullable) | When not null, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain. [Filter(multi eq)] |
+| [MaterialGroup](Production.Technologies.PrincipalRecipeIngredients.md#materialgroup) | [ProductGroups](General.Products.ProductGroups.md) | Filter for choosing specific material in the recipe (Gen_Product_Groups_Table). [Required] [Filter(multi eq)] |
+| [Operation](Production.Technologies.PrincipalRecipeIngredients.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Specifies for which operation this ingredient will be used. [Filter(multi eq)] |
+| [PrincipalRecipe](Production.Technologies.PrincipalRecipeIngredients.md#principalrecipe) | [PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | The [PrincipalRecipe](Production.Technologies.PrincipalRecipeIngredients.md#principalrecipe) to which this PrincipalRecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner] |
+| [UsageUnit](Production.Technologies.PrincipalRecipeIngredients.md#usageunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Usage_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -86,10 +86,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.PrincipalRecipe.Ingredients.Select(c => c.LineOrd).DefaultIfEmpty(0).Max() + 10)`
+`( obj.PrincipalRecipe.Ingredients.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.PrincipalRecipe.Ingredients.Select(c => c.LineOrd).DefaultIfEmpty(0).Max() + 10)`
+`( obj.PrincipalRecipe.Ingredients.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### ScrapRate
 
 > The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. [Required] [Default(0)] [Filter(ge;le)]
@@ -109,7 +109,7 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.UsageQuantityFormula != null), null, obj.UsageQuantity)`
+`IIF( ( obj.UsageQuantityFormula != null), null, obj.UsageQuantity)`
 ### UsageQuantityFormula
 
 > Specifies formula for the usage quantity. The formula can reference properties in [<Prop_Name>] style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.
@@ -119,7 +119,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.UsageQuantity != null), null, obj.UsageQuantityFormula)`
+`IIF( ( obj.UsageQuantity != null), null, obj.UsageQuantityFormula)`
 
 ## Reference Details
 
@@ -127,63 +127,63 @@ _Front-End Recalc Expressions:_
 
 > When not null, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product. [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md) (nullable)**  
+_Type_: **[CustomProperties](General.CustomProperties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionalPropertyAllowedValue
 
 > When not null, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in Conditional_Property_Id equals the specified value. [Filter(multi eq)]
 
-_Type_: **[General.CustomPropertyAllowedValues](General.CustomPropertyAllowedValues.md) (nullable)**  
+_Type_: **[CustomPropertyAllowedValues](General.CustomPropertyAllowedValues.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultMaterial
 
 > If not null, points to default product for this ingredient. [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md) (nullable)**  
+_Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultStore
 
 > The default store from which to retrieve the material. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaterialFromProperty
 
 > When not null, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain. [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md) (nullable)**  
+_Type_: **[CustomProperties](General.CustomProperties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaterialGroup
 
 > Filter for choosing specific material in the recipe (Gen_Product_Groups_Table). [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.ProductGroups](General.Products.ProductGroups.md)**  
+_Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Operation
 
 > Specifies for which operation this ingredient will be used. [Filter(multi eq)]
 
-_Type_: **[Production.Resources.Operations](Production.Resources.Operations.md) (nullable)**  
+_Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrincipalRecipe
 
 > The [PrincipalRecipe](Production.Technologies.PrincipalRecipeIngredients.md#principalrecipe) to which this PrincipalRecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)**  
+_Type_: **[PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UsageUnit
 
 > The measurement unit of Usage_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

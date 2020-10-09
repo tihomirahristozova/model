@@ -20,7 +20,7 @@ Contains alerts, specific to one vehicle. Alerts are created based on many sourc
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Vehicle](Applications.Fleet.VehicleAlerts.md#vehicle) | [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md) | The vehicle, for which is the alert. [Required] [Filter(multi eq)] |
+| [Vehicle](Applications.Fleet.VehicleAlerts.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The vehicle, for which is the alert. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -79,7 +79,7 @@ _Supports Order By_: **True**
 
 > The vehicle, for which is the alert. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)**  
+_Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -20,7 +20,7 @@ Contains permissions, which are honored only by client applications and are used
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Security.VisualPermissions.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The security access key which controls the access to the visual permission. [Filter(multi eq)] |
+| [AccessKey](Systems.Security.VisualPermissions.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The security access key which controls the access to the visual permission. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -78,7 +78,7 @@ _Supports Order By_: **False**
 
 > The security access key which controls the access to the visual permission. [Filter(multi eq)]
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

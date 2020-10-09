@@ -17,8 +17,8 @@ Contains the output data for the specified period. This is the output on which c
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostDistribution](Finance.Cost.DistributionOutputs.md#costdistribution) | [Finance.Cost.Distributions](Finance.Cost.Distributions.md) | The [Distribution](Finance.Cost.Distributions.md) to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner] |
-| [StoreTransactionLine](Finance.Cost.DistributionOutputs.md#storetransactionline) | [Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)] |
+| [CostDistribution](Finance.Cost.DistributionOutputs.md#costdistribution) | [Distributions](Finance.Cost.Distributions.md) | The [Distribution](Finance.Cost.Distributions.md) to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner] |
+| [StoreTransactionLine](Finance.Cost.DistributionOutputs.md#storetransactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -38,10 +38,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.CostDistribution.Outputs.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.CostDistribution.Outputs.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.CostDistribution.Outputs.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.CostDistribution.Outputs.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### WeightCoefficient
 
 > The weight coefficient for prorate distribution of cost over the current line. [Required] [Default(1)]
@@ -58,14 +58,14 @@ _Default Value_: **1**
 
 > The [Distribution](Finance.Cost.Distributions.md) to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Cost.Distributions](Finance.Cost.Distributions.md)**  
+_Type_: **[Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreTransactionLine
 
 > The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
+_Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

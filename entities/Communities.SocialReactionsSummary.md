@@ -16,8 +16,8 @@ Summary with the social reactions per comment and dataobject. Entity: Cmm_Social
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](Communities.SocialReactionsSummary.md#dataobject) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | . [Required] [Default(New Guid)] [Filter(multi eq)] |
-| [SocialComment](Communities.SocialReactionsSummary.md#socialcomment) | [Communities.SocialComments](Communities.SocialComments.md) |  |
+| [DataObject](Communities.SocialReactionsSummary.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | . [Required] [Default(New Guid)] [Filter(multi eq)] |
+| [SocialComment](Communities.SocialReactionsSummary.md#socialcomment) | [SocialComments](Communities.SocialComments.md) |  |
 
 
 ## Attribute Details
@@ -55,13 +55,13 @@ _Supports Order By_: **False**
 
 > . [Required] [Default(New Guid)] [Filter(multi eq)]
 
-_Type_: **[Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+_Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
 ### SocialComment
 
-_Type_: **[Communities.SocialComments](Communities.SocialComments.md)**  
+_Type_: **[SocialComments](Communities.SocialComments.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -19,9 +19,9 @@ Contains the materials, which are required for a project task. Entity: Prj_Proje
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaterialProduct](Projects.ProjectTaskMaterials.md#materialproduct) | [General.Products.Products](General.Products.Products.md) | The product Id of the required material. [Required] [Filter(multi eq)] |
-| [ProjectTask](Projects.ProjectTaskMaterials.md#projecttask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The task for which is the material requirement. [Required] [Filter(multi eq)] [Owner] |
-| [QuantityUnit](Projects.ProjectTaskMaterials.md#quantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of the required quantity. [Required] [Filter(multi eq)] |
+| [MaterialProduct](Projects.ProjectTaskMaterials.md#materialproduct) | [Products](General.Products.Products.md) | The product Id of the required material. [Required] [Filter(multi eq)] |
+| [ProjectTask](Projects.ProjectTaskMaterials.md#projecttask) | [ProjectTasks](Projects.ProjectTasks.md) | The task for which is the material requirement. [Required] [Filter(multi eq)] [Owner] |
+| [QuantityUnit](Projects.ProjectTaskMaterials.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of the required quantity. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -35,7 +35,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.MaterialProduct != null), obj.CalculateBudgetMaterialAmount(obj.Quantity), new Amount(0, obj.ProjectTask.Project.BudgetingCurrency))`
+`IIF( ( obj.MaterialProduct != null), obj.CalculateBudgetMaterialAmount( obj.Quantity), new Amount( 0, obj.ProjectTask.Project.BudgetingCurrency))`
 ### Id
 
 _Type_: **guid**  
@@ -52,10 +52,10 @@ _Supports Order By_: **False**
 _Default Value_: **0**  
 
 _Back-End Default Expression:_  
-`(obj.ProjectTask.Materials.Select(c => c.LineNumber).DefaultIfEmpty(0).Max() + 10)`
+`( obj.ProjectTask.Materials.Select( c => c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.ProjectTask.Materials.Select(c => c.LineNumber).DefaultIfEmpty(0).Max() + 10)`
+`( obj.ProjectTask.Materials.Select( c => c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Quantity
 
 > The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)]
@@ -75,7 +75,7 @@ _Supports Order By_: **False**
 _Default Value_: **0**  
 
 _Front-End Recalc Expressions:_  
-`IIF(((obj.QuantityUnit != null) AndAlso (obj.MaterialProduct != null)), obj.Quantity.ConvertTo(obj.MaterialProduct.BaseUnit, obj.MaterialProduct).Value, obj.QuantityBase)`
+`IIF( ( ( obj.QuantityUnit != null) AndAlso ( obj.MaterialProduct != null)), obj.Quantity.ConvertTo( obj.MaterialProduct.BaseUnit, obj.MaterialProduct).Value, obj.QuantityBase)`
 
 ## Reference Details
 
@@ -83,21 +83,21 @@ _Front-End Recalc Expressions:_
 
 > The product Id of the required material. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTask
 
 > The task for which is the material requirement. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md)**  
+_Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
 > The measurement unit of the required quantity. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

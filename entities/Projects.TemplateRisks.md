@@ -19,7 +19,7 @@ Contains project risks, which will be copied to projects, based on the template.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectTemplate](Projects.TemplateRisks.md#projecttemplate) | [Projects.Templates](Projects.Templates.md) | The [Template](Projects.Templates.md) to which this TemplateRisk belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ProjectTemplate](Projects.TemplateRisks.md#projecttemplate) | [Templates](Projects.Templates.md) | The [Template](Projects.Templates.md) to which this TemplateRisk belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -71,7 +71,7 @@ _Supports Order By_: **False**
 
 > The [Template](Projects.Templates.md) to which this TemplateRisk belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Projects.Templates](Projects.Templates.md)**  
+_Type_: **[Templates](Projects.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

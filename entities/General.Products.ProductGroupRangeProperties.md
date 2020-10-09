@@ -19,8 +19,8 @@ When specified for a product group, provides a way for automatical creation of n
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) | [General.Products.ProductGroups](General.Products.ProductGroups.md) | The [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Property](General.Products.ProductGroupRangeProperties.md#property) | [General.CustomProperties](General.CustomProperties.md) | The property whose values will be altered. [Required] [Filter(multi eq)] |
+| [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The [ProductGroup](General.Products.ProductGroupRange<br />Properties.md#productgroup) to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] ] |
+| [Property](General.Products.ProductGroupRangeProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The property whose values will be altered. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -79,14 +79,14 @@ _Supports Order By_: **False**
 
 > The [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Products.ProductGroups](General.Products.ProductGroups.md)**  
+_Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property
 
 > The property whose values will be altered. [Required] [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md)**  
+_Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

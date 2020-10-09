@@ -24,14 +24,14 @@ Contains supply rules, which are used by the procurement planning system. Entity
 | [OrderPeriodStartDate](General.Products.ProductSupply.md#orderperiodstartdate) | datetime (nullable) | Start date of the first period under fixed period replenishment system. null - not yet specified. 
 | [OrderPointQuantityBase](General.Products.ProductSupply.md#orderpointquantitybase) | [Quantity](../data-types.md#quantity) | Order point quantity under the OP replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
 | [OrderPolicy](General.Products.ProductSupply.md#orderpolicy) | [OrderPolicy](General.Products.ProductSupply.md#orderpolicy) | Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning. [Required] [Default("OPS")] 
-| [PlanningAnnualCarryingCostPercent](General.Products.ProductSupply.md#planningannualcarryingcostpercent) | decimal (nullable) | The expected carrying cost as percentage of inventory cost. null means unknown. 
-| [PlanningAnnualUsageQuantityBase](General.Products.ProductSupply.md#planningannualusagequantitybase) | [Quantity](../data-types.md#quantity) (nullable) | Average usage of the product for 1 year. NUL means unknown. [Unit: Product.BaseMeasurementCategory.BaseUnit] 
+| [PlanningAnnual<br />CarryingCostPercent](General.Products.ProductSupply.md#planningannualcarryingcostpercent) | decimal (nullable) | The expected carrying cost as percentage of inventory cost. null means unknown. 
+| [PlanningAnnual<br />UsageQuantityBase](General.Products.ProductSupply.md#planningannualusagequantitybase) | [Quantity](../data-types.md#quantity) (nullable) | Average usage of the product for 1 year. NUL means unknown. [Unit: Product.BaseMeasurementCategory.BaseUnit] 
 | [PlanningHorizonDays](General.Products.ProductSupply.md#planninghorizondays) | int32 | Number of days in the future for which to plan the demand and supply. [Required] [Default(0)] 
 | [PlanningLeadTimeDays](General.Products.ProductSupply.md#planningleadtimedays) | int32 | The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components. [Required] [Default(0)] 
-| [PlanningMaximumInventoryQuantityBase](General.Products.ProductSupply.md#planningmaximuminventoryquantitybase) | [Quantity](../data-types.md#quantity) (nullable) | Maximum inventory. null if N/A. [Unit: Product.BaseMeasurementCategory.BaseUnit] 
-| [PlanningOrderCostBaseCurrency](General.Products.ProductSupply.md#planningordercostbasecurrency) | [Amount](../data-types.md#amount) (nullable) | Projected cost to place an order and set-up equipment. [Currency: EnterpriseCompany.BaseCurrency] 
+| [PlanningMaximum<br />InventoryQuantity<br />Base](General.Products.ProductSupply.md#planningmaximuminventoryquantitybase) | [Quantity](../data-types.md#quantity) (nullable) | Maximum inventory. null if N/A. [Unit: Product.BaseMeasurementCategory.BaseUnit] 
+| [PlanningOrderCost<br />BaseCurrency](General.Products.ProductSupply.md#planningordercostbasecurrency) | [Amount](../data-types.md#amount) (nullable) | Projected cost to place an order and set-up equipment. [Currency: EnterpriseCompany.BaseCurrency] 
 | [PlanningOrderCycleDays](General.Products.ProductSupply.md#planningordercycledays) | int32 (nullable) | Number of days in one period under fixed period replenishment system. null - not yet specified. 
-| [PlanningSafetyStockQuantityBase](General.Products.ProductSupply.md#planningsafetystockquantitybase) | [Quantity](../data-types.md#quantity) | Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [PlanningSafety<br />StockQuantityBase](General.Products.ProductSupply.md#planningsafetystockquantitybase) | [Quantity](../data-types.md#quantity) | Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
 | [PlanningTimeFenceDays](General.Products.ProductSupply.md#planningtimefencedays) | int32 | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. [Required] [Default(1)] 
 | [ProcurementType](General.Products.ProductSupply.md#procurementtype) | [ProcurementType](General.Products.ProductSupply.md#procurementtype) | M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought. [Required] [Default("B")] 
 | [StandardCostPerLot](General.Products.ProductSupply.md#standardcostperlot) | [Amount](../data-types.md#amount) | Standard cost for one lot of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)] 
@@ -41,14 +41,14 @@ Contains supply rules, which are used by the procurement planning system. Entity
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultStoreBin](General.Products.ProductSupply.md#defaultstorebin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | Default store bin for new deliveries using this supply scheme. [Filter(multi eq)] |
-| [EnterpriseCompany](General.Products.ProductSupply.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this ProductSupply applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
-| [FromStore](General.Products.ProductSupply.md#fromstore) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | Used when the Procurement_Type is Transfer. [Filter(multi eq)] |
-| [GenerateDocumentType](General.Products.ProductSupply.md#generatedocumenttype) | [General.DocumentTypes](General.DocumentTypes.md) (nullable) | Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule. [Filter(multi eq)] |
-| [PreferredSupplier](General.Products.ProductSupply.md#preferredsupplier) | [Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md) (nullable) | Preferred supplier for the product. null if there is no preferred supplier. [Filter(multi eq)] |
-| [Product](General.Products.ProductSupply.md#product) | [General.Products.Products](General.Products.Products.md) (nullable) | The [Product](General.Products.ProductSupply.md#product) to which this ProductSupply belongs. [Filter(multi eq)] |
-| [ProductGroup](General.Products.ProductSupply.md#productgroup) | [General.Products.ProductGroups](General.Products.ProductGroups.md) (nullable) | Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings. [Filter(multi eq)] |
-| [Store](General.Products.ProductSupply.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | The store for which this rule is defined. When null, the rule is valid for all stores. [Filter(multi eq)] |
+| [DefaultStoreBin](General.Products.ProductSupply.md#defaultstorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | Default store bin for new deliveries using this supply scheme. [Filter(multi eq)] |
+| [EnterpriseCompany](General.Products.ProductSupply.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this ProductSupply applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [FromStore](General.Products.ProductSupply.md#fromstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Used when the Procurement_Type is Transfer. [Filter(multi eq)] |
+| [GenerateDocumentType](General.Products.ProductSupply.md#generatedocumenttype) | [DocumentTypes](General.DocumentTypes.md) (nullable) | Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule. [Filter(multi eq)] |
+| [PreferredSupplier](General.Products.ProductSupply.md#preferredsupplier) | [Suppliers](Logistics.Procurement.Suppliers.md) (nullable) | Preferred supplier for the product. null if there is no preferred supplier. [Filter(multi eq)] |
+| [Product](General.Products.ProductSupply.md#product) | [Products](General.Products.Products.md) (nullable) | The [Product](General.Products.ProductSupply.md#product) to which this ProductSupply belongs. [Filter(multi eq)] |
+| [ProductGroup](General.Products.ProductSupply.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings. [Filter(multi eq)] |
+| [Store](General.Products.ProductSupply.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store for which this rule is defined. When null, the rule is valid for all stores. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -137,7 +137,7 @@ _Allowed Values (General.Products.ProductSupplyRepository.OrderLotSizingMethod E
 | LotForLot | LotForLot value. Stored as 'LFL'. <br /> _Database Value:_ 'LFL' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'LotForLot' |
 | LotForPeriod | LotForPeriod value. Stored as 'LFP'. <br /> _Database Value:_ 'LFP' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'LotForPeriod' |
 | ReorderPoint | ReorderPoint value. Stored as 'ROP'. <br /> _Database Value:_ 'ROP' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'ReorderPoint' |
-| ReorderPointWithTimePlanning | ReorderPointWithTimePlanning value. Stored as 'ROT'. <br /> _Database Value:_ 'ROT' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'ReorderPointWithTimePlanning' |
+| ReorderPointWith<br />TimePlanning | ReorderPointWith<br />TimePlanning value. Stored as 'ROT'. <br /> _Database Value:_ 'ROT' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'ReorderPointWith<br />TimePlanning' |
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
@@ -204,9 +204,9 @@ _Allowed Values (General.Products.ProductSupplyRepository.OrderPolicy Enum Membe
 
 | Value | Description |
 | ---- | --- |
-| MaterialRequirementsPlanning | MaterialRequirementsPlanning value. Stored as 'MRP'. <br /> _Database Value:_ 'MRP' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'MaterialRequirementsPlanning' |
+| MaterialRequirements<br />Planning | MaterialRequirements<br />Planning value. Stored as 'MRP'. <br /> _Database Value:_ 'MRP' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'MaterialRequirements<br />Planning' |
 | OrderPointSystem | OrderPointSystem value. Stored as 'OPS'. <br /> _Database Value:_ 'OPS' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'OrderPointSystem' |
-| OrderPointSystemWithTimePlanning | OrderPointSystemWithTimePlanning value. Stored as 'OPT'. <br /> _Database Value:_ 'OPT' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'OrderPointSystemWithTimePlanning' |
+| OrderPointSystem<br />WithTimePlanning | OrderPointSystem<br />WithTimePlanning value. Stored as 'OPT'. <br /> _Database Value:_ 'OPT' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'OrderPointSystem<br />WithTimePlanning' |
 | PeriodicReviewSystem | PeriodicReviewSystem value. Stored as 'PRS'. <br /> _Database Value:_ 'PRS' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'PeriodicReviewSystem' |
 
 _Supported Filters_: **NotFilterable**  
@@ -248,7 +248,7 @@ _Supports Order By_: **False**
 _Default Value_: **0**  
 
 _Front-End Recalc Expressions:_  
-`IIF((Convert(obj.PreferredSupplier.DefaultDeliveryTermDays, Nullable`1) != null), obj.PreferredSupplier.DefaultDeliveryTermDays, obj.PlanningLeadTimeDays)`
+`IIF( ( Convert( obj.PreferredSupplier.DefaultDeliveryTermDays, Nullable`1) != null), obj.PreferredSupplier.DefaultDeliveryTermDays, obj.PlanningLeadTimeDays)`
 ### PlanningMaximumInventoryQuantityBase
 
 > Maximum inventory. null if N/A. [Unit: Product.BaseMeasurementCategory.BaseUnit]
@@ -332,56 +332,56 @@ _Supported Filters_: **Equals, EqualsIn**
 
 > Default store bin for new deliveries using this supply scheme. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The Enterprise Company to which this ProductSupply applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromStore
 
 > Used when the Procurement_Type is Transfer. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### GenerateDocumentType
 
 > Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule. [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md) (nullable)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PreferredSupplier
 
 > Preferred supplier for the product. null if there is no preferred supplier. [Filter(multi eq)]
 
-_Type_: **[Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md) (nullable)**  
+_Type_: **[Suppliers](Logistics.Procurement.Suppliers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The [Product](General.Products.ProductSupply.md#product) to which this ProductSupply belongs. [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md) (nullable)**  
+_Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup
 
 > Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings. [Filter(multi eq)]
 
-_Type_: **[General.Products.ProductGroups](General.Products.ProductGroups.md) (nullable)**  
+_Type_: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
 > The store for which this rule is defined. When null, the rule is valid for all stores. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

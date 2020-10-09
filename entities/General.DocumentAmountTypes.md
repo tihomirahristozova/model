@@ -29,14 +29,14 @@ Represents the different types of additional amounts which are calculated for th
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DistributeByMeasurementCategory](General.DocumentAmountTypes.md#distributebymeasurementcategory) | [General.MeasurementCategories](General.MeasurementCategories.md) (nullable) | Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)] |
+| [DistributeByMeasurement<br />Category](General.DocumentAmountTypes.md#distributebymeasurementcategory) | [MeasurementCategories](General.MeasurementCategories.md) (nullable) | Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Dependencies | [General.DocumentAmountTypeDependencies](General.DocumentAmountTypeDependencies.md) | List of [DocumentAmountTypeDependency](General.DocumentAmountTypeDependencies.md) child objects, based on the [General.DocumentAmountTypeDependency.DocumentAmountType](General.DocumentAmountTypeDependencies.md#documentamounttype) back reference 
-| Settings | [Finance.Intrastat.DocumentAmountTypeSettings](Finance.Intrastat.DocumentAmountTypeSettings.md) | List of [DocumentAmountTypeSetting](Finance.Intrastat.DocumentAmountTypeSettings.md) child objects, based on the [Finance.Intrastat.DocumentAmountTypeSetting.DocumentAmountType](Finance.Intrastat.DocumentAmountTypeSettings.md#documentamounttype) back reference 
+| Dependencies | [DocumentAmountTypeDependencies](General.DocumentAmountTypeDependencies.md) | List of [DocumentAmount<br />TypeDependency](General.DocumentAmount<br />TypeDependencies.md) child objects, based on the [General.DocumentAmount<br />TypeDependency.DocumentAmountType](General.DocumentAmount<br />TypeDependencies.md#documentamounttype) back  
+| Settings | [DocumentAmountTypeSettings](Finance.Intrastat.DocumentAmountTypeSettings.md) | List of [DocumentAmount<br />TypeSetting](Finance.Intrastat.DocumentAmountTypeSettings.md) child objects, based on the [Finance.Intrastat.DocumentAmountTypeSetting.DocumentAmountType](Finance.Intrastat.DocumentAmountTypeSettings.md#documentamounttype) back nce 
 
 
 ## Attribute Details
@@ -193,7 +193,7 @@ _Default Value_: **False**
 
 > Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)]
 
-_Type_: **[General.MeasurementCategories](General.MeasurementCategories.md) (nullable)**  
+_Type_: **[MeasurementCategories](General.MeasurementCategories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

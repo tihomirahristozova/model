@@ -3,7 +3,7 @@ uid: Communities.SocialPosts
 ---
 # Communities.SocialPosts
 
-User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.1.100.0)
+User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.1)
 
 ## Attributes
 
@@ -18,8 +18,8 @@ User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [SocialGroup](Communities.SocialPosts.md#socialgroup) | [Communities.SocialGroups](Communities.SocialGroups.md) | The group in which the post is made. [Required] [Filter(multi eq)] |
-| [User](Communities.SocialPosts.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who made the post. [Required] [Filter(multi eq)] |
+| [SocialGroup](Communities.SocialPosts.md#socialgroup) | [SocialGroups](Communities.SocialGroups.md) | The group in which the post is made. [Required] [Filter(multi eq)] |
+| [User](Communities.SocialPosts.md#user) | [Users](Systems.Security.Users.md) | The user, who made the post. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -61,14 +61,14 @@ _Supports Order By_: **False**
 
 > The group in which the post is made. [Required] [Filter(multi eq)]
 
-_Type_: **[Communities.SocialGroups](Communities.SocialGroups.md)**  
+_Type_: **[SocialGroups](Communities.SocialGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
 > The user, who made the post. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

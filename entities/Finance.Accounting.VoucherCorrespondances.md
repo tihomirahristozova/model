@@ -20,7 +20,7 @@ Obsolete. Not used. Entity: Acc_Voucher_Correspondances
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Voucher](Finance.Accounting.VoucherCorrespondances.md#voucher) | [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md) | The [AccountingVoucher](Finance.Accounting.AccountingVouchers.md) to which this VoucherCorrespondance belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Voucher](Finance.Accounting.VoucherCorrespondances.md#voucher) | [AccountingVouchers](Finance.Accounting.AccountingVouchers.md) | The [AccountingVoucher](Finance.Accounting.AccountingVouchers.md) to which this VoucherCorrespondance belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -79,7 +79,7 @@ _Default Value_: **NewGuid**
 
 > The [AccountingVoucher](Finance.Accounting.AccountingVouchers.md) to which this VoucherCorrespondance belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)**  
+_Type_: **[AccountingVouchers](Finance.Accounting.AccountingVouchers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

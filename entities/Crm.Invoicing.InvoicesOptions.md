@@ -18,9 +18,9 @@ Default options for user document types for Invoices. Entity: Crm_Invoices_Optio
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultDealType](Crm.Invoicing.InvoicesOptions.md#defaultdealtype) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable) | When not null, specifies default VAT deal type. [Filter(multi eq)] |
-| [DocumentType](Crm.Invoicing.InvoicesOptions.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the invoice option applies. [Required] [Filter(multi eq)] [Owner] |
-| [VATDeviationDocumentAmountType](Crm.Invoicing.InvoicesOptions.md#vatdeviationdocumentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable) | Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)] |
+| [DefaultDealType](Crm.Invoicing.InvoicesOptions.md#defaultdealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | When not null, specifies default VAT deal type. [Filter(multi eq)] |
+| [DocumentType](Crm.Invoicing.InvoicesOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which the invoice option applies. [Required] [Filter(multi eq)] [Owner] |
+| [VATDeviationDocument<br />AmountType](Crm.Invoicing.InvoicesOptions.md#vatdeviationdocumentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable) | Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -83,21 +83,21 @@ _Default Value_: **0**
 
 > When not null, specifies default VAT deal type. [Filter(multi eq)]
 
-_Type_: **[Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
+_Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
 > The document type for which the invoice option applies. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VATDeviationDocumentAmountType
 
 > Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)]
 
-_Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable)**  
+_Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

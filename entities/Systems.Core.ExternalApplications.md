@@ -25,7 +25,7 @@ List of external applications. Used to run external applications. Entity: Sys_Ex
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Core.ExternalApplications.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. [Filter(multi eq)] |
+| [AccessKey](Systems.Core.ExternalApplications.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -148,7 +148,7 @@ _Default Value_: **True**
 
 > The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. [Filter(multi eq)]
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

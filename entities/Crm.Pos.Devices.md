@@ -3,7 +3,7 @@ uid: Crm.Pos.Devices
 ---
 # Crm.Pos.Devices
 
-Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Introduced in version 19.1.100.0)
+Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Introduced in version 19.1)
 
 ## Attributes
 
@@ -21,7 +21,7 @@ Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Intr
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PosTerminal](Crm.Pos.Devices.md#posterminal) | [Crm.Pos.Terminals](Crm.Pos.Terminals.md) | The POS terminal, to which this device is attached. [Required] [Filter(multi eq)] [Owner] |
+| [PosTerminal](Crm.Pos.Devices.md#posterminal) | [Terminals](Crm.Pos.Terminals.md) | The POS terminal, to which this device is attached. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -106,7 +106,7 @@ _Supports Order By_: **False**
 
 > The POS terminal, to which this device is attached. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Crm.Pos.Terminals](Crm.Pos.Terminals.md)**  
+_Type_: **[Terminals](Crm.Pos.Terminals.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

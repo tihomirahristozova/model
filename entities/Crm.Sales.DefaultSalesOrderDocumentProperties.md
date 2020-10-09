@@ -15,9 +15,9 @@ User-defined properties which shall be copied from the customer to the document 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CustomerProperty](Crm.Sales.DefaultSalesOrderDocumentProperties.md#customerproperty) | [General.CustomProperties](General.CustomProperties.md) | The user-defined customer property that shall be copied. [Required] [Filter(multi eq)] |
-| [DocumentProperty](Crm.Sales.DefaultSalesOrderDocumentProperties.md#documentproperty) | [General.CustomProperties](General.CustomProperties.md) | The user-defined document property in which to copy the customers property value. [Required] [Filter(multi eq)] |
-| [DocumentType](Crm.Sales.DefaultSalesOrderDocumentProperties.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which the current definitions apply. [Required] [Filter(multi eq)] [Owner] |
+| [CustomerProperty](Crm.Sales.DefaultSalesOrderDocumentProperties.md#customerproperty) | [CustomProperties](General.CustomProperties.md) | The user-defined customer property that shall be copied. [Required] [Filter(multi eq)] |
+| [DocumentProperty](Crm.Sales.DefaultSalesOrderDocumentProperties.md#documentproperty) | [CustomProperties](General.CustomProperties.md) | The user-defined document property in which to copy the customers property value. [Required] [Filter(multi eq)] |
+| [DocumentType](Crm.Sales.DefaultSalesOrderDocumentProperties.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which the current definitions apply. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -35,21 +35,21 @@ _Default Value_: **NewGuid**
 
 > The user-defined customer property that shall be copied. [Required] [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md)**  
+_Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentProperty
 
 > The user-defined document property in which to copy the customers property value. [Required] [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md)**  
+_Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
 > The document type for which the current definitions apply. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

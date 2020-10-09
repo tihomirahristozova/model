@@ -18,13 +18,13 @@ Accounting templates are used to automate the postings for repetitive business t
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Finance.Accounting.Templates.md#route) | [Systems.Workflow.Routes](Systems.Workflow.Routes.md) | The route which activates the template. [Required] [Filter(multi eq)] [Owner] |
+| [Route](Finance.Accounting.Templates.md#route) | [Routes](Systems.Workflow.Routes.md) | The route which activates the template. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Lines | [Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md) | List of [TemplateLine](Finance.Accounting.TemplateLines.md) child objects, based on the [Finance.Accounting.TemplateLine.Template](Finance.Accounting.TemplateLines.md#template) back reference 
+| Lines | [TemplateLines](Finance.Accounting.TemplateLines.md) | List of [TemplateLine](Finance.Accounting.TemplateLines.md) child objects, based on the [Finance.Accounting.TemplateLine.Template](Finance.Accounting.TemplateLines.md#template) back reference 
 
 
 ## Attribute Details
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 > The route which activates the template. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Workflow.Routes](Systems.Workflow.Routes.md)**  
+_Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -22,10 +22,10 @@ The process lanes categorize elements in the process and contain logic for execu
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssignByInstanceProperty](Systems.Bpm.ProcessLanes.md#assignbyinstanceproperty) | [General.CustomProperties](General.CustomProperties.md) (nullable) | When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User. [Filter(multi eq)] |
-| [AssignToUser](Systems.Bpm.ProcessLanes.md#assigntouser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | When set, specifies that tasks from the lane are always assigned to specific user. [Filter(multi eq)] |
-| [OfferToRole](Systems.Bpm.ProcessLanes.md#offertorole) | [Systems.Workflow.Roles](Systems.Workflow.Roles.md) (nullable) | When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance. [Filter(multi eq)] |
-| [Process](Systems.Bpm.ProcessLanes.md#process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process to which this lane belongs. [Required] [Filter(multi eq)] [Owner] |
+| [AssignByInstanceProperty](Systems.Bpm.ProcessLanes.md#assignbyinstanceproperty) | [CustomProperties](General.CustomProperties.md) (nullable) | When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User. [Filter(multi eq)] |
+| [AssignToUser](Systems.Bpm.ProcessLanes.md#assigntouser) | [Users](Systems.Security.Users.md) (nullable) | When set, specifies that tasks from the lane are always assigned to specific user. [Filter(multi eq)] |
+| [OfferToRole](Systems.Bpm.ProcessLanes.md#offertorole) | [Roles](Systems.Workflow.Roles.md) (nullable) | When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance. [Filter(multi eq)] |
+| [Process](Systems.Bpm.ProcessLanes.md#process) | [Processes](Systems.Bpm.Processes.md) | The process to which this lane belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -120,28 +120,28 @@ _Supports Order By_: **False**
 
 > When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User. [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md) (nullable)**  
+_Type_: **[CustomProperties](General.CustomProperties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignToUser
 
 > When set, specifies that tasks from the lane are always assigned to specific user. [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OfferToRole
 
 > When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance. [Filter(multi eq)]
 
-_Type_: **[Systems.Workflow.Roles](Systems.Workflow.Roles.md) (nullable)**  
+_Type_: **[Roles](Systems.Workflow.Roles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Process
 
 > The process to which this lane belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Bpm.Processes](Systems.Bpm.Processes.md)**  
+_Type_: **[Processes](Systems.Bpm.Processes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

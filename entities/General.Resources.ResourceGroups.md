@@ -16,14 +16,14 @@ Resource groups categorize the resources. Entity: Gen_Resource_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](General.Resources.ResourceGroups.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. [Filter(multi eq)] |
-| [Parent](General.Resources.ResourceGroups.md#parent) | [General.Resources.ResourceGroups](General.Resources.ResourceGroups.md) (nullable) | The parent resource group or null if this is root group. [Filter(multi eq)] |
+| [EnterpriseCompany](General.Resources.ResourceGroups.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. [Filter(multi eq)] |
+| [Parent](General.Resources.ResourceGroups.md#parent) | [ResourceGroups](General.Resources.ResourceGroups.md) (nullable) | The parent resource group or null if this is root group. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Resources | [General.Resources.Resources](General.Resources.Resources.md) | List of [Resource](General.Resources.Resources.md) child objects, based on the [General.Resources.Resource.ResourceGroup](General.Resources.Resources.md#resourcegroup) back reference 
+| Resources | [Resources](General.Resources.Resources.md) | List of [Resource](General.Resources.Resources.md) child objects, based on the [General.Resources.Resource.ResourceGroup](General.Resources.Resources.md#resourcegroup) back reference 
 
 
 ## Attribute Details
@@ -49,14 +49,14 @@ _Supports Order By_: **False**
 
 > The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
 > The parent resource group or null if this is root group. [Filter(multi eq)]
 
-_Type_: **[General.Resources.ResourceGroups](General.Resources.ResourceGroups.md) (nullable)**  
+_Type_: **[ResourceGroups](General.Resources.ResourceGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

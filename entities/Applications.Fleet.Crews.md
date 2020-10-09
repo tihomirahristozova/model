@@ -17,13 +17,13 @@ Represents the crews, which can operate vehicles. Entity: Fleet_Crews
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.Fleet.Crews.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the crew. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](Applications.Fleet.Crews.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the crew. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Members | [Applications.Fleet.CrewMembers](Applications.Fleet.CrewMembers.md) | List of [CrewMember](Applications.Fleet.CrewMembers.md) child objects, based on the [Applications.Fleet.CrewMember.Crew](Applications.Fleet.CrewMembers.md#crew) back reference 
+| Members | [CrewMembers](Applications.Fleet.CrewMembers.md) | List of [CrewMember](Applications.Fleet.CrewMembers.md) child objects, based on the [Applications.Fleet.CrewMember.Crew](Applications.Fleet.CrewMembers.md#crew) back reference 
 
 
 ## Attribute Details
@@ -58,7 +58,7 @@ _Supports Order By_: **False**
 
 > The enterprise company operating the crew. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

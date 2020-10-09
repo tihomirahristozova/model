@@ -19,7 +19,7 @@ Contains troubles, reported by the on-board diagnostics (OBD) of the vehicle. En
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Vehicle](Applications.Fleet.VehicleObdTroubles.md#vehicle) | [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md) | The vehicle, which has experienced the trouble. [Required] [Filter(multi eq)] |
+| [Vehicle](Applications.Fleet.VehicleObdTroubles.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The vehicle, which has experienced the trouble. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 > The vehicle, which has experienced the trouble. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)**  
+_Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

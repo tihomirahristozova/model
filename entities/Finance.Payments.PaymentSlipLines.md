@@ -17,8 +17,8 @@ Mass payment line, which is distribution of an amount among payment orders. Each
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PaymentOrder](Finance.Payments.PaymentSlipLines.md#paymentorder) | [Finance.Payments.PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)] |
-| [PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) | [Finance.Payments.PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md) | The [PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
+| [PaymentOrder](Finance.Payments.PaymentSlipLines.md#paymentorder) | [PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)] |
+| [PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) | [PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md) | The [PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
 
 
 ## Attribute Details
@@ -33,7 +33,7 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Front-End Recalc Expressions:_  
-`obj.CoveredOrderAmount.ConvertTo(obj.PaymentSlipAmount.PaymentSlip.DocumentCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)`
+`obj.CoveredOrderAmount.ConvertTo( obj.PaymentSlipAmount.PaymentSlip.DocumentCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)`
 ### CoveredOrderAmount
 
 > The part of the original payment order amount, that is covered by this payment slip line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]
@@ -44,7 +44,7 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Front-End Recalc Expressions:_  
-`obj.Amount.ConvertTo(obj.PaymentOrder.TotalAmountCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)`
+`obj.Amount.ConvertTo( obj.PaymentOrder.TotalAmountCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)`
 ### Id
 
 _Type_: **guid**  
@@ -58,14 +58,14 @@ _Default Value_: **NewGuid**
 
 > The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentOrders](Finance.Payments.PaymentOrders.md)**  
+_Type_: **[PaymentOrders](Finance.Payments.PaymentOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentSlipAmount
 
 > The [PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
-_Type_: **[Finance.Payments.PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md)**  
+_Type_: **[PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

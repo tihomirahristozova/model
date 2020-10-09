@@ -3,7 +3,7 @@ uid: Applications.PersonalData.JointControllers
 ---
 # Applications.PersonalData.JointControllers
 
-Contains relationship between process and joint controllers. For processes with control role, these are the joint controllers. Otherwise, these are the joint controllers, on behalf of which the enterprise company processes the data. Entity: Pdm_Joint_Controllers (Introduced in version 18.2.100.0)
+Contains relationship between process and joint controllers. For processes with control role, these are the joint controllers. Otherwise, these are the joint controllers, on behalf of which the enterprise company processes the data. Entity: Pdm_Joint_Controllers (Introduced in version 18.2)
 
 ## Attributes
 
@@ -16,8 +16,8 @@ Contains relationship between process and joint controllers. For processes with 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [JointControllerParty](Applications.PersonalData.JointControllers.md#jointcontrollerparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The party, controlling the process. [Required] [Filter(multi eq)] |
-| [PersonalDataProcess](Applications.PersonalData.JointControllers.md#personaldataprocess) | [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) | The process, which is managed jointly. [Required] [Filter(multi eq)] [Owner] |
+| [JointControllerParty](Applications.PersonalData.JointControllers.md#jointcontrollerparty) | [Parties](General.Contacts.Parties.md) | The party, controlling the process. [Required] [Filter(multi eq)] |
+| [PersonalDataProcess](Applications.PersonalData.JointControllers.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) | The process, which is managed jointly. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -43,14 +43,14 @@ _Supports Order By_: **False**
 
 > The party, controlling the process. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PersonalDataProcess
 
 > The process, which is managed jointly. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)**  
+_Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

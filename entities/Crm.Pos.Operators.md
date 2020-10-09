@@ -3,7 +3,7 @@ uid: Crm.Pos.Operators
 ---
 # Crm.Pos.Operators
 
-Represents one operator (person) in one POS location. Entity: Pos_Operators (Introduced in version 19.1.100.0)
+Represents one operator (person) in one POS location. Entity: Pos_Operators (Introduced in version 19.1)
 
 ## Attributes
 
@@ -19,10 +19,10 @@ Represents one operator (person) in one POS location. Entity: Pos_Operators (Int
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultPosTerminal](Crm.Pos.Operators.md#defaultposterminal) | [Crm.Pos.Terminals](Crm.Pos.Terminals.md) (nullable) | The default POS terminal for this opertor. null when there is no default. [Filter(multi eq)] |
-| [PosLocation](Crm.Pos.Operators.md#poslocation) | [Crm.Pos.Locations](Crm.Pos.Locations.md) | The POS location where this operator works. [Required] [Filter(multi eq)] |
-| [PosRole](Crm.Pos.Operators.md#posrole) | [Crm.Pos.Roles](Crm.Pos.Roles.md) | The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. [Required] [Filter(multi eq)] |
-| [User](Crm.Pos.Operators.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The login user for this POS operator. [Required] [Filter(multi eq)] |
+| [DefaultPosTerminal](Crm.Pos.Operators.md#defaultposterminal) | [Terminals](Crm.Pos.Terminals.md) (nullable) | The default POS terminal for this opertor. null when there is no default. [Filter(multi eq)] |
+| [PosLocation](Crm.Pos.Operators.md#poslocation) | [Locations](Crm.Pos.Locations.md) | The POS location where this operator works. [Required] [Filter(multi eq)] |
+| [PosRole](Crm.Pos.Operators.md#posrole) | [Roles](Crm.Pos.Roles.md) | The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. [Required] [Filter(multi eq)] |
+| [User](Crm.Pos.Operators.md#user) | [Users](Systems.Security.Users.md) | The login user for this POS operator. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -73,28 +73,28 @@ _Supports Order By_: **False**
 
 > The default POS terminal for this opertor. null when there is no default. [Filter(multi eq)]
 
-_Type_: **[Crm.Pos.Terminals](Crm.Pos.Terminals.md) (nullable)**  
+_Type_: **[Terminals](Crm.Pos.Terminals.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosLocation
 
 > The POS location where this operator works. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.Pos.Locations](Crm.Pos.Locations.md)**  
+_Type_: **[Locations](Crm.Pos.Locations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosRole
 
 > The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.Pos.Roles](Crm.Pos.Roles.md)**  
+_Type_: **[Roles](Crm.Pos.Roles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
 > The login user for this POS operator. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -3,7 +3,7 @@ uid: Systems.Security.DomainProviders
 ---
 # Systems.Security.DomainProviders
 
-The external authentication providers, linked to the domain. Contains data about registration, usually the app id or app key. Entity: Sec_Domain_Providers (Introduced in version 20.1.100.0)
+The external authentication providers, linked to the domain. Contains data about registration, usually the app id or app key. Entity: Sec_Domain_Providers (Introduced in version 20.1)
 
 ## Attributes
 
@@ -22,7 +22,7 @@ The external authentication providers, linked to the domain. Contains data about
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Domain](Systems.Security.DomainProviders.md#domain) | [Systems.Security.Domains](Systems.Security.Domains.md) | The domain for which the provider is setup. [Required] [Filter(multi eq)] [Owner] |
+| [Domain](Systems.Security.DomainProviders.md#domain) | [Domains](Systems.Security.Domains.md) | The domain for which the provider is setup. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -107,7 +107,7 @@ _Supports Order By_: **False**
 
 > The domain for which the provider is setup. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Security.Domains](Systems.Security.Domains.md)**  
+_Type_: **[Domains](Systems.Security.Domains.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -3,7 +3,7 @@ uid: Logistics.Wms.WarehouseZones
 ---
 # Logistics.Wms.WarehouseZones
 
-One zone within a warehouse. Each zone can have different rack structure and different temperature and other properties. Entity: Wms_Warehouse_Zones (Introduced in version 20.1.100.0)
+One zone within a warehouse. Each zone can have different rack structure and different temperature and other properties. Entity: Wms_Warehouse_Zones (Introduced in version 20.1)
 
 ## Attributes
 
@@ -18,8 +18,8 @@ One zone within a warehouse. Each zone can have different rack structure and dif
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Logistics.Wms.WarehouseZones.md#parent) | [Logistics.Wms.WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | The parent Warehouse Zone of the current Warehouse Zone. [Filter(multi eq)] |
-| [Warehouse](Logistics.Wms.WarehouseZones.md#warehouse) | [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md) | The warehouse in which the zone is located. [Required] [Filter(multi eq)] [Owner] |
+| [Parent](Logistics.Wms.WarehouseZones.md#parent) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | The parent Warehouse Zone of the current Warehouse Zone. [Filter(multi eq)] |
+| [Warehouse](Logistics.Wms.WarehouseZones.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse in which the zone is located. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -33,10 +33,10 @@ _Supported Filters_: **Equals, EqualsIn**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`obj.GetNextCode(obj.Parent)`
+`obj.GetNextCode( obj.Parent)`
 
 _Front-End Recalc Expressions:_  
-`obj.GetNextCode(obj.Parent)`
+`obj.GetNextCode( obj.Parent)`
 ### Id
 
 _Type_: **guid**  
@@ -66,14 +66,14 @@ _Supports Order By_: **False**
 
 > The parent Warehouse Zone of the current Warehouse Zone. [Filter(multi eq)]
 
-_Type_: **[Logistics.Wms.WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
+_Type_: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Warehouse
 
 > The warehouse in which the zone is located. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)**  
+_Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

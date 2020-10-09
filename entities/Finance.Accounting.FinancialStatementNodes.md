@@ -19,13 +19,13 @@ Contains the hierarchical structure of the user-defined financial statements. En
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) | [Finance.Accounting.FinancialStatements](Finance.Accounting.FinancialStatements.md) | The [FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) to which this FinancialStatementNode belongs. [Required] [Filter(multi eq)] [Owner] |
+| [FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) | [FinancialStatements](Finance.Accounting.FinancialStatements.md) | The [FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) to which this FinancialStatementNode belongs. [Required] [Filter(multi eq)] [Owner] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Correspondances | [Finance.Accounting.FinancialStatementNodeCorrespondances](Finance.Accounting.FinancialStatementNodeCorrespondances.md) | List of [FinancialStatementNodeCorrespondance](Finance.Accounting.FinancialStatementNodeCorrespondances.md) child objects, based on the [Finance.Accounting.FinancialStatementNodeCorrespondance.FinancialStatementNode](Finance.Accounting.FinancialStatementNodeCorrespondances.md#financialstatementnode) back reference 
+| Correspondances | [FinancialStatementNodeCorrespondances](Finance.Accounting.FinancialStatementNodeCorrespondances.md) | List of [FinancialStatement<br />NodeCorrespondance](Finance.Accounting.FinancialStatement<br />NodeCorrespondances.md) child objects, based on the [Finance.Accounting.FinancialStatement<br />NodeCorrespondance.FinancialStatementNode](Finance.Accounting.FinancialStatement<br />NodeCorrespondances.md#financialstatementnode) back  
 
 
 ## Attribute Details
@@ -75,7 +75,7 @@ _Supports Order By_: **False**
 
 > The [FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) to which this FinancialStatementNode belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Accounting.FinancialStatements](Finance.Accounting.FinancialStatements.md)**  
+_Type_: **[FinancialStatements](Finance.Accounting.FinancialStatements.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

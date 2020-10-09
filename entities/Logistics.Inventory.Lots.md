@@ -23,11 +23,11 @@ Warehouse lots. They contain one row for each specific product, status, producti
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BlockedForDocument](Logistics.Inventory.Lots.md#blockedfordocument) | [General.Documents](General.Documents.md) (nullable) | If non-null, contains the document for which the lot is blocked. [Filter(multi eq)] |
-| [BlockedForParty](Logistics.Inventory.Lots.md#blockedforparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Non-null when the warehouse lot is blocked specifically for some party. [Filter(multi eq)] |
-| [CertificateDocument](Logistics.Inventory.Lots.md#certificatedocument) | [General.Documents](General.Documents.md) (nullable) | Document, containing the certificate for this lot. [Filter(multi eq)] |
-| [Product](Logistics.Inventory.Lots.md#product) | [General.Products.Products](General.Products.Products.md) | The product to which the lot is bound. [Required] [Filter(multi eq)] |
-| [ReceiptStoreTransaction](Logistics.Inventory.Lots.md#receiptstoretransaction) | [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable) | The store receipt transaction, which created the lot. null if the lot is manually created. [Filter(multi eq)] |
+| [BlockedForDocument](Logistics.Inventory.Lots.md#blockedfordocument) | [Documents](General.Documents.md) (nullable) | If non-null, contains the document for which the lot is blocked. [Filter(multi eq)] |
+| [BlockedForParty](Logistics.Inventory.Lots.md#blockedforparty) | [Parties](General.Contacts.Parties.md) (nullable) | Non-null when the warehouse lot is blocked specifically for some party. [Filter(multi eq)] |
+| [CertificateDocument](Logistics.Inventory.Lots.md#certificatedocument) | [Documents](General.Documents.md) (nullable) | Document, containing the certificate for this lot. [Filter(multi eq)] |
+| [Product](Logistics.Inventory.Lots.md#product) | [Products](General.Products.Products.md) | The product to which the lot is bound. [Required] [Filter(multi eq)] |
+| [ReceiptStoreTransaction](Logistics.Inventory.Lots.md#receiptstoretransaction) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable) | The store receipt transaction, which created the lot. null if the lot is manually created. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -119,35 +119,35 @@ _Default Value_: **0**
 
 > If non-null, contains the document for which the lot is blocked. [Filter(multi eq)]
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### BlockedForParty
 
 > Non-null when the warehouse lot is blocked specifically for some party. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CertificateDocument
 
 > Document, containing the certificate for this lot. [Filter(multi eq)]
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The product to which the lot is bound. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReceiptStoreTransaction
 
 > The store receipt transaction, which created the lot. null if the lot is manually created. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable)**  
+_Type_: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

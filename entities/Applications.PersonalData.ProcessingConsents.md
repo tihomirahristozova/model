@@ -3,7 +3,7 @@ uid: Applications.PersonalData.ProcessingConsents
 ---
 # Applications.PersonalData.ProcessingConsents
 
-Consents of data subjects for processing of their personal data. Entity: Pdm_Processing_Consents (Introduced in version 18.2.100.0)
+Consents of data subjects for processing of their personal data. Entity: Pdm_Processing_Consents (Introduced in version 18.2)
 
 ## Attributes
 
@@ -31,9 +31,9 @@ Consents of data subjects for processing of their personal data. Entity: Pdm_Pro
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Person](Applications.PersonalData.ProcessingConsents.md#person) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. [Filter(multi eq)] |
-| [PersonalDataProcess](Applications.PersonalData.ProcessingConsents.md#personaldataprocess) | [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. [Filter(multi eq)] |
-| [User](Applications.PersonalData.ProcessingConsents.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. [Required] [Filter(multi eq)] |
+| [Person](Applications.PersonalData.ProcessingConsents.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. [Filter(multi eq)] |
+| [PersonalDataProcess](Applications.PersonalData.ProcessingConsents.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. [Filter(multi eq)] |
+| [User](Applications.PersonalData.ProcessingConsents.md#user) | [Users](Systems.Security.Users.md) | The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -197,21 +197,21 @@ _Supports Order By_: **False**
 
 > The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PersonalDataProcess
 
 > The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. [Filter(multi eq)]
 
-_Type_: **[Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
+_Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
 > The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

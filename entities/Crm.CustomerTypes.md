@@ -16,7 +16,7 @@ User defined customer type. Primarily used for customer definition security, bec
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Crm.CustomerTypes.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this CustomerType. Null means that all users have unlimited permissions. [Filter(multi eq)] |
+| [AccessKey](Crm.CustomerTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this CustomerType. Null means that all users have unlimited permissions. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -42,7 +42,7 @@ _Supports Order By_: **False**
 
 > The access key, containing the user permissions for this CustomerType. Null means that all users have unlimited permissions. [Filter(multi eq)]
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

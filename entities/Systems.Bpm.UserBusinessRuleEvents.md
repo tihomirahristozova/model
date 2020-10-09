@@ -19,7 +19,7 @@ Represents event registration of a business rule. Entity: Sys_User_Business_Rule
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [UserBusinessRule](Systems.Bpm.UserBusinessRuleEvents.md#userbusinessrule) | [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The rule, which will be registered for the event. [Required] [Filter(multi eq)] [Owner] |
+| [UserBusinessRule](Systems.Bpm.UserBusinessRuleEvents.md#userbusinessrule) | [UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The rule, which will be registered for the event. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -103,7 +103,7 @@ _Default Value_: **BackEnd**
 
 > The rule, which will be registered for the event. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
+_Type_: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

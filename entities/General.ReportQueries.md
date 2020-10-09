@@ -13,7 +13,7 @@ Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries
 | [ExtensionsList](General.ReportQueries.md#extensionslist) | string (nullable) | A comma separated list of report extension names. An extension is set of additional fields that participate in the query. 
 | [FilterXml](General.ReportQueries.md#filterxml) | dataaccessfilter (nullable) | Filter for the loaded table. 
 | [Id](General.ReportQueries.md#id) | guid |  
-| [ReferencePath](General.ReportQueries.md#referencepath) | string | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. [Required] 
+| [ReferencePath](General.ReportQueries.md#referencepath) | string | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br />Enterprise_Company_<br />Id/Company_Id - will load the definition of the company for the enterprise company of a document.  
 | [ShowCustomProperties](General.ReportQueries.md#showcustomproperties) | boolean | True to include the custom properties. [Required] [Default(false)] 
 | [ShowTextColumns](General.ReportQueries.md#showtextcolumns) | boolean | True to include text descriptions for certain columns. [Required] [Default(false)] 
 | [TableName](General.ReportQueries.md#tablename) | string (nullable) | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null. 
@@ -23,7 +23,7 @@ Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Report](General.ReportQueries.md#report) | [General.Reports](General.Reports.md) | The [Report](General.ReportQueries.md#report) to which this ReportQuery belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Report](General.ReportQueries.md#report) | [Reports](General.Reports.md) | The [Report](General.ReportQueries.md#report) to which this ReportQuery belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -108,7 +108,7 @@ _Supports Order By_: **False**
 
 > The [Report](General.ReportQueries.md#report) to which this ReportQuery belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Reports](General.Reports.md)**  
+_Type_: **[Reports](General.Reports.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

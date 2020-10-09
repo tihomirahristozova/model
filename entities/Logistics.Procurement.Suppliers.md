@@ -26,13 +26,13 @@ Contains supplier conditions (contracts). Entity: Scm_Suppliers
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultCurrency](Logistics.Procurement.Suppliers.md#defaultcurrency) | [General.Currencies](General.Currencies.md) (nullable) | The default currency for purchases from this supplier. null means there is no default. [Filter(multi eq)] |
-| [DefaultPaymentAccount](Logistics.Procurement.Suppliers.md#defaultpaymentaccount) | [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, specifies the default payment account which should be used for new purchase document for this supplier. [Filter(multi eq)] |
-| [DefaultPaymentType](Logistics.Procurement.Suppliers.md#defaultpaymenttype) | [Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null, specifies the default payment type which should be used for new purchase document for this supplier. [Filter(multi eq)] |
-| [DefaultPurchasePriceList](Logistics.Procurement.Suppliers.md#defaultpurchasepricelist) | [Logistics.Procurement.PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable) | The default purchase price list, which shall be used for new purchase documents for this supplier. [Filter(multi eq)] |
-| [EnterpriseCompany](Logistics.Procurement.Suppliers.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Supplier applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
-| [Party](Logistics.Procurement.Suppliers.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.Parties.md) to which this Supplier belongs. [Required] [Filter(multi eq)] [Owner] |
-| [SupplierType](Logistics.Procurement.Suppliers.md#suppliertype) | [Logistics.Procurement.SupplierTypes](Logistics.Procurement.SupplierTypes.md) (nullable) | When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. [Filter(multi eq)] |
+| [DefaultCurrency](Logistics.Procurement.Suppliers.md#defaultcurrency) | [Currencies](General.Currencies.md) (nullable) | The default currency for purchases from this supplier. null means there is no default. [Filter(multi eq)] |
+| [DefaultPaymentAccount](Logistics.Procurement.Suppliers.md#defaultpaymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, specifies the default payment account which should be used for new purchase document for this supplier. [Filter(multi eq)] |
+| [DefaultPaymentType](Logistics.Procurement.Suppliers.md#defaultpaymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null, specifies the default payment type which should be used for new purchase document for this supplier. [Filter(multi eq)] |
+| [DefaultPurchasePriceList](Logistics.Procurement.Suppliers.md#defaultpurchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable) | The default purchase price list, which shall be used for new purchase documents for this supplier. [Filter(multi eq)] |
+| [EnterpriseCompany](Logistics.Procurement.Suppliers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Supplier applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [Party](Logistics.Procurement.Suppliers.md#party) | [Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.Parties.md) to which this Supplier belongs. [Required] [Filter(multi eq)] [Owner] |
+| [SupplierType](Logistics.Procurement.Suppliers.md#suppliertype) | [SupplierTypes](Logistics.Procurement.SupplierTypes.md) (nullable) | When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -142,49 +142,49 @@ _Supports Order By_: **False**
 
 > The default currency for purchases from this supplier. null means there is no default. [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
+_Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPaymentAccount
 
 > When not null, specifies the default payment account which should be used for new purchase document for this supplier. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPaymentType
 
 > When not null, specifies the default payment type which should be used for new purchase document for this supplier. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPurchasePriceList
 
 > The default purchase price list, which shall be used for new purchase documents for this supplier. [Filter(multi eq)]
 
-_Type_: **[Logistics.Procurement.PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
+_Type_: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The Enterprise Company to which this Supplier applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
 > The [Party](General.Contacts.Parties.md) to which this Supplier belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SupplierType
 
 > When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. [Filter(multi eq)]
 
-_Type_: **[Logistics.Procurement.SupplierTypes](Logistics.Procurement.SupplierTypes.md) (nullable)**  
+_Type_: **[SupplierTypes](Logistics.Procurement.SupplierTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

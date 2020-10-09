@@ -16,7 +16,7 @@ Obsolete. Not used. Entity: Inv_Supply_Schemata
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Routes | [Logistics.Inventory.SupplySchemaRoutes](Logistics.Inventory.SupplySchemaRoutes.md) | List of [SupplySchemaRoute](Logistics.Inventory.SupplySchemaRoutes.md) child objects, based on the [Logistics.Inventory.SupplySchemaRoute.SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) back reference 
+| Routes | [SupplySchemaRoutes](Logistics.Inventory.SupplySchemaRoutes.md) | List of [SupplySchemaRoute](Logistics.Inventory.SupplySchemaRoutes.md) child objects, based on the [Logistics.Inventory.SupplySchemaRoute.SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) back reference 
 
 
 ## Attribute Details

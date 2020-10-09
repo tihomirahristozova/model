@@ -3,7 +3,7 @@ uid: General.PartyApplicableLegislations
 ---
 # General.PartyApplicableLegislations
 
-Specifies a legislation, which is applicable for a party. A single party can have more than one applicable legislations. Entity: Gen_Party_Applicable_Legislations (Introduced in version 19.1.100.0)
+Specifies a legislation, which is applicable for a party. A single party can have more than one applicable legislations. Entity: Gen_Party_Applicable_Legislations (Introduced in version 19.1)
 
 ## Attributes
 
@@ -17,7 +17,7 @@ Specifies a legislation, which is applicable for a party. A single party can hav
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](General.PartyApplicableLegislations.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.Parties.md) to which this PartyApplicableLegislation belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Party](General.PartyApplicableLegislations.md#party) | [Parties](General.Contacts.Parties.md) | The [Party](General.Contacts.Parties.md) to which this PartyApplicableLegislation belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -82,7 +82,7 @@ _Supports Order By_: **False**
 
 > The [Party](General.Contacts.Parties.md) to which this PartyApplicableLegislation belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

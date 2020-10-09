@@ -19,9 +19,9 @@ Contains the connections between process elements. Part of the process model. En
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Process](Systems.Bpm.ProcessConnections.md#process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process version to which this connection belongs. [Required] [Filter(multi eq)] [Owner] |
-| [SourceProcessNode](Systems.Bpm.ProcessConnections.md#sourceprocessnode) | [Systems.Bpm.ProcessNodes](Systems.Bpm.ProcessNodes.md) | The element, from which the connection starts. The element should be in the same process as the connection. [Required] [Filter(multi eq)] |
-| [TargetProcessNode](Systems.Bpm.ProcessConnections.md#targetprocessnode) | [Systems.Bpm.ProcessNodes](Systems.Bpm.ProcessNodes.md) | The element, at which the connection ends. The element should be in the same process as the connection. [Required] [Filter(multi eq)] |
+| [Process](Systems.Bpm.ProcessConnections.md#process) | [Processes](Systems.Bpm.Processes.md) | The process version to which this connection belongs. [Required] [Filter(multi eq)] [Owner] |
+| [SourceProcessNode](Systems.Bpm.ProcessConnections.md#sourceprocessnode) | [ProcessNodes](Systems.Bpm.ProcessNodes.md) | The element, from which the connection starts. The element should be in the same process as the connection. [Required] [Filter(multi eq)] |
+| [TargetProcessNode](Systems.Bpm.ProcessConnections.md#targetprocessnode) | [ProcessNodes](Systems.Bpm.ProcessNodes.md) | The element, at which the connection ends. The element should be in the same process as the connection. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -73,21 +73,21 @@ _Supports Order By_: **False**
 
 > The process version to which this connection belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Bpm.Processes](Systems.Bpm.Processes.md)**  
+_Type_: **[Processes](Systems.Bpm.Processes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SourceProcessNode
 
 > The element, from which the connection starts. The element should be in the same process as the connection. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Bpm.ProcessNodes](Systems.Bpm.ProcessNodes.md)**  
+_Type_: **[ProcessNodes](Systems.Bpm.ProcessNodes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TargetProcessNode
 
 > The element, at which the connection ends. The element should be in the same process as the connection. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Bpm.ProcessNodes](Systems.Bpm.ProcessNodes.md)**  
+_Type_: **[ProcessNodes](Systems.Bpm.ProcessNodes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

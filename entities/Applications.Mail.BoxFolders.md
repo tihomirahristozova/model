@@ -19,14 +19,14 @@ Contains the folders inside the mailboxes. Entity: Mail_Box_Folders
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MailBox](Applications.Mail.BoxFolders.md#mailbox) | [Applications.Mail.Boxes](Applications.Mail.Boxes.md) | The [Box](Applications.Mail.Boxes.md) to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
-| [ParentFolder](Applications.Mail.BoxFolders.md#parentfolder) | [Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md) (nullable) | The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)] |
+| [MailBox](Applications.Mail.BoxFolders.md#mailbox) | [Boxes](Applications.Mail.Boxes.md) | The [Box](Applications.Mail.Boxes.md) to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
+| [ParentFolder](Applications.Mail.BoxFolders.md#parentfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) (nullable) | The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Messages | [Applications.Mail.Messages](Applications.Mail.Messages.md) | List of [Message](Applications.Mail.Messages.md) child objects, based on the [Applications.Mail.Message.MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) back reference 
+| Messages | [Messages](Applications.Mail.Messages.md) | List of [Message](Applications.Mail.Messages.md) child objects, based on the [Applications.Mail.Message.MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) back reference 
 
 
 ## Attribute Details
@@ -88,14 +88,14 @@ _Supports Order By_: **False**
 
 > The [Box](Applications.Mail.Boxes.md) to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
-_Type_: **[Applications.Mail.Boxes](Applications.Mail.Boxes.md)**  
+_Type_: **[Boxes](Applications.Mail.Boxes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentFolder
 
 > The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)]
 
-_Type_: **[Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md) (nullable)**  
+_Type_: **[BoxFolders](Applications.Mail.BoxFolders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

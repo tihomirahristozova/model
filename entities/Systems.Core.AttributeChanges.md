@@ -16,7 +16,7 @@ Attribute values of an object change. Entity: Sys_Attribute_Changes_View
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ObjectChange](Systems.Core.AttributeChanges.md#objectchange) | [Systems.Core.ObjectChanges](Systems.Core.ObjectChanges.md) | The object change. [Required] [Filter(multi eq)] [Owner] |
+| [ObjectChange](Systems.Core.AttributeChanges.md#objectchange) | [ObjectChanges](Systems.Core.ObjectChanges.md) | The object change. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -44,7 +44,7 @@ _Supports Order By_: **False**
 
 > The object change. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Core.ObjectChanges](Systems.Core.ObjectChanges.md)**  
+_Type_: **[ObjectChanges](Systems.Core.ObjectChanges.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -18,8 +18,8 @@ External dealers. Entity: Crm_Dealers
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Dealers.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this dealer is recorded. [Filter(multi eq)] |
-| [Party](Crm.Dealers.md#party) | [General.Contacts.Parties](General.Contacts.Parties.md) | The base party record of the dealer. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](Crm.Dealers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this dealer is recorded. [Filter(multi eq)] |
+| [Party](Crm.Dealers.md#party) | [Parties](General.Contacts.Parties.md) | The base party record of the dealer. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -62,14 +62,14 @@ _Supports Order By_: **False**
 
 > The enterprise company for which this dealer is recorded. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
 > The base party record of the dealer. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

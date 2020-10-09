@@ -20,8 +20,8 @@ Contains the flow elements of the process model. Entity: Bpm_Process_Elements
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Process](Systems.Bpm.ProcessElements.md#process) | [Systems.Bpm.Processes](Systems.Bpm.Processes.md) | The process, to which this element belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ProcessLane](Systems.Bpm.ProcessElements.md#processlane) | [Systems.Bpm.ProcessLanes](Systems.Bpm.ProcessLanes.md) | The process lane to which this element belongs. [Required] [Filter(multi eq)] |
+| [Process](Systems.Bpm.ProcessElements.md#process) | [Processes](Systems.Bpm.Processes.md) | The process, to which this element belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ProcessLane](Systems.Bpm.ProcessElements.md#processlane) | [ProcessLanes](Systems.Bpm.ProcessLanes.md) | The process lane to which this element belongs. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -59,9 +59,9 @@ _Allowed Values (Systems.Bpm.ProcessElementsRepository.ElementSubtype Enum Membe
 | EndEventError | EndEventError value. Stored as 'EE5'. <br /> _Database Value:_ 'EE5' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'EndEventError' |
 | EndEventTerminate | EndEventTerminate value. Stored as 'EE9'. <br /> _Database Value:_ 'EE9' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'EndEventTerminate' |
 | IntermediateEventThrow | IntermediateEventThrow value. Stored as 'EI1'. <br /> _Database Value:_ 'EI1' <br /> _Model Value:_ 14 <br /> _Domain API Value:_ 'IntermediateEventThrow' |
-| IntermediateEventThrowMessage | IntermediateEventThrowMessage value. Stored as 'EI2'. <br /> _Database Value:_ 'EI2' <br /> _Model Value:_ 15 <br /> _Domain API Value:_ 'IntermediateEventThrowMessage' |
-| IntermediateEventCatchMessage | IntermediateEventCatchMessage value. Stored as 'EI3'. <br /> _Database Value:_ 'EI3' <br /> _Model Value:_ 16 <br /> _Domain API Value:_ 'IntermediateEventCatchMessage' |
-| IntermediateEventCatchTimer | IntermediateEventCatchTimer value. Stored as 'EI4'. <br /> _Database Value:_ 'EI4' <br /> _Model Value:_ 17 <br /> _Domain API Value:_ 'IntermediateEventCatchTimer' |
+| IntermediateEvent<br />ThrowMessage | IntermediateEvent<br />ThrowMessage value. Stored as 'EI2'. <br /> _Database Value:_ 'EI2' <br /> _Model Value:_ 15 <br /> _Domain API Value:_ 'IntermediateEvent<br />ThrowMessage' |
+| IntermediateEvent<br />CatchMessage | IntermediateEvent<br />CatchMessage value. Stored as 'EI3'. <br /> _Database Value:_ 'EI3' <br /> _Model Value:_ 16 <br /> _Domain API Value:_ 'IntermediateEvent<br />CatchMessage' |
+| IntermediateEvent<br />CatchTimer | IntermediateEvent<br />CatchTimer value. Stored as 'EI4'. <br /> _Database Value:_ 'EI4' <br /> _Model Value:_ 17 <br /> _Domain API Value:_ 'IntermediateEvent<br />CatchTimer' |
 | GatewayExclusive | GatewayExclusive value. Stored as 'GEX'. <br /> _Database Value:_ 'GEX' <br /> _Model Value:_ 18 <br /> _Domain API Value:_ 'GatewayExclusive' |
 | GatewayInclusive | GatewayInclusive value. Stored as 'GIN'. <br /> _Database Value:_ 'GIN' <br /> _Model Value:_ 19 <br /> _Domain API Value:_ 'GatewayInclusive' |
 | ArtifactTextAnnotation | ArtifactTextAnnotation value. Stored as 'CAT'. <br /> _Database Value:_ 'CAT' <br /> _Model Value:_ 20 <br /> _Domain API Value:_ 'ArtifactTextAnnotation' |
@@ -117,14 +117,14 @@ _Supports Order By_: **False**
 
 > The process, to which this element belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Bpm.Processes](Systems.Bpm.Processes.md)**  
+_Type_: **[Processes](Systems.Bpm.Processes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProcessLane
 
 > The process lane to which this element belongs. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Bpm.ProcessLanes](Systems.Bpm.ProcessLanes.md)**  
+_Type_: **[ProcessLanes](Systems.Bpm.ProcessLanes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

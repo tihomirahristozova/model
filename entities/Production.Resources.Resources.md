@@ -21,16 +21,16 @@ Resource types available to production. Entity: Prd_Resources
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PrimaryUnit](Production.Resources.Resources.md#primaryunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for quantities of the resource. [Required] [Filter(multi eq)] |
-| [ResourceCurrency](Production.Resources.Resources.md#resourcecurrency) | [General.Currencies](General.Currencies.md) (nullable) | Currency for this resource. This currency applies for the standard price and cost per hour. [Filter(multi eq)] |
-| [ResourceGroup](Production.Resources.Resources.md#resourcegroup) | [Production.Resources.ResourceGroups](Production.Resources.ResourceGroups.md) | The Id of the containing resource group. [Required] [Filter(multi eq)] [Owner] |
-| [SetupScrapUnit](Production.Resources.Resources.md#setupscrapunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement units of Setup_Scrap_Quantity. [Required] [Filter(multi eq)] |
+| [PrimaryUnit](Production.Resources.Resources.md#primaryunit) | [MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for quantities of the resource. [Required] [Filter(multi eq)] |
+| [ResourceCurrency](Production.Resources.Resources.md#resourcecurrency) | [Currencies](General.Currencies.md) (nullable) | Currency for this resource. This currency applies for the standard price and cost per hour. [Filter(multi eq)] |
+| [ResourceGroup](Production.Resources.Resources.md#resourcegroup) | [ResourceGroups](Production.Resources.ResourceGroups.md) | The Id of the containing resource group. [Required] [Filter(multi eq)] [Owner] |
+| [SetupScrapUnit](Production.Resources.Resources.md#setupscrapunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement units of Setup_Scrap_Quantity. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Functions | [Production.Resources.ResourceFunctions](Production.Resources.ResourceFunctions.md) | List of [ResourceFunction](Production.Resources.ResourceFunctions.md) child objects, based on the [Production.Resources.ResourceFunction.Resource](Production.Resources.ResourceFunctions.md#resource) back reference 
+| Functions | [ResourceFunctions](Production.Resources.ResourceFunctions.md) | List of [ResourceFunction](Production.Resources.ResourceFunctions.md) child objects, based on the [Production.Resources.ResourceFunction.Resource](Production.Resources.ResourceFunctions.md#resource) back reference 
 
 
 ## Attribute Details
@@ -98,28 +98,28 @@ _Supports Order By_: **False**
 
 > Primary measurement unit for quantities of the resource. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResourceCurrency
 
 > Currency for this resource. This currency applies for the standard price and cost per hour. [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
+_Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResourceGroup
 
 > The Id of the containing resource group. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Production.Resources.ResourceGroups](Production.Resources.ResourceGroups.md)**  
+_Type_: **[ResourceGroups](Production.Resources.ResourceGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SetupScrapUnit
 
 > The measurement units of Setup_Scrap_Quantity. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

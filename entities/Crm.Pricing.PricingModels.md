@@ -17,15 +17,15 @@ Pricing models are assigned to product groups and are used to automate creation 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Crm.Pricing.PricingModels.md#currency) | [General.Currencies](General.Currencies.md) | The currency in which the prices will be calculated. [Required] [Filter(multi eq)] |
-| [PurchasePriceList](Crm.Pricing.PricingModels.md#purchasepricelist) | [Logistics.Procurement.PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) | Purchase price list Id, which will be used to get the purchase price of the products. [Required] [Filter(multi eq)] |
+| [Currency](Crm.Pricing.PricingModels.md#currency) | [Currencies](General.Currencies.md) | The currency in which the prices will be calculated. [Required] [Filter(multi eq)] |
+| [PurchasePriceList](Crm.Pricing.PricingModels.md#purchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) | Purchase price list Id, which will be used to get the purchase price of the products. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Costs | [Crm.Pricing.PricingModelCosts](Crm.Pricing.PricingModelCosts.md) | List of [PricingModelCost](Crm.Pricing.PricingModelCosts.md) child objects, based on the [Crm.Pricing.PricingModelCost.PricingModel](Crm.Pricing.PricingModelCosts.md#pricingmodel) back reference 
-| PriceLists | [Crm.Pricing.PricingModelPriceLists](Crm.Pricing.PricingModelPriceLists.md) | List of [PricingModelPriceList](Crm.Pricing.PricingModelPriceLists.md) child objects, based on the [Crm.Pricing.PricingModelPriceList.PricingModel](Crm.Pricing.PricingModelPriceLists.md#pricingmodel) back reference 
+| Costs | [PricingModelCosts](Crm.Pricing.PricingModelCosts.md) | List of [PricingModelCost](Crm.Pricing.PricingModelCosts.md) child objects, based on the [Crm.Pricing.PricingModelCost.PricingModel](Crm.Pricing.PricingModelCosts.md#pricingmodel) back reference 
+| PriceLists | [PricingModelPriceLists](Crm.Pricing.PricingModelPriceLists.md) | List of [PricingModelPriceList](Crm.Pricing.PricingModelPriceLists.md) child objects, based on the [Crm.Pricing.PricingModelPriceList.PricingModel](Crm.Pricing.PricingModelPriceLists.md#pricingmodel) back reference 
 
 
 ## Attribute Details
@@ -60,14 +60,14 @@ _Supports Order By_: **False**
 
 > The currency in which the prices will be calculated. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md)**  
+_Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchasePriceList
 
 > Purchase price list Id, which will be used to get the purchase price of the products. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Procurement.PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md)**  
+_Type_: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

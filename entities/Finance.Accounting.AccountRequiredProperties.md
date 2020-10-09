@@ -17,8 +17,8 @@ Defines the required properties for new vouchers, for each account. Entity: Acc_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Account](Finance.Accounting.AccountRequiredProperties.md#account) | [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md) | The [Account](Finance.Accounting.AccountRequiredProperties.md#account) to which this AccountRequiredProperty belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Property](Finance.Accounting.AccountRequiredProperties.md#property) | [General.CustomProperties](General.CustomProperties.md) | A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers. [Required] [Filter(multi eq)] |
+| [Account](Finance.Accounting.AccountRequiredProperties.md#account) | [Accounts](Finance.Accounting.Accounts.md) | The [Account](Finance.Accounting.AccountRequiredProperties.md#account) to which this AccountRequiredProperty belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Property](Finance.Accounting.AccountRequiredProperties.md#property) | [CustomProperties](General.CustomProperties.md) | A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -38,10 +38,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.Account.RequiredProperties.Select(c => c.KeyOrder).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Account.RequiredProperties.Select( c => c.KeyOrder).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.Account.RequiredProperties.Select(c => c.KeyOrder).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Account.RequiredProperties.Select( c => c.KeyOrder).DefaultIfEmpty( 0).Max( ) + 10)`
 ### KeyProperty
 
 > Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes. [Required] [Default(true)] [Filter(eq)]
@@ -58,14 +58,14 @@ _Default Value_: **True**
 
 > The [Account](Finance.Accounting.AccountRequiredProperties.md#account) to which this AccountRequiredProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)**  
+_Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property
 
 > A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers. [Required] [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md)**  
+_Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

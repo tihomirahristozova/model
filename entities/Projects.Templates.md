@@ -17,8 +17,8 @@ Contains templates for creating new projects. Entity: Prj_Templates
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Risks | [Projects.TemplateRisks](Projects.TemplateRisks.md) | List of [TemplateRisk](Projects.TemplateRisks.md) child objects, based on the [Projects.TemplateRisk.ProjectTemplate](Projects.TemplateRisks.md#projecttemplate) back reference 
-| WorkElements | [Projects.TemplateWorkElements](Projects.TemplateWorkElements.md) | List of [TemplateWorkElement](Projects.TemplateWorkElements.md) child objects, based on the [Projects.TemplateWorkElement.ProjectTemplate](Projects.TemplateWorkElements.md#projecttemplate) back reference 
+| Risks | [TemplateRisks](Projects.TemplateRisks.md) | List of [TemplateRisk](Projects.TemplateRisks.md) child objects, based on the [Projects.TemplateRisk.ProjectTemplate](Projects.TemplateRisks.md#projecttemplate) back reference 
+| WorkElements | [TemplateWorkElements](Projects.TemplateWorkElements.md) | List of [TemplateWorkElement](Projects.TemplateWorkElements.md) child objects, based on the [Projects.TemplateWorkElement.ProjectTemplate](Projects.TemplateWorkElements.md#projecttemplate) back reference 
 
 
 ## Attribute Details

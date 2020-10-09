@@ -13,7 +13,7 @@ Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 | [AmountPercent](Crm.Sales.SalesOrderPaymentPlans.md#amountpercent) | decimal (nullable) | Percent of the sales order amount to be payed. 
 | [DueDateFormMethod](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod) | [PaymentPlanDueDateSource](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod) | Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. [Required] 
 | [ExplicitPaymentDueDate](Crm.Sales.SalesOrderPaymentPlans.md#explicitpaymentduedate) | datetime (nullable) | Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'. 
-| [ExplicitPaymentDueStartDate](Crm.Sales.SalesOrderPaymentPlans.md#explicitpaymentduestartdate) | date (nullable) | Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'. 
+| [ExplicitPayment<br />DueStartDate](Crm.Sales.SalesOrderPaymentPlans.md#explicitpaymentduestartdate) | date (nullable) | Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'. 
 | [Id](Crm.Sales.SalesOrderPaymentPlans.md#id) | guid |  
 | [InstallmentNumber](Crm.Sales.SalesOrderPaymentPlans.md#installmentnumber) | int32 | Consequtive installment number. Used for identifying different payments generated according this payment plan. [Required] 
 | [Notes](Crm.Sales.SalesOrderPaymentPlans.md#notes) | string (nullable) | Notes for this SalesOrderPaymentPlan. 
@@ -25,9 +25,9 @@ Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PaymentAccount](Crm.Sales.SalesOrderPaymentPlans.md#paymentaccount) | [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. [Filter(multi eq)] |
-| [PaymentType](Crm.Sales.SalesOrderPaymentPlans.md#paymenttype) | [Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. [Filter(multi eq)] |
-| [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) | [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) | The [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner] |
+| [PaymentAccount](Crm.Sales.SalesOrderPaymentPlans.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. [Filter(multi eq)] |
+| [PaymentType](Crm.Sales.SalesOrderPaymentPlans.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. [Filter(multi eq)] |
+| [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -76,7 +76,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF((Convert(obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueDate)`
+`IIF( ( Convert( obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueDate)`
 ### ExplicitPaymentDueStartDate
 
 > Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.
@@ -86,7 +86,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF((Convert(obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueStartDate)`
+`IIF( ( Convert( obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueStartDate)`
 ### Id
 
 _Type_: **guid**  
@@ -102,10 +102,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.SalesOrder.PaymentPlans.Select(c => c.InstallmentNumber).DefaultIfEmpty(0).Max() + 10)`
+`( obj.SalesOrder.PaymentPlans.Select( c => c.InstallmentNumber).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.SalesOrder.PaymentPlans.Select(c => c.InstallmentNumber).DefaultIfEmpty(0).Max() + 10)`
+`( obj.SalesOrder.PaymentPlans.Select( c => c.InstallmentNumber).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
 > Notes for this SalesOrderPaymentPlan.
@@ -133,10 +133,10 @@ _Supports Order By_: **False**
 _Default Value_: **0**  
 
 _Back-End Default Expression:_  
-`IIF(((Convert(obj.DueDateFormMethod, Int32) == 3) OrElse (Convert(obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)`
+`IIF( ( ( Convert( obj.DueDateFormMethod, Int32) == 3) OrElse ( Convert( obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)`
 
 _Front-End Recalc Expressions:_  
-`IIF(((Convert(obj.DueDateFormMethod, Int32) == 3) OrElse (Convert(obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)`
+`IIF( ( ( Convert( obj.DueDateFormMethod, Int32) == 3) OrElse ( Convert( obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)`
 ### Remainder
 
 > Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). [Required] [Default(false)]
@@ -147,10 +147,10 @@ _Supports Order By_: **False**
 _Default Value_: **False**  
 
 _Back-End Default Expression:_  
-`IIF((obj.AmountPercent != null), False, obj.Remainder)`
+`IIF( ( obj.AmountPercent != null), False, obj.Remainder)`
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.AmountPercent != null), False, obj.Remainder)`
+`IIF( ( obj.AmountPercent != null), False, obj.Remainder)`
 
 ## Reference Details
 
@@ -158,20 +158,20 @@ _Front-End Recalc Expressions:_
 
 > Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
 `obj.SalesOrder.PaymentAccount`
 
 _Front-End Recalc Expressions:_  
-`obj.SalesOrder.PaymentAccount.IfNullThen(obj.PaymentType.DefaultPaymentAccount.IfNullThen(obj.PaymentAccount))`
+`obj.SalesOrder.PaymentAccount.IfNullThen( obj.PaymentType.DefaultPaymentAccount.IfNullThen( obj.PaymentAccount))`
 `obj.SalesOrder.PaymentAccount`
 ### PaymentType
 
 > Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -183,7 +183,7 @@ _Front-End Recalc Expressions:_
 
 > The [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)**  
+_Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

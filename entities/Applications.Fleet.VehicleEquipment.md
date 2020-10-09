@@ -19,8 +19,8 @@ Contains the actual and history of equipment, installed on the vehicles. Entity:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EquipmentType](Applications.Fleet.VehicleEquipment.md#equipmenttype) | [Applications.Fleet.EquipmentTypes](Applications.Fleet.EquipmentTypes.md) | The type of equipment installed on the vehicle. [Required] [Filter(multi eq)] |
-| [Vehicle](Applications.Fleet.VehicleEquipment.md#vehicle) | [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md) | The vehicle that is holding the equipment. [Required] [Filter(multi eq)] [Owner] |
+| [EquipmentType](Applications.Fleet.VehicleEquipment.md#equipmenttype) | [EquipmentTypes](Applications.Fleet.EquipmentTypes.md) | The type of equipment installed on the vehicle. [Required] [Filter(multi eq)] |
+| [Vehicle](Applications.Fleet.VehicleEquipment.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The vehicle that is holding the equipment. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -71,14 +71,14 @@ _Supports Order By_: **False**
 
 > The type of equipment installed on the vehicle. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Fleet.EquipmentTypes](Applications.Fleet.EquipmentTypes.md)**  
+_Type_: **[EquipmentTypes](Applications.Fleet.EquipmentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Vehicle
 
 > The vehicle that is holding the equipment. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)**  
+_Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

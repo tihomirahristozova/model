@@ -18,13 +18,13 @@ Contains the services, which can be performed. Entity: Srv_Services
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MeasurementUnit](Applications.Service.Services.md#measurementunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit in which the service rendered to the customer is quantified. [Required] [Filter(multi eq)] |
+| [MeasurementUnit](Applications.Service.Services.md#measurementunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit in which the service rendered to the customer is quantified. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Invoicing | [Applications.Service.ServiceInvoicing](Applications.Service.ServiceInvoicing.md) | List of [ServiceInvoicing](Applications.Service.ServiceInvoicing.md) child objects, based on the [Applications.Service.ServiceInvoicing.Service](Applications.Service.ServiceInvoicing.md#service) back reference 
+| Invoicing | [ServiceInvoicing](Applications.Service.ServiceInvoicing.md) | List of [ServiceInvoicing](Applications.Service.ServiceInvoicing.md) child objects, based on the [Applications.Service.ServiceInvoicing.Service](Applications.Service.ServiceInvoicing.md#service) back reference 
 
 
 ## Attribute Details
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 > The measurement unit in which the service rendered to the customer is quantified. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

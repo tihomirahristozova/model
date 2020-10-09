@@ -21,9 +21,9 @@ One line in a client requisition for transportation. Different lines usually rep
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CargoType](Logistics.Shipment.TransportationRequisitionLines.md#cargotype) | [Logistics.Shipment.CargoTypes](Logistics.Shipment.CargoTypes.md) | The type of the transported cargo. [Required] [Filter(multi eq)] |
-| [ParentDocument](Logistics.Shipment.TransportationRequisitionLines.md#parentdocument) | [General.Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
-| [TransportationRequisition](Logistics.Shipment.TransportationRequisitionLines.md#transportationrequisition) | [Logistics.Shipment.TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md) | The [TransportationRequisition](Logistics.Shipment.TransportationRequisitionLines.md#transportationrequisition) to which this TransportationRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CargoType](Logistics.Shipment.TransportationRequisitionLines.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The type of the transported cargo. [Required] [Filter(multi eq)] |
+| [ParentDocument](Logistics.Shipment.TransportationRequisitionLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
+| [TransportationRequisition](Logistics.Shipment.TransportationRequisitionLines.md#transportationrequisition) | [TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md) | The [Transportation<br />Requisition](Logistics.Shipment.Transportation<br />RequisitionLines.md#transportationrequisition) to which this Transportation<br />RequisitionLine belongs. [Required] [Filter(multi eq)]  |
 
 
 ## Attribute Details
@@ -51,10 +51,10 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.TransportationRequisition.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.TransportationRequisition.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.TransportationRequisition.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.TransportationRequisition.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### PalletsCount
 
 > Number of palettes comprising the cargo. null when it is unknown.
@@ -94,21 +94,21 @@ _Supports Order By_: **False**
 
 > The type of the transported cargo. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Shipment.CargoTypes](Logistics.Shipment.CargoTypes.md)**  
+_Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
 
 > The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransportationRequisition
 
 > The [TransportationRequisition](Logistics.Shipment.TransportationRequisitionLines.md#transportationrequisition) to which this TransportationRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Logistics.Shipment.TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)**  
+_Type_: **[TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -17,10 +17,10 @@ Specifies user-defined distribution pattern of additonal amount for specific doc
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentLineAmounts.md#document) | [General.Documents](General.Documents.md) | The [Document](General.DocumentLineAmounts.md#document) to which this DocumentLineAmount belongs. [Required] [Filter(multi eq)] [Owner] |
-| [DocumentAmountType](General.DocumentLineAmounts.md#documentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The type of amount for which the distribution pattern is specified. [Required] [Filter(multi eq)] |
-| [Product](General.DocumentLineAmounts.md#product) | [General.Products.Products](General.Products.Products.md) | The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes. [Required] [Filter(multi eq)] |
-| [ReferencedDocument](General.DocumentLineAmounts.md#referenceddocument) | [General.Documents](General.Documents.md) (nullable) | When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated). [Filter(multi eq)] |
+| [Document](General.DocumentLineAmounts.md#document) | [Documents](General.Documents.md) | The [Document](General.DocumentLineAmounts.md#document) to which this DocumentLineAmount belongs. [Required] [Filter(multi eq)] [Owner] |
+| [DocumentAmountType](General.DocumentLineAmounts.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The type of amount for which the distribution pattern is specified. [Required] [Filter(multi eq)] |
+| [Product](General.DocumentLineAmounts.md#product) | [Products](General.Products.Products.md) | The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes. [Required] [Filter(multi eq)] |
+| [ReferencedDocument](General.DocumentLineAmounts.md#referenceddocument) | [Documents](General.Documents.md) (nullable) | When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated). [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -54,28 +54,28 @@ _Default Value_: **0**
 
 > The [Document](General.DocumentLineAmounts.md#document) to which this DocumentLineAmount belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentAmountType
 
 > The type of amount for which the distribution pattern is specified. [Required] [Filter(multi eq)]
 
-_Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md)**  
+_Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReferencedDocument
 
 > When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated). [Filter(multi eq)]
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -21,16 +21,16 @@ Contains a specific instance of an additional amount for a specific document. En
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentAmounts.md#document) | [General.Documents](General.Documents.md) | The [Document](General.DocumentAmounts.md#document) to which this DocumentAmount belongs. [Required] [Filter(multi eq)] [Owner] |
-| [DocumentAmountType](General.DocumentAmounts.md#documentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The type of the amount. [Required] [Filter(multi eq)] |
-| [InputAmountCurrency](General.DocumentAmounts.md#inputamountcurrency) | [General.Currencies](General.Currencies.md) (nullable) | When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null. [Filter(multi eq)] |
-| [InputUnit](General.DocumentAmounts.md#inputunit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | Measurement unit of the input unit amount. [Filter(multi eq)] |
+| [Document](General.DocumentAmounts.md#document) | [Documents](General.Documents.md) | The [Document](General.DocumentAmounts.md#document) to which this DocumentAmount belongs. [Required] [Filter(multi eq)] [Owner] |
+| [DocumentAmountType](General.DocumentAmounts.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The type of the amount. [Required] [Filter(multi eq)] |
+| [InputAmountCurrency](General.DocumentAmounts.md#inputamountcurrency) | [Currencies](General.Currencies.md) (nullable) | When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null. [Filter(multi eq)] |
+| [InputUnit](General.DocumentAmounts.md#inputunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | Measurement unit of the input unit amount. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| ReferencedDocuments | [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md) | List of [DocumentAmountReferencedDocument](General.DocumentAmountReferencedDocuments.md) child objects, based on the [General.DocumentAmountReferencedDocument.DocumentAmount](General.DocumentAmountReferencedDocuments.md#documentamount) back reference 
+| ReferencedDocuments | [DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md) | List of [DocumentAmount<br />ReferencedDocument](General.DocumentAmount<br />ReferencedDocuments.md) child objects, based on the [General.DocumentAmount<br />ReferencedDocument.DocumentAmount](General.DocumentAmount<br />ReferencedDocuments.md#documentamount) back  
 
 
 ## Attribute Details
@@ -58,7 +58,7 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF(obj.DocumentAmountType.AmountInputAllowed, obj.InputAmount, null)`
+`IIF( obj.DocumentAmountType.AmountInputAllowed, obj.InputAmount, null)`
 ### InputPercent
 
 > When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). [Filter(ge;le)]
@@ -81,7 +81,7 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF(obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnitAmount, null)`
+`IIF( obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnitAmount, null)`
 ### TotalDistributedAmount
 
 > The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly]
@@ -106,34 +106,34 @@ _Default Value_: **True**
 
 > The [Document](General.DocumentAmounts.md#document) to which this DocumentAmount belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentAmountType
 
 > The type of the amount. [Required] [Filter(multi eq)]
 
-_Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md)**  
+_Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### InputAmountCurrency
 
 > When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null. [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
+_Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`IIF(obj.DocumentAmountType.AmountInputAllowed, obj.InputAmountCurrency, null)`
+`IIF( obj.DocumentAmountType.AmountInputAllowed, obj.InputAmountCurrency, null)`
 ### InputUnit
 
 > Measurement unit of the input unit amount. [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`IIF(obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnit, null)`
+`IIF( obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnit, null)`
 
 
 ## Business Rules

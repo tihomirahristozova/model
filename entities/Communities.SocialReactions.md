@@ -3,7 +3,7 @@ uid: Communities.SocialReactions
 ---
 # Communities.SocialReactions
 
-Reaction of a user to any social comment to an object of the system. Entity: Cmm_Social_Reactions (Introduced in version 20.1.100.0)
+Reaction of a user to any social comment to an object of the system. Entity: Cmm_Social_Reactions (Introduced in version 20.1)
 
 ## Attributes
 
@@ -17,9 +17,9 @@ Reaction of a user to any social comment to an object of the system. Entity: Cmm
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](Communities.SocialReactions.md#dataobject) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root data object (post, marketplace product, document, etc), for which the reaction is. [Required] [Filter(multi eq)] |
-| [SocialComment](Communities.SocialReactions.md#socialcomment) | [Communities.SocialComments](Communities.SocialComments.md) (nullable) | When not null, specifies that the reaction is for the specified comment within the data object. [Filter(multi eq)] |
-| [User](Communities.SocialReactions.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who reacted. [Required] [Filter(multi eq)] |
+| [DataObject](Communities.SocialReactions.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root data object (post, marketplace product, document, etc), for which the reaction is. [Required] [Filter(multi eq)] |
+| [SocialComment](Communities.SocialReactions.md#socialcomment) | [SocialComments](Communities.SocialComments.md) (nullable) | When not null, specifies that the reaction is for the specified comment within the data object. [Filter(multi eq)] |
+| [User](Communities.SocialReactions.md#user) | [Users](Systems.Security.Users.md) | The user, who reacted. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -66,21 +66,21 @@ _Supports Order By_: **False**
 
 > The root data object (post, marketplace product, document, etc), for which the reaction is. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+_Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SocialComment
 
 > When not null, specifies that the reaction is for the specified comment within the data object. [Filter(multi eq)]
 
-_Type_: **[Communities.SocialComments](Communities.SocialComments.md) (nullable)**  
+_Type_: **[SocialComments](Communities.SocialComments.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
 > The user, who reacted. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

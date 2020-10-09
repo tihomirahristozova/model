@@ -17,8 +17,8 @@ When specified for a product type, contains the suggested user-defined propertie
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) | [General.Products.ProductTypes](General.Products.ProductTypes.md) | The [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Property](General.Products.ProductTypePurchaseInvoiceLineProperties.md#property) | [General.CustomProperties](General.CustomProperties.md) | The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. [Required] [Filter(multi eq)] |
+| [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The [ProductType](General.Products.ProductTypePurchase<br />InvoiceLineProperties.md#producttype) to which this ProductTypePurchase<br />InvoiceLineProperty belongs. [Required] [Filter(multi eq)]  |
+| [Property](General.Products.ProductTypePurchaseInvoiceLineProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -38,10 +38,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.ProductType.PurchaseInvoiceLineProperties.Select(c => c.PropertyNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.ProductType.PurchaseInvoiceLineProperties.Select( c => c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.ProductType.PurchaseInvoiceLineProperties.Select(c => c.PropertyNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.ProductType.PurchaseInvoiceLineProperties.Select( c => c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Required
 
 > True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. [Required] [Default(false)]
@@ -58,14 +58,14 @@ _Default Value_: **False**
 
 > The [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Products.ProductTypes](General.Products.ProductTypes.md)**  
+_Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property
 
 > The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. [Required] [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md)**  
+_Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

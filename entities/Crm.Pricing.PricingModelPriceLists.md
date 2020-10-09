@@ -17,8 +17,8 @@ The price lists, which are updated by the pricing model. Entity: Crm_Pricing_Mod
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PriceList](Crm.Pricing.PricingModelPriceLists.md#pricelist) | [Crm.PriceLists](Crm.PriceLists.md) | The price list, which is included in the pricing model. [Required] [Filter(multi eq)] |
-| [PricingModel](Crm.Pricing.PricingModelPriceLists.md#pricingmodel) | [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md) | The pricing model, for which the price list is listed. [Required] [Filter(multi eq)] [Owner] |
+| [PriceList](Crm.Pricing.PricingModelPriceLists.md#pricelist) | [PriceLists](Crm.PriceLists.md) | The price list, which is included in the pricing model. [Required] [Filter(multi eq)] |
+| [PricingModel](Crm.Pricing.PricingModelPriceLists.md#pricingmodel) | [PricingModels](Crm.Pricing.PricingModels.md) | The pricing model, for which the price list is listed. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -38,10 +38,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.PricingModel.PriceLists.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.PricingModel.PriceLists.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.PricingModel.PriceLists.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.PricingModel.PriceLists.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### MarginPercent
 
 > Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way.
@@ -57,14 +57,14 @@ _Supports Order By_: **False**
 
 > The price list, which is included in the pricing model. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.PriceLists](Crm.PriceLists.md)**  
+_Type_: **[PriceLists](Crm.PriceLists.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PricingModel
 
 > The pricing model, for which the price list is listed. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md)**  
+_Type_: **[PricingModels](Crm.Pricing.PricingModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

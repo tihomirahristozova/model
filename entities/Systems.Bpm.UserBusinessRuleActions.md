@@ -23,7 +23,7 @@ Represents an action within a business rule. Entity: Sys_User_Business_Rule_Acti
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [UserBusinessRule](Systems.Bpm.UserBusinessRuleActions.md#userbusinessrule) | [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner] |
+| [UserBusinessRule](Systems.Bpm.UserBusinessRuleActions.md#userbusinessrule) | [UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -37,10 +37,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.UserBusinessRule.Actions.Select(c => c.ActionNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.UserBusinessRule.Actions.Select( c => c.ActionNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.UserBusinessRule.Actions.Select(c => c.ActionNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.UserBusinessRule.Actions.Select( c => c.ActionNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### ActionType
 
 > Specifies the type of action to perform. [Required]
@@ -154,7 +154,7 @@ _Supports Order By_: **False**
 
 > The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
+_Type_: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

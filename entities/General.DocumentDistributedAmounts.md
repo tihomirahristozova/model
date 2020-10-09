@@ -17,9 +17,9 @@ Contains the amounts which are distributed by the system over the document lines
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentDistributedAmounts.md#document) | [General.Documents](General.Documents.md) | The [Document](General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner] |
-| [DocumentAmountType](General.DocumentDistributedAmounts.md#documentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The type of amount which is distributed. [Required] [Filter(multi eq)] |
-| [ReferencedDocument](General.DocumentDistributedAmounts.md#referenceddocument) | [General.Documents](General.Documents.md) (nullable) | In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)] |
+| [Document](General.DocumentDistributedAmounts.md#document) | [Documents](General.Documents.md) | The [Document](General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner] |
+| [DocumentAmountType](General.DocumentDistributedAmounts.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The type of amount which is distributed. [Required] [Filter(multi eq)] |
+| [ReferencedDocument](General.DocumentDistributedAmounts.md#referenceddocument) | [Documents](General.Documents.md) (nullable) | In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -52,21 +52,21 @@ _Default Value_: **NewGuid**
 
 > The [Document](General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentAmountType
 
 > The type of amount which is distributed. [Required] [Filter(multi eq)]
 
-_Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md)**  
+_Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReferencedDocument
 
 > In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)]
 
-_Type_: **[General.Documents](General.Documents.md) (nullable)**  
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

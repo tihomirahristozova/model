@@ -22,11 +22,11 @@ The fixed assets. Entity: Ast_Assets
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssetCategory](Finance.Assets.Assets.md#assetcategory) | [Finance.Assets.AssetCategories](Finance.Assets.AssetCategories.md) | The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset. [Required] [Filter(multi eq)] |
-| [AssetGroup](Finance.Assets.Assets.md#assetgroup) | [Finance.Assets.AssetGroups](Finance.Assets.AssetGroups.md) (nullable) | The asset group to which this asset belongs. [Filter(multi eq)] |
-| [EnterpriseCompany](Finance.Assets.Assets.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company to which this Asset applies. [Required] [Filter(multi eq)] [Owner] |
-| [PrimaryValuationModel](Finance.Assets.Assets.md#primaryvaluationmodel) | [Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
-| [ValuationCurrency](Finance.Assets.Assets.md#valuationcurrency) | [General.Currencies](General.Currencies.md) | Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored. [Required] [Filter(multi eq)] |
+| [AssetCategory](Finance.Assets.Assets.md#assetcategory) | [AssetCategories](Finance.Assets.AssetCategories.md) | The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset. [Required] [Filter(multi eq)] |
+| [AssetGroup](Finance.Assets.Assets.md#assetgroup) | [AssetGroups](Finance.Assets.AssetGroups.md) (nullable) | The asset group to which this asset belongs. [Filter(multi eq)] |
+| [EnterpriseCompany](Finance.Assets.Assets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company to which this Asset applies. [Required] [Filter(multi eq)] [Owner] |
+| [PrimaryValuationModel](Finance.Assets.Assets.md#primaryvaluationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
+| [ValuationCurrency](Finance.Assets.Assets.md#valuationcurrency) | [Currencies](General.Currencies.md) | Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -101,35 +101,35 @@ _Supports Order By_: **False**
 
 > The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Assets.AssetCategories](Finance.Assets.AssetCategories.md)**  
+_Type_: **[AssetCategories](Finance.Assets.AssetCategories.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssetGroup
 
 > The asset group to which this asset belongs. [Filter(multi eq)]
 
-_Type_: **[Finance.Assets.AssetGroups](Finance.Assets.AssetGroups.md) (nullable)**  
+_Type_: **[AssetGroups](Finance.Assets.AssetGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The Enterprise Company to which this Asset applies. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimaryValuationModel
 
 > Obsolete. Not used. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md)**  
+_Type_: **[ValuationModels](Finance.Assets.ValuationModels.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationCurrency
 
 > Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md)**  
+_Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

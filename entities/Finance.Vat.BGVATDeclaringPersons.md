@@ -21,8 +21,8 @@ National data: Contains the persons, which are authorized to issue and sign VAT 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Finance.Vat.BGVATDeclaringPersons.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the person is presenting the declaration. [Required] [Filter(multi eq)] [Owner] |
-| [Person](Finance.Vat.BGVATDeclaringPersons.md#person) | [General.Contacts.Persons](General.Contacts.Persons.md) | The person that is presenting the declaration. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Finance.Vat.BGVATDeclaringPersons.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the person is presenting the declaration. [Required] [Filter(multi eq)] [Owner] |
+| [Person](Finance.Vat.BGVATDeclaringPersons.md#person) | [Persons](General.Contacts.Persons.md) | The person that is presenting the declaration. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -97,14 +97,14 @@ _Default Value_: **True**
 
 > The enterprise company for which the person is presenting the declaration. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
 > The person that is presenting the declaration. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md)**  
+_Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

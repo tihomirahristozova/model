@@ -17,9 +17,9 @@ Contains user comments for documents. Entity: Gen_Document_Comments
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssignToUser](General.DocumentComments.md#assigntouser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | When not null means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user. [Filter(multi eq)] |
-| [Document](General.DocumentComments.md#document) | [General.Documents](General.Documents.md) | The document to which to attach the comment. [Required] [Filter(multi eq)] [Owner] |
-| [User](General.DocumentComments.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who created the comment. [Required] [Filter(multi eq)] |
+| [AssignToUser](General.DocumentComments.md#assigntouser) | [Users](Systems.Security.Users.md) (nullable) | When not null means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user. [Filter(multi eq)] |
+| [Document](General.DocumentComments.md#document) | [Documents](General.Documents.md) | The document to which to attach the comment. [Required] [Filter(multi eq)] [Owner] |
+| [User](General.DocumentComments.md#user) | [Users](Systems.Security.Users.md) | The user, who created the comment. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -54,21 +54,21 @@ _Default Value_: **NewGuid**
 
 > When not null means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user. [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Document
 
 > The document to which to attach the comment. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
 > The user, who created the comment. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

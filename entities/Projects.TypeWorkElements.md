@@ -20,7 +20,7 @@ The work elements of the work breakdown structure of each project type. Entity: 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectType](Projects.TypeWorkElements.md#projecttype) | [Projects.ProjectTypes](Projects.ProjectTypes.md) | The [ProjectType](Projects.TypeWorkElements.md#projecttype) to which this TypeWorkElement belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ProjectType](Projects.TypeWorkElements.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) | The [ProjectType](Projects.TypeWorkElements.md#projecttype) to which this TypeWorkElement belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -78,7 +78,7 @@ _Supports Order By_: **False**
 
 > The [ProjectType](Projects.TypeWorkElements.md#projecttype) to which this TypeWorkElement belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Projects.ProjectTypes](Projects.ProjectTypes.md)**  
+_Type_: **[ProjectTypes](Projects.ProjectTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

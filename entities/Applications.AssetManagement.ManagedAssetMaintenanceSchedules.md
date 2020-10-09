@@ -3,14 +3,14 @@ uid: Applications.AssetManagement.ManagedAssetMaintenanceSchedules
 ---
 # Applications.AssetManagement.ManagedAssetMaintenanceSchedules
 
-Contains the maintenance schedules for the managed assets. Entity: Eam_Managed_Asset_Maintenance_Schedules (Introduced in version 19.1.100.0)
+Contains the maintenance schedules for the managed assets. Entity: Eam_Managed_Asset_Maintenance_Schedules (Introduced in version 19.1)
 
 ## Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#id) | guid |  
-| [Notes](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#notes) | string (nullable) | Notes for this ManagedAssetMaintenanceSchedule. 
+| [Notes](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#notes) | string (nullable) | Notes for this ManagedAssetMaintenance<br />Schedule. 
 | [ParameterChangeDelta](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#parameterchangedelta) | int32 (nullable) | The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. [Filter(multi eq;ge;le)] 
 | [ScheduleDays](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#scheduledays) | int32 (nullable) | Number of days between planned maintenances. null means that the schedule is not planned based on days. 
 | [ScheduleMonths](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#schedulemonths) | int32 (nullable) | Number of months between planned maintenances. null means that the schedule is not planned based on months. 
@@ -19,8 +19,8 @@ Contains the maintenance schedules for the managed assets. Entity: Eam_Managed_A
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenanceType](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#maintenancetype) | [Applications.AssetManagement.MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | What type of maintenance is scheduled. [Required] [Filter(multi eq)] |
-| [ManagedAsset](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#managedasset) | [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The managed asset for which the maintenance schedule applies. [Required] [Filter(multi eq)] [Owner] |
+| [MaintenanceType](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | What type of maintenance is scheduled. [Required] [Filter(multi eq)] |
+| [ManagedAsset](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The managed asset for which the maintenance schedule applies. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -70,14 +70,14 @@ _Supports Order By_: **False**
 
 > What type of maintenance is scheduled. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.AssetManagement.MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
+_Type_: **[MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAsset
 
 > The managed asset for which the maintenance schedule applies. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
+_Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

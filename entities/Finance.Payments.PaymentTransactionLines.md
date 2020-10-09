@@ -19,8 +19,8 @@ Contains the distibution of the payments' amounts among the source payment order
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PaymentOrder](Finance.Payments.PaymentTransactionLines.md#paymentorder) | [Finance.Payments.PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order, that is covered by this transaction amount distribution (tr.line). [Required] [Filter(multi eq)] |
-| [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) | [Finance.Payments.PaymentTransactions](Finance.Payments.PaymentTransactions.md) | The [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [PaymentOrder](Finance.Payments.PaymentTransactionLines.md#paymentorder) | [PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order, that is covered by this transaction amount distribution (tr.line). [Required] [Filter(multi eq)] |
+| [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) | The [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -44,7 +44,7 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Front-End Recalc Expressions:_  
-`obj.CoveredOrderAmount.ConvertTo(obj.PaymentTransaction.TotalAmountCurrency, obj.PaymentTransaction.CurrencyDirectory)`
+`obj.CoveredOrderAmount.ConvertTo( obj.PaymentTransaction.TotalAmountCurrency, obj.PaymentTransaction.CurrencyDirectory)`
 ### CoveredOrderAmount
 
 > The part of the original payment order amount, that is covered by this transaction line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Front-End Recalc Expressions:_  
-`obj.Amount.ConvertTo(obj.PaymentOrder.TotalAmountCurrency, obj.PaymentTransaction.CurrencyDirectory)`
+`obj.Amount.ConvertTo( obj.PaymentOrder.TotalAmountCurrency, obj.PaymentTransaction.CurrencyDirectory)`
 ### Id
 
 _Type_: **guid**  
@@ -77,14 +77,14 @@ _Supports Order By_: **False**
 
 > The payment order, that is covered by this transaction amount distribution (tr.line). [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Payments.PaymentOrders](Finance.Payments.PaymentOrders.md)**  
+_Type_: **[PaymentOrders](Finance.Payments.PaymentOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentTransaction
 
 > The [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Payments.PaymentTransactions](Finance.Payments.PaymentTransactions.md)**  
+_Type_: **[PaymentTransactions](Finance.Payments.PaymentTransactions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

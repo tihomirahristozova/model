@@ -20,8 +20,8 @@ Contains history of saved version of the managed objects. Entity: Sys_Object_Ver
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Object](Systems.Core.ObjectVersions.md#object) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object, for which a version is stored. [Required] [Filter(multi eq)] [Owner] |
-| [User](Systems.Core.ObjectVersions.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user, which saved the version. [Required] [Filter(multi eq)] |
+| [Object](Systems.Core.ObjectVersions.md#object) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object, for which a version is stored. [Required] [Filter(multi eq)] [Owner] |
+| [User](Systems.Core.ObjectVersions.md#user) | [Users](Systems.Security.Users.md) | The user, which saved the version. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -87,14 +87,14 @@ _Supports Order By_: **False**
 
 > The object, for which a version is stored. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+_Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
 > The user, which saved the version. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

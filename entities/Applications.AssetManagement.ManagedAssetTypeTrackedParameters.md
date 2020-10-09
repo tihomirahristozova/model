@@ -3,21 +3,21 @@ uid: Applications.AssetManagement.ManagedAssetTypeTrackedParameters
 ---
 # Applications.AssetManagement.ManagedAssetTypeTrackedParameters
 
-Defines the parameters, which are tracked for the assets of the different types. Entity: Eam_Managed_Asset_Type_Tracked_Parameters (Introduced in version 19.1.100.0)
+Defines the parameters, which are tracked for the assets of the different types. Entity: Eam_Managed_Asset_Type_Tracked_Parameters (Introduced in version 19.1)
 
 ## Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#id) | guid |  
-| [Notes](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#notes) | string (nullable) | Notes for this ManagedAssetTypeTrackedParameter. 
+| [Notes](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#notes) | string (nullable) | Notes for this ManagedAssetType<br />TrackedParameter. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ManagedAssetType](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#managedassettype) | [Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The asset type for which the tracked parameter is defined. [Required] [Filter(multi eq)] [Owner] |
-| [TrackedParameter](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#trackedparameter) | [Applications.AssetManagement.TrackedParameters](Applications.AssetManagement.TrackedParameters.md) | The parameter, which will be tracked for assets of the specified type. [Required] [Filter(multi eq)] |
+| [ManagedAssetType](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#managedassettype) | [ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The asset type for which the tracked parameter is defined. [Required] [Filter(multi eq)] [Owner] |
+| [TrackedParameter](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#trackedparameter) | [TrackedParameters](Applications.AssetManagement.TrackedParameters.md) | The parameter, which will be tracked for assets of the specified type. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -43,14 +43,14 @@ _Supports Order By_: **False**
 
 > The asset type for which the tracked parameter is defined. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
+_Type_: **[ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrackedParameter
 
 > The parameter, which will be tracked for assets of the specified type. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.AssetManagement.TrackedParameters](Applications.AssetManagement.TrackedParameters.md)**  
+_Type_: **[TrackedParameters](Applications.AssetManagement.TrackedParameters.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

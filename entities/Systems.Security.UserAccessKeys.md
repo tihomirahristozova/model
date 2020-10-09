@@ -27,8 +27,8 @@ Obsolete. Not used. Entity: Sec_User_Access_Keys
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Security.UserAccessKeys.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) | The access key, containing the user permissions for this UserAccessKey. Null means that all users have unlimited permissions. [Required] [Filter(multi eq)] |
-| [User](Systems.Security.UserAccessKeys.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | Obsolete. Not used. [Required] [Filter(multi eq)] [Owner] |
+| [AccessKey](Systems.Security.UserAccessKeys.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | The access key, containing the user permissions for this UserAccessKey. Null means that all users have unlimited permissions. [Required] [Filter(multi eq)] |
+| [User](Systems.Security.UserAccessKeys.md#user) | [Users](Systems.Security.Users.md) | Obsolete. Not used. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -152,14 +152,14 @@ _Default Value_: **False**
 
 > The access key, containing the user permissions for this UserAccessKey. Null means that all users have unlimited permissions. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
 > Obsolete. Not used. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

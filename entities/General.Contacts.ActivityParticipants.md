@@ -17,8 +17,8 @@ Contains the additional participants in the activities. These are the participat
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Contacts.ActivityParticipants.md#activity) | [General.Contacts.Activities](General.Contacts.Activities.md) | The [Activity](General.Contacts.ActivityParticipants.md#activity) to which this ActivityParticipant belongs. [Required] [Filter(multi eq)] [Owner] |
-| [ParticipantPerson](General.Contacts.ActivityParticipants.md#participantperson) | [General.Contacts.Persons](General.Contacts.Persons.md) | The person, participating in an activity. [Required] [Filter(multi eq)] |
+| [Activity](General.Contacts.ActivityParticipants.md#activity) | [Activities](General.Contacts.Activities.md) | The [Activity](General.Contacts.ActivityParticipants.md#activity) to which this ActivityParticipant belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ParticipantPerson](General.Contacts.ActivityParticipants.md#participantperson) | [Persons](General.Contacts.Persons.md) | The person, participating in an activity. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -53,14 +53,14 @@ _Default Value_: **1**
 
 > The [Activity](General.Contacts.ActivityParticipants.md#activity) to which this ActivityParticipant belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Activities](General.Contacts.Activities.md)**  
+_Type_: **[Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParticipantPerson
 
 > The person, participating in an activity. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md)**  
+_Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

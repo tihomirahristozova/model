@@ -3,21 +3,21 @@ uid: Applications.PersonalData.PersonalDataProcessRecipients
 ---
 # Applications.PersonalData.PersonalDataProcessRecipients
 
-Contains recipients, to which personal data is disclosed. Entity: Pdm_Personal_Data_Process_Recipients (Introduced in version 18.2.100.0)
+Contains recipients, to which personal data is disclosed. Entity: Pdm_Personal_Data_Process_Recipients (Introduced in version 18.2)
 
 ## Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.PersonalData.PersonalDataProcessRecipients.md#id) | guid |  
-| [Notes](Applications.PersonalData.PersonalDataProcessRecipients.md#notes) | string (nullable) | Notes for this PersonalDataProcessRecipient. 
+| [Notes](Applications.PersonalData.PersonalDataProcessRecipients.md#notes) | string (nullable) | Notes for this PersonalDataProcess<br />Recipient. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PersonalDataProcess](Applications.PersonalData.PersonalDataProcessRecipients.md#personaldataprocess) | [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) | The process, whose data is disclosed to the recipient. [Required] [Filter(multi eq)] [Owner] |
-| [RecipientParty](Applications.PersonalData.PersonalDataProcessRecipients.md#recipientparty) | [General.Contacts.Parties](General.Contacts.Parties.md) | The recipient, to whom the data is disclosed. [Required] [Filter(multi eq)] |
+| [PersonalDataProcess](Applications.PersonalData.PersonalDataProcessRecipients.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) | The process, whose data is disclosed to the recipient. [Required] [Filter(multi eq)] [Owner] |
+| [RecipientParty](Applications.PersonalData.PersonalDataProcessRecipients.md#recipientparty) | [Parties](General.Contacts.Parties.md) | The recipient, to whom the data is disclosed. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -43,14 +43,14 @@ _Supports Order By_: **False**
 
 > The process, whose data is disclosed to the recipient. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)**  
+_Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RecipientParty
 
 > The recipient, to whom the data is disclosed. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md)**  
+_Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

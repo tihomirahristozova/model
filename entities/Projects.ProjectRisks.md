@@ -23,14 +23,14 @@ Contains risks, associated to projects. Entity: Prj_Project_Risks
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Project](Projects.ProjectRisks.md#project) | [Projects.Projects](Projects.Projects.md) | The project for which this risk applies. [Required] [Filter(multi eq)] [Owner] |
-| [ResponsiblePerson](Projects.ProjectRisks.md#responsibleperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The person who is responsible for handling the risk. [Filter(multi eq)] |
+| [Project](Projects.ProjectRisks.md#project) | [Projects](Projects.Projects.md) | The project for which this risk applies. [Required] [Filter(multi eq)] [Owner] |
+| [ResponsiblePerson](Projects.ProjectRisks.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person who is responsible for handling the risk. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Discussion | [Projects.ProjectRiskDiscussion](Projects.ProjectRiskDiscussion.md) | List of [ProjectRiskDiscussion](Projects.ProjectRiskDiscussion.md) child objects, based on the [Projects.ProjectRiskDiscussion.ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) back reference 
+| Discussion | [ProjectRiskDiscussion](Projects.ProjectRiskDiscussion.md) | List of [ProjectRiskDiscussion](Projects.ProjectRiskDiscussion.md) child objects, based on the [Projects.ProjectRiskDiscussion.ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) back reference 
 
 
 ## Attribute Details
@@ -116,14 +116,14 @@ _Supports Order By_: **False**
 
 > The project for which this risk applies. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Projects.Projects](Projects.Projects.md)**  
+_Type_: **[Projects](Projects.Projects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
 
 > The person who is responsible for handling the risk. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

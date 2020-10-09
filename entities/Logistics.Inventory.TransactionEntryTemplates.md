@@ -16,8 +16,8 @@ Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DealType](Logistics.Inventory.TransactionEntryTemplates.md#dealtype) | [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
-| [Route](Logistics.Inventory.TransactionEntryTemplates.md#route) | [Systems.Workflow.Routes](Systems.Workflow.Routes.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
+| [DealType](Logistics.Inventory.TransactionEntryTemplates.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
+| [Route](Logistics.Inventory.TransactionEntryTemplates.md#route) | [Routes](Systems.Workflow.Routes.md) | Obsolete. Not used. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -43,14 +43,14 @@ _Default Value_: **NewGuid**
 
 > Obsolete. Not used. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Vat.DealTypes](Finance.Vat.DealTypes.md)**  
+_Type_: **[DealTypes](Finance.Vat.DealTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Route
 
 > Obsolete. Not used. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Workflow.Routes](Systems.Workflow.Routes.md)**  
+_Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

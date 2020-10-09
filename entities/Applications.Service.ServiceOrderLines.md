@@ -17,8 +17,8 @@ Contains the details and problem symptoms for each object, which requires servic
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ServiceObject](Applications.Service.ServiceOrderLines.md#serviceobject) | [Applications.Service.ServiceObjects](Applications.Service.ServiceObjects.md) | The service object, which is experiencing the symptoms and needs repair. [Required] [Filter(multi eq)] |
-| [ServiceOrder](Applications.Service.ServiceOrderLines.md#serviceorder) | [Applications.Service.ServiceOrders](Applications.Service.ServiceOrders.md) | The [ServiceOrder](Applications.Service.ServiceOrderLines.md#serviceorder) to which this ServiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [ServiceObject](Applications.Service.ServiceOrderLines.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) | The service object, which is experiencing the symptoms and needs repair. [Required] [Filter(multi eq)] |
+| [ServiceOrder](Applications.Service.ServiceOrderLines.md#serviceorder) | [ServiceOrders](Applications.Service.ServiceOrders.md) | The [ServiceOrder](Applications.Service.ServiceOrderLines.md#serviceorder) to which this ServiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -38,10 +38,10 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.ServiceOrder.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.ServiceOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.ServiceOrder.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.ServiceOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### SymptomDescription
 
 > Description or synopsis of the symptoms of the failed object. [Filter(like)]
@@ -57,14 +57,14 @@ _Supports Order By_: **False**
 
 > The service object, which is experiencing the symptoms and needs repair. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.Service.ServiceObjects](Applications.Service.ServiceObjects.md)**  
+_Type_: **[ServiceObjects](Applications.Service.ServiceObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceOrder
 
 > The [ServiceOrder](Applications.Service.ServiceOrderLines.md#serviceorder) to which this ServiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Service.ServiceOrders](Applications.Service.ServiceOrders.md)**  
+_Type_: **[ServiceOrders](Applications.Service.ServiceOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

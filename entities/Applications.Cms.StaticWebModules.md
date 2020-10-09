@@ -22,8 +22,8 @@ A web module, which contains one web page with static text. Entity: Cms_Static_W
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.Cms.StaticWebModules.md#parent) | [Applications.Cms.WebModules](Applications.Cms.WebModules.md) (nullable) | The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)] |
-| [WebSite](Applications.Cms.StaticWebModules.md#website) | [Applications.Cms.WebSites](Applications.Cms.WebSites.md) | The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Parent](Applications.Cms.StaticWebModules.md#parent) | [WebModules](Applications.Cms.WebModules.md) (nullable) | The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)] |
+| [WebSite](Applications.Cms.StaticWebModules.md#website) | [WebSites](Applications.Cms.WebSites.md) | The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -108,14 +108,14 @@ _Supports Order By_: **False**
 
 > The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)]
 
-_Type_: **[Applications.Cms.WebModules](Applications.Cms.WebModules.md) (nullable)**  
+_Type_: **[WebModules](Applications.Cms.WebModules.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WebSite
 
 > The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Cms.WebSites](Applications.Cms.WebSites.md)**  
+_Type_: **[WebSites](Applications.Cms.WebSites.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

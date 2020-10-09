@@ -20,8 +20,8 @@ Provides notification addresses to be notified upon occurrence of different docu
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](General.DocumentTypeNotifications.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The document type for which this notification is set. [Required] [Filter(multi eq)] [Owner] |
-| [UserStatus](General.DocumentTypeNotifications.md#userstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | When not null, specifies that the event will be triggered only on this user status. [Filter(multi eq)] |
+| [DocumentType](General.DocumentTypeNotifications.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which this notification is set. [Required] [Filter(multi eq)] [Owner] |
+| [UserStatus](General.DocumentTypeNotifications.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | When not null, specifies that the event will be triggered only on this user status. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -92,14 +92,14 @@ _Supports Order By_: **False**
 
 > The document type for which this notification is set. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UserStatus
 
 > When not null, specifies that the event will be triggered only on this user status. [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -3,7 +3,7 @@ uid: Applications.PersonalData.DataSubjectRightRequests
 ---
 # Applications.PersonalData.DataSubjectRightRequests
 
-Contains user requests for application of user rights. Entity: Pdm_Data_Subject_Right_Requests (Introduced in version 18.2.100.0)
+Contains user requests for application of user rights. Entity: Pdm_Data_Subject_Right_Requests (Introduced in version 18.2)
 
 ## Attributes
 
@@ -20,10 +20,10 @@ Contains user requests for application of user rights. Entity: Pdm_Data_Subject_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedByUser](Applications.PersonalData.DataSubjectRightRequests.md#completedbyuser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly] |
-| [CreatedByUser](Applications.PersonalData.DataSubjectRightRequests.md#createdbyuser) | [Systems.Security.Users](Systems.Security.Users.md) (nullable) | The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly] |
-| [EnterpriseCompany](Applications.PersonalData.DataSubjectRightRequests.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, to which the request was made. [Required] [Filter(multi eq)] |
-| [Person](Applications.PersonalData.DataSubjectRightRequests.md#person) | [General.Contacts.Persons](General.Contacts.Persons.md) | The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)] |
+| [CompletedByUser](Applications.PersonalData.DataSubjectRightRequests.md#completedbyuser) | [Users](Systems.Security.Users.md) (nullable) | The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly] |
+| [CreatedByUser](Applications.PersonalData.DataSubjectRightRequests.md#createdbyuser) | [Users](Systems.Security.Users.md) (nullable) | The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly] |
+| [EnterpriseCompany](Applications.PersonalData.DataSubjectRightRequests.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, to which the request was made. [Required] [Filter(multi eq)] |
+| [Person](Applications.PersonalData.DataSubjectRightRequests.md#person) | [Persons](General.Contacts.Persons.md) | The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -105,28 +105,28 @@ _Supports Order By_: **False**
 
 > The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CreatedByUser
 
 > The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md) (nullable)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The enterprise company, to which the request was made. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
 
 > The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md)**  
+_Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

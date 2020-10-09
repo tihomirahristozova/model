@@ -3,7 +3,7 @@ uid: Communities.SocialGroupMembers
 ---
 # Communities.SocialGroupMembers
 
-Represents the membership of a user in a social group. Entity: Cmm_Social_Group_Members (Introduced in version 20.1.100.0)
+Represents the membership of a user in a social group. Entity: Cmm_Social_Group_Members (Introduced in version 20.1)
 
 ## Attributes
 
@@ -16,8 +16,8 @@ Represents the membership of a user in a social group. Entity: Cmm_Social_Group_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [SocialGroup](Communities.SocialGroupMembers.md#socialgroup) | [Communities.SocialGroups](Communities.SocialGroups.md) | The group in which the user participates. [Required] [Filter(multi eq)] [Owner] |
-| [User](Communities.SocialGroupMembers.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user, who is a member of the group. [Required] [Filter(multi eq)] |
+| [SocialGroup](Communities.SocialGroupMembers.md#socialgroup) | [SocialGroups](Communities.SocialGroups.md) | The group in which the user participates. [Required] [Filter(multi eq)] [Owner] |
+| [User](Communities.SocialGroupMembers.md#user) | [Users](Systems.Security.Users.md) | The user, who is a member of the group. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -44,14 +44,14 @@ _Default Value_: **CurrentDateTimeUtc**
 
 > The group in which the user participates. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Communities.SocialGroups](Communities.SocialGroups.md)**  
+_Type_: **[SocialGroups](Communities.SocialGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
 
 > The user, who is a member of the group. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

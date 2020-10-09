@@ -19,10 +19,10 @@ A vehicle, which is used for transportation. One actual vehicle might be defined
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CargoType](Logistics.Shipment.TransportationVehicles.md#cargotype) | [Logistics.Shipment.CargoTypes](Logistics.Shipment.CargoTypes.md) | The cargo type supported by this transportation vehicle. [Required] [Filter(multi eq)] |
-| [EnterpriseCompany](Logistics.Shipment.TransportationVehicles.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which the transportation vehicle will be bound. [Required] [Filter(multi eq)] |
-| [TransportationMode](Logistics.Shipment.TransportationVehicles.md#transportationmode) | [Logistics.Shipment.TransportationModes](Logistics.Shipment.TransportationModes.md) | The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode. [Required] [Filter(multi eq)] |
-| [Vehicle](Logistics.Shipment.TransportationVehicles.md#vehicle) | [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md) | The definition of the base vehicle. [Required] [Filter(multi eq)] [Owner] |
+| [CargoType](Logistics.Shipment.TransportationVehicles.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The cargo type supported by this transportation vehicle. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Logistics.Shipment.TransportationVehicles.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which the transportation vehicle will be bound. [Required] [Filter(multi eq)] |
+| [TransportationMode](Logistics.Shipment.TransportationVehicles.md#transportationmode) | [TransportationModes](Logistics.Shipment.TransportationModes.md) | The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode. [Required] [Filter(multi eq)] |
+| [Vehicle](Logistics.Shipment.TransportationVehicles.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The definition of the base vehicle. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -72,28 +72,28 @@ _Supports Order By_: **False**
 
 > The cargo type supported by this transportation vehicle. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Shipment.CargoTypes](Logistics.Shipment.CargoTypes.md)**  
+_Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The enterprise company to which the transportation vehicle will be bound. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransportationMode
 
 > The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Shipment.TransportationModes](Logistics.Shipment.TransportationModes.md)**  
+_Type_: **[TransportationModes](Logistics.Shipment.TransportationModes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Vehicle
 
 > The definition of the base vehicle. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)**  
+_Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

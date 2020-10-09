@@ -21,10 +21,10 @@ Contains call detail records. Calls are phone calls, video calls and SMS message
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalledParty](Applications.Telephony.CallDetails.md#calledparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party, which received the call. null when the party was not determined successfully. [Filter(multi eq)] |
-| [CallingParty](Applications.Telephony.CallDetails.md#callingparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | The party, which originated the call.  null when the party was not determined successfully. [Filter(multi eq)] |
-| [ExternalCompany](Applications.Telephony.CallDetails.md#externalcompany) | [General.Contacts.Companies](General.Contacts.Companies.md) (nullable) | The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. [Filter(multi eq)] |
-| [ExternalParty](Applications.Telephony.CallDetails.md#externalparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. [Filter(multi eq)] |
+| [CalledParty](Applications.Telephony.CallDetails.md#calledparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which received the call. null when the party was not determined successfully. [Filter(multi eq)] |
+| [CallingParty](Applications.Telephony.CallDetails.md#callingparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which originated the call.  null when the party was not determined successfully. [Filter(multi eq)] |
+| [ExternalCompany](Applications.Telephony.CallDetails.md#externalcompany) | [Companies](General.Contacts.Companies.md) (nullable) | The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. [Filter(multi eq)] |
+| [ExternalParty](Applications.Telephony.CallDetails.md#externalparty) | [Parties](General.Contacts.Parties.md) (nullable) | It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -101,28 +101,28 @@ _Supports Order By_: **False**
 
 > The party, which received the call. null when the party was not determined successfully. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CallingParty
 
 > The party, which originated the call.  null when the party was not determined successfully. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExternalCompany
 
 > The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Companies](General.Contacts.Companies.md) (nullable)**  
+_Type_: **[Companies](General.Contacts.Companies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExternalParty
 
 > It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

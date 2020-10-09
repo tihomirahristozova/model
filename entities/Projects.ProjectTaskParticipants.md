@@ -18,8 +18,8 @@ Contains the participants in the project tasks. Entity: Prj_Project_Task_Partici
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ParticipantPerson](Projects.ProjectTaskParticipants.md#participantperson) | [General.Contacts.Persons](General.Contacts.Persons.md) | The person, who is planned to participate in the project task. [Required] [Filter(multi eq)] |
-| [ProjectTask](Projects.ProjectTaskParticipants.md#projecttask) | [Projects.ProjectTasks](Projects.ProjectTasks.md) | The project task for which the participant is planned. [Required] [Filter(multi eq)] [Owner] |
+| [ParticipantPerson](Projects.ProjectTaskParticipants.md#participantperson) | [Persons](General.Contacts.Persons.md) | The person, who is planned to participate in the project task. [Required] [Filter(multi eq)] |
+| [ProjectTask](Projects.ProjectTaskParticipants.md#projecttask) | [ProjectTasks](Projects.ProjectTasks.md) | The project task for which the participant is planned. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -63,14 +63,14 @@ _Default Value_: **1**
 
 > The person, who is planned to participate in the project task. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md)**  
+_Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTask
 
 > The project task for which the participant is planned. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Projects.ProjectTasks](Projects.ProjectTasks.md)**  
+_Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

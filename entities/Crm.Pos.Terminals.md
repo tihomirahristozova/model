@@ -3,7 +3,7 @@ uid: Crm.Pos.Terminals
 ---
 # Crm.Pos.Terminals
 
-Represents a POS workplace for 1 person, with all the attached devices. (Not to be confused with Payment Terminal, which is specific POS device). Entity: Pos_Terminals (Introduced in version 19.1.100.0)
+Represents a POS workplace for 1 person, with all the attached devices. (Not to be confused with Payment Terminal, which is specific POS device). Entity: Pos_Terminals (Introduced in version 19.1)
 
 ## Attributes
 
@@ -18,14 +18,14 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultFiscalPrinterPosDevice](Crm.Pos.Terminals.md#defaultfiscalprinterposdevice) | [Crm.Pos.Devices](Crm.Pos.Devices.md) (nullable) | The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1.100.0) |
-| [PosLocation](Crm.Pos.Terminals.md#poslocation) | [Crm.Pos.Locations](Crm.Pos.Locations.md) | The POS location, where the terminal is located. [Required] [Filter(multi eq)] |
+| [DefaultFiscalPrinter<br />PosDevice](Crm.Pos.Terminals.md#defaultfiscalprinterposdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1) |
+| [PosLocation](Crm.Pos.Terminals.md#poslocation) | [Locations](Crm.Pos.Locations.md) | The POS location, where the terminal is located. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Devices | [Crm.Pos.Devices](Crm.Pos.Devices.md) | List of [Device](Crm.Pos.Devices.md) child objects, based on the [Crm.Pos.Device.PosTerminal](Crm.Pos.Devices.md#posterminal) back reference 
+| Devices | [Devices](Crm.Pos.Devices.md) | List of [Device](Crm.Pos.Devices.md) child objects, based on the [Crm.Pos.Device.PosTerminal](Crm.Pos.Devices.md#posterminal) back reference 
 
 
 ## Attribute Details
@@ -66,16 +66,16 @@ _Supports Order By_: **False**
 
 ### DefaultFiscalPrinterPosDevice
 
-> The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1.100.0)
+> The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1)
 
-_Type_: **[Crm.Pos.Devices](Crm.Pos.Devices.md) (nullable)**  
+_Type_: **[Devices](Crm.Pos.Devices.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosLocation
 
 > The POS location, where the terminal is located. [Required] [Filter(multi eq)]
 
-_Type_: **[Crm.Pos.Locations](Crm.Pos.Locations.md)**  
+_Type_: **[Locations](Crm.Pos.Locations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

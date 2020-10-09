@@ -18,14 +18,14 @@ Represents costs allocated to product outputs. Entity: Cost_Calculation_Product_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Calculation](Finance.Cost.CalculationProductOutputs.md#calculation) | [Finance.Cost.Calculations](Finance.Cost.Calculations.md) | The [Calculation](Finance.Cost.CalculationProductOutputs.md#calculation) to which this CalculationProductOutput belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Lot](Finance.Cost.CalculationProductOutputs.md#lot) | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, which absorbed the cost. [Filter(multi eq)] |
-| [Parent](Finance.Cost.CalculationProductOutputs.md#parent) | [Finance.Cost.CalculationProductOutputs](Finance.Cost.CalculationProductOutputs.md) (nullable) | When not null specifies the parent output, whose cost is "absorbed" within the current output. [Filter(multi eq)] |
-| [Product](Finance.Cost.CalculationProductOutputs.md#product) | [General.Products.Products](General.Products.Products.md) | The Product, which absorbed the cost. [Required] [Filter(multi eq)] |
-| [ProfitCenter](Finance.Cost.CalculationProductOutputs.md#profitcenter) | [Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | The Profit Center, which absorbed the cost. [Filter(multi eq)] |
-| [SalesOrder](Finance.Cost.CalculationProductOutputs.md#salesorder) | [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | The Sales Order, which absorbed the cost. [Filter(multi eq)] |
-| [Workgroup](Finance.Cost.CalculationProductOutputs.md#workgroup) | [Production.Resources.Workgroups](Production.Resources.Workgroups.md) (nullable) | The Workgroup, which absorbed the cost. [Filter(multi eq)] |
-| [WorkOrder](Finance.Cost.CalculationProductOutputs.md#workorder) | [Production.ShopFloor.WorkOrders](Production.ShopFloor.WorkOrders.md) (nullable) | The Work Order, which absorbed the cost. [Filter(multi eq)] |
+| [Calculation](Finance.Cost.CalculationProductOutputs.md#calculation) | [Calculations](Finance.Cost.Calculations.md) | The [Calculation](Finance.Cost.CalculationProductOutputs.md#calculation) to which this CalculationProductOutput belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Lot](Finance.Cost.CalculationProductOutputs.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, which absorbed the cost. [Filter(multi eq)] |
+| [Parent](Finance.Cost.CalculationProductOutputs.md#parent) | [CalculationProductOutputs](Finance.Cost.CalculationProductOutputs.md) (nullable) | When not null specifies the parent output, whose cost is "absorbed" within the current output. [Filter(multi eq)] |
+| [Product](Finance.Cost.CalculationProductOutputs.md#product) | [Products](General.Products.Products.md) | The Product, which absorbed the cost. [Required] [Filter(multi eq)] |
+| [ProfitCenter](Finance.Cost.CalculationProductOutputs.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | The Profit Center, which absorbed the cost. [Filter(multi eq)] |
+| [SalesOrder](Finance.Cost.CalculationProductOutputs.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | The Sales Order, which absorbed the cost. [Filter(multi eq)] |
+| [Workgroup](Finance.Cost.CalculationProductOutputs.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) (nullable) | The Workgroup, which absorbed the cost. [Filter(multi eq)] |
+| [WorkOrder](Finance.Cost.CalculationProductOutputs.md#workorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) (nullable) | The Work Order, which absorbed the cost. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -45,10 +45,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.Calculation.ProductOutputs.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Calculation.ProductOutputs.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.Calculation.ProductOutputs.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Calculation.ProductOutputs.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### ProjectId
 
 > The Project, which absorbed the cost. [Filter(multi eq)]
@@ -72,56 +72,56 @@ _Default Value_: **0**
 
 > The [Calculation](Finance.Cost.CalculationProductOutputs.md#calculation) to which this CalculationProductOutput belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Cost.Calculations](Finance.Cost.Calculations.md)**  
+_Type_: **[Calculations](Finance.Cost.Calculations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 
 > The Lot, which absorbed the cost. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
 > When not null specifies the parent output, whose cost is "absorbed" within the current output. [Filter(multi eq)]
 
-_Type_: **[Finance.Cost.CalculationProductOutputs](Finance.Cost.CalculationProductOutputs.md) (nullable)**  
+_Type_: **[CalculationProductOutputs](Finance.Cost.CalculationProductOutputs.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The Product, which absorbed the cost. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProfitCenter
 
 > The Profit Center, which absorbed the cost. [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
+_Type_: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesOrder
 
 > The Sales Order, which absorbed the cost. [Filter(multi eq)]
 
-_Type_: **[Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
+_Type_: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Workgroup
 
 > The Workgroup, which absorbed the cost. [Filter(multi eq)]
 
-_Type_: **[Production.Resources.Workgroups](Production.Resources.Workgroups.md) (nullable)**  
+_Type_: **[Workgroups](Production.Resources.Workgroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrder
 
 > The Work Order, which absorbed the cost. [Filter(multi eq)]
 
-_Type_: **[Production.ShopFloor.WorkOrders](Production.ShopFloor.WorkOrders.md) (nullable)**  
+_Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

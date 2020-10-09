@@ -19,7 +19,7 @@ Geographical (geo) points are used as points of interest on the map. They are us
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](General.Geography.GeoPoints.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which the name of the geo point has meaning. Null for geo points not related to specific enterprise company. [Filter(multi eq)] |
+| [EnterpriseCompany](General.Geography.GeoPoints.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which the name of the geo point has meaning. Null for geo points not related to specific enterprise company. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -71,7 +71,7 @@ _Supports Order By_: **False**
 
 > The enterprise company for which the name of the geo point has meaning. Null for geo points not related to specific enterprise company. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

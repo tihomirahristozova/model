@@ -3,7 +3,7 @@ uid: Applications.AssetManagement.MaintenanceOrderLines
 ---
 # Applications.AssetManagement.MaintenanceOrderLines
 
-Contains the types of maintenance and maintained assets in the maintenance orders. Entity: Eam_Maintenance_Order_Lines (Introduced in version 19.1.100.0)
+Contains the types of maintenance and maintained assets in the maintenance orders. Entity: Eam_Maintenance_Order_Lines (Introduced in version 19.1)
 
 ## Attributes
 
@@ -12,16 +12,16 @@ Contains the types of maintenance and maintained assets in the maintenance order
 | [Id](Applications.AssetManagement.MaintenanceOrderLines.md#id) | guid |  
 | [LineNo](Applications.AssetManagement.MaintenanceOrderLines.md#lineno) | int32 | Consecutive line number, unique within the maintenance order. [Required] 
 | [NextServiceDate](Applications.AssetManagement.MaintenanceOrderLines.md#nextservicedate) | date (nullable) | Specifies, that the maintenance required a specific date for the next maintenance. null means that default scheduling should be used. 
-| [NextServiceTrackedParameterValue](Applications.AssetManagement.MaintenanceOrderLines.md#nextservicetrackedparametervalue) | int32 (nullable) | Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. null means that default scheduling should be used. 
+| [NextServiceTracked<br />ParameterValue](Applications.AssetManagement.MaintenanceOrderLines.md#nextservicetrackedparametervalue) | int32 (nullable) | Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. null means that default scheduling should be used. 
 | [Notes](Applications.AssetManagement.MaintenanceOrderLines.md#notes) | string (nullable) | Notes for this MaintenanceOrderLine. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) | [Applications.AssetManagement.MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md) | The [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) to which this MaintenanceOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [MaintenanceType](Applications.AssetManagement.MaintenanceOrderLines.md#maintenancetype) | [Applications.AssetManagement.MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | The type of maintenance performed. [Required] [Filter(multi eq)] |
-| [ManagedAsset](Applications.AssetManagement.MaintenanceOrderLines.md#managedasset) | [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The maintained asset. [Required] [Filter(multi eq)] |
+| [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) | [MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md) | The [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) to which this MaintenanceOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [MaintenanceType](Applications.AssetManagement.MaintenanceOrderLines.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | The type of maintenance performed. [Required] [Filter(multi eq)] |
+| [ManagedAsset](Applications.AssetManagement.MaintenanceOrderLines.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The maintained asset. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -41,10 +41,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.MaintenanceOrder.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.MaintenanceOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.MaintenanceOrder.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.MaintenanceOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### NextServiceDate
 
 > Specifies, that the maintenance required a specific date for the next maintenance. null means that default scheduling should be used.
@@ -76,21 +76,21 @@ _Supports Order By_: **False**
 
 > The [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) to which this MaintenanceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.AssetManagement.MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)**  
+_Type_: **[MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaintenanceType
 
 > The type of maintenance performed. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.AssetManagement.MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
+_Type_: **[MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAsset
 
 > The maintained asset. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
+_Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

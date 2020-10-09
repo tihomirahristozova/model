@@ -19,8 +19,8 @@ Service levels. Entity: Srv_Service_Types
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PriceList](Applications.Service.ServiceTypes.md#pricelist) | [Crm.PriceLists](Crm.PriceLists.md) (nullable) | When not null, specifies the price list that should be applied when invoicing service activities. [Filter(multi eq)] |
-| [ServiceObjectType](Applications.Service.ServiceTypes.md#serviceobjecttype) | [Applications.Service.ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable) | The service object type to which this service type is applicable. [Filter(multi eq)] |
+| [PriceList](Applications.Service.ServiceTypes.md#pricelist) | [PriceLists](Crm.PriceLists.md) (nullable) | When not null, specifies the price list that should be applied when invoicing service activities. [Filter(multi eq)] |
+| [ServiceObjectType](Applications.Service.ServiceTypes.md#serviceobjecttype) | [ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable) | The service object type to which this service type is applicable. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -72,14 +72,14 @@ _Supports Order By_: **False**
 
 > When not null, specifies the price list that should be applied when invoicing service activities. [Filter(multi eq)]
 
-_Type_: **[Crm.PriceLists](Crm.PriceLists.md) (nullable)**  
+_Type_: **[PriceLists](Crm.PriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceObjectType
 
 > The service object type to which this service type is applicable. [Filter(multi eq)]
 
-_Type_: **[Applications.Service.ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable)**  
+_Type_: **[ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

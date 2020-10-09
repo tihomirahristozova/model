@@ -11,7 +11,7 @@ List of countries, listed by their internet suffix code. Entity: Gen_Countries
 | ---- | ---- | --- |
 | [Code](General.Geography.Countries.md#code) | string | Internet suffix code of the country. [Required] [Filter(eq;like)] [ORD] 
 | [Id](General.Geography.Countries.md#id) | guid |  
-| [IntrastatCode](General.Geography.Countries.md#intrastatcode) | string (nullable) | This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. (Introduced in version 20.1.100.0) 
+| [IntrastatCode](General.Geography.Countries.md#intrastatcode) | string (nullable) | This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. (Introduced in version 20.1) 
 | [Name](General.Geography.Countries.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the country. [Required] [Filter(like)] 
 
 
@@ -33,7 +33,7 @@ _Default Value_: **NewGuid**
 
 ### IntrastatCode
 
-> This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. (Introduced in version 20.1.100.0)
+> This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. (Introduced in version 20.1)
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  

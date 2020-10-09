@@ -17,8 +17,8 @@ Contains the properties, which are required for each asset category. Entity: Ren
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Property](Applications.Rental.AssetTypeProperties.md#property) | [General.CustomProperties](General.CustomProperties.md) | The user-defined property, which is required for assets of the specified type. [Required] [Filter(multi eq)] |
-| [RentalAssetType](Applications.Rental.AssetTypeProperties.md#rentalassettype) | [Applications.Rental.AssetTypes](Applications.Rental.AssetTypes.md) | The [AssetType](Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Property](Applications.Rental.AssetTypeProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The user-defined property, which is required for assets of the specified type. [Required] [Filter(multi eq)] |
+| [RentalAssetType](Applications.Rental.AssetTypeProperties.md#rentalassettype) | [AssetTypes](Applications.Rental.AssetTypes.md) | The [AssetType](Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -51,14 +51,14 @@ _Default Value_: **NewGuid**
 
 > The user-defined property, which is required for assets of the specified type. [Required] [Filter(multi eq)]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md)**  
+_Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RentalAssetType
 
 > The [AssetType](Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Rental.AssetTypes](Applications.Rental.AssetTypes.md)**  
+_Type_: **[AssetTypes](Applications.Rental.AssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

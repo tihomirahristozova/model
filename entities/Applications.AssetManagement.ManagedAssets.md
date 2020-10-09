@@ -3,7 +3,7 @@ uid: Applications.AssetManagement.ManagedAssets
 ---
 # Applications.AssetManagement.ManagedAssets
 
-Contains the managed assets. The management of assets include maintenance planning and execution, location assignments tracking, etc. Entity: Eam_Managed_Assets (Introduced in version 19.1.100.0)
+Contains the managed assets. The management of assets include maintenance planning and execution, location assignments tracking, etc. Entity: Eam_Managed_Assets (Introduced in version 19.1)
 
 ## Attributes
 
@@ -19,18 +19,18 @@ Contains the managed assets. The management of assets include maintenance planni
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.AssetManagement.ManagedAssets.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which the managed asset belongs. [Required] [Filter(multi eq)] |
-| [ManagedAssetGroup](Applications.AssetManagement.ManagedAssets.md#managedassetgroup) | [Applications.AssetManagement.ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) | The organizational group of the asset. Used for organizational purposes only. [Required] [Filter(multi eq)] |
-| [ManagedAssetType](Applications.AssetManagement.ManagedAssets.md#managedassettype) | [Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Applications.AssetManagement.ManagedAssets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which the managed asset belongs. [Required] [Filter(multi eq)] |
+| [ManagedAssetGroup](Applications.AssetManagement.ManagedAssets.md#managedassetgroup) | [ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) | The organizational group of the asset. Used for organizational purposes only. [Required] [Filter(multi eq)] |
+| [ManagedAssetType](Applications.AssetManagement.ManagedAssets.md#managedassettype) | [ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Locations | [Applications.AssetManagement.ManagedAssetLocations](Applications.AssetManagement.ManagedAssetLocations.md) | List of [ManagedAssetLocation](Applications.AssetManagement.ManagedAssetLocations.md) child objects, based on the [Applications.AssetManagement.ManagedAssetLocation.ManagedAsset](Applications.AssetManagement.ManagedAssetLocations.md#managedasset) back reference 
-| MaintenanceSchedules | [Applications.AssetManagement.ManagedAssetMaintenanceSchedules](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md) | List of [ManagedAssetMaintenanceSchedule](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md) child objects, based on the [Applications.AssetManagement.ManagedAssetMaintenanceSchedule.ManagedAsset](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#managedasset) back reference 
-| ParameterValues | [Applications.AssetManagement.ManagedAssetParameterValues](Applications.AssetManagement.ManagedAssetParameterValues.md) | List of [ManagedAssetParameterValue](Applications.AssetManagement.ManagedAssetParameterValues.md) child objects, based on the [Applications.AssetManagement.ManagedAssetParameterValue.ManagedAsset](Applications.AssetManagement.ManagedAssetParameterValues.md#managedasset) back reference 
-| ScheduledMaintenances | [Applications.AssetManagement.ManagedAssetScheduledMaintenances](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md) | List of [ManagedAssetScheduledMaintenance](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md) child objects, based on the [Applications.AssetManagement.ManagedAssetScheduledMaintenance.ManagedAsset](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#managedasset) back reference 
+| Locations | [ManagedAssetLocations](Applications.AssetManagement.ManagedAssetLocations.md) | List of [ManagedAssetLocation](Applications.AssetManagement.ManagedAssetLocations.md) child objects, based on the [Applications.AssetManagement.ManagedAssetLocation.ManagedAsset](Applications.AssetManagement.ManagedAssetLocations.md#managedasset) back reference 
+| MaintenanceSchedules | [ManagedAssetMaintenanceSchedules](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md) | List of [ManagedAssetMaintenance<br />Schedule](Applications.AssetManagement.ManagedAssetMaintenance<br />Schedules.md) child objects, based on the [Applications.AssetManagement.ManagedAssetMaintenance<br />Schedule.ManagedAsset](Applications.AssetManagement.ManagedAssetMaintenance<br />Schedules.md#managedasset) back  
+| ParameterValues | [ManagedAssetParameterValues](Applications.AssetManagement.ManagedAssetParameterValues.md) | List of [ManagedAssetParameter<br />Value](Applications.AssetManagement.ManagedAssetParameter<br />Values.md) child objects, based on the [Applications.AssetManagement.ManagedAssetParameterValue.ManagedAsset](Applications.AssetManagement.ManagedAssetParameter<br />Values.md#managedasset) back  
+| ScheduledMaintenances | [ManagedAssetScheduledMaintenances](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md) | List of [ManagedAssetScheduled<br />Maintenance](Applications.AssetManagement.ManagedAssetScheduled<br />Maintenances.md) child objects, based on the [Applications.AssetManagement.ManagedAssetScheduled<br />Maintenance.ManagedAsset](Applications.AssetManagement.ManagedAssetScheduled<br />Maintenances.md#managedasset) back  
 
 
 ## Attribute Details
@@ -80,21 +80,21 @@ _Supports Order By_: **False**
 
 > The enterprise company to which the managed asset belongs. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAssetGroup
 
 > The organizational group of the asset. Used for organizational purposes only. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.AssetManagement.ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md)**  
+_Type_: **[ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAssetType
 
 > The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. [Required] [Filter(multi eq)]
 
-_Type_: **[Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
+_Type_: **[ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

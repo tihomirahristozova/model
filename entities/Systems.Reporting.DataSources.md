@@ -13,13 +13,13 @@ Contains user-defined data sources, which retrieve rows from multiple queries. E
 | [DataSourceType](Systems.Reporting.DataSources.md#datasourcetype) | [DataSourceType](Systems.Reporting.DataSources.md#datasourcetype) | 'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . [Required] [Default("M")] [Filter(eq)] 
 | [Id](Systems.Reporting.DataSources.md#id) | guid |  
 | [Name](Systems.Reporting.DataSources.md#name) | string | The name of the data source. [Required] [Filter(eq;like)] 
-| [ShowParentTables](Systems.Reporting.DataSources.md#showparenttables) | boolean | Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. [Required] [Default(false)] 
+| [ShowParentTables](Systems.Reporting.DataSources.md#showparenttables) | boolean | Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_<br />Queries_Table are automaticaly included in the report or not. [Required] [Default(false) 
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Queries | [Systems.Reporting.DataSourceQueries](Systems.Reporting.DataSourceQueries.md) | List of [DataSourceQuery](Systems.Reporting.DataSourceQueries.md) child objects, based on the [Systems.Reporting.DataSourceQuery.DataSource](Systems.Reporting.DataSourceQueries.md#datasource) back reference 
+| Queries | [DataSourceQueries](Systems.Reporting.DataSourceQueries.md) | List of [DataSourceQuery](Systems.Reporting.DataSourceQueries.md) child objects, based on the [Systems.Reporting.DataSourceQuery.DataSource](Systems.Reporting.DataSourceQueries.md#datasource) back reference 
 
 
 ## Attribute Details

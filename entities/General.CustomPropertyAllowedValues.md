@@ -21,8 +21,8 @@ User-defined properties allowed values. Can be specified only for properties wit
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](General.CustomPropertyAllowedValues.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this CustomPropertyAllowedValue applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
-| [Property](General.CustomPropertyAllowedValues.md#property) | [General.CustomProperties](General.CustomProperties.md) | The [CustomProperty](General.CustomProperties.md) to which this CustomPropertyAllowedValue belongs. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](General.CustomPropertyAllowedValues.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this CustomPropertyAllowedValue applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [Property](General.CustomPropertyAllowedValues.md#property) | [CustomProperties](General.CustomProperties.md) | The [CustomProperty](General.CustomProperties.md) to which this CustomPropertyAllowedValue belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -88,14 +88,14 @@ _Supports Order By_: **False**
 
 > The Enterprise Company to which this CustomPropertyAllowedValue applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property
 
 > The [CustomProperty](General.CustomProperties.md) to which this CustomPropertyAllowedValue belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.CustomProperties](General.CustomProperties.md)**  
+_Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

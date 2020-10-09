@@ -17,8 +17,8 @@ Contains the quantity of materials distributed over the output order lines. Enti
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumptionOrderLine](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumptionorderline) | [Production.ShopFloor.ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md) | Consumption order line which requested the Consumed_Quantity. [Required] [Filter(multi eq)] [ReadOnly] |
-| [OutputOrderLine](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#outputorderline) | [Production.ShopFloor.OutputOrderLines](Production.ShopFloor.OutputOrderLines.md) | The output order line for which the distribution is recorded. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
+| [ConsumptionOrderLine](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumptionorderline) | [ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md) | Consumption order line which requested the Consumed_Quantity. [Required] [Filter(multi eq)] [ReadOnly] |
+| [OutputOrderLine](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#outputorderline) | [OutputOrderLines](Production.ShopFloor.OutputOrderLines.md) | The output order line for which the distribution is recorded. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
 
 
 ## Attribute Details
@@ -54,14 +54,14 @@ _Default Value_: **NewGuid**
 
 > Consumption order line which requested the Consumed_Quantity. [Required] [Filter(multi eq)] [ReadOnly]
 
-_Type_: **[Production.ShopFloor.ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md)**  
+_Type_: **[ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OutputOrderLine
 
 > The output order line for which the distribution is recorded. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
-_Type_: **[Production.ShopFloor.OutputOrderLines](Production.ShopFloor.OutputOrderLines.md)**  
+_Type_: **[OutputOrderLines](Production.ShopFloor.OutputOrderLines.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

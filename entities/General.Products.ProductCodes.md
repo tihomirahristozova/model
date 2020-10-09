@@ -17,8 +17,8 @@ Additional product codes, categorized by coding systems. Entity: Gen_Product_Cod
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CodingSystem](General.Products.ProductCodes.md#codingsystem) | [General.Products.CodingSystems](General.Products.CodingSystems.md) | The coding system in which the product code is specified. [Required] [Filter(multi eq)] |
-| [Product](General.Products.ProductCodes.md#product) | [General.Products.Products](General.Products.Products.md) | The product for which the code is specified. [Required] [Filter(multi eq)] [Owner] |
+| [CodingSystem](General.Products.ProductCodes.md#codingsystem) | [CodingSystems](General.Products.CodingSystems.md) | The coding system in which the product code is specified. [Required] [Filter(multi eq)] |
+| [Product](General.Products.ProductCodes.md#product) | [Products](General.Products.Products.md) | The product for which the code is specified. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -53,14 +53,14 @@ _Supports Order By_: **False**
 
 > The coding system in which the product code is specified. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.CodingSystems](General.Products.CodingSystems.md)**  
+_Type_: **[CodingSystems](General.Products.CodingSystems.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The product for which the code is specified. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

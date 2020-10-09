@@ -21,16 +21,16 @@ Represents one business process version. All process model elements and executio
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProcessGroup](Systems.Bpm.Processes.md#processgroup) | [Systems.Bpm.ProcessGroups](Systems.Bpm.ProcessGroups.md) | The process group, to which this process belongs. [Required] [Filter(multi eq)] |
+| [ProcessGroup](Systems.Bpm.Processes.md#processgroup) | [ProcessGroups](Systems.Bpm.ProcessGroups.md) | The process group, to which this process belongs. [Required] [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Connections | [Systems.Bpm.ProcessConnections](Systems.Bpm.ProcessConnections.md) | List of [ProcessConnection](Systems.Bpm.ProcessConnections.md) child objects, based on the [Systems.Bpm.ProcessConnection.Process](Systems.Bpm.ProcessConnections.md#process) back reference 
-| Elements | [Systems.Bpm.ProcessElements](Systems.Bpm.ProcessElements.md) | List of [ProcessElement](Systems.Bpm.ProcessElements.md) child objects, based on the [Systems.Bpm.ProcessElement.Process](Systems.Bpm.ProcessElements.md#process) back reference 
-| Lanes | [Systems.Bpm.ProcessLanes](Systems.Bpm.ProcessLanes.md) | List of [ProcessLane](Systems.Bpm.ProcessLanes.md) child objects, based on the [Systems.Bpm.ProcessLane.Process](Systems.Bpm.ProcessLanes.md#process) back reference 
-| Nodes | [Systems.Bpm.ProcessNodes](Systems.Bpm.ProcessNodes.md) | List of [ProcessNode](Systems.Bpm.ProcessNodes.md) child objects, based on the [Systems.Bpm.ProcessNode.Process](Systems.Bpm.ProcessNodes.md#process) back reference 
+| Connections | [ProcessConnections](Systems.Bpm.ProcessConnections.md) | List of [ProcessConnection](Systems.Bpm.ProcessConnections.md) child objects, based on the [Systems.Bpm.ProcessConnection.Process](Systems.Bpm.ProcessConnections.md#process) back reference 
+| Elements | [ProcessElements](Systems.Bpm.ProcessElements.md) | List of [ProcessElement](Systems.Bpm.ProcessElements.md) child objects, based on the [Systems.Bpm.ProcessElement.Process](Systems.Bpm.ProcessElements.md#process) back reference 
+| Lanes | [ProcessLanes](Systems.Bpm.ProcessLanes.md) | List of [ProcessLane](Systems.Bpm.ProcessLanes.md) child objects, based on the [Systems.Bpm.ProcessLane.Process](Systems.Bpm.ProcessLanes.md#process) back reference 
+| Nodes | [ProcessNodes](Systems.Bpm.ProcessNodes.md) | List of [ProcessNode](Systems.Bpm.ProcessNodes.md) child objects, based on the [Systems.Bpm.ProcessNode.Process](Systems.Bpm.ProcessNodes.md#process) back reference 
 
 
 ## Attribute Details
@@ -109,7 +109,7 @@ _Supports Order By_: **False**
 
 > The process group, to which this process belongs. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Bpm.ProcessGroups](Systems.Bpm.ProcessGroups.md)**  
+_Type_: **[ProcessGroups](Systems.Bpm.ProcessGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

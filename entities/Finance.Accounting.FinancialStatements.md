@@ -17,7 +17,7 @@ Contains the user-defined financial statement definitions. Entity: Acc_Financial
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Nodes | [Finance.Accounting.FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md) | List of [FinancialStatementNode](Finance.Accounting.FinancialStatementNodes.md) child objects, based on the [Finance.Accounting.FinancialStatementNode.FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) back reference 
+| Nodes | [FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md) | List of [FinancialStatementNode](Finance.Accounting.FinancialStatementNodes.md) child objects, based on the [Finance.Accounting.FinancialStatementNode.FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) back reference 
 
 
 ## Attribute Details

@@ -18,10 +18,10 @@ Contains one or more sequence generators for each sequence. Many sequence genera
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](General.SequenceGenerators.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company to which this SequenceGenerator applies. [Required] [Filter(multi eq)] |
-| [EnterpriseCompanyLocation](General.SequenceGenerators.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this SequenceGenerator applies, or null if it is for all enterprise company locations. [Filter(multi eq)] |
-| [ResponsiblePerson](General.SequenceGenerators.md#responsibleperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | If specified then the generator is designated for use only in documents with that Responsible_Person_Id. [Filter(multi eq)] |
-| [Sequence](General.SequenceGenerators.md#sequence) | [General.Sequences](General.Sequences.md) | The [Sequence](General.SequenceGenerators.md#sequence) to which this SequenceGenerator belongs. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](General.SequenceGenerators.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company to which this SequenceGenerator applies. [Required] [Filter(multi eq)] |
+| [EnterpriseCompanyLocation](General.SequenceGenerators.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this SequenceGenerator applies, or null if it is for all enterprise company locations. [Filter(multi eq)] |
+| [ResponsiblePerson](General.SequenceGenerators.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | If specified then the generator is designated for use only in documents with that Responsible_Person_Id. [Filter(multi eq)] |
+| [Sequence](General.SequenceGenerators.md#sequence) | [Sequences](General.Sequences.md) | The [Sequence](General.SequenceGenerators.md#sequence) to which this SequenceGenerator belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -66,28 +66,28 @@ _Default Value_: **1**
 
 > The Enterprise Company to which this SequenceGenerator applies. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
 > The Enterprise Company Location to which this SequenceGenerator applies, or null if it is for all enterprise company locations. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
 
 > If specified then the generator is designated for use only in documents with that Responsible_Person_Id. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Sequence
 
 > The [Sequence](General.SequenceGenerators.md#sequence) to which this SequenceGenerator belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Sequences](General.Sequences.md)**  
+_Type_: **[Sequences](General.Sequences.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

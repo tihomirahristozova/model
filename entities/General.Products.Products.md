@@ -11,7 +11,7 @@ Products are the different items in the enterprise, which can be purchased, stor
 | ---- | ---- | --- |
 | [ABCClass](General.Products.Products.md#abcclass) | [ABCClass](General.Products.Products.md#abcclass) | Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. [Required] [Default("B ")] [Filter(eq)] 
 | [Active](General.Products.Products.md#active) | boolean | True if the product is active, false - not to list in combo boxes for choosing in new documents. [Required] [Default(true)] [Filter(eq)] 
-| [AllowVariableMeasurementRatios](General.Products.Products.md#allowvariablemeasurementratios) | boolean | Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. [Required] [Default(false)] [Filter(eq)] 
+| [AllowVariableMeasurement<br />Ratios](General.Products.Products.md#allowvariablemeasurementratios) | boolean | Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. [Required] [Default(false)] [Filter(eq)] 
 | [CatalogDescriptionHtml](General.Products.Products.md#catalogdescriptionhtml) | string (nullable) | Full HTML description of the product. Usually used for display on product catalogs, web pages, etc. 
 | [CostingMethod](General.Products.Products.md#costingmethod) | [CostingMethod](General.Products.Products.md#costingmethod) (nullable) | Specifies the costing method for the product. null means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost. 
 | [CreationTime](General.Products.Products.md#creationtime) | datetime (nullable) | Date and time when the Product was created. [Filter(ge;le)] [ReadOnly] 
@@ -29,7 +29,7 @@ Products are the different items in the enterprise, which can be purchased, stor
 | [MinimalSalesQuantityBase](General.Products.Products.md#minimalsalesquantitybase) | decimal (nullable) | Minimal base quantity of this product that has to be specified in any sale. 
 | [Name](General.Products.Products.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the item. [Required] [Filter(eq;like)] 
 | [PartNumber](General.Products.Products.md#partnumber) | string | Unique part number of the product. [Required] [Filter(multi eq;like)] [ORD] 
-| [PlanningDemandTimeFenceDays](General.Products.Products.md#planningdemandtimefencedays) | int32 (nullable) | Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days). 
+| [PlanningDemand<br />TimeFenceDays](General.Products.Products.md#planningdemandtimefencedays) | int32 (nullable) | Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days). 
 | [PlanningHorizonDays](General.Products.Products.md#planninghorizondays) | int32 (nullable) | Number of days in the future for which to plan the demand and supply (null = Default of 180 days). 
 | [PlanningTimeFenceDays](General.Products.Products.md#planningtimefencedays) | int32 (nullable) | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days). 
 | [ScrapRate](General.Products.Products.md#scraprate) | decimal | Default scrap rate for the recipe, when this product is used as ingredient. [Required] [Default(0)] 
@@ -47,35 +47,35 @@ Products are the different items in the enterprise, which can be purchased, stor
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseMeasurementCategory](General.Products.Products.md#basemeasurementcategory) | [General.MeasurementCategories](General.MeasurementCategories.md) | The base measurement category for quantities of this product. [Required] [Filter(multi eq)] |
-| [CargoType](General.Products.Products.md#cargotype) | [Logistics.Shipment.CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable) | Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. [Filter(multi eq)] |
-| [CostingCurrency](General.Products.Products.md#costingcurrency) | [General.Currencies](General.Currencies.md) (nullable) | Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. [Filter(multi eq)] |
-| [EnterpriseCompany](General.Products.Products.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)] |
-| [IntrastatCommodityCode](General.Products.Products.md#intrastatcommoditycode) | [Finance.Intrastat.CommodityCodes](Finance.Intrastat.CommodityCodes.md) (nullable) | Product code from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)] |
-| [IntrastatSupplementaryUnit](General.Products.Products.md#intrastatsupplementaryunit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)] |
-| [MeasurementUnit](General.Products.Products.md#measurementunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | Default measurement unit, when creating new documents with this product. [Required] [Filter(multi eq)] |
-| [OriginCountry](General.Products.Products.md#origincountry) | [General.Geography.Countries](General.Geography.Countries.md) (nullable) | Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. [Filter(multi eq)] |
-| [ProductGroup](General.Products.Products.md#productgroup) | [General.Products.ProductGroups](General.Products.ProductGroups.md) | The product group, under which the product is categorized. [Required] [Filter(multi eq)] |
-| [ProductType](General.Products.Products.md#producttype) | [General.Products.ProductTypes](General.Products.ProductTypes.md) | The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. [Required] [Filter(multi eq)] |
-| [PurchaseMeasurementUnit](General.Products.Products.md#purchasemeasurementunit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | Default measurement unit to use, when creating new purchase documents with this product. [Filter(multi eq)] |
-| [ValuationGroup](General.Products.Products.md#valuationgroup) | [Logistics.Inventory.ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable) | Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. [Filter(multi eq)] |
+| [BaseMeasurementCategory](General.Products.Products.md#basemeasurementcategory) | [MeasurementCategories](General.MeasurementCategories.md) | The base measurement category for quantities of this product. [Required] [Filter(multi eq)] |
+| [CargoType](General.Products.Products.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable) | Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. [Filter(multi eq)] |
+| [CostingCurrency](General.Products.Products.md#costingcurrency) | [Currencies](General.Currencies.md) (nullable) | Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. [Filter(multi eq)] |
+| [EnterpriseCompany](General.Products.Products.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)] |
+| [IntrastatCommodityCode](General.Products.Products.md#intrastatcommoditycode) | [CommodityCodes](Finance.Intrastat.CommodityCodes.md) (nullable) | Product code from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)] |
+| [IntrastatSupplementaryUnit](General.Products.Products.md#intrastatsupplementaryunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)] |
+| [MeasurementUnit](General.Products.Products.md#measurementunit) | [MeasurementUnits](General.MeasurementUnits.md) | Default measurement unit, when creating new documents with this product. [Required] [Filter(multi eq)] |
+| [OriginCountry](General.Products.Products.md#origincountry) | [Countries](General.Geography.Countries.md) (nullable) | Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. [Filter(multi eq)] |
+| [ProductGroup](General.Products.Products.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The product group, under which the product is categorized. [Required] [Filter(multi eq)] |
+| [ProductType](General.Products.Products.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. [Required] [Filter(multi eq)] |
+| [PurchaseMeasurementUnit](General.Products.Products.md#purchasemeasurementunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | Default measurement unit to use, when creating new purchase documents with this product. [Filter(multi eq)] |
+| [ValuationGroup](General.Products.Products.md#valuationgroup) | [ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable) | Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Codes | [General.Products.ProductCodes](General.Products.ProductCodes.md) | List of [ProductCode](General.Products.ProductCodes.md) child objects, based on the [General.Products.ProductCode.Product](General.Products.ProductCodes.md#product) back reference 
-| DefaultStoreBins | [Logistics.Inventory.ProductDefaultStoreBins](Logistics.Inventory.ProductDefaultStoreBins.md) | List of [ProductDefaultStoreBin](Logistics.Inventory.ProductDefaultStoreBins.md) child objects, based on the [Logistics.Inventory.ProductDefaultStoreBin.Product](Logistics.Inventory.ProductDefaultStoreBins.md#product) back reference 
-| Dimensions | [General.Products.ProductDimensions](General.Products.ProductDimensions.md) | List of [ProductDimension](General.Products.ProductDimensions.md) child objects, based on the [General.Products.ProductDimension.Product](General.Products.ProductDimensions.md#product) back reference 
-| DistributionChannels | [Crm.Marketing.ProductDistributionChannels](Crm.Marketing.ProductDistributionChannels.md) | List of [ProductDistributionChannel](Crm.Marketing.ProductDistributionChannels.md) child objects, based on the [Crm.Marketing.ProductDistributionChannel.Product](Crm.Marketing.ProductDistributionChannels.md#product) back reference 
-| DocumentAmounts | [General.Products.ProductDocumentAmounts](General.Products.ProductDocumentAmounts.md) | List of [ProductDocumentAmount](General.Products.ProductDocumentAmounts.md) child objects, based on the [General.Products.ProductDocumentAmount.Product](General.Products.ProductDocumentAmounts.md#product) back reference 
-| LineDiscounts | [Crm.LineDiscounts](Crm.LineDiscounts.md) | List of [LineDiscount](Crm.LineDiscounts.md) child objects, based on the [Crm.LineDiscount.Product](Crm.LineDiscounts.md#product) back reference 
-| Lots | [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md) | List of [Lot](Logistics.Inventory.Lots.md) child objects, based on the [Logistics.Inventory.Lot.Product](Logistics.Inventory.Lots.md#product) back reference 
-| Pictures | [General.Products.ProductPictures](General.Products.ProductPictures.md) | List of [ProductPicture](General.Products.ProductPictures.md) child objects, based on the [General.Products.ProductPicture.Product](General.Products.ProductPictures.md#product) back reference 
-| Prices | [Crm.ProductPrices](Crm.ProductPrices.md) | List of [ProductPrice](Crm.ProductPrices.md) child objects, based on the [Crm.ProductPrice.Product](Crm.ProductPrices.md#product) back reference 
-| PurchaseProductPrices | [Logistics.Procurement.PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md) | List of [PurchaseProductPrice](Logistics.Procurement.PurchaseProductPrices.md) child objects, based on the [Logistics.Procurement.PurchaseProductPrice.Product](Logistics.Procurement.PurchaseProductPrices.md#product) back reference 
-| SerialNumbers | [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md) | List of [SerialNumber](Logistics.Inventory.SerialNumbers.md) child objects, based on the [Logistics.Inventory.SerialNumber.Product](Logistics.Inventory.SerialNumbers.md#product) back reference 
-| Variants | [General.ProductVariants](General.ProductVariants.md) | List of [ProductVariant](General.ProductVariants.md) child objects, based on the [General.ProductVariant.Product](General.ProductVariants.md#product) back reference 
+| Codes | [ProductCodes](General.Products.ProductCodes.md) | List of [ProductCode](General.Products.ProductCodes.md) child objects, based on the [General.Products.ProductCode.Product](General.Products.ProductCodes.md#product) back reference 
+| DefaultStoreBins | [ProductDefaultStoreBins](Logistics.Inventory.ProductDefaultStoreBins.md) | List of [ProductDefaultStoreBin](Logistics.Inventory.ProductDefaultStoreBins.md) child objects, based on the [Logistics.Inventory.ProductDefaultStoreBin.Product](Logistics.Inventory.ProductDefaultStoreBins.md#product) back reference 
+| Dimensions | [ProductDimensions](General.Products.ProductDimensions.md) | List of [ProductDimension](General.Products.ProductDimensions.md) child objects, based on the [General.Products.ProductDimension.Product](General.Products.ProductDimensions.md#product) back reference 
+| DistributionChannels | [ProductDistributionChannels](Crm.Marketing.ProductDistributionChannels.md) | List of [ProductDistribution<br />Channel](Crm.Marketing.ProductDistribution<br />Channels.md) child objects, based on the [Crm.Marketing.ProductDistributionChannel.Product](Crm.Marketing.ProductDistribution<br />Channels.md#product) back  
+| DocumentAmounts | [ProductDocumentAmounts](General.Products.ProductDocumentAmounts.md) | List of [ProductDocumentAmount](General.Products.ProductDocumentAmounts.md) child objects, based on the [General.Products.ProductDocumentAmount.Product](General.Products.ProductDocumentAmounts.md#product) back reference 
+| LineDiscounts | [LineDiscounts](Crm.LineDiscounts.md) | List of [LineDiscount](Crm.LineDiscounts.md) child objects, based on the [Crm.LineDiscount.Product](Crm.LineDiscounts.md#product) back reference 
+| Lots | [Lots](Logistics.Inventory.Lots.md) | List of [Lot](Logistics.Inventory.Lots.md) child objects, based on the [Logistics.Inventory.Lot.Product](Logistics.Inventory.Lots.md#product) back reference 
+| Pictures | [ProductPictures](General.Products.ProductPictures.md) | List of [ProductPicture](General.Products.ProductPictures.md) child objects, based on the [General.Products.ProductPicture.Product](General.Products.ProductPictures.md#product) back reference 
+| Prices | [ProductPrices](Crm.ProductPrices.md) | List of [ProductPrice](Crm.ProductPrices.md) child objects, based on the [Crm.ProductPrice.Product](Crm.ProductPrices.md#product) back reference 
+| PurchaseProductPrices | [PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md) | List of [PurchaseProductPrice](Logistics.Procurement.PurchaseProductPrices.md) child objects, based on the [Logistics.Procurement.PurchaseProductPrice.Product](Logistics.Procurement.PurchaseProductPrices.md#product) back reference 
+| SerialNumbers | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) | List of [SerialNumber](Logistics.Inventory.SerialNumbers.md) child objects, based on the [Logistics.Inventory.SerialNumber.Product](Logistics.Inventory.SerialNumbers.md#product) back reference 
+| Variants | [ProductVariants](General.ProductVariants.md) | List of [ProductVariant](General.ProductVariants.md) child objects, based on the [General.ProductVariant.Product](General.ProductVariants.md#product) back reference 
 
 
 ## Attribute Details
@@ -134,9 +134,9 @@ _Allowed Values (General.Products.ProductsRepository.CostingMethod Enum Members)
 
 | Value | Description |
 | ---- | --- |
-| AverageCostForTheWholeProduct | AverageCostForTheWholeProduct value. Stored as 'AVG'. <br /> _Database Value:_ 'AVG' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'AverageCostForTheWholeProduct' |
+| AverageCostFor<br />TheWholeProduct | AverageCostFor<br />TheWholeProduct value. Stored as 'AVG'. <br /> _Database Value:_ 'AVG' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'AverageCostFor<br />TheWholeProduct' |
 | SeparateCostForEachLot | SeparateCostForEachLot value. Stored as 'EXP'. <br /> _Database Value:_ 'EXP' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'SeparateCostForEachLot' |
-| AveragePartitionedByReservedForDocument | AveragePartitionedByReservedForDocument value. Stored as 'BLD'. <br /> _Database Value:_ 'BLD' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'AveragePartitionedByReservedForDocument' |
+| AveragePartitioned<br />ByReservedForDocument | AveragePartitioned<br />ByReservedForDocument value. Stored as 'BLD'. <br /> _Database Value:_ 'BLD' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'AveragePartitioned<br />ByReservedForDocument' |
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
@@ -406,7 +406,7 @@ _Default Value_: **Allowed**
 
 > The base measurement category for quantities of this product. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementCategories](General.MeasurementCategories.md)**  
+_Type_: **[MeasurementCategories](General.MeasurementCategories.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -415,21 +415,21 @@ _Front-End Recalc Expressions:_
 
 > Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. [Filter(multi eq)]
 
-_Type_: **[Logistics.Shipment.CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable)**  
+_Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostingCurrency
 
 > Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
+_Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -438,21 +438,21 @@ _Front-End Recalc Expressions:_
 
 > Product code from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)]
 
-_Type_: **[Finance.Intrastat.CommodityCodes](Finance.Intrastat.CommodityCodes.md) (nullable)**  
+_Type_: **[CommodityCodes](Finance.Intrastat.CommodityCodes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatSupplementaryUnit
 
 > Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MeasurementUnit
 
 > Default measurement unit, when creating new documents with this product. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -461,37 +461,37 @@ _Front-End Recalc Expressions:_
 
 > Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. [Filter(multi eq)]
 
-_Type_: **[General.Geography.Countries](General.Geography.Countries.md) (nullable)**  
+_Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup
 
 > The product group, under which the product is categorized. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.ProductGroups](General.Products.ProductGroups.md)**  
+_Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductType
 
 > The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.ProductTypes](General.Products.ProductTypes.md)**  
+_Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.ProductGroup.GetDefaultProductTypeForNewProduct()`
+`obj.ProductGroup.GetDefaultProductTypeForNewProduct( )`
 ### PurchaseMeasurementUnit
 
 > Default measurement unit to use, when creating new purchase documents with this product. [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationGroup
 
 > Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable)**  
+_Type_: **[ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

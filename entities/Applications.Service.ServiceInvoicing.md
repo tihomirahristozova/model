@@ -17,8 +17,8 @@ Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](Applications.Service.ServiceInvoicing.md#product) | [General.Products.Products](General.Products.Products.md) | The product that should be invoiced. [Required] [Filter(multi eq)] |
-| [Service](Applications.Service.ServiceInvoicing.md#service) | [Applications.Service.Services](Applications.Service.Services.md) | The service for which the invoicing instructions are. [Required] [Filter(multi eq)] [Owner] |
+| [Product](Applications.Service.ServiceInvoicing.md#product) | [Products](General.Products.Products.md) | The product that should be invoiced. [Required] [Filter(multi eq)] |
+| [Service](Applications.Service.ServiceInvoicing.md#service) | [Services](Applications.Service.Services.md) | The service for which the invoicing instructions are. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -54,14 +54,14 @@ _Default Value_: **Constant**
 
 > The product that should be invoiced. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Service
 
 > The service for which the invoicing instructions are. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Service.Services](Applications.Service.Services.md)**  
+_Type_: **[Services](Applications.Service.Services.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

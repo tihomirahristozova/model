@@ -17,8 +17,8 @@ Hierarchical structure of the company departments. The departments and divisions
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Company](General.Contacts.CompanyDepartments.md#company) | [General.Contacts.Companies](General.Contacts.Companies.md) | The [Company](General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Parent](General.Contacts.CompanyDepartments.md#parent) | [General.Contacts.CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The parent department. null if this is root department in the company. [Filter(multi eq)] |
+| [Company](General.Contacts.CompanyDepartments.md#company) | [Companies](General.Contacts.Companies.md) | The [Company](General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Parent](General.Contacts.CompanyDepartments.md#parent) | [CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The parent department. null if this is root department in the company. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -52,14 +52,14 @@ _Supports Order By_: **False**
 
 > The [Company](General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Contacts.Companies](General.Contacts.Companies.md)**  
+_Type_: **[Companies](General.Contacts.Companies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
 > The parent department. null if this is root department in the company. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable)**  
+_Type_: **[CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

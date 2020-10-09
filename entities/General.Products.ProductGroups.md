@@ -30,18 +30,18 @@ Hierarchical categorization of the products. Entity: Gen_Product_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultMeasurementUnit](General.Products.ProductGroups.md#defaultmeasurementunit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | When not null, specifies default measurement unit, which should be assigned to new products in the group. [Filter(multi eq)] |
-| [DefaultProductType](General.Products.ProductGroups.md#defaultproducttype) | [General.Products.ProductTypes](General.Products.ProductTypes.md) (nullable) | When not null, specifies default product type, which should be assigned to new products in the group. [Filter(multi eq)] |
-| [EnterpriseCompany](General.Products.ProductGroups.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)] |
-| [PricingModel](General.Products.ProductGroups.md#pricingmodel) | [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md) (nullable) | When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. [Filter(multi eq)] |
+| [DefaultMeasurementUnit](General.Products.ProductGroups.md#defaultmeasurementunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | When not null, specifies default measurement unit, which should be assigned to new products in the group. [Filter(multi eq)] |
+| [DefaultProductType](General.Products.ProductGroups.md#defaultproducttype) | [ProductTypes](General.Products.ProductTypes.md) (nullable) | When not null, specifies default product type, which should be assigned to new products in the group. [Filter(multi eq)] |
+| [EnterpriseCompany](General.Products.ProductGroups.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)] |
+| [PricingModel](General.Products.ProductGroups.md#pricingmodel) | [PricingModels](Crm.Pricing.PricingModels.md) (nullable) | When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| PrincipalRecipes | [Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | List of [PrincipalRecipe](Production.Technologies.PrincipalRecipes.md) child objects, based on the [Production.Technologies.PrincipalRecipe.ProductGroup](Production.Technologies.PrincipalRecipes.md#productgroup) back reference 
-| RangeProperties | [General.Products.ProductGroupRangeProperties](General.Products.ProductGroupRangeProperties.md) | List of [ProductGroupRangeProperty](General.Products.ProductGroupRangeProperties.md) child objects, based on the [General.Products.ProductGroupRangeProperty.ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) back reference 
-| RequiredProperties | [General.Products.ProductGroupRequiredProperties](General.Products.ProductGroupRequiredProperties.md) | List of [ProductGroupRequiredProperty](General.Products.ProductGroupRequiredProperties.md) child objects, based on the [General.Products.ProductGroupRequiredProperty.ProductGroup](General.Products.ProductGroupRequiredProperties.md#productgroup) back reference 
+| PrincipalRecipes | [PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | List of [PrincipalRecipe](Production.Technologies.PrincipalRecipes.md) child objects, based on the [Production.Technologies.PrincipalRecipe.ProductGroup](Production.Technologies.PrincipalRecipes.md#productgroup) back reference 
+| RangeProperties | [ProductGroupRangeProperties](General.Products.ProductGroupRangeProperties.md) | List of [ProductGroupRange<br />Property](General.Products.ProductGroupRange<br />Properties.md) child objects, based on the [General.Products.ProductGroupRangeProperty.ProductGroup](General.Products.ProductGroupRange<br />Properties.md#productgroup) back  
+| RequiredProperties | [ProductGroupRequiredProperties](General.Products.ProductGroupRequiredProperties.md) | List of [ProductGroupRequired<br />Property](General.Products.ProductGroupRequired<br />Properties.md) child objects, based on the [General.Products.ProductGroupRequired<br />Property.ProductGroup](General.Products.ProductGroupRequired<br />Properties.md#productgroup) back  
 
 
 ## Attribute Details
@@ -202,28 +202,28 @@ _Supports Order By_: **False**
 
 > When not null, specifies default measurement unit, which should be assigned to new products in the group. [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultProductType
 
 > When not null, specifies default product type, which should be assigned to new products in the group. [Filter(multi eq)]
 
-_Type_: **[General.Products.ProductTypes](General.Products.ProductTypes.md) (nullable)**  
+_Type_: **[ProductTypes](General.Products.ProductTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PricingModel
 
 > When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. [Filter(multi eq)]
 
-_Type_: **[Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md) (nullable)**  
+_Type_: **[PricingModels](Crm.Pricing.PricingModels.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

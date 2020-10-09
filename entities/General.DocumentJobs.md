@@ -3,7 +3,7 @@ uid: General.DocumentJobs
 ---
 # General.DocumentJobs
 
-Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Introduced in version 20.1.100.0)
+Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Introduced in version 20.1)
 
 ## Attributes
 
@@ -22,8 +22,8 @@ Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Int
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](General.DocumentJobs.md#documenttype) | [General.DocumentTypes](General.DocumentTypes.md) | The type of the document, whose state will be changed. [Required] [Filter(multi eq)] |
-| [NewUserStatus](General.DocumentJobs.md#newuserstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type. [Filter(multi eq)] |
+| [DocumentType](General.DocumentJobs.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The type of the document, whose state will be changed. [Required] [Filter(multi eq)] |
+| [NewUserStatus](General.DocumentJobs.md#newuserstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -122,14 +122,14 @@ _Default Value_: **True**
 
 > The type of the document, whose state will be changed. [Required] [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypes](General.DocumentTypes.md)**  
+_Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### NewUserStatus
 
 > Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type. [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

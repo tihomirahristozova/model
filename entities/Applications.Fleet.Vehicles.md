@@ -9,9 +9,9 @@ Contains vehicle definitions. Entity: Fleet_Vehicles
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActiveFrom](Applications.Fleet.Vehicles.md#activefrom) | datetime (nullable) | The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. (Introduced in version 18.2.100.0) 
-| [ActiveTill](Applications.Fleet.Vehicles.md#activetill) | datetime (nullable) | The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. (Introduced in version 18.2.100.0) 
-| [AuthorityMaximumLadenMassKg](Applications.Fleet.Vehicles.md#authoritymaximumladenmasskg) | int32 (nullable) | Maximum permissible laden mass, as determined by the registration authority. 
+| [ActiveFrom](Applications.Fleet.Vehicles.md#activefrom) | datetime (nullable) | The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. (Introduced in version 18.2) 
+| [ActiveTill](Applications.Fleet.Vehicles.md#activetill) | datetime (nullable) | The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. (Introduced in version 18.2) 
+| [AuthorityMaximum<br />LadenMassKg](Applications.Fleet.Vehicles.md#authoritymaximumladenmasskg) | int32 (nullable) | Maximum permissible laden mass, as determined by the registration authority. 
 | [CrewCount](Applications.Fleet.Vehicles.md#crewcount) | int32 (nullable) | Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts. [Default(1)] [Filter(eq;ge;le)] 
 | [EngineIdentificationNumber](Applications.Fleet.Vehicles.md#engineidentificationnumber) | string (nullable) | Engine identification number. [Filter(eq;like)] 
 | [EnginePowerhp](Applications.Fleet.Vehicles.md#enginepowerhp) | int32 (nullable) | Engine output power in horse power. null means that the value is unknown or not applicable for this type of engine. [Filter(eq;ge;le)] 
@@ -20,7 +20,7 @@ Contains vehicle definitions. Entity: Fleet_Vehicles
 | [FuelCompsumption](Applications.Fleet.Vehicles.md#fuelcompsumption) | decimal (nullable) | Average fuel consumption in the fuel measurement unit for 1 operational unit. 
 | [FuelType](Applications.Fleet.Vehicles.md#fueltype) | string (nullable) | Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc. [Filter(eq;like)] 
 | [Id](Applications.Fleet.Vehicles.md#id) | guid |  
-| [IsActive](Applications.Fleet.Vehicles.md#isactive) | boolean | True if the vehicle is still owned and managed by the enterprise. [Required] [Default(true)] (Introduced in version 18.2.100.0) 
+| [IsActive](Applications.Fleet.Vehicles.md#isactive) | boolean | True if the vehicle is still owned and managed by the enterprise. [Required] [Default(true)] (Introduced in version 18.2) 
 | [IssuingAuthority](Applications.Fleet.Vehicles.md#issuingauthority) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The country or state issuing the registration number. null (not recommended) means that the authority is unknown or not applicable. [Filter(eq;like)] 
 | [Make](Applications.Fleet.Vehicles.md#make) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The name of the manufacturer of the vehicle. null means that the value is unknown. [Filter(eq;like)] 
 | [ManufactureYear](Applications.Fleet.Vehicles.md#manufactureyear) | int32 (nullable) | The year when the vehicle was manufactured or first registered - whichever is known. null means that the value is unknown. [Filter(eq;ge;le)] 
@@ -30,9 +30,9 @@ Contains vehicle definitions. Entity: Fleet_Vehicles
 | [PrimaryColor](Applications.Fleet.Vehicles.md#primarycolor) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The primary color of the vehicle. null means that the value is unknown or not applicable. [Filter(eq;like)] 
 | [SeatingPlacesCount](Applications.Fleet.Vehicles.md#seatingplacescount) | int32 (nullable) | Number of seating places, excluding driver. [Filter(eq;ge;le)] 
 | [StandingPlacesCount](Applications.Fleet.Vehicles.md#standingplacescount) | int32 (nullable) | Number of standing places, if applicable. 
-| [TechnicalMaximumLadenMassKg](Applications.Fleet.Vehicles.md#technicalmaximumladenmasskg) | int32 (nullable) | Maximum technically permissible laden mass in kg. 
+| [TechnicalMaximum<br />LadenMassKg](Applications.Fleet.Vehicles.md#technicalmaximumladenmasskg) | int32 (nullable) | Maximum technically permissible laden mass in kg. 
 | [TrainsetMaximumLadenMassKg](Applications.Fleet.Vehicles.md#trainsetmaximumladenmasskg) | int32 (nullable) | Maximum permissible laden mass of a whole trainset, including the vehicle. 
-| [VehicleIdentificationNumber](Applications.Fleet.Vehicles.md#vehicleidentificationnumber) | string (nullable) | VIN, aka Chassis number. [Filter(eq;like)] 
+| [VehicleIdentification<br />Number](Applications.Fleet.Vehicles.md#vehicleidentificationnumber) | string (nullable) | VIN, aka Chassis number. [Filter(eq;like)] 
 | [VehicleMassKg](Applications.Fleet.Vehicles.md#vehiclemasskg) | int32 (nullable) | Vehicle own mass in kg. 
 | [VehicleRegistrationNumber](Applications.Fleet.Vehicles.md#vehicleregistrationnumber) | string | The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority. [Required] [Filter(eq;like)] 
 | [VehicleType](Applications.Fleet.Vehicles.md#vehicletype) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | Type of vehicle - e.g. automobile, bus, etc. null means the value is unknown. [Filter(eq;like)] 
@@ -41,24 +41,24 @@ Contains vehicle definitions. Entity: Fleet_Vehicles
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FuelMeasurementUnit](Applications.Fleet.Vehicles.md#fuelmeasurementunit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. null means unknown. [Filter(multi eq)] |
-| [MaintenanceProfile](Applications.Fleet.Vehicles.md#maintenanceprofile) | [Applications.Fleet.MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md) (nullable) | When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans. [Filter(multi eq)] |
-| [OperationalMeasurementUnit](Applications.Fleet.Vehicles.md#operationalmeasurementunit) | [General.MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. null means that the unit is unknown. [Filter(multi eq)] |
-| [OwnerParty](Applications.Fleet.Vehicles.md#ownerparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Vehicle owner. [Filter(multi eq)] |
+| [FuelMeasurementUnit](Applications.Fleet.Vehicles.md#fuelmeasurementunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. null means unknown. [Filter(multi eq)] |
+| [MaintenanceProfile](Applications.Fleet.Vehicles.md#maintenanceprofile) | [MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md) (nullable) | When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans. [Filter(multi eq)] |
+| [OperationalMeasurementUnit](Applications.Fleet.Vehicles.md#operationalmeasurementunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. null means that the unit is unknown. [Filter(multi eq)] |
+| [OwnerParty](Applications.Fleet.Vehicles.md#ownerparty) | [Parties](General.Contacts.Parties.md) (nullable) | Vehicle owner. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Equipment | [Applications.Fleet.VehicleEquipment](Applications.Fleet.VehicleEquipment.md) | List of [VehicleEquipment](Applications.Fleet.VehicleEquipment.md) child objects, based on the [Applications.Fleet.VehicleEquipment.Vehicle](Applications.Fleet.VehicleEquipment.md#vehicle) back reference 
-| TransportationVehicles | [Logistics.Shipment.TransportationVehicles](Logistics.Shipment.TransportationVehicles.md) | List of [TransportationVehicle](Logistics.Shipment.TransportationVehicles.md) child objects, based on the [Logistics.Shipment.TransportationVehicle.Vehicle](Logistics.Shipment.TransportationVehicles.md#vehicle) back reference 
+| Equipment | [VehicleEquipment](Applications.Fleet.VehicleEquipment.md) | List of [VehicleEquipment](Applications.Fleet.VehicleEquipment.md) child objects, based on the [Applications.Fleet.VehicleEquipment.Vehicle](Applications.Fleet.VehicleEquipment.md#vehicle) back reference 
+| TransportationVehicles | [TransportationVehicles](Logistics.Shipment.TransportationVehicles.md) | List of [TransportationVehicle](Logistics.Shipment.TransportationVehicles.md) child objects, based on the [Logistics.Shipment.TransportationVehicle.Vehicle](Logistics.Shipment.TransportationVehicles.md#vehicle) back reference 
 
 
 ## Attribute Details
 
 ### ActiveFrom
 
-> The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. (Introduced in version 18.2.100.0)
+> The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. (Introduced in version 18.2)
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -66,7 +66,7 @@ _Supports Order By_: **False**
 
 ### ActiveTill
 
-> The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. (Introduced in version 18.2.100.0)
+> The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. (Introduced in version 18.2)
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -145,7 +145,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-> True if the vehicle is still owned and managed by the enterprise. [Required] [Default(true)] (Introduced in version 18.2.100.0)
+> True if the vehicle is still owned and managed by the enterprise. [Required] [Default(true)] (Introduced in version 18.2)
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -279,28 +279,28 @@ _Supports Order By_: **False**
 
 > The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. null means unknown. [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaintenanceProfile
 
 > When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans. [Filter(multi eq)]
 
-_Type_: **[Applications.Fleet.MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md) (nullable)**  
+_Type_: **[MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OperationalMeasurementUnit
 
 > The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. null means that the unit is unknown. [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OwnerParty
 
 > Vehicle owner. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

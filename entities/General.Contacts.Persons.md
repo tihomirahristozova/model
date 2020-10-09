@@ -13,7 +13,7 @@ Personal records. Requires related party record. Entity: Cm_Persons
 | [City](General.Contacts.Persons.md#city) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | City from the legal registration address for the person. [Filter(like)] 
 | [CreationTime](General.Contacts.Persons.md#creationtime) | datetime (nullable) | Date and time when the Person was created. [Filter(ge;le)] [ReadOnly] 
 | [CreationUser](General.Contacts.Persons.md#creationuser) | string (nullable) | Login name of the user, who created the Person. [Filter(like)] [ReadOnly] 
-| [DefaultProductCodingSystemId](General.Contacts.Persons.md#defaultproductcodingsystemid) | guid (nullable) |  
+| [DefaultProduct<br />CodingSystemId](General.Contacts.Persons.md#defaultproductcodingsystemid) | guid (nullable) |  
 | [FirstName](General.Contacts.Persons.md#firstname) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | First name of the person. [Filter(eq;like)] 
 | [Gender](General.Contacts.Persons.md#gender) | [Gender](General.Contacts.Persons.md#gender) (nullable) | Person gender. M=Male;F=Female;null=not known/not provided. [Filter(eq)] 
 | [GLN](General.Contacts.Persons.md#gln) | string (nullable) | Global Location Number used by EDI systems 
@@ -43,27 +43,27 @@ Personal records. Requires related party record. Entity: Cm_Persons
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdministrativeRegion](General.Contacts.Persons.md#administrativeregion) | [General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. |
-| [Area](General.Contacts.Persons.md#area) | [General.Geography.Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. |
-| [DefaultProductCodingSystem](General.Contacts.Persons.md#defaultproductcodingsystem) | [General.Products.CodingSystems](General.Products.CodingSystems.md) (nullable) | When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. |
-| [Nationality](General.Contacts.Persons.md#nationality) | [General.Geography.Countries](General.Geography.Countries.md) (nullable) | Person's nationality. null means the default (same as enterprise) nationality. [Filter(multi eq)] |
-| [ParentParty](General.Contacts.Persons.md#parentparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to |
+| [AdministrativeRegion](General.Contacts.Persons.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. |
+| [Area](General.Contacts.Persons.md#area) | [Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. |
+| [DefaultProductCodingSystem](General.Contacts.Persons.md#defaultproductcodingsystem) | [CodingSystems](General.Products.CodingSystems.md) (nullable) | When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. |
+| [Nationality](General.Contacts.Persons.md#nationality) | [Countries](General.Geography.Countries.md) (nullable) | Person's nationality. null means the default (same as enterprise) nationality. [Filter(multi eq)] |
+| [ParentParty](General.Contacts.Persons.md#parentparty) | [Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| ActivityTimeIntervals | [General.Contacts.ActivityTimeIntervals](General.Contacts.ActivityTimeIntervals.md) | List of [ActivityTimeInterval](General.Contacts.ActivityTimeIntervals.md) child objects, based on the [General.Contacts.ActivityTimeInterval.Party](General.Contacts.ActivityTimeIntervals.md#party) back reference 
-| BankAccounts | [General.Contacts.PartyBankAccounts](General.Contacts.PartyBankAccounts.md) | List of [PartyBankAccount](General.Contacts.PartyBankAccounts.md) child objects, based on the [General.Contacts.PartyBankAccount.Party](General.Contacts.PartyBankAccounts.md#party) back reference 
-| CompanyEmployees | [General.Contacts.CompanyEmployees](General.Contacts.CompanyEmployees.md) | List of [CompanyEmployee](General.Contacts.CompanyEmployees.md) child objects, based on the [General.Contacts.CompanyEmployee.Person](General.Contacts.CompanyEmployees.md#person) back reference 
-| ContactMechanisms | [General.Contacts.PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | List of [PartyContactMechanism](General.Contacts.PartyContactMechanisms.md) child objects, based on the [General.Contacts.PartyContactMechanism.Party](General.Contacts.PartyContactMechanisms.md#party) back reference 
-| Customers | [Crm.Customers](Crm.Customers.md) | List of [Customer](Crm.Customers.md) child objects, based on the [Crm.Customer.Party](Crm.Customers.md#party) back reference 
-| Dealers | [Crm.Dealers](Crm.Dealers.md) | List of [Dealer](Crm.Dealers.md) child objects, based on the [Crm.Dealer.Party](Crm.Dealers.md#party) back reference 
-| Distributors | [Crm.Distributors](Crm.Distributors.md) | List of [Distributor](Crm.Distributors.md) child objects, based on the [Crm.Distributor.Party](Crm.Distributors.md#party) back reference 
-| Pictures | [General.Contacts.PartyPictures](General.Contacts.PartyPictures.md) | List of [PartyPicture](General.Contacts.PartyPictures.md) child objects, based on the [General.Contacts.PartyPicture.Party](General.Contacts.PartyPictures.md#party) back reference 
-| SalesPersons | [Crm.SalesPersons](Crm.SalesPersons.md) | List of [SalesPerson](Crm.SalesPersons.md) child objects, based on the [Crm.SalesPerson.Person](Crm.SalesPersons.md#person) back reference 
-| Suppliers | [Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md) | List of [Supplier](Logistics.Procurement.Suppliers.md) child objects, based on the [Logistics.Procurement.Supplier.Party](Logistics.Procurement.Suppliers.md#party) back reference 
-| TargetGroupMembers | [Crm.Marketing.TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.Party](Crm.Marketing.TargetGroupMembers.md#party) back reference 
+| ActivityTimeIntervals | [ActivityTimeIntervals](General.Contacts.ActivityTimeIntervals.md) | List of [ActivityTimeInterval](General.Contacts.ActivityTimeIntervals.md) child objects, based on the [General.Contacts.ActivityTimeInterval.Party](General.Contacts.ActivityTimeIntervals.md#party) back reference 
+| BankAccounts | [PartyBankAccounts](General.Contacts.PartyBankAccounts.md) | List of [PartyBankAccount](General.Contacts.PartyBankAccounts.md) child objects, based on the [General.Contacts.PartyBankAccount.Party](General.Contacts.PartyBankAccounts.md#party) back reference 
+| CompanyEmployees | [CompanyEmployees](General.Contacts.CompanyEmployees.md) | List of [CompanyEmployee](General.Contacts.CompanyEmployees.md) child objects, based on the [General.Contacts.CompanyEmployee.Person](General.Contacts.CompanyEmployees.md#person) back reference 
+| ContactMechanisms | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | List of [PartyContactMechanism](General.Contacts.PartyContactMechanisms.md) child objects, based on the [General.Contacts.PartyContactMechanism.Party](General.Contacts.PartyContactMechanisms.md#party) back reference 
+| Customers | [Customers](Crm.Customers.md) | List of [Customer](Crm.Customers.md) child objects, based on the [Crm.Customer.Party](Crm.Customers.md#party) back reference 
+| Dealers | [Dealers](Crm.Dealers.md) | List of [Dealer](Crm.Dealers.md) child objects, based on the [Crm.Dealer.Party](Crm.Dealers.md#party) back reference 
+| Distributors | [Distributors](Crm.Distributors.md) | List of [Distributor](Crm.Distributors.md) child objects, based on the [Crm.Distributor.Party](Crm.Distributors.md#party) back reference 
+| Pictures | [PartyPictures](General.Contacts.PartyPictures.md) | List of [PartyPicture](General.Contacts.PartyPictures.md) child objects, based on the [General.Contacts.PartyPicture.Party](General.Contacts.PartyPictures.md#party) back reference 
+| SalesPersons | [SalesPersons](Crm.SalesPersons.md) | List of [SalesPerson](Crm.SalesPersons.md) child objects, based on the [Crm.SalesPerson.Person](Crm.SalesPersons.md#person) back reference 
+| Suppliers | [Suppliers](Logistics.Procurement.Suppliers.md) | List of [Supplier](Logistics.Procurement.Suppliers.md) child objects, based on the [Logistics.Procurement.Supplier.Party](Logistics.Procurement.Suppliers.md#party) back reference 
+| TargetGroupMembers | [TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.Party](Crm.Marketing.TargetGroupMembers.md#party) back reference 
 
 
 ## Attribute Details
@@ -319,35 +319,35 @@ _Supports Order By_: **False**
 
 > The administrative region in which the party is situated.
 
-_Type_: **[General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
+_Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Area
 
 > The area in which the party is situated.
 
-_Type_: **[General.Geography.Areas](General.Geography.Areas.md) (nullable)**  
+_Type_: **[Areas](General.Geography.Areas.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### DefaultProductCodingSystem
 
 > When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
 
-_Type_: **[General.Products.CodingSystems](General.Products.CodingSystems.md) (nullable)**  
+_Type_: **[CodingSystems](General.Products.CodingSystems.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Nationality
 
 > Person's nationality. null means the default (same as enterprise) nationality. [Filter(multi eq)]
 
-_Type_: **[General.Geography.Countries](General.Geography.Countries.md) (nullable)**  
+_Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentParty
 
 > Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 

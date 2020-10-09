@@ -3,7 +3,7 @@ uid: Applications.AssetManagement.ManagedAssetTypes
 ---
 # Applications.AssetManagement.ManagedAssetTypes
 
-Types of managed assets. Used to categorize the assets and the tracked parameters for each type. Entity: Eam_Managed_Asset_Types (Introduced in version 19.1.100.0)
+Types of managed assets. Used to categorize the assets and the tracked parameters for each type. Entity: Eam_Managed_Asset_Types (Introduced in version 19.1)
 
 ## Attributes
 
@@ -19,8 +19,8 @@ Types of managed assets. Used to categorize the assets and the tracked parameter
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| MaintenanceTypes | [Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md) | List of [ManagedAssetTypeMaintenanceType](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md) child objects, based on the [Applications.AssetManagement.ManagedAssetTypeMaintenanceType.ManagedAssetType](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#managedassettype) back reference 
-| TrackedParameters | [Applications.AssetManagement.ManagedAssetTypeTrackedParameters](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md) | List of [ManagedAssetTypeTrackedParameter](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md) child objects, based on the [Applications.AssetManagement.ManagedAssetTypeTrackedParameter.ManagedAssetType](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#managedassettype) back reference 
+| MaintenanceTypes | [ManagedAssetTypeMaintenanceTypes](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md) | List of [ManagedAssetType<br />MaintenanceType](Applications.AssetManagement.ManagedAssetType<br />MaintenanceTypes.md) child objects, based on the [Applications.AssetManagement.ManagedAssetType<br />MaintenanceType.ManagedAssetType](Applications.AssetManagement.ManagedAssetType<br />MaintenanceTypes.md#managedassettype) back  
+| TrackedParameters | [ManagedAssetTypeTrackedParameters](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md) | List of [ManagedAssetType<br />TrackedParameter](Applications.AssetManagement.ManagedAssetType<br />TrackedParameters.md) child objects, based on the [Applications.AssetManagement.ManagedAssetType<br />TrackedParameter.ManagedAssetType](Applications.AssetManagement.ManagedAssetType<br />TrackedParameters.md#managedassettype) back  
 
 
 ## Attribute Details

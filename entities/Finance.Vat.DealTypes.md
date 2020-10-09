@@ -18,7 +18,7 @@ Contains deal types supported by the system as well as user-defined types. Entit
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Country](Finance.Vat.DealTypes.md#country) | [General.Geography.Countries](General.Geography.Countries.md) | The country for which this deal type applies. The country is matched against the country of the enterprise company. [Required] [Filter(multi eq)] |
+| [Country](Finance.Vat.DealTypes.md#country) | [Countries](General.Geography.Countries.md) | The country for which this deal type applies. The country is matched against the country of the enterprise company. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 
 > The country for which this deal type applies. The country is matched against the country of the enterprise company. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Geography.Countries](General.Geography.Countries.md)**  
+_Type_: **[Countries](General.Geography.Countries.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

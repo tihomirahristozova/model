@@ -16,7 +16,7 @@ Specifies additional options for document routes, generating Rental Transactions
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Applications.Rental.TransactionTemplates.md#route) | [Systems.Workflow.Routes](Systems.Workflow.Routes.md) | The route for which the transaction template is defined. [Required] [Filter(multi eq)] |
+| [Route](Applications.Rental.TransactionTemplates.md#route) | [Routes](Systems.Workflow.Routes.md) | The route for which the transaction template is defined. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -52,7 +52,7 @@ _Supports Order By_: **False**
 
 > The route for which the transaction template is defined. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Workflow.Routes](Systems.Workflow.Routes.md)**  
+_Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

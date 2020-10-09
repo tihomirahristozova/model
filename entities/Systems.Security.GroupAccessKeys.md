@@ -28,8 +28,8 @@ Specifies the access keys for which the user groups have permissions. The exista
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Security.GroupAccessKeys.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) | This access key, to which we are granting access permissions. [Required] [Filter(multi eq)] |
-| [Group](Systems.Security.GroupAccessKeys.md#group) | [Systems.Security.Groups](Systems.Security.Groups.md) | The group, which is granted with access permission. [Required] [Filter(multi eq)] [Owner] |
+| [AccessKey](Systems.Security.GroupAccessKeys.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | This access key, to which we are granting access permissions. [Required] [Filter(multi eq)] |
+| [Group](Systems.Security.GroupAccessKeys.md#group) | [Groups](Systems.Security.Groups.md) | The group, which is granted with access permission. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -162,14 +162,14 @@ _Default Value_: **False**
 
 > This access key, to which we are granting access permissions. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Group
 
 > The group, which is granted with access permission. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Security.Groups](Systems.Security.Groups.md)**  
+_Type_: **[Groups](Systems.Security.Groups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

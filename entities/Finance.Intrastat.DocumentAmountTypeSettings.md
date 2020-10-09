@@ -17,8 +17,8 @@ Specifies the additional amounts, which are added to the invoiced and statistica
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAmountType](Finance.Intrastat.DocumentAmountTypeSettings.md#documentamounttype) | [General.DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type which will be added to the invoiced or the statistical value. [Required] [Filter(multi eq)] [Owner] |
-| [EnterpriseCompany](Finance.Intrastat.DocumentAmountTypeSettings.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the setting is valid. [Required] [Filter(multi eq)] |
+| [DocumentAmountType](Finance.Intrastat.DocumentAmountTypeSettings.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type which will be added to the invoiced or the statistical value. [Required] [Filter(multi eq)] [Owner] |
+| [EnterpriseCompany](Finance.Intrastat.DocumentAmountTypeSettings.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the setting is valid. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -54,14 +54,14 @@ _Default Value_: **NewGuid**
 
 > The amount type which will be added to the invoiced or the statistical value. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.DocumentAmountTypes](General.DocumentAmountTypes.md)**  
+_Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The enterprise company for which the setting is valid. [Required] [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

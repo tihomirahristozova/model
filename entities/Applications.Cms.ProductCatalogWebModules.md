@@ -20,9 +20,9 @@ A web module, which presents a whole product catalog. Entity: Cms_Product_Catalo
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.Cms.ProductCatalogWebModules.md#parent) | [Applications.Cms.WebModules](Applications.Cms.WebModules.md) (nullable) | The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)] |
-| [ProductCatalog](Applications.Cms.ProductCatalogWebModules.md#productcatalog) | [General.ProductCatalogs](General.ProductCatalogs.md) | The product catalog, which is represented by this web module. [Required] [Filter(multi eq)] |
-| [WebSite](Applications.Cms.ProductCatalogWebModules.md#website) | [Applications.Cms.WebSites](Applications.Cms.WebSites.md) | The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Parent](Applications.Cms.ProductCatalogWebModules.md#parent) | [WebModules](Applications.Cms.WebModules.md) (nullable) | The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)] |
+| [ProductCatalog](Applications.Cms.ProductCatalogWebModules.md#productcatalog) | [ProductCatalogs](General.ProductCatalogs.md) | The product catalog, which is represented by this web module. [Required] [Filter(multi eq)] |
+| [WebSite](Applications.Cms.ProductCatalogWebModules.md#website) | [WebSites](Applications.Cms.WebSites.md) | The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -90,21 +90,21 @@ _Supports Order By_: **False**
 
 > The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)]
 
-_Type_: **[Applications.Cms.WebModules](Applications.Cms.WebModules.md) (nullable)**  
+_Type_: **[WebModules](Applications.Cms.WebModules.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductCatalog
 
 > The product catalog, which is represented by this web module. [Required] [Filter(multi eq)]
 
-_Type_: **[General.ProductCatalogs](General.ProductCatalogs.md)**  
+_Type_: **[ProductCatalogs](General.ProductCatalogs.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WebSite
 
 > The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Cms.WebSites](Applications.Cms.WebSites.md)**  
+_Type_: **[WebSites](Applications.Cms.WebSites.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

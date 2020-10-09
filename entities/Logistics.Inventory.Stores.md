@@ -12,7 +12,7 @@ Represents the physical warehouses. Entity: Inv_Stores
 | [Code](Logistics.Inventory.Stores.md#code) | string | The unique code of the Store. [Required] [Filter(eq;like)] [ORD] 
 | [CreationTime](Logistics.Inventory.Stores.md#creationtime) | datetime (nullable) | Date and time when the Store was created. [Filter(ge;le)] [ReadOnly] 
 | [CreationUser](Logistics.Inventory.Stores.md#creationuser) | string (nullable) | Login name of the user, who created the Store. [Filter(like)] [ReadOnly] 
-| [DefaultProductCodingSystemId](Logistics.Inventory.Stores.md#defaultproductcodingsystemid) | guid (nullable) |  
+| [DefaultProduct<br />CodingSystemId](Logistics.Inventory.Stores.md#defaultproductcodingsystemid) | guid (nullable) |  
 | [DefaultSupplyStoreId](Logistics.Inventory.Stores.md#defaultsupplystoreid) | guid (nullable) | The store from which goods are usually supplied to this store. [Filter(multi eq)] 
 | [GLN](Logistics.Inventory.Stores.md#gln) | string (nullable) | Global Location Number used by EDI systems 
 | [Id](Logistics.Inventory.Stores.md#id) | guid |  
@@ -38,35 +38,35 @@ Represents the physical warehouses. Entity: Inv_Stores
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Logistics.Inventory.Stores.md#accesskey) | [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this Store. Null means that all users have unlimited permissions. [Filter(multi eq)] |
-| [AdministrativeRegion](Logistics.Inventory.Stores.md#administrativeregion) | [General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. |
-| [Area](Logistics.Inventory.Stores.md#area) | [General.Geography.Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. |
-| [Currency](Logistics.Inventory.Stores.md#currency) | [General.Currencies](General.Currencies.md) (nullable) | The currency for the warehouse cost calculations. When null, the base currency for the enterprise company will be used. [Filter(multi eq)] |
-| [DefaultProductCodingSystem](Logistics.Inventory.Stores.md#defaultproductcodingsystem) | [General.Products.CodingSystems](General.Products.CodingSystems.md) (nullable) | When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. |
-| [DefaultStoreBin](Logistics.Inventory.Stores.md#defaultstorebin) | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | To be used when store bin is unknown. [Filter(multi eq)] |
-| [EnterpriseCompany](Logistics.Inventory.Stores.md#enterprisecompany) | [General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Store applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
-| [EnterpriseCompanyLocation](Logistics.Inventory.Stores.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this Store applies, or null if it is for all enterprise company locations. [Filter(multi eq)] |
-| [Parent](Logistics.Inventory.Stores.md#parent) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable) | Obsolete. Not used. (Hierarchy of the stores is now represented by the Store Groups entity). [Filter(multi eq)] |
-| [ParentParty](Logistics.Inventory.Stores.md#parentparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to |
-| [ResponsibleParty](Logistics.Inventory.Stores.md#responsibleparty) | [General.Contacts.Parties](General.Contacts.Parties.md) (nullable) | Primary responsible party (usually employee) for the stock in the store. [Filter(multi eq)] |
-| [StoreGroup](Logistics.Inventory.Stores.md#storegroup) | [Logistics.Inventory.StoreGroups](Logistics.Inventory.StoreGroups.md) | The store group, to which this store belongs. [Required] [Filter(multi eq)] |
-| [Warehouse](Logistics.Inventory.Stores.md#warehouse) | [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md) (nullable) | Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. [Filter(multi eq)] (Introduced in version 20.1.100.0) |
+| [AccessKey](Logistics.Inventory.Stores.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this Store. Null means that all users have unlimited permissions. [Filter(multi eq)] |
+| [AdministrativeRegion](Logistics.Inventory.Stores.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. |
+| [Area](Logistics.Inventory.Stores.md#area) | [Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. |
+| [Currency](Logistics.Inventory.Stores.md#currency) | [Currencies](General.Currencies.md) (nullable) | The currency for the warehouse cost calculations. When null, the base currency for the enterprise company will be used. [Filter(multi eq)] |
+| [DefaultProductCodingSystem](Logistics.Inventory.Stores.md#defaultproductcodingsystem) | [CodingSystems](General.Products.CodingSystems.md) (nullable) | When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. |
+| [DefaultStoreBin](Logistics.Inventory.Stores.md#defaultstorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | To be used when store bin is unknown. [Filter(multi eq)] |
+| [EnterpriseCompany](Logistics.Inventory.Stores.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Store applies, or null if it is for all enterprise companies. [Filter(multi eq)] |
+| [EnterpriseCompanyLocation](Logistics.Inventory.Stores.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this Store applies, or null if it is for all enterprise company locations. [Filter(multi eq)] |
+| [Parent](Logistics.Inventory.Stores.md#parent) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Obsolete. Not used. (Hierarchy of the stores is now represented by the Store Groups entity). [Filter(multi eq)] |
+| [ParentParty](Logistics.Inventory.Stores.md#parentparty) | [Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to |
+| [ResponsibleParty](Logistics.Inventory.Stores.md#responsibleparty) | [Parties](General.Contacts.Parties.md) (nullable) | Primary responsible party (usually employee) for the stock in the store. [Filter(multi eq)] |
+| [StoreGroup](Logistics.Inventory.Stores.md#storegroup) | [StoreGroups](Logistics.Inventory.StoreGroups.md) | The store group, to which this store belongs. [Required] [Filter(multi eq)] |
+| [Warehouse](Logistics.Inventory.Stores.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) (nullable) | Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. [Filter(multi eq)] (Introduced in version 20.1) |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| ActivityTimeIntervals | [General.Contacts.ActivityTimeIntervals](General.Contacts.ActivityTimeIntervals.md) | List of [ActivityTimeInterval](General.Contacts.ActivityTimeIntervals.md) child objects, based on the [General.Contacts.ActivityTimeInterval.Party](General.Contacts.ActivityTimeIntervals.md#party) back reference 
-| BankAccounts | [General.Contacts.PartyBankAccounts](General.Contacts.PartyBankAccounts.md) | List of [PartyBankAccount](General.Contacts.PartyBankAccounts.md) child objects, based on the [General.Contacts.PartyBankAccount.Party](General.Contacts.PartyBankAccounts.md#party) back reference 
-| Bins | [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) | List of [StoreBin](Logistics.Inventory.StoreBins.md) child objects, based on the [Logistics.Inventory.StoreBin.Store](Logistics.Inventory.StoreBins.md#store) back reference 
-| ContactMechanisms | [General.Contacts.PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | List of [PartyContactMechanism](General.Contacts.PartyContactMechanisms.md) child objects, based on the [General.Contacts.PartyContactMechanism.Party](General.Contacts.PartyContactMechanisms.md#party) back reference 
-| Customers | [Crm.Customers](Crm.Customers.md) | List of [Customer](Crm.Customers.md) child objects, based on the [Crm.Customer.Party](Crm.Customers.md#party) back reference 
-| Dealers | [Crm.Dealers](Crm.Dealers.md) | List of [Dealer](Crm.Dealers.md) child objects, based on the [Crm.Dealer.Party](Crm.Dealers.md#party) back reference 
-| Distributors | [Crm.Distributors](Crm.Distributors.md) | List of [Distributor](Crm.Distributors.md) child objects, based on the [Crm.Distributor.Party](Crm.Distributors.md#party) back reference 
-| Pictures | [General.Contacts.PartyPictures](General.Contacts.PartyPictures.md) | List of [PartyPicture](General.Contacts.PartyPictures.md) child objects, based on the [General.Contacts.PartyPicture.Party](General.Contacts.PartyPictures.md#party) back reference 
-| ResponsibleParties | [Logistics.Inventory.StoreResponsibleParties](Logistics.Inventory.StoreResponsibleParties.md) | List of [StoreResponsibleParty](Logistics.Inventory.StoreResponsibleParties.md) child objects, based on the [Logistics.Inventory.StoreResponsibleParty.Store](Logistics.Inventory.StoreResponsibleParties.md#store) back reference 
-| Suppliers | [Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md) | List of [Supplier](Logistics.Procurement.Suppliers.md) child objects, based on the [Logistics.Procurement.Supplier.Party](Logistics.Procurement.Suppliers.md#party) back reference 
-| TargetGroupMembers | [Crm.Marketing.TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.Party](Crm.Marketing.TargetGroupMembers.md#party) back reference 
+| ActivityTimeIntervals | [ActivityTimeIntervals](General.Contacts.ActivityTimeIntervals.md) | List of [ActivityTimeInterval](General.Contacts.ActivityTimeIntervals.md) child objects, based on the [General.Contacts.ActivityTimeInterval.Party](General.Contacts.ActivityTimeIntervals.md#party) back reference 
+| BankAccounts | [PartyBankAccounts](General.Contacts.PartyBankAccounts.md) | List of [PartyBankAccount](General.Contacts.PartyBankAccounts.md) child objects, based on the [General.Contacts.PartyBankAccount.Party](General.Contacts.PartyBankAccounts.md#party) back reference 
+| Bins | [StoreBins](Logistics.Inventory.StoreBins.md) | List of [StoreBin](Logistics.Inventory.StoreBins.md) child objects, based on the [Logistics.Inventory.StoreBin.Store](Logistics.Inventory.StoreBins.md#store) back reference 
+| ContactMechanisms | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | List of [PartyContactMechanism](General.Contacts.PartyContactMechanisms.md) child objects, based on the [General.Contacts.PartyContactMechanism.Party](General.Contacts.PartyContactMechanisms.md#party) back reference 
+| Customers | [Customers](Crm.Customers.md) | List of [Customer](Crm.Customers.md) child objects, based on the [Crm.Customer.Party](Crm.Customers.md#party) back reference 
+| Dealers | [Dealers](Crm.Dealers.md) | List of [Dealer](Crm.Dealers.md) child objects, based on the [Crm.Dealer.Party](Crm.Dealers.md#party) back reference 
+| Distributors | [Distributors](Crm.Distributors.md) | List of [Distributor](Crm.Distributors.md) child objects, based on the [Crm.Distributor.Party](Crm.Distributors.md#party) back reference 
+| Pictures | [PartyPictures](General.Contacts.PartyPictures.md) | List of [PartyPicture](General.Contacts.PartyPictures.md) child objects, based on the [General.Contacts.PartyPicture.Party](General.Contacts.PartyPictures.md#party) back reference 
+| ResponsibleParties | [StoreResponsibleParties](Logistics.Inventory.StoreResponsibleParties.md) | List of [StoreResponsibleParty](Logistics.Inventory.StoreResponsibleParties.md) child objects, based on the [Logistics.Inventory.StoreResponsibleParty.Store](Logistics.Inventory.StoreResponsibleParties.md#store) back reference 
+| Suppliers | [Suppliers](Logistics.Procurement.Suppliers.md) | List of [Supplier](Logistics.Procurement.Suppliers.md) child objects, based on the [Logistics.Procurement.Supplier.Party](Logistics.Procurement.Suppliers.md#party) back reference 
+| TargetGroupMembers | [TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.Party](Crm.Marketing.TargetGroupMembers.md#party) back reference 
 
 
 ## Attribute Details
@@ -275,93 +275,93 @@ _Supports Order By_: **False**
 
 > The access key, containing the user permissions for this Store. Null means that all users have unlimited permissions. [Filter(multi eq)]
 
-_Type_: **[Systems.Security.AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdministrativeRegion
 
 > The administrative region in which the party is situated.
 
-_Type_: **[General.Geography.AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
+_Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Area
 
 > The area in which the party is situated.
 
-_Type_: **[General.Geography.Areas](General.Geography.Areas.md) (nullable)**  
+_Type_: **[Areas](General.Geography.Areas.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### Currency
 
 > The currency for the warehouse cost calculations. When null, the base currency for the enterprise company will be used. [Filter(multi eq)]
 
-_Type_: **[General.Currencies](General.Currencies.md) (nullable)**  
+_Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.EnterpriseCompany != null), obj.EnterpriseCompany.BaseCurrency, obj.Transaction.CurrentEnterpriseCompany.BaseCurrency)`
+`IIF( ( obj.EnterpriseCompany != null), obj.EnterpriseCompany.BaseCurrency, obj.Transaction.CurrentEnterpriseCompany.BaseCurrency)`
 ### DefaultProductCodingSystem
 
 > When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.
 
-_Type_: **[General.Products.CodingSystems](General.Products.CodingSystems.md) (nullable)**  
+_Type_: **[CodingSystems](General.Products.CodingSystems.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### DefaultStoreBin
 
 > To be used when store bin is unknown. [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
 > The Enterprise Company to which this Store applies, or null if it is for all enterprise companies. [Filter(multi eq)]
 
-_Type_: **[General.EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
 > The Enterprise Company Location to which this Store applies, or null if it is for all enterprise company locations. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
 > Obsolete. Not used. (Hierarchy of the stores is now represented by the Store Groups entity). [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentParty
 
 > Organizational unit (branch from the hierarchy of all parties) to which this party is referred to
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
 
 ### ResponsibleParty
 
 > Primary responsible party (usually employee) for the stock in the store. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Parties](General.Contacts.Parties.md) (nullable)**  
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreGroup
 
 > The store group, to which this store belongs. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.StoreGroups](Logistics.Inventory.StoreGroups.md)**  
+_Type_: **[StoreGroups](Logistics.Inventory.StoreGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Warehouse
 
-> Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. [Filter(multi eq)] (Introduced in version 20.1.100.0)
+> Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. [Filter(multi eq)] (Introduced in version 20.1)
 
-_Type_: **[Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md) (nullable)**  
+_Type_: **[Warehouses](Logistics.Wms.Warehouses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -18,7 +18,7 @@ Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [WebSite](Applications.Cms.WebSiteLanguages.md#website) | [Applications.Cms.WebSites](Applications.Cms.WebSites.md) | The web site, for which the language is specified. [Required] [Filter(multi eq)] [Owner] |
+| [WebSite](Applications.Cms.WebSiteLanguages.md#website) | [WebSites](Applications.Cms.WebSites.md) | The web site, for which the language is specified. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details
@@ -61,7 +61,7 @@ _Supports Order By_: **False**
 
 > The web site, for which the language is specified. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.Cms.WebSites](Applications.Cms.WebSites.md)**  
+_Type_: **[WebSites](Applications.Cms.WebSites.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

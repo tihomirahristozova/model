@@ -17,8 +17,8 @@ The cost types and their amounts which are distributed by a Cost Distribution do
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostDistribution](Finance.Cost.DistributionCosts.md#costdistribution) | [Finance.Cost.Distributions](Finance.Cost.Distributions.md) | The [Distribution](Finance.Cost.Distributions.md) to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner] |
-| [CostType](Finance.Cost.DistributionCosts.md#costtype) | [Finance.Cost.CostTypes](Finance.Cost.CostTypes.md) | The type of the cost, which will be distributed. [Required] [Filter(multi eq)] |
+| [CostDistribution](Finance.Cost.DistributionCosts.md#costdistribution) | [Distributions](Finance.Cost.Distributions.md) | The [Distribution](Finance.Cost.Distributions.md) to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CostType](Finance.Cost.DistributionCosts.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The type of the cost, which will be distributed. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -52,14 +52,14 @@ _Supports Order By_: **False**
 
 > The [Distribution](Finance.Cost.Distributions.md) to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Cost.Distributions](Finance.Cost.Distributions.md)**  
+_Type_: **[Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostType
 
 > The type of the cost, which will be distributed. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Cost.CostTypes](Finance.Cost.CostTypes.md)**  
+_Type_: **[CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

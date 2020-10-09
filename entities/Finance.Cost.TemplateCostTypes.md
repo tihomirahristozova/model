@@ -16,8 +16,8 @@ Contains the cost types and their hierachy positions within a cost calculation. 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostTemplate](Finance.Cost.TemplateCostTypes.md#costtemplate) | [Finance.Cost.Templates](Finance.Cost.Templates.md) | The [Template](Finance.Cost.Templates.md) to which this TemplateCostType belongs. [Required] [Filter(multi eq)] [Owner] |
-| [CostType](Finance.Cost.TemplateCostTypes.md#costtype) | [Finance.Cost.CostTypes](Finance.Cost.CostTypes.md) | The Cost Type for which the hierarchy is specified. [Required] [Filter(multi eq)] |
+| [CostTemplate](Finance.Cost.TemplateCostTypes.md#costtemplate) | [Templates](Finance.Cost.Templates.md) | The [Template](Finance.Cost.Templates.md) to which this TemplateCostType belongs. [Required] [Filter(multi eq)] [Owner] |
+| [CostType](Finance.Cost.TemplateCostTypes.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The Cost Type for which the hierarchy is specified. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -43,14 +43,14 @@ _Default Value_: **NewGuid**
 
 > The [Template](Finance.Cost.Templates.md) to which this TemplateCostType belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Finance.Cost.Templates](Finance.Cost.Templates.md)**  
+_Type_: **[Templates](Finance.Cost.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostType
 
 > The Cost Type for which the hierarchy is specified. [Required] [Filter(multi eq)]
 
-_Type_: **[Finance.Cost.CostTypes](Finance.Cost.CostTypes.md)**  
+_Type_: **[CostTypes](Finance.Cost.CostTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

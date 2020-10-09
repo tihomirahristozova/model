@@ -17,12 +17,12 @@ Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Country](Crm.Marketing.ForecastItems.md#country) | [General.Geography.Countries](General.Geography.Countries.md) (nullable) | The country for which the forecast is made. When null, the forecast is country neutral. [Filter(multi eq)] |
-| [Customer](Crm.Marketing.ForecastItems.md#customer) | [Crm.Customers](Crm.Customers.md) (nullable) | The customer for which the forecast is made. When null, the forecast is not for any specfic customer. [Filter(multi eq)] |
-| [Dealer](Crm.Marketing.ForecastItems.md#dealer) | [Crm.Dealers](Crm.Dealers.md) (nullable) | The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. [Filter(multi eq)] |
-| [Product](Crm.Marketing.ForecastItems.md#product) | [General.Products.Products](General.Products.Products.md) | The product for which the forecast is made. [Required] [Filter(multi eq)] |
-| [SalesPerson](Crm.Marketing.ForecastItems.md#salesperson) | [Crm.SalesPersons](Crm.SalesPersons.md) (nullable) | The sales person for which the forecast is made. When null, the forecast is not for any specfic sales person. [Filter(multi eq)] |
-| [Store](Crm.Marketing.ForecastItems.md#store) | [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md) | The store which is expected to sell the products. [Required] [Filter(multi eq)] |
+| [Country](Crm.Marketing.ForecastItems.md#country) | [Countries](General.Geography.Countries.md) (nullable) | The country for which the forecast is made. When null, the forecast is country neutral. [Filter(multi eq)] |
+| [Customer](Crm.Marketing.ForecastItems.md#customer) | [Customers](Crm.Customers.md) (nullable) | The customer for which the forecast is made. When null, the forecast is not for any specfic customer. [Filter(multi eq)] |
+| [Dealer](Crm.Marketing.ForecastItems.md#dealer) | [Dealers](Crm.Dealers.md) (nullable) | The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. [Filter(multi eq)] |
+| [Product](Crm.Marketing.ForecastItems.md#product) | [Products](General.Products.Products.md) | The product for which the forecast is made. [Required] [Filter(multi eq)] |
+| [SalesPerson](Crm.Marketing.ForecastItems.md#salesperson) | [SalesPersons](Crm.SalesPersons.md) (nullable) | The sales person for which the forecast is made. When null, the forecast is not for any specfic sales person. [Filter(multi eq)] |
+| [Store](Crm.Marketing.ForecastItems.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store which is expected to sell the products. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -57,42 +57,42 @@ _Default Value_: **Constant**
 
 > The country for which the forecast is made. When null, the forecast is country neutral. [Filter(multi eq)]
 
-_Type_: **[General.Geography.Countries](General.Geography.Countries.md) (nullable)**  
+_Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
 
 > The customer for which the forecast is made. When null, the forecast is not for any specfic customer. [Filter(multi eq)]
 
-_Type_: **[Crm.Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Customers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Dealer
 
 > The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. [Filter(multi eq)]
 
-_Type_: **[Crm.Dealers](Crm.Dealers.md) (nullable)**  
+_Type_: **[Dealers](Crm.Dealers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The product for which the forecast is made. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesPerson
 
 > The sales person for which the forecast is made. When null, the forecast is not for any specfic sales person. [Filter(multi eq)]
 
-_Type_: **[Crm.SalesPersons](Crm.SalesPersons.md) (nullable)**  
+_Type_: **[SalesPersons](Crm.SalesPersons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
 > The store which is expected to sell the products. [Required] [Filter(multi eq)]
 
-_Type_: **[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)**  
+_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

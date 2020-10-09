@@ -3,7 +3,7 @@ uid: Applications.AssetManagement.ManagedAssetLocations
 ---
 # Applications.AssetManagement.ManagedAssetLocations
 
-Contains the locations to which the assets are assigned at various moments in time. Entity: Eam_Managed_Asset_Locations (Introduced in version 19.1.100.0)
+Contains the locations to which the assets are assigned at various moments in time. Entity: Eam_Managed_Asset_Locations (Introduced in version 19.1)
 
 ## Attributes
 
@@ -17,9 +17,9 @@ Contains the locations to which the assets are assigned at various moments in ti
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompanyLocation](Applications.AssetManagement.ManagedAssetLocations.md#enterprisecompanylocation) | [General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md) | The enterprise company location, where the asset is assigned. [Required] [Filter(multi eq)] |
-| [ManagedAsset](Applications.AssetManagement.ManagedAssetLocations.md#managedasset) | [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The asset, whose location is recorded. [Required] [Filter(multi eq)] [Owner] |
-| [ResponsiblePerson](Applications.AssetManagement.ManagedAssetLocations.md#responsibleperson) | [General.Contacts.Persons](General.Contacts.Persons.md) (nullable) | The responsible person, to which the asset is assigned. null when the asset is not assigned to any particular responsible person. [Filter(multi eq)] |
+| [EnterpriseCompanyLocation](Applications.AssetManagement.ManagedAssetLocations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The enterprise company location, where the asset is assigned. [Required] [Filter(multi eq)] |
+| [ManagedAsset](Applications.AssetManagement.ManagedAssetLocations.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The asset, whose location is recorded. [Required] [Filter(multi eq)] [Owner] |
+| [ResponsiblePerson](Applications.AssetManagement.ManagedAssetLocations.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The responsible person, to which the asset is assigned. null when the asset is not assigned to any particular responsible person. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -54,21 +54,21 @@ _Supports Order By_: **False**
 
 > The enterprise company location, where the asset is assigned. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Contacts.CompanyLocations](General.Contacts.CompanyLocations.md)**  
+_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAsset
 
 > The asset, whose location is recorded. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
+_Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
 
 > The responsible person, to which the asset is assigned. null when the asset is not assigned to any particular responsible person. [Filter(multi eq)]
 
-_Type_: **[General.Contacts.Persons](General.Contacts.Persons.md) (nullable)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

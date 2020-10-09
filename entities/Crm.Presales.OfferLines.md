@@ -17,13 +17,13 @@ Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 | [LineAmount](Crm.Presales.OfferLines.md#lineamount) | [Amount](../data-types.md#amount) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: Offer.DocumentCurrency] [Required] [Default(0)] 
 | [LineCustomDiscountPercent](Crm.Presales.OfferLines.md#linecustomdiscountpercent) | decimal | Operator defined discount percentage, specified for this line. [Required] [Default(0)] 
 | [LineNo](Crm.Presales.OfferLines.md#lineno) | int32 | Line number, unique within the Offer. Usually is increasing number like 10, 20, 30, ... when initially entering the Offer (in order to allow insertions with adjustment documents). [Required] 
-| [LineStandardDiscountPercent](Crm.Presales.OfferLines.md#linestandarddiscountpercent) | decimal | The discount percentage, applied through the standard discount policy. [Required] [Default(0)] 
+| [LineStandardDiscount<br />Percent](Crm.Presales.OfferLines.md#linestandarddiscountpercent) | decimal | The discount percentage, applied through the standard discount policy. [Required] [Default(0)] 
 | [Notes](Crm.Presales.OfferLines.md#notes) | string (nullable) | Notes for this OfferLine. 
 | [ProductDescription](Crm.Presales.OfferLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The description of the offered product. Initially copied from the name of the offered product. [Required] [Filter(like)] 
 | [Quantity](Crm.Presales.OfferLines.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity offered. [Unit: QuantityUnit] [Required] [Default(1)] 
 | [QuantityBase](Crm.Presales.OfferLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
 | [RequiredDeliveryDate](Crm.Presales.OfferLines.md#requireddeliverydate) | date (nullable) | Date, when the delivery is required. Alternative to Delivery Term Days. When null, Delivery Term Days is used. 
-| [StandardQuantityBase](Crm.Presales.OfferLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0) 
+| [StandardQuantityBase](Crm.Presales.OfferLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2) 
 | [UnitPrice](Crm.Presales.OfferLines.md#unitprice) | [Amount](../data-types.md#amount) | The unit price of the offered product. It is specified in the measurement unit of Quantity. [Currency: Offer.DocumentCurrency] [Required] [Default(0)] 
 | [Variant](Crm.Presales.OfferLines.md#variant) | string (nullable) | Name or number of variant of the whole offer. When multiple lines have the same variant, they are selected for ordering together. 
 
@@ -31,12 +31,12 @@ Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineDiscount](Crm.Presales.OfferLines.md#linediscount) | [Crm.LineDiscounts](Crm.LineDiscounts.md) (nullable) | When not null, contains the discount policy selected for this line. [Filter(multi eq)] |
-| [Offer](Crm.Presales.OfferLines.md#offer) | [Crm.Presales.Offers](Crm.Presales.Offers.md) | The [Offer](Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [Product](Crm.Presales.OfferLines.md#product) | [General.Products.Products](General.Products.Products.md) | The offered product. [Required] [Filter(multi eq)] |
-| [ProductCode](Crm.Presales.OfferLines.md#productcode) | [General.Products.ProductCodes](General.Products.ProductCodes.md) (nullable) | Not null, when the product is selected using a coding system code. [Filter(multi eq)] |
-| [ProductPrice](Crm.Presales.OfferLines.md#productprice) | [Crm.ProductPrices](Crm.ProductPrices.md) (nullable) | Not null when the price has been selected from the list of valid standard prices. [Filter(multi eq)] |
-| [QuantityUnit](Crm.Presales.OfferLines.md#quantityunit) | [General.MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
+| [LineDiscount](Crm.Presales.OfferLines.md#linediscount) | [LineDiscounts](Crm.LineDiscounts.md) (nullable) | When not null, contains the discount policy selected for this line. [Filter(multi eq)] |
+| [Offer](Crm.Presales.OfferLines.md#offer) | [Offers](Crm.Presales.Offers.md) | The [Offer](Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Product](Crm.Presales.OfferLines.md#product) | [Products](General.Products.Products.md) | The offered product. [Required] [Filter(multi eq)] |
+| [ProductCode](Crm.Presales.OfferLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Not null, when the product is selected using a coding system code. [Filter(multi eq)] |
+| [ProductPrice](Crm.Presales.OfferLines.md#productprice) | [ProductPrices](Crm.ProductPrices.md) (nullable) | Not null when the price has been selected from the list of valid standard prices. [Filter(multi eq)] |
+| [QuantityUnit](Crm.Presales.OfferLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -93,10 +93,10 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Back-End Default Expression:_  
-`IIF((((obj.Quantity == null) OrElse (obj.UnitPrice == null)) OrElse ((obj.Quantity.Value == 0) AndAlso (obj.UnitPrice.Value == 0))), obj.LineAmount, (((obj.Quantity.Value * obj.UnitPrice) * (1 - obj.LineStandardDiscountPercent)) * (1 - obj.LineCustomDiscountPercent)).Round())`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.UnitPrice == null)) OrElse ( ( obj.Quantity.Value == 0) AndAlso ( obj.UnitPrice.Value == 0))), obj.LineAmount, ( ( ( obj.Quantity.Value * obj.UnitPrice) * ( 1 - obj.LineStandardDiscountPercent)) * ( 1 - obj.LineCustomDiscountPercent)).Round( ))`
 
 _Front-End Recalc Expressions:_  
-`IIF((((obj.Quantity == null) OrElse (obj.UnitPrice == null)) OrElse ((obj.Quantity.Value == 0) AndAlso (obj.UnitPrice.Value == 0))), obj.LineAmount, (((obj.Quantity.Value * obj.UnitPrice) * (1 - obj.LineStandardDiscountPercent)) * (1 - obj.LineCustomDiscountPercent)).Round())`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.UnitPrice == null)) OrElse ( ( obj.Quantity.Value == 0) AndAlso ( obj.UnitPrice.Value == 0))), obj.LineAmount, ( ( ( obj.Quantity.Value * obj.UnitPrice) * ( 1 - obj.LineStandardDiscountPercent)) * ( 1 - obj.LineCustomDiscountPercent)).Round( ))`
 ### LineCustomDiscountPercent
 
 > Operator defined discount percentage, specified for this line. [Required] [Default(0)]
@@ -115,10 +115,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`(obj.Offer.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Offer.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`(obj.Offer.Lines.Select(c => c.LineNo).DefaultIfEmpty(0).Max() + 10)`
+`( obj.Offer.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### LineStandardDiscountPercent
 
 > The discount percentage, applied through the standard discount policy. [Required] [Default(0)]
@@ -132,7 +132,7 @@ _Back-End Default Expression:_
 `obj.LineDiscount.DiscountPercent`
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.LineDiscount == null), 0, obj.LineDiscount.DiscountPercent)`
+`IIF( ( obj.LineDiscount == null), 0, obj.LineDiscount.DiscountPercent)`
 ### Notes
 
 > Notes for this OfferLine.
@@ -172,10 +172,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 
 _Front-End Recalc Expressions:_  
-`IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### RequiredDeliveryDate
 
 > Date, when the delivery is required. Alternative to Delivery Term Days. When null, Delivery Term Days is used.
@@ -188,21 +188,21 @@ _Back-End Default Expression:_
 `obj.Offer.RequiredDeliveryDate`
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.DeliveryTermDays == 0), obj.RequiredDeliveryDate, null)`
+`IIF( ( obj.DeliveryTermDays == 0), obj.RequiredDeliveryDate, null)`
 `obj.Offer.RequiredDeliveryDate`
 ### StandardQuantityBase
 
-> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)
+> The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 
 _Front-End Recalc Expressions:_  
-`IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))`
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### UnitPrice
 
 > The unit price of the offered product. It is specified in the measurement unit of Quantity. [Currency: Offer.DocumentCurrency] [Required] [Default(0)]
@@ -213,10 +213,10 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Back-End Default Expression:_  
-`(CalculateUnitPriceFromLineAmount(obj.LineAmount, obj.Quantity, obj.LineStandardDiscountPercent, obj.LineCustomDiscountPercent) ?? obj.UnitPrice)`
+`( CalculateUnitPriceFromLineAmount( obj.LineAmount, obj.Quantity, obj.LineStandardDiscountPercent, obj.LineCustomDiscountPercent) ?? obj.UnitPrice)`
 
 _Front-End Recalc Expressions:_  
-`obj.CalculateUnitPrice(obj.Product, obj.ProductPrice, obj.QuantityUnit, obj.Offer)`
+`obj.CalculateUnitPrice( obj.Product, obj.ProductPrice, obj.QuantityUnit, obj.Offer)`
 ### Variant
 
 > Name or number of variant of the whole offer. When multiple lines have the same variant, they are selected for ordering together.
@@ -232,58 +232,58 @@ _Supports Order By_: **False**
 
 > When not null, contains the discount policy selected for this line. [Filter(multi eq)]
 
-_Type_: **[Crm.LineDiscounts](Crm.LineDiscounts.md) (nullable)**  
+_Type_: **[LineDiscounts](Crm.LineDiscounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.DetermineLineDiscount(obj.RequiredDeliveryDate, obj.Offer.Customer, obj.Offer.ShipToCustomer, obj.Product, obj.Quantity, obj.QuantityUnit, obj.Offer.EnterpriseCompany, obj.Offer.EnterpriseCompanyLocation, obj.Offer.PriceList, obj.LineDiscount)`
+`obj.DetermineLineDiscount( obj.RequiredDeliveryDate, obj.Offer.Customer, obj.Offer.ShipToCustomer, obj.Product, obj.Quantity, obj.QuantityUnit, obj.Offer.EnterpriseCompany, obj.Offer.EnterpriseCompanyLocation, obj.Offer.PriceList, obj.LineDiscount)`
 ### Offer
 
 > The [Offer](Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Crm.Presales.Offers](Crm.Presales.Offers.md)**  
+_Type_: **[Offers](Crm.Presales.Offers.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
 > The offered product. [Required] [Filter(multi eq)]
 
-_Type_: **[General.Products.Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
-`IIF((obj.ProductCode.Product == null), obj.Product, obj.ProductCode.Product)`
+`IIF( ( obj.ProductCode.Product == null), obj.Product, obj.ProductCode.Product)`
 
 _Front-End Recalc Expressions:_  
-`IIF((obj.ProductCode.Product == null), obj.Product, obj.ProductCode.Product)`
+`IIF( ( obj.ProductCode.Product == null), obj.Product, obj.ProductCode.Product)`
 ### ProductCode
 
 > Not null, when the product is selected using a coding system code. [Filter(multi eq)]
 
-_Type_: **[General.Products.ProductCodes](General.Products.ProductCodes.md) (nullable)**  
+_Type_: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductPrice
 
 > Not null when the price has been selected from the list of valid standard prices. [Filter(multi eq)]
 
-_Type_: **[Crm.ProductPrices](Crm.ProductPrices.md) (nullable)**  
+_Type_: **[ProductPrices](Crm.ProductPrices.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`DetermineProductPrice(obj.Product, obj.Quantity, obj.QuantityUnit, obj.RequiredDeliveryDate, obj.Offer.Customer, obj.Offer.ShipToCustomer, obj.Offer.EnterpriseCompany, obj.Offer.EnterpriseCompanyLocation, null, obj.Offer.PriceList, obj.ProductPrice)`
+`DetermineProductPrice( obj.Product, obj.Quantity, obj.QuantityUnit, obj.RequiredDeliveryDate, obj.Offer.Customer, obj.Offer.ShipToCustomer, obj.Offer.EnterpriseCompany, obj.Offer.EnterpriseCompanyLocation, null, obj.Offer.PriceList, obj.ProductPrice)`
 ### QuantityUnit
 
 > The measurement unit of Quantity. [Required] [Filter(multi eq)]
 
-_Type_: **[General.MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
-`obj.Product.MeasurementUnit.IfNullThen(obj.QuantityUnit)`
+`obj.Product.MeasurementUnit.IfNullThen( obj.QuantityUnit)`
 
 _Front-End Recalc Expressions:_  
-`obj.Product.MeasurementUnit.IfNullThen(obj.QuantityUnit)`
+`obj.Product.MeasurementUnit.IfNullThen( obj.QuantityUnit)`
 
 
 ## Business Rules

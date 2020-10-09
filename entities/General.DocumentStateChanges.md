@@ -14,14 +14,14 @@ History of document state changes. Entity: Gen_Document_State_Changes
 | [SystemInitiated](General.DocumentStateChanges.md#systeminitiated) | boolean | Specifies whether the state change was caused by system process or from user action. [Required] [Default(false)] [ReadOnly] 
 | [UpdateTime](General.DocumentStateChanges.md#updatetime) | datetime | The time when the change took effect. [Required] [Filter(ge;le)] [ORD] 
 | [UpdateUser](General.DocumentStateChanges.md#updateuser) | string | The login name of the user, who made the status change. [Required] [Filter(eq)] 
-| [Void](General.DocumentStateChanges.md#void) | boolean | True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1.100.0) 
+| [Void](General.DocumentStateChanges.md#void) | boolean | True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentStateChanges.md#document) | [General.Documents](General.Documents.md) | The document which has changed state. [Required] [Filter(multi eq)] [Owner] |
-| [UserStatus](General.DocumentStateChanges.md#userstatus) | [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The new user status after the change. [Filter(multi eq)] |
+| [Document](General.DocumentStateChanges.md#document) | [Documents](General.Documents.md) | The document which has changed state. [Required] [Filter(multi eq)] [Owner] |
+| [UserStatus](General.DocumentStateChanges.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The new user status after the change. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -80,7 +80,7 @@ _Supports Order By_: **False**
 
 ### Void
 
-> True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1.100.0)
+> True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1)
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -94,14 +94,14 @@ _Default Value_: **False**
 
 > The document which has changed state. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[General.Documents](General.Documents.md)**  
+_Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UserStatus
 
 > The new user status after the change. [Filter(multi eq)]
 
-_Type_: **[General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

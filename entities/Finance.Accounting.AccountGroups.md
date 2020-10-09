@@ -20,7 +20,7 @@ Hierarchical chart of account groups. Entity: Acc_Account_Groups
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Finance.Accounting.AccountGroups.md#parent) | [Finance.Accounting.AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Parent account group. null if this is root group. [Filter(multi eq)] |
+| [Parent](Finance.Accounting.AccountGroups.md#parent) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Parent account group. null if this is root group. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -79,7 +79,7 @@ _Supports Order By_: **True**
 
 > Parent account group. null if this is root group. [Filter(multi eq)]
 
-_Type_: **[Finance.Accounting.AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
+_Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

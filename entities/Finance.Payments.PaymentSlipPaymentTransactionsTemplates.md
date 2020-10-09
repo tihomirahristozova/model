@@ -3,7 +3,7 @@ uid: Finance.Payments.PaymentSlipPaymentTransactionsTemplates
 ---
 # Finance.Payments.PaymentSlipPaymentTransactionsTemplates
 
-Contains options for generation of payment transactions. Each option set is assigned to specific generation route. Entity: Cash_Payment_Slip_Payment_Transactions_Templates (Introduced in version 19.1.100.0)
+Contains options for generation of payment transactions. Each option set is assigned to specific generation route. Entity: Cash_Payment_Slip_Payment_Transactions_Templates (Introduced in version 19.1)
 
 ## Attributes
 
@@ -17,7 +17,7 @@ Contains options for generation of payment transactions. Each option set is assi
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#route) | [Systems.Workflow.Routes](Systems.Workflow.Routes.md) | The route to which the current option set is assigned. [Required] [Filter(multi eq)] |
+| [Route](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#route) | [Routes](Systems.Workflow.Routes.md) | The route to which the current option set is assigned. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -50,7 +50,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 > The route to which the current option set is assigned. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Workflow.Routes](Systems.Workflow.Routes.md)**  
+_Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

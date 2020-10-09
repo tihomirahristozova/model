@@ -17,7 +17,7 @@ Valuation models stand for the different valuations an asset can have. For examp
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultDepreciationMethod](Finance.Assets.ValuationModels.md#defaultdepreciationmethod) | [Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable) | Obsolete. Not used. [Filter(multi eq)] |
+| [DefaultDepreciationMethod](Finance.Assets.ValuationModels.md#defaultdepreciationmethod) | [DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable) | Obsolete. Not used. [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -52,7 +52,7 @@ _Supports Order By_: **False**
 
 > Obsolete. Not used. [Filter(multi eq)]
 
-_Type_: **[Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable)**  
+_Type_: **[DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

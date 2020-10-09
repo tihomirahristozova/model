@@ -3,7 +3,7 @@ uid: Communities.NotificationSettings
 ---
 # Communities.NotificationSettings
 
-User notification settings for the different notification classes. Entity: Cmm_Notification_Settings (Introduced in version 20.1.100.0)
+User notification settings for the different notification classes. Entity: Cmm_Notification_Settings (Introduced in version 20.1)
 
 ## Attributes
 
@@ -19,7 +19,7 @@ User notification settings for the different notification classes. Entity: Cmm_N
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Communities.NotificationSettings.md#user) | [Systems.Security.Users](Systems.Security.Users.md) | The user for whom the notification setting is about. [Required] [Filter(multi eq)] |
+| [User](Communities.NotificationSettings.md#user) | [Users](Systems.Security.Users.md) | The user for whom the notification setting is about. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -72,7 +72,7 @@ _Default Value_: **False**
 
 > The user for whom the notification setting is about. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Security.Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

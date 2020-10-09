@@ -3,7 +3,7 @@ uid: Systems.Core.ObjectChanges
 ---
 # Systems.Core.ObjectChanges
 
-Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in version 19.1.100.0)
+Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in version 19.1)
 
 ## Attributes
 
@@ -18,8 +18,8 @@ Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ObjectChangeset](Systems.Core.ObjectChanges.md#objectchangeset) | [Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md) | The changeset containing this change. [Required] [Filter(multi eq)] [Owner] |
-| [RootObject](Systems.Core.ObjectChanges.md#rootobject) | [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)] |
+| [ObjectChangeset](Systems.Core.ObjectChanges.md#objectchangeset) | [ObjectChangesets](Systems.Core.ObjectChangesets.md) | The changeset containing this change. [Required] [Filter(multi eq)] [Owner] |
+| [RootObject](Systems.Core.ObjectChanges.md#rootobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)] |
 
 
 ## Attribute Details
@@ -69,14 +69,14 @@ _Supports Order By_: **False**
 
 > The changeset containing this change. [Required] [Filter(multi eq)] [Owner]
 
-_Type_: **[Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)**  
+_Type_: **[ObjectChangesets](Systems.Core.ObjectChangesets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RootObject
 
 > The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)]
 
-_Type_: **[Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+_Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 
