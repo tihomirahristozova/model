@@ -130,24 +130,18 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="jointimeutc">JoinTimeUtc</h3>
-<blockquote>
 <p>The exact server time (in UTC), when the user joined the group. [Required] [Default(NowUtc)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="socialgroup">SocialGroup</h3>
-<blockquote>
 <p>The group in which the user participates. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Communities.SocialGroups.html">SocialGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
-<blockquote>
 <p>The user, who is a member of the group. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

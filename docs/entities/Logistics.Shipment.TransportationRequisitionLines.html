@@ -156,9 +156,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contentsdescription">ContentsDescription</h3>
-<blockquote>
 <p>Textual description of the cargo contents. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -167,9 +165,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Line number, unique within the TransportationRequisition. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationRequisition (in order to allow insertions with adjustment documents). [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -178,50 +174,36 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.TransportationRequisition.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="palletscount">PalletsCount</h3>
-<blockquote>
 <p>Number of palettes comprising the cargo. null when it is unknown.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<blockquote>
 <p>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="volumecbm">VolumeCbm</h3>
-<blockquote>
 <p>The volume of the cargo, in CBM (cubic meters). null when it is unknown.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="weightkg">WeightKg</h3>
-<blockquote>
 <p>The weight of the cargo, in KG (kilogramms). null when it is unknown.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="cargotype">CargoType</h3>
-<blockquote>
 <p>The type of the transported cargo. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<blockquote>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transportationrequisition">TransportationRequisition</h3>
-<blockquote>
 <p>The <a href="Logistics.Shipment.TransportationRequisitionLines.html#transportationrequisition">TransportationRequisition</a> to which this TransportationRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationRequisitions.html">TransportationRequisitions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

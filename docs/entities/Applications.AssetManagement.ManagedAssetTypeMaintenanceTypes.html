@@ -141,23 +141,17 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="defaultparameterchange">DefaultParameterChange</h3>
-<blockquote>
 <p>Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means, that maintenances are not scheduled based on parameter change.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultscheduledays">DefaultScheduleDays</h3>
-<blockquote>
 <p>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in days.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultschedulemonths">DefaultScheduleMonths</h3>
-<blockquote>
 <p>Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in months.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -166,23 +160,17 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this ManagedAssetTypeMaintenanceType.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="maintenancetype">MaintenanceType</h3>
-<blockquote>
 <p>The allowed maintenance type for the asset type. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="managedassettype">ManagedAssetType</h3>
-<blockquote>
 <p>The asset type for which the allowed maintenance type is defined. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssetTypes.html">ManagedAssetTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

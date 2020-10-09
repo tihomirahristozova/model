@@ -221,32 +221,24 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="confirmedpriceperunit">ConfirmedPricePerUnit</h3>
-<blockquote>
 <p>The unit price that is confirmed by the supplier. null if there was no order confirmation. [Currency: PurchaseOrder.DocumentCurrency]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="confirmedquantity">ConfirmedQuantity</h3>
-<blockquote>
 <p>The quantity that is confirmed by the supplier. null if there was no order confirmation. [Unit: QuantityUnit] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="confirmedquantitybase">ConfirmedQuantityBase</h3>
-<blockquote>
 <p>The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.ConfirmedQuantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConfirmedQuantityBase, obj.ConfirmedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="confirmedstandardquantitybase">ConfirmedStandardQuantityBase</h3>
-<blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. [Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -257,9 +249,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Line number, unique within the PurchaseOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the PurchaseOrder (in order to allow insertions with adjustment documents). [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -268,37 +258,27 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.PurchaseOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this PurchaseOrderLine.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<blockquote>
 <p>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. [Filter(eq)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planneddeliverydate">PlannedDeliveryDate</h3>
-<blockquote>
 <p>The planned delivery date for this line. [Required] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="priceperunit">PricePerUnit</h3>
-<blockquote>
 <p>The expected unit price of the ordered products, in the document currency. [Currency: PurchaseOrder.DocumentCurrency]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="productdescription">ProductDescription</h3>
-<blockquote>
 <p>The name of the ordered product, initially copied from the name in the product definition. The field can be edited by the user. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -307,17 +287,13 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.Name</code></p>
 <h3 id="quantity">Quantity</h3>
-<blockquote>
 <p>The quantity ordered. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<blockquote>
 <p>The equivalence of Quantity, in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -327,9 +303,7 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -339,57 +313,39 @@
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="lot">Lot</h3>
-<blockquote>
 <p>When not null, indicates that a specific lot is required to be delivered. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<blockquote>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<blockquote>
 <p>The ordered product. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productcode">ProductCode</h3>
-<blockquote>
 <p>When not null, specifies that the product was selected using the specified product code record. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
-<blockquote>
 <p>If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseorder">PurchaseOrder</h3>
-<blockquote>
 <p>The <a href="Logistics.Procurement.PurchaseOrderLines.html#purchaseorder">PurchaseOrder</a> to which this PurchaseOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseproductprice">PurchaseProductPrice</h3>
-<blockquote>
 <p>When not null, specifies that the purchase unit price is loaded automatically from the specified purchase price record. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseProductPrices.html">PurchaseProductPrices</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<blockquote>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="requisitionline">RequisitionLine</h3>
-<blockquote>
 <p>When not null, specifies that the current line is based on the specified requisition line. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.RequisitionLines.html">RequisitionLines</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

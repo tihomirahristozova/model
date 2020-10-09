@@ -166,9 +166,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<blockquote>
 <p>The unique code of the ProductType. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -177,65 +175,49 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<blockquote>
 <p>When checked specifies that this type is set by default for new products unless another type is specified in the product groups. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="isfixedasset">IsFixedAsset</h3>
-<blockquote>
 <p>True when assets are acquired or retired when products from this type are purchased or sold. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="isserviceactivityservice">IsServiceActivityService</h3>
-<blockquote>
 <p>True when the product corresponds to service used in service documents (like service activities). [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="isserviced">IsServiced</h3>
-<blockquote>
 <p>True when the products of this type create service agreements and can be serviced. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="isshipped">IsShipped</h3>
-<blockquote>
 <p>True when the products from this type are being shipped after sales. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="isstocked">IsStocked</h3>
-<blockquote>
 <p>True=The products of this type are stocked in a warehouse; false=otherwise (services). [Required] [Default(true)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="lotautocreation">LotAutoCreation</h3>
-<blockquote>
 <p>If checked specifies that lots are automatically created by the receiving orders with which the products are received. [Required] [Default(false)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>The name of this ProductType. [Required] [Filter(eq;like)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>

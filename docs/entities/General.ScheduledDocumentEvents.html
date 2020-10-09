@@ -156,25 +156,19 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="cancelled">Cancelled</h3>
-<blockquote>
 <p>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="creationtime">CreationTime</h3>
-<blockquote>
 <p>Date and time when the ScheduledDocumentEvent was created. [Required] [Default(Now)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="documentevent">DocumentEvent</h3>
-<blockquote>
 <p>The type of the document event that is scheduled to be processed. [Required] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -183,31 +177,23 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lastprocessstatus">LastProcessStatus</h3>
-<blockquote>
 <p>Status/information of the last attemp to process the event. Usually shows the cause in case of failure. [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="lastprocesstime">LastProcessTime</h3>
-<blockquote>
 <p>The time of the last attempt to process the event. [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="processed">Processed</h3>
-<blockquote>
 <p>Indicates wheather the event is already processed or not. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="state">State</h3>
-<blockquote>
 <p>The state of the document for which the event will be processed. [Required] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.ScheduledDocumentEvents.html#state">State</a></strong><br>
 Allowed values for the <a href="General.ScheduledDocumentEvents.html#state">State</a> data attribute<br>
 <em>Allowed Values (General.ScheduledDocumentEventsRepository.State Enum Members)</em></p>
@@ -253,15 +239,11 @@ Allowed values for the <a href="General.ScheduledDocumentEvents.html#state">Stat
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<blockquote>
 <p>The document for which the event will be processed. [Required] [Filter(multi eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="sourcedocument">SourceDocument</h3>
-<blockquote>
 <p>The document that has caused this event to be scheduled. [Required] [Filter(multi eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

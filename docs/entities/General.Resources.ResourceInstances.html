@@ -141,9 +141,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<blockquote>
 <p>Code of the instance, unique within the resource. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -152,36 +150,26 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>Multilanguage resource instance name. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this ResourceInstance.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="asset">Asset</h3>
-<blockquote>
 <p>The asset, which is represented by this resource instance. null, when the resource instance is not an asset. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.Assets.html">Assets</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="party">Party</h3>
-<blockquote>
 <p>The party, which is represented by this resource instance. null, when the resource instance is not a party. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resource">Resource</h3>
-<blockquote>
 <p>The resource of which this is instance. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Resources.Resources.html">Resources</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

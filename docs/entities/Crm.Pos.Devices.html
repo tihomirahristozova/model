@@ -146,16 +146,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="deviceregistrationno">DeviceRegistrationNo</h3>
-<blockquote>
 <p>The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. [Filter(multi eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="devicetype">DeviceType</h3>
-<blockquote>
 <p>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. [Required] [Default(&quot;OTH&quot;)] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html#devicetype">DeviceType</a></strong><br>
 Allowed values for the <a href="Crm.Pos.Devices.html#devicetype">DeviceType</a> data attribute<br>
 <em>Allowed Values (Crm.Pos.DevicesRepository.DeviceType Enum Members)</em></p>
@@ -189,9 +185,7 @@ Allowed values for the <a href="Crm.Pos.Devices.html#devicetype">DeviceType</a> 
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Other</strong></p>
 <h3 id="electronicaddress">ElectronicAddress</h3>
-<blockquote>
 <p>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc. [Filter(multi eq;like)]<p>
-</addr></blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -200,17 +194,13 @@ Allowed values for the <a href="Crm.Pos.Devices.html#devicetype">DeviceType</a> 
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>Indicates whether the device is currently active and can be choosen from drop-downs in new records. [Required] [Default(true)] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="protocolname">ProtocolName</h3>
-<blockquote>
 <p>The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> (nullable)</strong><br>
 Allowed values for the <a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> data attribute<br>
 <em>Allowed Values (Crm.Pos.DevicesRepository.ProtocolName Enum Members)</em></p>
@@ -231,17 +221,13 @@ Allowed values for the <a href="Crm.Pos.Devices.html#protocolname">ProtocolName<
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="settingsjson">SettingsJson</h3>
-<blockquote>
 <p>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="posterminal">PosTerminal</h3>
-<blockquote>
 <p>The POS terminal, to which this device is attached. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Terminals.html">Terminals</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
@@ -255,7 +241,7 @@ Allowed values for the <a href="Crm.Pos.Devices.html#protocolname">ProtocolName<
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_Pos_Devices?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Pos_Devices?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_Devices?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Crm_Pos_Devices?$top=10</a></p>
-</article>
+</addr></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

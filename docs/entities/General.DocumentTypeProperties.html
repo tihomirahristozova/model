@@ -161,23 +161,17 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="defaultpropertyvalue">DefaultPropertyValue</h3>
-<blockquote>
 <p>The default value of the property when creating new documents.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultpropertyvaluedescription">DefaultPropertyValueDescription</h3>
-<blockquote>
 <p>Default description value of the property when creating new documents.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultvalueid">DefaultValueId</h3>
-<blockquote>
 <p>Internal Id of the default value of the property. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
@@ -185,9 +179,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Line number, unique within the document type. [Required] [Filter(ge;le)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
@@ -196,44 +188,32 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.DocumentType.DocumentTypeProperties.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="required">Required</h3>
-<blockquote>
 <p>True if the property is required when creating documents of this type. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="requiredfromdate">RequiredFromDate</h3>
-<blockquote>
 <p>When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date. [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="requiredthrudate">RequiredThruDate</h3>
-<blockquote>
 <p>When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<blockquote>
 <p>The document type, for which to add user-defined properties. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>When not null, specifies that the current rule is valid only for the specified company. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="property">Property</h3>
-<blockquote>
 <p>The user-defined property, which should be added. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

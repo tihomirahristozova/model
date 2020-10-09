@@ -150,31 +150,23 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="ispublished">IsPublished</h3>
-<blockquote>
 <p>Specifies whether the module is published and will be showed in the web site. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="localurl">LocalUrl</h3>
-<blockquote>
 <p>The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="modulepicture">ModulePicture</h3>
-<blockquote>
 <p>Default picture. Used for picture links, small module icons, etc. PNG format is suggested.</p>
-</blockquote>
 <p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="moduletype">ModuleType</h3>
-<blockquote>
 <p>Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Cms.NewsWebModules.html#moduletype">ModuleType</a></strong><br>
 Allowed values for the <a href="Applications.Cms.WebModules.html#moduletype">ModuleType</a> data attribute<br>
 <em>Allowed Values (Applications.Cms.WebModulesRepository.ModuleType Enum Members)</em></p>
@@ -203,23 +195,17 @@ Allowed values for the <a href="Applications.Cms.WebModules.html#moduletype">Mod
 <p><em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>Multilanguage Module name. This is used as a title when displaying the web Module. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
-<blockquote>
 <p>The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Cms.WebModules.html">WebModules</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="website">WebSite</h3>
-<blockquote>
 <p>The web site to which the module belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Cms.WebSites.html">WebSites</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

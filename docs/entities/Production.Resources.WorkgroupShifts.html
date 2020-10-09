@@ -136,17 +136,13 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="efficiencyfactorpercent">EfficiencyFactorPercent</h3>
-<blockquote>
 <p>Efficiency factor of the routing steps for this shift, expressed as percentage. [Required] [Default(1)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="establishmentdate">EstablishmentDate</h3>
-<blockquote>
 <p>When the workgroup shift was established. Used as minimum date when generating calendar. [Required] [Default(Today)] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -156,23 +152,17 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="shiftname">ShiftName</h3>
-<blockquote>
 <p>The name of the workgroup shift. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="workgroup">Workgroup</h3>
-<blockquote>
 <p>The <a href="Production.Resources.WorkgroupShifts.html#workgroup">Workgroup</a> to which this WorkgroupShift belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.Workgroups.html">Workgroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workschedule">WorkSchedule</h3>
-<blockquote>
 <p>The work schedule used to calculate the working time for the shift. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Resources.WorkSchedules.html">WorkSchedules</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

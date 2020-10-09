@@ -281,16 +281,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="buyername">BuyerName</h3>
-<blockquote>
 <p>The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="fixedorderquantitybase">FixedOrderQuantityBase</h3>
-<blockquote>
 <p>Fixed order quantity under the FOQ &amp; EOQ replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -300,25 +296,19 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>True if this product supply is active. [Required] [Default(true)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<blockquote>
 <p>Specifies whether this is the default supply rule. The planning system works using <em>only</em> the default supply rules. The other rules are for reference and user information. [Required] [Default(true)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="manufacturingpolicy">ManufacturingPolicy</h3>
-<blockquote>
 <p>MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order. [Required] [Default(&quot;MTS&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductSupply.html#manufacturingpolicy">ManufacturingPolicy</a></strong><br>
 Allowed values for the <a href="General.Products.ProductSupply.html#manufacturingpolicy">ManufacturingPolicy</a> data attribute<br>
 <em>Allowed Values (General.Products.ProductSupplyRepository.ManufacturingPolicy Enum Members)</em></p>
@@ -352,17 +342,13 @@ Allowed values for the <a href="General.Products.ProductSupply.html#manufacturin
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>MakeToStock</strong></p>
 <h3 id="orderlotsizequantitybase">OrderLotSizeQuantityBase</h3>
-<blockquote>
 <p>The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="orderlotsizingmethod">OrderLotSizingMethod</h3>
-<blockquote>
 <p>LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;. [Required] [Default(&quot;ROP&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductSupply.html#orderlotsizingmethod">OrderLotSizingMethod</a></strong><br>
 Allowed values for the <a href="General.Products.ProductSupply.html#orderlotsizingmethod">OrderLotSizingMethod</a> data attribute<br>
 <em>Allowed Values (General.Products.ProductSupplyRepository.OrderLotSizingMethod Enum Members)</em></p>
@@ -404,54 +390,40 @@ Allowed values for the <a href="General.Products.ProductSupply.html#orderlotsizi
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>ReorderPoint</strong></p>
 <h3 id="ordermaximum">OrderMaximum</h3>
-<blockquote>
 <p>Order maximum when buying or making. null means no maximum. [Unit: Product.BaseMeasurementCategory.BaseUnit]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="orderminimum">OrderMinimum</h3>
-<blockquote>
 <p>Minimum order quantity both for buying and making. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="ordermultiple">OrderMultiple</h3>
-<blockquote>
 <p>True if the order qty should be multiple of lot size when buying or making. [Required] [Default(false)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="orderperiodplanningdays">OrderPeriodPlanningDays</h3>
-<blockquote>
 <p>For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="orderperiodstartdate">OrderPeriodStartDate</h3>
-<blockquote>
 <p>Start date of the first period under fixed period replenishment system. null - not yet specified.</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="orderpointquantitybase">OrderPointQuantityBase</h3>
-<blockquote>
 <p>Order point quantity under the OP replenishment system. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="orderpolicy">OrderPolicy</h3>
-<blockquote>
 <p>Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning. [Required] [Default(&quot;OPS&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductSupply.html#orderpolicy">OrderPolicy</a></strong><br>
 Allowed values for the <a href="General.Products.ProductSupply.html#orderpolicy">OrderPolicy</a> data attribute<br>
 <em>Allowed Values (General.Products.ProductSupplyRepository.OrderPolicy Enum Members)</em></p>
@@ -485,31 +457,23 @@ Allowed values for the <a href="General.Products.ProductSupply.html#orderpolicy"
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>OrderPointSystem</strong></p>
 <h3 id="planningannualcarryingcostpercent">PlanningAnnualCarryingCostPercent</h3>
-<blockquote>
 <p>The expected carrying cost as percentage of inventory cost. null means unknown.</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningannualusagequantitybase">PlanningAnnualUsageQuantityBase</h3>
-<blockquote>
 <p>Average usage of the product for 1 year. NUL means unknown. [Unit: Product.BaseMeasurementCategory.BaseUnit]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planninghorizondays">PlanningHorizonDays</h3>
-<blockquote>
 <p>Number of days in the future for which to plan the demand and supply. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="planningleadtimedays">PlanningLeadTimeDays</h3>
-<blockquote>
 <p>The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -517,46 +481,34 @@ Allowed values for the <a href="General.Products.ProductSupply.html#orderpolicy"
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( Convert( obj.PreferredSupplier.DefaultDeliveryTermDays, Nullable</code>1) != null), obj.PreferredSupplier.DefaultDeliveryTermDays, obj.PlanningLeadTimeDays)`</p>
 <h3 id="planningmaximuminventoryquantitybase">PlanningMaximumInventoryQuantityBase</h3>
-<blockquote>
 <p>Maximum inventory. null if N/A. [Unit: Product.BaseMeasurementCategory.BaseUnit]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningordercostbasecurrency">PlanningOrderCostBaseCurrency</h3>
-<blockquote>
 <p>Projected cost to place an order and set-up equipment. [Currency: EnterpriseCompany.BaseCurrency]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningordercycledays">PlanningOrderCycleDays</h3>
-<blockquote>
 <p>Number of days in one period under fixed period replenishment system. null - not yet specified.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningsafetystockquantitybase">PlanningSafetyStockQuantityBase</h3>
-<blockquote>
 <p>Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="planningtimefencedays">PlanningTimeFenceDays</h3>
-<blockquote>
 <p>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. [Required] [Default(1)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="procurementtype">ProcurementType</h3>
-<blockquote>
 <p>M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought. [Required] [Default(&quot;B&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductSupply.html#procurementtype">ProcurementType</a></strong><br>
 Allowed values for the <a href="General.Products.ProductSupply.html#procurementtype">ProcurementType</a> data attribute<br>
 <em>Allowed Values (General.Products.ProductSupplyRepository.ProcurementType Enum Members)</em></p>
@@ -586,66 +538,46 @@ Allowed values for the <a href="General.Products.ProductSupply.html#procurementt
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Buy</strong></p>
 <h3 id="standardcostperlot">StandardCostPerLot</h3>
-<blockquote>
 <p>Standard cost for one lot of the product. [Currency: Product.CostingCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="supplyschemaid">SupplySchemaId</h3>
-<blockquote>
 <p>The supply schema to use for the distribution of the product among warehouses. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultstorebin">DefaultStoreBin</h3>
-<blockquote>
 <p>Default store bin for new deliveries using this supply scheme. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>The Enterprise Company to which this ProductSupply applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromstore">FromStore</h3>
-<blockquote>
 <p>Used when the Procurement_Type is Transfer. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="generatedocumenttype">GenerateDocumentType</h3>
-<blockquote>
 <p>Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="preferredsupplier">PreferredSupplier</h3>
-<blockquote>
 <p>Preferred supplier for the product. null if there is no preferred supplier. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.Suppliers.html">Suppliers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<blockquote>
 <p>The <a href="General.Products.ProductSupply.html#product">Product</a> to which this ProductSupply belongs. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productgroup">ProductGroup</h3>
-<blockquote>
 <p>Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
-<blockquote>
 <p>The store for which this rule is defined. When null, the rule is valid for all stores. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

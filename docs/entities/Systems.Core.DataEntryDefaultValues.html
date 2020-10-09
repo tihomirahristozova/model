@@ -161,37 +161,27 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="columnname">ColumnName</h3>
-<blockquote>
 <p>The column for which the default is specified. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionformname">ConditionFormName</h3>
-<blockquote>
 <p>If not null specifies that the default should be applied only if Form_Name equals the specified value. [Filter(eq)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="conditionuserlogin">ConditionUserLogin</h3>
-<blockquote>
 <p>If not null specifies that the default should be applied only if User_Login equals this value. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="conditionusermachine">ConditionUserMachine</h3>
-<blockquote>
 <p>If not null specifies that the default should be applied only if User_Machine equals this value. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultvaluefield">DefaultValueField</h3>
-<blockquote>
 <p>The default value for Column_Name. Should be applied only if the other conditions are met. null specifies null default.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -200,36 +190,26 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="panelname">PanelName</h3>
-<blockquote>
 <p>When not null, specifies the panel for which the default value applies. [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="tablename">TableName</h3>
-<blockquote>
 <p>The table, containing the column for which the default value is specified. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="conditiondocumenttype">ConditionDocumentType</h3>
-<blockquote>
 <p>If not null specifies that the default should be applied only if Document_Type_Id equals this value. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="conditionenterprisecompany">ConditionEnterpriseCompany</h3>
-<blockquote>
 <p>If not null specifies that the default should be applied only if Enterprise_Company_Id equals this value. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="conditionrole">ConditionRole</h3>
-<blockquote>
 <p>When not null, specifies that the default value should be applied only when the user plays the specified role. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Roles.html">Roles</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -145,45 +145,33 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="entityitemid">EntityItemId</h3>
-<blockquote>
 <p>The id of the actual changed object, described by this change. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="newvalue">NewValue</h3>
-<blockquote>
 <p>The new value. [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="previousvalue">PreviousValue</h3>
-<blockquote>
 <p>The previous value. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="repositoryname">RepositoryName</h3>
-<blockquote>
 <p>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="timeutc">TimeUtc</h3>
-<blockquote>
 <p>Date and time (in Utc) when the changeset was processed by the server. [Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="user">User</h3>
-<blockquote>
 <p>The user which initiated the change. null when it is unknown. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

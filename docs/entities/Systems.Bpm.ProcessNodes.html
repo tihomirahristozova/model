@@ -141,9 +141,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<blockquote>
 <p>Node code, unique within the process. Used as ID for XML serialization purposes. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -152,23 +150,17 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="instructionshtml">InstructionsHtml</h3>
-<blockquote>
 <p>Detailed instructions to the executor in HTML format. [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>Multilanguage process name. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="nodetype">NodeType</h3>
-<blockquote>
 <p>Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessNodes.html#nodetype">NodeType</a></strong><br>
 Allowed values for the <a href="Systems.Bpm.ProcessNodes.html#nodetype">NodeType</a> data attribute<br>
 <em>Allowed Values (Systems.Bpm.ProcessNodesRepository.NodeType Enum Members)</em></p>
@@ -202,15 +194,11 @@ Allowed values for the <a href="Systems.Bpm.ProcessNodes.html#nodetype">NodeType
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="process">Process</h3>
-<blockquote>
 <p>The process, to which this Node belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.Processes.html">Processes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="processlane">ProcessLane</h3>
-<blockquote>
 <p>The process lane to which this Node belongs. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessLanes.html">ProcessLanes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

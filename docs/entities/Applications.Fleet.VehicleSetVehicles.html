@@ -135,30 +135,22 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this VehicleSetVehicle. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="ordinalpos">OrdinalPos</h3>
-<blockquote>
 <p>Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="vehicle">Vehicle</h3>
-<blockquote>
 <p>The Vehicle which is part of the vehicle set. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.Vehicles.html">Vehicles</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="vehicleset">VehicleSet</h3>
-<blockquote>
 <p>The <a href="Applications.Fleet.VehicleSetVehicles.html#vehicleset">VehicleSet</a> to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.VehicleSets.html">VehicleSets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -141,9 +141,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<blockquote>
 <p>The exact server time (in UTC), when the notification was created. [Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
@@ -153,38 +151,28 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isread">IsRead</h3>
-<blockquote>
 <p>Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="notificationclass">NotificationClass</h3>
-<blockquote>
 <p>The class of the notification from a predefined list of system classes. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="subject">Subject</h3>
-<blockquote>
 <p>The short subject of the notification (in the Default Culture of the user). [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dataobject">DataObject</h3>
-<blockquote>
 <p>The data object about which the notification is created. Null means that the notification is not about any specific data object. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
-<blockquote>
 <p>The user, who is notified. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

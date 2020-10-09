@@ -135,32 +135,24 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>Indicates whether this sequence is active. [Required] [Default(true)] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="maxno">MaxNo</h3>
-<blockquote>
 <p>Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. [Filter(multi eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="nextno">NextNo</h3>
-<blockquote>
 <p>The next consecutive number which will be assigned on the next request. [Required] [Filter(multi eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="posdevice">PosDevice</h3>
-<blockquote>
 <p>The POS device, for which the sequence is defined. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html">Devices</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

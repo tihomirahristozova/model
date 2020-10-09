@@ -141,16 +141,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<blockquote>
 <p>The unique code of the StoreGroup. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="fullpath">FullPath</h3>
-<blockquote>
 <p>The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. [Filter(eq;like)] [ORD] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
@@ -159,30 +155,22 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>The name of this StoreGroup. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentfullpath">ParentFullPath</h3>
-<blockquote>
 <p>The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>The Enterprise Company to which this StoreGroup applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<blockquote>
 <p>The Enterprise Company Location to which this StoreGroup applies, or null if it is for all enterprise company locations. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -157,38 +157,28 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>Represents whether the POS terminal is active and can be chosen from drop-downs for new records. [Required] [Default(true)] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="posterminalcode">PosTerminalCode</h3>
-<blockquote>
 <p>Unique (within the location) code of the POS terminal. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="posterminalname">PosTerminalName</h3>
-<blockquote>
 <p>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc. [Required] [Filter(multi eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultfiscalprinterposdevice">DefaultFiscalPrinterPosDevice</h3>
-<blockquote>
 <p>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html">Devices</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="poslocation">PosLocation</h3>
-<blockquote>
 <p>The POS location, where the terminal is located. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

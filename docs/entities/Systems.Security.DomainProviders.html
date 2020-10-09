@@ -151,23 +151,17 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="clientid">ClientID</h3>
-<blockquote>
 <p>This is the Client_ID of our registration within the provider.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="clientsecret">ClientSecret</h3>
-<blockquote>
 <p>This is the password, which we, as a client app, use to access the authentication provider.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="displayname">DisplayName</h3>
-<blockquote>
 <p>Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -176,24 +170,18 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>Specifies whether the provider is currently active for the domain. [Required] [Default(true)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this DomainProvider.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="providername">ProviderName</h3>
-<blockquote>
 <p>The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.DomainProviders.html#providername">ProviderName</a></strong><br>
 Allowed values for the <a href="Systems.Security.DomainProviders.html#providername">ProviderName</a> data attribute<br>
 <em>Allowed Values (Systems.Security.DomainProvidersRepository.ProviderName Enum Members)</em></p>
@@ -226,17 +214,13 @@ Allowed values for the <a href="Systems.Security.DomainProviders.html#providerna
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="tenantid">TenantID</h3>
-<blockquote>
 <p>When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="domain">Domain</h3>
-<blockquote>
 <p>The domain for which the provider is setup. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Domains.html">Domains</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

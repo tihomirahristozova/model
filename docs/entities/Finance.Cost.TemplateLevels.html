@@ -126,9 +126,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="hierarchylevel">HierarchyLevel</h3>
-<blockquote>
 <p>The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9). [Required] [Default(0)] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -138,17 +136,13 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="levelname">LevelName</h3>
-<blockquote>
 <p>The name of the hierarchy level. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costtemplate">CostTemplate</h3>
-<blockquote>
 <p>The <a href="Finance.Cost.Templates.html">Template</a> to which this TemplateLevel belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Templates.html">Templates</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

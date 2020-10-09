@@ -383,61 +383,45 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="completetime">CompleteTime</h3>
-<blockquote>
 <p>Exact time, when the document was last completed[Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationtime">CreationTime</h3>
-<blockquote>
 <p>Date/Time when the document was created [Required][Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="creationuser">CreationUser</h3>
-<blockquote>
 <p>The login name of the user, who created the document [Required][Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentdate">DocumentDate</h3>
-<blockquote>
 <p>The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="documentno">DocumentNo</h3>
-<blockquote>
 <p>Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="documentnotes">DocumentNotes</h3>
-<blockquote>
 <p>Notes for this Document</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentversion">DocumentVersion</h3>
-<blockquote>
 <p>[Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="entityname">EntityName</h3>
-<blockquote>
 <p>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
@@ -446,25 +430,19 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<blockquote>
 <p>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<blockquote>
 <p>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
-<blockquote>
 <p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlips.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> (nullable)</strong><br>
 Relationship between parent and child documents<br>
 <em>Allowed Values (General.ParentDocumentRelationshipType Enum Members)</em></p>
@@ -489,53 +467,39 @@ Relationship between parent and child documents<br>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="paymentslipno">PaymentSlipNo</h3>
-<blockquote>
 <p>When not null, contains the number of the slip, as issued by the banking institution.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planningonly">PlanningOnly</h3>
-<blockquote>
 <p>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="readonly">ReadOnly</h3>
-<blockquote>
 <p>True - the document is read only; false - the document is not read only [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="referencedate">ReferenceDate</h3>
-<blockquote>
 <p>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="referencedocumentno">ReferenceDocumentNo</h3>
-<blockquote>
 <p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="releasetime">ReleaseTime</h3>
-<blockquote>
 <p>Exact time, when the document was first released [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="state">State</h3>
-<blockquote>
 <p>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlips.html#state">DocumentState</a></strong><br>
 Enumeration of document system states<br>
 <em>Allowed Values (General.DocumentState Enum Members)</em></p>
@@ -581,161 +545,111 @@ Enumeration of document system states<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="void">Void</h3>
-<blockquote>
 <p>True if the document is null and void [Required][Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="voidreason">VoidReason</h3>
-<blockquote>
 <p>Reason for voiding the document, entered by the user</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="voidtime">VoidTime</h3>
-<blockquote>
 <p>Date/time when the document has become void</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="voiduser">VoidUser</h3>
-<blockquote>
 <p>The user who voided the document</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
-<blockquote>
 <p>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="adjusteddocument">AdjustedDocument</h3>
-<blockquote>
 <p>The primary document, which the current document adjusts. null when this is not an adjustment document</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assignedtouser">AssignedToUser</h3>
-<blockquote>
 <p>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="currencydirectory">CurrencyDirectory</h3>
-<blockquote>
 <p>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
-<blockquote>
 <p>The currency of the amounts in this document. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<blockquote>
 <p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>The enterprise company which issued the document [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<blockquote>
 <p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromcompanydivision">FromCompanyDivision</h3>
-<blockquote>
 <p>The division of the company, issuing the document. null when the document is not issued by any specific division</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromparty">FromParty</h3>
-<blockquote>
 <p>The party which issued the document [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="masterdocument">MasterDocument</h3>
-<blockquote>
 <p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
-<blockquote>
 <p>In a multi-document tree, this is the direct parent document. If this is the root it is null</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
-<blockquote>
 <p>The account towards which the payments was effected. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)</code></p>
 <h3 id="paymenttype">PaymentType</h3>
-<blockquote>
 <p>When not null specifies the payment type for the sales order. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="primecausedocument">PrimeCauseDocument</h3>
-<blockquote>
 <p>The document that is the prime cause for creation of the current document</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
-<blockquote>
 <p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="reverseofdocument">ReverseOfDocument</h3>
-<blockquote>
 <p>The document which the current document is reverse of</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="sequence">Sequence</h3>
-<blockquote>
 <p>The sequence that will be used to give new numbers to the documents of this type</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Sequences.html">Sequences</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="tocompanydivision">ToCompanyDivision</h3>
-<blockquote>
 <p>The division of the company, receiving the document. null when the document is not received by any specific division</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong></p>
 <h3 id="toparty">ToParty</h3>
-<blockquote>
 <p>The party which should receive the document</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="userstatus">UserStatus</h3>
-<blockquote>
 <p>The user status of this document if applicable for this document type. null means unknown or not yet set</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

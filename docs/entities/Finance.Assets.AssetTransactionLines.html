@@ -181,17 +181,13 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="depreciationvalue">DepreciationValue</h3>
-<blockquote>
 <p>Change in the depreciation value of the asset (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="depreciationvaluebase">DepreciationValueBase</h3>
-<blockquote>
 <p>Change in the depreciation value of the asset (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -201,25 +197,19 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="negativereservevalue">NegativeReserveValue</h3>
-<blockquote>
 <p>Change in the value of the negative reserve after asset valuations (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="negativereservevaluebase">NegativeReserveValueBase</h3>
-<blockquote>
 <p>Change in the value of the negative reserve after asset valuations (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="operationtype">OperationType</h3>
-<blockquote>
 <p>Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation. [Required] [Default(&quot;ADJ&quot;)] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.AssetTransactionLines.html#operationtype">OperationType</a></strong><br>
 Allowed values for the <a href="Finance.Assets.AssetTransactionLines.html#operationtype">OperationType</a> data attribute<br>
 <em>Allowed Values (Finance.Assets.AssetTransactionLinesRepository.OperationType Enum Members)</em></p>
@@ -257,70 +247,52 @@ Allowed values for the <a href="Finance.Assets.AssetTransactionLines.html#operat
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Adjustment</strong></p>
 <h3 id="positivereservevalue">PositiveReserveValue</h3>
-<blockquote>
 <p>Change in the value of the positive reserve after asset valuations (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="positivereservevaluebase">PositiveReserveValueBase</h3>
-<blockquote>
 <p>Change in the value of the positive reserve after asset valuations (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="purchasevalue">PurchaseValue</h3>
-<blockquote>
 <p>Change in the purchase value of the asset (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="purchasevaluebase">PurchaseValueBase</h3>
-<blockquote>
 <p>Change in the purchase value of the asset (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="salvagevalue">SalvageValue</h3>
-<blockquote>
 <p>Change in the salvage value of the asset (in the currency of the asset). [Currency: Asset.ValuationCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="salvagevaluebase">SalvageValueBase</h3>
-<blockquote>
 <p>Change in the salvage value of the asset (in the currency of the enterprise company). [Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="asset">Asset</h3>
-<blockquote>
 <p>Asset for which changes in values have occurred. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.Assets.html">Assets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assettransaction">AssetTransaction</h3>
-<blockquote>
 <p>The <a href="Finance.Assets.AssetTransactionLines.html#assettransaction">AssetTransaction</a> to which this AssetTransactionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.AssetTransactions.html">AssetTransactions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="valuationmodel">ValuationModel</h3>
-<blockquote>
 <p>Valuation model in which the changes of the asset values have occurred (Taxation model or Accounting model or other). [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.ValuationModels.html">ValuationModels</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

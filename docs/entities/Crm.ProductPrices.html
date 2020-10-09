@@ -206,9 +206,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<blockquote>
 <p>Starting date of validity of the price. [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -217,46 +215,34 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="maxquantity">MaxQuantity</h3>
-<blockquote>
 <p>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="minquantity">MinQuantity</h3>
-<blockquote>
 <p>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this ProductPrice.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="price">Price</h3>
-<blockquote>
 <p>Price in the specified currency and for the specified quantity. [Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="pricequantity">PriceQuantity</h3>
-<blockquote>
 <p>The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="priority">Priority</h3>
-<blockquote>
 <p>Priority of the price comparative to other prices. Only the highest priority price is applied. [Required] [Default(2)] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.ProductPrices.html#priority">Priority</a></strong><br>
 Generic enum type for Priority properties<br>
 <em>Allowed Values (General.Priority Enum Members)</em></p>
@@ -294,83 +280,59 @@ Generic enum type for Priority properties<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>2</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<blockquote>
 <p>Ending date (inclusive) of the validity of the price. [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="currency">Currency</h3>
-<blockquote>
 <p>The currency of the price. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="customer">Customer</h3>
-<blockquote>
 <p>When not null, specifies that the customer of the sales document must be the specified customer. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="distributionchannel">DistributionChannel</h3>
-<blockquote>
 <p>Use the price only when selling through the specified channel. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>When not null, specifies that the sales document must be in the specified enterprise company. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<blockquote>
 <p>When set, specifies that the sales document must be of the specified enterprise company location. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( obj.EnterpriseCompanyLocation != null) AndAlso ( obj.EnterpriseCompanyLocation.Company != obj.EnterpriseCompany)), null, obj.EnterpriseCompanyLocation.Company)</code></p>
 <h3 id="pricelist">PriceList</h3>
-<blockquote>
 <p>When not null, specifies that the sales document must have the specified price list. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.PriceLists.html">PriceLists</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="pricequantitymeasurementunit">PriceQuantityMeasurementUnit</h3>
-<blockquote>
 <p>The measurement unit of Price_Quantity. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.Product != null), obj.Product.MeasurementUnit, obj.PriceQuantityMeasurementUnit)</code></p>
 <h3 id="pricetype">PriceType</h3>
-<blockquote>
 <p>Price type of the current product price. The price types are used to set additional priority condition for the prices. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.PriceTypes.html">PriceTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<blockquote>
 <p>The product for which a price will be defined. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="shiptocustomer">ShipToCustomer</h3>
-<blockquote>
 <p>When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.ShipToCustomer.Party.ParentParty != obj.Customer), null, obj.ShipToCustomer)</code></p>
 <h3 id="targetgroup">TargetGroup</h3>
-<blockquote>
 <p>When not null, specifies a criteria, which is matched only when the customer of the sales document is included in the group. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

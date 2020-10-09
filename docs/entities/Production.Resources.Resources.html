@@ -182,72 +182,52 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>Name of the resource. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>User notes for the resource.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="setupdurationhours">SetupDurationHours</h3>
-<blockquote>
 <p>The usual duration of setup when changing production. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="setupscrapquantity">SetupScrapQuantity</h3>
-<blockquote>
 <p>The usual quantity of fixed scrap occurring when changing production. . [Unit: SetupScrapUnit] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="standardcostperhour">StandardCostPerHour</h3>
-<blockquote>
 <p>Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. [Currency: ResourceCurrency]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardpriceperhour">StandardPricePerHour</h3>
-<blockquote>
 <p>Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. [Currency: ResourceCurrency]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="primaryunit">PrimaryUnit</h3>
-<blockquote>
 <p>Primary measurement unit for quantities of the resource. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resourcecurrency">ResourceCurrency</h3>
-<blockquote>
 <p>Currency for this resource. This currency applies for the standard price and cost per hour. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resourcegroup">ResourceGroup</h3>
-<blockquote>
 <p>The Id of the containing resource group. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.ResourceGroups.html">ResourceGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="setupscrapunit">SetupScrapUnit</h3>
-<blockquote>
 <p>The measurement units of Setup_Scrap_Quantity. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

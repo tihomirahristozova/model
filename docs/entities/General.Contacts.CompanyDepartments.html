@@ -131,9 +131,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="departmentname">DepartmentName</h3>
-<blockquote>
 <p>The name of the department. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -142,23 +140,17 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this CompanyDepartment.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="company">Company</h3>
-<blockquote>
 <p>The <a href="General.Contacts.CompanyDepartments.html#company">Company</a> to which this CompanyDepartment belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">Companies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
-<blockquote>
 <p>The parent department. null if this is root department in the company. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyDepartments.html">CompanyDepartments</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -154,22 +154,16 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="boundaryofprocessnodeid">BoundaryOfProcessNodeId</h3>
-<blockquote>
 <p>When the event is boundary, contains the node to which the event is bound. Otherwise contains null. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="eventkey">EventKey</h3>
-<blockquote>
 <p>The unique event key, which is thrown or caught. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="eventtype">EventType</h3>
-<blockquote>
 <p>Event type. S=Start, T=Intermediate Throw, C=Intermediate Catch, B=Boundary, E=End. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -178,58 +172,42 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="iscancel">IsCancel</h3>
-<blockquote>
 <p>True if this is cancel event. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="iscompensation">IsCompensation</h3>
-<blockquote>
 <p>True if this is compensation event. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="iserror">IsError</h3>
-<blockquote>
 <p>True if this is error event. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="isescalation">IsEscalation</h3>
-<blockquote>
 <p>True if this is escalation event. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="ismessage">IsMessage</h3>
-<blockquote>
 <p>True if this is message event. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="issignal">IsSignal</h3>
-<blockquote>
 <p>True if this is signal event. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="istimer">IsTimer</h3>
-<blockquote>
 <p>True if this is timer event. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="processnodeid">ProcessNodeId</h3>
-<blockquote>
 <p>The node of this node event. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

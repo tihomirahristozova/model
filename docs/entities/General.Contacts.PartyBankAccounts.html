@@ -151,37 +151,27 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="bankaccountcode">BankAccountCode</h3>
-<blockquote>
 <p>The code of the account, usually the IBAN code. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="bankaddress">BankAddress</h3>
-<blockquote>
 <p>The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="bankbranchname">BankBranchName</h3>
-<blockquote>
 <p>The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="bankcode">BankCode</h3>
-<blockquote>
 <p>The code of the bank, usually the BIC code. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="bankname">BankName</h3>
-<blockquote>
 <p>The full name of the bank. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -190,25 +180,19 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<blockquote>
 <p>True if the this is the default account for the party. Only one default per party is allowed. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this PartyBankAccount.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="party">Party</h3>
-<blockquote>
 <p>The <a href="General.Contacts.PartyBankAccounts.html#party">Party</a> to which this PartyBankAccount belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

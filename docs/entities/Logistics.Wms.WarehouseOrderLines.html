@@ -185,93 +185,65 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Unique consecutive line number within the order. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this WarehouseOrderLine.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantity">Quantity</h3>
-<blockquote>
 <p>The quantity of the product, which should be operated. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="tasktype">TaskType</h3>
-<blockquote>
 <p>The type of the task (operation), which should be performed. MOV=Move; INB=Inbound; OUT=Outbound; INS=Inspect; PCK=Packing/Unpacking; CNT=Count. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="lot">Lot</h3>
-<blockquote>
 <p>The lot of the product, which should be operated. null for operations, which are not lot-specific, or when any lot can be used. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<blockquote>
 <p>The product, which should be operated. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<blockquote>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<blockquote>
 <p>The serial number of the product, which should be operated. null for operations, which are not serial number-specific, or when any serial number can be used. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="tounit">ToUnit</h3>
-<blockquote>
 <p>Destination measurement unit. null for operations, which do not specify destination measurement unit. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="towarehouselocation">ToWarehouseLocation</h3>
-<blockquote>
 <p>Destination warehouse location. null for operations, which do not specify destination location. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouselocation">WarehouseLocation</h3>
-<blockquote>
 <p>Location, where the opeartion should be performed. null for operations, which do not require location. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouseorder">WarehouseOrder</h3>
-<blockquote>
 <p>The <a href="Logistics.Wms.WarehouseOrderLines.html#warehouseorder">WarehouseOrder</a> to which this WarehouseOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouseworker">WarehouseWorker</h3>
-<blockquote>
 <p>The human or robot worker, which should execute the line. null means that the line is shared among all workers, assigned to the order. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehousezone">WarehouseZone</h3>
-<blockquote>
 <p>The warehouse zone, in which the operation should be performed. null for operations which do not require specific zone. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

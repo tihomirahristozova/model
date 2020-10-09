@@ -141,24 +141,18 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="description">Description</h3>
-<blockquote>
 <p>The description of this AccountGroup.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="discontinued">Discontinued</h3>
-<blockquote>
 <p>True means that the account group won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="fullpath">FullPath</h3>
-<blockquote>
 <p>Full path to the group. Contains delimited list of group numbers of parent groups. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -167,24 +161,18 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>Account group name, required. Must be unique within the parent group. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="number">Number</h3>
-<blockquote>
 <p>Unique account group number. May contain characters, if required. [Required] [Filter(like)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
-<blockquote>
 <p>Parent account group. null if this is root group. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

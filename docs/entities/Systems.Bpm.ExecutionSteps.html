@@ -131,9 +131,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="executionstate">ExecutionState</h3>
-<blockquote>
 <p>Shows where the execution of the step has reached. 0=Ready; 10=Active; 20=Executing; 30=Completing; 40=Failing; 50=Terminating; 60=Completed; 70=Failed; 80=Terminated. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -143,24 +141,18 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="starttime">StartTime</h3>
-<blockquote>
 <p>The date and time when the step execution started. [Required] [Default(Now)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="processelement">ProcessElement</h3>
-<blockquote>
 <p>The process element, which is being executed for the instance. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessElements.html">ProcessElements</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="processinstance">ProcessInstance</h3>
-<blockquote>
 <p>The process instance, which is being executed. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessInstances.html">ProcessInstances</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

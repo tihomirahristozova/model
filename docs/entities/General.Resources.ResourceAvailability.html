@@ -131,17 +131,13 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="availableresources">AvailableResources</h3>
-<blockquote>
 <p>The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. [Required] [Default(1)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<blockquote>
 <p>The date from which availability starts. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -150,17 +146,13 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="todate">ToDate</h3>
-<blockquote>
 <p>The date to which the availability continues. When null, the availability continues infinitely.</p>
-</blockquote>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="resource">Resource</h3>
-<blockquote>
 <p>The resource, for which we provide availability. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Resources.Resources.html">Resources</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

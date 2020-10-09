@@ -151,37 +151,27 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<blockquote>
 <p>Unique code of the maintenance type. [Required] [Filter(eq;like)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="defaultparameterchange">DefaultParameterChange</h3>
-<blockquote>
 <p>Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultscheduledays">DefaultScheduleDays</h3>
-<blockquote>
 <p>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultschedulemonths">DefaultScheduleMonths</h3>
-<blockquote>
 <p>Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="description">Description</h3>
-<blockquote>
 <p>Detailed description of the maintenance (multilanguage).</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -190,23 +180,17 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>Multilanguage name of the maintenance type. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="maintenancetypegroup">MaintenanceTypeGroup</h3>
-<blockquote>
 <p>The group, to which this maintenance type belongs. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceTypeGroups.html">MaintenanceTypeGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="trackedparameter">TrackedParameter</h3>
-<blockquote>
 <p>Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.TrackedParameters.html">TrackedParameters</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

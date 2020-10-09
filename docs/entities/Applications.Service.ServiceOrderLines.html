@@ -135,9 +135,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -146,23 +144,17 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.ServiceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="symptomdescription">SymptomDescription</h3>
-<blockquote>
 <p>Description or synopsis of the symptoms of the failed object. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="serviceobject">ServiceObject</h3>
-<blockquote>
 <p>The service object, which is experiencing the symptoms and needs repair. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceorder">ServiceOrder</h3>
-<blockquote>
 <p>The <a href="Applications.Service.ServiceOrderLines.html#serviceorder">ServiceOrder</a> to which this ServiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceOrders.html">ServiceOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

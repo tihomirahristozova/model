@@ -150,9 +150,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="newstate">NewState</h3>
-<blockquote>
 <p>The new state after the change. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentStateChanges.html#newstate">NewState</a></strong><br>
 Allowed values for the <a href="General.DocumentStateChanges.html#newstate">NewState</a> data attribute<br>
 <em>Allowed Values (General.DocumentStateChangesRepository.NewState Enum Members)</em></p>
@@ -197,46 +195,34 @@ Allowed values for the <a href="General.DocumentStateChanges.html#newstate">NewS
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="systeminitiated">SystemInitiated</h3>
-<blockquote>
 <p>Specifies whether the state change was caused by system process or from user action. [Required] [Default(false)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<blockquote>
 <p>The time when the change took effect. [Required] [Filter(ge;le)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
-<blockquote>
 <p>The login name of the user, who made the status change. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="void">Void</h3>
-<blockquote>
 <p>True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1)</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<blockquote>
 <p>The document which has changed state. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="userstatus">UserStatus</h3>
-<blockquote>
 <p>The new user status after the change. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -171,9 +171,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="executiondate">ExecutionDate</h3>
-<blockquote>
 <p>The date when the operation was executed. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -182,9 +180,7 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.TransportationExecution.ExecutionDate</code></p>
 <h3 id="executiontime">ExecutionTime</h3>
-<blockquote>
 <p>The time when the operation was executed. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>time</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -197,9 +193,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Consecutive line number within this execution. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -208,16 +202,12 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.TransportationExecution.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this TransportationExecutionLine.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="operationtype">OperationType</h3>
-<blockquote>
 <p>The type of operation being executed. L=Loading; U=Unloading; O=Other. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationExecutionLines.html#operationtype">OperationType</a></strong><br>
 Allowed values for the <a href="Logistics.Shipment.TransportationExecutionLines.html#operationtype">OperationType</a> data attribute<br>
 <em>Allowed Values (Logistics.Shipment.TransportationExecutionLinesRepository.OperationType Enum Members)</em></p>
@@ -246,44 +236,32 @@ Allowed values for the <a href="Logistics.Shipment.TransportationExecutionLines.
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="palletnumber">PalletNumber</h3>
-<blockquote>
 <p>Pallet number, when applicable. null when unknown or not applicable.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="palletscount">PalletsCount</h3>
-<blockquote>
 <p>Number of pallets affected by this operation. null when unknown or N/A.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="volumecbm">VolumeCbm</h3>
-<blockquote>
 <p>Cargo volume in cubic meters, affected by this operation. null when unknown or N/A.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="weightkg">WeightKg</h3>
-<blockquote>
 <p>Cargo weight in kg, affected by this operation. null when unknown or N/A.</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="executionoftransportationorderline">ExecutionOfTransportationOrderLine</h3>
-<blockquote>
 <p>The transportation order line, which is executed. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrderLines.html">TransportationOrderLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="geopoint">GeoPoint</h3>
-<blockquote>
 <p>The geographic point, where the operation is executed. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.GeoPoints.html">GeoPoints</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -291,9 +269,7 @@ Allowed values for the <a href="Logistics.Shipment.TransportationExecutionLines.
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.TransportationExecution.GeoPoint</code></p>
 <h3 id="transportationexecution">TransportationExecution</h3>
-<blockquote>
 <p>The <a href="Logistics.Shipment.TransportationExecutionLines.html#transportationexecution">TransportationExecution</a> to which this TransportationExecutionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationExecutions.html">TransportationExecutions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

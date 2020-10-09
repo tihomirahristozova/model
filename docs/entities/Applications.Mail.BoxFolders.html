@@ -158,9 +158,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="foldername">FolderName</h3>
-<blockquote>
 <p>Multi-language folder name. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -169,23 +167,17 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="serverfolderid">ServerFolderID</h3>
-<blockquote>
 <p>ID of the folder on the mail server in the format of the mail server. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="syncstate">SyncState</h3>
-<blockquote>
 <p>The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="systempurpose">SystemPurpose</h3>
-<blockquote>
 <p>When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. [Filter(eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Mail.BoxFolders.html#systempurpose">SystemPurpose</a> (nullable)</strong><br>
 Allowed values for the <a href="Applications.Mail.BoxFolders.html#systempurpose">SystemPurpose</a> data attribute<br>
 <em>Allowed Values (Applications.Mail.BoxFoldersRepository.SystemPurpose Enum Members)</em></p>
@@ -227,15 +219,11 @@ Allowed values for the <a href="Applications.Mail.BoxFolders.html#systempurpose"
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="mailbox">MailBox</h3>
-<blockquote>
 <p>The <a href="Applications.Mail.Boxes.html">Box</a> to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Mail.Boxes.html">Boxes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentfolder">ParentFolder</h3>
-<blockquote>
 <p>The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Mail.BoxFolders.html">BoxFolders</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

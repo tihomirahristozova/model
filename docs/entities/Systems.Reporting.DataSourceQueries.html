@@ -151,9 +151,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="dependsonchildrows">DependsOnChildRows</h3>
-<blockquote>
 <p>Determines the visibility of rows in this table. 0 - allways visible; 1 - the row is visible if there is at least one child row; 2 - the row is visible if all sub-tables contain child rows. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Reporting.DataSourceQueries.html#dependsonchildrows">DependsOnChildRows</a></strong><br>
 Allowed values for the <a href="Systems.Reporting.DataSourceQueries.html#dependsonchildrows">DependsOnChildRows</a> data attribute<br>
 <em>Allowed Values (Systems.Reporting.DataSourceQueriesRepository.DependsOnChildRows Enum Members)</em></p>
@@ -183,23 +181,17 @@ Allowed values for the <a href="Systems.Reporting.DataSourceQueries.html#depends
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="extensionslist">ExtensionsList</h3>
-<blockquote>
 <p>A comma separated list of report extension names. An extension is set of additional fields that participate in the query.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="filterxml">FilterXml</h3>
-<blockquote>
 <p>Filter for the loaded table.</p>
-</blockquote>
 <p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="firstrow">FirstRow</h3>
-<blockquote>
 <p>Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable. [Required] [Default(false)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -209,31 +201,23 @@ Allowed values for the <a href="Systems.Reporting.DataSourceQueries.html#depends
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="referencepath">ReferencePath</h3>
-<blockquote>
 <p>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="tablename">TableName</h3>
-<blockquote>
 <p>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="uniquename">UniqueName</h3>
-<blockquote>
 <p>The name of the data table in the printout datasource. If null the Reference_Path is used.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="datasource">DataSource</h3>
-<blockquote>
 <p>The report of the query. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Reporting.DataSources.html">DataSources</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

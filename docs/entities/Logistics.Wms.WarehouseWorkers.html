@@ -146,17 +146,13 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="activefrom">ActiveFrom</h3>
-<blockquote>
 <p>The date, from which the worker record has become active in the warehouse. [Required] [Default(Today)] [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="activeto">ActiveTo</h3>
-<blockquote>
 <p>The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -165,38 +161,28 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>Specifies whether the worker is active and can execute new warehouse tasks. [Required] [Default(true)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>Name of the worker (multi-language). [Required] [Filter(multi eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this WarehouseWorker.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="person">Person</h3>
-<blockquote>
 <p>The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouse">Warehouse</h3>
-<blockquote>
 <p>The warehouse, where the worker works. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

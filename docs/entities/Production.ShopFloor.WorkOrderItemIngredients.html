@@ -206,9 +206,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="distributeby">DistributeBy</h3>
-<blockquote>
 <p>Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT null iif Work_Order_Item_Id is null. MC=Measurement, SP=Standard_Price.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItemIngredients.html#distributeby">DistributeBy</a> (nullable)</strong><br>
 Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.html#distributeby">DistributeBy</a> data attribute<br>
 <em>Allowed Values (Production.ShopFloor.WorkOrderItemIngredientsRepository.DistributeBy Enum Members)</em></p>
@@ -239,9 +237,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.WorkOrderItem != null), null, obj.DistributeBy)</code></p>
 <h3 id="fixedscrapquantity">FixedScrapQuantity</h3>
-<blockquote>
 <p>The quantity of the material, which will be used for setup. [Unit: UsedQuantityUnit] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -251,9 +247,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<blockquote>
 <p>The order of the line within the item. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -262,24 +256,18 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.WorkOrder.ItemIngredients.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this WorkOrderItemIngredient.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="usedquantity">UsedQuantity</h3>
-<blockquote>
 <p>The quantity of the material consumed in the operation. [Unit: UsedQuantityUnit] [Required] [Default(1)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="usedquantitybase">UsedQuantityBase</h3>
-<blockquote>
 <p>The equivalence of Used Quantity in the base measurement category of the material. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -288,9 +276,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Material != null) AndAlso ( obj.UsedQuantity != null)) AndAlso ( obj.UsedQuantityUnit != null)), obj.UsedQuantity.ConvertTo( obj.Material.BaseUnit, obj.Material), obj.UsedQuantityBase)</code></p>
 <h3 id="usedstandardquantitybase">UsedStandardQuantityBase</h3>
-<blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -300,23 +286,17 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <code>IIF( ( ( ( obj.UsedQuantity != null) AndAlso ( obj.UsedQuantityUnit != null)) AndAlso ( obj.Material != null)), obj.UsedQuantity.ConvertTo( obj.Material.BaseUnit, obj.Material), obj.UsedStandardQuantityBase)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="distributebymeasurementcategory">DistributeByMeasurementCategory</h3>
-<blockquote>
 <p>Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT null iif Distribute_By = MC. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementCategories.html">MeasurementCategories</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( obj.DistributeBy == null) OrElse ( Convert( obj.DistributeBy.Value, Int32) != 1)), null, obj.DistributeByMeasurementCategory)</code></p>
 <h3 id="lot">Lot</h3>
-<blockquote>
 <p>Lot from which to get the material. When null, any lot can be used. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="material">Material</h3>
-<blockquote>
 <p>The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -324,35 +304,25 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ProductCode.Product.IfNullThen( obj.Material)</code></p>
 <h3 id="operation">Operation</h3>
-<blockquote>
 <p>Specifies for which operation this ingredient is used. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.Operations.html">Operations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="principalrecipeingredient">PrincipalRecipeIngredient</h3>
-<blockquote>
 <p>The principal recipe ingredient on which this record is based. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.Technologies.PrincipalRecipeIngredients.html">PrincipalRecipeIngredients</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productcode">ProductCode</h3>
-<blockquote>
 <p>Selects the product thru some of the product codes. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.ProductCode.Product != obj.Material), null, obj.ProductCode)</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<blockquote>
 <p>If not null, specifies the serial number of the ingredient. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
-<blockquote>
 <p>The store from which to retrieve the material. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -360,15 +330,11 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.WorkOrder.DefaultMaterialsStore</code></p>
 <h3 id="storebin">StoreBin</h3>
-<blockquote>
 <p>The store bin from which to take the ingredients. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="usedquantityunit">UsedQuantityUnit</h3>
-<blockquote>
 <p>The measurement unit of the quantity of the material consumed in the operation. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -376,15 +342,11 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen( obj.Material.MeasurementUnit.IfNullThen( obj.UsedQuantityUnit))</code></p>
 <h3 id="workorder">WorkOrder</h3>
-<blockquote>
 <p>The <a href="Production.ShopFloor.WorkOrderItemIngredients.html#workorder">WorkOrder</a> to which this WorkOrderItemIngredient belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workorderitem">WorkOrderItem</h3>
-<blockquote>
 <p>The work order item for which the materials in this line are used. If null means that the materials are distributed amongst all work order items in the document. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>

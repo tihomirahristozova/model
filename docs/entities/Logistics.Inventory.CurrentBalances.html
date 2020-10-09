@@ -161,74 +161,52 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="basecost">BaseCost</h3>
-<blockquote>
 <p>The cost of the inventory in base currency of the enterprise company. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="productcost">ProductCost</h3>
-<blockquote>
 <p>The cost of the inventory in the products currency. [Currency: Product.CostingCurrency] [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<blockquote>
 <p>The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="storecost">StoreCost</h3>
-<blockquote>
 <p>The cost of the inventory in the stores currency. [Currency: Store.Currency] [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>The enterprise company which issued the document. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
-<blockquote>
 <p>If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<blockquote>
 <p>The item that was received/issued. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
-<blockquote>
 <p>If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<blockquote>
 <p>Item serial number for serialized items. null for non-serialized items. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
-<blockquote>
 <p>The store from which the goods are received or issued. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storebin">StoreBin</h3>
-<blockquote>
 <p>Store bin, from/to which the transaction was performed. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

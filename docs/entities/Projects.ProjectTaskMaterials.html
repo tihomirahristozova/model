@@ -146,9 +146,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="budgetedmaterialamount">BudgetedMaterialAmount</h3>
-<blockquote>
 <p>Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. [Currency: ProjectTask.Project.BudgetingCurrency]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -159,9 +157,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="linenumber">LineNumber</h3>
-<blockquote>
 <p>Line number within the task, increased in steps of 10. Used for sorting purposes. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -171,17 +167,13 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.ProjectTask.Materials.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="quantity">Quantity</h3>
-<blockquote>
 <p>The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<blockquote>
 <p>The equivalence of Quantity in the base measurement unit of the Material. [Required] [Default(0)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -190,21 +182,15 @@
 <code>IIF( ( ( obj.QuantityUnit != null) AndAlso ( obj.MaterialProduct != null)), obj.Quantity.ConvertTo( obj.MaterialProduct.BaseUnit, obj.MaterialProduct).Value, obj.QuantityBase)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="materialproduct">MaterialProduct</h3>
-<blockquote>
 <p>The product Id of the required material. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projecttask">ProjectTask</h3>
-<blockquote>
 <p>The task for which is the material requirement. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">ProjectTasks</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<blockquote>
 <p>The measurement unit of the required quantity. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

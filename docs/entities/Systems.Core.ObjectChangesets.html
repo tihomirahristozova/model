@@ -148,9 +148,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicationname">ApplicationName</h3>
-<blockquote>
 <p>The application which requested the change. null when it is unknown. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -159,25 +157,19 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="serverversion">ServerVersion</h3>
-<blockquote>
 <p>The version of the application server at the time of the change. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="timeutc">TimeUtc</h3>
-<blockquote>
 <p>Date and time (in Utc) when the changeset was processed by the server. [Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="user">User</h3>
-<blockquote>
 <p>The user which initiated the change. null when it is unknown. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

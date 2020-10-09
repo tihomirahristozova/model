@@ -131,9 +131,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amountbase">AmountBase</h3>
-<blockquote>
 <p>The cost (in base currency) which should be distributed. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -142,23 +140,17 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this DistributionCost.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costdistribution">CostDistribution</h3>
-<blockquote>
 <p>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionCost belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Distributions.html">Distributions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costtype">CostType</h3>
-<blockquote>
 <p>The type of the cost, which will be distributed. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">CostTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

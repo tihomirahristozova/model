@@ -139,9 +139,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="conflictdescription">ConflictDescription</h3>
-<blockquote>
 <p>Description of the conflict. [Required] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -150,54 +148,40 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="resolveconfirmedbyuser">ResolveConfirmedByUser</h3>
-<blockquote>
 <p>True, when the conflict resolution was manually confirmed by user. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="resolveconfirmedtime">ResolveConfirmedTime</h3>
-<blockquote>
 <p>Time when the conflict resolution was confirmed by the user. [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="resolvedescription">ResolveDescription</h3>
-<blockquote>
 <p>Description of the resolution of the conflict. [Required] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="resolvedtime">ResolvedTime</h3>
-<blockquote>
 <p>Time when the resolution of the conflict was made. [Required] [Default(Now)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="revisedbyuser">RevisedByUser</h3>
-<blockquote>
 <p>True, when the conflict resolution was revised (reviewed) manually by user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="tablename">TableName</h3>
-<blockquote>
 <p>Name of the table in which the conflict has occurred. [Required] [Filter(like)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="url">URL</h3>
-<blockquote>
 <p>URL of the item (the row) for which the conflict occurred. [Required] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>

@@ -178,17 +178,13 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="createdate">CreateDate</h3>
-<blockquote>
 <p>The creation date of the project risk. [Required] [Default(Now)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="description">Description</h3>
-<blockquote>
 <p>The description of this ProjectRisk. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -197,61 +193,45 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="impactpercent">ImpactPercent</h3>
-<blockquote>
 <p>The impact of the risk to the project, expressed as percentage of the total project value. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="probabilitypercent">ProbabilityPercent</h3>
-<blockquote>
 <p>The probability of the risk occurring. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="resolutionstrategy">ResolutionStrategy</h3>
-<blockquote>
 <p>The strategy chosen to handle the risk. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="resolved">Resolved</h3>
-<blockquote>
 <p>True if the risk is resolved. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="resolvedate">ResolveDate</h3>
-<blockquote>
 <p>The date on which the risk is resolved. [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>date (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="riskname">RiskName</h3>
-<blockquote>
 <p>The short name of the risk. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="project">Project</h3>
-<blockquote>
 <p>The project for which this risk applies. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Projects.Projects.html">Projects</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
-<blockquote>
 <p>The person who is responsible for handling the risk. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

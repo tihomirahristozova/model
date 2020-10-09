@@ -146,23 +146,17 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="defaultpropertyvalue">DefaultPropertyValue</h3>
-<blockquote>
 <p>When not null, specifies the default value of the property, for new products in the group.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultpropertyvaluedescription">DefaultPropertyValueDescription</h3>
-<blockquote>
 <p>When not null, specifies the default description value of the property, for new products in the group.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultvalueid">DefaultValueId</h3>
-<blockquote>
 <p>When not null, specifies the default internal Id value of the property, for new products in the group. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
@@ -170,9 +164,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="propertyno">PropertyNo</h3>
-<blockquote>
 <p>The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -182,24 +174,18 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.ProductGroup.RequiredProperties.Select( c =&gt; c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="required">Required</h3>
-<blockquote>
 <p>Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. [Required] [Default(false)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="productgroup">ProductGroup</h3>
-<blockquote>
 <p>The <a href="General.Products.ProductGroupRequiredProperties.html#productgroup">ProductGroup</a> to which this ProductGroupRequiredProperty belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="property">Property</h3>
-<blockquote>
 <p>The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

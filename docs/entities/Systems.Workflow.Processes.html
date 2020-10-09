@@ -159,16 +159,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtime">CreationTime</h3>
-<blockquote>
 <p>Date and time when the Process was created. [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="creationuser">CreationUser</h3>
-<blockquote>
 <p>Login name of the user, who created the Process. [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -177,73 +173,53 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="islandscape">IsLandscape</h3>
-<blockquote>
 <p>Specifies whether the process diagram is intended to be viewed in landscape mode. [Required] [Default(true)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>The name of this Process. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this Process.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="schemaformat">SchemaFormat</h3>
-<blockquote>
 <p>Application specific format of the Schema Layout. [Required] [Default(&quot;D&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>D</strong></p>
 <h3 id="schemalayout">SchemaLayout</h3>
-<blockquote>
 <p>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startevent">StartEvent</h3>
-<blockquote>
 <p>USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startroleid">StartRoleId</h3>
-<blockquote>
 <p>When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="thumbnail">Thumbnail</h3>
-<blockquote>
 <p>Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format.</p>
-</blockquote>
 <p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<blockquote>
 <p>Date and time when the Process was last updated. [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
-<blockquote>
 <p>Login name of the user, who last updated the Process. [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>

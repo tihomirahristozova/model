@@ -141,16 +141,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amountpercent">AmountPercent</h3>
-<blockquote>
 <p>Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way.</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="amountperunit">AmountPerUnit</h3>
-<blockquote>
 <p>Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. [Currency: PricingModel.Currency]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -159,9 +155,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>The consequtive number of the cost within the pricing model. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -171,21 +165,15 @@
 <code>( obj.PricingModel.Costs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costtype">CostType</h3>
-<blockquote>
 <p>The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">CostTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="measurementunit">MeasurementUnit</h3>
-<blockquote>
 <p>The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="pricingmodel">PricingModel</h3>
-<blockquote>
 <p>Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pricing.PricingModels.html">PricingModels</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

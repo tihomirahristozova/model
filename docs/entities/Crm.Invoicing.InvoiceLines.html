@@ -256,9 +256,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="businessreason">BusinessReason</h3>
-<blockquote>
 <p>Business reason for invoicing of this product or service. S=Shipment, P=Payment. [Required] [Default(&quot;S&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceLines.html#businessreason">InvoicingBusinessReason</a></strong><br>
 Generic enum type for InvoicingBusinessReason properties<br>
 <em>Allowed Values (Crm.Invoicing.InvoicingBusinessReason Enum Members)</em></p>
@@ -284,9 +282,7 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Shipment</strong></p>
 <h3 id="deliverytermscode">DeliveryTermsCode</h3>
-<blockquote>
 <p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceLines.html#deliverytermscode">DeliveryTerms</a> (nullable)</strong><br>
 Generic enum type for DeliveryTerms properties<br>
 <em>Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)</em></p>
@@ -355,9 +351,7 @@ Generic enum type for DeliveryTerms properties<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="intrastattransactionnaturecode">IntrastatTransactionNatureCode</h3>
-<blockquote>
 <p>Transaction nature; used for Intrastat reporting.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceLines.html#intrastattransactionnaturecode">TransactionNature</a> (nullable)</strong><br>
 Generic enum type for TransactionNature properties<br>
 <em>Allowed Values (Finance.Intrastat.TransactionNature Enum Members)</em></p>
@@ -454,9 +448,7 @@ Generic enum type for TransactionNature properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Invoice.IntrastatTransactionNatureCode</code></p>
 <h3 id="intrastattransportmodecode">IntrastatTransportModeCode</h3>
-<blockquote>
 <p>Transport mode; used for Intrastat reporting.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceLines.html#intrastattransportmodecode">TransportMode</a> (nullable)</strong><br>
 Generic enum type for TransportMode properties<br>
 <em>Allowed Values (Finance.Intrastat.TransportMode Enum Members)</em></p>
@@ -509,9 +501,7 @@ Generic enum type for TransportMode properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Invoice.IntrastatTransportModeCode</code></p>
 <h3 id="lineamount">LineAmount</h3>
-<blockquote>
 <p>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -519,17 +509,13 @@ Generic enum type for TransportMode properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.CalculateLineAmount( obj.Quantity, obj.UnitPrice, Convert( obj.LineStandardDiscountPercent, Nullable</code>1), Convert( obj.LineCustomDiscountPercent, Nullable<code>1), obj.Invoice.DocumentCurrency)</code></p>
 <h3 id="linecustomdiscountpercent">LineCustomDiscountPercent</h3>
-<blockquote>
 <p>User-defined discount for the line. [Required] [Default(0)] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Consecutive line number, unique within the invoice. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -538,9 +524,7 @@ Generic enum type for TransportMode properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.Invoice.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linestandarddiscountpercent">LineStandardDiscountPercent</h3>
-<blockquote>
 <p>Standard discount for the line. This is automatically computed according to discount conditions. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -548,40 +532,30 @@ Generic enum type for TransportMode properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.LineDiscount != null), obj.LineDiscount.DiscountPercent, 0)</code></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this InvoiceLine.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<blockquote>
 <p>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="productdescription">ProductDescription</h3>
-<blockquote>
 <p>The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.Name</code></p>
 <h3 id="quantity">Quantity</h3>
-<blockquote>
 <p>The quantity of the invoiced product. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<blockquote>
 <p>The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -590,16 +564,12 @@ Generic enum type for TransportMode properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="salesorderamount">SalesOrderAmount</h3>
-<blockquote>
 <p>Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing.</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -608,18 +578,14 @@ Generic enum type for TransportMode properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="unitprice">UnitPrice</h3>
-<blockquote>
 <p>The unit selling price of Quantity. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="intrastattransportcountry">IntrastatTransportCountry</h3>
-<blockquote>
 <p>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -627,21 +593,15 @@ Generic enum type for TransportMode properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Invoice.IntrastatTransportCountry</code></p>
 <h3 id="invoice">Invoice</h3>
-<blockquote>
 <p>The <a href="Crm.Invoicing.InvoiceLines.html#invoice">Invoice</a> to which this InvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.Invoices.html">Invoices</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="invoiceorderline">InvoiceOrderLine</h3>
-<blockquote>
 <p>Invoice order line which is invoiced by this line. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceOrderLines.html">InvoiceOrderLines</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linedealtype">LineDealType</h3>
-<blockquote>
 <p>Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -649,63 +609,45 @@ Generic enum type for TransportMode properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Invoice.DealType</code></p>
 <h3 id="linediscount">LineDiscount</h3>
-<blockquote>
 <p>The line discount type used to form the Line_Standard_Discount_Percent. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.LineDiscounts.html">LineDiscounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.DetermineLineDiscount( Convert( ( obj.Invoice.DeliveryDate ?? obj.Invoice.DocumentDate), Nullable</code>1), obj.Invoice.Customer, obj.Product, obj.Quantity, obj.Invoice.EnterpriseCompany, obj.Invoice.EnterpriseCompanyLocation, IIF( ( obj.SalesOrder == null), null, obj.SalesOrder.DistributionChannel), IIF( ( obj.SalesOrder == null), null, obj.SalesOrder.PriceList))`</p>
 <h3 id="parentdocument">ParentDocument</h3>
-<blockquote>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2)</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentsalesorderline">ParentSalesOrderLine</h3>
-<blockquote>
 <p>When not null specifies the Sales Order line that is invoiced by this invoice line. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymenttransaction">PaymentTransaction</h3>
-<blockquote>
 <p>The payment transaction, which is invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<blockquote>
 <p>The invoiced product. When null, although rarely used, the invoice line is still valid and the Product Description contains the invoiced item. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<blockquote>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.MeasurementUnit</code></p>
 <h3 id="salesorder">SalesOrder</h3>
-<blockquote>
 <p>When not null specifies the Sales Order that is invoiced by this line. [Filter(multi eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.ParentSalesOrderLine != null), obj.ParentSalesOrderLine.SalesOrder, null)</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<blockquote>
 <p>Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transactionline">TransactionLine</h3>
-<blockquote>
 <p>The store transaction line that is invoiced by this line, for Business Reason = S. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

@@ -146,9 +146,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="comments">Comments</h3>
-<blockquote>
 <p>Comments for this ProductPicture.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -157,9 +155,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<blockquote>
 <p>True=This is the default picture for the product and the size class; false=otherwise. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -167,23 +163,17 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.Product.Pictures.Take( 1).Count( ) == 0)</code></p>
 <h3 id="lastupdatetime">LastUpdateTime</h3>
-<blockquote>
 <p>The exact server time, when the picture was last updated. Set automatically. [Filter(ge;le)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="picture">Picture</h3>
-<blockquote>
 <p>The actual product picture. Can be null if we insert only some comments.</p>
-</blockquote>
 <p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="pictureno">PictureNo</h3>
-<blockquote>
 <p>Unique picture number within the product. Also used for sorting. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -192,9 +182,7 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.Product.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="picturesizeclass">PictureSizeClass</h3>
-<blockquote>
 <p>Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> (nullable)</strong><br>
 Allowed values for the <a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> data attribute<br>
 <em>Allowed Values (General.Products.ProductPicturesRepository.PictureSizeClass Enum Members)</em></p>
@@ -220,9 +208,7 @@ Allowed values for the <a href="General.Products.ProductPictures.html#picturesiz
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
-<blockquote>
 <p>The <a href="General.Products.ProductPictures.html#product">Product</a> to which this ProductPicture belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

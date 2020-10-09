@@ -141,17 +141,13 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowoverpayment">AllowOverpayment</h3>
-<blockquote>
 <p>True-Allows overpayment for the payment order; false=Does not allow (default). [Required] [Default(false)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="amount">Amount</h3>
-<blockquote>
 <p>The part of the total payed amount by the transaction, that is distributed to the specified payment order. [Currency: PaymentTransaction.TotalAmountCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -159,9 +155,7 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.CoveredOrderAmount.ConvertTo( obj.PaymentTransaction.TotalAmountCurrency, obj.PaymentTransaction.CurrencyDirectory)</code></p>
 <h3 id="coveredorderamount">CoveredOrderAmount</h3>
-<blockquote>
 <p>The part of the original payment order amount, that is covered by this transaction line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -173,23 +167,17 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this PaymentTransactionLine.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="paymentorder">PaymentOrder</h3>
-<blockquote>
 <p>The payment order, that is covered by this transaction amount distribution (tr.line). [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymenttransaction">PaymentTransaction</h3>
-<blockquote>
 <p>The <a href="Finance.Payments.PaymentTransactionLines.html#paymenttransaction">PaymentTransaction</a> to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

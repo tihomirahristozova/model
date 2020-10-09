@@ -191,24 +191,18 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="description">Description</h3>
-<blockquote>
 <p>The description of the discount that is shown to the operator when he/she should choose between different discounts. [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="discountpercent">DiscountPercent</h3>
-<blockquote>
 <p>The discount percent that should be applied if all the matching criteria are met. [Required] [Default(0)] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<blockquote>
 <p>Starting date of validity of the discount. null means no from date restriction. [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -217,23 +211,17 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="maxquantity">MaxQuantity</h3>
-<blockquote>
 <p>Apply the discount only if the quantity sold is equal to or less than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="minquantity">MinQuantity</h3>
-<blockquote>
 <p>Apply the discount only if the quantity sold is equal to or more than the specified here. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="priority">Priority</h3>
-<blockquote>
 <p>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. [Required] [Default(3)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.LineDiscounts.html#priority">Priority</a></strong><br>
 Generic enum type for Priority properties<br>
 <em>Allowed Values (General.Priority Enum Members)</em></p>
@@ -271,67 +259,47 @@ Generic enum type for Priority properties<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>3</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<blockquote>
 <p>Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. [Filter(eq;ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="customer">Customer</h3>
-<blockquote>
 <p>Apply the discount only if this is the customer. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="customertype">CustomerType</h3>
-<blockquote>
 <p>Apply the discount only if the customer is of this customer type. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.CustomerTypes.html">CustomerTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="distributionchannel">DistributionChannel</h3>
-<blockquote>
 <p>Apply the discount only when the sales document is on the specified channel. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>When not null, the policy is applied only for documents of the specified enterprise company . [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<blockquote>
 <p>When set, the policy is applied only for documents of the specified enterprise company location. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( obj.EnterpriseCompanyLocation != null) AndAlso ( obj.EnterpriseCompanyLocation.Company != obj.EnterpriseCompany)), null, obj.EnterpriseCompanyLocation.Company)</code></p>
 <h3 id="pricelist">PriceList</h3>
-<blockquote>
 <p>Apply the discount only if this price list is used. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.PriceLists.html">PriceLists</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<blockquote>
 <p>Apply the discount only when this specific product is sold. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productgroup">ProductGroup</h3>
-<blockquote>
 <p>Apply the discount only if the product sold is contained in this product group or any of its sub-groups. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="targetgroup">TargetGroup</h3>
-<blockquote>
 <p>Apply the discount only if the customer is included in this target group. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

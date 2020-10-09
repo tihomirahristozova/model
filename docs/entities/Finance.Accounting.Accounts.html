@@ -173,16 +173,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="accountfullnumber">AccountFullNumber</h3>
-<blockquote>
 <p>The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. [Required] [Filter(like)] [ReadOnly]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="currencyvaluationmethod">CurrencyValuationMethod</h3>
-<blockquote>
 <p>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document. [Required] [Default(&quot;ACB&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html#currencyvaluationmethod">CurrencyValuationMethod</a></strong><br>
 Allowed values for the <a href="Finance.Accounting.Accounts.html#currencyvaluationmethod">CurrencyValuationMethod</a> data attribute<br>
 <em>Allowed Values (Finance.Accounting.AccountsRepository.CurrencyValuationMethod Enum Members)</em></p>
@@ -212,16 +208,12 @@ Allowed values for the <a href="Finance.Accounting.Accounts.html#currencyvaluati
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>AccountCurrentBalance</strong></p>
 <h3 id="description">Description</h3>
-<blockquote>
 <p>The description of this Account.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="discontinued">Discontinued</h3>
-<blockquote>
 <p>True means that the account won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -231,36 +223,26 @@ Allowed values for the <a href="Finance.Accounting.Accounts.html#currencyvaluati
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>The account name. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="number">Number</h3>
-<blockquote>
 <p>The number of the account, unique within the account group. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accountgroup">AccountGroup</h3>
-<blockquote>
 <p>The account group to which this account belongs. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="currency">Currency</h3>
-<blockquote>
 <p>The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
 <p>The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

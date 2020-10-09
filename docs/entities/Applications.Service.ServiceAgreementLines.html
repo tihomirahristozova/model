@@ -155,16 +155,12 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineenddatetime">LineEndDateTime</h3>
-<blockquote>
 <p>The ending date and time of the agreement coverage for the current line. [Required] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -173,44 +169,32 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.ServiceAgreement.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linestartdatetime">LineStartDateTime</h3>
-<blockquote>
 <p>The starting date and time of the agreement coverage for the current line. [Required] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this ServiceAgreementLine.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantity">Quantity</h3>
-<blockquote>
 <p>The quantity of the service object that is included in the agreement. [Required] [Default(1)] [Filter(ge;le)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="serviceagreement">ServiceAgreement</h3>
-<blockquote>
 <p>The <a href="Applications.Service.ServiceAgreementLines.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceobject">ServiceObject</h3>
-<blockquote>
 <p>The service object, which is covered by the current agreement. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="servicetype">ServiceType</h3>
-<blockquote>
 <p>The type (level) of service that is agreed. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceTypes.html">ServiceTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

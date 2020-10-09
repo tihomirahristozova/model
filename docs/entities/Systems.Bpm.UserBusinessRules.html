@@ -176,16 +176,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<blockquote>
 <p>The unique code of the UserBusinessRule. [Required] [Filter(eq;like)] [ORD]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="icon">Icon</h3>
-<blockquote>
 <p>Visual icon of the rule in .PNG format.</p>
-</blockquote>
 <p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -194,17 +190,13 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<blockquote>
 <p>Specifies whether the rule is activated. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="layer">Layer</h3>
-<blockquote>
 <p>Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). [Required] [Default(&quot;BKE&quot;)] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html#layer">Layer</a></strong><br>
 Allowed values for the <a href="Systems.Bpm.UserBusinessRules.html#layer">Layer</a> data attribute<br>
 <em>Allowed Values (Systems.Bpm.UserBusinessRulesRepository.Layer Enum Members)</em></p>
@@ -234,30 +226,22 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRules.html#layer">Layer<
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>BackEnd</strong></p>
 <h3 id="name">Name</h3>
-<blockquote>
 <p>The name of this UserBusinessRule. [Required] [Filter(like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this UserBusinessRule.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="repositoryname">RepositoryName</h3>
-<blockquote>
 <p>The name of the repository, for which this business rule is defined. [Required] [Filter(eq;like)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scriptlanguage">ScriptLanguage</h3>
-<blockquote>
 <p>The programming language used to define the rule actions. [Required] [Default(&quot;Integrated&quot;)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html#scriptlanguage">ScriptLanguage</a></strong><br>
 Allowed values for the <a href="Systems.Bpm.UserBusinessRules.html#scriptlanguage">ScriptLanguage</a> data attribute<br>
 <em>Allowed Values (Systems.Bpm.UserBusinessRulesRepository.ScriptLanguage Enum Members)</em></p>
@@ -283,16 +267,12 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRules.html#scriptlanguag
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Integrated</strong></p>
 <h3 id="scripttext">ScriptText</h3>
-<blockquote>
 <p>The program code used to define the rule actions.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="userstartable">UserStartable</h3>
-<blockquote>
 <p>Specifies, that the rule can be manually started by the user. [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>

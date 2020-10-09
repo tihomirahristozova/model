@@ -141,16 +141,12 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="embeddedfilecontents">EmbeddedFileContents</h3>
-<blockquote>
 <p>The contents of the embedded file. null when the file is linked.</p>
-</blockquote>
 <p><em>Type</em>: <strong>byte[] (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="filename">FileName</h3>
-<blockquote>
 <p>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -159,32 +155,24 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="islinked">IsLinked</h3>
-<blockquote>
 <p>True when the document is linked (ony file name is kept). false when the document is embedded. [Required] [Default(false)] [Filter(eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="linkedfilepath">LinkedFilePath</h3>
-<blockquote>
 <p>Path to the linked file. null when the file is embedded.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<blockquote>
 <p>Notes for this DocumentFileAttachment.</p>
-</blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<blockquote>
 <p>The <a href="General.DocumentFileAttachments.html#document">Document</a> to which this DocumentFileAttachment belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

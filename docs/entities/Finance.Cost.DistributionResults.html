@@ -136,9 +136,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="distributedamountbase">DistributedAmountBase</h3>
-<blockquote>
 <p>The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -147,9 +145,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
-<blockquote>
 <p>Consecutive line number (within the cost distribution document) of the result. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -158,23 +154,17 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.CostDistribution.Results.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="outputlineno">OutputLineNo</h3>
-<blockquote>
 <p>The line number (within the document) of the output over which the cost is distributed. [Required]</p>
-</blockquote>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costdistribution">CostDistribution</h3>
-<blockquote>
 <p>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionResult belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Distributions.html">Distributions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costtype">CostType</h3>
-<blockquote>
 <p>The cost type for which the current distribution is calculated. [Required] [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">CostTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

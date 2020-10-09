@@ -24,7 +24,7 @@ When you retrieve the value of this attribute with the Domain API, you get value
 
 ### All translations are a single value
 
-ALL translations in a multi-language string are treated as a single value.
+All translations in a multi-language string are treated as a single value.
 You cannot change only one language pair - all pairs are updated simultaneously.
 The client applications are responsible for managing all language pairs.
 

@@ -141,9 +141,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="createsvatentries">CreatesVATEntries</h3>
-<blockquote>
 <p>Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided. [Required] [Default(true)]</p>
-</blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -153,9 +151,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="signrestriction">SignRestriction</h3>
-<blockquote>
 <p>Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoicesOptions.html#signrestriction">SignRestriction</a></strong><br>
 Generic enum type for SignRestriction properties<br>
 <em>Allowed Values (General.SignRestriction Enum Members)</em></p>
@@ -185,9 +181,7 @@ Generic enum type for SignRestriction properties<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="totalamountsignrestriction">TotalAmountSignRestriction</h3>
-<blockquote>
 <p>Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. [Required] [Default(0)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoicesOptions.html#totalamountsignrestriction">SignRestriction</a></strong><br>
 Generic enum type for SignRestriction properties<br>
 <em>Allowed Values (General.SignRestriction Enum Members)</em></p>
@@ -218,21 +212,15 @@ Generic enum type for SignRestriction properties<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultdealtype">DefaultDealType</h3>
-<blockquote>
 <p>When not null, specifies default VAT deal type. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<blockquote>
 <p>The document type for which the invoice option applies. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="vatdeviationdocumentamounttype">VATDeviationDocumentAmountType</h3>
-<blockquote>
 <p>Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)]</p>
-</blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
