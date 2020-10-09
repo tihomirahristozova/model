@@ -3,46 +3,51 @@ uid: data-types
 ---
 # Data Types
 
-## Simple Types
+## MultilanguageString
 
-## Complex Types
+Some text properties support value in more than one language.
+This properties are of multi-language string type.
 
-### MultilanguageString
+The multi-language string can store many language strings, indexing them by language key.
+The language key is a CultureInfo two letter ISO language name, like "en", "de", etc.
 
-Multi-language strings - https://enterpriseone.atlassian.net/wiki/display/techdoc/Multi-language
+For example, the name of a product is a data attribute, which can simultaneously contain translation of the product name in many languages.
 
-Some text properties support value in more than one language. This properties are of multi-language string type.
-
-Example: General_Products_Products.Name property.
-
-The multi-language string can store many language strings, indexing them by language key. The language key is a CultureInfo two letter ISO language name, like "en", "de", etc.
-
-For example the Name property of General_Products_Products entity is displayed as:
+When you retrieve the value of this attribute with the Domain API, you get values similar to:
 <code>
 {
-  "Name": {
-	  "bg": "Ябълка",
-	  "en": "Apple"
-  }
+  "en": "Apple",
+  "de": "Apfel"
 }
 <code>
 
->ALL multi-language values are treated as a single value. You cannot GET/PUT/PATCH only some multi-language values - they are treated as a single piece of data.
+### All translations are treated as a single value
+ALL translations in a multi-language string are treated as a single value.
+You cannot change only one language pair - all pairs are updated simultaneously.
+The client applications are responsible for managing all language pairs.
 
-> **Note!**  
-> Multi-language properties support only filter function **contains**:  
-> Domain API: 
-> ~/General_Products_Products?$filter=contains(Name,'ppl')  
-> This is an invalid filter:  
-> ~/General_Products_Products?$filter=Name eq 'Apple'  
+### Filtering
+The equality comparison for multi-language string is ambiguous.
+The APIs generally do not support direct equality comparisons.
 
-### Amount
+> [!note]
+> Domain API supports only the filter function **contains**.
+
+For example, the following is supported:
+
+    ~/General_Products_Products?$filter=contains(Name,'ppl')  
+    
+However, this is not valid:
+
+    ~/General_Products_Products?$filter=Name eq 'Apple'  
+
+## Amount
 
 The ERP domain model declares a special type for amount (currency) properties.
 
 The amount is represented by value and currency.
 
-**Properties**
+### Properties
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -59,13 +64,13 @@ Example:
   }
 }
 
-### Quantity
+## Quantity
 
 The ERP domain model declares a special type for quantity properties.
 
 The quantity is represented by value and measurement unit.
 
-**Properties**
+### Properties
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -82,7 +87,7 @@ Example:
   }
 }
 
-### CustomPropertyValue
+## CustomPropertyValue
 
 User-defined properties, which can supplement the system properties of almost all entities in the system.
 
@@ -100,7 +105,7 @@ In EnterpriseOne REST API custom properties are properties of type General_Custo
 
 Each database contains different custom properties and that is why each database have different EDM model ($metadata).
 
-**Properties**
+### Properties
 
 | Name | Type | Description |
 | --- | --- | --- |
