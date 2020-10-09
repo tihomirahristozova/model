@@ -154,32 +154,32 @@
 <tbody>
 <tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#administrativeregion">AdministrativeRegion</a></td>
-<td><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a></td>
+<td><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a></td>
 <td>Administrative region of the enterprise company at the time of the declaration. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#intrastatcommoditycode">IntrastatCommodityCode</a></td>
-<td><a href="Finance.Intrastat.CommodityCodes.html">Finance.Intrastat.CommodityCodes</a></td>
+<td><a href="Finance.Intrastat.CommodityCodes.html">CommodityCodes</a></td>
 <td>The commodity code of the goods, according to the Intrastat commodity classification. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#intrastatdeclaration">IntrastatDeclaration</a></td>
-<td><a href="Finance.Intrastat.Declarations.html">Finance.Intrastat.Declarations</a></td>
+<td><a href="Finance.Intrastat.Declarations.html">Declarations</a></td>
 <td>The intrastat declaration, to which this line belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#origincountry">OriginCountry</a></td>
-<td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
+<td><a href="General.Geography.Countries.html">Countries</a> (nullable)</td>
 <td>The country of origin of the goods. null for outbound declarations. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#partycountry">PartyCountry</a></td>
-<td><a href="General.Geography.Countries.html">General.Geography.Countries</a></td>
+<td><a href="General.Geography.Countries.html">Countries</a></td>
 <td>The country of the partner. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#transportcountry">TransportCountry</a></td>
-<td><a href="General.Geography.Countries.html">General.Geography.Countries</a></td>
+<td><a href="General.Geography.Countries.html">Countries</a></td>
 <td>The country of the transportation company. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -303,9 +303,9 @@ Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#lineacti
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.IntrastatDeclaration.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.IntrastatDeclaration.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.IntrastatDeclaration.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.IntrastatDeclaration.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="netmasskg">NetMassKg</h3>
 <blockquote>
 <p>Net mass of the goods in kg. [Required] [Filter(multi eq)]</p>
@@ -367,16 +367,16 @@ Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#transact
 <td>ReturnStokilizing value. Stored as '21'. <br> <em>Database Value:</em> '21' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'ReturnStokilizing'</td>
 </tr>
 <tr>
-<td>ReplacementForReturnedGoods</td>
-<td>ReplacementForReturnedGoods value. Stored as '22'. <br> <em>Database Value:</em> '22' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'ReplacementForReturnedGoods'</td>
+<td>ReplacementFor<br>ReturnedGoods</td>
+<td>ReplacementFor<br>ReturnedGoods value. Stored as '22'. <br> <em>Database Value:</em> '22' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'ReplacementFor<br>ReturnedGoods'</td>
 </tr>
 <tr>
-<td>ReplacementOfGoodsNotBeingReturned</td>
-<td>ReplacementOfGoodsNotBeingReturned value. Stored as '23'. <br> <em>Database Value:</em> '23' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'ReplacementOfGoodsNotBeingReturned'</td>
+<td>ReplacementOfGoods<br>NotBeingReturned</td>
+<td>ReplacementOfGoods<br>NotBeingReturned value. Stored as '23'. <br> <em>Database Value:</em> '23' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'ReplacementOfGoods<br>NotBeingReturned'</td>
 </tr>
 <tr>
-<td>ReturnOrExchangeOfOtherGoods</td>
-<td>ReturnOrExchangeOfOtherGoods value. Stored as '29'. <br> <em>Database Value:</em> '29' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'ReturnOrExchangeOfOtherGoods'</td>
+<td>ReturnOrExchange<br>OfOtherGoods</td>
+<td>ReturnOrExchange<br>OfOtherGoods value. Stored as '29'. <br> <em>Database Value:</em> '29' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'ReturnOrExchange<br>OfOtherGoods'</td>
 </tr>
 <tr>
 <td>SpecificTransactions</td>
@@ -387,8 +387,8 @@ Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#transact
 <td>OperationsOnJointProjects value. Stored as '70'. <br> <em>Database Value:</em> '70' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'OperationsOnJointProjects'</td>
 </tr>
 <tr>
-<td>TransactionsOfConstructionMaterialsAndEquipment</td>
-<td>TransactionsOfConstructionMaterialsAndEquipment value. Stored as '80'. <br> <em>Database Value:</em> '80' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'TransactionsOfConstructionMaterialsAndEquipment'</td>
+<td>TransactionsOf<br>ConstructionMaterials<br>AndEquipment</td>
+<td>TransactionsOf<br>ConstructionMaterials<br>AndEquipment value. Stored as '80'. <br> <em>Database Value:</em> '80' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'TransactionsOf<br>ConstructionMaterials<br>AndEquipment'</td>
 </tr>
 <tr>
 <td>OtherTransactionsLeasing</td>
@@ -399,24 +399,24 @@ Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#transact
 <td>OtherTransactionsOther value. Stored as '99'. <br> <em>Database Value:</em> '99' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'OtherTransactionsOther'</td>
 </tr>
 <tr>
-<td>DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind</td>
-<td>DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind value. Stored as '30'. <br> <em>Database Value:</em> '30' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind'</td>
+<td>DealsThatInclude<br>PropertyTransfers<br>WithoutFinancial<br>CompensationOr<br>CompensationIn<br>Kind</td>
+<td>DealsThatInclude<br>PropertyTransfers<br>WithoutFinancial<br>CompensationOr<br>CompensationIn<br>Kind value. Stored as '30'. <br> <em>Database Value:</em> '30' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'DealsThatInclude<br>PropertyTransfers<br>WithoutFinancial<br>CompensationOr<br>CompensationIn<br>Kind'</td>
 </tr>
 <tr>
-<td>GoodsThatAreExpectedToBeReturnedToSender</td>
-<td>GoodsThatAreExpectedToBeReturnedToSender value. Stored as '41'. <br> <em>Database Value:</em> '41' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'GoodsThatAreExpectedToBeReturnedToSender'</td>
+<td>GoodsThatAreExpected<br>ToBeReturnedTo<br>Sender</td>
+<td>GoodsThatAreExpected<br>ToBeReturnedTo<br>Sender value. Stored as '41'. <br> <em>Database Value:</em> '41' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'GoodsThatAreExpected<br>ToBeReturnedTo<br>Sender'</td>
 </tr>
 <tr>
-<td>GoodsThatAreNotExpectedToBeReturnedToSender</td>
-<td>GoodsThatAreNotExpectedToBeReturnedToSender value. Stored as '42'. <br> <em>Database Value:</em> '42' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'GoodsThatAreNotExpectedToBeReturnedToSender'</td>
+<td>GoodsThatAreNot<br>ExpectedToBeReturned<br>ToSender</td>
+<td>GoodsThatAreNot<br>ExpectedToBeReturned<br>ToSender value. Stored as '42'. <br> <em>Database Value:</em> '42' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'GoodsThatAreNot<br>ExpectedToBeReturned<br>ToSender'</td>
 </tr>
 <tr>
-<td>GoodsThatAreReturnedToSender</td>
-<td>GoodsThatAreReturnedToSender value. Stored as '51'. <br> <em>Database Value:</em> '51' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GoodsThatAreReturnedToSender'</td>
+<td>GoodsThatAreReturned<br>ToSender</td>
+<td>GoodsThatAreReturned<br>ToSender value. Stored as '51'. <br> <em>Database Value:</em> '51' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GoodsThatAreReturned<br>ToSender'</td>
 </tr>
 <tr>
-<td>GoodsThatAreNotReturnedToSender</td>
-<td>GoodsThatAreNotReturnedToSender value. Stored as '52'. <br> <em>Database Value:</em> '52' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GoodsThatAreNotReturnedToSender'</td>
+<td>GoodsThatAreNot<br>ReturnedToSender</td>
+<td>GoodsThatAreNot<br>ReturnedToSender value. Stored as '52'. <br> <em>Database Value:</em> '52' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GoodsThatAreNot<br>ReturnedToSender'</td>
 </tr>
 </tbody>
 </table>
@@ -458,8 +458,8 @@ Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#transpor
 <td>Mail value. Stored as '5'. <br> <em>Database Value:</em> '5' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Mail'</td>
 </tr>
 <tr>
-<td>FixedTransportInstallations</td>
-<td>FixedTransportInstallations value. Stored as '7'. <br> <em>Database Value:</em> '7' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'FixedTransportInstallations'</td>
+<td>FixedTransport<br>Installations</td>
+<td>FixedTransport<br>Installations value. Stored as '7'. <br> <em>Database Value:</em> '7' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'FixedTransport<br>Installations'</td>
 </tr>
 <tr>
 <td>RiverTransport</td>
@@ -478,37 +478,37 @@ Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#transpor
 <blockquote>
 <p>Administrative region of the enterprise company at the time of the declaration. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastatcommoditycode">IntrastatCommodityCode</h3>
 <blockquote>
 <p>The commodity code of the goods, according to the Intrastat commodity classification. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Intrastat.CommodityCodes.html">Finance.Intrastat.CommodityCodes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Intrastat.CommodityCodes.html">CommodityCodes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastatdeclaration">IntrastatDeclaration</h3>
 <blockquote>
 <p>The intrastat declaration, to which this line belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Intrastat.Declarations.html">Finance.Intrastat.Declarations</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Intrastat.Declarations.html">Declarations</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="origincountry">OriginCountry</h3>
 <blockquote>
 <p>The country of origin of the goods. null for outbound declarations. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="partycountry">PartyCountry</h3>
 <blockquote>
 <p>The country of the partner. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transportcountry">TransportCountry</h3>
 <blockquote>
 <p>The country of the transportation company. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

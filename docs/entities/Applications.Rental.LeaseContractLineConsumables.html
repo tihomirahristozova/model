@@ -119,22 +119,22 @@
 <tbody>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLineConsumables.html#consumablequantityunit">ConsumableQuantityUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
 <td>The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLineConsumables.html#leaseline">LeaseLine</a></td>
-<td><a href="Applications.Rental.LeaseContractLines.html">Applications.Rental.LeaseContractLines</a></td>
+<td><a href="Applications.Rental.LeaseContractLines.html">LeaseContractLines</a></td>
 <td>Lease line with which the current consumable is given. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLineConsumables.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
 <td>The consumable to be sold accompanying the asset. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLineConsumables.html#store">Store</a></td>
-<td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></td>
+<td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
 <td>Store from which the consumable is issued. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -160,33 +160,33 @@
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.LeaseLine.Consumables.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.LeaseLine.Consumables.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.LeaseLine.Consumables.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.LeaseLine.Consumables.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="consumablequantityunit">ConsumableQuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of Consumable Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="leaseline">LeaseLine</h3>
 <blockquote>
 <p>Lease line with which the current consumable is given. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Rental.LeaseContractLines.html">Applications.Rental.LeaseContractLines</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.Rental.LeaseContractLines.html">LeaseContractLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The consumable to be sold accompanying the asset. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
 <blockquote>
 <p>Store from which the consumable is issued. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

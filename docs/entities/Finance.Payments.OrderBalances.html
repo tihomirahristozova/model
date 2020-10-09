@@ -154,47 +154,47 @@
 <tbody>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#currency">Currency</a></td>
-<td><a href="General.Currencies.html">General.Currencies</a></td>
+<td><a href="General.Currencies.html">Currencies</a></td>
 <td>The currency of amounts. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
 <td>The enterprise company which issued the document. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#locationparty">LocationParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
 <td>Location or sub-party of the Party_Id in the order. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#party">Party</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
+<td><a href="General.Contacts.Parties.html">Parties</a></td>
 <td>The party which is to pay or receive the amount. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#paymentorder">PaymentOrder</a></td>
-<td><a href="Finance.Payments.PaymentOrders.html">Finance.Payments.PaymentOrders</a></td>
+<td><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></td>
 <td>The payment order. [Required] [Default(New Guid)] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refdocument">RefDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refdocumenttype">RefDocumentType</a></td>
-<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
+<td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
 <td>The type of the document which has created the payment order and is the basis for the payment. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refinvoicedocument">RefInvoiceDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
-<td>The invoice document which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document. [Filter(multi eq)]</td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
+<td>The invoice document which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_<br>Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document. [Filter(multi eq)</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refinvoicedocumenttype">RefInvoiceDocumentType</a></td>
-<td><a href="General.DocumentTypes.html">General.DocumentTypes</a> (nullable)</td>
+<td><a href="General.DocumentTypes.html">DocumentTypes</a> (nullable)</td>
 <td>The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -313,44 +313,44 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#direction">D
 <blockquote>
 <p>The currency of amounts. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The enterprise company which issued the document. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="locationparty">LocationParty</h3>
 <blockquote>
 <p>Location or sub-party of the Party_Id in the order. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="party">Party</h3>
 <blockquote>
 <p>The party which is to pay or receive the amount. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentorder">PaymentOrder</h3>
 <blockquote>
 <p>The payment order. [Required] [Default(New Guid)] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentOrders.html">Finance.Payments.PaymentOrders</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="refdocument">RefDocument</h3>
 <blockquote>
 <p>The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="refdocumenttype">RefDocumentType</h3>
 <blockquote>
 <p>The type of the document which has created the payment order and is the basis for the payment. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.RefDocument.DocumentType</code></p>
@@ -360,13 +360,13 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#direction">D
 <blockquote>
 <p>The invoice document which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="refinvoicedocumenttype">RefInvoiceDocumentType</h3>
 <blockquote>
 <p>The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.RefInvoiceDocument.DocumentType</code></p>

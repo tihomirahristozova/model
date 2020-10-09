@@ -139,27 +139,27 @@
 <tbody>
 <tr>
 <td><a href="Projects.Projects.html#budgetingcurrency">BudgetingCurrency</a></td>
-<td><a href="General.Currencies.html">General.Currencies</a> (nullable)</td>
+<td><a href="General.Currencies.html">Currencies</a> (nullable)</td>
 <td>The currency in which the project budget is calculated. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Projects.html#clientparty">ClientParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
 <td>The external or internal client of the project. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Projects.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
 <td>The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Projects.html#projectmanagerperson">ProjectManagerPerson</a></td>
-<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
+<td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
 <td>The project manager. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Projects.html#projecttype">ProjectType</a></td>
-<td><a href="Projects.ProjectTypes.html">Projects.ProjectTypes</a></td>
+<td><a href="Projects.ProjectTypes.html">ProjectTypes</a></td>
 <td>The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -176,17 +176,17 @@
 <tbody>
 <tr>
 <td>Participants</td>
-<td><a href="Projects.ProjectParticipants.html">Projects.ProjectParticipants</a></td>
+<td><a href="Projects.ProjectParticipants.html">ProjectParticipants</a></td>
 <td>List of <a href="Projects.ProjectParticipants.html">ProjectParticipant</a> child objects, based on the <a href="Projects.ProjectParticipants.html#project">Projects.ProjectParticipant.Project</a> back reference</td>
 </tr>
 <tr>
 <td>Risks</td>
-<td><a href="Projects.ProjectRisks.html">Projects.ProjectRisks</a></td>
+<td><a href="Projects.ProjectRisks.html">ProjectRisks</a></td>
 <td>List of <a href="Projects.ProjectRisks.html">ProjectRisk</a> child objects, based on the <a href="Projects.ProjectRisks.html#project">Projects.ProjectRisk.Project</a> back reference</td>
 </tr>
 <tr>
 <td>WorkElements</td>
-<td><a href="Projects.ProjectWorkElements.html">Projects.ProjectWorkElements</a></td>
+<td><a href="Projects.ProjectWorkElements.html">ProjectWorkElements</a></td>
 <td>List of <a href="Projects.ProjectWorkElements.html">ProjectWorkElement</a> child objects, based on the <a href="Projects.ProjectWorkElements.html#project">Projects.ProjectWorkElement.Project</a> back reference</td>
 </tr>
 </tbody>
@@ -288,31 +288,31 @@ Allowed values for the <a href="Projects.Projects.html#projectstatus">ProjectSta
 <blockquote>
 <p>The currency in which the project budget is calculated. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="clientparty">ClientParty</h3>
 <blockquote>
 <p>The external or internal client of the project. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projectmanagerperson">ProjectManagerPerson</h3>
 <blockquote>
 <p>The project manager. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projecttype">ProjectType</h3>
 <blockquote>
 <p>The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Projects.ProjectTypes.html">Projects.ProjectTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Projects.ProjectTypes.html">ProjectTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

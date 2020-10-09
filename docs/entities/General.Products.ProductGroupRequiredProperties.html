@@ -96,7 +96,7 @@
 <td>When not null, specifies the default value of the property, for new products in the group.</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroupRequiredProperties.html#defaultpropertyvaluedescription">DefaultPropertyValueDescription</a></td>
+<td><a href="General.Products.ProductGroupRequiredProperties.html#defaultpropertyvaluedescription">DefaultProperty<br>ValueDescription</a></td>
 <td>string (nullable)</td>
 <td>When not null, specifies the default description value of the property, for new products in the group.</td>
 </tr>
@@ -134,12 +134,12 @@
 <tbody>
 <tr>
 <td><a href="General.Products.ProductGroupRequiredProperties.html#productgroup">ProductGroup</a></td>
-<td><a href="General.Products.ProductGroups.html">General.Products.ProductGroups</a></td>
-<td>The <a href="General.Products.ProductGroupRequiredProperties.html#productgroup">ProductGroup</a> to which this ProductGroupRequiredProperty belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td><a href="General.Products.ProductGroups.html">ProductGroups</a></td>
+<td>The [ProductGroup](General.Products.ProductGroupRequired<br>Properties.md#productgroup) to which this ProductGroupRequired<br>Property belongs. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroupRequiredProperties.html#property">Property</a></td>
-<td><a href="General.CustomProperties.html">General.CustomProperties</a></td>
+<td><a href="General.CustomProperties.html">CustomProperties</a></td>
 <td>The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -178,9 +178,9 @@
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.ProductGroup.RequiredProperties.Select(c =&gt; c.PropertyNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.ProductGroup.RequiredProperties.Select( c =&gt; c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.ProductGroup.RequiredProperties.Select(c =&gt; c.PropertyNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.ProductGroup.RequiredProperties.Select( c =&gt; c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="required">Required</h3>
 <blockquote>
 <p>Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. [Required] [Default(false)]</p>
@@ -194,13 +194,13 @@
 <blockquote>
 <p>The <a href="General.Products.ProductGroupRequiredProperties.html#productgroup">ProductGroup</a> to which this ProductGroupRequiredProperty belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">General.Products.ProductGroups</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="property">Property</h3>
 <blockquote>
 <p>The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.CustomProperties.html">General.CustomProperties</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

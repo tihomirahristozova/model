@@ -113,7 +113,7 @@
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleConditions.html#notes">Notes</a></td>
 <td>string (nullable)</td>
-<td>Notes for this UserBusinessRuleCondition. (Introduced in version 20.1.100.0)</td>
+<td>Notes for this UserBusinessRuleCondition. (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleConditions.html#value">Value</a></td>
@@ -134,7 +134,7 @@
 <tbody>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleConditions.html#userbusinessrule">UserBusinessRule</a></td>
-<td><a href="Systems.Bpm.UserBusinessRules.html">Systems.Bpm.UserBusinessRules</a></td>
+<td><a href="Systems.Bpm.UserBusinessRules.html">UserBusinessRules</a></td>
 <td>The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -199,16 +199,16 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleConditions.html#comp
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.UserBusinessRule.Conditions.Select(c =&gt; c.ConditionNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.UserBusinessRule.Conditions.Select( c =&gt; c.ConditionNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.UserBusinessRule.Conditions.Select(c =&gt; c.ConditionNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.UserBusinessRule.Conditions.Select( c =&gt; c.ConditionNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
-<p>Notes for this UserBusinessRuleCondition. (Introduced in version 20.1.100.0)</p>
+<p>Notes for this UserBusinessRuleCondition. (Introduced in version 20.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -225,7 +225,7 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleConditions.html#comp
 <blockquote>
 <p>The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html">Systems.Bpm.UserBusinessRules</a></strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html">UserBusinessRules</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

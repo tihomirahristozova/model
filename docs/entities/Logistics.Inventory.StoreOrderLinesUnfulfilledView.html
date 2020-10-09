@@ -129,37 +129,37 @@
 <tbody>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
 <td>The enterprise company which issued the document. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#lot">Lot</a></td>
-<td><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</td>
+<td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
 <td>If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
 <td>The product which should be received/issued. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#productvariant">ProductVariant</a></td>
-<td><a href="General.ProductVariants.html">General.ProductVariants</a> (nullable)</td>
+<td><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</td>
 <td>If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#serialnumber">SerialNumber</a></td>
-<td><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</td>
+<td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
 <td>Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#store">Store</a></td>
-<td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></td>
+<td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
 <td>The designated warehouse for the operation. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#storeorderline">StoreOrderLine</a></td>
-<td><a href="Logistics.Inventory.StoreOrderLines.html">Logistics.Inventory.StoreOrderLines</a></td>
+<td><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a></td>
 <td>Store order line Id. [Required] [Default(New Guid)] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -206,43 +206,43 @@
 <blockquote>
 <p>The enterprise company which issued the document. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <blockquote>
 <p>If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The product which should be received/issued. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
 <blockquote>
 <p>If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.ProductVariants.html">General.ProductVariants</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <blockquote>
 <p>Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
 <blockquote>
 <p>The designated warehouse for the operation. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storeorderline">StoreOrderLine</h3>
 <blockquote>
 <p>Store order line Id. [Required] [Default(New Guid)] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreOrderLines.html">Logistics.Inventory.StoreOrderLines</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="business-rules">Business Rules</h2>

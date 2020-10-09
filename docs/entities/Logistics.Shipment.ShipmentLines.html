@@ -168,7 +168,7 @@
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#volumel">Volumel</a></td>
@@ -194,52 +194,52 @@
 <tbody>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#document">Document</a></td>
-<td><a href="Logistics.Shipment.Shipments.html">Logistics.Shipment.Shipments</a></td>
+<td><a href="Logistics.Shipment.Shipments.html">Shipments</a></td>
 <td>The <a href="Logistics.Shipment.ShipmentLines.html#shipment">Shipment</a> to which this ShipmentLine belongs. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#lot">Lot</a></td>
-<td><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</td>
+<td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
 <td>The store lot from which to take the goods. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#parentdocument">ParentDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#parentsalesorderline">ParentSalesOrderLine</a></td>
-<td><a href="Crm.Sales.SalesOrderLines.html">Crm.Sales.SalesOrderLines</a></td>
+<td><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a></td>
 <td>Sales order line which is shipped. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#quantityunit">QuantityUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
 <td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#serialnumber">SerialNumber</a></td>
-<td><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</td>
+<td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
 <td>The serial number of the shipped product. null means that serial number is unknown or not applicable. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#shipment">Shipment</a></td>
-<td><a href="Logistics.Shipment.Shipments.html">Logistics.Shipment.Shipments</a></td>
+<td><a href="Logistics.Shipment.Shipments.html">Shipments</a></td>
 <td>The <a href="Logistics.Shipment.ShipmentLines.html#shipment">Shipment</a> to which this ShipmentLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#shipmentorderline">ShipmentOrderLine</a></td>
-<td><a href="Logistics.Shipment.ShipmentOrderLines.html">Logistics.Shipment.ShipmentOrderLines</a> (nullable)</td>
+<td><a href="Logistics.Shipment.ShipmentOrderLines.html">ShipmentOrderLines</a> (nullable)</td>
 <td>Shipment order line for which this quantity is shipped. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#storebin">StoreBin</a></td>
-<td><a href="Logistics.Inventory.StoreBins.html">Logistics.Inventory.StoreBins</a> (nullable)</td>
+<td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
 <td>The store bin from which to take the goods. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#transactionline">TransactionLine</a></td>
-<td><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a> (nullable)</td>
+<td><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</td>
 <td>The Transaction Line, based on which this shipment line was created. The transaction line contains the store issue operation of the shipped product. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -275,7 +275,7 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(obj.ParentSalesOrderLine.Product.ProductType.IsServiced, obj.ParentSalesOrderLine.Product.GuaranteePeriodDays, null)</code></p>
+<code>IIF( obj.ParentSalesOrderLine.Product.ProductType.IsServiced, obj.ParentSalesOrderLine.Product.GuaranteePeriodDays, null)</code></p>
 <h3 id="heightm">Heightm</h3>
 <blockquote>
 <p>The height of the package in meters. null means unknown.</p>
@@ -302,9 +302,9 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.Shipment.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.Shipment.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.Shipment.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.Shipment.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linerequireddeliverydate">LineRequiredDeliveryDate</h3>
 <blockquote>
 <p>Required delivery date for this lines. Depending on the shipment route travel time, the shipment should be released accordingly.</p>
@@ -361,20 +361,20 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
 <blockquote>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, IIF(obj.Product.AllowVariableMeasurementRatios, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product), obj.QuantityBase))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, IIF( obj.Product.AllowVariableMeasurementRatios, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product), obj.QuantityBase))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="volumel">Volumel</h3>
 <blockquote>
 <p>The volume in litres of the whole batch. null means unknown.</p>
@@ -394,13 +394,13 @@
 <blockquote>
 <p>The <a href="Logistics.Shipment.ShipmentLines.html#shipment">Shipment</a> to which this ShipmentLine belongs. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Shipment.Shipments.html">Logistics.Shipment.Shipments</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.Shipments.html">Shipments</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <blockquote>
 <p>The store lot from which to take the goods. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ParentSalesOrderLine.Lot</code></p>
@@ -408,19 +408,19 @@
 <blockquote>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentsalesorderline">ParentSalesOrderLine</h3>
 <blockquote>
 <p>Sales order line which is shipped. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html">Crm.Sales.SalesOrderLines</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ParentSalesOrderLine.QuantityUnit</code></p>
@@ -428,31 +428,31 @@
 <blockquote>
 <p>The serial number of the shipped product. null means that serial number is unknown or not applicable. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="shipment">Shipment</h3>
 <blockquote>
 <p>The <a href="Logistics.Shipment.ShipmentLines.html#shipment">Shipment</a> to which this ShipmentLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Shipment.Shipments.html">Logistics.Shipment.Shipments</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.Shipments.html">Shipments</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="shipmentorderline">ShipmentOrderLine</h3>
 <blockquote>
 <p>Shipment order line for which this quantity is shipped. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Shipment.ShipmentOrderLines.html">Logistics.Shipment.ShipmentOrderLines</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.ShipmentOrderLines.html">ShipmentOrderLines</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storebin">StoreBin</h3>
 <blockquote>
 <p>The store bin from which to take the goods. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">Logistics.Inventory.StoreBins</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transactionline">TransactionLine</h3>
 <blockquote>
 <p>The Transaction Line, based on which this shipment line was created. The transaction line contains the store issue operation of the shipped product. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

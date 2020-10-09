@@ -139,7 +139,7 @@
 <tbody>
 <tr>
 <td><a href="General.DocumentTypeUserStatuses.html#documenttype">DocumentType</a></td>
-<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
+<td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
 <td>The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -161,9 +161,9 @@
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.DocumentType.UserStatuses.Select(c =&gt; c.DisplayOrder).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.DocumentType.UserStatuses.Select( c =&gt; c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.DocumentType.UserStatuses.Select(c =&gt; c.DisplayOrder).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.DocumentType.UserStatuses.Select( c =&gt; c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
@@ -242,7 +242,7 @@ Enumeration of document system states<br>
 <blockquote>
 <p>The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

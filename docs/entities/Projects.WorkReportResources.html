@@ -124,22 +124,22 @@
 <tbody>
 <tr>
 <td><a href="Projects.WorkReportResources.html#projecttask">ProjectTask</a></td>
-<td><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a></td>
+<td><a href="Projects.ProjectTasks.html">ProjectTasks</a></td>
 <td>The project task for which the work is reported. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.WorkReportResources.html#resource">Resource</a></td>
-<td><a href="General.Resources.Resources.html">General.Resources.Resources</a></td>
+<td><a href="General.Resources.Resources.html">Resources</a></td>
 <td>The resource, for which usage is reported. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.WorkReportResources.html#resourceinstance">ResourceInstance</a></td>
-<td><a href="General.Resources.ResourceInstances.html">General.Resources.ResourceInstances</a> (nullable)</td>
+<td><a href="General.Resources.ResourceInstances.html">ResourceInstances</a> (nullable)</td>
 <td>The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. [Filter(multi eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Projects.WorkReportResources.html#workreport">WorkReport</a></td>
-<td><a href="Projects.WorkReports.html">Projects.WorkReports</a></td>
+<td><a href="Projects.WorkReports.html">WorkReports</a></td>
 <td>The <a href="Projects.WorkReportResources.html#workreport">WorkReport</a> to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -176,7 +176,7 @@
 <blockquote>
 <p>The project task for which the work is reported. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a></strong><br>
+<p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">ProjectTasks</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.WorkReport.ProjectTask</code></p>
@@ -186,21 +186,21 @@
 <blockquote>
 <p>The resource, for which usage is reported. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Resources.Resources.html">General.Resources.Resources</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Resources.Resources.html">Resources</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resourceinstance">ResourceInstance</h3>
 <blockquote>
 <p>The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. [Filter(multi eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Resources.ResourceInstances.html">General.Resources.ResourceInstances</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Resources.ResourceInstances.html">ResourceInstances</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(((obj.ResourceInstance != null) AndAlso (obj.ResourceInstance.Resource != obj.Resource)), null, obj.ResourceInstance)</code></p>
+<code>IIF( ( ( obj.ResourceInstance != null) AndAlso ( obj.ResourceInstance.Resource != obj.Resource)), null, obj.ResourceInstance)</code></p>
 <h3 id="workreport">WorkReport</h3>
 <blockquote>
 <p>The <a href="Projects.WorkReportResources.html#workreport">WorkReport</a> to which this WorkReportResource belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Projects.WorkReports.html">Projects.WorkReports</a></strong><br>
+<p><em>Type</em>: <strong><a href="Projects.WorkReports.html">WorkReports</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

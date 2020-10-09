@@ -1096,6 +1096,9 @@ references:
 - uid: Logistics.Wms.WarehouseLocations
   name: Logistics.Wms.WarehouseLocations
   href: entities/Logistics.Wms.WarehouseLocations.html
+- uid: Logistics.Wms.WarehouseOrderExecutions
+  name: Logistics.Wms.WarehouseOrderExecutions
+  href: entities/Logistics.Wms.WarehouseOrderExecutions.html
 - uid: Logistics.Wms.WarehouseOrderLines
   name: Logistics.Wms.WarehouseOrderLines
   href: entities/Logistics.Wms.WarehouseOrderLines.html

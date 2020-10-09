@@ -106,12 +106,12 @@
 <td>The quantity of the product in the package in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Crm.PromotionalPackageLines.html#standarddiscountadjustorreplace">StandardDiscountAdjustOrReplace</a></td>
-<td><a href="Crm.PromotionalPackageLines.html#standarddiscountadjustorreplace">StandardDiscountAdjustOrReplace</a></td>
+<td><a href="Crm.PromotionalPackageLines.html#standarddiscountadjustorreplace">StandardDiscount<br>AdjustOrReplace</a></td>
+<td><a href="Crm.PromotionalPackageLines.html#standarddiscountadjustorreplace">StandardDiscount<br>AdjustOrReplace</a></td>
 <td>Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. [Required] [Default(&quot;R&quot;)]</td>
 </tr>
 <tr>
-<td><a href="Crm.PromotionalPackageLines.html#standarddiscountpercentadjust">StandardDiscountPercentAdjust</a></td>
+<td><a href="Crm.PromotionalPackageLines.html#standarddiscountpercentadjust">StandardDiscount<br>PercentAdjust</a></td>
 <td>decimal</td>
 <td>The value of change (in percents) for the standard discount. [Required] [Default(0)]</td>
 </tr>
@@ -134,22 +134,22 @@
 <tbody>
 <tr>
 <td><a href="Crm.PromotionalPackageLines.html#lot">Lot</a></td>
-<td><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</td>
-<td>The Product lot number in the promotional package. [Filter(multi eq)] (Introduced in version 19.1.100.0)</td>
+<td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
+<td>The Product lot number in the promotional package. [Filter(multi eq)] (Introduced in version 19.1)</td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackageLines.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
 <td>The product, which is included in the promotional package. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackageLines.html#promotionalpackage">PromotionalPackage</a></td>
-<td><a href="Crm.PromotionalPackages.html">Crm.PromotionalPackages</a></td>
+<td><a href="Crm.PromotionalPackages.html">PromotionalPackages</a></td>
 <td>The <a href="Crm.PromotionalPackageLines.html#promotionalpackage">PromotionalPackage</a> to which this PromotionalPackageLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackageLines.html#unitpricecurrency">UnitPriceCurrency</a></td>
-<td><a href="General.Currencies.html">General.Currencies</a> (nullable)</td>
+<td><a href="General.Currencies.html">Currencies</a> (nullable)</td>
 <td>Currency of the unit price. null if the package specifies only discount. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -167,9 +167,9 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.PromotionalPackage.Lines.Select(c =&gt; c.LineNumber).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.PromotionalPackage.Lines.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.PromotionalPackage.Lines.Select(c =&gt; c.LineNumber).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.PromotionalPackage.Lines.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="quantity">Quantity</h3>
 <blockquote>
 <p>The quantity of the product in the package in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
@@ -182,7 +182,7 @@
 <blockquote>
 <p>Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. [Required] [Default(&quot;R&quot;)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.PromotionalPackageLines.html#standarddiscountadjustorreplace">StandardDiscountAdjustOrReplace</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.PromotionalPackageLines.html#standarddiscountadjustorreplace">StandardDiscount<br>AdjustOrReplace</a></strong><br>
 Allowed values for the <a href="Crm.PromotionalPackageLines.html#standarddiscountadjustorreplace">StandardDiscountAdjustOrReplace</a> data attribute<br>
 <em>Allowed Values (Crm.PromotionalPackageLinesRepository.StandardDiscountAdjustOrReplace Enum Members)</em></p>
 <table>
@@ -228,27 +228,27 @@ Allowed values for the <a href="Crm.PromotionalPackageLines.html#standarddiscoun
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="lot">Lot</h3>
 <blockquote>
-<p>The Product lot number in the promotional package. [Filter(multi eq)] (Introduced in version 19.1.100.0)</p>
+<p>The Product lot number in the promotional package. [Filter(multi eq)] (Introduced in version 19.1)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The product, which is included in the promotional package. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="promotionalpackage">PromotionalPackage</h3>
 <blockquote>
 <p>The <a href="Crm.PromotionalPackageLines.html#promotionalpackage">PromotionalPackage</a> to which this PromotionalPackageLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.PromotionalPackages.html">Crm.PromotionalPackages</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.PromotionalPackages.html">PromotionalPackages</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="unitpricecurrency">UnitPriceCurrency</h3>
 <blockquote>
 <p>Currency of the unit price. null if the package specifies only discount. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

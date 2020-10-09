@@ -113,7 +113,7 @@
 <tr>
 <td><a href="General.CustomProperties.html#hint">Hint</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
-<td>The hint, which is displayed alongside the property. [Filter(multi eq;like)] (Introduced in version 20.1.100.0)</td>
+<td>The hint, which is displayed alongside the property. [Filter(multi eq;like)] (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#id">Id</a></td>
@@ -143,7 +143,7 @@
 <tr>
 <td><a href="General.CustomProperties.html#notes">Notes</a></td>
 <td>string (nullable)</td>
-<td>Notes for this CustomProperty. (Introduced in version 20.1.100.0)</td>
+<td>Notes for this CustomProperty. (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#propertytype">PropertyType</a></td>
@@ -163,18 +163,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.CustomProperties.html#allowedvaluesparentproperty">AllowedValuesParentProperty</a></td>
-<td><a href="General.CustomProperties.html">General.CustomProperties</a> (nullable)</td>
+<td><a href="General.CustomProperties.html#allowedvaluesparentproperty">AllowedValuesParent<br>Property</a></td>
+<td><a href="General.CustomProperties.html">CustomProperties</a> (nullable)</td>
 <td>Specifies the user defined property, which is used for filtering the allowed values by value of the parent property. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#allowedvaluesproperty">AllowedValuesProperty</a></td>
-<td><a href="General.CustomProperties.html">General.CustomProperties</a> (nullable)</td>
+<td><a href="General.CustomProperties.html">CustomProperties</a> (nullable)</td>
 <td>When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#propertiescategory">PropertiesCategory</a></td>
-<td><a href="General.PropertiesCategories.html">General.PropertiesCategories</a> (nullable)</td>
+<td><a href="General.PropertiesCategories.html">PropertiesCategories</a> (nullable)</td>
 <td>When not null, categorizes the property under a category. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -191,13 +191,13 @@
 <tbody>
 <tr>
 <td>AllowedValues</td>
-<td><a href="General.CustomPropertyAllowedValues.html">General.CustomPropertyAllowedValues</a></td>
-<td>List of <a href="General.CustomPropertyAllowedValues.html">CustomPropertyAllowedValue</a> child objects, based on the <a href="General.CustomPropertyAllowedValues.html#property">General.CustomPropertyAllowedValue.Property</a> back reference</td>
+<td><a href="General.CustomPropertyAllowedValues.html">CustomPropertyAllowedValues</a></td>
+<td>List of [CustomProperty<br>AllowedValue](General.CustomProperty<br>AllowedValues.md) child objects, based on the [General.CustomPropertyAllowedValue.Property](General.CustomProperty<br>AllowedValues.md#property) back</td>
 </tr>
 <tr>
 <td>EnterpriseCompanyFilters</td>
-<td><a href="General.PropertyEnterpriseCompanyFilters.html">General.PropertyEnterpriseCompanyFilters</a></td>
-<td>List of <a href="General.PropertyEnterpriseCompanyFilters.html">PropertyEnterpriseCompanyFilter</a> child objects, based on the <a href="General.PropertyEnterpriseCompanyFilters.html#property">General.PropertyEnterpriseCompanyFilter.Property</a> back reference</td>
+<td><a href="General.PropertyEnterpriseCompanyFilters.html">PropertyEnterpriseCompanyFilters</a></td>
+<td>List of [PropertyEnterprise<br>CompanyFilter](General.PropertyEnterprise<br>CompanyFilters.md) child objects, based on the [General.PropertyEnterprise<br>CompanyFilter.Property](General.PropertyEnterprise<br>CompanyFilters.md#property) back</td>
 </tr>
 </tbody>
 </table>
@@ -232,7 +232,7 @@
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="hint">Hint</h3>
 <blockquote>
-<p>The hint, which is displayed alongside the property. [Filter(multi eq;like)] (Introduced in version 20.1.100.0)</p>
+<p>The hint, which is displayed alongside the property. [Filter(multi eq;like)] (Introduced in version 20.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
@@ -272,7 +272,7 @@
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
-<p>Notes for this CustomProperty. (Introduced in version 20.1.100.0)</p>
+<p>Notes for this CustomProperty. (Introduced in version 20.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -318,19 +318,19 @@ Allowed values for the <a href="General.CustomProperties.html#propertytype">Prop
 <blockquote>
 <p>Specifies the user defined property, which is used for filtering the allowed values by value of the parent property. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.CustomProperties.html">General.CustomProperties</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="allowedvaluesproperty">AllowedValuesProperty</h3>
 <blockquote>
 <p>When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.CustomProperties.html">General.CustomProperties</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="propertiescategory">PropertiesCategory</h3>
 <blockquote>
 <p>When not null, categorizes the property under a category. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.PropertiesCategories.html">General.PropertiesCategories</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.PropertiesCategories.html">PropertiesCategories</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

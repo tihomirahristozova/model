@@ -119,12 +119,12 @@
 <tbody>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipLines.html#paymentorder">PaymentOrder</a></td>
-<td><a href="Finance.Payments.PaymentOrders.html">Finance.Payments.PaymentOrders</a></td>
+<td><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></td>
 <td>The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipLines.html#paymentslipamount">PaymentSlipAmount</a></td>
-<td><a href="Finance.Payments.PaymentSlipAmounts.html">Finance.Payments.PaymentSlipAmounts</a></td>
+<td><a href="Finance.Payments.PaymentSlipAmounts.html">PaymentSlipAmounts</a></td>
 <td>The <a href="Finance.Payments.PaymentSlipLines.html#paymentslipamount">PaymentSlipAmount</a> to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</td>
 </tr>
 </tbody>
@@ -139,7 +139,7 @@
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.CoveredOrderAmount.ConvertTo(obj.PaymentSlipAmount.PaymentSlip.DocumentCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)</code></p>
+<code>obj.CoveredOrderAmount.ConvertTo( obj.PaymentSlipAmount.PaymentSlip.DocumentCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)</code></p>
 <h3 id="coveredorderamount">CoveredOrderAmount</h3>
 <blockquote>
 <p>The part of the original payment order amount, that is covered by this payment slip line. [Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]</p>
@@ -149,7 +149,7 @@
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Amount.ConvertTo(obj.PaymentOrder.TotalAmountCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)</code></p>
+<code>obj.Amount.ConvertTo( obj.PaymentOrder.TotalAmountCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
@@ -159,13 +159,13 @@
 <blockquote>
 <p>The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentOrders.html">Finance.Payments.PaymentOrders</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentslipamount">PaymentSlipAmount</h3>
 <blockquote>
 <p>The <a href="Finance.Payments.PaymentSlipLines.html#paymentslipamount">PaymentSlipAmount</a> to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlipAmounts.html">Finance.Payments.PaymentSlipAmounts</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlipAmounts.html">PaymentSlipAmounts</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

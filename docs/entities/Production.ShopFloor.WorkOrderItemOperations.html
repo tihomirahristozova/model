@@ -111,7 +111,7 @@
 <td>Order of the line within the work order routing. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Production.ShopFloor.WorkOrderItemOperations.html#minimumconcurrentstarttimeminutes">MinimumConcurrentStartTimeMinutes</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItemOperations.html#minimumconcurrentstarttimeminutes">MinimumConcurrent<br>StartTimeMinutes</a></td>
 <td>int32 (nullable)</td>
 <td>How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.</td>
 </tr>
@@ -184,17 +184,17 @@
 <tbody>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#operation">Operation</a></td>
-<td><a href="Production.Resources.Operations.html">Production.Resources.Operations</a> (nullable)</td>
+<td><a href="Production.Resources.Operations.html">Operations</a> (nullable)</td>
 <td>The performed operation. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#workgroupresource">WorkgroupResource</a></td>
-<td><a href="Production.Resources.WorkgroupResources.html">Production.Resources.WorkgroupResources</a></td>
+<td><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a></td>
 <td>The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#workorderitem">WorkOrderItem</a></td>
-<td><a href="Production.ShopFloor.WorkOrderItems.html">Production.ShopFloor.WorkOrderItems</a></td>
+<td><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a></td>
 <td>The work order item, containing the line. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -211,7 +211,7 @@
 <tbody>
 <tr>
 <td>Load</td>
-<td><a href="Production.Resources.Load.html">Production.Resources.Load</a></td>
+<td><a href="Production.Resources.Load.html">Load</a></td>
 <td>List of <a href="Production.Resources.Load.html">Load</a> child objects, based on the <a href="Production.Resources.Load.html#workorderitemoperation">Production.Resources.Load.WorkOrderItemOperation</a> back reference</td>
 </tr>
 </tbody>
@@ -243,9 +243,9 @@
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.WorkOrderItem.Operations.Select(c =&gt; c.LineOrd).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.WorkOrderItem.Operations.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.WorkOrderItem.Operations.Select(c =&gt; c.LineOrd).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.WorkOrderItem.Operations.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="minimumconcurrentstarttimeminutes">MinimumConcurrentStartTimeMinutes</h3>
 <blockquote>
 <p>How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.</p>
@@ -343,19 +343,19 @@
 <blockquote>
 <p>The performed operation. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Resources.Operations.html">Production.Resources.Operations</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Production.Resources.Operations.html">Operations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workgroupresource">WorkgroupResource</h3>
 <blockquote>
 <p>The resource that will be used for the operation. null means that no resource will be locked for the operation. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">Production.Resources.WorkgroupResources</a></strong><br>
+<p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workorderitem">WorkOrderItem</h3>
 <blockquote>
 <p>The work order item, containing the line. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItems.html">Production.ShopFloor.WorkOrderItems</a></strong><br>
+<p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

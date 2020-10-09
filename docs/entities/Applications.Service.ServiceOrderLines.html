@@ -119,12 +119,12 @@
 <tbody>
 <tr>
 <td><a href="Applications.Service.ServiceOrderLines.html#serviceobject">ServiceObject</a></td>
-<td><a href="Applications.Service.ServiceObjects.html">Applications.Service.ServiceObjects</a></td>
+<td><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a></td>
 <td>The service object, which is experiencing the symptoms and needs repair. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceOrderLines.html#serviceorder">ServiceOrder</a></td>
-<td><a href="Applications.Service.ServiceOrders.html">Applications.Service.ServiceOrders</a></td>
+<td><a href="Applications.Service.ServiceOrders.html">ServiceOrders</a></td>
 <td>The <a href="Applications.Service.ServiceOrderLines.html#serviceorder">ServiceOrder</a> to which this ServiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -142,9 +142,9 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.ServiceOrder.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.ServiceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.ServiceOrder.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.ServiceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="symptomdescription">SymptomDescription</h3>
 <blockquote>
 <p>Description or synopsis of the symptoms of the failed object. [Filter(like)]</p>
@@ -157,13 +157,13 @@
 <blockquote>
 <p>The service object, which is experiencing the symptoms and needs repair. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">Applications.Service.ServiceObjects</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceorder">ServiceOrder</h3>
 <blockquote>
 <p>The <a href="Applications.Service.ServiceOrderLines.html#serviceorder">ServiceOrder</a> to which this ServiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Service.ServiceOrders.html">Applications.Service.ServiceOrders</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.Service.ServiceOrders.html">ServiceOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

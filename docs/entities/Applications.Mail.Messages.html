@@ -164,12 +164,12 @@
 <tbody>
 <tr>
 <td><a href="Applications.Mail.Messages.html#mailboxfolder">MailBoxFolder</a></td>
-<td><a href="Applications.Mail.BoxFolders.html">Applications.Mail.BoxFolders</a></td>
+<td><a href="Applications.Mail.BoxFolders.html">BoxFolders</a></td>
 <td>The <a href="Applications.Mail.BoxFolders.html">BoxFolder</a> to which this Message belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#relatedtoparty">RelatedToParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
 <td>The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -186,7 +186,7 @@
 <tbody>
 <tr>
 <td>Attachments</td>
-<td><a href="Applications.Mail.MessageAttachments.html">Applications.Mail.MessageAttachments</a></td>
+<td><a href="Applications.Mail.MessageAttachments.html">MessageAttachments</a></td>
 <td>List of <a href="Applications.Mail.MessageAttachments.html">MessageAttachment</a> child objects, based on the <a href="Applications.Mail.MessageAttachments.html#mailmessage">Applications.Mail.MessageAttachment.MailMessage</a> back reference</td>
 </tr>
 </tbody>
@@ -281,13 +281,13 @@
 <blockquote>
 <p>The <a href="Applications.Mail.BoxFolders.html">BoxFolder</a> to which this Message belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Mail.BoxFolders.html">Applications.Mail.BoxFolders</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.Mail.BoxFolders.html">BoxFolders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="relatedtoparty">RelatedToParty</h3>
 <blockquote>
 <p>The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

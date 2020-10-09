@@ -171,7 +171,7 @@
 <td>Automatically generated unique code for the last password recovery attempt. [Filter(multi eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Systems.External.PublicUsers.html#passwordrecoverycreationtime">PasswordRecoveryCreationTime</a></td>
+<td><a href="Systems.External.PublicUsers.html#passwordrecoverycreationtime">PasswordRecovery<br>CreationTime</a></td>
 <td>datetime (nullable)</td>
 <td>Date and time when the last password recovery code was created. [ReadOnly]</td>
 </tr>
@@ -209,17 +209,17 @@
 <tbody>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#company">Company</a></td>
-<td><a href="General.Contacts.Companies.html">General.Contacts.Companies</a> (nullable)</td>
+<td><a href="General.Contacts.Companies.html">Companies</a> (nullable)</td>
 <td>Link to an internal company record, specified by internal employee. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#person">Person</a></td>
-<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
+<td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
 <td>Link to an internal person record. Usually specified by internal employee, but can also be an automated process. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#publicuserlist">PublicUserList</a></td>
-<td><a href="Systems.External.PublicUserLists.html">Systems.External.PublicUserLists</a></td>
+<td><a href="Systems.External.PublicUserLists.html">PublicUserLists</a></td>
 <td>The list in which the user account is saved. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -375,19 +375,19 @@
 <blockquote>
 <p>Link to an internal company record, specified by internal employee. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">General.Contacts.Companies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">Companies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
 <blockquote>
 <p>Link to an internal person record. Usually specified by internal employee, but can also be an automated process. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="publicuserlist">PublicUserList</h3>
 <blockquote>
 <p>The list in which the user account is saved. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.External.PublicUserLists.html">Systems.External.PublicUserLists</a></strong><br>
+<p><em>Type</em>: <strong><a href="Systems.External.PublicUserLists.html">PublicUserLists</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

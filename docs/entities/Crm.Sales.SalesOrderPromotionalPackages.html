@@ -119,13 +119,13 @@
 <tbody>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPromotionalPackages.html#promotionalpackage">PromotionalPackage</a></td>
-<td><a href="Crm.PromotionalPackages.html">Crm.PromotionalPackages</a></td>
+<td><a href="Crm.PromotionalPackages.html">PromotionalPackages</a></td>
 <td>The type of promotional package sold. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPromotionalPackages.html#salesorder">SalesOrder</a></td>
-<td><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a></td>
-<td>The <a href="Crm.Sales.SalesOrderPromotionalPackages.html#salesorder">SalesOrder</a> to which this SalesOrderPromotionalPackage belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td><a href="Crm.Sales.SalesOrders.html">SalesOrders</a></td>
+<td>The [SalesOrder](Crm.Sales.SalesOrderPromotional<br>Packages.md#salesorder) to which this SalesOrderPromotional<br>Package belongs. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -142,9 +142,9 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.SalesOrder.PromotionalPackages.Select(c =&gt; c.LineNumber).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.SalesOrder.PromotionalPackages.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.SalesOrder.PromotionalPackages.Select(c =&gt; c.LineNumber).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.SalesOrder.PromotionalPackages.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="numberofpackages">NumberOfPackages</h3>
 <blockquote>
 <p>Number of packages sold. [Required] [Default(0)]</p>
@@ -158,13 +158,13 @@
 <blockquote>
 <p>The type of promotional package sold. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.PromotionalPackages.html">Crm.PromotionalPackages</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.PromotionalPackages.html">PromotionalPackages</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salesorder">SalesOrder</h3>
 <blockquote>
 <p>The <a href="Crm.Sales.SalesOrderPromotionalPackages.html#salesorder">SalesOrder</a> to which this SalesOrderPromotionalPackage belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

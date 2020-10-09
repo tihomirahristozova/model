@@ -184,22 +184,22 @@
 <tbody>
 <tr>
 <td><a href="General.Products.ProductGroups.html#defaultmeasurementunit">DefaultMeasurementUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
 <td>When not null, specifies default measurement unit, which should be assigned to new products in the group. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#defaultproducttype">DefaultProductType</a></td>
-<td><a href="General.Products.ProductTypes.html">General.Products.ProductTypes</a> (nullable)</td>
+<td><a href="General.Products.ProductTypes.html">ProductTypes</a> (nullable)</td>
 <td>When not null, specifies default product type, which should be assigned to new products in the group. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
 <td>When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#pricingmodel">PricingModel</a></td>
-<td><a href="Crm.Pricing.PricingModels.html">Crm.Pricing.PricingModels</a> (nullable)</td>
+<td><a href="Crm.Pricing.PricingModels.html">PricingModels</a> (nullable)</td>
 <td>When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -216,18 +216,18 @@
 <tbody>
 <tr>
 <td>PrincipalRecipes</td>
-<td><a href="Production.Technologies.PrincipalRecipes.html">Production.Technologies.PrincipalRecipes</a></td>
+<td><a href="Production.Technologies.PrincipalRecipes.html">PrincipalRecipes</a></td>
 <td>List of <a href="Production.Technologies.PrincipalRecipes.html">PrincipalRecipe</a> child objects, based on the <a href="Production.Technologies.PrincipalRecipes.html#productgroup">Production.Technologies.PrincipalRecipe.ProductGroup</a> back reference</td>
 </tr>
 <tr>
 <td>RangeProperties</td>
-<td><a href="General.Products.ProductGroupRangeProperties.html">General.Products.ProductGroupRangeProperties</a></td>
-<td>List of <a href="General.Products.ProductGroupRangeProperties.html">ProductGroupRangeProperty</a> child objects, based on the <a href="General.Products.ProductGroupRangeProperties.html#productgroup">General.Products.ProductGroupRangeProperty.ProductGroup</a> back reference</td>
+<td><a href="General.Products.ProductGroupRangeProperties.html">ProductGroupRangeProperties</a></td>
+<td>List of [ProductGroupRange<br>Property](General.Products.ProductGroupRange<br>Properties.md) child objects, based on the [General.Products.ProductGroupRangeProperty.ProductGroup](General.Products.ProductGroupRange<br>Properties.md#productgroup) back</td>
 </tr>
 <tr>
 <td>RequiredProperties</td>
-<td><a href="General.Products.ProductGroupRequiredProperties.html">General.Products.ProductGroupRequiredProperties</a></td>
-<td>List of <a href="General.Products.ProductGroupRequiredProperties.html">ProductGroupRequiredProperty</a> child objects, based on the <a href="General.Products.ProductGroupRequiredProperties.html#productgroup">General.Products.ProductGroupRequiredProperty.ProductGroup</a> back reference</td>
+<td><a href="General.Products.ProductGroupRequiredProperties.html">ProductGroupRequiredProperties</a></td>
+<td>List of [ProductGroupRequired<br>Property](General.Products.ProductGroupRequired<br>Properties.md) child objects, based on the [General.Products.ProductGroupRequired<br>Property.ProductGroup](General.Products.ProductGroupRequired<br>Properties.md#productgroup) back</td>
 </tr>
 </tbody>
 </table>
@@ -399,25 +399,25 @@ Allowed values for the <a href="General.Products.ProductGroups.html#uselots">Use
 <blockquote>
 <p>When not null, specifies default measurement unit, which should be assigned to new products in the group. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="defaultproducttype">DefaultProductType</h3>
 <blockquote>
 <p>When not null, specifies default product type, which should be assigned to new products in the group. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">General.Products.ProductTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">ProductTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="pricingmodel">PricingModel</h3>
 <blockquote>
 <p>When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Pricing.PricingModels.html">Crm.Pricing.PricingModels</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Pricing.PricingModels.html">PricingModels</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

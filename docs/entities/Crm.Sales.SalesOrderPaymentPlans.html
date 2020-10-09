@@ -111,7 +111,7 @@
 <td>Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'.</td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#explicitpaymentduestartdate">ExplicitPaymentDueStartDate</a></td>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#explicitpaymentduestartdate">ExplicitPayment<br>DueStartDate</a></td>
 <td>date (nullable)</td>
 <td>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.</td>
 </tr>
@@ -159,17 +159,17 @@
 <tbody>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#paymentaccount">PaymentAccount</a></td>
-<td><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</td>
+<td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
 <td>Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#paymenttype">PaymentType</a></td>
-<td><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</td>
+<td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
 <td>Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#salesorder">SalesOrder</a></td>
-<td><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a></td>
+<td><a href="Crm.Sales.SalesOrders.html">SalesOrders</a></td>
 <td>The <a href="Crm.Sales.SalesOrderPaymentPlans.html#salesorder">SalesOrder</a> to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -236,7 +236,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((Convert(obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueDate)</code></p>
+<code>IIF( ( Convert( obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueDate)</code></p>
 <h3 id="explicitpaymentduestartdate">ExplicitPaymentDueStartDate</h3>
 <blockquote>
 <p>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.</p>
@@ -245,7 +245,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((Convert(obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueStartDate)</code></p>
+<code>IIF( ( Convert( obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueStartDate)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
@@ -258,9 +258,9 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.SalesOrder.PaymentPlans.Select(c =&gt; c.InstallmentNumber).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.SalesOrder.PaymentPlans.Select( c =&gt; c.InstallmentNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.SalesOrder.PaymentPlans.Select(c =&gt; c.InstallmentNumber).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.SalesOrder.PaymentPlans.Select( c =&gt; c.InstallmentNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this SalesOrderPaymentPlan.</p>
@@ -285,9 +285,9 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>IIF(((Convert(obj.DueDateFormMethod, Int32) == 3) OrElse (Convert(obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)</code></p>
+<code>IIF( ( ( Convert( obj.DueDateFormMethod, Int32) == 3) OrElse ( Convert( obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(((Convert(obj.DueDateFormMethod, Int32) == 3) OrElse (Convert(obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)</code></p>
+<code>IIF( ( ( Convert( obj.DueDateFormMethod, Int32) == 3) OrElse ( Convert( obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)</code></p>
 <h3 id="remainder">Remainder</h3>
 <blockquote>
 <p>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). [Required] [Default(false)]</p>
@@ -297,26 +297,26 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>IIF((obj.AmountPercent != null), False, obj.Remainder)</code></p>
+<code>IIF( ( obj.AmountPercent != null), False, obj.Remainder)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((obj.AmountPercent != null), False, obj.Remainder)</code></p>
+<code>IIF( ( obj.AmountPercent != null), False, obj.Remainder)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="paymentaccount">PaymentAccount</h3>
 <blockquote>
 <p>Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.SalesOrder.PaymentAccount</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.SalesOrder.PaymentAccount.IfNullThen(obj.PaymentType.DefaultPaymentAccount.IfNullThen(obj.PaymentAccount))</code>
+<code>obj.SalesOrder.PaymentAccount.IfNullThen( obj.PaymentType.DefaultPaymentAccount.IfNullThen( obj.PaymentAccount))</code>
 <code>obj.SalesOrder.PaymentAccount</code></p>
 <h3 id="paymenttype">PaymentType</h3>
 <blockquote>
 <p>Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.SalesOrder.PaymentType</code></p>
@@ -326,7 +326,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <blockquote>
 <p>The <a href="Crm.Sales.SalesOrderPaymentPlans.html#salesorder">SalesOrder</a> to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

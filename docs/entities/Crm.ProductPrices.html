@@ -103,12 +103,12 @@
 <tr>
 <td><a href="Crm.ProductPrices.html#maxquantity">MaxQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
-<td>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]</td>
+<td>Maximum quantity for which this price is valid in the Price_Quantity_<br>Measurement_Unit. [Unit: PriceQuantityMeasurement<br>Unit] [Filter(eq;ge;le)</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#minquantity">MinQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a> (nullable)</td>
-<td>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]</td>
+<td>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). [Unit: PriceQuantityMeasurement<br>Unit] [Filter(eq;ge;le)</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#notes">Notes</a></td>
@@ -123,7 +123,7 @@
 <tr>
 <td><a href="Crm.ProductPrices.html#pricequantity">PriceQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
+<td>The quantity of the product for which the price is specified. [Unit: PriceQuantityMeasurement<br>Unit] [Required] [Default(1)] [Filter(ge;le)</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#priority">Priority</a></td>
@@ -149,57 +149,57 @@
 <tbody>
 <tr>
 <td><a href="Crm.ProductPrices.html#currency">Currency</a></td>
-<td><a href="General.Currencies.html">General.Currencies</a></td>
+<td><a href="General.Currencies.html">Currencies</a></td>
 <td>The currency of the price. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#customer">Customer</a></td>
-<td><a href="Crm.Customers.html">Crm.Customers</a> (nullable)</td>
+<td><a href="Crm.Customers.html">Customers</a> (nullable)</td>
 <td>When not null, specifies that the customer of the sales document must be the specified customer. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#distributionchannel">DistributionChannel</a></td>
-<td><a href="Crm.Marketing.DistributionChannels.html">Crm.Marketing.DistributionChannels</a> (nullable)</td>
+<td><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</td>
 <td>Use the price only when selling through the specified channel. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
 <td>When not null, specifies that the sales document must be in the specified enterprise company. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
-<td><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</td>
+<td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
 <td>When set, specifies that the sales document must be of the specified enterprise company location. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#pricelist">PriceList</a></td>
-<td><a href="Crm.PriceLists.html">Crm.PriceLists</a> (nullable)</td>
+<td><a href="Crm.PriceLists.html">PriceLists</a> (nullable)</td>
 <td>When not null, specifies that the sales document must have the specified price list. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.ProductPrices.html#pricequantitymeasurementunit">PriceQuantityMeasurementUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td><a href="Crm.ProductPrices.html#pricequantitymeasurementunit">PriceQuantityMeasurement<br>Unit</a></td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
 <td>The measurement unit of Price_Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#pricetype">PriceType</a></td>
-<td><a href="Crm.PriceTypes.html">Crm.PriceTypes</a> (nullable)</td>
+<td><a href="Crm.PriceTypes.html">PriceTypes</a> (nullable)</td>
 <td>Price type of the current product price. The price types are used to set additional priority condition for the prices. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
 <td>The product for which a price will be defined. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#shiptocustomer">ShipToCustomer</a></td>
-<td><a href="Crm.Customers.html">Crm.Customers</a> (nullable)</td>
+<td><a href="Crm.Customers.html">Customers</a> (nullable)</td>
 <td>When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#targetgroup">TargetGroup</a></td>
-<td><a href="Crm.Marketing.TargetGroups.html">Crm.Marketing.TargetGroups</a> (nullable)</td>
+<td><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</td>
 <td>When not null, specifies a criteria, which is matched only when the customer of the sales document is included in the group. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -305,73 +305,73 @@ Generic enum type for Priority properties<br>
 <blockquote>
 <p>The currency of the price. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="customer">Customer</h3>
 <blockquote>
 <p>When not null, specifies that the customer of the sales document must be the specified customer. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Customers.html">Crm.Customers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="distributionchannel">DistributionChannel</h3>
 <blockquote>
 <p>Use the price only when selling through the specified channel. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Marketing.DistributionChannels.html">Crm.Marketing.DistributionChannels</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>When not null, specifies that the sales document must be in the specified enterprise company. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
 <blockquote>
 <p>When set, specifies that the sales document must be of the specified enterprise company location. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(((obj.EnterpriseCompanyLocation != null) AndAlso (obj.EnterpriseCompanyLocation.Company != obj.EnterpriseCompany)), null, obj.EnterpriseCompanyLocation.Company)</code></p>
+<code>IIF( ( ( obj.EnterpriseCompanyLocation != null) AndAlso ( obj.EnterpriseCompanyLocation.Company != obj.EnterpriseCompany)), null, obj.EnterpriseCompanyLocation.Company)</code></p>
 <h3 id="pricelist">PriceList</h3>
 <blockquote>
 <p>When not null, specifies that the sales document must have the specified price list. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.PriceLists.html">Crm.PriceLists</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.PriceLists.html">PriceLists</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="pricequantitymeasurementunit">PriceQuantityMeasurementUnit</h3>
 <blockquote>
 <p>The measurement unit of Price_Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((obj.Product != null), obj.Product.MeasurementUnit, obj.PriceQuantityMeasurementUnit)</code></p>
+<code>IIF( ( obj.Product != null), obj.Product.MeasurementUnit, obj.PriceQuantityMeasurementUnit)</code></p>
 <h3 id="pricetype">PriceType</h3>
 <blockquote>
 <p>Price type of the current product price. The price types are used to set additional priority condition for the prices. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.PriceTypes.html">Crm.PriceTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.PriceTypes.html">PriceTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The product for which a price will be defined. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="shiptocustomer">ShipToCustomer</h3>
 <blockquote>
 <p>When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Customers.html">Crm.Customers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((obj.ShipToCustomer.Party.ParentParty != obj.Customer), null, obj.ShipToCustomer)</code></p>
+<code>IIF( ( obj.ShipToCustomer.Party.ParentParty != obj.Customer), null, obj.ShipToCustomer)</code></p>
 <h3 id="targetgroup">TargetGroup</h3>
 <blockquote>
 <p>When not null, specifies a criteria, which is matched only when the customer of the sales document is included in the group. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Marketing.TargetGroups.html">Crm.Marketing.TargetGroups</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

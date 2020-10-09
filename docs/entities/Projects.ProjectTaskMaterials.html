@@ -129,17 +129,17 @@
 <tbody>
 <tr>
 <td><a href="Projects.ProjectTaskMaterials.html#materialproduct">MaterialProduct</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
 <td>The product Id of the required material. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTaskMaterials.html#projecttask">ProjectTask</a></td>
-<td><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a></td>
+<td><a href="Projects.ProjectTasks.html">ProjectTasks</a></td>
 <td>The task for which is the material requirement. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTaskMaterials.html#quantityunit">QuantityUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
 <td>The measurement unit of the required quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -153,7 +153,7 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((obj.MaterialProduct != null), obj.CalculateBudgetMaterialAmount(obj.Quantity), new Amount(0, obj.ProjectTask.Project.BudgetingCurrency))</code></p>
+<code>IIF( ( obj.MaterialProduct != null), obj.CalculateBudgetMaterialAmount( obj.Quantity), new Amount( 0, obj.ProjectTask.Project.BudgetingCurrency))</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
@@ -167,9 +167,9 @@
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.ProjectTask.Materials.Select(c =&gt; c.LineNumber).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.ProjectTask.Materials.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.ProjectTask.Materials.Select(c =&gt; c.LineNumber).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.ProjectTask.Materials.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="quantity">Quantity</h3>
 <blockquote>
 <p>The required quantity of the material. [Unit: QuantityUnit] [Required] [Default(1)]</p>
@@ -187,25 +187,25 @@
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(((obj.QuantityUnit != null) AndAlso (obj.MaterialProduct != null)), obj.Quantity.ConvertTo(obj.MaterialProduct.BaseUnit, obj.MaterialProduct).Value, obj.QuantityBase)</code></p>
+<code>IIF( ( ( obj.QuantityUnit != null) AndAlso ( obj.MaterialProduct != null)), obj.Quantity.ConvertTo( obj.MaterialProduct.BaseUnit, obj.MaterialProduct).Value, obj.QuantityBase)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="materialproduct">MaterialProduct</h3>
 <blockquote>
 <p>The product Id of the required material. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projecttask">ProjectTask</h3>
 <blockquote>
 <p>The task for which is the material requirement. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a></strong><br>
+<p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">ProjectTasks</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of the required quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

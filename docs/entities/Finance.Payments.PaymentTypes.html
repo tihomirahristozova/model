@@ -103,7 +103,7 @@
 <tr>
 <td><a href="Finance.Payments.PaymentTypes.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1.100.0)</td>
+<td>Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1)</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentTypes.html#name">Name</a></td>
@@ -129,12 +129,12 @@
 <tbody>
 <tr>
 <td><a href="Finance.Payments.PaymentTypes.html#defaultpaymentaccount">DefaultPaymentAccount</a></td>
-<td><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</td>
+<td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
 <td>When not null specifies the default payment account to use associated with this payment type. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentTypes.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
 <td>The Enterprise Company to which this PaymentType applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -153,7 +153,7 @@
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
-<p>Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1.100.0)</p>
+<p>Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
@@ -238,13 +238,13 @@ Allowed values for the <a href="Finance.Payments.PaymentTypes.html#systemtype">S
 <blockquote>
 <p>When not null specifies the default payment account to use associated with this payment type. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The Enterprise Company to which this PaymentType applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

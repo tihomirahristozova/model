@@ -149,7 +149,7 @@
 <tbody>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#userbusinessrule">UserBusinessRule</a></td>
-<td><a href="Systems.Bpm.UserBusinessRules.html">Systems.Bpm.UserBusinessRules</a></td>
+<td><a href="Systems.Bpm.UserBusinessRules.html">UserBusinessRules</a></td>
 <td>The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -163,9 +163,9 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.UserBusinessRule.Actions.Select(c =&gt; c.ActionNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.UserBusinessRule.Actions.Select( c =&gt; c.ActionNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.UserBusinessRule.Actions.Select(c =&gt; c.ActionNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.UserBusinessRule.Actions.Select( c =&gt; c.ActionNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="actiontype">ActionType</h3>
 <blockquote>
 <p>Specifies the type of action to perform. [Required]</p>
@@ -352,7 +352,7 @@ Generic enum type for ActionParameterType properties<br>
 <blockquote>
 <p>The business rule, for which the action is defined. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html">Systems.Bpm.UserBusinessRules</a></strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html">UserBusinessRules</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

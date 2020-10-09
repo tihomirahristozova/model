@@ -124,17 +124,17 @@
 <tbody>
 <tr>
 <td><a href="Crm.Pricing.PricingModelCosts.html#costtype">CostType</a></td>
-<td><a href="Finance.Cost.CostTypes.html">Finance.Cost.CostTypes</a></td>
+<td><a href="Finance.Cost.CostTypes.html">CostTypes</a></td>
 <td>The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PricingModelCosts.html#measurementunit">MeasurementUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
 <td>The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PricingModelCosts.html#pricingmodel">PricingModel</a></td>
-<td><a href="Crm.Pricing.PricingModels.html">Crm.Pricing.PricingModels</a></td>
+<td><a href="Crm.Pricing.PricingModels.html">PricingModels</a></td>
 <td>Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -166,27 +166,27 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.PricingModel.Costs.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.PricingModel.Costs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.PricingModel.Costs.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.PricingModel.Costs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costtype">CostType</h3>
 <blockquote>
 <p>The cost type, which is listed for the pricing model. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">Finance.Cost.CostTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">CostTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="measurementunit">MeasurementUnit</h3>
 <blockquote>
 <p>The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="pricingmodel">PricingModel</h3>
 <blockquote>
 <p>Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Pricing.PricingModels.html">Crm.Pricing.PricingModels</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Pricing.PricingModels.html">PricingModels</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

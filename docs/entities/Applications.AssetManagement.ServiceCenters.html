@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="Applications.AssetManagement.ServiceCenters">
 <h1 id="applicationsassetmanagementservicecenters">Applications.AssetManagement.ServiceCenters</h1>
 
-<p>Contains data about the service centers, which can maintain the assets. Entity: Eam_Service_Centers (Introduced in version 19.1.100.0)</p>
+<p>Contains data about the service centers, which can maintain the assets. Entity: Eam_Service_Centers (Introduced in version 19.1)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -114,12 +114,12 @@
 <tbody>
 <tr>
 <td><a href="Applications.AssetManagement.ServiceCenters.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
 <td>The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ServiceCenters.html#party">Party</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
+<td><a href="General.Contacts.Parties.html">Parties</a></td>
 <td>The person or company, actually performing the maintenance. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -141,13 +141,13 @@
 <blockquote>
 <p>The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="party">Party</h3>
 <blockquote>
 <p>The person or company, actually performing the maintenance. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

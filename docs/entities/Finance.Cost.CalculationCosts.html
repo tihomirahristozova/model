@@ -124,37 +124,37 @@
 <tbody>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#calculation">Calculation</a></td>
-<td><a href="Finance.Cost.Calculations.html">Finance.Cost.Calculations</a></td>
+<td><a href="Finance.Cost.Calculations.html">Calculations</a></td>
 <td>The <a href="Finance.Cost.CalculationCosts.html#calculation">Calculation</a> to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#costcenter">CostCenter</a></td>
-<td><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</td>
+<td><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</td>
 <td>The Cost Center, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#costtype">CostType</a></td>
-<td><a href="Finance.Cost.CostTypes.html">Finance.Cost.CostTypes</a></td>
+<td><a href="Finance.Cost.CostTypes.html">CostTypes</a></td>
 <td>The Cost Type, which absorbed the cost. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#lot">Lot</a></td>
-<td><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</td>
+<td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
 <td>The Lot, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</td>
+<td><a href="General.Products.Products.html">Products</a> (nullable)</td>
 <td>The Product, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#salesorder">SalesOrder</a></td>
-<td><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a> (nullable)</td>
+<td><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</td>
 <td>The Sales Order, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#workgroup">Workgroup</a></td>
-<td><a href="Production.Resources.Workgroups.html">Production.Resources.Workgroups</a> (nullable)</td>
+<td><a href="Production.Resources.Workgroups.html">Workgroups</a> (nullable)</td>
 <td>The Workgroup, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -180,9 +180,9 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.Calculation.Costs.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.Calculation.Costs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.Calculation.Costs.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.Calculation.Costs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="projectid">ProjectId</h3>
 <blockquote>
 <p>The Project, which absorbed the cost. [Filter(multi eq)]</p>
@@ -194,43 +194,43 @@
 <blockquote>
 <p>The <a href="Finance.Cost.CalculationCosts.html#calculation">Calculation</a> to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Cost.Calculations.html">Finance.Cost.Calculations</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Cost.Calculations.html">Calculations</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costcenter">CostCenter</h3>
 <blockquote>
 <p>The Cost Center, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costtype">CostType</h3>
 <blockquote>
 <p>The Cost Type, which absorbed the cost. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">Finance.Cost.CostTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">CostTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <blockquote>
 <p>The Lot, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The Product, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salesorder">SalesOrder</h3>
 <blockquote>
 <p>The Sales Order, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workgroup">Workgroup</h3>
 <blockquote>
 <p>The Workgroup, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Resources.Workgroups.html">Production.Resources.Workgroups</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Production.Resources.Workgroups.html">Workgroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>
