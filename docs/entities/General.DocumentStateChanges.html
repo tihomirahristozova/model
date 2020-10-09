@@ -118,7 +118,7 @@
 <tr>
 <td><a href="General.DocumentStateChanges.html#void">Void</a></td>
 <td>boolean</td>
-<td>True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1.100.0)</td>
+<td>True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1)</td>
 </tr>
 </tbody>
 </table>
@@ -134,12 +134,12 @@
 <tbody>
 <tr>
 <td><a href="General.DocumentStateChanges.html#document">Document</a></td>
-<td><a href="General.Documents.html">General.Documents</a></td>
+<td><a href="General.Documents.html">Documents</a></td>
 <td>The document which has changed state. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="General.DocumentStateChanges.html#userstatus">UserStatus</a></td>
-<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
+<td><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
 <td>The new user status after the change. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -220,7 +220,7 @@ Allowed values for the <a href="General.DocumentStateChanges.html#newstate">NewS
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="void">Void</h3>
 <blockquote>
-<p>True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1.100.0)</p>
+<p>True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
@@ -231,13 +231,13 @@ Allowed values for the <a href="General.DocumentStateChanges.html#newstate">NewS
 <blockquote>
 <p>The document which has changed state. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="userstatus">UserStatus</h3>
 <blockquote>
 <p>The new user status after the change. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

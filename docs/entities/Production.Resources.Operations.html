@@ -101,7 +101,7 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="Production.Resources.Operations.html#minimumconcurrentstarttimeminutes">MinimumConcurrentStartTimeMinutes</a></td>
+<td><a href="Production.Resources.Operations.html#minimumconcurrentstarttimeminutes">MinimumConcurrent<br>StartTimeMinutes</a></td>
 <td>int32 (nullable)</td>
 <td>How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.</td>
 </tr>
@@ -164,17 +164,17 @@
 <tbody>
 <tr>
 <td><a href="Production.Resources.Operations.html#operationgroup">OperationGroup</a></td>
-<td><a href="Production.Resources.OperationGroups.html">Production.Resources.OperationGroups</a></td>
+<td><a href="Production.Resources.OperationGroups.html">OperationGroups</a></td>
 <td>The <a href="Production.Resources.Operations.html#operationgroup">OperationGroup</a> to which this Operation belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#operationinstructions">OperationInstructions</a></td>
-<td><a href="Production.Resources.OperationInstructions.html">Production.Resources.OperationInstructions</a> (nullable)</td>
+<td><a href="Production.Resources.OperationInstructions.html">OperationInstructions</a> (nullable)</td>
 <td>Full instructions for the operation. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#workgroupresource">WorkgroupResource</a></td>
-<td><a href="Production.Resources.WorkgroupResources.html">Production.Resources.WorkgroupResources</a> (nullable)</td>
+<td><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a> (nullable)</td>
 <td>When not null, specifies the Workgroup Resource, which is required by the operation. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -272,19 +272,19 @@
 <blockquote>
 <p>The <a href="Production.Resources.Operations.html#operationgroup">OperationGroup</a> to which this Operation belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Resources.OperationGroups.html">Production.Resources.OperationGroups</a></strong><br>
+<p><em>Type</em>: <strong><a href="Production.Resources.OperationGroups.html">OperationGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="operationinstructions">OperationInstructions</h3>
 <blockquote>
 <p>Full instructions for the operation. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Resources.OperationInstructions.html">Production.Resources.OperationInstructions</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Production.Resources.OperationInstructions.html">OperationInstructions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workgroupresource">WorkgroupResource</h3>
 <blockquote>
 <p>When not null, specifies the Workgroup Resource, which is required by the operation. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">Production.Resources.WorkgroupResources</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

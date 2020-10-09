@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="Crm.Pos.Terminals">
 <h1 id="crmposterminals">Crm.Pos.Terminals</h1>
 
-<p>Represents a POS workplace for 1 person, with all the attached devices. (Not to be confused with Payment Terminal, which is specific POS device). Entity: Pos_Terminals (Introduced in version 19.1.100.0)</p>
+<p>Represents a POS workplace for 1 person, with all the attached devices. (Not to be confused with Payment Terminal, which is specific POS device). Entity: Pos_Terminals (Introduced in version 19.1)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -123,13 +123,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Pos.Terminals.html#defaultfiscalprinterposdevice">DefaultFiscalPrinterPosDevice</a></td>
-<td><a href="Crm.Pos.Devices.html">Crm.Pos.Devices</a> (nullable)</td>
-<td>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1.100.0)</td>
+<td><a href="Crm.Pos.Terminals.html#defaultfiscalprinterposdevice">DefaultFiscalPrinter<br>PosDevice</a></td>
+<td><a href="Crm.Pos.Devices.html">Devices</a> (nullable)</td>
+<td>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Terminals.html#poslocation">PosLocation</a></td>
-<td><a href="Crm.Pos.Locations.html">Crm.Pos.Locations</a></td>
+<td><a href="Crm.Pos.Locations.html">Locations</a></td>
 <td>The POS location, where the terminal is located. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -146,7 +146,7 @@
 <tbody>
 <tr>
 <td>Devices</td>
-<td><a href="Crm.Pos.Devices.html">Crm.Pos.Devices</a></td>
+<td><a href="Crm.Pos.Devices.html">Devices</a></td>
 <td>List of <a href="Crm.Pos.Devices.html">Device</a> child objects, based on the <a href="Crm.Pos.Devices.html#posterminal">Crm.Pos.Device.PosTerminal</a> back reference</td>
 </tr>
 </tbody>
@@ -181,15 +181,15 @@
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultfiscalprinterposdevice">DefaultFiscalPrinterPosDevice</h3>
 <blockquote>
-<p>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1.100.0)</p>
+<p>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html">Crm.Pos.Devices</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html">Devices</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="poslocation">PosLocation</h3>
 <blockquote>
 <p>The POS location, where the terminal is located. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Pos.Locations.html">Crm.Pos.Locations</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

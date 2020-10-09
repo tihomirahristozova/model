@@ -98,7 +98,7 @@
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#currencyvaluationmethod">CurrencyValuationMethod</a></td>
 <td><a href="Finance.Accounting.Accounts.html#currencyvaluationmethod">CurrencyValuationMethod</a></td>
-<td>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document. [Required] [Default(&quot;ACB&quot;)]</td>
+<td>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_<br>Directory, BRD=Balance_Reference_<br>Document. [Required] [Default(&quot;ACB&quot;)</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#description">Description</a></td>
@@ -139,17 +139,17 @@
 <tbody>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#accountgroup">AccountGroup</a></td>
-<td><a href="Finance.Accounting.AccountGroups.html">Finance.Accounting.AccountGroups</a></td>
+<td><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></td>
 <td>The account group to which this account belongs. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#currency">Currency</a></td>
-<td><a href="General.Currencies.html">General.Currencies</a> (nullable)</td>
+<td><a href="General.Currencies.html">Currencies</a> (nullable)</td>
 <td>The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
 <td>The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -166,7 +166,7 @@
 <tbody>
 <tr>
 <td>RequiredProperties</td>
-<td><a href="Finance.Accounting.AccountRequiredProperties.html">Finance.Accounting.AccountRequiredProperties</a></td>
+<td><a href="Finance.Accounting.AccountRequiredProperties.html">AccountRequiredProperties</a></td>
 <td>List of <a href="Finance.Accounting.AccountRequiredProperties.html">AccountRequiredProperty</a> child objects, based on the <a href="Finance.Accounting.AccountRequiredProperties.html#account">Finance.Accounting.AccountRequiredProperty.Account</a> back reference</td>
 </tr>
 </tbody>
@@ -249,19 +249,19 @@ Allowed values for the <a href="Finance.Accounting.Accounts.html#currencyvaluati
 <blockquote>
 <p>The account group to which this account belongs. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">Finance.Accounting.AccountGroups</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="currency">Currency</h3>
 <blockquote>
 <p>The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

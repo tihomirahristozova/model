@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="Applications.PersonalData.ProcessingConsents">
 <h1 id="applicationspersonaldataprocessingconsents">Applications.PersonalData.ProcessingConsents</h1>
 
-<p>Consents of data subjects for processing of their personal data. Entity: Pdm_Processing_Consents (Introduced in version 18.2.100.0)</p>
+<p>Consents of data subjects for processing of their personal data. Entity: Pdm_Processing_Consents (Introduced in version 18.2)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -189,17 +189,17 @@
 <tbody>
 <tr>
 <td><a href="Applications.PersonalData.ProcessingConsents.html#person">Person</a></td>
-<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
+<td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
 <td>The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.ProcessingConsents.html#personaldataprocess">PersonalDataProcess</a></td>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html">Applications.PersonalData.PersonalDataProcesses</a> (nullable)</td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html">PersonalDataProcesses</a> (nullable)</td>
 <td>The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.ProcessingConsents.html#user">User</a></td>
-<td><a href="Systems.Security.Users.html">Systems.Security.Users</a></td>
+<td><a href="Systems.Security.Users.html">Users</a></td>
 <td>The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -368,19 +368,19 @@ Allowed values for the <a href="Applications.PersonalData.ProcessingConsents.htm
 <blockquote>
 <p>The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="personaldataprocess">PersonalDataProcess</h3>
 <blockquote>
 <p>The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html">Applications.PersonalData.PersonalDataProcesses</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html">PersonalDataProcesses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
 <blockquote>
 <p>The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a></strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

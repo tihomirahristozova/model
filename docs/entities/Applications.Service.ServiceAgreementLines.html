@@ -134,17 +134,17 @@
 <tbody>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#serviceagreement">ServiceAgreement</a></td>
-<td><a href="Applications.Service.ServiceAgreements.html">Applications.Service.ServiceAgreements</a></td>
+<td><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></td>
 <td>The <a href="Applications.Service.ServiceAgreementLines.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#serviceobject">ServiceObject</a></td>
-<td><a href="Applications.Service.ServiceObjects.html">Applications.Service.ServiceObjects</a></td>
+<td><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a></td>
 <td>The service object, which is covered by the current agreement. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#servicetype">ServiceType</a></td>
-<td><a href="Applications.Service.ServiceTypes.html">Applications.Service.ServiceTypes</a></td>
+<td><a href="Applications.Service.ServiceTypes.html">ServiceTypes</a></td>
 <td>The type (level) of service that is agreed. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -169,9 +169,9 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.ServiceAgreement.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.ServiceAgreement.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.ServiceAgreement.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.ServiceAgreement.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linestartdatetime">LineStartDateTime</h3>
 <blockquote>
 <p>The starting date and time of the agreement coverage for the current line. [Required] [Filter(ge;le)]</p>
@@ -199,19 +199,19 @@
 <blockquote>
 <p>The <a href="Applications.Service.ServiceAgreementLines.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">Applications.Service.ServiceAgreements</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceobject">ServiceObject</h3>
 <blockquote>
 <p>The service object, which is covered by the current agreement. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">Applications.Service.ServiceObjects</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="servicetype">ServiceType</h3>
 <blockquote>
 <p>The type (level) of service that is agreed. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Service.ServiceTypes.html">Applications.Service.ServiceTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.Service.ServiceTypes.html">ServiceTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="Applications.PersonalData.DataSubjectRightRequests">
 <h1 id="applicationspersonaldatadatasubjectrightrequests">Applications.PersonalData.DataSubjectRightRequests</h1>
 
-<p>Contains user requests for application of user rights. Entity: Pdm_Data_Subject_Right_Requests (Introduced in version 18.2.100.0)</p>
+<p>Contains user requests for application of user rights. Entity: Pdm_Data_Subject_Right_Requests (Introduced in version 18.2)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -134,22 +134,22 @@
 <tbody>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#completedbyuser">CompletedByUser</a></td>
-<td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
+<td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
 <td>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#createdbyuser">CreatedByUser</a></td>
-<td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
+<td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
 <td>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
 <td>The enterprise company, to which the request was made. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#person">Person</a></td>
-<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a></td>
+<td><a href="General.Contacts.Persons.html">Persons</a></td>
 <td>The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -268,25 +268,25 @@ Allowed values for the <a href="Applications.PersonalData.DataSubjectRightReques
 <blockquote>
 <p>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="createdbyuser">CreatedByUser</h3>
 <blockquote>
 <p>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The enterprise company, to which the request was made. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
 <blockquote>
 <p>The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

@@ -119,12 +119,12 @@
 <tbody>
 <tr>
 <td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#producttype">ProductType</a></td>
-<td><a href="General.Products.ProductTypes.html">General.Products.ProductTypes</a></td>
-<td>The <a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#producttype">ProductType</a> to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td><a href="General.Products.ProductTypes.html">ProductTypes</a></td>
+<td>The [ProductType](General.Products.ProductTypePurchase<br>InvoiceLineProperties.md#producttype) to which this ProductTypePurchase<br>InvoiceLineProperty belongs. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#property">Property</a></td>
-<td><a href="General.CustomProperties.html">General.CustomProperties</a></td>
+<td><a href="General.CustomProperties.html">CustomProperties</a></td>
 <td>The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -142,9 +142,9 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.ProductType.PurchaseInvoiceLineProperties.Select(c =&gt; c.PropertyNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.ProductType.PurchaseInvoiceLineProperties.Select( c =&gt; c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.ProductType.PurchaseInvoiceLineProperties.Select(c =&gt; c.PropertyNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.ProductType.PurchaseInvoiceLineProperties.Select( c =&gt; c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="required">Required</h3>
 <blockquote>
 <p>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. [Required] [Default(false)]</p>
@@ -158,13 +158,13 @@
 <blockquote>
 <p>The <a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#producttype">ProductType</a> to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">General.Products.ProductTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">ProductTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="property">Property</h3>
 <blockquote>
 <p>The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.CustomProperties.html">General.CustomProperties</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

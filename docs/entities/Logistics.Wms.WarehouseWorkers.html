@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="Logistics.Wms.WarehouseWorkers">
 <h1 id="logisticswmswarehouseworkers">Logistics.Wms.WarehouseWorkers</h1>
 
-<p>Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_Workers (Introduced in version 20.1.100.0)</p>
+<p>Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_Workers (Introduced in version 20.1)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -134,12 +134,12 @@
 <tbody>
 <tr>
 <td><a href="Logistics.Wms.WarehouseWorkers.html#person">Person</a></td>
-<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
+<td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
 <td>The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseWorkers.html#warehouse">Warehouse</a></td>
-<td><a href="Logistics.Wms.Warehouses.html">Logistics.Wms.Warehouses</a></td>
+<td><a href="Logistics.Wms.Warehouses.html">Warehouses</a></td>
 <td>The warehouse, where the worker works. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -191,13 +191,13 @@
 <blockquote>
 <p>The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouse">Warehouse</h3>
 <blockquote>
 <p>The warehouse, where the worker works. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Wms.Warehouses.html">Logistics.Wms.Warehouses</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

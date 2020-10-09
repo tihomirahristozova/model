@@ -119,12 +119,12 @@
 <tbody>
 <tr>
 <td><a href="Crm.Pricing.PricingModelPriceLists.html#pricelist">PriceList</a></td>
-<td><a href="Crm.PriceLists.html">Crm.PriceLists</a></td>
+<td><a href="Crm.PriceLists.html">PriceLists</a></td>
 <td>The price list, which is included in the pricing model. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PricingModelPriceLists.html#pricingmodel">PricingModel</a></td>
-<td><a href="Crm.Pricing.PricingModels.html">Crm.Pricing.PricingModels</a></td>
+<td><a href="Crm.Pricing.PricingModels.html">PricingModels</a></td>
 <td>The pricing model, for which the price list is listed. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -142,9 +142,9 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.PricingModel.PriceLists.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.PricingModel.PriceLists.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.PricingModel.PriceLists.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.PricingModel.PriceLists.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="marginpercent">MarginPercent</h3>
 <blockquote>
 <p>Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way.</p>
@@ -157,13 +157,13 @@
 <blockquote>
 <p>The price list, which is included in the pricing model. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.PriceLists.html">Crm.PriceLists</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.PriceLists.html">PriceLists</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="pricingmodel">PricingModel</h3>
 <blockquote>
 <p>The pricing model, for which the price list is listed. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Pricing.PricingModels.html">Crm.Pricing.PricingModels</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Pricing.PricingModels.html">PricingModels</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

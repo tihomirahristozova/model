@@ -93,12 +93,12 @@
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a></td>
 <td><a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a></td>
-<td>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default(&quot;EMB&quot;)] (Introduced in version 20.1.100.0)</td>
+<td>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default(&quot;EMB&quot;)] (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>Time (in UTC), when the file was created. [Required] [Default(NowUtc)] (Introduced in version 20.1.100.0)</td>
+<td>Time (in UTC), when the file was created. [Required] [Default(NowUtc)] (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#embeddedfilecontents">EmbeddedFileContents</a></td>
@@ -118,7 +118,7 @@
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#lastupdatetimeutc">LastUpdateTimeUtc</a></td>
 <td>datetime</td>
-<td>Time (in UTC), when the file was last updated. [Required] [Default(NowUtc)] (Introduced in version 20.1.100.0)</td>
+<td>Time (in UTC), when the file was last updated. [Required] [Default(NowUtc)] (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#linkedfilepath">LinkedFilePath</a></td>
@@ -128,17 +128,17 @@
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#mediaheight">MediaHeight</a></td>
 <td>int32 (nullable)</td>
-<td>Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1.100.0)</td>
+<td>Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#mediatype">MediaType</a></td>
 <td>string (nullable)</td>
-<td>For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. (Introduced in version 20.1.100.0)</td>
+<td>For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#mediawidth">MediaWidth</a></td>
 <td>int32 (nullable)</td>
-<td>Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1.100.0)</td>
+<td>Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#notes">Notes</a></td>
@@ -164,17 +164,17 @@
 <tbody>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#creationuser">CreationUser</a></td>
-<td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
-<td>The user, who created the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1.100.0)</td>
+<td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
+<td>The user, who created the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#lastupdateuser">LastUpdateUser</a></td>
-<td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
-<td>The user, who performed the last update to the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1.100.0)</td>
+<td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
+<td>The user, who performed the last update to the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#object">Object</a></td>
-<td><a href="Systems.Core.ExtensibleDataObjects.html">Systems.Core.ExtensibleDataObjects</a></td>
+<td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></td>
 <td>The object to which the file is attached. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -182,7 +182,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contentlocation">ContentLocation</h3>
 <blockquote>
-<p>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default(&quot;EMB&quot;)] (Introduced in version 20.1.100.0)</p>
+<p>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default(&quot;EMB&quot;)] (Introduced in version 20.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a></strong><br>
 Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a> data attribute<br>
@@ -214,7 +214,7 @@ Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">C
 <em>Default Value</em>: <strong>Embedded</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
 <blockquote>
-<p>Time (in UTC), when the file was created. [Required] [Default(NowUtc)] (Introduced in version 20.1.100.0)</p>
+<p>Time (in UTC), when the file was created. [Required] [Default(NowUtc)] (Introduced in version 20.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -240,7 +240,7 @@ Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">C
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lastupdatetimeutc">LastUpdateTimeUtc</h3>
 <blockquote>
-<p>Time (in UTC), when the file was last updated. [Required] [Default(NowUtc)] (Introduced in version 20.1.100.0)</p>
+<p>Time (in UTC), when the file was last updated. [Required] [Default(NowUtc)] (Introduced in version 20.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -255,21 +255,21 @@ Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">C
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="mediaheight">MediaHeight</h3>
 <blockquote>
-<p>Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1.100.0)</p>
+<p>Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="mediatype">MediaType</h3>
 <blockquote>
-<p>For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. (Introduced in version 20.1.100.0)</p>
+<p>For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. (Introduced in version 20.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="mediawidth">MediaWidth</h3>
 <blockquote>
-<p>Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1.100.0)</p>
+<p>Used (non-null) only for media files. Specifies the width for displaying the media. (Introduced in version 20.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -291,21 +291,21 @@ Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">C
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>
 <blockquote>
-<p>The user, who created the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1.100.0)</p>
+<p>The user, who created the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lastupdateuser">LastUpdateUser</h3>
 <blockquote>
-<p>The user, who performed the last update to the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1.100.0)</p>
+<p>The user, who performed the last update to the file record. null if it is unknown. [Filter(multi eq)] (Introduced in version 20.1)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="object">Object</h3>
 <blockquote>
 <p>The object to which the file is attached. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">Systems.Core.ExtensibleDataObjects</a></strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

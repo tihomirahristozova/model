@@ -174,22 +174,22 @@
 <tbody>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#currencydirectory">CurrencyDirectory</a></td>
-<td><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</td>
+<td><a href="General.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</td>
 <td>Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#principalrecipe">PrincipalRecipe</a></td>
-<td><a href="Production.Technologies.PrincipalRecipes.html">Production.Technologies.PrincipalRecipes</a> (nullable)</td>
+<td><a href="Production.Technologies.PrincipalRecipes.html">PrincipalRecipes</a> (nullable)</td>
 <td>The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</td>
+<td><a href="General.Products.Products.html">Products</a> (nullable)</td>
 <td>The Id of the produced product. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.Recipes.html#store">Store</a></td>
-<td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</td>
+<td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
 <td>The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -206,12 +206,12 @@
 <tbody>
 <tr>
 <td>Ingredients</td>
-<td><a href="Production.Technologies.RecipeIngredients.html">Production.Technologies.RecipeIngredients</a></td>
+<td><a href="Production.Technologies.RecipeIngredients.html">RecipeIngredients</a></td>
 <td>List of <a href="Production.Technologies.RecipeIngredients.html">RecipeIngredient</a> child objects, based on the <a href="Production.Technologies.RecipeIngredients.html#recipe">Production.Technologies.RecipeIngredient.Recipe</a> back reference</td>
 </tr>
 <tr>
 <td>Operations</td>
-<td><a href="Production.Technologies.RecipeOperations.html">Production.Technologies.RecipeOperations</a></td>
+<td><a href="Production.Technologies.RecipeOperations.html">RecipeOperations</a></td>
 <td>List of <a href="Production.Technologies.RecipeOperations.html">RecipeOperation</a> child objects, based on the <a href="Production.Technologies.RecipeOperations.html#recipe">Production.Technologies.RecipeOperation.Recipe</a> back reference</td>
 </tr>
 </tbody>
@@ -323,25 +323,25 @@
 <blockquote>
 <p>Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="principalrecipe">PrincipalRecipe</h3>
 <blockquote>
 <p>The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Technologies.PrincipalRecipes.html">Production.Technologies.PrincipalRecipes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Production.Technologies.PrincipalRecipes.html">PrincipalRecipes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The Id of the produced product. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
 <blockquote>
 <p>The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

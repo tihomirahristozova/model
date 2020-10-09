@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="Logistics.Shipment.TransportationExecutionLines">
 <h1 id="logisticsshipmenttransportationexecutionlines">Logistics.Shipment.TransportationExecutionLines</h1>
 
-<p>Contains details of executions of transportation order lines. Entity: Log_Transportation_Execution_Lines (Introduced in version 18.2.100.0)</p>
+<p>Contains details of executions of transportation order lines. Entity: Log_Transportation_Execution_Lines (Introduced in version 18.2)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -113,7 +113,7 @@
 <tr>
 <td><a href="Logistics.Shipment.TransportationExecutionLines.html#notes">Notes</a></td>
 <td>string (nullable)</td>
-<td>Notes for this TransportationExecutionLine.</td>
+<td>Notes for this Transportation<br>ExecutionLine.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationExecutionLines.html#operationtype">OperationType</a></td>
@@ -153,19 +153,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Shipment.TransportationExecutionLines.html#executionoftransportationorderline">ExecutionOfTransportationOrderLine</a></td>
-<td><a href="Logistics.Shipment.TransportationOrderLines.html">Logistics.Shipment.TransportationOrderLines</a></td>
+<td><a href="Logistics.Shipment.TransportationExecutionLines.html#executionoftransportationorderline">ExecutionOfTransportation<br>OrderLine</a></td>
+<td><a href="Logistics.Shipment.TransportationOrderLines.html">TransportationOrderLines</a></td>
 <td>The transportation order line, which is executed. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationExecutionLines.html#geopoint">GeoPoint</a></td>
-<td><a href="General.Geography.GeoPoints.html">General.Geography.GeoPoints</a></td>
+<td><a href="General.Geography.GeoPoints.html">GeoPoints</a></td>
 <td>The geographic point, where the operation is executed. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationExecutionLines.html#transportationexecution">TransportationExecution</a></td>
-<td><a href="Logistics.Shipment.TransportationExecutions.html">Logistics.Shipment.TransportationExecutions</a></td>
-<td>The <a href="Logistics.Shipment.TransportationExecutionLines.html#transportationexecution">TransportationExecution</a> to which this TransportationExecutionLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td><a href="Logistics.Shipment.TransportationExecutions.html">TransportationExecutions</a></td>
+<td>The [TransportationExecution](Logistics.Shipment.Transportation<br>ExecutionLines.md#transportationexecution) to which this Transportation<br>ExecutionLine belongs. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -204,9 +204,9 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.TransportationExecution.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.TransportationExecution.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.TransportationExecution.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.TransportationExecution.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this TransportationExecutionLine.</p>
@@ -278,13 +278,13 @@ Allowed values for the <a href="Logistics.Shipment.TransportationExecutionLines.
 <blockquote>
 <p>The transportation order line, which is executed. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrderLines.html">Logistics.Shipment.TransportationOrderLines</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrderLines.html">TransportationOrderLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="geopoint">GeoPoint</h3>
 <blockquote>
 <p>The geographic point, where the operation is executed. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Geography.GeoPoints.html">General.Geography.GeoPoints</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Geography.GeoPoints.html">GeoPoints</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.TransportationExecution.GeoPoint</code></p>
@@ -294,7 +294,7 @@ Allowed values for the <a href="Logistics.Shipment.TransportationExecutionLines.
 <blockquote>
 <p>The <a href="Logistics.Shipment.TransportationExecutionLines.html#transportationexecution">TransportationExecution</a> to which this TransportationExecutionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationExecutions.html">Logistics.Shipment.TransportationExecutions</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationExecutions.html">TransportationExecutions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

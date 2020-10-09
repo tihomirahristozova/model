@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="General.DocumentJobs">
 <h1 id="generaldocumentjobs">General.DocumentJobs</h1>
 
-<p>Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Introduced in version 20.1.100.0)</p>
+<p>Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Introduced in version 20.1)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -144,12 +144,12 @@
 <tbody>
 <tr>
 <td><a href="General.DocumentJobs.html#documenttype">DocumentType</a></td>
-<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
+<td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
 <td>The type of the document, whose state will be changed. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.DocumentJobs.html#newuserstatus">NewUserStatus</a></td>
-<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
+<td><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
 <td>Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -283,13 +283,13 @@ Enumeration of document system states<br>
 <blockquote>
 <p>The type of the document, whose state will be changed. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="newuserstatus">NewUserStatus</h3>
 <blockquote>
 <p>Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

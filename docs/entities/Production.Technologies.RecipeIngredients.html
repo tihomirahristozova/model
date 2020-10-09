@@ -154,32 +154,32 @@
 <tbody>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#material">Material</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
 <td>The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#operation">Operation</a></td>
-<td><a href="Production.Resources.Operations.html">Production.Resources.Operations</a> (nullable)</td>
+<td><a href="Production.Resources.Operations.html">Operations</a> (nullable)</td>
 <td>Specifies for which operation this ingredient will be used. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#principalrecipeingredient">PrincipalRecipeIngredient</a></td>
-<td><a href="Production.Technologies.PrincipalRecipeIngredients.html">Production.Technologies.PrincipalRecipeIngredients</a> (nullable)</td>
+<td><a href="Production.Technologies.PrincipalRecipeIngredients.html">PrincipalRecipeIngredients</a> (nullable)</td>
 <td>The principal recipe ingredient which was used to create this recipe ingredient. null means that this ingredient is standalone, not created with principal recipe ingredient. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#recipe">Recipe</a></td>
-<td><a href="Production.Technologies.Recipes.html">Production.Technologies.Recipes</a></td>
+<td><a href="Production.Technologies.Recipes.html">Recipes</a></td>
 <td>The <a href="Production.Technologies.RecipeIngredients.html#recipe">Recipe</a> to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#store">Store</a></td>
-<td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</td>
+<td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
 <td>The store from which to retrieve the material. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#usageunit">UsageUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
 <td>The measurement unit of Usage_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -213,9 +213,9 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.Recipe.Ingredients.Select(c =&gt; c.LineOrd).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.Recipe.Ingredients.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.Recipe.Ingredients.Select(c =&gt; c.LineOrd).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.Recipe.Ingredients.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this RecipeIngredient.</p>
@@ -268,37 +268,37 @@
 <blockquote>
 <p>The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="operation">Operation</h3>
 <blockquote>
 <p>Specifies for which operation this ingredient will be used. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Resources.Operations.html">Production.Resources.Operations</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Production.Resources.Operations.html">Operations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="principalrecipeingredient">PrincipalRecipeIngredient</h3>
 <blockquote>
 <p>The principal recipe ingredient which was used to create this recipe ingredient. null means that this ingredient is standalone, not created with principal recipe ingredient. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Technologies.PrincipalRecipeIngredients.html">Production.Technologies.PrincipalRecipeIngredients</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Production.Technologies.PrincipalRecipeIngredients.html">PrincipalRecipeIngredients</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="recipe">Recipe</h3>
 <blockquote>
 <p>The <a href="Production.Technologies.RecipeIngredients.html#recipe">Recipe</a> to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Technologies.Recipes.html">Production.Technologies.Recipes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Production.Technologies.Recipes.html">Recipes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
 <blockquote>
 <p>The store from which to retrieve the material. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="usageunit">UsageUnit</h3>
 <blockquote>
 <p>The measurement unit of Usage_Quantity. The selected item must support the specified unit. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

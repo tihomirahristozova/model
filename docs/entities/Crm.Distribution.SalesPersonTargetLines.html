@@ -144,32 +144,32 @@
 <tbody>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonTargetLines.html#bonusprogram">BonusProgram</a></td>
-<td><a href="Crm.Marketing.BonusPrograms.html">Crm.Marketing.BonusPrograms</a> (nullable)</td>
+<td><a href="Crm.Marketing.BonusPrograms.html">BonusPrograms</a> (nullable)</td>
 <td>Bonus program Id when the target type is BONUS, null otherwise. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonTargetLines.html#productgroup">ProductGroup</a></td>
-<td><a href="General.Products.ProductGroups.html">General.Products.ProductGroups</a> (nullable)</td>
+<td><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</td>
 <td>Product group for which the target is defined. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonTargetLines.html#promotionalpackage">PromotionalPackage</a></td>
-<td><a href="Crm.PromotionalPackages.html">Crm.PromotionalPackages</a> (nullable)</td>
+<td><a href="Crm.PromotionalPackages.html">PromotionalPackages</a> (nullable)</td>
 <td>Promotional Package Id when the target type is PROMO, null otherwise. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonTargetLines.html#salesperson">SalesPerson</a></td>
-<td><a href="Crm.SalesPersons.html">Crm.SalesPersons</a></td>
+<td><a href="Crm.SalesPersons.html">SalesPersons</a></td>
 <td>Sales person to whom the target is assigned. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonTargetLines.html#salespersontarget">SalesPersonTarget</a></td>
-<td><a href="Crm.Distribution.SalesPersonTargets.html">Crm.Distribution.SalesPersonTargets</a></td>
+<td><a href="Crm.Distribution.SalesPersonTargets.html">SalesPersonTargets</a></td>
 <td>The <a href="Crm.Distribution.SalesPersonTargetLines.html#salespersontarget">SalesPersonTarget</a> to which this SalesPersonTargetLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonTargetLines.html#targetamountcurrency">TargetAmountCurrency</a></td>
-<td><a href="General.Currencies.html">General.Currencies</a> (nullable)</td>
+<td><a href="General.Currencies.html">Currencies</a> (nullable)</td>
 <td>Deprecated - use currency in document header. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -227,12 +227,12 @@ Allowed values for the <a href="Crm.Distribution.SalesPersonTargetLines.html#tar
 <td>SalesAmount value. Stored as 'SALES'. <br> <em>Database Value:</em> 'SALES' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'SalesAmount'</td>
 </tr>
 <tr>
-<td>NumberOfAppliedBonusPrograms</td>
-<td>NumberOfAppliedBonusPrograms value. Stored as 'BONUS'. <br> <em>Database Value:</em> 'BONUS' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'NumberOfAppliedBonusPrograms'</td>
+<td>NumberOfApplied<br>BonusPrograms</td>
+<td>NumberOfApplied<br>BonusPrograms value. Stored as 'BONUS'. <br> <em>Database Value:</em> 'BONUS' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'NumberOfApplied<br>BonusPrograms'</td>
 </tr>
 <tr>
-<td>NumberOfPromotionalPackages</td>
-<td>NumberOfPromotionalPackages value. Stored as 'PROMO'. <br> <em>Database Value:</em> 'PROMO' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'NumberOfPromotionalPackages'</td>
+<td>NumberOfPromotional<br>Packages</td>
+<td>NumberOfPromotional<br>Packages value. Stored as 'PROMO'. <br> <em>Database Value:</em> 'PROMO' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'NumberOfPromotional<br>Packages'</td>
 </tr>
 <tr>
 <td>LocationsCount</td>
@@ -264,13 +264,13 @@ Allowed values for the <a href="Crm.Distribution.SalesPersonTargetLines.html#tar
 <blockquote>
 <p>Bonus program Id when the target type is BONUS, null otherwise. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Marketing.BonusPrograms.html">Crm.Marketing.BonusPrograms</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Marketing.BonusPrograms.html">BonusPrograms</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productgroup">ProductGroup</h3>
 <blockquote>
 <p>Product group for which the target is defined. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">General.Products.ProductGroups</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.SalesPersonTarget.ProductGroup</code></p>
@@ -280,13 +280,13 @@ Allowed values for the <a href="Crm.Distribution.SalesPersonTargetLines.html#tar
 <blockquote>
 <p>Promotional Package Id when the target type is PROMO, null otherwise. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.PromotionalPackages.html">Crm.PromotionalPackages</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.PromotionalPackages.html">PromotionalPackages</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salesperson">SalesPerson</h3>
 <blockquote>
 <p>Sales person to whom the target is assigned. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.SalesPersons.html">Crm.SalesPersons</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.SalesPersons.html">SalesPersons</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.SalesPersonTarget.SalesPerson</code></p>
@@ -296,13 +296,13 @@ Allowed values for the <a href="Crm.Distribution.SalesPersonTargetLines.html#tar
 <blockquote>
 <p>The <a href="Crm.Distribution.SalesPersonTargetLines.html#salespersontarget">SalesPersonTarget</a> to which this SalesPersonTargetLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Distribution.SalesPersonTargets.html">Crm.Distribution.SalesPersonTargets</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Distribution.SalesPersonTargets.html">SalesPersonTargets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="targetamountcurrency">TargetAmountCurrency</h3>
 <blockquote>
 <p>Deprecated - use currency in document header. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.SalesPersonTarget.TargetCurrency</code></p>

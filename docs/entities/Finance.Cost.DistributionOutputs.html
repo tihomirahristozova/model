@@ -119,12 +119,12 @@
 <tbody>
 <tr>
 <td><a href="Finance.Cost.DistributionOutputs.html#costdistribution">CostDistribution</a></td>
-<td><a href="Finance.Cost.Distributions.html">Finance.Cost.Distributions</a></td>
+<td><a href="Finance.Cost.Distributions.html">Distributions</a></td>
 <td>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.DistributionOutputs.html#storetransactionline">StoreTransactionLine</a></td>
-<td><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a></td>
+<td><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></td>
 <td>The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -142,9 +142,9 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.CostDistribution.Outputs.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.CostDistribution.Outputs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.CostDistribution.Outputs.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.CostDistribution.Outputs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="weightcoefficient">WeightCoefficient</h3>
 <blockquote>
 <p>The weight coefficient for prorate distribution of cost over the current line. [Required] [Default(1)]</p>
@@ -158,13 +158,13 @@
 <blockquote>
 <p>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Cost.Distributions.html">Finance.Cost.Distributions</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Cost.Distributions.html">Distributions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storetransactionline">StoreTransactionLine</h3>
 <blockquote>
 <p>The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

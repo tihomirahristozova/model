@@ -129,12 +129,12 @@
 <tbody>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#mailbox">MailBox</a></td>
-<td><a href="Applications.Mail.Boxes.html">Applications.Mail.Boxes</a></td>
+<td><a href="Applications.Mail.Boxes.html">Boxes</a></td>
 <td>The <a href="Applications.Mail.Boxes.html">Box</a> to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#parentfolder">ParentFolder</a></td>
-<td><a href="Applications.Mail.BoxFolders.html">Applications.Mail.BoxFolders</a> (nullable)</td>
+<td><a href="Applications.Mail.BoxFolders.html">BoxFolders</a> (nullable)</td>
 <td>The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -151,7 +151,7 @@
 <tbody>
 <tr>
 <td>Messages</td>
-<td><a href="Applications.Mail.Messages.html">Applications.Mail.Messages</a></td>
+<td><a href="Applications.Mail.Messages.html">Messages</a></td>
 <td>List of <a href="Applications.Mail.Messages.html">Message</a> child objects, based on the <a href="Applications.Mail.Messages.html#mailboxfolder">Applications.Mail.Message.MailBoxFolder</a> back reference</td>
 </tr>
 </tbody>
@@ -230,13 +230,13 @@ Allowed values for the <a href="Applications.Mail.BoxFolders.html#systempurpose"
 <blockquote>
 <p>The <a href="Applications.Mail.Boxes.html">Box</a> to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Mail.Boxes.html">Applications.Mail.Boxes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.Mail.Boxes.html">Boxes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentfolder">ParentFolder</h3>
 <blockquote>
 <p>The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Mail.BoxFolders.html">Applications.Mail.BoxFolders</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Applications.Mail.BoxFolders.html">BoxFolders</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

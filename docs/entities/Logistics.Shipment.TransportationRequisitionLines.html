@@ -139,18 +139,18 @@
 <tbody>
 <tr>
 <td><a href="Logistics.Shipment.TransportationRequisitionLines.html#cargotype">CargoType</a></td>
-<td><a href="Logistics.Shipment.CargoTypes.html">Logistics.Shipment.CargoTypes</a></td>
+<td><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></td>
 <td>The type of the transported cargo. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationRequisitionLines.html#parentdocument">ParentDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationRequisitionLines.html#transportationrequisition">TransportationRequisition</a></td>
-<td><a href="Logistics.Shipment.TransportationRequisitions.html">Logistics.Shipment.TransportationRequisitions</a></td>
-<td>The <a href="Logistics.Shipment.TransportationRequisitionLines.html#transportationrequisition">TransportationRequisition</a> to which this TransportationRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td><a href="Logistics.Shipment.TransportationRequisitions.html">TransportationRequisitions</a></td>
+<td>The [Transportation<br>Requisition](Logistics.Shipment.Transportation<br>RequisitionLines.md#transportationrequisition) to which this Transportation<br>RequisitionLine belongs. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -174,9 +174,9 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.TransportationRequisition.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.TransportationRequisition.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.TransportationRequisition.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.TransportationRequisition.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="palletscount">PalletsCount</h3>
 <blockquote>
 <p>Number of palettes comprising the cargo. null when it is unknown.</p>
@@ -210,19 +210,19 @@
 <blockquote>
 <p>The type of the transported cargo. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Shipment.CargoTypes.html">Logistics.Shipment.CargoTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
 <blockquote>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transportationrequisition">TransportationRequisition</h3>
 <blockquote>
 <p>The <a href="Logistics.Shipment.TransportationRequisitionLines.html#transportationrequisition">TransportationRequisition</a> to which this TransportationRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationRequisitions.html">Logistics.Shipment.TransportationRequisitions</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationRequisitions.html">TransportationRequisitions</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

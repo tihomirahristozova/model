@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="Applications.AssetManagement.ManagedAssets">
 <h1 id="applicationsassetmanagementmanagedassets">Applications.AssetManagement.ManagedAssets</h1>
 
-<p>Contains the managed assets. The management of assets include maintenance planning and execution, location assignments tracking, etc. Entity: Eam_Managed_Assets (Introduced in version 19.1.100.0)</p>
+<p>Contains the managed assets. The management of assets include maintenance planning and execution, location assignments tracking, etc. Entity: Eam_Managed_Assets (Introduced in version 19.1)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -129,17 +129,17 @@
 <tbody>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssets.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
 <td>The enterprise company to which the managed asset belongs. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssets.html#managedassetgroup">ManagedAssetGroup</a></td>
-<td><a href="Applications.AssetManagement.ManagedAssetGroups.html">Applications.AssetManagement.ManagedAssetGroups</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetGroups.html">ManagedAssetGroups</a></td>
 <td>The organizational group of the asset. Used for organizational purposes only. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssets.html#managedassettype">ManagedAssetType</a></td>
-<td><a href="Applications.AssetManagement.ManagedAssetTypes.html">Applications.AssetManagement.ManagedAssetTypes</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetTypes.html">ManagedAssetTypes</a></td>
 <td>The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -156,23 +156,23 @@
 <tbody>
 <tr>
 <td>Locations</td>
-<td><a href="Applications.AssetManagement.ManagedAssetLocations.html">Applications.AssetManagement.ManagedAssetLocations</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetLocations.html">ManagedAssetLocations</a></td>
 <td>List of <a href="Applications.AssetManagement.ManagedAssetLocations.html">ManagedAssetLocation</a> child objects, based on the <a href="Applications.AssetManagement.ManagedAssetLocations.html#managedasset">Applications.AssetManagement.ManagedAssetLocation.ManagedAsset</a> back reference</td>
 </tr>
 <tr>
 <td>MaintenanceSchedules</td>
-<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html">Applications.AssetManagement.ManagedAssetMaintenanceSchedules</a></td>
-<td>List of <a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html">ManagedAssetMaintenanceSchedule</a> child objects, based on the <a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#managedasset">Applications.AssetManagement.ManagedAssetMaintenanceSchedule.ManagedAsset</a> back reference</td>
+<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html">ManagedAssetMaintenanceSchedules</a></td>
+<td>List of [ManagedAssetMaintenance<br>Schedule](Applications.AssetManagement.ManagedAssetMaintenance<br>Schedules.md) child objects, based on the [Applications.AssetManagement.ManagedAssetMaintenance<br>Schedule.ManagedAsset](Applications.AssetManagement.ManagedAssetMaintenance<br>Schedules.md#managedasset) back</td>
 </tr>
 <tr>
 <td>ParameterValues</td>
-<td><a href="Applications.AssetManagement.ManagedAssetParameterValues.html">Applications.AssetManagement.ManagedAssetParameterValues</a></td>
-<td>List of <a href="Applications.AssetManagement.ManagedAssetParameterValues.html">ManagedAssetParameterValue</a> child objects, based on the <a href="Applications.AssetManagement.ManagedAssetParameterValues.html#managedasset">Applications.AssetManagement.ManagedAssetParameterValue.ManagedAsset</a> back reference</td>
+<td><a href="Applications.AssetManagement.ManagedAssetParameterValues.html">ManagedAssetParameterValues</a></td>
+<td>List of [ManagedAssetParameter<br>Value](Applications.AssetManagement.ManagedAssetParameter<br>Values.md) child objects, based on the [Applications.AssetManagement.ManagedAssetParameterValue.ManagedAsset](Applications.AssetManagement.ManagedAssetParameter<br>Values.md#managedasset) back</td>
 </tr>
 <tr>
 <td>ScheduledMaintenances</td>
-<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html">Applications.AssetManagement.ManagedAssetScheduledMaintenances</a></td>
-<td>List of <a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html">ManagedAssetScheduledMaintenance</a> child objects, based on the <a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#managedasset">Applications.AssetManagement.ManagedAssetScheduledMaintenance.ManagedAsset</a> back reference</td>
+<td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html">ManagedAssetScheduledMaintenances</a></td>
+<td>List of [ManagedAssetScheduled<br>Maintenance](Applications.AssetManagement.ManagedAssetScheduled<br>Maintenances.md) child objects, based on the [Applications.AssetManagement.ManagedAssetScheduled<br>Maintenance.ManagedAsset](Applications.AssetManagement.ManagedAssetScheduled<br>Maintenances.md#managedasset) back</td>
 </tr>
 </tbody>
 </table>
@@ -214,19 +214,19 @@
 <blockquote>
 <p>The enterprise company to which the managed asset belongs. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="managedassetgroup">ManagedAssetGroup</h3>
 <blockquote>
 <p>The organizational group of the asset. Used for organizational purposes only. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssetGroups.html">Applications.AssetManagement.ManagedAssetGroups</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssetGroups.html">ManagedAssetGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="managedassettype">ManagedAssetType</h3>
 <blockquote>
 <p>The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssetTypes.html">Applications.AssetManagement.ManagedAssetTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssetTypes.html">ManagedAssetTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

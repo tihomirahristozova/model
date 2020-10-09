@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="Applications.AssetManagement.MaintenanceOrderLines">
 <h1 id="applicationsassetmanagementmaintenanceorderlines">Applications.AssetManagement.MaintenanceOrderLines</h1>
 
-<p>Contains the types of maintenance and maintained assets in the maintenance orders. Entity: Eam_Maintenance_Order_Lines (Introduced in version 19.1.100.0)</p>
+<p>Contains the types of maintenance and maintained assets in the maintenance orders. Entity: Eam_Maintenance_Order_Lines (Introduced in version 19.1)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -106,7 +106,7 @@
 <td>Specifies, that the maintenance required a specific date for the next maintenance. null means that default scheduling should be used.</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#nextservicetrackedparametervalue">NextServiceTrackedParameterValue</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#nextservicetrackedparametervalue">NextServiceTracked<br>ParameterValue</a></td>
 <td>int32 (nullable)</td>
 <td>Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. null means that default scheduling should be used.</td>
 </tr>
@@ -129,17 +129,17 @@
 <tbody>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#maintenanceorder">MaintenanceOrder</a></td>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html">Applications.AssetManagement.MaintenanceOrders</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html">MaintenanceOrders</a></td>
 <td>The <a href="Applications.AssetManagement.MaintenanceOrderLines.html#maintenanceorder">MaintenanceOrder</a> to which this MaintenanceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#maintenancetype">MaintenanceType</a></td>
-<td><a href="Applications.AssetManagement.MaintenanceTypes.html">Applications.AssetManagement.MaintenanceTypes</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a></td>
 <td>The type of maintenance performed. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#managedasset">ManagedAsset</a></td>
-<td><a href="Applications.AssetManagement.ManagedAssets.html">Applications.AssetManagement.ManagedAssets</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></td>
 <td>The maintained asset. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -157,9 +157,9 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.MaintenanceOrder.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.MaintenanceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.MaintenanceOrder.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.MaintenanceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="nextservicedate">NextServiceDate</h3>
 <blockquote>
 <p>Specifies, that the maintenance required a specific date for the next maintenance. null means that default scheduling should be used.</p>
@@ -186,19 +186,19 @@
 <blockquote>
 <p>The <a href="Applications.AssetManagement.MaintenanceOrderLines.html#maintenanceorder">MaintenanceOrder</a> to which this MaintenanceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceOrders.html">Applications.AssetManagement.MaintenanceOrders</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceOrders.html">MaintenanceOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="maintenancetype">MaintenanceType</h3>
 <blockquote>
 <p>The type of maintenance performed. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceTypes.html">Applications.AssetManagement.MaintenanceTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
 <blockquote>
 <p>The maintained asset. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssets.html">Applications.AssetManagement.ManagedAssets</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

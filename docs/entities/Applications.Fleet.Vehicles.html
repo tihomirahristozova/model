@@ -93,15 +93,15 @@
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#activefrom">ActiveFrom</a></td>
 <td>datetime (nullable)</td>
-<td>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. (Introduced in version 18.2.100.0)</td>
+<td>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. (Introduced in version 18.2)</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#activetill">ActiveTill</a></td>
 <td>datetime (nullable)</td>
-<td>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. (Introduced in version 18.2.100.0)</td>
+<td>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. (Introduced in version 18.2)</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.Vehicles.html#authoritymaximumladenmasskg">AuthorityMaximumLadenMassKg</a></td>
+<td><a href="Applications.Fleet.Vehicles.html#authoritymaximumladenmasskg">AuthorityMaximum<br>LadenMassKg</a></td>
 <td>int32 (nullable)</td>
 <td>Maximum permissible laden mass, as determined by the registration authority.</td>
 </tr>
@@ -148,7 +148,7 @@
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>True if the vehicle is still owned and managed by the enterprise. [Required] [Default(true)] (Introduced in version 18.2.100.0)</td>
+<td>True if the vehicle is still owned and managed by the enterprise. [Required] [Default(true)] (Introduced in version 18.2)</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#issuingauthority">IssuingAuthority</a></td>
@@ -196,7 +196,7 @@
 <td>Number of standing places, if applicable.</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.Vehicles.html#technicalmaximumladenmasskg">TechnicalMaximumLadenMassKg</a></td>
+<td><a href="Applications.Fleet.Vehicles.html#technicalmaximumladenmasskg">TechnicalMaximum<br>LadenMassKg</a></td>
 <td>int32 (nullable)</td>
 <td>Maximum technically permissible laden mass in kg.</td>
 </tr>
@@ -206,7 +206,7 @@
 <td>Maximum permissible laden mass of a whole trainset, including the vehicle.</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.Vehicles.html#vehicleidentificationnumber">VehicleIdentificationNumber</a></td>
+<td><a href="Applications.Fleet.Vehicles.html#vehicleidentificationnumber">VehicleIdentification<br>Number</a></td>
 <td>string (nullable)</td>
 <td>VIN, aka Chassis number. [Filter(eq;like)]</td>
 </tr>
@@ -239,22 +239,22 @@
 <tbody>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#fuelmeasurementunit">FuelMeasurementUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
 <td>The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. null means unknown. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#maintenanceprofile">MaintenanceProfile</a></td>
-<td><a href="Applications.Fleet.MaintenanceProfiles.html">Applications.Fleet.MaintenanceProfiles</a> (nullable)</td>
+<td><a href="Applications.Fleet.MaintenanceProfiles.html">MaintenanceProfiles</a> (nullable)</td>
 <td>When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#operationalmeasurementunit">OperationalMeasurementUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
 <td>The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. null means that the unit is unknown. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#ownerparty">OwnerParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
 <td>Vehicle owner. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -271,12 +271,12 @@
 <tbody>
 <tr>
 <td>Equipment</td>
-<td><a href="Applications.Fleet.VehicleEquipment.html">Applications.Fleet.VehicleEquipment</a></td>
+<td><a href="Applications.Fleet.VehicleEquipment.html">VehicleEquipment</a></td>
 <td>List of <a href="Applications.Fleet.VehicleEquipment.html">VehicleEquipment</a> child objects, based on the <a href="Applications.Fleet.VehicleEquipment.html#vehicle">Applications.Fleet.VehicleEquipment.Vehicle</a> back reference</td>
 </tr>
 <tr>
 <td>TransportationVehicles</td>
-<td><a href="Logistics.Shipment.TransportationVehicles.html">Logistics.Shipment.TransportationVehicles</a></td>
+<td><a href="Logistics.Shipment.TransportationVehicles.html">TransportationVehicles</a></td>
 <td>List of <a href="Logistics.Shipment.TransportationVehicles.html">TransportationVehicle</a> child objects, based on the <a href="Logistics.Shipment.TransportationVehicles.html#vehicle">Logistics.Shipment.TransportationVehicle.Vehicle</a> back reference</td>
 </tr>
 </tbody>
@@ -284,14 +284,14 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="activefrom">ActiveFrom</h3>
 <blockquote>
-<p>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. (Introduced in version 18.2.100.0)</p>
+<p>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. (Introduced in version 18.2)</p>
 </blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="activetill">ActiveTill</h3>
 <blockquote>
-<p>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. (Introduced in version 18.2.100.0)</p>
+<p>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. (Introduced in version 18.2)</p>
 </blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -359,7 +359,7 @@
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
-<p>True if the vehicle is still owned and managed by the enterprise. [Required] [Default(true)] (Introduced in version 18.2.100.0)</p>
+<p>True if the vehicle is still owned and managed by the enterprise. [Required] [Default(true)] (Introduced in version 18.2)</p>
 </blockquote>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -475,25 +475,25 @@
 <blockquote>
 <p>The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. null means unknown. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="maintenanceprofile">MaintenanceProfile</h3>
 <blockquote>
 <p>When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Fleet.MaintenanceProfiles.html">Applications.Fleet.MaintenanceProfiles</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Applications.Fleet.MaintenanceProfiles.html">MaintenanceProfiles</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="operationalmeasurementunit">OperationalMeasurementUnit</h3>
 <blockquote>
 <p>The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. null means that the unit is unknown. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="ownerparty">OwnerParty</h3>
 <blockquote>
 <p>Vehicle owner. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

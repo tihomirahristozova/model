@@ -174,47 +174,47 @@
 <tbody>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#bulkpaymentorder">BulkPaymentOrder</a></td>
-<td><a href="Finance.Payments.BulkPaymentOrders.html">Finance.Payments.BulkPaymentOrders</a></td>
+<td><a href="Finance.Payments.BulkPaymentOrders.html">BulkPaymentOrders</a></td>
 <td>The <a href="Finance.Payments.BulkPaymentOrderLines.html#bulkpaymentorder">BulkPaymentOrder</a> to which this BulkPaymentOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#invoiceamountcurrency">InvoiceAmountCurrency</a></td>
-<td><a href="General.Currencies.html">General.Currencies</a> (nullable)</td>
+<td><a href="General.Currencies.html">Currencies</a> (nullable)</td>
 <td>The currency of Invoice Amount. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#locationparty">LocationParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
 <td>Location or sub-party of the Party_Id. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#party">Party</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
+<td><a href="General.Contacts.Parties.html">Parties</a></td>
 <td>The party which is to pay or receive the amount. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#paymentaccount">PaymentAccount</a></td>
-<td><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</td>
+<td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
 <td>When not null, specifies the payment account that is expected or will be used by the payment transaction. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#paymenttype">PaymentType</a></td>
-<td><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</td>
+<td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
 <td>Expected payment type. When null, there is no expectation for payment type. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#refdocumenttype">RefDocumentType</a></td>
-<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
+<td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
 <td>The type of the document which is the basis for the payment. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#refinvoicedocumenttype">RefInvoiceDocumentType</a></td>
-<td><a href="General.DocumentTypes.html">General.DocumentTypes</a> (nullable)</td>
+<td><a href="General.DocumentTypes.html">DocumentTypes</a> (nullable)</td>
 <td>The document type of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#totalamountcurrency">TotalAmountCurrency</a></td>
-<td><a href="General.Currencies.html">General.Currencies</a></td>
+<td><a href="General.Currencies.html">Currencies</a></td>
 <td>The currency of Total Amount. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -363,25 +363,25 @@ Allowed values for the <a href="Finance.Payments.BulkPaymentOrderLines.html#dire
 <blockquote>
 <p>The <a href="Finance.Payments.BulkPaymentOrderLines.html#bulkpaymentorder">BulkPaymentOrder</a> to which this BulkPaymentOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.BulkPaymentOrders.html">Finance.Payments.BulkPaymentOrders</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.BulkPaymentOrders.html">BulkPaymentOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="invoiceamountcurrency">InvoiceAmountCurrency</h3>
 <blockquote>
 <p>The currency of Invoice Amount. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="locationparty">LocationParty</h3>
 <blockquote>
 <p>Location or sub-party of the Party_Id. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="party">Party</h3>
 <blockquote>
 <p>The party which is to pay or receive the amount. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.LocationParty.ParentParty</code></p>
@@ -389,33 +389,33 @@ Allowed values for the <a href="Finance.Payments.BulkPaymentOrderLines.html#dire
 <blockquote>
 <p>When not null, specifies the payment account that is expected or will be used by the payment transaction. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.PaymentType.GetDefaultPaymentAccount().IfNullThen(obj.PaymentAccount)</code></p>
+<code>obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)</code></p>
 <h3 id="paymenttype">PaymentType</h3>
 <blockquote>
 <p>Expected payment type. When null, there is no expectation for payment type. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="refdocumenttype">RefDocumentType</h3>
 <blockquote>
 <p>The type of the document which is the basis for the payment. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="refinvoicedocumenttype">RefInvoiceDocumentType</h3>
 <blockquote>
 <p>The document type of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="totalamountcurrency">TotalAmountCurrency</h3>
 <blockquote>
 <p>The currency of Total Amount. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.PaymentAccount.Currency</code></p>

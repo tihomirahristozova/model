@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="Systems.Core.AuditLogEntries">
 <h1 id="systemscoreauditlogentries">Systems.Core.AuditLogEntries</h1>
 
-<p>Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log_Entries (Introduced in version 18.2.100.0)</p>
+<p>Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log_Entries (Introduced in version 18.2)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -149,12 +149,12 @@
 <tbody>
 <tr>
 <td><a href="Systems.Core.AuditLogEntries.html#personaldataprocess">PersonalDataProcess</a></td>
-<td><a href="Applications.PersonalData.PersonalDataProcesses.html">Applications.PersonalData.PersonalDataProcesses</a> (nullable)</td>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html">PersonalDataProcesses</a> (nullable)</td>
 <td>The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.AuditLogEntries.html#user">User</a></td>
-<td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
+<td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
 <td>The user account under which the event has occurred. Null only for events which are not user-specific. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -317,13 +317,13 @@ Allowed values for the <a href="Systems.Core.AuditLogEntries.html#eventtype">Eve
 <blockquote>
 <p>The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html">Applications.PersonalData.PersonalDataProcesses</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html">PersonalDataProcesses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
 <blockquote>
 <p>The user account under which the event has occurred. Null only for events which are not user-specific. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

@@ -139,22 +139,22 @@
 <tbody>
 <tr>
 <td><a href="General.DocumentAmounts.html#document">Document</a></td>
-<td><a href="General.Documents.html">General.Documents</a></td>
+<td><a href="General.Documents.html">Documents</a></td>
 <td>The <a href="General.DocumentAmounts.html#document">Document</a> to which this DocumentAmount belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmounts.html#documentamounttype">DocumentAmountType</a></td>
-<td><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a></td>
+<td><a href="General.DocumentAmountTypes.html">DocumentAmountTypes</a></td>
 <td>The type of the amount. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmounts.html#inputamountcurrency">InputAmountCurrency</a></td>
-<td><a href="General.Currencies.html">General.Currencies</a> (nullable)</td>
+<td><a href="General.Currencies.html">Currencies</a> (nullable)</td>
 <td>When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmounts.html#inputunit">InputUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
 <td>Measurement unit of the input unit amount. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -171,8 +171,8 @@
 <tbody>
 <tr>
 <td>ReferencedDocuments</td>
-<td><a href="General.DocumentAmountReferencedDocuments.html">General.DocumentAmountReferencedDocuments</a></td>
-<td>List of <a href="General.DocumentAmountReferencedDocuments.html">DocumentAmountReferencedDocument</a> child objects, based on the <a href="General.DocumentAmountReferencedDocuments.html#documentamount">General.DocumentAmountReferencedDocument.DocumentAmount</a> back reference</td>
+<td><a href="General.DocumentAmountReferencedDocuments.html">DocumentAmountReferencedDocuments</a></td>
+<td>List of [DocumentAmount<br>ReferencedDocument](General.DocumentAmount<br>ReferencedDocuments.md) child objects, based on the [General.DocumentAmount<br>ReferencedDocument.DocumentAmount](General.DocumentAmount<br>ReferencedDocuments.md#documentamount) back</td>
 </tr>
 </tbody>
 </table>
@@ -196,7 +196,7 @@
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(obj.DocumentAmountType.AmountInputAllowed, obj.InputAmount, null)</code></p>
+<code>IIF( obj.DocumentAmountType.AmountInputAllowed, obj.InputAmount, null)</code></p>
 <h3 id="inputpercent">InputPercent</h3>
 <blockquote>
 <p>When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). [Filter(ge;le)]</p>
@@ -216,7 +216,7 @@
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnitAmount, null)</code></p>
+<code>IIF( obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnitAmount, null)</code></p>
 <h3 id="totaldistributedamount">TotalDistributedAmount</h3>
 <blockquote>
 <p>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. [Currency: LogisticsDocument.DocumentCurrency] [ReadOnly]</p>
@@ -237,30 +237,30 @@
 <blockquote>
 <p>The <a href="General.DocumentAmounts.html#document">Document</a> to which this DocumentAmount belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
 <blockquote>
 <p>The type of the amount. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">DocumentAmountTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="inputamountcurrency">InputAmountCurrency</h3>
 <blockquote>
 <p>When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(obj.DocumentAmountType.AmountInputAllowed, obj.InputAmountCurrency, null)</code></p>
+<code>IIF( obj.DocumentAmountType.AmountInputAllowed, obj.InputAmountCurrency, null)</code></p>
 <h3 id="inputunit">InputUnit</h3>
 <blockquote>
 <p>Measurement unit of the input unit amount. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnit, null)</code></p>
+<code>IIF( obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnit, null)</code></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

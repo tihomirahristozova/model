@@ -151,7 +151,7 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoices.html#intrastattransactionnaturecode">IntrastatTransactionNatureCode</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoices.html#intrastattransactionnaturecode">IntrastatTransaction<br>NatureCode</a></td>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#intrastattransactionnaturecode">TransactionNature</a> (nullable)</td>
 <td>Transaction nature; used for Intrastat reporting.</td>
 </tr>
@@ -171,8 +171,8 @@
 <td>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoices.html#parentdocumentrelationshiptype">ParentDocumentRelationshipType</a></td>
-<td><a href="Logistics.Procurement.PurchaseInvoices.html#parentdocumentrelationshiptype">ParentDocumentRelationshipType</a> (nullable)</td>
+<td><a href="Logistics.Procurement.PurchaseInvoices.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoices.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> (nullable)</td>
 <td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</td>
 </tr>
 <tr>
@@ -254,157 +254,157 @@
 <tbody>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#accesskey">AccessKey</a></td>
-<td><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</td>
+<td><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</td>
 <td>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#adjusteddocument">AdjustedDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>The primary document, which the current document adjusts. null when this is not an adjustment document</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#assignedtouser">AssignedToUser</a></td>
-<td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
+<td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
 <td>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#costcenter">CostCenter</a></td>
-<td><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</td>
+<td><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</td>
 <td>Cost center for which the amount from this document will be accounted. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoices.html#creditnoteoriginalpurchaseinvoice">CreditNoteOriginalPurchaseInvoice</a></td>
-<td><a href="Logistics.Procurement.PurchaseInvoices.html">Logistics.Procurement.PurchaseInvoices</a> (nullable)</td>
+<td><a href="Logistics.Procurement.PurchaseInvoices.html#creditnoteoriginalpurchaseinvoice">CreditNoteOriginal<br>PurchaseInvoice</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoices.html">PurchaseInvoices</a> (nullable)</td>
 <td>The original invoice, which is debited/credited with this note. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#currencydirectory">CurrencyDirectory</a></td>
-<td><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</td>
+<td><a href="General.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</td>
 <td>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#dealtype">DealType</a></td>
-<td><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</td>
+<td><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</td>
 <td>Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#documentcurrency">DocumentCurrency</a></td>
-<td><a href="General.Currencies.html">General.Currencies</a></td>
+<td><a href="General.Currencies.html">Currencies</a></td>
 <td>The currency of the unit prices and amounts in the document. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#documenttype">DocumentType</a></td>
-<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
+<td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
 <td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
 <td>The enterprise company which issued the document [Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
-<td><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</td>
+<td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
 <td>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#fromcompanydivision">FromCompanyDivision</a></td>
-<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</td>
+<td><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</td>
 <td>The division of the company, issuing the document. null when the document is not issued by any specific division</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#fromparty">FromParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
+<td><a href="General.Contacts.Parties.html">Parties</a></td>
 <td>The party which issued the document [Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#intrastatdestinationregion">IntrastatDestinationRegion</a></td>
-<td><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a> (nullable)</td>
+<td><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</td>
 <td>Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-null, it applies to the whole document. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#intrastattransportcountry">IntrastatTransportCountry</a></td>
-<td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
+<td><a href="General.Geography.Countries.html">Countries</a> (nullable)</td>
 <td>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#masterdocument">MasterDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a></td>
+<td><a href="General.Documents.html">Documents</a></td>
 <td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#parent">Parent</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>In a multi-document tree, this is the direct parent document. If this is the root it is null</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#paymentaccount">PaymentAccount</a></td>
-<td><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</td>
+<td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
 <td>When not null, specifies the default payment account for the payment order. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#paymenttype">PaymentType</a></td>
-<td><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</td>
+<td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
 <td>The payment type to be used. null is allowed only temporary and should be specified if payment order is to be generated. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#primecausedocument">PrimeCauseDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>The document that is the prime cause for creation of the current document</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#purchaseorder">PurchaseOrder</a></td>
-<td><a href="Logistics.Procurement.PurchaseOrders.html">Logistics.Procurement.PurchaseOrders</a> (nullable)</td>
+<td><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a> (nullable)</td>
 <td>The purchase order that was sent to the supplier and is the base for the invoice. null means there is no linked PO and 3 way check won't be performed. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#purchasepricelist">PurchasePriceList</a></td>
-<td><a href="Logistics.Procurement.PurchasePriceLists.html">Logistics.Procurement.PurchasePriceLists</a> (nullable)</td>
+<td><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</td>
 <td>The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#receivingorder">ReceivingOrder</a></td>
-<td><a href="Logistics.Procurement.ReceivingOrders.html">Logistics.Procurement.ReceivingOrders</a> (nullable)</td>
+<td><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a> (nullable)</td>
 <td>The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. null means that there is no linked RO and the 2 or 3 way check will not include the RO. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#responsibleperson">ResponsiblePerson</a></td>
-<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
+<td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
 <td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#reverseofdocument">ReverseOfDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>The document which the current document is reverse of</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#saledealtype">SaleDealType</a></td>
-<td><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</td>
+<td><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</td>
 <td>Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#sequence">Sequence</a></td>
-<td><a href="General.Sequences.html">General.Sequences</a> (nullable)</td>
+<td><a href="General.Sequences.html">Sequences</a> (nullable)</td>
 <td>The sequence that will be used to give new numbers to the documents of this type</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#supplier">Supplier</a></td>
-<td><a href="Logistics.Procurement.Suppliers.html">Logistics.Procurement.Suppliers</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html">Suppliers</a></td>
 <td>The supplier of the purchase, who is issuing the document. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#tocompanydivision">ToCompanyDivision</a></td>
-<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></td>
+<td><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a></td>
 <td>The division of the company, receiving the document. null when the document is not received by any specific division</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#toparty">ToParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
 <td>The party which should receive the document</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#userstatus">UserStatus</a></td>
-<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
+<td><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
 <td>The user status of this document if applicable for this document type. null means unknown or not yet set</td>
 </tr>
 </tbody>
@@ -421,47 +421,47 @@
 <tbody>
 <tr>
 <td>Comments</td>
-<td><a href="General.DocumentComments.html">General.DocumentComments</a></td>
+<td><a href="General.DocumentComments.html">DocumentComments</a></td>
 <td>List of <a href="General.DocumentComments.html">DocumentComment</a> child objects, based on the <a href="General.DocumentComments.html#document">DocumentComment.Document</a> back reference</td>
 </tr>
 <tr>
 <td>DistributedAmounts</td>
-<td><a href="General.DocumentDistributedAmounts.html">General.DocumentDistributedAmounts</a></td>
-<td>List of <a href="General.DocumentDistributedAmounts.html">DocumentDistributedAmount</a> child objects, based on the <a href="General.DocumentDistributedAmounts.html#document">DocumentDistributedAmount.Document</a> back reference</td>
+<td><a href="General.DocumentDistributedAmounts.html">DocumentDistributedAmounts</a></td>
+<td>List of <a href="General.DocumentDistributedAmounts.html">DocumentDistributed<br>Amount</a> child objects, based on the <a href="General.DocumentDistributedAmounts.html#document">DocumentDistributedAmount.Document</a> back nce</td>
 </tr>
 <tr>
 <td>DocumentAmounts</td>
-<td><a href="General.DocumentAmounts.html">General.DocumentAmounts</a></td>
+<td><a href="General.DocumentAmounts.html">DocumentAmounts</a></td>
 <td>List of <a href="General.DocumentAmounts.html">DocumentAmount</a> child objects, based on the <a href="General.DocumentAmounts.html#document">DocumentAmount.Document</a> back reference</td>
 </tr>
 <tr>
 <td>FileAttachments</td>
-<td><a href="General.DocumentFileAttachments.html">General.DocumentFileAttachments</a></td>
+<td><a href="General.DocumentFileAttachments.html">DocumentFileAttachments</a></td>
 <td>List of <a href="General.DocumentFileAttachments.html">DocumentFileAttachment</a> child objects, based on the <a href="General.DocumentFileAttachments.html#document">DocumentFileAttachment.Document</a> back reference</td>
 </tr>
 <tr>
 <td>LineAmounts</td>
-<td><a href="General.DocumentLineAmounts.html">General.DocumentLineAmounts</a></td>
+<td><a href="General.DocumentLineAmounts.html">DocumentLineAmounts</a></td>
 <td>List of <a href="General.DocumentLineAmounts.html">DocumentLineAmount</a> child objects, based on the <a href="General.DocumentLineAmounts.html#document">DocumentLineAmount.Document</a> back reference</td>
 </tr>
 <tr>
 <td>Lines</td>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html">Logistics.Procurement.PurchaseInvoiceLines</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html">PurchaseInvoiceLines</a></td>
 <td>List of <a href="Logistics.Procurement.PurchaseInvoiceLines.html">PurchaseInvoiceLine</a> child objects, based on the <a href="Logistics.Procurement.PurchaseInvoiceLines.html#purchaseinvoice">Logistics.Procurement.PurchaseInvoiceLine.PurchaseInvoice</a> back reference</td>
 </tr>
 <tr>
 <td>Prints</td>
-<td><a href="General.DocumentPrints.html">General.DocumentPrints</a></td>
+<td><a href="General.DocumentPrints.html">DocumentPrints</a></td>
 <td>List of <a href="General.DocumentPrints.html">DocumentPrint</a> child objects, based on the <a href="General.DocumentPrints.html#document">DocumentPrint.Document</a> back reference</td>
 </tr>
 <tr>
 <td>StateChanges</td>
-<td><a href="General.DocumentStateChanges.html">General.DocumentStateChanges</a></td>
+<td><a href="General.DocumentStateChanges.html">DocumentStateChanges</a></td>
 <td>List of <a href="General.DocumentStateChanges.html">DocumentStateChange</a> child objects, based on the <a href="General.DocumentStateChanges.html#document">DocumentStateChange.Document</a> back reference</td>
 </tr>
 <tr>
 <td>Versions</td>
-<td><a href="General.DocumentVersions.html">General.DocumentVersions</a></td>
+<td><a href="General.DocumentVersions.html">DocumentVersions</a></td>
 <td>List of <a href="General.Documents.html#documentversion">DocumentVersion</a> child objects, based on the <a href="General.DocumentVersions.html#document">DocumentVersion.Document</a> back reference</td>
 </tr>
 </tbody>
@@ -647,16 +647,16 @@ Generic enum type for TransactionNature properties<br>
 <td>ReturnStokilizing value. Stored as '21'. <br> <em>Database Value:</em> '21' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'ReturnStokilizing'</td>
 </tr>
 <tr>
-<td>ReplacementForReturnedGoods</td>
-<td>ReplacementForReturnedGoods value. Stored as '22'. <br> <em>Database Value:</em> '22' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'ReplacementForReturnedGoods'</td>
+<td>ReplacementFor<br>ReturnedGoods</td>
+<td>ReplacementFor<br>ReturnedGoods value. Stored as '22'. <br> <em>Database Value:</em> '22' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'ReplacementFor<br>ReturnedGoods'</td>
 </tr>
 <tr>
-<td>ReplacementOfGoodsNotBeingReturned</td>
-<td>ReplacementOfGoodsNotBeingReturned value. Stored as '23'. <br> <em>Database Value:</em> '23' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'ReplacementOfGoodsNotBeingReturned'</td>
+<td>ReplacementOfGoods<br>NotBeingReturned</td>
+<td>ReplacementOfGoods<br>NotBeingReturned value. Stored as '23'. <br> <em>Database Value:</em> '23' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'ReplacementOfGoods<br>NotBeingReturned'</td>
 </tr>
 <tr>
-<td>ReturnOrExchangeOfOtherGoods</td>
-<td>ReturnOrExchangeOfOtherGoods value. Stored as '29'. <br> <em>Database Value:</em> '29' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'ReturnOrExchangeOfOtherGoods'</td>
+<td>ReturnOrExchange<br>OfOtherGoods</td>
+<td>ReturnOrExchange<br>OfOtherGoods value. Stored as '29'. <br> <em>Database Value:</em> '29' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'ReturnOrExchange<br>OfOtherGoods'</td>
 </tr>
 <tr>
 <td>SpecificTransactions</td>
@@ -667,8 +667,8 @@ Generic enum type for TransactionNature properties<br>
 <td>OperationsOnJointProjects value. Stored as '70'. <br> <em>Database Value:</em> '70' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'OperationsOnJointProjects'</td>
 </tr>
 <tr>
-<td>TransactionsOfConstructionMaterialsAndEquipment</td>
-<td>TransactionsOfConstructionMaterialsAndEquipment value. Stored as '80'. <br> <em>Database Value:</em> '80' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'TransactionsOfConstructionMaterialsAndEquipment'</td>
+<td>TransactionsOf<br>ConstructionMaterials<br>AndEquipment</td>
+<td>TransactionsOf<br>ConstructionMaterials<br>AndEquipment value. Stored as '80'. <br> <em>Database Value:</em> '80' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'TransactionsOf<br>ConstructionMaterials<br>AndEquipment'</td>
 </tr>
 <tr>
 <td>OtherTransactionsLeasing</td>
@@ -679,24 +679,24 @@ Generic enum type for TransactionNature properties<br>
 <td>OtherTransactionsOther value. Stored as '99'. <br> <em>Database Value:</em> '99' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'OtherTransactionsOther'</td>
 </tr>
 <tr>
-<td>DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind</td>
-<td>DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind value. Stored as '30'. <br> <em>Database Value:</em> '30' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind'</td>
+<td>DealsThatInclude<br>PropertyTransfers<br>WithoutFinancial<br>CompensationOr<br>CompensationIn<br>Kind</td>
+<td>DealsThatInclude<br>PropertyTransfers<br>WithoutFinancial<br>CompensationOr<br>CompensationIn<br>Kind value. Stored as '30'. <br> <em>Database Value:</em> '30' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'DealsThatInclude<br>PropertyTransfers<br>WithoutFinancial<br>CompensationOr<br>CompensationIn<br>Kind'</td>
 </tr>
 <tr>
-<td>GoodsThatAreExpectedToBeReturnedToSender</td>
-<td>GoodsThatAreExpectedToBeReturnedToSender value. Stored as '41'. <br> <em>Database Value:</em> '41' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'GoodsThatAreExpectedToBeReturnedToSender'</td>
+<td>GoodsThatAreExpected<br>ToBeReturnedTo<br>Sender</td>
+<td>GoodsThatAreExpected<br>ToBeReturnedTo<br>Sender value. Stored as '41'. <br> <em>Database Value:</em> '41' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'GoodsThatAreExpected<br>ToBeReturnedTo<br>Sender'</td>
 </tr>
 <tr>
-<td>GoodsThatAreNotExpectedToBeReturnedToSender</td>
-<td>GoodsThatAreNotExpectedToBeReturnedToSender value. Stored as '42'. <br> <em>Database Value:</em> '42' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'GoodsThatAreNotExpectedToBeReturnedToSender'</td>
+<td>GoodsThatAreNot<br>ExpectedToBeReturned<br>ToSender</td>
+<td>GoodsThatAreNot<br>ExpectedToBeReturned<br>ToSender value. Stored as '42'. <br> <em>Database Value:</em> '42' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'GoodsThatAreNot<br>ExpectedToBeReturned<br>ToSender'</td>
 </tr>
 <tr>
-<td>GoodsThatAreReturnedToSender</td>
-<td>GoodsThatAreReturnedToSender value. Stored as '51'. <br> <em>Database Value:</em> '51' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GoodsThatAreReturnedToSender'</td>
+<td>GoodsThatAreReturned<br>ToSender</td>
+<td>GoodsThatAreReturned<br>ToSender value. Stored as '51'. <br> <em>Database Value:</em> '51' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GoodsThatAreReturned<br>ToSender'</td>
 </tr>
 <tr>
-<td>GoodsThatAreNotReturnedToSender</td>
-<td>GoodsThatAreNotReturnedToSender value. Stored as '52'. <br> <em>Database Value:</em> '52' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GoodsThatAreNotReturnedToSender'</td>
+<td>GoodsThatAreNot<br>ReturnedToSender</td>
+<td>GoodsThatAreNot<br>ReturnedToSender value. Stored as '52'. <br> <em>Database Value:</em> '52' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GoodsThatAreNot<br>ReturnedToSender'</td>
 </tr>
 </tbody>
 </table>
@@ -738,8 +738,8 @@ Generic enum type for TransportMode properties<br>
 <td>Mail value. Stored as '5'. <br> <em>Database Value:</em> '5' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Mail'</td>
 </tr>
 <tr>
-<td>FixedTransportInstallations</td>
-<td>FixedTransportInstallations value. Stored as '6'. <br> <em>Database Value:</em> '6' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'FixedTransportInstallations'</td>
+<td>FixedTransport<br>Installations</td>
+<td>FixedTransport<br>Installations value. Stored as '6'. <br> <em>Database Value:</em> '6' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'FixedTransport<br>Installations'</td>
 </tr>
 <tr>
 <td>RiverTransport</td>
@@ -773,7 +773,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoices.html#parentdocumentrelationshiptype">ParentDocumentRelationshipType</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoices.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> (nullable)</strong><br>
 Relationship between parent and child documents<br>
 <em>Allowed Values (General.ParentDocumentRelationshipType Enum Members)</em></p>
 <table>
@@ -937,187 +937,187 @@ Enumeration of document system states<br>
 <blockquote>
 <p>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="adjusteddocument">AdjustedDocument</h3>
 <blockquote>
 <p>The primary document, which the current document adjusts. null when this is not an adjustment document</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assignedtouser">AssignedToUser</h3>
 <blockquote>
 <p>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costcenter">CostCenter</h3>
 <blockquote>
 <p>Cost center for which the amount from this document will be accounted. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="creditnoteoriginalpurchaseinvoice">CreditNoteOriginalPurchaseInvoice</h3>
 <blockquote>
 <p>The original invoice, which is debited/credited with this note. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoices.html">Logistics.Procurement.PurchaseInvoices</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoices.html">PurchaseInvoices</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="currencydirectory">CurrencyDirectory</h3>
 <blockquote>
 <p>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="dealtype">DealType</h3>
 <blockquote>
 <p>Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
 <blockquote>
 <p>The currency of the unit prices and amounts in the document. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
 <blockquote>
 <p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The enterprise company which issued the document [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
 <blockquote>
 <p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromcompanydivision">FromCompanyDivision</h3>
 <blockquote>
 <p>The division of the company, issuing the document. null when the document is not issued by any specific division</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromparty">FromParty</h3>
 <blockquote>
 <p>The party which issued the document [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastatdestinationregion">IntrastatDestinationRegion</h3>
 <blockquote>
 <p>Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-null, it applies to the whole document. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastattransportcountry">IntrastatTransportCountry</h3>
 <blockquote>
 <p>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="masterdocument">MasterDocument</h3>
 <blockquote>
 <p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
 <blockquote>
 <p>In a multi-document tree, this is the direct parent document. If this is the root it is null</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
 <blockquote>
 <p>When not null, specifies the default payment account for the payment order. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymenttype">PaymentType</h3>
 <blockquote>
 <p>The payment type to be used. null is allowed only temporary and should be specified if payment order is to be generated. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="primecausedocument">PrimeCauseDocument</h3>
 <blockquote>
 <p>The document that is the prime cause for creation of the current document</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="purchaseorder">PurchaseOrder</h3>
 <blockquote>
 <p>The purchase order that was sent to the supplier and is the base for the invoice. null means there is no linked PO and 3 way check won't be performed. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOrders.html">Logistics.Procurement.PurchaseOrders</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchasepricelist">PurchasePriceList</h3>
 <blockquote>
 <p>The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchasePriceLists.html">Logistics.Procurement.PurchasePriceLists</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="receivingorder">ReceivingOrder</h3>
 <blockquote>
 <p>The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. null means that there is no linked RO and the 2 or 3 way check will not include the RO. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrders.html">Logistics.Procurement.ReceivingOrders</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
 <blockquote>
 <p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="reverseofdocument">ReverseOfDocument</h3>
 <blockquote>
 <p>The document which the current document is reverse of</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="saledealtype">SaleDealType</h3>
 <blockquote>
 <p>Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="sequence">Sequence</h3>
 <blockquote>
 <p>The sequence that will be used to give new numbers to the documents of this type</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Sequences.html">General.Sequences</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Sequences.html">Sequences</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="supplier">Supplier</h3>
 <blockquote>
 <p>The supplier of the purchase, who is issuing the document. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.Suppliers.html">Logistics.Procurement.Suppliers</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.Suppliers.html">Suppliers</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="tocompanydivision">ToCompanyDivision</h3>
 <blockquote>
 <p>The division of the company, receiving the document. null when the document is not received by any specific division</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong></p>
 <h3 id="toparty">ToParty</h3>
 <blockquote>
 <p>The party which should receive the document</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="userstatus">UserStatus</h3>
 <blockquote>
 <p>The user status of this document if applicable for this document type. null means unknown or not yet set</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

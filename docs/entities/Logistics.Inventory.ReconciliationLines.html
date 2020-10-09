@@ -123,7 +123,7 @@
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#transactiontimestamp">TransactionTimestamp</a></td>
@@ -144,42 +144,42 @@
 <tbody>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#lot">Lot</a></td>
-<td><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</td>
+<td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
 <td>The lot, which was reconciled. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
 <td>The id of the reconciled product. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#productcode">ProductCode</a></td>
-<td><a href="General.Products.ProductCodes.html">General.Products.ProductCodes</a> (nullable)</td>
+<td><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</td>
 <td>Selects the product thru some of the product codes. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#quantityunit">QuantityUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
 <td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#reconciliation">Reconciliation</a></td>
-<td><a href="Logistics.Inventory.Reconciliations.html">Logistics.Inventory.Reconciliations</a></td>
+<td><a href="Logistics.Inventory.Reconciliations.html">Reconciliations</a></td>
 <td>Parent reconciliation Id. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#serialnumber">SerialNumber</a></td>
-<td><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</td>
+<td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
 <td>Item serial number for serialized items. null for non-serializable items. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#store">Store</a></td>
-<td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></td>
+<td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
 <td>The store, containing the reconciled product. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#storebin">StoreBin</a></td>
-<td><a href="Logistics.Inventory.StoreBins.html">Logistics.Inventory.StoreBins</a> (nullable)</td>
+<td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
 <td>The store bin, that was counted. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -204,9 +204,9 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.Reconciliation.Lines.Select(c =&gt; c.LineOrd).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.Reconciliation.Lines.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.Reconciliation.Lines.Select(c =&gt; c.LineOrd).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.Reconciliation.Lines.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this ReconciliationLine.</p>
@@ -229,20 +229,20 @@
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
 <blockquote>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="transactiontimestamp">TransactionTimestamp</h3>
 <blockquote>
 <p>Exact time when the transaction occurred.</p>
@@ -255,60 +255,60 @@
 <blockquote>
 <p>The lot, which was reconciled. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The id of the reconciled product. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.ProductCode.Product.IfNullThen(obj.Product)</code></p>
+<code>obj.ProductCode.Product.IfNullThen( obj.Product)</code></p>
 <h3 id="productcode">ProductCode</h3>
 <blockquote>
 <p>Selects the product thru some of the product codes. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.ProductCodes.html">General.Products.ProductCodes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((((obj.Product != null) AndAlso (obj.ProductCode != null)) AndAlso (obj.Product != obj.ProductCode.Product)), null, obj.ProductCode)</code></p>
+<code>IIF( ( ( ( obj.Product != null) AndAlso ( obj.ProductCode != null)) AndAlso ( obj.Product != obj.ProductCode.Product)), null, obj.ProductCode)</code></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen(obj.Product.MeasurementUnit.IfNullThen(obj.QuantityUnit))</code></p>
+<code>obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen( obj.Product.MeasurementUnit.IfNullThen( obj.QuantityUnit))</code></p>
 <h3 id="reconciliation">Reconciliation</h3>
 <blockquote>
 <p>Parent reconciliation Id. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Reconciliations.html">Logistics.Inventory.Reconciliations</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Reconciliations.html">Reconciliations</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <blockquote>
 <p>Item serial number for serialized items. null for non-serializable items. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
 <blockquote>
 <p>The store, containing the reconciled product. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Reconciliation.DefaultStore.IfNullThen(obj.Store)</code></p>
+<code>obj.Reconciliation.DefaultStore.IfNullThen( obj.Store)</code></p>
 <h3 id="storebin">StoreBin</h3>
 <blockquote>
 <p>The store bin, that was counted. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">Logistics.Inventory.StoreBins</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Reconciliation.DefaultStoreBin.IfNullThen(obj.StoreBin)</code></p>
+<code>obj.Reconciliation.DefaultStoreBin.IfNullThen( obj.StoreBin)</code></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

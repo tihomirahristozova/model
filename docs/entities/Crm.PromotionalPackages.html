@@ -116,12 +116,12 @@
 <td>When not null, the package is valid only for the customers, that match the filter.</td>
 </tr>
 <tr>
-<td><a href="Crm.PromotionalPackages.html#validfordistributionchannelfilterxml">ValidForDistributionChannelFilterXML</a></td>
+<td><a href="Crm.PromotionalPackages.html#validfordistributionchannelfilterxml">ValidForDistribution<br>ChannelFilterX<br>ML</a></td>
 <td>dataaccessfilter (nullable)</td>
 <td>When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria.</td>
 </tr>
 <tr>
-<td><a href="Crm.PromotionalPackages.html#validforshiptocustomerfilterxml">ValidForShipToCustomerFilterXML</a></td>
+<td><a href="Crm.PromotionalPackages.html#validforshiptocustomerfilterxml">ValidForShipTo<br>CustomerFilter<br>XML</a></td>
 <td>dataaccessfilter (nullable)</td>
 <td>When not null, specifies validity condition for the Ship To Customer of the sales document.</td>
 </tr>
@@ -149,37 +149,37 @@
 <tbody>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
 <td>When not null, indicates that the package is valid only for the specified enterprise company. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
-<td><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</td>
+<td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
 <td>The Enterprise Company Location to which this PromotionalPackage applies, or null if it is for all enterprise company locations. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#validforcustomer">ValidForCustomer</a></td>
-<td><a href="Crm.Customers.html">Crm.Customers</a> (nullable)</td>
+<td><a href="Crm.Customers.html">Customers</a> (nullable)</td>
 <td>When not null, the package is valid only for the specified customer. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.PromotionalPackages.html#validfordistributionchannel">ValidForDistributionChannel</a></td>
-<td><a href="Crm.Marketing.DistributionChannels.html">Crm.Marketing.DistributionChannels</a> (nullable)</td>
+<td><a href="Crm.PromotionalPackages.html#validfordistributionchannel">ValidForDistribution<br>Channel</a></td>
+<td><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</td>
 <td>When not null, the package is valid only for the specified distribution channel of the sales order. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#validforpricelist">ValidForPriceList</a></td>
-<td><a href="Crm.PriceLists.html">Crm.PriceLists</a> (nullable)</td>
+<td><a href="Crm.PriceLists.html">PriceLists</a> (nullable)</td>
 <td>When not null, the package is valid only for the specified price list. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#validforshiptocustomer">ValidForShipToCustomer</a></td>
-<td><a href="Crm.Customers.html">Crm.Customers</a> (nullable)</td>
+<td><a href="Crm.Customers.html">Customers</a> (nullable)</td>
 <td>When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#validfortargetgroup">ValidForTargetGroup</a></td>
-<td><a href="Crm.Marketing.TargetGroups.html">Crm.Marketing.TargetGroups</a> (nullable)</td>
+<td><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</td>
 <td>When not null, the package is valid only for the specified customer target group. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -196,7 +196,7 @@
 <tbody>
 <tr>
 <td>Lines</td>
-<td><a href="Crm.PromotionalPackageLines.html">Crm.PromotionalPackageLines</a></td>
+<td><a href="Crm.PromotionalPackageLines.html">PromotionalPackageLines</a></td>
 <td>List of <a href="Crm.PromotionalPackageLines.html">PromotionalPackageLine</a> child objects, based on the <a href="Crm.PromotionalPackageLines.html#promotionalpackage">Crm.PromotionalPackageLine.PromotionalPackage</a> back reference</td>
 </tr>
 </tbody>
@@ -268,43 +268,43 @@
 <blockquote>
 <p>When not null, indicates that the package is valid only for the specified enterprise company. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
 <blockquote>
 <p>The Enterprise Company Location to which this PromotionalPackage applies, or null if it is for all enterprise company locations. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="validforcustomer">ValidForCustomer</h3>
 <blockquote>
 <p>When not null, the package is valid only for the specified customer. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Customers.html">Crm.Customers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="validfordistributionchannel">ValidForDistributionChannel</h3>
 <blockquote>
 <p>When not null, the package is valid only for the specified distribution channel of the sales order. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Marketing.DistributionChannels.html">Crm.Marketing.DistributionChannels</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="validforpricelist">ValidForPriceList</h3>
 <blockquote>
 <p>When not null, the package is valid only for the specified price list. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.PriceLists.html">Crm.PriceLists</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.PriceLists.html">PriceLists</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="validforshiptocustomer">ValidForShipToCustomer</h3>
 <blockquote>
 <p>When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Customers.html">Crm.Customers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="validfortargetgroup">ValidForTargetGroup</h3>
 <blockquote>
 <p>When not null, the package is valid only for the specified customer target group. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Marketing.TargetGroups.html">Crm.Marketing.TargetGroups</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

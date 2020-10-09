@@ -149,27 +149,27 @@
 <tbody>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#blockedfordocument">BlockedForDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>If non-null, contains the document for which the lot is blocked. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#blockedforparty">BlockedForParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
 <td>Non-null when the warehouse lot is blocked specifically for some party. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#certificatedocument">CertificateDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>Document, containing the certificate for this lot. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
 <td>The product to which the lot is bound. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#receiptstoretransaction">ReceiptStoreTransaction</a></td>
-<td><a href="Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions</a> (nullable)</td>
+<td><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a> (nullable)</td>
 <td>The store receipt transaction, which created the lot. null if the lot is manually created. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -268,31 +268,31 @@ Allowed values for the <a href="Logistics.Inventory.Lots.html#status">Status</a>
 <blockquote>
 <p>If non-null, contains the document for which the lot is blocked. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="blockedforparty">BlockedForParty</h3>
 <blockquote>
 <p>Non-null when the warehouse lot is blocked specifically for some party. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="certificatedocument">CertificateDocument</h3>
 <blockquote>
 <p>Document, containing the certificate for this lot. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The product to which the lot is bound. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="receiptstoretransaction">ReceiptStoreTransaction</h3>
 <blockquote>
 <p>The store receipt transaction, which created the lot. null if the lot is manually created. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

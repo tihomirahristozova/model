@@ -101,7 +101,7 @@
 <td>Order of the operation within the recipe. [Required]</td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.RecipeOperations.html#minimumconcurrentstarttimeminutes">MinimumConcurrentStartTimeMinutes</a></td>
+<td><a href="Production.Technologies.RecipeOperations.html#minimumconcurrentstarttimeminutes">MinimumConcurrent<br>StartTimeMinutes</a></td>
 <td>int32 (nullable)</td>
 <td>How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.</td>
 </tr>
@@ -174,27 +174,27 @@
 <tbody>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#operation">Operation</a></td>
-<td><a href="Production.Resources.Operations.html">Production.Resources.Operations</a> (nullable)</td>
+<td><a href="Production.Resources.Operations.html">Operations</a> (nullable)</td>
 <td>Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#operationinstruction">OperationInstruction</a></td>
-<td><a href="Production.Resources.OperationInstructions.html">Production.Resources.OperationInstructions</a> (nullable)</td>
+<td><a href="Production.Resources.OperationInstructions.html">OperationInstructions</a> (nullable)</td>
 <td>Link to additional data, containing instructions in external format. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#recipe">Recipe</a></td>
-<td><a href="Production.Technologies.Recipes.html">Production.Technologies.Recipes</a></td>
+<td><a href="Production.Technologies.Recipes.html">Recipes</a></td>
 <td>The <a href="Production.Technologies.RecipeOperations.html#recipe">Recipe</a> to which this RecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#usequantityunit">UseQuantityUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
 <td>The measurement unit of Use_Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#workgroupresource">WorkgroupResource</a></td>
-<td><a href="Production.Resources.WorkgroupResources.html">Production.Resources.WorkgroupResources</a></td>
+<td><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a></td>
 <td>The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -212,9 +212,9 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.Recipe.Operations.Select(c =&gt; c.LineOrd).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.Recipe.Operations.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.Recipe.Operations.Select(c =&gt; c.LineOrd).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.Recipe.Operations.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="minimumconcurrentstarttimeminutes">MinimumConcurrentStartTimeMinutes</h3>
 <blockquote>
 <p>How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.</p>
@@ -311,31 +311,31 @@
 <blockquote>
 <p>Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Resources.Operations.html">Production.Resources.Operations</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Production.Resources.Operations.html">Operations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="operationinstruction">OperationInstruction</h3>
 <blockquote>
 <p>Link to additional data, containing instructions in external format. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Resources.OperationInstructions.html">Production.Resources.OperationInstructions</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Production.Resources.OperationInstructions.html">OperationInstructions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="recipe">Recipe</h3>
 <blockquote>
 <p>The <a href="Production.Technologies.RecipeOperations.html#recipe">Recipe</a> to which this RecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Technologies.Recipes.html">Production.Technologies.Recipes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Production.Technologies.Recipes.html">Recipes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="usequantityunit">UseQuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of Use_Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workgroupresource">WorkgroupResource</h3>
 <blockquote>
 <p>The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">Production.Resources.WorkgroupResources</a></strong><br>
+<p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

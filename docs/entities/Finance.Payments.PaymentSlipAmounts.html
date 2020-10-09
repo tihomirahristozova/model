@@ -144,17 +144,17 @@
 <tbody>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#party">Party</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
 <td>The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#paymentreason">PaymentReason</a></td>
-<td><a href="Finance.Payments.PaymentReasons.html">Finance.Payments.PaymentReasons</a> (nullable)</td>
+<td><a href="Finance.Payments.PaymentReasons.html">PaymentReasons</a> (nullable)</td>
 <td>The reason for the payment, as defined in Payment Reasons. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#paymentslip">PaymentSlip</a></td>
-<td><a href="Finance.Payments.PaymentSlips.html">Finance.Payments.PaymentSlips</a></td>
+<td><a href="Finance.Payments.PaymentSlips.html">PaymentSlips</a></td>
 <td>The <a href="Finance.Payments.PaymentSlipAmounts.html#paymentslip">PaymentSlip</a> to which this PaymentSlipAmount belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -171,7 +171,7 @@
 <tbody>
 <tr>
 <td>PaymentSlipLines</td>
-<td><a href="Finance.Payments.PaymentSlipLines.html">Finance.Payments.PaymentSlipLines</a></td>
+<td><a href="Finance.Payments.PaymentSlipLines.html">PaymentSlipLines</a></td>
 <td>List of <a href="Finance.Payments.PaymentSlipLines.html">PaymentSlipLine</a> child objects, based on the <a href="Finance.Payments.PaymentSlipLines.html#paymentslipamount">Finance.Payments.PaymentSlipLine.PaymentSlipAmount</a> back reference</td>
 </tr>
 </tbody>
@@ -231,9 +231,9 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#direction">D
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.PaymentSlip.Amounts.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.PaymentSlip.Amounts.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.PaymentSlip.Amounts.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.PaymentSlip.Amounts.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="partyname">PartyName</h3>
 <blockquote>
 <p>The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee).</p>
@@ -242,7 +242,7 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#direction">D
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Party.ObtainPartyName()</code></p>
+<code>obj.Party.ObtainPartyName( )</code></p>
 <h3 id="paymentdate">PaymentDate</h3>
 <blockquote>
 <p>The date on which the payment is done. [Required] [Filter(ge;le)]</p>
@@ -262,19 +262,19 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#direction">D
 <blockquote>
 <p>The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentreason">PaymentReason</h3>
 <blockquote>
 <p>The reason for the payment, as defined in Payment Reasons. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentReasons.html">Finance.Payments.PaymentReasons</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentReasons.html">PaymentReasons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentslip">PaymentSlip</h3>
 <blockquote>
 <p>The <a href="Finance.Payments.PaymentSlipAmounts.html#paymentslip">PaymentSlip</a> to which this PaymentSlipAmount belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlips.html">Finance.Payments.PaymentSlips</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlips.html">PaymentSlips</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

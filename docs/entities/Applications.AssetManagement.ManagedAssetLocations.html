@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="Applications.AssetManagement.ManagedAssetLocations">
 <h1 id="applicationsassetmanagementmanagedassetlocations">Applications.AssetManagement.ManagedAssetLocations</h1>
 
-<p>Contains the locations to which the assets are assigned at various moments in time. Entity: Eam_Managed_Asset_Locations (Introduced in version 19.1.100.0)</p>
+<p>Contains the locations to which the assets are assigned at various moments in time. Entity: Eam_Managed_Asset_Locations (Introduced in version 19.1)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -119,17 +119,17 @@
 <tbody>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLocations.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
-<td><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a></td>
+<td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></td>
 <td>The enterprise company location, where the asset is assigned. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLocations.html#managedasset">ManagedAsset</a></td>
-<td><a href="Applications.AssetManagement.ManagedAssets.html">Applications.AssetManagement.ManagedAssets</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></td>
 <td>The asset, whose location is recorded. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLocations.html#responsibleperson">ResponsiblePerson</a></td>
-<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
+<td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
 <td>The responsible person, to which the asset is assigned. null when the asset is not assigned to any particular responsible person. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -159,19 +159,19 @@
 <blockquote>
 <p>The enterprise company location, where the asset is assigned. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
 <blockquote>
 <p>The asset, whose location is recorded. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssets.html">Applications.AssetManagement.ManagedAssets</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
 <blockquote>
 <p>The responsible person, to which the asset is assigned. null when the asset is not assigned to any particular responsible person. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

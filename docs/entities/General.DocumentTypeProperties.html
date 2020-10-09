@@ -96,7 +96,7 @@
 <td>The default value of the property when creating new documents.</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeProperties.html#defaultpropertyvaluedescription">DefaultPropertyValueDescription</a></td>
+<td><a href="General.DocumentTypeProperties.html#defaultpropertyvaluedescription">DefaultProperty<br>ValueDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>Default description value of the property when creating new documents.</td>
 </tr>
@@ -144,17 +144,17 @@
 <tbody>
 <tr>
 <td><a href="General.DocumentTypeProperties.html#documenttype">DocumentType</a></td>
-<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
+<td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
 <td>The document type, for which to add user-defined properties. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="General.DocumentTypeProperties.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
 <td>When not null, specifies that the current rule is valid only for the specified company. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.DocumentTypeProperties.html#property">Property</a></td>
-<td><a href="General.CustomProperties.html">General.CustomProperties</a></td>
+<td><a href="General.CustomProperties.html">CustomProperties</a></td>
 <td>The user-defined property, which should be added. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -192,9 +192,9 @@
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.DocumentType.DocumentTypeProperties.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.DocumentType.DocumentTypeProperties.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.DocumentType.DocumentTypeProperties.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.DocumentType.DocumentTypeProperties.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="required">Required</h3>
 <blockquote>
 <p>True if the property is required when creating documents of this type. [Required] [Default(false)] [Filter(eq)]</p>
@@ -222,19 +222,19 @@
 <blockquote>
 <p>The document type, for which to add user-defined properties. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>When not null, specifies that the current rule is valid only for the specified company. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="property">Property</h3>
 <blockquote>
 <p>The user-defined property, which should be added. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.CustomProperties.html">General.CustomProperties</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

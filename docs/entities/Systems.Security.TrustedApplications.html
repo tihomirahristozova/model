@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="Systems.Security.TrustedApplications">
 <h1 id="systemssecuritytrustedapplications">Systems.Security.TrustedApplications</h1>
 
-<p>Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applications (Introduced in version 19.1.100.0)</p>
+<p>Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applications (Introduced in version 19.1)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -93,7 +93,7 @@
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#applicationsecrethash">ApplicationSecretHash</a></td>
 <td>string (nullable)</td>
-<td>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. (Introduced in version 20.1.100.0)</td>
+<td>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#applicationuri">ApplicationUri</a></td>
@@ -108,7 +108,7 @@
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a></td>
 <td><a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a></td>
-<td>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). [Required] [Default(&quot;C&quot;)] (Introduced in version 20.1.100.0)</td>
+<td>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). [Required] [Default(&quot;C&quot;)] (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#creationtimeutc">CreationTimeUtc</a></td>
@@ -121,12 +121,12 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="Systems.Security.TrustedApplications.html#impersonateascommunityuserallowed">ImpersonateAsCommunityUserAllowed</a></td>
+<td><a href="Systems.Security.TrustedApplications.html#impersonateascommunityuserallowed">ImpersonateAsCommunity<br>UserAllowed</a></td>
 <td>boolean</td>
 <td>Allows the application to request login from external users and operate on their behalf. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.TrustedApplications.html#impersonateasinternaluserallowed">ImpersonateAsInternalUserAllowed</a></td>
+<td><a href="Systems.Security.TrustedApplications.html#impersonateasinternaluserallowed">ImpersonateAsInternal<br>UserAllowed</a></td>
 <td>boolean</td>
 <td>Allows the application to request login from internal users and operate on their behalf. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
@@ -158,7 +158,7 @@
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#scope">Scope</a></td>
 <td>string (nullable)</td>
-<td>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). (Introduced in version 20.1.100.0)</td>
+<td>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). (Introduced in version 20.1)</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#systemuserallowed">SystemUserAllowed</a></td>
@@ -184,7 +184,7 @@
 <tbody>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#systemuser">SystemUser</a></td>
-<td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
+<td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
 <td>The user, which will be used when the application logins as a service. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -201,15 +201,15 @@
 <tbody>
 <tr>
 <td>Authorizations</td>
-<td><a href="Systems.Security.TrustedApplicationAuthorizations.html">Systems.Security.TrustedApplicationAuthorizations</a></td>
-<td>List of <a href="Systems.Security.TrustedApplicationAuthorizations.html">TrustedApplicationAuthorization</a> child objects, based on the <a href="Systems.Security.TrustedApplicationAuthorizations.html#trustedapplication">Systems.Security.TrustedApplicationAuthorization.TrustedApplication</a> back reference</td>
+<td><a href="Systems.Security.TrustedApplicationAuthorizations.html">TrustedApplicationAuthorizations</a></td>
+<td>List of [TrustedApplication<br>Authorization](Systems.Security.TrustedApplication<br>Authorizations.md) child objects, based on the [Systems.Security.TrustedApplication<br>Authorization.TrustedApplication](Systems.Security.TrustedApplication<br>Authorizations.md#trustedapplication) back</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicationsecrethash">ApplicationSecretHash</h3>
 <blockquote>
-<p>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. (Introduced in version 20.1.100.0)</p>
+<p>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. (Introduced in version 20.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -231,7 +231,7 @@
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="clienttype">ClientType</h3>
 <blockquote>
-<p>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). [Required] [Default(&quot;C&quot;)] (Introduced in version 20.1.100.0)</p>
+<p>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). [Required] [Default(&quot;C&quot;)] (Introduced in version 20.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a></strong><br>
 Allowed values for the <a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a> data attribute<br>
@@ -323,7 +323,7 @@ Allowed values for the <a href="Systems.Security.TrustedApplications.html#client
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scope">Scope</h3>
 <blockquote>
-<p>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). (Introduced in version 20.1.100.0)</p>
+<p>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). (Introduced in version 20.1)</p>
 </blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -348,7 +348,7 @@ Allowed values for the <a href="Systems.Security.TrustedApplications.html#client
 <blockquote>
 <p>The user, which will be used when the application logins as a service. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

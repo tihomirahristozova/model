@@ -124,22 +124,22 @@
 <tbody>
 <tr>
 <td><a href="General.ProductVariants.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
 <td>The product for which this variant is defined. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="General.ProductVariants.html#variantcolor">VariantColor</a></td>
-<td><a href="General.Products.VariantColors.html">General.Products.VariantColors</a> (nullable)</td>
+<td><a href="General.Products.VariantColors.html">VariantColors</a> (nullable)</td>
 <td>The color of the variant. null means that the variant does not have a specific color. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.ProductVariants.html#variantsize">VariantSize</a></td>
-<td><a href="General.Products.VariantSizes.html">General.Products.VariantSizes</a> (nullable)</td>
+<td><a href="General.Products.VariantSizes.html">VariantSizes</a> (nullable)</td>
 <td>The size of the variant. null means that the variant does not have a specific size. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.ProductVariants.html#variantstyle">VariantStyle</a></td>
-<td><a href="General.Products.VariantStyles.html">General.Products.VariantStyles</a> (nullable)</td>
+<td><a href="General.Products.VariantStyles.html">VariantStyles</a> (nullable)</td>
 <td>The style of the variant. null means that the variant does not have a specific style. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -171,33 +171,33 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>Join(&quot; &quot;, new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})</code></p>
+<code>Join( &quot; &quot;, new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>Join(&quot; &quot;, new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})</code></p>
+<code>Join( &quot; &quot;, new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The product for which this variant is defined. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="variantcolor">VariantColor</h3>
 <blockquote>
 <p>The color of the variant. null means that the variant does not have a specific color. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.VariantColors.html">General.Products.VariantColors</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.VariantColors.html">VariantColors</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="variantsize">VariantSize</h3>
 <blockquote>
 <p>The size of the variant. null means that the variant does not have a specific size. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.VariantSizes.html">General.Products.VariantSizes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.VariantSizes.html">VariantSizes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="variantstyle">VariantStyle</h3>
 <blockquote>
 <p>The style of the variant. null means that the variant does not have a specific style. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.VariantStyles.html">General.Products.VariantStyles</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.VariantStyles.html">VariantStyles</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

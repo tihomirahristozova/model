@@ -106,7 +106,7 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="Crm.Invoicing.InvoiceLines.html#intrastattransactionnaturecode">IntrastatTransactionNatureCode</a></td>
+<td><a href="Crm.Invoicing.InvoiceLines.html#intrastattransactionnaturecode">IntrastatTransaction<br>NatureCode</a></td>
 <td><a href="Crm.Invoicing.InvoiceLines.html#intrastattransactionnaturecode">TransactionNature</a> (nullable)</td>
 <td>Transaction nature; used for Intrastat reporting.</td>
 </tr>
@@ -131,7 +131,7 @@
 <td>Consecutive line number, unique within the invoice. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Invoicing.InvoiceLines.html#linestandarddiscountpercent">LineStandardDiscountPercent</a></td>
+<td><a href="Crm.Invoicing.InvoiceLines.html#linestandarddiscountpercent">LineStandardDiscount<br>Percent</a></td>
 <td>decimal</td>
 <td>Standard discount for the line. This is automatically computed according to discount conditions. [Required] [Default(0)]</td>
 </tr>
@@ -143,7 +143,7 @@
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 (nullable)</td>
-<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2.100.0)</td>
+<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2)</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#productdescription">ProductDescription</a></td>
@@ -168,7 +168,7 @@
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#unitprice">UnitPrice</a></td>
@@ -189,67 +189,67 @@
 <tbody>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#intrastattransportcountry">IntrastatTransportCountry</a></td>
-<td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
+<td><a href="General.Geography.Countries.html">Countries</a> (nullable)</td>
 <td>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#invoice">Invoice</a></td>
-<td><a href="Crm.Invoicing.Invoices.html">Crm.Invoicing.Invoices</a></td>
+<td><a href="Crm.Invoicing.Invoices.html">Invoices</a></td>
 <td>The <a href="Crm.Invoicing.InvoiceLines.html#invoice">Invoice</a> to which this InvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#invoiceorderline">InvoiceOrderLine</a></td>
-<td><a href="Crm.Invoicing.InvoiceOrderLines.html">Crm.Invoicing.InvoiceOrderLines</a> (nullable)</td>
+<td><a href="Crm.Invoicing.InvoiceOrderLines.html">InvoiceOrderLines</a> (nullable)</td>
 <td>Invoice order line which is invoiced by this line. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#linedealtype">LineDealType</a></td>
-<td><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</td>
+<td><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</td>
 <td>Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#linediscount">LineDiscount</a></td>
-<td><a href="Crm.LineDiscounts.html">Crm.LineDiscounts</a> (nullable)</td>
-<td>The line discount type used to form the Line_Standard_Discount_Percent. [Filter(multi eq)]</td>
+<td><a href="Crm.LineDiscounts.html">LineDiscounts</a> (nullable)</td>
+<td>The line discount type used to form the Line_Standard_<br>Discount_Percent. [Filter(multi eq)</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#parentdocument">ParentDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
-<td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2.100.0)</td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
+<td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2)</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#parentsalesorderline">ParentSalesOrderLine</a></td>
-<td><a href="Crm.Sales.SalesOrderLines.html">Crm.Sales.SalesOrderLines</a> (nullable)</td>
+<td><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a> (nullable)</td>
 <td>When not null specifies the Sales Order line that is invoiced by this invoice line. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#paymenttransaction">PaymentTransaction</a></td>
-<td><a href="Finance.Payments.PaymentTransactions.html">Finance.Payments.PaymentTransactions</a> (nullable)</td>
+<td><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a> (nullable)</td>
 <td>The payment transaction, which is invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</td>
+<td><a href="General.Products.Products.html">Products</a> (nullable)</td>
 <td>The invoiced product. When null, although rarely used, the invoice line is still valid and the Product Description contains the invoiced item. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#quantityunit">QuantityUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
 <td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#salesorder">SalesOrder</a></td>
-<td><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a> (nullable)</td>
+<td><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</td>
 <td>When not null specifies the Sales Order that is invoiced by this line. [Filter(multi eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#serialnumber">SerialNumber</a></td>
-<td><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</td>
+<td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
 <td>Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#transactionline">TransactionLine</a></td>
-<td><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a> (nullable)</td>
+<td><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</td>
 <td>The store transaction line that is invoiced by this line, for Business Reason = S. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -394,16 +394,16 @@ Generic enum type for TransactionNature properties<br>
 <td>ReturnStokilizing value. Stored as '21'. <br> <em>Database Value:</em> '21' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'ReturnStokilizing'</td>
 </tr>
 <tr>
-<td>ReplacementForReturnedGoods</td>
-<td>ReplacementForReturnedGoods value. Stored as '22'. <br> <em>Database Value:</em> '22' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'ReplacementForReturnedGoods'</td>
+<td>ReplacementFor<br>ReturnedGoods</td>
+<td>ReplacementFor<br>ReturnedGoods value. Stored as '22'. <br> <em>Database Value:</em> '22' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'ReplacementFor<br>ReturnedGoods'</td>
 </tr>
 <tr>
-<td>ReplacementOfGoodsNotBeingReturned</td>
-<td>ReplacementOfGoodsNotBeingReturned value. Stored as '23'. <br> <em>Database Value:</em> '23' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'ReplacementOfGoodsNotBeingReturned'</td>
+<td>ReplacementOfGoods<br>NotBeingReturned</td>
+<td>ReplacementOfGoods<br>NotBeingReturned value. Stored as '23'. <br> <em>Database Value:</em> '23' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'ReplacementOfGoods<br>NotBeingReturned'</td>
 </tr>
 <tr>
-<td>ReturnOrExchangeOfOtherGoods</td>
-<td>ReturnOrExchangeOfOtherGoods value. Stored as '29'. <br> <em>Database Value:</em> '29' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'ReturnOrExchangeOfOtherGoods'</td>
+<td>ReturnOrExchange<br>OfOtherGoods</td>
+<td>ReturnOrExchange<br>OfOtherGoods value. Stored as '29'. <br> <em>Database Value:</em> '29' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'ReturnOrExchange<br>OfOtherGoods'</td>
 </tr>
 <tr>
 <td>SpecificTransactions</td>
@@ -414,8 +414,8 @@ Generic enum type for TransactionNature properties<br>
 <td>OperationsOnJointProjects value. Stored as '70'. <br> <em>Database Value:</em> '70' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'OperationsOnJointProjects'</td>
 </tr>
 <tr>
-<td>TransactionsOfConstructionMaterialsAndEquipment</td>
-<td>TransactionsOfConstructionMaterialsAndEquipment value. Stored as '80'. <br> <em>Database Value:</em> '80' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'TransactionsOfConstructionMaterialsAndEquipment'</td>
+<td>TransactionsOf<br>ConstructionMaterials<br>AndEquipment</td>
+<td>TransactionsOf<br>ConstructionMaterials<br>AndEquipment value. Stored as '80'. <br> <em>Database Value:</em> '80' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'TransactionsOf<br>ConstructionMaterials<br>AndEquipment'</td>
 </tr>
 <tr>
 <td>OtherTransactionsLeasing</td>
@@ -426,24 +426,24 @@ Generic enum type for TransactionNature properties<br>
 <td>OtherTransactionsOther value. Stored as '99'. <br> <em>Database Value:</em> '99' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'OtherTransactionsOther'</td>
 </tr>
 <tr>
-<td>DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind</td>
-<td>DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind value. Stored as '30'. <br> <em>Database Value:</em> '30' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind'</td>
+<td>DealsThatInclude<br>PropertyTransfers<br>WithoutFinancial<br>CompensationOr<br>CompensationIn<br>Kind</td>
+<td>DealsThatInclude<br>PropertyTransfers<br>WithoutFinancial<br>CompensationOr<br>CompensationIn<br>Kind value. Stored as '30'. <br> <em>Database Value:</em> '30' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'DealsThatInclude<br>PropertyTransfers<br>WithoutFinancial<br>CompensationOr<br>CompensationIn<br>Kind'</td>
 </tr>
 <tr>
-<td>GoodsThatAreExpectedToBeReturnedToSender</td>
-<td>GoodsThatAreExpectedToBeReturnedToSender value. Stored as '41'. <br> <em>Database Value:</em> '41' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'GoodsThatAreExpectedToBeReturnedToSender'</td>
+<td>GoodsThatAreExpected<br>ToBeReturnedTo<br>Sender</td>
+<td>GoodsThatAreExpected<br>ToBeReturnedTo<br>Sender value. Stored as '41'. <br> <em>Database Value:</em> '41' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'GoodsThatAreExpected<br>ToBeReturnedTo<br>Sender'</td>
 </tr>
 <tr>
-<td>GoodsThatAreNotExpectedToBeReturnedToSender</td>
-<td>GoodsThatAreNotExpectedToBeReturnedToSender value. Stored as '42'. <br> <em>Database Value:</em> '42' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'GoodsThatAreNotExpectedToBeReturnedToSender'</td>
+<td>GoodsThatAreNot<br>ExpectedToBeReturned<br>ToSender</td>
+<td>GoodsThatAreNot<br>ExpectedToBeReturned<br>ToSender value. Stored as '42'. <br> <em>Database Value:</em> '42' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'GoodsThatAreNot<br>ExpectedToBeReturned<br>ToSender'</td>
 </tr>
 <tr>
-<td>GoodsThatAreReturnedToSender</td>
-<td>GoodsThatAreReturnedToSender value. Stored as '51'. <br> <em>Database Value:</em> '51' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GoodsThatAreReturnedToSender'</td>
+<td>GoodsThatAreReturned<br>ToSender</td>
+<td>GoodsThatAreReturned<br>ToSender value. Stored as '51'. <br> <em>Database Value:</em> '51' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GoodsThatAreReturned<br>ToSender'</td>
 </tr>
 <tr>
-<td>GoodsThatAreNotReturnedToSender</td>
-<td>GoodsThatAreNotReturnedToSender value. Stored as '52'. <br> <em>Database Value:</em> '52' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GoodsThatAreNotReturnedToSender'</td>
+<td>GoodsThatAreNot<br>ReturnedToSender</td>
+<td>GoodsThatAreNot<br>ReturnedToSender value. Stored as '52'. <br> <em>Database Value:</em> '52' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GoodsThatAreNot<br>ReturnedToSender'</td>
 </tr>
 </tbody>
 </table>
@@ -489,8 +489,8 @@ Generic enum type for TransportMode properties<br>
 <td>Mail value. Stored as '5'. <br> <em>Database Value:</em> '5' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Mail'</td>
 </tr>
 <tr>
-<td>FixedTransportInstallations</td>
-<td>FixedTransportInstallations value. Stored as '6'. <br> <em>Database Value:</em> '6' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'FixedTransportInstallations'</td>
+<td>FixedTransport<br>Installations</td>
+<td>FixedTransport<br>Installations value. Stored as '6'. <br> <em>Database Value:</em> '6' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'FixedTransport<br>Installations'</td>
 </tr>
 <tr>
 <td>RiverTransport</td>
@@ -517,7 +517,7 @@ Generic enum type for TransportMode properties<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.CalculateLineAmount(obj.Quantity, obj.UnitPrice, Convert(obj.LineStandardDiscountPercent, Nullable</code>1), Convert(obj.LineCustomDiscountPercent, Nullable<code>1), obj.Invoice.DocumentCurrency)</code></p>
+<code>obj.CalculateLineAmount( obj.Quantity, obj.UnitPrice, Convert( obj.LineStandardDiscountPercent, Nullable</code>1), Convert( obj.LineCustomDiscountPercent, Nullable<code>1), obj.Invoice.DocumentCurrency)</code></p>
 <h3 id="linecustomdiscountpercent">LineCustomDiscountPercent</h3>
 <blockquote>
 <p>User-defined discount for the line. [Required] [Default(0)] [Filter(ge;le)]</p>
@@ -534,9 +534,9 @@ Generic enum type for TransportMode properties<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.Invoice.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.Invoice.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.Invoice.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.Invoice.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linestandarddiscountpercent">LineStandardDiscountPercent</h3>
 <blockquote>
 <p>Standard discount for the line. This is automatically computed according to discount conditions. [Required] [Default(0)]</p>
@@ -546,7 +546,7 @@ Generic enum type for TransportMode properties<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((obj.LineDiscount != null), obj.LineDiscount.DiscountPercent, 0)</code></p>
+<code>IIF( ( obj.LineDiscount != null), obj.LineDiscount.DiscountPercent, 0)</code></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this InvoiceLine.</p>
@@ -556,7 +556,7 @@ Generic enum type for TransportMode properties<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
 <blockquote>
-<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2.100.0)</p>
+<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2)</p>
 </blockquote>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -586,9 +586,9 @@ Generic enum type for TransportMode properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="salesorderamount">SalesOrderAmount</h3>
 <blockquote>
 <p>Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing.</p>
@@ -598,15 +598,15 @@ Generic enum type for TransportMode properties<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
 <blockquote>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="unitprice">UnitPrice</h3>
 <blockquote>
 <p>The unit selling price of Quantity. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)]</p>
@@ -620,7 +620,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.Invoice.IntrastatTransportCountry</code></p>
@@ -630,19 +630,19 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The <a href="Crm.Invoicing.InvoiceLines.html#invoice">Invoice</a> to which this InvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Invoicing.Invoices.html">Crm.Invoicing.Invoices</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Invoicing.Invoices.html">Invoices</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="invoiceorderline">InvoiceOrderLine</h3>
 <blockquote>
 <p>Invoice order line which is invoiced by this line. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceOrderLines.html">Crm.Invoicing.InvoiceOrderLines</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceOrderLines.html">InvoiceOrderLines</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linedealtype">LineDealType</h3>
 <blockquote>
 <p>Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.Invoice.DealType</code></p>
@@ -652,39 +652,39 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The line discount type used to form the Line_Standard_Discount_Percent. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.LineDiscounts.html">Crm.LineDiscounts</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.LineDiscounts.html">LineDiscounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.DetermineLineDiscount(Convert((obj.Invoice.DeliveryDate ?? obj.Invoice.DocumentDate), Nullable</code>1), obj.Invoice.Customer, obj.Product, obj.Quantity, obj.Invoice.EnterpriseCompany, obj.Invoice.EnterpriseCompanyLocation, IIF((obj.SalesOrder == null), null, obj.SalesOrder.DistributionChannel), IIF((obj.SalesOrder == null), null, obj.SalesOrder.PriceList))`</p>
+<code>obj.DetermineLineDiscount( Convert( ( obj.Invoice.DeliveryDate ?? obj.Invoice.DocumentDate), Nullable</code>1), obj.Invoice.Customer, obj.Product, obj.Quantity, obj.Invoice.EnterpriseCompany, obj.Invoice.EnterpriseCompanyLocation, IIF( ( obj.SalesOrder == null), null, obj.SalesOrder.DistributionChannel), IIF( ( obj.SalesOrder == null), null, obj.SalesOrder.PriceList))`</p>
 <h3 id="parentdocument">ParentDocument</h3>
 <blockquote>
-<p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2.100.0)</p>
+<p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentsalesorderline">ParentSalesOrderLine</h3>
 <blockquote>
 <p>When not null specifies the Sales Order line that is invoiced by this invoice line. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html">Crm.Sales.SalesOrderLines</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymenttransaction">PaymentTransaction</h3>
 <blockquote>
 <p>The payment transaction, which is invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">Finance.Payments.PaymentTransactions</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The invoiced product. When null, although rarely used, the invoice line is still valid and the Product Description contains the invoiced item. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.MeasurementUnit</code></p>
@@ -692,21 +692,21 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>When not null specifies the Sales Order that is invoiced by this line. [Filter(multi eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((obj.ParentSalesOrderLine != null), obj.ParentSalesOrderLine.SalesOrder, null)</code></p>
+<code>IIF( ( obj.ParentSalesOrderLine != null), obj.ParentSalesOrderLine.SalesOrder, null)</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <blockquote>
 <p>Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transactionline">TransactionLine</h3>
 <blockquote>
 <p>The store transaction line that is invoiced by this line, for Business Reason = S. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

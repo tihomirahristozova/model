@@ -149,17 +149,17 @@
 <tbody>
 <tr>
 <td><a href="Projects.ProjectTaskResources.html#projecttask">ProjectTask</a></td>
-<td><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a></td>
+<td><a href="Projects.ProjectTasks.html">ProjectTasks</a></td>
 <td>The task for which the resource is planned. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTaskResources.html#resource">Resource</a></td>
-<td><a href="General.Resources.Resources.html">General.Resources.Resources</a></td>
+<td><a href="General.Resources.Resources.html">Resources</a></td>
 <td>The planned resource. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTaskResources.html#resourceinstance">ResourceInstance</a></td>
-<td><a href="General.Resources.ResourceInstances.html">General.Resources.ResourceInstances</a> (nullable)</td>
+<td><a href="General.Resources.ResourceInstances.html">ResourceInstances</a> (nullable)</td>
 <td>The concrete resource instance, which should be used. null when no specific resource instance is required. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -173,7 +173,7 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(((obj.BillingTotalAmount != null) AndAlso (obj.BillingPricePerHour != null)), null, obj.BillingPricePerHour)</code></p>
+<code>IIF( ( ( obj.BillingTotalAmount != null) AndAlso ( obj.BillingPricePerHour != null)), null, obj.BillingPricePerHour)</code></p>
 <h3 id="billingtotalamount">BillingTotalAmount</h3>
 <blockquote>
 <p>When not null, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). null means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour. [Filter(eq)]</p>
@@ -182,7 +182,7 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(((obj.BillingTotalAmount != null) AndAlso (obj.BillingPricePerHour != null)), null, obj.BillingTotalAmount)</code></p>
+<code>IIF( ( ( obj.BillingTotalAmount != null) AndAlso ( obj.BillingPricePerHour != null)), null, obj.BillingTotalAmount)</code></p>
 <h3 id="costperhour">CostPerHour</h3>
 <blockquote>
 <p>Cost per hour for the resource usage for this task (in the currency of the project). [Required] [Default(0)] [Filter(eq)]</p>
@@ -192,7 +192,7 @@
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(((obj.PerUseCost != null) AndAlso (obj.ResourceUsageHours != 0)), ((obj.TaskTotalCost - obj.PerUseCost.Value) / obj.ResourceUsageHours), obj.CostPerHour)</code></p>
+<code>IIF( ( ( obj.PerUseCost != null) AndAlso ( obj.ResourceUsageHours != 0)), ( ( obj.TaskTotalCost - obj.PerUseCost.Value) / obj.ResourceUsageHours), obj.CostPerHour)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
@@ -220,7 +220,7 @@
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((obj.ProjectTask != null), (obj.ProjectTask.PlannedDurationHours * obj.ResourceUsagePercent), obj.ResourceUsageHours)</code></p>
+<code>IIF( ( obj.ProjectTask != null), ( obj.ProjectTask.PlannedDurationHours * obj.ResourceUsagePercent), obj.ResourceUsageHours)</code></p>
 <h3 id="resourceusagepercent">ResourceUsagePercent</h3>
 <blockquote>
 <p>The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. [Required] [Default(1)] [Filter(eq)]</p>
@@ -230,7 +230,7 @@
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((obj.ProjectTask.PlannedDurationHours == 0), 0, (obj.ResourceUsageHours / obj.ProjectTask.PlannedDurationHours))</code></p>
+<code>IIF( ( obj.ProjectTask.PlannedDurationHours == 0), 0, ( obj.ResourceUsageHours / obj.ProjectTask.PlannedDurationHours))</code></p>
 <h3 id="tasktotalcost">TaskTotalCost</h3>
 <blockquote>
 <p>Total cost for this task (in the currency of the project). [Required] [Default(0)] [Filter(eq)]</p>
@@ -240,27 +240,27 @@
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>((obj.ResourceUsageHours * obj.CostPerHour) + obj.PerUseCost.Value)</code></p>
+<code>( ( obj.ResourceUsageHours * obj.CostPerHour) + obj.PerUseCost.Value)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((obj.PerUseCost != null), ((obj.ResourceUsageHours * obj.CostPerHour) + obj.PerUseCost.Value), obj.TaskTotalCost)</code></p>
+<code>IIF( ( obj.PerUseCost != null), ( ( obj.ResourceUsageHours * obj.CostPerHour) + obj.PerUseCost.Value), obj.TaskTotalCost)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="projecttask">ProjectTask</h3>
 <blockquote>
 <p>The task for which the resource is planned. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a></strong><br>
+<p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">ProjectTasks</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resource">Resource</h3>
 <blockquote>
 <p>The planned resource. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Resources.Resources.html">General.Resources.Resources</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Resources.Resources.html">Resources</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resourceinstance">ResourceInstance</h3>
 <blockquote>
 <p>The concrete resource instance, which should be used. null when no specific resource instance is required. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Resources.ResourceInstances.html">General.Resources.ResourceInstances</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Resources.ResourceInstances.html">ResourceInstances</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

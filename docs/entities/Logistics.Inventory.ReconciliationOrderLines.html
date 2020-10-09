@@ -114,27 +114,27 @@
 <tbody>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationOrderLines.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
 <td>The item which quantity should be reconciled. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationOrderLines.html#reconciliationorder">ReconciliationOrder</a></td>
-<td><a href="Logistics.Inventory.ReconciliationOrders.html">Logistics.Inventory.ReconciliationOrders</a></td>
+<td><a href="Logistics.Inventory.ReconciliationOrders.html">ReconciliationOrders</a></td>
 <td>Reconciliation order header. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationOrderLines.html#serialnumber">SerialNumber</a></td>
-<td><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</td>
+<td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
 <td>Serial number of the product, which should be reconciled. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationOrderLines.html#store">Store</a></td>
-<td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></td>
+<td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
 <td>Store, which should be checked. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationOrderLines.html#storebin">StoreBin</a></td>
-<td><a href="Logistics.Inventory.StoreBins.html">Logistics.Inventory.StoreBins</a> (nullable)</td>
+<td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
 <td>Specifies store bin, that should be reconciled. null means to reconcile all or any bin. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -152,39 +152,39 @@
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.ReconciliationOrder.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.ReconciliationOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.ReconciliationOrder.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.ReconciliationOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The item which quantity should be reconciled. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="reconciliationorder">ReconciliationOrder</h3>
 <blockquote>
 <p>Reconciliation order header. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.ReconciliationOrders.html">Logistics.Inventory.ReconciliationOrders</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.ReconciliationOrders.html">ReconciliationOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <blockquote>
 <p>Serial number of the product, which should be reconciled. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
 <blockquote>
 <p>Store, which should be checked. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storebin">StoreBin</h3>
 <blockquote>
 <p>Specifies store bin, that should be reconciled. null means to reconcile all or any bin. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">Logistics.Inventory.StoreBins</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

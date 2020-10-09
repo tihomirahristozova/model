@@ -134,12 +134,12 @@
 <tbody>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#leasecontract">LeaseContract</a></td>
-<td><a href="Applications.Rental.LeaseContracts.html">Applications.Rental.LeaseContracts</a></td>
+<td><a href="Applications.Rental.LeaseContracts.html">LeaseContracts</a></td>
 <td>The <a href="Applications.Rental.LeaseContractLines.html#leasecontract">LeaseContract</a> to which this LeaseContractLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#rentalasset">RentalAsset</a></td>
-<td><a href="Applications.Rental.Assets.html">Applications.Rental.Assets</a></td>
+<td><a href="Applications.Rental.Assets.html">Assets</a></td>
 <td>The asset which is rented with the current contract. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -156,8 +156,8 @@
 <tbody>
 <tr>
 <td>Consumables</td>
-<td><a href="Applications.Rental.LeaseContractLineConsumables.html">Applications.Rental.LeaseContractLineConsumables</a></td>
-<td>List of <a href="Applications.Rental.LeaseContractLineConsumables.html">LeaseContractLineConsumable</a> child objects, based on the <a href="Applications.Rental.LeaseContractLineConsumables.html#leaseline">Applications.Rental.LeaseContractLineConsumable.LeaseLine</a> back reference</td>
+<td><a href="Applications.Rental.LeaseContractLineConsumables.html">LeaseContractLineConsumables</a></td>
+<td>List of [LeaseContract<br>LineConsumable](Applications.Rental.LeaseContractLine<br>Consumables.md) child objects, based on the [Applications.Rental.LeaseContractLine<br>Consumable.LeaseLine](Applications.Rental.LeaseContractLine<br>Consumables.md#leaseline) back</td>
 </tr>
 </tbody>
 </table>
@@ -192,9 +192,9 @@
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.LeaseContract.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.LeaseContract.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.LeaseContract.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.LeaseContract.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linenotes">LineNotes</h3>
 <blockquote>
 <p>Notes for this line.</p>
@@ -218,13 +218,13 @@
 <blockquote>
 <p>The <a href="Applications.Rental.LeaseContractLines.html#leasecontract">LeaseContract</a> to which this LeaseContractLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Rental.LeaseContracts.html">Applications.Rental.LeaseContracts</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.Rental.LeaseContracts.html">LeaseContracts</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="rentalasset">RentalAsset</h3>
 <blockquote>
 <p>The asset which is rented with the current contract. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Rental.Assets.html">Applications.Rental.Assets</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.Rental.Assets.html">Assets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

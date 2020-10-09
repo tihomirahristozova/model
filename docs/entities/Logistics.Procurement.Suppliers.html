@@ -164,37 +164,37 @@
 <tbody>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultcurrency">DefaultCurrency</a></td>
-<td><a href="General.Currencies.html">General.Currencies</a> (nullable)</td>
+<td><a href="General.Currencies.html">Currencies</a> (nullable)</td>
 <td>The default currency for purchases from this supplier. null means there is no default. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultpaymentaccount">DefaultPaymentAccount</a></td>
-<td><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</td>
+<td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
 <td>When not null, specifies the default payment account which should be used for new purchase document for this supplier. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultpaymenttype">DefaultPaymentType</a></td>
-<td><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</td>
+<td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
 <td>When not null, specifies the default payment type which should be used for new purchase document for this supplier. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultpurchasepricelist">DefaultPurchasePriceList</a></td>
-<td><a href="Logistics.Procurement.PurchasePriceLists.html">Logistics.Procurement.PurchasePriceLists</a> (nullable)</td>
+<td><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</td>
 <td>The default purchase price list, which shall be used for new purchase documents for this supplier. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#enterprisecompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
 <td>The Enterprise Company to which this Supplier applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#party">Party</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
+<td><a href="General.Contacts.Parties.html">Parties</a></td>
 <td>The <a href="General.Contacts.Parties.html">Party</a> to which this Supplier belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#suppliertype">SupplierType</a></td>
-<td><a href="Logistics.Procurement.SupplierTypes.html">Logistics.Procurement.SupplierTypes</a> (nullable)</td>
+<td><a href="Logistics.Procurement.SupplierTypes.html">SupplierTypes</a> (nullable)</td>
 <td>When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -290,43 +290,43 @@
 <blockquote>
 <p>The default currency for purchases from this supplier. null means there is no default. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="defaultpaymentaccount">DefaultPaymentAccount</h3>
 <blockquote>
 <p>When not null, specifies the default payment account which should be used for new purchase document for this supplier. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="defaultpaymenttype">DefaultPaymentType</h3>
 <blockquote>
 <p>When not null, specifies the default payment type which should be used for new purchase document for this supplier. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="defaultpurchasepricelist">DefaultPurchasePriceList</h3>
 <blockquote>
 <p>The default purchase price list, which shall be used for new purchase documents for this supplier. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchasePriceLists.html">Logistics.Procurement.PurchasePriceLists</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The Enterprise Company to which this Supplier applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="party">Party</h3>
 <blockquote>
 <p>The <a href="General.Contacts.Parties.html">Party</a> to which this Supplier belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="suppliertype">SupplierType</h3>
 <blockquote>
 <p>When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.SupplierTypes.html">Logistics.Procurement.SupplierTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.SupplierTypes.html">SupplierTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

@@ -106,7 +106,7 @@
 <td>Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastattransactionnaturecode">IntrastatTransactionNatureCode</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastattransactionnaturecode">IntrastatTransaction<br>NatureCode</a></td>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastattransactionnaturecode">TransactionNature</a> (nullable)</td>
 <td>Transaction nature; used for Intrastat reporting.</td>
 </tr>
@@ -148,7 +148,7 @@
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#unitprice">UnitPrice</a></td>
@@ -169,52 +169,52 @@
 <tbody>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastatdestinationregion">IntrastatDestinationRegion</a></td>
-<td><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a> (nullable)</td>
+<td><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</td>
 <td>Region, which is the final destination of the goods. Used for Intrastat reporting. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastattransportcountry">IntrastatTransportCountry</a></td>
-<td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
+<td><a href="General.Geography.Countries.html">Countries</a> (nullable)</td>
 <td>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#linecostcenter">LineCostCenter</a></td>
-<td><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</td>
+<td><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</td>
 <td>Cost center for which the amount from this row will be accounted. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#linedealtype">LineDealType</a></td>
-<td><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</td>
+<td><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</td>
 <td>Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#origincountry">OriginCountry</a></td>
-<td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
+<td><a href="General.Geography.Countries.html">Countries</a> (nullable)</td>
 <td>The country of origin of the invoiced product. Should be non-null only when this is different from the country of origin from the product definition. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">General.Products.Products</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
 <td>The invoiced product. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#purchaseinvoice">PurchaseInvoice</a></td>
-<td><a href="Logistics.Procurement.PurchaseInvoices.html">Logistics.Procurement.PurchaseInvoices</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoices.html">PurchaseInvoices</a></td>
 <td>The <a href="Logistics.Procurement.PurchaseInvoiceLines.html#purchaseinvoice">PurchaseInvoice</a> to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#quantityunit">QuantityUnit</a></td>
-<td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
 <td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#receivingorderline">ReceivingOrderLine</a></td>
-<td><a href="Logistics.Procurement.ReceivingOrderLines.html">Logistics.Procurement.ReceivingOrderLines</a> (nullable)</td>
+<td><a href="Logistics.Procurement.ReceivingOrderLines.html">ReceivingOrderLines</a> (nullable)</td>
 <td>The receiving order line, which is invoiced by the current line. null means that this line is not directly related to receiving order line. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#salelinedealtype">SaleLineDealType</a></td>
-<td><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</td>
+<td><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</td>
 <td>Sale deal type for this line. If sale deal type in the line is different from sale deal type in the header another Sales VAT entry is created. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -334,16 +334,16 @@ Generic enum type for TransactionNature properties<br>
 <td>ReturnStokilizing value. Stored as '21'. <br> <em>Database Value:</em> '21' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'ReturnStokilizing'</td>
 </tr>
 <tr>
-<td>ReplacementForReturnedGoods</td>
-<td>ReplacementForReturnedGoods value. Stored as '22'. <br> <em>Database Value:</em> '22' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'ReplacementForReturnedGoods'</td>
+<td>ReplacementFor<br>ReturnedGoods</td>
+<td>ReplacementFor<br>ReturnedGoods value. Stored as '22'. <br> <em>Database Value:</em> '22' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'ReplacementFor<br>ReturnedGoods'</td>
 </tr>
 <tr>
-<td>ReplacementOfGoodsNotBeingReturned</td>
-<td>ReplacementOfGoodsNotBeingReturned value. Stored as '23'. <br> <em>Database Value:</em> '23' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'ReplacementOfGoodsNotBeingReturned'</td>
+<td>ReplacementOfGoods<br>NotBeingReturned</td>
+<td>ReplacementOfGoods<br>NotBeingReturned value. Stored as '23'. <br> <em>Database Value:</em> '23' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'ReplacementOfGoods<br>NotBeingReturned'</td>
 </tr>
 <tr>
-<td>ReturnOrExchangeOfOtherGoods</td>
-<td>ReturnOrExchangeOfOtherGoods value. Stored as '29'. <br> <em>Database Value:</em> '29' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'ReturnOrExchangeOfOtherGoods'</td>
+<td>ReturnOrExchange<br>OfOtherGoods</td>
+<td>ReturnOrExchange<br>OfOtherGoods value. Stored as '29'. <br> <em>Database Value:</em> '29' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'ReturnOrExchange<br>OfOtherGoods'</td>
 </tr>
 <tr>
 <td>SpecificTransactions</td>
@@ -354,8 +354,8 @@ Generic enum type for TransactionNature properties<br>
 <td>OperationsOnJointProjects value. Stored as '70'. <br> <em>Database Value:</em> '70' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'OperationsOnJointProjects'</td>
 </tr>
 <tr>
-<td>TransactionsOfConstructionMaterialsAndEquipment</td>
-<td>TransactionsOfConstructionMaterialsAndEquipment value. Stored as '80'. <br> <em>Database Value:</em> '80' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'TransactionsOfConstructionMaterialsAndEquipment'</td>
+<td>TransactionsOf<br>ConstructionMaterials<br>AndEquipment</td>
+<td>TransactionsOf<br>ConstructionMaterials<br>AndEquipment value. Stored as '80'. <br> <em>Database Value:</em> '80' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'TransactionsOf<br>ConstructionMaterials<br>AndEquipment'</td>
 </tr>
 <tr>
 <td>OtherTransactionsLeasing</td>
@@ -366,24 +366,24 @@ Generic enum type for TransactionNature properties<br>
 <td>OtherTransactionsOther value. Stored as '99'. <br> <em>Database Value:</em> '99' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'OtherTransactionsOther'</td>
 </tr>
 <tr>
-<td>DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind</td>
-<td>DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind value. Stored as '30'. <br> <em>Database Value:</em> '30' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'DealsThatIncludePropertyTransfersWithoutFinancialCompensationOrCompensationInKind'</td>
+<td>DealsThatInclude<br>PropertyTransfers<br>WithoutFinancial<br>CompensationOr<br>CompensationIn<br>Kind</td>
+<td>DealsThatInclude<br>PropertyTransfers<br>WithoutFinancial<br>CompensationOr<br>CompensationIn<br>Kind value. Stored as '30'. <br> <em>Database Value:</em> '30' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'DealsThatInclude<br>PropertyTransfers<br>WithoutFinancial<br>CompensationOr<br>CompensationIn<br>Kind'</td>
 </tr>
 <tr>
-<td>GoodsThatAreExpectedToBeReturnedToSender</td>
-<td>GoodsThatAreExpectedToBeReturnedToSender value. Stored as '41'. <br> <em>Database Value:</em> '41' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'GoodsThatAreExpectedToBeReturnedToSender'</td>
+<td>GoodsThatAreExpected<br>ToBeReturnedTo<br>Sender</td>
+<td>GoodsThatAreExpected<br>ToBeReturnedTo<br>Sender value. Stored as '41'. <br> <em>Database Value:</em> '41' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'GoodsThatAreExpected<br>ToBeReturnedTo<br>Sender'</td>
 </tr>
 <tr>
-<td>GoodsThatAreNotExpectedToBeReturnedToSender</td>
-<td>GoodsThatAreNotExpectedToBeReturnedToSender value. Stored as '42'. <br> <em>Database Value:</em> '42' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'GoodsThatAreNotExpectedToBeReturnedToSender'</td>
+<td>GoodsThatAreNot<br>ExpectedToBeReturned<br>ToSender</td>
+<td>GoodsThatAreNot<br>ExpectedToBeReturned<br>ToSender value. Stored as '42'. <br> <em>Database Value:</em> '42' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'GoodsThatAreNot<br>ExpectedToBeReturned<br>ToSender'</td>
 </tr>
 <tr>
-<td>GoodsThatAreReturnedToSender</td>
-<td>GoodsThatAreReturnedToSender value. Stored as '51'. <br> <em>Database Value:</em> '51' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GoodsThatAreReturnedToSender'</td>
+<td>GoodsThatAreReturned<br>ToSender</td>
+<td>GoodsThatAreReturned<br>ToSender value. Stored as '51'. <br> <em>Database Value:</em> '51' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GoodsThatAreReturned<br>ToSender'</td>
 </tr>
 <tr>
-<td>GoodsThatAreNotReturnedToSender</td>
-<td>GoodsThatAreNotReturnedToSender value. Stored as '52'. <br> <em>Database Value:</em> '52' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GoodsThatAreNotReturnedToSender'</td>
+<td>GoodsThatAreNot<br>ReturnedToSender</td>
+<td>GoodsThatAreNot<br>ReturnedToSender value. Stored as '52'. <br> <em>Database Value:</em> '52' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GoodsThatAreNot<br>ReturnedToSender'</td>
 </tr>
 </tbody>
 </table>
@@ -425,8 +425,8 @@ Generic enum type for TransportMode properties<br>
 <td>Mail value. Stored as '5'. <br> <em>Database Value:</em> '5' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Mail'</td>
 </tr>
 <tr>
-<td>FixedTransportInstallations</td>
-<td>FixedTransportInstallations value. Stored as '6'. <br> <em>Database Value:</em> '6' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'FixedTransportInstallations'</td>
+<td>FixedTransport<br>Installations</td>
+<td>FixedTransport<br>Installations value. Stored as '6'. <br> <em>Database Value:</em> '6' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'FixedTransport<br>Installations'</td>
 </tr>
 <tr>
 <td>RiverTransport</td>
@@ -456,9 +456,9 @@ Generic enum type for TransportMode properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.PurchaseInvoice.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.PurchaseInvoice.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.PurchaseInvoice.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.PurchaseInvoice.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this PurchaseInvoiceLine.</p>
@@ -493,20 +493,20 @@ Generic enum type for TransportMode properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
 <blockquote>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF((((obj.Quantity == null) OrElse (obj.QuantityUnit == null)) OrElse (obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo(obj.Product.BaseUnit, obj.Product))</code></p>
+<code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="unitprice">UnitPrice</h3>
 <blockquote>
 <p>The unit price of the invoiced item in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]</p>
@@ -520,61 +520,61 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>Region, which is the final destination of the goods. Used for Intrastat reporting. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastattransportcountry">IntrastatTransportCountry</h3>
 <blockquote>
 <p>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linecostcenter">LineCostCenter</h3>
 <blockquote>
 <p>Cost center for which the amount from this row will be accounted. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linedealtype">LineDealType</h3>
 <blockquote>
 <p>Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="origincountry">OriginCountry</h3>
 <blockquote>
 <p>The country of origin of the invoiced product. Should be non-null only when this is different from the country of origin from the product definition. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The invoiced product. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseinvoice">PurchaseInvoice</h3>
 <blockquote>
 <p>The <a href="Logistics.Procurement.PurchaseInvoiceLines.html#purchaseinvoice">PurchaseInvoice</a> to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoices.html">Logistics.Procurement.PurchaseInvoices</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoices.html">PurchaseInvoices</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="receivingorderline">ReceivingOrderLine</h3>
 <blockquote>
 <p>The receiving order line, which is invoiced by the current line. null means that this line is not directly related to receiving order line. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrderLines.html">Logistics.Procurement.ReceivingOrderLines</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrderLines.html">ReceivingOrderLines</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salelinedealtype">SaleLineDealType</h3>
 <blockquote>
 <p>Sale deal type for this line. If sale deal type in the line is different from sale deal type in the header another Sales VAT entry is created. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

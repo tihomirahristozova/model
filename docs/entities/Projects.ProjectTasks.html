@@ -144,37 +144,37 @@
 <tbody>
 <tr>
 <td><a href="Projects.ProjectTasks.html#activity">Activity</a></td>
-<td><a href="General.Contacts.Activities.html">General.Contacts.Activities</a> (nullable)</td>
+<td><a href="General.Contacts.Activities.html">Activities</a> (nullable)</td>
 <td>The Id of the Cm_Activity created for this task. null means that activity is still not created. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTasks.html#project">Project</a></td>
-<td><a href="Projects.Projects.html">Projects.Projects</a></td>
+<td><a href="Projects.Projects.html">Projects</a></td>
 <td>The project, to which this task belongs. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTasks.html#projectworkelement">ProjectWorkElement</a></td>
-<td><a href="Projects.ProjectWorkElements.html">Projects.ProjectWorkElements</a></td>
+<td><a href="Projects.ProjectWorkElements.html">ProjectWorkElements</a></td>
 <td>The work element under which the task is filed. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTasks.html#resource">Resource</a></td>
-<td><a href="Projects.Resources.html">Projects.Resources</a> (nullable)</td>
+<td><a href="Projects.Resources.html">Resources</a> (nullable)</td>
 <td>The resource, which is required for the task. null means - do not plan any resource. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTasks.html#responsibleparty">ResponsibleParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
 <td>The responsible party. Usually a person and usually one of the project participants. null means that responsible is not yet determined. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTasks.html#tasktype">TaskType</a></td>
-<td><a href="Projects.TaskTypes.html">Projects.TaskTypes</a></td>
+<td><a href="Projects.TaskTypes.html">TaskTypes</a></td>
 <td>The type of the task. Determines the work type of the tasks, default billing rules, etc. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTasks.html#worktype">WorkType</a></td>
-<td><a href="Projects.TypeWorkTypes.html">Projects.TypeWorkTypes</a> (nullable)</td>
+<td><a href="Projects.TypeWorkTypes.html">TypeWorkTypes</a> (nullable)</td>
 <td>Type of work to be done. null means that type of work is undetermined yet. [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -191,22 +191,22 @@
 <tbody>
 <tr>
 <td>Dependancies</td>
-<td><a href="Projects.ProjectTaskDependancies.html">Projects.ProjectTaskDependancies</a></td>
+<td><a href="Projects.ProjectTaskDependancies.html">ProjectTaskDependancies</a></td>
 <td>List of <a href="Projects.ProjectTaskDependancies.html">ProjectTaskDependancy</a> child objects, based on the <a href="Projects.ProjectTaskDependancies.html#projecttask">Projects.ProjectTaskDependancy.ProjectTask</a> back reference</td>
 </tr>
 <tr>
 <td>Materials</td>
-<td><a href="Projects.ProjectTaskMaterials.html">Projects.ProjectTaskMaterials</a></td>
+<td><a href="Projects.ProjectTaskMaterials.html">ProjectTaskMaterials</a></td>
 <td>List of <a href="Projects.ProjectTaskMaterials.html">ProjectTaskMaterial</a> child objects, based on the <a href="Projects.ProjectTaskMaterials.html#projecttask">Projects.ProjectTaskMaterial.ProjectTask</a> back reference</td>
 </tr>
 <tr>
 <td>Participants</td>
-<td><a href="Projects.ProjectTaskParticipants.html">Projects.ProjectTaskParticipants</a></td>
+<td><a href="Projects.ProjectTaskParticipants.html">ProjectTaskParticipants</a></td>
 <td>List of <a href="Projects.ProjectTaskParticipants.html">ProjectTaskParticipant</a> child objects, based on the <a href="Projects.ProjectTaskParticipants.html#projecttask">Projects.ProjectTaskParticipant.ProjectTask</a> back reference</td>
 </tr>
 <tr>
 <td>Resources</td>
-<td><a href="Projects.ProjectTaskResources.html">Projects.ProjectTaskResources</a></td>
+<td><a href="Projects.ProjectTaskResources.html">ProjectTaskResources</a></td>
 <td>List of <a href="Projects.ProjectTaskResources.html">ProjectTaskResource</a> child objects, based on the <a href="Projects.ProjectTaskResources.html#projecttask">Projects.ProjectTaskResource.ProjectTask</a> back reference</td>
 </tr>
 </tbody>
@@ -220,7 +220,7 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF(((obj.PlannedDurationHours != 0) AndAlso (obj.WorkType != null)), obj.CalculateBudgetLaborAmount(), new Amount(0, obj.Project.BudgetingCurrency))</code></p>
+<code>IIF( ( ( obj.PlannedDurationHours != 0) AndAlso ( obj.WorkType != null)), obj.CalculateBudgetLaborAmount( ), new Amount( 0, obj.Project.BudgetingCurrency))</code></p>
 <h3 id="finishdatetime">FinishDateTime</h3>
 <blockquote>
 <p>The date and time when the task is planned to finish. [Required] [Default(Now)] [Filter(eq;ge;le)]</p>
@@ -275,43 +275,43 @@
 <blockquote>
 <p>The Id of the Cm_Activity created for this task. null means that activity is still not created. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Activities.html">General.Contacts.Activities</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Activities.html">Activities</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="project">Project</h3>
 <blockquote>
 <p>The project, to which this task belongs. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Projects.Projects.html">Projects.Projects</a></strong><br>
+<p><em>Type</em>: <strong><a href="Projects.Projects.html">Projects</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projectworkelement">ProjectWorkElement</h3>
 <blockquote>
 <p>The work element under which the task is filed. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Projects.ProjectWorkElements.html">Projects.ProjectWorkElements</a></strong><br>
+<p><em>Type</em>: <strong><a href="Projects.ProjectWorkElements.html">ProjectWorkElements</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="resource">Resource</h3>
 <blockquote>
 <p>The resource, which is required for the task. null means - do not plan any resource. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Projects.Resources.html">Projects.Resources</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Projects.Resources.html">Resources</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="responsibleparty">ResponsibleParty</h3>
 <blockquote>
 <p>The responsible party. Usually a person and usually one of the project participants. null means that responsible is not yet determined. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="tasktype">TaskType</h3>
 <blockquote>
 <p>The type of the task. Determines the work type of the tasks, default billing rules, etc. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Projects.TaskTypes.html">Projects.TaskTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Projects.TaskTypes.html">TaskTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="worktype">WorkType</h3>
 <blockquote>
 <p>Type of work to be done. null means that type of work is undetermined yet. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Projects.TypeWorkTypes.html">Projects.TypeWorkTypes</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Projects.TypeWorkTypes.html">TypeWorkTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

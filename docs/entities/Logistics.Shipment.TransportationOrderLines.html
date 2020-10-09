@@ -108,7 +108,7 @@
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#notes">Notes</a></td>
 <td>string (nullable)</td>
-<td>Notes for this TransportationOrderLine. (Introduced in version 18.2.100.0)</td>
+<td>Notes for this TransportationOrderLine. (Introduced in version 18.2)</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#palletscount">PalletsCount</a></td>
@@ -144,17 +144,17 @@
 <tbody>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#cargotype">CargoType</a></td>
-<td><a href="Logistics.Shipment.CargoTypes.html">Logistics.Shipment.CargoTypes</a></td>
+<td><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></td>
 <td>The type of the transported cargo. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#parentdocument">ParentDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a></td>
-<td><a href="Logistics.Shipment.TransportationOrders.html">Logistics.Shipment.TransportationOrders</a></td>
+<td><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></td>
 <td>The <a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a> to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -179,12 +179,12 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>(obj.TransportationOrder.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.TransportationOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>(obj.TransportationOrder.Lines.Select(c =&gt; c.LineNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<code>( obj.TransportationOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
-<p>Notes for this TransportationOrderLine. (Introduced in version 18.2.100.0)</p>
+<p>Notes for this TransportationOrderLine. (Introduced in version 18.2)</p>
 </blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -222,19 +222,19 @@
 <blockquote>
 <p>The type of the transported cargo. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Shipment.CargoTypes.html">Logistics.Shipment.CargoTypes</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
 <blockquote>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transportationorder">TransportationOrder</h3>
 <blockquote>
 <p>The <a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a> to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrders.html">Logistics.Shipment.TransportationOrders</a></strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

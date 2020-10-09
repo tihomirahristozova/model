@@ -101,8 +101,8 @@
 <td>The background image to be used for web visualization of the catalog. null means that background image won't be displayed.</td>
 </tr>
 <tr>
-<td><a href="General.ProductCatalogs.html#backgroundpositionhorizontal">BackgroundPositionHorizontal</a></td>
-<td><a href="General.ProductCatalogs.html#backgroundpositionhorizontal">BackgroundPositionHorizontal</a></td>
+<td><a href="General.ProductCatalogs.html#backgroundpositionhorizontal">BackgroundPosition<br>Horizontal</a></td>
+<td><a href="General.ProductCatalogs.html#backgroundpositionhorizontal">BackgroundPosition<br>Horizontal</a></td>
 <td>Horizontal position of the Background Image. L=Left, C=Center, R=Right. [Required] [Default(&quot;L&quot;)]</td>
 </tr>
 <tr>
@@ -164,13 +164,13 @@
 <tbody>
 <tr>
 <td><a href="General.ProductCatalogs.html#rootproductgroup">RootProductGroup</a></td>
-<td><a href="General.Products.ProductGroups.html">General.Products.ProductGroups</a></td>
+<td><a href="General.Products.ProductGroups.html">ProductGroups</a></td>
 <td>The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.ProductCatalogs.html#website">WebSite</a></td>
-<td><a href="Systems.Core.WebSites.html">Systems.Core.WebSites</a> (nullable)</td>
-<td>The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. [Filter(multi eq)] (Introduced in version 19.1.100.0)</td>
+<td><a href="Systems.Core.WebSites.html">WebSites</a> (nullable)</td>
+<td>The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. [Filter(multi eq)] (Introduced in version 19.1)</td>
 </tr>
 </tbody>
 </table>
@@ -193,7 +193,7 @@
 <blockquote>
 <p>Horizontal position of the Background Image. L=Left, C=Center, R=Right. [Required] [Default(&quot;L&quot;)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.ProductCatalogs.html#backgroundpositionhorizontal">BackgroundPositionHorizontal</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.ProductCatalogs.html#backgroundpositionhorizontal">BackgroundPosition<br>Horizontal</a></strong><br>
 Allowed values for the <a href="General.ProductCatalogs.html#backgroundpositionhorizontal">BackgroundPositionHorizontal</a> data attribute<br>
 <em>Allowed Values (General.ProductCatalogsRepository.BackgroundPositionHorizontal Enum Members)</em></p>
 <table>
@@ -269,8 +269,8 @@ Allowed values for the <a href="General.ProductCatalogs.html#backgroundrepeat">B
 </thead>
 <tbody>
 <tr>
-<td>RepeatBothVerticallyAndHorizontally</td>
-<td>RepeatBothVerticallyAndHorizontally value. Stored as 'R'. <br> <em>Database Value:</em> 'R' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'RepeatBothVerticallyAndHorizontally'</td>
+<td>RepeatBothVertically<br>AndHorizontally</td>
+<td>RepeatBothVertically<br>AndHorizontally value. Stored as 'R'. <br> <em>Database Value:</em> 'R' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'RepeatBothVertically<br>AndHorizontally'</td>
 </tr>
 <tr>
 <td>RepeatOnlyHorizontally</td>
@@ -340,13 +340,13 @@ Allowed values for the <a href="General.ProductCatalogs.html#backgroundrepeat">B
 <blockquote>
 <p>The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">General.Products.ProductGroups</a></strong><br>
+<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="website">WebSite</h3>
 <blockquote>
-<p>The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. [Filter(multi eq)] (Introduced in version 19.1.100.0)</p>
+<p>The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. [Filter(multi eq)] (Introduced in version 19.1)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Core.WebSites.html">Systems.Core.WebSites</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Core.WebSites.html">WebSites</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>

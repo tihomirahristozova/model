@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="Systems.Security.TrustedApplicationAuthorizations">
 <h1 id="systemssecuritytrustedapplicationauthorizations">Systems.Security.TrustedApplicationAuthorizations</h1>
 
-<p>Authorization of a trusted application to access the data on behalf of a context user. Entity: Sec_Trusted_Application_Authorizations (Introduced in version 20.1.100.0)</p>
+<p>Authorization of a trusted application to access the data on behalf of a context user. Entity: Sec_Trusted_Application_Authorizations (Introduced in version 20.1)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -108,7 +108,7 @@
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#notes">Notes</a></td>
 <td>string (nullable)</td>
-<td>Notes for this TrustedApplicationAuthorization.</td>
+<td>Notes for this TrustedApplication<br>Authorization.</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#validfromutc">ValidFromUtc</a></td>
@@ -134,17 +134,17 @@
 <tbody>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#contextuser">ContextUser</a></td>
-<td><a href="Systems.Security.Users.html">Systems.Security.Users</a></td>
+<td><a href="Systems.Security.Users.html">Users</a></td>
 <td>The user, whose permissions are granted to the application. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#grantinguser">GrantingUser</a></td>
-<td><a href="Systems.Security.Users.html">Systems.Security.Users</a></td>
+<td><a href="Systems.Security.Users.html">Users</a></td>
 <td>The user, who authorized the application. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#trustedapplication">TrustedApplication</a></td>
-<td><a href="Systems.Security.TrustedApplications.html">Systems.Security.TrustedApplications</a></td>
+<td><a href="Systems.Security.TrustedApplications.html">TrustedApplications</a></td>
 <td>The application, which is authorized. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
@@ -196,19 +196,19 @@
 <blockquote>
 <p>The user, whose permissions are granted to the application. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a></strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="grantinguser">GrantingUser</h3>
 <blockquote>
 <p>The user, who authorized the application. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a></strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="trustedapplication">TrustedApplication</h3>
 <blockquote>
 <p>The application, which is authorized. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Security.TrustedApplications.html">Systems.Security.TrustedApplications</a></strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Security.TrustedApplications.html">TrustedApplications</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>
