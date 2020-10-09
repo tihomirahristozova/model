@@ -118,10 +118,13 @@ Each database contains different custom properties and that is why each database
 
 Domain API Example:  
 
+```json
 "CustomProperty_color": {
-    "Value": "Син",
+    "Value": "Apple",
     "ValueId": "5263a2d3-88b0-41db-adae-31c76135719e",
     "Description": {
-        "BG": "Морско"
+        "en": "Apple",
+        "de": "Apfel"
     }
 }
+```
