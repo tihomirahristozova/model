@@ -1,6 +1,6 @@
 # ERP.net Entities
 
-[!include(../entities-overview.md)]
+[!include[Summary](../entities-overview.md)]
 
 ## Namespaces
 - [Applications](Applications.md)  
