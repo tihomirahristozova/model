@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentManualDistributedAmounts
 ---
-# General.DocumentManualDistributedAmounts
+# General.DocumentManualDistributedAmounts Entity
 
 Obsolete. Not used. Entity: Gen_Document_Manual_Distributed_Amounts
 

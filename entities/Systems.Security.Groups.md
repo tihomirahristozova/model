@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.Groups
 ---
-# Systems.Security.Groups
+# Systems.Security.Groups Entity
 
 Groups of users. Used for providing group access to secured data. Entity: Sec_Groups
 

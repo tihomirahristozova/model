@@ -1,7 +1,7 @@
 ---
 uid: Applications.PersonalData.PersonalDataProcessRecipients
 ---
-# Applications.PersonalData.PersonalDataProcessRecipients
+# Applications.PersonalData.PersonalDataProcessRecipients Entity
 
 Contains recipients, to which personal data is disclosed. Entity: Pdm_Personal_Data_Process_Recipients (Introduced in version 18.2)
 

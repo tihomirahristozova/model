@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.AssetGroups
 ---
-# Finance.Assets.AssetGroups
+# Finance.Assets.AssetGroups Entity
 
 User-defined grouping of the assets. Entity: Ast_Asset_Groups
 

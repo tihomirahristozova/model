@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.Reminders
 ---
-# General.Contacts.Reminders
+# General.Contacts.Reminders Entity
 
 Reminders for activities. The reminders are alarms, which can be turned off. Each activity can have multiple reminders. Entity: Cm_Reminders
 

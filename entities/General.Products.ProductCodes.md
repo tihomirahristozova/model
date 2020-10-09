@@ -1,7 +1,7 @@
 ---
 uid: General.Products.ProductCodes
 ---
-# General.Products.ProductCodes
+# General.Products.ProductCodes Entity
 
 Additional product codes, categorized by coding systems. Entity: Gen_Product_Codes
 

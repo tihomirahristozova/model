@@ -1,7 +1,7 @@
 ---
 uid: Crm.Marketing.ProductDistributionChannels
 ---
-# Crm.Marketing.ProductDistributionChannels
+# Crm.Marketing.ProductDistributionChannels Entity
 
 Channel assignments (listing) for products. Entity: Crm_Product_Distribution_Channels
 

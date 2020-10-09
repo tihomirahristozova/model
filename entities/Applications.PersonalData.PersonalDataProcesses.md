@@ -1,7 +1,7 @@
 ---
 uid: Applications.PersonalData.PersonalDataProcesses
 ---
-# Applications.PersonalData.PersonalDataProcesses
+# Applications.PersonalData.PersonalDataProcesses Entity
 
 Represents processes, which process personal data, regulated by GDPR and other applicable laws. Entity: Pdm_Personal_Data_Processes (Introduced in version 18.2)
 

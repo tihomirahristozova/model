@@ -1,12 +1,11 @@
 ---
 uid: Crm.Distribution
 ---
-# Crm.Distribution
+# Crm.Distribution Namespace
 
-## Namespaces
 
 ## Entities
-- @Crm.Distribution.SalesPersonGroups  
-- @Crm.Distribution.SalesPersonTargetLines  
-- @Crm.Distribution.SalesPersonTargets  
+- [SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md)  
+- [SalesPersonTargetLines](Crm.Distribution.SalesPersonTargetLines.md)  
+- [SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)  
 

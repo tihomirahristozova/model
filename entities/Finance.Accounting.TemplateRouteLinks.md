@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.TemplateRouteLinks
 ---
-# Finance.Accounting.TemplateRouteLinks
+# Finance.Accounting.TemplateRouteLinks Entity
 
 When specified denotes that another route uses the template, initially bound to one route. Entity: Acc_Template_Route_Links
 

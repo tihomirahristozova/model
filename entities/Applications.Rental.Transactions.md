@@ -1,7 +1,7 @@
 ---
 uid: Applications.Rental.Transactions
 ---
-# Applications.Rental.Transactions
+# Applications.Rental.Transactions Entity
 
 Contains all transactions of Record of Handover / Handing-Over Record . Entity: Rent_Transactions
 

@@ -1,7 +1,7 @@
 ---
 uid: Applications.Rental.AssetGroups
 ---
-# Applications.Rental.AssetGroups
+# Applications.Rental.AssetGroups Entity
 
 Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Groups
 

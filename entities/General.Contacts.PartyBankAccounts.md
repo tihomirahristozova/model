@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.PartyBankAccounts
 ---
-# General.Contacts.PartyBankAccounts
+# General.Contacts.PartyBankAccounts Entity
 
 The bank accounts of a party. Entity: Gen_Party_Bank_Accounts
 

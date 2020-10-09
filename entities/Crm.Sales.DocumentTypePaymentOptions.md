@@ -1,7 +1,7 @@
 ---
 uid: Crm.Sales.DocumentTypePaymentOptions
 ---
-# Crm.Sales.DocumentTypePaymentOptions
+# Crm.Sales.DocumentTypePaymentOptions Entity
 
 Contains payment options for user documnet types for sales orders. Entity: Crm_Document_Type_Payment_Options
 

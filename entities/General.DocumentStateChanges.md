@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentStateChanges
 ---
-# General.DocumentStateChanges
+# General.DocumentStateChanges Entity
 
 History of document state changes. Entity: Gen_Document_State_Changes
 

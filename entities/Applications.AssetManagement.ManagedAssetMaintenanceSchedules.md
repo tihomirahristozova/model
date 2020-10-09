@@ -1,7 +1,7 @@
 ---
 uid: Applications.AssetManagement.ManagedAssetMaintenanceSchedules
 ---
-# Applications.AssetManagement.ManagedAssetMaintenanceSchedules
+# Applications.AssetManagement.ManagedAssetMaintenanceSchedules Entity
 
 Contains the maintenance schedules for the managed assets. Entity: Eam_Managed_Asset_Maintenance_Schedules (Introduced in version 19.1)
 

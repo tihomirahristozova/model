@@ -1,7 +1,7 @@
 ---
 uid: Projects.TemplateRisks
 ---
-# Projects.TemplateRisks
+# Projects.TemplateRisks Entity
 
 Contains project risks, which will be copied to projects, based on the template. Entity: Prj_Template_Risks
 

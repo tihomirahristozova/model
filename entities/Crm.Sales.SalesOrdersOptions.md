@@ -1,7 +1,7 @@
 ---
 uid: Crm.Sales.SalesOrdersOptions
 ---
-# Crm.Sales.SalesOrdersOptions
+# Crm.Sales.SalesOrdersOptions Entity
 
 Options for sales orders of specific user defined document type. Entity: Crm_Sales_Orders_Options
 

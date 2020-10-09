@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.AccessKeys
 ---
-# Systems.Security.AccessKeys
+# Systems.Security.AccessKeys Entity
 
 Access keys provide the basic locking mechanism for data security. Each record can be secured by specifying an access key. Then the users are given access to access keys through groups. Entity: Sec_Access_Keys
 

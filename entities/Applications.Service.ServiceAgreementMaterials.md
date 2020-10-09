@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceAgreementMaterials
 ---
-# Applications.Service.ServiceAgreementMaterials
+# Applications.Service.ServiceAgreementMaterials Entity
 
 Contains the free materials, included in the service agreement. Entity: Srv_Service_Agreement_Materials
 

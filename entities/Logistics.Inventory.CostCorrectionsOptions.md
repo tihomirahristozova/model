@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.CostCorrectionsOptions
 ---
-# Logistics.Inventory.CostCorrectionsOptions
+# Logistics.Inventory.CostCorrectionsOptions Entity
 
 Options per document type for the cost corrections. Entity: Inv_Cost_Corrections_Options
 

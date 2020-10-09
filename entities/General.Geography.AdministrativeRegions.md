@@ -1,7 +1,7 @@
 ---
 uid: General.Geography.AdministrativeRegions
 ---
-# General.Geography.AdministrativeRegions
+# General.Geography.AdministrativeRegions Entity
 
 Hierarchical structure of the legally defined administrative regions. Administrative regions are sub-divisions of the countries. Entity: Gen_Administrative_Regions
 

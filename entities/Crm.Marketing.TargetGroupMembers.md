@@ -1,7 +1,7 @@
 ---
 uid: Crm.Marketing.TargetGroupMembers
 ---
-# Crm.Marketing.TargetGroupMembers
+# Crm.Marketing.TargetGroupMembers Entity
 
 Member parties of a marketing target group. Entity: Crm_Target_Group_Members
 

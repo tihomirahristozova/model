@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.DistributionResults
 ---
-# Finance.Cost.DistributionResults
+# Finance.Cost.DistributionResults Entity
 
 Contains the results of a cost distribution calculation. Entity: Cost_Distribution_Results
 

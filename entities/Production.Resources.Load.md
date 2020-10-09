@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.Load
 ---
-# Production.Resources.Load
+# Production.Resources.Load Entity
 
 Contains scheduled operations usage of the resources. Entity: Prd_Load
 

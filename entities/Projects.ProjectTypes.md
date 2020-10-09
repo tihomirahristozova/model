@@ -1,7 +1,7 @@
 ---
 uid: Projects.ProjectTypes
 ---
-# Projects.ProjectTypes
+# Projects.ProjectTypes Entity
 
 Contains the types of projects, which can be executed by the enterprise company. Entity: Prj_Types
 

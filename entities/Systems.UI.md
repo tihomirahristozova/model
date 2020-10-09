@@ -1,10 +1,9 @@
 ---
 uid: Systems.UI
 ---
-# Systems.UI
+# Systems.UI Namespace
 
-## Namespaces
 
 ## Entities
-- @Systems.UI.FormLayouts  
+- [FormLayouts](Systems.UI.FormLayouts.md)  
 

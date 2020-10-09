@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.PurchaseInvoices
 ---
-# Logistics.Procurement.PurchaseInvoices
+# Logistics.Procurement.PurchaseInvoices Entity
 
 Contains purchase invoice headers. Entity: Scm_Purchase_Invoices
 

@@ -1,25 +1,24 @@
 ---
 uid: Logistics.Procurement
 ---
-# Logistics.Procurement
+# Logistics.Procurement Namespace
 
-## Namespaces
 
 ## Entities
-- @Logistics.Procurement.PurchaseControlDocumentLines  
-- @Logistics.Procurement.PurchaseControlDocuments  
-- @Logistics.Procurement.PurchaseInvoiceLines  
-- @Logistics.Procurement.PurchaseInvoices  
-- @Logistics.Procurement.PurchaseInvoicesOptions  
-- @Logistics.Procurement.PurchaseOperationTypes  
-- @Logistics.Procurement.PurchaseOrderLines  
-- @Logistics.Procurement.PurchaseOrders  
-- @Logistics.Procurement.PurchasePriceLists  
-- @Logistics.Procurement.PurchaseProductPrices  
-- @Logistics.Procurement.ReceivingOrderLines  
-- @Logistics.Procurement.ReceivingOrders  
-- @Logistics.Procurement.RequisitionLines  
-- @Logistics.Procurement.Requisitions  
-- @Logistics.Procurement.Suppliers  
-- @Logistics.Procurement.SupplierTypes  
+- [PurchaseControlDocumentLines](Logistics.Procurement.PurchaseControlDocumentLines.md)  
+- [PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)  
+- [PurchaseInvoiceLines](Logistics.Procurement.PurchaseInvoiceLines.md)  
+- [PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md)  
+- [PurchaseInvoicesOptions](Logistics.Procurement.PurchaseInvoicesOptions.md)  
+- [PurchaseOperationTypes](Logistics.Procurement.PurchaseOperationTypes.md)  
+- [PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md)  
+- [PurchaseOrders](Logistics.Procurement.PurchaseOrders.md)  
+- [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md)  
+- [PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md)  
+- [ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md)  
+- [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)  
+- [RequisitionLines](Logistics.Procurement.RequisitionLines.md)  
+- [Requisitions](Logistics.Procurement.Requisitions.md)  
+- [Suppliers](Logistics.Procurement.Suppliers.md)  
+- [SupplierTypes](Logistics.Procurement.SupplierTypes.md)  
 

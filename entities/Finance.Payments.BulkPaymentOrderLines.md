@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.BulkPaymentOrderLines
 ---
-# Finance.Payments.BulkPaymentOrderLines
+# Finance.Payments.BulkPaymentOrderLines Entity
 
 Bulk payment order document line. Each line usually creates one payment order. Entity: Cash_Bulk_Payment_Order_Lines
 

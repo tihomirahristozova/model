@@ -1,7 +1,7 @@
 ---
 uid: Applications.Rental.TransactionTemplates
 ---
-# Applications.Rental.TransactionTemplates
+# Applications.Rental.TransactionTemplates Entity
 
 Specifies additional options for document routes, generating Rental Transactions. Entity: Rent_Transaction_Templates
 

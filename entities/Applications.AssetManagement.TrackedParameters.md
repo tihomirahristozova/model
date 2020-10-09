@@ -1,7 +1,7 @@
 ---
 uid: Applications.AssetManagement.TrackedParameters
 ---
-# Applications.AssetManagement.TrackedParameters
+# Applications.AssetManagement.TrackedParameters Entity
 
 Parameters of assets, tracked for maintenance reasons, like car mileage, aircraft cycles, etc. Entity: Eam_Tracked_Parameters (Introduced in version 19.1)
 

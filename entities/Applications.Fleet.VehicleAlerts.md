@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.VehicleAlerts
 ---
-# Applications.Fleet.VehicleAlerts
+# Applications.Fleet.VehicleAlerts Entity
 
 Contains alerts, specific to one vehicle. Alerts are created based on many sources and stay active, until excplicitly hidden. Entity: Fleet_Vehicle_Alerts
 

@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.Stores
 ---
-# Logistics.Inventory.Stores
+# Logistics.Inventory.Stores Entity
 
 Represents the physical warehouses. Entity: Inv_Stores
 

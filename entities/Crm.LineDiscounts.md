@@ -1,7 +1,7 @@
 ---
 uid: Crm.LineDiscounts
 ---
-# Crm.LineDiscounts
+# Crm.LineDiscounts Entity
 
 Discount policies for sales documents. Entity: Crm_Line_Discounts
 

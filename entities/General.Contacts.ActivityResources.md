@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.ActivityResources
 ---
-# General.Contacts.ActivityResources
+# General.Contacts.ActivityResources Entity
 
 Contains the resources, allocated to the activities. Entity: Cm_Activity_Resources
 

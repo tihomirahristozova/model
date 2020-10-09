@@ -1,7 +1,7 @@
 ---
 uid: General.Resources.ResourceGroups
 ---
-# General.Resources.ResourceGroups
+# General.Resources.ResourceGroups Entity
 
 Resource groups categorize the resources. Entity: Gen_Resource_Groups
 

@@ -1,21 +1,20 @@
 ---
 uid: Applications.Rental
 ---
-# Applications.Rental
+# Applications.Rental Namespace
 
-## Namespaces
 
 ## Entities
-- @Applications.Rental.AssetConsumables  
-- @Applications.Rental.AssetGroups  
-- @Applications.Rental.Assets  
-- @Applications.Rental.AssetTypeConsumables  
-- @Applications.Rental.AssetTypeProperties  
-- @Applications.Rental.AssetTypes  
-- @Applications.Rental.LeaseContractLineConsumables  
-- @Applications.Rental.LeaseContractLines  
-- @Applications.Rental.LeaseContracts  
-- @Applications.Rental.TransactionLines  
-- @Applications.Rental.Transactions  
-- @Applications.Rental.TransactionTemplates  
+- [AssetConsumables](Applications.Rental.AssetConsumables.md)  
+- [AssetGroups](Applications.Rental.AssetGroups.md)  
+- [Assets](Applications.Rental.Assets.md)  
+- [AssetTypeConsumables](Applications.Rental.AssetTypeConsumables.md)  
+- [AssetTypeProperties](Applications.Rental.AssetTypeProperties.md)  
+- [AssetTypes](Applications.Rental.AssetTypes.md)  
+- [LeaseContractLineConsumables](Applications.Rental.LeaseContractLineConsumables.md)  
+- [LeaseContractLines](Applications.Rental.LeaseContractLines.md)  
+- [LeaseContracts](Applications.Rental.LeaseContracts.md)  
+- [TransactionLines](Applications.Rental.TransactionLines.md)  
+- [Transactions](Applications.Rental.Transactions.md)  
+- [TransactionTemplates](Applications.Rental.TransactionTemplates.md)  
 

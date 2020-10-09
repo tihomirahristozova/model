@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.PurchaseOrders
 ---
-# Logistics.Procurement.PurchaseOrders
+# Logistics.Procurement.PurchaseOrders Entity
 
 Contains purchase order headers. The purchase orders are documents, sent to a supplier, to inform him for an order of goods or services. Entity: Scm_Purchase_Orders
 

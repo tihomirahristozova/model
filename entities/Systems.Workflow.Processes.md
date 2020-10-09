@@ -1,7 +1,7 @@
 ---
 uid: Systems.Workflow.Processes
 ---
-# Systems.Workflow.Processes
+# Systems.Workflow.Processes Entity
 
 Contains the business process diagrams. Entity: Wf_Processes
 

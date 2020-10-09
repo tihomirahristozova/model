@@ -1,7 +1,7 @@
 ---
 uid: Crm.Pos.Devices
 ---
-# Crm.Pos.Devices
+# Crm.Pos.Devices Entity
 
 Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Introduced in version 19.1)
 

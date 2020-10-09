@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.UserBusinessRuleEvents
 ---
-# Systems.Bpm.UserBusinessRuleEvents
+# Systems.Bpm.UserBusinessRuleEvents Entity
 
 Represents event registration of a business rule. Entity: Sys_User_Business_Rule_Events
 

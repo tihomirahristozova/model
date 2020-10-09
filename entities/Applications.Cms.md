@@ -1,16 +1,15 @@
 ---
 uid: Applications.Cms
 ---
-# Applications.Cms
+# Applications.Cms Namespace
 
-## Namespaces
 
 ## Entities
-- @Applications.Cms.NewsWebModuleArticles  
-- @Applications.Cms.NewsWebModules  
-- @Applications.Cms.ProductCatalogWebModules  
-- @Applications.Cms.StaticWebModules  
-- @Applications.Cms.WebModules  
-- @Applications.Cms.WebSiteLanguages  
-- @Applications.Cms.WebSites  
+- [NewsWebModuleArticles](Applications.Cms.NewsWebModuleArticles.md)  
+- [NewsWebModules](Applications.Cms.NewsWebModules.md)  
+- [ProductCatalogWebModules](Applications.Cms.ProductCatalogWebModules.md)  
+- [StaticWebModules](Applications.Cms.StaticWebModules.md)  
+- [WebModules](Applications.Cms.WebModules.md)  
+- [WebSiteLanguages](Applications.Cms.WebSiteLanguages.md)  
+- [WebSites](Applications.Cms.WebSites.md)  
 

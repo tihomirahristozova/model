@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.Translations
 ---
-# Systems.Core.Translations
+# Systems.Core.Translations Entity
 
 Contains user-defined translations for non-english languages of the user interface and program messages. Entity: Sys_Translations
 

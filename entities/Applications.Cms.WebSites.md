@@ -1,7 +1,7 @@
 ---
 uid: Applications.Cms.WebSites
 ---
-# Applications.Cms.WebSites
+# Applications.Cms.WebSites Entity
 
 Contains the public web sites. Entity: Cms_Web_Sites
 

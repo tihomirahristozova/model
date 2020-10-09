@@ -1,7 +1,7 @@
 ---
 uid: Applications.Cms.ProductCatalogWebModules
 ---
-# Applications.Cms.ProductCatalogWebModules
+# Applications.Cms.ProductCatalogWebModules Entity
 
 A web module, which presents a whole product catalog. Entity: Cms_Product_Catalog_Web_Modules
 

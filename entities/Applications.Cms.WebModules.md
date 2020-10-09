@@ -1,7 +1,7 @@
 ---
 uid: Applications.Cms.WebModules
 ---
-# Applications.Cms.WebModules
+# Applications.Cms.WebModules Entity
 
 The abstract basic building block of web sites. Each module can render multiple web pages. Entity: Cms_Web_Modules
 

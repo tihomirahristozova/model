@@ -1,7 +1,7 @@
 ---
 uid: Crm.PromotionalPackages
 ---
-# Crm.PromotionalPackages
+# Crm.PromotionalPackages Entity
 
 Promotional packages are packages of products, which are sold together at a special pricing and discount conditions. Entity: Crm_Promotional_Packages
 

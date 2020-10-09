@@ -1,7 +1,7 @@
 ---
 uid: General.PrintoutLayouts
 ---
-# General.PrintoutLayouts
+# General.PrintoutLayouts Entity
 
 Contains design layouts for document printouts. Entity: Gen_Printout_Layouts
 

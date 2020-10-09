@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.Persons
 ---
-# General.Contacts.Persons
+# General.Contacts.Persons Entity
 
 Personal records. Requires related party record. Entity: Cm_Persons
 

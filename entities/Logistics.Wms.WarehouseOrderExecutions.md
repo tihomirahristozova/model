@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Wms.WarehouseOrderExecutions
 ---
-# Logistics.Wms.WarehouseOrderExecutions
+# Logistics.Wms.WarehouseOrderExecutions Entity
 
 Execution of a warehouse order line. Entity: Wms_Warehouse_Order_Executions (Introduced in version 20.1)
 

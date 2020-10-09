@@ -1,7 +1,7 @@
 ---
 uid: Applications.AssetManagement.ManagedAssetTypes
 ---
-# Applications.AssetManagement.ManagedAssetTypes
+# Applications.AssetManagement.ManagedAssetTypes Entity
 
 Types of managed assets. Used to categorize the assets and the tracked parameters for each type. Entity: Eam_Managed_Asset_Types (Introduced in version 19.1)
 

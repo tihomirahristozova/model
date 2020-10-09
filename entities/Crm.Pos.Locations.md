@@ -1,7 +1,7 @@
 ---
 uid: Crm.Pos.Locations
 ---
-# Crm.Pos.Locations
+# Crm.Pos.Locations Entity
 
 Defines a company location as POS enabled location. Entity: Pos_Locations (Introduced in version 19.1)
 

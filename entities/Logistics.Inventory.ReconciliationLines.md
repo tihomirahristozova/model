@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.ReconciliationLines
 ---
-# Logistics.Inventory.ReconciliationLines
+# Logistics.Inventory.ReconciliationLines Entity
 
 Store reconciliations (physical counting) detail lines. Each line contains the reconciliation for one combination of product, lot, bin and serial number. Entity: Inv_Reconciliation_Lines
 

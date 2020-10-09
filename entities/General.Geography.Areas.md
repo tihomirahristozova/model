@@ -1,7 +1,7 @@
 ---
 uid: General.Geography.Areas
 ---
-# General.Geography.Areas
+# General.Geography.Areas Entity
 
 Areas are user-defined division of the sales territories. Entity: Gen_Areas
 

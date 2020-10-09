@@ -1,7 +1,7 @@
 ---
 uid: Applications.DataWarehouse.DataValues
 ---
-# Applications.DataWarehouse.DataValues
+# Applications.DataWarehouse.DataValues Entity
 
 The actual values in the general data warehouse. Entity: Dw_Data_Values (Introduced in version 18.2)
 

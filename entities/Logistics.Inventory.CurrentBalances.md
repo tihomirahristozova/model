@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.CurrentBalances
 ---
-# Logistics.Inventory.CurrentBalances
+# Logistics.Inventory.CurrentBalances Entity
 
 The current inventory balances, grouped by storage key (Store, Product, Lot, etc.). Entity: Inv_Current_Balances
 

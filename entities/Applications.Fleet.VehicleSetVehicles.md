@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.VehicleSetVehicles
 ---
-# Applications.Fleet.VehicleSetVehicles
+# Applications.Fleet.VehicleSetVehicles Entity
 
 Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicles
 

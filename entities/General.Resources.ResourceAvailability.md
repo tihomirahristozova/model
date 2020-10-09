@@ -1,7 +1,7 @@
 ---
 uid: General.Resources.ResourceAvailability
 ---
-# General.Resources.ResourceAvailability
+# General.Resources.ResourceAvailability Entity
 
 Contains the resources availability for the different periods. Each period is a separate record. The availability of a resource for any given date is determined by the sum of all availability periods that include it. Entity: Gen_Resource_Availability
 

@@ -1,7 +1,7 @@
 ---
 uid: Crm.Sales.SalesOrderPaymentOrdersTemplates
 ---
-# Crm.Sales.SalesOrderPaymentOrdersTemplates
+# Crm.Sales.SalesOrderPaymentOrdersTemplates Entity
 
 Contains options for generation of payment orders. Each option set is assigned to specific generation route. Entity: Crm_Sales_Order_Payment_Orders_Templates
 

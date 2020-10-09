@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.PartyRelationshipTypes
 ---
-# General.Contacts.PartyRelationshipTypes
+# General.Contacts.PartyRelationshipTypes Entity
 
 Defines the types of relationships possible between the parties. Entity: Cm_Party_Relationship_Types
 

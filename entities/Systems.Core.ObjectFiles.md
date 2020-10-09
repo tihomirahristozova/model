@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.ObjectFiles
 ---
-# Systems.Core.ObjectFiles
+# Systems.Core.ObjectFiles Entity
 
 Contains files attached to objects. Entity: Sys_Object_Files
 

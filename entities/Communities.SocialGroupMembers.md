@@ -1,7 +1,7 @@
 ---
 uid: Communities.SocialGroupMembers
 ---
-# Communities.SocialGroupMembers
+# Communities.SocialGroupMembers Entity
 
 Represents the membership of a user in a social group. Entity: Cmm_Social_Group_Members (Introduced in version 20.1)
 

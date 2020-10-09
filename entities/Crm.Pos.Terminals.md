@@ -1,7 +1,7 @@
 ---
 uid: Crm.Pos.Terminals
 ---
-# Crm.Pos.Terminals
+# Crm.Pos.Terminals Entity
 
 Represents a POS workplace for 1 person, with all the attached devices. (Not to be confused with Payment Terminal, which is specific POS device). Entity: Pos_Terminals (Introduced in version 19.1)
 

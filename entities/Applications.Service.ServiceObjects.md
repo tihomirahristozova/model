@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceObjects
 ---
-# Applications.Service.ServiceObjects
+# Applications.Service.ServiceObjects Entity
 
 Contains the serviceable objects. The service objects can be covered by service agreements, serviced in service activities, etc. Entity: Srv_Service_Objects
 

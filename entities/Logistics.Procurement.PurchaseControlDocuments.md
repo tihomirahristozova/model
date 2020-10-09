@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.PurchaseControlDocuments
 ---
-# Logistics.Procurement.PurchaseControlDocuments
+# Logistics.Procurement.PurchaseControlDocuments Entity
 
 The main document for purchase control data. The purchase control is used to tally all orders and execuctions in the purchasing module. Entity: Scm_Purchase_Control_Documents (Introduced in version 18.2)
 

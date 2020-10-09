@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.ProcessConnections
 ---
-# Systems.Bpm.ProcessConnections
+# Systems.Bpm.ProcessConnections Entity
 
 Contains the connections between process elements. Part of the process model. Entity: Bpm_Process_Connections
 

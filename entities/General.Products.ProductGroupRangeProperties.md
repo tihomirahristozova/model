@@ -1,7 +1,7 @@
 ---
 uid: General.Products.ProductGroupRangeProperties
 ---
-# General.Products.ProductGroupRangeProperties
+# General.Products.ProductGroupRangeProperties Entity
 
 When specified for a product group, provides a way for automatical creation of new products, based on altering a set of values of some user-defined properties. Each value combination is used to create a new, unique product within the group. Entity: Gen_Product_Group_Range_Properties
 

@@ -1,7 +1,7 @@
 ---
 uid: Crm.Pos.Sequences
 ---
-# Crm.Pos.Sequences
+# Crm.Pos.Sequences Entity
 
 Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequences (Introduced in version 19.1)
 

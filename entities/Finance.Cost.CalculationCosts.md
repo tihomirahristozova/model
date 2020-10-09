@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.CalculationCosts
 ---
-# Finance.Cost.CalculationCosts
+# Finance.Cost.CalculationCosts Entity
 
 Contains the calculated costs allocated to the different Cost Types. Entity: Cost_Calculation_Costs
 

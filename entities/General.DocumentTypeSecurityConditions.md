@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentTypeSecurityConditions
 ---
-# General.DocumentTypeSecurityConditions
+# General.DocumentTypeSecurityConditions Entity
 
 Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_Security_Conditions
 

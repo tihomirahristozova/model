@@ -1,7 +1,7 @@
 ---
 uid: Systems.Workflow.Roles
 ---
-# Systems.Workflow.Roles
+# Systems.Workflow.Roles Entity
 
 The various roles, which the users can play. Entity: Wf_Roles
 

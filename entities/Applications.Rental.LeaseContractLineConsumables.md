@@ -1,7 +1,7 @@
 ---
 uid: Applications.Rental.LeaseContractLineConsumables
 ---
-# Applications.Rental.LeaseContractLineConsumables
+# Applications.Rental.LeaseContractLineConsumables Entity
 
 Contains the consumables, which are sold accompanying asset rentals. Entity: Rent_Lease_Contract_Line_Consumables
 

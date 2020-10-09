@@ -1,7 +1,7 @@
 ---
 uid: Production.Technologies.PrincipalRecipeOperations
 ---
-# Production.Technologies.PrincipalRecipeOperations
+# Production.Technologies.PrincipalRecipeOperations Entity
 
 Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_Operations
 

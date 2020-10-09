@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.Jobs
 ---
-# Systems.Core.Jobs
+# Systems.Core.Jobs Entity
 
 The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in version 20.1)
 

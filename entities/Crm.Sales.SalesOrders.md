@@ -1,7 +1,7 @@
 ---
 uid: Crm.Sales.SalesOrders
 ---
-# Crm.Sales.SalesOrders
+# Crm.Sales.SalesOrders Entity
 
 Sales order document headers. Entity: Crm_Sales_Orders
 

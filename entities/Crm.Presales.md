@@ -1,13 +1,12 @@
 ---
 uid: Crm.Presales
 ---
-# Crm.Presales
+# Crm.Presales Namespace
 
-## Namespaces
 
 ## Entities
-- @Crm.Presales.Deals  
-- @Crm.Presales.OfferLines  
-- @Crm.Presales.Offers  
-- @Crm.Presales.OffersOptions  
+- [Deals](Crm.Presales.Deals.md)  
+- [OfferLines](Crm.Presales.OfferLines.md)  
+- [Offers](Crm.Presales.Offers.md)  
+- [OffersOptions](Crm.Presales.OffersOptions.md)  
 

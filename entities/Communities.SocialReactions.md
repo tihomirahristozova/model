@@ -1,7 +1,7 @@
 ---
 uid: Communities.SocialReactions
 ---
-# Communities.SocialReactions
+# Communities.SocialReactions Entity
 
 Reaction of a user to any social comment to an object of the system. Entity: Cmm_Social_Reactions (Introduced in version 20.1)
 

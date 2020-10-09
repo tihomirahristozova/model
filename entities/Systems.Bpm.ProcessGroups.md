@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.ProcessGroups
 ---
-# Systems.Bpm.ProcessGroups
+# Systems.Bpm.ProcessGroups Entity
 
 Represents a node in the hierarchy of process groups. Entity: Bpm_Process_Groups
 

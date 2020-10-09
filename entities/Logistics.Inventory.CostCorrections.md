@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.CostCorrections
 ---
-# Logistics.Inventory.CostCorrections
+# Logistics.Inventory.CostCorrections Entity
 
 Cost corrections provide a way to correct the cost of stock transactions after they are issued. Entity: Inv_Cost_Corrections
 

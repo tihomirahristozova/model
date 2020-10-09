@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.CalculationProductOutputs
 ---
-# Finance.Cost.CalculationProductOutputs
+# Finance.Cost.CalculationProductOutputs Entity
 
 Represents costs allocated to product outputs. Entity: Cost_Calculation_Product_Outputs
 

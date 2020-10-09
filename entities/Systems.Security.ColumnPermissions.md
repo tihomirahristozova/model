@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.ColumnPermissions
 ---
-# Systems.Security.ColumnPermissions
+# Systems.Security.ColumnPermissions Entity
 
 User permissions for accessing the system data columns. Entity: Sec_Column_Permissions
 

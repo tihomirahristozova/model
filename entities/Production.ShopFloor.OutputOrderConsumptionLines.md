@@ -1,7 +1,7 @@
 ---
 uid: Production.ShopFloor.OutputOrderConsumptionLines
 ---
-# Production.ShopFloor.OutputOrderConsumptionLines
+# Production.ShopFloor.OutputOrderConsumptionLines Entity
 
 The internal production consumption of materials. Used only for control purposes - for comparison with the active consumption orders. Warehouse and accounting are still updated only by Consumption Orders. Entity: Prd_Output_Order_Consumption_Lines
 

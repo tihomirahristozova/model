@@ -1,7 +1,7 @@
 ---
 uid: Projects.Projects
 ---
-# Projects.Projects
+# Projects.Projects Entity
 
 Contains the planned, running and completed projects of the enterprises. Entity: Prj_Projects
 

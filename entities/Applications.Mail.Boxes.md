@@ -1,7 +1,7 @@
 ---
 uid: Applications.Mail.Boxes
 ---
-# Applications.Mail.Boxes
+# Applications.Mail.Boxes Entity
 
 Represents user mailboxes. Entity: Mail_Boxes
 

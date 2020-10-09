@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.PaymentTypes
 ---
-# Finance.Payments.PaymentTypes
+# Finance.Payments.PaymentTypes Entity
 
 Describes the way of payment. For example: in cash, by bank transfer, with credit card, etc. Entity: Cash_Payment_Types
 

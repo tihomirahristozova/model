@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.DepreciationMethods
 ---
-# Finance.Assets.DepreciationMethods
+# Finance.Assets.DepreciationMethods Entity
 
 Depreciation methods. Contains both system-defined and user-defined methods. Entity: Ast_Depreciation_Methods
 

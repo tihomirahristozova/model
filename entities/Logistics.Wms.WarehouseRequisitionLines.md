@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Wms.WarehouseRequisitionLines
 ---
-# Logistics.Wms.WarehouseRequisitionLines
+# Logistics.Wms.WarehouseRequisitionLines Entity
 
 Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requisition_Lines (Introduced in version 20.1)
 

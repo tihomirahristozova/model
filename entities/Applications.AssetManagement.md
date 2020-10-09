@@ -1,24 +1,23 @@
 ---
 uid: Applications.AssetManagement
 ---
-# Applications.AssetManagement
+# Applications.AssetManagement Namespace
 
-## Namespaces
 
 ## Entities
-- @Applications.AssetManagement.MaintenanceOrderLines  
-- @Applications.AssetManagement.MaintenanceOrders  
-- @Applications.AssetManagement.MaintenanceTypeGroups  
-- @Applications.AssetManagement.MaintenanceTypes  
-- @Applications.AssetManagement.ManagedAssetGroups  
-- @Applications.AssetManagement.ManagedAssetLocations  
-- @Applications.AssetManagement.ManagedAssetMaintenanceSchedules  
-- @Applications.AssetManagement.ManagedAssetParameterValues  
-- @Applications.AssetManagement.ManagedAssets  
-- @Applications.AssetManagement.ManagedAssetScheduledMaintenances  
-- @Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes  
-- @Applications.AssetManagement.ManagedAssetTypes  
-- @Applications.AssetManagement.ManagedAssetTypeTrackedParameters  
-- @Applications.AssetManagement.ServiceCenters  
-- @Applications.AssetManagement.TrackedParameters  
+- [MaintenanceOrderLines](Applications.AssetManagement.MaintenanceOrderLines.md)  
+- [MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)  
+- [MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md)  
+- [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)  
+- [ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md)  
+- [ManagedAssetLocations](Applications.AssetManagement.ManagedAssetLocations.md)  
+- [ManagedAssetMaintenanceSchedules](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md)  
+- [ManagedAssetParameterValues](Applications.AssetManagement.ManagedAssetParameterValues.md)  
+- [ManagedAssets](Applications.AssetManagement.ManagedAssets.md)  
+- [ManagedAssetScheduledMaintenances](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md)  
+- [ManagedAssetTypeMaintenanceTypes](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md)  
+- [ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)  
+- [ManagedAssetTypeTrackedParameters](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md)  
+- [ServiceCenters](Applications.AssetManagement.ServiceCenters.md)  
+- [TrackedParameters](Applications.AssetManagement.TrackedParameters.md)  
 

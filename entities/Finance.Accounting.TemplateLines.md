@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.TemplateLines
 ---
-# Finance.Accounting.TemplateLines
+# Finance.Accounting.TemplateLines Entity
 
 Each template line contains the posting to a single set of debit and credit account. It also specifies the way to calculate the amount. Entity: Acc_Template_Lines
 

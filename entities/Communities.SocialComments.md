@@ -1,7 +1,7 @@
 ---
 uid: Communities.SocialComments
 ---
-# Communities.SocialComments
+# Communities.SocialComments Entity
 
 User comment to any object in the system. Entity: Cmm_Social_Comments (Introduced in version 20.1)
 

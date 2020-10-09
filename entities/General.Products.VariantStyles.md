@@ -1,7 +1,7 @@
 ---
 uid: General.Products.VariantStyles
 ---
-# General.Products.VariantStyles
+# General.Products.VariantStyles Entity
 
 Contains the different styles, which can be assigned to product variants. Entity: Gen_Variant_Styles
 

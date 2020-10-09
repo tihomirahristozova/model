@@ -1,7 +1,7 @@
 ---
 uid: General.ProductCatalogs
 ---
-# General.ProductCatalogs
+# General.ProductCatalogs Entity
 
 Product catalogs serve to organize the products for display primarily in web pages. Entity: Gen_Product_Catalogs
 

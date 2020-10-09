@@ -1,7 +1,7 @@
 ---
 uid: Crm.Marketing.MarketingActivities
 ---
-# Crm.Marketing.MarketingActivities
+# Crm.Marketing.MarketingActivities Entity
 
 Marketing activity, part of a marketing campaign. Entity: Crm_Activities
 

@@ -1,11 +1,10 @@
 ---
 uid: Logistics.Inventory.DemandManagement
 ---
-# Logistics.Inventory.DemandManagement
+# Logistics.Inventory.DemandManagement Namespace
 
-## Namespaces
 
 ## Entities
-- @Logistics.Inventory.DemandManagement.AvailableToPromise  
-- @Logistics.Inventory.DemandManagement.AvailableToPromiseByLots  
+- [AvailableToPromise](Logistics.Inventory.DemandManagement.AvailableToPromise.md)  
+- [AvailableToPromiseByLots](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md)  
 

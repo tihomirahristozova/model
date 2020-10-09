@@ -1,7 +1,7 @@
 ---
 uid: Applications.Cms.NewsWebModuleArticles
 ---
-# Applications.Cms.NewsWebModuleArticles
+# Applications.Cms.NewsWebModuleArticles Entity
 
 Represents an article in a news web module. Entity: Cms_News_Web_Module_Articles
 

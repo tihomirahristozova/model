@@ -1,7 +1,7 @@
 ---
 uid: Crm.PriceTypes
 ---
-# Crm.PriceTypes
+# Crm.PriceTypes Entity
 
 Price types. Entity: Crm_Price_Types
 

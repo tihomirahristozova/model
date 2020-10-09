@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.GroupAccessKeys
 ---
-# Systems.Security.GroupAccessKeys
+# Systems.Security.GroupAccessKeys Entity
 
 Specifies the access keys for which the user groups have permissions. The existance of a record grants read permission. Additional permissions are granted through specialized fields. Entity: Sec_Group_Access_Keys
 

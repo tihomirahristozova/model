@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.StoreTransactions
 ---
-# Logistics.Inventory.StoreTransactions
+# Logistics.Inventory.StoreTransactions Entity
 
 Executed store-receipts(in) and store-issues(out). Store-issues are recorded with minus quantity. Entity: Inv_Transactions
 

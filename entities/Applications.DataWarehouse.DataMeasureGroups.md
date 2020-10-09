@@ -1,7 +1,7 @@
 ---
 uid: Applications.DataWarehouse.DataMeasureGroups
 ---
-# Applications.DataWarehouse.DataMeasureGroups
+# Applications.DataWarehouse.DataMeasureGroups Entity
 
 Contains the groups of measures in the general data warehouse. Entity: Dw_Data_Measure_Groups (Introduced in version 18.2)
 

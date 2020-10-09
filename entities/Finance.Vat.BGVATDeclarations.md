@@ -1,7 +1,7 @@
 ---
 uid: Finance.Vat.BGVATDeclarations
 ---
-# Finance.Vat.BGVATDeclarations
+# Finance.Vat.BGVATDeclarations Entity
 
 National data: Contains the VAT declarations, issued by the enterprise company, according to the Bulgarian legislation. Entity: Nat_BG_VAT_Declarations
 

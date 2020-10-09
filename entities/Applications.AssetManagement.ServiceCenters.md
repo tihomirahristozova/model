@@ -1,7 +1,7 @@
 ---
 uid: Applications.AssetManagement.ServiceCenters
 ---
-# Applications.AssetManagement.ServiceCenters
+# Applications.AssetManagement.ServiceCenters Entity
 
 Contains data about the service centers, which can maintain the assets. Entity: Eam_Service_Centers (Introduced in version 19.1)
 

@@ -1,7 +1,7 @@
 ---
 uid: Crm.Pricing.PricingModels
 ---
-# Crm.Pricing.PricingModels
+# Crm.Pricing.PricingModels Entity
 
 Pricing models are assigned to product groups and are used to automate creation of standard costs and prices and related price records. Entity: Crm_Pricing_Models
 

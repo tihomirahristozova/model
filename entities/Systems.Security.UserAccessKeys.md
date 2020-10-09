@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.UserAccessKeys
 ---
-# Systems.Security.UserAccessKeys
+# Systems.Security.UserAccessKeys Entity
 
 Obsolete. Not used. Entity: Sec_User_Access_Keys
 

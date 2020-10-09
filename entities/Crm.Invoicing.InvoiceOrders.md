@@ -1,7 +1,7 @@
 ---
 uid: Crm.Invoicing.InvoiceOrders
 ---
-# Crm.Invoicing.InvoiceOrders
+# Crm.Invoicing.InvoiceOrders Entity
 
 Invoice Orders can be created by different modules and order the creation of Invoices. Entity: Crm_Invoice_Orders
 

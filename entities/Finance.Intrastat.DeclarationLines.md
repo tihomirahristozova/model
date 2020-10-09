@@ -1,7 +1,7 @@
 ---
 uid: Finance.Intrastat.DeclarationLines
 ---
-# Finance.Intrastat.DeclarationLines
+# Finance.Intrastat.DeclarationLines Entity
 
 Contains the details of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declaration_Lines
 

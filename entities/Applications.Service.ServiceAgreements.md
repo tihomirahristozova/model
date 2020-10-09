@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceAgreements
 ---
-# Applications.Service.ServiceAgreements
+# Applications.Service.ServiceAgreements Entity
 
 Service agreements represent SLAs between the enterprise company and its clients. Entity: Srv_Service_Agreements
 

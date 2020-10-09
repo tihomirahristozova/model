@@ -1,7 +1,7 @@
 ---
 uid: Crm.Sales.SalesOrderPromotionalPackages
 ---
-# Crm.Sales.SalesOrderPromotionalPackages
+# Crm.Sales.SalesOrderPromotionalPackages Entity
 
 The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Promotional_Packages
 

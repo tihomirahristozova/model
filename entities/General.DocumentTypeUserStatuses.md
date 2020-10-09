@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentTypeUserStatuses
 ---
-# General.DocumentTypeUserStatuses
+# General.DocumentTypeUserStatuses Entity
 
 User-defined document statuses. Entity: Gen_Document_Type_User_Statuses
 

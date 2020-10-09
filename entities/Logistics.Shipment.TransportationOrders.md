@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Shipment.TransportationOrders
 ---
-# Logistics.Shipment.TransportationOrders
+# Logistics.Shipment.TransportationOrders Entity
 
 Transportation ordered to specific carrier or vehicle. Entity: Log_Transportation_Orders
 

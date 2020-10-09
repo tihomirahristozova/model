@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.Trips
 ---
-# Applications.Fleet.Trips
+# Applications.Fleet.Trips Entity
 
 Represents actual trip made by the vehicles. Entity: Fleet_Trips
 

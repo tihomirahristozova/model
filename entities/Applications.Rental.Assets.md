@@ -1,7 +1,7 @@
 ---
 uid: Applications.Rental.Assets
 ---
-# Applications.Rental.Assets
+# Applications.Rental.Assets Entity
 
 Contains the rentable assets. Entity: Rent_Assets
 

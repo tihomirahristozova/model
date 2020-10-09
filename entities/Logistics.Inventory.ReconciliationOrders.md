@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.ReconciliationOrders
 ---
-# Logistics.Inventory.ReconciliationOrders
+# Logistics.Inventory.ReconciliationOrders Entity
 
 Obsolete. Not used. (Orders for store reconciliations. After an order is executed, store reconciliation is created). Entity: Inv_Reconciliation_Orders
 

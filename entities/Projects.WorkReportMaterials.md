@@ -1,7 +1,7 @@
 ---
 uid: Projects.WorkReportMaterials
 ---
-# Projects.WorkReportMaterials
+# Projects.WorkReportMaterials Entity
 
 Each record contains a consumed material, reported by the related Work Report. Entity: Prj_Work_Report_Materials
 

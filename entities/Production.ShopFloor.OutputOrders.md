@@ -1,7 +1,7 @@
 ---
 uid: Production.ShopFloor.OutputOrders
 ---
-# Production.ShopFloor.OutputOrders
+# Production.ShopFloor.OutputOrders Entity
 
 Stores the output and run-time of the work orders. Entity: Prd_Output_Orders
 

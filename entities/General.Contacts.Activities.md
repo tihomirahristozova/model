@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.Activities
 ---
-# General.Contacts.Activities
+# General.Contacts.Activities Entity
 
 Generic activity. Provides task management functionality. Activity can be one of Task, Communication or Meeting. Entity: Cm_Activities
 

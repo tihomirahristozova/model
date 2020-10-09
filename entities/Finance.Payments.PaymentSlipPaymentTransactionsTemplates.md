@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.PaymentSlipPaymentTransactionsTemplates
 ---
-# Finance.Payments.PaymentSlipPaymentTransactionsTemplates
+# Finance.Payments.PaymentSlipPaymentTransactionsTemplates Entity
 
 Contains options for generation of payment transactions. Each option set is assigned to specific generation route. Entity: Cash_Payment_Slip_Payment_Transactions_Templates (Introduced in version 19.1)
 

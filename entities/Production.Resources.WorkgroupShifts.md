@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.WorkgroupShifts
 ---
-# Production.Resources.WorkgroupShifts
+# Production.Resources.WorkgroupShifts Entity
 
 Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts
 

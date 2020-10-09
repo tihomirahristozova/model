@@ -1,7 +1,7 @@
 ---
 uid: General.Documents
 ---
-# General.Documents
+# General.Documents Entity
 
 Contains all documents issued by and to the enterprise
 

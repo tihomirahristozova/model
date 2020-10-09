@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.OperationInstructions
 ---
-# Production.Resources.OperationInstructions
+# Production.Resources.OperationInstructions Entity
 
 Long (full) instructions for performing an operation. The operations point to the instructions and one instruction can be used for different operations. Entity: Prd_Operation_Instructions
 

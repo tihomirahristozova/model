@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.Companies
 ---
-# General.Contacts.Companies
+# General.Contacts.Companies Entity
 
 Contains company definitions. Entity: Cm_Companies
 

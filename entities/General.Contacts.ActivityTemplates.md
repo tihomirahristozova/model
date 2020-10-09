@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.ActivityTemplates
 ---
-# General.Contacts.ActivityTemplates
+# General.Contacts.ActivityTemplates Entity
 
 Templates for automatical generation of activity from any document. Entity: Cm_Activity_Templates
 

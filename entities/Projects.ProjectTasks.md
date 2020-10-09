@@ -1,7 +1,7 @@
 ---
 uid: Projects.ProjectTasks
 ---
-# Projects.ProjectTasks
+# Projects.ProjectTasks Entity
 
 Represents one task of a project. Entity: Prj_Project_Tasks
 

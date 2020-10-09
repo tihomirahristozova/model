@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.Workgroups
 ---
-# Production.Resources.Workgroups
+# Production.Resources.Workgroups Entity
 
 Production workgroups. Entity: Prd_Workgroups
 

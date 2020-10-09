@@ -1,7 +1,7 @@
 ---
 uid: Finance.Intrastat.Declarations
 ---
-# Finance.Intrastat.Declarations
+# Finance.Intrastat.Declarations Entity
 
 Contains the headers of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declarations
 

@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.AccountingVouchers
 ---
-# Finance.Accounting.AccountingVouchers
+# Finance.Accounting.AccountingVouchers Entity
 
 Contains the accounting vouchers (postings) in the general ledger. Entity: Acc_Vouchers
 

@@ -1,7 +1,7 @@
 ---
 uid: Production.ShopFloor.WorkOrderItemIngredients
 ---
-# Production.ShopFloor.WorkOrderItemIngredients
+# Production.ShopFloor.WorkOrderItemIngredients Entity
 
 The materials consumed in the production order operations. Entity: Prd_Work_Order_Item_Ingredients
 

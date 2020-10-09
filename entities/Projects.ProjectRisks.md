@@ -1,7 +1,7 @@
 ---
 uid: Projects.ProjectRisks
 ---
-# Projects.ProjectRisks
+# Projects.ProjectRisks Entity
 
 Contains risks, associated to projects. Entity: Prj_Project_Risks
 

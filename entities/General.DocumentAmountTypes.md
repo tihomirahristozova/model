@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentAmountTypes
 ---
-# General.DocumentAmountTypes
+# General.DocumentAmountTypes Entity
 
 Represents the different types of additional amounts which are calculated for the documents. Entity: Gen_Document_Amount_Types
 

@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentAmounts
 ---
-# General.DocumentAmounts
+# General.DocumentAmounts Entity
 
 Contains a specific instance of an additional amount for a specific document. Entity: Gen_Document_Amounts
 

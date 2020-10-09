@@ -1,7 +1,7 @@
 ---
 uid: Crm.ProductPrices
 ---
-# Crm.ProductPrices
+# Crm.ProductPrices Entity
 
 Specific prices of products. A price is applied after matching the specified criteria. Entity: Crm_Product_Prices
 

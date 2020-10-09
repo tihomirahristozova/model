@@ -1,7 +1,7 @@
 ---
 uid: Projects.TypeWorkTypes
 ---
-# Projects.TypeWorkTypes
+# Projects.TypeWorkTypes Entity
 
 Contains the work types, that can be performed in projects of this project type. Entity: Prj_Type_Work_Types
 

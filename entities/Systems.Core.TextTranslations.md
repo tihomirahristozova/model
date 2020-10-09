@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.TextTranslations
 ---
-# Systems.Core.TextTranslations
+# Systems.Core.TextTranslations Entity
 
 Obsolete. Not used. Entity: Gen_Text_Translations
 

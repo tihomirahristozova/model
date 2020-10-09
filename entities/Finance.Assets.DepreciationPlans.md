@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.DepreciationPlans
 ---
-# Finance.Assets.DepreciationPlans
+# Finance.Assets.DepreciationPlans Entity
 
 Each depreciation plan document can create depreciation plans for numerous assets. Entity: Ast_Depreciation_Plans
 

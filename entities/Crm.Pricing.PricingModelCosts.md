@@ -1,7 +1,7 @@
 ---
 uid: Crm.Pricing.PricingModelCosts
 ---
-# Crm.Pricing.PricingModelCosts
+# Crm.Pricing.PricingModelCosts Entity
 
 List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs
 

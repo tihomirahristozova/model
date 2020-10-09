@@ -1,7 +1,7 @@
 ---
 uid: Crm.Invoicing.Invoices
 ---
-# Crm.Invoicing.Invoices
+# Crm.Invoicing.Invoices Entity
 
 Invoices issued by the enterprise companies. Entity: Crm_Invoices
 

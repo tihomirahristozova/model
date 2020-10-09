@@ -1,7 +1,7 @@
 ---
 uid: General.Reports
 ---
-# General.Reports
+# General.Reports Entity
 
 Contains user-defined data-sources. The data sources is a user-defined way (similar to query designer) to extract, filter, join and transform data for presentation purposes. Entity: Gen_Reports
 

@@ -1,7 +1,7 @@
 ---
 uid: Applications.Mail.BoxFolders
 ---
-# Applications.Mail.BoxFolders
+# Applications.Mail.BoxFolders Entity
 
 Contains the folders inside the mailboxes. Entity: Mail_Box_Folders
 

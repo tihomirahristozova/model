@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.AssetOrderLines
 ---
-# Finance.Assets.AssetOrderLines
+# Finance.Assets.AssetOrderLines Entity
 
 Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines
 

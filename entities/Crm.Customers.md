@@ -1,7 +1,7 @@
 ---
 uid: Crm.Customers
 ---
-# Crm.Customers
+# Crm.Customers Entity
 
 Customer contracts list. For each combination of Enterprise Company and external Party there can be zero or one records of this. Entity: Crm_Customers
 

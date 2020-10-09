@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Wms.WarehouseRequisitions
 ---
-# Logistics.Wms.WarehouseRequisitions
+# Logistics.Wms.WarehouseRequisitions Entity
 
 Contains request for warehouse operation created from another module. Entity: Wms_Warehouse_Requisitions (Introduced in version 20.1)
 

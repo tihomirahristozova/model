@@ -1,7 +1,7 @@
 ---
 uid: Crm.SalesPersons
 ---
-# Crm.SalesPersons
+# Crm.SalesPersons Entity
 
 Sales persons (or representatives) are sellers inside the enterprise company who sell the products to customers. Entity: Crm_Sales_Persons
 

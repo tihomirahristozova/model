@@ -1,7 +1,7 @@
 ---
 uid: General.LinkTypes
 ---
-# General.LinkTypes
+# General.LinkTypes Entity
 
 Obsolete. Not used. Entity: Gen_Link_Types
 

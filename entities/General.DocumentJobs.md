@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentJobs
 ---
-# General.DocumentJobs
+# General.DocumentJobs Entity
 
 Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Introduced in version 20.1)
 

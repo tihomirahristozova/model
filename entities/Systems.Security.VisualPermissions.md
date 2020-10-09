@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.VisualPermissions
 ---
-# Systems.Security.VisualPermissions
+# Systems.Security.VisualPermissions Entity
 
 Contains permissions, which are honored only by client applications and are used to provide access to (primarily show/hide) different elements of the user interface. Entity: Sec_Visual_Permissions
 

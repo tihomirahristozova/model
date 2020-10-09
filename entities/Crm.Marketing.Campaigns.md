@@ -1,7 +1,7 @@
 ---
 uid: Crm.Marketing.Campaigns
 ---
-# Crm.Marketing.Campaigns
+# Crm.Marketing.Campaigns Entity
 
 Marketing campaigns. Used to treat target groups with marketing messages, plan budgets and marketing activities. Entity: Crm_Campaigns
 

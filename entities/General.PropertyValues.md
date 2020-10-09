@@ -1,7 +1,7 @@
 ---
 uid: General.PropertyValues
 ---
-# General.PropertyValues
+# General.PropertyValues Entity
 
 The actual values of the user-defined properties for each actual entity. Entity: Gen_Property_Values
 

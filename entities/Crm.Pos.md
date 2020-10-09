@@ -1,16 +1,15 @@
 ---
 uid: Crm.Pos
 ---
-# Crm.Pos
+# Crm.Pos Namespace
 
-## Namespaces
 
 ## Entities
-- @Crm.Pos.Devices  
-- @Crm.Pos.Locations  
-- @Crm.Pos.Operators  
-- @Crm.Pos.ProductTypeTaxGroups  
-- @Crm.Pos.Roles  
-- @Crm.Pos.Sequences  
-- @Crm.Pos.Terminals  
+- [Devices](Crm.Pos.Devices.md)  
+- [Locations](Crm.Pos.Locations.md)  
+- [Operators](Crm.Pos.Operators.md)  
+- [ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md)  
+- [Roles](Crm.Pos.Roles.md)  
+- [Sequences](Crm.Pos.Sequences.md)  
+- [Terminals](Crm.Pos.Terminals.md)  
 

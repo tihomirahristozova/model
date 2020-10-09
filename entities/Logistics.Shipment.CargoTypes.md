@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Shipment.CargoTypes
 ---
-# Logistics.Shipment.CargoTypes
+# Logistics.Shipment.CargoTypes Entity
 
 Represents a cargo type. Different cargo types might require different types of vehicles or modes of transportartion. Entity: Log_Cargo_Types
 

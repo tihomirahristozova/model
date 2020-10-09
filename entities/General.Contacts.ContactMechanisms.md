@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.ContactMechanisms
 ---
-# General.Contacts.ContactMechanisms
+# General.Contacts.ContactMechanisms Entity
 
 Contains contacting mechanisms - telephone numbers, addresses, web sites, etc. Contact mechanisms can be attached to parties. Currently each contact mechanism is attached to strictly one party. Entity: Cm_Contact_Mechanisms
 

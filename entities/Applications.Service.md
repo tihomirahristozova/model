@@ -1,25 +1,24 @@
 ---
 uid: Applications.Service
 ---
-# Applications.Service
+# Applications.Service Namespace
 
-## Namespaces
 
 ## Entities
-- @Applications.Service.ServiceActivities  
-- @Applications.Service.ServiceActivityAgreedMaterials  
-- @Applications.Service.ServiceActivityAgreedServices  
-- @Applications.Service.ServiceActivityMaterials  
-- @Applications.Service.ServiceActivityServices  
-- @Applications.Service.ServiceAgreementLines  
-- @Applications.Service.ServiceAgreementMaterials  
-- @Applications.Service.ServiceAgreements  
-- @Applications.Service.ServiceAgreementServices  
-- @Applications.Service.ServiceInvoicing  
-- @Applications.Service.ServiceObjects  
-- @Applications.Service.ServiceObjectTypes  
-- @Applications.Service.ServiceOrderLines  
-- @Applications.Service.ServiceOrders  
-- @Applications.Service.Services  
-- @Applications.Service.ServiceTypes  
+- [ServiceActivities](Applications.Service.ServiceActivities.md)  
+- [ServiceActivityAgreedMaterials](Applications.Service.ServiceActivityAgreedMaterials.md)  
+- [ServiceActivityAgreedServices](Applications.Service.ServiceActivityAgreedServices.md)  
+- [ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md)  
+- [ServiceActivityServices](Applications.Service.ServiceActivityServices.md)  
+- [ServiceAgreementLines](Applications.Service.ServiceAgreementLines.md)  
+- [ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md)  
+- [ServiceAgreements](Applications.Service.ServiceAgreements.md)  
+- [ServiceAgreementServices](Applications.Service.ServiceAgreementServices.md)  
+- [ServiceInvoicing](Applications.Service.ServiceInvoicing.md)  
+- [ServiceObjects](Applications.Service.ServiceObjects.md)  
+- [ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md)  
+- [ServiceOrderLines](Applications.Service.ServiceOrderLines.md)  
+- [ServiceOrders](Applications.Service.ServiceOrders.md)  
+- [Services](Applications.Service.Services.md)  
+- [ServiceTypes](Applications.Service.ServiceTypes.md)  
 

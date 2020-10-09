@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.ProcessInstances
 ---
-# Systems.Bpm.ProcessInstances
+# Systems.Bpm.ProcessInstances Entity
 
 Contains the running instances of the processes. Entity: Bpm_Process_Instances
 

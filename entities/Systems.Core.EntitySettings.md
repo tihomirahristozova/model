@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.EntitySettings
 ---
-# Systems.Core.EntitySettings
+# Systems.Core.EntitySettings Entity
 
 Contains entities, which have secured access. Entity: Sys_Entities
 

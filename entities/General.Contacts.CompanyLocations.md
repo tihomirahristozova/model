@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.CompanyLocations
 ---
-# General.Contacts.CompanyLocations
+# General.Contacts.CompanyLocations Entity
 
 Stores company locations. The locations are parties and as such, can be organized hierarchically mixed with other structuring mechanisms. The locations, departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Locations
 

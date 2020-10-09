@@ -1,7 +1,7 @@
 ---
 uid: General.Currencies
 ---
-# General.Currencies
+# General.Currencies Entity
 
 List of user-defined currencies. Entity: Gen_Currencies
 

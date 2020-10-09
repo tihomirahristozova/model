@@ -1,7 +1,7 @@
 ---
 uid: General.Products.CodingSystems
 ---
-# General.Products.CodingSystems
+# General.Products.CodingSystems Entity
 
 Coding systems categorize additional product codes. Entity: Gen_Coding_Systems
 

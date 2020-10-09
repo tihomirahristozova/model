@@ -1,7 +1,7 @@
 ---
 uid: Applications.AssetManagement.ManagedAssetLocations
 ---
-# Applications.AssetManagement.ManagedAssetLocations
+# Applications.AssetManagement.ManagedAssetLocations Entity
 
 Contains the locations to which the assets are assigned at various moments in time. Entity: Eam_Managed_Asset_Locations (Introduced in version 19.1)
 

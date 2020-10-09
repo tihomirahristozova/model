@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.DistributionCosts
 ---
-# Finance.Cost.DistributionCosts
+# Finance.Cost.DistributionCosts Entity
 
 The cost types and their amounts which are distributed by a Cost Distribution document. Entity: Cost_Distribution_Costs
 

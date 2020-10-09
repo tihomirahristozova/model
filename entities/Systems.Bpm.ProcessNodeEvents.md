@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.ProcessNodeEvents
 ---
-# Systems.Bpm.ProcessNodeEvents
+# Systems.Bpm.ProcessNodeEvents Entity
 
 Abstract root of all process node events. Currently - not used. Entity: Bpm_Process_Node_Events
 

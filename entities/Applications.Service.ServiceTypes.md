@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceTypes
 ---
-# Applications.Service.ServiceTypes
+# Applications.Service.ServiceTypes Entity
 
 Service levels. Entity: Srv_Service_Types
 

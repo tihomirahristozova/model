@@ -1,7 +1,7 @@
 ---
 uid: Crm.Sales.DefaultSalesOrderDocumentProperties
 ---
-# Crm.Sales.DefaultSalesOrderDocumentProperties
+# Crm.Sales.DefaultSalesOrderDocumentProperties Entity
 
 User-defined properties which shall be copied from the customer to the document for new documents of the specified document type. Entity: Crm_Default_Sales_Order_Document_Properties
 

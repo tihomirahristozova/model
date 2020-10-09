@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.ObjectChangesets
 ---
-# Systems.Core.ObjectChangesets
+# Systems.Core.ObjectChangesets Entity
 
 A set of changes, performed in one request. Entity: Sys_Object_Changesets (Introduced in version 19.1)
 

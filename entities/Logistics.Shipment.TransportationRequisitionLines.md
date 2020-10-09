@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Shipment.TransportationRequisitionLines
 ---
-# Logistics.Shipment.TransportationRequisitionLines
+# Logistics.Shipment.TransportationRequisitionLines Entity
 
 One line in a client requisition for transportation. Different lines usually represent requisitions for different cargo types. Entity: Log_Transportation_Requisition_Lines
 

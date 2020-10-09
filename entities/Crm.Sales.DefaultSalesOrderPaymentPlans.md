@@ -1,7 +1,7 @@
 ---
 uid: Crm.Sales.DefaultSalesOrderPaymentPlans
 ---
-# Crm.Sales.DefaultSalesOrderPaymentPlans
+# Crm.Sales.DefaultSalesOrderPaymentPlans Entity
 
 Default payment plan for new documents of the specified document type. Entity: Crm_Default_Sales_Order_Payment_Plans
 

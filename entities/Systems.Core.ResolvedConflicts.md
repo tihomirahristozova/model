@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.ResolvedConflicts
 ---
-# Systems.Core.ResolvedConflicts
+# Systems.Core.ResolvedConflicts Entity
 
 Contains records of conflicts, which were automatically resolved by update procedures. Entity: Sys_Resolved_Conflicts
 

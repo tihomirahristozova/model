@@ -1,15 +1,13 @@
 # ErpNet Entities
 
 ## Namespaces
-- @Applications  
-- @Communities  
-- @Crm  
-- @Finance  
-- @General  
-- @Logistics  
-- @Production  
-- @Projects  
-- @Systems  
-
-## Entities
+- [Applications](Applications.md)  
+- [Communities](Communities.md)  
+- [Crm](Crm.md)  
+- [Finance](Finance.md)  
+- [General](General.md)  
+- [Logistics](Logistics.md)  
+- [Production](Production.md)  
+- [Projects](Projects.md)  
+- [Systems](Systems.md)  
 

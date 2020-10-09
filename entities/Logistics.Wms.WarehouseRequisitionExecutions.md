@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Wms.WarehouseRequisitionExecutions
 ---
-# Logistics.Wms.WarehouseRequisitionExecutions
+# Logistics.Wms.WarehouseRequisitionExecutions Entity
 
 Execution ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition_Executions (Introduced in version 20.1)
 

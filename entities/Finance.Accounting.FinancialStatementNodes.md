@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.FinancialStatementNodes
 ---
-# Finance.Accounting.FinancialStatementNodes
+# Finance.Accounting.FinancialStatementNodes Entity
 
 Contains the hierarchical structure of the user-defined financial statements. Entity: Acc_Financial_Statement_Nodes
 

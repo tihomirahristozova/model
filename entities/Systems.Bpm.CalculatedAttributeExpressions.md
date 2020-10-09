@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.CalculatedAttributeExpressions
 ---
-# Systems.Bpm.CalculatedAttributeExpressions
+# Systems.Bpm.CalculatedAttributeExpressions Entity
 
 Represent an expression within the calculation of a calculated attribute. Entity: Sys_Calculated_Attribute_Expressions
 

@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.AuditLogEntries
 ---
-# Systems.Core.AuditLogEntries
+# Systems.Core.AuditLogEntries Entity
 
 Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log_Entries (Introduced in version 18.2)
 

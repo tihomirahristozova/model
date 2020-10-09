@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.Vehicles
 ---
-# Applications.Fleet.Vehicles
+# Applications.Fleet.Vehicles Entity
 
 Contains vehicle definitions. Entity: Fleet_Vehicles
 

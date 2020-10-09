@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.SerialNumbers
 ---
-# Logistics.Inventory.SerialNumbers
+# Logistics.Inventory.SerialNumbers Entity
 
 Serial numbers, used by the items. Rows are created on first occurrence of the serial number in a document. Rows can be deleted after deleting the last occurence of the serial number in a document. Entity: Inv_Serial_Numbers
 

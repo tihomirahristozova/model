@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.AllocationModels
 ---
-# Finance.Cost.AllocationModels
+# Finance.Cost.AllocationModels Entity
 
 User-defined models for cost allocation. Entity: Cost_Allocation_Models
 

@@ -1,7 +1,7 @@
 ---
 uid: Crm.Pos.Operators
 ---
-# Crm.Pos.Operators
+# Crm.Pos.Operators Entity
 
 Represents one operator (person) in one POS location. Entity: Pos_Operators (Introduced in version 19.1)
 

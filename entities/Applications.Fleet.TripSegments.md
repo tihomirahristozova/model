@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.TripSegments
 ---
-# Applications.Fleet.TripSegments
+# Applications.Fleet.TripSegments Entity
 
 Represents the segments which comprise the route of the trips. Entity: Fleet_Trip_Segments
 

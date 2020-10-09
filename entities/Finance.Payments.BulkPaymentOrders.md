@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.BulkPaymentOrders
 ---
-# Finance.Payments.BulkPaymentOrders
+# Finance.Payments.BulkPaymentOrders Entity
 
 Bulk payment orders document. Can generate a multitude of payment orders. Often used for opening balances. Entity: Cash_Bulk_Payment_Orders
 

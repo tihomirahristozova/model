@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.VehicleObdTroubles
 ---
-# Applications.Fleet.VehicleObdTroubles
+# Applications.Fleet.VehicleObdTroubles Entity
 
 Contains troubles, reported by the on-board diagnostics (OBD) of the vehicle. Entity: Fleet_Vehicle_Obd_Troubles
 

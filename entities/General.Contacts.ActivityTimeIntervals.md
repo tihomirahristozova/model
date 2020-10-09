@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.ActivityTimeIntervals
 ---
-# General.Contacts.ActivityTimeIntervals
+# General.Contacts.ActivityTimeIntervals Entity
 
 History of work efforts for executing activities (timesheet). Entity: Cm_Activity_Time_Intervals
 

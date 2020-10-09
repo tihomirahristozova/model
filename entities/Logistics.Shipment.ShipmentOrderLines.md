@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Shipment.ShipmentOrderLines
 ---
-# Logistics.Shipment.ShipmentOrderLines
+# Logistics.Shipment.ShipmentOrderLines Entity
 
 Represents detail lines of orders for shipment of sales orders to customers. Each line orders the shipment of one product. Entity: Log_Shipment_Order_Lines
 

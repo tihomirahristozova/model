@@ -1,7 +1,7 @@
 ---
 uid: Crm.PromotionalPackageLines
 ---
-# Crm.PromotionalPackageLines
+# Crm.PromotionalPackageLines Entity
 
 Detail records (lines) of promotional package definition. Entity: Crm_Promotional_Package_Lines
 

@@ -1,7 +1,7 @@
 ---
 uid: Production.ShopFloor.ConsumptionOrderLines
 ---
-# Production.ShopFloor.ConsumptionOrderLines
+# Production.ShopFloor.ConsumptionOrderLines Entity
 
 Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_Lines
 

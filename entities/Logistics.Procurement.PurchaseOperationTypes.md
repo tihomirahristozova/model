@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.PurchaseOperationTypes
 ---
-# Logistics.Procurement.PurchaseOperationTypes
+# Logistics.Procurement.PurchaseOperationTypes Entity
 
 User-defined categorization of the purchase operations. Used to group the purchase control data. Entity: Scm_Purchase_Operation_Types (Introduced in version 18.2)
 

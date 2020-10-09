@@ -1,7 +1,7 @@
 ---
 uid: Applications.Telephony.CallDetails
 ---
-# Applications.Telephony.CallDetails
+# Applications.Telephony.CallDetails Entity
 
 Contains call detail records. Calls are phone calls, video calls and SMS messages. Entity: Cm_Call_Details
 

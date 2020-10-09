@@ -1,7 +1,7 @@
 ---
 uid: Applications.Mail.MessageAttachments
 ---
-# Applications.Mail.MessageAttachments
+# Applications.Mail.MessageAttachments Entity
 
 Represents attachments to mail messages. Entity: Mail_Message_Attachments
 

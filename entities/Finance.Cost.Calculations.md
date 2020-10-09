@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.Calculations
 ---
-# Finance.Cost.Calculations
+# Finance.Cost.Calculations Entity
 
 Represents one cost calculation and allocation. Entity: Cost_Calculations
 

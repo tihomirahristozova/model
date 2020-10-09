@@ -1,7 +1,7 @@
 ---
 uid: Projects.TemplateWorkElements
 ---
-# Projects.TemplateWorkElements
+# Projects.TemplateWorkElements Entity
 
 Contains project work elements, which shall be copied to projects, based on the specified template. Entity: Prj_Template_Work_Elements
 

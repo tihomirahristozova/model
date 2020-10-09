@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentAmountReferencedDocuments
 ---
-# General.DocumentAmountReferencedDocuments
+# General.DocumentAmountReferencedDocuments Entity
 
 Contains the documents which are referenced by each document amount. Entity: Gen_Document_Amount_Referenced_Documents
 

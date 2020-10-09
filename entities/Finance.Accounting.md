@@ -1,25 +1,24 @@
 ---
 uid: Finance.Accounting
 ---
-# Finance.Accounting
+# Finance.Accounting Namespace
 
-## Namespaces
 
 ## Entities
-- @Finance.Accounting.AccountGroups  
-- @Finance.Accounting.AccountingVoucherLines  
-- @Finance.Accounting.AccountingVouchers  
-- @Finance.Accounting.AccountRequiredProperties  
-- @Finance.Accounting.Accounts  
-- @Finance.Accounting.CostCenters  
-- @Finance.Accounting.FinancialStatementNodeCorrespondances  
-- @Finance.Accounting.FinancialStatementNodes  
-- @Finance.Accounting.FinancialStatements  
-- @Finance.Accounting.Operations  
-- @Finance.Accounting.ProfitCenters  
-- @Finance.Accounting.TemplateLineProperties  
-- @Finance.Accounting.TemplateLines  
-- @Finance.Accounting.TemplateRouteLinks  
-- @Finance.Accounting.Templates  
-- @Finance.Accounting.VoucherCorrespondances  
+- [AccountGroups](Finance.Accounting.AccountGroups.md)  
+- [AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md)  
+- [AccountingVouchers](Finance.Accounting.AccountingVouchers.md)  
+- [AccountRequiredProperties](Finance.Accounting.AccountRequiredProperties.md)  
+- [Accounts](Finance.Accounting.Accounts.md)  
+- [CostCenters](Finance.Accounting.CostCenters.md)  
+- [FinancialStatementNodeCorrespondances](Finance.Accounting.FinancialStatementNodeCorrespondances.md)  
+- [FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md)  
+- [FinancialStatements](Finance.Accounting.FinancialStatements.md)  
+- [Operations](Finance.Accounting.Operations.md)  
+- [ProfitCenters](Finance.Accounting.ProfitCenters.md)  
+- [TemplateLineProperties](Finance.Accounting.TemplateLineProperties.md)  
+- [TemplateLines](Finance.Accounting.TemplateLines.md)  
+- [TemplateRouteLinks](Finance.Accounting.TemplateRouteLinks.md)  
+- [Templates](Finance.Accounting.Templates.md)  
+- [VoucherCorrespondances](Finance.Accounting.VoucherCorrespondances.md)  
 

@@ -1,7 +1,7 @@
 ---
 uid: Production.Technologies.RecipeOperations
 ---
-# Production.Technologies.RecipeOperations
+# Production.Technologies.RecipeOperations Entity
 
 Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operations
 

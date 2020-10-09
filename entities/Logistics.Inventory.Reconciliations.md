@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.Reconciliations
 ---
-# Logistics.Inventory.Reconciliations
+# Logistics.Inventory.Reconciliations Entity
 
 Store reconciliations (physical counting). Usefull for real-world reconciliations and for opening balance. Entity: Inv_Reconciliations
 

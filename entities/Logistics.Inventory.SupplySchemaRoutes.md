@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.SupplySchemaRoutes
 ---
-# Logistics.Inventory.SupplySchemaRoutes
+# Logistics.Inventory.SupplySchemaRoutes Entity
 
 Obsolete. Not used. Entity: Inv_Supply_Schema_Routes
 

@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentAmountTypeDependencies
 ---
-# General.DocumentAmountTypeDependencies
+# General.DocumentAmountTypeDependencies Entity
 
 Specifies the base amounts on which an amount depends. . Entity: Gen_Document_Amount_Type_Dependencies
 

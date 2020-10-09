@@ -1,7 +1,7 @@
 ---
 uid: Applications.PersonalData.DataSubjectRightRequests
 ---
-# Applications.PersonalData.DataSubjectRightRequests
+# Applications.PersonalData.DataSubjectRightRequests Entity
 
 Contains user requests for application of user rights. Entity: Pdm_Data_Subject_Right_Requests (Introduced in version 18.2)
 

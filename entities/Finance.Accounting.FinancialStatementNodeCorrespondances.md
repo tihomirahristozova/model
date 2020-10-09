@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.FinancialStatementNodeCorrespondances
 ---
-# Finance.Accounting.FinancialStatementNodeCorrespondances
+# Finance.Accounting.FinancialStatementNodeCorrespondances Entity
 
 Contains the actual correspondance filters, which specify how each financial statement node is calculated. Entity: Acc_Financial_Statement_Node_Correspondances
 

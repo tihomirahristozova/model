@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.CostCorrectionLines
 ---
-# Logistics.Inventory.CostCorrectionLines
+# Logistics.Inventory.CostCorrectionLines Entity
 
 Cost correction detail lines. One line is created for each corrected transaction line. Entity: Inv_Cost_Correction_Lines
 

@@ -1,15 +1,14 @@
 ---
 uid: Production.Technologies
 ---
-# Production.Technologies
+# Production.Technologies Namespace
 
-## Namespaces
 
 ## Entities
-- @Production.Technologies.PrincipalRecipeIngredients  
-- @Production.Technologies.PrincipalRecipeOperations  
-- @Production.Technologies.PrincipalRecipes  
-- @Production.Technologies.RecipeIngredients  
-- @Production.Technologies.RecipeOperations  
-- @Production.Technologies.Recipes  
+- [PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md)  
+- [PrincipalRecipeOperations](Production.Technologies.PrincipalRecipeOperations.md)  
+- [PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)  
+- [RecipeIngredients](Production.Technologies.RecipeIngredients.md)  
+- [RecipeOperations](Production.Technologies.RecipeOperations.md)  
+- [Recipes](Production.Technologies.Recipes.md)  
 

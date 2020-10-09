@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.UserBusinessRuleConditions
 ---
-# Systems.Bpm.UserBusinessRuleConditions
+# Systems.Bpm.UserBusinessRuleConditions Entity
 
 Represents one condition for the execution of a business rule. Entity: Sys_User_Business_Rule_Conditions
 

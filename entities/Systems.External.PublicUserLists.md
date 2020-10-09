@@ -1,7 +1,7 @@
 ---
 uid: Systems.External.PublicUserLists
 ---
-# Systems.External.PublicUserLists
+# Systems.External.PublicUserLists Entity
 
 Each list represents a unique collection of public users. Entity: Ext_Public_User_Lists
 

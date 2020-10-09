@@ -1,7 +1,7 @@
 ---
 uid: Crm.Dealers
 ---
-# Crm.Dealers
+# Crm.Dealers Entity
 
 External dealers. Entity: Crm_Dealers
 

@@ -1,7 +1,7 @@
 ---
 uid: Finance.Vat.BGVATDocumentTypeVATCodes
 ---
-# Finance.Vat.BGVATDocumentTypeVATCodes
+# Finance.Vat.BGVATDocumentTypeVATCodes Entity
 
 Contains the VAT codes, which should be used, when reporting VAT for the different document types. Entity: Nat_BG_VAT_Document_Type_VAT_Codes
 

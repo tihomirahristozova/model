@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.CostTypes
 ---
-# Finance.Cost.CostTypes
+# Finance.Cost.CostTypes Entity
 
 Types of costs. Entity: Cost_Types
 

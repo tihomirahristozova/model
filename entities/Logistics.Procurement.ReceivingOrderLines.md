@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.ReceivingOrderLines
 ---
-# Logistics.Procurement.ReceivingOrderLines
+# Logistics.Procurement.ReceivingOrderLines Entity
 
 Contains detail records of Receiving Orders. Each line contains the receiving of a quantity of a product. Entity: Scm_Receiving_Order_Lines
 

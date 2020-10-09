@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.DomainProviders
 ---
-# Systems.Security.DomainProviders
+# Systems.Security.DomainProviders Entity
 
 The external authentication providers, linked to the domain. Contains data about registration, usually the app id or app key. Entity: Sec_Domain_Providers (Introduced in version 20.1)
 

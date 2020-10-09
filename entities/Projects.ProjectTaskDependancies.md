@@ -1,7 +1,7 @@
 ---
 uid: Projects.ProjectTaskDependancies
 ---
-# Projects.ProjectTaskDependancies
+# Projects.ProjectTaskDependancies Entity
 
 Represents dependancy between project tasks. Entity: Prj_Project_Task_Dependancies
 

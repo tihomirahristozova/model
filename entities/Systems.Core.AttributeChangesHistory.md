@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.AttributeChangesHistory
 ---
-# Systems.Core.AttributeChangesHistory
+# Systems.Core.AttributeChangesHistory Entity
 
 Each entry represents an entity attribute change with previous and new value. Entity: Sys_Attribute_Changes_History_View
 

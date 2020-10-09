@@ -1,7 +1,7 @@
 ---
 uid: Finance.Vat.Entries
 ---
-# Finance.Vat.Entries
+# Finance.Vat.Entries Entity
 
 Contains the entries in the VAT sales and purchase ledgers. Entity: VAT_Entries
 

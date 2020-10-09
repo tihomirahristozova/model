@@ -1,7 +1,7 @@
 ---
 uid: Crm.Presales.OffersOptions
 ---
-# Crm.Presales.OffersOptions
+# Crm.Presales.OffersOptions Entity
 
 Contains options for user defined document types for Offers. Entity: Crm_Offers_Options
 

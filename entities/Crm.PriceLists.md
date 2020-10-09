@@ -1,7 +1,7 @@
 ---
 uid: Crm.PriceLists
 ---
-# Crm.PriceLists
+# Crm.PriceLists Entity
 
 Price Lists are used to manage multiple price records, assign to customers, etc. Entity: Crm_Price_Lists
 

@@ -1,7 +1,7 @@
 ---
 uid: Applications.DataWarehouse.DataMeasures
 ---
-# Applications.DataWarehouse.DataMeasures
+# Applications.DataWarehouse.DataMeasures Entity
 
 Contains the data measures of the General data warehouse. Entity: Dw_Data_Measures (Introduced in version 18.2)
 

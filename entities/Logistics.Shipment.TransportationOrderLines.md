@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Shipment.TransportationOrderLines
 ---
-# Logistics.Shipment.TransportationOrderLines
+# Logistics.Shipment.TransportationOrderLines Entity
 
 Different cargoes of a transportation order. Entity: Log_Transportation_Order_Lines
 

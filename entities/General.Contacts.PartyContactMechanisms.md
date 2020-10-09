@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.PartyContactMechanisms
 ---
-# General.Contacts.PartyContactMechanisms
+# General.Contacts.PartyContactMechanisms Entity
 
 Specifies the contact mechanisms, which are attached to the parties. Currently each contact mechanism is attached to strictly one party. Entity: Cm_Party_Contact_Mechanisms
 

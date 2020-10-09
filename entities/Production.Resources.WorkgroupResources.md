@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.WorkgroupResources
 ---
-# Production.Resources.WorkgroupResources
+# Production.Resources.WorkgroupResources Entity
 
 Describes the availability of resources in the active workgroups. Entity: Prd_Workgroup_Resources
 

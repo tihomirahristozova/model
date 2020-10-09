@@ -1,7 +1,7 @@
 ---
 uid: Production.Technologies.RecipeIngredients
 ---
-# Production.Technologies.RecipeIngredients
+# Production.Technologies.RecipeIngredients Entity
 
 Contains the materials of a recipe that make up the product. Entity: Prd_Recipe_Ingredients
 

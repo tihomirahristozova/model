@@ -1,16 +1,14 @@
 ---
 uid: Systems
 ---
-# Systems
+# Systems Namespace
 
 ## Namespaces
-- @Systems.Bpm  
-- @Systems.Core  
-- @Systems.External  
-- @Systems.Reporting  
-- @Systems.Security  
-- @Systems.UI  
-- @Systems.Workflow  
-
-## Entities
+- [Bpm](Systems.Bpm.md)  
+- [Core](Systems.Core.md)  
+- [External](Systems.External.md)  
+- [Reporting](Systems.Reporting.md)  
+- [Security](Systems.Security.md)  
+- [UI](Systems.UI.md)  
+- [Workflow](Systems.Workflow.md)  
 

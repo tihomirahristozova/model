@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.Suppliers
 ---
-# Logistics.Procurement.Suppliers
+# Logistics.Procurement.Suppliers Entity
 
 Contains supplier conditions (contracts). Entity: Scm_Suppliers
 

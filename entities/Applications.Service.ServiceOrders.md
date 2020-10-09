@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceOrders
 ---
-# Applications.Service.ServiceOrders
+# Applications.Service.ServiceOrders Entity
 
 Service Orders are issued when a new servicing is required. Entity: Srv_Service_Orders
 

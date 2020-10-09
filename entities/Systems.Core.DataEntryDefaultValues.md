@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.DataEntryDefaultValues
 ---
-# Systems.Core.DataEntryDefaultValues
+# Systems.Core.DataEntryDefaultValues Entity
 
 Contains user-specified default values for columns in data entry forms. Entity: Sys_Default_Values
 

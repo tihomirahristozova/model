@@ -1,19 +1,18 @@
 ---
 uid: Production.ShopFloor
 ---
-# Production.ShopFloor
+# Production.ShopFloor Namespace
 
-## Namespaces
 
 ## Entities
-- @Production.ShopFloor.ConsumptionOrderLines  
-- @Production.ShopFloor.ConsumptionOrders  
-- @Production.ShopFloor.OutputOrderConsumptionLines  
-- @Production.ShopFloor.OutputOrderDistributedMaterialConsumptions  
-- @Production.ShopFloor.OutputOrderLines  
-- @Production.ShopFloor.OutputOrders  
-- @Production.ShopFloor.WorkOrderItemIngredients  
-- @Production.ShopFloor.WorkOrderItemOperations  
-- @Production.ShopFloor.WorkOrderItems  
-- @Production.ShopFloor.WorkOrders  
+- [ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md)  
+- [ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)  
+- [OutputOrderConsumptionLines](Production.ShopFloor.OutputOrderConsumptionLines.md)  
+- [OutputOrderDistributedMaterialConsumptions](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md)  
+- [OutputOrderLines](Production.ShopFloor.OutputOrderLines.md)  
+- [OutputOrders](Production.ShopFloor.OutputOrders.md)  
+- [WorkOrderItemIngredients](Production.ShopFloor.WorkOrderItemIngredients.md)  
+- [WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md)  
+- [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)  
+- [WorkOrders](Production.ShopFloor.WorkOrders.md)  
 

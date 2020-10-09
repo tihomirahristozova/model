@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.OrderBalances
 ---
-# Finance.Payments.OrderBalances
+# Finance.Payments.OrderBalances Entity
 
 Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View
 

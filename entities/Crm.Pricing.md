@@ -1,12 +1,11 @@
 ---
 uid: Crm.Pricing
 ---
-# Crm.Pricing
+# Crm.Pricing Namespace
 
-## Namespaces
 
 ## Entities
-- @Crm.Pricing.PricingModelCosts  
-- @Crm.Pricing.PricingModelPriceLists  
-- @Crm.Pricing.PricingModels  
+- [PricingModelCosts](Crm.Pricing.PricingModelCosts.md)  
+- [PricingModelPriceLists](Crm.Pricing.PricingModelPriceLists.md)  
+- [PricingModels](Crm.Pricing.PricingModels.md)  
 

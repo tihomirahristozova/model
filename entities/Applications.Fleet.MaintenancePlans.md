@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.MaintenancePlans
 ---
-# Applications.Fleet.MaintenancePlans
+# Applications.Fleet.MaintenancePlans Entity
 
 Defines the periodic maintenance plans and the conditions for performing the next maintenance. Entity: Fleet_Maintenance_Plans
 

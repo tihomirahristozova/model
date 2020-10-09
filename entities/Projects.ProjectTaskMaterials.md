@@ -1,7 +1,7 @@
 ---
 uid: Projects.ProjectTaskMaterials
 ---
-# Projects.ProjectTaskMaterials
+# Projects.ProjectTaskMaterials Entity
 
 Contains the materials, which are required for a project task. Entity: Prj_Project_Task_Materials
 

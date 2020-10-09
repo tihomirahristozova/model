@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceObjectTypes
 ---
-# Applications.Service.ServiceObjectTypes
+# Applications.Service.ServiceObjectTypes Entity
 
 Contins the types of serviceable objects. Entity: Srv_Service_Object_Types
 

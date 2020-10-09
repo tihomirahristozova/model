@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Shipment.TransportationRequisitions
 ---
-# Logistics.Shipment.TransportationRequisitions
+# Logistics.Shipment.TransportationRequisitions Entity
 
 Client requisition for transportation. Entity: Log_Transportation_Requisitions
 

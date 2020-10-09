@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.DistributionOutputs
 ---
-# Finance.Cost.DistributionOutputs
+# Finance.Cost.DistributionOutputs Entity
 
 Contains the output data for the specified period. This is the output on which cost is distributed. Entity: Cost_Distribution_Outputs
 

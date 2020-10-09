@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.TransactionCostCorrectionsSummary
 ---
-# Logistics.Inventory.TransactionCostCorrectionsSummary
+# Logistics.Inventory.TransactionCostCorrectionsSummary Entity
 
 Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transaction_Cost_Corrections_Summary
 

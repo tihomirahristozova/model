@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.Operations
 ---
-# Finance.Accounting.Operations
+# Finance.Accounting.Operations Entity
 
 Generic accounting operations. Since templates can be bound to such operations, they are usefull for automating the postings of repetitive business transactions, not represented in other modules. Entity: Acc_Operations
 

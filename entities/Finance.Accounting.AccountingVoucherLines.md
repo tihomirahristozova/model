@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.AccountingVoucherLines
 ---
-# Finance.Accounting.AccountingVoucherLines
+# Finance.Accounting.AccountingVoucherLines Entity
 
 Contains one debit or credit posting within an accounting voucher. Entity: Acc_Voucher_Lines
 

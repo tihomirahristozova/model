@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Shipment.Carriers
 ---
-# Logistics.Shipment.Carriers
+# Logistics.Shipment.Carriers Entity
 
 Represents a carrier agreement. One actual carrier can have different agreements over time or with different enterprise companies. Entity: Log_Carriers
 

@@ -1,7 +1,7 @@
 ---
 uid: Finance.Intrastat.CommodityCodes
 ---
-# Finance.Intrastat.CommodityCodes
+# Finance.Intrastat.CommodityCodes Entity
 
 Contains the approved Intrastat commodity codes for each period. Entity: Its_Commodity_Codes
 

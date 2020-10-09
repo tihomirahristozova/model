@@ -1,7 +1,7 @@
 ---
 uid: Applications.Rental.TransactionLines
 ---
-# Applications.Rental.TransactionLines
+# Applications.Rental.TransactionLines Entity
 
 Contains all transactions of Record of Handover / Handing-Over Record lines. Entity: Rent_Transaction_Lines
 

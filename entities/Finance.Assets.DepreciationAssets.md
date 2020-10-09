@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.DepreciationAssets
 ---
-# Finance.Assets.DepreciationAssets
+# Finance.Assets.DepreciationAssets Entity
 
 Depreciation document line. Can specify assets, whose depreciation should be calculated. Entity: Ast_Depreciation_Assets
 

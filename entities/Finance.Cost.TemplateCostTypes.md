@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.TemplateCostTypes
 ---
-# Finance.Cost.TemplateCostTypes
+# Finance.Cost.TemplateCostTypes Entity
 
 Contains the cost types and their hierachy positions within a cost calculation. Entity: Cost_Template_Cost_Types
 

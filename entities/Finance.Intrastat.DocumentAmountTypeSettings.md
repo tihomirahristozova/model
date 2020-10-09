@@ -1,7 +1,7 @@
 ---
 uid: Finance.Intrastat.DocumentAmountTypeSettings
 ---
-# Finance.Intrastat.DocumentAmountTypeSettings
+# Finance.Intrastat.DocumentAmountTypeSettings Entity
 
 Specifies the additional amounts, which are added to the invoiced and statistical values. Entity: Its_Document_Amount_Type_Settings
 

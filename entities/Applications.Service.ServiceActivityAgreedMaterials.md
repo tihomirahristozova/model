@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceActivityAgreedMaterials
 ---
-# Applications.Service.ServiceActivityAgreedMaterials
+# Applications.Service.ServiceActivityAgreedMaterials Entity
 
 Contains the materials, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Materials
 

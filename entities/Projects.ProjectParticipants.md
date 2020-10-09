@@ -1,7 +1,7 @@
 ---
 uid: Projects.ProjectParticipants
 ---
-# Projects.ProjectParticipants
+# Projects.ProjectParticipants Entity
 
 Represents participant in a project, with a specific role. The same participant can participate multiple times in different roles. Entity: Prj_Project_Participants
 

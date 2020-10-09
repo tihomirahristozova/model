@@ -1,7 +1,7 @@
 ---
 uid: Applications.Rental.AssetTypeProperties
 ---
-# Applications.Rental.AssetTypeProperties
+# Applications.Rental.AssetTypeProperties Entity
 
 Contains the properties, which are required for each asset category. Entity: Rent_Asset_Type_Properties
 

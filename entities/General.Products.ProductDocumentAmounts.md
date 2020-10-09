@@ -1,7 +1,7 @@
 ---
 uid: General.Products.ProductDocumentAmounts
 ---
-# General.Products.ProductDocumentAmounts
+# General.Products.ProductDocumentAmounts Entity
 
 Contains custom percent ratios for additional amount distribution over products. Entity: Gen_Product_Document_Amounts
 

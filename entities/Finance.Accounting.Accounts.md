@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.Accounts
 ---
-# Finance.Accounting.Accounts
+# Finance.Accounting.Accounts Entity
 
 Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 

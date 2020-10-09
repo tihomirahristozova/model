@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.ValuationModels
 ---
-# Finance.Assets.ValuationModels
+# Finance.Assets.ValuationModels Entity
 
 Valuation models stand for the different valuations an asset can have. For example Accounting, Tax, External Financial Reports, etc. All asset transactions are posted for specific valuation model, but are usually automatically copied to other models. Entity: Ast_Valuation_Models
 

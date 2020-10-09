@@ -1,7 +1,7 @@
 ---
 uid: Production.WorkOrderDocumentTypesOptions
 ---
-# Production.WorkOrderDocumentTypesOptions
+# Production.WorkOrderDocumentTypesOptions Entity
 
 Options for user-defined Work Order document types. Entity: Prd_Work_Order_Document_Types_Options
 

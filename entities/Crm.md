@@ -1,29 +1,29 @@
 ---
 uid: Crm
 ---
-# Crm
+# Crm Namespace
 
 ## Namespaces
-- @Crm.Distribution  
-- @Crm.Invoicing  
-- @Crm.Marketing  
-- @Crm.Pos  
-- @Crm.Presales  
-- @Crm.Pricing  
-- @Crm.Sales  
+- [Distribution](Crm.Distribution.md)  
+- [Invoicing](Crm.Invoicing.md)  
+- [Marketing](Crm.Marketing.md)  
+- [Pos](Crm.Pos.md)  
+- [Presales](Crm.Presales.md)  
+- [Pricing](Crm.Pricing.md)  
+- [Sales](Crm.Sales.md)  
 
 ## Entities
-- @Crm.CustomerProducts  
-- @Crm.Customers  
-- @Crm.CustomerTypes  
-- @Crm.Dealers  
-- @Crm.DiscountTypes  
-- @Crm.Distributors  
-- @Crm.LineDiscounts  
-- @Crm.PriceLists  
-- @Crm.PriceTypes  
-- @Crm.ProductPrices  
-- @Crm.PromotionalPackageLines  
-- @Crm.PromotionalPackages  
-- @Crm.SalesPersons  
+- [CustomerProducts](Crm.CustomerProducts.md)  
+- [Customers](Crm.Customers.md)  
+- [CustomerTypes](Crm.CustomerTypes.md)  
+- [Dealers](Crm.Dealers.md)  
+- [DiscountTypes](Crm.DiscountTypes.md)  
+- [Distributors](Crm.Distributors.md)  
+- [LineDiscounts](Crm.LineDiscounts.md)  
+- [PriceLists](Crm.PriceLists.md)  
+- [PriceTypes](Crm.PriceTypes.md)  
+- [ProductPrices](Crm.ProductPrices.md)  
+- [PromotionalPackageLines](Crm.PromotionalPackageLines.md)  
+- [PromotionalPackages](Crm.PromotionalPackages.md)  
+- [SalesPersons](Crm.SalesPersons.md)  
 

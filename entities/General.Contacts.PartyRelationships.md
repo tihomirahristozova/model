@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.PartyRelationships
 ---
-# General.Contacts.PartyRelationships
+# General.Contacts.PartyRelationships Entity
 
 Defines the relationships between the parties. The data is preserved over time. Entity: Cm_Party_Relationships
 

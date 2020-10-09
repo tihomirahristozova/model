@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.UserProviderTokens
 ---
-# Systems.Security.UserProviderTokens
+# Systems.Security.UserProviderTokens Entity
 
 Stores verification tokens for users - e.g. tokens for email, phone or two-factor authentication. Entity: Sec_User_Provider_Tokens (Introduced in version 18.2)
 

@@ -1,24 +1,23 @@
 ---
 uid: Finance.Assets
 ---
-# Finance.Assets
+# Finance.Assets Namespace
 
-## Namespaces
 
 ## Entities
-- @Finance.Assets.AssetCategories  
-- @Finance.Assets.AssetGroups  
-- @Finance.Assets.AssetOrderLines  
-- @Finance.Assets.AssetOrders  
-- @Finance.Assets.Assets  
-- @Finance.Assets.AssetTransactionLines  
-- @Finance.Assets.AssetTransactions  
-- @Finance.Assets.DepreciationAssets  
-- @Finance.Assets.DepreciationMethods  
-- @Finance.Assets.DepreciationPlanLineFixedValues  
-- @Finance.Assets.DepreciationPlanLines  
-- @Finance.Assets.DepreciationPlans  
-- @Finance.Assets.DepreciationPlanTemplates  
-- @Finance.Assets.Depreciations  
-- @Finance.Assets.ValuationModels  
+- [AssetCategories](Finance.Assets.AssetCategories.md)  
+- [AssetGroups](Finance.Assets.AssetGroups.md)  
+- [AssetOrderLines](Finance.Assets.AssetOrderLines.md)  
+- [AssetOrders](Finance.Assets.AssetOrders.md)  
+- [Assets](Finance.Assets.Assets.md)  
+- [AssetTransactionLines](Finance.Assets.AssetTransactionLines.md)  
+- [AssetTransactions](Finance.Assets.AssetTransactions.md)  
+- [DepreciationAssets](Finance.Assets.DepreciationAssets.md)  
+- [DepreciationMethods](Finance.Assets.DepreciationMethods.md)  
+- [DepreciationPlanLineFixedValues](Finance.Assets.DepreciationPlanLineFixedValues.md)  
+- [DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md)  
+- [DepreciationPlans](Finance.Assets.DepreciationPlans.md)  
+- [DepreciationPlanTemplates](Finance.Assets.DepreciationPlanTemplates.md)  
+- [Depreciations](Finance.Assets.Depreciations.md)  
+- [ValuationModels](Finance.Assets.ValuationModels.md)  
 

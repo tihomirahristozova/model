@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.ProcessNodes
 ---
-# Systems.Bpm.ProcessNodes
+# Systems.Bpm.ProcessNodes Entity
 
 Contains the flow Nodes of the process model. Entity: Bpm_Process_Nodes
 

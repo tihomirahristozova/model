@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Wms.WarehouseOrderLines
 ---
-# Logistics.Wms.WarehouseOrderLines
+# Logistics.Wms.WarehouseOrderLines Entity
 
 A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lines (Introduced in version 20.1)
 

@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceActivityServices
 ---
-# Applications.Service.ServiceActivityServices
+# Applications.Service.ServiceActivityServices Entity
 
 Contains the services, which were actually performed during the service activity (repair). Entity: Srv_Service_Activity_Services
 

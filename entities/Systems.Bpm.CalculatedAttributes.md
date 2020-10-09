@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.CalculatedAttributes
 ---
-# Systems.Bpm.CalculatedAttributes
+# Systems.Bpm.CalculatedAttributes Entity
 
 User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 

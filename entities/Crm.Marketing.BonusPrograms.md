@@ -1,7 +1,7 @@
 ---
 uid: Crm.Marketing.BonusPrograms
 ---
-# Crm.Marketing.BonusPrograms
+# Crm.Marketing.BonusPrograms Entity
 
 Bonus programs allow automatic adding of new line with bonus product or automatic application of discount in a sales document. Entity: Crm_Bonus_Programs
 

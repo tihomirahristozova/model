@@ -1,7 +1,7 @@
 ---
 uid: Production.ShopFloor.ConsumptionOrders
 ---
-# Production.ShopFloor.ConsumptionOrders
+# Production.ShopFloor.ConsumptionOrders Entity
 
 Headers of material consuption orders of the work orders. Entity: Prd_Consumption_Orders
 

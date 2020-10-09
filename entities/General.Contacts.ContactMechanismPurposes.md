@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.ContactMechanismPurposes
 ---
-# General.Contacts.ContactMechanismPurposes
+# General.Contacts.ContactMechanismPurposes Entity
 
 Contains user-defined purposes for processing contact mechanisms. Used for personal data management. Entity: Cm_Contact_Mechanism_Purposes (Introduced in version 18.2)
 

@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.TrustedApplicationAuthorizations
 ---
-# Systems.Security.TrustedApplicationAuthorizations
+# Systems.Security.TrustedApplicationAuthorizations Entity
 
 Authorization of a trusted application to access the data on behalf of a context user. Entity: Sec_Trusted_Application_Authorizations (Introduced in version 20.1)
 

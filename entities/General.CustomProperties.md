@@ -1,7 +1,7 @@
 ---
 uid: General.CustomProperties
 ---
-# General.CustomProperties
+# General.CustomProperties Entity
 
 User-defined properties, which can supplement the system properties of almost all entities in the system. Entity: Gen_Properties
 

@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Shipment.TransportationVehicles
 ---
-# Logistics.Shipment.TransportationVehicles
+# Logistics.Shipment.TransportationVehicles Entity
 
 A vehicle, which is used for transportation. One actual vehicle might be defined multiple times as transportation vehicle - for different modes of transportation or cargo types. Entity: Log_Transportation_Vehicles
 

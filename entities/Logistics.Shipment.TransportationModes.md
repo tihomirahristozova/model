@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Shipment.TransportationModes
 ---
-# Logistics.Shipment.TransportationModes
+# Logistics.Shipment.TransportationModes Entity
 
 Represents a mode of transportation, like water, air, road, etc. Entity: Log_Transportation_Modes
 

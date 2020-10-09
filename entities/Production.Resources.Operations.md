@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.Operations
 ---
-# Production.Resources.Operations
+# Production.Resources.Operations Entity
 
 The different steps performed to create products. Entity: Prd_Operations
 

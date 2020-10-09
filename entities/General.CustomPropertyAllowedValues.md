@@ -1,7 +1,7 @@
 ---
 uid: General.CustomPropertyAllowedValues
 ---
-# General.CustomPropertyAllowedValues
+# General.CustomPropertyAllowedValues Entity
 
 User-defined properties allowed values. Can be specified only for properties with unbound allowed values (e.g. for which Allowed Values Entity is not set). Entity: Gen_Property_Allowed_Values
 

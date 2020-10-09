@@ -1,7 +1,7 @@
 ---
 uid: General.Printouts
 ---
-# General.Printouts
+# General.Printouts Entity
 
 Contains data about binding of printout layouts to specific user-defined document types. Entity: Gen_Printouts
 

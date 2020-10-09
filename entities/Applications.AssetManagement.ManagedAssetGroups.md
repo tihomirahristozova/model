@@ -1,7 +1,7 @@
 ---
 uid: Applications.AssetManagement.ManagedAssetGroups
 ---
-# Applications.AssetManagement.ManagedAssetGroups
+# Applications.AssetManagement.ManagedAssetGroups Entity
 
 Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Introduced in version 19.1)
 

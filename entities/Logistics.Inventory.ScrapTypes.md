@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.ScrapTypes
 ---
-# Logistics.Inventory.ScrapTypes
+# Logistics.Inventory.ScrapTypes Entity
 
 Types of scrap. Used in store transactions to categorize scrap, when it occurs. Entity: Inv_Scrap_Types
 

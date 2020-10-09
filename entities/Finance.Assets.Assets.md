@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.Assets
 ---
-# Finance.Assets.Assets
+# Finance.Assets.Assets Entity
 
 The fixed assets. Entity: Ast_Assets
 

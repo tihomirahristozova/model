@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.MaintenanceProfilePlans
 ---
-# Applications.Fleet.MaintenanceProfilePlans
+# Applications.Fleet.MaintenanceProfilePlans Entity
 
 Contains the plans, included in the maintenance profile. Entity: Fleet_Maintenance_Profile_Plans
 

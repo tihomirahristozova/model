@@ -1,7 +1,7 @@
 ---
 uid: Crm.CustomerProducts
 ---
-# Crm.CustomerProducts
+# Crm.CustomerProducts Entity
 
 Contains the products, that are contracted (listed) with a customer. Entity: Crm_Customer_Products
 

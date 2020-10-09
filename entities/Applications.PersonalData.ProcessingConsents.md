@@ -1,7 +1,7 @@
 ---
 uid: Applications.PersonalData.ProcessingConsents
 ---
-# Applications.PersonalData.ProcessingConsents
+# Applications.PersonalData.ProcessingConsents Entity
 
 Consents of data subjects for processing of their personal data. Entity: Pdm_Processing_Consents (Introduced in version 18.2)
 

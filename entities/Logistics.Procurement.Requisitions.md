@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.Requisitions
 ---
-# Logistics.Procurement.Requisitions
+# Logistics.Procurement.Requisitions Entity
 
 Contains the internal requisitions for products. Requisitions are consolidated by the purchase department into purchase orders. Entity: Scm_Requisitions
 

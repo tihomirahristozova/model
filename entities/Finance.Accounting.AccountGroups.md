@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.AccountGroups
 ---
-# Finance.Accounting.AccountGroups
+# Finance.Accounting.AccountGroups Entity
 
 Hierarchical chart of account groups. Entity: Acc_Account_Groups
 

@@ -1,7 +1,7 @@
 ---
 uid: General.Products.VariantColors
 ---
-# General.Products.VariantColors
+# General.Products.VariantColors Entity
 
 Contains the different colors, which can be assigned to product variants. Entity: Gen_Variant_Colors
 

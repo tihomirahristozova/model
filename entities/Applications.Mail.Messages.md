@@ -1,7 +1,7 @@
 ---
 uid: Applications.Mail.Messages
 ---
-# Applications.Mail.Messages
+# Applications.Mail.Messages Entity
 
 Represents email messages. Entity: Mail_Messages
 

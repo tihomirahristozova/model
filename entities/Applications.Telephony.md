@@ -1,10 +1,9 @@
 ---
 uid: Applications.Telephony
 ---
-# Applications.Telephony
+# Applications.Telephony Namespace
 
-## Namespaces
 
 ## Entities
-- @Applications.Telephony.CallDetails  
+- [CallDetails](Applications.Telephony.CallDetails.md)  
 

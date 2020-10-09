@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentTypeNotifications
 ---
-# General.DocumentTypeNotifications
+# General.DocumentTypeNotifications Entity
 
 Provides notification addresses to be notified upon occurrence of different document events. Entity: Gen_Document_Type_Notifications
 

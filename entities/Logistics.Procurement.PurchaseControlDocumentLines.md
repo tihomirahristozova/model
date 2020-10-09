@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.PurchaseControlDocumentLines
 ---
-# Logistics.Procurement.PurchaseControlDocumentLines
+# Logistics.Procurement.PurchaseControlDocumentLines Entity
 
 The detail line of purchase control data. The purchase control is used to tally all orders and execuctions in the purchasing module. Entity: Scm_Purchase_Control_Document_Lines (Introduced in version 18.2)
 

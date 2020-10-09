@@ -1,7 +1,7 @@
 ---
 uid: General.ProductVariants
 ---
-# General.ProductVariants
+# General.ProductVariants Entity
 
 Contains definitions of different variants of a product. The variants are differentiated by color, size and style. Entity: Gen_Product_Variants
 

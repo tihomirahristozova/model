@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.VoucherCorrespondances
 ---
-# Finance.Accounting.VoucherCorrespondances
+# Finance.Accounting.VoucherCorrespondances Entity
 
 Obsolete. Not used. Entity: Acc_Voucher_Correspondances
 

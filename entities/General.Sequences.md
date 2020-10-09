@@ -1,7 +1,7 @@
 ---
 uid: General.Sequences
 ---
-# General.Sequences
+# General.Sequences Entity
 
 Provides numbering sequences, applicable for use in a multi-threaded environment. Entity: Gen_Sequences
 

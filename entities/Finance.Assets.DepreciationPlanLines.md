@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.DepreciationPlanLines
 ---
-# Finance.Assets.DepreciationPlanLines
+# Finance.Assets.DepreciationPlanLines Entity
 
 Each record contains one depreciation plan for one valuation model of one asset. Entity: Ast_Depreciation_Plan_Lines
 

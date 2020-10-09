@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.PurchaseProductPrices
 ---
-# Logistics.Procurement.PurchaseProductPrices
+# Logistics.Procurement.PurchaseProductPrices Entity
 
 Contains purchase prices of the products. Used for automatically loading unit prices in the purchase documents. Entity: Scm_Purchase_Product_Prices
 

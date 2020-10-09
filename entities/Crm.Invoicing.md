@@ -1,14 +1,13 @@
 ---
 uid: Crm.Invoicing
 ---
-# Crm.Invoicing
+# Crm.Invoicing Namespace
 
-## Namespaces
 
 ## Entities
-- @Crm.Invoicing.InvoiceLines  
-- @Crm.Invoicing.InvoiceOrderLines  
-- @Crm.Invoicing.InvoiceOrders  
-- @Crm.Invoicing.Invoices  
-- @Crm.Invoicing.InvoicesOptions  
+- [InvoiceLines](Crm.Invoicing.InvoiceLines.md)  
+- [InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md)  
+- [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md)  
+- [Invoices](Crm.Invoicing.Invoices.md)  
+- [InvoicesOptions](Crm.Invoicing.InvoicesOptions.md)  
 

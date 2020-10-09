@@ -1,7 +1,7 @@
 ---
 uid: Projects.ProjectTaskResources
 ---
-# Projects.ProjectTaskResources
+# Projects.ProjectTaskResources Entity
 
 Contains the resources, required by the project tasks. Entity: Prj_Project_Task_Resources
 

@@ -1,7 +1,7 @@
 ---
 uid: Systems.Reporting.DataSourceQueries
 ---
-# Systems.Reporting.DataSourceQueries
+# Systems.Reporting.DataSourceQueries Entity
 
 Represents a query within a data source. Entity: Sys_Data_Source_Queries
 

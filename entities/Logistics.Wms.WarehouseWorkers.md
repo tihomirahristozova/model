@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Wms.WarehouseWorkers
 ---
-# Logistics.Wms.WarehouseWorkers
+# Logistics.Wms.WarehouseWorkers Entity
 
 Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_Workers (Introduced in version 20.1)
 

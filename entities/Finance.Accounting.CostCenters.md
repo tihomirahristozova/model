@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.CostCenters
 ---
-# Finance.Accounting.CostCenters
+# Finance.Accounting.CostCenters Entity
 
 Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Centers
 

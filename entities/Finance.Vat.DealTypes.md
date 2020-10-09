@@ -1,7 +1,7 @@
 ---
 uid: Finance.Vat.DealTypes
 ---
-# Finance.Vat.DealTypes
+# Finance.Vat.DealTypes Entity
 
 Contains deal types supported by the system as well as user-defined types. Entity: VAT_Deal_Types
 

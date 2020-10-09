@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.TrustedApplications
 ---
-# Systems.Security.TrustedApplications
+# Systems.Security.TrustedApplications Entity
 
 Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applications (Introduced in version 19.1)
 

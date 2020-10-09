@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Wms.Warehouses
 ---
-# Logistics.Wms.Warehouses
+# Logistics.Wms.Warehouses Entity
 
 Physical warehouse. Entity: Wms_Warehouses (Introduced in version 20.1)
 

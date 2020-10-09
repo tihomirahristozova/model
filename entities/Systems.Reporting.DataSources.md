@@ -1,7 +1,7 @@
 ---
 uid: Systems.Reporting.DataSources
 ---
-# Systems.Reporting.DataSources
+# Systems.Reporting.DataSources Entity
 
 Contains user-defined data sources, which retrieve rows from multiple queries. Entity: Sys_Data_Sources
 

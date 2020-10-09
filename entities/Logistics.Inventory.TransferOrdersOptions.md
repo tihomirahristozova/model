@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.TransferOrdersOptions
 ---
-# Logistics.Inventory.TransferOrdersOptions
+# Logistics.Inventory.TransferOrdersOptions Entity
 
 Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_Options
 

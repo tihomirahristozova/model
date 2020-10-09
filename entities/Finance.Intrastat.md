@@ -1,13 +1,12 @@
 ---
 uid: Finance.Intrastat
 ---
-# Finance.Intrastat
+# Finance.Intrastat Namespace
 
-## Namespaces
 
 ## Entities
-- @Finance.Intrastat.CommodityCodes  
-- @Finance.Intrastat.DeclarationLines  
-- @Finance.Intrastat.Declarations  
-- @Finance.Intrastat.DocumentAmountTypeSettings  
+- [CommodityCodes](Finance.Intrastat.CommodityCodes.md)  
+- [DeclarationLines](Finance.Intrastat.DeclarationLines.md)  
+- [Declarations](Finance.Intrastat.Declarations.md)  
+- [DocumentAmountTypeSettings](Finance.Intrastat.DocumentAmountTypeSettings.md)  
 

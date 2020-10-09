@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.ProfitCenters
 ---
-# Finance.Accounting.ProfitCenters
+# Finance.Accounting.ProfitCenters Entity
 
 Defines company profit centers and their relative weight for automatic balance transfers from cost centers. Entity: Acc_Profit_Centers
 

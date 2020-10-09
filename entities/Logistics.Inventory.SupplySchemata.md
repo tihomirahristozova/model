@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.SupplySchemata
 ---
-# Logistics.Inventory.SupplySchemata
+# Logistics.Inventory.SupplySchemata Entity
 
 Obsolete. Not used. Entity: Inv_Supply_Schemata
 

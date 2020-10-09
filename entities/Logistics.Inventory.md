@@ -1,40 +1,40 @@
 ---
 uid: Logistics.Inventory
 ---
-# Logistics.Inventory
+# Logistics.Inventory Namespace
 
 ## Namespaces
-- @Logistics.Inventory.DemandManagement  
+- [DemandManagement](Logistics.Inventory.DemandManagement.md)  
 
 ## Entities
-- @Logistics.Inventory.CostCorrectionLines  
-- @Logistics.Inventory.CostCorrections  
-- @Logistics.Inventory.CostCorrectionsOptions  
-- @Logistics.Inventory.CurrentBalances  
-- @Logistics.Inventory.Lots  
-- @Logistics.Inventory.ProductDefaultStoreBins  
-- @Logistics.Inventory.ProductValuationGroups  
-- @Logistics.Inventory.ReconciliationLines  
-- @Logistics.Inventory.ReconciliationOrderLines  
-- @Logistics.Inventory.ReconciliationOrders  
-- @Logistics.Inventory.Reconciliations  
-- @Logistics.Inventory.RequisitionPlan  
-- @Logistics.Inventory.ScrapTypes  
-- @Logistics.Inventory.SerialNumbers  
-- @Logistics.Inventory.StoreBins  
-- @Logistics.Inventory.StoreGroups  
-- @Logistics.Inventory.StoreOrderLines  
-- @Logistics.Inventory.StoreOrderLinesUnfulfilledView  
-- @Logistics.Inventory.StoreOrders  
-- @Logistics.Inventory.StoreResponsibleParties  
-- @Logistics.Inventory.Stores  
-- @Logistics.Inventory.StoreTransactionLines  
-- @Logistics.Inventory.StoreTransactions  
-- @Logistics.Inventory.SupplySchemaRoutes  
-- @Logistics.Inventory.SupplySchemata  
-- @Logistics.Inventory.TransactionCostCorrectionsSummary  
-- @Logistics.Inventory.TransactionEntryTemplates  
-- @Logistics.Inventory.TransferOrderLines  
-- @Logistics.Inventory.TransferOrders  
-- @Logistics.Inventory.TransferOrdersOptions  
+- [CostCorrectionLines](Logistics.Inventory.CostCorrectionLines.md)  
+- [CostCorrections](Logistics.Inventory.CostCorrections.md)  
+- [CostCorrectionsOptions](Logistics.Inventory.CostCorrectionsOptions.md)  
+- [CurrentBalances](Logistics.Inventory.CurrentBalances.md)  
+- [Lots](Logistics.Inventory.Lots.md)  
+- [ProductDefaultStoreBins](Logistics.Inventory.ProductDefaultStoreBins.md)  
+- [ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md)  
+- [ReconciliationLines](Logistics.Inventory.ReconciliationLines.md)  
+- [ReconciliationOrderLines](Logistics.Inventory.ReconciliationOrderLines.md)  
+- [ReconciliationOrders](Logistics.Inventory.ReconciliationOrders.md)  
+- [Reconciliations](Logistics.Inventory.Reconciliations.md)  
+- [RequisitionPlan](Logistics.Inventory.RequisitionPlan.md)  
+- [ScrapTypes](Logistics.Inventory.ScrapTypes.md)  
+- [SerialNumbers](Logistics.Inventory.SerialNumbers.md)  
+- [StoreBins](Logistics.Inventory.StoreBins.md)  
+- [StoreGroups](Logistics.Inventory.StoreGroups.md)  
+- [StoreOrderLines](Logistics.Inventory.StoreOrderLines.md)  
+- [StoreOrderLinesUnfulfilledView](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md)  
+- [StoreOrders](Logistics.Inventory.StoreOrders.md)  
+- [StoreResponsibleParties](Logistics.Inventory.StoreResponsibleParties.md)  
+- [Stores](Logistics.Inventory.Stores.md)  
+- [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)  
+- [StoreTransactions](Logistics.Inventory.StoreTransactions.md)  
+- [SupplySchemaRoutes](Logistics.Inventory.SupplySchemaRoutes.md)  
+- [SupplySchemata](Logistics.Inventory.SupplySchemata.md)  
+- [TransactionCostCorrectionsSummary](Logistics.Inventory.TransactionCostCorrectionsSummary.md)  
+- [TransactionEntryTemplates](Logistics.Inventory.TransactionEntryTemplates.md)  
+- [TransferOrderLines](Logistics.Inventory.TransferOrderLines.md)  
+- [TransferOrders](Logistics.Inventory.TransferOrders.md)  
+- [TransferOrdersOptions](Logistics.Inventory.TransferOrdersOptions.md)  
 

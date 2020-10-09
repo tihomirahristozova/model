@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceActivityMaterials
 ---
-# Applications.Service.ServiceActivityMaterials
+# Applications.Service.ServiceActivityMaterials Entity
 
 Contains the materials, which were actually used during the service activity (repair). Entity: Srv_Service_Activity_Materials
 

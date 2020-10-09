@@ -1,7 +1,7 @@
 ---
 uid: Production.ShopFloor.WorkOrderItems
 ---
-# Production.ShopFloor.WorkOrderItems
+# Production.ShopFloor.WorkOrderItems Entity
 
 The different items that are produced with a work order. Entity: Prd_Work_Order_Items
 

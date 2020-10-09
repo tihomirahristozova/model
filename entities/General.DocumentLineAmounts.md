@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentLineAmounts
 ---
-# General.DocumentLineAmounts
+# General.DocumentLineAmounts Entity
 
 Specifies user-defined distribution pattern of additonal amount for specific document. Entity: Gen_Document_Line_Amounts
 

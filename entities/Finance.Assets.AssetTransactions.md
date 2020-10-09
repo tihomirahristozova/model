@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.AssetTransactions
 ---
-# Finance.Assets.AssetTransactions
+# Finance.Assets.AssetTransactions Entity
 
 Basic asset value transactions. The transactions can increase or decrease any of the 5 asset values. Entity: Ast_Asset_Transactions
 

@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.PaymentTransactionLines
 ---
-# Finance.Payments.PaymentTransactionLines
+# Finance.Payments.PaymentTransactionLines Entity
 
 Contains the distibution of the payments' amounts among the source payment orders. Entity: Cash_Payment_Transaction_Lines
 

@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.TemplateLineProperties
 ---
-# Finance.Accounting.TemplateLineProperties
+# Finance.Accounting.TemplateLineProperties Entity
 
 Contains the way to obtain the values for each required property of both the debit and the credit accounts. Entity: Acc_Template_Line_Properties
 

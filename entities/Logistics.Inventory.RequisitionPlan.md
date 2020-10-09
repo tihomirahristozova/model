@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.RequisitionPlan
 ---
-# Logistics.Inventory.RequisitionPlan
+# Logistics.Inventory.RequisitionPlan Entity
 
 The current requisition (MRP) plan. The data is deleted and re-created upon each planning. Entity: Inv_Requisition_Plan
 

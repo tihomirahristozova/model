@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.UserBusinessRuleActions
 ---
-# Systems.Bpm.UserBusinessRuleActions
+# Systems.Bpm.UserBusinessRuleActions Entity
 
 Represents an action within a business rule. Entity: Sys_User_Business_Rule_Actions
 

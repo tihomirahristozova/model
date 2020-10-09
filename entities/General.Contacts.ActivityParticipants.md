@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.ActivityParticipants
 ---
-# General.Contacts.ActivityParticipants
+# General.Contacts.ActivityParticipants Entity
 
 Contains the additional participants in the activities. These are the participating users, besides the user to which the activitiy is assigned. Entity: Cm_Activity_Participants
 

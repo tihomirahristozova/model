@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.Parties
 ---
-# General.Contacts.Parties
+# General.Contacts.Parties Entity
 
 Contains base data for different kind of parties - companies, persons, departments, etc.
 

@@ -1,7 +1,7 @@
 ---
 uid: General.Resources.WorkSchedules
 ---
-# General.Resources.WorkSchedules
+# General.Resources.WorkSchedules Entity
 
 Represents the different working schedules, used by the employees and resources. Entity: Gen_Work_Schedules
 

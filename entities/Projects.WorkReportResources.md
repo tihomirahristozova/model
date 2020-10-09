@@ -1,7 +1,7 @@
 ---
 uid: Projects.WorkReportResources
 ---
-# Projects.WorkReportResources
+# Projects.WorkReportResources Entity
 
 Each record contains usage of resource, reported by the related Work Report. Entity: Prj_Work_Report_Resources
 

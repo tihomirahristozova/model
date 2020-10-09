@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Wms.WarehouseLocations
 ---
-# Logistics.Wms.WarehouseLocations
+# Logistics.Wms.WarehouseLocations Entity
 
 One physical location within a warehouse. Locations are the leaf elements of the rack structure of the warehouse. Entity: Wms_Warehouse_Locations (Introduced in version 20.1)
 

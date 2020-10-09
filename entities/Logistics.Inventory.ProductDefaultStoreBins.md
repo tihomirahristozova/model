@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.ProductDefaultStoreBins
 ---
-# Logistics.Inventory.ProductDefaultStoreBins
+# Logistics.Inventory.ProductDefaultStoreBins Entity
 
 The default store bins in which products should be placed. Entity: Inv_Product_Default_Store_Bins
 

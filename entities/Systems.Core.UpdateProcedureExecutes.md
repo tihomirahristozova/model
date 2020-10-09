@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.UpdateProcedureExecutes
 ---
-# Systems.Core.UpdateProcedureExecutes
+# Systems.Core.UpdateProcedureExecutes Entity
 
 Contains data about the execution of Upgrade Procedures. Contains status messages and ensures that each procedure is executed only once. Entity: Sys_Update_Procedure_Executes
 

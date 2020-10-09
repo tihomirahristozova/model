@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.CompanyEmployees
 ---
-# General.Contacts.CompanyEmployees
+# General.Contacts.CompanyEmployees Entity
 
 Contains the company employee contracts. Entity: Cm_Company_Employees
 

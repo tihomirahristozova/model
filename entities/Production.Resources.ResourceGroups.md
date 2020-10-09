@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.ResourceGroups
 ---
-# Production.Resources.ResourceGroups
+# Production.Resources.ResourceGroups Entity
 
 Groups of resource types. Entity: Prd_Resource_Groups
 

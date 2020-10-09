@@ -1,23 +1,22 @@
 ---
 uid: Finance.Payments
 ---
-# Finance.Payments
+# Finance.Payments Namespace
 
-## Namespaces
 
 ## Entities
-- @Finance.Payments.BulkPaymentOrderLines  
-- @Finance.Payments.BulkPaymentOrders  
-- @Finance.Payments.OrderBalances  
-- @Finance.Payments.PaymentAccounts  
-- @Finance.Payments.PaymentOrders  
-- @Finance.Payments.PaymentReasons  
-- @Finance.Payments.PaymentSlipAmounts  
-- @Finance.Payments.PaymentSlipLines  
-- @Finance.Payments.PaymentSlipPaymentTransactionsTemplates  
-- @Finance.Payments.PaymentSlips  
-- @Finance.Payments.PaymentTransactionLines  
-- @Finance.Payments.PaymentTransactions  
-- @Finance.Payments.PaymentTypes  
-- @Finance.Payments.Transfers  
+- [BulkPaymentOrderLines](Finance.Payments.BulkPaymentOrderLines.md)  
+- [BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)  
+- [OrderBalances](Finance.Payments.OrderBalances.md)  
+- [PaymentAccounts](Finance.Payments.PaymentAccounts.md)  
+- [PaymentOrders](Finance.Payments.PaymentOrders.md)  
+- [PaymentReasons](Finance.Payments.PaymentReasons.md)  
+- [PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md)  
+- [PaymentSlipLines](Finance.Payments.PaymentSlipLines.md)  
+- [PaymentSlipPaymentTransactionsTemplates](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md)  
+- [PaymentSlips](Finance.Payments.PaymentSlips.md)  
+- [PaymentTransactionLines](Finance.Payments.PaymentTransactionLines.md)  
+- [PaymentTransactions](Finance.Payments.PaymentTransactions.md)  
+- [PaymentTypes](Finance.Payments.PaymentTypes.md)  
+- [Transfers](Finance.Payments.Transfers.md)  
 

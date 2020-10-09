@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.Resources
 ---
-# Production.Resources.Resources
+# Production.Resources.Resources Entity
 
 Resource types available to production. Entity: Prd_Resources
 

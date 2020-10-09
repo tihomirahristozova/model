@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.EquipmentTypes
 ---
-# Applications.Fleet.EquipmentTypes
+# Applications.Fleet.EquipmentTypes Entity
 
 Contains types of equipment, which can be installed on the vehicles. Entity: Fleet_Equipment_Types
 

@@ -1,7 +1,7 @@
 ---
 uid: General.MeasurementCategories
 ---
-# General.MeasurementCategories
+# General.MeasurementCategories Entity
 
 Categories of measurement units. The units within a category are directly convertable to each other. Each category contains one base unit and unlimited number of derived units with fixed ratio to the base unit. Entity: Gen_Measurement_Categories
 

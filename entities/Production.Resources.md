@@ -1,22 +1,21 @@
 ---
 uid: Production.Resources
 ---
-# Production.Resources
+# Production.Resources Namespace
 
-## Namespaces
 
 ## Entities
-- @Production.Resources.Capacity  
-- @Production.Resources.FunctionGroups  
-- @Production.Resources.Functions  
-- @Production.Resources.Load  
-- @Production.Resources.OperationGroups  
-- @Production.Resources.OperationInstructions  
-- @Production.Resources.Operations  
-- @Production.Resources.ResourceFunctions  
-- @Production.Resources.ResourceGroups  
-- @Production.Resources.Resources  
-- @Production.Resources.WorkgroupResources  
-- @Production.Resources.Workgroups  
-- @Production.Resources.WorkgroupShifts  
+- [Capacity](Production.Resources.Capacity.md)  
+- [FunctionGroups](Production.Resources.FunctionGroups.md)  
+- [Functions](Production.Resources.Functions.md)  
+- [Load](Production.Resources.Load.md)  
+- [OperationGroups](Production.Resources.OperationGroups.md)  
+- [OperationInstructions](Production.Resources.OperationInstructions.md)  
+- [Operations](Production.Resources.Operations.md)  
+- [ResourceFunctions](Production.Resources.ResourceFunctions.md)  
+- [ResourceGroups](Production.Resources.ResourceGroups.md)  
+- [Resources](Production.Resources.Resources.md)  
+- [WorkgroupResources](Production.Resources.WorkgroupResources.md)  
+- [Workgroups](Production.Resources.Workgroups.md)  
+- [WorkgroupShifts](Production.Resources.WorkgroupShifts.md)  
 

@@ -1,7 +1,7 @@
 ---
 uid: Systems.UI.FormLayouts
 ---
-# Systems.UI.FormLayouts
+# Systems.UI.FormLayouts Entity
 
 Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
 

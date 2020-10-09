@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.PurchaseInvoicesOptions
 ---
-# Logistics.Procurement.PurchaseInvoicesOptions
+# Logistics.Procurement.PurchaseInvoicesOptions Entity
 
 Contains purchase invoice specific options for the different document types. Entity: Scm_Purchase_Invoices_Options
 

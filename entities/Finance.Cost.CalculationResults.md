@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.CalculationResults
 ---
-# Finance.Cost.CalculationResults
+# Finance.Cost.CalculationResults Entity
 
 Contains the results of cost calculations. Entity: Cost_Calculation_Results
 

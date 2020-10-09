@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.PaymentTransactions
 ---
-# Finance.Payments.PaymentTransactions
+# Finance.Payments.PaymentTransactions Entity
 
 Represents actual payments, which increase or decrease the balance of a payment account. Entity: Cash_Payment_Transactions
 

@@ -1,7 +1,7 @@
 ---
 uid: Crm.Distribution.SalesPersonGroups
 ---
-# Crm.Distribution.SalesPersonGroups
+# Crm.Distribution.SalesPersonGroups Entity
 
 Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
 

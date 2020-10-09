@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.ProcessNodeTimerEvents
 ---
-# Systems.Bpm.ProcessNodeTimerEvents
+# Systems.Bpm.ProcessNodeTimerEvents Entity
 
 Timer event definition. Currently - not used. Entity: Bpm_Process_Node_Timer_Events
 

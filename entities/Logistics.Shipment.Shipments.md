@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Shipment.Shipments
 ---
-# Logistics.Shipment.Shipments
+# Logistics.Shipment.Shipments Entity
 
 Represents shipments of sales orders to customers. Entity: Log_Shipments
 

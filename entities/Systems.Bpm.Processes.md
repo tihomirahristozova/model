@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.Processes
 ---
-# Systems.Bpm.Processes
+# Systems.Bpm.Processes Entity
 
 Represents one business process version. All process model elements and execution instances are bound to specfic process version. Entity: Bpm_Processes
 

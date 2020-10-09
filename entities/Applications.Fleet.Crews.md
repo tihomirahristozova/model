@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.Crews
 ---
-# Applications.Fleet.Crews
+# Applications.Fleet.Crews Entity
 
 Represents the crews, which can operate vehicles. Entity: Fleet_Crews
 

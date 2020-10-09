@@ -1,7 +1,7 @@
 ---
 uid: Crm.Pricing.PricingModelPriceLists
 ---
-# Crm.Pricing.PricingModelPriceLists
+# Crm.Pricing.PricingModelPriceLists Entity
 
 The price lists, which are updated by the pricing model. Entity: Crm_Pricing_Model_Price_Lists
 

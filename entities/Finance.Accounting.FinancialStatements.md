@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.FinancialStatements
 ---
-# Finance.Accounting.FinancialStatements
+# Finance.Accounting.FinancialStatements Entity
 
 Contains the user-defined financial statement definitions. Entity: Acc_Financial_Statements
 

@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.Services
 ---
-# Applications.Service.Services
+# Applications.Service.Services Entity
 
 Contains the services, which can be performed. Entity: Srv_Services
 

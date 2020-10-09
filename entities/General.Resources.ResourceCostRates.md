@@ -1,7 +1,7 @@
 ---
 uid: General.Resources.ResourceCostRates
 ---
-# General.Resources.ResourceCostRates
+# General.Resources.ResourceCostRates Entity
 
 Contains cost rates for different periods for resources. Each record is valid until the next From Date. Entity: Gen_Resource_Cost_Rates
 

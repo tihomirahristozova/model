@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.DepreciationPlanLineFixedValues
 ---
-# Finance.Assets.DepreciationPlanLineFixedValues
+# Finance.Assets.DepreciationPlanLineFixedValues Entity
 
 When specified, contains user-defined asset depreciation values for each depreciation period. Entity: Ast_Depreciation_Plan_Line_Fixed_Values
 

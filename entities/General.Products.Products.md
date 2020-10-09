@@ -1,7 +1,7 @@
 ---
 uid: General.Products.Products
 ---
-# General.Products.Products
+# General.Products.Products Entity
 
 Products are the different items in the enterprise, which can be purchased, stored, sold and depreciated. Entity: Gen_Products
 

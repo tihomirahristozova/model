@@ -1,31 +1,30 @@
 ---
 uid: Projects
 ---
-# Projects
+# Projects Namespace
 
-## Namespaces
 
 ## Entities
-- @Projects.ProjectParticipants  
-- @Projects.ProjectRiskDiscussion  
-- @Projects.ProjectRisks  
-- @Projects.Projects  
-- @Projects.ProjectTaskDependancies  
-- @Projects.ProjectTaskMaterials  
-- @Projects.ProjectTaskParticipants  
-- @Projects.ProjectTaskResources  
-- @Projects.ProjectTasks  
-- @Projects.ProjectTypes  
-- @Projects.ProjectWorkElements  
-- @Projects.Resources  
-- @Projects.TaskTypes  
-- @Projects.TemplateRisks  
-- @Projects.Templates  
-- @Projects.TemplateWorkElements  
-- @Projects.TypeRoles  
-- @Projects.TypeWorkElements  
-- @Projects.TypeWorkTypes  
-- @Projects.WorkReportMaterials  
-- @Projects.WorkReportResources  
-- @Projects.WorkReports  
+- [ProjectParticipants](Projects.ProjectParticipants.md)  
+- [ProjectRiskDiscussion](Projects.ProjectRiskDiscussion.md)  
+- [ProjectRisks](Projects.ProjectRisks.md)  
+- [Projects](Projects.Projects.md)  
+- [ProjectTaskDependancies](Projects.ProjectTaskDependancies.md)  
+- [ProjectTaskMaterials](Projects.ProjectTaskMaterials.md)  
+- [ProjectTaskParticipants](Projects.ProjectTaskParticipants.md)  
+- [ProjectTaskResources](Projects.ProjectTaskResources.md)  
+- [ProjectTasks](Projects.ProjectTasks.md)  
+- [ProjectTypes](Projects.ProjectTypes.md)  
+- [ProjectWorkElements](Projects.ProjectWorkElements.md)  
+- [Resources](Projects.Resources.md)  
+- [TaskTypes](Projects.TaskTypes.md)  
+- [TemplateRisks](Projects.TemplateRisks.md)  
+- [Templates](Projects.Templates.md)  
+- [TemplateWorkElements](Projects.TemplateWorkElements.md)  
+- [TypeRoles](Projects.TypeRoles.md)  
+- [TypeWorkElements](Projects.TypeWorkElements.md)  
+- [TypeWorkTypes](Projects.TypeWorkTypes.md)  
+- [WorkReportMaterials](Projects.WorkReportMaterials.md)  
+- [WorkReportResources](Projects.WorkReportResources.md)  
+- [WorkReports](Projects.WorkReports.md)  
 

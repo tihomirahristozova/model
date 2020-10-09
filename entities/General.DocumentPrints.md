@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentPrints
 ---
-# General.DocumentPrints
+# General.DocumentPrints Entity
 
 Contains the history of each document print or export. Entity: Gen_Document_Prints
 

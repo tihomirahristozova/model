@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.ObjectVersions
 ---
-# Systems.Core.ObjectVersions
+# Systems.Core.ObjectVersions Entity
 
 Contains history of saved version of the managed objects. Entity: Sys_Object_Versions
 

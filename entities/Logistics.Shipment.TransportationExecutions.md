@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Shipment.TransportationExecutions
 ---
-# Logistics.Shipment.TransportationExecutions
+# Logistics.Shipment.TransportationExecutions Entity
 
 Contains executions (loading, unloading or other operations) of the transportation orders. Entity: Log_Transportation_Executions (Introduced in version 18.2)
 

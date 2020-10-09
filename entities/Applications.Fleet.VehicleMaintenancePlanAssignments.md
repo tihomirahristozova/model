@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.VehicleMaintenancePlanAssignments
 ---
-# Applications.Fleet.VehicleMaintenancePlanAssignments
+# Applications.Fleet.VehicleMaintenancePlanAssignments Entity
 
 Represents assignment of a maintenance plan to a vehicle. Entity: Fleet_Vehicle_Maintenance_Plan_Assignments
 

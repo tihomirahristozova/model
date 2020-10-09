@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.StoreTransactionLines
 ---
-# Logistics.Inventory.StoreTransactionLines
+# Logistics.Inventory.StoreTransactionLines Entity
 
 Details records of Transactions. Each detail contains the movement for one product. Entity: Inv_Transaction_Lines
 

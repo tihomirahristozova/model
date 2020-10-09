@@ -1,13 +1,13 @@
 ---
 uid: Production
 ---
-# Production
+# Production Namespace
 
 ## Namespaces
-- @Production.Resources  
-- @Production.ShopFloor  
-- @Production.Technologies  
+- [Resources](Production.Resources.md)  
+- [ShopFloor](Production.ShopFloor.md)  
+- [Technologies](Production.Technologies.md)  
 
 ## Entities
-- @Production.WorkOrderDocumentTypesOptions  
+- [WorkOrderDocumentTypesOptions](Production.WorkOrderDocumentTypesOptions.md)  
 

@@ -1,7 +1,7 @@
 ---
 uid: Crm.Presales.Deals
 ---
-# Crm.Presales.Deals
+# Crm.Presales.Deals Entity
 
 Potential deals (Opportunities). Entity: Crm_Deals
 

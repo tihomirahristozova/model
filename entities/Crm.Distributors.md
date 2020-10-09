@@ -1,7 +1,7 @@
 ---
 uid: Crm.Distributors
 ---
-# Crm.Distributors
+# Crm.Distributors Entity
 
 Distributors are external for the enterprise persons or companies who obtain sales orders from end-customers in benefit of the enterprise. Entity: Crm_Distributors
 

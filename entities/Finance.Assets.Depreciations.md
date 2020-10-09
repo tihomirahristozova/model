@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.Depreciations
 ---
-# Finance.Assets.Depreciations
+# Finance.Assets.Depreciations Entity
 
 Depreciation documents contain actual depreciation values for one or more assets for one period. Entity: Ast_Depreciations
 

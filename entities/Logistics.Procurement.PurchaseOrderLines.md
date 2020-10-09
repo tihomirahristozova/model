@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.PurchaseOrderLines
 ---
-# Logistics.Procurement.PurchaseOrderLines
+# Logistics.Procurement.PurchaseOrderLines Entity
 
 Contains detail lines of purchase orders. Entity: Scm_Purchase_Order_Lines
 

@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.FunctionGroups
 ---
-# Production.Resources.FunctionGroups
+# Production.Resources.FunctionGroups Entity
 
 Represents the hierarchy of the function groups. They group the multitude of resource functions in logical, user-defined groups. Entity: Prd_Function_Groups
 

@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.TemplateLevels
 ---
-# Finance.Cost.TemplateLevels
+# Finance.Cost.TemplateLevels Entity
 
 Represents named hierarchy levels within a cost calculation. The hierarchy levels are used to specify cost allocation mechanisms. Entity: Cost_Template_Levels
 

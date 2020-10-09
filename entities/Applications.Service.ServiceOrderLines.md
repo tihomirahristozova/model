@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceOrderLines
 ---
-# Applications.Service.ServiceOrderLines
+# Applications.Service.ServiceOrderLines Entity
 
 Contains the details and problem symptoms for each object, which requires servicing. Entity: Srv_Service_Order_Lines
 

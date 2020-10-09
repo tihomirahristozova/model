@@ -1,7 +1,7 @@
 ---
 uid: General.Products.ProductGroupRequiredProperties
 ---
-# General.Products.ProductGroupRequiredProperties
+# General.Products.ProductGroupRequiredProperties Entity
 
 Contains the properties, that are required to be set, when creating new products in the category and its sub-categories. Entity: Gen_Product_Group_Required_Properties
 

@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentComments
 ---
-# General.DocumentComments
+# General.DocumentComments Entity
 
 Contains user comments for documents. Entity: Gen_Document_Comments
 

@@ -1,7 +1,7 @@
 ---
 uid: General.Config
 ---
-# General.Config
+# General.Config Entity
 
 Hierarchical repository of configuration options. Entity: Gen_Config
 

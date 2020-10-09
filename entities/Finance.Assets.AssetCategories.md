@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.AssetCategories
 ---
-# Finance.Assets.AssetCategories
+# Finance.Assets.AssetCategories Entity
 
 Categorization of the assets, which specifies their depreciation plans. Entity: Ast_Asset_Categories
 

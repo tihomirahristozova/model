@@ -1,7 +1,7 @@
 ---
 uid: Projects.ProjectWorkElements
 ---
-# Projects.ProjectWorkElements
+# Projects.ProjectWorkElements Entity
 
 Contains the work elements from the work breakdown structure, which are included in the projects. Entity: Prj_Project_Work_Elements
 

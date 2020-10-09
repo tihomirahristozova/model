@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.UserProviderLogins
 ---
-# Systems.Security.UserProviderLogins
+# Systems.Security.UserProviderLogins Entity
 
 External login providers. Entity: Sec_User_Provider_Logins (Introduced in version 18.2)
 

@@ -1,13 +1,11 @@
 ---
 uid: Logistics
 ---
-# Logistics
+# Logistics Namespace
 
 ## Namespaces
-- @Logistics.Inventory  
-- @Logistics.Procurement  
-- @Logistics.Shipment  
-- @Logistics.Wms  
-
-## Entities
+- [Inventory](Logistics.Inventory.md)  
+- [Procurement](Logistics.Procurement.md)  
+- [Shipment](Logistics.Shipment.md)  
+- [Wms](Logistics.Wms.md)  
 

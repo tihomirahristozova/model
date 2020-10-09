@@ -1,7 +1,7 @@
 ---
 uid: General.Products.VariantSizes
 ---
-# General.Products.VariantSizes
+# General.Products.VariantSizes Entity
 
 Contains the different sizes, which can be assigned to product variants. Entity: Gen_Variant_Sizes
 

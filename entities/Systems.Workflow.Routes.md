@@ -1,7 +1,7 @@
 ---
 uid: Systems.Workflow.Routes
 ---
-# Systems.Workflow.Routes
+# Systems.Workflow.Routes Entity
 
 Contains document routes, which specify which document generation procedures will be run upon document events. Entity: Wf_Routes
 

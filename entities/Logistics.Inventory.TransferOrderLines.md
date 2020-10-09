@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.TransferOrderLines
 ---
-# Logistics.Inventory.TransferOrderLines
+# Logistics.Inventory.TransferOrderLines Entity
 
 Details of Transfer Orders. Each line contains order for the movement of one product. Entity: Inv_Transfer_Order_Lines
 

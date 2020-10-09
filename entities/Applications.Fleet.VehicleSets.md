@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.VehicleSets
 ---
-# Applications.Fleet.VehicleSets
+# Applications.Fleet.VehicleSets Entity
 
 Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Sets
 

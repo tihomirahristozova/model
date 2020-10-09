@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.DepreciationPlanTemplates
 ---
-# Finance.Assets.DepreciationPlanTemplates
+# Finance.Assets.DepreciationPlanTemplates Entity
 
 Specifies the default depreciation methods for the asset categories. Different methods can be specified for each valuation model. Entity: Ast_Depreciation_Plan_Templates
 

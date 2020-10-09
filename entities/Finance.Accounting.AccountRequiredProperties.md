@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.AccountRequiredProperties
 ---
-# Finance.Accounting.AccountRequiredProperties
+# Finance.Accounting.AccountRequiredProperties Entity
 
 Defines the required properties for new vouchers, for each account. Entity: Acc_Account_Required_Properties
 

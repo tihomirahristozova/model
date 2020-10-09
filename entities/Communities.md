@@ -1,17 +1,16 @@
 ---
 uid: Communities
 ---
-# Communities
+# Communities Namespace
 
-## Namespaces
 
 ## Entities
-- @Communities.Notifications  
-- @Communities.NotificationSettings  
-- @Communities.SocialComments  
-- @Communities.SocialGroupMembers  
-- @Communities.SocialGroups  
-- @Communities.SocialPosts  
-- @Communities.SocialReactions  
-- @Communities.SocialReactionsSummary  
+- [Notifications](Communities.Notifications.md)  
+- [NotificationSettings](Communities.NotificationSettings.md)  
+- [SocialComments](Communities.SocialComments.md)  
+- [SocialGroupMembers](Communities.SocialGroupMembers.md)  
+- [SocialGroups](Communities.SocialGroups.md)  
+- [SocialPosts](Communities.SocialPosts.md)  
+- [SocialReactions](Communities.SocialReactions.md)  
+- [SocialReactionsSummary](Communities.SocialReactionsSummary.md)  
 

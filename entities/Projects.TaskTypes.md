@@ -1,7 +1,7 @@
 ---
 uid: Projects.TaskTypes
 ---
-# Projects.TaskTypes
+# Projects.TaskTypes Entity
 
 Represents the different types of tasks, which can be included in the projects. Entity: Prj_Task_Types
 

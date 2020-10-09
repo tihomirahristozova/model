@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentTypes
 ---
-# General.DocumentTypes
+# General.DocumentTypes Entity
 
 List of user-defined document types. Each type has associated system entity (object class). Entity: Gen_Document_Types
 

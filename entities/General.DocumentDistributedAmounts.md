@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentDistributedAmounts
 ---
-# General.DocumentDistributedAmounts
+# General.DocumentDistributedAmounts Entity
 
 Contains the amounts which are distributed by the system over the document lines as a result of additional amount calculations. Entity: Gen_Document_Distributed_Amounts
 

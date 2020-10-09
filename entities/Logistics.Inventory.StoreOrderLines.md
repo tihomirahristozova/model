@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.StoreOrderLines
 ---
-# Logistics.Inventory.StoreOrderLines
+# Logistics.Inventory.StoreOrderLines Entity
 
 Detail lines of store orders. Each line represents one planned stock transaction line, but can be executed in parts. E.g. many transaction lines can be bound to one order line. Entity: Inv_Store_Order_Lines
 

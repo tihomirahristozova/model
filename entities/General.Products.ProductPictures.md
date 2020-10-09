@@ -1,7 +1,7 @@
 ---
 uid: General.Products.ProductPictures
 ---
-# General.Products.ProductPictures
+# General.Products.ProductPictures Entity
 
 Pictures of products. Entity: Gen_Product_Pictures
 

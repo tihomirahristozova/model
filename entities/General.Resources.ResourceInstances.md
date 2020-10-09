@@ -1,7 +1,7 @@
 ---
 uid: General.Resources.ResourceInstances
 ---
-# General.Resources.ResourceInstances
+# General.Resources.ResourceInstances Entity
 
 Represents concrete instances of resources. Entity: Gen_Resource_Instances
 

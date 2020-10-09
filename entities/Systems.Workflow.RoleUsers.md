@@ -1,7 +1,7 @@
 ---
 uid: Systems.Workflow.RoleUsers
 ---
-# Systems.Workflow.RoleUsers
+# Systems.Workflow.RoleUsers Entity
 
 The roles "played" by the security users. Entity: Wf_Role_Users
 

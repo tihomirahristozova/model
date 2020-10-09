@@ -1,11 +1,10 @@
 ---
 uid: Systems.External
 ---
-# Systems.External
+# Systems.External Namespace
 
-## Namespaces
 
 ## Entities
-- @Systems.External.PublicUserLists  
-- @Systems.External.PublicUsers  
+- [PublicUserLists](Systems.External.PublicUserLists.md)  
+- [PublicUsers](Systems.External.PublicUsers.md)  
 

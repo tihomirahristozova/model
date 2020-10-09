@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.WebSites
 ---
-# Systems.Core.WebSites
+# Systems.Core.WebSites Entity
 
 Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites (Introduced in version 19.1)
 

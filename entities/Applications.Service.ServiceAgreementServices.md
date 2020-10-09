@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceAgreementServices
 ---
-# Applications.Service.ServiceAgreementServices
+# Applications.Service.ServiceAgreementServices Entity
 
 Contains the free services, included in the service agreement. Entity: Srv_Service_Agreement_Services
 

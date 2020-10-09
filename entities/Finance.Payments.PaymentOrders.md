@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.PaymentOrders
 ---
-# Finance.Payments.PaymentOrders
+# Finance.Payments.PaymentOrders Entity
 
 Each payment order contains a receivable or payable amount. Entity: Cash_Payment_Orders
 

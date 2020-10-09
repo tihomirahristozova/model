@@ -1,7 +1,7 @@
 ---
 uid: General.Products.ProductTypes
 ---
-# General.Products.ProductTypes
+# General.Products.ProductTypes Entity
 
 Categorization of the products by their nature. Entity: Gen_Product_Types
 

@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.PaymentAccounts
 ---
-# Finance.Payments.PaymentAccounts
+# Finance.Payments.PaymentAccounts Entity
 
 Payment accounts are cash, bank and other accounts, which are used in payments. Payment accounts are frequently used as analytical dimensions (properties) for general ledger accounts. Entity: Cash_Payment_Accounts
 

@@ -1,7 +1,7 @@
 ---
 uid: Production.ShopFloor.OutputOrderDistributedMaterialConsumptions
 ---
-# Production.ShopFloor.OutputOrderDistributedMaterialConsumptions
+# Production.ShopFloor.OutputOrderDistributedMaterialConsumptions Entity
 
 Contains the quantity of materials distributed over the output order lines. Entity: Prd_Output_Order_Distributed_Material_Consumptions
 

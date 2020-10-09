@@ -1,7 +1,7 @@
 ---
 uid: Communities.SocialPosts
 ---
-# Communities.SocialPosts
+# Communities.SocialPosts Entity
 
 User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.1)
 

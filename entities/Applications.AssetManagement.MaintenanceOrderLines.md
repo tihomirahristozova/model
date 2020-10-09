@@ -1,7 +1,7 @@
 ---
 uid: Applications.AssetManagement.MaintenanceOrderLines
 ---
-# Applications.AssetManagement.MaintenanceOrderLines
+# Applications.AssetManagement.MaintenanceOrderLines Entity
 
 Contains the types of maintenance and maintained assets in the maintenance orders. Entity: Eam_Maintenance_Order_Lines (Introduced in version 19.1)
 

@@ -1,7 +1,7 @@
 ---
 uid: General.Resources.Resources
 ---
-# General.Resources.Resources
+# General.Resources.Resources Entity
 
 Enterprise resources, categorized by groups. Entity: Gen_Resources
 

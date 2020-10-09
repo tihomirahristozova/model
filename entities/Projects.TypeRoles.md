@@ -1,7 +1,7 @@
 ---
 uid: Projects.TypeRoles
 ---
-# Projects.TypeRoles
+# Projects.TypeRoles Entity
 
 Contains the roles of the participants of each project type. Entity: Prj_Type_Roles
 

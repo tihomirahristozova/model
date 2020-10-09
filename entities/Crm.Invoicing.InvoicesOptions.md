@@ -1,7 +1,7 @@
 ---
 uid: Crm.Invoicing.InvoicesOptions
 ---
-# Crm.Invoicing.InvoicesOptions
+# Crm.Invoicing.InvoicesOptions Entity
 
 Default options for user document types for Invoices. Entity: Crm_Invoices_Options
 

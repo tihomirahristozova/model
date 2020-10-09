@@ -1,25 +1,24 @@
 ---
 uid: Applications.Fleet
 ---
-# Applications.Fleet
+# Applications.Fleet Namespace
 
-## Namespaces
 
 ## Entities
-- @Applications.Fleet.CrewMembers  
-- @Applications.Fleet.Crews  
-- @Applications.Fleet.EquipmentTypes  
-- @Applications.Fleet.MaintenancePlans  
-- @Applications.Fleet.MaintenanceProfilePlans  
-- @Applications.Fleet.MaintenanceProfiles  
-- @Applications.Fleet.Trips  
-- @Applications.Fleet.TripSegments  
-- @Applications.Fleet.VehicleAlerts  
-- @Applications.Fleet.VehicleEquipment  
-- @Applications.Fleet.VehicleLocationHistoryRecords  
-- @Applications.Fleet.VehicleMaintenancePlanAssignments  
-- @Applications.Fleet.VehicleObdTroubles  
-- @Applications.Fleet.Vehicles  
-- @Applications.Fleet.VehicleSets  
-- @Applications.Fleet.VehicleSetVehicles  
+- [CrewMembers](Applications.Fleet.CrewMembers.md)  
+- [Crews](Applications.Fleet.Crews.md)  
+- [EquipmentTypes](Applications.Fleet.EquipmentTypes.md)  
+- [MaintenancePlans](Applications.Fleet.MaintenancePlans.md)  
+- [MaintenanceProfilePlans](Applications.Fleet.MaintenanceProfilePlans.md)  
+- [MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md)  
+- [Trips](Applications.Fleet.Trips.md)  
+- [TripSegments](Applications.Fleet.TripSegments.md)  
+- [VehicleAlerts](Applications.Fleet.VehicleAlerts.md)  
+- [VehicleEquipment](Applications.Fleet.VehicleEquipment.md)  
+- [VehicleLocationHistoryRecords](Applications.Fleet.VehicleLocationHistoryRecords.md)  
+- [VehicleMaintenancePlanAssignments](Applications.Fleet.VehicleMaintenancePlanAssignments.md)  
+- [VehicleObdTroubles](Applications.Fleet.VehicleObdTroubles.md)  
+- [Vehicles](Applications.Fleet.Vehicles.md)  
+- [VehicleSets](Applications.Fleet.VehicleSets.md)  
+- [VehicleSetVehicles](Applications.Fleet.VehicleSetVehicles.md)  
 

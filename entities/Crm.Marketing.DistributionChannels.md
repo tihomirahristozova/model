@@ -1,7 +1,7 @@
 ---
 uid: Crm.Marketing.DistributionChannels
 ---
-# Crm.Marketing.DistributionChannels
+# Crm.Marketing.DistributionChannels Entity
 
 General list of distribution channels. Used to control prices and availability of products for the different channels. Entity: Crm_Distribution_Channels
 

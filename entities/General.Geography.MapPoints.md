@@ -1,7 +1,7 @@
 ---
 uid: General.Geography.MapPoints
 ---
-# General.Geography.MapPoints
+# General.Geography.MapPoints Entity
 
 Geographical map points are used as points of interest on the map. They are used for routing and other purposes. The points of interest for the different enterprise companies are different. Entity: Geo_Map_Points
 

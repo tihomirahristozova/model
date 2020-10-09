@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.Lots
 ---
-# Logistics.Inventory.Lots
+# Logistics.Inventory.Lots Entity
 
 Warehouse lots. They contain one row for each specific product, status, production batch and other specific warehousing conditions. Lot status can block certain operations. Entity: Inv_Lots
 

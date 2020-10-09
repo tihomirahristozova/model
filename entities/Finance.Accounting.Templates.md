@@ -1,7 +1,7 @@
 ---
 uid: Finance.Accounting.Templates
 ---
-# Finance.Accounting.Templates
+# Finance.Accounting.Templates Entity
 
 Accounting templates are used to automate the postings for repetitive business transactions. Templates can be bound to almost all documents and automate their postings. Entity: Acc_Templates
 

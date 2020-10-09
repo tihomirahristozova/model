@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.CompanyDepartments
 ---
-# General.Contacts.CompanyDepartments
+# General.Contacts.CompanyDepartments Entity
 
 Hierarchical structure of the company departments. The departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Departments
 

@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceInvoicing
 ---
-# Applications.Service.ServiceInvoicing
+# Applications.Service.ServiceInvoicing Entity
 
 Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
 

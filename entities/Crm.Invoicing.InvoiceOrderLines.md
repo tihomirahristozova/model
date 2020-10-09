@@ -1,7 +1,7 @@
 ---
 uid: Crm.Invoicing.InvoiceOrderLines
 ---
-# Crm.Invoicing.InvoiceOrderLines
+# Crm.Invoicing.InvoiceOrderLines Entity
 
 Detail records (lines) of Invoice Orders. Entity: Crm_Invoice_Order_Lines
 

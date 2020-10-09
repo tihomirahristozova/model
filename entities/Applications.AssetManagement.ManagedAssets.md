@@ -1,7 +1,7 @@
 ---
 uid: Applications.AssetManagement.ManagedAssets
 ---
-# Applications.AssetManagement.ManagedAssets
+# Applications.AssetManagement.ManagedAssets Entity
 
 Contains the managed assets. The management of assets include maintenance planning and execution, location assignments tracking, etc. Entity: Eam_Managed_Assets (Introduced in version 19.1)
 

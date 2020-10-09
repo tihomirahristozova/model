@@ -1,7 +1,7 @@
 ---
 uid: Applications.AssetManagement.ManagedAssetTypeTrackedParameters
 ---
-# Applications.AssetManagement.ManagedAssetTypeTrackedParameters
+# Applications.AssetManagement.ManagedAssetTypeTrackedParameters Entity
 
 Defines the parameters, which are tracked for the assets of the different types. Entity: Eam_Managed_Asset_Type_Tracked_Parameters (Introduced in version 19.1)
 

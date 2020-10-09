@@ -1,7 +1,7 @@
 ---
 uid: General.Products.ProductDimensions
 ---
-# General.Products.ProductDimensions
+# General.Products.ProductDimensions Entity
 
 Contains convertion ratios between the supported measument categories for each product. Does not contain a record for the default category of the products, for which the convertion ratio is defined as equal to 1. Entity: Gen_Product_Dimensions
 

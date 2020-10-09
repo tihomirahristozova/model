@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.Capacity
 ---
-# Production.Resources.Capacity
+# Production.Resources.Capacity Entity
 
 Contains capacity of workgroup resources available for production. Entity: Prd_Capacity
 

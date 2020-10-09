@@ -1,7 +1,7 @@
 ---
 uid: General.ReportQueries
 ---
-# General.ReportQueries
+# General.ReportQueries Entity
 
 Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries
 

@@ -1,7 +1,7 @@
 ---
 uid: Applications.Rental.AssetTypes
 ---
-# Applications.Rental.AssetTypes
+# Applications.Rental.AssetTypes Entity
 
 Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Types
 

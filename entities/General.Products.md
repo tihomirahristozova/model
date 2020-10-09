@@ -1,24 +1,23 @@
 ---
 uid: General.Products
 ---
-# General.Products
+# General.Products Namespace
 
-## Namespaces
 
 ## Entities
-- @General.Products.CodingSystems  
-- @General.Products.ProductCodes  
-- @General.Products.ProductDimensions  
-- @General.Products.ProductDocumentAmounts  
-- @General.Products.ProductGroupRangeProperties  
-- @General.Products.ProductGroupRequiredProperties  
-- @General.Products.ProductGroups  
-- @General.Products.ProductPictures  
-- @General.Products.Products  
-- @General.Products.ProductSupply  
-- @General.Products.ProductTypePurchaseInvoiceLineProperties  
-- @General.Products.ProductTypes  
-- @General.Products.VariantColors  
-- @General.Products.VariantSizes  
-- @General.Products.VariantStyles  
+- [CodingSystems](General.Products.CodingSystems.md)  
+- [ProductCodes](General.Products.ProductCodes.md)  
+- [ProductDimensions](General.Products.ProductDimensions.md)  
+- [ProductDocumentAmounts](General.Products.ProductDocumentAmounts.md)  
+- [ProductGroupRangeProperties](General.Products.ProductGroupRangeProperties.md)  
+- [ProductGroupRequiredProperties](General.Products.ProductGroupRequiredProperties.md)  
+- [ProductGroups](General.Products.ProductGroups.md)  
+- [ProductPictures](General.Products.ProductPictures.md)  
+- [Products](General.Products.Products.md)  
+- [ProductSupply](General.Products.ProductSupply.md)  
+- [ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md)  
+- [ProductTypes](General.Products.ProductTypes.md)  
+- [VariantColors](General.Products.VariantColors.md)  
+- [VariantSizes](General.Products.VariantSizes.md)  
+- [VariantStyles](General.Products.VariantStyles.md)  
 

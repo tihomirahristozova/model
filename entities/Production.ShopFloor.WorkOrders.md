@@ -1,7 +1,7 @@
 ---
 uid: Production.ShopFloor.WorkOrders
 ---
-# Production.ShopFloor.WorkOrders
+# Production.ShopFloor.WorkOrders Entity
 
 Scheduled and released production orders. Each order can contain the production of many items. Entity: Prd_Work_Orders
 

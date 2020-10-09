@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.StoreGroups
 ---
-# Logistics.Inventory.StoreGroups
+# Logistics.Inventory.StoreGroups Entity
 
 Hierarchy of store groups. Entity: Inv_Store_Groups
 

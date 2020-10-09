@@ -1,7 +1,7 @@
 ---
 uid: Projects.Resources
 ---
-# Projects.Resources
+# Projects.Resources Entity
 
 Contains the enterprise resources, which are available for including in projects. Entity: Prj_Resources
 

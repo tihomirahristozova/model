@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentFileAttachments
 ---
-# General.DocumentFileAttachments
+# General.DocumentFileAttachments Entity
 
 Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
 

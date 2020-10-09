@@ -1,7 +1,7 @@
 ---
 uid: Crm.Sales.SalesOrderLines
 ---
-# Crm.Sales.SalesOrderLines
+# Crm.Sales.SalesOrderLines Entity
 
 Sales Orders detail records. Entity: Crm_Sales_Order_Lines
 

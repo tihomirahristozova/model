@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.CompanyDivisions
 ---
-# General.Contacts.CompanyDivisions
+# General.Contacts.CompanyDivisions Entity
 
 Stores company divisions structure. The divisions are parties and as such, can be organized hierarchically mixed with other structuring mechanisms. The departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Divisions
 

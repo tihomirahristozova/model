@@ -1,12 +1,11 @@
 ---
 uid: Systems.Reporting
 ---
-# Systems.Reporting
+# Systems.Reporting Namespace
 
-## Namespaces
 
 ## Entities
-- @Systems.Reporting.DataSourceQueries  
-- @Systems.Reporting.DataSources  
-- @Systems.Reporting.Reports  
+- [DataSourceQueries](Systems.Reporting.DataSourceQueries.md)  
+- [DataSources](Systems.Reporting.DataSources.md)  
+- [Reports](Systems.Reporting.Reports.md)  
 

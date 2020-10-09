@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.ReconciliationOrderLines
 ---
-# Logistics.Inventory.ReconciliationOrderLines
+# Logistics.Inventory.ReconciliationOrderLines Entity
 
 Obsolete. Not used. Entity: Inv_Reconciliation_Order_Lines
 

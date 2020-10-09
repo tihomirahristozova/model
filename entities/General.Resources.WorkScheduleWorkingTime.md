@@ -1,7 +1,7 @@
 ---
 uid: General.Resources.WorkScheduleWorkingTime
 ---
-# General.Resources.WorkScheduleWorkingTime
+# General.Resources.WorkScheduleWorkingTime Entity
 
 Contains the different working time periods within the work schedule. Entity: Gen_Work_Schedule_Working_Time
 

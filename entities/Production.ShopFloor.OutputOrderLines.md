@@ -1,7 +1,7 @@
 ---
 uid: Production.ShopFloor.OutputOrderLines
 ---
-# Production.ShopFloor.OutputOrderLines
+# Production.ShopFloor.OutputOrderLines Entity
 
 Detail records of output orders. Entity: Prd_Output_Order_Lines
 

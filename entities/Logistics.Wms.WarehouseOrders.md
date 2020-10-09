@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Wms.WarehouseOrders
 ---
-# Logistics.Wms.WarehouseOrders
+# Logistics.Wms.WarehouseOrders Entity
 
 Contains order for internal warehouse operation or plan for execution of warehouse requisition. Entity: Wms_Warehouse_Orders (Introduced in version 20.1)
 

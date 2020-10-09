@@ -1,7 +1,7 @@
 ---
 uid: Applications.Rental.LeaseContracts
 ---
-# Applications.Rental.LeaseContracts
+# Applications.Rental.LeaseContracts Entity
 
 Contains the lease contracts for rental assets. Entity: Rent_Lease_Contracts
 

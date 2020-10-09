@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentTypeProperties
 ---
-# General.DocumentTypeProperties
+# General.DocumentTypeProperties Entity
 
 Default user-defined properties, which should be added to new documents. Entity: Gen_Document_Type_Properties
 

@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.PurchasePriceLists
 ---
-# Logistics.Procurement.PurchasePriceLists
+# Logistics.Procurement.PurchasePriceLists Entity
 
 Contains purchase price list headers. Entity: Scm_Purchase_Price_Lists
 

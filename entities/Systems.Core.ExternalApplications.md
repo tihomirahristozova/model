@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.ExternalApplications
 ---
-# Systems.Core.ExternalApplications
+# Systems.Core.ExternalApplications Entity
 
 List of external applications. Used to run external applications. Entity: Sys_External_Applications
 

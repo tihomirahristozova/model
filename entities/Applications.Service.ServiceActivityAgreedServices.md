@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceActivityAgreedServices
 ---
-# Applications.Service.ServiceActivityAgreedServices
+# Applications.Service.ServiceActivityAgreedServices Entity
 
 Contains the services, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Services
 

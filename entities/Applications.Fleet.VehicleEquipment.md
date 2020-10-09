@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.VehicleEquipment
 ---
-# Applications.Fleet.VehicleEquipment
+# Applications.Fleet.VehicleEquipment Entity
 
 Contains the actual and history of equipment, installed on the vehicles. Entity: Fleet_Vehicle_Equipment
 

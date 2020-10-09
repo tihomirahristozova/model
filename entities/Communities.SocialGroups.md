@@ -1,7 +1,7 @@
 ---
 uid: Communities.SocialGroups
 ---
-# Communities.SocialGroups
+# Communities.SocialGroups Entity
 
 Represents a group of users, sharing interest in the group topic. Entity: Cmm_Social_Groups (Introduced in version 20.1)
 

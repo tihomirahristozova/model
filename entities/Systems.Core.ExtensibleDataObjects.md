@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.ExtensibleDataObjects
 ---
-# Systems.Core.ExtensibleDataObjects
+# Systems.Core.ExtensibleDataObjects Entity
 
 Extends data in other tables with attached files, custom properties, etc. Each row is an object, bound to exactly one row in the primary table. Each object can be bound to a row in a different primary table, specified in Entity_Type. Entity: Sys_Objects
 

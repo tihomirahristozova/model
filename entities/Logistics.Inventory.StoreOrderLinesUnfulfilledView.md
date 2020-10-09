@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.StoreOrderLinesUnfulfilledView
 ---
-# Logistics.Inventory.StoreOrderLinesUnfulfilledView
+# Logistics.Inventory.StoreOrderLinesUnfulfilledView Entity
 
 Returns the remaining (unfulfilled) quantity and cost for each Store Order Line in Store Orders, which are Planned, FirmPlanned or Released. Is_Fulfilled and Is_QuantityFulfilled can be used to filter out lines which appear fulfilled. For best performance, the store orders should be finished after fulfilling. Entity: Inv_Store_Order_Lines_Unfulfilled_View
 

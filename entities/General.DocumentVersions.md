@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentVersions
 ---
-# General.DocumentVersions
+# General.DocumentVersions Entity
 
 History of each saved version of each document. Entity: Gen_Document_Versions
 

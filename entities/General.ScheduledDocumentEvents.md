@@ -1,7 +1,7 @@
 ---
 uid: General.ScheduledDocumentEvents
 ---
-# General.ScheduledDocumentEvents
+# General.ScheduledDocumentEvents Entity
 
 Contains postponed events, which will be executed later. Usually these are large number of recalculation events, resulting from other events. For example, releasing a cost correction, publishes postponed events for all affected documents. Entity: Gen_Scheduled_Document_Events
 

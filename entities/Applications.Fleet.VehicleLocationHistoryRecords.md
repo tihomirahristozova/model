@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.VehicleLocationHistoryRecords
 ---
-# Applications.Fleet.VehicleLocationHistoryRecords
+# Applications.Fleet.VehicleLocationHistoryRecords Entity
 
 Stores information about vehicle locations. Entity: Fleet_Vehicle_Location_History_Records
 

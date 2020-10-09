@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.StoreBins
 ---
-# Logistics.Inventory.StoreBins
+# Logistics.Inventory.StoreBins Entity
 
 The storage locations within a store. If there are no differentiated storage locations, create only one, called “(Default)” or similar. Entity: Inv_Store_Bins
 

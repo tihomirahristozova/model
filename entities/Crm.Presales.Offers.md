@@ -1,7 +1,7 @@
 ---
 uid: Crm.Presales.Offers
 ---
-# Crm.Presales.Offers
+# Crm.Presales.Offers Entity
 
 Offers (quotes) for sales of products. Can contain variants and choice groups. The user can select some approved lines and generate Sales Order. Entity: Crm_Offers
 

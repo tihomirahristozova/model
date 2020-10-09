@@ -1,7 +1,7 @@
 ---
 uid: Projects.Templates
 ---
-# Projects.Templates
+# Projects.Templates Entity
 
 Contains templates for creating new projects. Entity: Prj_Templates
 

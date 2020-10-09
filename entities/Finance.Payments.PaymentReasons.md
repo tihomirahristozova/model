@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.PaymentReasons
 ---
-# Finance.Payments.PaymentReasons
+# Finance.Payments.PaymentReasons Entity
 
 Represents reasons for the payments. Contains both system and user-defined reasons. Entity: Cash_Payment_Reasons
 

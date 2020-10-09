@@ -1,7 +1,7 @@
 ---
 uid: Production.Technologies.PrincipalRecipes
 ---
-# Production.Technologies.PrincipalRecipes
+# Production.Technologies.PrincipalRecipes Entity
 
 List of base recipe models. Recipe models are used by the Product Configurator to create specific recipes. Entity: Prd_Principal_Recipes
 

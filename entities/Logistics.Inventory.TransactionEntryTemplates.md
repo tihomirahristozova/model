@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.TransactionEntryTemplates
 ---
-# Logistics.Inventory.TransactionEntryTemplates
+# Logistics.Inventory.TransactionEntryTemplates Entity
 
 Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 

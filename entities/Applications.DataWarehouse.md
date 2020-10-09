@@ -1,12 +1,11 @@
 ---
 uid: Applications.DataWarehouse
 ---
-# Applications.DataWarehouse
+# Applications.DataWarehouse Namespace
 
-## Namespaces
 
 ## Entities
-- @Applications.DataWarehouse.DataMeasureGroups  
-- @Applications.DataWarehouse.DataMeasures  
-- @Applications.DataWarehouse.DataValues  
+- [DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md)  
+- [DataMeasures](Applications.DataWarehouse.DataMeasures.md)  
+- [DataValues](Applications.DataWarehouse.DataValues.md)  
 

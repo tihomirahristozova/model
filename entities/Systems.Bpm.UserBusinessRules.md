@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.UserBusinessRules
 ---
-# Systems.Bpm.UserBusinessRules
+# Systems.Bpm.UserBusinessRules Entity
 
 Represents user-defined business rule. Entity: Sys_User_Business_Rules
 

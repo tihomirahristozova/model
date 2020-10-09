@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentLinks
 ---
-# General.DocumentLinks
+# General.DocumentLinks Entity
 
 Obsolete. Not used. Entity: Gen_Document_Links
 

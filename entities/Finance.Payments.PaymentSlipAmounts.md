@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.PaymentSlipAmounts
 ---
-# Finance.Payments.PaymentSlipAmounts
+# Finance.Payments.PaymentSlipAmounts Entity
 
 Mass payment amount. Each record generates one payment transaction. Entity: Cash_Payment_Slip_Amounts
 

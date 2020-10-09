@@ -1,7 +1,7 @@
 ---
 uid: General.Products.ProductGroups
 ---
-# General.Products.ProductGroups
+# General.Products.ProductGroups Entity
 
 Hierarchical categorization of the products. Entity: Gen_Product_Groups
 

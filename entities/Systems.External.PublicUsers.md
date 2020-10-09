@@ -1,7 +1,7 @@
 ---
 uid: Systems.External.PublicUsers
 ---
-# Systems.External.PublicUsers
+# Systems.External.PublicUsers Entity
 
 /Users of the publicly offered services. This includes Internet, external and employee users. Entity: Ext_Public_Users
 

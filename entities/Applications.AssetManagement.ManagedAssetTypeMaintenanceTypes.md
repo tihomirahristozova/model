@@ -1,7 +1,7 @@
 ---
 uid: Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes
 ---
-# Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes
+# Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes Entity
 
 Defines the types of maintenances, which are allowed for assets of the different types. Entity: Eam_Managed_Asset_Type_Maintenance_Types (Introduced in version 19.1)
 

@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.ReceivingOrders
 ---
-# Logistics.Procurement.ReceivingOrders
+# Logistics.Procurement.ReceivingOrders Entity
 
 Contains the received quantities from a supplier. Entity: Scm_Receiving_Orders
 

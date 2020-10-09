@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.ProcessLanes
 ---
-# Systems.Bpm.ProcessLanes
+# Systems.Bpm.ProcessLanes Entity
 
 The process lanes categorize elements in the process and contain logic for executor selection. Entity: Bpm_Process_Lanes
 

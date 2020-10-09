@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.ObjectChanges
 ---
-# Systems.Core.ObjectChanges
+# Systems.Core.ObjectChanges Entity
 
 Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in version 19.1)
 

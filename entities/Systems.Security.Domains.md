@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.Domains
 ---
-# Systems.Security.Domains
+# Systems.Security.Domains Entity
 
 Represents one user domain. The users in a domain have different emails. But one user can use the same email to register in different domains. Entity: Sec_Domains (Introduced in version 20.1)
 

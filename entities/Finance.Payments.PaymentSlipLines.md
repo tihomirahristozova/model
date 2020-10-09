@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.PaymentSlipLines
 ---
-# Finance.Payments.PaymentSlipLines
+# Finance.Payments.PaymentSlipLines Entity
 
 Mass payment line, which is distribution of an amount among payment orders. Each record generates one payment transaction line. Entity: Cash_Payment_Slip_Lines
 

@@ -1,14 +1,13 @@
 ---
 uid: Finance.Vat
 ---
-# Finance.Vat
+# Finance.Vat Namespace
 
-## Namespaces
 
 ## Entities
-- @Finance.Vat.BGVATDeclarations  
-- @Finance.Vat.BGVATDeclaringPersons  
-- @Finance.Vat.BGVATDocumentTypeVATCodes  
-- @Finance.Vat.DealTypes  
-- @Finance.Vat.Entries  
+- [BGVATDeclarations](Finance.Vat.BGVATDeclarations.md)  
+- [BGVATDeclaringPersons](Finance.Vat.BGVATDeclaringPersons.md)  
+- [BGVATDocumentTypeVATCodes](Finance.Vat.BGVATDocumentTypeVATCodes.md)  
+- [DealTypes](Finance.Vat.DealTypes.md)  
+- [Entries](Finance.Vat.Entries.md)  
 

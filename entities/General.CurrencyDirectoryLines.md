@@ -1,7 +1,7 @@
 ---
 uid: General.CurrencyDirectoryLines
 ---
-# General.CurrencyDirectoryLines
+# General.CurrencyDirectoryLines Entity
 
 Contains exchange rate for a currency against the main currency of currency directory. Entity: Gen_Currency_Directory_Lines
 

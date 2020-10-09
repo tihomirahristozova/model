@@ -1,7 +1,7 @@
 ---
 uid: General.Products.ProductSupply
 ---
-# General.Products.ProductSupply
+# General.Products.ProductSupply Entity
 
 Contains supply rules, which are used by the procurement planning system. Entity: Gen_Product_Supply
 

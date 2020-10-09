@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.ResourceFunctions
 ---
-# Production.Resources.ResourceFunctions
+# Production.Resources.ResourceFunctions Entity
 
 List of functions that a specific resource is able to perform. Entity: Prd_Resource_Functions
 

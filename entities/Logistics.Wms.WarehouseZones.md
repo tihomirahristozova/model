@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Wms.WarehouseZones
 ---
-# Logistics.Wms.WarehouseZones
+# Logistics.Wms.WarehouseZones Entity
 
 One zone within a warehouse. Each zone can have different rack structure and different temperature and other properties. Entity: Wms_Warehouse_Zones (Introduced in version 20.1)
 

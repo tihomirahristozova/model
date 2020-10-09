@@ -1,14 +1,13 @@
 ---
 uid: Applications.PersonalData
 ---
-# Applications.PersonalData
+# Applications.PersonalData Namespace
 
-## Namespaces
 
 ## Entities
-- @Applications.PersonalData.DataSubjectRightRequests  
-- @Applications.PersonalData.JointControllers  
-- @Applications.PersonalData.PersonalDataProcesses  
-- @Applications.PersonalData.PersonalDataProcessRecipients  
-- @Applications.PersonalData.ProcessingConsents  
+- [DataSubjectRightRequests](Applications.PersonalData.DataSubjectRightRequests.md)  
+- [JointControllers](Applications.PersonalData.JointControllers.md)  
+- [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)  
+- [PersonalDataProcessRecipients](Applications.PersonalData.PersonalDataProcessRecipients.md)  
+- [ProcessingConsents](Applications.PersonalData.ProcessingConsents.md)  
 

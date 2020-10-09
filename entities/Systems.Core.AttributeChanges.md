@@ -1,7 +1,7 @@
 ---
 uid: Systems.Core.AttributeChanges
 ---
-# Systems.Core.AttributeChanges
+# Systems.Core.AttributeChanges Entity
 
 Attribute values of an object change. Entity: Sys_Attribute_Changes_View
 

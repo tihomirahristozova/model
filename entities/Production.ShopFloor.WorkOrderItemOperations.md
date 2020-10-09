@@ -1,7 +1,7 @@
 ---
 uid: Production.ShopFloor.WorkOrderItemOperations
 ---
-# Production.ShopFloor.WorkOrderItemOperations
+# Production.ShopFloor.WorkOrderItemOperations Entity
 
 The operations that are performed to produce the product. Entity: Prd_Work_Order_Item_Operations
 

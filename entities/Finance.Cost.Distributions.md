@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.Distributions
 ---
-# Finance.Cost.Distributions
+# Finance.Cost.Distributions Entity
 
 Used for cost distribution. Contains the period and the store of the cost distribution. Entity: Cost_Distributions
 

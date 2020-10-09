@@ -1,7 +1,7 @@
 ---
 uid: Applications.Rental.AssetTypeConsumables
 ---
-# Applications.Rental.AssetTypeConsumables
+# Applications.Rental.AssetTypeConsumables Entity
 
 Consumables are products, which are usually sold accompanying an asset rental. Entity: Rent_Asset_Type_Consumables
 

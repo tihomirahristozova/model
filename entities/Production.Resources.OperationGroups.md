@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.OperationGroups
 ---
-# Production.Resources.OperationGroups
+# Production.Resources.OperationGroups Entity
 
 Groups of operations. Entity: Prd_Operation_Groups
 

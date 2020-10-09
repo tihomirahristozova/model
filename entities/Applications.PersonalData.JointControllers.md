@@ -1,7 +1,7 @@
 ---
 uid: Applications.PersonalData.JointControllers
 ---
-# Applications.PersonalData.JointControllers
+# Applications.PersonalData.JointControllers Entity
 
 Contains relationship between process and joint controllers. For processes with control role, these are the joint controllers. Otherwise, these are the joint controllers, on behalf of which the enterprise company processes the data. Entity: Pdm_Joint_Controllers (Introduced in version 18.2)
 

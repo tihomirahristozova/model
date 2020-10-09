@@ -1,7 +1,7 @@
 ---
 uid: General.EnterpriseCompanies
 ---
-# General.EnterpriseCompanies
+# General.EnterpriseCompanies Entity
 
 The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Companies
 

@@ -1,7 +1,7 @@
 ---
 uid: General.Products.ProductTypePurchaseInvoiceLineProperties
 ---
-# General.Products.ProductTypePurchaseInvoiceLineProperties
+# General.Products.ProductTypePurchaseInvoiceLineProperties Entity
 
 When specified for a product type, contains the suggested user-defined properties, which can be specified when creating new purchase invoice lines with products of this type. Entity: Gen_Product_Type_Purchase_Invoice_Line_Properties
 

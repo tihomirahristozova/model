@@ -1,7 +1,7 @@
 ---
 uid: Projects.ProjectRiskDiscussion
 ---
-# Projects.ProjectRiskDiscussion
+# Projects.ProjectRiskDiscussion Entity
 
 Contains discussions on project risks. Entity: Prj_Project_Risk_Discussion
 

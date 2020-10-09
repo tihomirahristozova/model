@@ -1,7 +1,7 @@
 ---
 uid: Applications.Cms.StaticWebModules
 ---
-# Applications.Cms.StaticWebModules
+# Applications.Cms.StaticWebModules Entity
 
 A web module, which contains one web page with static text. Entity: Cms_Static_Web_Modules
 

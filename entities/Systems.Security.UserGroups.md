@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.UserGroups
 ---
-# Systems.Security.UserGroups
+# Systems.Security.UserGroups Entity
 
 Contains the user group members. Entity: Sec_User_Groups
 

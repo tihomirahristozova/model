@@ -1,7 +1,7 @@
 ---
 uid: General.Contacts.PartyPictures
 ---
-# General.Contacts.PartyPictures
+# General.Contacts.PartyPictures Entity
 
 Party pictures - photos, logos, etc. Entity: Gen_Party_Pictures
 

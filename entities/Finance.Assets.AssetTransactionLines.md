@@ -1,7 +1,7 @@
 ---
 uid: Finance.Assets.AssetTransactionLines
 ---
-# Finance.Assets.AssetTransactionLines
+# Finance.Assets.AssetTransactionLines Entity
 
 Asset value transaction lines. Each line changes the values of one asset in one valuation model. Entity: Ast_Asset_Transaction_Lines
 

@@ -1,7 +1,7 @@
 ---
 uid: Crm.Distribution.SalesPersonTargets
 ---
-# Crm.Distribution.SalesPersonTargets
+# Crm.Distribution.SalesPersonTargets Entity
 
 Sales person targets document header. Targets are expressed in amount or other numeric objectives and are tracked in achieved percentages. Entity: Crm_Sales_Person_Targets
 

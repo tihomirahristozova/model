@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.RequisitionLines
 ---
-# Logistics.Procurement.RequisitionLines
+# Logistics.Procurement.RequisitionLines Entity
 
 Detail lines of Requistions. Entity: Scm_Requisition_Lines
 

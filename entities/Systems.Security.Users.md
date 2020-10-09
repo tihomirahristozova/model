@@ -1,7 +1,7 @@
 ---
 uid: Systems.Security.Users
 ---
-# Systems.Security.Users
+# Systems.Security.Users Entity
 
 User logins. Entity: Sec_Users
 

@@ -1,7 +1,7 @@
 ---
 uid: Production.Resources.Functions
 ---
-# Production.Resources.Functions
+# Production.Resources.Functions Entity
 
 Definition of the functions that the resources can perform. Entity: Prd_Functions
 

@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Shipment.ShipmentLines
 ---
-# Logistics.Shipment.ShipmentLines
+# Logistics.Shipment.ShipmentLines Entity
 
 Represents detail lines of shipments. Each line contains the shipment of one product. Entity: Log_Shipment_Lines
 

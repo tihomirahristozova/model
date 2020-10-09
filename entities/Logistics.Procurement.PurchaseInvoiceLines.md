@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.PurchaseInvoiceLines
 ---
-# Logistics.Procurement.PurchaseInvoiceLines
+# Logistics.Procurement.PurchaseInvoiceLines Entity
 
 Contains detail lines for purchase invoice documents. Entity: Scm_Purchase_Invoice_Lines
 

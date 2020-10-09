@@ -1,7 +1,7 @@
 ---
 uid: Projects.WorkReports
 ---
-# Projects.WorkReports
+# Projects.WorkReports Entity
 
 Contains project work report documents. Each work report contains consumed materials and resources. Entity: Prj_Work_Reports
 

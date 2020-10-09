@@ -1,7 +1,7 @@
 ---
 uid: Crm.Presales.OfferLines
 ---
-# Crm.Presales.OfferLines
+# Crm.Presales.OfferLines Entity
 
 Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 

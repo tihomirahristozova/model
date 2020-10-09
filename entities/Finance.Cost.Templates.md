@@ -1,7 +1,7 @@
 ---
 uid: Finance.Cost.Templates
 ---
-# Finance.Cost.Templates
+# Finance.Cost.Templates Entity
 
 Cost templates specify how to calculate and allocate costs. Entity: Cost_Templates
 

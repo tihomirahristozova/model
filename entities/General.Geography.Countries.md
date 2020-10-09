@@ -1,7 +1,7 @@
 ---
 uid: General.Geography.Countries
 ---
-# General.Geography.Countries
+# General.Geography.Countries Entity
 
 List of countries, listed by their internet suffix code. Entity: Gen_Countries
 

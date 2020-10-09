@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentTypeAmounts
 ---
-# General.DocumentTypeAmounts
+# General.DocumentTypeAmounts Entity
 
 Specifies amount types, that should be automatically added to documents of a given type. Entity: Gen_Document_Type_Amounts
 

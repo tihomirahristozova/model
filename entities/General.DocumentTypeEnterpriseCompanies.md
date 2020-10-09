@@ -1,7 +1,7 @@
 ---
 uid: General.DocumentTypeEnterpriseCompanies
 ---
-# General.DocumentTypeEnterpriseCompanies
+# General.DocumentTypeEnterpriseCompanies Entity
 
 Specifies the visibility (availability) of the document type for the different enterprise companies. Entity: Gen_Document_Type_Enterprise_Companies
 

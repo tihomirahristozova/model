@@ -1,13 +1,12 @@
 ---
 uid: Applications.Mail
 ---
-# Applications.Mail
+# Applications.Mail Namespace
 
-## Namespaces
 
 ## Entities
-- @Applications.Mail.Boxes  
-- @Applications.Mail.BoxFolders  
-- @Applications.Mail.MessageAttachments  
-- @Applications.Mail.Messages  
+- [Boxes](Applications.Mail.Boxes.md)  
+- [BoxFolders](Applications.Mail.BoxFolders.md)  
+- [MessageAttachments](Applications.Mail.MessageAttachments.md)  
+- [Messages](Applications.Mail.Messages.md)  
 

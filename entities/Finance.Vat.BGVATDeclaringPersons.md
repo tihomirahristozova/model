@@ -1,7 +1,7 @@
 ---
 uid: Finance.Vat.BGVATDeclaringPersons
 ---
-# Finance.Vat.BGVATDeclaringPersons
+# Finance.Vat.BGVATDeclaringPersons Entity
 
 National data: Contains the persons, which are authorized to issue and sign VAT declarations. Entity: Nat_BG_VAT_Declaring_Persons
 

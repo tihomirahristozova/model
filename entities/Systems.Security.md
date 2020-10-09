@@ -1,23 +1,22 @@
 ---
 uid: Systems.Security
 ---
-# Systems.Security
+# Systems.Security Namespace
 
-## Namespaces
 
 ## Entities
-- @Systems.Security.AccessKeys  
-- @Systems.Security.ColumnPermissions  
-- @Systems.Security.DomainProviders  
-- @Systems.Security.Domains  
-- @Systems.Security.GroupAccessKeys  
-- @Systems.Security.Groups  
-- @Systems.Security.TrustedApplicationAuthorizations  
-- @Systems.Security.TrustedApplications  
-- @Systems.Security.UserAccessKeys  
-- @Systems.Security.UserGroups  
-- @Systems.Security.UserProviderLogins  
-- @Systems.Security.UserProviderTokens  
-- @Systems.Security.Users  
-- @Systems.Security.VisualPermissions  
+- [AccessKeys](Systems.Security.AccessKeys.md)  
+- [ColumnPermissions](Systems.Security.ColumnPermissions.md)  
+- [DomainProviders](Systems.Security.DomainProviders.md)  
+- [Domains](Systems.Security.Domains.md)  
+- [GroupAccessKeys](Systems.Security.GroupAccessKeys.md)  
+- [Groups](Systems.Security.Groups.md)  
+- [TrustedApplicationAuthorizations](Systems.Security.TrustedApplicationAuthorizations.md)  
+- [TrustedApplications](Systems.Security.TrustedApplications.md)  
+- [UserAccessKeys](Systems.Security.UserAccessKeys.md)  
+- [UserGroups](Systems.Security.UserGroups.md)  
+- [UserProviderLogins](Systems.Security.UserProviderLogins.md)  
+- [UserProviderTokens](Systems.Security.UserProviderTokens.md)  
+- [Users](Systems.Security.Users.md)  
+- [VisualPermissions](Systems.Security.VisualPermissions.md)  
 

@@ -1,7 +1,7 @@
 ---
 uid: General.PropertyEnterpriseCompanyFilters
 ---
-# General.PropertyEnterpriseCompanyFilters
+# General.PropertyEnterpriseCompanyFilters Entity
 
 Provides a way to apply different filtering of the property allowed values for the different enterprise companies. Entity: Gen_Property_Enterprise_Company_Filters
 

@@ -1,7 +1,7 @@
 ---
 uid: Applications.Fleet.MaintenanceProfiles
 ---
-# Applications.Fleet.MaintenanceProfiles
+# Applications.Fleet.MaintenanceProfiles Entity
 
 Profiles contain multiple maintenance plans and can be assigned directly to a vehicle. Entity: Fleet_Maintenance_Profiles
 

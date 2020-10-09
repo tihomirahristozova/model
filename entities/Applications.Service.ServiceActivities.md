@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceActivities
 ---
-# Applications.Service.ServiceActivities
+# Applications.Service.ServiceActivities Entity
 
 Contains service activity headers. The service activities are the actual actions performed to service (repair) an object. Entity: Srv_Service_Activities
 

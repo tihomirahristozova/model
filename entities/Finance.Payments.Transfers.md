@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.Transfers
 ---
-# Finance.Payments.Transfers
+# Finance.Payments.Transfers Entity
 
 Represents one fund transfer from one payment account to another. Entity: Cash_Transfers
 

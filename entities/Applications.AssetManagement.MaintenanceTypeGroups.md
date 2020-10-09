@@ -1,7 +1,7 @@
 ---
 uid: Applications.AssetManagement.MaintenanceTypeGroups
 ---
-# Applications.AssetManagement.MaintenanceTypeGroups
+# Applications.AssetManagement.MaintenanceTypeGroups Entity
 
 Represents the hierarchy of the groups of maintenance types. Entity: Eam_Maintenance_Type_Groups (Introduced in version 19.1)
 

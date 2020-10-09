@@ -1,7 +1,7 @@
 ---
 uid: Crm.Sales.SalesOrderPaymentPlans
 ---
-# Crm.Sales.SalesOrderPaymentPlans
+# Crm.Sales.SalesOrderPaymentPlans Entity
 
 Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 

@@ -1,7 +1,7 @@
 ---
 uid: Projects.ProjectTaskParticipants
 ---
-# Projects.ProjectTaskParticipants
+# Projects.ProjectTaskParticipants Entity
 
 Contains the participants in the project tasks. Entity: Prj_Project_Task_Participants
 

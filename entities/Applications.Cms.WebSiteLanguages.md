@@ -1,7 +1,7 @@
 ---
 uid: Applications.Cms.WebSiteLanguages
 ---
-# Applications.Cms.WebSiteLanguages
+# Applications.Cms.WebSiteLanguages Entity
 
 Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages
 

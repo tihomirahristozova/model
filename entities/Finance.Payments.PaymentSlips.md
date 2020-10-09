@@ -1,7 +1,7 @@
 ---
 uid: Finance.Payments.PaymentSlips
 ---
-# Finance.Payments.PaymentSlips
+# Finance.Payments.PaymentSlips Entity
 
 Represents mass payment document (payment slip). Entity: Cash_Payment_Slips
 

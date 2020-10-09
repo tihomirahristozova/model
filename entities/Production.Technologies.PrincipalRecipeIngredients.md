@@ -1,7 +1,7 @@
 ---
 uid: Production.Technologies.PrincipalRecipeIngredients
 ---
-# Production.Technologies.PrincipalRecipeIngredients
+# Production.Technologies.PrincipalRecipeIngredients Entity
 
 Template for material usage of a principal recipe. Entity: Prd_Principal_Recipe_Ingredients
 

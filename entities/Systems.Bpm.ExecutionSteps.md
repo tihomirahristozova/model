@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.ExecutionSteps
 ---
-# Systems.Bpm.ExecutionSteps
+# Systems.Bpm.ExecutionSteps Entity
 
 Contains both historical and active steps in the execution of the business processes. Entity: Bpm_Execution_Steps
 

@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Procurement.SupplierTypes
 ---
-# Logistics.Procurement.SupplierTypes
+# Logistics.Procurement.SupplierTypes Entity
 
 Supplier types are primarily used to differentiate the security level access to the different supplier groups. Entity: Scm_Supplier_Types
 

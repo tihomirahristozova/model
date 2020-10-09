@@ -1,19 +1,18 @@
 ---
 uid: Logistics.Wms
 ---
-# Logistics.Wms
+# Logistics.Wms Namespace
 
-## Namespaces
 
 ## Entities
-- @Logistics.Wms.WarehouseLocations  
-- @Logistics.Wms.WarehouseOrderExecutions  
-- @Logistics.Wms.WarehouseOrderLines  
-- @Logistics.Wms.WarehouseOrders  
-- @Logistics.Wms.WarehouseRequisitionExecutions  
-- @Logistics.Wms.WarehouseRequisitionLines  
-- @Logistics.Wms.WarehouseRequisitions  
-- @Logistics.Wms.Warehouses  
-- @Logistics.Wms.WarehouseWorkers  
-- @Logistics.Wms.WarehouseZones  
+- [WarehouseLocations](Logistics.Wms.WarehouseLocations.md)  
+- [WarehouseOrderExecutions](Logistics.Wms.WarehouseOrderExecutions.md)  
+- [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md)  
+- [WarehouseOrders](Logistics.Wms.WarehouseOrders.md)  
+- [WarehouseRequisitionExecutions](Logistics.Wms.WarehouseRequisitionExecutions.md)  
+- [WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md)  
+- [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)  
+- [Warehouses](Logistics.Wms.Warehouses.md)  
+- [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md)  
+- [WarehouseZones](Logistics.Wms.WarehouseZones.md)  
 

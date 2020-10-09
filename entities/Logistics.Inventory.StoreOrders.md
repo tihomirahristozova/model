@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.StoreOrders
 ---
-# Logistics.Inventory.StoreOrders
+# Logistics.Inventory.StoreOrders Entity
 
 Orders for store transactions. After an order is executed, store transaction is created. Entity: Inv_Store_Orders
 

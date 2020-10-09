@@ -1,7 +1,7 @@
 ---
 uid: Crm.Marketing.ForecastItems
 ---
-# Crm.Marketing.ForecastItems
+# Crm.Marketing.ForecastItems Entity
 
 Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 

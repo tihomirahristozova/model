@@ -1,7 +1,7 @@
 ---
 uid: Applications.Service.ServiceAgreementLines
 ---
-# Applications.Service.ServiceAgreementLines
+# Applications.Service.ServiceAgreementLines Entity
 
 Service agreement lines represent the individual serviced objects that are covered by the service agreement. Entity: Srv_Service_Agreement_Lines
 

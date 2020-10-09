@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.TransferOrders
 ---
-# Logistics.Inventory.TransferOrders
+# Logistics.Inventory.TransferOrders Entity
 
 Orders for stock transfers between stores. Entity: Inv_Transfer_Orders
 

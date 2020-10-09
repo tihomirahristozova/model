@@ -1,7 +1,7 @@
 ---
 uid: Production.Technologies.Recipes
 ---
-# Production.Technologies.Recipes
+# Production.Technologies.Recipes Entity
 
 Contains the characteristics of operations used to create products. Entity: Prd_Recipes
 

@@ -1,7 +1,7 @@
 ---
 uid: Systems.Bpm.ProcessElements
 ---
-# Systems.Bpm.ProcessElements
+# Systems.Bpm.ProcessElements Entity
 
 Contains the flow elements of the process model. Entity: Bpm_Process_Elements
 

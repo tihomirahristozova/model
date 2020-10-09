@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.StoreResponsibleParties
 ---
-# Logistics.Inventory.StoreResponsibleParties
+# Logistics.Inventory.StoreResponsibleParties Entity
 
 Contains the list of responsible parties (usually persons) for the stores. Stores can have multiple responsible parties. Entity: Inv_Store_Responsible_Parties
 

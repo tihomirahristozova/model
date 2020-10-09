@@ -1,7 +1,7 @@
 ---
 uid: General.PropertiesCategories
 ---
-# General.PropertiesCategories
+# General.PropertiesCategories Entity
 
 Categories of properties. Entity: Gen_Properties_Categories
 
