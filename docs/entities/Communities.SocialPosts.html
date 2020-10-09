@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Communities.SocialPosts.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Communities.SocialPosts.html#CreationTimeUtc">CreationTimeUtc</a></td>
+<td><a href="Communities.SocialPosts.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
 <td>The exact server time (in UTC), when the post was created. [Required]</td>
 </tr>
 <tr>
-<td><a href="Communities.SocialPosts.html#LastInteractionTimeUtc">LastInteractionTimeUtc</a></td>
+<td><a href="Communities.SocialPosts.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Communities.SocialPosts.html#lastinteractiontimeutc">LastInteractionTimeUtc</a></td>
 <td>datetime</td>
 <td>The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. [Required]</td>
 </tr>
 <tr>
-<td><a href="Communities.SocialPosts.html#PostText">PostText</a></td>
+<td><a href="Communities.SocialPosts.html#posttext">PostText</a></td>
 <td>string</td>
 <td>The post contents in clear text. [Required]</td>
 </tr>
@@ -123,23 +123,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Communities.SocialPosts.html#SocialGroup">SocialGroup</a></td>
+<td><a href="Communities.SocialPosts.html#socialgroup">SocialGroup</a></td>
 <td><a href="Communities.SocialGroups.html">Communities.SocialGroups</a></td>
 <td>The group in which the post is made. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Communities.SocialPosts.html#User">User</a></td>
+<td><a href="Communities.SocialPosts.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a></td>
 <td>The user, who made the post. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
 <blockquote>
 <p>The exact server time (in UTC), when the post was created. [Required]</p>
@@ -147,6 +142,10 @@
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lastinteractiontimeutc">LastInteractionTimeUtc</h3>
 <blockquote>
 <p>The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. [Required]</p>
@@ -167,21 +166,19 @@
 <p>The group in which the post is made. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Communities.SocialGroups.html">Communities.SocialGroups</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
 <blockquote>
 <p>The user, who made the post. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Communities.SocialPosts erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Communities.SocialPosts erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Communities.SocialPosts erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Communities_SocialPosts?$top=10">https://demodb.my.erp.net/api/domain/odata/Communities_SocialPosts?$top=10</a></p>

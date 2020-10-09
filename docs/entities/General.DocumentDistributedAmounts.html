@@ -91,19 +91,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentDistributedAmounts.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.DocumentDistributedAmounts.html#Amount">Amount</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="General.DocumentDistributedAmounts.html#amount">Amount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentDistributedAmounts.html#DocumentLineId">DocumentLineId</a></td>
+<td><a href="General.DocumentDistributedAmounts.html#documentlineid">DocumentLineId</a></td>
 <td>guid (nullable)</td>
 <td>The Id of the line over which the amount is distributed. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentDistributedAmounts.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -118,33 +118,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentDistributedAmounts.html#DocumentAmountType">DocumentAmountType</a></td>
+<td><a href="General.DocumentDistributedAmounts.html#document">Document</a></td>
+<td><a href="General.Documents.html">General.Documents</a></td>
+<td>The <a href="General.DocumentDistributedAmounts.html#document">Document</a> to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]</td>
+</tr>
+<tr>
+<td><a href="General.DocumentDistributedAmounts.html#documentamounttype">DocumentAmountType</a></td>
 <td><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a></td>
 <td>The type of amount which is distributed. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentDistributedAmounts.html#Document">Document</a></td>
-<td><a href="General.Documents.html">General.Documents</a></td>
-<td>The <a href="General.DocumentDistributedAmounts.html#Document">Document</a> to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]</td>
-</tr>
-<tr>
-<td><a href="General.DocumentDistributedAmounts.html#ReferencedDocument">ReferencedDocument</a></td>
+<td><a href="General.DocumentDistributedAmounts.html#referenceddocument">ReferencedDocument</a></td>
 <td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
 <td>In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="amount">Amount</h3>
 <blockquote>
 <p>The amount which has beed distributed over the current line. The amount is in the currency of the document. [Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentlineid">DocumentLineId</h3>
@@ -152,36 +147,36 @@
 <p>The Id of the line over which the amount is distributed. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="document">Document</h3>
+<blockquote>
+<p>The <a href="General.DocumentDistributedAmounts.html#document">Document</a> to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
 <blockquote>
 <p>The type of amount which is distributed. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="document">Document</h3>
-<blockquote>
-<p>The <a href="General.DocumentDistributedAmounts.html#Document">Document</a> to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="referenceddocument">ReferencedDocument</h3>
 <blockquote>
 <p>In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.DocumentDistributedAmounts erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.DocumentDistributedAmounts erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.DocumentDistributedAmounts erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_DocumentDistributedAmounts?$top=10">https://demodb.my.erp.net/api/domain/odata/General_DocumentDistributedAmounts?$top=10</a></p>

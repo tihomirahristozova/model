@@ -91,83 +91,83 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Products.ProductGroups.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroups.html#Active">Active</a></td>
+<td><a href="General.Products.ProductGroups.html#active">Active</a></td>
 <td>boolean</td>
 <td>True if the product group is active, false - not to list in combo boxes for choosing in new documents. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroups.html#ConfiguratorCreatesRecipe">ConfiguratorCreatesRecipe</a></td>
-<td>boolean</td>
-<td>Whether the product configurator should create one default recipe. true=yes;false=no. [Required] [Default(false)]</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroups.html#ConfiguratorStatus">ConfiguratorStatus</a></td>
-<td><a href="General.Products.ProductGroups.html#ConfiguratorStatus">General.Products.ProductGroupsRepository.ConfiguratorStatus</a></td>
-<td>Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly. [Required] [Default(0)]</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroups.html#FullPath">FullPath</a></td>
-<td>string</td>
-<td>Full tree path in the form /parent/.../leaf/. Contains the group names. [Required] [Default(&quot;&quot;)] [Filter(eq;like)] [ORD]</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroups.html#NextPartNumber">NextPartNumber</a></td>
-<td>string (nullable)</td>
-<td>Contains the next part number to be auto-assigned to parts, created in the group or sub-groups.</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroups.html#NextSerialNumber">NextSerialNumber</a></td>
-<td>string (nullable)</td>
-<td>When not null, specifies the next serial number, that should be assigned to new produced items. [Filter(eq;like)]</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroups.html#Notes">Notes</a></td>
-<td>string (nullable)</td>
-<td>User notes for the item group.</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroups.html#Parent">Parent</a></td>
-<td>string</td>
-<td>Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. [Required] [Default(&quot;/&quot;)] [Filter(eq)] [ORD]</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroups.html#Picture">Picture</a></td>
-<td>byte[] (nullable)</td>
-<td>The picture of the product group.</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroups.html#PictureLastUpdateTime">PictureLastUpdateTime</a></td>
-<td>datetime (nullable)</td>
-<td>Last update time of the Picture. [Filter(ge;le)] [ReadOnly]</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroups.html#ProductDescriptionMask">ProductDescriptionMask</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
-<td>When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroups.html#Code">Code</a></td>
+<td><a href="General.Products.ProductGroups.html#code">Code</a></td>
 <td>string</td>
 <td>The unique code of the ProductGroup. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroups.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="General.Products.ProductGroups.html#configuratorcreatesrecipe">ConfiguratorCreatesRecipe</a></td>
+<td>boolean</td>
+<td>Whether the product configurator should create one default recipe. true=yes;false=no. [Required] [Default(false)]</td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductGroups.html#configuratorstatus">ConfiguratorStatus</a></td>
+<td><a href="General.Products.ProductGroups.html#configuratorstatus">ConfiguratorStatus</a></td>
+<td>Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly. [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductGroups.html#fullpath">FullPath</a></td>
+<td>string</td>
+<td>Full tree path in the form /parent/.../leaf/. Contains the group names. [Required] [Default(&quot;&quot;)] [Filter(eq;like)] [ORD]</td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductGroups.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductGroups.html#name">Name</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
 <td>Group name should be unique among the other groups within the same parent. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroups.html#ProductNameMask">ProductNameMask</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="General.Products.ProductGroups.html#nextpartnumber">NextPartNumber</a></td>
+<td>string (nullable)</td>
+<td>Contains the next part number to be auto-assigned to parts, created in the group or sub-groups.</td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductGroups.html#nextserialnumber">NextSerialNumber</a></td>
+<td>string (nullable)</td>
+<td>When not null, specifies the next serial number, that should be assigned to new produced items. [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductGroups.html#notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>User notes for the item group.</td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductGroups.html#parent">Parent</a></td>
+<td>string</td>
+<td>Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. [Required] [Default(&quot;/&quot;)] [Filter(eq)] [ORD]</td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductGroups.html#picture">Picture</a></td>
+<td>byte[] (nullable)</td>
+<td>The picture of the product group.</td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductGroups.html#picturelastupdatetime">PictureLastUpdateTime</a></td>
+<td>datetime (nullable)</td>
+<td>Last update time of the Picture. [Filter(ge;le)] [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductGroups.html#productdescriptionmask">ProductDescriptionMask</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
+<td>When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.</td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductGroups.html#productnamemask">ProductNameMask</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroups.html#UseLots">UseLots</a></td>
-<td><a href="General.Products.ProductGroups.html#UseLots">General.Products.ProductGroupsRepository.UseLots</a> (nullable)</td>
+<td><a href="General.Products.ProductGroups.html#uselots">UseLots</a></td>
+<td><a href="General.Products.ProductGroups.html#uselots">UseLots</a> (nullable)</td>
 <td>Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required.</td>
 </tr>
 </tbody>
@@ -183,22 +183,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Products.ProductGroups.html#DefaultMeasurementUnit">DefaultMeasurementUnit</a></td>
+<td><a href="General.Products.ProductGroups.html#defaultmeasurementunit">DefaultMeasurementUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</td>
 <td>When not null, specifies default measurement unit, which should be assigned to new products in the group. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroups.html#DefaultProductType">DefaultProductType</a></td>
+<td><a href="General.Products.ProductGroups.html#defaultproducttype">DefaultProductType</a></td>
 <td><a href="General.Products.ProductTypes.html">General.Products.ProductTypes</a> (nullable)</td>
 <td>When not null, specifies default product type, which should be assigned to new products in the group. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroups.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="General.Products.ProductGroups.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
 <td>When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroups.html#PricingModel">PricingModel</a></td>
+<td><a href="General.Products.ProductGroups.html#pricingmodel">PricingModel</a></td>
 <td><a href="Crm.Pricing.PricingModels.html">Crm.Pricing.PricingModels</a> (nullable)</td>
 <td>When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. [Filter(multi eq)]</td>
 </tr>
@@ -215,28 +215,23 @@
 </thead>
 <tbody>
 <tr>
+<td>PrincipalRecipes</td>
+<td><a href="Production.Technologies.PrincipalRecipes.html">Production.Technologies.PrincipalRecipes</a></td>
+<td>List of <a href="Production.Technologies.PrincipalRecipes.html">PrincipalRecipe</a> child objects, based on the <a href="Production.Technologies.PrincipalRecipes.html#productgroup">Production.Technologies.PrincipalRecipe.ProductGroup</a> back reference</td>
+</tr>
+<tr>
 <td>RangeProperties</td>
 <td><a href="General.Products.ProductGroupRangeProperties.html">General.Products.ProductGroupRangeProperties</a></td>
-<td>List of <a href="General.Products.ProductGroupRangeProperties.html">ProductGroupRangeProperty</a> child objects, based on the <a href="General.Products.ProductGroupRangeProperties.html#ProductGroup">General.Products.ProductGroupRangeProperty.ProductGroup</a> back reference</td>
+<td>List of <a href="General.Products.ProductGroupRangeProperties.html">ProductGroupRangeProperty</a> child objects, based on the <a href="General.Products.ProductGroupRangeProperties.html#productgroup">General.Products.ProductGroupRangeProperty.ProductGroup</a> back reference</td>
 </tr>
 <tr>
 <td>RequiredProperties</td>
 <td><a href="General.Products.ProductGroupRequiredProperties.html">General.Products.ProductGroupRequiredProperties</a></td>
-<td>List of <a href="General.Products.ProductGroupRequiredProperties.html">ProductGroupRequiredProperty</a> child objects, based on the <a href="General.Products.ProductGroupRequiredProperties.html#ProductGroup">General.Products.ProductGroupRequiredProperty.ProductGroup</a> back reference</td>
-</tr>
-<tr>
-<td>PrincipalRecipes</td>
-<td><a href="Production.Technologies.PrincipalRecipes.html">Production.Technologies.PrincipalRecipes</a></td>
-<td>List of <a href="Production.Technologies.PrincipalRecipes.html">PrincipalRecipe</a> child objects, based on the <a href="Production.Technologies.PrincipalRecipes.html#ProductGroup">Production.Technologies.PrincipalRecipe.ProductGroup</a> back reference</td>
+<td>List of <a href="General.Products.ProductGroupRequiredProperties.html">ProductGroupRequiredProperty</a> child objects, based on the <a href="General.Products.ProductGroupRequiredProperties.html#productgroup">General.Products.ProductGroupRequiredProperty.ProductGroup</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="active">Active</h3>
 <blockquote>
 <p>True if the product group is active, false - not to list in combo boxes for choosing in new documents. [Required] [Default(true)] [Filter(eq)]</p>
@@ -245,6 +240,13 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="code">Code</h3>
+<blockquote>
+<p>The unique code of the ProductGroup. [Required] [Filter(eq;like)] [ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="configuratorcreatesrecipe">ConfiguratorCreatesRecipe</h3>
 <blockquote>
 <p>Whether the product configurator should create one default recipe. true=yes;false=no. [Required] [Default(false)]</p>
@@ -257,9 +259,9 @@
 <blockquote>
 <p>Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly. [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html#ConfiguratorStatus">General.Products.ProductGroupsRepository.ConfiguratorStatus</a></strong><br>
-Allowed values for the <a href="General.Products.ProductGroups.html#ConfiguratorStatus">ConfiguratorStatus</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html#configuratorstatus">ConfiguratorStatus</a></strong><br>
+Allowed values for the <a href="General.Products.ProductGroups.html#configuratorstatus">ConfiguratorStatus</a> data attribute<br>
+<em>Allowed Values (General.Products.ProductGroupsRepository.ConfiguratorStatus Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -293,6 +295,17 @@ Allowed values for the <a href="General.Products.ProductGroups.html#Configurator
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: ****</p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>Group name should be unique among the other groups within the same parent. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="nextpartnumber">NextPartNumber</h3>
 <blockquote>
 <p>Contains the next part number to be auto-assigned to parts, created in the group or sub-groups.</p>
@@ -340,37 +353,23 @@ Allowed values for the <a href="General.Products.ProductGroups.html#Configurator
 <blockquote>
 <p>When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="code">Code</h3>
-<blockquote>
-<p>The unique code of the ProductGroup. [Required] [Filter(eq;like)] [ORD]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>Group name should be unique among the other groups within the same parent. [Required] [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="productnamemask">ProductNameMask</h3>
 <blockquote>
 <p>When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="uselots">UseLots</h3>
 <blockquote>
 <p>Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html#UseLots">General.Products.ProductGroupsRepository.UseLots</a> (nullable)</strong><br>
-Allowed values for the <a href="General.Products.ProductGroups.html#UseLots">UseLots</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html#uselots">UseLots</a> (nullable)</strong><br>
+Allowed values for the <a href="General.Products.ProductGroups.html#uselots">UseLots</a> data attribute<br>
+<em>Allowed Values (General.Products.ProductGroupsRepository.UseLots Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -401,35 +400,31 @@ Allowed values for the <a href="General.Products.ProductGroups.html#UseLots">Use
 <p>When not null, specifies default measurement unit, which should be assigned to new products in the group. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="defaultproducttype">DefaultProductType</h3>
 <blockquote>
 <p>When not null, specifies default product type, which should be assigned to new products in the group. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">General.Products.ProductTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="pricingmodel">PricingModel</h3>
 <blockquote>
 <p>When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pricing.PricingModels.html">Crm.Pricing.PricingModels</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.Products.ProductGroups erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.Products.ProductGroups erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.Products.ProductGroups erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Products_ProductGroups?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Products_ProductGroups?$top=10</a></p>

@@ -91,7 +91,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Presales.OffersOptions.html#Id">Id</a></td>
+<td><a href="Crm.Presales.OffersOptions.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
@@ -108,12 +108,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Presales.OffersOptions.html#DealDocumentType">DealDocumentType</a></td>
+<td><a href="Crm.Presales.OffersOptions.html#dealdocumenttype">DealDocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a> (nullable)</td>
 <td>If filled then new opportunities (deals) from the specified type will be created automatically for the offers that aren't assigned to existing opportunities. Used for automating opportunity management. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Presales.OffersOptions.html#DocumentType">DocumentType</a></td>
+<td><a href="Crm.Presales.OffersOptions.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
 <td>The document type for which the offer option applies. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
@@ -123,7 +123,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dealdocumenttype">DealDocumentType</h3>
@@ -131,21 +130,19 @@
 <p>If filled then new opportunities (deals) from the specified type will be created automatically for the offers that aren't assigned to existing opportunities. Used for automating opportunity management. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
 <blockquote>
 <p>The document type for which the offer option applies. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Crm.Presales.OffersOptions erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Crm.Presales.OffersOptions erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Crm.Presales.OffersOptions erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_Presales_OffersOptions?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Presales_OffersOptions?$top=10</a></p>

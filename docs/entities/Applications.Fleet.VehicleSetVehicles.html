@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Fleet.VehicleSetVehicles.html#Id">Id</a></td>
+<td><a href="Applications.Fleet.VehicleSetVehicles.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.VehicleSetVehicles.html#Notes">Notes</a></td>
+<td><a href="Applications.Fleet.VehicleSetVehicles.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this VehicleSetVehicle. [Filter(like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.VehicleSetVehicles.html#OrdinalPos">OrdinalPos</a></td>
+<td><a href="Applications.Fleet.VehicleSetVehicles.html#ordinalpos">OrdinalPos</a></td>
 <td>int32 (nullable)</td>
 <td>Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. [Filter(ge;le)]</td>
 </tr>
@@ -118,14 +118,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Fleet.VehicleSetVehicles.html#Vehicle">Vehicle</a></td>
+<td><a href="Applications.Fleet.VehicleSetVehicles.html#vehicle">Vehicle</a></td>
 <td><a href="Applications.Fleet.Vehicles.html">Applications.Fleet.Vehicles</a></td>
 <td>The Vehicle which is part of the vehicle set. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.VehicleSetVehicles.html#VehicleSet">VehicleSet</a></td>
+<td><a href="Applications.Fleet.VehicleSetVehicles.html#vehicleset">VehicleSet</a></td>
 <td><a href="Applications.Fleet.VehicleSets.html">Applications.Fleet.VehicleSets</a></td>
-<td>The <a href="Applications.Fleet.VehicleSetVehicles.html#VehicleSet">VehicleSet</a> to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Applications.Fleet.VehicleSetVehicles.html#vehicleset">VehicleSet</a> to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
@@ -133,7 +133,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
@@ -155,21 +154,19 @@
 <p>The Vehicle which is part of the vehicle set. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.Vehicles.html">Applications.Fleet.Vehicles</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="vehicleset">VehicleSet</h3>
 <blockquote>
-<p>The <a href="Applications.Fleet.VehicleSetVehicles.html#VehicleSet">VehicleSet</a> to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Applications.Fleet.VehicleSetVehicles.html#vehicleset">VehicleSet</a> to which this VehicleSetVehicle belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.VehicleSets.html">Applications.Fleet.VehicleSets</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.Fleet.VehicleSetVehicles erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.Fleet.VehicleSetVehicles erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.Fleet.VehicleSetVehicles erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_Fleet_VehicleSetVehicles?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_Fleet_VehicleSetVehicles?$top=10</a></p>

@@ -91,13 +91,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Rental.TransactionTemplates.html#Id">Id</a></td>
+<td><a href="Applications.Rental.TransactionTemplates.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Applications.Rental.TransactionTemplates.html#TransactionType">TransactionType</a></td>
-<td><a href="Applications.Rental.TransactionTemplates.html#TransactionType">Applications.Rental.TransactionsRepository.TransactionType</a></td>
+<td><a href="Applications.Rental.TransactionTemplates.html#transactiontype">TransactionType</a></td>
+<td><a href="Applications.Rental.TransactionTemplates.html#transactiontype">TransactionType</a></td>
 <td>Transaction type for the rent transaction that is to be created. [Required]</td>
 </tr>
 </tbody>
@@ -113,7 +113,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Rental.TransactionTemplates.html#Route">Route</a></td>
+<td><a href="Applications.Rental.TransactionTemplates.html#route">Route</a></td>
 <td><a href="Systems.Workflow.Routes.html">Systems.Workflow.Routes</a></td>
 <td>The route for which the transaction template is defined. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -123,15 +123,14 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="transactiontype">TransactionType</h3>
 <blockquote>
 <p>Transaction type for the rent transaction that is to be created. [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Rental.TransactionTemplates.html#TransactionType">Applications.Rental.TransactionsRepository.TransactionType</a></strong><br>
-Allowed values for the <a href="Applications.Rental.Transactions.html#TransactionType">TransactionType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Applications.Rental.TransactionTemplates.html#transactiontype">TransactionType</a></strong><br>
+Allowed values for the <a href="Applications.Rental.Transactions.html#transactiontype">TransactionType</a> data attribute<br>
+<em>Allowed Values (Applications.Rental.TransactionsRepository.TransactionType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -166,14 +165,13 @@ Allowed values for the <a href="Applications.Rental.Transactions.html#Transactio
 <p>The route for which the transaction template is defined. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html">Systems.Workflow.Routes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.Rental.TransactionTemplates erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.Rental.TransactionTemplates erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.Rental.TransactionTemplates erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_Rental_TransactionTemplates?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_Rental_TransactionTemplates?$top=10</a></p>

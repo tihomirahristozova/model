@@ -91,32 +91,32 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Bpm.ProcessInstances.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Systems.Bpm.ProcessInstances.html#CreationTime">CreationTime</a></td>
+<td><a href="Systems.Bpm.ProcessInstances.html#creationtime">CreationTime</a></td>
 <td>datetime</td>
 <td>The date and time, when the process instance was created. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Systems.Bpm.ProcessInstances.html#FinishTime">FinishTime</a></td>
+<td><a href="Systems.Bpm.ProcessInstances.html#finishtime">FinishTime</a></td>
 <td>datetime (nullable)</td>
 <td>The date and time, when the process instance has finished its execution. null when the instance has not yet finished execution. [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Systems.Bpm.ProcessInstances.html#StartTime">StartTime</a></td>
+<td><a href="Systems.Bpm.ProcessInstances.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.ProcessInstances.html#starttime">StartTime</a></td>
 <td>datetime</td>
 <td>The date and time, when the process instance was started. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Systems.Bpm.ProcessInstances.html#State">State</a></td>
-<td><a href="Systems.Bpm.ProcessInstances.html#State">Systems.Bpm.ProcessInstancesRepository.State</a></td>
+<td><a href="Systems.Bpm.ProcessInstances.html#state">State</a></td>
+<td><a href="Systems.Bpm.ProcessInstances.html#state">State</a></td>
 <td>Instance state. 0=Created; 60=Completed. [Required] [Default(0)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Systems.Bpm.ProcessInstances.html#Subject">Subject</a></td>
+<td><a href="Systems.Bpm.ProcessInstances.html#subject">Subject</a></td>
 <td>string</td>
 <td>The multilanguage subject (or title) of this process instance. [Required] [Filter(eq;like)]</td>
 </tr>
@@ -133,18 +133,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Bpm.ProcessInstances.html#Process">Process</a></td>
+<td><a href="Systems.Bpm.ProcessInstances.html#process">Process</a></td>
 <td><a href="Systems.Bpm.Processes.html">Systems.Bpm.Processes</a></td>
 <td>The process on which this instance is based. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="creationtime">CreationTime</h3>
 <blockquote>
 <p>The date and time, when the process instance was created. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]</p>
@@ -160,6 +155,10 @@
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="starttime">StartTime</h3>
 <blockquote>
 <p>The date and time, when the process instance was started. [Required] [Default(Now)] [Filter(eq)] [ReadOnly]</p>
@@ -172,9 +171,9 @@
 <blockquote>
 <p>Instance state. 0=Created; 60=Completed. [Required] [Default(0)] [Filter(eq)] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessInstances.html#State">Systems.Bpm.ProcessInstancesRepository.State</a></strong><br>
-Allowed values for the <a href="Systems.Bpm.ProcessInstances.html#State">State</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessInstances.html#state">State</a></strong><br>
+Allowed values for the <a href="Systems.Bpm.ProcessInstances.html#state">State</a> data attribute<br>
+<em>Allowed Values (Systems.Bpm.ProcessInstancesRepository.State Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -217,14 +216,13 @@ Allowed values for the <a href="Systems.Bpm.ProcessInstances.html#State">State</
 <p>The process on which this instance is based. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.Processes.html">Systems.Bpm.Processes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Systems.Bpm.ProcessInstances erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Systems.Bpm.ProcessInstances erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Systems.Bpm.ProcessInstances erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_ProcessInstances?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_ProcessInstances?$top=10</a></p>

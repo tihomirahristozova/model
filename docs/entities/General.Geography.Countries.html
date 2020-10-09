@@ -91,33 +91,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Geography.Countries.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Geography.Countries.html#Code">Code</a></td>
+<td><a href="General.Geography.Countries.html#code">Code</a></td>
 <td>string</td>
 <td>Internet suffix code of the country. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="General.Geography.Countries.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
-<td>Name of the country. [Required] [Filter(like)]</td>
+<td><a href="General.Geography.Countries.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 <tr>
-<td><a href="General.Geography.Countries.html#IntrastatCode">IntrastatCode</a></td>
+<td><a href="General.Geography.Countries.html#intrastatcode">IntrastatCode</a></td>
 <td>string (nullable)</td>
 <td>This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. (Introduced in version 20.1.100.0)</td>
+</tr>
+<tr>
+<td><a href="General.Geography.Countries.html#name">Name</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
+<td>Name of the country. [Required] [Filter(like)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="code">Code</h3>
 <blockquote>
 <p>Internet suffix code of the country. [Required] [Filter(eq;like)] [ORD]</p>
@@ -125,13 +120,10 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>Name of the country. [Required] [Filter(like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="intrastatcode">IntrastatCode</h3>
 <blockquote>
 <p>This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. (Introduced in version 20.1.100.0)</p>
@@ -139,12 +131,19 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>Name of the country. [Required] [Filter(like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.Geography.Countries erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.Geography.Countries erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.Geography.Countries erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Geography_Countries?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Geography_Countries?$top=10</a></p>

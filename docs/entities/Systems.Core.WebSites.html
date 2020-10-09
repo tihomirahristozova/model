@@ -91,28 +91,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Core.WebSites.html#Id">Id</a></td>
+<td><a href="Systems.Core.WebSites.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Systems.Core.WebSites.html#IsActive">IsActive</a></td>
+<td><a href="Systems.Core.WebSites.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>Indicates whether the web site is active and will be instantiated upon next web server restart. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.WebSites.html#Notes">Notes</a></td>
+<td><a href="Systems.Core.WebSites.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this WebSite.</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.WebSites.html#RelativeUrl">RelativeUrl</a></td>
+<td><a href="Systems.Core.WebSites.html#relativeurl">RelativeUrl</a></td>
 <td>string (nullable)</td>
 <td>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host.</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.WebSites.html#WebSiteType">WebSiteType</a></td>
-<td><a href="Systems.Core.WebSites.html#WebSiteType">Systems.Core.WebSitesRepository.WebSiteType</a></td>
+<td><a href="Systems.Core.WebSites.html#websitetype">WebSiteType</a></td>
+<td><a href="Systems.Core.WebSites.html#websitetype">WebSiteType</a></td>
 <td>The type of web site - Api, Client Center, Id, etc. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -128,17 +128,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Core.WebSites.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="Systems.Core.WebSites.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
 <td>The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.WebSites.html#TrustedApplication">TrustedApplication</a></td>
+<td><a href="Systems.Core.WebSites.html#trustedapplication">TrustedApplication</a></td>
 <td><a href="Systems.Security.TrustedApplications.html">Systems.Security.TrustedApplications</a> (nullable)</td>
 <td>The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.WebSites.html#WebHost">WebHost</a></td>
+<td><a href="Systems.Core.WebSites.html#webhost">WebHost</a></td>
 <td><a href="Systems.Core.WebHosts.html">Systems.Core.WebHosts</a> (nullable)</td>
 <td>The web host in which to host the site. [Filter(multi eq)]</td>
 </tr>
@@ -148,7 +148,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
@@ -176,9 +175,9 @@
 <blockquote>
 <p>The type of web site - Api, Client Center, Id, etc. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Core.WebSites.html#WebSiteType">Systems.Core.WebSitesRepository.WebSiteType</a></strong><br>
-Allowed values for the <a href="Systems.Core.WebSites.html#WebSiteType">WebSiteType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Core.WebSites.html#websitetype">WebSiteType</a></strong><br>
+Allowed values for the <a href="Systems.Core.WebSites.html#websitetype">WebSiteType</a> data attribute<br>
+<em>Allowed Values (Systems.Core.WebSitesRepository.WebSiteType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -245,28 +244,25 @@ Allowed values for the <a href="Systems.Core.WebSites.html#WebSiteType">WebSiteT
 <p>The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="trustedapplication">TrustedApplication</h3>
 <blockquote>
 <p>The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1.100.0)</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.TrustedApplications.html">Systems.Security.TrustedApplications</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="webhost">WebHost</h3>
 <blockquote>
 <p>The web host in which to host the site. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Core.WebHosts.html">Systems.Core.WebHosts</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Systems.Core.WebSites erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Systems.Core.WebSites erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Systems.Core.WebSites erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Systems_Core_WebSites?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Core_WebSites?$top=10</a></p>

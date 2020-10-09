@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Products.ProductGroupRangeProperties.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroupRangeProperties.html#FromPropertyValue">FromPropertyValue</a></td>
+<td><a href="General.Products.ProductGroupRangeProperties.html#frompropertyvalue">FromPropertyValue</a></td>
 <td>string (nullable)</td>
 <td>Starting value of the range of alternative values. Used only when Rage Type = R (range).</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroupRangeProperties.html#PropertyValuesList">PropertyValuesList</a></td>
+<td><a href="General.Products.ProductGroupRangeProperties.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductGroupRangeProperties.html#propertyvalueslist">PropertyValuesList</a></td>
 <td>string (nullable)</td>
 <td>Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroupRangeProperties.html#RangeType">RangeType</a></td>
-<td><a href="General.Products.ProductGroupRangeProperties.html#RangeType">General.Products.ProductGroupRangePropertiesRepository.RangeType</a></td>
+<td><a href="General.Products.ProductGroupRangeProperties.html#rangetype">RangeType</a></td>
+<td><a href="General.Products.ProductGroupRangeProperties.html#rangetype">RangeType</a></td>
 <td>Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. [Required] [Default(&quot;R&quot;)]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroupRangeProperties.html#ToPropertyValue">ToPropertyValue</a></td>
+<td><a href="General.Products.ProductGroupRangeProperties.html#topropertyvalue">ToPropertyValue</a></td>
 <td>string (nullable)</td>
 <td>Ending value of the range of alternative values. Used only when Rage Type = R (range).</td>
 </tr>
@@ -128,23 +128,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Products.ProductGroupRangeProperties.html#ProductGroup">ProductGroup</a></td>
+<td><a href="General.Products.ProductGroupRangeProperties.html#productgroup">ProductGroup</a></td>
 <td><a href="General.Products.ProductGroups.html">General.Products.ProductGroups</a></td>
-<td>The <a href="General.Products.ProductGroupRangeProperties.html#ProductGroup">ProductGroup</a> to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="General.Products.ProductGroupRangeProperties.html#productgroup">ProductGroup</a> to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroupRangeProperties.html#Property">Property</a></td>
+<td><a href="General.Products.ProductGroupRangeProperties.html#property">Property</a></td>
 <td><a href="General.CustomProperties.html">General.CustomProperties</a></td>
 <td>The property whose values will be altered. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="frompropertyvalue">FromPropertyValue</h3>
 <blockquote>
 <p>Starting value of the range of alternative values. Used only when Rage Type = R (range).</p>
@@ -152,6 +147,10 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="propertyvalueslist">PropertyValuesList</h3>
 <blockquote>
 <p>Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).</p>
@@ -163,9 +162,9 @@
 <blockquote>
 <p>Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. [Required] [Default(&quot;R&quot;)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.ProductGroupRangeProperties.html#RangeType">General.Products.ProductGroupRangePropertiesRepository.RangeType</a></strong><br>
-Allowed values for the <a href="General.Products.ProductGroupRangeProperties.html#RangeType">RangeType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.Products.ProductGroupRangeProperties.html#rangetype">RangeType</a></strong><br>
+Allowed values for the <a href="General.Products.ProductGroupRangeProperties.html#rangetype">RangeType</a> data attribute<br>
+<em>Allowed Values (General.Products.ProductGroupRangePropertiesRepository.RangeType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -197,24 +196,22 @@ Allowed values for the <a href="General.Products.ProductGroupRangeProperties.htm
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="productgroup">ProductGroup</h3>
 <blockquote>
-<p>The <a href="General.Products.ProductGroupRangeProperties.html#ProductGroup">ProductGroup</a> to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="General.Products.ProductGroupRangeProperties.html#productgroup">ProductGroup</a> to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">General.Products.ProductGroups</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="property">Property</h3>
 <blockquote>
 <p>The property whose values will be altered. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">General.CustomProperties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.Products.ProductGroupRangeProperties erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.Products.ProductGroupRangeProperties erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.Products.ProductGroupRangeProperties erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Products_ProductGroupRangeProperties?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Products_ProductGroupRangeProperties?$top=10</a></p>

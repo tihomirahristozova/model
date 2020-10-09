@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.PartyApplicableLegislations.html#Id">Id</a></td>
+<td><a href="General.PartyApplicableLegislations.html#applicablelegislation">ApplicableLegislation</a></td>
+<td><a href="General.PartyApplicableLegislations.html#applicablelegislation">ApplicableLegislation</a></td>
+<td>A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. [Required] [Filter(multi eq)] [ORD]</td>
+</tr>
+<tr>
+<td><a href="General.PartyApplicableLegislations.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="General.PartyApplicableLegislations.html#ApplicableLegislation">ApplicableLegislation</a></td>
-<td><a href="General.PartyApplicableLegislations.html#ApplicableLegislation">General.PartyApplicableLegislationsRepository.ApplicableLegislation</a></td>
-<td>A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. [Required] [Filter(multi eq)] [ORD]</td>
-</tr>
-<tr>
-<td><a href="General.PartyApplicableLegislations.html#Notes">Notes</a></td>
+<td><a href="General.PartyApplicableLegislations.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this PartyApplicableLegislation. [Filter(like)]</td>
 </tr>
@@ -118,25 +118,20 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.PartyApplicableLegislations.html#Party">Party</a></td>
+<td><a href="General.PartyApplicableLegislations.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
 <td>The <a href="General.Contacts.Parties.html">Party</a> to which this PartyApplicableLegislation belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="applicablelegislation">ApplicableLegislation</h3>
 <blockquote>
 <p>A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. [Required] [Filter(multi eq)] [ORD]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.PartyApplicableLegislations.html#ApplicableLegislation">General.PartyApplicableLegislationsRepository.ApplicableLegislation</a></strong><br>
-Allowed values for the <a href="General.PartyApplicableLegislations.html#ApplicableLegislation">ApplicableLegislation</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.PartyApplicableLegislations.html#applicablelegislation">ApplicableLegislation</a></strong><br>
+Allowed values for the <a href="General.PartyApplicableLegislations.html#applicablelegislation">ApplicableLegislation</a> data attribute<br>
+<em>Allowed Values (General.PartyApplicableLegislationsRepository.ApplicableLegislation Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -249,6 +244,10 @@ Allowed values for the <a href="General.PartyApplicableLegislations.html#Applica
 </table>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this PartyApplicableLegislation. [Filter(like)]</p>
@@ -262,14 +261,13 @@ Allowed values for the <a href="General.PartyApplicableLegislations.html#Applica
 <p>The <a href="General.Contacts.Parties.html">Party</a> to which this PartyApplicableLegislation belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.PartyApplicableLegislations erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.PartyApplicableLegislations erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.PartyApplicableLegislations erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_PartyApplicableLegislations?$top=10">https://demodb.my.erp.net/api/domain/odata/General_PartyApplicableLegislations?$top=10</a></p>

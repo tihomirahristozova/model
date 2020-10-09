@@ -91,28 +91,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Sales.SalesOrdersOptions.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Crm.Sales.SalesOrdersOptions.html#AllowedDirections">AllowedDirections</a></td>
-<td><a href="Crm.Sales.SalesOrdersOptions.html#AllowedDirections">Crm.Sales.SalesOrdersOptionsRepository.AllowedDirections</a></td>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#alloweddirections">AllowedDirections</a></td>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#alloweddirections">AllowedDirections</a></td>
 <td>Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default). [Required] [Default(&quot;A&quot;)] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.SalesOrdersOptions.html#AvailableQuantityOnly">AvailableQuantityOnly</a></td>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#availablequantityonly">AvailableQuantityOnly</a></td>
 <td>boolean</td>
 <td>When true indicates that the sales order can be released only if there is sufficient available quantity (by ATP). [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.SalesOrdersOptions.html#MinimumAmount">MinimumAmount</a></td>
-<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#minimumamount">MinimumAmount</a></td>
+<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
 <td>When not null, specifies minimal total amount of the sales order, which is required for order releasing. [Currency: MinimumAmountCurrency]</td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.SalesOrdersOptions.html#ShipmentAllowance">ShipmentAllowance</a></td>
-<td><a href="Crm.Sales.SalesOrdersOptions.html#ShipmentAllowance">Crm.Sales.SalesOrdersOptionsRepository.ShipmentAllowance</a></td>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#shipmentallowance">ShipmentAllowance</a></td>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#shipmentallowance">ShipmentAllowance</a></td>
 <td>Terms on which the shipment of the products in the sales order is allowed. [Required] [Default(&quot;A&quot;)]</td>
 </tr>
 </tbody>
@@ -128,40 +128,35 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Sales.SalesOrdersOptions.html#DealDocumentType">DealDocumentType</a></td>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#dealdocumenttype">DealDocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a> (nullable)</td>
 <td>If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.SalesOrdersOptions.html#DocumentType">DocumentType</a></td>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
 <td>The document type for which the sales order option applies. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.SalesOrdersOptions.html#MinimumAmountCurrency">MinimumAmountCurrency</a></td>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#minimumamountcurrency">MinimumAmountCurrency</a></td>
 <td><a href="General.Currencies.html">General.Currencies</a> (nullable)</td>
 <td>The currency of Minimal Amount. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.SalesOrdersOptions.html#VATDeviationDocumentAmountType">VATDeviationDocumentAmountType</a></td>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#vatdeviationdocumentamounttype">VATDeviationDocumentAmountType</a></td>
 <td><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a> (nullable)</td>
 <td>Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="alloweddirections">AllowedDirections</h3>
 <blockquote>
 <p>Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default). [Required] [Default(&quot;A&quot;)] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrdersOptions.html#AllowedDirections">Crm.Sales.SalesOrdersOptionsRepository.AllowedDirections</a></strong><br>
-Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#AllowedDirections">AllowedDirections</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrdersOptions.html#alloweddirections">AllowedDirections</a></strong><br>
+Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#alloweddirections">AllowedDirections</a> data attribute<br>
+<em>Allowed Values (Crm.Sales.SalesOrdersOptionsRepository.AllowedDirections Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -199,20 +194,24 @@ Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#AllowedDirecti
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="minimumamount">MinimumAmount</h3>
 <blockquote>
 <p>When not null, specifies minimal total amount of the sales order, which is required for order releasing. [Currency: MinimumAmountCurrency]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="shipmentallowance">ShipmentAllowance</h3>
 <blockquote>
 <p>Terms on which the shipment of the products in the sales order is allowed. [Required] [Default(&quot;A&quot;)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrdersOptions.html#ShipmentAllowance">Crm.Sales.SalesOrdersOptionsRepository.ShipmentAllowance</a></strong><br>
-Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#ShipmentAllowance">ShipmentAllowance</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrdersOptions.html#shipmentallowance">ShipmentAllowance</a></strong><br>
+Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#shipmentallowance">ShipmentAllowance</a> data attribute<br>
+<em>Allowed Values (Crm.Sales.SalesOrdersOptionsRepository.ShipmentAllowance Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -244,35 +243,31 @@ Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#ShipmentAllowa
 <p>If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
 <blockquote>
 <p>The document type for which the sales order option applies. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="minimumamountcurrency">MinimumAmountCurrency</h3>
 <blockquote>
 <p>The currency of Minimal Amount. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="vatdeviationdocumentamounttype">VATDeviationDocumentAmountType</h3>
 <blockquote>
 <p>Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Crm.Sales.SalesOrdersOptions erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Crm.Sales.SalesOrdersOptions erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Crm.Sales.SalesOrdersOptions erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_Sales_SalesOrdersOptions?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Sales_SalesOrdersOptions?$top=10</a></p>

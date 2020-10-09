@@ -91,18 +91,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#Id">Id</a></td>
+<td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#cashreportingvatcode">CashReportingVATCode</a></td>
+<td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#cashreportingvatcode">CashReportingVATCode</a> (nullable)</td>
+<td>VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#CashReportingVATCode">CashReportingVATCode</a></td>
-<td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#CashReportingVATCode">Finance.Vat.BGVATDocumentTypeVATCodesRepository.CashReportingVATCode</a> (nullable)</td>
-<td>VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#VATCode">VATCode</a></td>
-<td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#VATCode">Finance.Vat.BGVATDocumentTypeVATCodesRepository.VATCode</a> (nullable)</td>
+<td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#vatcode">VATCode</a></td>
+<td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#vatcode">VATCode</a> (nullable)</td>
 <td>VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.</td>
 </tr>
 </tbody>
@@ -118,25 +118,20 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#DocumentType">DocumentType</a></td>
+<td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
 <td>Document type that generates VAT entries. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="cashreportingvatcode">CashReportingVATCode</h3>
 <blockquote>
 <p>VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#CashReportingVATCode">Finance.Vat.BGVATDocumentTypeVATCodesRepository.CashReportingVATCode</a> (nullable)</strong><br>
-Allowed values for the <a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#CashReportingVATCode">CashReportingVATCode</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#cashreportingvatcode">CashReportingVATCode</a> (nullable)</strong><br>
+Allowed values for the <a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#cashreportingvatcode">CashReportingVATCode</a> data attribute<br>
+<em>Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.CashReportingVATCode Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -213,13 +208,17 @@ Allowed values for the <a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#CashR
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="vatcode">VATCode</h3>
 <blockquote>
 <p>VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#VATCode">Finance.Vat.BGVATDocumentTypeVATCodesRepository.VATCode</a> (nullable)</strong><br>
-Allowed values for the <a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#VATCode">VATCode</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#vatcode">VATCode</a> (nullable)</strong><br>
+Allowed values for the <a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#vatcode">VATCode</a> data attribute<br>
+<em>Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.VATCode Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -302,14 +301,13 @@ Allowed values for the <a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#VATCo
 <p>Document type that generates VAT entries. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Vat.BGVATDocumentTypeVATCodes erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Vat.BGVATDocumentTypeVATCodes erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Vat.BGVATDocumentTypeVATCodes erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Vat_BGVATDocumentTypeVATCodes?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Vat_BGVATDocumentTypeVATCodes?$top=10</a></p>

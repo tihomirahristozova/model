@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Fleet.MaintenanceProfilePlans.html#Id">Id</a></td>
+<td><a href="Applications.Fleet.MaintenanceProfilePlans.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.MaintenanceProfilePlans.html#IsActive">IsActive</a></td>
+<td><a href="Applications.Fleet.MaintenanceProfilePlans.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. [Required] [Default(true)] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.MaintenanceProfilePlans.html#Notes">Notes</a></td>
+<td><a href="Applications.Fleet.MaintenanceProfilePlans.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this MaintenanceProfilePlan.</td>
 </tr>
@@ -118,12 +118,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Fleet.MaintenanceProfilePlans.html#MaintenancePlan">MaintenancePlan</a></td>
+<td><a href="Applications.Fleet.MaintenanceProfilePlans.html#maintenanceplan">MaintenancePlan</a></td>
 <td><a href="Applications.Fleet.MaintenancePlans.html">Applications.Fleet.MaintenancePlans</a></td>
 <td>The maintenance plan, which is included in the profile. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.MaintenanceProfilePlans.html#MaintenanceProfile">MaintenanceProfile</a></td>
+<td><a href="Applications.Fleet.MaintenanceProfilePlans.html#maintenanceprofile">MaintenanceProfile</a></td>
 <td><a href="Applications.Fleet.MaintenanceProfiles.html">Applications.Fleet.MaintenanceProfiles</a></td>
 <td>The maintenance profile, which includes the plan. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
@@ -133,7 +133,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
@@ -156,21 +155,19 @@
 <p>The maintenance plan, which is included in the profile. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.MaintenancePlans.html">Applications.Fleet.MaintenancePlans</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="maintenanceprofile">MaintenanceProfile</h3>
 <blockquote>
 <p>The maintenance profile, which includes the plan. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.MaintenanceProfiles.html">Applications.Fleet.MaintenanceProfiles</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.Fleet.MaintenanceProfilePlans erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.Fleet.MaintenanceProfilePlans erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.Fleet.MaintenanceProfilePlans erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_Fleet_MaintenanceProfilePlans?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_Fleet_MaintenanceProfilePlans?$top=10</a></p>

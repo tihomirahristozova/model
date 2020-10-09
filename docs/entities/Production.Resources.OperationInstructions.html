@@ -91,27 +91,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Production.Resources.OperationInstructions.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Production.Resources.OperationInstructions.html#Description">Description</a></td>
+<td><a href="Production.Resources.OperationInstructions.html#description">Description</a></td>
 <td>string (nullable)</td>
 <td>Short description or notes for the instructions. [Filter(like)]</td>
 </tr>
 <tr>
-<td><a href="Production.Resources.OperationInstructions.html#Instructions">Instructions</a></td>
+<td><a href="Production.Resources.OperationInstructions.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Production.Resources.OperationInstructions.html#instructions">Instructions</a></td>
 <td>byte[] (nullable)</td>
 <td>The operation instructions in OLE format.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="description">Description</h3>
 <blockquote>
 <p>Short description or notes for the instructions. [Filter(like)]</p>
@@ -119,6 +115,9 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="instructions">Instructions</h3>
 <blockquote>
 <p>The operation instructions in OLE format.</p>
@@ -127,11 +126,11 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Production.Resources.OperationInstructions erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Production.Resources.OperationInstructions erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Production.Resources.OperationInstructions erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Production_Resources_OperationInstructions?$top=10">https://demodb.my.erp.net/api/domain/odata/Production_Resources_OperationInstructions?$top=10</a></p>

@@ -91,18 +91,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.MeasurementCategories.html#Id">Id</a></td>
+<td><a href="General.MeasurementCategories.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="General.MeasurementCategories.html#IsDefault">IsDefault</a></td>
+<td><a href="General.MeasurementCategories.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
 <td>True=This category is the default category; false=otherwise. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.MeasurementCategories.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="General.MeasurementCategories.html#name">Name</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
 <td>The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 </tbody>
@@ -120,7 +120,7 @@
 <tr>
 <td>MeasurementUnits</td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
-<td>List of <a href="General.MeasurementUnits.html">MeasurementUnit</a> child objects, based on the <a href="General.MeasurementUnits.html#MeasurementCategory">General.MeasurementUnit.MeasurementCategory</a> back reference</td>
+<td>List of <a href="General.MeasurementUnits.html">MeasurementUnit</a> child objects, based on the <a href="General.MeasurementUnits.html#measurementcategory">General.MeasurementUnit.MeasurementCategory</a> back reference</td>
 </tr>
 </tbody>
 </table>
@@ -128,7 +128,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
 <blockquote>
@@ -142,15 +141,15 @@
 <blockquote>
 <p>The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.MeasurementCategories erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.MeasurementCategories erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.MeasurementCategories erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_MeasurementCategories?$top=10">https://demodb.my.erp.net/api/domain/odata/General_MeasurementCategories?$top=10</a></p>

@@ -91,147 +91,147 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.Persons.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#IsActive">IsActive</a></td>
-<td>boolean</td>
-<td>Specifies whether the current party is active in the system or not [Required]</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#PartyCreationTime">PartyCreationTime</a></td>
-<td>datetime (nullable)</td>
-<td>Date and time when the Party was created.</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#PartyCreationUser">PartyCreationUser</a></td>
-<td>string (nullable)</td>
-<td>Login name of the user, who created the Party.</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#DefaultProductCodingSystemId">DefaultProductCodingSystemId</a></td>
-<td>guid (nullable)</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#GLN">GLN</a></td>
-<td>string (nullable)</td>
-<td>Global Location Number used by EDI systems</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#PartyNotes">PartyNotes</a></td>
-<td>string (nullable)</td>
-<td>Notes for this Party</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#ParentPartyId">ParentPartyId</a></td>
-<td>guid (nullable)</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#PartyCode">PartyCode</a></td>
-<td>string</td>
-<td>The unique code of the Party [Required]</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#PartyName">PartyName</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
-<td>The name of the party [Required]</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#PartyType">PartyType</a></td>
-<td><a href="General.Contacts.Persons.html#PartyType">General.Contacts.PartiesRepository.PartyType</a></td>
-<td>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#PartyUniqueNumber">PartyUniqueNumber</a></td>
-<td>string (nullable)</td>
-<td>Unique number of the party (National number for persons, Registration number for companies)</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#PartyUpdateTime">PartyUpdateTime</a></td>
-<td>datetime (nullable)</td>
-<td>Date and time when the Party was last updated.</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#PartyUpdateUser">PartyUpdateUser</a></td>
-<td>string (nullable)</td>
-<td>Login name of the user, who last updated the Party.</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#BirthDate">BirthDate</a></td>
+<td><a href="General.Contacts.Persons.html#birthdate">BirthDate</a></td>
 <td>datetime (nullable)</td>
 <td>Birth date. null means unknown. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#City">City</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="General.Contacts.Persons.html#city">City</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>City from the legal registration address for the person. [Filter(like)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#CreationTime">CreationTime</a></td>
+<td><a href="General.Contacts.Persons.html#creationtime">CreationTime</a></td>
 <td>datetime (nullable)</td>
 <td>Date and time when the Person was created. [Filter(ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#CreationUser">CreationUser</a></td>
+<td><a href="General.Contacts.Persons.html#creationuser">CreationUser</a></td>
 <td>string (nullable)</td>
 <td>Login name of the user, who created the Person. [Filter(like)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#FirstName">FirstName</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="General.Contacts.Persons.html#defaultproductcodingsystemid">DefaultProductCodingSystemId</a></td>
+<td>guid (nullable)</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#firstname">FirstName</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>First name of the person. [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#Gender">Gender</a></td>
-<td><a href="General.Contacts.Persons.html#Gender">General.Contacts.PersonsRepository.Gender</a> (nullable)</td>
+<td><a href="General.Contacts.Persons.html#gender">Gender</a></td>
+<td><a href="General.Contacts.Persons.html#gender">Gender</a> (nullable)</td>
 <td>Person gender. M=Male;F=Female;null=not known/not provided. [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#LastName">LastName</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="General.Contacts.Persons.html#gln">GLN</a></td>
+<td>string (nullable)</td>
+<td>Global Location Number used by EDI systems</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#isactive">IsActive</a></td>
+<td>boolean</td>
+<td>Specifies whether the current party is active in the system or not [Required]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#lastname">LastName</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>Last name of the person. [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#MiddleName">MiddleName</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="General.Contacts.Persons.html#middlename">MiddleName</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>Middle name of the person. [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#NationalNumber">NationalNumber</a></td>
+<td><a href="General.Contacts.Persons.html#nationalnumber">NationalNumber</a></td>
 <td>string (nullable)</td>
 <td>Government assigned unique personal number. null means unknown. [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#Notes">Notes</a></td>
+<td><a href="General.Contacts.Persons.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Internal notes for the person.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#PassportIssuingDate">PassportIssuingDate</a></td>
+<td><a href="General.Contacts.Persons.html#parentpartyid">ParentPartyId</a></td>
+<td>guid (nullable)</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#partycode">PartyCode</a></td>
+<td>string</td>
+<td>The unique code of the Party [Required]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#partycreationtime">PartyCreationTime</a></td>
+<td>datetime (nullable)</td>
+<td>Date and time when the Party was created.</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#partycreationuser">PartyCreationUser</a></td>
+<td>string (nullable)</td>
+<td>Login name of the user, who created the Party.</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#partyname">PartyName</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
+<td>The name of the party [Required]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#partynotes">PartyNotes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this Party</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#partytype">PartyType</a></td>
+<td><a href="General.Contacts.Persons.html#partytype">PartyType</a></td>
+<td>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#partyuniquenumber">PartyUniqueNumber</a></td>
+<td>string (nullable)</td>
+<td>Unique number of the party (National number for persons, Registration number for companies)</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#partyupdatetime">PartyUpdateTime</a></td>
+<td>datetime (nullable)</td>
+<td>Date and time when the Party was last updated.</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#partyupdateuser">PartyUpdateUser</a></td>
+<td>string (nullable)</td>
+<td>Login name of the user, who last updated the Party.</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#passportissuingdate">PassportIssuingDate</a></td>
 <td>datetime (nullable)</td>
 <td>Date of issuing the passport. null means unknown. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#PassportNumber">PassportNumber</a></td>
+<td><a href="General.Contacts.Persons.html#passportnumber">PassportNumber</a></td>
 <td>string (nullable)</td>
 <td>Current passport number. null means unknown. [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#Title">Title</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="General.Contacts.Persons.html#title">Title</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#UpdateTime">UpdateTime</a></td>
+<td><a href="General.Contacts.Persons.html#updatetime">UpdateTime</a></td>
 <td>datetime (nullable)</td>
 <td>Date and time when the Person was last updated. [Filter(ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#UpdateUser">UpdateUser</a></td>
+<td><a href="General.Contacts.Persons.html#updateuser">UpdateUser</a></td>
 <td>string (nullable)</td>
 <td>Login name of the user, who last updated the Person. [Filter(like)] [ReadOnly]</td>
 </tr>
@@ -248,29 +248,29 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.Persons.html#AdministrativeRegion">AdministrativeRegion</a></td>
+<td><a href="General.Contacts.Persons.html#administrativeregion">AdministrativeRegion</a></td>
 <td><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a> (nullable)</td>
 <td>The administrative region in which the party is situated.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#Area">Area</a></td>
+<td><a href="General.Contacts.Persons.html#area">Area</a></td>
 <td><a href="General.Geography.Areas.html">General.Geography.Areas</a> (nullable)</td>
 <td>The area in which the party is situated.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#DefaultProductCodingSystem">DefaultProductCodingSystem</a></td>
+<td><a href="General.Contacts.Persons.html#defaultproductcodingsystem">DefaultProductCodingSystem</a></td>
 <td><a href="General.Products.CodingSystems.html">General.Products.CodingSystems</a> (nullable)</td>
 <td>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.Persons.html#ParentParty">ParentParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
-<td>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.Persons.html#Nationality">Nationality</a></td>
+<td><a href="General.Contacts.Persons.html#nationality">Nationality</a></td>
 <td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
 <td>Person's nationality. null means the default (same as enterprise) nationality. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Persons.html#parentparty">ParentParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to</td>
 </tr>
 </tbody>
 </table>
@@ -287,65 +287,136 @@
 <tr>
 <td>ActivityTimeIntervals</td>
 <td><a href="General.Contacts.ActivityTimeIntervals.html">General.Contacts.ActivityTimeIntervals</a></td>
-<td>List of <a href="General.Contacts.ActivityTimeIntervals.html">ActivityTimeInterval</a> child objects, based on the <a href="General.Contacts.ActivityTimeIntervals.html#Party">General.Contacts.ActivityTimeInterval.Party</a> back reference</td>
-</tr>
-<tr>
-<td>ContactMechanisms</td>
-<td><a href="General.Contacts.PartyContactMechanisms.html">General.Contacts.PartyContactMechanisms</a></td>
-<td>List of <a href="General.Contacts.PartyContactMechanisms.html">PartyContactMechanism</a> child objects, based on the <a href="General.Contacts.PartyContactMechanisms.html#Party">General.Contacts.PartyContactMechanism.Party</a> back reference</td>
-</tr>
-<tr>
-<td>Customers</td>
-<td><a href="Crm.Customers.html">Crm.Customers</a></td>
-<td>List of <a href="Crm.Customers.html">Customer</a> child objects, based on the <a href="Crm.Customers.html#Party">Crm.Customer.Party</a> back reference</td>
-</tr>
-<tr>
-<td>Dealers</td>
-<td><a href="Crm.Dealers.html">Crm.Dealers</a></td>
-<td>List of <a href="Crm.Dealers.html">Dealer</a> child objects, based on the <a href="Crm.Dealers.html#Party">Crm.Dealer.Party</a> back reference</td>
-</tr>
-<tr>
-<td>Distributors</td>
-<td><a href="Crm.Distributors.html">Crm.Distributors</a></td>
-<td>List of <a href="Crm.Distributors.html">Distributor</a> child objects, based on the <a href="Crm.Distributors.html#Party">Crm.Distributor.Party</a> back reference</td>
-</tr>
-<tr>
-<td>TargetGroupMembers</td>
-<td><a href="Crm.Marketing.TargetGroupMembers.html">Crm.Marketing.TargetGroupMembers</a></td>
-<td>List of <a href="Crm.Marketing.TargetGroupMembers.html">TargetGroupMember</a> child objects, based on the <a href="Crm.Marketing.TargetGroupMembers.html#Party">Crm.Marketing.TargetGroupMember.Party</a> back reference</td>
+<td>List of <a href="General.Contacts.ActivityTimeIntervals.html">ActivityTimeInterval</a> child objects, based on the <a href="General.Contacts.ActivityTimeIntervals.html#party">General.Contacts.ActivityTimeInterval.Party</a> back reference</td>
 </tr>
 <tr>
 <td>BankAccounts</td>
 <td><a href="General.Contacts.PartyBankAccounts.html">General.Contacts.PartyBankAccounts</a></td>
-<td>List of <a href="General.Contacts.PartyBankAccounts.html">PartyBankAccount</a> child objects, based on the <a href="General.Contacts.PartyBankAccounts.html#Party">General.Contacts.PartyBankAccount.Party</a> back reference</td>
-</tr>
-<tr>
-<td>Pictures</td>
-<td><a href="General.Contacts.PartyPictures.html">General.Contacts.PartyPictures</a></td>
-<td>List of <a href="General.Contacts.PartyPictures.html">PartyPicture</a> child objects, based on the <a href="General.Contacts.PartyPictures.html#Party">General.Contacts.PartyPicture.Party</a> back reference</td>
-</tr>
-<tr>
-<td>Suppliers</td>
-<td><a href="Logistics.Procurement.Suppliers.html">Logistics.Procurement.Suppliers</a></td>
-<td>List of <a href="Logistics.Procurement.Suppliers.html">Supplier</a> child objects, based on the <a href="Logistics.Procurement.Suppliers.html#Party">Logistics.Procurement.Supplier.Party</a> back reference</td>
+<td>List of <a href="General.Contacts.PartyBankAccounts.html">PartyBankAccount</a> child objects, based on the <a href="General.Contacts.PartyBankAccounts.html#party">General.Contacts.PartyBankAccount.Party</a> back reference</td>
 </tr>
 <tr>
 <td>CompanyEmployees</td>
 <td><a href="General.Contacts.CompanyEmployees.html">General.Contacts.CompanyEmployees</a></td>
-<td>List of <a href="General.Contacts.CompanyEmployees.html">CompanyEmployee</a> child objects, based on the <a href="General.Contacts.CompanyEmployees.html#Person">General.Contacts.CompanyEmployee.Person</a> back reference</td>
+<td>List of <a href="General.Contacts.CompanyEmployees.html">CompanyEmployee</a> child objects, based on the <a href="General.Contacts.CompanyEmployees.html#person">General.Contacts.CompanyEmployee.Person</a> back reference</td>
+</tr>
+<tr>
+<td>ContactMechanisms</td>
+<td><a href="General.Contacts.PartyContactMechanisms.html">General.Contacts.PartyContactMechanisms</a></td>
+<td>List of <a href="General.Contacts.PartyContactMechanisms.html">PartyContactMechanism</a> child objects, based on the <a href="General.Contacts.PartyContactMechanisms.html#party">General.Contacts.PartyContactMechanism.Party</a> back reference</td>
+</tr>
+<tr>
+<td>Customers</td>
+<td><a href="Crm.Customers.html">Crm.Customers</a></td>
+<td>List of <a href="Crm.Customers.html">Customer</a> child objects, based on the <a href="Crm.Customers.html#party">Crm.Customer.Party</a> back reference</td>
+</tr>
+<tr>
+<td>Dealers</td>
+<td><a href="Crm.Dealers.html">Crm.Dealers</a></td>
+<td>List of <a href="Crm.Dealers.html">Dealer</a> child objects, based on the <a href="Crm.Dealers.html#party">Crm.Dealer.Party</a> back reference</td>
+</tr>
+<tr>
+<td>Distributors</td>
+<td><a href="Crm.Distributors.html">Crm.Distributors</a></td>
+<td>List of <a href="Crm.Distributors.html">Distributor</a> child objects, based on the <a href="Crm.Distributors.html#party">Crm.Distributor.Party</a> back reference</td>
+</tr>
+<tr>
+<td>Pictures</td>
+<td><a href="General.Contacts.PartyPictures.html">General.Contacts.PartyPictures</a></td>
+<td>List of <a href="General.Contacts.PartyPictures.html">PartyPicture</a> child objects, based on the <a href="General.Contacts.PartyPictures.html#party">General.Contacts.PartyPicture.Party</a> back reference</td>
 </tr>
 <tr>
 <td>SalesPersons</td>
 <td><a href="Crm.SalesPersons.html">Crm.SalesPersons</a></td>
-<td>List of <a href="Crm.SalesPersons.html">SalesPerson</a> child objects, based on the <a href="Crm.SalesPersons.html#Person">Crm.SalesPerson.Person</a> back reference</td>
+<td>List of <a href="Crm.SalesPersons.html">SalesPerson</a> child objects, based on the <a href="Crm.SalesPersons.html#person">Crm.SalesPerson.Person</a> back reference</td>
+</tr>
+<tr>
+<td>Suppliers</td>
+<td><a href="Logistics.Procurement.Suppliers.html">Logistics.Procurement.Suppliers</a></td>
+<td>List of <a href="Logistics.Procurement.Suppliers.html">Supplier</a> child objects, based on the <a href="Logistics.Procurement.Suppliers.html#party">Logistics.Procurement.Supplier.Party</a> back reference</td>
+</tr>
+<tr>
+<td>TargetGroupMembers</td>
+<td><a href="Crm.Marketing.TargetGroupMembers.html">Crm.Marketing.TargetGroupMembers</a></td>
+<td>List of <a href="Crm.Marketing.TargetGroupMembers.html">TargetGroupMember</a> child objects, based on the <a href="Crm.Marketing.TargetGroupMembers.html#party">Crm.Marketing.TargetGroupMember.Party</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="birthdate">BirthDate</h3>
+<blockquote>
+<p>Birth date. null means unknown. [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="city">City</h3>
+<blockquote>
+<p>City from the legal registration address for the person. [Filter(like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="creationtime">CreationTime</h3>
+<blockquote>
+<p>Date and time when the Person was created. [Filter(ge;le)] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="creationuser">CreationUser</h3>
+<blockquote>
+<p>Login name of the user, who created the Person. [Filter(like)] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="defaultproductcodingsystemid">DefaultProductCodingSystemId</h3>
+<p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="firstname">FirstName</h3>
+<blockquote>
+<p>First name of the person. [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="gender">Gender</h3>
+<blockquote>
+<p>Person gender. M=Male;F=Female;null=not known/not provided. [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html#gender">Gender</a> (nullable)</strong><br>
+Allowed values for the <a href="General.Contacts.Persons.html#gender">Gender</a> data attribute<br>
+<em>Allowed Values (General.Contacts.PersonsRepository.Gender Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Female</td>
+<td>Female value. Stored as 'F'. <br> <em>Database Value:</em> 'F' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Female'</td>
+</tr>
+<tr>
+<td>Male</td>
+<td>Male value. Stored as 'M'. <br> <em>Database Value:</em> 'M' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Male'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="gln">GLN</h3>
+<blockquote>
+<p>Global Location Number used by EDI systems</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
@@ -354,6 +425,44 @@
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="lastname">LastName</h3>
+<blockquote>
+<p>Last name of the person. [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="middlename">MiddleName</h3>
+<blockquote>
+<p>Middle name of the person. [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="nationalnumber">NationalNumber</h3>
+<blockquote>
+<p>Government assigned unique personal number. null means unknown. [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="notes">Notes</h3>
+<blockquote>
+<p>Internal notes for the person.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parentpartyid">ParentPartyId</h3>
+<p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="partycode">PartyCode</h3>
+<blockquote>
+<p>The unique code of the Party [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partycreationtime">PartyCreationTime</h3>
 <blockquote>
 <p>Date and time when the Party was created.</p>
@@ -368,17 +477,13 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="defaultproductcodingsystemid">DefaultProductCodingSystemId</h3>
-<p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="gln">GLN</h3>
+<h3 id="partyname">PartyName</h3>
 <blockquote>
-<p>Global Location Number used by EDI systems</p>
+<p>The name of the party [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partynotes">PartyNotes</h3>
 <blockquote>
 <p>Notes for this Party</p>
@@ -386,31 +491,13 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="parentpartyid">ParentPartyId</h3>
-<p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="partycode">PartyCode</h3>
-<blockquote>
-<p>The unique code of the Party [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
-<h3 id="partyname">PartyName</h3>
-<blockquote>
-<p>The name of the party [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partytype">PartyType</h3>
 <blockquote>
 <p>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html#PartyType">General.Contacts.PartiesRepository.PartyType</a></strong><br>
-Allowed values for the <a href="General.Contacts.Parties.html#PartyType">PartyType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html#partytype">PartyType</a></strong><br>
+Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyType</a> data attribute<br>
+<em>Allowed Values (General.Contacts.PartiesRepository.PartyType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -465,96 +552,6 @@ Allowed values for the <a href="General.Contacts.Parties.html#PartyType">PartyTy
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="birthdate">BirthDate</h3>
-<blockquote>
-<p>Birth date. null means unknown. [Filter(ge;le)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="city">City</h3>
-<blockquote>
-<p>City from the legal registration address for the person. [Filter(like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="creationtime">CreationTime</h3>
-<blockquote>
-<p>Date and time when the Person was created. [Filter(ge;le)] [ReadOnly]</p>
-</blockquote>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="creationuser">CreationUser</h3>
-<blockquote>
-<p>Login name of the user, who created the Person. [Filter(like)] [ReadOnly]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="firstname">FirstName</h3>
-<blockquote>
-<p>First name of the person. [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="gender">Gender</h3>
-<blockquote>
-<p>Person gender. M=Male;F=Female;null=not known/not provided. [Filter(eq)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html#Gender">General.Contacts.PersonsRepository.Gender</a> (nullable)</strong><br>
-Allowed values for the <a href="General.Contacts.Persons.html#Gender">Gender</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Female</td>
-<td>Female value. Stored as 'F'. <br> <em>Database Value:</em> 'F' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Female'</td>
-</tr>
-<tr>
-<td>Male</td>
-<td>Male value. Stored as 'M'. <br> <em>Database Value:</em> 'M' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Male'</td>
-</tr>
-</tbody>
-</table>
-<p><em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="lastname">LastName</h3>
-<blockquote>
-<p>Last name of the person. [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="middlename">MiddleName</h3>
-<blockquote>
-<p>Middle name of the person. [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="nationalnumber">NationalNumber</h3>
-<blockquote>
-<p>Government assigned unique personal number. null means unknown. [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="notes">Notes</h3>
-<blockquote>
-<p>Internal notes for the person.</p>
-</blockquote>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="passportissuingdate">PassportIssuingDate</h3>
 <blockquote>
 <p>Date of issuing the passport. null means unknown. [Filter(ge;le)]</p>
@@ -573,7 +570,7 @@ Allowed values for the <a href="General.Contacts.Persons.html#Gender">Gender</a>
 <blockquote>
 <p>The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
@@ -596,42 +593,37 @@ Allowed values for the <a href="General.Contacts.Persons.html#Gender">Gender</a>
 <p>The administrative region in which the party is situated.</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="area">Area</h3>
 <blockquote>
 <p>The area in which the party is situated.</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Areas.html">General.Geography.Areas</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="defaultproductcodingsystem">DefaultProductCodingSystem</h3>
 <blockquote>
 <p>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.CodingSystems.html">General.Products.CodingSystems</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="parentparty">ParentParty</h3>
-<blockquote>
-<p>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="nationality">Nationality</h3>
 <blockquote>
 <p>Person's nationality. null means the default (same as enterprise) nationality. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="parentparty">ParentParty</h3>
+<blockquote>
+<p>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.Contacts.Persons erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.Contacts.Persons erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.Contacts.Persons erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Contacts_Persons?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Contacts_Persons?$top=10</a></p>

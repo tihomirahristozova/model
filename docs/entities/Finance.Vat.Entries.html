@@ -91,154 +91,154 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Vat.Entries.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#CompleteTime">CompleteTime</a></td>
-<td>datetime (nullable)</td>
-<td>Exact time, when the document was last completed[Filter(ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#CreationTime">CreationTime</a></td>
-<td>datetime</td>
-<td>Date/Time when the document was created [Required][Filter(ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#CreationUser">CreationUser</a></td>
-<td>string</td>
-<td>The login name of the user, who created the document [Required][Filter(like)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#DocumentDate">DocumentDate</a></td>
-<td>datetime</td>
-<td>The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#DocumentNo">DocumentNo</a></td>
-<td>string</td>
-<td>Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#DocumentVersion">DocumentVersion</a></td>
-<td>int32</td>
-<td>[Filter(eq;ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#DocumentNotes">DocumentNotes</a></td>
-<td>string (nullable)</td>
-<td>Notes for this Document</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#ParentDocumentRelationshipType">ParentDocumentRelationshipType</a></td>
-<td><a href="Finance.Vat.Entries.html#ParentDocumentRelationshipType">General.ParentDocumentRelationshipType</a> (nullable)</td>
-<td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#PlanningOnly">PlanningOnly</a></td>
-<td>boolean (nullable)</td>
-<td>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#ReadOnly">ReadOnly</a></td>
-<td>boolean</td>
-<td>True - the document is read only; false - the document is not read only [Required]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#ReferenceDate">ReferenceDate</a></td>
-<td>datetime (nullable)</td>
-<td>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#ReferenceDocumentNo">ReferenceDocumentNo</a></td>
-<td>string (nullable)</td>
-<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#ReleaseTime">ReleaseTime</a></td>
-<td>datetime (nullable)</td>
-<td>Exact time, when the document was first released [Filter(ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#State">State</a></td>
-<td><a href="Finance.Vat.Entries.html#State">General.DocumentState</a></td>
-<td>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#Void">Void</a></td>
-<td>boolean</td>
-<td>True if the document is null and void [Required][Filter(eq)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#VoidReason">VoidReason</a></td>
-<td>string (nullable)</td>
-<td>Reason for voiding the document, entered by the user</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#VoidTime">VoidTime</a></td>
-<td>datetime (nullable)</td>
-<td>Date/time when the document has become void</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#VoidUser">VoidUser</a></td>
-<td>string (nullable)</td>
-<td>The user who voided the document</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#EntityName">EntityName</a></td>
-<td>string</td>
-<td>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#AmountBase">AmountBase</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Finance.Vat.Entries.html#amountbase">AmountBase</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>Amount of the operation without the tax in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#ApplyDate">ApplyDate</a></td>
+<td><a href="Finance.Vat.Entries.html#applydate">ApplyDate</a></td>
 <td>date</td>
 <td>Specifies the date on which the entry should be applied in the reporting. Usually equal to the document date with exception for documents that are late to be applied in the correct period. [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#CashReportingMode">CashReportingMode</a></td>
+<td><a href="Finance.Vat.Entries.html#cashreportingmode">CashReportingMode</a></td>
 <td>boolean</td>
 <td>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. [Required] [Default(false)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#EntryType">EntryType</a></td>
-<td><a href="Finance.Vat.Entries.html#EntryType">Finance.Vat.EntriesRepository.EntryType</a></td>
+<td><a href="Finance.Vat.Entries.html#completetime">CompleteTime</a></td>
+<td>datetime (nullable)</td>
+<td>Exact time, when the document was last completed[Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#creationtime">CreationTime</a></td>
+<td>datetime</td>
+<td>Date/Time when the document was created [Required][Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#creationuser">CreationUser</a></td>
+<td>string</td>
+<td>The login name of the user, who created the document [Required][Filter(like)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#documentdate">DocumentDate</a></td>
+<td>datetime</td>
+<td>The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#documentno">DocumentNo</a></td>
+<td>string</td>
+<td>Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#documentnotes">DocumentNotes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this Document</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#documentversion">DocumentVersion</a></td>
+<td>int32</td>
+<td>[Filter(eq;ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#entityname">EntityName</a></td>
+<td>string</td>
+<td>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#entrytype">EntryType</a></td>
+<td><a href="Finance.Vat.Entries.html#entrytype">EntryType</a></td>
 <td>Type of the VAT entry. S=Sales, P=Purchases. [Required] [Filter(eq)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#IsReleased">IsReleased</a></td>
+<td><a href="Finance.Vat.Entries.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#isreleased">IsReleased</a></td>
 <td>boolean</td>
 <td>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#IsSingleExecution">IsSingleExecution</a></td>
+<td><a href="Finance.Vat.Entries.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
 <td>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#ReferencedDocumentNo">ReferencedDocumentNo</a></td>
+<td><a href="Finance.Vat.Entries.html#parentdocumentrelationshiptype">ParentDocumentRelationshipType</a></td>
+<td><a href="Finance.Vat.Entries.html#parentdocumentrelationshiptype">ParentDocumentRelationshipType</a> (nullable)</td>
+<td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#planningonly">PlanningOnly</a></td>
+<td>boolean (nullable)</td>
+<td>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#readonly">ReadOnly</a></td>
+<td>boolean</td>
+<td>True - the document is read only; false - the document is not read only [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#referencedate">ReferenceDate</a></td>
+<td>datetime (nullable)</td>
+<td>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#referenceddocumentno">ReferencedDocumentNo</a></td>
 <td>string</td>
 <td>Number of the document that represents the operation that caused this entry. [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#RegistrationNumber">RegistrationNumber</a></td>
+<td><a href="Finance.Vat.Entries.html#referencedocumentno">ReferenceDocumentNo</a></td>
+<td>string (nullable)</td>
+<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#registrationnumber">RegistrationNumber</a></td>
 <td>string (nullable)</td>
 <td>Identification code (IC) for the party specified by Party_Id.</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#RegistrationVATNumber">RegistrationVATNumber</a></td>
+<td><a href="Finance.Vat.Entries.html#registrationvatnumber">RegistrationVATNumber</a></td>
 <td>string</td>
 <td>VAT number by registration (or national number) for the party specified by Party_Id. [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#VATAmountBase">VATAmountBase</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Finance.Vat.Entries.html#releasetime">ReleaseTime</a></td>
+<td>datetime (nullable)</td>
+<td>Exact time, when the document was first released [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#state">State</a></td>
+<td><a href="Finance.Vat.Entries.html#state">DocumentState</a></td>
+<td>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#vatamountbase">VATAmountBase</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The amount of the tax for the operation in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#void">Void</a></td>
+<td>boolean</td>
+<td>True if the document is null and void [Required][Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#voidreason">VoidReason</a></td>
+<td>string (nullable)</td>
+<td>Reason for voiding the document, entered by the user</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#voidtime">VoidTime</a></td>
+<td>datetime (nullable)</td>
+<td>Date/time when the document has become void</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#voiduser">VoidUser</a></td>
+<td>string (nullable)</td>
+<td>The user who voided the document</td>
 </tr>
 </tbody>
 </table>
@@ -253,109 +253,109 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Vat.Entries.html#AccessKey">AccessKey</a></td>
+<td><a href="Finance.Vat.Entries.html#accesskey">AccessKey</a></td>
 <td><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</td>
 <td>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#AdjustedDocument">AdjustedDocument</a></td>
+<td><a href="Finance.Vat.Entries.html#adjusteddocument">AdjustedDocument</a></td>
 <td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
 <td>The primary document, which the current document adjusts. null when this is not an adjustment document</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#AssignedToUser">AssignedToUser</a></td>
+<td><a href="Finance.Vat.Entries.html#assignedtouser">AssignedToUser</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
 <td>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#CurrencyDirectory">CurrencyDirectory</a></td>
+<td><a href="Finance.Vat.Entries.html#currencydirectory">CurrencyDirectory</a></td>
 <td><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</td>
 <td>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#DocumentType">DocumentType</a></td>
-<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
-<td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#EnterpriseCompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
-<td>The enterprise company which issued the document [Required]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#EnterpriseCompanyLocation">EnterpriseCompanyLocation</a></td>
-<td><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</td>
-<td>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#FromCompanyDivision">FromCompanyDivision</a></td>
-<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</td>
-<td>The division of the company, issuing the document. null when the document is not issued by any specific division</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#FromParty">FromParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
-<td>The party which issued the document [Required]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#MasterDocument">MasterDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a></td>
-<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#Parent">Parent</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
-<td>In a multi-document tree, this is the direct parent document. If this is the root it is null</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#PrimeCauseDocument">PrimeCauseDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
-<td>The document that is the prime cause for creation of the current document</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#ResponsiblePerson">ResponsiblePerson</a></td>
-<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
-<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#ReverseOfDocument">ReverseOfDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
-<td>The document which the current document is reverse of</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#Sequence">Sequence</a></td>
-<td><a href="General.Sequences.html">General.Sequences</a> (nullable)</td>
-<td>The sequence that will be used to give new numbers to the documents of this type</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#ToCompanyDivision">ToCompanyDivision</a></td>
-<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></td>
-<td>The division of the company, receiving the document. null when the document is not received by any specific division</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#ToParty">ToParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
-<td>The party which should receive the document</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#UserStatus">UserStatus</a></td>
-<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
-<td>The user status of this document if applicable for this document type. null means unknown or not yet set</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#DealType">DealType</a></td>
+<td><a href="Finance.Vat.Entries.html#dealtype">DealType</a></td>
 <td><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a></td>
 <td>Deal type that caused this entry. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#Party">Party</a></td>
+<td><a href="Finance.Vat.Entries.html#documenttype">DocumentType</a></td>
+<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
+<td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#enterprisecompany">EnterpriseCompany</a></td>
+<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
+<td>The enterprise company which issued the document [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
+<td><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</td>
+<td>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#fromcompanydivision">FromCompanyDivision</a></td>
+<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</td>
+<td>The division of the company, issuing the document. null when the document is not issued by any specific division</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#fromparty">FromParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
+<td>The party which issued the document [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#masterdocument">MasterDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a></td>
+<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#parent">Parent</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>In a multi-document tree, this is the direct parent document. If this is the root it is null</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
 <td>The corresponding party that is involved in the operation that caused this entry. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#ReferencedDocumentType">ReferencedDocumentType</a></td>
+<td><a href="Finance.Vat.Entries.html#primecausedocument">PrimeCauseDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>The document that is the prime cause for creation of the current document</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#referenceddocumenttype">ReferencedDocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
 <td>Type of the document that represents the operation that caused this entry. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#responsibleperson">ResponsiblePerson</a></td>
+<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
+<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#reverseofdocument">ReverseOfDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>The document which the current document is reverse of</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#sequence">Sequence</a></td>
+<td><a href="General.Sequences.html">General.Sequences</a> (nullable)</td>
+<td>The sequence that will be used to give new numbers to the documents of this type</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#tocompanydivision">ToCompanyDivision</a></td>
+<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></td>
+<td>The division of the company, receiving the document. null when the document is not received by any specific division</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#toparty">ToParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td>The party which should receive the document</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#userstatus">UserStatus</a></td>
+<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
+<td>The user status of this document if applicable for this document type. null means unknown or not yet set</td>
 </tr>
 </tbody>
 </table>
@@ -370,53 +370,70 @@
 </thead>
 <tbody>
 <tr>
+<td>Comments</td>
+<td><a href="General.DocumentComments.html">General.DocumentComments</a></td>
+<td>List of <a href="General.DocumentComments.html">DocumentComment</a> child objects, based on the <a href="General.DocumentComments.html#document">DocumentComment.Document</a> back reference</td>
+</tr>
+<tr>
+<td>DistributedAmounts</td>
+<td><a href="General.DocumentDistributedAmounts.html">General.DocumentDistributedAmounts</a></td>
+<td>List of <a href="General.DocumentDistributedAmounts.html">DocumentDistributedAmount</a> child objects, based on the <a href="General.DocumentDistributedAmounts.html#document">DocumentDistributedAmount.Document</a> back reference</td>
+</tr>
+<tr>
 <td>DocumentAmounts</td>
 <td><a href="General.DocumentAmounts.html">General.DocumentAmounts</a></td>
 <td></td>
 </tr>
 <tr>
-<td>Comments</td>
-<td><a href="General.DocumentComments.html">General.DocumentComments</a></td>
-<td>List of <a href="General.DocumentComments.html">DocumentComment</a> child objects, based on the <a href="General.DocumentComments.html#Document">DocumentComment.Document</a> back reference</td>
-</tr>
-<tr>
-<td>DistributedAmounts</td>
-<td><a href="General.DocumentDistributedAmounts.html">General.DocumentDistributedAmounts</a></td>
-<td>List of <a href="General.DocumentDistributedAmounts.html">DocumentDistributedAmount</a> child objects, based on the <a href="General.DocumentDistributedAmounts.html#Document">DocumentDistributedAmount.Document</a> back reference</td>
-</tr>
-<tr>
 <td>FileAttachments</td>
 <td><a href="General.DocumentFileAttachments.html">General.DocumentFileAttachments</a></td>
-<td>List of <a href="General.DocumentFileAttachments.html">DocumentFileAttachment</a> child objects, based on the <a href="General.DocumentFileAttachments.html#Document">DocumentFileAttachment.Document</a> back reference</td>
+<td>List of <a href="General.DocumentFileAttachments.html">DocumentFileAttachment</a> child objects, based on the <a href="General.DocumentFileAttachments.html#document">DocumentFileAttachment.Document</a> back reference</td>
 </tr>
 <tr>
 <td>LineAmounts</td>
 <td><a href="General.DocumentLineAmounts.html">General.DocumentLineAmounts</a></td>
-<td>List of <a href="General.DocumentLineAmounts.html">DocumentLineAmount</a> child objects, based on the <a href="General.DocumentLineAmounts.html#Document">DocumentLineAmount.Document</a> back reference</td>
+<td>List of <a href="General.DocumentLineAmounts.html">DocumentLineAmount</a> child objects, based on the <a href="General.DocumentLineAmounts.html#document">DocumentLineAmount.Document</a> back reference</td>
 </tr>
 <tr>
 <td>Prints</td>
 <td><a href="General.DocumentPrints.html">General.DocumentPrints</a></td>
-<td>List of <a href="General.DocumentPrints.html">DocumentPrint</a> child objects, based on the <a href="General.DocumentPrints.html#Document">DocumentPrint.Document</a> back reference</td>
+<td>List of <a href="General.DocumentPrints.html">DocumentPrint</a> child objects, based on the <a href="General.DocumentPrints.html#document">DocumentPrint.Document</a> back reference</td>
 </tr>
 <tr>
 <td>StateChanges</td>
 <td><a href="General.DocumentStateChanges.html">General.DocumentStateChanges</a></td>
-<td>List of <a href="General.DocumentStateChanges.html">DocumentStateChange</a> child objects, based on the <a href="General.DocumentStateChanges.html#Document">DocumentStateChange.Document</a> back reference</td>
+<td>List of <a href="General.DocumentStateChanges.html">DocumentStateChange</a> child objects, based on the <a href="General.DocumentStateChanges.html#document">DocumentStateChange.Document</a> back reference</td>
 </tr>
 <tr>
 <td>Versions</td>
 <td><a href="General.DocumentVersions.html">General.DocumentVersions</a></td>
-<td>List of <a href="General.Documents.html#DocumentVersion">DocumentVersion</a> child objects, based on the <a href="General.DocumentVersions.html#Document">DocumentVersion.Document</a> back reference</td>
+<td>List of <a href="General.Documents.html#documentversion">DocumentVersion</a> child objects, based on the <a href="General.DocumentVersions.html#document">DocumentVersion.Document</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<h3 id="amountbase">AmountBase</h3>
+<blockquote>
+<p>Amount of the operation without the tax in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="applydate">ApplyDate</h3>
+<blockquote>
+<p>Specifies the date on which the entry should be applied in the reporting. Usually equal to the document date with exception for documents that are late to be applied in the correct period. [Required] [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>date</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="cashreportingmode">CashReportingMode</h3>
+<blockquote>
+<p>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. [Required] [Default(false)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
+<em>Default Value</em>: <strong>False</strong></p>
 <h3 id="completetime">CompleteTime</h3>
 <blockquote>
 <p>Exact time, when the document was last completed[Filter(ge;le)]</p>
@@ -454,6 +471,13 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="documentnotes">DocumentNotes</h3>
+<blockquote>
+<p>Notes for this Document</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentversion">DocumentVersion</h3>
 <blockquote>
 <p>[Filter(eq;ge;le)]</p>
@@ -462,20 +486,67 @@
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
-<h3 id="documentnotes">DocumentNotes</h3>
+<h3 id="entityname">EntityName</h3>
 <blockquote>
-<p>Notes for this Document</p>
+<p>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</p>
 </blockquote>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="entrytype">EntryType</h3>
+<blockquote>
+<p>Type of the VAT entry. S=Sales, P=Purchases. [Required] [Filter(eq)] [ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Finance.Vat.Entries.html#entrytype">EntryType</a></strong><br>
+Allowed values for the <a href="Finance.Vat.Entries.html#entrytype">EntryType</a> data attribute<br>
+<em>Allowed Values (Finance.Vat.EntriesRepository.EntryType Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purchases</td>
+<td>Purchases value. Stored as 'P'. <br> <em>Database Value:</em> 'P' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Purchases'</td>
+</tr>
+<tr>
+<td>Sales</td>
+<td>Sales value. Stored as 'S'. <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Sales'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="isreleased">IsReleased</h3>
+<blockquote>
+<p>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="issingleexecution">IsSingleExecution</h3>
+<blockquote>
+<p>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
 <h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
 <blockquote>
 <p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Vat.Entries.html#ParentDocumentRelationshipType">General.ParentDocumentRelationshipType</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Vat.Entries.html#parentdocumentrelationshiptype">ParentDocumentRelationshipType</a> (nullable)</strong><br>
 Relationship between parent and child documents<br>
-<em>Allowed Values (Enum Members)</em></p>
+<em>Allowed Values (General.ParentDocumentRelationshipType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -519,12 +590,33 @@ Relationship between parent and child documents<br>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="referenceddocumentno">ReferencedDocumentNo</h3>
+<blockquote>
+<p>Number of the document that represents the operation that caused this entry. [Required] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="referencedocumentno">ReferenceDocumentNo</h3>
 <blockquote>
 <p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="registrationnumber">RegistrationNumber</h3>
+<blockquote>
+<p>Identification code (IC) for the party specified by Party_Id.</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="registrationvatnumber">RegistrationVATNumber</h3>
+<blockquote>
+<p>VAT number by registration (or national number) for the party specified by Party_Id. [Required] [Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="releasetime">ReleaseTime</h3>
 <blockquote>
@@ -537,9 +629,9 @@ Relationship between parent and child documents<br>
 <blockquote>
 <p>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Vat.Entries.html#State">General.DocumentState</a></strong><br>
+<p><em>Type</em>: <strong><a href="Finance.Vat.Entries.html#state">DocumentState</a></strong><br>
 Enumeration of document system states<br>
-<em>Allowed Values (Enum Members)</em></p>
+<em>Allowed Values (General.DocumentState Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -581,6 +673,13 @@ Enumeration of document system states<br>
 <p><em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="vatamountbase">VATAmountBase</h3>
+<blockquote>
+<p>The amount of the tax for the operation in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="void">Void</h3>
 <blockquote>
 <p>True if the document is null and void [Required][Filter(eq)]</p>
@@ -610,260 +709,139 @@ Enumeration of document system states<br>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="entityname">EntityName</h3>
-<blockquote>
-<p>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
-<h3 id="amountbase">AmountBase</h3>
-<blockquote>
-<p>Amount of the operation without the tax in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="applydate">ApplyDate</h3>
-<blockquote>
-<p>Specifies the date on which the entry should be applied in the reporting. Usually equal to the document date with exception for documents that are late to be applied in the correct period. [Required] [Filter(ge;le)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>date</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="cashreportingmode">CashReportingMode</h3>
-<blockquote>
-<p>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. [Required] [Default(false)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong></p>
-<h3 id="entrytype">EntryType</h3>
-<blockquote>
-<p>Type of the VAT entry. S=Sales, P=Purchases. [Required] [Filter(eq)] [ORD]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Vat.Entries.html#EntryType">Finance.Vat.EntriesRepository.EntryType</a></strong><br>
-Allowed values for the <a href="Finance.Vat.Entries.html#EntryType">EntryType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Purchases</td>
-<td>Purchases value. Stored as 'P'. <br> <em>Database Value:</em> 'P' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Purchases'</td>
-</tr>
-<tr>
-<td>Sales</td>
-<td>Sales value. Stored as 'S'. <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Sales'</td>
-</tr>
-</tbody>
-</table>
-<p><em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
-<h3 id="isreleased">IsReleased</h3>
-<blockquote>
-<p>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
-</blockquote>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong></p>
-<h3 id="issingleexecution">IsSingleExecution</h3>
-<blockquote>
-<p>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
-</blockquote>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong></p>
-<h3 id="referenceddocumentno">ReferencedDocumentNo</h3>
-<blockquote>
-<p>Number of the document that represents the operation that caused this entry. [Required] [Filter(eq)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="registrationnumber">RegistrationNumber</h3>
-<blockquote>
-<p>Identification code (IC) for the party specified by Party_Id.</p>
-</blockquote>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="registrationvatnumber">RegistrationVATNumber</h3>
-<blockquote>
-<p>VAT number by registration (or national number) for the party specified by Party_Id. [Required] [Filter(eq)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="vatamountbase">VATAmountBase</h3>
-<blockquote>
-<p>The amount of the tax for the operation in base currency. [Currency: EnterpriseCompany.BaseCurrency] [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
 <blockquote>
 <p>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="adjusteddocument">AdjustedDocument</h3>
 <blockquote>
 <p>The primary document, which the current document adjusts. null when this is not an adjustment document</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assignedtouser">AssignedToUser</h3>
 <blockquote>
 <p>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="currencydirectory">CurrencyDirectory</h3>
 <blockquote>
 <p>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="documenttype">DocumentType</h3>
-<blockquote>
-<p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
-<p>The enterprise company which issued the document [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<blockquote>
-<p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="fromcompanydivision">FromCompanyDivision</h3>
-<blockquote>
-<p>The division of the company, issuing the document. null when the document is not issued by any specific division</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="fromparty">FromParty</h3>
-<blockquote>
-<p>The party which issued the document [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="masterdocument">MasterDocument</h3>
-<blockquote>
-<p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="parent">Parent</h3>
-<blockquote>
-<p>In a multi-document tree, this is the direct parent document. If this is the root it is null</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="primecausedocument">PrimeCauseDocument</h3>
-<blockquote>
-<p>The document that is the prime cause for creation of the current document</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="responsibleperson">ResponsiblePerson</h3>
-<blockquote>
-<p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="reverseofdocument">ReverseOfDocument</h3>
-<blockquote>
-<p>The document which the current document is reverse of</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="sequence">Sequence</h3>
-<blockquote>
-<p>The sequence that will be used to give new numbers to the documents of this type</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Sequences.html">General.Sequences</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="tocompanydivision">ToCompanyDivision</h3>
-<blockquote>
-<p>The division of the company, receiving the document. null when the document is not received by any specific division</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****</p>
-<h3 id="toparty">ToParty</h3>
-<blockquote>
-<p>The party which should receive the document</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="userstatus">UserStatus</h3>
-<blockquote>
-<p>The user status of this document if applicable for this document type. null means unknown or not yet set</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="dealtype">DealType</h3>
 <blockquote>
 <p>Deal type that caused this entry. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="documenttype">DocumentType</h3>
+<blockquote>
+<p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="enterprisecompany">EnterpriseCompany</h3>
+<blockquote>
+<p>The enterprise company which issued the document [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
+<blockquote>
+<p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="fromcompanydivision">FromCompanyDivision</h3>
+<blockquote>
+<p>The division of the company, issuing the document. null when the document is not issued by any specific division</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="fromparty">FromParty</h3>
+<blockquote>
+<p>The party which issued the document [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="masterdocument">MasterDocument</h3>
+<blockquote>
+<p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="parent">Parent</h3>
+<blockquote>
+<p>In a multi-document tree, this is the direct parent document. If this is the root it is null</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="party">Party</h3>
 <blockquote>
 <p>The corresponding party that is involved in the operation that caused this entry. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="primecausedocument">PrimeCauseDocument</h3>
+<blockquote>
+<p>The document that is the prime cause for creation of the current document</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="referenceddocumenttype">ReferencedDocumentType</h3>
 <blockquote>
 <p>Type of the document that represents the operation that caused this entry. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="responsibleperson">ResponsiblePerson</h3>
+<blockquote>
+<p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="reverseofdocument">ReverseOfDocument</h3>
+<blockquote>
+<p>The document which the current document is reverse of</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="sequence">Sequence</h3>
+<blockquote>
+<p>The sequence that will be used to give new numbers to the documents of this type</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Sequences.html">General.Sequences</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="tocompanydivision">ToCompanyDivision</h3>
+<blockquote>
+<p>The division of the company, receiving the document. null when the document is not received by any specific division</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong></p>
+<h3 id="toparty">ToParty</h3>
+<blockquote>
+<p>The party which should receive the document</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="userstatus">UserStatus</h3>
+<blockquote>
+<p>The user status of this document if applicable for this document type. null means unknown or not yet set</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Vat.Entries erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Vat.Entries erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Vat.Entries erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Vat_Entries?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Vat_Entries?$top=10</a></p>

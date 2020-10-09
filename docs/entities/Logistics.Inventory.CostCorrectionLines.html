@@ -91,28 +91,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.CostCorrectionLines.html#Id">Id</a></td>
+<td><a href="Logistics.Inventory.CostCorrectionLines.html#basecostadjustment">BaseCostAdjustment</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
+<td>The amount of correction (plus or minus) for the Base Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.CostCorrectionLines.html#costcorrectionamount">CostCorrectionAmount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
+<td>The amount of correction (plus or minus) for the Amount field of the transaction line. [Currency: TransactionLine.TransactionObj.DocumentCurrency] [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.CostCorrectionLines.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.CostCorrectionLines.html#BaseCostAdjustment">BaseCostAdjustment</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
-<td>The amount of correction (plus or minus) for the Base Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Inventory.CostCorrectionLines.html#CostCorrectionAmount">CostCorrectionAmount</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
-<td>The amount of correction (plus or minus) for the Amount field of the transaction line. [Currency: TransactionLine.TransactionObj.DocumentCurrency] [Required] [Default(0)]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Inventory.CostCorrectionLines.html#ProductCostAdjustment">ProductCostAdjustment</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Logistics.Inventory.CostCorrectionLines.html#productcostadjustment">ProductCostAdjustment</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The amount of correction (plus or minus) for the Product Cost field of the transaction line. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.CostCorrectionLines.html#StoreCostAdjustment">StoreCostAdjustment</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Logistics.Inventory.CostCorrectionLines.html#storecostadjustment">StoreCostAdjustment</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The amount of correction (plus or minus) for the Store Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.Store.Currency] [Required] [Default(0)]</td>
 </tr>
 </tbody>
@@ -128,28 +128,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.CostCorrectionLines.html#CostCorrection">CostCorrection</a></td>
+<td><a href="Logistics.Inventory.CostCorrectionLines.html#costcorrection">CostCorrection</a></td>
 <td><a href="Logistics.Inventory.CostCorrections.html">Logistics.Inventory.CostCorrections</a></td>
-<td>The <a href="Logistics.Inventory.CostCorrectionLines.html#CostCorrection">CostCorrection</a> to which this CostCorrectionLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Logistics.Inventory.CostCorrectionLines.html#costcorrection">CostCorrection</a> to which this CostCorrectionLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.CostCorrectionLines.html#TransactionLine">TransactionLine</a></td>
+<td><a href="Logistics.Inventory.CostCorrectionLines.html#transactionline">TransactionLine</a></td>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a></td>
 <td>The transaction line, which is corrected. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="basecostadjustment">BaseCostAdjustment</h3>
 <blockquote>
 <p>The amount of correction (plus or minus) for the Base Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -157,15 +152,19 @@
 <blockquote>
 <p>The amount of correction (plus or minus) for the Amount field of the transaction line. [Currency: TransactionLine.TransactionObj.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="productcostadjustment">ProductCostAdjustment</h3>
 <blockquote>
 <p>The amount of correction (plus or minus) for the Product Cost field of the transaction line. [Currency: TransactionLine.Product.CostingCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -173,31 +172,29 @@
 <blockquote>
 <p>The amount of correction (plus or minus) for the Store Cost field of the transaction line. [Currency: TransactionLine.TransactionObj.Store.Currency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costcorrection">CostCorrection</h3>
 <blockquote>
-<p>The <a href="Logistics.Inventory.CostCorrectionLines.html#CostCorrection">CostCorrection</a> to which this CostCorrectionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Logistics.Inventory.CostCorrectionLines.html#costcorrection">CostCorrection</a> to which this CostCorrectionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.CostCorrections.html">Logistics.Inventory.CostCorrections</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transactionline">TransactionLine</h3>
 <blockquote>
 <p>The transaction line, which is corrected. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.CostCorrectionLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.CostCorrectionLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Logistics.Inventory.CostCorrectionLines erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_CostCorrectionLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_CostCorrectionLines?$top=10</a></p>

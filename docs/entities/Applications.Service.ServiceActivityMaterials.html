@@ -91,33 +91,33 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Service.ServiceActivityMaterials.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.Service.ServiceActivityMaterials.html#CoveredByGuarantee">CoveredByGuarantee</a></td>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#coveredbyguarantee">CoveredByGuarantee</a></td>
 <td>boolean</td>
 <td>True when the used material is covered by the guarantee. [Required] [Default(false)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceActivityMaterials.html#LineNo">LineNo</a></td>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceActivityMaterials.html#Quantity">Quantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>Quantity of the product, that was used. [Unit: QuantityUnit] [Required]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceActivityMaterials.html#QuantityBase">QuantityBase</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#quantitybase">QuantityBase</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceActivityMaterials.html#StandardQuantityBase">StandardQuantityBase</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#standardquantitybase">StandardQuantityBase</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 </tbody>
@@ -133,27 +133,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Service.ServiceActivityMaterials.html#LineStore">LineStore</a></td>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#linestore">LineStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</td>
 <td>The store from which the product was taken. null = use the store from the header. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceActivityMaterials.html#Product">Product</a></td>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The product, which was used as material. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceActivityMaterials.html#QuantityUnit">QuantityUnit</a></td>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
 <td>The measurement unit of Quantity. Initially is set to the default unit for the product. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceActivityMaterials.html#ServiceActivity">ServiceActivity</a></td>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#serviceactivity">ServiceActivity</a></td>
 <td><a href="Applications.Service.ServiceActivities.html">Applications.Service.ServiceActivities</a></td>
-<td>The <a href="Applications.Service.ServiceActivityMaterials.html#ServiceActivity">ServiceActivity</a> to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Applications.Service.ServiceActivityMaterials.html#serviceactivity">ServiceActivity</a> to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceActivityMaterials.html#ServiceObject">ServiceObject</a></td>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#serviceobject">ServiceObject</a></td>
 <td><a href="Applications.Service.ServiceObjects.html">Applications.Service.ServiceObjects</a> (nullable)</td>
 <td>The service object for which the material is used. null means unkown object or N/A. [Filter(multi eq)]</td>
 </tr>
@@ -172,16 +172,11 @@
 <tr>
 <td>ServiceActivityAgreedMaterials</td>
 <td><a href="Applications.Service.ServiceActivityAgreedMaterials.html">Applications.Service.ServiceActivityAgreedMaterials</a></td>
-<td>List of <a href="Applications.Service.ServiceActivityAgreedMaterials.html">ServiceActivityAgreedMaterial</a> child objects, based on the <a href="Applications.Service.ServiceActivityAgreedMaterials.html#ServiceActivityMaterial">Applications.Service.ServiceActivityAgreedMaterial.ServiceActivityMaterial</a> back reference</td>
+<td>List of <a href="Applications.Service.ServiceActivityAgreedMaterials.html">ServiceActivityAgreedMaterial</a> child objects, based on the <a href="Applications.Service.ServiceActivityAgreedMaterials.html#serviceactivitymaterial">Applications.Service.ServiceActivityAgreedMaterial.ServiceActivityMaterial</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="coveredbyguarantee">CoveredByGuarantee</h3>
 <blockquote>
 <p>True when the used material is covered by the guarantee. [Required] [Default(false)]</p>
@@ -190,6 +185,10 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
 <p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</p>
@@ -205,14 +204,14 @@
 <blockquote>
 <p>Quantity of the product, that was used. [Unit: QuantityUnit] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
 <blockquote>
 <p>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -223,7 +222,7 @@
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -236,8 +235,7 @@
 <p>The store from which the product was taken. null = use the store from the header. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.ServiceActivity.Store</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -247,41 +245,37 @@
 <p>The product, which was used as material. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of Quantity. Initially is set to the default unit for the product. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.BaseUnit</code></p>
 <h3 id="serviceactivity">ServiceActivity</h3>
 <blockquote>
-<p>The <a href="Applications.Service.ServiceActivityMaterials.html#ServiceActivity">ServiceActivity</a> to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Applications.Service.ServiceActivityMaterials.html#serviceactivity">ServiceActivity</a> to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivities.html">Applications.Service.ServiceActivities</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceobject">ServiceObject</h3>
 <blockquote>
 <p>The service object for which the material is used. null means unkown object or N/A. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">Applications.Service.ServiceObjects</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.ServiceActivity.DefaultServiceObject</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ServiceActivity.DefaultServiceObject</code></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.Service.ServiceActivityMaterials erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.Service.ServiceActivityMaterials erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.Service.ServiceActivityMaterials erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_Service_ServiceActivityMaterials?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_Service_ServiceActivityMaterials?$top=10</a></p>

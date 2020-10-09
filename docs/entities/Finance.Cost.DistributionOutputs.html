@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.DistributionOutputs.html#Id">Id</a></td>
+<td><a href="Finance.Cost.DistributionOutputs.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.DistributionOutputs.html#LineNo">LineNo</a></td>
+<td><a href="Finance.Cost.DistributionOutputs.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Unique (within the document), consecutive line number of the output. [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.DistributionOutputs.html#WeightCoefficient">WeightCoefficient</a></td>
+<td><a href="Finance.Cost.DistributionOutputs.html#weightcoefficient">WeightCoefficient</a></td>
 <td>decimal</td>
 <td>The weight coefficient for prorate distribution of cost over the current line. [Required] [Default(1)]</td>
 </tr>
@@ -118,12 +118,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.DistributionOutputs.html#CostDistribution">CostDistribution</a></td>
+<td><a href="Finance.Cost.DistributionOutputs.html#costdistribution">CostDistribution</a></td>
 <td><a href="Finance.Cost.Distributions.html">Finance.Cost.Distributions</a></td>
 <td>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.DistributionOutputs.html#StoreTransactionLine">StoreTransactionLine</a></td>
+<td><a href="Finance.Cost.DistributionOutputs.html#storetransactionline">StoreTransactionLine</a></td>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a></td>
 <td>The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -133,7 +133,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
@@ -160,21 +159,19 @@
 <p>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionOutput belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Distributions.html">Finance.Cost.Distributions</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storetransactionline">StoreTransactionLine</h3>
 <blockquote>
 <p>The store transaction line, for which costs will be distributed. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Cost.DistributionOutputs erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Cost.DistributionOutputs erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Cost.DistributionOutputs erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Cost_DistributionOutputs?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Cost_DistributionOutputs?$top=10</a></p>

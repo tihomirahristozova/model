@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.TemplateLevels.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Cost.TemplateLevels.html#HierarchyLevel">HierarchyLevel</a></td>
+<td><a href="Finance.Cost.TemplateLevels.html#hierarchylevel">HierarchyLevel</a></td>
 <td>int32</td>
 <td>The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9). [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.TemplateLevels.html#LevelName">LevelName</a></td>
+<td><a href="Finance.Cost.TemplateLevels.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Finance.Cost.TemplateLevels.html#levelname">LevelName</a></td>
 <td>string</td>
 <td>The name of the hierarchy level. [Required] [Filter(like)]</td>
 </tr>
@@ -118,18 +118,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.TemplateLevels.html#CostTemplate">CostTemplate</a></td>
+<td><a href="Finance.Cost.TemplateLevels.html#costtemplate">CostTemplate</a></td>
 <td><a href="Finance.Cost.Templates.html">Finance.Cost.Templates</a></td>
 <td>The <a href="Finance.Cost.Templates.html">Template</a> to which this TemplateLevel belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="hierarchylevel">HierarchyLevel</h3>
 <blockquote>
 <p>The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9). [Required] [Default(0)] [Filter(ge;le)]</p>
@@ -138,6 +133,10 @@
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="levelname">LevelName</h3>
 <blockquote>
 <p>The name of the hierarchy level. [Required] [Filter(like)]</p>
@@ -151,14 +150,13 @@
 <p>The <a href="Finance.Cost.Templates.html">Template</a> to which this TemplateLevel belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Templates.html">Finance.Cost.Templates</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Cost.TemplateLevels erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Cost.TemplateLevels erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Cost.TemplateLevels erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Cost_TemplateLevels?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Cost_TemplateLevels?$top=10</a></p>

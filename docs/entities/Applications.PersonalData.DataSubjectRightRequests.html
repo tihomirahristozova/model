@@ -91,33 +91,33 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#CompletedOnUtc">CompletedOnUtc</a></td>
+<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#completedonutc">CompletedOnUtc</a></td>
 <td>datetime (nullable)</td>
 <td>Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#CreatedOnUtc">CreatedOnUtc</a></td>
+<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#createdonutc">CreatedOnUtc</a></td>
 <td>datetime</td>
 <td>The date and time (in UTC), when the request was created. [Required] [Default(Now)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#Notes">Notes</a></td>
+<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>This should usually contain detailed implementation notes.</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#RequestedRight">RequestedRight</a></td>
-<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#RequestedRight">Applications.PersonalData.DataSubjectRightRequestsRepository.RequestedRight</a></td>
+<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a></td>
+<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a></td>
 <td>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#Status">Status</a></td>
-<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#Status">Applications.PersonalData.DataSubjectRightRequestsRepository.Status</a></td>
+<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a></td>
+<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a></td>
 <td>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. [Required]</td>
 </tr>
 </tbody>
@@ -133,33 +133,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#CompletedByUser">CompletedByUser</a></td>
+<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#completedbyuser">CompletedByUser</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
 <td>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#CreatedByUser">CreatedByUser</a></td>
+<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#createdbyuser">CreatedByUser</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
 <td>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
 <td>The enterprise company, to which the request was made. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#Person">Person</a></td>
+<td><a href="Applications.PersonalData.DataSubjectRightRequests.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a></td>
 <td>The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="completedonutc">CompletedOnUtc</h3>
 <blockquote>
 <p>Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.</p>
@@ -175,6 +170,10 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>This should usually contain detailed implementation notes.</p>
@@ -186,9 +185,9 @@
 <blockquote>
 <p>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. [Required] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.PersonalData.DataSubjectRightRequests.html#RequestedRight">Applications.PersonalData.DataSubjectRightRequestsRepository.RequestedRight</a></strong><br>
-Allowed values for the <a href="Applications.PersonalData.DataSubjectRightRequests.html#RequestedRight">RequestedRight</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a></strong><br>
+Allowed values for the <a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a> data attribute<br>
+<em>Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.RequestedRight Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -229,9 +228,9 @@ Allowed values for the <a href="Applications.PersonalData.DataSubjectRightReques
 <blockquote>
 <p>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.PersonalData.DataSubjectRightRequests.html#Status">Applications.PersonalData.DataSubjectRightRequestsRepository.Status</a></strong><br>
-Allowed values for the <a href="Applications.PersonalData.DataSubjectRightRequests.html#Status">Status</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a></strong><br>
+Allowed values for the <a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a> data attribute<br>
+<em>Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.Status Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -270,35 +269,31 @@ Allowed values for the <a href="Applications.PersonalData.DataSubjectRightReques
 <p>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. [Filter(multi eq)] [ReadOnly]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="createdbyuser">CreatedByUser</h3>
 <blockquote>
 <p>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. [Filter(multi eq)] [ReadOnly]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The enterprise company, to which the request was made. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
 <blockquote>
 <p>The person, whose data will be corrected with the request. . [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.PersonalData.DataSubjectRightRequests erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.PersonalData.DataSubjectRightRequests erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.PersonalData.DataSubjectRightRequests erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_PersonalData_DataSubjectRightRequests?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_PersonalData_DataSubjectRightRequests?$top=10</a></p>

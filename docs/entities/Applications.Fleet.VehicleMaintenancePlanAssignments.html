@@ -91,32 +91,32 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#Id">Id</a></td>
+<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#IsActive">IsActive</a></td>
+<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>Specifies whether the plan is active. [Required] [Default(true)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#LastMaintenanceMileageKm">LastMaintenanceMileageKm</a></td>
+<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#lastmaintenancemileagekm">LastMaintenanceMileageKm</a></td>
 <td>int32 (nullable)</td>
 <td>The mileage of the vehicle (in Kilometers), when the last maintenance of this type occurred. Should be specified for plans, which require mileage check.</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#LastMaintenanceTripCount">LastMaintenanceTripCount</a></td>
+<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#lastmaintenancetripcount">LastMaintenanceTripCount</a></td>
 <td>int32 (nullable)</td>
 <td>The trip count of the vehicle, when the last maintenance of this type occurred. Should be specified for plans, which trip count check.</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#Notes">Notes</a></td>
+<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this VehicleMaintenancePlanAssignment.</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#StartingDate">StartingDate</a></td>
+<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#startingdate">StartingDate</a></td>
 <td>date</td>
 <td>The date on which the periodic maintenance should start. [Required]</td>
 </tr>
@@ -133,12 +133,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#MaintenancePlan">MaintenancePlan</a></td>
+<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#maintenanceplan">MaintenancePlan</a></td>
 <td><a href="Applications.Fleet.MaintenancePlans.html">Applications.Fleet.MaintenancePlans</a></td>
 <td>The assigned periodic maintenance type. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#Vehicle">Vehicle</a></td>
+<td><a href="Applications.Fleet.VehicleMaintenancePlanAssignments.html#vehicle">Vehicle</a></td>
 <td><a href="Applications.Fleet.Vehicles.html">Applications.Fleet.Vehicles</a></td>
 <td>The vehicle, to which a periodic maintenance plan is assigned. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -148,7 +148,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
@@ -192,21 +191,19 @@
 <p>The assigned periodic maintenance type. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.MaintenancePlans.html">Applications.Fleet.MaintenancePlans</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="vehicle">Vehicle</h3>
 <blockquote>
 <p>The vehicle, to which a periodic maintenance plan is assigned. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.Vehicles.html">Applications.Fleet.Vehicles</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.Fleet.VehicleMaintenancePlanAssignments erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.Fleet.VehicleMaintenancePlanAssignments erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.Fleet.VehicleMaintenancePlanAssignments erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_Fleet_VehicleMaintenancePlanAssignments?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_Fleet_VehicleMaintenancePlanAssignments?$top=10</a></p>

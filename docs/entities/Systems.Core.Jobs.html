@@ -91,32 +91,32 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Core.Jobs.html#Id">Id</a></td>
+<td><a href="Systems.Core.Jobs.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Systems.Core.Jobs.html#IsActive">IsActive</a></td>
+<td><a href="Systems.Core.Jobs.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.Jobs.html#Name">Name</a></td>
+<td><a href="Systems.Core.Jobs.html#jobtype">JobType</a></td>
+<td><a href="Systems.Core.Jobs.html#jobtype">JobType</a></td>
+<td>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Core.Jobs.html#name">Name</a></td>
 <td>string</td>
 <td>The name of the job. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.Jobs.html#JobType">JobType</a></td>
-<td><a href="Systems.Core.Jobs.html#JobType">Systems.Core.JobsRepository.JobType</a></td>
-<td>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)]</td>
-</tr>
-<tr>
-<td><a href="Systems.Core.Jobs.html#Notes">Notes</a></td>
+<td><a href="Systems.Core.Jobs.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this Job.</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.Jobs.html#RunOnIdle">RunOnIdle</a></td>
+<td><a href="Systems.Core.Jobs.html#runonidle">RunOnIdle</a></td>
 <td>boolean</td>
 <td>Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
@@ -126,7 +126,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
@@ -136,20 +135,13 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>The name of the job. [Required] [Filter(eq;like)] [ORD]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="jobtype">JobType</h3>
 <blockquote>
 <p>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Core.Jobs.html#JobType">Systems.Core.JobsRepository.JobType</a></strong><br>
-Allowed values for the <a href="Systems.Core.Jobs.html#JobType">JobType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Core.Jobs.html#jobtype">JobType</a></strong><br>
+Allowed values for the <a href="Systems.Core.Jobs.html#jobtype">JobType</a> data attribute<br>
+<em>Allowed Values (Systems.Core.JobsRepository.JobType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -178,6 +170,13 @@ Allowed values for the <a href="Systems.Core.Jobs.html#JobType">JobType</a> data
 </table>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>The name of the job. [Required] [Filter(eq;like)] [ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this Job.</p>
@@ -194,11 +193,11 @@ Allowed values for the <a href="Systems.Core.Jobs.html#JobType">JobType</a> data
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Systems.Core.Jobs erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Systems.Core.Jobs erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Systems.Core.Jobs erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Systems_Core_Jobs?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Core_Jobs?$top=10</a></p>

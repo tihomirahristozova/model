@@ -91,34 +91,34 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Accounting.AccountGroups.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Accounting.AccountGroups.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
-<td>Account group name, required. Must be unique within the parent group. [Required] [Filter(like)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Accounting.AccountGroups.html#Number">Number</a></td>
-<td>string</td>
-<td>Unique account group number. May contain characters, if required. [Required] [Filter(like)] [ORD]</td>
-</tr>
-<tr>
-<td><a href="Finance.Accounting.AccountGroups.html#Description">Description</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="Finance.Accounting.AccountGroups.html#description">Description</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>The description of this AccountGroup.</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.AccountGroups.html#Discontinued">Discontinued</a></td>
+<td><a href="Finance.Accounting.AccountGroups.html#discontinued">Discontinued</a></td>
 <td>boolean</td>
 <td>True means that the account group won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.AccountGroups.html#FullPath">FullPath</a></td>
+<td><a href="Finance.Accounting.AccountGroups.html#fullpath">FullPath</a></td>
 <td>string (nullable)</td>
 <td>Full path to the group. Contains delimited list of group numbers of parent groups. [Filter(like)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountGroups.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountGroups.html#name">Name</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
+<td>Account group name, required. Must be unique within the parent group. [Required] [Filter(like)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountGroups.html#number">Number</a></td>
+<td>string</td>
+<td>Unique account group number. May contain characters, if required. [Required] [Filter(like)] [ORD]</td>
 </tr>
 </tbody>
 </table>
@@ -133,37 +133,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Accounting.AccountGroups.html#Parent">Parent</a></td>
+<td><a href="Finance.Accounting.AccountGroups.html#parent">Parent</a></td>
 <td><a href="Finance.Accounting.AccountGroups.html">Finance.Accounting.AccountGroups</a> (nullable)</td>
 <td>Parent account group. null if this is root group. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>Account group name, required. Must be unique within the parent group. [Required] [Filter(like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="number">Number</h3>
-<blockquote>
-<p>Unique account group number. May contain characters, if required. [Required] [Filter(like)] [ORD]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="description">Description</h3>
 <blockquote>
 <p>The description of this AccountGroup.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="discontinued">Discontinued</h3>
@@ -181,20 +162,37 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>Account group name, required. Must be unique within the parent group. [Required] [Filter(like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="number">Number</h3>
+<blockquote>
+<p>Unique account group number. May contain characters, if required. [Required] [Filter(like)] [ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
 <blockquote>
 <p>Parent account group. null if this is root group. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">Finance.Accounting.AccountGroups</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Accounting.AccountGroups erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Accounting.AccountGroups erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Accounting.AccountGroups erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_AccountGroups?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_AccountGroups?$top=10</a></p>

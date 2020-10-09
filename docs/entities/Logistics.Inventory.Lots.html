@@ -91,48 +91,48 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Logistics.Inventory.Lots.html#Description">Description</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="Logistics.Inventory.Lots.html#description">Description</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>The description of this Lot.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#ExpiryDate">ExpiryDate</a></td>
+<td><a href="Logistics.Inventory.Lots.html#expirydate">ExpiryDate</a></td>
 <td>datetime (nullable)</td>
 <td>Expiry date for this lot.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#LicenseNo">LicenseNo</a></td>
+<td><a href="Logistics.Inventory.Lots.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#licenseno">LicenseNo</a></td>
 <td>string (nullable)</td>
 <td>The license number for this lot. Null when license number is N/A or unknown.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#Number">Number</a></td>
+<td><a href="Logistics.Inventory.Lots.html#number">Number</a></td>
 <td>string</td>
 <td>The unique number of the Lot. May contain characters, if required. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#ProductionBatchId">ProductionBatchId</a></td>
+<td><a href="Logistics.Inventory.Lots.html#productionbatchid">ProductionBatchId</a></td>
 <td>guid (nullable)</td>
 <td>Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#PurchaseLotNumber">PurchaseLotNumber</a></td>
+<td><a href="Logistics.Inventory.Lots.html#purchaselotnumber">PurchaseLotNumber</a></td>
 <td>string (nullable)</td>
 <td>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. [Filter(like)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#ReceiptDate">ReceiptDate</a></td>
+<td><a href="Logistics.Inventory.Lots.html#receiptdate">ReceiptDate</a></td>
 <td>date (nullable)</td>
 <td>The date of the first receipt of products in this lot. [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#Status">Status</a></td>
-<td><a href="Logistics.Inventory.Lots.html#Status">Logistics.Inventory.LotsRepository.Status</a></td>
+<td><a href="Logistics.Inventory.Lots.html#status">Status</a></td>
+<td><a href="Logistics.Inventory.Lots.html#status">Status</a></td>
 <td>Status of the warehouse lot. Minus statuses describe blocked conditions. -3 blocked for document (sales or service order) -2 blocked for party -1 blocked for inspection 0 free to use. [Required] [Default(0)] [Filter(multi eq)]</td>
 </tr>
 </tbody>
@@ -148,43 +148,38 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#BlockedForDocument">BlockedForDocument</a></td>
+<td><a href="Logistics.Inventory.Lots.html#blockedfordocument">BlockedForDocument</a></td>
 <td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
 <td>If non-null, contains the document for which the lot is blocked. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#BlockedForParty">BlockedForParty</a></td>
+<td><a href="Logistics.Inventory.Lots.html#blockedforparty">BlockedForParty</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
 <td>Non-null when the warehouse lot is blocked specifically for some party. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#CertificateDocument">CertificateDocument</a></td>
+<td><a href="Logistics.Inventory.Lots.html#certificatedocument">CertificateDocument</a></td>
 <td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
 <td>Document, containing the certificate for this lot. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#Product">Product</a></td>
+<td><a href="Logistics.Inventory.Lots.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The product to which the lot is bound. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.Lots.html#ReceiptStoreTransaction">ReceiptStoreTransaction</a></td>
+<td><a href="Logistics.Inventory.Lots.html#receiptstoretransaction">ReceiptStoreTransaction</a></td>
 <td><a href="Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions</a> (nullable)</td>
 <td>The store receipt transaction, which created the lot. null if the lot is manually created. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="description">Description</h3>
 <blockquote>
 <p>The description of this Lot.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="expirydate">ExpiryDate</h3>
@@ -194,6 +189,10 @@
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="licenseno">LicenseNo</h3>
 <blockquote>
 <p>The license number for this lot. Null when license number is N/A or unknown.</p>
@@ -213,8 +212,7 @@
 <p>Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaselotnumber">PurchaseLotNumber</h3>
 <blockquote>
 <p>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. [Filter(like)]</p>
@@ -233,9 +231,9 @@
 <blockquote>
 <p>Status of the warehouse lot. Minus statuses describe blocked conditions. -3 blocked for document (sales or service order) -2 blocked for party -1 blocked for inspection 0 free to use. [Required] [Default(0)] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html#Status">Logistics.Inventory.LotsRepository.Status</a></strong><br>
-Allowed values for the <a href="Logistics.Inventory.Lots.html#Status">Status</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html#status">Status</a></strong><br>
+Allowed values for the <a href="Logistics.Inventory.Lots.html#status">Status</a> data attribute<br>
+<em>Allowed Values (Logistics.Inventory.LotsRepository.Status Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -271,42 +269,37 @@ Allowed values for the <a href="Logistics.Inventory.Lots.html#Status">Status</a>
 <p>If non-null, contains the document for which the lot is blocked. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="blockedforparty">BlockedForParty</h3>
 <blockquote>
 <p>Non-null when the warehouse lot is blocked specifically for some party. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="certificatedocument">CertificateDocument</h3>
 <blockquote>
 <p>Document, containing the certificate for this lot. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The product to which the lot is bound. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="receiptstoretransaction">ReceiptStoreTransaction</h3>
 <blockquote>
 <p>The store receipt transaction, which created the lot. null if the lot is manually created. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactions.html">Logistics.Inventory.StoreTransactions</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.Lots erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.Lots erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Logistics.Inventory.Lots erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_Lots?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_Lots?$top=10</a></p>

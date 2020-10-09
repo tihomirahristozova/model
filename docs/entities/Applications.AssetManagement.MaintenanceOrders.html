@@ -91,164 +91,164 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#CompleteTime">CompleteTime</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#completetime">CompleteTime</a></td>
 <td>datetime (nullable)</td>
 <td>Exact time, when the document was last completed[Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#CreationTime">CreationTime</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#creationtime">CreationTime</a></td>
 <td>datetime</td>
 <td>Date/Time when the document was created [Required][Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#CreationUser">CreationUser</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#creationuser">CreationUser</a></td>
 <td>string</td>
 <td>The login name of the user, who created the document [Required][Filter(like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#DocumentDate">DocumentDate</a></td>
-<td>datetime</td>
-<td>The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#DocumentNo">DocumentNo</a></td>
-<td>string</td>
-<td>Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#DocumentVersion">DocumentVersion</a></td>
-<td>int32</td>
-<td>[Filter(eq;ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#DocumentNotes">DocumentNotes</a></td>
-<td>string (nullable)</td>
-<td>Notes for this Document</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ParentDocumentRelationshipType">ParentDocumentRelationshipType</a></td>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ParentDocumentRelationshipType">General.ParentDocumentRelationshipType</a> (nullable)</td>
-<td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#PlanningOnly">PlanningOnly</a></td>
-<td>boolean (nullable)</td>
-<td>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ReadOnly">ReadOnly</a></td>
-<td>boolean</td>
-<td>True - the document is read only; false - the document is not read only [Required]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ReferenceDate">ReferenceDate</a></td>
-<td>datetime (nullable)</td>
-<td>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ReferenceDocumentNo">ReferenceDocumentNo</a></td>
-<td>string (nullable)</td>
-<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ReleaseTime">ReleaseTime</a></td>
-<td>datetime (nullable)</td>
-<td>Exact time, when the document was first released [Filter(ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#State">State</a></td>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#State">General.DocumentState</a></td>
-<td>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#Void">Void</a></td>
-<td>boolean</td>
-<td>True if the document is null and void [Required][Filter(eq)]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#VoidReason">VoidReason</a></td>
-<td>string (nullable)</td>
-<td>Reason for voiding the document, entered by the user</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#VoidTime">VoidTime</a></td>
-<td>datetime (nullable)</td>
-<td>Date/time when the document has become void</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#VoidUser">VoidUser</a></td>
-<td>string (nullable)</td>
-<td>The user who voided the document</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#EntityName">EntityName</a></td>
-<td>string</td>
-<td>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#DeadlineTime">DeadlineTime</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#deadlinetime">DeadlineTime</a></td>
 <td>datetime (nullable)</td>
 <td>The deadline for the task. null if there is no deadline. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#EndTime">EndTime</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#documentdate">DocumentDate</a></td>
+<td>datetime</td>
+<td>The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#documentno">DocumentNo</a></td>
+<td>string</td>
+<td>Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#documentnotes">DocumentNotes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this Document</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#documentversion">DocumentVersion</a></td>
+<td>int32</td>
+<td>[Filter(eq;ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#endtime">EndTime</a></td>
 <td>datetime (nullable)</td>
 <td>Currently planned ending time of the task. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#IsReleased">IsReleased</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#entityname">EntityName</a></td>
+<td>string</td>
+<td>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#isreleased">IsReleased</a></td>
 <td>boolean</td>
 <td>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#IsSingleExecution">IsSingleExecution</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
 <td>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#Notes">Notes</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this Activity.</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#PlannedDurationMinutes">PlannedDurationMinutes</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#parentdocumentrelationshiptype">ParentDocumentRelationshipType</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#parentdocumentrelationshiptype">ParentDocumentRelationshipType</a> (nullable)</td>
+<td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#planneddurationminutes">PlannedDurationMinutes</a></td>
 <td>int32 (nullable)</td>
 <td>Total planned duration of the activity, regardless of the current execution status. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#Priority">Priority</a></td>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#Priority">General.Priority</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#planningonly">PlanningOnly</a></td>
+<td>boolean (nullable)</td>
+<td>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#priority">Priority</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#priority">Priority</a></td>
 <td>Priority on the scale from 1 (least important) to 5 (very important). [Required] [Default(3)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#Private">Private</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#private">Private</a></td>
 <td>boolean</td>
 <td>True if the task is visible only to its owner; false if this is publicly visible task. [Required] [Default(false)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ReminderTime">ReminderTime</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#readonly">ReadOnly</a></td>
+<td>boolean</td>
+<td>True - the document is read only; false - the document is not read only [Required]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#referencedate">ReferenceDate</a></td>
+<td>datetime (nullable)</td>
+<td>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#referencedocumentno">ReferenceDocumentNo</a></td>
+<td>string (nullable)</td>
+<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#releasetime">ReleaseTime</a></td>
+<td>datetime (nullable)</td>
+<td>Exact time, when the document was first released [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#remindertime">ReminderTime</a></td>
 <td>datetime (nullable)</td>
 <td>When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#StartTime">StartTime</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#starttime">StartTime</a></td>
 <td>datetime</td>
 <td>Currently planned starting time of the task. [Required] [Default(Now)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#Subject">Subject</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#state">State</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#state">DocumentState</a></td>
+<td>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#subject">Subject</a></td>
 <td>string</td>
 <td>Task primary subject (required). [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#SystemType">SystemType</a></td>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#SystemType">General.Contacts.ActivitiesRepository.SystemType</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#systemtype">SystemType</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#systemtype">SystemType</a></td>
 <td>T=Task; C=Communication; M=Meeting. [Required]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#void">Void</a></td>
+<td>boolean</td>
+<td>True if the document is null and void [Required][Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#voidreason">VoidReason</a></td>
+<td>string (nullable)</td>
+<td>Reason for voiding the document, entered by the user</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#voidtime">VoidTime</a></td>
+<td>datetime (nullable)</td>
+<td>Date/time when the document has become void</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#voiduser">VoidUser</a></td>
+<td>string (nullable)</td>
+<td>The user who voided the document</td>
 </tr>
 </tbody>
 </table>
@@ -263,134 +263,134 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#AccessKey">AccessKey</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#accesskey">AccessKey</a></td>
 <td><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</td>
 <td>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#AdjustedDocument">AdjustedDocument</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#adjusteddocument">AdjustedDocument</a></td>
 <td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
 <td>The primary document, which the current document adjusts. null when this is not an adjustment document</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#AssignedToUser">AssignedToUser</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#assignedtouser">AssignedToUser</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</td>
 <td>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#CurrencyDirectory">CurrencyDirectory</a></td>
-<td><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</td>
-<td>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#DocumentType">DocumentType</a></td>
-<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
-<td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#EnterpriseCompany">EnterpriseCompany</a></td>
-<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
-<td>The enterprise company which issued the document [Required]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#EnterpriseCompanyLocation">EnterpriseCompanyLocation</a></td>
-<td><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</td>
-<td>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#FromCompanyDivision">FromCompanyDivision</a></td>
-<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</td>
-<td>The division of the company, issuing the document. null when the document is not issued by any specific division</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#FromParty">FromParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
-<td>The party which issued the document [Required]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#MasterDocument">MasterDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a></td>
-<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#Parent">Parent</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
-<td>In a multi-document tree, this is the direct parent document. If this is the root it is null</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#PrimeCauseDocument">PrimeCauseDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
-<td>The document that is the prime cause for creation of the current document</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ResponsiblePerson">ResponsiblePerson</a></td>
-<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
-<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ReverseOfDocument">ReverseOfDocument</a></td>
-<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
-<td>The document which the current document is reverse of</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#Sequence">Sequence</a></td>
-<td><a href="General.Sequences.html">General.Sequences</a> (nullable)</td>
-<td>The sequence that will be used to give new numbers to the documents of this type</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ToCompanyDivision">ToCompanyDivision</a></td>
-<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></td>
-<td>The division of the company, receiving the document. null when the document is not received by any specific division</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ToParty">ToParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
-<td>The party which should receive the document</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#UserStatus">UserStatus</a></td>
-<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
-<td>The user status of this document if applicable for this document type. null means unknown or not yet set</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ContactPerson">ContactPerson</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#contactperson">ContactPerson</a></td>
 <td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
 <td>The contact person, from the side of the Target Party. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#OwnerParty">OwnerParty</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#currencydirectory">CurrencyDirectory</a></td>
+<td><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</td>
+<td>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#documenttype">DocumentType</a></td>
+<td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
+<td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#enterprisecompany">EnterpriseCompany</a></td>
+<td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></td>
+<td>The enterprise company which issued the document [Required]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
+<td><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</td>
+<td>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#fromcompanydivision">FromCompanyDivision</a></td>
+<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</td>
+<td>The division of the company, issuing the document. null when the document is not issued by any specific division</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#fromparty">FromParty</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
-<td>The party that owns the task. Initially this is the party that has created the task. [Required] [Filter(multi eq)]</td>
+<td>The party which issued the document [Required]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ProjectTask">ProjectTask</a></td>
-<td><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a> (nullable)</td>
-<td>The project task for which the work is performed. null when the activity is not related to a project task. [Filter(multi eq)]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ResponsibleParty">ResponsibleParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
-<td>Who is responsible for executing the task. Initially this is the owner of the task. [Required] [Filter(multi eq)]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#TargetParty">TargetParty</a></td>
-<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
-<td>External participant or target of the task. [Filter(multi eq)]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#MaintenanceType">MaintenanceType</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#maintenancetype">MaintenanceType</a></td>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html">Applications.AssetManagement.MaintenanceTypes</a> (nullable)</td>
 <td>The type of maintenance, which will be performed. null means that will be more than one type of maintenance performed. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ManagedAsset">ManagedAsset</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">Applications.AssetManagement.ManagedAssets</a> (nullable)</td>
 <td>The asset, which will be maintained. null means that more than one asset will be maintained. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ServiceCenter">ServiceCenter</a></td>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#masterdocument">MasterDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a></td>
+<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#ownerparty">OwnerParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
+<td>The party that owns the task. Initially this is the party that has created the task. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#parent">Parent</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>In a multi-document tree, this is the direct parent document. If this is the root it is null</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#primecausedocument">PrimeCauseDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>The document that is the prime cause for creation of the current document</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#projecttask">ProjectTask</a></td>
+<td><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a> (nullable)</td>
+<td>The project task for which the work is performed. null when the activity is not related to a project task. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#responsibleparty">ResponsibleParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
+<td>Who is responsible for executing the task. Initially this is the owner of the task. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#responsibleperson">ResponsiblePerson</a></td>
+<td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
+<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#reverseofdocument">ReverseOfDocument</a></td>
+<td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
+<td>The document which the current document is reverse of</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#sequence">Sequence</a></td>
+<td><a href="General.Sequences.html">General.Sequences</a> (nullable)</td>
+<td>The sequence that will be used to give new numbers to the documents of this type</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#servicecenter">ServiceCenter</a></td>
 <td><a href="Applications.AssetManagement.ServiceCenters.html">Applications.AssetManagement.ServiceCenters</a></td>
 <td>The service center, which will perform the maintenance. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#targetparty">TargetParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td>External participant or target of the task. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#tocompanydivision">ToCompanyDivision</a></td>
+<td><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></td>
+<td>The division of the company, receiving the document. null when the document is not received by any specific division</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#toparty">ToParty</a></td>
+<td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</td>
+<td>The party which should receive the document</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.MaintenanceOrders.html#userstatus">UserStatus</a></td>
+<td><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</td>
+<td>The user status of this document if applicable for this document type. null means unknown or not yet set</td>
 </tr>
 </tbody>
 </table>
@@ -405,73 +405,68 @@
 </thead>
 <tbody>
 <tr>
+<td>Comments</td>
+<td><a href="General.DocumentComments.html">General.DocumentComments</a></td>
+<td>List of <a href="General.DocumentComments.html">DocumentComment</a> child objects, based on the <a href="General.DocumentComments.html#document">DocumentComment.Document</a> back reference</td>
+</tr>
+<tr>
+<td>DistributedAmounts</td>
+<td><a href="General.DocumentDistributedAmounts.html">General.DocumentDistributedAmounts</a></td>
+<td>List of <a href="General.DocumentDistributedAmounts.html">DocumentDistributedAmount</a> child objects, based on the <a href="General.DocumentDistributedAmounts.html#document">DocumentDistributedAmount.Document</a> back reference</td>
+</tr>
+<tr>
 <td>DocumentAmounts</td>
 <td><a href="General.DocumentAmounts.html">General.DocumentAmounts</a></td>
 <td></td>
 </tr>
 <tr>
-<td>Comments</td>
-<td><a href="General.DocumentComments.html">General.DocumentComments</a></td>
-<td>List of <a href="General.DocumentComments.html">DocumentComment</a> child objects, based on the <a href="General.DocumentComments.html#Document">DocumentComment.Document</a> back reference</td>
-</tr>
-<tr>
-<td>DistributedAmounts</td>
-<td><a href="General.DocumentDistributedAmounts.html">General.DocumentDistributedAmounts</a></td>
-<td>List of <a href="General.DocumentDistributedAmounts.html">DocumentDistributedAmount</a> child objects, based on the <a href="General.DocumentDistributedAmounts.html#Document">DocumentDistributedAmount.Document</a> back reference</td>
-</tr>
-<tr>
 <td>FileAttachments</td>
 <td><a href="General.DocumentFileAttachments.html">General.DocumentFileAttachments</a></td>
-<td>List of <a href="General.DocumentFileAttachments.html">DocumentFileAttachment</a> child objects, based on the <a href="General.DocumentFileAttachments.html#Document">DocumentFileAttachment.Document</a> back reference</td>
+<td>List of <a href="General.DocumentFileAttachments.html">DocumentFileAttachment</a> child objects, based on the <a href="General.DocumentFileAttachments.html#document">DocumentFileAttachment.Document</a> back reference</td>
 </tr>
 <tr>
 <td>LineAmounts</td>
 <td><a href="General.DocumentLineAmounts.html">General.DocumentLineAmounts</a></td>
-<td>List of <a href="General.DocumentLineAmounts.html">DocumentLineAmount</a> child objects, based on the <a href="General.DocumentLineAmounts.html#Document">DocumentLineAmount.Document</a> back reference</td>
-</tr>
-<tr>
-<td>Prints</td>
-<td><a href="General.DocumentPrints.html">General.DocumentPrints</a></td>
-<td>List of <a href="General.DocumentPrints.html">DocumentPrint</a> child objects, based on the <a href="General.DocumentPrints.html#Document">DocumentPrint.Document</a> back reference</td>
-</tr>
-<tr>
-<td>StateChanges</td>
-<td><a href="General.DocumentStateChanges.html">General.DocumentStateChanges</a></td>
-<td>List of <a href="General.DocumentStateChanges.html">DocumentStateChange</a> child objects, based on the <a href="General.DocumentStateChanges.html#Document">DocumentStateChange.Document</a> back reference</td>
-</tr>
-<tr>
-<td>Versions</td>
-<td><a href="General.DocumentVersions.html">General.DocumentVersions</a></td>
-<td>List of <a href="General.Documents.html#DocumentVersion">DocumentVersion</a> child objects, based on the <a href="General.DocumentVersions.html#Document">DocumentVersion.Document</a> back reference</td>
-</tr>
-<tr>
-<td>Participants</td>
-<td><a href="General.Contacts.ActivityParticipants.html">General.Contacts.ActivityParticipants</a></td>
-<td>List of <a href="General.Contacts.ActivityParticipants.html">ActivityParticipant</a> child objects, based on the <a href="General.Contacts.ActivityParticipants.html#Activity">General.Contacts.ActivityParticipant.Activity</a> back reference</td>
-</tr>
-<tr>
-<td>Resources</td>
-<td><a href="General.Contacts.ActivityResources.html">General.Contacts.ActivityResources</a></td>
-<td>List of <a href="General.Contacts.ActivityResources.html">ActivityResource</a> child objects, based on the <a href="General.Contacts.ActivityResources.html#Activity">General.Contacts.ActivityResource.Activity</a> back reference</td>
-</tr>
-<tr>
-<td>Reminders</td>
-<td><a href="General.Contacts.Reminders.html">General.Contacts.Reminders</a></td>
-<td>List of <a href="General.Contacts.Reminders.html">Reminder</a> child objects, based on the <a href="General.Contacts.Reminders.html#Activity">General.Contacts.Reminder.Activity</a> back reference</td>
+<td>List of <a href="General.DocumentLineAmounts.html">DocumentLineAmount</a> child objects, based on the <a href="General.DocumentLineAmounts.html#document">DocumentLineAmount.Document</a> back reference</td>
 </tr>
 <tr>
 <td>Lines</td>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html">Applications.AssetManagement.MaintenanceOrderLines</a></td>
-<td>List of <a href="Applications.AssetManagement.MaintenanceOrderLines.html">MaintenanceOrderLine</a> child objects, based on the <a href="Applications.AssetManagement.MaintenanceOrderLines.html#MaintenanceOrder">Applications.AssetManagement.MaintenanceOrderLine.MaintenanceOrder</a> back reference</td>
+<td>List of <a href="Applications.AssetManagement.MaintenanceOrderLines.html">MaintenanceOrderLine</a> child objects, based on the <a href="Applications.AssetManagement.MaintenanceOrderLines.html#maintenanceorder">Applications.AssetManagement.MaintenanceOrderLine.MaintenanceOrder</a> back reference</td>
+</tr>
+<tr>
+<td>Participants</td>
+<td><a href="General.Contacts.ActivityParticipants.html">General.Contacts.ActivityParticipants</a></td>
+<td>List of <a href="General.Contacts.ActivityParticipants.html">ActivityParticipant</a> child objects, based on the <a href="General.Contacts.ActivityParticipants.html#activity">General.Contacts.ActivityParticipant.Activity</a> back reference</td>
+</tr>
+<tr>
+<td>Prints</td>
+<td><a href="General.DocumentPrints.html">General.DocumentPrints</a></td>
+<td>List of <a href="General.DocumentPrints.html">DocumentPrint</a> child objects, based on the <a href="General.DocumentPrints.html#document">DocumentPrint.Document</a> back reference</td>
+</tr>
+<tr>
+<td>Reminders</td>
+<td><a href="General.Contacts.Reminders.html">General.Contacts.Reminders</a></td>
+<td>List of <a href="General.Contacts.Reminders.html">Reminder</a> child objects, based on the <a href="General.Contacts.Reminders.html#activity">General.Contacts.Reminder.Activity</a> back reference</td>
+</tr>
+<tr>
+<td>Resources</td>
+<td><a href="General.Contacts.ActivityResources.html">General.Contacts.ActivityResources</a></td>
+<td>List of <a href="General.Contacts.ActivityResources.html">ActivityResource</a> child objects, based on the <a href="General.Contacts.ActivityResources.html#activity">General.Contacts.ActivityResource.Activity</a> back reference</td>
+</tr>
+<tr>
+<td>StateChanges</td>
+<td><a href="General.DocumentStateChanges.html">General.DocumentStateChanges</a></td>
+<td>List of <a href="General.DocumentStateChanges.html">DocumentStateChange</a> child objects, based on the <a href="General.DocumentStateChanges.html#document">DocumentStateChange.Document</a> back reference</td>
+</tr>
+<tr>
+<td>Versions</td>
+<td><a href="General.DocumentVersions.html">General.DocumentVersions</a></td>
+<td>List of <a href="General.Documents.html#documentversion">DocumentVersion</a> child objects, based on the <a href="General.DocumentVersions.html#document">DocumentVersion.Document</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="completetime">CompleteTime</h3>
 <blockquote>
 <p>Exact time, when the document was last completed[Filter(ge;le)]</p>
@@ -494,6 +489,13 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="deadlinetime">DeadlineTime</h3>
+<blockquote>
+<p>The deadline for the task. null if there is no deadline. [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentdate">DocumentDate</h3>
 <blockquote>
 <p>The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]</p>
@@ -509,6 +511,13 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="documentnotes">DocumentNotes</h3>
+<blockquote>
+<p>Notes for this Document</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentversion">DocumentVersion</h3>
 <blockquote>
 <p>[Filter(eq;ge;le)]</p>
@@ -517,153 +526,12 @@
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
-<h3 id="documentnotes">DocumentNotes</h3>
+<h3 id="endtime">EndTime</h3>
 <blockquote>
-<p>Notes for this Document</p>
-</blockquote>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
-<blockquote>
-<p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceOrders.html#ParentDocumentRelationshipType">General.ParentDocumentRelationshipType</a> (nullable)</strong><br>
-Relationship between parent and child documents<br>
-<em>Allowed Values (Enum Members)</em></p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Subtask</td>
-<td>The child document is a sub-task of the parent document. (Complete child to complete parent) <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Subtask'</td>
-</tr>
-<tr>
-<td>NextTask</td>
-<td>The child document is next task of the parent document. (Complete parent to complete child) <br> <em>Database Value:</em> 'N' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'NextTask'</td>
-</tr>
-</tbody>
-</table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="planningonly">PlanningOnly</h3>
-<blockquote>
-<p>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong>boolean (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong></p>
-<h3 id="readonly">ReadOnly</h3>
-<blockquote>
-<p>True - the document is read only; false - the document is not read only [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong></p>
-<h3 id="referencedate">ReferenceDate</h3>
-<blockquote>
-<p>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</p>
+<p>Currently planned ending time of the task. [Filter(ge;le)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="referencedocumentno">ReferenceDocumentNo</h3>
-<blockquote>
-<p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="releasetime">ReleaseTime</h3>
-<blockquote>
-<p>Exact time, when the document was first released [Filter(ge;le)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="state">State</h3>
-<blockquote>
-<p>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceOrders.html#State">General.DocumentState</a></strong><br>
-Enumeration of document system states<br>
-<em>Allowed Values (Enum Members)</em></p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>New</td>
-<td>New document, just created. Can be edited. (Stored as 0). <br> <em>Database Value:</em> 0 <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
-</tr>
-<tr>
-<td>Adjustment</td>
-<td>Document which adjusts other released documents. (Stored as 5). <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Adjustment'</td>
-</tr>
-<tr>
-<td>Planned</td>
-<td>Planned by the system for future releasing. (Stored as 10). <br> <em>Database Value:</em> 10 <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Planned'</td>
-</tr>
-<tr>
-<td>FirmPlanned</td>
-<td>Planned by operator for future releasing. (Stored as 20). <br> <em>Database Value:</em> 20 <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
-</tr>
-<tr>
-<td>Released</td>
-<td>Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br> <em>Database Value:</em> 30 <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Released'</td>
-</tr>
-<tr>
-<td>Completed</td>
-<td>Work has completed. (Stored as 40). <br> <em>Database Value:</em> 40 <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'Completed'</td>
-</tr>
-<tr>
-<td>Closed</td>
-<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br> <em>Database Value:</em> 50 <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Closed'</td>
-</tr>
-</tbody>
-</table>
-<p><em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>0</strong></p>
-<h3 id="void">Void</h3>
-<blockquote>
-<p>True if the document is null and void [Required][Filter(eq)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong></p>
-<h3 id="voidreason">VoidReason</h3>
-<blockquote>
-<p>Reason for voiding the document, entered by the user</p>
-</blockquote>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="voidtime">VoidTime</h3>
-<blockquote>
-<p>Date/time when the document has become void</p>
-</blockquote>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="voiduser">VoidUser</h3>
-<blockquote>
-<p>The user who voided the document</p>
-</blockquote>
-<p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="entityname">EntityName</h3>
 <blockquote>
@@ -672,20 +540,10 @@ Enumeration of document system states<br>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
-<h3 id="deadlinetime">DeadlineTime</h3>
-<blockquote>
-<p>The deadline for the task. null if there is no deadline. [Filter(ge;le)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="endtime">EndTime</h3>
-<blockquote>
-<p>Currently planned ending time of the task. [Filter(ge;le)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isreleased">IsReleased</h3>
 <blockquote>
 <p>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
@@ -709,6 +567,33 @@ Enumeration of document system states<br>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
+<blockquote>
+<p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceOrders.html#parentdocumentrelationshiptype">ParentDocumentRelationshipType</a> (nullable)</strong><br>
+Relationship between parent and child documents<br>
+<em>Allowed Values (General.ParentDocumentRelationshipType Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subtask</td>
+<td>The child document is a sub-task of the parent document. (Complete child to complete parent) <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Subtask'</td>
+</tr>
+<tr>
+<td>NextTask</td>
+<td>The child document is next task of the parent document. (Complete parent to complete child) <br> <em>Database Value:</em> 'N' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'NextTask'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="planneddurationminutes">PlannedDurationMinutes</h3>
 <blockquote>
 <p>Total planned duration of the activity, regardless of the current execution status. [Filter(ge;le)]</p>
@@ -716,13 +601,21 @@ Enumeration of document system states<br>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="planningonly">PlanningOnly</h3>
+<blockquote>
+<p>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
 <h3 id="priority">Priority</h3>
 <blockquote>
 <p>Priority on the scale from 1 (least important) to 5 (very important). [Required] [Default(3)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceOrders.html#Priority">General.Priority</a></strong><br>
+<p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceOrders.html#priority">Priority</a></strong><br>
 Generic enum type for Priority properties<br>
-<em>Allowed Values (Enum Members)</em></p>
+<em>Allowed Values (General.Priority Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -764,6 +657,35 @@ Generic enum type for Priority properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="readonly">ReadOnly</h3>
+<blockquote>
+<p>True - the document is read only; false - the document is not read only [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="referencedate">ReferenceDate</h3>
+<blockquote>
+<p>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="referencedocumentno">ReferenceDocumentNo</h3>
+<blockquote>
+<p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="releasetime">ReleaseTime</h3>
+<blockquote>
+<p>Exact time, when the document was first released [Filter(ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="remindertime">ReminderTime</h3>
 <blockquote>
 <p>When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.</p>
@@ -779,6 +701,54 @@ Generic enum type for Priority properties<br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
+<h3 id="state">State</h3>
+<blockquote>
+<p>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceOrders.html#state">DocumentState</a></strong><br>
+Enumeration of document system states<br>
+<em>Allowed Values (General.DocumentState Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>New document, just created. Can be edited. (Stored as 0). <br> <em>Database Value:</em> 0 <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+</tr>
+<tr>
+<td>Adjustment</td>
+<td>Document which adjusts other released documents. (Stored as 5). <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Adjustment'</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Planned by the system for future releasing. (Stored as 10). <br> <em>Database Value:</em> 10 <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Planned'</td>
+</tr>
+<tr>
+<td>FirmPlanned</td>
+<td>Planned by operator for future releasing. (Stored as 20). <br> <em>Database Value:</em> 20 <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+</tr>
+<tr>
+<td>Released</td>
+<td>Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br> <em>Database Value:</em> 30 <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Released'</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Work has completed. (Stored as 40). <br> <em>Database Value:</em> 40 <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'Completed'</td>
+</tr>
+<tr>
+<td>Closed</td>
+<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br> <em>Database Value:</em> 50 <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Closed'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
 <h3 id="subject">Subject</h3>
 <blockquote>
 <p>Task primary subject (required). [Required] [Filter(eq;like)]</p>
@@ -792,9 +762,9 @@ Generic enum type for Priority properties<br>
 <blockquote>
 <p>T=Task; C=Communication; M=Meeting. [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceOrders.html#SystemType">General.Contacts.ActivitiesRepository.SystemType</a></strong><br>
-Allowed values for the <a href="General.Contacts.Activities.html#SystemType">SystemType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceOrders.html#systemtype">SystemType</a></strong><br>
+Allowed values for the <a href="General.Contacts.Activities.html#systemtype">SystemType</a> data attribute<br>
+<em>Allowed Values (General.Contacts.ActivitiesRepository.SystemType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -819,195 +789,198 @@ Allowed values for the <a href="General.Contacts.Activities.html#SystemType">Sys
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="void">Void</h3>
+<blockquote>
+<p>True if the document is null and void [Required][Filter(eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="voidreason">VoidReason</h3>
+<blockquote>
+<p>Reason for voiding the document, entered by the user</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="voidtime">VoidTime</h3>
+<blockquote>
+<p>Date/time when the document has become void</p>
+</blockquote>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="voiduser">VoidUser</h3>
+<blockquote>
+<p>The user who voided the document</p>
+</blockquote>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
 <blockquote>
 <p>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="adjusteddocument">AdjustedDocument</h3>
 <blockquote>
 <p>The primary document, which the current document adjusts. null when this is not an adjustment document</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assignedtouser">AssignedToUser</h3>
 <blockquote>
 <p>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="currencydirectory">CurrencyDirectory</h3>
-<blockquote>
-<p>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="documenttype">DocumentType</h3>
-<blockquote>
-<p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="enterprisecompany">EnterpriseCompany</h3>
-<blockquote>
-<p>The enterprise company which issued the document [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<blockquote>
-<p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="fromcompanydivision">FromCompanyDivision</h3>
-<blockquote>
-<p>The division of the company, issuing the document. null when the document is not issued by any specific division</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="fromparty">FromParty</h3>
-<blockquote>
-<p>The party which issued the document [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="masterdocument">MasterDocument</h3>
-<blockquote>
-<p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="parent">Parent</h3>
-<blockquote>
-<p>In a multi-document tree, this is the direct parent document. If this is the root it is null</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="primecausedocument">PrimeCauseDocument</h3>
-<blockquote>
-<p>The document that is the prime cause for creation of the current document</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="responsibleperson">ResponsiblePerson</h3>
-<blockquote>
-<p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="reverseofdocument">ReverseOfDocument</h3>
-<blockquote>
-<p>The document which the current document is reverse of</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="sequence">Sequence</h3>
-<blockquote>
-<p>The sequence that will be used to give new numbers to the documents of this type</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Sequences.html">General.Sequences</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="tocompanydivision">ToCompanyDivision</h3>
-<blockquote>
-<p>The division of the company, receiving the document. null when the document is not received by any specific division</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****</p>
-<h3 id="toparty">ToParty</h3>
-<blockquote>
-<p>The party which should receive the document</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="userstatus">UserStatus</h3>
-<blockquote>
-<p>The user status of this document if applicable for this document type. null means unknown or not yet set</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="contactperson">ContactPerson</h3>
 <blockquote>
 <p>The contact person, from the side of the Target Party. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="ownerparty">OwnerParty</h3>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="currencydirectory">CurrencyDirectory</h3>
 <blockquote>
-<p>The party that owns the task. Initially this is the party that has created the task. [Required] [Filter(multi eq)]</p>
+<p>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">General.CurrencyDirectories</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="documenttype">DocumentType</h3>
+<blockquote>
+<p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="enterprisecompany">EnterpriseCompany</h3>
+<blockquote>
+<p>The enterprise company which issued the document [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
+<blockquote>
+<p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">General.Contacts.CompanyLocations</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="fromcompanydivision">FromCompanyDivision</h3>
+<blockquote>
+<p>The division of the company, issuing the document. null when the document is not issued by any specific division</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="fromparty">FromParty</h3>
+<blockquote>
+<p>The party which issued the document [Required]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="projecttask">ProjectTask</h3>
-<blockquote>
-<p>The project task for which the work is performed. null when the activity is not related to a project task. [Filter(multi eq)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="responsibleparty">ResponsibleParty</h3>
-<blockquote>
-<p>Who is responsible for executing the task. Initially this is the owner of the task. [Required] [Filter(multi eq)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="targetparty">TargetParty</h3>
-<blockquote>
-<p>External participant or target of the task. [Filter(multi eq)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="maintenancetype">MaintenanceType</h3>
 <blockquote>
 <p>The type of maintenance, which will be performed. null means that will be more than one type of maintenance performed. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceTypes.html">Applications.AssetManagement.MaintenanceTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
 <blockquote>
 <p>The asset, which will be maintained. null means that more than one asset will be maintained. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssets.html">Applications.AssetManagement.ManagedAssets</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="masterdocument">MasterDocument</h3>
+<blockquote>
+<p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="ownerparty">OwnerParty</h3>
+<blockquote>
+<p>The party that owns the task. Initially this is the party that has created the task. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="parent">Parent</h3>
+<blockquote>
+<p>In a multi-document tree, this is the direct parent document. If this is the root it is null</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="primecausedocument">PrimeCauseDocument</h3>
+<blockquote>
+<p>The document that is the prime cause for creation of the current document</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="projecttask">ProjectTask</h3>
+<blockquote>
+<p>The project task for which the work is performed. null when the activity is not related to a project task. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Projects.ProjectTasks.html">Projects.ProjectTasks</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="responsibleparty">ResponsibleParty</h3>
+<blockquote>
+<p>Who is responsible for executing the task. Initially this is the owner of the task. [Required] [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="responsibleperson">ResponsiblePerson</h3>
+<blockquote>
+<p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="reverseofdocument">ReverseOfDocument</h3>
+<blockquote>
+<p>The document which the current document is reverse of</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="sequence">Sequence</h3>
+<blockquote>
+<p>The sequence that will be used to give new numbers to the documents of this type</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Sequences.html">General.Sequences</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="servicecenter">ServiceCenter</h3>
 <blockquote>
 <p>The service center, which will perform the maintenance. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.ServiceCenters.html">Applications.AssetManagement.ServiceCenters</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="targetparty">TargetParty</h3>
+<blockquote>
+<p>External participant or target of the task. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="tocompanydivision">ToCompanyDivision</h3>
+<blockquote>
+<p>The division of the company, receiving the document. null when the document is not received by any specific division</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">General.Contacts.CompanyDivisions</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong></p>
+<h3 id="toparty">ToParty</h3>
+<blockquote>
+<p>The party which should receive the document</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="userstatus">UserStatus</h3>
+<blockquote>
+<p>The user status of this document if applicable for this document type. null means unknown or not yet set</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">General.DocumentTypeUserStatuses</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.AssetManagement.MaintenanceOrders erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.AssetManagement.MaintenanceOrders erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.AssetManagement.MaintenanceOrders erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_MaintenanceOrders?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_MaintenanceOrders?$top=10</a></p>

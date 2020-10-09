@@ -91,62 +91,62 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Logistics.Procurement.Suppliers.html#CreationTime">CreationTime</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#creationtime">CreationTime</a></td>
 <td>datetime (nullable)</td>
 <td>Date and time when the Supplier was created. [Filter(ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#CreationUser">CreationUser</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#creationuser">CreationUser</a></td>
 <td>string (nullable)</td>
 <td>Login name of the user, who created the Supplier. [Filter(like)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#DefaultDeliveryTermDays">DefaultDeliveryTermDays</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#defaultdeliverytermdays">DefaultDeliveryTermDays</a></td>
 <td>int32</td>
 <td>Default term in days for goods delivery, starting at the day of sending the purchase order. [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#DefaultPaymentStartDays">DefaultPaymentStartDays</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#defaultpaymentstartdays">DefaultPaymentStartDays</a></td>
 <td>int32</td>
 <td>Default number of days until the payment becomes executable. 0 means that the payment is executable at all times. [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#DefaultPaymentTermDays">DefaultPaymentTermDays</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#defaultpaymenttermdays">DefaultPaymentTermDays</a></td>
 <td>int32</td>
 <td>Default payment term in days, starting from the date of receiving the invoice. [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#FromDate">FromDate</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#fromdate">FromDate</a></td>
 <td>datetime (nullable)</td>
 <td>The date on which this party became a supplier or the date, when the supplier contract was signed. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#IsActive">IsActive</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.Suppliers.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>Indicates whether the current supplier is active. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#Number">Number</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#number">Number</a></td>
 <td>string (nullable)</td>
 <td>The unique supplier number. [Filter(eq)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#ThruDate">ThruDate</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#thrudate">ThruDate</a></td>
 <td>datetime (nullable)</td>
 <td>The date (inclusive) on which this party ceased to be a supplier. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#UpdateTime">UpdateTime</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#updatetime">UpdateTime</a></td>
 <td>datetime (nullable)</td>
 <td>Date and time when the Supplier was last updated. [Filter(ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#UpdateUser">UpdateUser</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#updateuser">UpdateUser</a></td>
 <td>string (nullable)</td>
 <td>Login name of the user, who last updated the Supplier. [Filter(like)] [ReadOnly]</td>
 </tr>
@@ -163,48 +163,43 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#DefaultCurrency">DefaultCurrency</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#defaultcurrency">DefaultCurrency</a></td>
 <td><a href="General.Currencies.html">General.Currencies</a> (nullable)</td>
 <td>The default currency for purchases from this supplier. null means there is no default. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#DefaultPaymentAccount">DefaultPaymentAccount</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#defaultpaymentaccount">DefaultPaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</td>
 <td>When not null, specifies the default payment account which should be used for new purchase document for this supplier. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#DefaultPaymentType">DefaultPaymentType</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#defaultpaymenttype">DefaultPaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</td>
 <td>When not null, specifies the default payment type which should be used for new purchase document for this supplier. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#DefaultPurchasePriceList">DefaultPurchasePriceList</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#defaultpurchasepricelist">DefaultPurchasePriceList</a></td>
 <td><a href="Logistics.Procurement.PurchasePriceLists.html">Logistics.Procurement.PurchasePriceLists</a> (nullable)</td>
 <td>The default purchase price list, which shall be used for new purchase documents for this supplier. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
 <td>The Enterprise Company to which this Supplier applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#Party">Party</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
 <td>The <a href="General.Contacts.Parties.html">Party</a> to which this Supplier belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.Suppliers.html#SupplierType">SupplierType</a></td>
+<td><a href="Logistics.Procurement.Suppliers.html#suppliertype">SupplierType</a></td>
 <td><a href="Logistics.Procurement.SupplierTypes.html">Logistics.Procurement.SupplierTypes</a> (nullable)</td>
 <td>When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="creationtime">CreationTime</h3>
 <blockquote>
 <p>Date and time when the Supplier was created. [Filter(ge;le)] [ReadOnly]</p>
@@ -250,6 +245,10 @@
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
 <p>Indicates whether the current supplier is active. [Required] [Default(true)] [Filter(eq)]</p>
@@ -292,56 +291,49 @@
 <p>The default currency for purchases from this supplier. null means there is no default. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">General.Currencies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="defaultpaymentaccount">DefaultPaymentAccount</h3>
 <blockquote>
 <p>When not null, specifies the default payment account which should be used for new purchase document for this supplier. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">Finance.Payments.PaymentAccounts</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="defaultpaymenttype">DefaultPaymentType</h3>
 <blockquote>
 <p>When not null, specifies the default payment type which should be used for new purchase document for this supplier. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">Finance.Payments.PaymentTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="defaultpurchasepricelist">DefaultPurchasePriceList</h3>
 <blockquote>
 <p>The default purchase price list, which shall be used for new purchase documents for this supplier. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchasePriceLists.html">Logistics.Procurement.PurchasePriceLists</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The Enterprise Company to which this Supplier applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="party">Party</h3>
 <blockquote>
 <p>The <a href="General.Contacts.Parties.html">Party</a> to which this Supplier belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="suppliertype">SupplierType</h3>
 <blockquote>
 <p>When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.SupplierTypes.html">Logistics.Procurement.SupplierTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Logistics.Procurement.Suppliers erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Logistics.Procurement.Suppliers erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Logistics.Procurement.Suppliers erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_Suppliers?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_Suppliers?$top=10</a></p>

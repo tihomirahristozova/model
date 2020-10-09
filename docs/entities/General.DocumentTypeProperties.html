@@ -91,42 +91,42 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentTypeProperties.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.DocumentTypeProperties.html#DefaultPropertyValue">DefaultPropertyValue</a></td>
+<td><a href="General.DocumentTypeProperties.html#defaultpropertyvalue">DefaultPropertyValue</a></td>
 <td>string (nullable)</td>
 <td>The default value of the property when creating new documents.</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeProperties.html#DefaultPropertyValueDescription">DefaultPropertyValueDescription</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</td>
+<td><a href="General.DocumentTypeProperties.html#defaultpropertyvaluedescription">DefaultPropertyValueDescription</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
 <td>Default description value of the property when creating new documents.</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeProperties.html#DefaultValueId">DefaultValueId</a></td>
+<td><a href="General.DocumentTypeProperties.html#defaultvalueid">DefaultValueId</a></td>
 <td>guid (nullable)</td>
 <td>Internal Id of the default value of the property. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeProperties.html#LineNo">LineNo</a></td>
+<td><a href="General.DocumentTypeProperties.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.DocumentTypeProperties.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Line number, unique within the document type. [Required] [Filter(ge;le)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeProperties.html#Required">Required</a></td>
+<td><a href="General.DocumentTypeProperties.html#required">Required</a></td>
 <td>boolean</td>
 <td>True if the property is required when creating documents of this type. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeProperties.html#RequiredFromDate">RequiredFromDate</a></td>
+<td><a href="General.DocumentTypeProperties.html#requiredfromdate">RequiredFromDate</a></td>
 <td>datetime (nullable)</td>
 <td>When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeProperties.html#RequiredThruDate">RequiredThruDate</a></td>
+<td><a href="General.DocumentTypeProperties.html#requiredthrudate">RequiredThruDate</a></td>
 <td>datetime (nullable)</td>
 <td>When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. [Filter(ge;le)]</td>
 </tr>
@@ -143,28 +143,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentTypeProperties.html#DocumentType">DocumentType</a></td>
+<td><a href="General.DocumentTypeProperties.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
 <td>The document type, for which to add user-defined properties. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeProperties.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="General.DocumentTypeProperties.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
 <td>When not null, specifies that the current rule is valid only for the specified company. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentTypeProperties.html#Property">Property</a></td>
+<td><a href="General.DocumentTypeProperties.html#property">Property</a></td>
 <td><a href="General.CustomProperties.html">General.CustomProperties</a></td>
 <td>The user-defined property, which should be added. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="defaultpropertyvalue">DefaultPropertyValue</h3>
 <blockquote>
 <p>The default value of the property when creating new documents.</p>
@@ -176,7 +171,7 @@
 <blockquote>
 <p>Default description value of the property when creating new documents.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="defaultvalueid">DefaultValueId</h3>
@@ -184,8 +179,11 @@
 <p>Internal Id of the default value of the property. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
 <p>Line number, unique within the document type. [Required] [Filter(ge;le)] [ORD]</p>
@@ -225,28 +223,25 @@
 <p>The document type, for which to add user-defined properties. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>When not null, specifies that the current rule is valid only for the specified company. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="property">Property</h3>
 <blockquote>
 <p>The user-defined property, which should be added. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">General.CustomProperties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.DocumentTypeProperties erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.DocumentTypeProperties erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.DocumentTypeProperties erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_DocumentTypeProperties?$top=10">https://demodb.my.erp.net/api/domain/odata/General_DocumentTypeProperties?$top=10</a></p>

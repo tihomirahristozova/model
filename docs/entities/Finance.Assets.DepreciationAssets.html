@@ -91,7 +91,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Assets.DepreciationAssets.html#Id">Id</a></td>
+<td><a href="Finance.Assets.DepreciationAssets.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
@@ -108,14 +108,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Assets.DepreciationAssets.html#Asset">Asset</a></td>
+<td><a href="Finance.Assets.DepreciationAssets.html#asset">Asset</a></td>
 <td><a href="Finance.Assets.Assets.html">Finance.Assets.Assets</a></td>
 <td>Specifies the asset, whose depreciation should be calculated with the current document. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Assets.DepreciationAssets.html#Depreciation">Depreciation</a></td>
+<td><a href="Finance.Assets.DepreciationAssets.html#depreciation">Depreciation</a></td>
 <td><a href="Finance.Assets.Depreciations.html">Finance.Assets.Depreciations</a></td>
-<td>The <a href="Finance.Assets.DepreciationAssets.html#Depreciation">Depreciation</a> to which this DepreciationAsset belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Finance.Assets.DepreciationAssets.html#depreciation">Depreciation</a> to which this DepreciationAsset belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
@@ -123,7 +123,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="asset">Asset</h3>
@@ -131,21 +130,19 @@
 <p>Specifies the asset, whose depreciation should be calculated with the current document. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.Assets.html">Finance.Assets.Assets</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="depreciation">Depreciation</h3>
 <blockquote>
-<p>The <a href="Finance.Assets.DepreciationAssets.html#Depreciation">Depreciation</a> to which this DepreciationAsset belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Finance.Assets.DepreciationAssets.html#depreciation">Depreciation</a> to which this DepreciationAsset belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.Depreciations.html">Finance.Assets.Depreciations</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Assets.DepreciationAssets erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Assets.DepreciationAssets erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Assets.DepreciationAssets erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Assets_DepreciationAssets?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Assets_DepreciationAssets?$top=10</a></p>

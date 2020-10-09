@@ -91,87 +91,87 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#AllowAddress">AllowAddress</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#allowaddress">AllowAddress</a></td>
 <td>boolean</td>
 <td>Allows the processing of the physical address. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#AllowBasicData">AllowBasicData</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#allowbasicdata">AllowBasicData</a></td>
 <td>boolean</td>
 <td>Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#AllowEmail">AllowEmail</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#allowemail">AllowEmail</a></td>
 <td>boolean</td>
 <td>Allows the processing of the email address. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#AllowOtherData">AllowOtherData</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#allowotherdata">AllowOtherData</a></td>
 <td>string (nullable)</td>
 <td>Comma-separated list of other types of data, which was allowed for processing with this consent. [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#AllowPhone">AllowPhone</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#allowphone">AllowPhone</a></td>
 <td>boolean</td>
 <td>Allows the processing of the telephone number. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#ConsentImage">ConsentImage</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#consentimage">ConsentImage</a></td>
 <td>byte[] (nullable)</td>
 <td>If not null, it is a graphical image, containing additional information for the consent.</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#ConsentText">ConsentText</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#consenttext">ConsentText</a></td>
 <td>string (nullable)</td>
 <td>The actual text of the consent. [Filter(like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#ConsentType">ConsentType</a></td>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#ConsentType">Applications.PersonalData.ProcessingConsentsRepository.ConsentType</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#consenttype">ConsentType</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#consenttype">ConsentType</a></td>
 <td>The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#GivenOnUtc">GivenOnUtc</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#givenonutc">GivenOnUtc</a></td>
 <td>datetime</td>
 <td>The date and time (in Utc), when the consent was given. [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#IsActive">IsActive</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#IsChild">IsChild</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#ischild">IsChild</a></td>
 <td>boolean</td>
 <td>Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#Notes">Notes</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ProcessingConsent.</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#ParentEmail">ParentEmail</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#parentemail">ParentEmail</a></td>
 <td>string (nullable)</td>
 <td>When a parental rights holder gives a consent for a child, contains the email of the parent. [Filter(like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#ParentName">ParentName</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#parentname">ParentName</a></td>
 <td>string (nullable)</td>
 <td>When a parental rights holder gives a consent for a child, contains the name of the parent. [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#ParentPhone">ParentPhone</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#parentphone">ParentPhone</a></td>
 <td>string (nullable)</td>
 <td>When a parental rights holder gives a consent for a child, contains the phone number of the parent. [Filter(like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#RetractedOnUtc">RetractedOnUtc</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#retractedonutc">RetractedOnUtc</a></td>
 <td>datetime (nullable)</td>
 <td>The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. [Filter(ge;le)]</td>
 </tr>
@@ -188,28 +188,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#Person">Person</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</td>
 <td>The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#PersonalDataProcess">PersonalDataProcess</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#personaldataprocess">PersonalDataProcess</a></td>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html">Applications.PersonalData.PersonalDataProcesses</a> (nullable)</td>
 <td>The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.PersonalData.ProcessingConsents.html#User">User</a></td>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Systems.Security.Users</a></td>
 <td>The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="allowaddress">AllowAddress</h3>
 <blockquote>
 <p>Allows the processing of the physical address. [Required] [Default(false)] [Filter(eq)]</p>
@@ -267,9 +262,9 @@
 <blockquote>
 <p>The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). [Required] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Applications.PersonalData.ProcessingConsents.html#ConsentType">Applications.PersonalData.ProcessingConsentsRepository.ConsentType</a></strong><br>
-Allowed values for the <a href="Applications.PersonalData.ProcessingConsents.html#ConsentType">ConsentType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Applications.PersonalData.ProcessingConsents.html#consenttype">ConsentType</a></strong><br>
+Allowed values for the <a href="Applications.PersonalData.ProcessingConsents.html#consenttype">ConsentType</a> data attribute<br>
+<em>Allowed Values (Applications.PersonalData.ProcessingConsentsRepository.ConsentType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -313,6 +308,10 @@ Allowed values for the <a href="Applications.PersonalData.ProcessingConsents.htm
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
 <p>Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. [Required] [Default(true)] [Filter(eq)]</p>
@@ -370,28 +369,25 @@ Allowed values for the <a href="Applications.PersonalData.ProcessingConsents.htm
 <p>The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="personaldataprocess">PersonalDataProcess</h3>
 <blockquote>
 <p>The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html">Applications.PersonalData.PersonalDataProcesses</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
 <blockquote>
 <p>The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Systems.Security.Users</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.PersonalData.ProcessingConsents erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.PersonalData.ProcessingConsents erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.PersonalData.ProcessingConsents erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_PersonalData_ProcessingConsents?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_PersonalData_ProcessingConsents?$top=10</a></p>

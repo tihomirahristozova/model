@@ -91,28 +91,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#Id">Id</a></td>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#LineNo">LineNo</a></td>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>The unique, consecutive line number within the requisition. [Required]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#Notes">Notes</a></td>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this WarehouseRequisitionLine.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#ParentLineNo">ParentLineNo</a></td>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 (nullable)</td>
 <td>The number of the line within the parent document, which the current line executes. null when the current line does not execute line.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#Quantity">Quantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The requested quantity. [Unit: QuantityUnit] [Required] [Filter(eq;ge;le)]</td>
 </tr>
 </tbody>
@@ -128,34 +128,34 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#Lot">Lot</a></td>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</td>
 <td>The requested lot. null means that any lot can be used or the product does not use lots at all. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#ParentDocument">ParentDocument</a></td>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.html">General.Documents</a> (nullable)</td>
 <td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#Product">Product</a></td>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The requested product. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#QuantityUnit">QuantityUnit</a></td>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
 <td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#SerialNumber">SerialNumber</a></td>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</td>
 <td>The requested serial number. null means that any serial number can be used or the product does not use serial numbers at all. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#WarehouseRequisition">WarehouseRequisition</a></td>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#warehouserequisition">WarehouseRequisition</a></td>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html">Logistics.Wms.WarehouseRequisitions</a></td>
-<td>The <a href="Logistics.Wms.WarehouseRequisitionLines.html#WarehouseRequisition">WarehouseRequisition</a> to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Logistics.Wms.WarehouseRequisitionLines.html#warehouserequisition">WarehouseRequisition</a> to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
@@ -163,7 +163,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
@@ -194,7 +193,7 @@
 <blockquote>
 <p>The requested quantity. [Unit: QuantityUnit] [Required] [Filter(eq;ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -203,49 +202,43 @@
 <p>The requested lot. null means that any lot can be used or the product does not use lots at all. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
 <blockquote>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The requested product. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <blockquote>
 <p>The requested serial number. null means that any serial number can be used or the product does not use serial numbers at all. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouserequisition">WarehouseRequisition</h3>
 <blockquote>
-<p>The <a href="Logistics.Wms.WarehouseRequisitionLines.html#WarehouseRequisition">WarehouseRequisition</a> to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Logistics.Wms.WarehouseRequisitionLines.html#warehouserequisition">WarehouseRequisition</a> to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseRequisitions.html">Logistics.Wms.WarehouseRequisitions</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Logistics.Wms.WarehouseRequisitionLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Logistics.Wms.WarehouseRequisitionLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Logistics.Wms.WarehouseRequisitionLines erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Wms_WarehouseRequisitionLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Wms_WarehouseRequisitionLines?$top=10</a></p>

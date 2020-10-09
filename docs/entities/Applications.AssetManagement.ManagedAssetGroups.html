@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetGroups.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.ManagedAssetGroups.html#Code">Code</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetGroups.html#code">Code</a></td>
 <td>string</td>
 <td>Unique (within all groups) code of the asset group. [Required] [Filter(multi eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetGroups.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetGroups.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.ManagedAssetGroups.html#name">Name</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
 <td>Name of the asset group (multi-language). [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetGroups.html#Notes">Notes</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetGroups.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ManagedAssetGroup.</td>
 </tr>
@@ -123,18 +123,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetGroups.html#Parent">Parent</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetGroups.html#parent">Parent</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssetGroups.html">Applications.AssetManagement.ManagedAssetGroups</a> (nullable)</td>
 <td>The parent asset group in the hierarchy. null means this is a root group. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="code">Code</h3>
 <blockquote>
 <p>Unique (within all groups) code of the asset group. [Required] [Filter(multi eq;like)] [ORD]</p>
@@ -142,11 +137,15 @@
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <blockquote>
 <p>Name of the asset group (multi-language). [Required] [Filter(eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
@@ -162,14 +161,13 @@
 <p>The parent asset group in the hierarchy. null means this is a root group. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssetGroups.html">Applications.AssetManagement.ManagedAssetGroups</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.AssetManagement.ManagedAssetGroups erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.AssetManagement.ManagedAssetGroups erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.AssetManagement.ManagedAssetGroups erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_ManagedAssetGroups?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_ManagedAssetGroups?$top=10</a></p>

@@ -91,53 +91,53 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#Id">Id</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#deliveryterms">DeliveryTerms</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#deliveryterms">DeliveryTerms</a></td>
+<td>Delivery terms - classification according to Intrastat (which uses the common abbreviations). [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#DeliveryTerms">DeliveryTerms</a></td>
-<td><a href="Finance.Intrastat.DeclarationLines.html#DeliveryTerms">Finance.Intrastat.DeclarationLinesRepository.DeliveryTerms</a></td>
-<td>Delivery terms - classification according to Intrastat (which uses the common abbreviations). [Required]</td>
-</tr>
-<tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#InvoicedValueAmountBase">InvoicedValueAmountBase</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#invoicedvalueamountbase">InvoicedValueAmountBase</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>Invoiced value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency] [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#LineAction">LineAction</a></td>
-<td><a href="Finance.Intrastat.DeclarationLines.html#LineAction">Finance.Intrastat.DeclarationLinesRepository.LineAction</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#lineaction">LineAction</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#lineaction">LineAction</a></td>
 <td>Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted. [Required] [Default(&quot;NEW&quot;)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#LineNo">LineNo</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Consequtive line number within the intrastat declaration. [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#NetMassKg">NetMassKg</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#netmasskg">NetMassKg</a></td>
 <td>decimal</td>
 <td>Net mass of the goods in kg. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#QuantitySupplementaryUnit">QuantitySupplementaryUnit</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#quantitysupplementaryunit">QuantitySupplementaryUnit</a></td>
 <td>decimal (nullable)</td>
 <td>Quantity of the goods in the supplementary unit. null when no supplementary unit is specified.</td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#StatisticalValueAmountBase">StatisticalValueAmountBase</a></td>
-<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#statisticalvalueamountbase">StatisticalValueAmountBase</a></td>
+<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
 <td>Statistical value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency]</td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#TransactionNature">TransactionNature</a></td>
-<td><a href="Finance.Intrastat.DeclarationLines.html#TransactionNature">Finance.Intrastat.DeclarationLinesRepository.TransactionNature</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#transactionnature">TransactionNature</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#transactionnature">TransactionNature</a></td>
 <td>Transaction nature, according to the Intrastat classification. [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#TransportMode">TransportMode</a></td>
-<td><a href="Finance.Intrastat.DeclarationLines.html#TransportMode">Finance.Intrastat.DeclarationLinesRepository.TransportMode</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#transportmode">TransportMode</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#transportmode">TransportMode</a></td>
 <td>Transportation mode - type of transportation used. [Required]</td>
 </tr>
 </tbody>
@@ -153,50 +153,45 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#AdministrativeRegion">AdministrativeRegion</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#administrativeregion">AdministrativeRegion</a></td>
 <td><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a></td>
 <td>Administrative region of the enterprise company at the time of the declaration. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#IntrastatCommodityCode">IntrastatCommodityCode</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#intrastatcommoditycode">IntrastatCommodityCode</a></td>
 <td><a href="Finance.Intrastat.CommodityCodes.html">Finance.Intrastat.CommodityCodes</a></td>
 <td>The commodity code of the goods, according to the Intrastat commodity classification. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#IntrastatDeclaration">IntrastatDeclaration</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#intrastatdeclaration">IntrastatDeclaration</a></td>
 <td><a href="Finance.Intrastat.Declarations.html">Finance.Intrastat.Declarations</a></td>
 <td>The intrastat declaration, to which this line belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#OriginCountry">OriginCountry</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#origincountry">OriginCountry</a></td>
 <td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
 <td>The country of origin of the goods. null for outbound declarations. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#PartyCountry">PartyCountry</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#partycountry">PartyCountry</a></td>
 <td><a href="General.Geography.Countries.html">General.Geography.Countries</a></td>
 <td>The country of the partner. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#TransportCountry">TransportCountry</a></td>
+<td><a href="Finance.Intrastat.DeclarationLines.html#transportcountry">TransportCountry</a></td>
 <td><a href="General.Geography.Countries.html">General.Geography.Countries</a></td>
 <td>The country of the transportation company. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="deliveryterms">DeliveryTerms</h3>
 <blockquote>
 <p>Delivery terms - classification according to Intrastat (which uses the common abbreviations). [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Intrastat.DeclarationLines.html#DeliveryTerms">Finance.Intrastat.DeclarationLinesRepository.DeliveryTerms</a></strong><br>
-Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#DeliveryTerms">DeliveryTerms</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Finance.Intrastat.DeclarationLines.html#deliveryterms">DeliveryTerms</a></strong><br>
+Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#deliveryterms">DeliveryTerms</a> data attribute<br>
+<em>Allowed Values (Finance.Intrastat.DeclarationLinesRepository.DeliveryTerms Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -253,20 +248,24 @@ Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#Delivery
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="invoicedvalueamountbase">InvoicedValueAmountBase</h3>
 <blockquote>
 <p>Invoiced value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="lineaction">LineAction</h3>
 <blockquote>
 <p>Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted. [Required] [Default(&quot;NEW&quot;)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Intrastat.DeclarationLines.html#LineAction">Finance.Intrastat.DeclarationLinesRepository.LineAction</a></strong><br>
-Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#LineAction">LineAction</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Finance.Intrastat.DeclarationLines.html#lineaction">LineAction</a></strong><br>
+Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#lineaction">LineAction</a> data attribute<br>
+<em>Allowed Values (Finance.Intrastat.DeclarationLinesRepository.LineAction Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -325,16 +324,16 @@ Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#LineActi
 <blockquote>
 <p>Statistical value of the goods in the base currency. [Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="transactionnature">TransactionNature</h3>
 <blockquote>
 <p>Transaction nature, according to the Intrastat classification. [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Intrastat.DeclarationLines.html#TransactionNature">Finance.Intrastat.DeclarationLinesRepository.TransactionNature</a></strong><br>
-Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#TransactionNature">TransactionNature</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Finance.Intrastat.DeclarationLines.html#transactionnature">TransactionNature</a></strong><br>
+Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#transactionnature">TransactionNature</a> data attribute<br>
+<em>Allowed Values (Finance.Intrastat.DeclarationLinesRepository.TransactionNature Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -427,9 +426,9 @@ Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#Transact
 <blockquote>
 <p>Transportation mode - type of transportation used. [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Intrastat.DeclarationLines.html#TransportMode">Finance.Intrastat.DeclarationLinesRepository.TransportMode</a></strong><br>
-Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#TransportMode">TransportMode</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Finance.Intrastat.DeclarationLines.html#transportmode">TransportMode</a></strong><br>
+Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#transportmode">TransportMode</a> data attribute<br>
+<em>Allowed Values (Finance.Intrastat.DeclarationLinesRepository.TransportMode Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -480,49 +479,43 @@ Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#Transpor
 <p>Administrative region of the enterprise company at the time of the declaration. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastatcommoditycode">IntrastatCommodityCode</h3>
 <blockquote>
 <p>The commodity code of the goods, according to the Intrastat commodity classification. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Intrastat.CommodityCodes.html">Finance.Intrastat.CommodityCodes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastatdeclaration">IntrastatDeclaration</h3>
 <blockquote>
 <p>The intrastat declaration, to which this line belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Intrastat.Declarations.html">Finance.Intrastat.Declarations</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="origincountry">OriginCountry</h3>
 <blockquote>
 <p>The country of origin of the goods. null for outbound declarations. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="partycountry">PartyCountry</h3>
 <blockquote>
 <p>The country of the partner. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transportcountry">TransportCountry</h3>
 <blockquote>
 <p>The country of the transportation company. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Intrastat.DeclarationLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Intrastat.DeclarationLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Intrastat.DeclarationLines erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Intrastat_DeclarationLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Intrastat_DeclarationLines?$top=10</a></p>

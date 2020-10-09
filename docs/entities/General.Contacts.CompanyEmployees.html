@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.CompanyEmployees.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Contacts.CompanyEmployees.html#ContractCode">ContractCode</a></td>
+<td><a href="General.Contacts.CompanyEmployees.html#contractcode">ContractCode</a></td>
 <td>string (nullable)</td>
 <td>Contract number or code, unique within the company. One employee can have more than one contract. [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.CompanyEmployees.html#ContractEndDate">ContractEndDate</a></td>
+<td><a href="General.Contacts.CompanyEmployees.html#contractenddate">ContractEndDate</a></td>
 <td>datetime (nullable)</td>
 <td>End date of the employee contract, null if the contract is still valid. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.CompanyEmployees.html#ContractStartDate">ContractStartDate</a></td>
+<td><a href="General.Contacts.CompanyEmployees.html#contractstartdate">ContractStartDate</a></td>
 <td>datetime (nullable)</td>
 <td>Start date of the employee contract. Null if it is unkown. [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.CompanyEmployees.html#Notes">Notes</a></td>
+<td><a href="General.Contacts.CompanyEmployees.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.CompanyEmployees.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this CompanyEmployee.</td>
 </tr>
@@ -128,28 +128,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.CompanyEmployees.html#CompanyDepartment">CompanyDepartment</a></td>
-<td><a href="General.Contacts.CompanyDepartments.html">General.Contacts.CompanyDepartments</a> (nullable)</td>
-<td>The department in which this employee is working. null means this information is unknown. [Filter(multi eq)]</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.CompanyEmployees.html#Company">Company</a></td>
+<td><a href="General.Contacts.CompanyEmployees.html#company">Company</a></td>
 <td><a href="General.Contacts.Companies.html">General.Contacts.Companies</a></td>
 <td>The company for which this employee works. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.CompanyEmployees.html#Person">Person</a></td>
+<td><a href="General.Contacts.CompanyEmployees.html#companydepartment">CompanyDepartment</a></td>
+<td><a href="General.Contacts.CompanyDepartments.html">General.Contacts.CompanyDepartments</a> (nullable)</td>
+<td>The department in which this employee is working. null means this information is unknown. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.CompanyEmployees.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">General.Contacts.Persons</a></td>
 <td>The personal data of the employee. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="contractcode">ContractCode</h3>
 <blockquote>
 <p>Contract number or code, unique within the company. One employee can have more than one contract. [Filter(eq)]</p>
@@ -171,6 +166,10 @@
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this CompanyEmployee.</p>
@@ -179,33 +178,30 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
-<h3 id="companydepartment">CompanyDepartment</h3>
-<blockquote>
-<p>The department in which this employee is working. null means this information is unknown. [Filter(multi eq)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDepartments.html">General.Contacts.CompanyDepartments</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="company">Company</h3>
 <blockquote>
 <p>The company for which this employee works. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">General.Contacts.Companies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="companydepartment">CompanyDepartment</h3>
+<blockquote>
+<p>The department in which this employee is working. null means this information is unknown. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDepartments.html">General.Contacts.CompanyDepartments</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
 <blockquote>
 <p>The personal data of the employee. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">General.Contacts.Persons</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.Contacts.CompanyEmployees erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.Contacts.CompanyEmployees erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.Contacts.CompanyEmployees erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Contacts_CompanyEmployees?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Contacts_CompanyEmployees?$top=10</a></p>

@@ -91,18 +91,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Marketing.ForecastItems.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Crm.Marketing.ForecastItems.html#Date">Date</a></td>
+<td><a href="Crm.Marketing.ForecastItems.html#date">Date</a></td>
 <td>datetime</td>
 <td>The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period. [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.ForecastItems.html#Quantity">Quantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Crm.Marketing.ForecastItems.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Crm.Marketing.ForecastItems.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The forecasted sales quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 </tbody>
@@ -118,43 +118,38 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Marketing.ForecastItems.html#Country">Country</a></td>
+<td><a href="Crm.Marketing.ForecastItems.html#country">Country</a></td>
 <td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
 <td>The country for which the forecast is made. When null, the forecast is country neutral. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.ForecastItems.html#Customer">Customer</a></td>
+<td><a href="Crm.Marketing.ForecastItems.html#customer">Customer</a></td>
 <td><a href="Crm.Customers.html">Crm.Customers</a> (nullable)</td>
 <td>The customer for which the forecast is made. When null, the forecast is not for any specfic customer. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.ForecastItems.html#Dealer">Dealer</a></td>
+<td><a href="Crm.Marketing.ForecastItems.html#dealer">Dealer</a></td>
 <td><a href="Crm.Dealers.html">Crm.Dealers</a> (nullable)</td>
 <td>The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.ForecastItems.html#Product">Product</a></td>
+<td><a href="Crm.Marketing.ForecastItems.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The product for which the forecast is made. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.ForecastItems.html#SalesPerson">SalesPerson</a></td>
+<td><a href="Crm.Marketing.ForecastItems.html#salesperson">SalesPerson</a></td>
 <td><a href="Crm.SalesPersons.html">Crm.SalesPersons</a> (nullable)</td>
 <td>The sales person for which the forecast is made. When null, the forecast is not for any specfic sales person. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.ForecastItems.html#Store">Store</a></td>
+<td><a href="Crm.Marketing.ForecastItems.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></td>
 <td>The store which is expected to sell the products. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="date">Date</h3>
 <blockquote>
 <p>The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period. [Required] [Filter(ge;le)]</p>
@@ -162,11 +157,15 @@
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="quantity">Quantity</h3>
 <blockquote>
 <p>The forecasted sales quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -176,49 +175,43 @@
 <p>The country for which the forecast is made. When null, the forecast is country neutral. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="customer">Customer</h3>
 <blockquote>
 <p>The customer for which the forecast is made. When null, the forecast is not for any specfic customer. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Customers.html">Crm.Customers</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="dealer">Dealer</h3>
 <blockquote>
 <p>The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Dealers.html">Crm.Dealers</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The product for which the forecast is made. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salesperson">SalesPerson</h3>
 <blockquote>
 <p>The sales person for which the forecast is made. When null, the forecast is not for any specfic sales person. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.SalesPersons.html">Crm.SalesPersons</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
 <blockquote>
 <p>The store which is expected to sell the products. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Logistics.Inventory.Stores</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Crm.Marketing.ForecastItems erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Crm.Marketing.ForecastItems erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Crm.Marketing.ForecastItems erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_Marketing_ForecastItems?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Marketing_ForecastItems?$top=10</a></p>

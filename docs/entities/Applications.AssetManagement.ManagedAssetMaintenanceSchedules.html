@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#Id">Id</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#Notes">Notes</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ManagedAssetMaintenanceSchedule.</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#ParameterChangeDelta">ParameterChangeDelta</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#parameterchangedelta">ParameterChangeDelta</a></td>
 <td>int32 (nullable)</td>
 <td>The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. [Filter(multi eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#ScheduleDays">ScheduleDays</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#scheduledays">ScheduleDays</a></td>
 <td>int32 (nullable)</td>
 <td>Number of days between planned maintenances. null means that the schedule is not planned based on days.</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#ScheduleMonths">ScheduleMonths</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#schedulemonths">ScheduleMonths</a></td>
 <td>int32 (nullable)</td>
 <td>Number of months between planned maintenances. null means that the schedule is not planned based on months.</td>
 </tr>
@@ -128,12 +128,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#MaintenanceType">MaintenanceType</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#maintenancetype">MaintenanceType</a></td>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html">Applications.AssetManagement.MaintenanceTypes</a></td>
 <td>What type of maintenance is scheduled. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#ManagedAsset">ManagedAsset</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">Applications.AssetManagement.ManagedAssets</a></td>
 <td>The managed asset for which the maintenance schedule applies. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
@@ -143,7 +143,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
@@ -179,21 +178,19 @@
 <p>What type of maintenance is scheduled. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceTypes.html">Applications.AssetManagement.MaintenanceTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
 <blockquote>
 <p>The managed asset for which the maintenance schedule applies. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssets.html">Applications.AssetManagement.ManagedAssets</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.AssetManagement.ManagedAssetMaintenanceSchedules erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.AssetManagement.ManagedAssetMaintenanceSchedules erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.AssetManagement.ManagedAssetMaintenanceSchedules erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_ManagedAssetMaintenanceSchedules?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_ManagedAssetMaintenanceSchedules?$top=10</a></p>

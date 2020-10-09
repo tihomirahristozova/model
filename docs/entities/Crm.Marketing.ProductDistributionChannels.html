@@ -91,32 +91,32 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Marketing.ProductDistributionChannels.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Crm.Marketing.ProductDistributionChannels.html#FromDate">FromDate</a></td>
+<td><a href="Crm.Marketing.ProductDistributionChannels.html#fromdate">FromDate</a></td>
 <td>date (nullable)</td>
 <td>When the product was listed. null-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). [Default(Today)] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.ProductDistributionChannels.html#IsActive">IsActive</a></td>
+<td><a href="Crm.Marketing.ProductDistributionChannels.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Crm.Marketing.ProductDistributionChannels.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>Is this product listing active? true=Yes, false=No. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.ProductDistributionChannels.html#MinimalSalesPricePerLot">MinimalSalesPricePerLot</a></td>
-<td><a href="../data-types.md#Amount">Amount</a> (nullable)</td>
+<td><a href="Crm.Marketing.ProductDistributionChannels.html#minimalsalespriceperlot">MinimalSalesPricePerLot</a></td>
+<td><a href="../data-types.html#amount">Amount</a> (nullable)</td>
 <td>Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: Product.CostingCurrency]</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.ProductDistributionChannels.html#MinimalSalesQuantityBase">MinimalSalesQuantityBase</a></td>
+<td><a href="Crm.Marketing.ProductDistributionChannels.html#minimalsalesquantitybase">MinimalSalesQuantityBase</a></td>
 <td>decimal (nullable)</td>
 <td>Minimal base quantity of the current product that has to be specified in any sale for this distribution channel.</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.ProductDistributionChannels.html#ToDate">ToDate</a></td>
+<td><a href="Crm.Marketing.ProductDistributionChannels.html#todate">ToDate</a></td>
 <td>date (nullable)</td>
 <td>When the product was de-listed. null=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). [Filter(ge;le)]</td>
 </tr>
@@ -133,23 +133,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Marketing.ProductDistributionChannels.html#DistributionChannel">DistributionChannel</a></td>
+<td><a href="Crm.Marketing.ProductDistributionChannels.html#distributionchannel">DistributionChannel</a></td>
 <td><a href="Crm.Marketing.DistributionChannels.html">Crm.Marketing.DistributionChannels</a></td>
 <td>The distribution channel in which the product is listed. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Marketing.ProductDistributionChannels.html#Product">Product</a></td>
+<td><a href="Crm.Marketing.ProductDistributionChannels.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The listed product. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="fromdate">FromDate</h3>
 <blockquote>
 <p>When the product was listed. null-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). [Default(Today)] [Filter(ge;le)]</p>
@@ -158,6 +153,10 @@
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
 <p>Is this product listing active? true=Yes, false=No. [Required] [Default(true)] [Filter(eq)]</p>
@@ -170,7 +169,7 @@
 <blockquote>
 <p>Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. [Currency: Product.CostingCurrency]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="minimalsalesquantitybase">MinimalSalesQuantityBase</h3>
@@ -193,21 +192,19 @@
 <p>The distribution channel in which the product is listed. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.DistributionChannels.html">Crm.Marketing.DistributionChannels</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The listed product. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Crm.Marketing.ProductDistributionChannels erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Crm.Marketing.ProductDistributionChannels erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Crm.Marketing.ProductDistributionChannels erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_Marketing_ProductDistributionChannels?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Marketing_ProductDistributionChannels?$top=10</a></p>

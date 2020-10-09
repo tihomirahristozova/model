@@ -91,37 +91,37 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementMaterials.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.Service.ServiceAgreementMaterials.html#EndDate">EndDate</a></td>
+<td><a href="Applications.Service.ServiceAgreementMaterials.html#enddate">EndDate</a></td>
 <td>datetime (nullable)</td>
 <td>End date to which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementMaterials.html#LineNo">LineNo</a></td>
+<td><a href="Applications.Service.ServiceAgreementMaterials.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceAgreementMaterials.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementMaterials.html#Quantity">Quantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Applications.Service.ServiceAgreementMaterials.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>Quantity of the agreed material. [Unit: QuantityUnit] [Required]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementMaterials.html#QuantityBase">QuantityBase</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Applications.Service.ServiceAgreementMaterials.html#quantitybase">QuantityBase</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementMaterials.html#StandardQuantityBase">StandardQuantityBase</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Applications.Service.ServiceAgreementMaterials.html#standardquantitybase">StandardQuantityBase</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementMaterials.html#StartDate">StartDate</a></td>
+<td><a href="Applications.Service.ServiceAgreementMaterials.html#startdate">StartDate</a></td>
 <td>datetime (nullable)</td>
 <td>Start date from which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.</td>
 </tr>
@@ -138,28 +138,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementMaterials.html#Product">Product</a></td>
+<td><a href="Applications.Service.ServiceAgreementMaterials.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>Paid or agreed in advance material that won't be invoiced after service activities. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementMaterials.html#QuantityUnit">QuantityUnit</a></td>
+<td><a href="Applications.Service.ServiceAgreementMaterials.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
 <td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementMaterials.html#ServiceAgreement">ServiceAgreement</a></td>
+<td><a href="Applications.Service.ServiceAgreementMaterials.html#serviceagreement">ServiceAgreement</a></td>
 <td><a href="Applications.Service.ServiceAgreements.html">Applications.Service.ServiceAgreements</a></td>
-<td>The <a href="Applications.Service.ServiceAgreementMaterials.html#ServiceAgreement">ServiceAgreement</a> to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Applications.Service.ServiceAgreementMaterials.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="enddate">EndDate</h3>
 <blockquote>
 <p>End date to which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities.</p>
@@ -167,6 +162,10 @@
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
 <p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required]</p>
@@ -182,14 +181,14 @@
 <blockquote>
 <p>Quantity of the agreed material. [Unit: QuantityUnit] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
 <blockquote>
 <p>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -200,7 +199,7 @@
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -220,28 +219,25 @@
 <p>Paid or agreed in advance material that won't be invoiced after service activities. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceagreement">ServiceAgreement</h3>
 <blockquote>
-<p>The <a href="Applications.Service.ServiceAgreementMaterials.html#ServiceAgreement">ServiceAgreement</a> to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Applications.Service.ServiceAgreementMaterials.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">Applications.Service.ServiceAgreements</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.Service.ServiceAgreementMaterials erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.Service.ServiceAgreementMaterials erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.Service.ServiceAgreementMaterials erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_Service_ServiceAgreementMaterials?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_Service_ServiceAgreementMaterials?$top=10</a></p>

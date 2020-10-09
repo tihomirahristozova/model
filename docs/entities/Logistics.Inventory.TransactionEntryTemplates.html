@@ -91,14 +91,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.TransactionEntryTemplates.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Logistics.Inventory.TransactionEntryTemplates.html#DocumentNotesFixedText">DocumentNotesFixedText</a></td>
+<td><a href="Logistics.Inventory.TransactionEntryTemplates.html#documentnotesfixedtext">DocumentNotesFixedText</a></td>
 <td>string (nullable)</td>
 <td>Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.TransactionEntryTemplates.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -113,23 +113,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.TransactionEntryTemplates.html#DealType">DealType</a></td>
+<td><a href="Logistics.Inventory.TransactionEntryTemplates.html#dealtype">DealType</a></td>
 <td><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a></td>
 <td>Obsolete. Not used. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.TransactionEntryTemplates.html#Route">Route</a></td>
+<td><a href="Logistics.Inventory.TransactionEntryTemplates.html#route">Route</a></td>
 <td><a href="Systems.Workflow.Routes.html">Systems.Workflow.Routes</a></td>
 <td>Obsolete. Not used. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="documentnotesfixedtext">DocumentNotesFixedText</h3>
 <blockquote>
 <p>Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text.</p>
@@ -137,27 +132,29 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dealtype">DealType</h3>
 <blockquote>
 <p>Obsolete. Not used. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="route">Route</h3>
 <blockquote>
 <p>Obsolete. Not used. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html">Systems.Workflow.Routes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.TransactionEntryTemplates erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.TransactionEntryTemplates erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Logistics.Inventory.TransactionEntryTemplates erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_TransactionEntryTemplates?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_TransactionEntryTemplates?$top=10</a></p>

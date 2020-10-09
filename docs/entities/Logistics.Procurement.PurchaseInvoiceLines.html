@@ -91,68 +91,68 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#Id">Id</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#deliverytermscode">DeliveryTermsCode</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#deliverytermscode">DeliveryTerms</a> (nullable)</td>
+<td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#DeliveryTermsCode">DeliveryTermsCode</a></td>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#DeliveryTermsCode">Finance.Intrastat.DeliveryTerms</a> (nullable)</td>
-<td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</td>
-</tr>
-<tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatApplyDate">IntrastatApplyDate</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastatapplydate">IntrastatApplyDate</a></td>
 <td>datetime (nullable)</td>
 <td>Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransactionNatureCode">IntrastatTransactionNatureCode</a></td>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransactionNatureCode">Finance.Intrastat.TransactionNature</a> (nullable)</td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastattransactionnaturecode">IntrastatTransactionNatureCode</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastattransactionnaturecode">TransactionNature</a> (nullable)</td>
 <td>Transaction nature; used for Intrastat reporting.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransportModeCode">IntrastatTransportModeCode</a></td>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransportModeCode">Finance.Intrastat.TransportMode</a> (nullable)</td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastattransportmodecode">IntrastatTransportModeCode</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastattransportmodecode">TransportMode</a> (nullable)</td>
 <td>Transport mode; used for Intrastat reporting.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#LineAmount">LineAmount</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#lineamount">LineAmount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The total invoiced amount for this line in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#LineNo">LineNo</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Consecutive line number within the invoice. [Required]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#Notes">Notes</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this PurchaseInvoiceLine.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#ProductName">ProductName</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#productname">ProductName</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
 <td>The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user. [Required]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#Quantity">Quantity</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#quantity">Quantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The invoiced quantity. [Unit: QuantityUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#QuantityBase">QuantityBase</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#quantitybase">QuantityBase</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#StandardQuantityBase">StandardQuantityBase</a></td>
-<td><a href="../data-types.md#Quantity">Quantity</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#standardquantitybase">StandardQuantityBase</a></td>
+<td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#UnitPrice">UnitPrice</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#unitprice">UnitPrice</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>The unit price of the invoiced item in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 </tbody>
@@ -168,70 +168,65 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatDestinationRegion">IntrastatDestinationRegion</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastatdestinationregion">IntrastatDestinationRegion</a></td>
 <td><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a> (nullable)</td>
 <td>Region, which is the final destination of the goods. Used for Intrastat reporting. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransportCountry">IntrastatTransportCountry</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastattransportcountry">IntrastatTransportCountry</a></td>
 <td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
 <td>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#LineCostCenter">LineCostCenter</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#linecostcenter">LineCostCenter</a></td>
 <td><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</td>
 <td>Cost center for which the amount from this row will be accounted. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#LineDealType">LineDealType</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#linedealtype">LineDealType</a></td>
 <td><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</td>
 <td>Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#OriginCountry">OriginCountry</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#origincountry">OriginCountry</a></td>
 <td><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</td>
 <td>The country of origin of the invoiced product. Should be non-null only when this is different from the country of origin from the product definition. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#Product">Product</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The invoiced product. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#PurchaseInvoice">PurchaseInvoice</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#purchaseinvoice">PurchaseInvoice</a></td>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html">Logistics.Procurement.PurchaseInvoices</a></td>
-<td>The <a href="Logistics.Procurement.PurchaseInvoiceLines.html#PurchaseInvoice">PurchaseInvoice</a> to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Logistics.Procurement.PurchaseInvoiceLines.html#purchaseinvoice">PurchaseInvoice</a> to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#QuantityUnit">QuantityUnit</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></td>
 <td>The measurement unit of Quantity. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#ReceivingOrderLine">ReceivingOrderLine</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#receivingorderline">ReceivingOrderLine</a></td>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html">Logistics.Procurement.ReceivingOrderLines</a> (nullable)</td>
 <td>The receiving order line, which is invoiced by the current line. null means that this line is not directly related to receiving order line. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#SaleLineDealType">SaleLineDealType</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#salelinedealtype">SaleLineDealType</a></td>
 <td><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</td>
 <td>Sale deal type for this line. If sale deal type in the line is different from sale deal type in the header another Sales VAT entry is created. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="deliverytermscode">DeliveryTermsCode</h3>
 <blockquote>
 <p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoiceLines.html#DeliveryTermsCode">Finance.Intrastat.DeliveryTerms</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoiceLines.html#deliverytermscode">DeliveryTerms</a> (nullable)</strong><br>
 Generic enum type for DeliveryTerms properties<br>
-<em>Allowed Values (Enum Members)</em></p>
+<em>Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -288,6 +283,10 @@ Generic enum type for DeliveryTerms properties<br>
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="intrastatapplydate">IntrastatApplyDate</h3>
 <blockquote>
 <p>Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.</p>
@@ -299,9 +298,9 @@ Generic enum type for DeliveryTerms properties<br>
 <blockquote>
 <p>Transaction nature; used for Intrastat reporting.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransactionNatureCode">Finance.Intrastat.TransactionNature</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastattransactionnaturecode">TransactionNature</a> (nullable)</strong><br>
 Generic enum type for TransactionNature properties<br>
-<em>Allowed Values (Enum Members)</em></p>
+<em>Allowed Values (Finance.Intrastat.TransactionNature Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -394,9 +393,9 @@ Generic enum type for TransactionNature properties<br>
 <blockquote>
 <p>Transport mode; used for Intrastat reporting.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoiceLines.html#IntrastatTransportModeCode">Finance.Intrastat.TransportMode</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastattransportmodecode">TransportMode</a> (nullable)</strong><br>
 Generic enum type for TransportMode properties<br>
-<em>Allowed Values (Enum Members)</em></p>
+<em>Allowed Values (Finance.Intrastat.TransportMode Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -445,7 +444,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The total invoiced amount for this line in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -471,7 +470,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user. [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -482,7 +481,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The invoiced quantity. [Unit: QuantityUnit] [Required] [Default(1)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -490,7 +489,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -501,7 +500,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2.100.0)</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Quantity">Quantity</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -512,7 +511,7 @@ Generic enum type for TransportMode properties<br>
 <blockquote>
 <p>The unit price of the invoiced item in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -522,77 +521,67 @@ Generic enum type for TransportMode properties<br>
 <p>Region, which is the final destination of the goods. Used for Intrastat reporting. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastattransportcountry">IntrastatTransportCountry</h3>
 <blockquote>
 <p>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linecostcenter">LineCostCenter</h3>
 <blockquote>
 <p>Cost center for which the amount from this row will be accounted. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linedealtype">LineDealType</h3>
 <blockquote>
 <p>Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="origincountry">OriginCountry</h3>
 <blockquote>
 <p>The country of origin of the invoiced product. Should be non-null only when this is different from the country of origin from the product definition. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">General.Geography.Countries</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The invoiced product. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseinvoice">PurchaseInvoice</h3>
 <blockquote>
-<p>The <a href="Logistics.Procurement.PurchaseInvoiceLines.html#PurchaseInvoice">PurchaseInvoice</a> to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Logistics.Procurement.PurchaseInvoiceLines.html#purchaseinvoice">PurchaseInvoice</a> to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoices.html">Logistics.Procurement.PurchaseInvoices</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <blockquote>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">General.MeasurementUnits</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="receivingorderline">ReceivingOrderLine</h3>
 <blockquote>
 <p>The receiving order line, which is invoiced by the current line. null means that this line is not directly related to receiving order line. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrderLines.html">Logistics.Procurement.ReceivingOrderLines</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salelinedealtype">SaleLineDealType</h3>
 <blockquote>
 <p>Sale deal type for this line. If sale deal type in the line is different from sale deal type in the header another Sales VAT entry is created. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Logistics.Procurement.PurchaseInvoiceLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Logistics.Procurement.PurchaseInvoiceLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Logistics.Procurement.PurchaseInvoiceLines erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_PurchaseInvoiceLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_PurchaseInvoiceLines?$top=10</a></p>

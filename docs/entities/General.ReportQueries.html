@@ -91,47 +91,47 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.ReportQueries.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.ReportQueries.html#DependsOnChildRows">DependsOnChildRows</a></td>
+<td><a href="General.ReportQueries.html#dependsonchildrows">DependsOnChildRows</a></td>
 <td>boolean</td>
 <td>If True the data in the current report table contains only the rows that have child rows in sub-tables. [Required] [Default(false)]</td>
 </tr>
 <tr>
-<td><a href="General.ReportQueries.html#ExtensionsList">ExtensionsList</a></td>
+<td><a href="General.ReportQueries.html#extensionslist">ExtensionsList</a></td>
 <td>string (nullable)</td>
 <td>A comma separated list of report extension names. An extension is set of additional fields that participate in the query.</td>
 </tr>
 <tr>
-<td><a href="General.ReportQueries.html#FilterXml">FilterXml</a></td>
+<td><a href="General.ReportQueries.html#filterxml">FilterXml</a></td>
 <td>dataaccessfilter (nullable)</td>
 <td>Filter for the loaded table.</td>
 </tr>
 <tr>
-<td><a href="General.ReportQueries.html#ReferencePath">ReferencePath</a></td>
+<td><a href="General.ReportQueries.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.ReportQueries.html#referencepath">ReferencePath</a></td>
 <td>string</td>
 <td>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. [Required]</td>
 </tr>
 <tr>
-<td><a href="General.ReportQueries.html#ShowCustomProperties">ShowCustomProperties</a></td>
+<td><a href="General.ReportQueries.html#showcustomproperties">ShowCustomProperties</a></td>
 <td>boolean</td>
 <td>True to include the custom properties. [Required] [Default(false)]</td>
 </tr>
 <tr>
-<td><a href="General.ReportQueries.html#ShowTextColumns">ShowTextColumns</a></td>
+<td><a href="General.ReportQueries.html#showtextcolumns">ShowTextColumns</a></td>
 <td>boolean</td>
 <td>True to include text descriptions for certain columns. [Required] [Default(false)]</td>
 </tr>
 <tr>
-<td><a href="General.ReportQueries.html#TableName">TableName</a></td>
+<td><a href="General.ReportQueries.html#tablename">TableName</a></td>
 <td>string (nullable)</td>
 <td>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null.</td>
 </tr>
 <tr>
-<td><a href="General.ReportQueries.html#UniqueName">UniqueName</a></td>
+<td><a href="General.ReportQueries.html#uniquename">UniqueName</a></td>
 <td>string (nullable)</td>
 <td>The name of the data table in the printout datasource. If null the Reference_Path is used.</td>
 </tr>
@@ -148,18 +148,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.ReportQueries.html#Report">Report</a></td>
+<td><a href="General.ReportQueries.html#report">Report</a></td>
 <td><a href="General.Reports.html">General.Reports</a></td>
-<td>The <a href="General.ReportQueries.html#Report">Report</a> to which this ReportQuery belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="General.ReportQueries.html#report">Report</a> to which this ReportQuery belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="dependsonchildrows">DependsOnChildRows</h3>
 <blockquote>
 <p>If True the data in the current report table contains only the rows that have child rows in sub-tables. [Required] [Default(false)]</p>
@@ -182,6 +177,10 @@
 <p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="referencepath">ReferencePath</h3>
 <blockquote>
 <p>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. [Required]</p>
@@ -222,17 +221,16 @@
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="report">Report</h3>
 <blockquote>
-<p>The <a href="General.ReportQueries.html#Report">Report</a> to which this ReportQuery belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="General.ReportQueries.html#report">Report</a> to which this ReportQuery belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Reports.html">General.Reports</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.ReportQueries erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.ReportQueries erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.ReportQueries erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_ReportQueries?$top=10">https://demodb.my.erp.net/api/domain/odata/General_ReportQueries?$top=10</a></p>

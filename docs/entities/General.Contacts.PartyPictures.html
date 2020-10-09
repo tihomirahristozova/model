@@ -91,32 +91,32 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.PartyPictures.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Contacts.PartyPictures.html#Comments">Comments</a></td>
+<td><a href="General.Contacts.PartyPictures.html#comments">Comments</a></td>
 <td>string (nullable)</td>
 <td>Notes for this party picture.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.PartyPictures.html#IsDefault">IsDefault</a></td>
+<td><a href="General.Contacts.PartyPictures.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.PartyPictures.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
 <td>True=This is the default picture for the party; false=otherwise. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.PartyPictures.html#IsLogo">IsLogo</a></td>
+<td><a href="General.Contacts.PartyPictures.html#islogo">IsLogo</a></td>
 <td>boolean</td>
 <td>If checked specifies that this picture is used to visualize the logo of this party in the system. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.PartyPictures.html#Picture">Picture</a></td>
+<td><a href="General.Contacts.PartyPictures.html#picture">Picture</a></td>
 <td>byte[] (nullable)</td>
 <td>The actual party picture data. Can be null if we insert only some comments.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.PartyPictures.html#PictureNo">PictureNo</a></td>
+<td><a href="General.Contacts.PartyPictures.html#pictureno">PictureNo</a></td>
 <td>int32</td>
 <td>Unique picture number within the party. Also used for sorting. [Required] [Filter(eq)]</td>
 </tr>
@@ -133,18 +133,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.PartyPictures.html#Party">Party</a></td>
+<td><a href="General.Contacts.PartyPictures.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
-<td>The <a href="General.Contacts.PartyPictures.html#Party">Party</a> to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="General.Contacts.PartyPictures.html#party">Party</a> to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="comments">Comments</h3>
 <blockquote>
 <p>Notes for this party picture.</p>
@@ -152,6 +147,10 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
 <blockquote>
 <p>True=This is the default picture for the party; false=otherwise. [Required] [Default(false)] [Filter(eq)]</p>
@@ -191,17 +190,16 @@
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="party">Party</h3>
 <blockquote>
-<p>The <a href="General.Contacts.PartyPictures.html#Party">Party</a> to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="General.Contacts.PartyPictures.html#party">Party</a> to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.Contacts.PartyPictures erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.Contacts.PartyPictures erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.Contacts.PartyPictures erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Contacts_PartyPictures?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Contacts_PartyPictures?$top=10</a></p>

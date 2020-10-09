@@ -91,38 +91,38 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Products.ProductPictures.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductPictures.html#Comments">Comments</a></td>
+<td><a href="General.Products.ProductPictures.html#comments">Comments</a></td>
 <td>string (nullable)</td>
 <td>Comments for this ProductPicture.</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductPictures.html#IsDefault">IsDefault</a></td>
+<td><a href="General.Products.ProductPictures.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Products.ProductPictures.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
 <td>True=This is the default picture for the product and the size class; false=otherwise. [Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductPictures.html#LastUpdateTime">LastUpdateTime</a></td>
+<td><a href="General.Products.ProductPictures.html#lastupdatetime">LastUpdateTime</a></td>
 <td>datetime (nullable)</td>
 <td>The exact server time, when the picture was last updated. Set automatically. [Filter(ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductPictures.html#Picture">Picture</a></td>
+<td><a href="General.Products.ProductPictures.html#picture">Picture</a></td>
 <td>byte[] (nullable)</td>
 <td>The actual product picture. Can be null if we insert only some comments.</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductPictures.html#PictureNo">PictureNo</a></td>
+<td><a href="General.Products.ProductPictures.html#pictureno">PictureNo</a></td>
 <td>int32</td>
 <td>Unique picture number within the product. Also used for sorting. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductPictures.html#PictureSizeClass">PictureSizeClass</a></td>
-<td><a href="General.Products.ProductPictures.html#PictureSizeClass">General.Products.ProductPicturesRepository.PictureSizeClass</a> (nullable)</td>
+<td><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a></td>
+<td><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> (nullable)</td>
 <td>Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.</td>
 </tr>
 </tbody>
@@ -138,18 +138,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Products.ProductPictures.html#Product">Product</a></td>
+<td><a href="General.Products.ProductPictures.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
-<td>The <a href="General.Products.ProductPictures.html#Product">Product</a> to which this ProductPicture belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="General.Products.ProductPictures.html#product">Product</a> to which this ProductPicture belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="comments">Comments</h3>
 <blockquote>
 <p>Comments for this ProductPicture.</p>
@@ -157,6 +152,10 @@
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
 <blockquote>
 <p>True=This is the default picture for the product and the size class; false=otherwise. [Required] [Default(false)] [Filter(eq)]</p>
@@ -196,9 +195,9 @@
 <blockquote>
 <p>Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Products.ProductPictures.html#PictureSizeClass">General.Products.ProductPicturesRepository.PictureSizeClass</a> (nullable)</strong><br>
-Allowed values for the <a href="General.Products.ProductPictures.html#PictureSizeClass">PictureSizeClass</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> (nullable)</strong><br>
+Allowed values for the <a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> data attribute<br>
+<em>Allowed Values (General.Products.ProductPicturesRepository.PictureSizeClass Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -222,17 +221,16 @@ Allowed values for the <a href="General.Products.ProductPictures.html#PictureSiz
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
 <blockquote>
-<p>The <a href="General.Products.ProductPictures.html#Product">Product</a> to which this ProductPicture belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="General.Products.ProductPictures.html#product">Product</a> to which this ProductPicture belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.Products.ProductPictures erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.Products.ProductPictures erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.Products.ProductPictures erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Products_ProductPictures?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Products_ProductPictures?$top=10</a></p>

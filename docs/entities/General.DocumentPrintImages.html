@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentPrintImages.html#Id">Id</a></td>
+<td><a href="General.DocumentPrintImages.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="General.DocumentPrintImages.html#PrintImage">PrintImage</a></td>
+<td><a href="General.DocumentPrintImages.html#printimage">PrintImage</a></td>
 <td>byte[]</td>
 <td>The data of the printout, stored in the format, specified in Print Image Format. [Required]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentPrintImages.html#PrintImageFormat">PrintImageFormat</a></td>
+<td><a href="General.DocumentPrintImages.html#printimageformat">PrintImageFormat</a></td>
 <td>string</td>
 <td>The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. [Required] [Default(&quot;CDS&quot;)]</td>
 </tr>
@@ -118,7 +118,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentPrintImages.html#PrintoutLayout">PrintoutLayout</a></td>
+<td><a href="General.DocumentPrintImages.html#printoutlayout">PrintoutLayout</a></td>
 <td><a href="General.PrintoutLayouts.html">General.PrintoutLayouts</a></td>
 <td>The print layout, which was used for the current printout. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
@@ -128,7 +128,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="printimage">PrintImage</h3>
 <blockquote>
@@ -151,14 +150,13 @@
 <p>The print layout, which was used for the current printout. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.PrintoutLayouts.html">General.PrintoutLayouts</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.DocumentPrintImages erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.DocumentPrintImages erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.DocumentPrintImages erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_DocumentPrintImages?$top=10">https://demodb.my.erp.net/api/domain/odata/General_DocumentPrintImages?$top=10</a></p>

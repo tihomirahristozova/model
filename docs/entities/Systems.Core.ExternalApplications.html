@@ -91,57 +91,57 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Core.ExternalApplications.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Systems.Core.ExternalApplications.html#Address">Address</a></td>
+<td><a href="Systems.Core.ExternalApplications.html#address">Address</a></td>
 <td>string</td>
 <td>The address (path) to the application. The address is platform-dependant. [Required]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.ExternalApplications.html#AvailableInMode">AvailableInMode</a></td>
-<td><a href="Systems.Core.ExternalApplications.html#AvailableInMode">Systems.Core.ExternalApplicationsRepository.AvailableInMode</a></td>
+<td><a href="Systems.Core.ExternalApplications.html#availableinmode">AvailableInMode</a></td>
+<td><a href="Systems.Core.ExternalApplications.html#availableinmode">AvailableInMode</a></td>
 <td>Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. [Required] [Default(&quot;SINGLE&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.ExternalApplications.html#EntityName">EntityName</a></td>
+<td><a href="Systems.Core.ExternalApplications.html#entityname">EntityName</a></td>
 <td>string</td>
 <td>The entity, for which the application is defined. [Required] [Filter(eq)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.ExternalApplications.html#ExecuteForAllObjects">ExecuteForAllObjects</a></td>
+<td><a href="Systems.Core.ExternalApplications.html#executeforallobjects">ExecuteForAllObjects</a></td>
 <td>boolean</td>
 <td>Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.ExternalApplications.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
-<td>The name of the external application. [Required] [Filter(eq;like)]</td>
+<td><a href="Systems.Core.ExternalApplications.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 <tr>
-<td><a href="Systems.Core.ExternalApplications.html#IsActive">IsActive</a></td>
+<td><a href="Systems.Core.ExternalApplications.html#isactive">IsActive</a></td>
 <td>boolean (nullable)</td>
 <td>Specifies whether the external application is currently used. [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.ExternalApplications.html#Notes">Notes</a></td>
+<td><a href="Systems.Core.ExternalApplications.html#name">Name</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
+<td>The name of the external application. [Required] [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Systems.Core.ExternalApplications.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ExternalApplication.</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.ExternalApplications.html#Platform">Platform</a></td>
-<td><a href="Systems.Core.ExternalApplications.html#Platform">Systems.Core.ExternalApplicationsRepository.Platform</a></td>
+<td><a href="Systems.Core.ExternalApplications.html#platform">Platform</a></td>
+<td><a href="Systems.Core.ExternalApplications.html#platform">Platform</a></td>
 <td>The execution platform of the application. [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.ExternalApplications.html#RefreshAfterFinish">RefreshAfterFinish</a></td>
+<td><a href="Systems.Core.ExternalApplications.html#refreshafterfinish">RefreshAfterFinish</a></td>
 <td>boolean</td>
 <td>Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Core.ExternalApplications.html#SaveBeforeStart">SaveBeforeStart</a></td>
+<td><a href="Systems.Core.ExternalApplications.html#savebeforestart">SaveBeforeStart</a></td>
 <td>boolean</td>
 <td>Whether to save the form data to the server before starting the application. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
@@ -158,18 +158,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Core.ExternalApplications.html#AccessKey">AccessKey</a></td>
+<td><a href="Systems.Core.ExternalApplications.html#accesskey">AccessKey</a></td>
 <td><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</td>
 <td>The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="address">Address</h3>
 <blockquote>
 <p>The address (path) to the application. The address is platform-dependant. [Required]</p>
@@ -181,9 +176,9 @@
 <blockquote>
 <p>Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. [Required] [Default(&quot;SINGLE&quot;)] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Core.ExternalApplications.html#AvailableInMode">Systems.Core.ExternalApplicationsRepository.AvailableInMode</a></strong><br>
-Allowed values for the <a href="Systems.Core.ExternalApplications.html#AvailableInMode">AvailableInMode</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Core.ExternalApplications.html#availableinmode">AvailableInMode</a></strong><br>
+Allowed values for the <a href="Systems.Core.ExternalApplications.html#availableinmode">AvailableInMode</a> data attribute<br>
+<em>Allowed Values (Systems.Core.ExternalApplicationsRepository.AvailableInMode Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -224,13 +219,10 @@ Allowed values for the <a href="Systems.Core.ExternalApplications.html#Available
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>The name of the external application. [Required] [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
 <p>Specifies whether the external application is currently used. [Default(true)] [Filter(eq)]</p>
@@ -239,6 +231,13 @@ Allowed values for the <a href="Systems.Core.ExternalApplications.html#Available
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>The name of the external application. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this ExternalApplication.</p>
@@ -250,9 +249,9 @@ Allowed values for the <a href="Systems.Core.ExternalApplications.html#Available
 <blockquote>
 <p>The execution platform of the application. [Required] [Filter(eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Core.ExternalApplications.html#Platform">Systems.Core.ExternalApplicationsRepository.Platform</a></strong><br>
-Allowed values for the <a href="Systems.Core.ExternalApplications.html#Platform">Platform</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Core.ExternalApplications.html#platform">Platform</a></strong><br>
+Allowed values for the <a href="Systems.Core.ExternalApplications.html#platform">Platform</a> data attribute<br>
+<em>Allowed Values (Systems.Core.ExternalApplicationsRepository.Platform Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -307,14 +306,13 @@ Allowed values for the <a href="Systems.Core.ExternalApplications.html#Platform"
 <p>The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">Systems.Security.AccessKeys</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Systems.Core.ExternalApplications erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Systems.Core.ExternalApplications erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Systems.Core.ExternalApplications erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Systems_Core_ExternalApplications?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Core_ExternalApplications?$top=10</a></p>

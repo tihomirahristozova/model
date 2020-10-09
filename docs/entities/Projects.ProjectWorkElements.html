@@ -91,7 +91,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.ProjectWorkElements.html#Id">Id</a></td>
+<td><a href="Projects.ProjectWorkElements.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
@@ -108,12 +108,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.ProjectWorkElements.html#Project">Project</a></td>
+<td><a href="Projects.ProjectWorkElements.html#project">Project</a></td>
 <td><a href="Projects.Projects.html">Projects.Projects</a></td>
-<td>The <a href="Projects.ProjectWorkElements.html#Project">Project</a> to which this ProjectWorkElement belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Projects.ProjectWorkElements.html#project">Project</a> to which this ProjectWorkElement belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Projects.ProjectWorkElements.html#ProjectTypeWorkElement">ProjectTypeWorkElement</a></td>
+<td><a href="Projects.ProjectWorkElements.html#projecttypeworkelement">ProjectTypeWorkElement</a></td>
 <td><a href="Projects.TypeWorkElements.html">Projects.TypeWorkElements</a></td>
 <td>The work element from the project type on which the current work element is based. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -123,29 +123,26 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="project">Project</h3>
 <blockquote>
-<p>The <a href="Projects.ProjectWorkElements.html#Project">Project</a> to which this ProjectWorkElement belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Projects.ProjectWorkElements.html#project">Project</a> to which this ProjectWorkElement belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Projects.Projects.html">Projects.Projects</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projecttypeworkelement">ProjectTypeWorkElement</h3>
 <blockquote>
 <p>The work element from the project type on which the current work element is based. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Projects.TypeWorkElements.html">Projects.TypeWorkElements</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Projects.ProjectWorkElements erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Projects.ProjectWorkElements erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Projects.ProjectWorkElements erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Projects_ProjectWorkElements?$top=10">https://demodb.my.erp.net/api/domain/odata/Projects_ProjectWorkElements?$top=10</a></p>

@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.DistributionResults.html#Id">Id</a></td>
+<td><a href="Finance.Cost.DistributionResults.html#distributedamountbase">DistributedAmountBase</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
+<td>The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Cost.DistributionResults.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.DistributionResults.html#DistributedAmountBase">DistributedAmountBase</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
-<td>The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required]</td>
-</tr>
-<tr>
-<td><a href="Finance.Cost.DistributionResults.html#LineNo">LineNo</a></td>
+<td><a href="Finance.Cost.DistributionResults.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Consecutive line number (within the cost distribution document) of the result. [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.DistributionResults.html#OutputLineNo">OutputLineNo</a></td>
+<td><a href="Finance.Cost.DistributionResults.html#outputlineno">OutputLineNo</a></td>
 <td>int32</td>
 <td>The line number (within the document) of the output over which the cost is distributed. [Required]</td>
 </tr>
@@ -123,30 +123,29 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.DistributionResults.html#CostDistribution">CostDistribution</a></td>
+<td><a href="Finance.Cost.DistributionResults.html#costdistribution">CostDistribution</a></td>
 <td><a href="Finance.Cost.Distributions.html">Finance.Cost.Distributions</a></td>
 <td>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionResult belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.DistributionResults.html#CostType">CostType</a></td>
+<td><a href="Finance.Cost.DistributionResults.html#costtype">CostType</a></td>
 <td><a href="Finance.Cost.CostTypes.html">Finance.Cost.CostTypes</a></td>
 <td>The cost type for which the current distribution is calculated. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="distributedamountbase">DistributedAmountBase</h3>
 <blockquote>
 <p>The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. [Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
 <p>Consecutive line number (within the cost distribution document) of the result. [Required]</p>
@@ -171,21 +170,19 @@
 <p>The <a href="Finance.Cost.Distributions.html">Distribution</a> to which this DistributionResult belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Distributions.html">Finance.Cost.Distributions</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costtype">CostType</h3>
 <blockquote>
 <p>The cost type for which the current distribution is calculated. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">Finance.Cost.CostTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Cost.DistributionResults erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Cost.DistributionResults erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Cost.DistributionResults erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Cost_DistributionResults?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Cost_DistributionResults?$top=10</a></p>

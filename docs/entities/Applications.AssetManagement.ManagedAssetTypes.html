@@ -91,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#IsActive">IsActive</a></td>
-<td>boolean</td>
-<td>Specifies whether the asset type is active for choosing in drop-down choices. [Required] [Default(true)]</td>
-</tr>
-<tr>
-<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#Code">Code</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#code">Code</a></td>
 <td>string</td>
 <td>Unique code of the asset type. [Required] [Filter(multi eq;like)] [ORD]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#Name">Name</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#isactive">IsActive</a></td>
+<td>boolean</td>
+<td>Specifies whether the asset type is active for choosing in drop-down choices. [Required] [Default(true)]</td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#name">Name</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
 <td>Multilanguage name of the asset type. [Required] [Filter(multi eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#Notes">Notes</a></td>
+<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ManagedAssetType.</td>
 </tr>
@@ -130,20 +130,26 @@
 <tr>
 <td>MaintenanceTypes</td>
 <td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html">Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes</a></td>
-<td>List of <a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html">ManagedAssetTypeMaintenanceType</a> child objects, based on the <a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#ManagedAssetType">Applications.AssetManagement.ManagedAssetTypeMaintenanceType.ManagedAssetType</a> back reference</td>
+<td>List of <a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html">ManagedAssetTypeMaintenanceType</a> child objects, based on the <a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#managedassettype">Applications.AssetManagement.ManagedAssetTypeMaintenanceType.ManagedAssetType</a> back reference</td>
 </tr>
 <tr>
 <td>TrackedParameters</td>
 <td><a href="Applications.AssetManagement.ManagedAssetTypeTrackedParameters.html">Applications.AssetManagement.ManagedAssetTypeTrackedParameters</a></td>
-<td>List of <a href="Applications.AssetManagement.ManagedAssetTypeTrackedParameters.html">ManagedAssetTypeTrackedParameter</a> child objects, based on the <a href="Applications.AssetManagement.ManagedAssetTypeTrackedParameters.html#ManagedAssetType">Applications.AssetManagement.ManagedAssetTypeTrackedParameter.ManagedAssetType</a> back reference</td>
+<td>List of <a href="Applications.AssetManagement.ManagedAssetTypeTrackedParameters.html">ManagedAssetTypeTrackedParameter</a> child objects, based on the <a href="Applications.AssetManagement.ManagedAssetTypeTrackedParameters.html#managedassettype">Applications.AssetManagement.ManagedAssetTypeTrackedParameter.ManagedAssetType</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="code">Code</h3>
+<blockquote>
+<p>Unique code of the asset type. [Required] [Filter(multi eq;like)] [ORD]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
@@ -153,18 +159,11 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
-<h3 id="code">Code</h3>
-<blockquote>
-<p>Unique code of the asset type. [Required] [Filter(multi eq;like)] [ORD]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="name">Name</h3>
 <blockquote>
 <p>Multilanguage name of the asset type. [Required] [Filter(multi eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
@@ -175,11 +174,11 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.AssetManagement.ManagedAssetTypes erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.AssetManagement.ManagedAssetTypes erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.AssetManagement.ManagedAssetTypes erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_ManagedAssetTypes?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_ManagedAssetTypes?$top=10</a></p>

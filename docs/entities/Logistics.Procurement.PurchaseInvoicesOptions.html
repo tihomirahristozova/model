@@ -91,18 +91,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#Id">Id</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#SignRestriction">SignRestriction</a></td>
-<td><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#SignRestriction">Logistics.Procurement.PurchaseInvoicesOptionsRepository.SignRestriction</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#signrestriction">SignRestriction</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#signrestriction">SignRestriction</a></td>
 <td>This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type. [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#TotalAmountSignRestriction">TotalAmountSignRestriction</a></td>
-<td><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#TotalAmountSignRestriction">Logistics.Procurement.PurchaseInvoicesOptionsRepository.TotalAmountSignRestriction</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#totalamountsignrestriction">TotalAmountSignRestriction</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#totalamountsignrestriction">TotalAmountSignRestriction</a></td>
 <td>This option can restrict the sign of the Total Amounts of the purchase invoices of the specified document type. The restriction is applied upon document Release. [Required] [Default(0)]</td>
 </tr>
 </tbody>
@@ -118,7 +118,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#DocumentType">DocumentType</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
 <td>The document type, for which the options are specified. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -128,15 +128,14 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="signrestriction">SignRestriction</h3>
 <blockquote>
 <p>This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type. [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#SignRestriction">Logistics.Procurement.PurchaseInvoicesOptionsRepository.SignRestriction</a></strong><br>
-Allowed values for the <a href="Logistics.Procurement.PurchaseInvoicesOptions.html#SignRestriction">SignRestriction</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#signrestriction">SignRestriction</a></strong><br>
+Allowed values for the <a href="Logistics.Procurement.PurchaseInvoicesOptions.html#signrestriction">SignRestriction</a> data attribute<br>
+<em>Allowed Values (Logistics.Procurement.PurchaseInvoicesOptionsRepository.SignRestriction Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -166,9 +165,9 @@ Allowed values for the <a href="Logistics.Procurement.PurchaseInvoicesOptions.ht
 <blockquote>
 <p>This option can restrict the sign of the Total Amounts of the purchase invoices of the specified document type. The restriction is applied upon document Release. [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#TotalAmountSignRestriction">Logistics.Procurement.PurchaseInvoicesOptionsRepository.TotalAmountSignRestriction</a></strong><br>
-Allowed values for the <a href="Logistics.Procurement.PurchaseInvoicesOptions.html#TotalAmountSignRestriction">TotalAmountSignRestriction</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoicesOptions.html#totalamountsignrestriction">TotalAmountSignRestriction</a></strong><br>
+Allowed values for the <a href="Logistics.Procurement.PurchaseInvoicesOptions.html#totalamountsignrestriction">TotalAmountSignRestriction</a> data attribute<br>
+<em>Allowed Values (Logistics.Procurement.PurchaseInvoicesOptionsRepository.TotalAmountSignRestriction Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -200,14 +199,13 @@ Allowed values for the <a href="Logistics.Procurement.PurchaseInvoicesOptions.ht
 <p>The document type, for which the options are specified. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Logistics.Procurement.PurchaseInvoicesOptions erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Logistics.Procurement.PurchaseInvoicesOptions erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Logistics.Procurement.PurchaseInvoicesOptions erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_PurchaseInvoicesOptions?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_PurchaseInvoicesOptions?$top=10</a></p>

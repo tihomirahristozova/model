@@ -91,19 +91,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.ContactMechanisms.html#Id">Id</a></td>
+<td><a href="General.Contacts.ContactMechanisms.html#contactmechanismtype">ContactMechanismType</a></td>
+<td><a href="General.Contacts.ContactMechanisms.html#contactmechanismtype">ContactMechanismType</a></td>
+<td>A=Address; E=e-mail; T=Telephone. [Required] [Default(&quot;A&quot;)] [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ContactMechanisms.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ContactMechanisms.html#Name">Name</a></td>
+<td><a href="General.Contacts.ContactMechanisms.html#name">Name</a></td>
 <td>string</td>
 <td>Contact mechanism description. [Required] [Filter(eq;like)]</td>
-</tr>
-<tr>
-<td><a href="General.Contacts.ContactMechanisms.html#ContactMechanismType">ContactMechanismType</a></td>
-<td><a href="General.Contacts.ContactMechanisms.html#ContactMechanismType">General.Contacts.ContactMechanismsRepository.ContactMechanismType</a></td>
-<td>A=Address; E=e-mail; T=Telephone. [Required] [Default(&quot;A&quot;)] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -118,37 +118,25 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Contacts.ContactMechanisms.html#AdministrativeRegion">AdministrativeRegion</a></td>
+<td><a href="General.Contacts.ContactMechanisms.html#administrativeregion">AdministrativeRegion</a></td>
 <td><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a> (nullable)</td>
 <td>The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2.100.0)</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.ContactMechanisms.html#GeoPoint">GeoPoint</a></td>
+<td><a href="General.Contacts.ContactMechanisms.html#geopoint">GeoPoint</a></td>
 <td><a href="General.Geography.GeoPoints.html">General.Geography.GeoPoints</a> (nullable)</td>
 <td>The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2.100.0)</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>Contact mechanism description. [Required] [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="contactmechanismtype">ContactMechanismType</h3>
 <blockquote>
 <p>A=Address; E=e-mail; T=Telephone. [Required] [Default(&quot;A&quot;)] [Filter(multi eq)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="General.Contacts.ContactMechanisms.html#ContactMechanismType">General.Contacts.ContactMechanismsRepository.ContactMechanismType</a></strong><br>
-Allowed values for the <a href="General.Contacts.ContactMechanisms.html#ContactMechanismType">ContactMechanismType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.ContactMechanisms.html#contactmechanismtype">ContactMechanismType</a></strong><br>
+Allowed values for the <a href="General.Contacts.ContactMechanisms.html#contactmechanismtype">ContactMechanismType</a> data attribute<br>
+<em>Allowed Values (General.Contacts.ContactMechanismsRepository.ContactMechanismType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -190,27 +178,36 @@ Allowed values for the <a href="General.Contacts.ContactMechanisms.html#ContactM
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Address</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>Contact mechanism description. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="administrativeregion">AdministrativeRegion</h3>
 <blockquote>
 <p>The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2.100.0)</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">General.Geography.AdministrativeRegions</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="geopoint">GeoPoint</h3>
 <blockquote>
 <p>The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2.100.0)</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Geography.GeoPoints.html">General.Geography.GeoPoints</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.Contacts.ContactMechanisms erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.Contacts.ContactMechanisms erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.Contacts.ContactMechanisms erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Contacts_ContactMechanisms?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Contacts_ContactMechanisms?$top=10</a></p>

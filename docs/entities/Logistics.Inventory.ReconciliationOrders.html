@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.ReconciliationOrders.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Logistics.Inventory.ReconciliationOrders.html#DueDate">DueDate</a></td>
+<td><a href="Logistics.Inventory.ReconciliationOrders.html#duedate">DueDate</a></td>
 <td>datetime</td>
 <td>Date, when the transaction is scheduled to occur. [Required] [Default(Today)]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.ReconciliationOrders.html#IsReleased">IsReleased</a></td>
+<td><a href="Logistics.Inventory.ReconciliationOrders.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.ReconciliationOrders.html#isreleased">IsReleased</a></td>
 <td>boolean</td>
 <td>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.ReconciliationOrders.html#IsSingleExecution">IsSingleExecution</a></td>
+<td><a href="Logistics.Inventory.ReconciliationOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
 <td>Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
@@ -123,7 +123,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.ReconciliationOrders.html#Document">Document</a></td>
+<td><a href="Logistics.Inventory.ReconciliationOrders.html#document">Document</a></td>
 <td><a href="General.Documents.html">General.Documents</a></td>
 <td>The Id of the base document. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
@@ -142,16 +142,11 @@
 <tr>
 <td>Lines</td>
 <td><a href="Logistics.Inventory.ReconciliationOrderLines.html">Logistics.Inventory.ReconciliationOrderLines</a></td>
-<td>List of <a href="Logistics.Inventory.ReconciliationOrderLines.html">ReconciliationOrderLine</a> child objects, based on the <a href="Logistics.Inventory.ReconciliationOrderLines.html#ReconciliationOrder">Logistics.Inventory.ReconciliationOrderLine.ReconciliationOrder</a> back reference</td>
+<td>List of <a href="Logistics.Inventory.ReconciliationOrderLines.html">ReconciliationOrderLine</a> child objects, based on the <a href="Logistics.Inventory.ReconciliationOrderLines.html#reconciliationorder">Logistics.Inventory.ReconciliationOrderLine.ReconciliationOrder</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="duedate">DueDate</h3>
 <blockquote>
 <p>Date, when the transaction is scheduled to occur. [Required] [Default(Today)]</p>
@@ -160,6 +155,10 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isreleased">IsReleased</h3>
 <blockquote>
 <p>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
@@ -182,14 +181,13 @@
 <p>The Id of the base document. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Documents.html">General.Documents</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.ReconciliationOrders erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.ReconciliationOrders erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Logistics.Inventory.ReconciliationOrders erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_ReconciliationOrders?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_ReconciliationOrders?$top=10</a></p>

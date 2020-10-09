@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.CalculationCosts.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Cost.CalculationCosts.html#Amount">Amount</a></td>
+<td><a href="Finance.Cost.CalculationCosts.html#amount">Amount</a></td>
 <td>decimal</td>
 <td>The allocated amount of costs in the currency of the calculation. [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationCosts.html#LineNo">LineNo</a></td>
+<td><a href="Finance.Cost.CalculationCosts.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Finance.Cost.CalculationCosts.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Consecutive number of the line within the calculation. [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationCosts.html#ProjectId">ProjectId</a></td>
+<td><a href="Finance.Cost.CalculationCosts.html#projectid">ProjectId</a></td>
 <td>guid (nullable)</td>
 <td>The Project, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
@@ -123,48 +123,43 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.CalculationCosts.html#Calculation">Calculation</a></td>
+<td><a href="Finance.Cost.CalculationCosts.html#calculation">Calculation</a></td>
 <td><a href="Finance.Cost.Calculations.html">Finance.Cost.Calculations</a></td>
-<td>The <a href="Finance.Cost.CalculationCosts.html#Calculation">Calculation</a> to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Finance.Cost.CalculationCosts.html#calculation">Calculation</a> to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationCosts.html#CostCenter">CostCenter</a></td>
+<td><a href="Finance.Cost.CalculationCosts.html#costcenter">CostCenter</a></td>
 <td><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</td>
 <td>The Cost Center, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationCosts.html#CostType">CostType</a></td>
+<td><a href="Finance.Cost.CalculationCosts.html#costtype">CostType</a></td>
 <td><a href="Finance.Cost.CostTypes.html">Finance.Cost.CostTypes</a></td>
 <td>The Cost Type, which absorbed the cost. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationCosts.html#Lot">Lot</a></td>
+<td><a href="Finance.Cost.CalculationCosts.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</td>
 <td>The Lot, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationCosts.html#Product">Product</a></td>
+<td><a href="Finance.Cost.CalculationCosts.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</td>
 <td>The Product, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationCosts.html#SalesOrder">SalesOrder</a></td>
+<td><a href="Finance.Cost.CalculationCosts.html#salesorder">SalesOrder</a></td>
 <td><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a> (nullable)</td>
 <td>The Sales Order, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationCosts.html#Workgroup">Workgroup</a></td>
+<td><a href="Finance.Cost.CalculationCosts.html#workgroup">Workgroup</a></td>
 <td><a href="Production.Resources.Workgroups.html">Production.Resources.Workgroups</a> (nullable)</td>
 <td>The Workgroup, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="amount">Amount</h3>
 <blockquote>
 <p>The allocated amount of costs in the currency of the calculation. [Required] [Default(0)]</p>
@@ -173,6 +168,10 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
 <p>Consecutive number of the line within the calculation. [Required]</p>
@@ -189,64 +188,56 @@
 <p>The Project, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="calculation">Calculation</h3>
 <blockquote>
-<p>The <a href="Finance.Cost.CalculationCosts.html#Calculation">Calculation</a> to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Finance.Cost.CalculationCosts.html#calculation">Calculation</a> to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Calculations.html">Finance.Cost.Calculations</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costcenter">CostCenter</h3>
 <blockquote>
 <p>The Cost Center, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">Finance.Accounting.CostCenters</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costtype">CostType</h3>
 <blockquote>
 <p>The Cost Type, which absorbed the cost. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.CostTypes.html">Finance.Cost.CostTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <blockquote>
 <p>The Lot, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The Product, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salesorder">SalesOrder</h3>
 <blockquote>
 <p>The Sales Order, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workgroup">Workgroup</h3>
 <blockquote>
 <p>The Workgroup, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.Workgroups.html">Production.Resources.Workgroups</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Cost.CalculationCosts erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Cost.CalculationCosts erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Cost.CalculationCosts erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Cost_CalculationCosts?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Cost_CalculationCosts?$top=10</a></p>

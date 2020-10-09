@@ -91,7 +91,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentAmountTypeDependencies.html#Id">Id</a></td>
+<td><a href="General.DocumentAmountTypeDependencies.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
@@ -108,12 +108,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.DocumentAmountTypeDependencies.html#DependsOnDocumentAmountType">DependsOnDocumentAmountType</a></td>
+<td><a href="General.DocumentAmountTypeDependencies.html#dependsondocumentamounttype">DependsOnDocumentAmountType</a></td>
 <td><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a></td>
 <td>The base amount type on which the current amount depends. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmountTypeDependencies.html#DocumentAmountType">DocumentAmountType</a></td>
+<td><a href="General.DocumentAmountTypeDependencies.html#documentamounttype">DocumentAmountType</a></td>
 <td><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a></td>
 <td>The amount for which the base amount is specified. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
@@ -123,7 +123,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dependsondocumentamounttype">DependsOnDocumentAmountType</h3>
@@ -131,21 +130,19 @@
 <p>The base amount type on which the current amount depends. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
 <blockquote>
 <p>The amount for which the base amount is specified. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentAmountTypes.html">General.DocumentAmountTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.DocumentAmountTypeDependencies erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.DocumentAmountTypeDependencies erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.DocumentAmountTypeDependencies erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_DocumentAmountTypeDependencies?$top=10">https://demodb.my.erp.net/api/domain/odata/General_DocumentAmountTypeDependencies?$top=10</a></p>

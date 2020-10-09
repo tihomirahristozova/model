@@ -91,60 +91,55 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Assets.DepreciationMethods.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Assets.DepreciationMethods.html#DepreciationFunction">DepreciationFunction</a></td>
-<td><a href="Finance.Assets.DepreciationMethods.html#DepreciationFunction">Finance.Assets.DepreciationMethodsRepository.DepreciationFunction</a></td>
+<td><a href="Finance.Assets.DepreciationMethods.html#depreciationfunction">DepreciationFunction</a></td>
+<td><a href="Finance.Assets.DepreciationMethods.html#depreciationfunction">DepreciationFunction</a></td>
 <td>Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table. [Required] [Default(&quot;STL&quot;)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Assets.DepreciationMethods.html#Name">Name</a></td>
-<td>string</td>
-<td>The name of this DepreciationMethod. [Required] [Filter(like)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Assets.DepreciationMethods.html#Factor">Factor</a></td>
+<td><a href="Finance.Assets.DepreciationMethods.html#factor">Factor</a></td>
 <td>decimal</td>
 <td>Factor used in factor depreciation function. Factor &lt; 1 means declining depreciation; &gt;1 - increasing. The depreciation is multiplied for each period by the factor. [Required] [Default(1)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Assets.DepreciationMethods.html#IsSystem">IsSystem</a></td>
+<td><a href="Finance.Assets.DepreciationMethods.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Finance.Assets.DepreciationMethods.html#issystem">IsSystem</a></td>
 <td>boolean</td>
 <td>Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
-<td><a href="Finance.Assets.DepreciationMethods.html#MonthsInAPeriod">MonthsInAPeriod</a></td>
+<td><a href="Finance.Assets.DepreciationMethods.html#monthsinaperiod">MonthsInAPeriod</a></td>
 <td>int32</td>
 <td>Number of equal valued months calculated with single application of the function. [Required] [Default(12)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Assets.DepreciationMethods.html#PeriodDeterminationMethod">PeriodDeterminationMethod</a></td>
-<td><a href="Finance.Assets.DepreciationMethods.html#PeriodDeterminationMethod">Finance.Assets.DepreciationMethodsRepository.PeriodDeterminationMethod</a></td>
+<td><a href="Finance.Assets.DepreciationMethods.html#name">Name</a></td>
+<td>string</td>
+<td>The name of this DepreciationMethod. [Required] [Filter(like)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Assets.DepreciationMethods.html#perioddeterminationmethod">PeriodDeterminationMethod</a></td>
+<td><a href="Finance.Assets.DepreciationMethods.html#perioddeterminationmethod">PeriodDeterminationMethod</a></td>
 <td>Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days. [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Assets.DepreciationMethods.html#StartFromNextMonth">StartFromNextMonth</a></td>
+<td><a href="Finance.Assets.DepreciationMethods.html#startfromnextmonth">StartFromNextMonth</a></td>
 <td>boolean</td>
 <td>When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month. [Required] [Default(true)] [ReadOnly]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="depreciationfunction">DepreciationFunction</h3>
 <blockquote>
 <p>Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table. [Required] [Default(&quot;STL&quot;)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationMethods.html#DepreciationFunction">Finance.Assets.DepreciationMethodsRepository.DepreciationFunction</a></strong><br>
-Allowed values for the <a href="Finance.Assets.DepreciationMethods.html#DepreciationFunction">DepreciationFunction</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationMethods.html#depreciationfunction">DepreciationFunction</a></strong><br>
+Allowed values for the <a href="Finance.Assets.DepreciationMethods.html#depreciationfunction">DepreciationFunction</a> data attribute<br>
+<em>Allowed Values (Finance.Assets.DepreciationMethodsRepository.DepreciationFunction Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -174,13 +169,6 @@ Allowed values for the <a href="Finance.Assets.DepreciationMethods.html#Deprecia
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>StraightLine</strong></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>The name of this DepreciationMethod. [Required] [Filter(like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="factor">Factor</h3>
 <blockquote>
 <p>Factor used in factor depreciation function. Factor &lt; 1 means declining depreciation; &gt;1 - increasing. The depreciation is multiplied for each period by the factor. [Required] [Default(1)]</p>
@@ -189,6 +177,10 @@ Allowed values for the <a href="Finance.Assets.DepreciationMethods.html#Deprecia
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="issystem">IsSystem</h3>
 <blockquote>
 <p>Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
@@ -205,13 +197,20 @@ Allowed values for the <a href="Finance.Assets.DepreciationMethods.html#Deprecia
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>12</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>The name of this DepreciationMethod. [Required] [Filter(like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="perioddeterminationmethod">PeriodDeterminationMethod</h3>
 <blockquote>
 <p>Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days. [Required]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationMethods.html#PeriodDeterminationMethod">Finance.Assets.DepreciationMethodsRepository.PeriodDeterminationMethod</a></strong><br>
-Allowed values for the <a href="Finance.Assets.DepreciationMethods.html#PeriodDeterminationMethod">PeriodDeterminationMethod</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationMethods.html#perioddeterminationmethod">PeriodDeterminationMethod</a></strong><br>
+Allowed values for the <a href="Finance.Assets.DepreciationMethods.html#perioddeterminationmethod">PeriodDeterminationMethod</a> data attribute<br>
+<em>Allowed Values (Finance.Assets.DepreciationMethodsRepository.PeriodDeterminationMethod Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -245,11 +244,11 @@ Allowed values for the <a href="Finance.Assets.DepreciationMethods.html#PeriodDe
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Assets.DepreciationMethods erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Assets.DepreciationMethods erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Assets.DepreciationMethods erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Assets_DepreciationMethods?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Assets_DepreciationMethods?$top=10</a></p>

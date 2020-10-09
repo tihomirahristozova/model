@@ -91,32 +91,32 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementLines.html#Id">Id</a></td>
+<td><a href="Applications.Service.ServiceAgreementLines.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementLines.html#LineEndDateTime">LineEndDateTime</a></td>
+<td><a href="Applications.Service.ServiceAgreementLines.html#lineenddatetime">LineEndDateTime</a></td>
 <td>datetime</td>
 <td>The ending date and time of the agreement coverage for the current line. [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementLines.html#LineNo">LineNo</a></td>
+<td><a href="Applications.Service.ServiceAgreementLines.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementLines.html#LineStartDateTime">LineStartDateTime</a></td>
+<td><a href="Applications.Service.ServiceAgreementLines.html#linestartdatetime">LineStartDateTime</a></td>
 <td>datetime</td>
 <td>The starting date and time of the agreement coverage for the current line. [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementLines.html#Notes">Notes</a></td>
+<td><a href="Applications.Service.ServiceAgreementLines.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ServiceAgreementLine.</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementLines.html#Quantity">Quantity</a></td>
+<td><a href="Applications.Service.ServiceAgreementLines.html#quantity">Quantity</a></td>
 <td>decimal</td>
 <td>The quantity of the service object that is included in the agreement. [Required] [Default(1)] [Filter(ge;le)]</td>
 </tr>
@@ -133,17 +133,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementLines.html#ServiceAgreement">ServiceAgreement</a></td>
+<td><a href="Applications.Service.ServiceAgreementLines.html#serviceagreement">ServiceAgreement</a></td>
 <td><a href="Applications.Service.ServiceAgreements.html">Applications.Service.ServiceAgreements</a></td>
-<td>The <a href="Applications.Service.ServiceAgreementLines.html#ServiceAgreement">ServiceAgreement</a> to which this ServiceAgreementLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Applications.Service.ServiceAgreementLines.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementLines.html#ServiceObject">ServiceObject</a></td>
+<td><a href="Applications.Service.ServiceAgreementLines.html#serviceobject">ServiceObject</a></td>
 <td><a href="Applications.Service.ServiceObjects.html">Applications.Service.ServiceObjects</a></td>
 <td>The service object, which is covered by the current agreement. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceAgreementLines.html#ServiceType">ServiceType</a></td>
+<td><a href="Applications.Service.ServiceAgreementLines.html#servicetype">ServiceType</a></td>
 <td><a href="Applications.Service.ServiceTypes.html">Applications.Service.ServiceTypes</a></td>
 <td>The type (level) of service that is agreed. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -153,7 +153,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineenddatetime">LineEndDateTime</h3>
 <blockquote>
@@ -198,31 +197,28 @@
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="serviceagreement">ServiceAgreement</h3>
 <blockquote>
-<p>The <a href="Applications.Service.ServiceAgreementLines.html#ServiceAgreement">ServiceAgreement</a> to which this ServiceAgreementLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Applications.Service.ServiceAgreementLines.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">Applications.Service.ServiceAgreements</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceobject">ServiceObject</h3>
 <blockquote>
 <p>The service object, which is covered by the current agreement. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">Applications.Service.ServiceObjects</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="servicetype">ServiceType</h3>
 <blockquote>
 <p>The type (level) of service that is agreed. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceTypes.html">Applications.Service.ServiceTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.Service.ServiceAgreementLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.Service.ServiceAgreementLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.Service.ServiceAgreementLines erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_Service_ServiceAgreementLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_Service_ServiceAgreementLines?$top=10</a></p>

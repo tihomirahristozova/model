@@ -91,24 +91,24 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Assets.DepreciationPlanLineFixedValues.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Assets.DepreciationPlanLineFixedValues.html#DepreciationValue">DepreciationValue</a></td>
-<td><a href="../data-types.md#Amount">Amount</a></td>
+<td><a href="Finance.Assets.DepreciationPlanLineFixedValues.html#depreciationvalue">DepreciationValue</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
 <td>Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. [Currency: DepreciationPlanLine.Asset.ValuationCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Assets.DepreciationPlanLineFixedValues.html#FixedValuePeriodMonth">FixedValuePeriodMonth</a></td>
+<td><a href="Finance.Assets.DepreciationPlanLineFixedValues.html#fixedvalueperiodmonth">FixedValuePeriodMonth</a></td>
 <td>byte</td>
 <td>Month of the period for which the depreciation value is fixed. [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Assets.DepreciationPlanLineFixedValues.html#FixedValuePeriodYear">FixedValuePeriodYear</a></td>
+<td><a href="Finance.Assets.DepreciationPlanLineFixedValues.html#fixedvalueperiodyear">FixedValuePeriodYear</a></td>
 <td>int16</td>
 <td>Year of the period for which the depreciation value is fixed. [Required]</td>
+</tr>
+<tr>
+<td><a href="Finance.Assets.DepreciationPlanLineFixedValues.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -123,23 +123,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Assets.DepreciationPlanLineFixedValues.html#DepreciationPlanLine">DepreciationPlanLine</a></td>
+<td><a href="Finance.Assets.DepreciationPlanLineFixedValues.html#depreciationplanline">DepreciationPlanLine</a></td>
 <td><a href="Finance.Assets.DepreciationPlanLines.html">Finance.Assets.DepreciationPlanLines</a></td>
-<td>The <a href="Finance.Assets.DepreciationPlanLineFixedValues.html#DepreciationPlanLine">DepreciationPlanLine</a> to which this DepreciationPlanLineFixedValue belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Finance.Assets.DepreciationPlanLineFixedValues.html#depreciationplanline">DepreciationPlanLine</a> to which this DepreciationPlanLineFixedValue belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="depreciationvalue">DepreciationValue</h3>
 <blockquote>
 <p>Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. [Currency: DepreciationPlanLine.Asset.ValuationCurrency] [Required] [Default(0)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#Amount">Amount</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
@@ -157,20 +152,23 @@
 <p><em>Type</em>: <strong>int16</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="depreciationplanline">DepreciationPlanLine</h3>
 <blockquote>
-<p>The <a href="Finance.Assets.DepreciationPlanLineFixedValues.html#DepreciationPlanLine">DepreciationPlanLine</a> to which this DepreciationPlanLineFixedValue belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Finance.Assets.DepreciationPlanLineFixedValues.html#depreciationplanline">DepreciationPlanLine</a> to which this DepreciationPlanLineFixedValue belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationPlanLines.html">Finance.Assets.DepreciationPlanLines</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Assets.DepreciationPlanLineFixedValues erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Assets.DepreciationPlanLineFixedValues erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Assets.DepreciationPlanLineFixedValues erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Assets_DepreciationPlanLineFixedValues?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Assets_DepreciationPlanLineFixedValues?$top=10</a></p>

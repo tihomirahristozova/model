@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#Id">Id</a></td>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#LineNo">LineNo</a></td>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Consecutive number of the line within the calculation. [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#ProjectId">ProjectId</a></td>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#projectid">ProjectId</a></td>
 <td>guid (nullable)</td>
 <td>The Project, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#Quantity">Quantity</a></td>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#quantity">Quantity</a></td>
 <td>decimal</td>
 <td>The quantity produced. [Required] [Default(0)]</td>
 </tr>
@@ -123,44 +123,44 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#Calculation">Calculation</a></td>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#calculation">Calculation</a></td>
 <td><a href="Finance.Cost.Calculations.html">Finance.Cost.Calculations</a></td>
-<td>The <a href="Finance.Cost.CalculationProductOutputs.html#Calculation">Calculation</a> to which this CalculationProductOutput belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Finance.Cost.CalculationProductOutputs.html#calculation">Calculation</a> to which this CalculationProductOutput belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#Lot">Lot</a></td>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</td>
 <td>The Lot, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#Parent">Parent</a></td>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#parent">Parent</a></td>
 <td><a href="Finance.Cost.CalculationProductOutputs.html">Finance.Cost.CalculationProductOutputs</a> (nullable)</td>
 <td>When not null specifies the parent output, whose cost is &quot;absorbed&quot; within the current output. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#Product">Product</a></td>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a></td>
 <td>The Product, which absorbed the cost. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#ProfitCenter">ProfitCenter</a></td>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#profitcenter">ProfitCenter</a></td>
 <td><a href="Finance.Accounting.ProfitCenters.html">Finance.Accounting.ProfitCenters</a> (nullable)</td>
 <td>The Profit Center, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#SalesOrder">SalesOrder</a></td>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#salesorder">SalesOrder</a></td>
 <td><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a> (nullable)</td>
 <td>The Sales Order, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#WorkOrder">WorkOrder</a></td>
-<td><a href="Production.ShopFloor.WorkOrders.html">Production.ShopFloor.WorkOrders</a> (nullable)</td>
-<td>The Work Order, which absorbed the cost. [Filter(multi eq)]</td>
-</tr>
-<tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#Workgroup">Workgroup</a></td>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#workgroup">Workgroup</a></td>
 <td><a href="Production.Resources.Workgroups.html">Production.Resources.Workgroups</a> (nullable)</td>
 <td>The Workgroup, which absorbed the cost. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#workorder">WorkOrder</a></td>
+<td><a href="Production.ShopFloor.WorkOrders.html">Production.ShopFloor.WorkOrders</a> (nullable)</td>
+<td>The Work Order, which absorbed the cost. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -168,7 +168,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
@@ -186,8 +185,7 @@
 <p>The Project, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantity">Quantity</h3>
 <blockquote>
 <p>The quantity produced. [Required] [Default(0)]</p>
@@ -199,66 +197,58 @@
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="calculation">Calculation</h3>
 <blockquote>
-<p>The <a href="Finance.Cost.CalculationProductOutputs.html#Calculation">Calculation</a> to which this CalculationProductOutput belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Finance.Cost.CalculationProductOutputs.html#calculation">Calculation</a> to which this CalculationProductOutput belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Calculations.html">Finance.Cost.Calculations</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <blockquote>
 <p>The Lot, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
 <blockquote>
 <p>When not null specifies the parent output, whose cost is &quot;absorbed&quot; within the current output. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Cost.CalculationProductOutputs.html">Finance.Cost.CalculationProductOutputs</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>The Product, which absorbed the cost. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="profitcenter">ProfitCenter</h3>
 <blockquote>
 <p>The Profit Center, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.ProfitCenters.html">Finance.Accounting.ProfitCenters</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salesorder">SalesOrder</h3>
 <blockquote>
 <p>The Sales Order, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="workorder">WorkOrder</h3>
-<blockquote>
-<p>The Work Order, which absorbed the cost. [Filter(multi eq)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">Production.ShopFloor.WorkOrders</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workgroup">Workgroup</h3>
 <blockquote>
 <p>The Workgroup, which absorbed the cost. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Production.Resources.Workgroups.html">Production.Resources.Workgroups</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="workorder">WorkOrder</h3>
+<blockquote>
+<p>The Work Order, which absorbed the cost. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">Production.ShopFloor.WorkOrders</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Cost.CalculationProductOutputs erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Cost.CalculationProductOutputs erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Cost.CalculationProductOutputs erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Cost_CalculationProductOutputs?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Cost_CalculationProductOutputs?$top=10</a></p>

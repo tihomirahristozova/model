@@ -91,14 +91,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Distributors.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Crm.Distributors.html#FlatCommisionPercentage">FlatCommisionPercentage</a></td>
+<td><a href="Crm.Distributors.html#flatcommisionpercentage">FlatCommisionPercentage</a></td>
 <td>decimal</td>
 <td>Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations. [Required] [Default(0)]</td>
+</tr>
+<tr>
+<td><a href="Crm.Distributors.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -113,18 +113,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Distributors.html#Party">Party</a></td>
+<td><a href="Crm.Distributors.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></td>
 <td>Base party Id. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="flatcommisionpercentage">FlatCommisionPercentage</h3>
 <blockquote>
 <p>Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations. [Required] [Default(0)]</p>
@@ -133,20 +128,23 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="party">Party</h3>
 <blockquote>
 <p>Base party Id. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">General.Contacts.Parties</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Crm.Distributors erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Crm.Distributors erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Crm.Distributors erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_Distributors?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Distributors?$top=10</a></p>

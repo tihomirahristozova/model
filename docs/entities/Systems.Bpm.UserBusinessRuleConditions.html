@@ -91,32 +91,32 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#AttributeName">AttributeName</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#attributename">AttributeName</a></td>
 <td>string</td>
 <td>The attribute, which will be tested. [Required]</td>
 </tr>
 <tr>
-<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#ComparisonType">ComparisonType</a></td>
-<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#ComparisonType">Systems.Bpm.UserBusinessRuleConditionsRepository.ComparisonType</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#comparisontype">ComparisonType</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#comparisontype">ComparisonType</a></td>
 <td>How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. [Required] [Default(&quot;Equals&quot;)]</td>
 </tr>
 <tr>
-<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#ConditionNo">ConditionNo</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#conditionno">ConditionNo</a></td>
 <td>int32</td>
 <td>Unique consecutive number of the condition within the business rule. [Required]</td>
 </tr>
 <tr>
-<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#Notes">Notes</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this UserBusinessRuleCondition. (Introduced in version 20.1.100.0)</td>
 </tr>
 <tr>
-<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#Value">Value</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#value">Value</a></td>
 <td>string (nullable)</td>
 <td>The value against which the data attribute will be tested.</td>
 </tr>
@@ -133,18 +133,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#UserBusinessRule">UserBusinessRule</a></td>
+<td><a href="Systems.Bpm.UserBusinessRuleConditions.html#userbusinessrule">UserBusinessRule</a></td>
 <td><a href="Systems.Bpm.UserBusinessRules.html">Systems.Bpm.UserBusinessRules</a></td>
 <td>The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="attributename">AttributeName</h3>
 <blockquote>
 <p>The attribute, which will be tested. [Required]</p>
@@ -156,9 +151,9 @@
 <blockquote>
 <p>How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. [Required] [Default(&quot;Equals&quot;)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleConditions.html#ComparisonType">Systems.Bpm.UserBusinessRuleConditionsRepository.ComparisonType</a></strong><br>
-Allowed values for the <a href="Systems.Bpm.UserBusinessRuleConditions.html#ComparisonType">ComparisonType</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleConditions.html#comparisontype">ComparisonType</a></strong><br>
+Allowed values for the <a href="Systems.Bpm.UserBusinessRuleConditions.html#comparisontype">ComparisonType</a> data attribute<br>
+<em>Allowed Values (Systems.Bpm.UserBusinessRuleConditionsRepository.ComparisonType Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -207,6 +202,10 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleConditions.html#Comp
 <code>(obj.UserBusinessRule.Conditions.Select(c =&gt; c.ConditionNo).DefaultIfEmpty(0).Max() + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>(obj.UserBusinessRule.Conditions.Select(c =&gt; c.ConditionNo).DefaultIfEmpty(0).Max() + 10)</code></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this UserBusinessRuleCondition. (Introduced in version 20.1.100.0)</p>
@@ -227,14 +226,13 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleConditions.html#Comp
 <p>The business rule, for which the condition is defined. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRules.html">Systems.Bpm.UserBusinessRules</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Systems.Bpm.UserBusinessRuleConditions erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Systems.Bpm.UserBusinessRuleConditions erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Systems.Bpm.UserBusinessRuleConditions erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_UserBusinessRuleConditions?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_UserBusinessRuleConditions?$top=10</a></p>

@@ -91,22 +91,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Resources.WorkScheduleWorkingTime.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="General.Resources.WorkScheduleWorkingTime.html#DayNo">DayNo</a></td>
+<td><a href="General.Resources.WorkScheduleWorkingTime.html#dayno">DayNo</a></td>
 <td>int32</td>
 <td>Consequtive day in the work schedule recurrence, starting at 1. [Required]</td>
 </tr>
 <tr>
-<td><a href="General.Resources.WorkScheduleWorkingTime.html#EndTime">EndTime</a></td>
+<td><a href="General.Resources.WorkScheduleWorkingTime.html#endtime">EndTime</a></td>
 <td>time</td>
 <td>End of working time period. [Required]</td>
 </tr>
 <tr>
-<td><a href="General.Resources.WorkScheduleWorkingTime.html#StartTime">StartTime</a></td>
+<td><a href="General.Resources.WorkScheduleWorkingTime.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="General.Resources.WorkScheduleWorkingTime.html#starttime">StartTime</a></td>
 <td>time</td>
 <td>Start of working time period on the day, specified by Day_No. [Required]</td>
 </tr>
@@ -123,18 +123,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.Resources.WorkScheduleWorkingTime.html#WorkSchedule">WorkSchedule</a></td>
+<td><a href="General.Resources.WorkScheduleWorkingTime.html#workschedule">WorkSchedule</a></td>
 <td><a href="General.Resources.WorkSchedules.html">General.Resources.WorkSchedules</a></td>
-<td>The <a href="General.Resources.WorkScheduleWorkingTime.html#WorkSchedule">WorkSchedule</a> to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="General.Resources.WorkScheduleWorkingTime.html#workschedule">WorkSchedule</a> to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="dayno">DayNo</h3>
 <blockquote>
 <p>Consequtive day in the work schedule recurrence, starting at 1. [Required]</p>
@@ -149,6 +144,10 @@
 <p><em>Type</em>: <strong>time</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="starttime">StartTime</h3>
 <blockquote>
 <p>Start of working time period on the day, specified by Day_No. [Required]</p>
@@ -159,17 +158,16 @@
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="workschedule">WorkSchedule</h3>
 <blockquote>
-<p>The <a href="General.Resources.WorkScheduleWorkingTime.html#WorkSchedule">WorkSchedule</a> to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="General.Resources.WorkScheduleWorkingTime.html#workschedule">WorkSchedule</a> to which this WorkScheduleWorkingTime belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Resources.WorkSchedules.html">General.Resources.WorkSchedules</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=General.Resources.WorkScheduleWorkingTime erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=General.Resources.WorkScheduleWorkingTime erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=General.Resources.WorkScheduleWorkingTime erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Resources_WorkScheduleWorkingTime?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Resources_WorkScheduleWorkingTime?$top=10</a></p>

@@ -91,23 +91,23 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Pos.Terminals.html#Id">Id</a></td>
+<td><a href="Crm.Pos.Terminals.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Crm.Pos.Terminals.html#IsActive">IsActive</a></td>
+<td><a href="Crm.Pos.Terminals.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>Represents whether the POS terminal is active and can be chosen from drop-downs for new records. [Required] [Default(true)] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Pos.Terminals.html#PosTerminalCode">PosTerminalCode</a></td>
+<td><a href="Crm.Pos.Terminals.html#posterminalcode">PosTerminalCode</a></td>
 <td>string</td>
 <td>Unique (within the location) code of the POS terminal. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="Crm.Pos.Terminals.html#PosTerminalName">PosTerminalName</a></td>
-<td><a href="../data-types.md#MultilanguageString">MultilanguageString</a></td>
+<td><a href="Crm.Pos.Terminals.html#posterminalname">PosTerminalName</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
 <td>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc. [Required] [Filter(multi eq;like)]</td>
 </tr>
 </tbody>
@@ -123,12 +123,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Pos.Terminals.html#DefaultFiscalPrinterPosDevice">DefaultFiscalPrinterPosDevice</a></td>
+<td><a href="Crm.Pos.Terminals.html#defaultfiscalprinterposdevice">DefaultFiscalPrinterPosDevice</a></td>
 <td><a href="Crm.Pos.Devices.html">Crm.Pos.Devices</a> (nullable)</td>
 <td>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1.100.0)</td>
 </tr>
 <tr>
-<td><a href="Crm.Pos.Terminals.html#PosLocation">PosLocation</a></td>
+<td><a href="Crm.Pos.Terminals.html#poslocation">PosLocation</a></td>
 <td><a href="Crm.Pos.Locations.html">Crm.Pos.Locations</a></td>
 <td>The POS location, where the terminal is located. [Required] [Filter(multi eq)]</td>
 </tr>
@@ -147,7 +147,7 @@
 <tr>
 <td>Devices</td>
 <td><a href="Crm.Pos.Devices.html">Crm.Pos.Devices</a></td>
-<td>List of <a href="Crm.Pos.Devices.html">Device</a> child objects, based on the <a href="Crm.Pos.Devices.html#PosTerminal">Crm.Pos.Device.PosTerminal</a> back reference</td>
+<td>List of <a href="Crm.Pos.Devices.html">Device</a> child objects, based on the <a href="Crm.Pos.Devices.html#posterminal">Crm.Pos.Device.PosTerminal</a> back reference</td>
 </tr>
 </tbody>
 </table>
@@ -155,7 +155,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
@@ -176,7 +175,7 @@
 <blockquote>
 <p>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc. [Required] [Filter(multi eq;like)]</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="../data-types.md#MultilanguageString">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -185,21 +184,19 @@
 <p>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. [Filter(multi eq)] (Introduced in version 20.1.100.0)</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html">Crm.Pos.Devices</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="poslocation">PosLocation</h3>
 <blockquote>
 <p>The POS location, where the terminal is located. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Locations.html">Crm.Pos.Locations</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Crm.Pos.Terminals erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Crm.Pos.Terminals erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Crm.Pos.Terminals erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Crm_Pos_Terminals?$top=10">https://demodb.my.erp.net/api/domain/odata/Crm_Pos_Terminals?$top=10</a></p>

@@ -91,67 +91,67 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Accounting.TemplateLines.html#AmountColumnName">AmountColumnName</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#amountcolumnname">AmountColumnName</a></td>
 <td>string</td>
 <td>The name of the column within the amount rowset where the amount is located. [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#AmountCondition">AmountCondition</a></td>
-<td><a href="Finance.Accounting.TemplateLines.html#AmountCondition">Finance.Accounting.TemplateLinesRepository.AmountCondition</a> (nullable)</td>
+<td><a href="Finance.Accounting.TemplateLines.html#amountcondition">AmountCondition</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#amountcondition">AmountCondition</a> (nullable)</td>
 <td>Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#AmountRowId">AmountRowId</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#amountrowid">AmountRowId</a></td>
 <td>guid (nullable)</td>
 <td>The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#AmountRowName">AmountRowName</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#amountrowname">AmountRowName</a></td>
 <td>string (nullable)</td>
 <td>The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name.</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#AmountSourceFilter">AmountSourceFilter</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#amountsourcefilter">AmountSourceFilter</a></td>
 <td>dataaccessfilter (nullable)</td>
 <td>Filter that further specifies which rows from the amount rowset determine the amount.</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#AmountSourceName">AmountSourceName</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#amountsourcename">AmountSourceName</a></td>
 <td>string</td>
 <td>The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#FilterXML">FilterXML</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#filterxml">FilterXML</a></td>
 <td>dataaccessfilter (nullable)</td>
 <td>The line is accounted only when the filter is satisfied compared with the source document header.</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#LineNo">LineNo</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TemplateLines.html#lineno">LineNo</a></td>
 <td>int32</td>
 <td>Consecutive number of the line within the template. Determines the order of execution of the template lines. [Required]</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#Multiplier">Multiplier</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#multiplier">Multiplier</a></td>
 <td>decimal</td>
 <td>Factor by which the amount from the source will be multiplied. [Required] [Default(1)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#Notes">Notes</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this TemplateLine.</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#ValidFromDate">ValidFromDate</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#validfromdate">ValidFromDate</a></td>
 <td>datetime (nullable)</td>
 <td>Start date from which the accounting template line is valid. [Filter(multi eq;ge;le)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#ValidToDate">ValidToDate</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#validtodate">ValidToDate</a></td>
 <td>datetime (nullable)</td>
 <td>End date to which the accounting template line is valid. [Filter(multi eq;ge;le)]</td>
 </tr>
@@ -168,19 +168,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#CreditAccount">CreditAccount</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#creditaccount">CreditAccount</a></td>
 <td><a href="Finance.Accounting.Accounts.html">Finance.Accounting.Accounts</a></td>
 <td>The account which should be credited. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#DebitAccount">DebitAccount</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#debitaccount">DebitAccount</a></td>
 <td><a href="Finance.Accounting.Accounts.html">Finance.Accounting.Accounts</a></td>
 <td>The account which should be debited. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Finance.Accounting.TemplateLines.html#Template">Template</a></td>
+<td><a href="Finance.Accounting.TemplateLines.html#template">Template</a></td>
 <td><a href="Finance.Accounting.Templates.html">Finance.Accounting.Templates</a></td>
-<td>The <a href="Finance.Accounting.TemplateLines.html#Template">Template</a> to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Finance.Accounting.TemplateLines.html#template">Template</a> to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
@@ -197,16 +197,11 @@
 <tr>
 <td>TemplateLineProperties</td>
 <td><a href="Finance.Accounting.TemplateLineProperties.html">Finance.Accounting.TemplateLineProperties</a></td>
-<td>List of <a href="Finance.Accounting.TemplateLineProperties.html">TemplateLineProperty</a> child objects, based on the <a href="Finance.Accounting.TemplateLineProperties.html#TemplateLine">Finance.Accounting.TemplateLineProperty.TemplateLine</a> back reference</td>
+<td>List of <a href="Finance.Accounting.TemplateLineProperties.html">TemplateLineProperty</a> child objects, based on the <a href="Finance.Accounting.TemplateLineProperties.html#templateline">Finance.Accounting.TemplateLineProperty.TemplateLine</a> back reference</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="amountcolumnname">AmountColumnName</h3>
 <blockquote>
 <p>The name of the column within the amount rowset where the amount is located. [Required]</p>
@@ -218,9 +213,9 @@
 <blockquote>
 <p>Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.</p>
 </blockquote>
-<p><em>Type</em>: <strong><a href="Finance.Accounting.TemplateLines.html#AmountCondition">Finance.Accounting.TemplateLinesRepository.AmountCondition</a> (nullable)</strong><br>
-Allowed values for the <a href="Finance.Accounting.TemplateLines.html#AmountCondition">AmountCondition</a> data attribute<br>
-<em>Allowed Values (Enum Members)</em></p>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.TemplateLines.html#amountcondition">AmountCondition</a> (nullable)</strong><br>
+Allowed values for the <a href="Finance.Accounting.TemplateLines.html#amountcondition">AmountCondition</a> data attribute<br>
+<em>Allowed Values (Finance.Accounting.TemplateLinesRepository.AmountCondition Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -246,8 +241,7 @@ Allowed values for the <a href="Finance.Accounting.TemplateLines.html#AmountCond
 <p>The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="amountrowname">AmountRowName</h3>
 <blockquote>
 <p>The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name.</p>
@@ -276,6 +270,10 @@ Allowed values for the <a href="Finance.Accounting.TemplateLines.html#AmountCond
 <p><em>Type</em>: <strong>dataaccessfilter (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <blockquote>
 <p>Consecutive number of the line within the template. Determines the order of execution of the template lines. [Required]</p>
@@ -322,28 +320,25 @@ Allowed values for the <a href="Finance.Accounting.TemplateLines.html#AmountCond
 <p>The account which should be credited. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Finance.Accounting.Accounts</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="debitaccount">DebitAccount</h3>
 <blockquote>
 <p>The account which should be debited. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Finance.Accounting.Accounts</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="template">Template</h3>
 <blockquote>
-<p>The <a href="Finance.Accounting.TemplateLines.html#Template">Template</a> to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Finance.Accounting.TemplateLines.html#template">Template</a> to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Templates.html">Finance.Accounting.Templates</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Finance.Accounting.TemplateLines erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Finance.Accounting.TemplateLines erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Finance.Accounting.TemplateLines erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_TemplateLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_TemplateLines?$top=10</a></p>

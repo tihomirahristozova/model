@@ -91,17 +91,17 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.TypeWorkTypes.html#Id">Id</a></td>
+<td><a href="Projects.TypeWorkTypes.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Projects.TypeWorkTypes.html#IsActive">IsActive</a></td>
+<td><a href="Projects.TypeWorkTypes.html#isactive">IsActive</a></td>
 <td>boolean</td>
 <td>True when the work type is currently active and selectable in new documents. [Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.TypeWorkTypes.html#WorkTypeName">WorkTypeName</a></td>
+<td><a href="Projects.TypeWorkTypes.html#worktypename">WorkTypeName</a></td>
 <td>string</td>
 <td>The name of the work type. [Required] [Filter(eq;like)]</td>
 </tr>
@@ -118,14 +118,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.TypeWorkTypes.html#BilledWithProduct">BilledWithProduct</a></td>
+<td><a href="Projects.TypeWorkTypes.html#billedwithproduct">BilledWithProduct</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</td>
 <td>The product, which is used for billing purposes for this work type. The price of the product is also used for project budgeting. null means that the work type cannot be billed. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Projects.TypeWorkTypes.html#ProjectType">ProjectType</a></td>
+<td><a href="Projects.TypeWorkTypes.html#projecttype">ProjectType</a></td>
 <td><a href="Projects.ProjectTypes.html">Projects.ProjectTypes</a></td>
-<td>The <a href="Projects.TypeWorkTypes.html#ProjectType">ProjectType</a> to which this TypeWorkType belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The <a href="Projects.TypeWorkTypes.html#projecttype">ProjectType</a> to which this TypeWorkType belongs. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
@@ -133,7 +133,6 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <blockquote>
@@ -156,21 +155,19 @@
 <p>The product, which is used for billing purposes for this work type. The price of the product is also used for project budgeting. null means that the work type cannot be billed. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projecttype">ProjectType</h3>
 <blockquote>
-<p>The <a href="Projects.TypeWorkTypes.html#ProjectType">ProjectType</a> to which this TypeWorkType belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The <a href="Projects.TypeWorkTypes.html#projecttype">ProjectType</a> to which this TypeWorkType belongs. [Required] [Filter(multi eq)] [Owner]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTypes.html">Projects.ProjectTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Projects.TypeWorkTypes erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Projects.TypeWorkTypes erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Projects.TypeWorkTypes erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Projects_TypeWorkTypes?$top=10">https://demodb.my.erp.net/api/domain/odata/Projects_TypeWorkTypes?$top=10</a></p>

@@ -91,14 +91,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.TransferOrdersOptions.html#Id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Logistics.Inventory.TransferOrdersOptions.html#AvailableQuantityOnly">AvailableQuantityOnly</a></td>
+<td><a href="Logistics.Inventory.TransferOrdersOptions.html#availablequantityonly">AvailableQuantityOnly</a></td>
 <td>boolean</td>
 <td>Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity. [Required] [Default(false)] [Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.TransferOrdersOptions.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -113,18 +113,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Inventory.TransferOrdersOptions.html#DocumentType">DocumentType</a></td>
+<td><a href="Logistics.Inventory.TransferOrdersOptions.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">General.DocumentTypes</a></td>
 <td>The document type, for which these options apply. [Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="availablequantityonly">AvailableQuantityOnly</h3>
 <blockquote>
 <p>Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity. [Required] [Default(false)] [Filter(eq)]</p>
@@ -133,20 +128,23 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
 <blockquote>
 <p>The document type, for which these options apply. [Required] [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">General.DocumentTypes</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.TransferOrdersOptions erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Logistics.Inventory.TransferOrdersOptions erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Logistics.Inventory.TransferOrdersOptions erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_TransferOrdersOptions?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_TransferOrdersOptions?$top=10</a></p>

@@ -91,24 +91,24 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Service.ServiceObjects.html#Id">Id</a></td>
+<td><a href="Applications.Service.ServiceObjects.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceObjects.html#Notes">Notes</a></td>
+<td><a href="Applications.Service.ServiceObjects.html#name">Name</a></td>
+<td>string</td>
+<td>The name of this ServiceObject. [Required] [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceObjects.html#notes">Notes</a></td>
 <td>string (nullable)</td>
 <td>Notes for this ServiceObject.</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceObjects.html#SerialNumber">SerialNumber</a></td>
+<td><a href="Applications.Service.ServiceObjects.html#serialnumber">SerialNumber</a></td>
 <td>string (nullable)</td>
 <td>The serial number of the item, that is being serviced. [Filter(like)]</td>
-</tr>
-<tr>
-<td><a href="Applications.Service.ServiceObjects.html#Name">Name</a></td>
-<td>string</td>
-<td>The name of this ServiceObject. [Required] [Filter(eq;like)]</td>
 </tr>
 </tbody>
 </table>
@@ -123,29 +123,29 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Applications.Service.ServiceObjects.html#EnterpriseCompany">EnterpriseCompany</a></td>
+<td><a href="Applications.Service.ServiceObjects.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</td>
 <td>The Enterprise Company to which this ServiceObject applies, or null if it is for all enterprise companies. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceObjects.html#Product">Product</a></td>
+<td><a href="Applications.Service.ServiceObjects.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</td>
 <td>When not-null identifies the product, from which the service object was created. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceObjects.html#SerialNumberObj">SerialNumberObj</a></td>
+<td><a href="Applications.Service.ServiceObjects.html#serialnumberobj">SerialNumberObj</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</td>
 <td>Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. [Filter(multi eq)]</td>
 </tr>
 <tr>
-<td><a href="Applications.Service.ServiceObjects.html#ServiceObjectType">ServiceObjectType</a></td>
-<td><a href="Applications.Service.ServiceObjectTypes.html">Applications.Service.ServiceObjectTypes</a> (nullable)</td>
-<td>When not null specifies the type of the service object. [Filter(multi eq)]</td>
-</tr>
-<tr>
-<td><a href="Applications.Service.ServiceObjects.html#ServicedProduct">ServicedProduct</a></td>
+<td><a href="Applications.Service.ServiceObjects.html#servicedproduct">ServicedProduct</a></td>
 <td><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</td>
 <td>The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceObjects.html#serviceobjecttype">ServiceObjectType</a></td>
+<td><a href="Applications.Service.ServiceObjectTypes.html">Applications.Service.ServiceObjectTypes</a> (nullable)</td>
+<td>When not null specifies the type of the service object. [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -153,8 +153,16 @@
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="name">Name</h3>
+<blockquote>
+<p>The name of this ServiceObject. [Required] [Filter(eq;like)]</p>
+</blockquote>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Product.Name</code></p>
 <h3 id="notes">Notes</h3>
 <blockquote>
 <p>Notes for this ServiceObject.</p>
@@ -171,59 +179,45 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF((obj.SerialNumberObj != null), null, obj.SerialNumber)</code></p>
-<h3 id="name">Name</h3>
-<blockquote>
-<p>The name of this ServiceObject. [Required] [Filter(eq;like)]</p>
-</blockquote>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Product.Name</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <blockquote>
 <p>The Enterprise Company to which this ServiceObject applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <blockquote>
 <p>When not-null identifies the product, from which the service object was created. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumberobj">SerialNumberObj</h3>
 <blockquote>
 <p>Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">Logistics.Inventory.SerialNumbers</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF((obj.SerialNumber != null), null, obj.SerialNumberObj)</code></p>
-<h3 id="serviceobjecttype">ServiceObjectType</h3>
-<blockquote>
-<p>When not null specifies the type of the service object. [Filter(multi eq)]</p>
-</blockquote>
-<p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjectTypes.html">Applications.Service.ServiceObjectTypes</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="servicedproduct">ServicedProduct</h3>
 <blockquote>
 <p>The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. [Filter(multi eq)]</p>
 </blockquote>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">General.Products.Products</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="serviceobjecttype">ServiceObjectType</h3>
+<blockquote>
+<p>When not null specifies the type of the service object. [Filter(multi eq)]</p>
+</blockquote>
+<p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjectTypes.html">Applications.Service.ServiceObjectTypes</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
-<p>[!list erp.entity=Applications.Service.ServiceObjects erp.type=business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>[!list erp.entity=Applications.Service.ServiceObjects erp.type=front-end-business-rule default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="generations">Generations</h2>
-<p>[!list erp.entity=Applications.Service.ServiceObjects erp.type=generation default-text=&quot;None&quot;]</p>
+<p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_Service_ServiceObjects?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_Service_ServiceObjects?$top=10</a></p>
