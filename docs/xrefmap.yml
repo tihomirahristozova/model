@@ -4,6 +4,9 @@ references:
 - uid: Applications
   name: Applications
   href: entities/Applications.html
+- uid: Applications.AssetManagement
+  name: Applications.AssetManagement
+  href: entities/Applications.AssetManagement.html
 - uid: Applications.AssetManagement.MaintenanceOrderLines
   name: Applications.AssetManagement.MaintenanceOrderLines
   href: entities/Applications.AssetManagement.MaintenanceOrderLines.html
@@ -49,6 +52,9 @@ references:
 - uid: Applications.AssetManagement.TrackedParameters
   name: Applications.AssetManagement.TrackedParameters
   href: entities/Applications.AssetManagement.TrackedParameters.html
+- uid: Applications.Cms
+  name: Applications.Cms
+  href: entities/Applications.Cms.html
 - uid: Applications.Cms.NewsWebModuleArticles
   name: Applications.Cms.NewsWebModuleArticles
   href: entities/Applications.Cms.NewsWebModuleArticles.html
@@ -70,6 +76,9 @@ references:
 - uid: Applications.Cms.WebSites
   name: Applications.Cms.WebSites
   href: entities/Applications.Cms.WebSites.html
+- uid: Applications.DataWarehouse
+  name: Applications.DataWarehouse
+  href: entities/Applications.DataWarehouse.html
 - uid: Applications.DataWarehouse.DataMeasureGroups
   name: Applications.DataWarehouse.DataMeasureGroups
   href: entities/Applications.DataWarehouse.DataMeasureGroups.html
@@ -79,6 +88,9 @@ references:
 - uid: Applications.DataWarehouse.DataValues
   name: Applications.DataWarehouse.DataValues
   href: entities/Applications.DataWarehouse.DataValues.html
+- uid: Applications.Fleet
+  name: Applications.Fleet
+  href: entities/Applications.Fleet.html
 - uid: Applications.Fleet.CrewMembers
   name: Applications.Fleet.CrewMembers
   href: entities/Applications.Fleet.CrewMembers.html
@@ -127,6 +139,9 @@ references:
 - uid: Applications.Fleet.VehicleSetVehicles
   name: Applications.Fleet.VehicleSetVehicles
   href: entities/Applications.Fleet.VehicleSetVehicles.html
+- uid: Applications.Mail
+  name: Applications.Mail
+  href: entities/Applications.Mail.html
 - uid: Applications.Mail.Boxes
   name: Applications.Mail.Boxes
   href: entities/Applications.Mail.Boxes.html
@@ -139,6 +154,9 @@ references:
 - uid: Applications.Mail.Messages
   name: Applications.Mail.Messages
   href: entities/Applications.Mail.Messages.html
+- uid: Applications.PersonalData
+  name: Applications.PersonalData
+  href: entities/Applications.PersonalData.html
 - uid: Applications.PersonalData.DataSubjectRightRequests
   name: Applications.PersonalData.DataSubjectRightRequests
   href: entities/Applications.PersonalData.DataSubjectRightRequests.html
@@ -154,6 +172,9 @@ references:
 - uid: Applications.PersonalData.ProcessingConsents
   name: Applications.PersonalData.ProcessingConsents
   href: entities/Applications.PersonalData.ProcessingConsents.html
+- uid: Applications.Rental
+  name: Applications.Rental
+  href: entities/Applications.Rental.html
 - uid: Applications.Rental.AssetConsumables
   name: Applications.Rental.AssetConsumables
   href: entities/Applications.Rental.AssetConsumables.html
@@ -190,6 +211,9 @@ references:
 - uid: Applications.Rental.TransactionTemplates
   name: Applications.Rental.TransactionTemplates
   href: entities/Applications.Rental.TransactionTemplates.html
+- uid: Applications.Service
+  name: Applications.Service
+  href: entities/Applications.Service.html
 - uid: Applications.Service.ServiceActivities
   name: Applications.Service.ServiceActivities
   href: entities/Applications.Service.ServiceActivities.html
@@ -238,6 +262,9 @@ references:
 - uid: Applications.Service.ServiceTypes
   name: Applications.Service.ServiceTypes
   href: entities/Applications.Service.ServiceTypes.html
+- uid: Applications.Telephony
+  name: Applications.Telephony
+  href: entities/Applications.Telephony.html
 - uid: Applications.Telephony.CallDetails
   name: Applications.Telephony.CallDetails
   href: entities/Applications.Telephony.CallDetails.html
@@ -286,6 +313,9 @@ references:
 - uid: Crm.DiscountTypes
   name: Crm.DiscountTypes
   href: entities/Crm.DiscountTypes.html
+- uid: Crm.Distribution
+  name: Crm.Distribution
+  href: entities/Crm.Distribution.html
 - uid: Crm.Distribution.SalesPersonGroups
   name: Crm.Distribution.SalesPersonGroups
   href: entities/Crm.Distribution.SalesPersonGroups.html
@@ -298,6 +328,9 @@ references:
 - uid: Crm.Distributors
   name: Crm.Distributors
   href: entities/Crm.Distributors.html
+- uid: Crm.Invoicing
+  name: Crm.Invoicing
+  href: entities/Crm.Invoicing.html
 - uid: Crm.Invoicing.InvoiceLines
   name: Crm.Invoicing.InvoiceLines
   href: entities/Crm.Invoicing.InvoiceLines.html
@@ -316,6 +349,9 @@ references:
 - uid: Crm.LineDiscounts
   name: Crm.LineDiscounts
   href: entities/Crm.LineDiscounts.html
+- uid: Crm.Marketing
+  name: Crm.Marketing
+  href: entities/Crm.Marketing.html
 - uid: Crm.Marketing.BonusProgramProducts
   name: Crm.Marketing.BonusProgramProducts
   href: entities/Crm.Marketing.BonusProgramProducts.html
@@ -343,6 +379,9 @@ references:
 - uid: Crm.Marketing.TargetGroups
   name: Crm.Marketing.TargetGroups
   href: entities/Crm.Marketing.TargetGroups.html
+- uid: Crm.Pos
+  name: Crm.Pos
+  href: entities/Crm.Pos.html
 - uid: Crm.Pos.Devices
   name: Crm.Pos.Devices
   href: entities/Crm.Pos.Devices.html
@@ -364,6 +403,9 @@ references:
 - uid: Crm.Pos.Terminals
   name: Crm.Pos.Terminals
   href: entities/Crm.Pos.Terminals.html
+- uid: Crm.Presales
+  name: Crm.Presales
+  href: entities/Crm.Presales.html
 - uid: Crm.Presales.Deals
   name: Crm.Presales.Deals
   href: entities/Crm.Presales.Deals.html
@@ -382,6 +424,9 @@ references:
 - uid: Crm.PriceTypes
   name: Crm.PriceTypes
   href: entities/Crm.PriceTypes.html
+- uid: Crm.Pricing
+  name: Crm.Pricing
+  href: entities/Crm.Pricing.html
 - uid: Crm.Pricing.PricingModelCosts
   name: Crm.Pricing.PricingModelCosts
   href: entities/Crm.Pricing.PricingModelCosts.html
@@ -400,6 +445,9 @@ references:
 - uid: Crm.PromotionalPackages
   name: Crm.PromotionalPackages
   href: entities/Crm.PromotionalPackages.html
+- uid: Crm.Sales
+  name: Crm.Sales
+  href: entities/Crm.Sales.html
 - uid: Crm.Sales.DefaultSalesOrderDocumentProperties
   name: Crm.Sales.DefaultSalesOrderDocumentProperties
   href: entities/Crm.Sales.DefaultSalesOrderDocumentProperties.html
@@ -436,6 +484,9 @@ references:
 - uid: Finance
   name: Finance
   href: entities/Finance.html
+- uid: Finance.Accounting
+  name: Finance.Accounting
+  href: entities/Finance.Accounting.html
 - uid: Finance.Accounting.AccountGroups
   name: Finance.Accounting.AccountGroups
   href: entities/Finance.Accounting.AccountGroups.html
@@ -484,6 +535,9 @@ references:
 - uid: Finance.Accounting.VoucherCorrespondances
   name: Finance.Accounting.VoucherCorrespondances
   href: entities/Finance.Accounting.VoucherCorrespondances.html
+- uid: Finance.Assets
+  name: Finance.Assets
+  href: entities/Finance.Assets.html
 - uid: Finance.Assets.AssetCategories
   name: Finance.Assets.AssetCategories
   href: entities/Finance.Assets.AssetCategories.html
@@ -529,6 +583,9 @@ references:
 - uid: Finance.Assets.ValuationModels
   name: Finance.Assets.ValuationModels
   href: entities/Finance.Assets.ValuationModels.html
+- uid: Finance.Cost
+  name: Finance.Cost
+  href: entities/Finance.Cost.html
 - uid: Finance.Cost.AllocationModels
   name: Finance.Cost.AllocationModels
   href: entities/Finance.Cost.AllocationModels.html
@@ -568,6 +625,9 @@ references:
 - uid: Finance.Cost.Templates
   name: Finance.Cost.Templates
   href: entities/Finance.Cost.Templates.html
+- uid: Finance.Intrastat
+  name: Finance.Intrastat
+  href: entities/Finance.Intrastat.html
 - uid: Finance.Intrastat.CommodityCodes
   name: Finance.Intrastat.CommodityCodes
   href: entities/Finance.Intrastat.CommodityCodes.html
@@ -580,6 +640,9 @@ references:
 - uid: Finance.Intrastat.DocumentAmountTypeSettings
   name: Finance.Intrastat.DocumentAmountTypeSettings
   href: entities/Finance.Intrastat.DocumentAmountTypeSettings.html
+- uid: Finance.Payments
+  name: Finance.Payments
+  href: entities/Finance.Payments.html
 - uid: Finance.Payments.BulkPaymentOrderLines
   name: Finance.Payments.BulkPaymentOrderLines
   href: entities/Finance.Payments.BulkPaymentOrderLines.html
@@ -622,6 +685,9 @@ references:
 - uid: Finance.Payments.Transfers
   name: Finance.Payments.Transfers
   href: entities/Finance.Payments.Transfers.html
+- uid: Finance.Vat
+  name: Finance.Vat
+  href: entities/Finance.Vat.html
 - uid: Finance.Vat.BGVATDeclarations
   name: Finance.Vat.BGVATDeclarations
   href: entities/Finance.Vat.BGVATDeclarations.html
@@ -643,6 +709,9 @@ references:
 - uid: General.Config
   name: General.Config
   href: entities/General.Config.html
+- uid: General.Contacts
+  name: General.Contacts
+  href: entities/General.Contacts.html
 - uid: General.Contacts.Activities
   name: General.Contacts.Activities
   href: entities/General.Contacts.Activities.html
@@ -790,6 +859,9 @@ references:
 - uid: General.EnterpriseCompanies
   name: General.EnterpriseCompanies
   href: entities/General.EnterpriseCompanies.html
+- uid: General.Geography
+  name: General.Geography
+  href: entities/General.Geography.html
 - uid: General.Geography.AdministrativeRegions
   name: General.Geography.AdministrativeRegions
   href: entities/General.Geography.AdministrativeRegions.html
@@ -829,6 +901,9 @@ references:
 - uid: General.ProductCatalogs
   name: General.ProductCatalogs
   href: entities/General.ProductCatalogs.html
+- uid: General.Products
+  name: General.Products
+  href: entities/General.Products.html
 - uid: General.Products.CodingSystems
   name: General.Products.CodingSystems
   href: entities/General.Products.CodingSystems.html
@@ -892,6 +967,9 @@ references:
 - uid: General.Reports
   name: General.Reports
   href: entities/General.Reports.html
+- uid: General.Resources
+  name: General.Resources
+  href: entities/General.Resources.html
 - uid: General.Resources.ResourceAvailability
   name: General.Resources.ResourceAvailability
   href: entities/General.Resources.ResourceAvailability.html
@@ -925,6 +1003,9 @@ references:
 - uid: Logistics
   name: Logistics
   href: entities/Logistics.html
+- uid: Logistics.Inventory
+  name: Logistics.Inventory
+  href: entities/Logistics.Inventory.html
 - uid: Logistics.Inventory.CostCorrectionLines
   name: Logistics.Inventory.CostCorrectionLines
   href: entities/Logistics.Inventory.CostCorrectionLines.html
@@ -937,6 +1018,9 @@ references:
 - uid: Logistics.Inventory.CurrentBalances
   name: Logistics.Inventory.CurrentBalances
   href: entities/Logistics.Inventory.CurrentBalances.html
+- uid: Logistics.Inventory.DemandManagement
+  name: Logistics.Inventory.DemandManagement
+  href: entities/Logistics.Inventory.DemandManagement.html
 - uid: Logistics.Inventory.DemandManagement.AvailableToPromise
   name: Logistics.Inventory.DemandManagement.AvailableToPromise
   href: entities/Logistics.Inventory.DemandManagement.AvailableToPromise.html
@@ -1021,6 +1105,9 @@ references:
 - uid: Logistics.Inventory.TransferOrdersOptions
   name: Logistics.Inventory.TransferOrdersOptions
   href: entities/Logistics.Inventory.TransferOrdersOptions.html
+- uid: Logistics.Procurement
+  name: Logistics.Procurement
+  href: entities/Logistics.Procurement.html
 - uid: Logistics.Procurement.PurchaseControlDocumentLines
   name: Logistics.Procurement.PurchaseControlDocumentLines
   href: entities/Logistics.Procurement.PurchaseControlDocumentLines.html
@@ -1069,6 +1156,9 @@ references:
 - uid: Logistics.Procurement.SupplierTypes
   name: Logistics.Procurement.SupplierTypes
   href: entities/Logistics.Procurement.SupplierTypes.html
+- uid: Logistics.Shipment
+  name: Logistics.Shipment
+  href: entities/Logistics.Shipment.html
 - uid: Logistics.Shipment.CargoTypes
   name: Logistics.Shipment.CargoTypes
   href: entities/Logistics.Shipment.CargoTypes.html
@@ -1111,6 +1201,9 @@ references:
 - uid: Logistics.Shipment.TransportationVehicles
   name: Logistics.Shipment.TransportationVehicles
   href: entities/Logistics.Shipment.TransportationVehicles.html
+- uid: Logistics.Wms
+  name: Logistics.Wms
+  href: entities/Logistics.Wms.html
 - uid: Logistics.Wms.WarehouseLocations
   name: Logistics.Wms.WarehouseLocations
   href: entities/Logistics.Wms.WarehouseLocations.html
@@ -1144,6 +1237,9 @@ references:
 - uid: Production
   name: Production
   href: entities/Production.html
+- uid: Production.Resources
+  name: Production.Resources
+  href: entities/Production.Resources.html
 - uid: Production.Resources.Capacity
   name: Production.Resources.Capacity
   href: entities/Production.Resources.Capacity.html
@@ -1183,6 +1279,9 @@ references:
 - uid: Production.Resources.WorkgroupShifts
   name: Production.Resources.WorkgroupShifts
   href: entities/Production.Resources.WorkgroupShifts.html
+- uid: Production.ShopFloor
+  name: Production.ShopFloor
+  href: entities/Production.ShopFloor.html
 - uid: Production.ShopFloor.ConsumptionOrderLines
   name: Production.ShopFloor.ConsumptionOrderLines
   href: entities/Production.ShopFloor.ConsumptionOrderLines.html
@@ -1213,6 +1312,9 @@ references:
 - uid: Production.ShopFloor.WorkOrders
   name: Production.ShopFloor.WorkOrders
   href: entities/Production.ShopFloor.WorkOrders.html
+- uid: Production.Technologies
+  name: Production.Technologies
+  href: entities/Production.Technologies.html
 - uid: Production.Technologies.PrincipalRecipeIngredients
   name: Production.Technologies.PrincipalRecipeIngredients
   href: entities/Production.Technologies.PrincipalRecipeIngredients.html
@@ -1306,6 +1408,9 @@ references:
 - uid: Systems
   name: Systems
   href: entities/Systems.html
+- uid: Systems.Bpm
+  name: Systems.Bpm
+  href: entities/Systems.Bpm.html
 - uid: Systems.Bpm.CalculatedAttributeExpressions
   name: Systems.Bpm.CalculatedAttributeExpressions
   href: entities/Systems.Bpm.CalculatedAttributeExpressions.html
@@ -1354,6 +1459,9 @@ references:
 - uid: Systems.Bpm.UserBusinessRules
   name: Systems.Bpm.UserBusinessRules
   href: entities/Systems.Bpm.UserBusinessRules.html
+- uid: Systems.Core
+  name: Systems.Core
+  href: entities/Systems.Core.html
 - uid: Systems.Core.AttributeChanges
   name: Systems.Core.AttributeChanges
   href: entities/Systems.Core.AttributeChanges.html
@@ -1411,12 +1519,18 @@ references:
 - uid: Systems.Core.WebSites
   name: Systems.Core.WebSites
   href: entities/Systems.Core.WebSites.html
+- uid: Systems.External
+  name: Systems.External
+  href: entities/Systems.External.html
 - uid: Systems.External.PublicUserLists
   name: Systems.External.PublicUserLists
   href: entities/Systems.External.PublicUserLists.html
 - uid: Systems.External.PublicUsers
   name: Systems.External.PublicUsers
   href: entities/Systems.External.PublicUsers.html
+- uid: Systems.Reporting
+  name: Systems.Reporting
+  href: entities/Systems.Reporting.html
 - uid: Systems.Reporting.DataSourceQueries
   name: Systems.Reporting.DataSourceQueries
   href: entities/Systems.Reporting.DataSourceQueries.html
@@ -1426,6 +1540,9 @@ references:
 - uid: Systems.Reporting.Reports
   name: Systems.Reporting.Reports
   href: entities/Systems.Reporting.Reports.html
+- uid: Systems.Security
+  name: Systems.Security
+  href: entities/Systems.Security.html
 - uid: Systems.Security.AccessKeys
   name: Systems.Security.AccessKeys
   href: entities/Systems.Security.AccessKeys.html
@@ -1468,9 +1585,15 @@ references:
 - uid: Systems.Security.VisualPermissions
   name: Systems.Security.VisualPermissions
   href: entities/Systems.Security.VisualPermissions.html
+- uid: Systems.UI
+  name: Systems.UI
+  href: entities/Systems.UI.html
 - uid: Systems.UI.FormLayouts
   name: Systems.UI.FormLayouts
   href: entities/Systems.UI.FormLayouts.html
+- uid: Systems.Workflow
+  name: Systems.Workflow
+  href: entities/Systems.Workflow.html
 - uid: Systems.Workflow.Processes
   name: Systems.Workflow.Processes
   href: entities/Systems.Workflow.Processes.html
