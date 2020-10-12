@@ -1,7 +1,8 @@
 param(
     [string]$docfx,
     [string]$remote,
-    [switch]$debug
+    [switch]$debug,
+    [string]$entities
 )
 
 if ($debug -eq $true) {
@@ -31,12 +32,23 @@ Write-Host "Getting Latest Changes"
 git checkout master
 git pull --rebase
 
+Write-Host "Copy generated entities (.md files)"
+try
+{
+  Copy-Item -Path $entities -Destination "." -Force -Recurse
+}
+catch
+{  
+  Write-Error $_
+  Exit 300
+}
+
 Write-Host "Building docfx"
 Invoke-Expression "$docfx build"
 
-if ($LASTEXITCODE -ne 0) {
+if ($lastexitcode -ne 0) {
 Write-Host "Error during build"
-Exit $LASTEXITCODE
+Exit $lastexitcode
 }
 
 Write-Host "Upload Changes to Github"
