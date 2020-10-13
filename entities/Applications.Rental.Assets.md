@@ -14,7 +14,7 @@ Contains the rentable assets. Entity: Rent_Assets
 | [Notes](Applications.Rental.Assets.md#notes) | string (nullable) | Notes for this Asset. 
 | [RentalAssetCode](Applications.Rental.Assets.md#rentalassetcode) | string | Unique rental asset code. [Required] [Filter(eq;like)] [ORD] 
 | [RentalAssetName](Applications.Rental.Assets.md#rentalassetname) | string | The name of the rental asset. [Required] [Filter(like)] 
-| [StandardGuaranteeAmount](Applications.Rental.Assets.md#standardguaranteeamount) | [Amount](../data-types.md#amount) (nullable) | Standard default amount of the guarantee that is set for this asset when leased. [Currency: StandardGuarantee<br />AmountCurrency] [Filter(multi eq) 
+| [StandardGuaranteeAmount](Applications.Rental.Assets.md#standardguaranteeamount) | [Amount](../data-types.md#amount) (nullable) | Standard default amount of the guarantee that is set for this asset when leased. [Currency: StandardGuarantee<br />AmountCurrency] [Filter(multi eq)] 
 | [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) | [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) (nullable) | Specifies the unit by which the periods of renting of this asset are measured. Possible values are: 'by days' or 'by months'. [Filter(multi eq)] 
 
 ## References

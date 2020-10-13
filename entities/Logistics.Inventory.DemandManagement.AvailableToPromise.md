@@ -21,7 +21,7 @@ Quantities available to promise for the different date periods. Also contains th
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EnterpriseCompany](Logistics.Inventory.DemandManagement.AvailableToPromise.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Тhe Enterprise Company, for which the quantities are calculated. [Required] [Filter(multi eq)] [Inherited from Gen_Documents_Table.Enterprise_Company_Id] |
-| [Product](Logistics.Inventory.DemandManagement.AvailableToPromise.md#product) | [Products](General.Products.Products.md) | The Product, for which the quantities are calculated. [Required] [Filter(multi eq)] [Inherited from Inv_Store_Order_<br />Lines_Table.t_Id] |
+| [Product](Logistics.Inventory.DemandManagement.AvailableToPromise.md#product) | [Products](General.Products.Products.md) | The Product, for which the quantities are calculated. [Required] [Filter(multi eq)] [Inherited from Inv_Store_Order_<br />Lines_Table.Product_Id] |
 | [Store](Logistics.Inventory.DemandManagement.AvailableToPromise.md#store) | [Stores](Logistics.Inventory.Stores.md) | The Store, for which the quantities are calculated. [Required] [Filter(multi eq)] [Inherited from Inv_Store_Orders_Table.Store_Id] |
 
 

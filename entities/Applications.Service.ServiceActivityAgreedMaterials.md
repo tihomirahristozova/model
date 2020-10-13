@@ -16,7 +16,7 @@ Contains the materials, which were agreed for this service activity (repair), be
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) | [ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md) | The [ServiceActivityMaterial](Applications.Service.ServiceActivity<br />AgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivity<br />AgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly]  |
+| [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) | [ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md) | The [ServiceActivityMaterial](Applications.Service.ServiceActivity<br />AgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivity<br />AgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
 | [ServiceAgreementMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceagreementmaterial) | [ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md) | Service agreement material line that records the paid or agreed in advance material. [Required] [Filter(multi eq)] [ReadOnly] |
 
 

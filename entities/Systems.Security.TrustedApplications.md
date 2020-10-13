@@ -36,7 +36,7 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Authorizations | [TrustedApplicationAuthorizations](Systems.Security.TrustedApplicationAuthorizations.md) | List of [TrustedApplication<br />Authorization](Systems.Security.TrustedApplication<br />Authorizations.md) child objects, based on the [Systems.Security.TrustedApplication<br />Authorization.TrustedApplication](Systems.Security.TrustedApplication<br />Authorizations.md#trustedapplication) back  
+| Authorizations | [TrustedApplicationAuthorizations](Systems.Security.TrustedApplicationAuthorizations.md) | List of [TrustedApplication<br />Authorization](Systems.Security.TrustedApplication<br />Authorizations.md) child objects, based on the [Systems.Security.TrustedApplication<br />Authorization.TrustedApplication](Systems.Security.TrustedApplication<br />Authorizations.md#trustedapplication) back reference 
 
 
 ## Attribute Details

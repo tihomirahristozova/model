@@ -34,8 +34,8 @@ User-defined properties, which can supplement the system properties of almost al
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| AllowedValues | [CustomPropertyAllowedValues](General.CustomPropertyAllowedValues.md) | List of [CustomProperty<br />AllowedValue](General.CustomProperty<br />AllowedValues.md) child objects, based on the [General.CustomPropertyAllowedValue.Property](General.CustomProperty<br />AllowedValues.md#property) back  
-| EnterpriseCompanyFilters | [PropertyEnterpriseCompanyFilters](General.PropertyEnterpriseCompanyFilters.md) | List of [PropertyEnterprise<br />CompanyFilter](General.PropertyEnterprise<br />CompanyFilters.md) child objects, based on the [General.PropertyEnterprise<br />CompanyFilter.Property](General.PropertyEnterprise<br />CompanyFilters.md#property) back  
+| AllowedValues | [CustomPropertyAllowedValues](General.CustomPropertyAllowedValues.md) | List of [CustomProperty<br />AllowedValue](General.CustomProperty<br />AllowedValues.md) child objects, based on the [General.CustomPropertyAllowedValue.Property](General.CustomProperty<br />AllowedValues.md#property) back reference 
+| EnterpriseCompanyFilters | [PropertyEnterpriseCompanyFilters](General.PropertyEnterpriseCompanyFilters.md) | List of [PropertyEnterprise<br />CompanyFilter](General.PropertyEnterprise<br />CompanyFilters.md) child objects, based on the [General.PropertyEnterprise<br />CompanyFilter.Property](General.PropertyEnterprise<br />CompanyFilters.md#property) back reference 
 
 
 ## Attribute Details

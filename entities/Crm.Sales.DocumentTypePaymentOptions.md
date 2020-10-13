@@ -9,7 +9,7 @@ Contains payment options for user documnet types for sales orders. Entity: Crm_D
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeferredPayment<br />MinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammount) | [Amount](../data-types.md#amount) | The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPayment<br />MinimalAmmount<br />Currency]  
+| [DeferredPayment<br />MinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammount) | [Amount](../data-types.md#amount) | The minimal order total amount, which an order must have in order to use deferred payment. [Currency: DeferredPayment<br />MinimalAmmount<br />Currency] [Required] 
 | [Id](Crm.Sales.DocumentTypePaymentOptions.md#id) | guid |  
 
 ## References

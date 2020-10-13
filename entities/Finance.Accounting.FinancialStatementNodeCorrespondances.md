@@ -18,7 +18,7 @@ Contains the actual correspondance filters, which specify how each financial sta
 | ---- | ---- | --- |
 | [AccountGroup](Finance.Accounting.FinancialStatementNodeCorrespondances.md#accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Main account group determining the correspondances for which the balances are summed. [Required] [Filter(multi eq)] |
 | [CorrespondantAccountGroup](Finance.Accounting.FinancialStatementNodeCorrespondances.md#correspondantaccountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Correspondant account group determining the correspondances for which the balances are summed. If null means that the balances of all correspondances for the main account group are summed. [Filter(multi eq)] |
-| [FinancialStatementNode](Finance.Accounting.FinancialStatementNodeCorrespondances.md#financialstatementnode) | [FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md) | The [FinancialStatementNode](Finance.Accounting.FinancialStatement<br />NodeCorrespondances.md#financialstatementnode) to which this FinancialStatement<br />NodeCorrespondance belongs. [Required] [Filter(multi eq)]  |
+| [FinancialStatementNode](Finance.Accounting.FinancialStatementNodeCorrespondances.md#financialstatementnode) | [FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md) | The [FinancialStatementNode](Finance.Accounting.FinancialStatement<br />NodeCorrespondances.md#financialstatementnode) to which this FinancialStatement<br />NodeCorrespondance belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details

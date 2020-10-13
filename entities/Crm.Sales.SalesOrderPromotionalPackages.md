@@ -18,7 +18,7 @@ The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Pro
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [PromotionalPackage](Crm.Sales.SalesOrderPromotionalPackages.md#promotionalpackage) | [PromotionalPackages](Crm.PromotionalPackages.md) | The type of promotional package sold. [Required] [Filter(multi eq)] |
-| [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The [SalesOrder](Crm.Sales.SalesOrderPromotional<br />Packages.md#salesorder) to which this SalesOrderPromotional<br />Package belongs. [Required] [Filter(multi eq)]  |
+| [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The [SalesOrder](Crm.Sales.SalesOrderPromotional<br />Packages.md#salesorder) to which this SalesOrderPromotional<br />Package belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details

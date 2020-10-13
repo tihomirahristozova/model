@@ -29,7 +29,7 @@ Contains the services, which were actually performed during the service activity
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| ServiceActivity<br />AgreedServices | [ServiceActivityAgreedServices](Applications.Service.ServiceActivityAgreedServices.md) | List of [ServiceActivity<br />AgreedService](Applications.Service.ServiceActivity<br />AgreedServices.md) child objects, based on the [Applications.Service.ServiceActivity<br />AgreedService.ServiceActivityService](Applications.Service.ServiceActivity<br />AgreedServices.md#serviceactivityservice) back  
+| ServiceActivity<br />AgreedServices | [ServiceActivityAgreedServices](Applications.Service.ServiceActivityAgreedServices.md) | List of [ServiceActivity<br />AgreedService](Applications.Service.ServiceActivity<br />AgreedServices.md) child objects, based on the [Applications.Service.ServiceActivity<br />AgreedService.ServiceActivityService](Applications.Service.ServiceActivity<br />AgreedServices.md#serviceactivityservice) back reference 
 
 
 ## Attribute Details

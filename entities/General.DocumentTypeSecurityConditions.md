@@ -10,7 +10,7 @@ Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ConditionFilterXml](General.DocumentTypeSecurityConditions.md#conditionfilterxml) | dataaccessfilter | Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. [Required] 
-| [Description](General.DocumentTypeSecurityConditions.md#description) | string | The description of this DocumentTypeSecurity<br />Condition. [Required] [Filter(eq;like) 
+| [Description](General.DocumentTypeSecurityConditions.md#description) | string | The description of this DocumentTypeSecurity<br />Condition. [Required] [Filter(eq;like)] 
 | [Id](General.DocumentTypeSecurityConditions.md#id) | guid |  
 | [Priority](General.DocumentTypeSecurityConditions.md#priority) | [Priority](General.DocumentTypeSecurityConditions.md#priority) | Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. [Required] [Default(3)] [Filter(ge;le)] 
 

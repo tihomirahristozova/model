@@ -14,7 +14,7 @@ Represents a query within a data source. Entity: Sys_Data_Source_Queries
 | [FilterXml](Systems.Reporting.DataSourceQueries.md#filterxml) | dataaccessfilter (nullable) | Filter for the loaded table. 
 | [FirstRow](Systems.Reporting.DataSourceQueries.md#firstrow) | boolean | Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable. [Required] [Default(false)] 
 | [Id](Systems.Reporting.DataSourceQueries.md#id) | guid |  
-| [ReferencePath](Systems.Reporting.DataSourceQueries.md#referencepath) | string | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br />Enterprise_Company_<br />Id/Company_Id - will load the definition of the company for the enterprise company of a document.  
+| [ReferencePath](Systems.Reporting.DataSourceQueries.md#referencepath) | string | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br />Enterprise_Company_<br />Id/Company_Id - will load the definition of the company for the enterprise company of a document. [Required] 
 | [TableName](Systems.Reporting.DataSourceQueries.md#tablename) | string (nullable) | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null. 
 | [UniqueName](Systems.Reporting.DataSourceQueries.md#uniquename) | string (nullable) | The name of the data table in the printout datasource. If null the Reference_Path is used. 
 

@@ -30,7 +30,7 @@ Contains the materials, which were actually used during the service activity (re
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| ServiceActivity<br />AgreedMaterials | [ServiceActivityAgreedMaterials](Applications.Service.ServiceActivityAgreedMaterials.md) | List of [ServiceActivity<br />AgreedMaterial](Applications.Service.ServiceActivity<br />AgreedMaterials.md) child objects, based on the [Applications.Service.ServiceActivity<br />AgreedMaterial.ServiceActivityMaterial](Applications.Service.ServiceActivity<br />AgreedMaterials.md#serviceactivitymaterial) back  
+| ServiceActivity<br />AgreedMaterials | [ServiceActivityAgreedMaterials](Applications.Service.ServiceActivityAgreedMaterials.md) | List of [ServiceActivity<br />AgreedMaterial](Applications.Service.ServiceActivity<br />AgreedMaterials.md) child objects, based on the [Applications.Service.ServiceActivity<br />AgreedMaterial.ServiceActivityMaterial](Applications.Service.ServiceActivity<br />AgreedMaterials.md#serviceactivitymaterial) back reference 
 
 
 ## Attribute Details

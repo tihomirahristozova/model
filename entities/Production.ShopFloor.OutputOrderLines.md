@@ -42,7 +42,7 @@ Detail records of output orders. Entity: Prd_Output_Order_Lines
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| OutputOrderDistributed<br />MaterialConsumptions | [OutputOrderDistributedMaterialConsumptions](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md) | List of [OutputOrderDistributed<br />MaterialConsumption](Production.ShopFloor.OutputOrderDistributed<br />MaterialConsumptions.md) child objects, based on the [Production.ShopFloor.OutputOrderDistributed<br />MaterialConsumption.OutputOrderLine](Production.ShopFloor.OutputOrderDistributed<br />MaterialConsumptions.md#outputorderline) back  
+| OutputOrderDistributed<br />MaterialConsumptions | [OutputOrderDistributedMaterialConsumptions](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md) | List of [OutputOrderDistributed<br />MaterialConsumption](Production.ShopFloor.OutputOrderDistributed<br />MaterialConsumptions.md) child objects, based on the [Production.ShopFloor.OutputOrderDistributed<br />MaterialConsumption.OutputOrderLine](Production.ShopFloor.OutputOrderDistributed<br />MaterialConsumptions.md#outputorderline) back reference 
 
 
 ## Attribute Details

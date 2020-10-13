@@ -9,7 +9,7 @@ Distributors are external for the enterprise persons or companies who obtain sal
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FlatCommisionPercentage](Crm.Distributors.md#flatcommisionpercentage) | decimal | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br />ve/qunatity considerations. [Required] [Default(0) 
+| [FlatCommisionPercentage](Crm.Distributors.md#flatcommisionpercentage) | decimal | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br />ve/qunatity considerations. [Required] [Default(0)] 
 | [Id](Crm.Distributors.md#id) | guid |  
 
 ## References

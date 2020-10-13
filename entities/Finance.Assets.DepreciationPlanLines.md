@@ -28,7 +28,7 @@ Each record contains one depreciation plan for one valuation model of one asset.
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| FixedValues | [DepreciationPlanLineFixedValues](Finance.Assets.DepreciationPlanLineFixedValues.md) | List of [DepreciationPlan<br />LineFixedValue](Finance.Assets.DepreciationPlan<br />LineFixedValues.md) child objects, based on the [Finance.Assets.DepreciationPlan<br />LineFixedValue.DepreciationPlanLine](Finance.Assets.DepreciationPlan<br />LineFixedValues.md#depreciationplanline) back  
+| FixedValues | [DepreciationPlanLineFixedValues](Finance.Assets.DepreciationPlanLineFixedValues.md) | List of [DepreciationPlan<br />LineFixedValue](Finance.Assets.DepreciationPlan<br />LineFixedValues.md) child objects, based on the [Finance.Assets.DepreciationPlan<br />LineFixedValue.DepreciationPlanLine](Finance.Assets.DepreciationPlan<br />LineFixedValues.md#depreciationplanline) back reference 
 
 
 ## Attribute Details

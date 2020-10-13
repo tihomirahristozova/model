@@ -20,7 +20,7 @@ Default payment plan for new documents of the specified document type. Entity: C
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Crm.Sales.DefaultSalesOrderPaymentPlans.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The [DocumentType](General.DocumentTypes.md) to which this DefaultSalesOrder<br />PaymentPlan belongs. [Required] [Filter(multi eq)] ] |
+| [DocumentType](Crm.Sales.DefaultSalesOrderPaymentPlans.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The [DocumentType](General.DocumentTypes.md) to which this DefaultSalesOrder<br />PaymentPlan belongs. [Required] [Filter(multi eq)] [Owner] |
 | [EnterpriseCompany](Crm.Sales.DefaultSalesOrderPaymentPlans.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies. [Filter(multi eq)] |
 | [EnterpriseCompanyLocation](Crm.Sales.DefaultSalesOrderPaymentPlans.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations. [Filter(multi eq)] |
 | [PaymentAccount](Crm.Sales.DefaultSalesOrderPaymentPlans.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Default payment account for the current installment. null means that there is no default account. [Filter(multi eq)] |

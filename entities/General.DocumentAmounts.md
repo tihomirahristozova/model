@@ -30,7 +30,7 @@ Contains a specific instance of an additional amount for a specific document. En
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| ReferencedDocuments | [DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md) | List of [DocumentAmount<br />ReferencedDocument](General.DocumentAmount<br />ReferencedDocuments.md) child objects, based on the [General.DocumentAmount<br />ReferencedDocument.DocumentAmount](General.DocumentAmount<br />ReferencedDocuments.md#documentamount) back  
+| ReferencedDocuments | [DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md) | List of [DocumentAmount<br />ReferencedDocument](General.DocumentAmount<br />ReferencedDocuments.md) child objects, based on the [General.DocumentAmount<br />ReferencedDocument.DocumentAmount](General.DocumentAmount<br />ReferencedDocuments.md#documentamount) back reference 
 
 
 ## Attribute Details

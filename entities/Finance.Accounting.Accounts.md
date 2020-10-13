@@ -10,7 +10,7 @@ Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AccountFullNumber](Finance.Accounting.Accounts.md#accountfullnumber) | string | The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. [Required] [Filter(like)] [ReadOnly] 
-| [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_<br />Directory, BRD=Balance_Reference_<br />Document. [Required] [Default("ACB") 
+| [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_<br />Directory, BRD=Balance_Reference_<br />Document. [Required] [Default("ACB")] 
 | [Description](Finance.Accounting.Accounts.md#description) | string (nullable) | The description of this Account. 
 | [Discontinued](Finance.Accounting.Accounts.md#discontinued) | boolean | True means that the account won't be used any more and should not appear in combo boxes. [Required] [Default(false)] [Filter(eq)] 
 | [Id](Finance.Accounting.Accounts.md#id) | guid |  

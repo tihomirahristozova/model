@@ -9,14 +9,14 @@ Attribute values of an object change. Entity: Sys_Attribute_Changes_View
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttributeName](Systems.Core.AttributeChanges.md#attributename) | string | The attribute name. [Required] [Filter(eq)] [Inherited from Sys_Attribute_<br />Changes_Table.ute_Name] 
-| [NewValue](Systems.Core.AttributeChanges.md#newvalue) | string (nullable) | The new value. [Filter(eq;like)] [Inherited from Sys_Attribute_<br />Changes_Table.lue] 
+| [AttributeName](Systems.Core.AttributeChanges.md#attributename) | string | The attribute name. [Required] [Filter(eq)] [Inherited from Sys_Attribute_<br />Changes_Table.Attribute_Name] 
+| [NewValue](Systems.Core.AttributeChanges.md#newvalue) | string (nullable) | The new value. [Filter(eq;like)] [Inherited from Sys_Attribute_<br />Changes_Table.New_Value] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ObjectChange](Systems.Core.AttributeChanges.md#objectchange) | [ObjectChanges](Systems.Core.ObjectChanges.md) | The object change. [Required] [Filter(multi eq)] [Inherited from Sys_Attribute_<br />Changes_Table.Object_Change_Id] ] |
+| [ObjectChange](Systems.Core.AttributeChanges.md#objectchange) | [ObjectChanges](Systems.Core.ObjectChanges.md) | The object change. [Required] [Filter(multi eq)] [Inherited from Sys_Attribute_<br />Changes_Table.Object_Change_Id] [Owner] |
 
 
 ## Attribute Details

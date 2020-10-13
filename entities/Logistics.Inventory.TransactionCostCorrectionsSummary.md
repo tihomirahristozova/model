@@ -18,8 +18,8 @@ Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transact
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [TransactionLine](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] [Inherited from Inv_Transaction_<br />Lines_Table.ction_Line_Id] |
-| [TransactionObj](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionobj) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) | The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Inherited from Inv_Transaction_<br />Lines_Table.Transaction_Id] ] |
+| [TransactionLine](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] [Inherited from Inv_Transaction_<br />Lines_Table.Transaction_Line_Id] |
+| [TransactionObj](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionobj) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) | The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Inherited from Inv_Transaction_<br />Lines_Table.Transaction_Id] [Owner] |
 
 
 ## Attribute Details

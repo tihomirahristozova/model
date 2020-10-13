@@ -26,7 +26,7 @@ Contains details of executions of transportation order lines. Entity: Log_Transp
 | ---- | ---- | --- |
 | [ExecutionOfTransportation<br />OrderLine](Logistics.Shipment.TransportationExecutionLines.md#executionoftransportationorderline) | [TransportationOrderLines](Logistics.Shipment.TransportationOrderLines.md) | The transportation order line, which is executed. [Required] [Filter(multi eq)] |
 | [GeoPoint](Logistics.Shipment.TransportationExecutionLines.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) | The geographic point, where the operation is executed. [Required] [Filter(multi eq)] |
-| [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) | [TransportationExecutions](Logistics.Shipment.TransportationExecutions.md) | The [TransportationExecution](Logistics.Shipment.Transportation<br />ExecutionLines.md#transportationexecution) to which this Transportation<br />ExecutionLine belongs. [Required] [Filter(multi eq)]  |
+| [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) | [TransportationExecutions](Logistics.Shipment.TransportationExecutions.md) | The [TransportationExecution](Logistics.Shipment.Transportation<br />ExecutionLines.md#transportationexecution) to which this Transportation<br />ExecutionLine belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details

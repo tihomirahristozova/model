@@ -27,7 +27,7 @@ The detail lines of rental contracts. Each line contains rental conditions for o
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Consumables | [LeaseContractLineConsumables](Applications.Rental.LeaseContractLineConsumables.md) | List of [LeaseContract<br />LineConsumable](Applications.Rental.LeaseContractLine<br />Consumables.md) child objects, based on the [Applications.Rental.LeaseContractLine<br />Consumable.LeaseLine](Applications.Rental.LeaseContractLine<br />Consumables.md#leaseline) back  
+| Consumables | [LeaseContractLineConsumables](Applications.Rental.LeaseContractLineConsumables.md) | List of [LeaseContract<br />LineConsumable](Applications.Rental.LeaseContractLine<br />Consumables.md) child objects, based on the [Applications.Rental.LeaseContractLine<br />Consumable.LeaseLine](Applications.Rental.LeaseContractLine<br />Consumables.md#leaseline) back reference 
 
 
 ## Attribute Details

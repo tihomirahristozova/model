@@ -20,7 +20,7 @@ Contains the properties, that are required to be set, when creating new products
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductGroup](General.Products.ProductGroupRequiredProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The [ProductGroup](General.Products.ProductGroupRequired<br />Properties.md#productgroup) to which this ProductGroupRequired<br />Property belongs. [Required] [Filter(multi eq)]  |
+| [ProductGroup](General.Products.ProductGroupRequiredProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The [ProductGroup](General.Products.ProductGroupRequired<br />Properties.md#productgroup) to which this ProductGroupRequired<br />Property belongs. [Required] [Filter(multi eq)] [Owner] |
 | [Property](General.Products.ProductGroupRequiredProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'. [Required] [Filter(multi eq)] |
 
 

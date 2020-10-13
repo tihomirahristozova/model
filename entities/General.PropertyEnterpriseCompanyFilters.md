@@ -17,7 +17,7 @@ Provides a way to apply different filtering of the property allowed values for t
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EnterpriseCompany](General.PropertyEnterpriseCompanyFilters.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current filter is specifed. [Required] [Filter(multi eq)] |
-| [Property](General.PropertyEnterpriseCompanyFilters.md#property) | [CustomProperties](General.CustomProperties.md) | The [CustomProperty](General.CustomProperties.md) to which this PropertyEnterprise<br />CompanyFilter belongs. [Required] [Filter(multi eq)] ] |
+| [Property](General.PropertyEnterpriseCompanyFilters.md#property) | [CustomProperties](General.CustomProperties.md) | The [CustomProperty](General.CustomProperties.md) to which this PropertyEnterprise<br />CompanyFilter belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details

@@ -17,7 +17,7 @@ When specified for a product type, contains the suggested user-defined propertie
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The [ProductType](General.Products.ProductTypePurchase<br />InvoiceLineProperties.md#producttype) to which this ProductTypePurchase<br />InvoiceLineProperty belongs. [Required] [Filter(multi eq)]  |
+| [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The [ProductType](General.Products.ProductTypePurchase<br />InvoiceLineProperties.md#producttype) to which this ProductTypePurchase<br />InvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner] |
 | [Property](General.Products.ProductTypePurchaseInvoiceLineProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. [Required] [Filter(multi eq)] |
 
 

@@ -21,7 +21,7 @@ User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Expressions | [CalculatedAttributeExpressions](Systems.Bpm.CalculatedAttributeExpressions.md) | List of [CalculatedAttribute<br />Expression](Systems.Bpm.CalculatedAttribute<br />Expressions.md) child objects, based on the [Systems.Bpm.CalculatedAttribute<br />Expression.CalculatedAttribute](Systems.Bpm.CalculatedAttribute<br />Expressions.md#calculatedattribute) back  
+| Expressions | [CalculatedAttributeExpressions](Systems.Bpm.CalculatedAttributeExpressions.md) | List of [CalculatedAttribute<br />Expression](Systems.Bpm.CalculatedAttribute<br />Expressions.md) child objects, based on the [Systems.Bpm.CalculatedAttribute<br />Expression.CalculatedAttribute](Systems.Bpm.CalculatedAttribute<br />Expressions.md#calculatedattribute) back reference 
 
 
 ## Attribute Details

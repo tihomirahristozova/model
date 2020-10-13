@@ -40,8 +40,8 @@ Hierarchical categorization of the products. Entity: Gen_Product_Groups
 | Name | Type | Description |
 | ---- | ---- | --- |
 | PrincipalRecipes | [PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | List of [PrincipalRecipe](Production.Technologies.PrincipalRecipes.md) child objects, based on the [Production.Technologies.PrincipalRecipe.ProductGroup](Production.Technologies.PrincipalRecipes.md#productgroup) back reference 
-| RangeProperties | [ProductGroupRangeProperties](General.Products.ProductGroupRangeProperties.md) | List of [ProductGroupRange<br />Property](General.Products.ProductGroupRange<br />Properties.md) child objects, based on the [General.Products.ProductGroupRangeProperty.ProductGroup](General.Products.ProductGroupRange<br />Properties.md#productgroup) back  
-| RequiredProperties | [ProductGroupRequiredProperties](General.Products.ProductGroupRequiredProperties.md) | List of [ProductGroupRequired<br />Property](General.Products.ProductGroupRequired<br />Properties.md) child objects, based on the [General.Products.ProductGroupRequired<br />Property.ProductGroup](General.Products.ProductGroupRequired<br />Properties.md#productgroup) back  
+| RangeProperties | [ProductGroupRangeProperties](General.Products.ProductGroupRangeProperties.md) | List of [ProductGroupRange<br />Property](General.Products.ProductGroupRange<br />Properties.md) child objects, based on the [General.Products.ProductGroupRangeProperty.ProductGroup](General.Products.ProductGroupRange<br />Properties.md#productgroup) back reference 
+| RequiredProperties | [ProductGroupRequiredProperties](General.Products.ProductGroupRequiredProperties.md) | List of [ProductGroupRequired<br />Property](General.Products.ProductGroupRequired<br />Properties.md) child objects, based on the [General.Products.ProductGroupRequired<br />Property.ProductGroup](General.Products.ProductGroupRequired<br />Properties.md#productgroup) back reference 
 
 
 ## Attribute Details

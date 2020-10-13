@@ -25,7 +25,7 @@ Contains the hierarchical structure of the user-defined financial statements. En
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Correspondances | [FinancialStatementNodeCorrespondances](Finance.Accounting.FinancialStatementNodeCorrespondances.md) | List of [FinancialStatement<br />NodeCorrespondance](Finance.Accounting.FinancialStatement<br />NodeCorrespondances.md) child objects, based on the [Finance.Accounting.FinancialStatement<br />NodeCorrespondance.FinancialStatementNode](Finance.Accounting.FinancialStatement<br />NodeCorrespondances.md#financialstatementnode) back  
+| Correspondances | [FinancialStatementNodeCorrespondances](Finance.Accounting.FinancialStatementNodeCorrespondances.md) | List of [FinancialStatement<br />NodeCorrespondance](Finance.Accounting.FinancialStatement<br />NodeCorrespondances.md) child objects, based on the [Finance.Accounting.FinancialStatement<br />NodeCorrespondance.FinancialStatementNode](Finance.Accounting.FinancialStatement<br />NodeCorrespondances.md#financialstatementnode) back reference 
 
 
 ## Attribute Details

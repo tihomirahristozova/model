@@ -130,22 +130,22 @@
 <tr>
 <td><a href="Logistics.Inventory.CurrentBalances.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>If non-null, contains the specific lot to use for the movement. [Filter(multi eq)] [Inherited from Inv_Transaction_<br>Lines_Table.]</td>
+<td>If non-null, contains the specific lot to use for the movement. [Filter(multi eq)] [Inherited from Inv_Transaction_<br>Lines_Table.Lot_Id]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CurrentBalances.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The item that was received/issued. [Required] [Filter(multi eq)] [Inherited from Inv_Transaction_<br>Lines_Table.t_Id]</td>
+<td>The item that was received/issued. [Required] [Filter(multi eq)] [Inherited from Inv_Transaction_<br>Lines_Table.Product_Id]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CurrentBalances.html#productvariant">ProductVariant</a></td>
 <td><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</td>
-<td>If specified determines which product variant of the current product in this line is used. [Filter(multi eq)] [Inherited from Inv_Transaction_<br>Lines_Table.t_Variant_Id]</td>
+<td>If specified determines which product variant of the current product in this line is used. [Filter(multi eq)] [Inherited from Inv_Transaction_<br>Lines_Table.Product_Variant_Id]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CurrentBalances.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>Item serial number for serialized items. null for non-serialized items. [Filter(multi eq)] [Inherited from Inv_Transaction_<br>Lines_Table._Number_Id]</td>
+<td>Item serial number for serialized items. null for non-serialized items. [Filter(multi eq)] [Inherited from Inv_Transaction_<br>Lines_Table.Serial_Number_Id]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CurrentBalances.html#store">Store</a></td>
@@ -155,7 +155,7 @@
 <tr>
 <td><a href="Logistics.Inventory.CurrentBalances.html#storebin">StoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
-<td>Store bin, from/to which the transaction was performed. [Filter(multi eq)] [Inherited from Inv_Transaction_<br>Lines_Table.Bin_Id]</td>
+<td>Store bin, from/to which the transaction was performed. [Filter(multi eq)] [Inherited from Inv_Transaction_<br>Lines_Table.Store_Bin_Id]</td>
 </tr>
 </tbody>
 </table>

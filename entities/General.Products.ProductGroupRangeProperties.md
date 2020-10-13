@@ -19,7 +19,7 @@ When specified for a product group, provides a way for automatical creation of n
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The [ProductGroup](General.Products.ProductGroupRange<br />Properties.md#productgroup) to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] ] |
+| [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The [ProductGroup](General.Products.ProductGroupRange<br />Properties.md#productgroup) to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner] |
 | [Property](General.Products.ProductGroupRangeProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The property whose values will be altered. [Required] [Filter(multi eq)] |
 
 

@@ -24,7 +24,7 @@ Categorization of the products by their nature. Entity: Gen_Product_Types
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| PurchaseInvoice<br />LineProperties | [ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md) | List of [ProductTypePurchase<br />InvoiceLineProperty](General.Products.ProductTypePurchase<br />InvoiceLineProperties.md) child objects, based on the [General.Products.ProductTypePurchase<br />InvoiceLineProperty.ProductType](General.Products.ProductTypePurchase<br />InvoiceLineProperties.md#producttype) back  
+| PurchaseInvoice<br />LineProperties | [ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md) | List of [ProductTypePurchase<br />InvoiceLineProperty](General.Products.ProductTypePurchase<br />InvoiceLineProperties.md) child objects, based on the [General.Products.ProductTypePurchase<br />InvoiceLineProperty.ProductType](General.Products.ProductTypePurchase<br />InvoiceLineProperties.md#producttype) back reference 
 | TaxGroups | [ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md) | List of [ProductTypeTaxGroup](Crm.Pos.ProductTypeTaxGroups.md) child objects, based on the [Crm.Pos.ProductTypeTaxGroup.ProductType](Crm.Pos.ProductTypeTaxGroups.md#producttype) back reference 
 
 

@@ -18,7 +18,7 @@ When specified, contains user-defined asset depreciation values for each depreci
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationplanline) | [DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md) | The [DepreciationPlanLine](Finance.Assets.DepreciationPlan<br />LineFixedValues.md#depreciationplanline) to which this DepreciationPlan<br />LineFixedValue belongs. [Required] [Filter(multi eq)]  |
+| [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationplanline) | [DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md) | The [DepreciationPlanLine](Finance.Assets.DepreciationPlan<br />LineFixedValues.md#depreciationplanline) to which this DepreciationPlan<br />LineFixedValue belongs. [Required] [Filter(multi eq)] [Owner] |
 
 
 ## Attribute Details

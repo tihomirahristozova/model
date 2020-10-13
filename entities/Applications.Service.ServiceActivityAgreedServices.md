@@ -16,7 +16,7 @@ Contains the services, which were agreed for this service activity (repair), bef
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ServiceActivityService](Applications.Service.ServiceActivityAgreedServices.md#serviceactivityservice) | [ServiceActivityServices](Applications.Service.ServiceActivityServices.md) | The [ServiceActivityService](Applications.Service.ServiceActivity<br />AgreedServices.md#serviceactivityservice) to which this ServiceActivity<br />AgreedService belongs. [Required] [Filter(multi eq)] [ReadOnly]  |
+| [ServiceActivityService](Applications.Service.ServiceActivityAgreedServices.md#serviceactivityservice) | [ServiceActivityServices](Applications.Service.ServiceActivityServices.md) | The [ServiceActivityService](Applications.Service.ServiceActivity<br />AgreedServices.md#serviceactivityservice) to which this ServiceActivity<br />AgreedService belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner] |
 | [ServiceAgreementService](Applications.Service.ServiceActivityAgreedServices.md#serviceagreementservice) | [ServiceAgreementServices](Applications.Service.ServiceAgreementServices.md) | Service agreement service line that records the paid or agreed in advance service or product. [Required] [Filter(multi eq)] [ReadOnly] |
 
 

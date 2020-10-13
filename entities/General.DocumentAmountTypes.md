@@ -35,8 +35,8 @@ Represents the different types of additional amounts which are calculated for th
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Dependencies | [DocumentAmountTypeDependencies](General.DocumentAmountTypeDependencies.md) | List of [DocumentAmount<br />TypeDependency](General.DocumentAmount<br />TypeDependencies.md) child objects, based on the [General.DocumentAmount<br />TypeDependency.DocumentAmountType](General.DocumentAmount<br />TypeDependencies.md#documentamounttype) back  
-| Settings | [DocumentAmountTypeSettings](Finance.Intrastat.DocumentAmountTypeSettings.md) | List of [DocumentAmount<br />TypeSetting](Finance.Intrastat.DocumentAmountTypeSettings.md) child objects, based on the [Finance.Intrastat.DocumentAmountTypeSetting.DocumentAmountType](Finance.Intrastat.DocumentAmountTypeSettings.md#documentamounttype) back nce 
+| Dependencies | [DocumentAmountTypeDependencies](General.DocumentAmountTypeDependencies.md) | List of [DocumentAmount<br />TypeDependency](General.DocumentAmount<br />TypeDependencies.md) child objects, based on the [General.DocumentAmount<br />TypeDependency.DocumentAmountType](General.DocumentAmount<br />TypeDependencies.md#documentamounttype) back reference 
+| Settings | [DocumentAmountTypeSettings](Finance.Intrastat.DocumentAmountTypeSettings.md) | List of [DocumentAmount<br />TypeSetting](Finance.Intrastat.DocumentAmountTypeSettings.md) child objects, based on the [Finance.Intrastat.DocumentAmountTypeSetting.DocumentAmountType](Finance.Intrastat.DocumentAmountTypeSettings.md#documentamounttype) back reference 
 
 
 ## Attribute Details

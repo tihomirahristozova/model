@@ -41,7 +41,7 @@ Represents processes, which process personal data, regulated by GDPR and other a
 | Name | Type | Description |
 | ---- | ---- | --- |
 | JointControllers | [JointControllers](Applications.PersonalData.JointControllers.md) | List of [JointController](Applications.PersonalData.JointControllers.md) child objects, based on the [Applications.PersonalData.JointController.PersonalDataProcess](Applications.PersonalData.JointControllers.md#personaldataprocess) back reference 
-| Recipients | [PersonalDataProcessRecipients](Applications.PersonalData.PersonalDataProcessRecipients.md) | List of [PersonalDataProcess<br />Recipient](Applications.PersonalData.PersonalDataProcess<br />Recipients.md) child objects, based on the [Applications.PersonalData.PersonalDataProcess<br />Recipient.PersonalDataProcess](Applications.PersonalData.PersonalDataProcess<br />Recipients.md#personaldataprocess) back  
+| Recipients | [PersonalDataProcessRecipients](Applications.PersonalData.PersonalDataProcessRecipients.md) | List of [PersonalDataProcess<br />Recipient](Applications.PersonalData.PersonalDataProcess<br />Recipients.md) child objects, based on the [Applications.PersonalData.PersonalDataProcess<br />Recipient.PersonalDataProcess](Applications.PersonalData.PersonalDataProcess<br />Recipients.md#personaldataprocess) back reference 
 
 
 ## Attribute Details

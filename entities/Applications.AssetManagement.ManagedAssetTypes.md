@@ -19,8 +19,8 @@ Types of managed assets. Used to categorize the assets and the tracked parameter
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| MaintenanceTypes | [ManagedAssetTypeMaintenanceTypes](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md) | List of [ManagedAssetType<br />MaintenanceType](Applications.AssetManagement.ManagedAssetType<br />MaintenanceTypes.md) child objects, based on the [Applications.AssetManagement.ManagedAssetType<br />MaintenanceType.ManagedAssetType](Applications.AssetManagement.ManagedAssetType<br />MaintenanceTypes.md#managedassettype) back  
-| TrackedParameters | [ManagedAssetTypeTrackedParameters](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md) | List of [ManagedAssetType<br />TrackedParameter](Applications.AssetManagement.ManagedAssetType<br />TrackedParameters.md) child objects, based on the [Applications.AssetManagement.ManagedAssetType<br />TrackedParameter.ManagedAssetType](Applications.AssetManagement.ManagedAssetType<br />TrackedParameters.md#managedassettype) back  
+| MaintenanceTypes | [ManagedAssetTypeMaintenanceTypes](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md) | List of [ManagedAssetType<br />MaintenanceType](Applications.AssetManagement.ManagedAssetType<br />MaintenanceTypes.md) child objects, based on the [Applications.AssetManagement.ManagedAssetType<br />MaintenanceType.ManagedAssetType](Applications.AssetManagement.ManagedAssetType<br />MaintenanceTypes.md#managedassettype) back reference 
+| TrackedParameters | [ManagedAssetTypeTrackedParameters](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md) | List of [ManagedAssetType<br />TrackedParameter](Applications.AssetManagement.ManagedAssetType<br />TrackedParameters.md) child objects, based on the [Applications.AssetManagement.ManagedAssetType<br />TrackedParameter.ManagedAssetType](Applications.AssetManagement.ManagedAssetType<br />TrackedParameters.md#managedassettype) back reference 
 
 
 ## Attribute Details

@@ -29,7 +29,7 @@ List of base recipe models. Recipe models are used by the Product Configurator t
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Ingredients | [PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) | List of [PrincipalRecipe<br />Ingredient](Production.Technologies.PrincipalRecipeIngredients.md) child objects, based on the [Production.Technologies.PrincipalRecipeIngredient.PrincipalRecipe](Production.Technologies.PrincipalRecipeIngredients.md#principalrecipe) back nce 
+| Ingredients | [PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) | List of [PrincipalRecipe<br />Ingredient](Production.Technologies.PrincipalRecipeIngredients.md) child objects, based on the [Production.Technologies.PrincipalRecipeIngredient.PrincipalRecipe](Production.Technologies.PrincipalRecipeIngredients.md#principalrecipe) back reference 
 | Operations | [PrincipalRecipeOperations](Production.Technologies.PrincipalRecipeOperations.md) | List of [PrincipalRecipeOperation](Production.Technologies.PrincipalRecipeOperations.md) child objects, based on the [Production.Technologies.PrincipalRecipeOperation.PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) back reference 
 
 
