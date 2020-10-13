@@ -35,6 +35,7 @@ git pull --rebase
 Write-Host "Copy generated entities (.md files)"
 try
 {
+  Remove-Item -Path ".\entities\*.*" -Force
   Copy-Item -Path $entities -Destination "." -Force -Recurse
 }
 catch
