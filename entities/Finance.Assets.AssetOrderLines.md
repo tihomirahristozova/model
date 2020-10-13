@@ -11,7 +11,7 @@ Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines
 | ---- | ---- | --- |
 | [AssetValue](Finance.Assets.AssetOrderLines.md#assetvalue) | [Amount](../data-types.md#amount) | Value of the acquired or retired asset. [Currency: AssetValueCurrency] [Required] [Default(0)] 
 | [Id](Finance.Assets.AssetOrderLines.md#id) | guid |  
-| [ParentLineNo](Finance.Assets.AssetOrderLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2) 
+| [ParentLineNo](Finance.Assets.AssetOrderLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. [Introduced in version 18.2] 
 | [Quantity](Finance.Assets.AssetOrderLines.md#quantity) | int32 | Indicates the nature of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. [Required] [Default(0)] 
 
 ## References
@@ -21,7 +21,7 @@ Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines
 | [Asset](Finance.Assets.AssetOrderLines.md#asset) | [Assets](Finance.Assets.Assets.md) | The asset that is acquired or retired. [Required] [Filter(multi eq)] |
 | [AssetOrder](Finance.Assets.AssetOrderLines.md#assetorder) | [AssetOrders](Finance.Assets.AssetOrders.md) | The [AssetOrder](Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
 | [AssetValueCurrency](Finance.Assets.AssetOrderLines.md#assetvaluecurrency) | [Currencies](General.Currencies.md) | Currency of Asset Value. [Required] [Filter(multi eq)] |
-| [ParentDocument](Finance.Assets.AssetOrderLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2) |
+| [ParentDocument](Finance.Assets.AssetOrderLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] [Introduced in version 18.2] |
 
 
 ## Attribute Details
@@ -43,7 +43,7 @@ _Default Value_: **NewGuid**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2)
+The number of the line within the parent document, which the current line executes. null when the current line does not execute line. [Introduced in version 18.2]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -84,7 +84,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ParentDocument
 
-The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2)
+The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] [Introduced in version 18.2]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

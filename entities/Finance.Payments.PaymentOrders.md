@@ -58,7 +58,7 @@ Each payment order contains a receivable or payable amount. Entity: Cash_Payment
 | [DocumentType](Finance.Payments.PaymentOrders.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
 | [EnterpriseCompany](Finance.Payments.PaymentOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
 | [EnterpriseCompanyLocation](Finance.Payments.PaymentOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
-| [FiscalPrinterPosDevice](Finance.Payments.PaymentOrders.md#fiscalprinterposdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | When not null, contains suggested fiscal printer for printing fiscal notes upon payment. [Filter(multi eq)] (Introduced in version 19.1) |
+| [FiscalPrinterPosDevice](Finance.Payments.PaymentOrders.md#fiscalprinterposdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | When not null, contains suggested fiscal printer for printing fiscal notes upon payment. [Filter(multi eq)] [Introduced in version 19.1] |
 | [FromCompanyDivision](Finance.Payments.PaymentOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
 | [FromParty](Finance.Payments.PaymentOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
 | [InvoiceAmountCurrency](Finance.Payments.PaymentOrders.md#invoiceamountcurrency) | [Currencies](General.Currencies.md) (nullable) | The currency of Invoice Amount. [Filter(multi eq)] |
@@ -520,7 +520,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### FiscalPrinterPosDevice
 
-When not null, contains suggested fiscal printer for printing fiscal notes upon payment. [Filter(multi eq)] (Introduced in version 19.1)
+When not null, contains suggested fiscal printer for printing fiscal notes upon payment. [Filter(multi eq)] [Introduced in version 19.1]
 
 _Type_: **[Devices](Crm.Pos.Devices.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

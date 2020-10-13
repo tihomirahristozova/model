@@ -19,12 +19,12 @@ Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines
 | [LineNo](Crm.Invoicing.InvoiceLines.md#lineno) | int32 | Consecutive line number, unique within the invoice. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)] 
 | [LineStandardDiscount<br />Percent](Crm.Invoicing.InvoiceLines.md#linestandarddiscountpercent) | decimal | Standard discount for the line. This is automatically computed according to discount conditions. [Required] [Default(0)] 
 | [Notes](Crm.Invoicing.InvoiceLines.md#notes) | string (nullable) | Notes for this InvoiceLine. 
-| [ParentLineNo](Crm.Invoicing.InvoiceLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2) 
+| [ParentLineNo](Crm.Invoicing.InvoiceLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. [Introduced in version 18.2] 
 | [ProductDescription](Crm.Invoicing.InvoiceLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document. [Required] 
 | [Quantity](Crm.Invoicing.InvoiceLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the invoiced product. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
 | [QuantityBase](Crm.Invoicing.InvoiceLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
 | [SalesOrderAmount](Crm.Invoicing.InvoiceLines.md#salesorderamount) | decimal (nullable) | Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing. 
-| [StandardQuantityBase](Crm.Invoicing.InvoiceLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2) 
+| [StandardQuantityBase](Crm.Invoicing.InvoiceLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
 | [UnitPrice](Crm.Invoicing.InvoiceLines.md#unitprice) | [Amount](../data-types.md#amount) | The unit selling price of Quantity. [Currency: Invoice.DocumentCurrency] [Required] [Default(0)] 
 
 ## References
@@ -36,7 +36,7 @@ Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines
 | [InvoiceOrderLine](Crm.Invoicing.InvoiceLines.md#invoiceorderline) | [InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md) (nullable) | Invoice order line which is invoiced by this line. [Filter(multi eq)] |
 | [LineDealType](Crm.Invoicing.InvoiceLines.md#linedealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)] |
 | [LineDiscount](Crm.Invoicing.InvoiceLines.md#linediscount) | [LineDiscounts](Crm.LineDiscounts.md) (nullable) | The line discount type used to form the Line_Standard_<br />Discount_Percent. [Filter(multi eq) |
-| [ParentDocument](Crm.Invoicing.InvoiceLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2) |
+| [ParentDocument](Crm.Invoicing.InvoiceLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] [Introduced in version 18.2] |
 | [ParentSalesOrderLine](Crm.Invoicing.InvoiceLines.md#parentsalesorderline) | [SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable) | When not null specifies the Sales Order line that is invoiced by this invoice line. [Filter(multi eq)] |
 | [PaymentTransaction](Crm.Invoicing.InvoiceLines.md#paymenttransaction) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) (nullable) | The payment transaction, which is invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)] |
 | [Product](Crm.Invoicing.InvoiceLines.md#product) | [Products](General.Products.Products.md) (nullable) | The invoiced product. When null, although rarely used, the invoice line is still valid and the Product Description contains the invoiced item. [Filter(multi eq)] |
@@ -220,7 +220,7 @@ _Supports Order By_: **False**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2)
+The number of the line within the parent document, which the current line executes. null when the current line does not execute line. [Introduced in version 18.2]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -268,7 +268,7 @@ _Supports Order By_: **False**
 
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -340,7 +340,7 @@ _Front-End Recalc Expressions:_
 `obj.DetermineLineDiscount( Convert( ( obj.Invoice.DeliveryDate ?? obj.Invoice.DocumentDate), Nullable`1), obj.Invoice.Customer, obj.Product, obj.Quantity, obj.Invoice.EnterpriseCompany, obj.Invoice.EnterpriseCompanyLocation, IIF( ( obj.SalesOrder == null), null, obj.SalesOrder.DistributionChannel), IIF( ( obj.SalesOrder == null), null, obj.SalesOrder.PriceList))`
 ### ParentDocument
 
-The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2)
+The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] [Introduced in version 18.2]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

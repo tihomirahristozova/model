@@ -24,7 +24,7 @@ Represents detail lines of orders for shipment of sales orders to customers. Eac
 | [PersistLot](Logistics.Shipment.ShipmentOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. [Required] [Default(false)] [Filter(eq)] 
 | [Quantity](Logistics.Shipment.ShipmentOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity to be shipped. [Unit: QuantityUnit] [Required] [Default(1)] 
 | [QuantityBase](Logistics.Shipment.ShipmentOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] 
-| [StandardQuantityBase](Logistics.Shipment.ShipmentOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2) 
+| [StandardQuantityBase](Logistics.Shipment.ShipmentOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
 | [Volumel](Logistics.Shipment.ShipmentOrderLines.md#volumel) | decimal (nullable) | The volume in litres of the whole batch. null means unknown. 
 | [Widthm](Logistics.Shipment.ShipmentOrderLines.md#widthm) | decimal (nullable) | The width of the package in meters. null means unknown. 
 
@@ -180,7 +180,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  

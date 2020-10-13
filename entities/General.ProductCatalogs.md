@@ -27,7 +27,7 @@ Product catalogs serve to organize the products for display primarily in web pag
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [RootProductGroup](General.ProductCatalogs.md#rootproductgroup) | [ProductGroups](General.Products.ProductGroups.md) | The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. [Required] [Filter(multi eq)] |
-| [WebSite](General.ProductCatalogs.md#website) | [WebSites](Systems.Core.WebSites.md) (nullable) | The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. [Filter(multi eq)] (Introduced in version 19.1) |
+| [WebSite](General.ProductCatalogs.md#website) | [WebSites](Systems.Core.WebSites.md) (nullable) | The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. [Filter(multi eq)] [Introduced in version 19.1] |
 
 
 ## Attribute Details
@@ -169,7 +169,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### WebSite
 
-The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. [Filter(multi eq)] (Introduced in version 19.1)
+The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. [Filter(multi eq)] [Introduced in version 19.1]
 
 _Type_: **[WebSites](Systems.Core.WebSites.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -16,7 +16,7 @@ The materials consumed in the production order operations. Entity: Prd_Work_Orde
 | [Notes](Production.ShopFloor.WorkOrderItemIngredients.md#notes) | string (nullable) | Notes for this WorkOrderItemIngredient. 
 | [UsedQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantity) | [Quantity](../data-types.md#quantity) | The quantity of the material consumed in the operation. [Unit: UsedQuantityUnit] [Required] [Default(1)] 
 | [UsedQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantitybase) | [Quantity](../data-types.md#quantity) | The equivalence of Used Quantity in the base measurement category of the material. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
-| [UsedStandardQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedstandardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2) 
+| [UsedStandardQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedstandardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
 
 ## References
 
@@ -117,7 +117,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Material != null) AndAlso ( obj.UsedQuantity != null)) AndAlso ( obj.UsedQuantityUnit != null)), obj.UsedQuantity.ConvertTo( obj.Material.BaseUnit, obj.Material), obj.UsedQuantityBase)`
 ### UsedStandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. [Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  

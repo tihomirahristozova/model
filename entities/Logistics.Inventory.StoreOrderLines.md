@@ -21,7 +21,7 @@ Detail lines of store orders. Each line represents one planned stock transaction
 | [PersistLot](Logistics.Inventory.StoreOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. [Required] [Default(false)] [Filter(eq)] 
 | [Quantity](Logistics.Inventory.StoreOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity ordered for receipt/issue. [Unit: QuantityUnit] [Required] [Default(0)] 
 | [QuantityBase](Logistics.Inventory.StoreOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] 
-| [StandardQuantityBase](Logistics.Inventory.StoreOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2) 
+| [StandardQuantityBase](Logistics.Inventory.StoreOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
 | [TransactionTimestamp](Logistics.Inventory.StoreOrderLines.md#transactiontimestamp) | datetime (nullable) | Exact time when the transaction for this store order line changes the cost of the product. [ReadOnly] 
 | [UnitCost](Logistics.Inventory.StoreOrderLines.md#unitcost) | [Amount](../data-types.md#amount) (nullable) | Cost for 1 unit of measure in the currency of the document. [Currency: StoreOrder.DocumentCurrency] 
 
@@ -154,7 +154,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  

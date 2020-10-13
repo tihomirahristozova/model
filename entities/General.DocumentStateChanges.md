@@ -14,7 +14,7 @@ History of document state changes. Entity: Gen_Document_State_Changes
 | [SystemInitiated](General.DocumentStateChanges.md#systeminitiated) | boolean | Specifies whether the state change was caused by system process or from user action. [Required] [Default(false)] [ReadOnly] 
 | [UpdateTime](General.DocumentStateChanges.md#updatetime) | datetime | The time when the change took effect. [Required] [Filter(ge;le)] [ORD] 
 | [UpdateUser](General.DocumentStateChanges.md#updateuser) | string | The login name of the user, who made the status change. [Required] [Filter(eq)] 
-| [Void](General.DocumentStateChanges.md#void) | boolean | True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1) 
+| [Void](General.DocumentStateChanges.md#void) | boolean | True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] [Introduced in version 19.1] 
 
 ## References
 
@@ -80,7 +80,7 @@ _Supports Order By_: **False**
 
 ### Void
 
-True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1)
+True if the document is voided with this change. [Required] [Default(false)] [Filter(eq)] [Introduced in version 19.1]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  

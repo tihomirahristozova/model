@@ -42,7 +42,7 @@ Transportation ordered to specific carrier or vehicle. Entity: Log_Transportatio
 | [AdjustedDocument](Logistics.Shipment.TransportationOrders.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
 | [AssignedToUser](Logistics.Shipment.TransportationOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
 | [Carrier](Logistics.Shipment.TransportationOrders.md#carrier) | [Carriers](Logistics.Shipment.Carriers.md) (nullable) | The carrier chosen for this transportation. null when the transportation is done with own transport. [Filter(multi eq)] |
-| [Crew](Logistics.Shipment.TransportationOrders.md#crew) | [Crews](Applications.Fleet.Crews.md) (nullable) | The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier. [Filter(multi eq)] (Introduced in version 18.2) |
+| [Crew](Logistics.Shipment.TransportationOrders.md#crew) | [Crews](Applications.Fleet.Crews.md) (nullable) | The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier. [Filter(multi eq)] [Introduced in version 18.2] |
 | [CurrencyDirectory](Logistics.Shipment.TransportationOrders.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
 | [DocumentType](Logistics.Shipment.TransportationOrders.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
 | [EnterpriseCompany](Logistics.Shipment.TransportationOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
@@ -331,7 +331,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Crew
 
-The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier. [Filter(multi eq)] (Introduced in version 18.2)
+The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier. [Filter(multi eq)] [Introduced in version 18.2]
 
 _Type_: **[Crews](Applications.Fleet.Crews.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

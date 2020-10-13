@@ -11,7 +11,7 @@ External login providers. Entity: Sec_User_Provider_Logins (Introduced in versio
 | ---- | ---- | --- |
 | [Id](Systems.Security.UserProviderLogins.md#id) | guid |  
 | [ProviderKey](Systems.Security.UserProviderLogins.md#providerkey) | string | The key, which the provider provided for logging the user. [Required] [Filter(multi eq)] 
-| [ProviderName](Systems.Security.UserProviderLogins.md#providername) | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | The system name of the authentication provider. It should be already registered for the domain. [Required] [Filter(eq)] (Introduced in version 20.1) 
+| [ProviderName](Systems.Security.UserProviderLogins.md#providername) | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | The system name of the authentication provider. It should be already registered for the domain. [Required] [Filter(eq)] [Introduced in version 20.1] 
 
 ## References
 
@@ -38,7 +38,7 @@ _Supports Order By_: **False**
 
 ### ProviderName
 
-The system name of the authentication provider. It should be already registered for the domain. [Required] [Filter(eq)] (Introduced in version 20.1)
+The system name of the authentication provider. It should be already registered for the domain. [Required] [Filter(eq)] [Introduced in version 20.1]
 
 _Type_: **[ProviderName](Systems.Security.UserProviderLogins.md#providername)**  
 Allowed values for the [ProviderName](Systems.Security.DomainProviders.md#providername) data attribute  

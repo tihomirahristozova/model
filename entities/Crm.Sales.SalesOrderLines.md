@@ -11,17 +11,17 @@ Sales Orders detail records. Entity: Crm_Sales_Order_Lines
 | ---- | ---- | --- |
 | [DeliveryTermsCode](Crm.Sales.SalesOrderLines.md#deliverytermscode) | [DeliveryTerms](Crm.Sales.SalesOrderLines.md#deliverytermscode) (nullable) | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
 | [GuaranteePeriodDays](Crm.Sales.SalesOrderLines.md#guaranteeperioddays) | int32 (nullable) | Guarantee period in days for the offered product. null for non-serviced products. 
-| [HistoricalDataJson](Crm.Sales.SalesOrderLines.md#historicaldatajson) | string (nullable) | Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. (Introduced in version 19.1) 
+| [HistoricalDataJson](Crm.Sales.SalesOrderLines.md#historicaldatajson) | string (nullable) | Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. [Introduced in version 19.1] 
 | [HistoricalUnitCost](Crm.Sales.SalesOrderLines.md#historicalunitcost) | [Amount](../data-types.md#amount) (nullable) | Used for returning of goods that are sold before the exploitation of the system. [Currency: SalesOrder.DocumentCurrency] [Filter(eq;ge;le)] 
 | [Id](Crm.Sales.SalesOrderLines.md#id) | guid |  
 | [IntrastatTransaction<br />NatureCode](Crm.Sales.SalesOrderLines.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Sales.SalesOrderLines.md#intrastattransactionnaturecode) (nullable) | Transaction nature; used for Intrastat reporting. 
 | [IntrastatTransportModeCode](Crm.Sales.SalesOrderLines.md#intrastattransportmodecode) | [TransportMode](Crm.Sales.SalesOrderLines.md#intrastattransportmodecode) (nullable) | Transport mode; used for Intrastat reporting. 
 | [LineAmount](Crm.Sales.SalesOrderLines.md#lineamount) | [Amount](../data-types.md#amount) | The total amount for the line. Equals to Quantity * Unit_Price, less the discounts. [Currency: SalesOrder.DocumentCurrency] [Required] [Default(0)] 
 | [LineCustomDiscountPercent](Crm.Sales.SalesOrderLines.md#linecustomdiscountpercent) | decimal | User-defined discount for the line. [Required] [Default(0)] [Filter(ge;le)] 
-| [LineFromDate](Crm.Sales.SalesOrderLines.md#linefromdate) | date (nullable) | When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. (Introduced in version 20.1) 
+| [LineFromDate](Crm.Sales.SalesOrderLines.md#linefromdate) | date (nullable) | When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. [Introduced in version 20.1] 
 | [LineNo](Crm.Sales.SalesOrderLines.md#lineno) | int32 | Consecutive number of the line within the sales order. [Required] [Filter(eq)] [ORD] 
 | [LineStandardDiscount<br />Percent](Crm.Sales.SalesOrderLines.md#linestandarddiscountpercent) | decimal | Standard discount for the line. This is automatically computed according to discount conditions. [Required] [Default(0)] [ReadOnly] 
-| [LineToDate](Crm.Sales.SalesOrderLines.md#linetodate) | date (nullable) | When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. (Introduced in version 20.1) 
+| [LineToDate](Crm.Sales.SalesOrderLines.md#linetodate) | date (nullable) | When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. [Introduced in version 20.1] 
 | [Notes](Crm.Sales.SalesOrderLines.md#notes) | string (nullable) | Notes for this SalesOrderLine. 
 | [ParentLineNo](Crm.Sales.SalesOrderLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. [Filter(eq)] 
 | [PersistLot](Crm.Sales.SalesOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. [Required] [Default(false)] [Filter(eq)] 
@@ -30,7 +30,7 @@ Sales Orders detail records. Entity: Crm_Sales_Order_Lines
 | [QuantityBase](Crm.Sales.SalesOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalent of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
 | [RequestedQuantity](Crm.Sales.SalesOrderLines.md#requestedquantity) | [Quantity](../data-types.md#quantity) (nullable) | Quantity requested by customer. [Unit: QuantityUnit] 
 | [RequiredDeliveryDate](Crm.Sales.SalesOrderLines.md#requireddeliverydate) | date (nullable) | The required (contracted) delivery date for the line. [Filter(ge;le)] 
-| [StandardQuantityBase](Crm.Sales.SalesOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2) 
+| [StandardQuantityBase](Crm.Sales.SalesOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
 | [StandardUnitPrice](Crm.Sales.SalesOrderLines.md#standardunitprice) | [Amount](../data-types.md#amount) (nullable) | Standard unit price of the product during the creation of the sales order line. [Currency: SalesOrder.DocumentCurrency] [ReadOnly] 
 | [UnitPrice](Crm.Sales.SalesOrderLines.md#unitprice) | [Amount](../data-types.md#amount) | Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId. [Currency: SalesOrder.DocumentCurrency] [Required] [Default(0)] 
 
@@ -43,7 +43,7 @@ Sales Orders detail records. Entity: Crm_Sales_Order_Lines
 | [IntrastatTransportCountry](Crm.Sales.SalesOrderLines.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)] |
 | [LineDealType](Crm.Sales.SalesOrderLines.md#linedealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice line. If deal type in entered then the invoice creates VAT entry for this deal type. [Filter(multi eq)] |
 | [LineDiscount](Crm.Sales.SalesOrderLines.md#linediscount) | [LineDiscounts](Crm.LineDiscounts.md) (nullable) | The line discount type used to form the Line_Standard_<br />Discount_Percent. [Filter(multi eq) |
-| [LineEndCustomerParty](Crm.Sales.SalesOrderLines.md#lineendcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. [Filter(multi eq)] (Introduced in version 20.1) |
+| [LineEndCustomerParty](Crm.Sales.SalesOrderLines.md#lineendcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. [Filter(multi eq)] [Introduced in version 20.1] |
 | [LineStore](Crm.Sales.SalesOrderLines.md#linestore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store which should be used to issue the goods for the line. null means to use the store from the header. [Filter(multi eq;like)] |
 | [Lot](Crm.Sales.SalesOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Specifies the lot from which the goods should be issued. null means that the lot will be specified at a later stage (store order, etc.). [Filter(multi eq)] |
 | [ParentDocument](Crm.Sales.SalesOrderLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
@@ -104,7 +104,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( obj.Product != null), obj.Product.GuaranteePeriodDays, obj.GuaranteePeriodDays)`
 ### HistoricalDataJson
 
-Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. (Introduced in version 19.1)
+Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale. [Introduced in version 19.1]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -214,7 +214,7 @@ _Default Value_: **0**
 
 ### LineFromDate
 
-When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. (Introduced in version 20.1)
+When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. [Introduced in version 20.1]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -254,7 +254,7 @@ _Front-End Recalc Expressions:_
 `obj.DetermineLineStandardDiscountPercent( obj.Product, obj.LineDiscount, obj.BonusProgram, obj.PromotionalPackage, obj.ReturnForSalesOrderLine)`
 ### LineToDate
 
-When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. (Introduced in version 20.1)
+When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. [Introduced in version 20.1]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -353,7 +353,7 @@ _Front-End Recalc Expressions:_
 `obj.SalesOrder.RequiredDeliveryDate`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
@@ -445,7 +445,7 @@ _Front-End Recalc Expressions:_
 `obj.DetermineLineDiscount( obj.SalesOrder.EnterpriseCompany, obj.SalesOrder.EnterpriseCompanyLocation, obj.RequiredDeliveryDate, obj.SalesOrder.Customer, obj.SalesOrder.ShipToCustomer, obj.SalesOrder.DistributionChannel, obj.SalesOrder.PriceList, obj.Product, obj.Quantity, obj.QuantityUnit, obj.ReturnForSalesOrderLine, obj.BonusProgram, obj.PromotionalPackage, obj.LineDiscount)`
 ### LineEndCustomerParty
 
-The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. [Filter(multi eq)] (Introduced in version 20.1)
+The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. [Filter(multi eq)] [Introduced in version 20.1]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

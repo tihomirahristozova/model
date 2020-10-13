@@ -45,7 +45,7 @@ Contains the headers of the Intrastat declarations, issued by the enterprise com
 | [AccessKey](Finance.Intrastat.Declarations.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
 | [AdjustedDocument](Finance.Intrastat.Declarations.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
 | [AssignedToUser](Finance.Intrastat.Declarations.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
-| [AuthorizedPerson](Finance.Intrastat.Declarations.md#authorizedperson) | [Persons](General.Contacts.Persons.md) (nullable) | The authorized person who submits the intrastat declaration. [Filter(multi eq)] (Introduced in version 18.2) |
+| [AuthorizedPerson](Finance.Intrastat.Declarations.md#authorizedperson) | [Persons](General.Contacts.Persons.md) (nullable) | The authorized person who submits the intrastat declaration. [Filter(multi eq)] [Introduced in version 18.2] |
 | [CurrencyDirectory](Finance.Intrastat.Declarations.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
 | [DocumentType](Finance.Intrastat.Declarations.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
 | [EnterpriseCompany](Finance.Intrastat.Declarations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
@@ -58,7 +58,7 @@ Contains the headers of the Intrastat declarations, issued by the enterprise com
 | [ResponsiblePerson](Finance.Intrastat.Declarations.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
 | [ReverseOfDocument](Finance.Intrastat.Declarations.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
 | [Sequence](Finance.Intrastat.Declarations.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
-| [ThirdDeclaringParty](Finance.Intrastat.Declarations.md#thirddeclaringparty) | [Companies](General.Contacts.Companies.md) | Third declaring party, which holds the electronic signature. This is the company which submits the declaration. [Required] [Filter(multi eq)] (Introduced in version 18.2) |
+| [ThirdDeclaringParty](Finance.Intrastat.Declarations.md#thirddeclaringparty) | [Companies](General.Contacts.Companies.md) | Third declaring party, which holds the electronic signature. This is the company which submits the declaration. [Required] [Filter(multi eq)] [Introduced in version 18.2] |
 | [ToCompanyDivision](Finance.Intrastat.Declarations.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
 | [ToParty](Finance.Intrastat.Declarations.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
 | [UserStatus](Finance.Intrastat.Declarations.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
@@ -394,7 +394,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### AuthorizedPerson
 
-The authorized person who submits the intrastat declaration. [Filter(multi eq)] (Introduced in version 18.2)
+The authorized person who submits the intrastat declaration. [Filter(multi eq)] [Introduced in version 18.2]
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -485,7 +485,7 @@ _Supported Filters_: **EqualsIn**
 
 ### ThirdDeclaringParty
 
-Third declaring party, which holds the electronic signature. This is the company which submits the declaration. [Required] [Filter(multi eq)] (Introduced in version 18.2)
+Third declaring party, which holds the electronic signature. This is the company which submits the declaration. [Required] [Filter(multi eq)] [Introduced in version 18.2]
 
 _Type_: **[Companies](General.Contacts.Companies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

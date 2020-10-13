@@ -1,7 +1,7 @@
 ---
 uid: Communities.SocialReactionsSummary
 ---
-# Communities.SocialReactionsSummary Entity
+# Communities.SocialReactionsSummary View
 
 Summary with the social reactions per comment and dataobject. Entity: Cmm_Social_Reactions_Summary_Indexed_View
 
@@ -16,7 +16,7 @@ Summary with the social reactions per comment and dataobject. Entity: Cmm_Social
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](Communities.SocialReactionsSummary.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | . [Required] [Default(New Guid)] [Filter(multi eq)] |
+| [DataObject](Communities.SocialReactionsSummary.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | . [Required] [Default(New Guid)] [Filter(multi eq)] [Inherited from Sys_Objects_Table.Object_Id] |
 | [SocialComment](Communities.SocialReactionsSummary.md#socialcomment) | [SocialComments](Communities.SocialComments.md) |  |
 
 
@@ -53,27 +53,20 @@ _Supports Order By_: **False**
 
 ### DataObject
 
-. [Required] [Default(New Guid)] [Filter(multi eq)]
+. [Required] [Default(New Guid)] [Filter(multi eq)] [Inherited from Sys_Objects_Table.Object_Id]
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+_Inherited From_: **Sys_Objects_Table.Object_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
 ### SocialComment
 
 _Type_: **[SocialComments](Communities.SocialComments.md)**  
+_Inherited From_: **Cmm_Social_Comments_Table.Social_Comment_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-
-
-## Business Rules
-
-[!list erp.entity=Communities.SocialReactionsSummary erp.type=business-rule default-text="None"]
-
-## Front-End Business Rules
-
-[!list erp.entity=Communities.SocialReactionsSummary erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.TransactionCostCorrectionsSummary
 ---
-# Logistics.Inventory.TransactionCostCorrectionsSummary Entity
+# Logistics.Inventory.TransactionCostCorrectionsSummary View
 
 Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transaction_Cost_Corrections_Summary
 
@@ -18,8 +18,8 @@ Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transact
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [TransactionLine](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] |
-| [TransactionObj](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionobj) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) | The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner] |
+| [TransactionLine](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] [Inherited from Inv_Transaction_<br />Lines_Table.ction_Line_Id] |
+| [TransactionObj](Logistics.Inventory.TransactionCostCorrectionsSummary.md#transactionobj) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) | The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Inherited from Inv_Transaction_<br />Lines_Table.Transaction_Id] ] |
 
 
 ## Attribute Details
@@ -61,28 +61,21 @@ _Supports Order By_: **False**
 
 ### TransactionLine
 
-Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)]
+Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] [Inherited from Inv_Transaction_Lines_Table.Transaction_Line_Id]
 
 _Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
+_Inherited From_: **Inv_Transaction_Lines_Table.Transaction_Line_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
 ### TransactionObj
 
-The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]
+The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Inherited from Inv_Transaction_Lines_Table.Transaction_Id] [Owner]
 
 _Type_: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
+_Inherited From_: **Inv_Transaction_Lines_Table.Transaction_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 
-
-
-## Business Rules
-
-[!list erp.entity=Logistics.Inventory.TransactionCostCorrectionsSummary erp.type=business-rule default-text="None"]
-
-## Front-End Business Rules
-
-[!list erp.entity=Logistics.Inventory.TransactionCostCorrectionsSummary erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

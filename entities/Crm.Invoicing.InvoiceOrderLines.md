@@ -18,7 +18,7 @@ Detail records (lines) of Invoice Orders. Entity: Crm_Invoice_Order_Lines
 | [ProductDescription](Crm.Invoicing.InvoiceOrderLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The description of Product. Initially copied from the name of the Product or from the generating document. [Required] 
 | [Quantity](Crm.Invoicing.InvoiceOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the product to invoice. [Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
 | [QuantityBase](Crm.Invoicing.InvoiceOrderLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
-| [StandardQuantityBase](Crm.Invoicing.InvoiceOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2) 
+| [StandardQuantityBase](Crm.Invoicing.InvoiceOrderLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
 | [UnitPrice](Crm.Invoicing.InvoiceOrderLines.md#unitprice) | [Amount](../data-types.md#amount) | Unit selling price in the unit of measure, specified in Quantity Unit. [Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)] 
 
 ## References
@@ -140,7 +140,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  

@@ -13,13 +13,13 @@ User-defined properties, which can supplement the system properties of almost al
 | [AllowedValuesFilterXML](General.CustomProperties.md#allowedvaluesfilterxml) | string (nullable) | When not null specifies the filter to apply when extracting allowed values from entity. 
 | [Code](General.CustomProperties.md#code) | string | Unique property code. [Required] [Filter(multi eq;like)] [ORD] 
 | [EntityName](General.CustomProperties.md#entityname) | string | The entity for which the property is applicable. [Required] [Filter(eq)] [ORD] 
-| [Hint](General.CustomProperties.md#hint) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The hint, which is displayed alongside the property. [Filter(multi eq;like)] (Introduced in version 20.1) 
+| [Hint](General.CustomProperties.md#hint) | [MultilanguageString](../data-types.md#multilanguagestring) (nullable) | The hint, which is displayed alongside the property. [Filter(multi eq;like)] [Introduced in version 20.1] 
 | [Id](General.CustomProperties.md#id) | guid |  
 | [KeyOrder](General.CustomProperties.md#keyorder) | byte (nullable) | When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis. 
 | [LimitToAllowedValues](General.CustomProperties.md#limittoallowedvalues) | boolean | When true, allows the property to be set only to allowed value. When false, the property can have any value. [Required] [Default(false)] [Filter(eq)] 
 | [MaskLength](General.CustomProperties.md#masklength) | int16 (nullable) | Limits te length of the property value to the specified number of characters. Null means no limitation. 
 | [Name](General.CustomProperties.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this CustomProperty. [Required] [Filter(like)] [ORD] 
-| [Notes](General.CustomProperties.md#notes) | string (nullable) | Notes for this CustomProperty. (Introduced in version 20.1) 
+| [Notes](General.CustomProperties.md#notes) | string (nullable) | Notes for this CustomProperty. [Introduced in version 20.1] 
 | [PropertyType](General.CustomProperties.md#propertytype) | [PropertyType](General.CustomProperties.md#propertytype) | Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date. [Required] [Default("T")] 
 
 ## References
@@ -74,7 +74,7 @@ _Supports Order By_: **True**
 
 ### Hint
 
-The hint, which is displayed alongside the property. [Filter(multi eq;like)] (Introduced in version 20.1)
+The hint, which is displayed alongside the property. [Filter(multi eq;like)] [Introduced in version 20.1]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -121,7 +121,7 @@ _Supports Order By_: **True**
 
 ### Notes
 
-Notes for this CustomProperty. (Introduced in version 20.1)
+Notes for this CustomProperty. [Introduced in version 20.1]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  

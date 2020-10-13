@@ -50,7 +50,7 @@ Represents the physical warehouses. Entity: Inv_Stores
 | [ParentParty](Logistics.Inventory.Stores.md#parentparty) | [Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to |
 | [ResponsibleParty](Logistics.Inventory.Stores.md#responsibleparty) | [Parties](General.Contacts.Parties.md) (nullable) | Primary responsible party (usually employee) for the stock in the store. [Filter(multi eq)] |
 | [StoreGroup](Logistics.Inventory.Stores.md#storegroup) | [StoreGroups](Logistics.Inventory.StoreGroups.md) | The store group, to which this store belongs. [Required] [Filter(multi eq)] |
-| [Warehouse](Logistics.Inventory.Stores.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) (nullable) | Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. [Filter(multi eq)] (Introduced in version 20.1) |
+| [Warehouse](Logistics.Inventory.Stores.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) (nullable) | Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. [Filter(multi eq)] [Introduced in version 20.1] |
 
 ## Child Collections
 
@@ -359,7 +359,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Warehouse
 
-Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. [Filter(multi eq)] (Introduced in version 20.1)
+Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. [Filter(multi eq)] [Introduced in version 20.1]
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

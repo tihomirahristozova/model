@@ -11,7 +11,7 @@ Describes the way of payment. For example: in cash, by bank transfer, with credi
 | ---- | ---- | --- |
 | [Code](Finance.Payments.PaymentTypes.md#code) | string | The payment type unique code. [Required] [Filter(eq;like)] [ORD] 
 | [Id](Finance.Payments.PaymentTypes.md#id) | guid |  
-| [IsActive](Finance.Payments.PaymentTypes.md#isactive) | boolean | Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1) 
+| [IsActive](Finance.Payments.PaymentTypes.md#isactive) | boolean | Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] [Introduced in version 19.1] 
 | [Name](Finance.Payments.PaymentTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentType. [Required] [Filter(like)] [ORD] 
 | [SystemType](Finance.Payments.PaymentTypes.md#systemtype) | [SystemType](Finance.Payments.PaymentTypes.md#systemtype) (nullable) | Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer. 
 
@@ -41,7 +41,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] (Introduced in version 19.1)
+Indicates wheather the payment type is active and usable for choosing in new documents. [Required] [Default(true)] [Filter(eq)] [Introduced in version 19.1]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  

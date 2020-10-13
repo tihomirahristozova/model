@@ -9,10 +9,10 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationSecretHash](Systems.Security.TrustedApplications.md#applicationsecrethash) | string (nullable) | Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. (Introduced in version 20.1) 
+| [ApplicationSecretHash](Systems.Security.TrustedApplications.md#applicationsecrethash) | string (nullable) | Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. [Introduced in version 20.1] 
 | [ApplicationUri](Systems.Security.TrustedApplications.md#applicationuri) | string | Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app". [Required] [Filter(eq)] 
 | [BasicAuthenticationAllowed](Systems.Security.TrustedApplications.md#basicauthenticationallowed) | boolean | Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user. [Required] [Default(false)] [Filter(eq)] 
-| [ClientType](Systems.Security.TrustedApplications.md#clienttype) | [ClientType](Systems.Security.TrustedApplications.md#clienttype) | Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). [Required] [Default("C")] (Introduced in version 20.1) 
+| [ClientType](Systems.Security.TrustedApplications.md#clienttype) | [ClientType](Systems.Security.TrustedApplications.md#clienttype) | Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). [Required] [Default("C")] [Introduced in version 20.1] 
 | [CreationTimeUtc](Systems.Security.TrustedApplications.md#creationtimeutc) | datetime | Date and time (in UTC) when the application was registered. [Required] [Default(NowUtc)] [Filter(eq;ge;le)] 
 | [Id](Systems.Security.TrustedApplications.md#id) | guid |  
 | [ImpersonateAsCommunity<br />UserAllowed](Systems.Security.TrustedApplications.md#impersonateascommunityuserallowed) | boolean | Allows the application to request login from external users and operate on their behalf. [Required] [Default(false)] [Filter(eq)] 
@@ -22,7 +22,7 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 | [IsEnabled](Systems.Security.TrustedApplications.md#isenabled) | boolean | Specifies whether the application is enabled for login. [Required] [Default(true)] [Filter(eq)] 
 | [Name](Systems.Security.TrustedApplications.md#name) | string | The multi-language name of the application. [Required] [Filter(eq;like)] 
 | [Notes](Systems.Security.TrustedApplications.md#notes) | string (nullable) | Notes for this TrustedApplication. 
-| [Scope](Systems.Security.TrustedApplications.md#scope) | string (nullable) | The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). (Introduced in version 20.1) 
+| [Scope](Systems.Security.TrustedApplications.md#scope) | string (nullable) | The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). [Introduced in version 20.1] 
 | [SystemUserAllowed](Systems.Security.TrustedApplications.md#systemuserallowed) | boolean | Allows this application to logon as a service. [Required] [Default(false)] [Filter(eq)] 
 | [SystemUserLoginUrl](Systems.Security.TrustedApplications.md#systemuserloginurl) | string (nullable) | The URL, which will be used by the login process, when the application logs in as a service. 
 
@@ -43,7 +43,7 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 
 ### ApplicationSecretHash
 
-Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. (Introduced in version 20.1)
+Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. [Introduced in version 20.1]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -68,7 +68,7 @@ _Default Value_: **False**
 
 ### ClientType
 
-Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). [Required] [Default("C")] (Introduced in version 20.1)
+Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). [Required] [Default("C")] [Introduced in version 20.1]
 
 _Type_: **[ClientType](Systems.Security.TrustedApplications.md#clienttype)**  
 Allowed values for the [ClientType](Systems.Security.TrustedApplications.md#clienttype) data attribute  
@@ -159,7 +159,7 @@ _Supports Order By_: **False**
 
 ### Scope
 
-The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). (Introduced in version 20.1)
+The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). [Introduced in version 20.1]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  

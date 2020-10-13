@@ -17,8 +17,8 @@ Contains contacting mechanisms - telephone numbers, addresses, web sites, etc. C
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdministrativeRegion](General.Contacts.ContactMechanisms.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2) |
-| [GeoPoint](General.Contacts.ContactMechanisms.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2) |
+| [AdministrativeRegion](General.Contacts.ContactMechanisms.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] [Introduced in version 18.2] |
+| [GeoPoint](General.Contacts.ContactMechanisms.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] [Introduced in version 18.2] |
 
 
 ## Attribute Details
@@ -64,14 +64,14 @@ _Supports Order By_: **False**
 
 ### AdministrativeRegion
 
-The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2)
+The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] [Introduced in version 18.2]
 
 _Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### GeoPoint
 
-The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] (Introduced in version 18.2)
+The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. [Filter(multi eq)] [Introduced in version 18.2]
 
 _Type_: **[GeoPoints](General.Geography.GeoPoints.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

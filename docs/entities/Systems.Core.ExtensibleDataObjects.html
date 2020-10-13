@@ -93,7 +93,7 @@
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime (nullable)</td>
-<td>The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. [Filter(ge;le)] (Introduced in version 19.1)</td>
+<td>The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. [Filter(ge;le)] [Introduced in version 19.1]</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#entityitemid">EntityItemId</a></td>
@@ -113,12 +113,12 @@
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#isdeleted">IsDeleted</a></td>
 <td>boolean</td>
-<td>Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1)</td>
+<td>Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. [Required] [Default(false)] [Filter(eq)] [Introduced in version 19.1]</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#lastupdatetimeutc">LastUpdateTimeUtc</a></td>
 <td>datetime (nullable)</td>
-<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] (Introduced in version 19.1)</td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [Introduced in version 19.1]</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#latestversion">LatestVersion</a></td>
@@ -140,12 +140,12 @@
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#creationuser">CreationUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user, who created the object represented by this system object . null means that it is unknown. [Filter(multi eq)] (Introduced in version 19.1)</td>
+<td>The user, who created the object represented by this system object . null means that it is unknown. [Filter(multi eq)] [Introduced in version 19.1]</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#lastupdateuser">LastUpdateUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user, who made the last modification of the object represented by this system object . null means that it is unknown. [Filter(multi eq)] (Introduced in version 19.1)</td>
+<td>The user, who made the last modification of the object represented by this system object . null means that it is unknown. [Filter(multi eq)] [Introduced in version 19.1]</td>
 </tr>
 </tbody>
 </table>
@@ -173,7 +173,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. [Filter(ge;le)] (Introduced in version 19.1)</p>
+<p>The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. [Filter(ge;le)] [Introduced in version 19.1]</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -192,13 +192,13 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdeleted">IsDeleted</h3>
-<p>Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. [Required] [Default(false)] [Filter(eq)] (Introduced in version 19.1)</p>
+<p>Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. [Required] [Default(false)] [Filter(eq)] [Introduced in version 19.1]</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="lastupdatetimeutc">LastUpdateTimeUtc</h3>
-<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] (Introduced in version 19.1)</p>
+<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [Introduced in version 19.1]</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -210,11 +210,11 @@
 <em>Default Value</em>: <strong>1</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>
-<p>The user, who created the object represented by this system object . null means that it is unknown. [Filter(multi eq)] (Introduced in version 19.1)</p>
+<p>The user, who created the object represented by this system object . null means that it is unknown. [Filter(multi eq)] [Introduced in version 19.1]</p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lastupdateuser">LastUpdateUser</h3>
-<p>The user, who made the last modification of the object represented by this system object . null means that it is unknown. [Filter(multi eq)] (Introduced in version 19.1)</p>
+<p>The user, who made the last modification of the object represented by this system object . null means that it is unknown. [Filter(multi eq)] [Introduced in version 19.1]</p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>

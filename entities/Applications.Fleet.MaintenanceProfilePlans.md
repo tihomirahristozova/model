@@ -10,7 +10,7 @@ Contains the plans, included in the maintenance profile. Entity: Fleet_Maintenan
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Fleet.MaintenanceProfilePlans.md#id) | guid |  
-| [IsActive](Applications.Fleet.MaintenanceProfilePlans.md#isactive) | boolean | True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. [Required] [Default(true)] (Introduced in version 18.2) 
+| [IsActive](Applications.Fleet.MaintenanceProfilePlans.md#isactive) | boolean | True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. [Required] [Default(true)] [Introduced in version 18.2] 
 | [Notes](Applications.Fleet.MaintenanceProfilePlans.md#notes) | string (nullable) | Notes for this MaintenanceProfilePlan. 
 
 ## References
@@ -31,7 +31,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. [Required] [Default(true)] (Introduced in version 18.2)
+True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. [Required] [Default(true)] [Introduced in version 18.2]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  

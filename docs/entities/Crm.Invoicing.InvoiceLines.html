@@ -143,7 +143,7 @@
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 (nullable)</td>
-<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2)</td>
+<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. [Introduced in version 18.2]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#productdescription">ProductDescription</a></td>
@@ -168,7 +168,7 @@
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#unitprice">UnitPrice</a></td>
@@ -215,7 +215,7 @@
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
-<td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2)</td>
+<td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] [Introduced in version 18.2]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#parentsalesorderline">ParentSalesOrderLine</a></td>
@@ -537,7 +537,7 @@ Generic enum type for TransportMode properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. (Introduced in version 18.2)</p>
+<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. [Introduced in version 18.2]</p>
 <p><em>Type</em>: <strong>int32 (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -569,7 +569,7 @@ Generic enum type for TransportMode properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -615,7 +615,7 @@ Generic enum type for TransportMode properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.DetermineLineDiscount( Convert( ( obj.Invoice.DeliveryDate ?? obj.Invoice.DocumentDate), Nullable</code>1), obj.Invoice.Customer, obj.Product, obj.Quantity, obj.Invoice.EnterpriseCompany, obj.Invoice.EnterpriseCompanyLocation, IIF( ( obj.SalesOrder == null), null, obj.SalesOrder.DistributionChannel), IIF( ( obj.SalesOrder == null), null, obj.SalesOrder.PriceList))`</p>
 <h3 id="parentdocument">ParentDocument</h3>
-<p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] (Introduced in version 18.2)</p>
+<p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] [Introduced in version 18.2]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentsalesorderline">ParentSalesOrderLine</h3>

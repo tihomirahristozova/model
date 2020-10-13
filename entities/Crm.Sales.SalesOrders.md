@@ -21,8 +21,8 @@ Sales order document headers. Entity: Crm_Sales_Orders
 | [DocumentNotes](Crm.Sales.SalesOrders.md#documentnotes) | string (nullable) | Notes for this Document 
 | [DocumentVersion](Crm.Sales.SalesOrders.md#documentversion) | int32 | [Filter(eq;ge;le)] 
 | [EntityName](Crm.Sales.SalesOrders.md#entityname) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
-| [FiscalSalesNumber](Crm.Sales.SalesOrders.md#fiscalsalesnumber) | string (nullable) | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. [Filter(multi eq;like)] [ReadOnly] (Introduced in version 19.1) 
-| [FromDate](Crm.Sales.SalesOrders.md#fromdate) | date (nullable) | When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. (Introduced in version 20.1) 
+| [FiscalSalesNumber](Crm.Sales.SalesOrders.md#fiscalsalesnumber) | string (nullable) | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. [Filter(multi eq;like)] [ReadOnly] [Introduced in version 19.1] 
+| [FromDate](Crm.Sales.SalesOrders.md#fromdate) | date (nullable) | When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. [Introduced in version 20.1] 
 | [Id](Crm.Sales.SalesOrders.md#id) | guid |  
 | [IntrastatTransaction<br />NatureCode](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) (nullable) | Transaction nature; used for Intrastat reporting. 
 | [IntrastatTransportModeCode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) | [TransportMode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) (nullable) | Transport mode; used for Intrastat reporting. 
@@ -40,7 +40,7 @@ Sales order document headers. Entity: Crm_Sales_Orders
 | [ReleaseTime](Crm.Sales.SalesOrders.md#releasetime) | datetime (nullable) | Exact time, when the document was first released [Filter(ge;le)] 
 | [RequiredDeliveryDate](Crm.Sales.SalesOrders.md#requireddeliverydate) | date (nullable) | The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term. [Filter(ge;le)] 
 | [State](Crm.Sales.SalesOrders.md#state) | [DocumentState](Crm.Sales.SalesOrders.md#state) | 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)] 
-| [ToDate](Crm.Sales.SalesOrders.md#todate) | date (nullable) | When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. (Introduced in version 20.1) 
+| [ToDate](Crm.Sales.SalesOrders.md#todate) | date (nullable) | When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. [Introduced in version 20.1] 
 | [Void](Crm.Sales.SalesOrders.md#void) | boolean | True if the document is null and void [Required][Filter(eq)] 
 | [VoidReason](Crm.Sales.SalesOrders.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user 
 | [VoidTime](Crm.Sales.SalesOrders.md#voidtime) | datetime (nullable) | Date/time when the document has become void 
@@ -61,10 +61,10 @@ Sales order document headers. Entity: Crm_Sales_Orders
 | [DistributionChannel](Crm.Sales.SalesOrders.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | The distribution channel, that is used to deliver the products. [Filter(multi eq)] |
 | [DocumentCurrency](Crm.Sales.SalesOrders.md#documentcurrency) | [Currencies](General.Currencies.md) | The currency of the document; e.g. the currency of the amounts in the document. [Required] [Filter(multi eq)] |
 | [DocumentType](Crm.Sales.SalesOrders.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
-| [EndCustomerParty](Crm.Sales.SalesOrders.md#endcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. [Filter(multi eq)] (Introduced in version 20.1) |
+| [EndCustomerParty](Crm.Sales.SalesOrders.md#endcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. [Filter(multi eq)] [Introduced in version 20.1] |
 | [EnterpriseCompany](Crm.Sales.SalesOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
 | [EnterpriseCompanyLocation](Crm.Sales.SalesOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
-| [FiscalPrinterPosDevice](Crm.Sales.SalesOrders.md#fiscalprinterposdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1) |
+| [FiscalPrinterPosDevice](Crm.Sales.SalesOrders.md#fiscalprinterposdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. [Filter(multi eq)] [Introduced in version 19.1] |
 | [FromCompanyDivision](Crm.Sales.SalesOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
 | [FromParty](Crm.Sales.SalesOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
 | [IntrastatTransportCountry](Crm.Sales.SalesOrders.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)] |
@@ -72,9 +72,9 @@ Sales order document headers. Entity: Crm_Sales_Orders
 | [Parent](Crm.Sales.SalesOrders.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
 | [PaymentAccount](Crm.Sales.SalesOrders.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, the payment account, where the payment is expected. null=no expectation for account. [Filter(multi eq)] |
 | [PaymentType](Crm.Sales.SalesOrders.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null specifies the payment type for the sales order. [Filter(multi eq)] |
-| [PosLocation](Crm.Sales.SalesOrders.md#poslocation) | [Locations](Crm.Pos.Locations.md) (nullable) | For POS sales, specifies the POS location, in which the sale is performed. null when the sales is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1) |
-| [PosOperator](Crm.Sales.SalesOrders.md#posoperator) | [Operators](Crm.Pos.Operators.md) (nullable) | For POS sales, specifies the POS operator, who created the sale. null when the sale is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1) |
-| [PosTerminal](Crm.Sales.SalesOrders.md#posterminal) | [Terminals](Crm.Pos.Terminals.md) (nullable) | For POS sales, specifies the POS terminal, on which the sale is entered. null when the sales is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1) |
+| [PosLocation](Crm.Sales.SalesOrders.md#poslocation) | [Locations](Crm.Pos.Locations.md) (nullable) | For POS sales, specifies the POS location, in which the sale is performed. null when the sales is not a POS sale. [Filter(multi eq)] [Introduced in version 19.1] |
+| [PosOperator](Crm.Sales.SalesOrders.md#posoperator) | [Operators](Crm.Pos.Operators.md) (nullable) | For POS sales, specifies the POS operator, who created the sale. null when the sale is not a POS sale. [Filter(multi eq)] [Introduced in version 19.1] |
+| [PosTerminal](Crm.Sales.SalesOrders.md#posterminal) | [Terminals](Crm.Pos.Terminals.md) (nullable) | For POS sales, specifies the POS terminal, on which the sale is entered. null when the sales is not a POS sale. [Filter(multi eq)] [Introduced in version 19.1] |
 | [PriceList](Crm.Sales.SalesOrders.md#pricelist) | [PriceLists](Crm.PriceLists.md) (nullable) | The price list to be used for determining product prices in the lines. [Filter(multi eq)] |
 | [PrimeCauseDocument](Crm.Sales.SalesOrders.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
 | [ResponsiblePerson](Crm.Sales.SalesOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
@@ -230,7 +230,7 @@ _Supports Order By_: **True**
 
 ### FiscalSalesNumber
 
-Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. [Filter(multi eq;like)] [ReadOnly] (Introduced in version 19.1)
+Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. [Filter(multi eq;like)] [ReadOnly] [Introduced in version 19.1]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -238,7 +238,7 @@ _Supports Order By_: **False**
 
 ### FromDate
 
-When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. (Introduced in version 20.1)
+When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. [Introduced in version 20.1]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -459,7 +459,7 @@ _Default Value_: **0**
 
 ### ToDate
 
-When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. (Introduced in version 20.1)
+When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. [Introduced in version 20.1]
 
 _Type_: **date (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -591,7 +591,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### EndCustomerParty
 
-The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. [Filter(multi eq)] (Introduced in version 20.1)
+The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. [Filter(multi eq)] [Introduced in version 20.1]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -614,7 +614,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### FiscalPrinterPosDevice
 
-For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1)
+For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. [Filter(multi eq)] [Introduced in version 19.1]
 
 _Type_: **[Devices](Crm.Pos.Devices.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -678,21 +678,21 @@ _Front-End Recalc Expressions:_
 `obj.PaymentPlans.Select( c => c.PaymentType).Distinct( ).OnlyIfSingle( )`
 ### PosLocation
 
-For POS sales, specifies the POS location, in which the sale is performed. null when the sales is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1)
+For POS sales, specifies the POS location, in which the sale is performed. null when the sales is not a POS sale. [Filter(multi eq)] [Introduced in version 19.1]
 
 _Type_: **[Locations](Crm.Pos.Locations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosOperator
 
-For POS sales, specifies the POS operator, who created the sale. null when the sale is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1)
+For POS sales, specifies the POS operator, who created the sale. null when the sale is not a POS sale. [Filter(multi eq)] [Introduced in version 19.1]
 
 _Type_: **[Operators](Crm.Pos.Operators.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosTerminal
 
-For POS sales, specifies the POS terminal, on which the sale is entered. null when the sales is not a POS sale. [Filter(multi eq)] (Introduced in version 19.1)
+For POS sales, specifies the POS terminal, on which the sale is entered. null when the sales is not a POS sale. [Filter(multi eq)] [Introduced in version 19.1]
 
 _Type_: **[Terminals](Crm.Pos.Terminals.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

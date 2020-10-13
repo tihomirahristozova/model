@@ -15,7 +15,7 @@ Store reconciliations (physical counting) detail lines. Each line contains the r
 | [Notes](Logistics.Inventory.ReconciliationLines.md#notes) | string (nullable) | Notes for this ReconciliationLine. 
 | [Quantity](Logistics.Inventory.ReconciliationLines.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity found at the reconciliation, . [Unit: QuantityUnit] [Required] [Filter(ge;le)] 
 | [QuantityBase](Logistics.Inventory.ReconciliationLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | Quantity found at the reconciliation, expressed in base measurement units. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] 
-| [StandardQuantityBase](Logistics.Inventory.ReconciliationLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2) 
+| [StandardQuantityBase](Logistics.Inventory.ReconciliationLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
 | [TransactionTimestamp](Logistics.Inventory.ReconciliationLines.md#transactiontimestamp) | datetime (nullable) | Exact time when the transaction occurred. 
 
 ## References
@@ -92,7 +92,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  

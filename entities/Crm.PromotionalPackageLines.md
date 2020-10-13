@@ -20,7 +20,7 @@ Detail records (lines) of promotional package definition. Entity: Crm_Promotiona
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Lot](Crm.PromotionalPackageLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Product lot number in the promotional package. [Filter(multi eq)] (Introduced in version 19.1) |
+| [Lot](Crm.PromotionalPackageLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Product lot number in the promotional package. [Filter(multi eq)] [Introduced in version 19.1] |
 | [Product](Crm.PromotionalPackageLines.md#product) | [Products](General.Products.Products.md) | The product, which is included in the promotional package. [Required] [Filter(multi eq)] |
 | [PromotionalPackage](Crm.PromotionalPackageLines.md#promotionalpackage) | [PromotionalPackages](Crm.PromotionalPackages.md) | The [PromotionalPackage](Crm.PromotionalPackageLines.md#promotionalpackage) to which this PromotionalPackageLine belongs. [Required] [Filter(multi eq)] [Owner] |
 | [UnitPriceCurrency](Crm.PromotionalPackageLines.md#unitpricecurrency) | [Currencies](General.Currencies.md) (nullable) | Currency of the unit price. null if the package specifies only discount. [Filter(multi eq)] |
@@ -96,7 +96,7 @@ _Supports Order By_: **False**
 
 ### Lot
 
-The Product lot number in the promotional package. [Filter(multi eq)] (Introduced in version 19.1)
+The Product lot number in the promotional package. [Filter(multi eq)] [Introduced in version 19.1]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

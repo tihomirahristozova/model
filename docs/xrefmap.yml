@@ -293,7 +293,7 @@ references:
   name: Communities.SocialReactions Entity
   href: entities/Communities.SocialReactions.html
 - uid: Communities.SocialReactionsSummary
-  name: Communities.SocialReactionsSummary Entity
+  name: Communities.SocialReactionsSummary View
   href: entities/Communities.SocialReactionsSummary.html
 - uid: Crm
   name: Crm Namespace
@@ -650,7 +650,7 @@ references:
   name: Finance.Payments.BulkPaymentOrders Entity
   href: entities/Finance.Payments.BulkPaymentOrders.html
 - uid: Finance.Payments.OrderBalances
-  name: Finance.Payments.OrderBalances Entity
+  name: Finance.Payments.OrderBalances View
   href: entities/Finance.Payments.OrderBalances.html
 - uid: Finance.Payments.PaymentAccounts
   name: Finance.Payments.PaymentAccounts Entity
@@ -1016,16 +1016,16 @@ references:
   name: Logistics.Inventory.CostCorrectionsOptions Entity
   href: entities/Logistics.Inventory.CostCorrectionsOptions.html
 - uid: Logistics.Inventory.CurrentBalances
-  name: Logistics.Inventory.CurrentBalances Entity
+  name: Logistics.Inventory.CurrentBalances View
   href: entities/Logistics.Inventory.CurrentBalances.html
 - uid: Logistics.Inventory.DemandManagement
   name: Logistics.Inventory.DemandManagement Namespace
   href: entities/Logistics.Inventory.DemandManagement.html
 - uid: Logistics.Inventory.DemandManagement.AvailableToPromise
-  name: Logistics.Inventory.DemandManagement.AvailableToPromise Entity
+  name: Logistics.Inventory.DemandManagement.AvailableToPromise View
   href: entities/Logistics.Inventory.DemandManagement.AvailableToPromise.html
 - uid: Logistics.Inventory.DemandManagement.AvailableToPromiseByLots
-  name: Logistics.Inventory.DemandManagement.AvailableToPromiseByLots Entity
+  name: Logistics.Inventory.DemandManagement.AvailableToPromiseByLots View
   href: entities/Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.html
 - uid: Logistics.Inventory.Lots
   name: Logistics.Inventory.Lots Entity
@@ -1067,7 +1067,7 @@ references:
   name: Logistics.Inventory.StoreOrderLines Entity
   href: entities/Logistics.Inventory.StoreOrderLines.html
 - uid: Logistics.Inventory.StoreOrderLinesUnfulfilledView
-  name: Logistics.Inventory.StoreOrderLinesUnfulfilledView Entity
+  name: Logistics.Inventory.StoreOrderLinesUnfulfilledView View
   href: entities/Logistics.Inventory.StoreOrderLinesUnfulfilledView.html
 - uid: Logistics.Inventory.StoreOrders
   name: Logistics.Inventory.StoreOrders Entity
@@ -1091,7 +1091,7 @@ references:
   name: Logistics.Inventory.SupplySchemata Entity
   href: entities/Logistics.Inventory.SupplySchemata.html
 - uid: Logistics.Inventory.TransactionCostCorrectionsSummary
-  name: Logistics.Inventory.TransactionCostCorrectionsSummary Entity
+  name: Logistics.Inventory.TransactionCostCorrectionsSummary View
   href: entities/Logistics.Inventory.TransactionCostCorrectionsSummary.html
 - uid: Logistics.Inventory.TransactionEntryTemplates
   name: Logistics.Inventory.TransactionEntryTemplates Entity
@@ -1463,10 +1463,10 @@ references:
   name: Systems.Core Namespace
   href: entities/Systems.Core.html
 - uid: Systems.Core.AttributeChanges
-  name: Systems.Core.AttributeChanges Entity
+  name: Systems.Core.AttributeChanges View
   href: entities/Systems.Core.AttributeChanges.html
 - uid: Systems.Core.AttributeChangesHistory
-  name: Systems.Core.AttributeChangesHistory Entity
+  name: Systems.Core.AttributeChangesHistory View
   href: entities/Systems.Core.AttributeChangesHistory.html
 - uid: Systems.Core.AuditLogEntries
   name: Systems.Core.AuditLogEntries Entity
@@ -1606,6 +1606,3 @@ references:
 - uid: Systems.Workflow.Routes
   name: Systems.Workflow.Routes Entity
   href: entities/Systems.Workflow.Routes.html
-- uid: Wms.WarehouseOrderExecutions
-  name: Wms.WarehouseOrderExecutions
-  href: entities/Wms.WarehouseOrderExecutions.html

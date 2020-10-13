@@ -1,7 +1,7 @@
 ---
 uid: Logistics.Inventory.DemandManagement.AvailableToPromiseByLots
 ---
-# Logistics.Inventory.DemandManagement.AvailableToPromiseByLots Entity
+# Logistics.Inventory.DemandManagement.AvailableToPromiseByLots View
 
 Quantities available to promise for the different date periods. Also contains the current and projected availability. The algorithm accounts for the quantities for each lot and separately for the quantities without lot. Entity: Inv_Demand_Management_ATP_By_Lots
 
@@ -20,10 +20,10 @@ Quantities available to promise for the different date periods. Also contains th
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Тhe Enterprise Company, for which the quantities are calculated. [Required] [Filter(multi eq)] |
-| [Lot](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, for which the quantities are calculated. [Filter(multi eq)] |
-| [Product](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#product) | [Products](General.Products.Products.md) | The Product, for which the quantities are calculated. [Required] [Filter(multi eq)] |
-| [Store](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#store) | [Stores](Logistics.Inventory.Stores.md) | The Store, for which the quantities are calculated. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Тhe Enterprise Company, for which the quantities are calculated. [Required] [Filter(multi eq)] [Inherited from Gen_Documents_Table.Enterprise_Company_Id] |
+| [Lot](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, for which the quantities are calculated. [Filter(multi eq)] [Inherited from Inv_Store_Order_<br />Lines_Table.] |
+| [Product](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#product) | [Products](General.Products.Products.md) | The Product, for which the quantities are calculated. [Required] [Filter(multi eq)] [Inherited from Inv_Store_Order_<br />Lines_Table.t_Id] |
+| [Store](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#store) | [Stores](Logistics.Inventory.Stores.md) | The Store, for which the quantities are calculated. [Required] [Filter(multi eq)] [Inherited from Inv_Store_Orders_Table.Store_Id] |
 
 
 ## Attribute Details
@@ -81,41 +81,36 @@ _Supports Order By_: **False**
 
 ### EnterpriseCompany
 
-Тhe Enterprise Company, for which the quantities are calculated. [Required] [Filter(multi eq)]
+Тhe Enterprise Company, for which the quantities are calculated. [Required] [Filter(multi eq)] [Inherited from Gen_Documents_Table.Enterprise_Company_Id]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Inherited From_: **Gen_Documents_Table.Enterprise_Company_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 
-The Lot, for which the quantities are calculated. [Filter(multi eq)]
+The Lot, for which the quantities are calculated. [Filter(multi eq)] [Inherited from Inv_Store_Order_Lines_Table.Lot_Id]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Inherited From_: **Inv_Store_Order_Lines_Table.Lot_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-The Product, for which the quantities are calculated. [Required] [Filter(multi eq)]
+The Product, for which the quantities are calculated. [Required] [Filter(multi eq)] [Inherited from Inv_Store_Order_Lines_Table.Product_Id]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Inherited From_: **Inv_Store_Order_Lines_Table.Product_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
 
-The Store, for which the quantities are calculated. [Required] [Filter(multi eq)]
+The Store, for which the quantities are calculated. [Required] [Filter(multi eq)] [Inherited from Inv_Store_Orders_Table.Store_Id]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
+_Inherited From_: **Inv_Store_Orders_Table.Store_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 
-
-
-## Business Rules
-
-[!list erp.entity=Logistics.Inventory.DemandManagement.AvailableToPromiseByLots erp.type=business-rule default-text="None"]
-
-## Front-End Business Rules
-
-[!list erp.entity=Logistics.Inventory.DemandManagement.AvailableToPromiseByLots erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

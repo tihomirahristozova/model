@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Logistics.Inventory.TransactionCostCorrectionsSummary Entity | ERP.net Domain Model </title>
+    <title>Logistics.Inventory.TransactionCostCorrectionsSummary View | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Logistics.Inventory.TransactionCostCorrectionsSummary Entity | ERP.net Domain Model ">
+    <meta name="title" content="Logistics.Inventory.TransactionCostCorrectionsSummary View | ERP.net Domain Model ">
     <meta name="generator" content="docfx 1.0.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -77,7 +77,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Logistics.Inventory.TransactionCostCorrectionsSummary">
-<h1 id="logisticsinventorytransactioncostcorrectionssummary-entity">Logistics.Inventory.TransactionCostCorrectionsSummary Entity</h1>
+<h1 id="logisticsinventorytransactioncostcorrectionssummary-view">Logistics.Inventory.TransactionCostCorrectionsSummary View</h1>
 
 <p>Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transaction_Cost_Corrections_Summary</p>
 <h2 id="attributes">Attributes</h2>
@@ -125,12 +125,12 @@
 <tr>
 <td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#transactionline">TransactionLine</a></td>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></td>
-<td>Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)]</td>
+<td>Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] [Inherited from Inv_Transaction_<br>Lines_Table.ction_Line_Id]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html#transactionobj">TransactionObj</a></td>
 <td><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a></td>
-<td>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Inherited from Inv_Transaction_<br>Lines_Table.Transaction_Id] ]</td>
 </tr>
 </tbody>
 </table>
@@ -157,18 +157,16 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="transactionline">TransactionLine</h3>
-<p>Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)]</p>
+<p>Unique transaction line id. [Required] [Default(New Guid)] [Filter(multi eq)] [Inherited from Inv_Transaction_Lines_Table.Transaction_Line_Id]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></strong><br>
+<em>Inherited From</em>: <strong>Inv_Transaction_Lines_Table.Transaction_Line_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="transactionobj">TransactionObj</h3>
-<p>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<p>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Inherited from Inv_Transaction_Lines_Table.Transaction_Id] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a></strong><br>
+<em>Inherited From</em>: <strong>Inv_Transaction_Lines_Table.Transaction_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
-<h2 id="business-rules">Business Rules</h2>
-<p>None</p>
-<h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>None</p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_TransactionCostCorrectionsSummary?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_TransactionCostCorrectionsSummary?$top=10</a></p>

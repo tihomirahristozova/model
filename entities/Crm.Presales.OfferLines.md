@@ -23,7 +23,7 @@ Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 | [Quantity](Crm.Presales.OfferLines.md#quantity) | [Quantity](../data-types.md#quantity) | Quantity offered. [Unit: QuantityUnit] [Required] [Default(1)] 
 | [QuantityBase](Crm.Presales.OfferLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
 | [RequiredDeliveryDate](Crm.Presales.OfferLines.md#requireddeliverydate) | date (nullable) | Date, when the delivery is required. Alternative to Delivery Term Days. When null, Delivery Term Days is used. 
-| [StandardQuantityBase](Crm.Presales.OfferLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2) 
+| [StandardQuantityBase](Crm.Presales.OfferLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
 | [UnitPrice](Crm.Presales.OfferLines.md#unitprice) | [Amount](../data-types.md#amount) | The unit price of the offered product. It is specified in the measurement unit of Quantity. [Currency: Offer.DocumentCurrency] [Required] [Default(0)] 
 | [Variant](Crm.Presales.OfferLines.md#variant) | string (nullable) | Name or number of variant of the whole offer. When multiple lines have the same variant, they are selected for ordering together. 
 
@@ -192,7 +192,7 @@ _Front-End Recalc Expressions:_
 `obj.Offer.RequiredDeliveryDate`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  

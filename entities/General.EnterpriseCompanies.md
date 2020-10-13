@@ -9,15 +9,15 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BIStartDate](General.EnterpriseCompanies.md#bistartdate) | datetime (nullable) | Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". [Filter(eq)] (Introduced in version 18.2) 
+| [BIStartDate](General.EnterpriseCompanies.md#bistartdate) | datetime (nullable) | Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". [Filter(eq)] [Introduced in version 18.2] 
 | [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. [Required] [Default("AVG")] 
 | [DefaultCustomer<br />CreditLimitBase](General.EnterpriseCompanies.md#defaultcustomercreditlimitbase) | [Amount](../data-types.md#amount) (nullable) | Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. [Currency: BaseCurrency] [Filter(eq;like)] 
 | [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) | [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) (nullable) | The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). [Default("en")] 
 | [EditPeriodStartDate](General.EnterpriseCompanies.md#editperiodstartdate) | datetime (nullable) | Start date of the priod when the documents can be edited. 
 | [Id](General.EnterpriseCompanies.md#id) | guid |  
-| [IsActive](General.EnterpriseCompanies.md#isactive) | boolean | Indicates whether the current Enterprise company  is active. [Required] [Default(true)] [Filter(multi eq)] (Introduced in version 20.1) 
-| [PrintImagesRetentionMonths](General.EnterpriseCompanies.md#printimagesretentionmonths) | int32 | A period of months for which the printed images of the documents will be kept. [Required] [Default(60)] [Filter(multi eq;ge;le)] (Introduced in version 20.1) 
-| [UIBaseColor](General.EnterpriseCompanies.md#uibasecolor) | int32 (nullable) | When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. (Introduced in version 18.2) 
+| [IsActive](General.EnterpriseCompanies.md#isactive) | boolean | Indicates whether the current Enterprise company  is active. [Required] [Default(true)] [Filter(multi eq)] [Introduced in version 20.1] 
+| [PrintImagesRetentionMonths](General.EnterpriseCompanies.md#printimagesretentionmonths) | int32 | A period of months for which the printed images of the documents will be kept. [Required] [Default(60)] [Filter(multi eq;ge;le)] [Introduced in version 20.1] 
+| [UIBaseColor](General.EnterpriseCompanies.md#uibasecolor) | int32 (nullable) | When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. [Introduced in version 18.2] 
 
 ## References
 
@@ -47,7 +47,7 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 
 ### BIStartDate
 
-Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". [Filter(eq)] (Introduced in version 18.2)
+Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". [Filter(eq)] [Introduced in version 18.2]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **Equals**  
@@ -112,7 +112,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Indicates whether the current Enterprise company  is active. [Required] [Default(true)] [Filter(multi eq)] (Introduced in version 20.1)
+Indicates whether the current Enterprise company  is active. [Required] [Default(true)] [Filter(multi eq)] [Introduced in version 20.1]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -121,7 +121,7 @@ _Default Value_: **True**
 
 ### PrintImagesRetentionMonths
 
-A period of months for which the printed images of the documents will be kept. [Required] [Default(60)] [Filter(multi eq;ge;le)] (Introduced in version 20.1)
+A period of months for which the printed images of the documents will be kept. [Required] [Default(60)] [Filter(multi eq;ge;le)] [Introduced in version 20.1]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
@@ -130,7 +130,7 @@ _Default Value_: **60**
 
 ### UIBaseColor
 
-When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. (Introduced in version 18.2)
+When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. [Introduced in version 18.2]
 
 _Type_: **int32 (nullable)**  
 _Supported Filters_: **NotFilterable**  

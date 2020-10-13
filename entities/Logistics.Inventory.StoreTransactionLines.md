@@ -24,7 +24,7 @@ Details records of Transactions. Each detail contains the movement for one produ
 | [ParentLineNo](Logistics.Inventory.StoreTransactionLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. 
 | [Quantity](Logistics.Inventory.StoreTransactionLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. [Unit: QuantityUnit] [Required] [Default(0)] 
 | [QuantityBase](Logistics.Inventory.StoreTransactionLines.md#quantitybase) | [Quantity](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)] 
-| [StandardQuantityBase](Logistics.Inventory.StoreTransactionLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2) 
+| [StandardQuantityBase](Logistics.Inventory.StoreTransactionLines.md#standardquantitybase) | [Quantity](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
 | [TempOrderNo](Logistics.Inventory.StoreTransactionLines.md#temporderno) | string (nullable) | Obsolete. Not used. [Filter(eq)] 
 | [TransactionTimestamp](Logistics.Inventory.StoreTransactionLines.md#transactiontimestamp) | datetime (nullable) | Exact time when the transaction changes the cost of the product. [Filter(ge;le)] [ORD] 
 | [UnitCost](Logistics.Inventory.StoreTransactionLines.md#unitcost) | [Amount](../data-types.md#amount) | Cost for 1 of the specified quantity. [Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] 
@@ -189,7 +189,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  

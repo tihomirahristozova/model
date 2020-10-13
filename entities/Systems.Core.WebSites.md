@@ -20,7 +20,7 @@ Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EnterpriseCompany](Systems.Core.WebSites.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. [Filter(multi eq)] |
-| [TrustedApplication](Systems.Core.WebSites.md#trustedapplication) | [TrustedApplications](Systems.Security.TrustedApplications.md) (nullable) | The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1) |
+| [TrustedApplication](Systems.Core.WebSites.md#trustedapplication) | [TrustedApplications](Systems.Security.TrustedApplications.md) (nullable) | The trusted application related to this web site. [Filter(multi eq)] [Introduced in version 20.1] |
 | [WebHost](Systems.Core.WebSites.md#webhost) | [WebHosts](Systems.Core.WebHosts.md) (nullable) | The web host in which to host the site. [Filter(multi eq)] |
 
 
@@ -95,7 +95,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### TrustedApplication
 
-The trusted application related to this web site. [Filter(multi eq)] (Introduced in version 20.1)
+The trusted application related to this web site. [Filter(multi eq)] [Introduced in version 20.1]
 
 _Type_: **[TrustedApplications](Systems.Security.TrustedApplications.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

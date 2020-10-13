@@ -143,7 +143,7 @@
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#producedstandardquantitybase">ProducedStandard<br>QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#releasedate">ReleaseDate</a></td>
@@ -342,7 +342,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#priorit
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.ProducedQuantity != null) AndAlso ( obj.ProducedQuantityUnit != null)) AndAlso ( obj.Product != null)), obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product), obj.ProducedQuantityBase)</code></p>
 <h3 id="producedstandardquantitybase">ProducedStandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] (Introduced in version 18.2)</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Produced Quantity Base. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
