@@ -9,3 +9,9 @@ uid: Logistics
 - [Shipment](Logistics.Shipment.md)  
 - [Wms](Logistics.Wms.md)  
 
+## Entities
+- [LogisticUnitContents](Logistics.LogisticUnitContents.md)  
+- [LogisticUnits](Logistics.LogisticUnits.md)  
+- [LogisticUnitSpecifications](Logistics.LogisticUnitSpecifications.md)  
+- [LogisticUnitTypes](Logistics.LogisticUnitTypes.md)  
+

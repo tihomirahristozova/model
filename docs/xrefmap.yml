@@ -1105,6 +1105,18 @@ references:
 - uid: Logistics.Inventory.TransferOrdersOptions
   name: Logistics.Inventory.TransferOrdersOptions Entity
   href: entities/Logistics.Inventory.TransferOrdersOptions.html
+- uid: Logistics.LogisticUnitContents
+  name: Logistics.LogisticUnitContents Entity
+  href: entities/Logistics.LogisticUnitContents.html
+- uid: Logistics.LogisticUnits
+  name: Logistics.LogisticUnits Entity
+  href: entities/Logistics.LogisticUnits.html
+- uid: Logistics.LogisticUnitSpecifications
+  name: Logistics.LogisticUnitSpecifications Entity
+  href: entities/Logistics.LogisticUnitSpecifications.html
+- uid: Logistics.LogisticUnitTypes
+  name: Logistics.LogisticUnitTypes Entity
+  href: entities/Logistics.LogisticUnitTypes.html
 - uid: Logistics.Procurement
   name: Logistics.Procurement Namespace
   href: entities/Logistics.Procurement.html

@@ -768,6 +768,14 @@
       href: Logistics.Inventory.TransferOrders.md
     - name: TransferOrdersOptions
       href: Logistics.Inventory.TransferOrdersOptions.md
+  - name: LogisticUnitContents
+    href: Logistics.LogisticUnitContents.md
+  - name: LogisticUnits
+    href: Logistics.LogisticUnits.md
+  - name: LogisticUnitSpecifications
+    href: Logistics.LogisticUnitSpecifications.md
+  - name: LogisticUnitTypes
+    href: Logistics.LogisticUnitTypes.md
   - name: Procurement
     href: Logistics.Procurement.md
     items:

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>General.CurrencyDirectoryLines Entity | ERP.net Domain Model </title>
+    <title>Logistics.LogisticUnitSpecifications Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="General.CurrencyDirectoryLines Entity | ERP.net Domain Model ">
+    <meta name="title" content="Logistics.LogisticUnitSpecifications Entity | ERP.net Domain Model ">
     <meta name="generator" content="docfx 1.0.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -76,10 +76,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="General.CurrencyDirectoryLines">
-<h1 id="generalcurrencydirectorylines-entity">General.CurrencyDirectoryLines Entity</h1>
+            <article class="content wrap" id="_content" data-uid="Logistics.LogisticUnitSpecifications">
+<h1 id="logisticslogisticunitspecifications-entity">Logistics.LogisticUnitSpecifications Entity</h1>
 
-<p>Contains exchange rate for a currency against the main currency of currency directory. Entity: Gen_Currency_Directory_Lines</p>
+<p>Specification of a logistic unit. The database can contain any kind of specification, but most client applications and integrated methods process GS1 specifications (application codes). Entity: Log_Logistic_Unit_Specifications (Introduced in version 21.1.0.77)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -91,19 +91,29 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.CurrencyDirectoryLines.html#id">Id</a></td>
+<td><a href="Logistics.LogisticUnitSpecifications.html#code">Code</a></td>
+<td>string</td>
+<td>The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces. [Required] [Filter(multi eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.LogisticUnitSpecifications.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="General.CurrencyDirectoryLines.html#ratedivisor">RateDivisor</a></td>
-<td>decimal</td>
-<td>The divisor for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</td>
+<td><a href="Logistics.LogisticUnitSpecifications.html#name">Name</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</td>
+<td>Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (null). [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="General.CurrencyDirectoryLines.html#ratemultiplier">RateMultiplier</a></td>
-<td>decimal</td>
-<td>The multiplier for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</td>
+<td><a href="Logistics.LogisticUnitSpecifications.html#notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this LogisticUnitSpecification.</td>
+</tr>
+<tr>
+<td><a href="Logistics.LogisticUnitSpecifications.html#value">Value</a></td>
+<td>string (nullable)</td>
+<td>Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces. [Filter(eq;like)]</td>
 </tr>
 </tbody>
 </table>
@@ -118,46 +128,41 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a></td>
-<td><a href="General.CurrencyDirectories.html">CurrencyDirectories</a></td>
-<td>The <a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a> to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
-</tr>
-<tr>
-<td><a href="General.CurrencyDirectoryLines.html#fromcurrency">FromCurrency</a></td>
-<td><a href="General.Currencies.html">Currencies</a></td>
-<td>The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)]</td>
+<td><a href="Logistics.LogisticUnitSpecifications.html#logisticunit">LogisticUnit</a></td>
+<td><a href="Logistics.LogisticUnits.html">LogisticUnits</a></td>
+<td>The logistic unit, which is detailed by this specification. [Required] [Filter(multi eq)] [Owner]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="code">Code</h3>
+<p>The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces. [Required] [Filter(multi eq;like)]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
-<h3 id="ratedivisor">RateDivisor</h3>
-<p>The divisor for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</p>
-<p><em>Type</em>: <strong>decimal</strong><br>
+<h3 id="name">Name</h3>
+<p>Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (null). [Filter(eq;like)]</p>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="notes">Notes</h3>
+<p>Notes for this LogisticUnitSpecification.</p>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>1</strong></p>
-<p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( ( ( ( obj.FromCurrency != null) AndAlso ( obj.CurrencyDirectory.ToCurrency != null)) AndAlso ( obj.FromCurrency == obj.CurrencyDirectory.ToCurrency)) OrElse ( obj.RateDivisor == 0)), 1, obj.RateDivisor)</code></p>
-<h3 id="ratemultiplier">RateMultiplier</h3>
-<p>The multiplier for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</p>
-<p><em>Type</em>: <strong>decimal</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>1</strong></p>
-<p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( ( ( ( obj.FromCurrency != null) AndAlso ( obj.CurrencyDirectory.ToCurrency != null)) AndAlso ( obj.FromCurrency == obj.CurrencyDirectory.ToCurrency)) OrElse ( obj.RateMultiplier == 0)), 1, obj.RateMultiplier)</code></p>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="value">Value</h3>
+<p>Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces. [Filter(eq;like)]</p>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
-<h3 id="currencydirectory">CurrencyDirectory</h3>
-<p>The <a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a> to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-<p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">CurrencyDirectories</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
-<h3 id="fromcurrency">FromCurrency</h3>
-<p>The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)]</p>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
+<h3 id="logisticunit">LogisticUnit</h3>
+<p>The logistic unit, which is detailed by this specification. [Required] [Filter(multi eq)] [Owner]</p>
+<p><em>Type</em>: <strong><a href="Logistics.LogisticUnits.html">LogisticUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
@@ -165,9 +170,9 @@
 <p>None</p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/General_CurrencyDirectoryLines?$top=10">https://demodb.my.erp.net/api/domain/odata/General_CurrencyDirectoryLines?$top=10</a></p>
+<a href="https://demodb.my.erp.net/api/domain/odata/Logistics_LogisticUnitSpecifications?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_LogisticUnitSpecifications?$top=10</a></p>
 <p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#General_CurrencyDirectoryLines?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#General_CurrencyDirectoryLines?$top=10</a></p>
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Logistics_LogisticUnitSpecifications?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Logistics_LogisticUnitSpecifications?$top=10</a></p>
 </article>
           </div>
           
@@ -176,7 +181,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/General.CurrencyDirectoryLines.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Logistics.LogisticUnitSpecifications.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -253,6 +253,8 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( obj.TransitionalDocument, False, obj.CreateManully)</code></p>
 <h3 id="description">Description</h3>
 <p>The description of this DocumentType.</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
@@ -295,6 +297,8 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( obj.CreateManully, False, obj.TransitionalDocument)</code></p>
 <h3 id="typename">TypeName</h3>
 <p>Description of the document type. [Required] [Filter(like)] [ORD]</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>

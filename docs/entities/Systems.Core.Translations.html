@@ -144,6 +144,8 @@
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( Not( IsNullOrEmpty( obj.TranslationField)), True, obj.Active)</code></p>
 <h3 id="applicationname">ApplicationName</h3>
 <p>The application, containing the resource. For base resource types (T,C,H), this is null. [Filter(eq)] [ORD]</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>

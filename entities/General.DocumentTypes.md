@@ -65,6 +65,8 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
+_Front-End Recalc Expressions:_  
+`IIF( obj.TransitionalDocument, False, obj.CreateManully)`
 ### Description
 
 The description of this DocumentType.
@@ -130,6 +132,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
+_Front-End Recalc Expressions:_  
+`IIF( obj.CreateManully, False, obj.TransitionalDocument)`
 ### TypeName
 
 Description of the document type. [Required] [Filter(like)] [ORD]

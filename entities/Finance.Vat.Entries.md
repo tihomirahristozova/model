@@ -98,6 +98,8 @@ _Type_: **date**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.DocumentDate`
 ### CashReportingMode
 
 When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. [Required] [Default(false)]
@@ -190,6 +192,8 @@ _Allowed Values (Finance.Vat.EntriesRepository.EntryType Enum Members)_
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 
+_Front-End Recalc Expressions:_  
+`obj.DealType.EntryType`
 ### Id
 
 _Type_: **guid**  
@@ -264,6 +268,8 @@ _Type_: **string**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`IIF( obj.Parent.IsDocumentTypeEntityInvoice( ), obj.Parent.DocumentNo, obj.ReferencedDocumentNo)`
 ### ReferenceDocumentNo
 
 The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]
@@ -288,6 +294,8 @@ _Type_: **string**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.Party.GetPartyCompany( ).RegistrationVATNumber`
 ### ReleaseTime
 
 Exact time, when the document was first released [Filter(ge;le)]
@@ -467,6 +475,8 @@ Type of the document that represents the operation that caused this entry. [Requ
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`IIF( obj.Parent.IsDocumentTypeEntityInvoice( ), obj.Parent.DocumentType, obj.ReferencedDocumentType)`
 ### ResponsiblePerson
 
 The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
@@ -508,6 +518,95 @@ The user status of this document if applicable for this document type. null mean
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **EqualsIn**  
+
+
+## Single Object Methods
+
+### GetAllParentDocuments
+
+_Return Type_: **Collection Of [Documents](General.Documents.md)**  
+_Declaring Type_: **[Documents](General.Documents.md)**  
+_Domain API Request_: **GET**  
+Gets all parent documents, traversing the parent document chain by using the [Parent](General.Documents.md#parent) property.
+
+**Parameters**  
+  * **includeSelf**  
+    _Type_: boolean  
+     _Optional_: True  
+    _Default Value_: False  
+    if set to true the current document is included.
+
+### ChangeState
+
+_Return Type_: **void**  
+_Declaring Type_: **[Documents](General.Documents.md)**  
+_Domain API Request_: **POST**  
+Changes the document state to the specified new state
+
+**Parameters**  
+  * **newState**  
+    _Type_: General.DocumentState  
+    The desired new state of the document
+  * **userStatus**  
+    _Type_: [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md)  
+     _Optional_: True  
+    _Default Value_: null  
+    The desired new user status of the document. Can be null.
+
+### Complete
+
+_Return Type_: **void**  
+_Declaring Type_: **[Documents](General.Documents.md)**  
+_Domain API Request_: **POST**  
+Changes the document state to Completed with all Release-ed sub-documents
+
+**Parameters**  
+  * **completion**  
+    _Type_: General.DocumentCompletion  
+    How the sub-documents will be completed, if at all
+
+### MakeVoid
+
+_Return Type_: **void**  
+_Declaring Type_: **[Documents](General.Documents.md)**  
+_Domain API Request_: **POST**  
+Makes the document void. The operation is irreversible.
+
+**Parameters**  
+  * **reason**  
+    _Type_: string  
+    The reason for voiding the document.
+  * **voidType**  
+    _Type_: General.DocumentsRepositoryBase.VoidType  
+     _Optional_: True  
+    _Default Value_: VoidDocument  
+    The type of void operation to execute.
+
+### GetPrintout
+
+_Return Type_: **string**  
+_Declaring Type_: **[Documents](General.Documents.md)**  
+_Domain API Request_: **POST**  
+Gets a document printout as a file. The returned value is Base64 string representation of the file contents.
+
+**Parameters**  
+  * **fileFormat**  
+    _Type_: string  
+     _Optional_: True  
+    _Default Value_: pdf  
+    The file format: pdf, html, xlsx, xls, docx, txt and png. The default format is 'pdf'.
+  * **printout**  
+    _Type_: [Printouts](General.Printouts.md)  
+     _Optional_: True  
+    _Default Value_: null  
+    The printout defined for the document type of the document. If null the default printout of the document type is used.
+
+### Recalculate
+
+_Return Type_: **void**  
+_Declaring Type_: **[Documents](General.Documents.md)**  
+_Domain API Request_: **POST**  
+The document and all of its owned objects will be altered to become valid.
 
 
 

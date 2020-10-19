@@ -31,6 +31,8 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
+_Front-End Recalc Expressions:_  
+`IIF( Not( IsNullOrEmpty( obj.TranslationField)), True, obj.Active)`
 ### ApplicationName
 
 The application, containing the resource. For base resource types (T,C,H), this is null. [Filter(eq)] [ORD]

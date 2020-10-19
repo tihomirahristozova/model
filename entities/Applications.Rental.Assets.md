@@ -127,6 +127,8 @@ Product which is used in the store transactions for this asset. [Filter(multi eq
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( ( obj.SerialNumber != null) AndAlso ( obj.SerialNumber.Product != obj.Product)), obj.SerialNumber.Product, obj.Product)`
 ### RentalAssetGroup
 
 The logical group of the rental asset. [Required] [Filter(multi eq)] [Owner]
@@ -155,6 +157,8 @@ Serial number which in conjunction with the product for store operations allows 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( ( obj.SerialNumber != null) AndAlso ( obj.Product != obj.SerialNumber.Product)), null, obj.SerialNumber)`
 ### StandardGuaranteeAmountCurrency
 
 Currency of the standard guarantee amount. [Filter(multi eq)]

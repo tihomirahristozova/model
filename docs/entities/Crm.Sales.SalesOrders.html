@@ -1185,6 +1185,86 @@ Enumeration of document system states<br>
 <p>The user status of this document if applicable for this document type. null means unknown or not yet set</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h2 id="single-object-methods">Single Object Methods</h2>
+<h3 id="getallparentdocuments">GetAllParentDocuments</h3>
+<p><em>Return Type</em>: <strong>Collection Of <a href="General.Documents.html">Documents</a></strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>GET</strong><br>
+Gets all parent documents, traversing the parent document chain by using the <a href="General.Documents.html#parent">Parent</a> property.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>includeSelf</strong><br>
+<em>Type</em>: boolean<br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: False<br>
+if set to true the current document is included.</li>
+</ul>
+<h3 id="changestate">ChangeState</h3>
+<p><em>Return Type</em>: <strong>void</strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>POST</strong><br>
+Changes the document state to the specified new state</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>newState</strong><br>
+<em>Type</em>: General.DocumentState<br>
+The desired new state of the document</li>
+<li><strong>userStatus</strong><br>
+<em>Type</em>: <a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a><br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: null<br>
+The desired new user status of the document. Can be null.</li>
+</ul>
+<h3 id="complete">Complete</h3>
+<p><em>Return Type</em>: <strong>void</strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>POST</strong><br>
+Changes the document state to Completed with all Release-ed sub-documents</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>completion</strong><br>
+<em>Type</em>: General.DocumentCompletion<br>
+How the sub-documents will be completed, if at all</li>
+</ul>
+<h3 id="makevoid">MakeVoid</h3>
+<p><em>Return Type</em>: <strong>void</strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>POST</strong><br>
+Makes the document void. The operation is irreversible.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>reason</strong><br>
+<em>Type</em>: string<br>
+The reason for voiding the document.</li>
+<li><strong>voidType</strong><br>
+<em>Type</em>: General.DocumentsRepositoryBase.VoidType<br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: VoidDocument<br>
+The type of void operation to execute.</li>
+</ul>
+<h3 id="getprintout">GetPrintout</h3>
+<p><em>Return Type</em>: <strong>string</strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>POST</strong><br>
+Gets a document printout as a file. The returned value is Base64 string representation of the file contents.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>fileFormat</strong><br>
+<em>Type</em>: string<br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: pdf<br>
+The file format: pdf, html, xlsx, xls, docx, txt and png. The default format is 'pdf'.</li>
+<li><strong>printout</strong><br>
+<em>Type</em>: <a href="General.Printouts.html">Printouts</a><br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: null<br>
+The printout defined for the document type of the document. If null the default printout of the document type is used.</li>
+</ul>
+<h3 id="recalculate">Recalculate</h3>
+<p><em>Return Type</em>: <strong>void</strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>POST</strong><br>
+The document and all of its owned objects will be altered to become valid.</p>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R27179.html">R27179 SalesOrder - Check Customer Enterprise Company</a></li>

@@ -270,6 +270,8 @@ Allowed values for the <a href="Applications.Rental.Assets.html#timeperiodtype">
 <p>Product which is used in the store transactions for this asset. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( ( obj.SerialNumber != null) AndAlso ( obj.SerialNumber.Product != obj.Product)), obj.SerialNumber.Product, obj.Product)</code></p>
 <h3 id="rentalassetgroup">RentalAssetGroup</h3>
 <p>The logical group of the rental asset. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.Rental.AssetGroups.html">AssetGroups</a></strong><br>
@@ -286,6 +288,8 @@ Allowed values for the <a href="Applications.Rental.Assets.html#timeperiodtype">
 <p>Serial number which in conjunction with the product for store operations allows for more accurate identification of the asset. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( ( obj.SerialNumber != null) AndAlso ( obj.Product != obj.SerialNumber.Product)), null, obj.SerialNumber)</code></p>
 <h3 id="standardguaranteeamountcurrency">StandardGuaranteeAmountCurrency</h3>
 <p>Currency of the standard guarantee amount. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>

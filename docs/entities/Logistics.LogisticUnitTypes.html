@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>General.CurrencyDirectoryLines Entity | ERP.net Domain Model </title>
+    <title>Logistics.LogisticUnitTypes Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="General.CurrencyDirectoryLines Entity | ERP.net Domain Model ">
+    <meta name="title" content="Logistics.LogisticUnitTypes Entity | ERP.net Domain Model ">
     <meta name="generator" content="docfx 1.0.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -76,10 +76,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="General.CurrencyDirectoryLines">
-<h1 id="generalcurrencydirectorylines-entity">General.CurrencyDirectoryLines Entity</h1>
+            <article class="content wrap" id="_content" data-uid="Logistics.LogisticUnitTypes">
+<h1 id="logisticslogisticunittypes-entity">Logistics.LogisticUnitTypes Entity</h1>
 
-<p>Contains exchange rate for a currency against the main currency of currency directory. Entity: Gen_Currency_Directory_Lines</p>
+<p>Types of logistic units, like EU-PALLET, 40x40 pallet, ISO container, etc. Entity: Log_Logistic_Unit_Types (Introduced in version 21.1.0.77)</p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -91,83 +91,56 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="General.CurrencyDirectoryLines.html#id">Id</a></td>
+<td><a href="Logistics.LogisticUnitTypes.html#code">Code</a></td>
+<td>string</td>
+<td>Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers. [Required] [Filter(multi eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.LogisticUnitTypes.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="General.CurrencyDirectoryLines.html#ratedivisor">RateDivisor</a></td>
-<td>decimal</td>
-<td>The divisor for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</td>
+<td><a href="Logistics.LogisticUnitTypes.html#name">Name</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
+<td>Multi-language name of the logistic unit type. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="General.CurrencyDirectoryLines.html#ratemultiplier">RateMultiplier</a></td>
-<td>decimal</td>
-<td>The multiplier for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</td>
-</tr>
-</tbody>
-</table>
-<h2 id="references">References</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a></td>
-<td><a href="General.CurrencyDirectories.html">CurrencyDirectories</a></td>
-<td>The <a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a> to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]</td>
-</tr>
-<tr>
-<td><a href="General.CurrencyDirectoryLines.html#fromcurrency">FromCurrency</a></td>
-<td><a href="General.Currencies.html">Currencies</a></td>
-<td>The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)]</td>
+<td><a href="Logistics.LogisticUnitTypes.html#notes">Notes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this LogisticUnitType. [Filter(like)]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="code">Code</h3>
+<p>Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers. [Required] [Filter(multi eq;like)]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
-<h3 id="ratedivisor">RateDivisor</h3>
-<p>The divisor for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</p>
-<p><em>Type</em>: <strong>decimal</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>1</strong></p>
-<p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( ( ( ( obj.FromCurrency != null) AndAlso ( obj.CurrencyDirectory.ToCurrency != null)) AndAlso ( obj.FromCurrency == obj.CurrencyDirectory.ToCurrency)) OrElse ( obj.RateDivisor == 0)), 1, obj.RateDivisor)</code></p>
-<h3 id="ratemultiplier">RateMultiplier</h3>
-<p>The multiplier for conversion from From_Currency to Directory.To_Currency. [Required] [Default(1)]</p>
-<p><em>Type</em>: <strong>decimal</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>1</strong></p>
-<p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( ( ( ( obj.FromCurrency != null) AndAlso ( obj.CurrencyDirectory.ToCurrency != null)) AndAlso ( obj.FromCurrency == obj.CurrencyDirectory.ToCurrency)) OrElse ( obj.RateMultiplier == 0)), 1, obj.RateMultiplier)</code></p>
-<h2 id="reference-details">Reference Details</h2>
-<h3 id="currencydirectory">CurrencyDirectory</h3>
-<p>The <a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a> to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
-<p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">CurrencyDirectories</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
-<h3 id="fromcurrency">FromCurrency</h3>
-<p>The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)]</p>
-<p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="name">Name</h3>
+<p>Multi-language name of the logistic unit type. [Required] [Filter(eq;like)]</p>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="notes">Notes</h3>
+<p>Notes for this LogisticUnitType. [Filter(like)]</p>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
 <p>None</p>
 <h2 id="api">API</h2>
 <p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/General_CurrencyDirectoryLines?$top=10">https://demodb.my.erp.net/api/domain/odata/General_CurrencyDirectoryLines?$top=10</a></p>
+<a href="https://demodb.my.erp.net/api/domain/odata/Logistics_LogisticUnitTypes?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_LogisticUnitTypes?$top=10</a></p>
 <p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#General_CurrencyDirectoryLines?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#General_CurrencyDirectoryLines?$top=10</a></p>
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Logistics_LogisticUnitTypes?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Logistics_LogisticUnitTypes?$top=10</a></p>
 </article>
           </div>
           
@@ -176,7 +149,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/General.CurrencyDirectoryLines.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Logistics.LogisticUnitTypes.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

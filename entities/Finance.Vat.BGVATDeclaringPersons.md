@@ -51,6 +51,8 @@ _Type_: **string**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.Person.GetValidAddress( ).Name`
 ### DeclaringPersonCity
 
 City from the address for correspondation of the declaring person. [Required]
