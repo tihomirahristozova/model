@@ -98,15 +98,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ## API Methods
 
-These are methods that can be invoked in public APIs.
+Methods that can be invoked in public APIs.
 
 ### UpdateGS1ApplicationCodes
 
+Based on the internal data in the logistic unit and its contents, creates or updates the GS1 application codes.              The data is than stored in the logistic unit specifications.              The method does not commit the object transaction.  
 _Return Type_: **void**  
 _Declaring Type_: **[LogisticUnits](Logistics.LogisticUnits.md)**  
 _Domain API Request_: **POST**  
-Based on the internal data in the logistic unit and its contents, creates or updates the GS1 application codes.              The data is than stored in the logistic unit specifications.              The method does not commit the object transaction.
-
 
 
 ## Business Rules

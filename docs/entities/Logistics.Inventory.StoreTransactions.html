@@ -753,86 +753,184 @@ Enumeration of document system states<br>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h2 id="api-methods">API Methods</h2>
-<p>These are methods that can be invoked in public APIs.</p>
+<p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallparentdocuments">GetAllParentDocuments</h3>
-<p><em>Return Type</em>: <strong>Collection Of <a href="General.Documents.html">Documents</a></strong><br>
+<p>Gets all parent documents, traversing the parent document chain by using the <a href="General.Documents.html#parent">Parent</a> property.<br>
+<em>Return Type</em>: <strong>Collection Of <a href="General.Documents.html">Documents</a></strong><br>
 <em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
-<em>Domain API Request</em>: <strong>GET</strong><br>
-Gets all parent documents, traversing the parent document chain by using the <a href="General.Documents.html#parent">Parent</a> property.</p>
+<em>Domain API Request</em>: <strong>GET</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><strong>includeSelf</strong><br>
+if set to true the current document is included.<br>
 <em>Type</em>: boolean<br>
 <em>Optional</em>: True<br>
-<em>Default Value</em>: False<br>
-if set to true the current document is included.</li>
+<em>Default Value</em>: False</li>
 </ul>
 <h3 id="changestate">ChangeState</h3>
-<p><em>Return Type</em>: <strong>void</strong><br>
+<p>Changes the document state to the specified new state<br>
+<em>Return Type</em>: <strong>void</strong><br>
 <em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
-<em>Domain API Request</em>: <strong>POST</strong><br>
-Changes the document state to the specified new state</p>
+<em>Domain API Request</em>: <strong>POST</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><strong>newState</strong><br>
+<li><p><strong>newState</strong><br>
+The desired new state of the document<br>
 <em>Type</em>: General.DocumentState<br>
-The desired new state of the document</li>
-<li><strong>userStatus</strong><br>
+Enumeration of document system states<br>
+<em>Allowed Values (General.DocumentState Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>New document, just created. Can be edited. (Stored as 0). <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+</tr>
+<tr>
+<td>Adjustment</td>
+<td>Document which adjusts other released documents. (Stored as 5). <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Adjustment'</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Planned by the system for future releasing. (Stored as 10). <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Planned'</td>
+</tr>
+<tr>
+<td>FirmPlanned</td>
+<td>Planned by operator for future releasing. (Stored as 20). <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+</tr>
+<tr>
+<td>Released</td>
+<td>Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Released'</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Work has completed. (Stored as 40). <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'Completed'</td>
+</tr>
+<tr>
+<td>Closed</td>
+<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Closed'</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>userStatus</strong><br>
+The desired new user status of the document. Can be null.<br>
 <em>Type</em>: <a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a><br>
 <em>Optional</em>: True<br>
-<em>Default Value</em>: null<br>
-The desired new user status of the document. Can be null.</li>
+<em>Default Value</em>: null</p>
+</li>
 </ul>
+<p>The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.</p>
 <h3 id="complete">Complete</h3>
-<p><em>Return Type</em>: <strong>void</strong><br>
+<p>Changes the document state to Completed with all Release-ed sub-documents<br>
+<em>Return Type</em>: <strong>void</strong><br>
 <em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
-<em>Domain API Request</em>: <strong>POST</strong><br>
-Changes the document state to Completed with all Release-ed sub-documents</p>
+<em>Domain API Request</em>: <strong>POST</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><strong>completion</strong><br>
+<li><p><strong>completion</strong><br>
+How the sub-documents will be completed, if at all<br>
 <em>Type</em>: General.DocumentCompletion<br>
-How the sub-documents will be completed, if at all</li>
+Determines how <a href="General.Documents.html">Document</a> will be completed<br>
+<em>Allowed Values (General.DocumentCompletion Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OnlyDocument</td>
+<td>Only the document will be completed <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'OnlyDocument'</td>
+</tr>
+<tr>
+<td>WithAllChildren</td>
+<td>The document, along with is sub-documents, will be completed <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'WithAllChildren'</td>
+</tr>
+<tr>
+<td>WithReleasedChildren</td>
+<td>The document, along with its Release-ed sub-documents, will be completed <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'WithReleasedChildren'</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
+<p>The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.</p>
 <h3 id="makevoid">MakeVoid</h3>
-<p><em>Return Type</em>: <strong>void</strong><br>
+<p>Makes the document void. The operation is irreversible.<br>
+<em>Return Type</em>: <strong>void</strong><br>
 <em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
-<em>Domain API Request</em>: <strong>POST</strong><br>
-Makes the document void. The operation is irreversible.</p>
+<em>Domain API Request</em>: <strong>POST</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><strong>reason</strong><br>
-<em>Type</em>: string<br>
-The reason for voiding the document.</li>
-<li><strong>voidType</strong><br>
+<li><p><strong>reason</strong><br>
+The reason for voiding the document.<br>
+<em>Type</em>: string</p>
+</li>
+<li><p><strong>voidType</strong><br>
+The type of void operation to execute.<br>
 <em>Type</em>: General.DocumentsRepositoryBase.VoidType<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: VoidDocument<br>
-The type of void operation to execute.</li>
+Specifies the type of void operation<br>
+<em>Allowed Values (General.DocumentsRepositoryBase.VoidType Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VoidDocument</td>
+<td>Void only the document. If there are sub-documents, the operation might fail. <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'VoidDocument'</td>
+</tr>
+<tr>
+<td>VoidWithSubDocuments</td>
+<td>Void the document and its non-released sub-documents. If there are released sub-documents, the operation might fail. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'VoidWithSubDocuments'</td>
+</tr>
+<tr>
+<td>VoidWithReleased<br>SubDocuments</td>
+<td>Void the document and all of its sub-documents, even the released ones. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'VoidWithReleased<br>SubDocuments'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Optional</em>: True<br>
+<em>Default Value</em>: VoidDocument</p>
+</li>
 </ul>
 <h3 id="getprintout">GetPrintout</h3>
-<p><em>Return Type</em>: <strong>string</strong><br>
+<p>Gets a document printout as a file. The returned value is Base64 string representation of the file contents.<br>
+<em>Return Type</em>: <strong>string</strong><br>
 <em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
-<em>Domain API Request</em>: <strong>POST</strong><br>
-Gets a document printout as a file. The returned value is Base64 string representation of the file contents.</p>
+<em>Domain API Request</em>: <strong>POST</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><strong>fileFormat</strong><br>
+<li><p><strong>fileFormat</strong><br>
+The file format: pdf, html, xlsx, xls, docx, txt and png. The default format is 'pdf'.<br>
 <em>Type</em>: string<br>
 <em>Optional</em>: True<br>
-<em>Default Value</em>: pdf<br>
-The file format: pdf, html, xlsx, xls, docx, txt and png. The default format is 'pdf'.</li>
-<li><strong>printout</strong><br>
+<em>Default Value</em>: pdf</p>
+</li>
+<li><p><strong>printout</strong><br>
+The printout defined for the document type of the document. If null the default printout of the document type is used.<br>
 <em>Type</em>: <a href="General.Printouts.html">Printouts</a><br>
 <em>Optional</em>: True<br>
-<em>Default Value</em>: null<br>
-The printout defined for the document type of the document. If null the default printout of the document type is used.</li>
+<em>Default Value</em>: null</p>
+</li>
 </ul>
 <h3 id="recalculate">Recalculate</h3>
-<p><em>Return Type</em>: <strong>void</strong><br>
+<p>The document and all of its owned objects will be altered to become valid.<br>
+<em>Return Type</em>: <strong>void</strong><br>
 <em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
-<em>Domain API Request</em>: <strong>POST</strong><br>
-The document and all of its owned objects will be altered to become valid.</p>
+<em>Domain API Request</em>: <strong>POST</strong></p>
+<p>In some cases the objects in child collection of the document depend on values from other child objects.             This method ensures that all child objects are properly validated.             The changes are only in memory and are not committed to the server.</p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
