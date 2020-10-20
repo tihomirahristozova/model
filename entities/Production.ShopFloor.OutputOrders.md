@@ -417,7 +417,9 @@ _Supported Filters_: **Equals, EqualsIn**
 _Front-End Recalc Expressions:_  
 `obj.Lines.Select( c => c.LineWorkOrder).Distinct( ).OnlyIfSingle( )`
 
-## Single Object Methods
+## API Methods
+
+These are methods that can be invoked in public APIs.
 
 ### GetAllParentDocuments
 

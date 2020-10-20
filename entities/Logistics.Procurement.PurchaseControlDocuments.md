@@ -418,7 +418,9 @@ _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nulla
 _Supported Filters_: **EqualsIn**  
 
 
-## Single Object Methods
+## API Methods
+
+These are methods that can be invoked in public APIs.
 
 ### GetAllParentDocuments
 

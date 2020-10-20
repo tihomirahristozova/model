@@ -424,7 +424,9 @@ _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**
 _Supported Filters_: **Equals, EqualsIn**  
 
 
-## Single Object Methods
+## API Methods
+
+These are methods that can be invoked in public APIs.
 
 ### GetAllParentDocuments
 
