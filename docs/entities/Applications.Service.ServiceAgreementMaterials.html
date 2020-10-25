@@ -210,6 +210,8 @@
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Product.MeasurementUnit.IfNullThen( obj.QuantityUnit)</code></p>
 <h3 id="serviceagreement">ServiceAgreement</h3>
 <p>The <a href="Applications.Service.ServiceAgreementMaterials.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></strong><br>

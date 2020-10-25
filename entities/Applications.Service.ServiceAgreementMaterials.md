@@ -114,6 +114,8 @@ The measurement unit of Quantity. [Required] [Filter(multi eq)]
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Product.MeasurementUnit.IfNullThen( obj.QuantityUnit)`
 ### ServiceAgreement
 
 The [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner]

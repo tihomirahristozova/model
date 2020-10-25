@@ -41,6 +41,11 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Back-End Default Expression:_  
+`obj.ServiceAgreement.EndDateTime`
+
+_Front-End Recalc Expressions:_  
+`obj.ServiceAgreement.EndDateTime`
 ### LineNo
 
 Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. [Required] [Filter(eq)]
@@ -62,6 +67,11 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Back-End Default Expression:_  
+`obj.ServiceAgreement.StartDateTime`
+
+_Front-End Recalc Expressions:_  
+`obj.ServiceAgreement.StartDateTime`
 ### Notes
 
 Notes for this ServiceAgreementLine.

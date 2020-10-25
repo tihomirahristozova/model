@@ -472,6 +472,8 @@
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.DocumentDate</code></p>
 <h3 id="completetime">CompleteTime</h3>
 <p>Exact time, when the document was last completed[Filter(ge;le)]</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
@@ -554,6 +556,8 @@ Generic enum type for DeliveryTerms properties<br>
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Lines.Select( c =&gt; PurchaseInvoiceLinesRepository.DeliveryTermsCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="documentdate">DocumentDate</h3>
 <p>The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]</p>
 <p><em>Type</em>: <strong>datetime</strong><br>
@@ -678,6 +682,8 @@ Generic enum type for TransactionNature properties<br>
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Lines.Select( c =&gt; PurchaseInvoiceLinesRepository.IntrastatTransactionNatureCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="intrastattransportmodecode">IntrastatTransportModeCode</h3>
 <p>Transport mode; used for Intrastat reporting.</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoices.html#intrastattransportmodecode">TransportMode</a> (nullable)</strong><br>
@@ -727,6 +733,8 @@ Generic enum type for TransportMode properties<br>
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Lines.Select( c =&gt; PurchaseInvoiceLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="isreleased">IsReleased</h3>
 <p>True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -769,6 +777,8 @@ Relationship between parent and child documents<br>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultPaymentTermDays, Double))</code></p>
 <h3 id="planningonly">PlanningOnly</h3>
 <p>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</p>
 <p><em>Type</em>: <strong>boolean (nullable)</strong><br>
@@ -848,6 +858,8 @@ Enumeration of document system states<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( obj.Supplier != null), obj.Supplier.Party.GetPartyCompany( ).IsVATCashReportingRegistered, obj.VATCashReportingMode)</code></p>
 <h3 id="vatnotes">VATNotes</h3>
 <p>Description of the operation that will be entered in the VAT ledgers.</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
@@ -903,10 +915,14 @@ Enumeration of document system states<br>
 <p>Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Lines.Select( c =&gt; c.LineDealType).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
 <p>The currency of the unit prices and amounts in the document. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Supplier.DefaultCurrency</code></p>
 <h3 id="documenttype">DocumentType</h3>
 <p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
@@ -931,10 +947,14 @@ Enumeration of document system states<br>
 <p>Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-null, it applies to the whole document. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Lines.Select( c =&gt; c.IntrastatDestinationRegion).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="intrastattransportcountry">IntrastatTransportCountry</h3>
 <p>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Lines.Select( c =&gt; c.IntrastatTransportCountry).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="masterdocument">MasterDocument</h3>
 <p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
@@ -947,10 +967,14 @@ Enumeration of document system states<br>
 <p>When not null, specifies the default payment account for the payment order. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))</code></p>
 <h3 id="paymenttype">PaymentType</h3>
 <p>The payment type to be used. null is allowed only temporary and should be specified if payment order is to be generated. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Supplier.DefaultPaymentType</code></p>
 <h3 id="primecausedocument">PrimeCauseDocument</h3>
 <p>The document that is the prime cause for creation of the current document</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
@@ -979,6 +1003,8 @@ Enumeration of document system states<br>
 <p>Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Lines.Select( c =&gt; c.SaleLineDealType).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="sequence">Sequence</h3>
 <p>The sequence that will be used to give new numbers to the documents of this type</p>
 <p><em>Type</em>: <strong><a href="General.Sequences.html">Sequences</a> (nullable)</strong><br>

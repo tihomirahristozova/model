@@ -144,6 +144,8 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => ServiceAgreementLinesRepository.LineEndDateTimeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### EntityName
 
 The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
@@ -242,6 +244,8 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => ServiceAgreementLinesRepository.LineStartDateTimeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### State
 
 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]

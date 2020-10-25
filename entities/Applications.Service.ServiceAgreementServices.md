@@ -80,6 +80,8 @@ The measurement unit of Quantity. [Required] [Filter(multi eq)]
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Service.MeasurementUnit.IfNullThen( obj.ServiceProduct.MeasurementUnit).IfNullThen( obj.QuantityUnit)`
 ### Service
 
 Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). [Filter(multi eq)]
@@ -87,6 +89,8 @@ Paid or agreed in advance service that won't be invoiced after service activitie
 _Type_: **[Services](Applications.Service.Services.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.ServiceProduct != null), null, obj.Service)`
 ### ServiceAgreement
 
 The [ServiceAgreement](Applications.Service.ServiceAgreementServices.md#serviceagreement) to which this ServiceAgreementService belongs. [Required] [Filter(multi eq)] [Owner]
@@ -101,6 +105,8 @@ Paid or agreed in advance product that will be substracted from the invoiced pro
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.Service != null), null, obj.ServiceProduct)`
 
 
 ## Business Rules

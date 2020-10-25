@@ -66,6 +66,11 @@ _Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Back-End Default Expression:_  
+`obj.PurchaseInvoice.DeliveryTermsCode`
+
+_Front-End Recalc Expressions:_  
+`obj.PurchaseInvoice.DeliveryTermsCode`
 ### Id
 
 _Type_: **guid**  
@@ -113,6 +118,11 @@ _Allowed Values (Finance.Intrastat.TransactionNature Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Back-End Default Expression:_  
+`obj.PurchaseInvoice.IntrastatTransactionNatureCode`
+
+_Front-End Recalc Expressions:_  
+`obj.PurchaseInvoice.IntrastatTransactionNatureCode`
 ### IntrastatTransportModeCode
 
 Transport mode; used for Intrastat reporting.
@@ -135,6 +145,11 @@ _Allowed Values (Finance.Intrastat.TransportMode Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Back-End Default Expression:_  
+`obj.PurchaseInvoice.IntrastatTransportModeCode`
+
+_Front-End Recalc Expressions:_  
+`obj.PurchaseInvoice.IntrastatTransportModeCode`
 ### LineAmount
 
 The total invoiced amount for this line in the document currency of the invoice. [Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]
@@ -232,6 +247,11 @@ Region, which is the final destination of the goods. Used for Intrastat reportin
 _Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Back-End Default Expression:_  
+`obj.PurchaseInvoice.IntrastatDestinationRegion`
+
+_Front-End Recalc Expressions:_  
+`obj.PurchaseInvoice.IntrastatDestinationRegion`
 ### IntrastatTransportCountry
 
 Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]
@@ -239,6 +259,11 @@ Country of origin of the transport company; used for Intrastat reporting. [Filte
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Back-End Default Expression:_  
+`obj.PurchaseInvoice.IntrastatTransportCountry`
+
+_Front-End Recalc Expressions:_  
+`obj.PurchaseInvoice.IntrastatTransportCountry`
 ### LineCostCenter
 
 Cost center for which the amount from this row will be accounted. [Filter(multi eq)]
@@ -253,6 +278,11 @@ Deal type for this line. If deal type in the line is different from deal type in
 _Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Back-End Default Expression:_  
+`obj.PurchaseInvoice.DealType`
+
+_Front-End Recalc Expressions:_  
+`obj.PurchaseInvoice.DealType`
 ### OriginCountry
 
 The country of origin of the invoiced product. Should be non-null only when this is different from the country of origin from the product definition. [Filter(multi eq)]
@@ -295,6 +325,11 @@ Sale deal type for this line. If sale deal type in the line is different from sa
 _Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Back-End Default Expression:_  
+`obj.PurchaseInvoice.SaleDealType`
+
+_Front-End Recalc Expressions:_  
+`obj.PurchaseInvoice.SaleDealType`
 
 
 ## Business Rules

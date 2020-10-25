@@ -37,6 +37,8 @@ _Type_: **decimal (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`IIF( obj.Remainder, null, obj.AmountPercent)`
 ### DueDateFormMethod
 
 Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. [Required]
@@ -84,6 +86,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **0**  
 
+_Back-End Default Expression:_  
+`IIF( ( ( Convert( obj.DueDateFormMethod, Int32) == 3) OrElse ( Convert( obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)`
+
+_Front-End Recalc Expressions:_  
+`IIF( ( ( Convert( obj.DueDateFormMethod, Int32) == 3) OrElse ( Convert( obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)`
 ### Remainder
 
 Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent). [Required] [Default(false)]
@@ -93,6 +100,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.AmountPercent != null), False, obj.Remainder)`
 
 ## Reference Details
 
@@ -117,6 +126,8 @@ Enterprise company location (within the chosen enterprise company) for which the
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.EnterpriseCompany.Company != obj.EnterpriseCompanyLocation.Company), null, obj.EnterpriseCompanyLocation)`
 ### PaymentAccount
 
 Default payment account for the current installment. null means that there is no default account. [Filter(multi eq)]
@@ -124,6 +135,8 @@ Default payment account for the current installment. null means that there is no
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.PaymentType.DefaultPaymentAccount.IfNullThen( obj.PaymentAccount)`
 ### PaymentType
 
 Default payment type for the current installment. null means that there is no default payment type. [Filter(multi eq)]

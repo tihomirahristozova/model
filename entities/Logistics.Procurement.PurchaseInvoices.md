@@ -101,6 +101,8 @@ _Type_: **date**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.DocumentDate`
 ### CompleteTime
 
 Exact time, when the document was last completed[Filter(ge;le)]
@@ -159,6 +161,8 @@ _Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => PurchaseInvoiceLinesRepository.DeliveryTermsCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### DocumentDate
 
 The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]
@@ -240,6 +244,8 @@ _Allowed Values (Finance.Intrastat.TransactionNature Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => PurchaseInvoiceLinesRepository.IntrastatTransactionNatureCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IntrastatTransportModeCode
 
 Transport mode; used for Intrastat reporting.
@@ -262,6 +268,8 @@ _Allowed Values (Finance.Intrastat.TransportMode Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => PurchaseInvoiceLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IsReleased
 
 True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
@@ -304,6 +312,8 @@ _Type_: **datetime (nullable)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultPaymentTermDays, Double))`
 ### PlanningOnly
 
 Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]
@@ -377,6 +387,8 @@ _Supported Filters_: **Equals, EqualsIn**
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.Supplier != null), obj.Supplier.Party.GetPartyCompany( ).IsVATCashReportingRegistered, obj.VATCashReportingMode)`
 ### VATNotes
 
 Description of the operation that will be entered in the VAT ledgers.
@@ -470,6 +482,8 @@ Deal type for this purchase invoice. If deal type in entered then VAT entry is c
 _Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => c.LineDealType).Distinct( ).OnlyIfSingle( )`
 ### DocumentCurrency
 
 The currency of the unit prices and amounts in the document. [Required] [Filter(multi eq)]
@@ -477,6 +491,8 @@ The currency of the unit prices and amounts in the document. [Required] [Filter(
 _Type_: **[Currencies](General.Currencies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Supplier.DefaultCurrency`
 ### DocumentType
 
 The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
@@ -519,6 +535,8 @@ Region, which is the final destination of the goods. Used for Intrastat reportin
 _Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => c.IntrastatDestinationRegion).Distinct( ).OnlyIfSingle( )`
 ### IntrastatTransportCountry
 
 Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]
@@ -526,6 +544,8 @@ Country of origin of the transport company; used for Intrastat reporting. [Filte
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => c.IntrastatTransportCountry).Distinct( ).OnlyIfSingle( )`
 ### MasterDocument
 
 In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
@@ -547,6 +567,8 @@ When not null, specifies the default payment account for the payment order. [Fil
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))`
 ### PaymentType
 
 The payment type to be used. null is allowed only temporary and should be specified if payment order is to be generated. [Filter(multi eq)]
@@ -554,6 +576,8 @@ The payment type to be used. null is allowed only temporary and should be specif
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Supplier.DefaultPaymentType`
 ### PrimeCauseDocument
 
 The document that is the prime cause for creation of the current document
@@ -603,6 +627,8 @@ Sale deal type for this purchase invoice. If sale deal type in entered then Sale
 _Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => c.SaleLineDealType).Distinct( ).OnlyIfSingle( )`
 ### Sequence
 
 The sequence that will be used to give new numbers to the documents of this type

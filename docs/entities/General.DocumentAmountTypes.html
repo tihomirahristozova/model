@@ -276,6 +276,8 @@ Allowed values for the <a href="General.DocumentAmountTypes.html#alloweddirectio
 <p><em>Type</em>: <strong>decimal (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( Not( obj.PercentInputAllowed), null, obj.DefaultPercent)</code></p>
 <h3 id="description">Description</h3>
 <p>The description of this DocumentAmountType.</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
@@ -343,6 +345,8 @@ Allowed values for the <a href="General.DocumentAmountTypes.html#distributeby">D
 <p>Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.MeasurementCategories.html">MeasurementCategories</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( Convert( obj.DistributeBy, Int32) != 1), null, obj.DistributeByMeasurementCategory)</code></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

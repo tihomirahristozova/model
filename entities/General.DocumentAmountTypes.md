@@ -119,6 +119,8 @@ _Type_: **decimal (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`IIF( Not( obj.PercentInputAllowed), null, obj.DefaultPercent)`
 ### Description
 
 The description of this DocumentAmountType.
@@ -196,6 +198,8 @@ Specifies the measurement category to be used for distribution, when the Distrib
 _Type_: **[MeasurementCategories](General.MeasurementCategories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( Convert( obj.DistributeBy, Int32) != 1), null, obj.DistributeByMeasurementCategory)`
 
 
 ## Business Rules

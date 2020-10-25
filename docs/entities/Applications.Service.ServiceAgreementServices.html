@@ -183,10 +183,14 @@
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Service.MeasurementUnit.IfNullThen( obj.ServiceProduct.MeasurementUnit).IfNullThen( obj.QuantityUnit)</code></p>
 <h3 id="service">Service</h3>
 <p>Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Applications.Service.Services.html">Services</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( obj.ServiceProduct != null), null, obj.Service)</code></p>
 <h3 id="serviceagreement">ServiceAgreement</h3>
 <p>The <a href="Applications.Service.ServiceAgreementServices.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementService belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></strong><br>
@@ -195,6 +199,8 @@
 <p>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( obj.Service != null), null, obj.ServiceProduct)</code></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
