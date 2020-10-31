@@ -450,6 +450,8 @@ Generic enum type for TransportMode properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>( obj.UnitPrice * obj.Quantity.Value).Round( )</code></p>
 <h3 id="lineno">LineNo</h3>
 <p>Consecutive line number within the invoice. [Required]</p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -472,13 +474,15 @@ Generic enum type for TransportMode properties<br>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.Product.Name</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Product.Name</code></p>
+<code>IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.ProductDescription, obj.Product.Name)</code></p>
 <h3 id="quantity">Quantity</h3>
 <p>The invoiced quantity. [Unit: QuantityUnit] [Required] [Default(1)]</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.ConfirmedQuantity.IfNullThen( obj.ReceivingOrderLine.Quantity), obj.Quantity)</code></p>
 <h3 id="quantitybase">QuantityBase</h3>
 <p>The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
@@ -503,6 +507,8 @@ Generic enum type for TransportMode properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.PricePerUnit, obj.UnitPrice)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="intrastatdestinationregion">IntrastatDestinationRegion</h3>
 <p>Region, which is the final destination of the goods. Used for Intrastat reporting. [Filter(multi eq)]</p>
@@ -540,6 +546,8 @@ Generic enum type for TransportMode properties<br>
 <p>The invoiced product. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.Product, obj.Product)</code></p>
 <h3 id="purchaseinvoice">PurchaseInvoice</h3>
 <p>The <a href="Logistics.Procurement.PurchaseInvoiceLines.html#purchaseinvoice">PurchaseInvoice</a> to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoices.html">PurchaseInvoices</a></strong><br>
@@ -548,6 +556,8 @@ Generic enum type for TransportMode properties<br>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.QuantityUnit, IIF( ( obj.Product != null), obj.Product.MeasurementUnit, obj.QuantityUnit))</code></p>
 <h3 id="receivingorderline">ReceivingOrderLine</h3>
 <p>The receiving order line, which is invoiced by the current line. null means that this line is not directly related to receiving order line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrderLines.html">ReceivingOrderLines</a> (nullable)</strong><br>

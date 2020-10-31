@@ -120,6 +120,11 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Back-End Default Expression:_  
+`obj.PurchaseOrder.PlannedDeliveryDate`
+
+_Front-End Recalc Expressions:_  
+`obj.PurchaseOrder.PlannedDeliveryDate`
 ### PricePerUnit
 
 The expected unit price of the ordered products, in the document currency. [Currency: PurchaseOrder.DocumentCurrency]
@@ -128,6 +133,8 @@ _Type_: **[Amount](../data-types.md#amount) (nullable)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.GetPurchasePriceForProductPriceUnit( obj.PurchaseProductPrice, obj.QuantityUnit)`
 ### ProductDescription
 
 The name of the ordered product, initially copied from the name in the product definition. The field can be edited by the user. [Required] [Filter(like)]
@@ -201,6 +208,8 @@ The ordered product. [Required] [Filter(multi eq)]
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.ProductCode.Product`
 ### ProductCode
 
 When not null, specifies that the product was selected using the specified product code record. [Filter(multi eq)]
@@ -208,6 +217,8 @@ When not null, specifies that the product was selected using the specified produ
 _Type_: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( ( obj.ProductCode != null) AndAlso ( obj.Product != obj.ProductCode.Product)), null, obj.ProductCode)`
 ### ProductVariant
 
 If specified determines which product variant of the current product in this line is used. [Filter(multi eq)]
@@ -229,6 +240,8 @@ When not null, specifies that the purchase unit price is loaded automatically fr
 _Type_: **[PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.DeterminePurchaseProductPrice( Convert( obj.Document.DocumentDate, Nullable`1), obj.PurchaseOrder.Supplier, obj.Product, obj.Quantity, obj.Document.EnterpriseCompany, obj.PurchaseOrder.PurchasePriceList)`
 ### QuantityUnit
 
 The measurement unit of Quantity. [Required] [Filter(multi eq)]
@@ -236,6 +249,8 @@ The measurement unit of Quantity. [Required] [Filter(multi eq)]
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen( obj.Product.PurchaseMeasurementUnit).IfNullThen( obj.Product.MeasurementUnit).IfNullThen( obj.QuantityUnit)`
 ### RequisitionLine
 
 When not null, specifies that the current line is based on the specified requisition line. [Filter(multi eq)]

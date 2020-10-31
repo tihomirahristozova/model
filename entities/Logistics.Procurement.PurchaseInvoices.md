@@ -536,6 +536,7 @@ _Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (n
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
+`obj.EnterpriseCompany.Company.AdministrativeRegion`
 `obj.Lines.Select( c => c.IntrastatDestinationRegion).Distinct( ).OnlyIfSingle( )`
 ### IntrastatTransportCountry
 

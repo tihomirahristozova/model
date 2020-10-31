@@ -9,7 +9,7 @@ List of user-defined document types. Each type has associated system entity (obj
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.DocumentTypes.md#code) | string | Unique descriptive code of the document type. [Required] [Filter(eq)] [ORD] 
+| [Code](General.DocumentTypes.md#code) | string | Unique descriptive code of the document type. [Required] [Filter(eq;like)] [ORD] 
 | [CreateManully](General.DocumentTypes.md#createmanully) | boolean | False if documents with this document type only can be generated; true - the user can create documents with this type. [Required] [Default(true)] [Filter(eq)] 
 | [Description](General.DocumentTypes.md#description) | string (nullable) | The description of this DocumentType. 
 | [DisallowOpposite<br />ValuesGeneration](General.DocumentTypes.md#disallowoppositevaluesgeneration) | boolean | Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type. [Required] [Default(false)] 
@@ -50,10 +50,10 @@ List of user-defined document types. Each type has associated system entity (obj
 
 ### Code
 
-Unique descriptive code of the document type. [Required] [Filter(eq)] [ORD]
+Unique descriptive code of the document type. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
-_Supported Filters_: **Equals**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
 ### CreateManully

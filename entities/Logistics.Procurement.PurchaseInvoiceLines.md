@@ -159,6 +159,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
 
+_Front-End Recalc Expressions:_  
+`( obj.UnitPrice * obj.Quantity.Value).Round( )`
 ### LineNo
 
 Consecutive line number within the invoice. [Required]
@@ -192,7 +194,7 @@ _Back-End Default Expression:_
 `obj.Product.Name`
 
 _Front-End Recalc Expressions:_  
-`obj.Product.Name`
+`IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.ProductDescription, obj.Product.Name)`
 ### Quantity
 
 The invoiced quantity. [Unit: QuantityUnit] [Required] [Default(1)]
@@ -202,6 +204,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.ConfirmedQuantity.IfNullThen( obj.ReceivingOrderLine.Quantity), obj.Quantity)`
 ### QuantityBase
 
 The equivalence of Quantity in the base measurement category of the product. [Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
@@ -237,6 +241,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.PricePerUnit, obj.UnitPrice)`
 
 ## Reference Details
 
@@ -297,6 +303,8 @@ The invoiced product. [Required] [Filter(multi eq)]
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.Product, obj.Product)`
 ### PurchaseInvoice
 
 The [PurchaseInvoice](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoice) to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]
@@ -311,6 +319,8 @@ The measurement unit of Quantity. [Required] [Filter(multi eq)]
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.QuantityUnit, IIF( ( obj.Product != null), obj.Product.MeasurementUnit, obj.QuantityUnit))`
 ### ReceivingOrderLine
 
 The receiving order line, which is invoiced by the current line. null means that this line is not directly related to receiving order line. [Filter(multi eq)]

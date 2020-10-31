@@ -722,6 +722,8 @@ Enumeration of document system states<br>
 <p>The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Supplier.GetDefaultPurchasePriceListIfValid( obj.DocumentDate)</code></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
 <p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>

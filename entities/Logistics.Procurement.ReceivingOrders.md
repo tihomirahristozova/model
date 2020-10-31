@@ -481,6 +481,8 @@ The price list, which, when non-null, is used to automatically load unit prices 
 _Type_: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Supplier.GetDefaultPurchasePriceListIfValid( obj.DocumentDate)`
 ### ResponsiblePerson
 
 The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.

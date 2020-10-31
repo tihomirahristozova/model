@@ -948,6 +948,7 @@ Enumeration of document system states<br>
 <p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.EnterpriseCompany.Company.AdministrativeRegion</code>
 <code>obj.Lines.Select( c =&gt; c.IntrastatDestinationRegion).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="intrastattransportcountry">IntrastatTransportCountry</h3>
 <p>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</p>

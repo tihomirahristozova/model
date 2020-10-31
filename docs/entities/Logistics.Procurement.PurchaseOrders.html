@@ -516,16 +516,23 @@ Relationship between parent and child documents<br>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultPaymentTermDays, Double))</code></p>
 <h3 id="planneddeliverydate">PlannedDeliveryDate</h3>
 <p>When not null, specifies the planned delivery date for all lines. [Filter(ge;le)]</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultDeliveryTermDays, Double))</code>
+<code>obj.Lines.Select( c =&gt; PurchaseOrderLinesRepository.PlannedDeliveryDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="plannedreleasedate">PlannedReleaseDate</h3>
 <p>The date, when the document is planned to be realeased and send to the supplier. [Required] [Filter(ge;le)]</p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.DocumentDate</code></p>
 <h3 id="planningonly">PlanningOnly</h3>
 <p>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</p>
 <p><em>Type</em>: <strong>boolean (nullable)</strong><br>
@@ -641,6 +648,8 @@ Enumeration of document system states<br>
 <p>The currency of the unit prices and amounts in the document. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Supplier.DefaultCurrency</code></p>
 <h3 id="documenttype">DocumentType</h3>
 <p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
@@ -673,10 +682,14 @@ Enumeration of document system states<br>
 <p>Payment account that is used for the payments of the deliveries for this purchase orders. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))</code></p>
 <h3 id="paymenttype">PaymentType</h3>
 <p>When not null specifies the payment type for the sales order. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Supplier.DefaultPaymentType.IfNullThen( obj.PaymentType)</code></p>
 <h3 id="primecausedocument">PrimeCauseDocument</h3>
 <p>The document that is the prime cause for creation of the current document</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
@@ -685,6 +698,8 @@ Enumeration of document system states<br>
 <p>The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Supplier.GetDefaultPurchasePriceListIfValid( obj.DocumentDate)</code></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
 <p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>

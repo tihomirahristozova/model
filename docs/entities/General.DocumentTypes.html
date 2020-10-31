@@ -93,7 +93,7 @@
 <tr>
 <td><a href="General.DocumentTypes.html#code">Code</a></td>
 <td>string</td>
-<td>Unique descriptive code of the document type. [Required] [Filter(eq)] [ORD]</td>
+<td>Unique descriptive code of the document type. [Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="General.DocumentTypes.html#createmanully">CreateManully</a></td>
@@ -243,9 +243,9 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Unique descriptive code of the document type. [Required] [Filter(eq)] [ORD]</p>
+<p>Unique descriptive code of the document type. [Required] [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="createmanully">CreateManully</h3>
 <p>False if documents with this document type only can be generated; true - the user can create documents with this type. [Required] [Default(true)] [Filter(eq)]</p>

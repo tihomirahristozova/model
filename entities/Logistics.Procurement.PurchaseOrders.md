@@ -214,6 +214,8 @@ _Type_: **datetime (nullable)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultPaymentTermDays, Double))`
 ### PlannedDeliveryDate
 
 When not null, specifies the planned delivery date for all lines. [Filter(ge;le)]
@@ -222,6 +224,9 @@ _Type_: **datetime (nullable)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultDeliveryTermDays, Double))`
+`obj.Lines.Select( c => PurchaseOrderLinesRepository.PlannedDeliveryDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### PlannedReleaseDate
 
 The date, when the document is planned to be realeased and send to the supplier. [Required] [Filter(ge;le)]
@@ -230,6 +235,8 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.DocumentDate`
 ### PlanningOnly
 
 Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]
@@ -365,6 +372,8 @@ The currency of the unit prices and amounts in the document. [Filter(multi eq)]
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Supplier.DefaultCurrency`
 ### DocumentType
 
 The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
@@ -421,6 +430,8 @@ Payment account that is used for the payments of the deliveries for this purchas
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))`
 ### PaymentType
 
 When not null specifies the payment type for the sales order. [Filter(multi eq)]
@@ -428,6 +439,8 @@ When not null specifies the payment type for the sales order. [Filter(multi eq)]
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Supplier.DefaultPaymentType.IfNullThen( obj.PaymentType)`
 ### PrimeCauseDocument
 
 The document that is the prime cause for creation of the current document
@@ -442,6 +455,8 @@ The price list, which, when non-null, is used to automatically load unit prices 
 _Type_: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Supplier.GetDefaultPurchasePriceListIfValid( obj.DocumentDate)`
 ### ResponsiblePerson
 
 The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
