@@ -430,6 +430,9 @@ Payment account that is used for the payments of the deliveries for this purchas
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Back-End Default Expression:_  
+`obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))`
+
 _Front-End Recalc Expressions:_  
 `obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))`
 ### PaymentType

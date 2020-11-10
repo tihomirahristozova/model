@@ -242,6 +242,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
 
+_Front-End Recalc Expressions:_  
+`obj.CalculateSourceAmount( obj.DestinationAmount)`
 ### State
 
 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]

@@ -255,7 +255,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.PaymentType.DefaultPaymentAccount.IfNullThen( obj.PaymentAccount)</code></p>
+<code>obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)</code></p>
 <h3 id="paymenttype">PaymentType</h3>
 <p>Default payment type for the current installment. null means that there is no default payment type. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>

@@ -136,7 +136,7 @@ _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.PaymentType.DefaultPaymentAccount.IfNullThen( obj.PaymentAccount)`
+`obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)`
 ### PaymentType
 
 Default payment type for the current installment. null means that there is no default payment type. [Filter(multi eq)]

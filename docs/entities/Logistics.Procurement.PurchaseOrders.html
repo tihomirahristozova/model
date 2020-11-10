@@ -682,6 +682,8 @@ Enumeration of document system states<br>
 <p>Payment account that is used for the payments of the deliveries for this purchase orders. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))</code></p>
 <h3 id="paymenttype">PaymentType</h3>

@@ -242,7 +242,7 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Front-End Recalc Expressions:_  
-`IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.PricePerUnit, obj.UnitPrice)`
+`IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.PricePerUnit, obj.GetDefaultProductPrice( obj.Product))`
 
 ## Reference Details
 

@@ -437,6 +437,11 @@
       href: Finance.Cost.TemplateLevels.md
     - name: Templates
       href: Finance.Cost.Templates.md
+  - name: Excise
+    href: Finance.Excise.md
+    items:
+    - name: TaxWarehouses
+      href: Finance.Excise.TaxWarehouses.md
   - name: Intrastat
     href: Finance.Intrastat.md
     items:

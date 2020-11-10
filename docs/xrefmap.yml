@@ -625,6 +625,12 @@ references:
 - uid: Finance.Cost.Templates
   name: Finance.Cost.Templates Entity
   href: entities/Finance.Cost.Templates.html
+- uid: Finance.Excise
+  name: Finance.Excise Namespace
+  href: entities/Finance.Excise.html
+- uid: Finance.Excise.TaxWarehouses
+  name: Finance.Excise.TaxWarehouses Entity
+  href: entities/Finance.Excise.TaxWarehouses.html
 - uid: Finance.Intrastat
   name: Finance.Intrastat Namespace
   href: entities/Finance.Intrastat.html
