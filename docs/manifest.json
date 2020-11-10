@@ -25,12 +25,51 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R18067.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R18067.html",
+          "hash": "QwFqvKTYlh4seeG8DbonDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "business-rules/R27179.md",
       "output": {
         ".html": {
           "relative_path": "business-rules/R27179.html",
           "hash": "9UZMQbAXdGbUeyLXvYf7qQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R31508-24.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R31508-24.html",
+          "hash": "4lFmxXll4LjhUvmpUQecpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R31531-15.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R31531-15.html",
+          "hash": "Y1TLupHREvAqlP9r2tSaeA=="
         }
       },
       "is_incremental": false,
@@ -1936,7 +1975,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Sales.SalesOrders.html",
-          "hash": "5hkuckuyUJ+Ym1Ri+c1Efw=="
+          "hash": "xW/xtDePuf7gGSTfQmQFXw=="
         }
       },
       "is_incremental": false,
@@ -4552,7 +4591,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Procurement.PurchaseInvoiceLines.html",
-          "hash": "VsfNCPpg3+BbwRMIFzm38g=="
+          "hash": "jUa/s7ucQOLAm9NZRhKA1g=="
         }
       },
       "is_incremental": false,
@@ -6572,6 +6611,17 @@
         ".html": {
           "relative_path": "index.html",
           "hash": "R42tLoOgkHJYnmtizk38IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
         }
       },
       "is_incremental": false,
