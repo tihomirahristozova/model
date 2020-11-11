@@ -72,54 +72,83 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="r31531-15-purchase-order-line---determine-purchase-product-price">R31531-15 Purchase Order Line - Determine Purchase Product Price</h1>
 
-<p>+-------------------------+-------------------------------------------------------------------------------------------+
-| Code                    | R31531-15                                                                                 |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Entity                  | PurchaseOrderLine                                                                         |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Name                    | DeterminePurchaseProductPrice                                                             |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Attribute               | PurchaseProductPrice                                                                      |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Layer                   | Front-End                                                                                 |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Events                  | AttributeChanged(DocumentDate)                                                            |
-|                         |                                                                                           |
-|                         | AttributeChanged(EnterpriseCompany)                                                       |
-|                         |                                                                                           |
-|                         | AttributeChanged(Supplier)                                                                |
-|                         |                                                                                           |
-|                         | AttributeChanged(PurchasePriceList)                                                       |
-|                         |                                                                                           |
-|                         | AttributeChanged(Product)                                                                 |
-|                         |                                                                                           |
-|                         | AttributeChanged(Quantity)                                                                |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Priority                | Normal                                                                                    |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Modify                  | YES                                                                                       |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Applicable Legislations | <a href="https://confluence.erp.net/display/techdoc/Country+Specific+Functionality">ALL // no condition                                                                      |
-|                         | needed</a>        |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Action                  | PurchaseProductPrice.DeterminePurchaseProductPrice(Document.DocumentDate,                 |
-|                         | PurchaseOrder.Supplier, Product,  Quantity, Document.EnterpriseCompany,                   |
-|                         | PurchaseOrder.PurchasePriceList, PurchaseProductPrice)                                    |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Description             | Determines Purchase Product Price using the Document Date, Supplier, Enterprise Company,  |
-|                         | Purchase Price List, Product, Confirmed Quantity or Quantity if the first one doesn't    |
-|                         | have a value and the current Purchase Product Price as filtering values.                  |
-|                         |                                                                                           |
-|                         | (RecalcExpression)                                                                        |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Message                 | \                                                                                         |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Version                 | Introduced: 21                                                                            |
-|                         |                                                                                           |
-|                         | Updated: -                                                                                |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Revocable               | YES                                                                                       |
-+-------------------------+-------------------------------------------------------------------------------------------+</p>
+<table>
+<col style="width:21.55%">
+<col style="width:78.45%">
+<tbody>
+<tr>
+<td>Code</td>
+<td>R31531-15</td>
+</tr>
+<tr>
+<td>Entity</td>
+<td>PurchaseOrderLine</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>DeterminePurchaseProductPrice</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>PurchaseProductPrice</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Front-End</td>
+</tr>
+<tr>
+<td>Events</td>
+<td><p>AttributeChanged(DocumentDate)</p>
+<p>AttributeChanged(EnterpriseCompany)</p>
+<p>AttributeChanged(Supplier)</p>
+<p>AttributeChanged(PurchasePriceList)</p>
+<p>AttributeChanged(Product)</p>
+<p>AttributeChanged(Quantity)</p>
+</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>Modify</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Applicable Legislations</td>
+<td><a href="https://confluence.erp.net/display/techdoc/Country+Specific+Functionality">ALL // no condition
+needed</a></td>
+</tr>
+<tr>
+<td>Action</td>
+<td>PurchaseProductPrice.DeterminePurchaseProductPrice(Document.DocumentDate,
+PurchaseOrder.Supplier, Product,  Quantity, Document.EnterpriseCompany,
+PurchaseOrder.PurchasePriceList, PurchaseProductPrice)</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><p>Determines Purchase Product Price using the Document Date, Supplier, Enterprise Company,
+Purchase Price List, Product, Confirmed Quantity or Quantity if the first one doesn't
+have a value and the current Purchase Product Price as filtering values.</p>
+<p>(RecalcExpression)</p>
+</td>
+</tr>
+<tr>
+<td>Message</td>
+<td>\</td>
+</tr>
+<tr>
+<td>Version</td>
+<td><p>Introduced: 21</p>
+<p>Updated: -</p>
+</td>
+</tr>
+<tr>
+<td>Revocable</td>
+<td>YES</td>
+</tr>
+</tbody>
+</table>
 <p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
 topic <a href="https://confluence.erp.net/display/techdoc/System+Business+Rules">System Business Rules</a>.</em></p>
 <p>\</p>

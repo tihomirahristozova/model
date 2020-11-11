@@ -72,51 +72,82 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="r18067-storetransaction---store-enterprise-company">R18067 StoreTransaction - Store Enterprise Company</h1>
 
-<p>+-------------------------+-------------------------------------------------------------------------------------------+
-| Code                    | R18067                                                                                    |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Entity                  | StoreTransaction                                                                          |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Name                    | StoreEnterpriseCompany                                                                    |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Attribute               | Store                                                                                     |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Layer                   | Back-End                                                                                  |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Events                  | Planning +                                                                                |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Priority                | Normal                                                                                    |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Modify                  | NO                                                                                        |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Applicable Legislations | <a href="https://confluence.erp.net/display/techdoc/Country+Specific+Functionality">ALL // no condition                                                                      |
-|                         | needed</a>        |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Action                  | Validate that:                                                                            |
-|                         |                                                                                           |
-|                         | Store.EnterpriseCompany == null || Store.EnterpriseCompany == EnterpriseCompany         |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Description             | The rule validates that the Store that is filled in the current Store Transaction does    |
-|                         | not belong to another Enterprise Company                                                  |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Message                 | Invalid value for Store.\                                                                 |
-|                         |  \                                                                                        |
-|                         | The selected store '{Store.StoreName}' is not in the same Enterprise Company as the     |
-|                         | document '{DocumentText}', which is not allowed.                                        |
-|                         |                                                                                           |
-|                         | \                                                                                         |
-|                         | Select a store from the same Enterprise Company.                                          |
-|                         |                                                                                           |
-|                         | \                                                                                         |
-|                         |                                                                                           |
-|                         | The message is also used in:\                                                             |
-|                         | \                                                                                         |
-|                         | <a href="R31213.md">R31213 SalesOrder - Check Store Enterprise Company</a>\                          |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Version                 | Introduced: 2015 CTP8                                                                     |
-+-------------------------+-------------------------------------------------------------------------------------------+
-| Revocable               | NO                                                                                        |
-+-------------------------+-------------------------------------------------------------------------------------------+</p>
+<table>
+<col style="width:21.55%">
+<col style="width:78.45%">
+<tbody>
+<tr>
+<td>Code</td>
+<td>R18067</td>
+</tr>
+<tr>
+<td>Entity</td>
+<td>StoreTransaction</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>StoreEnterpriseCompany</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>Store</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Back-End</td>
+</tr>
+<tr>
+<td>Events</td>
+<td>Planning +</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>Modify</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>Applicable Legislations</td>
+<td><a href="https://confluence.erp.net/display/techdoc/Country+Specific+Functionality">ALL // no condition
+needed</a></td>
+</tr>
+<tr>
+<td>Action</td>
+<td><p>Validate that:</p>
+<p>Store.EnterpriseCompany == null || Store.EnterpriseCompany == EnterpriseCompany</p>
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>The rule validates that the Store that is filled in the current Store Transaction does
+not belong to another Enterprise Company</td>
+</tr>
+<tr>
+<td>Message</td>
+<td><p>Invalid value for Store.<br>
+ <br>
+The selected store '{Store.StoreName}' is not in the same Enterprise Company as the
+document '{DocumentText}', which is not allowed.</p>
+<p><br>
+Select a store from the same Enterprise Company.</p>
+<p>\</p>
+<p>The message is also used in:<br>
+<br>
+<a href="R31213.md">R31213 SalesOrder - Check Store Enterprise Company</a>\</p>
+</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>Introduced: 2015 CTP8</td>
+</tr>
+<tr>
+<td>Revocable</td>
+<td>NO</td>
+</tr>
+</tbody>
+</table>
 <p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
 topic <a href="https://confluence.erp.net/display/techdoc/System+Business+Rules">System Business Rules</a>.</em></p>
 <p>\</p>
