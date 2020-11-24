@@ -700,16 +700,12 @@ Enumeration of document system states<br>
 <p>Payment account that is used for the payments of this delivery. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
-<p><em>Back-End Default Expression:</em><br>
-<code>obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))</code></p>
+<code>obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)</code></p>
 <h3 id="paymenttype">PaymentType</h3>
 <p>When not null specifies the payment type for the sales order. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
-<p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Supplier.DefaultPaymentType</code></p>
 <h3 id="primecausedocument">PrimeCauseDocument</h3>
 <p>The document that is the prime cause for creation of the current document</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>

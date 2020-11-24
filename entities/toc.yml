@@ -440,6 +440,8 @@
   - name: Excise
     href: Finance.Excise.md
     items:
+    - name: TaxWarehouseMeasuringTransactions
+      href: Finance.Excise.TaxWarehouseMeasuringTransactions.md
     - name: TaxWarehouses
       href: Finance.Excise.TaxWarehouses.md
   - name: Intrastat
@@ -603,6 +605,8 @@
     href: General.DocumentVersions.md
   - name: EnterpriseCompanies
     href: General.EnterpriseCompanies.md
+  - name: Folders
+    href: General.Folders.md
   - name: Geography
     href: General.Geography.md
     items:

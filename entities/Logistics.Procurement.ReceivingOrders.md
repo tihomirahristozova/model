@@ -446,11 +446,8 @@ Payment account that is used for the payments of this delivery. [Filter(multi eq
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
-_Back-End Default Expression:_  
-`obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))`
-
 _Front-End Recalc Expressions:_  
-`obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))`
+`obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)`
 ### PaymentType
 
 When not null specifies the payment type for the sales order. [Filter(multi eq)]
@@ -458,8 +455,6 @@ When not null specifies the payment type for the sales order. [Filter(multi eq)]
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
-_Front-End Recalc Expressions:_  
-`obj.Supplier.DefaultPaymentType`
 ### PrimeCauseDocument
 
 The document that is the prime cause for creation of the current document

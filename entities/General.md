@@ -40,6 +40,7 @@ uid: General
 - [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md)  
 - [DocumentVersions](General.DocumentVersions.md)  
 - [EnterpriseCompanies](General.EnterpriseCompanies.md)  
+- [Folders](General.Folders.md)  
 - [LinkTypes](General.LinkTypes.md)  
 - [MeasurementCategories](General.MeasurementCategories.md)  
 - [MeasurementUnits](General.MeasurementUnits.md)  

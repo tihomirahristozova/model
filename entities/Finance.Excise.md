@@ -5,5 +5,6 @@ uid: Finance.Excise
 
 
 ## Entities
+- [TaxWarehouseMeasuringTransactions](Finance.Excise.TaxWarehouseMeasuringTransactions.md)  
 - [TaxWarehouses](Finance.Excise.TaxWarehouses.md)  
 

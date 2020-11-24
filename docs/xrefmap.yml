@@ -628,6 +628,9 @@ references:
 - uid: Finance.Excise
   name: Finance.Excise Namespace
   href: entities/Finance.Excise.html
+- uid: Finance.Excise.TaxWarehouseMeasuringTransactions
+  name: Finance.Excise.TaxWarehouseMeasuringTransactions Entity
+  href: entities/Finance.Excise.TaxWarehouseMeasuringTransactions.html
 - uid: Finance.Excise.TaxWarehouses
   name: Finance.Excise.TaxWarehouses Entity
   href: entities/Finance.Excise.TaxWarehouses.html
@@ -865,6 +868,9 @@ references:
 - uid: General.EnterpriseCompanies
   name: General.EnterpriseCompanies Entity
   href: entities/General.EnterpriseCompanies.html
+- uid: General.Folders
+  name: General.Folders Entity
+  href: entities/General.Folders.html
 - uid: General.Geography
   name: General.Geography Namespace
   href: entities/General.Geography.html
