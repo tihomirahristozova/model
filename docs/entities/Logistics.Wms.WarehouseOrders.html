@@ -91,9 +91,104 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#completetime">CompleteTime</a></td>
+<td>datetime (nullable)</td>
+<td>Exact time, when the document was last completed[Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#creationtime">CreationTime</a></td>
+<td>datetime</td>
+<td>Date/Time when the document was created [Required][Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#creationuser">CreationUser</a></td>
+<td>string</td>
+<td>The login name of the user, who created the document [Required][Filter(like)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#documentdate">DocumentDate</a></td>
+<td>datetime</td>
+<td>The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#documentno">DocumentNo</a></td>
+<td>string</td>
+<td>Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#documentnotes">DocumentNotes</a></td>
+<td>string (nullable)</td>
+<td>Notes for this Document</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#documentversion">DocumentVersion</a></td>
+<td>int32</td>
+<td>[Filter(eq;ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#entityname">EntityName</a></td>
+<td>string</td>
+<td>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseOrders.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
+<td><a href="Logistics.Wms.WarehouseOrders.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> (nullable)</td>
+<td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#planningonly">PlanningOnly</a></td>
+<td>boolean (nullable)</td>
+<td>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#readonly">ReadOnly</a></td>
+<td>boolean</td>
+<td>True - the document is read only; false - the document is not read only [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#referencedate">ReferenceDate</a></td>
+<td>datetime (nullable)</td>
+<td>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#referencedocumentno">ReferenceDocumentNo</a></td>
+<td>string (nullable)</td>
+<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#releasetime">ReleaseTime</a></td>
+<td>datetime (nullable)</td>
+<td>Exact time, when the document was first released [Filter(ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#state">State</a></td>
+<td><a href="Logistics.Wms.WarehouseOrders.html#state">DocumentState</a></td>
+<td>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#void">Void</a></td>
+<td>boolean</td>
+<td>True if the document is null and void [Required][Filter(eq)]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#voidreason">VoidReason</a></td>
+<td>string (nullable)</td>
+<td>Reason for voiding the document, entered by the user</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#voidtime">VoidTime</a></td>
+<td>datetime (nullable)</td>
+<td>Date/time when the document has become void</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#voiduser">VoidUser</a></td>
+<td>string (nullable)</td>
+<td>The user who voided the document</td>
 </tr>
 </tbody>
 </table>
@@ -108,9 +203,94 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Wms.WarehouseOrders.html#document">Document</a></td>
+<td><a href="Logistics.Wms.WarehouseOrders.html#accesskey">AccessKey</a></td>
+<td><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</td>
+<td>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#adjusteddocument">AdjustedDocument</a></td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
+<td>The primary document, which the current document adjusts. null when this is not an adjustment document</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#assignedtouser">AssignedToUser</a></td>
+<td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
+<td>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#currencydirectory">CurrencyDirectory</a></td>
+<td><a href="General.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</td>
+<td>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#documenttype">DocumentType</a></td>
+<td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
+<td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#enterprisecompany">EnterpriseCompany</a></td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
+<td>The enterprise company which issued the document [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
+<td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
+<td>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#fromcompanydivision">FromCompanyDivision</a></td>
+<td><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</td>
+<td>The division of the company, issuing the document. null when the document is not issued by any specific division</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#fromparty">FromParty</a></td>
+<td><a href="General.Contacts.Parties.html">Parties</a></td>
+<td>The party which issued the document [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#masterdocument">MasterDocument</a></td>
 <td><a href="General.Documents.html">Documents</a></td>
-<td>The <a href="General.Documents.html">Document</a> to which this WarehouseOrder belongs. [Required] [Filter(multi eq)] [Owner]</td>
+<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#parent">Parent</a></td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
+<td>In a multi-document tree, this is the direct parent document. If this is the root it is null</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#primecausedocument">PrimeCauseDocument</a></td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
+<td>The document that is the prime cause for creation of the current document</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#responsibleperson">ResponsiblePerson</a></td>
+<td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
+<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#reverseofdocument">ReverseOfDocument</a></td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
+<td>The document which the current document is reverse of</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#sequence">Sequence</a></td>
+<td><a href="General.Sequences.html">Sequences</a> (nullable)</td>
+<td>The sequence that will be used to give new numbers to the documents of this type</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#tocompanydivision">ToCompanyDivision</a></td>
+<td><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a></td>
+<td>The division of the company, receiving the document. null when the document is not received by any specific division</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#toparty">ToParty</a></td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
+<td>The party which should receive the document</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#userstatus">UserStatus</a></td>
+<td><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
+<td>The user status of this document if applicable for this document type. null means unknown or not yet set</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrders.html#warehouse">Warehouse</a></td>
@@ -120,7 +300,7 @@
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrders.html#warehouseworker">WarehouseWorker</a></td>
 <td><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</td>
-<td>When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)]</td>
+<td>When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)] [Introduced in version 21.1.1.18]</td>
 </tr>
 </tbody>
 </table>
@@ -135,33 +315,484 @@
 </thead>
 <tbody>
 <tr>
+<td>Comments</td>
+<td><a href="General.DocumentComments.html">DocumentComments</a></td>
+<td>List of <a href="General.DocumentComments.html">DocumentComment</a> child objects, based on the <a href="General.DocumentComments.html#document">DocumentComment.Document</a> back reference</td>
+</tr>
+<tr>
+<td>DistributedAmounts</td>
+<td><a href="General.DocumentDistributedAmounts.html">DocumentDistributedAmounts</a></td>
+<td>List of <a href="General.DocumentDistributedAmounts.html">DocumentDistributed<br>Amount</a> child objects, based on the <a href="General.DocumentDistributedAmounts.html#document">DocumentDistributedAmount.Document</a> back reference</td>
+</tr>
+<tr>
+<td>DocumentAmounts</td>
+<td><a href="General.DocumentAmounts.html">DocumentAmounts</a></td>
+<td></td>
+</tr>
+<tr>
+<td>FileAttachments</td>
+<td><a href="General.DocumentFileAttachments.html">DocumentFileAttachments</a></td>
+<td>List of <a href="General.DocumentFileAttachments.html">DocumentFileAttachment</a> child objects, based on the <a href="General.DocumentFileAttachments.html#document">DocumentFileAttachment.Document</a> back reference</td>
+</tr>
+<tr>
+<td>LineAmounts</td>
+<td><a href="General.DocumentLineAmounts.html">DocumentLineAmounts</a></td>
+<td>List of <a href="General.DocumentLineAmounts.html">DocumentLineAmount</a> child objects, based on the <a href="General.DocumentLineAmounts.html#document">DocumentLineAmount.Document</a> back reference</td>
+</tr>
+<tr>
 <td>Lines</td>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLines</a></td>
 <td>List of <a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLine</a> child objects, based on the <a href="Logistics.Wms.WarehouseOrderLines.html#warehouseorder">Logistics.Wms.WarehouseOrderLine.WarehouseOrder</a> back reference</td>
 </tr>
+<tr>
+<td>Prints</td>
+<td><a href="General.DocumentPrints.html">DocumentPrints</a></td>
+<td>List of <a href="General.DocumentPrints.html">DocumentPrint</a> child objects, based on the <a href="General.DocumentPrints.html#document">DocumentPrint.Document</a> back reference</td>
+</tr>
+<tr>
+<td>StateChanges</td>
+<td><a href="General.DocumentStateChanges.html">DocumentStateChanges</a></td>
+<td>List of <a href="General.DocumentStateChanges.html">DocumentStateChange</a> child objects, based on the <a href="General.DocumentStateChanges.html#document">DocumentStateChange.Document</a> back reference</td>
+</tr>
+<tr>
+<td>Versions</td>
+<td><a href="General.DocumentVersions.html">DocumentVersions</a></td>
+<td>List of <a href="General.Documents.html#documentversion">DocumentVersion</a> child objects, based on the <a href="General.DocumentVersions.html#document">DocumentVersion.Document</a> back reference</td>
+</tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="completetime">CompleteTime</h3>
+<p>Exact time, when the document was last completed[Filter(ge;le)]</p>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="creationtime">CreationTime</h3>
+<p>Date/Time when the document was created [Required][Filter(ge;le)]</p>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>CurrentDateTime</strong></p>
+<h3 id="creationuser">CreationUser</h3>
+<p>The login name of the user, who created the document [Required][Filter(like)]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="documentdate">DocumentDate</h3>
+<p>The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]</p>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Default Value</em>: <strong>CurrentDate</strong></p>
+<h3 id="documentno">DocumentNo</h3>
+<p>Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="documentnotes">DocumentNotes</h3>
+<p>Notes for this Document</p>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="documentversion">DocumentVersion</h3>
+<p>[Filter(eq;ge;le)]</p>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>1</strong></p>
+<h3 id="entityname">EntityName</h3>
+<p>The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
+<p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</p>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrders.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> (nullable)</strong><br>
+Relationship between parent and child documents<br>
+<em>Allowed Values (General.ParentDocumentRelationshipType Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subtask</td>
+<td>The child document is a sub-task of the parent document. (Complete child to complete parent) <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Subtask'</td>
+</tr>
+<tr>
+<td>NextTask</td>
+<td>The child document is next task of the parent document. (Complete parent to complete child) <br> <em>Database Value:</em> 'N' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'NextTask'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="planningonly">PlanningOnly</h3>
+<p>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]</p>
+<p><em>Type</em>: <strong>boolean (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="readonly">ReadOnly</h3>
+<p>True - the document is read only; false - the document is not read only [Required]</p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="referencedate">ReferenceDate</h3>
+<p>The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]</p>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="referencedocumentno">ReferenceDocumentNo</h3>
+<p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]</p>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="releasetime">ReleaseTime</h3>
+<p>Exact time, when the document was first released [Filter(ge;le)]</p>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="state">State</h3>
+<p>0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]</p>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrders.html#state">DocumentState</a></strong><br>
+Enumeration of document system states<br>
+<em>Allowed Values (General.DocumentState Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>New document, just created. Can be edited. (Stored as 0). <br> <em>Database Value:</em> 0 <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+</tr>
+<tr>
+<td>Adjustment</td>
+<td>Document which adjusts other released documents. (Stored as 5). <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Adjustment'</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Planned by the system for future releasing. (Stored as 10). <br> <em>Database Value:</em> 10 <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Planned'</td>
+</tr>
+<tr>
+<td>FirmPlanned</td>
+<td>Planned by operator for future releasing. (Stored as 20). <br> <em>Database Value:</em> 20 <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+</tr>
+<tr>
+<td>Released</td>
+<td>Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br> <em>Database Value:</em> 30 <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Released'</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Work has completed. (Stored as 40). <br> <em>Database Value:</em> 40 <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'Completed'</td>
+</tr>
+<tr>
+<td>Closed</td>
+<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br> <em>Database Value:</em> 50 <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Closed'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h3 id="void">Void</h3>
+<p>True if the document is null and void [Required][Filter(eq)]</p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
+<h3 id="voidreason">VoidReason</h3>
+<p>Reason for voiding the document, entered by the user</p>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="voidtime">VoidTime</h3>
+<p>Date/time when the document has become void</p>
+<p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="voiduser">VoidUser</h3>
+<p>The user who voided the document</p>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
-<h3 id="document">Document</h3>
-<p>The <a href="General.Documents.html">Document</a> to which this WarehouseOrder belongs. [Required] [Filter(multi eq)] [Owner]</p>
+<h3 id="accesskey">AccessKey</h3>
+<p>The access key, containing the user permissions for this document. null means that all users have unlimited permissions</p>
+<p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="adjusteddocument">AdjustedDocument</h3>
+<p>The primary document, which the current document adjusts. null when this is not an adjustment document</p>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="assignedtouser">AssignedToUser</h3>
+<p>The user to which this document is assigned for handling. null means that the document is not assigned to specific user</p>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="currencydirectory">CurrencyDirectory</h3>
+<p>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions</p>
+<p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="documenttype">DocumentType</h3>
+<p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]</p>
+<p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="enterprisecompany">EnterpriseCompany</h3>
+<p>The enterprise company which issued the document [Required]</p>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
+<p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used</p>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="fromcompanydivision">FromCompanyDivision</h3>
+<p>The division of the company, issuing the document. null when the document is not issued by any specific division</p>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="fromparty">FromParty</h3>
+<p>The party which issued the document [Required]</p>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="masterdocument">MasterDocument</h3>
+<p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="parent">Parent</h3>
+<p>In a multi-document tree, this is the direct parent document. If this is the root it is null</p>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="primecausedocument">PrimeCauseDocument</h3>
+<p>The document that is the prime cause for creation of the current document</p>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="responsibleperson">ResponsiblePerson</h3>
+<p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="reverseofdocument">ReverseOfDocument</h3>
+<p>The document which the current document is reverse of</p>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="sequence">Sequence</h3>
+<p>The sequence that will be used to give new numbers to the documents of this type</p>
+<p><em>Type</em>: <strong><a href="General.Sequences.html">Sequences</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="tocompanydivision">ToCompanyDivision</h3>
+<p>The division of the company, receiving the document. null when the document is not received by any specific division</p>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong></p>
+<h3 id="toparty">ToParty</h3>
+<p>The party which should receive the document</p>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<h3 id="userstatus">UserStatus</h3>
+<p>The user status of this document if applicable for this document type. null means unknown or not yet set</p>
+<p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="warehouse">Warehouse</h3>
 <p>The warehouse, where the order will be executed. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouseworker">WarehouseWorker</h3>
-<p>When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)]</p>
+<p>When set, denotes that the whole order is assigned to the specified worker. [Filter(multi eq)] [Introduced in version 21.1.1.18]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h2 id="api-methods">API Methods</h2>
+<p>Methods that can be invoked in public APIs.</p>
+<h3 id="getallparentdocuments">GetAllParentDocuments</h3>
+<p>Gets all parent documents, traversing the parent document chain by using the <a href="General.Documents.html#parent">Parent</a> property.<br>
+<em>Return Type</em>: <strong>Collection Of <a href="General.Documents.html">Documents</a></strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>GET</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>includeSelf</strong><br>
+if set to true the current document is included.<br>
+<em>Type</em>: boolean<br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: False</li>
+</ul>
+<h3 id="changestate">ChangeState</h3>
+<p>Changes the document state to the specified new state<br>
+<em>Return Type</em>: <strong>void</strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>POST</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>newState</strong><br>
+The desired new state of the document<br>
+<em>Type</em>: General.DocumentState<br>
+Enumeration of document system states<br>
+<em>Allowed Values (General.DocumentState Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>New document, just created. Can be edited. (Stored as 0). <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+</tr>
+<tr>
+<td>Adjustment</td>
+<td>Document which adjusts other released documents. (Stored as 5). <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Adjustment'</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Planned by the system for future releasing. (Stored as 10). <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Planned'</td>
+</tr>
+<tr>
+<td>FirmPlanned</td>
+<td>Planned by operator for future releasing. (Stored as 20). <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+</tr>
+<tr>
+<td>Released</td>
+<td>Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Released'</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Work has completed. (Stored as 40). <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'Completed'</td>
+</tr>
+<tr>
+<td>Closed</td>
+<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Closed'</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>userStatus</strong><br>
+The desired new user status of the document. Can be null.<br>
+<em>Type</em>: <a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a><br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: null</p>
+</li>
+</ul>
+<p>The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.</p>
+<h3 id="complete">Complete</h3>
+<p>Changes the document state to Completed with all Release-ed sub-documents<br>
+<em>Return Type</em>: <strong>void</strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>POST</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>completion</strong><br>
+How the sub-documents will be completed, if at all<br>
+<em>Type</em>: General.DocumentCompletion<br>
+Determines how <a href="General.Documents.html">Document</a> will be completed<br>
+<em>Allowed Values (General.DocumentCompletion Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OnlyDocument</td>
+<td>Only the document will be completed <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'OnlyDocument'</td>
+</tr>
+<tr>
+<td>WithAllChildren</td>
+<td>The document, along with is sub-documents, will be completed <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'WithAllChildren'</td>
+</tr>
+<tr>
+<td>WithReleasedChildren</td>
+<td>The document, along with its Release-ed sub-documents, will be completed <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'WithReleasedChildren'</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.</p>
+<h3 id="makevoid">MakeVoid</h3>
+<p>Makes the document void. The operation is irreversible.<br>
+<em>Return Type</em>: <strong>void</strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>POST</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>reason</strong><br>
+The reason for voiding the document.<br>
+<em>Type</em>: string</p>
+</li>
+<li><p><strong>voidType</strong><br>
+The type of void operation to execute.<br>
+<em>Type</em>: General.DocumentsRepositoryBase.VoidType<br>
+Specifies the type of void operation<br>
+<em>Allowed Values (General.DocumentsRepositoryBase.VoidType Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VoidDocument</td>
+<td>Void only the document. If there are sub-documents, the operation might fail. <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'VoidDocument'</td>
+</tr>
+<tr>
+<td>VoidWithSubDocuments</td>
+<td>Void the document and its non-released sub-documents. If there are released sub-documents, the operation might fail. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'VoidWithSubDocuments'</td>
+</tr>
+<tr>
+<td>VoidWithReleased<br>SubDocuments</td>
+<td>Void the document and all of its sub-documents, even the released ones. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'VoidWithReleased<br>SubDocuments'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Optional</em>: True<br>
+<em>Default Value</em>: VoidDocument</p>
+</li>
+</ul>
+<h3 id="getprintout">GetPrintout</h3>
+<p>Gets a document printout as a file. The returned value is Base64 string representation of the file contents.<br>
+<em>Return Type</em>: <strong>string</strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>POST</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>fileFormat</strong><br>
+The file format: pdf, html, xlsx, xls, docx, txt and png. The default format is 'pdf'.<br>
+<em>Type</em>: string<br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: pdf</p>
+</li>
+<li><p><strong>printout</strong><br>
+The printout defined for the document type of the document. If null the default printout of the document type is used.<br>
+<em>Type</em>: <a href="General.Printouts.html">Printouts</a><br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: null</p>
+</li>
+</ul>
+<h3 id="recalculate">Recalculate</h3>
+<p>The document and all of its owned objects will be altered to become valid.<br>
+<em>Return Type</em>: <strong>void</strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>POST</strong></p>
+<p>In some cases the objects in child collection of the document depend on values from other child objects.             This method ensures that all child objects are properly validated.             The changes are only in memory and are not committed to the server.</p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>None</p>
+<h2 id="generations">Generations</h2>
 <p>None</p>
 <h2 id="api">API</h2>
 <p>Domain API Query:

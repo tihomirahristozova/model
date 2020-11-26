@@ -10,24 +10,25 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Wms.WarehouseOrderLines.md#id) | guid |  
-| [LineNo](Logistics.Wms.WarehouseOrderLines.md#lineno) | int32 | Unique consecutive line number within the order. [Required] 
+| [LineNo](Logistics.Wms.WarehouseOrderLines.md#lineno) | int32 | Unique consecutive line number within the order. [Required] [Filter(eq)] 
 | [Notes](Logistics.Wms.WarehouseOrderLines.md#notes) | string (nullable) | Notes for this WarehouseOrderLine. 
-| [Quantity](Logistics.Wms.WarehouseOrderLines.md#quantity) | decimal | The quantity of the product, which should be operated. [Required] [Default(0)] 
-| [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | string | The type of the task (operation), which should be performed. MOV=Move; INB=Inbound; OUT=Outbound; INS=Inspect; PCK=Packing/Unpacking; CNT=Count. [Required] 
+| [Quantity](Logistics.Wms.WarehouseOrderLines.md#quantity) | [Quantity](../data-types.md#quantity) | The quantity of the product, which should be processed. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(eq;ge;le)] 
+| [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | The type of the task (operation), which should be performed. REC=Receive; DES=Despatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Assemble kit; RKT=Reverse kitting; CNT=Count; TSK=Task. [Required] [Filter(multi eq)] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Lot](Logistics.Wms.WarehouseOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the product, which should be operated. null for operations, which are not lot-specific, or when any lot can be used. [Filter(multi eq)] |
-| [Product](Logistics.Wms.WarehouseOrderLines.md#product) | [Products](General.Products.Products.md) | The product, which should be operated. [Required] [Filter(multi eq)] |
-| [QuantityUnit](Logistics.Wms.WarehouseOrderLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
-| [SerialNumber](Logistics.Wms.WarehouseOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The serial number of the product, which should be operated. null for operations, which are not serial number-specific, or when any serial number can be used. [Filter(multi eq)] |
-| [ToUnit](Logistics.Wms.WarehouseOrderLines.md#tounit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | Destination measurement unit. null for operations, which do not specify destination measurement unit. [Filter(multi eq)] |
+| [LogisticUnit](Logistics.Wms.WarehouseOrderLines.md#logisticunit) | [LogisticUnits](Logistics.LogisticUnits.md) (nullable) | Logistic unit, which should be used in the operation. [Filter(multi eq)] [Introduced in version 21.1.1.18] |
+| [Lot](Logistics.Wms.WarehouseOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the product, which should be used. null for operations, which are not lot-specific, or when any lot can be used. [Filter(multi eq)] |
+| [Product](Logistics.Wms.WarehouseOrderLines.md#product) | [Products](General.Products.Products.md) (nullable) | The product, which should be used for the operation. [Filter(multi eq)] |
+| [ProductVariant](Logistics.Wms.WarehouseOrderLines.md#productvariant) | [ProductVariants](General.ProductVariants.md) (nullable) | The product variant, which should be used. [Filter(multi eq)] [Introduced in version 21.1.1.18] |
+| [QuantityUnit](Logistics.Wms.WarehouseOrderLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit of Quantity. null for operations, which are not quantity-related. [Filter(multi eq)] |
+| [SerialNumber](Logistics.Wms.WarehouseOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The serial number of the product, which should be used. null for operations, which are not serial number-specific, or when any serial number can be used. [Filter(multi eq)] |
 | [ToWarehouseLocation](Logistics.Wms.WarehouseOrderLines.md#towarehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable) | Destination warehouse location. null for operations, which do not specify destination location. [Filter(multi eq)] |
 | [WarehouseLocation](Logistics.Wms.WarehouseOrderLines.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable) | Location, where the opeartion should be performed. null for operations, which do not require location. [Filter(multi eq)] |
 | [WarehouseOrder](Logistics.Wms.WarehouseOrderLines.md#warehouseorder) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) | The [WarehouseOrder](Logistics.Wms.WarehouseOrderLines.md#warehouseorder) to which this WarehouseOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
-| [WarehouseWorker](Logistics.Wms.WarehouseOrderLines.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | The human or robot worker, which should execute the line. null means that the line is shared among all workers, assigned to the order. [Filter(multi eq)] |
+| [WarehouseWorker](Logistics.Wms.WarehouseOrderLines.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | Human or robot worker, which should execute the operation. null means that the line is shared among all workers, assigned to the order. [Filter(multi eq)] |
 | [WarehouseZone](Logistics.Wms.WarehouseOrderLines.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | The warehouse zone, in which the operation should be performed. null for operations which do not require specific zone. [Filter(multi eq)] |
 
 
@@ -41,12 +42,17 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-Unique consecutive line number within the order. [Required]
+Unique consecutive line number within the order. [Required] [Filter(eq)]
 
 _Type_: **int32**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
+_Back-End Default Expression:_  
+`( obj.WarehouseOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+
+_Front-End Recalc Expressions:_  
+`( obj.WarehouseOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
 Notes for this WarehouseOrderLine.
@@ -57,57 +63,81 @@ _Supports Order By_: **False**
 
 ### Quantity
 
-The quantity of the product, which should be operated. [Required] [Default(0)]
+The quantity of the product, which should be processed. [Unit: QuantityUnit] [Required] [Default(0)] [Filter(eq;ge;le)]
 
-_Type_: **decimal**  
-_Supported Filters_: **NotFilterable**  
+_Type_: **[Quantity](../data-types.md#quantity)**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
-_Default Value_: **0**  
+_Default Value_: **Constant**  
 
 ### TaskType
 
-The type of the task (operation), which should be performed. MOV=Move; INB=Inbound; OUT=Outbound; INS=Inspect; PCK=Packing/Unpacking; CNT=Count. [Required]
+The type of the task (operation), which should be performed. REC=Receive; DES=Despatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Assemble kit; RKT=Reverse kitting; CNT=Count; TSK=Task. [Required] [Filter(multi eq)]
 
-_Type_: **string**  
-_Supported Filters_: **NotFilterable**  
+_Type_: **[TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype)**  
+Allowed values for the [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) data attribute  
+_Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| Receive | Receive value. Stored as 'REC'. <br /> _Database Value:_ 'REC' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Receive' |
+| Despatch | Despatch value. Stored as 'DES'. <br /> _Database Value:_ 'DES' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Despatch' |
+| Move | Move value. Stored as 'MOV'. <br /> _Database Value:_ 'MOV' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Move' |
+| Label | Label value. Stored as 'LBL'. <br /> _Database Value:_ 'LBL' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Label' |
+| Inspect | Inspect value. Stored as 'INS'. <br /> _Database Value:_ 'INS' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Inspect' |
+| Pack | Pack value. Stored as 'PCK'. <br /> _Database Value:_ 'PCK' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Pack' |
+| Unpack | Unpack value. Stored as 'UPK'. <br /> _Database Value:_ 'UPK' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'Unpack' |
+| AssembleKit | AssembleKit value. Stored as 'KIT'. <br /> _Database Value:_ 'KIT' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'AssembleKit' |
+| ReverseKitting | ReverseKitting value. Stored as 'RKT'. <br /> _Database Value:_ 'RKT' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'ReverseKitting' |
+| Count | Count value. Stored as 'CNT'. <br /> _Database Value:_ 'CNT' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'Count' |
+| Task | Task value. Stored as 'TSK'. <br /> _Database Value:_ 'TSK' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'Task' |
+
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
 
 ## Reference Details
 
+### LogisticUnit
+
+Logistic unit, which should be used in the operation. [Filter(multi eq)] [Introduced in version 21.1.1.18]
+
+_Type_: **[LogisticUnits](Logistics.LogisticUnits.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
 ### Lot
 
-The lot of the product, which should be operated. null for operations, which are not lot-specific, or when any lot can be used. [Filter(multi eq)]
+The lot of the product, which should be used. null for operations, which are not lot-specific, or when any lot can be used. [Filter(multi eq)]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 
-The product, which should be operated. [Required] [Filter(multi eq)]
+The product, which should be used for the operation. [Filter(multi eq)]
 
-_Type_: **[Products](General.Products.Products.md)**  
+_Type_: **[Products](General.Products.Products.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ProductVariant
+
+The product variant, which should be used. [Filter(multi eq)] [Introduced in version 21.1.1.18]
+
+_Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
 
-The measurement unit of Quantity. [Required] [Filter(multi eq)]
+The measurement unit of Quantity. null for operations, which are not quantity-related. [Filter(multi eq)]
 
-_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
 
-The serial number of the product, which should be operated. null for operations, which are not serial number-specific, or when any serial number can be used. [Filter(multi eq)]
+The serial number of the product, which should be used. null for operations, which are not serial number-specific, or when any serial number can be used. [Filter(multi eq)]
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
-_Supported Filters_: **Equals, EqualsIn**  
-
-### ToUnit
-
-Destination measurement unit. null for operations, which do not specify destination measurement unit. [Filter(multi eq)]
-
-_Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToWarehouseLocation
@@ -133,7 +163,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### WarehouseWorker
 
-The human or robot worker, which should execute the line. null means that the line is shared among all workers, assigned to the order. [Filter(multi eq)]
+Human or robot worker, which should execute the operation. null means that the line is shared among all workers, assigned to the order. [Filter(multi eq)]
 
 _Type_: **[WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

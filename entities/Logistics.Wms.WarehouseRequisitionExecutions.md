@@ -10,11 +10,10 @@ Execution ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition_E
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](Logistics.Wms.WarehouseRequisitionExecutions.md#creationtimeutc) | datetime | The exact time in UTC, when the execution was created in the system. [Required] 
-| [Date](Logistics.Wms.WarehouseRequisitionExecutions.md#date) | date | Date, when the execution occurred in the real world. [Required] 
 | [ExecutedQuantity](Logistics.Wms.WarehouseRequisitionExecutions.md#executedquantity) | decimal | The executed quantity (in the measurement unit of the requisition line). [Required] 
+| [ExecutionType](Logistics.Wms.WarehouseRequisitionExecutions.md#executiontype) | string | Type of execution: P=Plan created; C=Requisition completed. [Required] 
 | [Id](Logistics.Wms.WarehouseRequisitionExecutions.md#id) | guid |  
 | [IsFinal](Logistics.Wms.WarehouseRequisitionExecutions.md#isfinal) | boolean | Specifies whether this execution will finalize the execution of the requisition line, regardless of any remaining quantities. [Required] 
-| [Time](Logistics.Wms.WarehouseRequisitionExecutions.md#time) | time | Time, when the execution occurred in the real world. [Required] 
 
 ## References
 
@@ -34,19 +33,19 @@ _Type_: **datetime**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### Date
-
-Date, when the execution occurred in the real world. [Required]
-
-_Type_: **date**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 ### ExecutedQuantity
 
 The executed quantity (in the measurement unit of the requisition line). [Required]
 
 _Type_: **decimal**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### ExecutionType
+
+Type of execution: P=Plan created; C=Requisition completed. [Required]
+
+_Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -61,14 +60,6 @@ _Default Value_: **NewGuid**
 Specifies whether this execution will finalize the execution of the requisition line, regardless of any remaining quantities. [Required]
 
 _Type_: **boolean**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### Time
-
-Time, when the execution occurred in the real world. [Required]
-
-_Type_: **time**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
