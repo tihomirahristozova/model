@@ -571,6 +571,8 @@
     href: General.DocumentDistributedAmounts.md
   - name: DocumentFileAttachments
     href: General.DocumentFileAttachments.md
+  - name: DocumentFulfillments
+    href: General.DocumentFulfillments.md
   - name: DocumentJobs
     href: General.DocumentJobs.md
   - name: DocumentLineAmounts
@@ -856,20 +858,22 @@
     items:
     - name: WarehouseLocations
       href: Logistics.Wms.WarehouseLocations.md
-    - name: WarehouseOrderExecutions
-      href: Logistics.Wms.WarehouseOrderExecutions.md
+    - name: WarehouseOrderFulfillments
+      href: Logistics.Wms.WarehouseOrderFulfillments.md
     - name: WarehouseOrderLines
       href: Logistics.Wms.WarehouseOrderLines.md
     - name: WarehouseOrders
       href: Logistics.Wms.WarehouseOrders.md
-    - name: WarehouseRequisitionExecutions
-      href: Logistics.Wms.WarehouseRequisitionExecutions.md
+    - name: WarehouseRequisitionFulfillments
+      href: Logistics.Wms.WarehouseRequisitionFulfillments.md
     - name: WarehouseRequisitionLines
       href: Logistics.Wms.WarehouseRequisitionLines.md
     - name: WarehouseRequisitions
       href: Logistics.Wms.WarehouseRequisitions.md
     - name: Warehouses
       href: Logistics.Wms.Warehouses.md
+    - name: WarehouseTransactions
+      href: Logistics.Wms.WarehouseTransactions.md
     - name: WarehouseWorkers
       href: Logistics.Wms.WarehouseWorkers.md
     - name: WarehouseZones

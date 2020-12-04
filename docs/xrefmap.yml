@@ -817,6 +817,9 @@ references:
 - uid: General.DocumentFileAttachments
   name: General.DocumentFileAttachments Entity
   href: entities/General.DocumentFileAttachments.html
+- uid: General.DocumentFulfillments
+  name: General.DocumentFulfillments Entity
+  href: entities/General.DocumentFulfillments.html
 - uid: General.DocumentJobs
   name: General.DocumentJobs Entity
   href: entities/General.DocumentJobs.html
@@ -1234,6 +1237,9 @@ references:
 - uid: Logistics.Wms.WarehouseOrderExecutions
   name: Logistics.Wms.WarehouseOrderExecutions Entity
   href: entities/Logistics.Wms.WarehouseOrderExecutions.html
+- uid: Logistics.Wms.WarehouseOrderFulfillments
+  name: Logistics.Wms.WarehouseOrderFulfillments Entity
+  href: entities/Logistics.Wms.WarehouseOrderFulfillments.html
 - uid: Logistics.Wms.WarehouseOrderLines
   name: Logistics.Wms.WarehouseOrderLines Entity
   href: entities/Logistics.Wms.WarehouseOrderLines.html
@@ -1243,6 +1249,9 @@ references:
 - uid: Logistics.Wms.WarehouseRequisitionExecutions
   name: Logistics.Wms.WarehouseRequisitionExecutions Entity
   href: entities/Logistics.Wms.WarehouseRequisitionExecutions.html
+- uid: Logistics.Wms.WarehouseRequisitionFulfillments
+  name: Logistics.Wms.WarehouseRequisitionFulfillments Entity
+  href: entities/Logistics.Wms.WarehouseRequisitionFulfillments.html
 - uid: Logistics.Wms.WarehouseRequisitionLines
   name: Logistics.Wms.WarehouseRequisitionLines Entity
   href: entities/Logistics.Wms.WarehouseRequisitionLines.html
@@ -1252,6 +1261,9 @@ references:
 - uid: Logistics.Wms.Warehouses
   name: Logistics.Wms.Warehouses Entity
   href: entities/Logistics.Wms.Warehouses.html
+- uid: Logistics.Wms.WarehouseTransactions
+  name: Logistics.Wms.WarehouseTransactions Entity
+  href: entities/Logistics.Wms.WarehouseTransactions.html
 - uid: Logistics.Wms.WarehouseWorkers
   name: Logistics.Wms.WarehouseWorkers Entity
   href: entities/Logistics.Wms.WarehouseWorkers.html
