@@ -1,3 +1,7 @@
+---
+uid: template-description-jobs
+---
+
 | **Template Column Name** | **Template Column Description**                              |
 | :----------------------- | ------------------------------------------------------------ |
 | Code                     | Unique job code. Always starts with "J" and continues with a digit number. |
