@@ -1630,3 +1630,6 @@ references:
 - uid: Systems.Workflow.Routes
   name: Systems.Workflow.Routes Entity
   href: entities/Systems.Workflow.Routes.html
+- uid: template-description-jobs
+  name: template-description-jobs
+  href: templates/template-description-jobs.html

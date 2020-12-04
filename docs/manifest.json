@@ -4459,7 +4459,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Inventory.StoreTransactions.html",
-          "hash": "GUB0Xyi4yl7oapDH75Y/9g=="
+          "hash": "ImsDUCI3/RG6mBbWdpNgeg=="
         }
       },
       "is_incremental": false,
@@ -4651,7 +4651,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Procurement.PurchaseInvoiceLines.html",
-          "hash": "AmzeCodQsP+hHuQJsTg3uw=="
+          "hash": "u6nzbN9/Zo1C6pDMY/Oatg=="
         }
       },
       "is_incremental": false,
@@ -4699,7 +4699,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Procurement.PurchaseOrderLines.html",
-          "hash": "5KO6f/cq1AANYY6NmO6BbQ=="
+          "hash": "a3GgKEjmAV+fsXxuD+aqfA=="
         }
       },
       "is_incremental": false,
@@ -6682,6 +6682,30 @@
       "output": {
         "resource": {
           "relative_path": "logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "templates/template-description-jobs.md",
+      "output": {
+        ".html": {
+          "relative_path": "templates/template-description-jobs.html",
+          "hash": "BzZeFYoOHg0kL9FIyZmQVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "templates/template-description-system-business-rules.md",
+      "output": {
+        ".html": {
+          "relative_path": "templates/template-description-system-business-rules.html",
+          "hash": "6WNAfEzGpTbo2DNCNn/Tmg=="
         }
       },
       "is_incremental": false,
