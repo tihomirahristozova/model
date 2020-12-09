@@ -14,6 +14,7 @@ Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requ
 | [Notes](Logistics.Wms.WarehouseRequisitionLines.md#notes) | string (nullable) | Notes for this WarehouseRequisitionLine. 
 | [ParentLineNo](Logistics.Wms.WarehouseRequisitionLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. 
 | [Quantity](Logistics.Wms.WarehouseRequisitionLines.md#quantity) | [Quantity](../data-types.md#quantity) | The requested quantity. [Unit: QuantityUnit] [Required] [Filter(eq;ge;le)] 
+| [QuantityBase](Logistics.Wms.WarehouseRequisitionLines.md#quantitybase) | decimal | Quantity in the base measurement unit of the product. [Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33] 
 
 ## References
 
@@ -70,6 +71,14 @@ The requested quantity. [Unit: QuantityUnit] [Required] [Filter(eq;ge;le)]
 
 _Type_: **[Quantity](../data-types.md#quantity)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
+### QuantityBase
+
+Quantity in the base measurement unit of the product. [Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33]
+
+_Type_: **decimal**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
 

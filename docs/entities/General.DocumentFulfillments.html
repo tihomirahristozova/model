@@ -126,9 +126,9 @@
 <td>Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. [Required] [Default(&quot;L&quot;)] [Filter(multi eq)] [Introduced in version 21.1.1.26]</td>
 </tr>
 <tr>
-<td><a href="General.DocumentFulfillments.html#quantity">Quantity</a></td>
+<td><a href="General.DocumentFulfillments.html#quantitybase">QuantityBase</a></td>
 <td>decimal</td>
-<td>Quantity fulfilled (in the measurement unit of the line). [Required] [Filter(multi eq;ge;le)]</td>
+<td>Fulfilled quantity in the base measurement unit of the product. [Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33]</td>
 </tr>
 </tbody>
 </table>
@@ -210,8 +210,8 @@ Allowed values for the <a href="General.DocumentFulfillments.html#fulfillmenttyp
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>L</strong></p>
-<h3 id="quantity">Quantity</h3>
-<p>Quantity fulfilled (in the measurement unit of the line). [Required] [Filter(multi eq;ge;le)]</p>
+<h3 id="quantitybase">QuantityBase</h3>
+<p>Fulfilled quantity in the base measurement unit of the product. [Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33]</p>
 <p><em>Type</em>: <strong>decimal</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
