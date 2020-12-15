@@ -23,6 +23,7 @@ Different cargoes of a transportation order. Entity: Log_Transportation_Order_Li
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CargoType](Logistics.Shipment.TransportationOrderLines.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The type of the transported cargo. [Required] [Filter(multi eq)] |
+| [Document](Logistics.Shipment.TransportationOrderLines.md#document) | [TransportationOrders](Logistics.Shipment.TransportationOrders.md) | The [TransportationOrder](Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)] |
 | [ParentDocument](Logistics.Shipment.TransportationOrderLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
 | [TransportationOrder](Logistics.Shipment.TransportationOrderLines.md#transportationorder) | [TransportationOrders](Logistics.Shipment.TransportationOrders.md) | The [TransportationOrder](Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
 
@@ -104,6 +105,13 @@ _Supports Order By_: **False**
 The type of the transported cargo. [Required] [Filter(multi eq)]
 
 _Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### Document
+
+The [TransportationOrder](Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[TransportationOrders](Logistics.Shipment.TransportationOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument

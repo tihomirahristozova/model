@@ -8,7 +8,7 @@
     <title>Production.ShopFloor.OutputOrderConsumptionLines Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Production.ShopFloor.OutputOrderConsumptionLines Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -133,6 +133,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="Production.ShopFloor.OutputOrderConsumptionLines.html#document">Document</a></td>
+<td><a href="Production.ShopFloor.OutputOrders.html">OutputOrders</a></td>
+<td>The [OutputOrder](Production.ShopFloor.OutputOrderConsumption<br>Lines.md#outputorder) to which this OutputOrderConsumptionLine belongs. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
 <td><a href="Production.ShopFloor.OutputOrderConsumptionLines.html#lineworkorder">LineWorkOrder</a></td>
 <td><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></td>
 <td>Work order for the line. Initially copied from the header (if there work order is not null). [Required] [Filter(multi eq)]</td>
@@ -207,6 +212,10 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="document">Document</h3>
+<p>The <a href="Production.ShopFloor.OutputOrderConsumptionLines.html#outputorder">OutputOrder</a> to which this OutputOrderConsumptionLine belongs. [Required] [Filter(multi eq)]</p>
+<p><em>Type</em>: <strong><a href="Production.ShopFloor.OutputOrders.html">OutputOrders</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lineworkorder">LineWorkOrder</h3>
 <p>Work order for the line. Initially copied from the header (if there work order is not null). [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>

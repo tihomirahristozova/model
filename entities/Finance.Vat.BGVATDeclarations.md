@@ -9,78 +9,106 @@ National data: Contains the VAT declarations, issued by the enterprise company, 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AdjustmentNumber](Finance.Vat.BGVATDeclarations.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly] 
+| [AdjustmentTime](Finance.Vat.BGVATDeclarations.md#adjustmenttime) | datetime (nullable) | Date/time when the document last has been adjusted by corrective document. [ReadOnly] 
+| [AdjustmentUser](Finance.Vat.BGVATDeclarations.md#adjustmentuser) | string (nullable) | The user who adjusted the document. [ReadOnly] 
 | [CoefficientVATLArticle73](Finance.Vat.BGVATDeclarations.md#coefficientvatlarticle73) | decimal | Field 01 - 33 from the declaration. Must be between 0.00 and 1.00. [Required] [Default(0)] 
-| [CompleteTime](Finance.Vat.BGVATDeclarations.md#completetime) | datetime (nullable) | Exact time, when the document was last completed[Filter(ge;le)] 
-| [CreationTime](Finance.Vat.BGVATDeclarations.md#creationtime) | datetime | Date/Time when the document was created [Required][Filter(ge;le)] 
-| [CreationUser](Finance.Vat.BGVATDeclarations.md#creationuser) | string | The login name of the user, who created the document [Required][Filter(like)] 
+| [CompleteTime](Finance.Vat.BGVATDeclarations.md#completetime) | datetime (nullable) | Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly] 
+| [CreationTime](Finance.Vat.BGVATDeclarations.md#creationtime) | datetime | Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] 
+| [CreationUser](Finance.Vat.BGVATDeclarations.md#creationuser) | string | The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly] 
 | [DeductedVATAmount<br />Article92Paragraph1](Finance.Vat.BGVATDeclarations.md#deductedvatamountarticle92paragraph1) | [Amount](../data-types.md#amount) | Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
 | [DepositedVATAmount](Finance.Vat.BGVATDeclarations.md#depositedvatamount) | [Amount](../data-types.md#amount) | Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [DocumentDate](Finance.Vat.BGVATDeclarations.md#documentdate) | datetime | The date on which the document was issued [Required][Filter(eq;ge;le)][ORD] 
-| [DocumentNo](Finance.Vat.BGVATDeclarations.md#documentno) | string | Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD] 
-| [DocumentNotes](Finance.Vat.BGVATDeclarations.md#documentnotes) | string (nullable) | Notes for this Document 
-| [DocumentVersion](Finance.Vat.BGVATDeclarations.md#documentversion) | int32 | [Filter(eq;ge;le)] 
-| [EntityName](Finance.Vat.BGVATDeclarations.md#entityname) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
+| [DocumentDate](Finance.Vat.BGVATDeclarations.md#documentdate) | date | The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] 
+| [DocumentNo](Finance.Vat.BGVATDeclarations.md#documentno) | string | Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] 
+| [DocumentNotes](Finance.Vat.BGVATDeclarations.md#documentnotes) | string (nullable) | Notes for this Document. 
+| [DocumentVersion](Finance.Vat.BGVATDeclarations.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly] 
+| [EntityName](Finance.Vat.BGVATDeclarations.md#entityname) | string | The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] 
 | [Id](Finance.Vat.BGVATDeclarations.md#id) | guid |  
 | [IsReleased](Finance.Vat.BGVATDeclarations.md#isreleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [IsSingleExecution](Finance.Vat.BGVATDeclarations.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [ParentDocument<br />RelationshipType](Finance.Vat.BGVATDeclarations.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Finance.Vat.BGVATDeclarations.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
-| [PlanningOnly](Finance.Vat.BGVATDeclarations.md#planningonly) | boolean (nullable) | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required] 
-| [ReadOnly](Finance.Vat.BGVATDeclarations.md#readonly) | boolean | True - the document is read only; false - the document is not read only [Required] 
-| [ReferenceDate](Finance.Vat.BGVATDeclarations.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)] 
-| [ReferenceDocumentNo](Finance.Vat.BGVATDeclarations.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)] 
-| [ReleaseTime](Finance.Vat.BGVATDeclarations.md#releasetime) | datetime (nullable) | Exact time, when the document was first released [Filter(ge;le)] 
-| [State](Finance.Vat.BGVATDeclarations.md#state) | [DocumentState](Finance.Vat.BGVATDeclarations.md#state) | 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)] 
+| [ParentDocument<br />RelationshipType](Finance.Vat.BGVATDeclarations.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Finance.Vat.BGVATDeclarations.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly] 
+| [PlanningOnly](Finance.Vat.BGVATDeclarations.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly] 
+| [ReadOnly](Finance.Vat.BGVATDeclarations.md#readonly) | boolean | True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly] 
+| [ReferenceDate](Finance.Vat.BGVATDeclarations.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)] 
+| [ReferenceDocumentNo](Finance.Vat.BGVATDeclarations.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)] 
+| [ReleaseTime](Finance.Vat.BGVATDeclarations.md#releasetime) | datetime (nullable) | Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly] 
+| [State](Finance.Vat.BGVATDeclarations.md#state) | [DocumentState](Finance.Vat.BGVATDeclarations.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly] 
 | [VATAmountToRecoup<br />Article92Paragraph1](Finance.Vat.BGVATDeclarations.md#vatamounttorecouparticle92paragraph1) | [Amount](../data-types.md#amount) | Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
 | [VATAmountToRecoup<br />Article92Paragraph3](Finance.Vat.BGVATDeclarations.md#vatamounttorecouparticle92paragraph3) | [Amount](../data-types.md#amount) | Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
 | [VATAmountToRecoup<br />Article92Paragraph4](Finance.Vat.BGVATDeclarations.md#vatamounttorecouparticle92paragraph4) | [Amount](../data-types.md#amount) | Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00. [Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
 | [VATDeclaration<br />RepresentingPerson<br />Position](Finance.Vat.BGVATDeclarations.md#vatdeclarationrepresentingpersonposition) | string (nullable) | Position of the representing person for the purposes of submitting of VAT declarations. 
 | [VATPeriodEnd](Finance.Vat.BGVATDeclarations.md#vatperiodend) | date | End date of the period fot which the VAT declaration is made. [Required] [Filter(ge;le)] 
 | [VATPeriodStart](Finance.Vat.BGVATDeclarations.md#vatperiodstart) | date | Start date of the period fot which the VAT declaration is made. [Required] [Filter(ge;le)] 
-| [Void](Finance.Vat.BGVATDeclarations.md#void) | boolean | True if the document is null and void [Required][Filter(eq)] 
-| [VoidReason](Finance.Vat.BGVATDeclarations.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user 
-| [VoidTime](Finance.Vat.BGVATDeclarations.md#voidtime) | datetime (nullable) | Date/time when the document has become void 
-| [VoidUser](Finance.Vat.BGVATDeclarations.md#voiduser) | string (nullable) | The user who voided the document 
+| [Void](Finance.Vat.BGVATDeclarations.md#void) | boolean | True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [VoidReason](Finance.Vat.BGVATDeclarations.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user. [ReadOnly] 
+| [VoidTime](Finance.Vat.BGVATDeclarations.md#voidtime) | datetime (nullable) | Date/time when the document has become void. [ReadOnly] 
+| [VoidUser](Finance.Vat.BGVATDeclarations.md#voiduser) | string (nullable) | The user who voided the document. [ReadOnly] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Finance.Vat.BGVATDeclarations.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
-| [AdjustedDocument](Finance.Vat.BGVATDeclarations.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
-| [AssignedToUser](Finance.Vat.BGVATDeclarations.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
-| [CurrencyDirectory](Finance.Vat.BGVATDeclarations.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
+| [AccessKey](Finance.Vat.BGVATDeclarations.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)] |
+| [AdjustedDocument](Finance.Vat.BGVATDeclarations.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] |
+| [AssignedToUser](Finance.Vat.BGVATDeclarations.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] |
+| [CurrencyDirectory](Finance.Vat.BGVATDeclarations.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)] |
 | [DeclaringPerson](Finance.Vat.BGVATDeclarations.md#declaringperson) | [BGVATDeclaringPersons](Finance.Vat.BGVATDeclaringPersons.md) (nullable) | Specific declaring person for this declaration. If the declaring person isn't specified then the default declaring person for the enterprise company is used. [Filter(multi eq)] |
-| [DocumentType](Finance.Vat.BGVATDeclarations.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
-| [EnterpriseCompany](Finance.Vat.BGVATDeclarations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
-| [EnterpriseCompanyLocation](Finance.Vat.BGVATDeclarations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
-| [FromCompanyDivision](Finance.Vat.BGVATDeclarations.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
-| [FromParty](Finance.Vat.BGVATDeclarations.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
-| [MasterDocument](Finance.Vat.BGVATDeclarations.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
-| [Parent](Finance.Vat.BGVATDeclarations.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
-| [PrimeCauseDocument](Finance.Vat.BGVATDeclarations.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
-| [ResponsiblePerson](Finance.Vat.BGVATDeclarations.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
-| [ReverseOfDocument](Finance.Vat.BGVATDeclarations.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
-| [Sequence](Finance.Vat.BGVATDeclarations.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
-| [ToCompanyDivision](Finance.Vat.BGVATDeclarations.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
-| [ToParty](Finance.Vat.BGVATDeclarations.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
-| [UserStatus](Finance.Vat.BGVATDeclarations.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
+| [DocumentType](Finance.Vat.BGVATDeclarations.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] |
+| [EnterpriseCompany](Finance.Vat.BGVATDeclarations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. [Required] [Filter(multi eq)] |
+| [EnterpriseCompanyLocation](Finance.Vat.BGVATDeclarations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] |
+| [FromCompanyDivision](Finance.Vat.BGVATDeclarations.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)] |
+| [FromParty](Finance.Vat.BGVATDeclarations.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. [Required] [Filter(multi eq)] |
+| [MasterDocument](Finance.Vat.BGVATDeclarations.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] |
+| [Parent](Finance.Vat.BGVATDeclarations.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] |
+| [PrimeCauseDocument](Finance.Vat.BGVATDeclarations.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. [Filter(multi eq)] |
+| [ResponsiblePerson](Finance.Vat.BGVATDeclarations.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)] |
+| [ReverseOfDocument](Finance.Vat.BGVATDeclarations.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly] |
+| [Sequence](Finance.Vat.BGVATDeclarations.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly] |
+| [ToCompanyDivision](Finance.Vat.BGVATDeclarations.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)] |
+| [ToParty](Finance.Vat.BGVATDeclarations.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. [Filter(multi eq)] |
+| [UserStatus](Finance.Vat.BGVATDeclarations.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly] |
 | [VATDeclaration<br />RepresentingPerson](Finance.Vat.BGVATDeclarations.md#vatdeclarationrepresentingperson) | [Persons](General.Contacts.Persons.md) (nullable) | Representing person for the purposes of submitting of VAT declarations. [Filter(multi eq)] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
-| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference 
-| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) |  
-| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
-| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
-| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
-| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
-| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
+| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [General.DocumentComment.Document](General.DocumentComments.md#document) back reference 
+| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [General.DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference 
+| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of [DocumentAmount](General.DocumentAmounts.md) child objects, based on the [General.DocumentAmount.Document](General.DocumentAmounts.md#document) back reference 
+| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [General.DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
+| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [General.DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
+| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [General.DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
+| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [General.DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
+| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.DocumentVersions.md) child objects, based on the [General.DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
 
 
 ## Attribute Details
+
+### AdjustmentNumber
+
+Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly]
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **0**  
+
+### AdjustmentTime
+
+Date/time when the document last has been adjusted by corrective document. [ReadOnly]
+
+_Type_: **datetime (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### AdjustmentUser
+
+The user who adjusted the document. [ReadOnly]
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### CoefficientVATLArticle73
 
@@ -93,7 +121,7 @@ _Default Value_: **0**
 
 ### CompleteTime
 
-Exact time, when the document was last completed[Filter(ge;le)]
+Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -101,7 +129,7 @@ _Supports Order By_: **False**
 
 ### CreationTime
 
-Date/Time when the document was created [Required][Filter(ge;le)]
+Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -110,7 +138,7 @@ _Default Value_: **CurrentDateTime**
 
 ### CreationUser
 
-The login name of the user, who created the document [Required][Filter(like)]
+The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -136,16 +164,16 @@ _Default Value_: **Constant**
 
 ### DocumentDate
 
-The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]
+The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD]
 
-_Type_: **datetime**  
+_Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDate**  
 
 ### DocumentNo
 
-Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]
+Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -153,7 +181,7 @@ _Supports Order By_: **True**
 
 ### DocumentNotes
 
-Notes for this Document
+Notes for this Document.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -161,7 +189,7 @@ _Supports Order By_: **False**
 
 ### DocumentVersion
 
-[Filter(eq;ge;le)]
+Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -170,7 +198,7 @@ _Default Value_: **1**
 
 ### EntityName
 
-The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
+The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -202,7 +230,7 @@ _Default Value_: **False**
 
 ### ParentDocumentRelationshipType
 
-Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
+Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly]
 
 _Type_: **[ParentDocument<br />RelationshipType](Finance.Vat.BGVATDeclarations.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
@@ -218,16 +246,16 @@ _Supports Order By_: **False**
 
 ### PlanningOnly
 
-Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]
+Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly]
 
-_Type_: **boolean (nullable)**  
+_Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
 ### ReadOnly
 
-True - the document is read only; false - the document is not read only [Required]
+True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -236,15 +264,16 @@ _Default Value_: **False**
 
 ### ReferenceDate
 
-The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]
+The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+_Default Value_: **CurrentDate**  
 
 ### ReferenceDocumentNo
 
-The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -252,7 +281,7 @@ _Supports Order By_: **False**
 
 ### ReleaseTime
 
-Exact time, when the document was first released [Filter(ge;le)]
+Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -260,7 +289,7 @@ _Supports Order By_: **False**
 
 ### State
 
-0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]
+The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly]
 
 _Type_: **[DocumentState](Finance.Vat.BGVATDeclarations.md#state)**  
 Enumeration of document system states  
@@ -333,7 +362,7 @@ _Supports Order By_: **False**
 
 ### Void
 
-True if the document is null and void [Required][Filter(eq)]
+True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -342,7 +371,7 @@ _Default Value_: **False**
 
 ### VoidReason
 
-Reason for voiding the document, entered by the user
+Reason for voiding the document, entered by the user. [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -350,7 +379,7 @@ _Supports Order By_: **False**
 
 ### VoidTime
 
-Date/time when the document has become void
+Date/time when the document has become void. [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -358,7 +387,7 @@ _Supports Order By_: **False**
 
 ### VoidUser
 
-The user who voided the document
+The user who voided the document. [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -369,28 +398,28 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-The access key, containing the user permissions for this document. null means that all users have unlimited permissions
+The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)]
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
 
-The primary document, which the current document adjusts. null when this is not an adjustment document
+The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
 
-The user to which this document is assigned for handling. null means that the document is not assigned to specific user
+The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
 
-The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
+The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)]
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -404,101 +433,101 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### DocumentType
 
-The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
+The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-The enterprise company which issued the document [Required]
+The enterprise company which issued the document. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
+The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
 
-The division of the company, issuing the document. null when the document is not issued by any specific division
+The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)]
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
 
-The party which issued the document [Required]
+The party which issued the document. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MasterDocument
 
-In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
+In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-In a multi-document tree, this is the direct parent document. If this is the root it is null
+In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimeCauseDocument
 
-The document that is the prime cause for creation of the current document
+The document that is the prime cause for creation of the current document. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
 
-The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
+The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ReverseOfDocument
 
-The document which the current document is reverse of
+The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### Sequence
 
-The sequence that will be used to give new numbers to the documents of this type
+The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[Sequences](General.Sequences.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ToCompanyDivision
 
-The division of the company, receiving the document. null when the document is not received by any specific division
+The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)]
 
-_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
-_Supported Filters_: **NotFilterable**  
+_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ToParty
 
-The party which should receive the document
+The party which should receive the document. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### UserStatus
 
-The user status of this document if applicable for this document type. null means unknown or not yet set
+The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### VATDeclarationRepresentingPerson
 
@@ -511,21 +540,6 @@ _Supported Filters_: **Equals, EqualsIn**
 ## API Methods
 
 Methods that can be invoked in public APIs.
-
-### GetAllParentDocuments
-
-Gets all parent documents, traversing the parent document chain by using the [Parent](General.Documents.md#parent) property.  
-_Return Type_: **Collection Of [Documents](General.Documents.md)**  
-_Declaring Type_: **[Documents](General.Documents.md)**  
-_Domain API Request_: **GET**  
-
-**Parameters**  
-  * **includeSelf**  
-    if set to true the current document is included.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
-
 
 ### ChangeState
 
@@ -642,6 +656,21 @@ _Declaring Type_: **[Documents](General.Documents.md)**
 _Domain API Request_: **POST**  
 
 In some cases the objects in child collection of the document depend on values from other child objects.             This method ensures that all child objects are properly validated.             The changes are only in memory and are not committed to the server.
+
+### GetAllParentDocuments
+
+Gets all parent documents, traversing the parent document chain by using the [Parent](General.Documents.md#parent) property.  
+_Return Type_: **Collection Of [Documents](General.Documents.md)**  
+_Declaring Type_: **[Documents](General.Documents.md)**  
+_Domain API Request_: **GET**  
+
+**Parameters**  
+  * **includeSelf**  
+    if set to true the current document is included.  
+    _Type_: boolean  
+     _Optional_: True  
+    _Default Value_: False  
+
 
 
 ## Business Rules

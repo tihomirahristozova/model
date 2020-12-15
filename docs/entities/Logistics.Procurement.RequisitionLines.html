@@ -8,7 +8,7 @@
     <title>Logistics.Procurement.RequisitionLines Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Logistics.Procurement.RequisitionLines Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -143,6 +143,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="Logistics.Procurement.RequisitionLines.html#document">Document</a></td>
+<td><a href="Logistics.Procurement.Requisitions.html">Requisitions</a></td>
+<td>The <a href="Logistics.Procurement.RequisitionLines.html#requisition">Requisition</a> to which this RequisitionLine belongs. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
 <td><a href="Logistics.Procurement.RequisitionLines.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
 <td>When not null, indicates a specific lot should be purchased. [Filter(multi eq)]</td>
@@ -226,6 +231,10 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="document">Document</h3>
+<p>The <a href="Logistics.Procurement.RequisitionLines.html#requisition">Requisition</a> to which this RequisitionLine belongs. [Required] [Filter(multi eq)]</p>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.Requisitions.html">Requisitions</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>When not null, indicates a specific lot should be purchased. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>

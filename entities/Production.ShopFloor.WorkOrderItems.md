@@ -28,6 +28,7 @@ The different items that are produced with a work order. Entity: Prd_Work_Order_
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Production.ShopFloor.WorkOrderItems.md#document) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The Id of the work order, containing the item. [Required] [Filter(multi eq)] |
 | [Lot](Production.ShopFloor.WorkOrderItems.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the produced product. [Filter(multi eq)] |
 | [OutputStore](Production.ShopFloor.WorkOrderItems.md#outputstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Output store for the production. [Filter(multi eq)] |
 | [ParentDocument](Production.ShopFloor.WorkOrderItems.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
@@ -202,6 +203,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Document
+
+The Id of the work order, containing the item. [Required] [Filter(multi eq)]
+
+_Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 

@@ -19,6 +19,7 @@ Contains the distibution of the payments' amounts among the source payment order
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Finance.Payments.PaymentTransactionLines.md#document) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) | The [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)] |
 | [PaymentOrder](Finance.Payments.PaymentTransactionLines.md#paymentorder) | [PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order, that is covered by this transaction amount distribution (tr.line). [Required] [Filter(multi eq)] |
 | [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) | The [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)] [Owner] |
 
@@ -72,6 +73,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Document
+
+The [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[PaymentTransactions](Finance.Payments.PaymentTransactions.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentOrder
 

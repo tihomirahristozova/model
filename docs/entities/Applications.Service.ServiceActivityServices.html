@@ -8,7 +8,7 @@
     <title>Applications.Service.ServiceActivityServices Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Applications.Service.ServiceActivityServices Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -133,6 +133,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="Applications.Service.ServiceActivityServices.html#document">Document</a></td>
+<td><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></td>
+<td>The <a href="Applications.Service.ServiceActivityServices.html#serviceactivity">ServiceActivity</a> to which this ServiceActivityService belongs. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
 <td><a href="Applications.Service.ServiceActivityServices.html#performedbyperson">PerformedByPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
 <td>The id of the person from the enterprise company that actually performed the work. [Filter(multi eq)]</td>
@@ -210,6 +215,10 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Service.Name</code></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="document">Document</h3>
+<p>The <a href="Applications.Service.ServiceActivityServices.html#serviceactivity">ServiceActivity</a> to which this ServiceActivityService belongs. [Required] [Filter(multi eq)]</p>
+<p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="performedbyperson">PerformedByPerson</h3>
 <p>The id of the person from the enterprise company that actually performed the work. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>

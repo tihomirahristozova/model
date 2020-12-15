@@ -20,6 +20,7 @@ Contains the services, which were actually performed during the service activity
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Applications.Service.ServiceActivityServices.md#document) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] |
 | [PerformedByPerson](Applications.Service.ServiceActivityServices.md#performedbyperson) | [Persons](General.Contacts.Persons.md) (nullable) | The id of the person from the enterprise company that actually performed the work. [Filter(multi eq)] |
 | [Service](Applications.Service.ServiceActivityServices.md#service) | [Services](Applications.Service.Services.md) | The type of service that is conducted. [Required] [Filter(multi eq)] |
 | [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] [Owner] |
@@ -91,6 +92,13 @@ _Front-End Recalc Expressions:_
 `obj.Service.Name`
 
 ## Reference Details
+
+### Document
+
+The [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### PerformedByPerson
 

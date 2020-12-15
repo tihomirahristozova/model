@@ -8,7 +8,7 @@
     <title>Production.ShopFloor.WorkOrderItemIngredients Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Production.ShopFloor.WorkOrderItemIngredients Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -146,6 +146,11 @@
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#distributebymeasurementcategory">DistributeByMeasurement<br>Category</a></td>
 <td><a href="General.MeasurementCategories.html">MeasurementCategories</a> (nullable)</td>
 <td>Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT null iif Distribute_By = MC. [Filter(multi eq)]</td>
+</tr>
+<tr>
+<td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#document">Document</a></td>
+<td><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></td>
+<td>The <a href="Production.ShopFloor.WorkOrderItemIngredients.html#workorder">WorkOrder</a> to which this WorkOrderItemIngredient belongs. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#lot">Lot</a></td>
@@ -291,6 +296,10 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( obj.DistributeBy == null) OrElse ( Convert( obj.DistributeBy.Value, Int32) != 1)), null, obj.DistributeByMeasurementCategory)</code></p>
+<h3 id="document">Document</h3>
+<p>The <a href="Production.ShopFloor.WorkOrderItemIngredients.html#workorder">WorkOrder</a> to which this WorkOrderItemIngredient belongs. [Required] [Filter(multi eq)]</p>
+<p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>Lot from which to get the material. When null, any lot can be used. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>

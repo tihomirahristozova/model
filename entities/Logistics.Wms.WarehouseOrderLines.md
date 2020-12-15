@@ -19,6 +19,7 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Logistics.Wms.WarehouseOrderLines.md#document) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) | The [WarehouseOrder](Logistics.Wms.WarehouseOrderLines.md#warehouseorder) to which this WarehouseOrderLine belongs. [Required] [Filter(multi eq)] |
 | [LogisticUnit](Logistics.Wms.WarehouseOrderLines.md#logisticunit) | [LogisticUnits](Logistics.LogisticUnits.md) (nullable) | Logistic unit, which should be used in the operation. [Filter(multi eq)] [Introduced in version 21.1.1.18] |
 | [Lot](Logistics.Wms.WarehouseOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the product, which should be used. null for operations, which are not lot-specific, or when any lot can be used. [Filter(multi eq)] |
 | [Product](Logistics.Wms.WarehouseOrderLines.md#product) | [Products](General.Products.Products.md) (nullable) | The product, which should be used for the operation. [Filter(multi eq)] |
@@ -97,6 +98,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Document
+
+The [WarehouseOrder](Logistics.Wms.WarehouseOrderLines.md#warehouseorder) to which this WarehouseOrderLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### LogisticUnit
 

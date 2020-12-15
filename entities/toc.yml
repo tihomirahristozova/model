@@ -735,10 +735,6 @@
       href: Logistics.Inventory.ProductValuationGroups.md
     - name: ReconciliationLines
       href: Logistics.Inventory.ReconciliationLines.md
-    - name: ReconciliationOrderLines
-      href: Logistics.Inventory.ReconciliationOrderLines.md
-    - name: ReconciliationOrders
-      href: Logistics.Inventory.ReconciliationOrders.md
     - name: Reconciliations
       href: Logistics.Inventory.Reconciliations.md
     - name: RequisitionPlan

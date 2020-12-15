@@ -21,6 +21,7 @@ Contains the free materials, included in the service agreement. Entity: Srv_Serv
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Applications.Service.ServiceAgreementMaterials.md#document) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] |
 | [Product](Applications.Service.ServiceAgreementMaterials.md#product) | [Products](General.Products.Products.md) | Paid or agreed in advance material that won't be invoiced after service activities. [Required] [Filter(multi eq)] |
 | [QuantityUnit](Applications.Service.ServiceAgreementMaterials.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. [Required] [Filter(multi eq)] |
 | [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner] |
@@ -99,6 +100,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Document
+
+The [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 

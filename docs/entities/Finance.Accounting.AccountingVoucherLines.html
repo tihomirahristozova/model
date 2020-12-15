@@ -8,7 +8,7 @@
     <title>Finance.Accounting.AccountingVoucherLines Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Finance.Accounting.AccountingVoucherLines Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -173,6 +173,11 @@
 <td>The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#document">Document</a></td>
+<td><a href="Finance.Accounting.AccountingVouchers.html">AccountingVouchers</a></td>
+<td>The voucher to which this line is attached. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#profitcenter">ProfitCenter</a></td>
 <td><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a> (nullable)</td>
 <td>The profit center to which this revenue is related. [Filter(multi eq)]</td>
@@ -267,6 +272,10 @@
 <h3 id="currency">Currency</h3>
 <p>The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="document">Document</h3>
+<p>The voucher to which this line is attached. [Required] [Filter(multi eq)]</p>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.AccountingVouchers.html">AccountingVouchers</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="profitcenter">ProfitCenter</h3>
 <p>The profit center to which this revenue is related. [Filter(multi eq)]</p>

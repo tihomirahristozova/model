@@ -8,7 +8,7 @@
     <title>Logistics.Procurement.ReceivingOrderLines Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Logistics.Procurement.ReceivingOrderLines Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -168,6 +168,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="Logistics.Procurement.ReceivingOrderLines.html#document">Document</a></td>
+<td><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a></td>
+<td>The <a href="Logistics.Procurement.ReceivingOrderLines.html#receivingorder">ReceivingOrder</a> to which this ReceivingOrderLine belongs. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#linestore">LineStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
 <td>The store in which the goods are received. [Filter(multi eq)]</td>
@@ -320,6 +325,10 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="document">Document</h3>
+<p>The <a href="Logistics.Procurement.ReceivingOrderLines.html#receivingorder">ReceivingOrder</a> to which this ReceivingOrderLine belongs. [Required] [Filter(multi eq)]</p>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linestore">LineStore</h3>
 <p>The store in which the goods are received. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>

@@ -9,18 +9,21 @@ Sales order document headers. Entity: Crm_Sales_Orders
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompleteTime](Crm.Sales.SalesOrders.md#completetime) | datetime (nullable) | Exact time, when the document was last completed[Filter(ge;le)] 
-| [CreationTime](Crm.Sales.SalesOrders.md#creationtime) | datetime | Date/Time when the document was created [Required][Filter(ge;le)] 
-| [CreationUser](Crm.Sales.SalesOrders.md#creationuser) | string | The login name of the user, who created the document [Required][Filter(like)] 
+| [AdjustmentNumber](Crm.Sales.SalesOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly] 
+| [AdjustmentTime](Crm.Sales.SalesOrders.md#adjustmenttime) | datetime (nullable) | Date/time when the document last has been adjusted by corrective document. [ReadOnly] 
+| [AdjustmentUser](Crm.Sales.SalesOrders.md#adjustmentuser) | string (nullable) | The user who adjusted the document. [ReadOnly] 
+| [CompleteTime](Crm.Sales.SalesOrders.md#completetime) | datetime (nullable) | Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly] 
+| [CreationTime](Crm.Sales.SalesOrders.md#creationtime) | datetime | Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] 
+| [CreationUser](Crm.Sales.SalesOrders.md#creationuser) | string | The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly] 
 | [CreditLimitOverride](Crm.Sales.SalesOrders.md#creditlimitoverride) | boolean | Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables. [Required] [Default(false)] [Filter(eq)] 
 | [CustomerPurchaseOrderDate](Crm.Sales.SalesOrders.md#customerpurchaseorderdate) | date (nullable) | Issue date of the referent customer purchase order. [Filter(ge;le)] 
 | [CustomerPurchaseOrderNo](Crm.Sales.SalesOrders.md#customerpurchaseorderno) | string (nullable) | Reference number of the customer's purchase order. [Filter(eq;like)] 
 | [DeliveryTermsCode](Crm.Sales.SalesOrders.md#deliverytermscode) | [DeliveryTerms](Crm.Sales.SalesOrders.md#deliverytermscode) (nullable) | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
-| [DocumentDate](Crm.Sales.SalesOrders.md#documentdate) | datetime | The date on which the document was issued [Required][Filter(eq;ge;le)][ORD] 
-| [DocumentNo](Crm.Sales.SalesOrders.md#documentno) | string | Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD] 
-| [DocumentNotes](Crm.Sales.SalesOrders.md#documentnotes) | string (nullable) | Notes for this Document 
-| [DocumentVersion](Crm.Sales.SalesOrders.md#documentversion) | int32 | [Filter(eq;ge;le)] 
-| [EntityName](Crm.Sales.SalesOrders.md#entityname) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
+| [DocumentDate](Crm.Sales.SalesOrders.md#documentdate) | date | The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] 
+| [DocumentNo](Crm.Sales.SalesOrders.md#documentno) | string | Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] 
+| [DocumentNotes](Crm.Sales.SalesOrders.md#documentnotes) | string (nullable) | Notes for this Document. 
+| [DocumentVersion](Crm.Sales.SalesOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly] 
+| [EntityName](Crm.Sales.SalesOrders.md#entityname) | string | The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] 
 | [FiscalSalesNumber](Crm.Sales.SalesOrders.md#fiscalsalesnumber) | string (nullable) | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. [Filter(multi eq;like)] [ReadOnly] [Introduced in version 19.1] 
 | [FromDate](Crm.Sales.SalesOrders.md#fromdate) | date (nullable) | When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. [Introduced in version 20.1] 
 | [Id](Crm.Sales.SalesOrders.md#id) | guid |  
@@ -30,88 +33,113 @@ Sales order document headers. Entity: Crm_Sales_Orders
 | [IsSingleExecution](Crm.Sales.SalesOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [IsValidField](Crm.Sales.SalesOrders.md#isvalidfield) | boolean | True when the order is valid (e.g. released and not void). Used for internal processing. [Required] [Default(false)] [ReadOnly] 
 | [Notes](Crm.Sales.SalesOrders.md#notes) | string (nullable) | Notes for this SalesOrder. 
-| [ParentDocument<br />RelationshipType](Crm.Sales.SalesOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Sales.SalesOrders.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
+| [ParentDocument<br />RelationshipType](Crm.Sales.SalesOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Sales.SalesOrders.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly] 
 | [PaymentDueDate](Crm.Sales.SalesOrders.md#paymentduedate) | datetime (nullable) | The last term for the payment of the sales order. [Filter(ge;le)] 
 | [PaymentDueStartDate](Crm.Sales.SalesOrders.md#paymentduestartdate) | datetime (nullable) | The date when the payment becomes due for documents with one installment. null when the document is with multiple installments. 
-| [PlanningOnly](Crm.Sales.SalesOrders.md#planningonly) | boolean (nullable) | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required] 
-| [ReadOnly](Crm.Sales.SalesOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only [Required] 
-| [ReferenceDate](Crm.Sales.SalesOrders.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)] 
-| [ReferenceDocumentNo](Crm.Sales.SalesOrders.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)] 
-| [ReleaseTime](Crm.Sales.SalesOrders.md#releasetime) | datetime (nullable) | Exact time, when the document was first released [Filter(ge;le)] 
+| [PlanningOnly](Crm.Sales.SalesOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly] 
+| [ReadOnly](Crm.Sales.SalesOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly] 
+| [ReferenceDate](Crm.Sales.SalesOrders.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)] 
+| [ReferenceDocumentNo](Crm.Sales.SalesOrders.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)] 
+| [ReleaseTime](Crm.Sales.SalesOrders.md#releasetime) | datetime (nullable) | Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly] 
 | [RequiredDeliveryDate](Crm.Sales.SalesOrders.md#requireddeliverydate) | date (nullable) | The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term. [Filter(ge;le)] 
-| [State](Crm.Sales.SalesOrders.md#state) | [DocumentState](Crm.Sales.SalesOrders.md#state) | 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)] 
+| [State](Crm.Sales.SalesOrders.md#state) | [DocumentState](Crm.Sales.SalesOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly] 
 | [ToDate](Crm.Sales.SalesOrders.md#todate) | date (nullable) | When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. [Introduced in version 20.1] 
-| [Void](Crm.Sales.SalesOrders.md#void) | boolean | True if the document is null and void [Required][Filter(eq)] 
-| [VoidReason](Crm.Sales.SalesOrders.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user 
-| [VoidTime](Crm.Sales.SalesOrders.md#voidtime) | datetime (nullable) | Date/time when the document has become void 
-| [VoidUser](Crm.Sales.SalesOrders.md#voiduser) | string (nullable) | The user who voided the document 
+| [Void](Crm.Sales.SalesOrders.md#void) | boolean | True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [VoidReason](Crm.Sales.SalesOrders.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user. [ReadOnly] 
+| [VoidTime](Crm.Sales.SalesOrders.md#voidtime) | datetime (nullable) | Date/time when the document has become void. [ReadOnly] 
+| [VoidUser](Crm.Sales.SalesOrders.md#voiduser) | string (nullable) | The user who voided the document. [ReadOnly] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Crm.Sales.SalesOrders.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
-| [AdjustedDocument](Crm.Sales.SalesOrders.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
-| [AssignedToUser](Crm.Sales.SalesOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
-| [CurrencyDirectory](Crm.Sales.SalesOrders.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
+| [AccessKey](Crm.Sales.SalesOrders.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)] |
+| [AdjustedDocument](Crm.Sales.SalesOrders.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] |
+| [AssignedToUser](Crm.Sales.SalesOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] |
+| [CurrencyDirectory](Crm.Sales.SalesOrders.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)] |
 | [Customer](Crm.Sales.SalesOrders.md#customer) | [Customers](Crm.Customers.md) | The primary customer, which placed the sales order. [Required] [Filter(multi eq)] |
 | [Deal](Crm.Sales.SalesOrders.md#deal) | [Deals](Crm.Presales.Deals.md) (nullable) | The opportunity (deal) on which this order is based. [Filter(multi eq)] |
 | [Dealer](Crm.Sales.SalesOrders.md#dealer) | [Dealers](Crm.Dealers.md) (nullable) | The external dealer, associated with the sales order. [Filter(multi eq)] |
 | [DealType](Crm.Sales.SalesOrders.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. [Filter(multi eq)] |
 | [DistributionChannel](Crm.Sales.SalesOrders.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | The distribution channel, that is used to deliver the products. [Filter(multi eq)] |
 | [DocumentCurrency](Crm.Sales.SalesOrders.md#documentcurrency) | [Currencies](General.Currencies.md) | The currency of the document; e.g. the currency of the amounts in the document. [Required] [Filter(multi eq)] |
-| [DocumentType](Crm.Sales.SalesOrders.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
+| [DocumentType](Crm.Sales.SalesOrders.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] |
 | [EndCustomerParty](Crm.Sales.SalesOrders.md#endcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. [Filter(multi eq)] [Introduced in version 20.1] |
-| [EnterpriseCompany](Crm.Sales.SalesOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
-| [EnterpriseCompanyLocation](Crm.Sales.SalesOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
+| [EnterpriseCompany](Crm.Sales.SalesOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. [Required] [Filter(multi eq)] |
+| [EnterpriseCompanyLocation](Crm.Sales.SalesOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] |
 | [FiscalPrinterPosDevice](Crm.Sales.SalesOrders.md#fiscalprinterposdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. [Filter(multi eq)] [Introduced in version 19.1] |
-| [FromCompanyDivision](Crm.Sales.SalesOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
-| [FromParty](Crm.Sales.SalesOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
+| [FromCompanyDivision](Crm.Sales.SalesOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)] |
+| [FromParty](Crm.Sales.SalesOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. [Required] [Filter(multi eq)] |
 | [IntrastatTransportCountry](Crm.Sales.SalesOrders.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)] |
-| [MasterDocument](Crm.Sales.SalesOrders.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
-| [Parent](Crm.Sales.SalesOrders.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
+| [MasterDocument](Crm.Sales.SalesOrders.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] |
+| [Parent](Crm.Sales.SalesOrders.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] |
 | [PaymentAccount](Crm.Sales.SalesOrders.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, the payment account, where the payment is expected. null=no expectation for account. [Filter(multi eq)] |
 | [PaymentType](Crm.Sales.SalesOrders.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null specifies the payment type for the sales order. [Filter(multi eq)] |
 | [PosLocation](Crm.Sales.SalesOrders.md#poslocation) | [Locations](Crm.Pos.Locations.md) (nullable) | For POS sales, specifies the POS location, in which the sale is performed. null when the sales is not a POS sale. [Filter(multi eq)] [Introduced in version 19.1] |
 | [PosOperator](Crm.Sales.SalesOrders.md#posoperator) | [Operators](Crm.Pos.Operators.md) (nullable) | For POS sales, specifies the POS operator, who created the sale. null when the sale is not a POS sale. [Filter(multi eq)] [Introduced in version 19.1] |
 | [PosTerminal](Crm.Sales.SalesOrders.md#posterminal) | [Terminals](Crm.Pos.Terminals.md) (nullable) | For POS sales, specifies the POS terminal, on which the sale is entered. null when the sales is not a POS sale. [Filter(multi eq)] [Introduced in version 19.1] |
 | [PriceList](Crm.Sales.SalesOrders.md#pricelist) | [PriceLists](Crm.PriceLists.md) (nullable) | The price list to be used for determining product prices in the lines. [Filter(multi eq)] |
-| [PrimeCauseDocument](Crm.Sales.SalesOrders.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
-| [ResponsiblePerson](Crm.Sales.SalesOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
+| [PrimeCauseDocument](Crm.Sales.SalesOrders.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. [Filter(multi eq)] |
+| [ResponsiblePerson](Crm.Sales.SalesOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)] |
 | [ReturnForInvoice](Crm.Sales.SalesOrders.md#returnforinvoice) | [Invoices](Crm.Invoicing.Invoices.md) (nullable) | When specified indicates that some of the goods sold in the sales orders invoiced with Return_For_Invoice_Id are returned with the current document. [Filter(multi eq)] |
 | [ReturnForSalesOrder](Crm.Sales.SalesOrders.md#returnforsalesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | When specified indicates that some of the goods sold in Return_For_Sales_Order_Id are returned with the current document. [Filter(multi eq;like)] |
-| [ReverseOfDocument](Crm.Sales.SalesOrders.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
+| [ReverseOfDocument](Crm.Sales.SalesOrders.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly] |
 | [SalesPerson](Crm.Sales.SalesOrders.md#salesperson) | [SalesPersons](Crm.SalesPersons.md) (nullable) | Internal company sales person. [Filter(multi eq)] |
-| [Sequence](Crm.Sales.SalesOrders.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
+| [Sequence](Crm.Sales.SalesOrders.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly] |
 | [ShipToCustomer](Crm.Sales.SalesOrders.md#shiptocustomer) | [Customers](Crm.Customers.md) (nullable) | The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. [Filter(multi eq)] |
 | [ShipToPartyContact<br />Mechanism](Crm.Sales.SalesOrders.md#shiptopartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable) | The contact mechanism (address) to whih to ship the sales order. [Filter(multi eq)] |
 | [Store](Crm.Sales.SalesOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which to issue the sales order. null means that there is no store associated with the sales order or there are different stores for some of the lines. [Filter(multi eq)] |
-| [ToCompanyDivision](Crm.Sales.SalesOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
-| [ToParty](Crm.Sales.SalesOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
-| [UserStatus](Crm.Sales.SalesOrders.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
+| [ToCompanyDivision](Crm.Sales.SalesOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)] |
+| [ToParty](Crm.Sales.SalesOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. [Filter(multi eq)] |
+| [UserStatus](Crm.Sales.SalesOrders.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly] |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
-| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference 
-| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of [DocumentAmount](General.DocumentAmounts.md) child objects, based on the [DocumentAmount.Document](General.DocumentAmounts.md#document) back reference 
-| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
-| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
+| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [General.DocumentComment.Document](General.DocumentComments.md#document) back reference 
+| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [General.DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference 
+| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of [DocumentAmount](General.DocumentAmounts.md) child objects, based on the [General.DocumentAmount.Document](General.DocumentAmounts.md#document) back reference 
+| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [General.DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
+| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [General.DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
 | Lines | [SalesOrderLines](Crm.Sales.SalesOrderLines.md) | List of [SalesOrderLine](Crm.Sales.SalesOrderLines.md) child objects, based on the [Crm.Sales.SalesOrderLine.SalesOrder](Crm.Sales.SalesOrderLines.md#salesorder) back reference 
 | PaymentPlans | [SalesOrderPaymentPlans](Crm.Sales.SalesOrderPaymentPlans.md) | List of [SalesOrderPaymentPlan](Crm.Sales.SalesOrderPaymentPlans.md) child objects, based on the [Crm.Sales.SalesOrderPaymentPlan.SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) back reference 
-| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
+| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [General.DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
 | PromotionalPackages | [SalesOrderPromotionalPackages](Crm.Sales.SalesOrderPromotionalPackages.md) | List of [SalesOrderPromotional<br />Package](Crm.Sales.SalesOrderPromotional<br />Packages.md) child objects, based on the [Crm.Sales.SalesOrderPromotional<br />Package.SalesOrder](Crm.Sales.SalesOrderPromotional<br />Packages.md#salesorder) back reference 
-| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
-| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
+| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [General.DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
+| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.DocumentVersions.md) child objects, based on the [General.DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
 
 
 ## Attribute Details
 
+### AdjustmentNumber
+
+Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly]
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **0**  
+
+### AdjustmentTime
+
+Date/time when the document last has been adjusted by corrective document. [ReadOnly]
+
+_Type_: **datetime (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### AdjustmentUser
+
+The user who adjusted the document. [ReadOnly]
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### CompleteTime
 
-Exact time, when the document was last completed[Filter(ge;le)]
+Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -119,7 +147,7 @@ _Supports Order By_: **False**
 
 ### CreationTime
 
-Date/Time when the document was created [Required][Filter(ge;le)]
+Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -128,7 +156,7 @@ _Default Value_: **CurrentDateTime**
 
 ### CreationUser
 
-The login name of the user, who created the document [Required][Filter(like)]
+The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly]
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -189,16 +217,16 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => SalesOrderLinesRepository.DeliveryTermsCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### DocumentDate
 
-The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]
+The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD]
 
-_Type_: **datetime**  
+_Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDate**  
 
 ### DocumentNo
 
-Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]
+Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -206,7 +234,7 @@ _Supports Order By_: **True**
 
 ### DocumentNotes
 
-Notes for this Document
+Notes for this Document.
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -214,7 +242,7 @@ _Supports Order By_: **False**
 
 ### DocumentVersion
 
-[Filter(eq;ge;le)]
+Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly]
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -223,7 +251,7 @@ _Default Value_: **1**
 
 ### EntityName
 
-The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
+The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly]
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -349,7 +377,7 @@ _Supports Order By_: **False**
 
 ### ParentDocumentRelationshipType
 
-Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
+Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly]
 
 _Type_: **[ParentDocument<br />RelationshipType](Crm.Sales.SalesOrders.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
@@ -385,16 +413,16 @@ _Front-End Recalc Expressions:_
 `obj.DocumentDate.AddDays( Convert( IIF( ( obj.ShipToCustomer.DefaultPaymentStartDays != 0), obj.ShipToCustomer.DefaultPaymentStartDays, obj.Customer.DefaultPaymentStartDays), Double))`
 ### PlanningOnly
 
-Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]
+Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly]
 
-_Type_: **boolean (nullable)**  
+_Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
 ### ReadOnly
 
-True - the document is read only; false - the document is not read only [Required]
+True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -403,15 +431,16 @@ _Default Value_: **False**
 
 ### ReferenceDate
 
-The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]
+The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+_Default Value_: **CurrentDate**  
 
 ### ReferenceDocumentNo
 
-The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -419,7 +448,7 @@ _Supports Order By_: **False**
 
 ### ReleaseTime
 
-Exact time, when the document was first released [Filter(ge;le)]
+Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -438,7 +467,7 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => SalesOrderLinesRepository.RequiredDeliveryDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### State
 
-0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]
+The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly]
 
 _Type_: **[DocumentState](Crm.Sales.SalesOrders.md#state)**  
 Enumeration of document system states  
@@ -470,7 +499,7 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => SalesOrderLinesRepository.LineToDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### Void
 
-True if the document is null and void [Required][Filter(eq)]
+True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -479,7 +508,7 @@ _Default Value_: **False**
 
 ### VoidReason
 
-Reason for voiding the document, entered by the user
+Reason for voiding the document, entered by the user. [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -487,7 +516,7 @@ _Supports Order By_: **False**
 
 ### VoidTime
 
-Date/time when the document has become void
+Date/time when the document has become void. [ReadOnly]
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -495,7 +524,7 @@ _Supports Order By_: **False**
 
 ### VoidUser
 
-The user who voided the document
+The user who voided the document. [ReadOnly]
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -506,28 +535,28 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-The access key, containing the user permissions for this document. null means that all users have unlimited permissions
+The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)]
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
 
-The primary document, which the current document adjusts. null when this is not an adjustment document
+The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
 
-The user to which this document is assigned for handling. null means that the document is not assigned to specific user
+The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
 
-The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
+The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)]
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -585,7 +614,7 @@ _Front-End Recalc Expressions:_
 `obj.ShipToCustomer.DefaultCurrency.IfNullThen( obj.Customer.DefaultCurrency).IfNullThen( obj.DocumentCurrency).IfNullThen( obj.EnterpriseCompany.BaseCurrency)`
 ### DocumentType
 
-The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
+The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -601,14 +630,14 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => c.LineEndCustomerParty).Distinct( ).OnlyIfSingle( )`
 ### EnterpriseCompany
 
-The enterprise company which issued the document [Required]
+The enterprise company which issued the document. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
+The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -622,14 +651,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### FromCompanyDivision
 
-The division of the company, issuing the document. null when the document is not issued by any specific division
+The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)]
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
 
-The party which issued the document [Required]
+The party which issued the document. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -645,14 +674,14 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => c.IntrastatTransportCountry).Distinct( ).OnlyIfSingle( )`
 ### MasterDocument
 
-In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
+In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-In a multi-document tree, this is the direct parent document. If this is the root it is null
+In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -707,17 +736,17 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### PrimeCauseDocument
 
-The document that is the prime cause for creation of the current document
+The document that is the prime cause for creation of the current document. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
 
-The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
+The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ReturnForInvoice
 
@@ -735,10 +764,10 @@ _Supported Filters_: **Equals, Like, EqualsIn**
 
 ### ReverseOfDocument
 
-The document which the current document is reverse of
+The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesPerson
 
@@ -751,10 +780,10 @@ _Front-End Recalc Expressions:_
 `DetermineSalesPerson( obj.Transaction, obj.EnterpriseCompany, new [] {obj.Customer, obj.ShipToCustomer})`
 ### Sequence
 
-The sequence that will be used to give new numbers to the documents of this type
+The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[Sequences](General.Sequences.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ShipToCustomer
 
@@ -785,44 +814,29 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => c.LineStore).Distinct( ).OnlyIfSingle( )`
 ### ToCompanyDivision
 
-The division of the company, receiving the document. null when the document is not received by any specific division
+The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)]
 
-_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
-_Supported Filters_: **NotFilterable**  
+_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ToParty
 
-The party which should receive the document
+The party which should receive the document. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### UserStatus
 
-The user status of this document if applicable for this document type. null means unknown or not yet set
+The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 
 ## API Methods
 
 Methods that can be invoked in public APIs.
-
-### GetAllParentDocuments
-
-Gets all parent documents, traversing the parent document chain by using the [Parent](General.Documents.md#parent) property.  
-_Return Type_: **Collection Of [Documents](General.Documents.md)**  
-_Declaring Type_: **[Documents](General.Documents.md)**  
-_Domain API Request_: **GET**  
-
-**Parameters**  
-  * **includeSelf**  
-    if set to true the current document is included.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
-
 
 ### ChangeState
 
@@ -939,6 +953,21 @@ _Declaring Type_: **[Documents](General.Documents.md)**
 _Domain API Request_: **POST**  
 
 In some cases the objects in child collection of the document depend on values from other child objects.             This method ensures that all child objects are properly validated.             The changes are only in memory and are not committed to the server.
+
+### GetAllParentDocuments
+
+Gets all parent documents, traversing the parent document chain by using the [Parent](General.Documents.md#parent) property.  
+_Return Type_: **Collection Of [Documents](General.Documents.md)**  
+_Declaring Type_: **[Documents](General.Documents.md)**  
+_Domain API Request_: **GET**  
+
+**Parameters**  
+  * **includeSelf**  
+    if set to true the current document is included.  
+    _Type_: boolean  
+     _Optional_: True  
+    _Default Value_: False  
+
 
 
 ## Business Rules

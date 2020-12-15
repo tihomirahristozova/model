@@ -20,6 +20,7 @@ Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requ
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Logistics.Wms.WarehouseRequisitionLines.md#document) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) | The [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)] |
 | [Lot](Logistics.Wms.WarehouseRequisitionLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The requested lot. null means that any lot can be used or the product does not use lots at all. [Filter(multi eq)] |
 | [ParentDocument](Logistics.Wms.WarehouseRequisitionLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
 | [Product](Logistics.Wms.WarehouseRequisitionLines.md#product) | [Products](General.Products.Products.md) | The requested product. [Required] [Filter(multi eq)] |
@@ -83,6 +84,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Document
+
+The [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 

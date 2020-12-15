@@ -8,7 +8,7 @@
     <title>Logistics.Shipment.ShipmentOrderLines Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Logistics.Shipment.ShipmentOrderLines Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -193,6 +193,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="Logistics.Shipment.ShipmentOrderLines.html#document">Document</a></td>
+<td><a href="Logistics.Shipment.ShipmentOrders.html">ShipmentOrders</a></td>
+<td>The <a href="Logistics.Shipment.ShipmentOrderLines.html#shipmentorder">ShipmentOrder</a> to which this ShipmentOrderLine belongs. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
 <td>The store lot from which to take the goods. [Filter(multi eq)]</td>
@@ -339,6 +344,10 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="document">Document</h3>
+<p>The <a href="Logistics.Shipment.ShipmentOrderLines.html#shipmentorder">ShipmentOrder</a> to which this ShipmentOrderLine belongs. [Required] [Filter(multi eq)]</p>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.ShipmentOrders.html">ShipmentOrders</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>The store lot from which to take the goods. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>

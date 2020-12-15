@@ -24,6 +24,7 @@ Contains details of executions of transportation order lines. Entity: Log_Transp
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Logistics.Shipment.TransportationExecutionLines.md#document) | [TransportationExecutions](Logistics.Shipment.TransportationExecutions.md) | The [TransportationExecution](Logistics.Shipment.Transportation<br />ExecutionLines.md#transportationexecution) to which this Transportation<br />ExecutionLine belongs. [Required] [Filter(multi eq)] |
 | [ExecutionOfTransportation<br />OrderLine](Logistics.Shipment.TransportationExecutionLines.md#executionoftransportationorderline) | [TransportationOrderLines](Logistics.Shipment.TransportationOrderLines.md) | The transportation order line, which is executed. [Required] [Filter(multi eq)] |
 | [GeoPoint](Logistics.Shipment.TransportationExecutionLines.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) | The geographic point, where the operation is executed. [Required] [Filter(multi eq)] |
 | [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) | [TransportationExecutions](Logistics.Shipment.TransportationExecutions.md) | The [TransportationExecution](Logistics.Shipment.Transportation<br />ExecutionLines.md#transportationexecution) to which this Transportation<br />ExecutionLine belongs. [Required] [Filter(multi eq)] [Owner] |
@@ -135,6 +136,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Document
+
+The [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) to which this TransportationExecutionLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ExecutionOfTransportationOrderLine
 

@@ -31,6 +31,7 @@ Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Crm.Invoicing.InvoiceLines.md#document) | [Invoices](Crm.Invoicing.Invoices.md) | The [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. [Required] [Filter(multi eq)] |
 | [IntrastatTransportCountry](Crm.Invoicing.InvoiceLines.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)] |
 | [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) | [Invoices](Crm.Invoicing.Invoices.md) | The [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. [Required] [Filter(multi eq)] [Owner] |
 | [InvoiceOrderLine](Crm.Invoicing.InvoiceLines.md#invoiceorderline) | [InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md) (nullable) | Invoice order line which is invoiced by this line. [Filter(multi eq)] |
@@ -291,6 +292,13 @@ _Default Value_: **Constant**
 
 
 ## Reference Details
+
+### Document
+
+The [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[Invoices](Crm.Invoicing.Invoices.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatTransportCountry
 
