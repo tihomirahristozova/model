@@ -1,7 +1,5 @@
 # J30632 Notifications - Deletе Old Notifications
 
-
-
 | Code                  | J30632                                                       |
 | :-------------------- | ------------------------------------------------------------ |
 | Entity                | Notifications                                                |
