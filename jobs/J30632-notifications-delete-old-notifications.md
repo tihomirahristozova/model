@@ -12,4 +12,4 @@
 | Records per Iteration | 10 000                                                       |
 | Version               | Introduced: 2020.1                                           |
 
-**For more information about the Jobs Documentation Template and a short explanation of each column, see topic** [Jobs Template](templates/template-description-jobs.md).
+**For more information about the Jobs Documentation Template and a short explanation of each column, see topic** [Jobs Template](https://github.com/ErpNetDocs/model/blob/master/templates/template-description-jobs.md).
