@@ -12,3 +12,5 @@
 
 > [!Note]
 > The job will NOT delete the information from the Document Prints panel/table. The information about when and by whom the document has been printed will continue to be available. The job deletes only the Document Print Image aka the visual representation of the document that has been printed.
+
+**For more information about the Jobs Documentation Template and a short explanation of each column, see topic** [Jobs Template](https://github.com/ErpNetDocs/model/blob/master/templates/template-description-jobs.md).
