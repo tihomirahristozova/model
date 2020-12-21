@@ -18,7 +18,7 @@ If there are NO conditions, the system will try to process all documents into th
 -  In 'Conditions' we have to choose and specify the right **combination** of criteria which will filter the desired set of documents among all documents in the system.
 <br>Commonly used filters would be:
            
-    - Document. Void = false - the job will exclude voided documents.
+    - Document.Void = false - the job will exclude voided documents.
     - Document.Entity Name - the job will be executed for all documents of this Entity e.g. 'Sales Orders'.
     - Document.Document Type - the job will be executed for all documents of this Document Type/s.
     - Document.State - the job will be executed for all documents with this Document State.
