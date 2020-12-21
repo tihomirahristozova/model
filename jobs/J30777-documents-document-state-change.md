@@ -12,26 +12,18 @@
 
 **IMPORTANT NOTES** about the configurations in Document Jobs:
 
-***** The 'Document Type' field is NOT a filter for the job. If you set a specific Document Type it does not mean that the job will be executed only for documents with this Document Type or even Entity. The only filters which are evaluated to determine the processed documents are the filters in the 'Conditions' field.
-
-***** The 'Conditions' field is the only field that is taken into account in order to determine which Documents will be processed.
-
+-  The 'Document Type' field is NOT a filter for the job. If you set a specific Document Type it does not mean that the job will be executed only for documents with this Document Type or even Entity. The only filters which are evaluated to determine the processed documents are the filters in the 'Conditions' field.
+-  The 'Conditions' field is the only field that is taken into account in order to determine which Documents will be processed. <br>
 If there are NO conditions, the system will try to process all documents into the database!
+-  In 'Conditions' we have to choose and specify the right **combination** of criteria which will filter the desired set of documents among all documents in the system.
+<br>Commonly used filters would be:
+           
+    - Document. Void = false - the job will exclude voided documents.
+    - Document.Entity Name - the job will be executed for all documents of this Entity e.g. 'Sales Orders'.
+    - Document.Document Type - the job will be executed for all documents of this Document Type/s.
+    - Document.State - the job will be executed for all documents with this Document State.
+    - Document.User State - the job will be executed for all documents with this User State.
+    - Document.Document Date >= and Document.Document Date >= - the job will be executed for all documents with Document Date in this period.
+- Currently, the only 'Conditions' which are taken into account are the filters from the 'Document' panel.
 
-***** In 'Conditions' we have to choose and specify the right **combination** of criteria which will filter the desired set of documents among all documents in the system.
-
-Commonly used filters would be:
-
-\- Document. Void = false - the job will exclude voided documents.
-
-\- Document.Entity Name - the job will be executed for all documents of this Entity e.g. 'Sales Orders'.
-
-\- Document.Document Type - the job will be executed for all documents of this Document Type/s.
-
-\- Document.State - the job will be executed for all documents with this Document State.
-
-\- Document.User State - the job will be executed for all documents with this User State.
-
-\- Document.Document Date >= and Document.Document Date >= - the job will be executed for all documents with Document Date in this period.
-
-***** Currently, the only 'Conditions' which are taken into account are the filters from the 'Document' panel.
+**For more information about the Jobs Documentation Template and a short explanation of each column, see topic** [Jobs Template](https://github.com/ErpNetDocs/model/blob/master/templates/template-description-jobs.md).
