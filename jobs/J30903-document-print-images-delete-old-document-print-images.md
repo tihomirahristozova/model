@@ -5,7 +5,7 @@
 | Entity                | DocumentPrintImages                                          |
 | Job Type Name         | Deletе Old Document Print Images                             |
 | Parameters            | DocumentPrintImage.DocumentPrints.Document.EnterpriseCompany.PrintImagesRetentionMonths |
-| Description           | The system job deletes all old Document Print Images, whose retention period has expired. A retention period is considered as expired when the period between the Print Time of the Document Print Image and today is larger than the period set in the in the "Print Images Retention Months" field Enterprise Company's definition. The default value for the "Print Images Retention Months" field is 60 months but this period can be adjusted according to the particular company's needs. |
+| Description           | The system job deletes all old Document Print Images, whose retention period has expired. <br> A retention period is considered as expired when the period between the Print Time of the Document Print Image and today is larger than the period set in the "Print Images Retention Months" field Enterprise Company's definition. The default value for the "Print Images Retention Months" field is 60 months but this period can be adjusted according to the particular company's needs. |
 | First to Process      | DocumentPrintImage.DocumentPrints.PrintTime (ASC)            |
 | Records per Iteration | 1000                                                         |
 | Version               | Introduced: 2020.1                                           |
