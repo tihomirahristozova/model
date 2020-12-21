@@ -13,7 +13,7 @@
 **IMPORTANT NOTES** about the configurations in Document Jobs:
 
 -  The 'Document Type' field is NOT a filter for the job. If you set a specific Document Type it does not mean that the job will be executed only for documents with this Document Type or even Entity. The only filters which are evaluated to determine the processed documents are the filters in the 'Conditions' field.
--  The 'Conditions' field is the only field that is taken into account in order to determine which Documents will be processed. <br>
+-  The 'Conditions' field is the only field that is taken into account to determine which Documents will be processed. <br>
 If there are NO conditions, the system will try to process all documents into the database!
 -  In 'Conditions' we have to choose and specify the right **combination** of criteria which will filter the desired set of documents among all documents in the system.
 <br>Commonly used filters would be:
