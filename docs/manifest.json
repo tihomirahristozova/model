@@ -2607,6 +2607,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Excise.ExciseOperationTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Excise.ExciseOperationTypes.html",
+          "hash": "kuaePU4S0zlKfTavn4H+qQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Excise.MeasuringTransactions.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Excise.MeasuringTransactions.html",
+          "hash": "+1AplWMScYPv0915xpcsug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Excise.TaxWarehouseMeasuringTransactions.md",
       "output": {
         ".html": {
@@ -2635,7 +2659,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.html",
-          "hash": "jr0K5rl/VrwDrNMzmtwclQ=="
+          "hash": "aOeVC2CPiYI/hiOemLiVmw=="
         }
       },
       "is_incremental": false,
@@ -4267,7 +4291,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Inventory.Lots.html",
-          "hash": "3f2zyzQ1wrfO45xsCr+PWA=="
+          "hash": "OH9Oz9+gVpg95pRNYB4FEQ=="
         }
       },
       "is_incremental": false,
@@ -5479,7 +5503,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Production.ShopFloor.WorkOrders.html",
-          "hash": "cfP/ax/GLMmmLKy80C6+fg=="
+          "hash": "gRj/JUgqPnO1o/RQKpCxCw=="
         }
       },
       "is_incremental": false,
@@ -6703,7 +6727,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "t+Fs+D0K5VQdEOAAxcsA/g=="
+          "hash": "MWqS3L7ujl29VY+kBg49CA=="
         }
       },
       "is_incremental": false,

@@ -628,6 +628,12 @@ references:
 - uid: Finance.Excise
   name: Finance.Excise Namespace
   href: entities/Finance.Excise.html
+- uid: Finance.Excise.ExciseOperationTypes
+  name: Finance.Excise.ExciseOperationTypes Entity
+  href: entities/Finance.Excise.ExciseOperationTypes.html
+- uid: Finance.Excise.MeasuringTransactions
+  name: Finance.Excise.MeasuringTransactions Entity
+  href: entities/Finance.Excise.MeasuringTransactions.html
 - uid: Finance.Excise.TaxWarehouseMeasuringTransactions
   name: Finance.Excise.TaxWarehouseMeasuringTransactions Entity
   href: entities/Finance.Excise.TaxWarehouseMeasuringTransactions.html

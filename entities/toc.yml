@@ -440,6 +440,10 @@
   - name: Excise
     href: Finance.Excise.md
     items:
+    - name: ExciseOperationTypes
+      href: Finance.Excise.ExciseOperationTypes.md
+    - name: MeasuringTransactions
+      href: Finance.Excise.MeasuringTransactions.md
     - name: TaxWarehouseMeasuringTransactions
       href: Finance.Excise.TaxWarehouseMeasuringTransactions.md
     - name: TaxWarehouses
