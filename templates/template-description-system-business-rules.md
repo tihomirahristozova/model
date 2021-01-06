@@ -1,3 +1,7 @@
+---
+uid: system-business-rules
+---
+
 # System Business Rules
 
 ## What is System Business Rule?
