@@ -1,3 +1,7 @@
+---
+uid: jobs-J30903
+---
+
 # J30903 Document Print Images - Deletе Old Document Print Images
 
 | Code                  | J30903                                                       |
