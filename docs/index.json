@@ -1067,7 +1067,7 @@
   "entities/Finance.Excise.html": {
     "href": "entities/Finance.Excise.html",
     "title": "Finance.Excise Namespace | ERP.net Domain Model",
-    "keywords": "Finance.Excise Namespace Entities ExciseOperationTypes MeasuringTransactions TaxWarehouseMeasuringTransactions TaxWarehouses"
+    "keywords": "Finance.Excise Namespace Entities ExciseOperationTypes MeasuringTransactions TaxWarehouses"
   },
   "entities/Finance.Excise.MeasuringTransactions.html": {
     "href": "entities/Finance.Excise.MeasuringTransactions.html",
