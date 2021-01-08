@@ -16,7 +16,7 @@ uid: template-description-jobs
 
 Available jobs:
 
-- [J30632 Notifications - Delete Old Notifications](xref:jobs-J30632)
-- [J30724 Scheduled Document Events - Run Scheduled Events.md](xref:jobs-J30724)
-- [J30777 Documents - Document State Change](xref:jobs-J30777)
-- [J30903 Document Print Images - Delete Old Document Print Images](xref:jobs-J30903)
+- [J30632 Notifications - Delete Old Notifications](~/jobs/J30632-notifications-delete-old-notifications.md)
+- [J30724 Scheduled Document Events - Run Scheduled Events.md](~/jobs/J30724-scheduled-document-events-run-scheduled-events.md)
+- [J30777 Documents - Document State Change](~/jobs/J30777-documents-document-state-change.md)
+- [J30903 Document Print Images - Delete Old Document Print Images](~/jobs/J30903-document-print-images-delete-old-document-print-images.md)
