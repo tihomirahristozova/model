@@ -12,3 +12,11 @@ uid: template-description-jobs
 | First to Process         | Specifies the condition/s (if any) by which the job determines which records have to be processed first. |
 | Records per Iteration    | The count of records that are included in a single iteration of the job.If we are cancelling a manually started job, the job will be aborted after the iteration is finished. |
 | Version                  | A list with all versions in which the job has been somehow changed. Usually contains two types of records:"Introduced: 2xxx.x" - the version since which the job type is available;"Updated: 2xxx.x " - the version in which the job has been changed plus a short description of the changes. There could be non or multiple records of this type. |
+
+
+Available jobs:
+
+- [J30632 Notifications - Delete Old Notifications](xref:jobs-J30632)
+- [J30724 Scheduled Document Events - Run Scheduled Events.md](xref:jobs-J30724)
+- [J30777 Documents - Document State Change](xref:jobs-J30777)
+- [J30903 Document Print Images - Delete Old Document Print Images](xref:jobs-J30903)
