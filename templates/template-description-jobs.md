@@ -14,4 +14,4 @@ uid: template-description-jobs
 | Version                  | A list with all versions in which the job has been somehow changed. Usually contains two types of records:"Introduced: 2xxx.x" - the version since which the job type is available;"Updated: 2xxx.x " - the version in which the job has been changed plus a short description of the changes. There could be non or multiple records of this type. |
 
 
-See [Available jobs](https://erpnetdocs/model/jobs/)
+See [Available jobs](https://docs.erp.net/model/jobs/)
