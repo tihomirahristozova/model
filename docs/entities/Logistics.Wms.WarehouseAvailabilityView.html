@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Logistics.Wms.WarehouseAvailabilityView View | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Logistics.Wms.WarehouseAvailabilityView View | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Logistics.Wms.WarehouseAvailabilityView">
+<h1 id="logisticswmswarehouseavailabilityview-view">Logistics.Wms.WarehouseAvailabilityView View</h1>
+
+<p>The availability of goods in the warehouse locations of the warehouse. Entity: Wms_Warehouse_Availability_Indexed_View (Introduced in version 21.1.1.35)</p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#catchbalance">CatchBalance</a></td>
+<td>decimal (nullable)</td>
+<td>Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. [Filter(eq;ge;le)] [Inherited from Wms_Warehouse_<br>Transactions_Table.Catch_Quantity]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#cnt">Cnt</a></td>
+<td>int64</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#quantityavailable">QuantityAvailable</a></td>
+<td>decimal</td>
+<td>The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. [Required] [Default(0)] [Filter(multi eq;ge;le)] [Inherited from Wms_Warehouse_<br>Transactions_Table.Quantity]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#catchquantityunit">CatchQuantityUnit</a></td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
+<td>The measurement unit of the catch quantity. null when catch measurement is not configured for the product. [Filter(multi eq)] [Inherited from Wms_Warehouse_<br>Transactions_Table.Catch_Quantity_Unit_Id]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#logisticunit">LogisticUnit</a></td>
+<td><a href="Logistics.LogisticUnits.html">LogisticUnits</a> (nullable)</td>
+<td>Logistic unit, which was transacted. null when the transaction was not for a logistic unit. [Filter(multi eq)] [Inherited from Wms_Warehouse_<br>Transactions_Table.Logistic_Unit_Id]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#lot">Lot</a></td>
+<td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
+<td>The lot which was transacted. null when the transaction was not for a specific lot. [Filter(multi eq)] [Inherited from Wms_Warehouse_<br>Transactions_Table.Lot_Id]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#product">Product</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
+<td>The product, which was transacted. [Required] [Filter(multi eq)] [Inherited from Wms_Warehouse_<br>Transactions_Table.Product_Id]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#productvariant">ProductVariant</a></td>
+<td><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</td>
+<td>The product variant, which was transacted. null when the transaction was not for a product variant. [Filter(multi eq)] [Inherited from Wms_Warehouse_<br>Transactions_Table.Product_Variant_Id]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#quantityunit">QuantityUnit</a></td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
+<td>The measurement unit of quantity. [Required] [Filter(multi eq)] [Inherited from Wms_Warehouse_<br>Transactions_Table.Quantity_Unit_Id]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#serialnumber">SerialNumber</a></td>
+<td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
+<td>The serial number which was transacted. null when the transaction was not for a specific serial number. [Filter(multi eq)] [Inherited from Wms_Warehouse_<br>Transactions_Table.Serial_Number_Id]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#warehouse">Warehouse</a></td>
+<td><a href="Logistics.Wms.Warehouses.html">Warehouses</a></td>
+<td>The warehouse in which the transaction occurred. [Required] [Filter(multi eq)] [Inherited from Wms_Warehouse_<br>Transactions_Table.Warehouse_Id]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#warehouselocation">WarehouseLocation</a></td>
+<td><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></td>
+<td>The warehouse location, where the transaction occurred. [Required] [Filter(multi eq)] [Inherited from Wms_Warehouse_<br>Transactions_Table.Warehouse_Location_Id]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="catchbalance">CatchBalance</h3>
+<p>Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. [Filter(eq;ge;le)] [Inherited from Wms_Warehouse_Transactions_Table.Catch_Quantity]</p>
+<p><em>Type</em>: <strong>decimal (nullable)</strong><br>
+<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Catch_Quantity</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="cnt">Cnt</h3>
+<p><em>Type</em>: <strong>int64</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="quantityavailable">QuantityAvailable</h3>
+<p>The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. [Required] [Default(0)] [Filter(multi eq;ge;le)] [Inherited from Wms_Warehouse_Transactions_Table.Quantity]</p>
+<p><em>Type</em>: <strong>decimal</strong><br>
+<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Quantity</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="catchquantityunit">CatchQuantityUnit</h3>
+<p>The measurement unit of the catch quantity. null when catch measurement is not configured for the product. [Filter(multi eq)] [Inherited from Wms_Warehouse_Transactions_Table.Catch_Quantity_Unit_Id]</p>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
+<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Catch_Quantity_Unit_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="logisticunit">LogisticUnit</h3>
+<p>Logistic unit, which was transacted. null when the transaction was not for a logistic unit. [Filter(multi eq)] [Inherited from Wms_Warehouse_Transactions_Table.Logistic_Unit_Id]</p>
+<p><em>Type</em>: <strong><a href="Logistics.LogisticUnits.html">LogisticUnits</a> (nullable)</strong><br>
+<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Logistic_Unit_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="lot">Lot</h3>
+<p>The lot which was transacted. null when the transaction was not for a specific lot. [Filter(multi eq)] [Inherited from Wms_Warehouse_Transactions_Table.Lot_Id]</p>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
+<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Lot_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="product">Product</h3>
+<p>The product, which was transacted. [Required] [Filter(multi eq)] [Inherited from Wms_Warehouse_Transactions_Table.Product_Id]</p>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Product_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="productvariant">ProductVariant</h3>
+<p>The product variant, which was transacted. null when the transaction was not for a product variant. [Filter(multi eq)] [Inherited from Wms_Warehouse_Transactions_Table.Product_Variant_Id]</p>
+<p><em>Type</em>: <strong><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
+<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Product_Variant_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="quantityunit">QuantityUnit</h3>
+<p>The measurement unit of quantity. [Required] [Filter(multi eq)] [Inherited from Wms_Warehouse_Transactions_Table.Quantity_Unit_Id]</p>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
+<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Quantity_Unit_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="serialnumber">SerialNumber</h3>
+<p>The serial number which was transacted. null when the transaction was not for a specific serial number. [Filter(multi eq)] [Inherited from Wms_Warehouse_Transactions_Table.Serial_Number_Id]</p>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
+<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Serial_Number_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="warehouse">Warehouse</h3>
+<p>The warehouse in which the transaction occurred. [Required] [Filter(multi eq)] [Inherited from Wms_Warehouse_Transactions_Table.Warehouse_Id]</p>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
+<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Warehouse_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="warehouselocation">WarehouseLocation</h3>
+<p>The warehouse location, where the transaction occurred. [Required] [Filter(multi eq)] [Inherited from Wms_Warehouse_Transactions_Table.Warehouse_Location_Id]</p>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></strong><br>
+<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Warehouse_Location_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Wms_WarehouseAvailabilityView?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Wms_WarehouseAvailabilityView?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseAvailabilityView?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseAvailabilityView?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Logistics.Wms.WarehouseAvailabilityView.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

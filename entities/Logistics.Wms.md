@@ -5,6 +5,7 @@ uid: Logistics.Wms
 
 
 ## Entities
+- [WarehouseAvailabilityView](Logistics.Wms.WarehouseAvailabilityView.md)  
 - [WarehouseLocations](Logistics.Wms.WarehouseLocations.md)  
 - [WarehouseOrderFulfillments](Logistics.Wms.WarehouseOrderFulfillments.md)  
 - [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md)  

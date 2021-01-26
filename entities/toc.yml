@@ -854,6 +854,8 @@
   - name: Wms
     href: Logistics.Wms.md
     items:
+    - name: WarehouseAvailabilityView
+      href: Logistics.Wms.WarehouseAvailabilityView.md
     - name: WarehouseLocations
       href: Logistics.Wms.WarehouseLocations.md
     - name: WarehouseOrderFulfillments

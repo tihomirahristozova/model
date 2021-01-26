@@ -5043,6 +5043,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Logistics.Wms.WarehouseAvailabilityView.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Logistics.Wms.WarehouseAvailabilityView.html",
+          "hash": "8/43zRWXFQ/FTqW5ps7h7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Logistics.Wms.WarehouseLocations.md",
       "output": {
         ".html": {
@@ -5203,7 +5215,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Wms.html",
-          "hash": "gGGYKx/ALnIRr76muXVdfQ=="
+          "hash": "OdSXYEYn1hxdHZgGHKOdQw=="
         }
       },
       "is_incremental": false,
@@ -6727,7 +6739,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "R496fBUlBzUz8X5AXI+bWg=="
+          "hash": "adSbCCsnCg9t6EdFGr1EDQ=="
         }
       },
       "is_incremental": false,
