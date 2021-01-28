@@ -150,6 +150,11 @@
 <td>string (nullable)</td>
 <td>Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. [Filter(eq)]</td>
 </tr>
+<tr>
+<td><a href="Systems.Core.ObjectFiles.html#section">Section</a></td>
+<td>string (nullable)</td>
+<td>A section name used to group files. [Introduced in version 21.1.1.84]</td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -265,6 +270,11 @@ Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">C
 <p>Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. [Filter(eq)]</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="section">Section</h3>
+<p>A section name used to group files. [Introduced in version 21.1.1.84]</p>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>

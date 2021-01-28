@@ -21,6 +21,7 @@ Contains files attached to objects. Entity: Sys_Object_Files
 | [MediaWidth](Systems.Core.ObjectFiles.md#mediawidth) | int32 (nullable) | Used (non-null) only for media files. Specifies the width for displaying the media. [Introduced in version 20.1] 
 | [Notes](Systems.Core.ObjectFiles.md#notes) | string (nullable) | User notes for the file attachment. 
 | [PurposeCode](Systems.Core.ObjectFiles.md#purposecode) | string (nullable) | Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. [Filter(eq)] 
+| [Section](Systems.Core.ObjectFiles.md#section) | string (nullable) | A section name used to group files. [Introduced in version 21.1.1.84] 
 
 ## References
 
@@ -137,6 +138,14 @@ Code, designating the usage purpose of the file. The meaning of each code is up 
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+
+### Section
+
+A section name used to group files. [Introduced in version 21.1.1.84]
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 
