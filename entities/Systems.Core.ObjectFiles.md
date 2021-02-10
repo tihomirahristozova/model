@@ -9,7 +9,7 @@ Contains files attached to objects. Entity: Sys_Object_Files
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] [Introduced in version 20.1] 
+| [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] [Filter(multi eq)] [Introduced in version 20.1] 
 | [CreationTimeUtc](Systems.Core.ObjectFiles.md#creationtimeutc) | datetime | Time (in UTC), when the file was created. [Required] [Default(NowUtc)] [Introduced in version 20.1] 
 | [EmbeddedFileContents](Systems.Core.ObjectFiles.md#embeddedfilecontents) | byte[] (nullable) | Contains the contents of the file, when it is embedded in the database. null for linked files. 
 | [FileName](Systems.Core.ObjectFiles.md#filename) | string | The file name of the linked or embedded file. [Required] [Filter(eq;like)] 
@@ -36,7 +36,7 @@ Contains files attached to objects. Entity: Sys_Object_Files
 
 ### ContentLocation
 
-The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] [Introduced in version 20.1]
+The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] [Filter(multi eq)] [Introduced in version 20.1]
 
 _Type_: **[ContentLocation](Systems.Core.ObjectFiles.md#contentlocation)**  
 Allowed values for the [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) data attribute  
@@ -48,7 +48,7 @@ _Allowed Values (Systems.Core.ObjectFilesRepository.ContentLocation Enum Members
 | InternetUrl | InternetUrl value. Stored as 'URL'. <br /> _Database Value:_ 'URL' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'InternetUrl' |
 | FileSystemLink | FileSystemLink value. Stored as 'FSL'. <br /> _Database Value:_ 'FSL' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'FileSystemLink' |
 
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **Embedded**  
 

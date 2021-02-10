@@ -93,7 +93,7 @@
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a></td>
 <td><a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a></td>
-<td>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default(&quot;EMB&quot;)] [Introduced in version 20.1]</td>
+<td>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default(&quot;EMB&quot;)] [Filter(multi eq)] [Introduced in version 20.1]</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#creationtimeutc">CreationTimeUtc</a></td>
@@ -186,7 +186,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contentlocation">ContentLocation</h3>
-<p>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default(&quot;EMB&quot;)] [Introduced in version 20.1]</p>
+<p>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default(&quot;EMB&quot;)] [Filter(multi eq)] [Introduced in version 20.1]</p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a></strong><br>
 Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a> data attribute<br>
 <em>Allowed Values (Systems.Core.ObjectFilesRepository.ContentLocation Enum Members)</em></p>
@@ -212,7 +212,7 @@ Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">C
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Embedded</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>

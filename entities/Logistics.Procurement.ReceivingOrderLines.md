@@ -96,10 +96,10 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Back-End Default Expression:_  
-`IIF( ( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value == 0)) OrElse ( obj.PricePerUnit == null)), obj.LineAmount, ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit))`
+`IIF( ( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value == 0)) OrElse ( obj.PricePerUnit == null)), Convert( obj.LineAmount, Object), Convert( Round( ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit.Value), 2, AwayFromZero), Object))`
 
 _Front-End Recalc Expressions:_  
-`IIF( ( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value == 0)) OrElse ( obj.PricePerUnit == null)), obj.LineAmount, ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit))`
+`IIF( ( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value == 0)) OrElse ( obj.PricePerUnit == null)), Convert( obj.LineAmount, Object), Convert( Round( ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit.Value), 2, AwayFromZero), Object))`
 ### LineNo
 
 Line number, unique within the ReceivingOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the ReceivingOrder (in order to allow insertions with adjustment documents). [Required]
