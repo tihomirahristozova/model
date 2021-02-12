@@ -8,7 +8,7 @@
     <title>General.DocumentJobs Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="General.DocumentJobs Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -103,17 +103,17 @@
 <tr>
 <td><a href="General.DocumentJobs.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)]</td>
+<td>Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)] (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</td>
 </tr>
 <tr>
 <td><a href="General.DocumentJobs.html#jobtype">JobType</a></td>
 <td><a href="General.DocumentJobs.html#jobtype">JobType</a></td>
-<td>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)]</td>
+<td>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)] (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</td>
 </tr>
 <tr>
 <td><a href="General.DocumentJobs.html#name">Name</a></td>
 <td>string</td>
-<td>The name of the job. [Required] [Filter(eq;like)] [ORD]</td>
+<td>The name of the job. [Required] [Filter(eq;like)] [ORD] (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</td>
 </tr>
 <tr>
 <td><a href="General.DocumentJobs.html#newstate">NewState</a></td>
@@ -123,12 +123,12 @@
 <tr>
 <td><a href="General.DocumentJobs.html#notes">Notes</a></td>
 <td>string (nullable)</td>
-<td>Notes for this Job.</td>
+<td>Notes for this Job. (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</td>
 </tr>
 <tr>
 <td><a href="General.DocumentJobs.html#runonidle">RunOnIdle</a></td>
 <td>boolean</td>
-<td>Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)]</td>
+<td>Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)] (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</td>
 </tr>
 </tbody>
 </table>
@@ -165,13 +165,13 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)]</p>
+<p>Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)] (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="jobtype">JobType</h3>
-<p>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)]</p>
+<p>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)] (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</p>
 <p><em>Type</em>: <strong><a href="General.DocumentJobs.html#jobtype">JobType</a></strong><br>
 Allowed values for the <a href="Systems.Core.Jobs.html#jobtype">JobType</a> data attribute<br>
 <em>Allowed Values (Systems.Core.JobsRepository.JobType Enum Members)</em></p>
@@ -204,7 +204,7 @@ Allowed values for the <a href="Systems.Core.Jobs.html#jobtype">JobType</a> data
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of the job. [Required] [Filter(eq;like)] [ORD]</p>
+<p>The name of the job. [Required] [Filter(eq;like)] [ORD] (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
@@ -254,12 +254,12 @@ Enumeration of document system states<br>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for this Job.</p>
+<p>Notes for this Job. (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="runonidle">RunOnIdle</h3>
-<p>Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)]</p>
+<p>Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)] (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>

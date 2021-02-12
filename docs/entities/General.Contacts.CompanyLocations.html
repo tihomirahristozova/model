@@ -8,7 +8,7 @@
     <title>General.Contacts.CompanyLocations Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="General.Contacts.CompanyLocations Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -96,14 +96,9 @@
 <td>If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, null = unidentified.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.CompanyLocations.html#defaultproductcodingsystemid">DefaultProduct<br>CodingSystemId</a></td>
-<td>guid (nullable)</td>
-<td></td>
-</tr>
-<tr>
 <td><a href="General.Contacts.CompanyLocations.html#gln">GLN</a></td>
 <td>string (nullable)</td>
-<td>Global Location Number used by EDI systems</td>
+<td>Global Location Number used by EDI systems. [Filter(multi eq)] [ORD] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#id">Id</a></td>
@@ -113,7 +108,7 @@
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the current party is active in the system or not [Required]</td>
+<td>Specifies whether the current party is active in the system or not. [Required] [Default(true)] [Filter(eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#locationname">LocationName</a></td>
@@ -121,54 +116,49 @@
 <td>The name of the company location. [Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.CompanyLocations.html#parentpartyid">ParentPartyId</a></td>
-<td>guid (nullable)</td>
-<td></td>
-</tr>
-<tr>
 <td><a href="General.Contacts.CompanyLocations.html#partycode">PartyCode</a></td>
 <td>string</td>
-<td>The unique code of the Party [Required]</td>
+<td>The unique code of the party. [Required] [Filter(eq;like)] [ORD] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#partycreationtime">PartyCreationTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date and time when the Party was created.</td>
+<td>Date and time when the Party was created. [Filter(ge;le)] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#partycreationuser">PartyCreationUser</a></td>
 <td>string (nullable)</td>
-<td>Login name of the user, who created the Party.</td>
+<td>Login name of the user, who created the Party. [Filter(like)] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#partyname">PartyName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The name of the party [Required]</td>
+<td>The name of the party. [Required] [Filter(eq;like)] [ORD] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#partynotes">PartyNotes</a></td>
 <td>string (nullable)</td>
-<td>Notes for this Party</td>
+<td>Notes for this Party. (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#partytype">PartyType</a></td>
 <td><a href="General.Contacts.CompanyLocations.html#partytype">PartyType</a></td>
-<td>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]</td>
+<td>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. [Required] [Default(&quot;P&quot;)] [Filter(multi eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#partyuniquenumber">PartyUniqueNumber</a></td>
 <td>string (nullable)</td>
-<td>Unique number of the party (National number for persons, Registration number for companies)</td>
+<td>Unique number of the party (National number for persons, Registration number for companies). [Filter(eq;like)] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#partyupdatetime">PartyUpdateTime</a></td>
 <td>datetime (nullable)</td>
-<td>Date and time when the Party was last updated.</td>
+<td>Date and time when the Party was last updated. [Filter(ge;le)] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#partyupdateuser">PartyUpdateUser</a></td>
 <td>string (nullable)</td>
-<td>Login name of the user, who last updated the Party.</td>
+<td>Login name of the user, who last updated the Party. [Filter(like)] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#workingtime">WorkingTime</a></td>
@@ -195,12 +185,12 @@
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#administrativeregion">AdministrativeRegion</a></td>
 <td><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</td>
-<td>The administrative region in which the party is situated.</td>
+<td>The administrative region in which the party is situated. [Filter(multi eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#area">Area</a></td>
 <td><a href="General.Geography.Areas.html">Areas</a> (nullable)</td>
-<td>The area in which the party is situated.</td>
+<td>The area in which the party is situated. [Filter(multi eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#company">Company</a></td>
@@ -210,12 +200,12 @@
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#defaultproductcodingsystem">DefaultProductCodingSystem</a></td>
 <td><a href="General.Products.CodingSystems.html">CodingSystems</a> (nullable)</td>
-<td>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.</td>
+<td>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. [Filter(multi eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#parentparty">ParentParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to</td>
+<td>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. [Filter(multi eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 </tbody>
 </table>
@@ -232,47 +222,57 @@
 <tr>
 <td>ActivityTimeIntervals</td>
 <td><a href="General.Contacts.ActivityTimeIntervals.html">ActivityTimeIntervals</a></td>
-<td>List of <a href="General.Contacts.ActivityTimeIntervals.html">ActivityTimeInterval</a> child objects, based on the <a href="General.Contacts.ActivityTimeIntervals.html#party">General.Contacts.ActivityTimeInterval.Party</a> back reference</td>
+<td>List of <a href="General.Contacts.ActivityTimeIntervals.html">ActivityTimeInterval</a> child objects, based on the <a href="General.Contacts.ActivityTimeIntervals.html#party">General.Contacts.ActivityTimeInterval.Party</a> back reference (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
+</tr>
+<tr>
+<td>ApplicableLegislations</td>
+<td><a href="General.PartyApplicableLegislations.html">PartyApplicableLegislations</a></td>
+<td>List of [PartyApplicable<br>Legislation](General.PartyApplicable<br>Legislations.md) child objects, based on the [General.PartyApplicableLegislation.Party](General.PartyApplicable<br>Legislations.md#party) back reference (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td>BankAccounts</td>
 <td><a href="General.Contacts.PartyBankAccounts.html">PartyBankAccounts</a></td>
-<td>List of <a href="General.Contacts.PartyBankAccounts.html">PartyBankAccount</a> child objects, based on the <a href="General.Contacts.PartyBankAccounts.html#party">General.Contacts.PartyBankAccount.Party</a> back reference</td>
+<td>List of <a href="General.Contacts.PartyBankAccounts.html">PartyBankAccount</a> child objects, based on the <a href="General.Contacts.PartyBankAccounts.html#party">General.Contacts.PartyBankAccount.Party</a> back reference (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td>ContactMechanisms</td>
 <td><a href="General.Contacts.PartyContactMechanisms.html">PartyContactMechanisms</a></td>
-<td>List of <a href="General.Contacts.PartyContactMechanisms.html">PartyContactMechanism</a> child objects, based on the <a href="General.Contacts.PartyContactMechanisms.html#party">General.Contacts.PartyContactMechanism.Party</a> back reference</td>
+<td>List of <a href="General.Contacts.PartyContactMechanisms.html">PartyContactMechanism</a> child objects, based on the <a href="General.Contacts.PartyContactMechanisms.html#party">General.Contacts.PartyContactMechanism.Party</a> back reference (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td>Customers</td>
 <td><a href="Crm.Customers.html">Customers</a></td>
-<td>List of <a href="Crm.Customers.html">Customer</a> child objects, based on the <a href="Crm.Customers.html#party">Crm.Customer.Party</a> back reference</td>
+<td>List of <a href="Crm.Customers.html">Customer</a> child objects, based on the <a href="Crm.Customers.html#party">Crm.Customer.Party</a> back reference (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td>Dealers</td>
 <td><a href="Crm.Dealers.html">Dealers</a></td>
-<td>List of <a href="Crm.Dealers.html">Dealer</a> child objects, based on the <a href="Crm.Dealers.html#party">Crm.Dealer.Party</a> back reference</td>
+<td>List of <a href="Crm.Dealers.html">Dealer</a> child objects, based on the <a href="Crm.Dealers.html#party">Crm.Dealer.Party</a> back reference (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td>Distributors</td>
 <td><a href="Crm.Distributors.html">Distributors</a></td>
-<td>List of <a href="Crm.Distributors.html">Distributor</a> child objects, based on the <a href="Crm.Distributors.html#party">Crm.Distributor.Party</a> back reference</td>
+<td>List of <a href="Crm.Distributors.html">Distributor</a> child objects, based on the <a href="Crm.Distributors.html#party">Crm.Distributor.Party</a> back reference (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
+</tr>
+<tr>
+<td>LocationNumbers</td>
+<td><a href="General.PartyLocationNumbers.html">PartyLocationNumbers</a></td>
+<td>List of <a href="General.PartyLocationNumbers.html">PartyLocationNumber</a> child objects, based on the <a href="General.PartyLocationNumbers.html#party">General.PartyLocationNumber.Party</a> back reference (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td>Pictures</td>
 <td><a href="General.Contacts.PartyPictures.html">PartyPictures</a></td>
-<td>List of <a href="General.Contacts.PartyPictures.html">PartyPicture</a> child objects, based on the <a href="General.Contacts.PartyPictures.html#party">General.Contacts.PartyPicture.Party</a> back reference</td>
+<td>List of <a href="General.Contacts.PartyPictures.html">PartyPicture</a> child objects, based on the <a href="General.Contacts.PartyPictures.html#party">General.Contacts.PartyPicture.Party</a> back reference (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td>Suppliers</td>
 <td><a href="Logistics.Procurement.Suppliers.html">Suppliers</a></td>
-<td>List of <a href="Logistics.Procurement.Suppliers.html">Supplier</a> child objects, based on the <a href="Logistics.Procurement.Suppliers.html#party">Logistics.Procurement.Supplier.Party</a> back reference</td>
+<td>List of <a href="Logistics.Procurement.Suppliers.html">Supplier</a> child objects, based on the <a href="Logistics.Procurement.Suppliers.html#party">Logistics.Procurement.Supplier.Party</a> back reference (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
 <td>TargetGroupMembers</td>
 <td><a href="Crm.Marketing.TargetGroupMembers.html">TargetGroupMembers</a></td>
-<td>List of <a href="Crm.Marketing.TargetGroupMembers.html">TargetGroupMember</a> child objects, based on the <a href="Crm.Marketing.TargetGroupMembers.html#party">Crm.Marketing.TargetGroupMember.Party</a> back reference</td>
+<td>List of <a href="Crm.Marketing.TargetGroupMembers.html">TargetGroupMember</a> child objects, based on the <a href="Crm.Marketing.TargetGroupMembers.html#party">Crm.Marketing.TargetGroupMember.Party</a> back reference (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 </tbody>
 </table>
@@ -302,58 +302,53 @@ Allowed values for the <a href="General.Contacts.CompanyLocations.html#billto">B
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="defaultproductcodingsystemid">DefaultProductCodingSystemId</h3>
-<p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="gln">GLN</h3>
-<p>Global Location Number used by EDI systems</p>
+<p>Global Location Number used by EDI systems. [Filter(multi eq)] [ORD] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the current party is active in the system or not [Required]</p>
+<p>Specifies whether the current party is active in the system or not. [Required] [Default(true)] [Filter(eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
 <h3 id="locationname">LocationName</h3>
 <p>The name of the company location. [Required] [Filter(eq;like)]</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="parentpartyid">ParentPartyId</h3>
-<p><em>Type</em>: <strong>guid (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
 <h3 id="partycode">PartyCode</h3>
-<p>The unique code of the Party [Required]</p>
+<p>The unique code of the party. [Required] [Filter(eq;like)] [ORD] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partycreationtime">PartyCreationTime</h3>
-<p>Date and time when the Party was created.</p>
+<p>Date and time when the Party was created. [Filter(ge;le)] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partycreationuser">PartyCreationUser</h3>
-<p>Login name of the user, who created the Party.</p>
+<p>Login name of the user, who created the Party. [Filter(like)] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyname">PartyName</h3>
-<p>The name of the party [Required]</p>
+<p>The name of the party. [Required] [Filter(eq;like)] [ORD] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partynotes">PartyNotes</h3>
-<p>Notes for this Party</p>
+<p>Notes for this Party. (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partytype">PartyType</h3>
-<p>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division [Required]</p>
+<p>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. [Required] [Default(&quot;P&quot;)] [Filter(multi eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html#partytype">PartyType</a></strong><br>
 Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyType</a> data attribute<br>
 <em>Allowed Values (General.Contacts.PartiesRepository.PartyType Enum Members)</em></p>
@@ -387,21 +382,21 @@ Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyTy
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>EqualsIn</strong><br>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Person</strong></p>
 <h3 id="partyuniquenumber">PartyUniqueNumber</h3>
-<p>Unique number of the party (National number for persons, Registration number for companies)</p>
+<p>Unique number of the party (National number for persons, Registration number for companies). [Filter(eq;like)] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyupdatetime">PartyUpdateTime</h3>
-<p>Date and time when the Party was last updated.</p>
+<p>Date and time when the Party was last updated. [Filter(ge;le)] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partyupdateuser">PartyUpdateUser</h3>
-<p>Login name of the user, who last updated the Party.</p>
+<p>Login name of the user, who last updated the Party. [Filter(like)] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -416,25 +411,25 @@ Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyTy
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="administrativeregion">AdministrativeRegion</h3>
-<p>The administrative region in which the party is situated.</p>
+<p>The administrative region in which the party is situated. [Filter(multi eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="area">Area</h3>
-<p>The area in which the party is situated.</p>
+<p>The area in which the party is situated. [Filter(multi eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Geography.Areas.html">Areas</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="company">Company</h3>
 <p>The company to which this location belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">Companies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="defaultproductcodingsystem">DefaultProductCodingSystem</h3>
-<p>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.</p>
+<p>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. [Filter(multi eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Products.CodingSystems.html">CodingSystems</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentparty">ParentParty</h3>
-<p>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to</p>
+<p>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. [Filter(multi eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
-<em>Supported Filters</em>: <strong>EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

@@ -15,8 +15,6 @@ uid: Logistics.Inventory
 - [ProductDefaultStoreBins](Logistics.Inventory.ProductDefaultStoreBins.md)  
 - [ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md)  
 - [ReconciliationLines](Logistics.Inventory.ReconciliationLines.md)  
-- [ReconciliationOrderLines](Logistics.Inventory.ReconciliationOrderLines.md)  
-- [ReconciliationOrders](Logistics.Inventory.ReconciliationOrders.md)  
 - [Reconciliations](Logistics.Inventory.Reconciliations.md)  
 - [RequisitionPlan](Logistics.Inventory.RequisitionPlan.md)  
 - [ScrapTypes](Logistics.Inventory.ScrapTypes.md)  

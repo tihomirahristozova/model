@@ -8,7 +8,7 @@
     <title>Finance.Payments.PaymentTransactionLines Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Finance.Payments.PaymentTransactionLines Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -128,6 +128,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="Finance.Payments.PaymentTransactionLines.html#document">Document</a></td>
+<td><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a></td>
+<td>The <a href="Finance.Payments.PaymentTransactionLines.html#paymenttransaction">PaymentTransaction</a> to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
 <td><a href="Finance.Payments.PaymentTransactionLines.html#paymentorder">PaymentOrder</a></td>
 <td><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></td>
 <td>The payment order, that is covered by this transaction amount distribution (tr.line). [Required] [Filter(multi eq)]</td>
@@ -172,6 +177,10 @@
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="document">Document</h3>
+<p>The <a href="Finance.Payments.PaymentTransactionLines.html#paymenttransaction">PaymentTransaction</a> to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)]</p>
+<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentorder">PaymentOrder</h3>
 <p>The payment order, that is covered by this transaction amount distribution (tr.line). [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></strong><br>

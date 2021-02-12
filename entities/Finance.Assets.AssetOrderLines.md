@@ -21,6 +21,7 @@ Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines
 | [Asset](Finance.Assets.AssetOrderLines.md#asset) | [Assets](Finance.Assets.Assets.md) | The asset that is acquired or retired. [Required] [Filter(multi eq)] |
 | [AssetOrder](Finance.Assets.AssetOrderLines.md#assetorder) | [AssetOrders](Finance.Assets.AssetOrders.md) | The [AssetOrder](Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
 | [AssetValueCurrency](Finance.Assets.AssetOrderLines.md#assetvaluecurrency) | [Currencies](General.Currencies.md) | Currency of Asset Value. [Required] [Filter(multi eq)] |
+| [Document](Finance.Assets.AssetOrderLines.md#document) | [AssetOrders](Finance.Assets.AssetOrders.md) | The [AssetOrder](Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. [Required] [Filter(multi eq)] |
 | [ParentDocument](Finance.Assets.AssetOrderLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] [Introduced in version 18.2] |
 
 
@@ -80,6 +81,13 @@ _Supported Filters_: **Equals, EqualsIn**
 Currency of Asset Value. [Required] [Filter(multi eq)]
 
 _Type_: **[Currencies](General.Currencies.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### Document
+
+The [AssetOrder](Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[AssetOrders](Finance.Assets.AssetOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument

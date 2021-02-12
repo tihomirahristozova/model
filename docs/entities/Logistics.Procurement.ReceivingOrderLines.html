@@ -8,7 +8,7 @@
     <title>Logistics.Procurement.ReceivingOrderLines Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Logistics.Procurement.ReceivingOrderLines Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -168,6 +168,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="Logistics.Procurement.ReceivingOrderLines.html#document">Document</a></td>
+<td><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a></td>
+<td>The <a href="Logistics.Procurement.ReceivingOrderLines.html#receivingorder">ReceivingOrder</a> to which this ReceivingOrderLine belongs. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#linestore">LineStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
 <td>The store in which the goods are received. [Filter(multi eq)]</td>
@@ -261,9 +266,9 @@
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>IIF( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( obj.PricePerUnit == null)), obj.LineAmount, ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit).Round( ))</code></p>
+<code>IIF( ( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value == 0)) OrElse ( obj.PricePerUnit == null)), obj.LineAmount, new Amount( Round( ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit.Value), 2, AwayFromZero), obj.PricePerUnit.Currency))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( obj.PricePerUnit == null)), obj.LineAmount, ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit).Round( ))</code></p>
+<code>IIF( ( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value == 0)) OrElse ( obj.PricePerUnit == null)), obj.LineAmount, new Amount( Round( ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit.Value), 2, AwayFromZero), obj.PricePerUnit.Currency))</code></p>
 <h3 id="lineno">LineNo</h3>
 <p>Line number, unique within the ReceivingOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the ReceivingOrder (in order to allow insertions with adjustment documents). [Required]</p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -285,7 +290,7 @@
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.GetPurchasePriceFromPurchasePriceList( obj.PurchaseProductPrice, obj.QuantityUnit)</code></p>
+<code>obj.PurchaseProductPrice.GetPurchasePrice( obj.QuantityUnit, obj.ReceivingOrder.CurrencyDirectory, obj.ReceivingOrder.DocumentCurrency)</code></p>
 <h3 id="productdescription">ProductDescription</h3>
 <p>The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. [Required]</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
@@ -320,6 +325,10 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="document">Document</h3>
+<p>The <a href="Logistics.Procurement.ReceivingOrderLines.html#receivingorder">ReceivingOrder</a> to which this ReceivingOrderLine belongs. [Required] [Filter(multi eq)]</p>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linestore">LineStore</h3>
 <p>The store in which the goods are received. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>

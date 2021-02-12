@@ -8,7 +8,7 @@
     <title>Systems.Core.ObjectFiles Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Systems.Core.ObjectFiles Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -93,7 +93,7 @@
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a></td>
 <td><a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a></td>
-<td>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default(&quot;EMB&quot;)] [Introduced in version 20.1]</td>
+<td>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default(&quot;EMB&quot;)] [Filter(multi eq)] [Introduced in version 20.1]</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#creationtimeutc">CreationTimeUtc</a></td>
@@ -150,6 +150,11 @@
 <td>string (nullable)</td>
 <td>Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. [Filter(eq)]</td>
 </tr>
+<tr>
+<td><a href="Systems.Core.ObjectFiles.html#section">Section</a></td>
+<td>string (nullable)</td>
+<td>A section name used to group files. [Introduced in version 21.1.1.84]</td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -181,7 +186,7 @@
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contentlocation">ContentLocation</h3>
-<p>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default(&quot;EMB&quot;)] [Introduced in version 20.1]</p>
+<p>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default(&quot;EMB&quot;)] [Filter(multi eq)] [Introduced in version 20.1]</p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a></strong><br>
 Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a> data attribute<br>
 <em>Allowed Values (Systems.Core.ObjectFilesRepository.ContentLocation Enum Members)</em></p>
@@ -207,7 +212,7 @@ Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">C
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Embedded</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
@@ -265,6 +270,11 @@ Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">C
 <p>Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. [Filter(eq)]</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="section">Section</h3>
+<p>A section name used to group files. [Introduced in version 21.1.1.84]</p>
+<p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>

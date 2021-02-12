@@ -20,6 +20,7 @@ The internal production consumption of materials. Used only for control purposes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Production.ShopFloor.OutputOrderConsumptionLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The [OutputOrder](Production.ShopFloor.OutputOrderConsumption<br />Lines.md#outputorder) to which this OutputOrderConsumptionLine belongs. [Required] [Filter(multi eq)] |
 | [LineWorkOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#lineworkorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | Work order for the line. Initially copied from the header (if there work order is not null). [Required] [Filter(multi eq)] |
 | [Material](Production.ShopFloor.OutputOrderConsumptionLines.md#material) | [Products](General.Products.Products.md) | The consumed material. [Required] [Filter(multi eq)] |
 | [OutputOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The [OutputOrder](Production.ShopFloor.OutputOrderConsumption<br />Lines.md#outputorder) to which this OutputOrderConsumptionLine belongs. [Required] [Filter(multi eq)] [Owner] |
@@ -87,6 +88,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Document
+
+The [OutputOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) to which this OutputOrderConsumptionLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### LineWorkOrder
 

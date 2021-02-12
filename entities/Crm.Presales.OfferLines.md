@@ -31,6 +31,7 @@ Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Crm.Presales.OfferLines.md#document) | [Offers](Crm.Presales.Offers.md) | The [Offer](Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. [Required] [Filter(multi eq)] |
 | [LineDiscount](Crm.Presales.OfferLines.md#linediscount) | [LineDiscounts](Crm.LineDiscounts.md) (nullable) | When not null, contains the discount policy selected for this line. [Filter(multi eq)] |
 | [Offer](Crm.Presales.OfferLines.md#offer) | [Offers](Crm.Presales.Offers.md) | The [Offer](Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. [Required] [Filter(multi eq)] [Owner] |
 | [Product](Crm.Presales.OfferLines.md#product) | [Products](General.Products.Products.md) | The offered product. [Required] [Filter(multi eq)] |
@@ -227,6 +228,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Document
+
+The [Offer](Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[Offers](Crm.Presales.Offers.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### LineDiscount
 

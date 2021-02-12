@@ -27,6 +27,7 @@ Contains detail records of Receiving Orders. Each line contains the receiving of
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Logistics.Procurement.ReceivingOrderLines.md#document) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) | The [ReceivingOrder](Logistics.Procurement.ReceivingOrderLines.md#receivingorder) to which this ReceivingOrderLine belongs. [Required] [Filter(multi eq)] |
 | [LineStore](Logistics.Procurement.ReceivingOrderLines.md#linestore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which the goods are received. [Filter(multi eq)] |
 | [Lot](Logistics.Procurement.ReceivingOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the received goods. [Filter(multi eq)] |
 | [Product](Logistics.Procurement.ReceivingOrderLines.md#product) | [Products](General.Products.Products.md) | The received product. [Required] [Filter(multi eq)] |
@@ -95,10 +96,10 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Back-End Default Expression:_  
-`IIF( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( obj.PricePerUnit == null)), obj.LineAmount, ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit).Round( ))`
+`IIF( ( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value == 0)) OrElse ( obj.PricePerUnit == null)), obj.LineAmount, new Amount( Round( ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit.Value), 2, AwayFromZero), obj.PricePerUnit.Currency))`
 
 _Front-End Recalc Expressions:_  
-`IIF( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( obj.PricePerUnit == null)), obj.LineAmount, ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit).Round( ))`
+`IIF( ( ( ( ( obj.ConfirmedQuantity ?? obj.Quantity) == null) OrElse ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value == 0)) OrElse ( obj.PricePerUnit == null)), obj.LineAmount, new Amount( Round( ( ( obj.ConfirmedQuantity ?? obj.Quantity).Value * obj.PricePerUnit.Value), 2, AwayFromZero), obj.PricePerUnit.Currency))`
 ### LineNo
 
 Line number, unique within the ReceivingOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the ReceivingOrder (in order to allow insertions with adjustment documents). [Required]
@@ -130,7 +131,7 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Front-End Recalc Expressions:_  
-`obj.GetPurchasePriceFromPurchasePriceList( obj.PurchaseProductPrice, obj.QuantityUnit)`
+`obj.PurchaseProductPrice.GetPurchasePrice( obj.QuantityUnit, obj.ReceivingOrder.CurrencyDirectory, obj.ReceivingOrder.DocumentCurrency)`
 ### ProductDescription
 
 The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. [Required]
@@ -181,6 +182,13 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 
 ## Reference Details
+
+### Document
+
+The [ReceivingOrder](Logistics.Procurement.ReceivingOrderLines.md#receivingorder) to which this ReceivingOrderLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### LineStore
 

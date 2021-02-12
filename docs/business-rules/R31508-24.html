@@ -8,7 +8,7 @@
     <title>R31508-24 Purchase Invoice Line - Set Quantity Base | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="R31508-24 Purchase Invoice Line - Set Quantity Base | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,13 +73,13 @@
 <h1 id="r31508-24-purchase-invoice-line---set-quantity-base">R31508-24 Purchase Invoice Line - Set Quantity Base</h1>
 
 <table>
-<thead>
-<tr>
-<th>Code</th>
-<th>31508-24</th>
-</tr>
-</thead>
+<col style="width:18.8%">
+<col style="width:81.2%">
 <tbody>
+<tr>
+<td>Code</td>
+<td>31508-24</td>
+</tr>
 <tr>
 <td>Entity</td>
 <td>PurchaseInvoiceLine</td>
@@ -98,15 +98,9 @@
 </tr>
 <tr>
 <td>Events</td>
-<td>AttributeChanged(Quantity)</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>LateDefault</td>
+<td><p>AttributeChanged(Quantity)</p>
+<p>LateDefault</p>
+</td>
 </tr>
 <tr>
 <td>Priority</td>
@@ -117,48 +111,27 @@
 <td>YES</td>
 </tr>
 <tr>
-<td>Applicable</td>
-<td><a href="https://confluence.erp.net/display/techdoc/Country%7CSpecific%7CFunctionality">ALL // no condition needed\                                                                  || Legislations         | </a>                  </td>
-</tr>
-<tr>
-<td></td>
-<td></td>
+<td>Applicable
+Legislations</td>
+<td><a href="https://confluence.erp.net/display/techdoc/Country+Specific+Functionality">ALL // no condition needed
+</a></td>
 </tr>
 <tr>
 <td>Action</td>
-<td>Quantity == null || QuantityUnit == null || Product == null ? QuantityBase :</td>
-</tr>
-<tr>
-<td></td>
-<td>Quantity.ConvertTo(Product.BaseUnit, Product)</td>
+<td>Quantity == null || QuantityUnit == null || Product == null ? QuantityBase :
+Quantity.ConvertTo(Product.BaseUnit, Product)</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>When Quantity is changed, Quantity Base is calculated as the converted value of Quantity to</td>
-</tr>
-<tr>
-<td></td>
-<td>the base Unit of the product.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>(RecalcExpression)</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>(LateDefault)</td>
+<td><p>When Quantity is changed, Quantity Base is calculated as the converted value of Quantity to
+the base Unit of the product.</p>
+<p>(RecalcExpression)</p>
+<p>(LateDefault)</p>
+</td>
 </tr>
 <tr>
 <td>Message</td>
-<td>\</td>
+<td></td>
 </tr>
 <tr>
 <td>Version</td>
@@ -170,9 +143,6 @@
 </tr>
 </tbody>
 </table>
-<p>\</p>
-<p>\</p>
-<p>\</p>
 </article>
           </div>
           

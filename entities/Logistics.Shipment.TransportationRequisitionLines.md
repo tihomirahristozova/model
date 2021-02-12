@@ -22,6 +22,7 @@ One line in a client requisition for transportation. Different lines usually rep
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CargoType](Logistics.Shipment.TransportationRequisitionLines.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The type of the transported cargo. [Required] [Filter(multi eq)] |
+| [Document](Logistics.Shipment.TransportationRequisitionLines.md#document) | [TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md) | The [Transportation<br />Requisition](Logistics.Shipment.Transportation<br />RequisitionLines.md#transportationrequisition) to which this Transportation<br />RequisitionLine belongs. [Required] [Filter(multi eq)] |
 | [ParentDocument](Logistics.Shipment.TransportationRequisitionLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
 | [TransportationRequisition](Logistics.Shipment.TransportationRequisitionLines.md#transportationrequisition) | [TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md) | The [Transportation<br />Requisition](Logistics.Shipment.Transportation<br />RequisitionLines.md#transportationrequisition) to which this Transportation<br />RequisitionLine belongs. [Required] [Filter(multi eq)] [Owner] |
 
@@ -95,6 +96,13 @@ _Supports Order By_: **False**
 The type of the transported cargo. [Required] [Filter(multi eq)]
 
 _Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### Document
+
+The [TransportationRequisition](Logistics.Shipment.TransportationRequisitionLines.md#transportationrequisition) to which this TransportationRequisitionLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument

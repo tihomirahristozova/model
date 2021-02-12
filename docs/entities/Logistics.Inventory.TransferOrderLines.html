@@ -8,7 +8,7 @@
     <title>Logistics.Inventory.TransferOrderLines Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Logistics.Inventory.TransferOrderLines Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -148,6 +148,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="Logistics.Inventory.TransferOrderLines.html#document">Document</a></td>
+<td><a href="Logistics.Inventory.TransferOrders.html">TransferOrders</a></td>
+<td>The parent transfer order. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#fromstorebin">FromStoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
 <td>From which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)]</td>
@@ -263,6 +268,10 @@
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( obj.Product != null) AndAlso ( obj.QuantityUnit != null)), obj.Product.GetStandardUnitPrice( obj.QuantityUnit, obj.TransferOrder.ToStore.Currency, obj.TransferOrder.CurrencyDirectory), obj.StandardUnitPrice)</code></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="document">Document</h3>
+<p>The parent transfer order. [Required] [Filter(multi eq)]</p>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.TransferOrders.html">TransferOrders</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromstorebin">FromStoreBin</h3>
 <p>From which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>

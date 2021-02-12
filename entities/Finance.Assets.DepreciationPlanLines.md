@@ -22,6 +22,7 @@ Each record contains one depreciation plan for one valuation model of one asset.
 | [Asset](Finance.Assets.DepreciationPlanLines.md#asset) | [Assets](Finance.Assets.Assets.md) | The asset that is planned for depreciation. [Required] [Filter(multi eq)] |
 | [DepreciationMethod](Finance.Assets.DepreciationPlanLines.md#depreciationmethod) | [DepreciationMethods](Finance.Assets.DepreciationMethods.md) | Depreciation method by which the asset will be depreciated. [Required] [Filter(multi eq)] |
 | [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) | [DepreciationPlans](Finance.Assets.DepreciationPlans.md) | The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Document](Finance.Assets.DepreciationPlanLines.md#document) | [DepreciationPlans](Finance.Assets.DepreciationPlans.md) | The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] |
 | [ValuationModel](Finance.Assets.DepreciationPlanLines.md#valuationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model in which the asset is accounted. [Required] [Filter(multi eq)] |
 
 ## Child Collections
@@ -97,6 +98,13 @@ _Supported Filters_: **Equals, EqualsIn**
 ### DepreciationPlan
 
 The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] [Owner]
+
+_Type_: **[DepreciationPlans](Finance.Assets.DepreciationPlans.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### Document
+
+The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[DepreciationPlans](Finance.Assets.DepreciationPlans.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

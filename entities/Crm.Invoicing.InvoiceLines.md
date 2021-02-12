@@ -31,6 +31,7 @@ Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Crm.Invoicing.InvoiceLines.md#document) | [Invoices](Crm.Invoicing.Invoices.md) | The [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. [Required] [Filter(multi eq)] |
 | [IntrastatTransportCountry](Crm.Invoicing.InvoiceLines.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)] |
 | [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) | [Invoices](Crm.Invoicing.Invoices.md) | The [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. [Required] [Filter(multi eq)] [Owner] |
 | [InvoiceOrderLine](Crm.Invoicing.InvoiceLines.md#invoiceorderline) | [InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md) (nullable) | Invoice order line which is invoiced by this line. [Filter(multi eq)] |
@@ -86,6 +87,7 @@ _Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)_
 | DeliveredAtPlace | DeliveredAtPlace value. Stored as 'DAP'. <br /> _Database Value:_ 'DAP' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'DeliveredAtPlace' |
 | DeliveredAtTerminal | DeliveredAtTerminal value. Stored as 'DAT'. <br /> _Database Value:_ 'DAT' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'DeliveredAtTerminal' |
 | DeliveredDutyPaid | DeliveredDutyPaid value. Stored as 'DDP'. <br /> _Database Value:_ 'DDP' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'DeliveredDutyPaid' |
+| DeliveredAtPlaceUnloaded | DeliveredAtPlaceUnloaded value. Stored as 'DPU'. <br /> _Database Value:_ 'DPU' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'DeliveredAtPlaceUnloaded' |
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
@@ -290,6 +292,13 @@ _Default Value_: **Constant**
 
 
 ## Reference Details
+
+### Document
+
+The [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[Invoices](Crm.Invoicing.Invoices.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatTransportCountry
 

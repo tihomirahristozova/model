@@ -440,6 +440,10 @@
   - name: Excise
     href: Finance.Excise.md
     items:
+    - name: ExciseOperationTypes
+      href: Finance.Excise.ExciseOperationTypes.md
+    - name: MeasuringTransactions
+      href: Finance.Excise.MeasuringTransactions.md
     - name: TaxWarehouses
       href: Finance.Excise.TaxWarehouses.md
   - name: Intrastat
@@ -569,6 +573,8 @@
     href: General.DocumentDistributedAmounts.md
   - name: DocumentFileAttachments
     href: General.DocumentFileAttachments.md
+  - name: DocumentFulfillments
+    href: General.DocumentFulfillments.md
   - name: DocumentJobs
     href: General.DocumentJobs.md
   - name: DocumentLineAmounts
@@ -603,6 +609,8 @@
     href: General.DocumentVersions.md
   - name: EnterpriseCompanies
     href: General.EnterpriseCompanies.md
+  - name: Folders
+    href: General.Folders.md
   - name: Geography
     href: General.Geography.md
     items:
@@ -729,10 +737,6 @@
       href: Logistics.Inventory.ProductValuationGroups.md
     - name: ReconciliationLines
       href: Logistics.Inventory.ReconciliationLines.md
-    - name: ReconciliationOrderLines
-      href: Logistics.Inventory.ReconciliationOrderLines.md
-    - name: ReconciliationOrders
-      href: Logistics.Inventory.ReconciliationOrders.md
     - name: Reconciliations
       href: Logistics.Inventory.Reconciliations.md
     - name: RequisitionPlan
@@ -850,22 +854,26 @@
   - name: Wms
     href: Logistics.Wms.md
     items:
+    - name: WarehouseAvailabilityView
+      href: Logistics.Wms.WarehouseAvailabilityView.md
     - name: WarehouseLocations
       href: Logistics.Wms.WarehouseLocations.md
-    - name: WarehouseOrderExecutions
-      href: Logistics.Wms.WarehouseOrderExecutions.md
+    - name: WarehouseOrderFulfillments
+      href: Logistics.Wms.WarehouseOrderFulfillments.md
     - name: WarehouseOrderLines
       href: Logistics.Wms.WarehouseOrderLines.md
     - name: WarehouseOrders
       href: Logistics.Wms.WarehouseOrders.md
-    - name: WarehouseRequisitionExecutions
-      href: Logistics.Wms.WarehouseRequisitionExecutions.md
+    - name: WarehouseRequisitionFulfillments
+      href: Logistics.Wms.WarehouseRequisitionFulfillments.md
     - name: WarehouseRequisitionLines
       href: Logistics.Wms.WarehouseRequisitionLines.md
     - name: WarehouseRequisitions
       href: Logistics.Wms.WarehouseRequisitions.md
     - name: Warehouses
       href: Logistics.Wms.Warehouses.md
+    - name: WarehouseTransactions
+      href: Logistics.Wms.WarehouseTransactions.md
     - name: WarehouseWorkers
       href: Logistics.Wms.WarehouseWorkers.md
     - name: WarehouseZones

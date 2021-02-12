@@ -14,11 +14,13 @@ Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requ
 | [Notes](Logistics.Wms.WarehouseRequisitionLines.md#notes) | string (nullable) | Notes for this WarehouseRequisitionLine. 
 | [ParentLineNo](Logistics.Wms.WarehouseRequisitionLines.md#parentlineno) | int32 (nullable) | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. 
 | [Quantity](Logistics.Wms.WarehouseRequisitionLines.md#quantity) | [Quantity](../data-types.md#quantity) | The requested quantity. [Unit: QuantityUnit] [Required] [Filter(eq;ge;le)] 
+| [QuantityBase](Logistics.Wms.WarehouseRequisitionLines.md#quantitybase) | decimal | Quantity in the base measurement unit of the product. [Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33] 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Logistics.Wms.WarehouseRequisitionLines.md#document) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) | The [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)] |
 | [Lot](Logistics.Wms.WarehouseRequisitionLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The requested lot. null means that any lot can be used or the product does not use lots at all. [Filter(multi eq)] |
 | [ParentDocument](Logistics.Wms.WarehouseRequisitionLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
 | [Product](Logistics.Wms.WarehouseRequisitionLines.md#product) | [Products](General.Products.Products.md) | The requested product. [Required] [Filter(multi eq)] |
@@ -72,8 +74,23 @@ _Type_: **[Quantity](../data-types.md#quantity)**
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+### QuantityBase
+
+Quantity in the base measurement unit of the product. [Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33]
+
+_Type_: **decimal**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
+
+### Document
+
+The [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 

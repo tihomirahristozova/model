@@ -32,6 +32,7 @@ Represents detail lines of orders for shipment of sales orders to customers. Eac
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Logistics.Shipment.ShipmentOrderLines.md#document) | [ShipmentOrders](Logistics.Shipment.ShipmentOrders.md) | The [ShipmentOrder](Logistics.Shipment.ShipmentOrderLines.md#shipmentorder) to which this ShipmentOrderLine belongs. [Required] [Filter(multi eq)] |
 | [Lot](Logistics.Shipment.ShipmentOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The store lot from which to take the goods. [Filter(multi eq)] |
 | [ParentDocument](Logistics.Shipment.ShipmentOrderLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] |
 | [ParentSalesOrderLine](Logistics.Shipment.ShipmentOrderLines.md#parentsalesorderline) | [SalesOrderLines](Crm.Sales.SalesOrderLines.md) | Sales order line which is shipped. [Required] [Filter(multi eq)] |
@@ -209,6 +210,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Document
+
+The [ShipmentOrder](Logistics.Shipment.ShipmentOrderLines.md#shipmentorder) to which this ShipmentOrderLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[ShipmentOrders](Logistics.Shipment.ShipmentOrders.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 

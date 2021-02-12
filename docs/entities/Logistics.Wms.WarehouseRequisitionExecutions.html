@@ -8,7 +8,7 @@
     <title>Logistics.Wms.WarehouseRequisitionExecutions Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Logistics.Wms.WarehouseRequisitionExecutions Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -96,14 +96,14 @@
 <td>The exact time in UTC, when the execution was created in the system. [Required]</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionExecutions.html#date">Date</a></td>
-<td>date</td>
-<td>Date, when the execution occurred in the real world. [Required]</td>
-</tr>
-<tr>
 <td><a href="Logistics.Wms.WarehouseRequisitionExecutions.html#executedquantity">ExecutedQuantity</a></td>
 <td>decimal</td>
 <td>The executed quantity (in the measurement unit of the requisition line). [Required]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseRequisitionExecutions.html#executiontype">ExecutionType</a></td>
+<td>string</td>
+<td>Type of execution: P=Plan created; C=Requisition completed. [Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitionExecutions.html#id">Id</a></td>
@@ -114,11 +114,6 @@
 <td><a href="Logistics.Wms.WarehouseRequisitionExecutions.html#isfinal">IsFinal</a></td>
 <td>boolean</td>
 <td>Specifies whether this execution will finalize the execution of the requisition line, regardless of any remaining quantities. [Required]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Wms.WarehouseRequisitionExecutions.html#time">Time</a></td>
-<td>time</td>
-<td>Time, when the execution occurred in the real world. [Required]</td>
 </tr>
 </tbody>
 </table>
@@ -150,14 +145,14 @@
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="date">Date</h3>
-<p>Date, when the execution occurred in the real world. [Required]</p>
-<p><em>Type</em>: <strong>date</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="executedquantity">ExecutedQuantity</h3>
 <p>The executed quantity (in the measurement unit of the requisition line). [Required]</p>
 <p><em>Type</em>: <strong>decimal</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="executiontype">ExecutionType</h3>
+<p>Type of execution: P=Plan created; C=Requisition completed. [Required]</p>
+<p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
@@ -167,11 +162,6 @@
 <h3 id="isfinal">IsFinal</h3>
 <p>Specifies whether this execution will finalize the execution of the requisition line, regardless of any remaining quantities. [Required]</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="time">Time</h3>
-<p>Time, when the execution occurred in the real world. [Required]</p>
-<p><em>Type</em>: <strong>time</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

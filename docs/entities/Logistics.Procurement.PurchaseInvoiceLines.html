@@ -8,7 +8,7 @@
     <title>Logistics.Procurement.PurchaseInvoiceLines Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Logistics.Procurement.PurchaseInvoiceLines Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -168,6 +168,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#document">Document</a></td>
+<td><a href="Logistics.Procurement.PurchaseInvoices.html">PurchaseInvoices</a></td>
+<td>The <a href="Logistics.Procurement.PurchaseInvoiceLines.html#purchaseinvoice">PurchaseInvoice</a> to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html#intrastatdestinationregion">IntrastatDestinationRegion</a></td>
 <td><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</td>
 <td>Region, which is the final destination of the goods. Used for Intrastat reporting. [Filter(multi eq)]</td>
@@ -276,6 +281,10 @@ Generic enum type for DeliveryTerms properties<br>
 <tr>
 <td>DeliveredDutyPaid</td>
 <td>DeliveredDutyPaid value. Stored as 'DDP'. <br> <em>Database Value:</em> 'DDP' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'DeliveredDutyPaid'</td>
+</tr>
+<tr>
+<td>DeliveredAtPlaceUnloaded</td>
+<td>DeliveredAtPlaceUnloaded value. Stored as 'DPU'. <br> <em>Database Value:</em> 'DPU' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'DeliveredAtPlaceUnloaded'</td>
 </tr>
 </tbody>
 </table>
@@ -510,6 +519,10 @@ Generic enum type for TransportMode properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.PricePerUnit, obj.GetDefaultProductPrice( obj.Product))</code></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="document">Document</h3>
+<p>The <a href="Logistics.Procurement.PurchaseInvoiceLines.html#purchaseinvoice">PurchaseInvoice</a> to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)]</p>
+<p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseInvoices.html">PurchaseInvoices</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastatdestinationregion">IntrastatDestinationRegion</h3>
 <p>Region, which is the final destination of the goods. Used for Intrastat reporting. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</strong><br>
@@ -571,9 +584,7 @@ Generic enum type for TransportMode properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.PurchaseInvoice.SaleDealType</code></p>
 <h2 id="business-rules">Business Rules</h2>
-<ul>
-<li><a href="../business-rules/R31508-24.html">R31508-24 Purchase Invoice Line - Set Quantity Base</a></li>
-</ul>
+<p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
 <p>None</p>
 <h2 id="api">API</h2>

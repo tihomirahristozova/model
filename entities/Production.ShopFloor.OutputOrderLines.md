@@ -24,6 +24,7 @@ Detail records of output orders. Entity: Prd_Output_Order_Lines
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Production.ShopFloor.OutputOrderLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The [OutputOrder](Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. [Required] [Filter(multi eq)] |
 | [LineWorkOrder](Production.ShopFloor.OutputOrderLines.md#lineworkorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The work order for which work is being accounted. [Required] [Filter(multi eq)] |
 | [Lot](Production.ShopFloor.OutputOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the produced product. [Filter(multi eq)] |
 | [OutputOrder](Production.ShopFloor.OutputOrderLines.md#outputorder) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The [OutputOrder](Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
@@ -147,6 +148,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Document
+
+The [OutputOrder](Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### LineWorkOrder
 

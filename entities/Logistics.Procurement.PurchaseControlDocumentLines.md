@@ -27,6 +27,7 @@ The detail line of purchase control data. The purchase control is used to tally 
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Logistics.Procurement.PurchaseControlDocumentLines.md#document) | [PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md) | The [PurchaseControlDocument](Logistics.Procurement.PurchaseControl<br />DocumentLines.md#purchasecontroldocument) to which this PurchaseControl<br />DocumentLine belongs. [Required] [Filter(multi eq)] |
 | [PurchaseControlDocument](Logistics.Procurement.PurchaseControlDocumentLines.md#purchasecontroldocument) | [PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md) | The [PurchaseControlDocument](Logistics.Procurement.PurchaseControl<br />DocumentLines.md#purchasecontroldocument) to which this PurchaseControl<br />DocumentLine belongs. [Required] [Filter(multi eq)] [Owner] |
 | [PurchaseInvoice](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseinvoice) | [PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) (nullable) | The purchase invoice which is to be or was executed. Null when the data is unknown. [Filter(multi eq)] |
 | [PurchaseInvoiceLine](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseinvoiceline) | [PurchaseInvoiceLines](Logistics.Procurement.PurchaseInvoiceLines.md) (nullable) | The purchase invoice line which is to be or was executed. Null when the data is unknown. [Filter(multi eq)] |
@@ -145,6 +146,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Document
+
+The [PurchaseControlDocument](Logistics.Procurement.PurchaseControlDocumentLines.md#purchasecontroldocument) to which this PurchaseControlDocumentLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseControlDocument
 

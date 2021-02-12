@@ -27,6 +27,7 @@ Contains detail lines for purchase invoice documents. Entity: Scm_Purchase_Invoi
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Logistics.Procurement.PurchaseInvoiceLines.md#document) | [PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) | The [PurchaseInvoice](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoice) to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] |
 | [IntrastatDestinationRegion](Logistics.Procurement.PurchaseInvoiceLines.md#intrastatdestinationregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | Region, which is the final destination of the goods. Used for Intrastat reporting. [Filter(multi eq)] |
 | [IntrastatTransportCountry](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)] |
 | [LineCostCenter](Logistics.Procurement.PurchaseInvoiceLines.md#linecostcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Cost center for which the amount from this row will be accounted. [Filter(multi eq)] |
@@ -62,6 +63,7 @@ _Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)_
 | DeliveredAtPlace | DeliveredAtPlace value. Stored as 'DAP'. <br /> _Database Value:_ 'DAP' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'DeliveredAtPlace' |
 | DeliveredAtTerminal | DeliveredAtTerminal value. Stored as 'DAT'. <br /> _Database Value:_ 'DAT' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'DeliveredAtTerminal' |
 | DeliveredDutyPaid | DeliveredDutyPaid value. Stored as 'DDP'. <br /> _Database Value:_ 'DDP' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'DeliveredDutyPaid' |
+| DeliveredAtPlaceUnloaded | DeliveredAtPlaceUnloaded value. Stored as 'DPU'. <br /> _Database Value:_ 'DPU' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'DeliveredAtPlaceUnloaded' |
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
@@ -245,6 +247,13 @@ _Front-End Recalc Expressions:_
 `IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.PricePerUnit, obj.GetDefaultProductPrice( obj.Product))`
 
 ## Reference Details
+
+### Document
+
+The [PurchaseInvoice](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoice) to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatDestinationRegion
 

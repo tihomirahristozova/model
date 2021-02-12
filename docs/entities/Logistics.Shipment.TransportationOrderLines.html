@@ -8,7 +8,7 @@
     <title>Logistics.Shipment.TransportationOrderLines Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Logistics.Shipment.TransportationOrderLines Entity | ERP.net Domain Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -148,6 +148,11 @@
 <td>The type of the transported cargo. [Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
+<td><a href="Logistics.Shipment.TransportationOrderLines.html#document">Document</a></td>
+<td><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></td>
+<td>The <a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a> to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)]</td>
+</tr>
+<tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</td>
@@ -207,6 +212,10 @@
 <h3 id="cargotype">CargoType</h3>
 <p>The type of the transported cargo. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="document">Document</h3>
+<p>The <a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a> to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)]</p>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>

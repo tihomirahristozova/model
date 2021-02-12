@@ -9,7 +9,7 @@ Contains files attached to objects. Entity: Sys_Object_Files
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] [Introduced in version 20.1] 
+| [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] [Filter(multi eq)] [Introduced in version 20.1] 
 | [CreationTimeUtc](Systems.Core.ObjectFiles.md#creationtimeutc) | datetime | Time (in UTC), when the file was created. [Required] [Default(NowUtc)] [Introduced in version 20.1] 
 | [EmbeddedFileContents](Systems.Core.ObjectFiles.md#embeddedfilecontents) | byte[] (nullable) | Contains the contents of the file, when it is embedded in the database. null for linked files. 
 | [FileName](Systems.Core.ObjectFiles.md#filename) | string | The file name of the linked or embedded file. [Required] [Filter(eq;like)] 
@@ -21,6 +21,7 @@ Contains files attached to objects. Entity: Sys_Object_Files
 | [MediaWidth](Systems.Core.ObjectFiles.md#mediawidth) | int32 (nullable) | Used (non-null) only for media files. Specifies the width for displaying the media. [Introduced in version 20.1] 
 | [Notes](Systems.Core.ObjectFiles.md#notes) | string (nullable) | User notes for the file attachment. 
 | [PurposeCode](Systems.Core.ObjectFiles.md#purposecode) | string (nullable) | Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. [Filter(eq)] 
+| [Section](Systems.Core.ObjectFiles.md#section) | string (nullable) | A section name used to group files. [Introduced in version 21.1.1.84] 
 
 ## References
 
@@ -35,7 +36,7 @@ Contains files attached to objects. Entity: Sys_Object_Files
 
 ### ContentLocation
 
-The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] [Introduced in version 20.1]
+The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. [Required] [Default("EMB")] [Filter(multi eq)] [Introduced in version 20.1]
 
 _Type_: **[ContentLocation](Systems.Core.ObjectFiles.md#contentlocation)**  
 Allowed values for the [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) data attribute  
@@ -47,7 +48,7 @@ _Allowed Values (Systems.Core.ObjectFilesRepository.ContentLocation Enum Members
 | InternetUrl | InternetUrl value. Stored as 'URL'. <br /> _Database Value:_ 'URL' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'InternetUrl' |
 | FileSystemLink | FileSystemLink value. Stored as 'FSL'. <br /> _Database Value:_ 'FSL' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'FileSystemLink' |
 
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **Embedded**  
 
@@ -137,6 +138,14 @@ Code, designating the usage purpose of the file. The meaning of each code is up 
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+
+### Section
+
+A section name used to group files. [Introduced in version 21.1.1.84]
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

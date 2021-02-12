@@ -19,6 +19,7 @@ Contains the types of maintenance and maintained assets in the maintenance order
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Applications.AssetManagement.MaintenanceOrderLines.md#document) | [MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md) | The [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) to which this MaintenanceOrderLine belongs. [Required] [Filter(multi eq)] |
 | [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) | [MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md) | The [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) to which this MaintenanceOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
 | [MaintenanceType](Applications.AssetManagement.MaintenanceOrderLines.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | The type of maintenance performed. [Required] [Filter(multi eq)] |
 | [ManagedAsset](Applications.AssetManagement.MaintenanceOrderLines.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The maintained asset. [Required] [Filter(multi eq)] |
@@ -71,6 +72,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Document
+
+The [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) to which this MaintenanceOrderLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### MaintenanceOrder
 

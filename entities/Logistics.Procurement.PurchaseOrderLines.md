@@ -28,6 +28,7 @@ Contains detail lines of purchase orders. Entity: Scm_Purchase_Order_Lines
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Logistics.Procurement.PurchaseOrderLines.md#document) | [PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) | The [PurchaseOrder](Logistics.Procurement.PurchaseOrderLines.md#purchaseorder) to which this PurchaseOrderLine belongs. [Required] [Filter(multi eq)] |
 | [Lot](Logistics.Procurement.PurchaseOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | When not null, indicates that a specific lot is required to be delivered. [Filter(multi eq)] |
 | [ParentDocument](Logistics.Procurement.PurchaseOrderLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] [Introduced in version 18.2] |
 | [Product](Logistics.Procurement.PurchaseOrderLines.md#product) | [Products](General.Products.Products.md) | The ordered product. [Required] [Filter(multi eq)] |
@@ -186,6 +187,13 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 
 ## Reference Details
+
+### Document
+
+The [PurchaseOrder](Logistics.Procurement.PurchaseOrderLines.md#purchaseorder) to which this PurchaseOrderLine belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[PurchaseOrders](Logistics.Procurement.PurchaseOrders.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
 

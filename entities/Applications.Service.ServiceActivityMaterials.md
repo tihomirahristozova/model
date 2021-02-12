@@ -20,6 +20,7 @@ Contains the materials, which were actually used during the service activity (re
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Applications.Service.ServiceActivityMaterials.md#document) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The [ServiceActivity](Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] |
 | [LineStore](Applications.Service.ServiceActivityMaterials.md#linestore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which the product was taken. null = use the store from the header. [Filter(multi eq)] |
 | [Product](Applications.Service.ServiceActivityMaterials.md#product) | [Products](General.Products.Products.md) | The product, which was used as material. [Required] [Filter(multi eq)] |
 | [QuantityUnit](Applications.Service.ServiceActivityMaterials.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. Initially is set to the default unit for the product. [Required] [Filter(multi eq)] |
@@ -99,6 +100,13 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 
 ## Reference Details
+
+### Document
+
+The [ServiceActivity](Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### LineStore
 

@@ -24,6 +24,7 @@ Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_L
 | ---- | ---- | --- |
 | [ConsumedQuantityUnit](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | Measurement unit of the requested quantity. [Required] [Filter(multi eq)] |
 | [ConsumptionOrder](Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) | [ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md) | The [ConsumptionOrder](Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) to which this ConsumptionOrderLine belongs. [Required] [Filter(multi eq)] [Owner] |
+| [Document](Production.ShopFloor.ConsumptionOrderLines.md#document) | [ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md) | The [ConsumptionOrder](Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) to which this ConsumptionOrderLine belongs. [Required] [Filter(multi eq)] |
 | [Lot](Production.ShopFloor.ConsumptionOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If not null, specifies that the material has to be consumed from specific lot. [Filter(multi eq)] |
 | [Product](Production.ShopFloor.ConsumptionOrderLines.md#product) | [Products](General.Products.Products.md) | The requested material. [Required] [Filter(multi eq)] |
 | [SerialNumber](Production.ShopFloor.ConsumptionOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | If not null, specifies that the material has to be consumed with specific serial number. [Filter(multi eq)] |
@@ -138,6 +139,13 @@ _Front-End Recalc Expressions:_
 ### ConsumptionOrder
 
 The [ConsumptionOrder](Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) to which this ConsumptionOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
+
+_Type_: **[ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### Document
+
+The [ConsumptionOrder](Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) to which this ConsumptionOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

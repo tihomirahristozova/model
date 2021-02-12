@@ -23,6 +23,7 @@ The materials consumed in the production order operations. Entity: Prd_Work_Orde
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DistributeByMeasurement<br />Category](Production.ShopFloor.WorkOrderItemIngredients.md#distributebymeasurementcategory) | [MeasurementCategories](General.MeasurementCategories.md) (nullable) | Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT null iif Distribute_By = MC. [Filter(multi eq)] |
+| [Document](Production.ShopFloor.WorkOrderItemIngredients.md#document) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The [WorkOrder](Production.ShopFloor.WorkOrderItemIngredients.md#workorder) to which this WorkOrderItemIngredient belongs. [Required] [Filter(multi eq)] |
 | [Lot](Production.ShopFloor.WorkOrderItemIngredients.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Lot from which to get the material. When null, any lot can be used. [Filter(multi eq)] |
 | [Material](Production.ShopFloor.WorkOrderItemIngredients.md#material) | [Products](General.Products.Products.md) | The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)] |
 | [Operation](Production.ShopFloor.WorkOrderItemIngredients.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Specifies for which operation this ingredient is used. [Filter(multi eq)] |
@@ -140,6 +141,13 @@ _Supported Filters_: **Equals, EqualsIn**
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( obj.DistributeBy == null) OrElse ( Convert( obj.DistributeBy.Value, Int32) != 1)), null, obj.DistributeByMeasurementCategory)`
+### Document
+
+The [WorkOrder](Production.ShopFloor.WorkOrderItemIngredients.md#workorder) to which this WorkOrderItemIngredient belongs. [Required] [Filter(multi eq)]
+
+_Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
 ### Lot
 
 Lot from which to get the material. When null, any lot can be used. [Filter(multi eq)]

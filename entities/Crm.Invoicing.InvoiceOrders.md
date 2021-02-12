@@ -9,83 +9,111 @@ Invoice Orders can be created by different modules and order the creation of Inv
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AdjustmentNumber](Crm.Invoicing.InvoiceOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentTime](Crm.Invoicing.InvoiceOrders.md#adjustmenttime) | datetime (nullable) | Date/time when the document last has been adjusted by corrective document. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentUser](Crm.Invoicing.InvoiceOrders.md#adjustmentuser) | string (nullable) | The user who adjusted the document. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
 | [ApplyDate](Crm.Invoicing.InvoiceOrders.md#applydate) | datetime (nullable) | Apply date to be passed to the invoice. When not null specifies that the VAT entry should be applied for a different period than that specified by the document date. 
-| [CompleteTime](Crm.Invoicing.InvoiceOrders.md#completetime) | datetime (nullable) | Exact time, when the document was last completed[Filter(ge;le)] 
-| [CreationTime](Crm.Invoicing.InvoiceOrders.md#creationtime) | datetime | Date/Time when the document was created [Required][Filter(ge;le)] 
-| [CreationUser](Crm.Invoicing.InvoiceOrders.md#creationuser) | string | The login name of the user, who created the document [Required][Filter(like)] 
+| [CompleteTime](Crm.Invoicing.InvoiceOrders.md#completetime) | datetime (nullable) | Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [CreationTime](Crm.Invoicing.InvoiceOrders.md#creationtime) | datetime | Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [CreationUser](Crm.Invoicing.InvoiceOrders.md#creationuser) | string | The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
 | [CreditNoteDescription](Crm.Invoicing.InvoiceOrders.md#creditnotedescription) | string (nullable) | Descriptions/reason for the credit note. 
 | [DeliveryDate](Crm.Invoicing.InvoiceOrders.md#deliverydate) | datetime (nullable) | Date, when the delivery was effected. When null = document date. 
-| [DocumentDate](Crm.Invoicing.InvoiceOrders.md#documentdate) | datetime | The date on which the document was issued [Required][Filter(eq;ge;le)][ORD] 
-| [DocumentNo](Crm.Invoicing.InvoiceOrders.md#documentno) | string | Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD] 
-| [DocumentNotes](Crm.Invoicing.InvoiceOrders.md#documentnotes) | string (nullable) | Notes for this Document 
-| [DocumentVersion](Crm.Invoicing.InvoiceOrders.md#documentversion) | int32 | [Filter(eq;ge;le)] 
-| [EntityName](Crm.Invoicing.InvoiceOrders.md#entityname) | string | The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD] 
+| [DocumentDate](Crm.Invoicing.InvoiceOrders.md#documentdate) | date | The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNo](Crm.Invoicing.InvoiceOrders.md#documentno) | string | Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNotes](Crm.Invoicing.InvoiceOrders.md#documentnotes) | string (nullable) | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentVersion](Crm.Invoicing.InvoiceOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [EntityName](Crm.Invoicing.InvoiceOrders.md#entityname) | string | The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
 | [Id](Crm.Invoicing.InvoiceOrders.md#id) | guid |  
 | [IsReleased](Crm.Invoicing.InvoiceOrders.md#isreleased) | boolean | True if the document is not void and its state is released or greater. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [IsSingleExecution](Crm.Invoicing.InvoiceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [Notes](Crm.Invoicing.InvoiceOrders.md#notes) | string (nullable) | Notes for this InvoiceOrder. 
-| [ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
+| [ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
 | [PaymentDueDate](Crm.Invoicing.InvoiceOrders.md#paymentduedate) | datetime (nullable) | When not null specifies due date for the payment. 
 | [PaymentDueStartDate](Crm.Invoicing.InvoiceOrders.md#paymentduestartdate) | datetime (nullable) | The date when the payment becomes due for documents with one installment. 
 | [PaymentTypeDescription](Crm.Invoicing.InvoiceOrders.md#paymenttypedescription) | string | Description of the payment type. Initially copied from the name of the Payment Type. [Required] 
-| [PlanningOnly](Crm.Invoicing.InvoiceOrders.md#planningonly) | boolean (nullable) | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required] 
-| [ReadOnly](Crm.Invoicing.InvoiceOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only [Required] 
-| [ReferenceDate](Crm.Invoicing.InvoiceOrders.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)] 
-| [ReferenceDocumentNo](Crm.Invoicing.InvoiceOrders.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)] 
-| [ReleaseTime](Crm.Invoicing.InvoiceOrders.md#releasetime) | datetime (nullable) | Exact time, when the document was first released [Filter(ge;le)] 
-| [State](Crm.Invoicing.InvoiceOrders.md#state) | [DocumentState](Crm.Invoicing.InvoiceOrders.md#state) | 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)] 
-| [Void](Crm.Invoicing.InvoiceOrders.md#void) | boolean | True if the document is null and void [Required][Filter(eq)] 
-| [VoidReason](Crm.Invoicing.InvoiceOrders.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user 
-| [VoidTime](Crm.Invoicing.InvoiceOrders.md#voidtime) | datetime (nullable) | Date/time when the document has become void 
-| [VoidUser](Crm.Invoicing.InvoiceOrders.md#voiduser) | string (nullable) | The user who voided the document 
+| [PlanningOnly](Crm.Invoicing.InvoiceOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [ReadOnly](Crm.Invoicing.InvoiceOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [ReferenceDate](Crm.Invoicing.InvoiceOrders.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)] (Inherited from [Documents](General.Documents.md)) 
+| [ReferenceDocumentNo](Crm.Invoicing.InvoiceOrders.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)] (Inherited from [Documents](General.Documents.md)) 
+| [ReleaseTime](Crm.Invoicing.InvoiceOrders.md#releasetime) | datetime (nullable) | Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [State](Crm.Invoicing.InvoiceOrders.md#state) | [DocumentState](Crm.Invoicing.InvoiceOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [Void](Crm.Invoicing.InvoiceOrders.md#void) | boolean | True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [VoidReason](Crm.Invoicing.InvoiceOrders.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [VoidTime](Crm.Invoicing.InvoiceOrders.md#voidtime) | datetime (nullable) | Date/time when the document has become void. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [VoidUser](Crm.Invoicing.InvoiceOrders.md#voiduser) | string (nullable) | The user who voided the document. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Crm.Invoicing.InvoiceOrders.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions |
-| [AdjustedDocument](Crm.Invoicing.InvoiceOrders.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document |
-| [AssignedToUser](Crm.Invoicing.InvoiceOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user |
+| [AccessKey](Crm.Invoicing.InvoiceOrders.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [AdjustedDocument](Crm.Invoicing.InvoiceOrders.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) |
+| [AssignedToUser](Crm.Invoicing.InvoiceOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
 | [CreditNoteOriginalInvoice](Crm.Invoicing.InvoiceOrders.md#creditnoteoriginalinvoice) | [Invoices](Crm.Invoicing.Invoices.md) (nullable) | When the order is for credit note, may contain the original Invoice. null for normal orders or when the original document is unknown. [Filter(multi eq)] |
 | [CreditNoteOriginal<br />InvoiceOrder](Crm.Invoicing.InvoiceOrders.md#creditnoteoriginalinvoiceorder) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) (nullable) | When the invoice is a credit note, can specify the original Invoice Order, on which this is based. null for normal invoice orders or when the original document is unknown. [Filter(multi eq)] |
-| [CurrencyDirectory](Crm.Invoicing.InvoiceOrders.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions |
+| [CurrencyDirectory](Crm.Invoicing.InvoiceOrders.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
 | [Customer](Crm.Invoicing.InvoiceOrders.md#customer) | [Customers](Crm.Customers.md) | The primary customer to whom to invoice. [Required] [Filter(multi eq)] |
 | [DealType](Crm.Invoicing.InvoiceOrders.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries. [Filter(multi eq)] |
 | [DocumentCurrency](Crm.Invoicing.InvoiceOrders.md#documentcurrency) | [Currencies](General.Currencies.md) | The currency in which the document is issued. All amounts are in this currency. [Required] [Filter(multi eq)] |
-| [DocumentType](Crm.Invoicing.InvoiceOrders.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] |
-| [EnterpriseCompany](Crm.Invoicing.InvoiceOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document [Required] |
-| [EnterpriseCompanyLocation](Crm.Invoicing.InvoiceOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used |
-| [FromCompanyDivision](Crm.Invoicing.InvoiceOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division |
-| [FromParty](Crm.Invoicing.InvoiceOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document [Required] |
-| [MasterDocument](Crm.Invoicing.InvoiceOrders.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required] |
-| [Parent](Crm.Invoicing.InvoiceOrders.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null |
+| [DocumentType](Crm.Invoicing.InvoiceOrders.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [EnterpriseCompany](Crm.Invoicing.InvoiceOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [EnterpriseCompanyLocation](Crm.Invoicing.InvoiceOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [FromCompanyDivision](Crm.Invoicing.InvoiceOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [FromParty](Crm.Invoicing.InvoiceOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [MasterDocument](Crm.Invoicing.InvoiceOrders.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [Parent](Crm.Invoicing.InvoiceOrders.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
 | [PaymentAccount](Crm.Invoicing.InvoiceOrders.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, specifies the default payment account for the payment order. [Filter(multi eq)] |
 | [PaymentType](Crm.Invoicing.InvoiceOrders.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null specifies the payment type for the invoice. [Filter(multi eq)] |
-| [PrimeCauseDocument](Crm.Invoicing.InvoiceOrders.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
-| [ResponsiblePerson](Crm.Invoicing.InvoiceOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
-| [ReverseOfDocument](Crm.Invoicing.InvoiceOrders.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of |
+| [PrimeCauseDocument](Crm.Invoicing.InvoiceOrders.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [ResponsiblePerson](Crm.Invoicing.InvoiceOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [ReverseOfDocument](Crm.Invoicing.InvoiceOrders.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) |
 | [SalesOrder](Crm.Invoicing.InvoiceOrders.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | Default value and filter for the lines. Used to differenciate the invoice order for each sales order. [Filter(multi eq)] |
-| [Sequence](Crm.Invoicing.InvoiceOrders.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
-| [ToCompanyDivision](Crm.Invoicing.InvoiceOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) | The division of the company, receiving the document. null when the document is not received by any specific division |
-| [ToParty](Crm.Invoicing.InvoiceOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
-| [UserStatus](Crm.Invoicing.InvoiceOrders.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set |
+| [Sequence](Crm.Invoicing.InvoiceOrders.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) |
+| [ToCompanyDivision](Crm.Invoicing.InvoiceOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [ToParty](Crm.Invoicing.InvoiceOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [UserStatus](Crm.Invoicing.InvoiceOrders.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [DocumentComment.Document](General.DocumentComments.md#document) back reference 
-| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference 
-| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of [DocumentAmount](General.DocumentAmounts.md) child objects, based on the [DocumentAmount.Document](General.DocumentAmounts.md#document) back reference 
-| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
-| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
+| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [General.DocumentComment.Document](General.DocumentComments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [General.DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of [DocumentAmount](General.DocumentAmounts.md) child objects, based on the [General.DocumentAmount.Document](General.DocumentAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [General.DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [General.DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Lines | [InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md) | List of [InvoiceOrderLine](Crm.Invoicing.InvoiceOrderLines.md) child objects, based on the [Crm.Invoicing.InvoiceOrderLine.InvoiceOrder](Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) back reference 
-| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
-| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
-| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.Documents.md#documentversion) child objects, based on the [DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
+| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [General.DocumentPrint.Document](General.DocumentPrints.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [General.DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.DocumentVersions.md) child objects, based on the [General.DocumentVersion.Document](General.DocumentVersions.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 
 
 ## Attribute Details
+
+### AdjustmentNumber
+
+Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **0**  
+
+### AdjustmentTime
+
+Date/time when the document last has been adjusted by corrective document. [ReadOnly] (Inherited from [Documents](General.Documents.md))
+
+_Type_: **datetime (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### AdjustmentUser
+
+The user who adjusted the document. [ReadOnly] (Inherited from [Documents](General.Documents.md))
+
+_Type_: **string (nullable)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ApplyDate
 
@@ -97,7 +125,7 @@ _Supports Order By_: **False**
 
 ### CompleteTime
 
-Exact time, when the document was last completed[Filter(ge;le)]
+Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -105,7 +133,7 @@ _Supports Order By_: **False**
 
 ### CreationTime
 
-Date/Time when the document was created [Required][Filter(ge;le)]
+Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -114,7 +142,7 @@ _Default Value_: **CurrentDateTime**
 
 ### CreationUser
 
-The login name of the user, who created the document [Required][Filter(like)]
+The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -138,16 +166,16 @@ _Supports Order By_: **False**
 
 ### DocumentDate
 
-The date on which the document was issued [Required][Filter(eq;ge;le)][ORD]
+The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] (Inherited from [Documents](General.Documents.md))
 
-_Type_: **datetime**  
+_Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDate**  
 
 ### DocumentNo
 
-Document number, unique within Document_Type_Id [Required][Filter(eq;like)][ORD]
+Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -155,7 +183,7 @@ _Supports Order By_: **True**
 
 ### DocumentNotes
 
-Notes for this Document
+Notes for this Document. (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -163,7 +191,7 @@ _Supports Order By_: **False**
 
 ### DocumentVersion
 
-[Filter(eq;ge;le)]
+Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -172,7 +200,7 @@ _Default Value_: **1**
 
 ### EntityName
 
-The entity name of the document equal to the entity name of the document type.[Filter(eq)] [ORD]
+The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -212,7 +240,7 @@ _Supports Order By_: **False**
 
 ### ParentDocumentRelationshipType
 
-Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
+Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
@@ -258,16 +286,16 @@ _Front-End Recalc Expressions:_
 `obj.PaymentType.Name`
 ### PlanningOnly
 
-Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) [Required]
+Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
-_Type_: **boolean (nullable)**  
+_Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
 ### ReadOnly
 
-True - the document is read only; false - the document is not read only [Required]
+True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -276,15 +304,16 @@ _Default Value_: **False**
 
 ### ReferenceDate
 
-The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken [Filter(ge;le)]
+The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+_Default Value_: **CurrentDate**  
 
 ### ReferenceDocumentNo
 
-The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents [Filter(eq;like)]
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -292,7 +321,7 @@ _Supports Order By_: **False**
 
 ### ReleaseTime
 
-Exact time, when the document was first released [Filter(ge;le)]
+Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -300,7 +329,7 @@ _Supports Order By_: **False**
 
 ### State
 
-0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed [Required][Filter(eq;ge;le)]
+The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentState](Crm.Invoicing.InvoiceOrders.md#state)**  
 Enumeration of document system states  
@@ -322,7 +351,7 @@ _Default Value_: **0**
 
 ### Void
 
-True if the document is null and void [Required][Filter(eq)]
+True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -331,7 +360,7 @@ _Default Value_: **False**
 
 ### VoidReason
 
-Reason for voiding the document, entered by the user
+Reason for voiding the document, entered by the user. [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -339,7 +368,7 @@ _Supports Order By_: **False**
 
 ### VoidTime
 
-Date/time when the document has become void
+Date/time when the document has become void. [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -347,7 +376,7 @@ _Supports Order By_: **False**
 
 ### VoidUser
 
-The user who voided the document
+The user who voided the document. [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -358,21 +387,21 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-The access key, containing the user permissions for this document. null means that all users have unlimited permissions
+The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
 
-The primary document, which the current document adjusts. null when this is not an adjustment document
+The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
 
-The user to which this document is assigned for handling. null means that the document is not assigned to specific user
+The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -393,7 +422,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### CurrencyDirectory
 
-The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions
+The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -423,49 +452,49 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### DocumentType
 
-The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required]
+The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-The enterprise company which issued the document [Required]
+The enterprise company which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used
+The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
 
-The division of the company, issuing the document. null when the document is not issued by any specific division
+The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
 
-The party which issued the document [Required]
+The party which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MasterDocument
 
-In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id [Required]
+In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-In a multi-document tree, this is the direct parent document. If this is the root it is null
+In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -490,24 +519,24 @@ _Front-End Recalc Expressions:_
 `obj.Customer.DefaultPaymentType`
 ### PrimeCauseDocument
 
-The document that is the prime cause for creation of the current document
+The document that is the prime cause for creation of the current document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
 
-The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
+The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ReverseOfDocument
 
-The document which the current document is reverse of
+The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesOrder
 
@@ -520,55 +549,40 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => c.SalesOrder).Distinct( ).OnlyIfSingle( )`
 ### Sequence
 
-The sequence that will be used to give new numbers to the documents of this type
+The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Sequences](General.Sequences.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ToCompanyDivision
 
-The division of the company, receiving the document. null when the document is not received by any specific division
+The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
-_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md)**  
-_Supported Filters_: **NotFilterable**  
+_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ToParty
 
-The party which should receive the document
+The party which should receive the document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### UserStatus
 
-The user status of this document if applicable for this document type. null means unknown or not yet set
+The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
-_Supported Filters_: **EqualsIn**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 
 ## API Methods
 
 Methods that can be invoked in public APIs.
 
-### GetAllParentDocuments
-
-Gets all parent documents, traversing the parent document chain by using the [Parent](General.Documents.md#parent) property.  
-_Return Type_: **Collection Of [Documents](General.Documents.md)**  
-_Declaring Type_: **[Documents](General.Documents.md)**  
-_Domain API Request_: **GET**  
-
-**Parameters**  
-  * **includeSelf**  
-    if set to true the current document is included.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
-
-
 ### ChangeState
 
-Changes the document state to the specified new state  
+Changes the document state to the specified new state              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **void**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **POST**  
@@ -602,7 +616,7 @@ The process of changing the document state is very labor intensive and includes 
 
 ### Complete
 
-Changes the document state to Completed with all Release-ed sub-documents  
+Changes the document state to Completed with all Release-ed sub-documents              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **void**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **POST**  
@@ -626,7 +640,7 @@ The process of changing the document state is very labor intensive and includes 
 
 ### MakeVoid
 
-Makes the document void. The operation is irreversible.  
+Makes the document void. The operation is irreversible.              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **void**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **POST**  
@@ -654,7 +668,7 @@ _Domain API Request_: **POST**
 
 ### GetPrintout
 
-Gets a document printout as a file. The returned value is Base64 string representation of the file contents.  
+Gets a document printout as a file. The returned value is Base64 string representation of the file contents.              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **string**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **POST**  
@@ -675,12 +689,27 @@ _Domain API Request_: **POST**
 
 ### Recalculate
 
-The document and all of its owned objects will be altered to become valid.  
+The document and all of its owned objects will be altered to become valid.              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **void**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **POST**  
 
 In some cases the objects in child collection of the document depend on values from other child objects.             This method ensures that all child objects are properly validated.             The changes are only in memory and are not committed to the server.
+
+### GetAllParentDocuments
+
+Gets all parent documents, traversing the parent document chain by using the [Parent](General.Documents.md#parent) property.              (Inherited from [Documents](General.Documents.md))  
+_Return Type_: **Collection Of [Documents](General.Documents.md)**  
+_Declaring Type_: **[Documents](General.Documents.md)**  
+_Domain API Request_: **GET**  
+
+**Parameters**  
+  * **includeSelf**  
+    if set to true the current document is included.  
+    _Type_: boolean  
+     _Optional_: True  
+    _Default Value_: False  
+
 
 
 ## Business Rules
