@@ -9,76 +9,76 @@ Contains executions (loading, unloading or other operations) of the transportati
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdjustmentNumber](Logistics.Shipment.TransportationExecutions.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly] 
-| [AdjustmentTime](Logistics.Shipment.TransportationExecutions.md#adjustmenttime) | datetime (nullable) | Date/time when the document last has been adjusted by corrective document. [ReadOnly] 
-| [AdjustmentUser](Logistics.Shipment.TransportationExecutions.md#adjustmentuser) | string (nullable) | The user who adjusted the document. [ReadOnly] 
-| [CompleteTime](Logistics.Shipment.TransportationExecutions.md#completetime) | datetime (nullable) | Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly] 
-| [CreationTime](Logistics.Shipment.TransportationExecutions.md#creationtime) | datetime | Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] 
-| [CreationUser](Logistics.Shipment.TransportationExecutions.md#creationuser) | string | The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly] 
-| [DocumentDate](Logistics.Shipment.TransportationExecutions.md#documentdate) | date | The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] 
-| [DocumentNo](Logistics.Shipment.TransportationExecutions.md#documentno) | string | Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] 
-| [DocumentNotes](Logistics.Shipment.TransportationExecutions.md#documentnotes) | string (nullable) | Notes for this Document. 
-| [DocumentVersion](Logistics.Shipment.TransportationExecutions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly] 
-| [EntityName](Logistics.Shipment.TransportationExecutions.md#entityname) | string | The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] 
+| [AdjustmentNumber](Logistics.Shipment.TransportationExecutions.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentTime](Logistics.Shipment.TransportationExecutions.md#adjustmenttime) | datetime (nullable) | Date/time when the document last has been adjusted by corrective document. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [AdjustmentUser](Logistics.Shipment.TransportationExecutions.md#adjustmentuser) | string (nullable) | The user who adjusted the document. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [CompleteTime](Logistics.Shipment.TransportationExecutions.md#completetime) | datetime (nullable) | Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [CreationTime](Logistics.Shipment.TransportationExecutions.md#creationtime) | datetime | Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [CreationUser](Logistics.Shipment.TransportationExecutions.md#creationuser) | string | The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [DocumentDate](Logistics.Shipment.TransportationExecutions.md#documentdate) | date | The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNo](Logistics.Shipment.TransportationExecutions.md#documentno) | string | Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] (Inherited from [Documents](General.Documents.md)) 
+| [DocumentNotes](Logistics.Shipment.TransportationExecutions.md#documentnotes) | string (nullable) | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentVersion](Logistics.Shipment.TransportationExecutions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [EntityName](Logistics.Shipment.TransportationExecutions.md#entityname) | string | The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
 | [ExecutionDate](Logistics.Shipment.TransportationExecutions.md#executiondate) | date (nullable) | Specifies the execution date, if it is the same for all lines. null means that the lines have different execution dates. 
 | [ExecutionTime](Logistics.Shipment.TransportationExecutions.md#executiontime) | time (nullable) | Specifies the execution time, if it is the same for all lines. null means that the lines have different execution times. 
 | [Id](Logistics.Shipment.TransportationExecutions.md#id) | guid |  
-| [ParentDocument<br />RelationshipType](Logistics.Shipment.TransportationExecutions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Shipment.TransportationExecutions.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly] 
-| [PlanningOnly](Logistics.Shipment.TransportationExecutions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly] 
-| [ReadOnly](Logistics.Shipment.TransportationExecutions.md#readonly) | boolean | True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly] 
-| [ReferenceDate](Logistics.Shipment.TransportationExecutions.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)] 
-| [ReferenceDocumentNo](Logistics.Shipment.TransportationExecutions.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)] 
-| [ReleaseTime](Logistics.Shipment.TransportationExecutions.md#releasetime) | datetime (nullable) | Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly] 
-| [State](Logistics.Shipment.TransportationExecutions.md#state) | [DocumentState](Logistics.Shipment.TransportationExecutions.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly] 
-| [Void](Logistics.Shipment.TransportationExecutions.md#void) | boolean | True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [VoidReason](Logistics.Shipment.TransportationExecutions.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user. [ReadOnly] 
-| [VoidTime](Logistics.Shipment.TransportationExecutions.md#voidtime) | datetime (nullable) | Date/time when the document has become void. [ReadOnly] 
-| [VoidUser](Logistics.Shipment.TransportationExecutions.md#voiduser) | string (nullable) | The user who voided the document. [ReadOnly] 
+| [ParentDocument<br />RelationshipType](Logistics.Shipment.TransportationExecutions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Shipment.TransportationExecutions.md#parentdocumentrelationshiptype) (nullable) | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [PlanningOnly](Logistics.Shipment.TransportationExecutions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [ReadOnly](Logistics.Shipment.TransportationExecutions.md#readonly) | boolean | True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [ReferenceDate](Logistics.Shipment.TransportationExecutions.md#referencedate) | datetime (nullable) | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)] (Inherited from [Documents](General.Documents.md)) 
+| [ReferenceDocumentNo](Logistics.Shipment.TransportationExecutions.md#referencedocumentno) | string (nullable) | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)] (Inherited from [Documents](General.Documents.md)) 
+| [ReleaseTime](Logistics.Shipment.TransportationExecutions.md#releasetime) | datetime (nullable) | Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [State](Logistics.Shipment.TransportationExecutions.md#state) | [DocumentState](Logistics.Shipment.TransportationExecutions.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [Void](Logistics.Shipment.TransportationExecutions.md#void) | boolean | True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [VoidReason](Logistics.Shipment.TransportationExecutions.md#voidreason) | string (nullable) | Reason for voiding the document, entered by the user. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [VoidTime](Logistics.Shipment.TransportationExecutions.md#voidtime) | datetime (nullable) | Date/time when the document has become void. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
+| [VoidUser](Logistics.Shipment.TransportationExecutions.md#voiduser) | string (nullable) | The user who voided the document. [ReadOnly] (Inherited from [Documents](General.Documents.md)) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Logistics.Shipment.TransportationExecutions.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)] |
-| [AdjustedDocument](Logistics.Shipment.TransportationExecutions.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] |
-| [AssignedToUser](Logistics.Shipment.TransportationExecutions.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] |
-| [CurrencyDirectory](Logistics.Shipment.TransportationExecutions.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)] |
-| [DocumentType](Logistics.Shipment.TransportationExecutions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] |
-| [EnterpriseCompany](Logistics.Shipment.TransportationExecutions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. [Required] [Filter(multi eq)] |
-| [EnterpriseCompanyLocation](Logistics.Shipment.TransportationExecutions.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] |
-| [FromCompanyDivision](Logistics.Shipment.TransportationExecutions.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)] |
-| [FromParty](Logistics.Shipment.TransportationExecutions.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. [Required] [Filter(multi eq)] |
+| [AccessKey](Logistics.Shipment.TransportationExecutions.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [AdjustedDocument](Logistics.Shipment.TransportationExecutions.md#adjusteddocument) | [Documents](General.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) |
+| [AssignedToUser](Logistics.Shipment.TransportationExecutions.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [CurrencyDirectory](Logistics.Shipment.TransportationExecutions.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [DocumentType](Logistics.Shipment.TransportationExecutions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [EnterpriseCompany](Logistics.Shipment.TransportationExecutions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [EnterpriseCompanyLocation](Logistics.Shipment.TransportationExecutions.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [FromCompanyDivision](Logistics.Shipment.TransportationExecutions.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [FromParty](Logistics.Shipment.TransportationExecutions.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
 | [GeoPoint](Logistics.Shipment.TransportationExecutions.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | Specifies the execution geographic point, if it is the same for all lines. null means that the lines have different geographic points. [Filter(multi eq)] |
-| [MasterDocument](Logistics.Shipment.TransportationExecutions.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] |
-| [Parent](Logistics.Shipment.TransportationExecutions.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] |
-| [PrimeCauseDocument](Logistics.Shipment.TransportationExecutions.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. [Filter(multi eq)] |
-| [ResponsiblePerson](Logistics.Shipment.TransportationExecutions.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)] |
-| [ReverseOfDocument](Logistics.Shipment.TransportationExecutions.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly] |
-| [Sequence](Logistics.Shipment.TransportationExecutions.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly] |
-| [ToCompanyDivision](Logistics.Shipment.TransportationExecutions.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)] |
-| [ToParty](Logistics.Shipment.TransportationExecutions.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. [Filter(multi eq)] |
-| [UserStatus](Logistics.Shipment.TransportationExecutions.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly] |
+| [MasterDocument](Logistics.Shipment.TransportationExecutions.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [Parent](Logistics.Shipment.TransportationExecutions.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [PrimeCauseDocument](Logistics.Shipment.TransportationExecutions.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [ResponsiblePerson](Logistics.Shipment.TransportationExecutions.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [ReverseOfDocument](Logistics.Shipment.TransportationExecutions.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) |
+| [Sequence](Logistics.Shipment.TransportationExecutions.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) |
+| [ToCompanyDivision](Logistics.Shipment.TransportationExecutions.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [ToParty](Logistics.Shipment.TransportationExecutions.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md)) |
+| [UserStatus](Logistics.Shipment.TransportationExecutions.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md)) |
 
 ## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [General.DocumentComment.Document](General.DocumentComments.md#document) back reference 
-| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [General.DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference 
-| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of [DocumentAmount](General.DocumentAmounts.md) child objects, based on the [General.DocumentAmount.Document](General.DocumentAmounts.md#document) back reference 
-| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [General.DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference 
-| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [General.DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference 
+| Comments | [DocumentComments](General.DocumentComments.md) | List of [DocumentComment](General.DocumentComments.md) child objects, based on the [General.DocumentComment.Document](General.DocumentComments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of [DocumentDistributed<br />Amount](General.DocumentDistributedAmounts.md) child objects, based on the [General.DocumentDistributedAmount.Document](General.DocumentDistributedAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of [DocumentAmount](General.DocumentAmounts.md) child objects, based on the [General.DocumentAmount.Document](General.DocumentAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of [DocumentFileAttachment](General.DocumentFileAttachments.md) child objects, based on the [General.DocumentFileAttachment.Document](General.DocumentFileAttachments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of [DocumentLineAmount](General.DocumentLineAmounts.md) child objects, based on the [General.DocumentLineAmount.Document](General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Lines | [TransportationExecutionLines](Logistics.Shipment.TransportationExecutionLines.md) | List of [Transportation<br />ExecutionLine](Logistics.Shipment.Transportation<br />ExecutionLines.md) child objects, based on the [Logistics.Shipment.Transportation<br />ExecutionLine.TransportationExecution](Logistics.Shipment.Transportation<br />ExecutionLines.md#transportationexecution) back reference 
-| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [General.DocumentPrint.Document](General.DocumentPrints.md#document) back reference 
-| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [General.DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference 
-| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.DocumentVersions.md) child objects, based on the [General.DocumentVersion.Document](General.DocumentVersions.md#document) back reference 
+| Prints | [DocumentPrints](General.DocumentPrints.md) | List of [DocumentPrint](General.DocumentPrints.md) child objects, based on the [General.DocumentPrint.Document](General.DocumentPrints.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of [DocumentStateChange](General.DocumentStateChanges.md) child objects, based on the [General.DocumentStateChange.Document](General.DocumentStateChanges.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| Versions | [DocumentVersions](General.DocumentVersions.md) | List of [DocumentVersion](General.DocumentVersions.md) child objects, based on the [General.DocumentVersion.Document](General.DocumentVersions.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 
 
 ## Attribute Details
 
 ### AdjustmentNumber
 
-Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly]
+Consecutive number of the correction that this document is applying to the adjusted document. [Required] [Default(0)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
@@ -87,7 +87,7 @@ _Default Value_: **0**
 
 ### AdjustmentTime
 
-Date/time when the document last has been adjusted by corrective document. [ReadOnly]
+Date/time when the document last has been adjusted by corrective document. [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -95,7 +95,7 @@ _Supports Order By_: **False**
 
 ### AdjustmentUser
 
-The user who adjusted the document. [ReadOnly]
+The user who adjusted the document. [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -103,7 +103,7 @@ _Supports Order By_: **False**
 
 ### CompleteTime
 
-Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly]
+Date and time when the document was completed (State set to Completed). [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -111,7 +111,7 @@ _Supports Order By_: **False**
 
 ### CreationTime
 
-Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly]
+Date/Time when the document was created. [Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -120,7 +120,7 @@ _Default Value_: **CurrentDateTime**
 
 ### CreationUser
 
-The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly]
+The login name of the user, who created the document. [Required] [Filter(like)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string**  
 _Supported Filters_: **Like**  
@@ -128,7 +128,7 @@ _Supports Order By_: **False**
 
 ### DocumentDate
 
-The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD]
+The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -137,7 +137,7 @@ _Default Value_: **CurrentDate**
 
 ### DocumentNo
 
-Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD]
+Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -145,7 +145,7 @@ _Supports Order By_: **True**
 
 ### DocumentNotes
 
-Notes for this Document.
+Notes for this Document. (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -153,7 +153,7 @@ _Supports Order By_: **False**
 
 ### DocumentVersion
 
-Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly]
+Consecutive version number, starting with 1. Each update produces a new version of the document. [Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **int32**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
@@ -162,7 +162,7 @@ _Default Value_: **1**
 
 ### EntityName
 
-The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly]
+The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string**  
 _Supported Filters_: **Equals**  
@@ -196,7 +196,7 @@ _Default Value_: **NewGuid**
 
 ### ParentDocumentRelationshipType
 
-Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly]
+Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[ParentDocument<br />RelationshipType](Logistics.Shipment.TransportationExecutions.md#parentdocumentrelationshiptype) (nullable)**  
 Relationship between parent and child documents  
@@ -212,7 +212,7 @@ _Supports Order By_: **False**
 
 ### PlanningOnly
 
-Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly]
+Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). [Required] [Default(false)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -221,7 +221,7 @@ _Default Value_: **False**
 
 ### ReadOnly
 
-True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly]
+True - the document is read only; false - the document is not read only. [Required] [Default(false)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
@@ -230,7 +230,7 @@ _Default Value_: **False**
 
 ### ReferenceDate
 
-The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)]
+The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. [Default(Today)] [Filter(ge;le)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -239,7 +239,7 @@ _Default Value_: **CurrentDate**
 
 ### ReferenceDocumentNo
 
-The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)]
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. [Filter(eq;like)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **Equals, Like**  
@@ -247,7 +247,7 @@ _Supports Order By_: **False**
 
 ### ReleaseTime
 
-Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly]
+Date and time when the document was released (State set to Released). [Filter(ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
@@ -255,7 +255,7 @@ _Supports Order By_: **False**
 
 ### State
 
-The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly]
+The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. [Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentState](Logistics.Shipment.TransportationExecutions.md#state)**  
 Enumeration of document system states  
@@ -277,7 +277,7 @@ _Default Value_: **0**
 
 ### Void
 
-True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly]
+True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -286,7 +286,7 @@ _Default Value_: **False**
 
 ### VoidReason
 
-Reason for voiding the document, entered by the user. [ReadOnly]
+Reason for voiding the document, entered by the user. [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -294,7 +294,7 @@ _Supports Order By_: **False**
 
 ### VoidTime
 
-Date/time when the document has become void. [ReadOnly]
+Date/time when the document has become void. [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -302,7 +302,7 @@ _Supports Order By_: **False**
 
 ### VoidUser
 
-The user who voided the document. [ReadOnly]
+The user who voided the document. [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -313,63 +313,63 @@ _Supports Order By_: **False**
 
 ### AccessKey
 
-The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)]
+The access key, containing the user permissions for this document. null means that all users have unlimited permissions. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
 
-The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly]
+The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
 
-The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)]
+The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
 
-The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)]
+The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
 
-The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)]
+The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 
-The enterprise company which issued the document. [Required] [Filter(multi eq)]
+The enterprise company which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)]
+The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
 
-The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)]
+The division of the company, issuing the document. null when the document is not issued by any specific division. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
 
-The party which issued the document. [Required] [Filter(multi eq)]
+The party which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -385,63 +385,63 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => c.GeoPoint).Distinct( ).OnlyIfSingle( )`
 ### MasterDocument
 
-In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)]
+In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
 
-In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)]
+In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimeCauseDocument
 
-The document that is the prime cause for creation of the current document. [Filter(multi eq)]
+The document that is the prime cause for creation of the current document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
 
-The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)]
+The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReverseOfDocument
 
-The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly]
+The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Sequence
 
-The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly]
+The sequence that will be used to give new numbers to the documents of this type. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Sequences](General.Sequences.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToCompanyDivision
 
-The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)]
+The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToParty
 
-The party which should receive the document. [Filter(multi eq)]
+The party which should receive the document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UserStatus
 
-The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly]
+The user status of this document if applicable for this document type. null means unknown or not yet set. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -453,7 +453,7 @@ Methods that can be invoked in public APIs.
 
 ### ChangeState
 
-Changes the document state to the specified new state  
+Changes the document state to the specified new state              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **void**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **POST**  
@@ -487,7 +487,7 @@ The process of changing the document state is very labor intensive and includes 
 
 ### Complete
 
-Changes the document state to Completed with all Release-ed sub-documents  
+Changes the document state to Completed with all Release-ed sub-documents              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **void**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **POST**  
@@ -511,7 +511,7 @@ The process of changing the document state is very labor intensive and includes 
 
 ### MakeVoid
 
-Makes the document void. The operation is irreversible.  
+Makes the document void. The operation is irreversible.              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **void**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **POST**  
@@ -539,7 +539,7 @@ _Domain API Request_: **POST**
 
 ### GetPrintout
 
-Gets a document printout as a file. The returned value is Base64 string representation of the file contents.  
+Gets a document printout as a file. The returned value is Base64 string representation of the file contents.              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **string**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **POST**  
@@ -560,7 +560,7 @@ _Domain API Request_: **POST**
 
 ### Recalculate
 
-The document and all of its owned objects will be altered to become valid.  
+The document and all of its owned objects will be altered to become valid.              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **void**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **POST**  
@@ -569,7 +569,7 @@ In some cases the objects in child collection of the document depend on values f
 
 ### GetAllParentDocuments
 
-Gets all parent documents, traversing the parent document chain by using the [Parent](General.Documents.md#parent) property.  
+Gets all parent documents, traversing the parent document chain by using the [Parent](General.Documents.md#parent) property.              (Inherited from [Documents](General.Documents.md))  
 _Return Type_: **Collection Of [Documents](General.Documents.md)**  
 _Declaring Type_: **[Documents](General.Documents.md)**  
 _Domain API Request_: **GET**  

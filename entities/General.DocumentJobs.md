@@ -11,12 +11,12 @@ Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Int
 | ---- | ---- | --- |
 | [FilterXml](General.DocumentJobs.md#filterxml) | dataaccessfilter | Specifies the documents, whose state will be changed. [Required] 
 | [Id](General.DocumentJobs.md#id) | guid |  
-| [IsActive](General.DocumentJobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)] 
-| [JobType](General.DocumentJobs.md#jobtype) | [JobType](General.DocumentJobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)] 
-| [Name](General.DocumentJobs.md#name) | string | The name of the job. [Required] [Filter(eq;like)] [ORD] 
+| [IsActive](General.DocumentJobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)] (Inherited from [Jobs](Systems.Core.Jobs.md)) 
+| [JobType](General.DocumentJobs.md#jobtype) | [JobType](General.DocumentJobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)] (Inherited from [Jobs](Systems.Core.Jobs.md)) 
+| [Name](General.DocumentJobs.md#name) | string | The name of the job. [Required] [Filter(eq;like)] [ORD] (Inherited from [Jobs](Systems.Core.Jobs.md)) 
 | [NewState](General.DocumentJobs.md#newstate) | [DocumentState](General.DocumentJobs.md#newstate) | Specifies the state, which should be set to the documents, matching the filter. [Required] 
-| [Notes](General.DocumentJobs.md#notes) | string (nullable) | Notes for this Job. 
-| [RunOnIdle](General.DocumentJobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)] 
+| [Notes](General.DocumentJobs.md#notes) | string (nullable) | Notes for this Job. (Inherited from [Jobs](Systems.Core.Jobs.md)) 
+| [RunOnIdle](General.DocumentJobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)] (Inherited from [Jobs](Systems.Core.Jobs.md)) 
 
 ## References
 
@@ -44,7 +44,7 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)]
+Specifies whether the job is active and ready for running. [Required] [Default(true)] [Filter(eq)] (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
@@ -53,7 +53,7 @@ _Default Value_: **True**
 
 ### JobType
 
-The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)]
+The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. [Required] [Filter(multi eq)] (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **[JobType](General.DocumentJobs.md#jobtype)**  
 Allowed values for the [JobType](Systems.Core.Jobs.md#jobtype) data attribute  
@@ -71,7 +71,7 @@ _Supports Order By_: **False**
 
 ### Name
 
-The name of the job. [Required] [Filter(eq;like)] [ORD]
+The name of the job. [Required] [Filter(eq;like)] [ORD] (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **string**  
 _Supported Filters_: **Equals, Like**  
@@ -100,7 +100,7 @@ _Supports Order By_: **False**
 
 ### Notes
 
-Notes for this Job.
+Notes for this Job. (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **string (nullable)**  
 _Supported Filters_: **NotFilterable**  
@@ -108,7 +108,7 @@ _Supports Order By_: **False**
 
 ### RunOnIdle
 
-Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)]
+Specifies whether to automatically run the job when the server is idle. [Required] [Default(true)] [Filter(eq)] (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **boolean**  
 _Supported Filters_: **Equals**  
