@@ -135,7 +135,7 @@ _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.Product.BaseUnit`
+`obj.Product.MeasurementUnit`
 ### ServiceActivity
 
 The [ServiceActivity](Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]

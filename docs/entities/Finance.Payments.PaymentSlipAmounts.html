@@ -238,6 +238,8 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#direction">D
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.PaymentSlip.DocumentDate</code></p>
 <h3 id="totalamount">TotalAmount</h3>
 <p>The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. [Currency: PaymentSlip.DocumentCurrency]</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a> (nullable)</strong><br>

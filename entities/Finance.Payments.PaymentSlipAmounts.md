@@ -105,6 +105,8 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.PaymentSlip.DocumentDate`
 ### TotalAmount
 
 The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. [Currency: PaymentSlip.DocumentCurrency]
