@@ -80,6 +80,10 @@
 <h1 id="crmmarketingbonusprograms-entity">Crm.Marketing.BonusPrograms Entity</h1>
 
 <p>Bonus programs allow automatic adding of new line with bonus product or automatic application of discount in a sales document. Entity: Crm_Bonus_Programs</p>
+<p>Default Display Text Format:<br>
+<em>{Name:T}</em><br>
+Default Search Member:<br>
+<em>Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -377,6 +381,7 @@ Allowed values for the <a href="Crm.Marketing.BonusPrograms.html#bonusaction">Bo
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
@@ -458,6 +463,7 @@ Allowed values for the <a href="Crm.Marketing.BonusPrograms.html#priority">Prior
 <h3 id="conditionproduct">ConditionProduct</h3>
 <p>When not null, specifies a conditional product, which is required to exist in the sales document in order for the bonus program to be applied. If a condition with multiple products is required, additional products can be added to Bonus Program Products. If null the other conditions should be evaluated against the whole order. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="conditionproductgroup">ConditionProductGroup</h3>
 <p>When not null, specifies that the bonus should be applied only to products from the specified product group or its subgroups. [Filter(multi eq)]</p>

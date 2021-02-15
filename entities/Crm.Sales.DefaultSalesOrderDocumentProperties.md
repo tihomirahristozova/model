@@ -5,6 +5,11 @@ uid: Crm.Sales.DefaultSalesOrderDocumentProperties
 
 User-defined properties which shall be copied from the customer to the document for new documents of the specified document type. Entity: Crm_Default_Sales_Order_Document_Properties
 
+Default Display Text Format:  
+_{DocumentType.Code}: {DocumentType.EntityName:T}_  
+Default Search Member:  
+_DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ User-defined properties which shall be copied from the customer to the document 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -50,6 +56,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document type for which the current definitions apply. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

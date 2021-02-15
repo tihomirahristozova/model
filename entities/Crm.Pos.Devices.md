@@ -5,6 +5,11 @@ uid: Crm.Pos.Devices
 
 Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{PosTerminal.PosTerminalCode}: {PosTerminal.PosTerminalName:T}_  
+Default Search Member:  
+_PosTerminal.PosTerminalCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -64,6 +69,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -107,6 +113,7 @@ _Supports Order By_: **False**
 The POS terminal, to which this device is attached. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Terminals](Crm.Pos.Terminals.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

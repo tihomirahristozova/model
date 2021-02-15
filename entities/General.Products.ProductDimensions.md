@@ -5,6 +5,11 @@ uid: General.Products.ProductDimensions
 
 Contains convertion ratios between the supported measument categories for each product. Does not contain a record for the default category of the products, for which the convertion ratio is defined as equal to 1. Entity: Gen_Product_Dimensions
 
+Default Display Text Format:  
+_{Product.PartNumber}: {Product.Name:T}_  
+Default Search Member:  
+_Product.PartNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -65,6 +70,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -104,6 +110,7 @@ _Front-End Recalc Expressions:_
 The product for which we specify conversion ratios. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SourceQuantityUnit

@@ -5,6 +5,11 @@ uid: General.ProductCatalogs
 
 Product catalogs serve to organize the products for display primarily in web pages. Entity: Gen_Product_Catalogs
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -130,6 +135,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -172,6 +178,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. [Filter(multi eq)] [Introduced in version 19.1]
 
 _Type_: **[WebSites](Systems.Core.WebSites.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

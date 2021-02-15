@@ -5,6 +5,11 @@ uid: General.Contacts.PartyPictures
 
 Party pictures - photos, logos, etc. Entity: Gen_Party_Pictures
 
+Default Display Text Format:  
+_{Party.PartyCode}: {Party.PartyName:T}_  
+Default Search Member:  
+_Party.PartyCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -36,6 +41,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -88,6 +94,7 @@ _Front-End Recalc Expressions:_
 The [Party](General.Contacts.PartyPictures.md#party) to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

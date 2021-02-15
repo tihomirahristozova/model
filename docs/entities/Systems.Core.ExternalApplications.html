@@ -80,6 +80,10 @@
 <h1 id="systemscoreexternalapplications-entity">Systems.Core.ExternalApplications Entity</h1>
 
 <p>List of external applications. Used to run external applications. Entity: Sys_External_Applications</p>
+<p>Default Display Text Format:<br>
+<em>{EntityName:T}</em><br>
+Default Search Member:<br>
+<em>EntityName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -203,6 +207,7 @@ Allowed values for the <a href="Systems.Core.ExternalApplications.html#available
 <h3 id="entityname">EntityName</h3>
 <p>The entity, for which the application is defined. [Required] [Filter(eq)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="executeforallobjects">ExecuteForAllObjects</h3>
@@ -213,6 +218,7 @@ Allowed values for the <a href="Systems.Core.ExternalApplications.html#available
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>

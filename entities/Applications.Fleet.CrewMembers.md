@@ -5,6 +5,11 @@ uid: Applications.Fleet.CrewMembers
 
 Contains the memnbers of vehicle crews. Entity: Fleet_Crew_Members
 
+Default Display Text Format:  
+_{Crew.Name:T}_  
+Default Search Member:  
+_Crew.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Contains the memnbers of vehicle crews. Entity: Fleet_Crew_Members
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

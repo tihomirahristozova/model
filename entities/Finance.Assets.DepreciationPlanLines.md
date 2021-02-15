@@ -5,6 +5,11 @@ uid: Finance.Assets.DepreciationPlanLines
 
 Each record contains one depreciation plan for one valuation model of one asset. Entity: Ast_Depreciation_Plan_Lines
 
+Default Display Text Format:  
+_{DepreciationPlan.DocumentType.Code}:{DepreciationPlan.DocumentNo}:{LineNo} - {DepreciationPlan.DocumentType.TypeName:T}_  
+Default Search Member:  
+_DepreciationPlan.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -53,6 +58,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -86,6 +92,7 @@ _Default Value_: **Constant**
 The asset that is planned for depreciation. [Required] [Filter(multi eq)]
 
 _Type_: **[Assets](Finance.Assets.Assets.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DepreciationMethod
@@ -100,6 +107,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DepreciationPlans](Finance.Assets.DepreciationPlans.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Document
@@ -107,6 +115,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[DepreciationPlans](Finance.Assets.DepreciationPlans.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationModel

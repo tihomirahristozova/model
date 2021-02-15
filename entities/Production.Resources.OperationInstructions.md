@@ -5,6 +5,11 @@ uid: Production.Resources.OperationInstructions
 
 Long (full) instructions for performing an operation. The operations point to the instructions and one instruction can be used for different operations. Entity: Prd_Operation_Instructions
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -27,6 +32,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Instructions

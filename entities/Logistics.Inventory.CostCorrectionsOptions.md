@@ -5,6 +5,11 @@ uid: Logistics.Inventory.CostCorrectionsOptions
 
 Options per document type for the cost corrections. Entity: Inv_Cost_Corrections_Options
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ Options per document type for the cost corrections. Entity: Inv_Cost_Corrections
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -54,6 +60,7 @@ _Default Value_: **False**
 The document type for which we specify the options. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

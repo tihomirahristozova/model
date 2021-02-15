@@ -80,6 +80,10 @@
 <h1 id="crmsalessalesordersoptions-entity">Crm.Sales.SalesOrdersOptions Entity</h1>
 
 <p>Options for sales orders of specific user defined document type. Entity: Crm_Sales_Orders_Options</p>
+<p>Default Display Text Format:<br>
+<em>{DocumentType.Code}: {DocumentType.EntityName:T}</em><br>
+Default Search Member:<br>
+<em>DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -192,6 +196,7 @@ Allowed values for the <a href="Crm.Sales.SalesOrdersOptions.html#alloweddirecti
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="minimumamount">MinimumAmount</h3>

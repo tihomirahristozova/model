@@ -5,6 +5,11 @@ uid: Communities.SocialGroupMembers
 
 Represents the membership of a user in a social group. Entity: Cmm_Social_Group_Members (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{SocialGroup.Code}: {SocialGroup.Name:T}_  
+Default Search Member:  
+_SocialGroup.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ Represents the membership of a user in a social group. Entity: Cmm_Social_Group_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

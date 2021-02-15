@@ -5,6 +5,11 @@ uid: Applications.Service.ServiceAgreementServices
 
 Contains the free services, included in the service agreement. Entity: Srv_Service_Agreement_Services
 
+Default Display Text Format:  
+_{ServiceAgreement.DocumentType.Code}:{ServiceAgreement.DocumentNo} - {ServiceAgreement.DocumentType.TypeName:T}_  
+Default Search Member:  
+_ServiceAgreement.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -38,6 +43,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -96,6 +102,7 @@ _Front-End Recalc Expressions:_
 The [ServiceAgreement](Applications.Service.ServiceAgreementServices.md#serviceagreement) to which this ServiceAgreementService belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceProduct

@@ -5,6 +5,11 @@ uid: Applications.AssetManagement.MaintenanceTypeGroups
 
 Represents the hierarchy of the groups of maintenance types. Entity: Eam_Maintenance_Type_Groups (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -28,12 +33,14 @@ Represents the hierarchy of the groups of maintenance types. Entity: Eam_Mainten
 Unique code of the group. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -61,6 +68,7 @@ _Supports Order By_: **False**
 Parent group. null denotes a root group. [Filter(multi eq)]
 
 _Type_: **[MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

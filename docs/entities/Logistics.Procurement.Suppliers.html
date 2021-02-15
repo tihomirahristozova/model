@@ -80,6 +80,10 @@
 <h1 id="logisticsprocurementsuppliers-entity">Logistics.Procurement.Suppliers Entity</h1>
 
 <p>Contains supplier conditions (contracts). Entity: Scm_Suppliers</p>
+<p>Default Display Text Format:<br>
+<em>{Number}</em><br>
+Default Search Member:<br>
+<em>Number</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -235,6 +239,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
@@ -246,6 +251,7 @@
 <h3 id="number">Number</h3>
 <p>The unique supplier number. [Filter(eq)] [ORD]</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="thrudate">ThruDate</h3>
@@ -287,6 +293,7 @@
 <h3 id="party">Party</h3>
 <p>The <a href="General.Contacts.Parties.html">Party</a> to which this Supplier belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="suppliertype">SupplierType</h3>
 <p>When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. [Filter(multi eq)]</p>

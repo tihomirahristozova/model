@@ -80,6 +80,10 @@
 <h1 id="generalcustomproperties-entity">General.CustomProperties Entity</h1>
 
 <p>User-defined properties, which can supplement the system properties of almost all entities in the system. Entity: Gen_Properties</p>
+<p>Default Display Text Format:<br>
+<em>{Code}: {AllowedValuesEntityName:T}</em><br>
+Default Search Member:<br>
+<em>Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -215,11 +219,13 @@
 <h3 id="code">Code</h3>
 <p>Unique property code. [Required] [Filter(multi eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="entityname">EntityName</h3>
 <p>The entity for which the property is applicable. [Required] [Filter(eq)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="hint">Hint</h3>
@@ -229,6 +235,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="keyorder">KeyOrder</h3>
@@ -250,6 +257,7 @@
 <h3 id="name">Name</h3>
 <p>The name of this CustomProperty. [Required] [Filter(like)] [ORD]</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>

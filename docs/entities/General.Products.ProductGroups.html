@@ -80,6 +80,10 @@
 <h1 id="generalproductsproductgroups-entity">General.Products.ProductGroups Entity</h1>
 
 <p>Hierarchical categorization of the products. Entity: Gen_Product_Groups</p>
+<p>Default Display Text Format:<br>
+<em>{NextPartNumber}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>NextPartNumber</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -241,6 +245,7 @@
 <h3 id="code">Code</h3>
 <p>The unique code of the ProductGroup. [Required] [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="configuratorcreatesrecipe">ConfiguratorCreatesRecipe</h3>
@@ -282,11 +287,13 @@ Allowed values for the <a href="General.Products.ProductGroups.html#configurator
 <h3 id="fullpath">FullPath</h3>
 <p>Full tree path in the form /parent/.../leaf/. Contains the group names. [Required] [Default(&quot;&quot;)] [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
@@ -312,6 +319,7 @@ Allowed values for the <a href="General.Products.ProductGroups.html#configurator
 <h3 id="parent">Parent</h3>
 <p>Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. [Required] [Default(&quot;/&quot;)] [Filter(eq)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>/</strong></p>

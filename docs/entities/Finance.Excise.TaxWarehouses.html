@@ -80,6 +80,10 @@
 <h1 id="financeexcisetaxwarehouses-entity">Finance.Excise.TaxWarehouses Entity</h1>
 
 <p>Contains excise-related data for warehouses (stores), which are defined as tax warehouses. Products subject to excise duties must be produced in tax warehouses. They can also be stored, under duty suspension, in these tax warehouses. Entity: Exc_Tax_Warehouses (Introduced in version 21.1.1.1)</p>
+<p>Default Display Text Format:<br>
+<em>{Id}</em><br>
+Default Search Member:<br>
+<em>Id</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -117,12 +121,14 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="store">Store</h3>
 <p>The base warehouse (store), which is declared as tax warehouse. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

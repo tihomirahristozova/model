@@ -80,6 +80,10 @@
 <h1 id="financeaccountingaccountgroups-entity">Finance.Accounting.AccountGroups Entity</h1>
 
 <p>Hierarchical chart of account groups. Entity: Acc_Account_Groups</p>
+<p>Default Display Text Format:<br>
+<em>{Number}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>Number</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -158,6 +162,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
@@ -168,12 +173,14 @@
 <h3 id="number">Number</h3>
 <p>Unique account group number. May contain characters, if required. [Required] [Filter(like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
 <p>Parent account group. null if this is root group. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

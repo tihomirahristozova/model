@@ -80,6 +80,10 @@
 <h1 id="crmcustomers-entity">Crm.Customers Entity</h1>
 
 <p>Customer contracts list. For each combination of Enterprise Company and external Party there can be zero or one records of this. Entity: Crm_Customers</p>
+<p>Default Display Text Format:<br>
+<em>{Number}</em><br>
+Default Search Member:<br>
+<em>Number</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -331,11 +335,13 @@
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="number">Number</h3>
 <p>Unique customer number. [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="persistsalesorderslots">PersistSalesOrdersLots</h3>
@@ -367,6 +373,7 @@
 <h3 id="customertype">CustomerType</h3>
 <p>The user-defined type of this customer. null when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.CustomerTypes.html">CustomerTypes</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="defaultcurrency">DefaultCurrency</h3>
 <p>The primary currency for value calculations for this customer - for credit limit, due amounts, etc. [Filter(multi eq)]</p>
@@ -395,16 +402,19 @@
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Transaction.CurrentEnterpriseCompany</code></p>
 <h3 id="party">Party</h3>
 <p>Base party Id. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salesperson">SalesPerson</h3>
 <p>The default sales person for new sales documents for this customer. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.SalesPersons.html">SalesPersons</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="servicedbyenterprisecompanylocation">ServicedByEnterpriseCompanyLocation</h3>
 <p>The enterprise company location, which sells to this client by default. [Filter(multi eq)]</p>

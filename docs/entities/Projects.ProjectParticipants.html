@@ -80,6 +80,10 @@
 <h1 id="projectsprojectparticipants-entity">Projects.ProjectParticipants Entity</h1>
 
 <p>Represents participant in a project, with a specific role. The same participant can participate multiple times in different roles. Entity: Prj_Project_Participants</p>
+<p>Default Display Text Format:<br>
+<em>{Project.Code}: {Project.Name:T}</em><br>
+Default Search Member:<br>
+<em>Project.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -132,6 +136,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>

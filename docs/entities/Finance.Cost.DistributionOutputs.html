@@ -80,6 +80,10 @@
 <h1 id="financecostdistributionoutputs-entity">Finance.Cost.DistributionOutputs Entity</h1>
 
 <p>Contains the output data for the specified period. This is the output on which cost is distributed. Entity: Cost_Distribution_Outputs</p>
+<p>Default Display Text Format:<br>
+<em>{CostDistribution.DocumentType.Code}:{CostDistribution.DocumentNo} - {CostDistribution.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>CostDistribution.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -132,6 +136,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>

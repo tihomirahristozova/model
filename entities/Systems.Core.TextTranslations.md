@@ -5,6 +5,11 @@ uid: Systems.Core.TextTranslations
 
 Obsolete. Not used. Entity: Gen_Text_Translations
 
+Default Display Text Format:  
+_{ColumnName:T}_  
+Default Search Member:  
+_ColumnName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -30,6 +35,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -53,6 +59,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Obsolete. Not used. [Required] [Filter(eq)] [ORD] [ReadOnly]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 

@@ -80,6 +80,10 @@
 <h1 id="productionshopflooroutputorderconsumptionlines-entity">Production.ShopFloor.OutputOrderConsumptionLines Entity</h1>
 
 <p>The internal production consumption of materials. Used only for control purposes - for comparison with the active consumption orders. Warehouse and accounting are still updated only by Consumption Orders. Entity: Prd_Output_Order_Consumption_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{OutputOrder.DocumentType.Code}:{OutputOrder.DocumentNo}:{LineNo} - {OutputOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>OutputOrder.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -195,6 +199,7 @@
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -215,6 +220,7 @@
 <h3 id="document">Document</h3>
 <p>The <a href="Production.ShopFloor.OutputOrderConsumptionLines.html#outputorder">OutputOrder</a> to which this OutputOrderConsumptionLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.OutputOrders.html">OutputOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lineworkorder">LineWorkOrder</h3>
 <p>Work order for the line. Initially copied from the header (if there work order is not null). [Required] [Filter(multi eq)]</p>
@@ -229,6 +235,7 @@
 <h3 id="outputorder">OutputOrder</h3>
 <p>The <a href="Production.ShopFloor.OutputOrderConsumptionLines.html#outputorder">OutputOrder</a> to which this OutputOrderConsumptionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.OutputOrders.html">OutputOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <p>The measurement unit for the consumed quantity for setup, run and scrap. [Required] [Filter(multi eq)]</p>

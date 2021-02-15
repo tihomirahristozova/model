@@ -5,6 +5,11 @@ uid: Systems.Workflow.Roles
 
 The various roles, which the users can play. Entity: Wf_Roles
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ The various roles, which the users can play. Entity: Wf_Roles
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -34,6 +40,7 @@ _Default Value_: **NewGuid**
 The name of this Role. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

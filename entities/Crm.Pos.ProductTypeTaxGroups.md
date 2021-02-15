@@ -5,6 +5,11 @@ uid: Crm.Pos.ProductTypeTaxGroups
 
 Contains the tax group codes for the product types. The tax group codes are used when sales documents are printed to fiscal printers or exported to fiscal authorities. Entity: Pos_Product_Type_Tax_Groups (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{ProductType.Code}: {ProductType.Name:T}_  
+Default Search Member:  
+_ProductType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -65,6 +70,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -106,6 +112,7 @@ _Supports Order By_: **False**
 The product type for which the tax group is specified. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

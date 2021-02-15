@@ -5,6 +5,11 @@ uid: General.ProductVariants
 
 Contains definitions of different variants of a product. The variants are differentiated by color, size and style. Entity: Gen_Product_Variants
 
+Default Display Text Format:  
+_{BarCode}: {Name:T}_  
+Default Search Member:  
+_BarCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -31,6 +36,7 @@ Contains definitions of different variants of a product. The variants are differ
 When specified, it contains a bar code which uniquely identifies the product variant. [Filter(eq;like)] [ORD]
 
 _Type_: **string (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -45,6 +51,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -69,6 +76,7 @@ _Front-End Recalc Expressions:_
 The product for which this variant is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VariantColor

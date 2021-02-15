@@ -5,6 +5,11 @@ uid: Communities.SocialReactionsSummary
 
 Summary with the social reactions per comment and dataobject. Entity: Cmm_Social_Reactions_Summary_Indexed_View
 
+Default Display Text Format:  
+_{DataObjectId}: {SocialCommentId}_  
+Default Search Member:  
+_DataObjectId_  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -5,6 +5,11 @@ uid: Applications.Service.ServiceActivityAgreedServices
 
 Contains the services, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Services
 
+Default Display Text Format:  
+_{ServiceActivityService.ServiceActivity.DocumentType.Code}:{ServiceActivityService.ServiceActivity.DocumentNo}:{ServiceActivityService.LineNo} - {ServiceActivityService.ServiceActivity.DocumentType.TypeName:T}_  
+Default Search Member:  
+_ServiceActivityService.ServiceActivity.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -34,6 +39,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -45,6 +51,7 @@ _Default Value_: **NewGuid**
 The [ServiceActivityService](Applications.Service.ServiceActivityAgreedServices.md#serviceactivityservice) to which this ServiceActivityAgreedService belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
 _Type_: **[ServiceActivityServices](Applications.Service.ServiceActivityServices.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceAgreementService

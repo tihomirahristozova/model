@@ -5,6 +5,11 @@ uid: Applications.PersonalData.DataSubjectRightRequests
 
 Contains user requests for application of user rights. Entity: Pdm_Data_Subject_Right_Requests (Introduced in version 18.2)
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -48,6 +53,7 @@ _Default Value_: **CurrentDateTime**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

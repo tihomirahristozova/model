@@ -80,6 +80,10 @@
 <h1 id="communitiesnotifications-entity">Communities.Notifications Entity</h1>
 
 <p>A single notification of a user. Entity: Cmm_Notifications (Introduced in version 20.1)</p>
+<p>Default Display Text Format:<br>
+<em>{Id}</em><br>
+Default Search Member:<br>
+<em>Id</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -148,6 +152,7 @@
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isread">IsRead</h3>
@@ -174,6 +179,7 @@
 <h3 id="user">User</h3>
 <p>The user, who is notified. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

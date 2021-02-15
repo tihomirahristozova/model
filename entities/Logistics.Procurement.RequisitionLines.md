@@ -5,6 +5,11 @@ uid: Logistics.Procurement.RequisitionLines
 
 Detail lines of Requistions. Entity: Scm_Requisition_Lines
 
+Default Display Text Format:  
+_{Requisition.DocumentType.Code}:{Requisition.DocumentNo}:{LineNo} - {Requisition.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Requisition.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -35,6 +40,7 @@ Detail lines of Requistions. Entity: Scm_Requisition_Lines
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -121,6 +127,7 @@ _Front-End Recalc Expressions:_
 The [Requisition](Logistics.Procurement.RequisitionLines.md#requisition) to which this RequisitionLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[Requisitions](Logistics.Procurement.Requisitions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -149,6 +156,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [Requisition](Logistics.Procurement.RequisitionLines.md#requisition) to which this RequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Requisitions](Logistics.Procurement.Requisitions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SuggestedSupplier

@@ -5,6 +5,11 @@ uid: Applications.PersonalData.JointControllers
 
 Contains relationship between process and joint controllers. For processes with control role, these are the joint controllers. Otherwise, these are the joint controllers, on behalf of which the enterprise company processes the data. Entity: Pdm_Joint_Controllers (Introduced in version 18.2)
 
+Default Display Text Format:  
+_{PersonalDataProcess.Code}: {PersonalDataProcess.Name:T}_  
+Default Search Member:  
+_PersonalDataProcess.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ Contains relationship between process and joint controllers. For processes with 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

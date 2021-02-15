@@ -80,6 +80,10 @@
 <h1 id="systemssecuritygroupaccesskeys-entity">Systems.Security.GroupAccessKeys Entity</h1>
 
 <p>Specifies the access keys for which the user groups have permissions. The existance of a record grants read permission. Additional permissions are granted through specialized fields. Entity: Sec_Group_Access_Keys</p>
+<p>Default Display Text Format:<br>
+<em>{Group.Name:T}</em><br>
+Default Search Member:<br>
+<em>Group.Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -203,6 +207,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="permission1">Permission1</h3>
@@ -269,10 +274,12 @@
 <h3 id="accesskey">AccessKey</h3>
 <p>This access key, to which we are granting access permissions. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="group">Group</h3>
 <p>The group, which is granted with access permission. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Groups.html">Groups</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

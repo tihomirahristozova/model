@@ -80,6 +80,10 @@
 <h1 id="logisticsshipmenttransportationexecutionlines-entity">Logistics.Shipment.TransportationExecutionLines Entity</h1>
 
 <p>Contains details of executions of transportation order lines. Entity: Log_Transportation_Execution_Lines (Introduced in version 18.2)</p>
+<p>Default Display Text Format:<br>
+<em>{TransportationExecution.DocumentType.Code}:{TransportationExecution.DocumentNo}:{LineNo} - {TransportationExecution.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>TransportationExecution.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -195,6 +199,7 @@
 <code>obj.TransportationExecution.ExecutionTime</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -264,6 +269,7 @@ Allowed values for the <a href="Logistics.Shipment.TransportationExecutionLines.
 <h3 id="document">Document</h3>
 <p>The <a href="Logistics.Shipment.TransportationExecutionLines.html#transportationexecution">TransportationExecution</a> to which this TransportationExecutionLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationExecutions.html">TransportationExecutions</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="executionoftransportationorderline">ExecutionOfTransportationOrderLine</h3>
 <p>The transportation order line, which is executed. [Required] [Filter(multi eq)]</p>
@@ -280,6 +286,7 @@ Allowed values for the <a href="Logistics.Shipment.TransportationExecutionLines.
 <h3 id="transportationexecution">TransportationExecution</h3>
 <p>The <a href="Logistics.Shipment.TransportationExecutionLines.html#transportationexecution">TransportationExecution</a> to which this TransportationExecutionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationExecutions.html">TransportationExecutions</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

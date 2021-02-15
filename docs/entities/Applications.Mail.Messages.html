@@ -80,6 +80,10 @@
 <h1 id="applicationsmailmessages-entity">Applications.Mail.Messages Entity</h1>
 
 <p>Represents email messages. Entity: Mail_Messages</p>
+<p>Default Display Text Format:<br>
+<em>{MailBoxFolder.FolderName:T}</em><br>
+Default Search Member:<br>
+<em>MailBoxFolder.FolderName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -215,6 +219,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isencrypted">IsEncrypted</h3>
@@ -258,6 +263,7 @@
 <h3 id="mailboxfolder">MailBoxFolder</h3>
 <p>The <a href="Applications.Mail.BoxFolders.html">BoxFolder</a> to which this Message belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.Mail.BoxFolders.html">BoxFolders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="relatedtoparty">RelatedToParty</h3>
 <p>The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. [Filter(multi eq)]</p>

@@ -80,6 +80,10 @@
 <h1 id="applicationsserviceserviceagreementmaterials-entity">Applications.Service.ServiceAgreementMaterials Entity</h1>
 
 <p>Contains the free materials, included in the service agreement. Entity: Srv_Service_Agreement_Materials</p>
+<p>Default Display Text Format:<br>
+<em>{ServiceAgreement.DocumentType.Code}:{ServiceAgreement.DocumentNo}:{LineNo} - {ServiceAgreement.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>ServiceAgreement.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -167,6 +171,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -210,6 +215,7 @@
 <h3 id="document">Document</h3>
 <p>The <a href="Applications.Service.ServiceAgreementMaterials.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <p>Paid or agreed in advance material that won't be invoiced after service activities. [Required] [Filter(multi eq)]</p>
@@ -224,6 +230,7 @@
 <h3 id="serviceagreement">ServiceAgreement</h3>
 <p>The <a href="Applications.Service.ServiceAgreementMaterials.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

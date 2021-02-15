@@ -5,6 +5,11 @@ uid: Finance.Assets.AssetGroups
 
 User-defined grouping of the assets. Entity: Ast_Asset_Groups
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -28,12 +33,14 @@ User-defined grouping of the assets. Entity: Ast_Asset_Groups
 The unique code of the AssetGroup. [Required] [Filter(eq)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

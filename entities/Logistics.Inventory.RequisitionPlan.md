@@ -5,6 +5,11 @@ uid: Logistics.Inventory.RequisitionPlan
 
 The current requisition (MRP) plan. The data is deleted and re-created upon each planning. Entity: Inv_Requisition_Plan
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -111,6 +116,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### NetRequirements

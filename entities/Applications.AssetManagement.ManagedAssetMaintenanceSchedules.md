@@ -5,6 +5,11 @@ uid: Applications.AssetManagement.ManagedAssetMaintenanceSchedules
 
 Contains the maintenance schedules for the managed assets. Entity: Eam_Managed_Asset_Maintenance_Schedules (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{ManagedAsset.Code}: {ManagedAsset.Name:T}_  
+Default Search Member:  
+_ManagedAsset.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -28,6 +33,7 @@ Contains the maintenance schedules for the managed assets. Entity: Eam_Managed_A
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -78,6 +84,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The managed asset for which the maintenance schedule applies. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

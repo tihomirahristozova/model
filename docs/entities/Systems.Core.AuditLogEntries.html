@@ -80,6 +80,10 @@
 <h1 id="systemscoreauditlogentries-entity">Systems.Core.AuditLogEntries Entity</h1>
 
 <p>Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log_Entries (Introduced in version 18.2)</p>
+<p>Default Display Text Format:<br>
+<em>{ApplicationName:T}</em><br>
+Default Search Member:<br>
+<em>ApplicationName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -216,6 +220,7 @@ Allowed values for the <a href="Systems.Core.AuditLogEntries.html#eventclass">Ev
 <h3 id="eventtimeutc">EventTimeUtc</h3>
 <p>The exact date and time (in Utc) when the event occurred. [Required] [Default(Now)] [Filter(ge;le)] [ORD]</p>
 <p><em>Type</em>: <strong>datetime</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
@@ -294,6 +299,7 @@ Allowed values for the <a href="Systems.Core.AuditLogEntries.html#eventtype">Eve
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>

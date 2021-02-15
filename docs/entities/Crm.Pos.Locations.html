@@ -80,6 +80,10 @@
 <h1 id="crmposlocations-entity">Crm.Pos.Locations Entity</h1>
 
 <p>Defines a company location as POS enabled location. Entity: Pos_Locations (Introduced in version 19.1)</p>
+<p>Default Display Text Format:<br>
+<em>{PosLocationCode}</em><br>
+Default Search Member:<br>
+<em>PosLocationCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -132,6 +136,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
@@ -149,10 +154,12 @@
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company of the POS location. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
 <p>The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

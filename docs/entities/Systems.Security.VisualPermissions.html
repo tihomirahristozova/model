@@ -80,6 +80,10 @@
 <h1 id="systemssecurityvisualpermissions-entity">Systems.Security.VisualPermissions Entity</h1>
 
 <p>Contains permissions, which are honored only by client applications and are used to provide access to (primarily show/hide) different elements of the user interface. Entity: Sec_Visual_Permissions</p>
+<p>Default Display Text Format:<br>
+<em>{ApplicationName:T}</em><br>
+Default Search Member:<br>
+<em>ApplicationName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -157,6 +161,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="operationname">OperationName</h3>

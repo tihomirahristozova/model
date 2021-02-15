@@ -5,6 +5,11 @@ uid: Logistics.Inventory.Lots
 
 Warehouse lots. They contain one row for each specific product, status, production batch and other specific warehousing conditions. Lot status can block certain operations. Entity: Inv_Lots
 
+Default Display Text Format:  
+_{Number}_  
+Default Search Member:  
+_Number_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -52,6 +57,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -149,6 +155,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product to which the lot is bound. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReceiptStoreTransaction

@@ -5,6 +5,11 @@ uid: Logistics.Shipment.TransportationVehicles
 
 A vehicle, which is used for transportation. One actual vehicle might be defined multiple times as transportation vehicle - for different modes of transportation or cargo types. Entity: Log_Transportation_Vehicles
 
+Default Display Text Format:  
+_{Code}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -32,12 +37,14 @@ A vehicle, which is used for transportation. One actual vehicle might be defined
 The unique code (or call sign) of this transportation vehicle. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

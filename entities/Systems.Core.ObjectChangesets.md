@@ -5,6 +5,11 @@ uid: Systems.Core.ObjectChangesets
 
 A set of changes, performed in one request. Entity: Sys_Object_Changesets (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{ApplicationName:T}_  
+Default Search Member:  
+_ApplicationName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -40,6 +45,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -56,6 +62,7 @@ _Supports Order By_: **False**
 Date and time (in Utc) when the changeset was processed by the server. [Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD]
 
 _Type_: **datetime**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDateTimeUtc**  
@@ -68,6 +75,7 @@ _Default Value_: **CurrentDateTimeUtc**
 The user which initiated the change. null when it is unknown. [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

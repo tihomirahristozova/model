@@ -5,6 +5,11 @@ uid: Applications.Fleet.VehicleSetVehicles
 
 Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicles
 
+Default Display Text Format:  
+_{VehicleSet.Name:T}_  
+Default Search Member:  
+_VehicleSet.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicl
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

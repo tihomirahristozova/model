@@ -5,6 +5,11 @@ uid: Applications.AssetManagement.MaintenanceTypes
 
 Types of maintenances which can be scheduled and performed on the managed assets. Maintenances can be scheduled based on date and tracked parameter change. Entity: Eam_Maintenance_Types (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -32,6 +37,7 @@ Types of maintenances which can be scheduled and performed on the managed assets
 Unique code of the maintenance type. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -70,6 +76,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -89,6 +96,7 @@ _Supports Order By_: **False**
 The group, to which this maintenance type belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrackedParameter

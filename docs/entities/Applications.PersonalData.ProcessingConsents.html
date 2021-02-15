@@ -80,6 +80,10 @@
 <h1 id="applicationspersonaldataprocessingconsents-entity">Applications.PersonalData.ProcessingConsents Entity</h1>
 
 <p>Consents of data subjects for processing of their personal data. Entity: Pdm_Processing_Consents (Introduced in version 18.2)</p>
+<p>Default Display Text Format:<br>
+<em>{ParentName:T}</em><br>
+Default Search Member:<br>
+<em>ParentName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -292,6 +296,7 @@ Allowed values for the <a href="Applications.PersonalData.ProcessingConsents.htm
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>

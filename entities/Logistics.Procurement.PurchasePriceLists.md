@@ -5,6 +5,11 @@ uid: Logistics.Procurement.PurchasePriceLists
 
 Contains purchase price list headers. Entity: Scm_Purchase_Price_Lists
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -28,6 +33,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -36,6 +42,7 @@ _Default Value_: **NewGuid**
 The name of this PurchasePriceList. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

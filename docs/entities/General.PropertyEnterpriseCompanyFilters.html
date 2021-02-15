@@ -80,6 +80,10 @@
 <h1 id="generalpropertyenterprisecompanyfilters-entity">General.PropertyEnterpriseCompanyFilters Entity</h1>
 
 <p>Provides a way to apply different filtering of the property allowed values for the different enterprise companies. Entity: Gen_Property_Enterprise_Company_Filters</p>
+<p>Default Display Text Format:<br>
+<em>{Property.Code}: {Property.AllowedValuesEntityName:T}</em><br>
+Default Search Member:<br>
+<em>Property.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -132,12 +136,14 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company for which the current filter is specifed. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="property">Property</h3>
 <p>The <a href="General.CustomProperties.html">CustomProperty</a> to which this PropertyEnterpriseCompanyFilter belongs. [Required] [Filter(multi eq)] [Owner]</p>

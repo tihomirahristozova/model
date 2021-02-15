@@ -5,6 +5,11 @@ uid: Finance.Accounting.TemplateLines
 
 Each template line contains the posting to a single set of debit and credit account. It also specifies the way to calculate the amount. Entity: Acc_Template_Lines
 
+Default Display Text Format:  
+_{AmountColumnName:T}_  
+Default Search Member:  
+_AmountColumnName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -106,6 +111,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -177,6 +183,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [Template](Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Templates](Finance.Accounting.Templates.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

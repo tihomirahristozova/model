@@ -5,6 +5,11 @@ uid: Systems.Security.UserProviderTokens
 
 Stores verification tokens for users - e.g. tokens for email, phone or two-factor authentication. Entity: Sec_User_Provider_Tokens (Introduced in version 18.2)
 
+Default Display Text Format:  
+_{LoginProviderName:T}_  
+Default Search Member:  
+_LoginProviderName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Stores verification tokens for users - e.g. tokens for email, phone or two-facto
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

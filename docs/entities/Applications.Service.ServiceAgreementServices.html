@@ -80,6 +80,10 @@
 <h1 id="applicationsserviceserviceagreementservices-entity">Applications.Service.ServiceAgreementServices Entity</h1>
 
 <p>Contains the free services, included in the service agreement. Entity: Srv_Service_Agreement_Services</p>
+<p>Default Display Text Format:<br>
+<em>{ServiceAgreement.DocumentType.Code}:{ServiceAgreement.DocumentNo} - {ServiceAgreement.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>ServiceAgreement.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -157,6 +161,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -194,6 +199,7 @@
 <h3 id="serviceagreement">ServiceAgreement</h3>
 <p>The <a href="Applications.Service.ServiceAgreementServices.html#serviceagreement">ServiceAgreement</a> to which this ServiceAgreementService belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceproduct">ServiceProduct</h3>
 <p>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). [Filter(multi eq)]</p>

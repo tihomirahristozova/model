@@ -5,6 +5,11 @@ uid: Applications.Rental.AssetGroups
 
 Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Groups
 
+Default Display Text Format:  
+_{RentalAssetGroupCode}: {RentalAssetGroupName:T}_  
+Default Search Member:  
+_RentalAssetGroupCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -30,12 +35,14 @@ Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Gr
 The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. [ORD] [ReadOnly]
 
 _Type_: **string (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

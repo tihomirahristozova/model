@@ -5,6 +5,11 @@ uid: Finance.Cost.TemplateLevels
 
 Represents named hierarchy levels within a cost calculation. The hierarchy levels are used to specify cost allocation mechanisms. Entity: Cost_Template_Levels
 
+Default Display Text Format:  
+_{LevelName:T}_  
+Default Search Member:  
+_LevelName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -34,6 +39,7 @@ _Default Value_: **0**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

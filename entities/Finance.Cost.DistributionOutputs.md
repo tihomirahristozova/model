@@ -5,6 +5,11 @@ uid: Finance.Cost.DistributionOutputs
 
 Contains the output data for the specified period. This is the output on which cost is distributed. Entity: Cost_Distribution_Outputs
 
+Default Display Text Format:  
+_{CostDistribution.DocumentType.Code}:{CostDistribution.DocumentNo} - {CostDistribution.DocumentType.TypeName:T}_  
+Default Search Member:  
+_CostDistribution.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Contains the output data for the specified period. This is the output on which c
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

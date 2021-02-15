@@ -80,6 +80,10 @@
 <h1 id="logisticsprocurementreceivingorders-entity">Logistics.Procurement.ReceivingOrders Entity</h1>
 
 <p>Contains the received quantities from a supplier. Entity: Scm_Receiving_Orders</p>
+<p>Default Display Text Format:<br>
+<em>{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -477,12 +481,14 @@
 <h3 id="documentdate">DocumentDate</h3>
 <p>The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>date</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="documentno">DocumentNo</h3>
 <p>Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="documentnotes">DocumentNotes</h3>
@@ -499,10 +505,12 @@
 <h3 id="entityname">EntityName</h3>
 <p>The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="invoicedocumentno">InvoiceDocumentNo</h3>
@@ -657,6 +665,7 @@ Enumeration of document system states<br>
 <h3 id="void">Void</h3>
 <p>True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
@@ -683,6 +692,7 @@ Enumeration of document system states<br>
 <h3 id="adjusteddocument">AdjustedDocument</h3>
 <p>The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assignedtouser">AssignedToUser</h3>
 <p>The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
@@ -703,10 +713,12 @@ Enumeration of document system states<br>
 <h3 id="documenttype">DocumentType</h3>
 <p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company which issued the document. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
 <p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
@@ -723,10 +735,12 @@ Enumeration of document system states<br>
 <h3 id="masterdocument">MasterDocument</h3>
 <p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
 <p>In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
 <p>Payment account that is used for the payments of this delivery. [Filter(multi eq)]</p>
@@ -741,6 +755,7 @@ Enumeration of document system states<br>
 <h3 id="primecausedocument">PrimeCauseDocument</h3>
 <p>The document that is the prime cause for creation of the current document. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseorder">PurchaseOrder</h3>
 <p>The purchase order which is received with this receiving order. [Filter(multi eq)]</p>
@@ -773,6 +788,7 @@ Enumeration of document system states<br>
 <h3 id="supplier">Supplier</h3>
 <p>The supplier of the products for this receiving order. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.Suppliers.html">Suppliers</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="tocompanydivision">ToCompanyDivision</h3>
 <p>The division of the company, receiving the document. null when the document is not received by any specific division. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>

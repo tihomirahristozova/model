@@ -5,6 +5,11 @@ uid: General.Geography.GeoPoints
 
 Geographical (geo) points are used as points of interest on the map. They are used for routing and other purposes. The points of interest for the different enterprise companies are different. Entity: Gen_Geo_Points
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -35,6 +40,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

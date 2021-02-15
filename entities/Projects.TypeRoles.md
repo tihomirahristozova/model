@@ -5,6 +5,11 @@ uid: Projects.TypeRoles
 
 Contains the roles of the participants of each project type. Entity: Prj_Type_Roles
 
+Default Display Text Format:  
+_{RoleName:T}_  
+Default Search Member:  
+_RoleName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -33,6 +38,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Default Value_: **NewGuid**  
 

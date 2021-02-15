@@ -5,6 +5,11 @@ uid: Finance.Accounting.Templates
 
 Accounting templates are used to automate the postings for repetitive business transactions. Templates can be bound to almost all documents and automate their postings. Entity: Acc_Templates
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -32,6 +37,7 @@ Accounting templates are used to automate the postings for repetitive business t
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -67,6 +73,7 @@ _Supports Order By_: **False**
 The route which activates the template. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

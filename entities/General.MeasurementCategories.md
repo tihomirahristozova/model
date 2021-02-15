@@ -5,6 +5,11 @@ uid: General.MeasurementCategories
 
 Categories of measurement units. The units within a category are directly convertable to each other. Each category contains one base unit and unlimited number of derived units with fixed ratio to the base unit. Entity: Gen_Measurement_Categories
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ Categories of measurement units. The units within a category are directly conver
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -42,6 +48,7 @@ _Default Value_: **False**
 The name of this MeasurementCategory. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

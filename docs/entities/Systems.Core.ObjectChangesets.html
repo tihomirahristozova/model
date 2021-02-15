@@ -80,6 +80,10 @@
 <h1 id="systemscoreobjectchangesets-entity">Systems.Core.ObjectChangesets Entity</h1>
 
 <p>A set of changes, performed in one request. Entity: Sys_Object_Changesets (Introduced in version 19.1)</p>
+<p>Default Display Text Format:<br>
+<em>{ApplicationName:T}</em><br>
+Default Search Member:<br>
+<em>ApplicationName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -154,6 +158,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="serverversion">ServerVersion</h3>
@@ -164,6 +169,7 @@
 <h3 id="timeutc">TimeUtc</h3>
 <p>Date and time (in Utc) when the changeset was processed by the server. [Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD]</p>
 <p><em>Type</em>: <strong>datetime</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong></p>
@@ -171,6 +177,7 @@
 <h3 id="user">User</h3>
 <p>The user which initiated the change. null when it is unknown. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

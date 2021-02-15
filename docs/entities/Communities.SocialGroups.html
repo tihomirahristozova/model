@@ -80,6 +80,10 @@
 <h1 id="communitiessocialgroups-entity">Communities.SocialGroups Entity</h1>
 
 <p>Represents a group of users, sharing interest in the group topic. Entity: Cmm_Social_Groups (Introduced in version 20.1)</p>
+<p>Default Display Text Format:<br>
+<em>{Code}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -133,10 +137,12 @@
 <h3 id="code">Code</h3>
 <p>Unique code of the group. Also used as group slug for Internet URL purposes. [Required] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>

@@ -5,6 +5,11 @@ uid: Systems.Core.DataEntryDefaultValues
 
 Contains user-specified default values for columns in data entry forms. Entity: Sys_Default_Values
 
+Default Display Text Format:  
+_{ColumnName:T}_  
+Default Search Member:  
+_ColumnName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -42,6 +47,7 @@ _Supports Order By_: **False**
 If not null specifies that the default should be applied only if Form_Name equals the specified value. [Filter(eq)] [ORD]
 
 _Type_: **string (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 
@@ -72,6 +78,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

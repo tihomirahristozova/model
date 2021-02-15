@@ -5,6 +5,11 @@ uid: Applications.Rental.AssetTypes
 
 Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Types
 
+Default Display Text Format:  
+_{RentalAssetTypeName:T}_  
+Default Search Member:  
+_RentalAssetTypeName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Ty
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

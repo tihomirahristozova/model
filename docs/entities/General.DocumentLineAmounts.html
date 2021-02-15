@@ -80,6 +80,10 @@
 <h1 id="generaldocumentlineamounts-entity">General.DocumentLineAmounts Entity</h1>
 
 <p>Specifies user-defined distribution pattern of additonal amount for specific document. Entity: Gen_Document_Line_Amounts</p>
+<p>Default Display Text Format:<br>
+<em>{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Document.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -146,6 +150,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="linepercent">LinePercent</h3>
@@ -158,6 +163,7 @@
 <h3 id="document">Document</h3>
 <p>The <a href="General.DocumentLineAmounts.html#document">Document</a> to which this DocumentLineAmount belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
 <p>The type of amount for which the distribution pattern is specified. [Required] [Filter(multi eq)]</p>
@@ -170,6 +176,7 @@
 <h3 id="referenceddocument">ReferencedDocument</h3>
 <p>When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated). [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

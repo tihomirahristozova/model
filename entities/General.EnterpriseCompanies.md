@@ -5,6 +5,11 @@ uid: General.EnterpriseCompanies
 
 The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Companies
 
+Default Display Text Format:  
+_{Company.RegistrationNumber}: {Company.PartyName:T}_  
+Default Search Member:  
+_Company.RegistrationNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -107,6 +112,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -165,6 +171,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Contains the base company data on which this enterprise company is based. [Required] [Filter(multi eq)]
 
 _Type_: **[Companies](General.Contacts.Companies.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExchangeDifferenceCreditAccount

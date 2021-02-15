@@ -5,6 +5,11 @@ uid: General.DocumentAmountTypeDependencies
 
 Specifies the base amounts on which an amount depends. . Entity: Gen_Document_Amount_Type_Dependencies
 
+Default Display Text Format:  
+_{DocumentAmountType.AmountTypeCode}: {DocumentAmountType.AmountTypeName:T}_  
+Default Search Member:  
+_DocumentAmountType.AmountTypeCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Specifies the base amounts on which an amount depends. . Entity: Gen_Document_Am
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -42,6 +48,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The amount for which the base amount is specified. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -5,6 +5,11 @@ uid: Crm.Distributors
 
 Distributors are external for the enterprise persons or companies who obtain sales orders from end-customers in benefit of the enterprise. Entity: Crm_Distributors
 
+Default Display Text Format:  
+_{Party.PartyCode}: {Party.PartyName:T}_  
+Default Search Member:  
+_Party.PartyCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -33,6 +38,7 @@ _Default Value_: **0**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

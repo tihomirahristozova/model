@@ -5,6 +5,11 @@ uid: General.Resources.ResourceGroups
 
 Resource groups categorize the resources. Entity: Gen_Resource_Groups
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -31,6 +36,7 @@ Resource groups categorize the resources. Entity: Gen_Resource_Groups
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -57,6 +63,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The parent resource group or null if this is root group. [Filter(multi eq)]
 
 _Type_: **[ResourceGroups](General.Resources.ResourceGroups.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

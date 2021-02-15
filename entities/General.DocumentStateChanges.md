@@ -5,6 +5,11 @@ uid: General.DocumentStateChanges
 
 History of document state changes. Entity: Gen_Document_State_Changes
 
+Default Display Text Format:  
+_{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Document.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -29,6 +34,7 @@ History of document state changes. Entity: Gen_Document_State_Changes
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -95,6 +101,7 @@ _Default Value_: **False**
 The document which has changed state. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Documents](General.Documents.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UserStatus

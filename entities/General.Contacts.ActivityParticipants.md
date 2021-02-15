@@ -5,6 +5,11 @@ uid: General.Contacts.ActivityParticipants
 
 Contains the additional participants in the activities. These are the participating users, besides the user to which the activitiy is assigned. Entity: Cm_Activity_Participants
 
+Default Display Text Format:  
+_{Activity.DocumentType.Code}:{Activity.DocumentNo} - {Activity.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Activity.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Contains the additional participants in the activities. These are the participat
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

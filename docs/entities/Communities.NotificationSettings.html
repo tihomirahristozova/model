@@ -80,6 +80,10 @@
 <h1 id="communitiesnotificationsettings-entity">Communities.NotificationSettings Entity</h1>
 
 <p>User notification settings for the different notification classes. Entity: Cmm_Notification_Settings (Introduced in version 20.1)</p>
+<p>Default Display Text Format:<br>
+<em>{Id}</em><br>
+Default Search Member:<br>
+<em>Id</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -137,6 +141,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notificationclass">NotificationClass</h3>
@@ -166,6 +171,7 @@
 <h3 id="user">User</h3>
 <p>The user for whom the notification setting is about. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

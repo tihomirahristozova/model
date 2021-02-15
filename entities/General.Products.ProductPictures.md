@@ -5,6 +5,11 @@ uid: General.Products.ProductPictures
 
 Pictures of products. Entity: Gen_Product_Pictures
 
+Default Display Text Format:  
+_{Product.PartNumber}: {Product.Name:T}_  
+Default Search Member:  
+_Product.PartNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -37,6 +42,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -80,6 +80,10 @@
 <h1 id="generalgeographycountries-entity">General.Geography.Countries Entity</h1>
 
 <p>List of countries, listed by their internet suffix code. Entity: Gen_Countries</p>
+<p>Default Display Text Format:<br>
+<em>{Code}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -116,10 +120,12 @@
 <h3 id="code">Code</h3>
 <p>Internet suffix code of the country. [Required] [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="intrastatcode">IntrastatCode</h3>

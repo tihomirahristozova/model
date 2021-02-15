@@ -5,6 +5,11 @@ uid: Finance.Cost.CalculationProductOutputs
 
 Represents costs allocated to product outputs. Entity: Cost_Calculation_Product_Outputs
 
+Default Display Text Format:  
+_{Calculation.DocumentType.Code}:{Calculation.DocumentNo} - {Calculation.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Calculation.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -33,6 +38,7 @@ Represents costs allocated to product outputs. Entity: Cost_Calculation_Product_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -73,6 +79,7 @@ _Default Value_: **0**
 The [Calculation](Finance.Cost.CalculationProductOutputs.md#calculation) to which this CalculationProductOutput belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Calculations](Finance.Cost.Calculations.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot

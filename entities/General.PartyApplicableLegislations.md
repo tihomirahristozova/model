@@ -5,6 +5,11 @@ uid: General.PartyApplicableLegislations
 
 Specifies a legislation, which is applicable for a party. A single party can have more than one applicable legislations. Entity: Gen_Party_Applicable_Legislations (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{Party.PartyCode}: {Party.PartyName:T}_  
+Default Search Member:  
+_Party.PartyCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -64,6 +69,7 @@ _Supports Order By_: **True**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -83,6 +89,7 @@ _Supports Order By_: **False**
 The [Party](General.Contacts.Parties.md) to which this PartyApplicableLegislation belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

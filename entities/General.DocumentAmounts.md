@@ -5,6 +5,11 @@ uid: General.DocumentAmounts
 
 Contains a specific instance of an additional amount for a specific document. Entity: Gen_Document_Amounts
 
+Default Display Text Format:  
+_{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Document.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -46,6 +51,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -107,6 +113,7 @@ _Default Value_: **True**
 The [Document](General.DocumentAmounts.md#document) to which this DocumentAmount belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Documents](General.Documents.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentAmountType

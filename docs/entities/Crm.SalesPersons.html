@@ -80,6 +80,10 @@
 <h1 id="crmsalespersons-entity">Crm.SalesPersons Entity</h1>
 
 <p>Sales persons (or representatives) are sellers inside the enterprise company who sell the products to customers. Entity: Crm_Sales_Persons</p>
+<p>Default Display Text Format:<br>
+<em>{Person.PartyCode}: {Person.PartyName:T}</em><br>
+Default Search Member:<br>
+<em>Person.PartyCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -176,6 +180,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
@@ -196,6 +201,7 @@
 <h3 id="person">Person</h3>
 <p>Base personal record. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salespersongroup">SalesPersonGroup</h3>
 <p>The sales person group to which this sales person is assigned. [Required] [Filter(multi eq)]</p>

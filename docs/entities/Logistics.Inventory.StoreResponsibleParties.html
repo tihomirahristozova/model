@@ -80,6 +80,10 @@
 <h1 id="logisticsinventorystoreresponsibleparties-entity">Logistics.Inventory.StoreResponsibleParties Entity</h1>
 
 <p>Contains the list of responsible parties (usually persons) for the stores. Stores can have multiple responsible parties. Entity: Inv_Store_Responsible_Parties</p>
+<p>Default Display Text Format:<br>
+<em>{Store.PartyCode}: {Store.PartyName:T}</em><br>
+Default Search Member:<br>
+<em>Store.PartyCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -122,6 +126,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>

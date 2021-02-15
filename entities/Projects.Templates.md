@@ -5,6 +5,11 @@ uid: Projects.Templates
 
 Contains templates for creating new projects. Entity: Prj_Templates
 
+Default Display Text Format:  
+_{ProjectTemplateName:T}_  
+Default Search Member:  
+_ProjectTemplateName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Contains templates for creating new projects. Entity: Prj_Templates
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

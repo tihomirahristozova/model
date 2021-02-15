@@ -5,6 +5,11 @@ uid: Applications.Fleet.VehicleAlerts
 
 Contains alerts, specific to one vehicle. Alerts are created based on many sources and stay active, until excplicitly hidden. Entity: Fleet_Vehicle_Alerts
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -44,6 +49,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -69,6 +75,7 @@ _Supports Order By_: **False**
 The time of the alert. [Required] [ORD]
 
 _Type_: **datetime**  
+_Indexed_: **True**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **True**  
 
@@ -80,6 +87,7 @@ _Supports Order By_: **True**
 The vehicle, for which is the alert. [Required] [Filter(multi eq)]
 
 _Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

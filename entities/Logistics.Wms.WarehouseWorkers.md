@@ -5,6 +5,11 @@ uid: Logistics.Wms.WarehouseWorkers
 
 Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_Workers (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -46,6 +51,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -89,6 +95,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The warehouse, where the worker works. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

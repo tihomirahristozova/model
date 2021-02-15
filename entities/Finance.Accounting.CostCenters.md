@@ -5,6 +5,11 @@ uid: Finance.Accounting.CostCenters
 
 Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Centers
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -27,6 +32,7 @@ Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Cent
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

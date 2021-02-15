@@ -80,6 +80,10 @@
 <h1 id="generalproductcatalogs-entity">General.ProductCatalogs Entity</h1>
 
 <p>Product catalogs serve to organize the products for display primarily in web pages. Entity: Gen_Product_Catalogs</p>
+<p>Default Display Text Format:<br>
+<em>{Code}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -296,6 +300,7 @@ Allowed values for the <a href="General.ProductCatalogs.html#backgroundrepeat">B
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="logo">Logo</h3>
@@ -321,6 +326,7 @@ Allowed values for the <a href="General.ProductCatalogs.html#backgroundrepeat">B
 <h3 id="website">WebSite</h3>
 <p>The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. [Filter(multi eq)] [Introduced in version 19.1]</p>
 <p><em>Type</em>: <strong><a href="Systems.Core.WebSites.html">WebSites</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

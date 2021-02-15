@@ -5,6 +5,11 @@ uid: Crm.Customers
 
 Customer contracts list. For each combination of Enterprise Company and external Party there can be zero or one records of this. Entity: Crm_Customers
 
+Default Display Text Format:  
+_{Number}_  
+Default Search Member:  
+_Number_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -156,6 +161,7 @@ _Default Value_: **0**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -164,6 +170,7 @@ _Default Value_: **NewGuid**
 Unique customer number. [Filter(eq;like)] [ORD]
 
 _Type_: **string (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -215,6 +222,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The user-defined type of this customer. null when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes. [Filter(multi eq)]
 
 _Type_: **[CustomerTypes](Crm.CustomerTypes.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultCurrency
@@ -261,6 +269,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies. [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -270,6 +279,7 @@ _Front-End Recalc Expressions:_
 Base party Id. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesPerson
@@ -277,6 +287,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The default sales person for new sales documents for this customer. [Filter(multi eq)]
 
 _Type_: **[SalesPersons](Crm.SalesPersons.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServicedByEnterpriseCompanyLocation

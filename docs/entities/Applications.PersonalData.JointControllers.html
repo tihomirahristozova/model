@@ -80,6 +80,10 @@
 <h1 id="applicationspersonaldatajointcontrollers-entity">Applications.PersonalData.JointControllers Entity</h1>
 
 <p>Contains relationship between process and joint controllers. For processes with control role, these are the joint controllers. Otherwise, these are the joint controllers, on behalf of which the enterprise company processes the data. Entity: Pdm_Joint_Controllers (Introduced in version 18.2)</p>
+<p>Default Display Text Format:<br>
+<em>{PersonalDataProcess.Code}: {PersonalDataProcess.Name:T}</em><br>
+Default Search Member:<br>
+<em>PersonalDataProcess.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -127,6 +131,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>

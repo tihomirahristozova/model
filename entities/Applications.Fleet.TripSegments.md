@@ -5,6 +5,11 @@ uid: Applications.Fleet.TripSegments
 
 Represents the segments which comprise the route of the trips. Entity: Fleet_Trip_Segments
 
+Default Display Text Format:  
+_{Trip.DocumentType.Code}:{Trip.DocumentNo} - {Trip.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Trip.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -37,6 +42,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

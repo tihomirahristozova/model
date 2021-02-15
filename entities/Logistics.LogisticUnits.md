@@ -5,6 +5,11 @@ uid: Logistics.LogisticUnits
 
 Composition of products established for transport and/or storage which needs to be managed through the supply chain. Entity: Log_Logistic_Units (Introduced in version 21.1.0.77)
 
+Default Display Text Format:  
+_{SerialCode}_  
+Default Search Member:  
+_SerialCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -44,6 +49,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -68,6 +74,7 @@ _Supports Order By_: **False**
 Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 
@@ -93,6 +100,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. null means that the unit is not a tradeable item. [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

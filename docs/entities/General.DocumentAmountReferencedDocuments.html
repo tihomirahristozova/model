@@ -80,6 +80,10 @@
 <h1 id="generaldocumentamountreferenceddocuments-entity">General.DocumentAmountReferencedDocuments Entity</h1>
 
 <p>Contains the documents which are referenced by each document amount. Entity: Gen_Document_Amount_Referenced_Documents</p>
+<p>Default Display Text Format:<br>
+<em>{DocumentAmount.Document.DocumentType.Code}:{DocumentAmount.Document.DocumentNo} - {DocumentAmount.Document.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>DocumentAmount.Document.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -122,16 +126,19 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documentamount">DocumentAmount</h3>
 <p>The document amount for which the referenced document is specified. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.DocumentAmounts.html">DocumentAmounts</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="referenceddocument">ReferencedDocument</h3>
 <p>The document which is referenced by the document amount. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

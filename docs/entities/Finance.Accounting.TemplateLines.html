@@ -80,6 +80,10 @@
 <h1 id="financeaccountingtemplatelines-entity">Finance.Accounting.TemplateLines Entity</h1>
 
 <p>Each template line contains the posting to a single set of debit and credit account. It also specifies the way to calculate the amount. Entity: Acc_Template_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{AmountColumnName:T}</em><br>
+Default Search Member:<br>
+<em>AmountColumnName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -258,6 +262,7 @@ Allowed values for the <a href="Finance.Accounting.TemplateLines.html#amountcond
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -302,6 +307,7 @@ Allowed values for the <a href="Finance.Accounting.TemplateLines.html#amountcond
 <h3 id="template">Template</h3>
 <p>The <a href="Finance.Accounting.TemplateLines.html#template">Template</a> to which this TemplateLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Templates.html">Templates</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

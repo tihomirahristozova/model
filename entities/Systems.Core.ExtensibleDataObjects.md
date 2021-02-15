@@ -5,6 +5,11 @@ uid: Systems.Core.ExtensibleDataObjects
 
 Extends data in other tables with attached files, custom properties, etc. Each row is an object, bound to exactly one row in the primary table. Each object can be bound to a row in a different primary table, specified in Entity_Type. Entity: Sys_Objects
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -54,6 +59,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The entity type of the row to which the object is bound. [Required] [Default(" ")] [Filter(eq)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Default Value_: ** **  
@@ -61,6 +67,7 @@ _Default Value_: ** **
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

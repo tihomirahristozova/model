@@ -5,6 +5,11 @@ uid: Crm.PromotionalPackageLines
 
 Detail records (lines) of promotional package definition. Entity: Crm_Promotional_Package_Lines
 
+Default Display Text Format:  
+_{PromotionalPackage.Code}: {PromotionalPackage.Name:T}_  
+Default Search Member:  
+_PromotionalPackage.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -31,6 +36,7 @@ Detail records (lines) of promotional package definition. Entity: Crm_Promotiona
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -113,6 +119,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [PromotionalPackage](Crm.PromotionalPackageLines.md#promotionalpackage) to which this PromotionalPackageLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PromotionalPackages](Crm.PromotionalPackages.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UnitPriceCurrency

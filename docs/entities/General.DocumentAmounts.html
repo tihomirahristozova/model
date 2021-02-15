@@ -80,6 +80,10 @@
 <h1 id="generaldocumentamounts-entity">General.DocumentAmounts Entity</h1>
 
 <p>Contains a specific instance of an additional amount for a specific document. Entity: Gen_Document_Amounts</p>
+<p>Default Display Text Format:<br>
+<em>{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Document.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -184,6 +188,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="inputamount">InputAmount</h3>
@@ -224,6 +229,7 @@
 <h3 id="document">Document</h3>
 <p>The <a href="General.DocumentAmounts.html#document">Document</a> to which this DocumentAmount belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
 <p>The type of the amount. [Required] [Filter(multi eq)]</p>

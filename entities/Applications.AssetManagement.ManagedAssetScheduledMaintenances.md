@@ -5,6 +5,11 @@ uid: Applications.AssetManagement.ManagedAssetScheduledMaintenances
 
 Contains the scheduled maintenances for the managed assets. Each maintenance can be planned based on date, parameter value or both. Past maintenance plans are kept only for reference and can be deleted at any time. Entity: Eam_Managed_Asset_Scheduled_Maintenances (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{ManagedAsset.Code}: {ManagedAsset.Name:T}_  
+Default Search Member:  
+_ManagedAsset.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -36,6 +41,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -79,6 +85,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The asset, which will be maintained. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -5,6 +5,11 @@ uid: General.Products.ProductGroupRangeProperties
 
 When specified for a product group, provides a way for automatical creation of new products, based on altering a set of values of some user-defined properties. Each value combination is used to create a new, unique product within the group. Entity: Gen_Product_Group_Range_Properties
 
+Default Display Text Format:  
+_{ProductGroup.NextPartNumber}: {ProductGroup.Name:T}_  
+Default Search Member:  
+_ProductGroup.NextPartNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -36,6 +41,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -80,6 +86,7 @@ _Supports Order By_: **False**
 The [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property

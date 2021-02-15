@@ -80,6 +80,10 @@
 <h1 id="generalcontactscompanylocations-entity">General.Contacts.CompanyLocations Entity</h1>
 
 <p>Stores company locations. The locations are parties and as such, can be organized hierarchically mixed with other structuring mechanisms. The locations, departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Locations</p>
+<p>Default Display Text Format:<br>
+<em>{PartyCode}: {PartyName:T}</em><br>
+Default Search Member:<br>
+<em>PartyCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -305,10 +309,12 @@ Allowed values for the <a href="General.Contacts.CompanyLocations.html#billto">B
 <h3 id="gln">GLN</h3>
 <p>Global Location Number used by EDI systems. [Filter(multi eq)] [ORD] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
@@ -325,6 +331,7 @@ Allowed values for the <a href="General.Contacts.CompanyLocations.html#billto">B
 <h3 id="partycode">PartyCode</h3>
 <p>The unique code of the party. [Required] [Filter(eq;like)] [ORD] [ReadOnly] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partycreationtime">PartyCreationTime</h3>
@@ -340,6 +347,7 @@ Allowed values for the <a href="General.Contacts.CompanyLocations.html#billto">B
 <h3 id="partyname">PartyName</h3>
 <p>The name of the party. [Required] [Filter(eq;like)] [ORD] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partynotes">PartyNotes</h3>
@@ -421,6 +429,7 @@ Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyTy
 <h3 id="company">Company</h3>
 <p>The company to which this location belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">Companies</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="defaultproductcodingsystem">DefaultProductCodingSystem</h3>
 <p>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. [Filter(multi eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
@@ -429,6 +438,7 @@ Allowed values for the <a href="General.Contacts.Parties.html#partytype">PartyTy
 <h3 id="parentparty">ParentParty</h3>
 <p>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. [Filter(multi eq)] (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

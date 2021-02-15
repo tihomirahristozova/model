@@ -5,6 +5,11 @@ uid: Crm.Invoicing.InvoicesOptions
 
 Default options for user document types for Invoices. Entity: Crm_Invoices_Options
 
+Default Display Text Format:  
+_{DocumentType.Code}: {DocumentType.EntityName:T}_  
+Default Search Member:  
+_DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -37,6 +42,7 @@ _Default Value_: **True**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

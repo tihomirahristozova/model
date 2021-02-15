@@ -80,6 +80,10 @@
 <h1 id="crmsalessalesorders-entity">Crm.Sales.SalesOrders Entity</h1>
 
 <p>Sales order document headers. Entity: Crm_Sales_Orders</p>
+<p>Default Display Text Format:<br>
+<em>{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -680,12 +684,14 @@ Generic enum type for DeliveryTerms properties<br>
 <h3 id="documentdate">DocumentDate</h3>
 <p>The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>date</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="documentno">DocumentNo</h3>
 <p>Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="documentnotes">DocumentNotes</h3>
@@ -702,6 +708,7 @@ Generic enum type for DeliveryTerms properties<br>
 <h3 id="entityname">EntityName</h3>
 <p>The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="fiscalsalesnumber">FiscalSalesNumber</h3>
@@ -718,6 +725,7 @@ Generic enum type for DeliveryTerms properties<br>
 <code>obj.Lines.Select( c =&gt; SalesOrderLinesRepository.LineFromDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="intrastattransactionnaturecode">IntrastatTransactionNatureCode</h3>
@@ -1020,6 +1028,7 @@ Enumeration of document system states<br>
 <h3 id="void">Void</h3>
 <p>True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
@@ -1046,6 +1055,7 @@ Enumeration of document system states<br>
 <h3 id="adjusteddocument">AdjustedDocument</h3>
 <p>The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assignedtouser">AssignedToUser</h3>
 <p>The user to which this document is assigned for handling. null means that the document is not assigned to specific user. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
@@ -1058,6 +1068,7 @@ Enumeration of document system states<br>
 <h3 id="customer">Customer</h3>
 <p>The primary customer, which placed the sales order. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="deal">Deal</h3>
 <p>The opportunity (deal) on which this order is based. [Filter(multi eq)]</p>
@@ -1090,6 +1101,7 @@ Enumeration of document system states<br>
 <h3 id="documenttype">DocumentType</h3>
 <p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="endcustomerparty">EndCustomerParty</h3>
 <p>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. [Filter(multi eq)] [Introduced in version 20.1]</p>
@@ -1100,6 +1112,7 @@ Enumeration of document system states<br>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company which issued the document. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
 <p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
@@ -1126,10 +1139,12 @@ Enumeration of document system states<br>
 <h3 id="masterdocument">MasterDocument</h3>
 <p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parent">Parent</h3>
 <p>In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
 <p>When not null, the payment account, where the payment is expected. null=no expectation for account. [Filter(multi eq)]</p>
@@ -1164,6 +1179,7 @@ Enumeration of document system states<br>
 <h3 id="primecausedocument">PrimeCauseDocument</h3>
 <p>The document that is the prime cause for creation of the current document. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
 <p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. [Filter(multi eq)] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
@@ -1172,10 +1188,12 @@ Enumeration of document system states<br>
 <h3 id="returnforinvoice">ReturnForInvoice</h3>
 <p>When specified indicates that some of the goods sold in the sales orders invoiced with Return_For_Invoice_Id are returned with the current document. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.Invoices.html">Invoices</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="returnforsalesorder">ReturnForSalesOrder</h3>
 <p>When specified indicates that some of the goods sold in Return_For_Sales_Order_Id are returned with the current document. [Filter(multi eq;like)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong></p>
 <h3 id="reverseofdocument">ReverseOfDocument</h3>
 <p>The document which the current document is reverse of. [Filter(multi eq)] [ReadOnly] (Inherited from <a href="General.Documents.html">Documents</a>)</p>
@@ -1184,6 +1202,7 @@ Enumeration of document system states<br>
 <h3 id="salesperson">SalesPerson</h3>
 <p>Internal company sales person. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.SalesPersons.html">SalesPersons</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>DetermineSalesPerson( obj.Transaction, obj.EnterpriseCompany, new [] {obj.Customer, obj.ShipToCustomer})</code></p>

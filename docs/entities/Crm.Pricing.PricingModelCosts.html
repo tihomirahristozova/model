@@ -80,6 +80,10 @@
 <h1 id="crmpricingpricingmodelcosts-entity">Crm.Pricing.PricingModelCosts Entity</h1>
 
 <p>List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs</p>
+<p>Default Display Text Format:<br>
+<em>{PricingModel.Name:T}</em><br>
+Default Search Member:<br>
+<em>PricingModel.Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -152,6 +156,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -175,6 +180,7 @@
 <h3 id="pricingmodel">PricingModel</h3>
 <p>Pricing model, for which the cost is defined. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Crm.Pricing.PricingModels.html">PricingModels</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

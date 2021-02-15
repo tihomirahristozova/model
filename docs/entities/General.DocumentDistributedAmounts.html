@@ -80,6 +80,10 @@
 <h1 id="generaldocumentdistributedamounts-entity">General.DocumentDistributedAmounts Entity</h1>
 
 <p>Contains the amounts which are distributed by the system over the document lines as a result of additional amount calculations. Entity: Gen_Document_Distributed_Amounts</p>
+<p>Default Display Text Format:<br>
+<em>{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Document.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -143,15 +147,18 @@
 <h3 id="documentlineid">DocumentLineId</h3>
 <p>The Id of the line over which the amount is distributed. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
 <p>The <a href="General.DocumentDistributedAmounts.html#document">Document</a> to which this DocumentDistributedAmount belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
 <p>The type of amount which is distributed. [Required] [Filter(multi eq)]</p>
@@ -160,6 +167,7 @@
 <h3 id="referenceddocument">ReferencedDocument</h3>
 <p>In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

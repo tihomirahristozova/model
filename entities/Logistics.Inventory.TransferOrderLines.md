@@ -5,6 +5,11 @@ uid: Logistics.Inventory.TransferOrderLines
 
 Details of Transfer Orders. Each line contains order for the movement of one product. Entity: Inv_Transfer_Order_Lines
 
+Default Display Text Format:  
+_{TransferOrder.DocumentType.Code}:{TransferOrder.DocumentNo}:{LineOrd} - {TransferOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_TransferOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -66,6 +71,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -143,6 +149,7 @@ _Front-End Recalc Expressions:_
 The parent transfer order. [Required] [Filter(multi eq)]
 
 _Type_: **[TransferOrders](Logistics.Inventory.TransferOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromStoreBin
@@ -164,6 +171,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product which will be transferred. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -212,6 +220,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The parent transfer order. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[TransferOrders](Logistics.Inventory.TransferOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -5,6 +5,11 @@ uid: Communities.SocialComments
 
 User comment to any object in the system. Entity: Cmm_Social_Comments (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -37,12 +42,14 @@ _Supports Order By_: **False**
 The exact server time (in UTC), when the comment was created. [Required] [ORD]
 
 _Type_: **datetime**  
+_Indexed_: **True**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

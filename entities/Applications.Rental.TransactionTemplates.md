@@ -5,6 +5,11 @@ uid: Applications.Rental.TransactionTemplates
 
 Specifies additional options for document routes, generating Rental Transactions. Entity: Rent_Transaction_Templates
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Specifies additional options for document routes, generating Rental Transactions
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -5,6 +5,11 @@ uid: General.DocumentPrintImages
 
 Contains the data of a printout of a document as it was obtained from the data source in the moment of printing. Entity: Gen_Document_Print_Images
 
+Default Display Text Format:  
+_{PrintoutLayout.DocumentEntityName:T}_  
+Default Search Member:  
+_PrintoutLayout.DocumentEntityName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ Contains the data of a printout of a document as it was obtained from the data s
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

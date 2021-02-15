@@ -5,6 +5,11 @@ uid: General.Geography.Areas
 
 Areas are user-defined division of the sales territories. Entity: Gen_Areas
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -28,6 +33,7 @@ Areas are user-defined division of the sales territories. Entity: Gen_Areas
 The unique code of the Area. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -42,6 +48,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -50,6 +57,7 @@ _Default Value_: **NewGuid**
 The name of this Area. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

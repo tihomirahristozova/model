@@ -5,6 +5,11 @@ uid: Projects.ProjectWorkElements
 
 Contains the work elements from the work breakdown structure, which are included in the projects. Entity: Prj_Project_Work_Elements
 
+Default Display Text Format:  
+_{Project.Code}: {Project.Name:T}_  
+Default Search Member:  
+_Project.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Contains the work elements from the work breakdown structure, which are included
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -35,6 +41,7 @@ _Default Value_: **NewGuid**
 The [Project](Projects.ProjectWorkElements.md#project) to which this ProjectWorkElement belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Projects](Projects.Projects.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTypeWorkElement

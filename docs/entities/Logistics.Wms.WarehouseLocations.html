@@ -80,6 +80,10 @@
 <h1 id="logisticswmswarehouselocations-entity">Logistics.Wms.WarehouseLocations Entity</h1>
 
 <p>One physical location within a warehouse. Locations are the leaf elements of the rack structure of the warehouse. Entity: Wms_Warehouse_Locations (Introduced in version 20.1)</p>
+<p>Default Display Text Format:<br>
+<em>{Warehouse.Name:T}</em><br>
+Default Search Member:<br>
+<em>Warehouse.Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -132,6 +136,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="locationaddress">LocationAddress</h3>

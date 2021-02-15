@@ -80,6 +80,10 @@
 <h1 id="logisticsinventorycostcorrectionlines-entity">Logistics.Inventory.CostCorrectionLines Entity</h1>
 
 <p>Cost correction detail lines. One line is created for each corrected transaction line. Entity: Inv_Cost_Correction_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{CostCorrection.DocumentType.Code}:{CostCorrection.DocumentNo} - {CostCorrection.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>CostCorrection.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -154,6 +158,7 @@
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="productcostadjustment">ProductCostAdjustment</h3>
@@ -172,10 +177,12 @@
 <h3 id="costcorrection">CostCorrection</h3>
 <p>The <a href="Logistics.Inventory.CostCorrectionLines.html#costcorrection">CostCorrection</a> to which this CostCorrectionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.CostCorrections.html">CostCorrections</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transactionline">TransactionLine</h3>
 <p>The transaction line, which is corrected. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

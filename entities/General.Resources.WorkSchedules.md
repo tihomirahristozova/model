@@ -5,6 +5,11 @@ uid: General.Resources.WorkSchedules
 
 Represents the different working schedules, used by the employees and resources. Entity: Gen_Work_Schedules
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Represents the different working schedules, used by the employees and resources.
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

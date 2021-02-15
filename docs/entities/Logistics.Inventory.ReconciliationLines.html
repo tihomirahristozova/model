@@ -80,6 +80,10 @@
 <h1 id="logisticsinventoryreconciliationlines-entity">Logistics.Inventory.ReconciliationLines Entity</h1>
 
 <p>Store reconciliations (physical counting) detail lines. Each line contains the reconciliation for one combination of product, lot, bin and serial number. Entity: Inv_Reconciliation_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{Reconciliation.DocumentType.Code}:{Reconciliation.DocumentNo}:{LineOrd} - {Reconciliation.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Reconciliation.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -197,6 +201,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineord">LineOrd</h3>
@@ -245,6 +250,7 @@
 <h3 id="document">Document</h3>
 <p>Parent reconciliation Id. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Reconciliations.html">Reconciliations</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>The lot, which was reconciled. [Filter(multi eq)]</p>
@@ -271,6 +277,7 @@
 <h3 id="reconciliation">Reconciliation</h3>
 <p>Parent reconciliation Id. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Reconciliations.html">Reconciliations</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <p>Item serial number for serialized items. null for non-serializable items. [Filter(multi eq)]</p>

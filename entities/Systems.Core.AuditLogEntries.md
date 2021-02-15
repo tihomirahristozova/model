@@ -5,6 +5,11 @@ uid: Systems.Core.AuditLogEntries
 
 Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log_Entries (Introduced in version 18.2)
 
+Default Display Text Format:  
+_{ApplicationName:T}_  
+Default Search Member:  
+_ApplicationName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -90,6 +95,7 @@ _Supports Order By_: **False**
 The exact date and time (in Utc) when the event occurred. [Required] [Default(Now)] [Filter(ge;le)] [ORD]
 
 _Type_: **datetime**  
+_Indexed_: **True**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDateTime**  
@@ -125,6 +131,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

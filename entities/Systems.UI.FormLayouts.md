@@ -5,6 +5,11 @@ uid: Systems.UI.FormLayouts
 
 Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
 
+Default Display Text Format:  
+_{ApplicationName:T}_  
+Default Search Member:  
+_ApplicationName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -33,6 +38,7 @@ Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
 The application, which consumes the layout. [Required] [Filter(eq)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 
@@ -47,6 +53,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

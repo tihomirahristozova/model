@@ -80,6 +80,10 @@
 <h1 id="generalresourcesresourceavailability-entity">General.Resources.ResourceAvailability Entity</h1>
 
 <p>Contains the resources availability for the different periods. Each period is a separate record. The availability of a resource for any given date is determined by the sum of all availability periods that include it. Entity: Gen_Resource_Availability</p>
+<p>Default Display Text Format:<br>
+<em>{Resource.Name:T}</em><br>
+Default Search Member:<br>
+<em>Resource.Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -143,6 +147,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="todate">ToDate</h3>

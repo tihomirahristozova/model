@@ -5,6 +5,11 @@ uid: General.Resources.ResourceInstances
 
 Represents concrete instances of resources. Entity: Gen_Resource_Instances
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -36,6 +41,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -77,6 +83,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The resource of which this is instance. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Resources](General.Resources.Resources.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

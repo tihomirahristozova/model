@@ -5,6 +5,11 @@ uid: Applications.Rental.TransactionLines
 
 Contains all transactions of Record of Handover / Handing-Over Record lines. Entity: Rent_Transaction_Lines
 
+Default Display Text Format:  
+_{RentTransaction.DocumentType.Code}:{RentTransaction.DocumentNo} - {RentTransaction.DocumentType.TypeName:T}_  
+Default Search Member:  
+_RentTransaction.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -29,6 +34,7 @@ Contains all transactions of Record of Handover / Handing-Over Record lines. Ent
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

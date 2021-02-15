@@ -80,6 +80,10 @@
 <h1 id="applicationsassetmanagementmanagedassetscheduledmaintenances-entity">Applications.AssetManagement.ManagedAssetScheduledMaintenances Entity</h1>
 
 <p>Contains the scheduled maintenances for the managed assets. Each maintenance can be planned based on date, parameter value or both. Past maintenance plans are kept only for reference and can be deleted at any time. Entity: Eam_Managed_Asset_Scheduled_Maintenances (Introduced in version 19.1)</p>
+<p>Default Display Text Format:<br>
+<em>{ManagedAsset.Code}: {ManagedAsset.Name:T}</em><br>
+Default Search Member:<br>
+<em>ManagedAsset.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -147,6 +151,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdismissed">IsDismissed</h3>
@@ -173,6 +178,7 @@
 <h3 id="managedasset">ManagedAsset</h3>
 <p>The asset, which will be maintained. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

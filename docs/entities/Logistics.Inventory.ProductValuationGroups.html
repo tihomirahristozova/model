@@ -80,6 +80,10 @@
 <h1 id="logisticsinventoryproductvaluationgroups-entity">Logistics.Inventory.ProductValuationGroups Entity</h1>
 
 <p>Contains the available valuation groups for products. They are used in reconciliations, where all pluses and minuses within a valuation group are allowed to balance each other without fiscal effects. Without valuation groups, each product is balanced for itself and taxes are calculated for each surplus. Entity: Inv_Product_Valuation_Groups</p>
+<p>Default Display Text Format:<br>
+<em>{ValuationGroupCode}: {ValuationGroupName:T}</em><br>
+Default Search Member:<br>
+<em>ValuationGroupCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -120,11 +124,13 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="valuationgroupcode">ValuationGroupCode</h3>
 <p>The unique code of the product valuation group. [Required] [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="valuationgroupname">ValuationGroupName</h3>

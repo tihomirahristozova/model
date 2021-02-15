@@ -5,6 +5,11 @@ uid: Production.Resources.WorkgroupShifts
 
 Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts
 
+Default Display Text Format:  
+_{ShiftName:T}_  
+Default Search Member:  
+_ShiftName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -45,6 +50,7 @@ _Default Value_: **CurrentDate**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

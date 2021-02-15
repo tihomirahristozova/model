@@ -5,6 +5,11 @@ uid: Logistics.Procurement.PurchaseProductPrices
 
 Contains purchase prices of the products. Used for automatically loading unit prices in the purchase documents. Entity: Scm_Purchase_Product_Prices
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -44,6 +49,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -148,6 +154,7 @@ _Front-End Recalc Expressions:_
 The product for which a purchase price will be defined. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchasePriceList

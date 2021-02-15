@@ -80,6 +80,10 @@
 <h1 id="systemscoretranslations-entity">Systems.Core.Translations Entity</h1>
 
 <p>Contains user-defined translations for non-english languages of the user interface and program messages. Entity: Sys_Translations</p>
+<p>Default Display Text Format:<br>
+<em>{ApplicationName:T}</em><br>
+Default Search Member:<br>
+<em>ApplicationName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -149,6 +153,7 @@
 <h3 id="applicationname">ApplicationName</h3>
 <p>The application, containing the resource. For base resource types (T,C,H), this is null. [Filter(eq)] [ORD]</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="creationtime">CreationTime</h3>
@@ -159,6 +164,7 @@
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="language">Language</h3>

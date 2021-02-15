@@ -5,6 +5,11 @@ uid: General.Contacts.ActivityTimeIntervals
 
 History of work efforts for executing activities (timesheet). Entity: Cm_Activity_Time_Intervals
 
+Default Display Text Format:  
+_{Party.PartyCode}: {Party.PartyName:T}_  
+Default Search Member:  
+_Party.PartyCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -56,6 +61,7 @@ _Default Value_: **0**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

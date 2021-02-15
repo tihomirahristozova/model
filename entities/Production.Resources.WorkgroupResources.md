@@ -5,6 +5,11 @@ uid: Production.Resources.WorkgroupResources
 
 Describes the availability of resources in the active workgroups. Entity: Prd_Workgroup_Resources
 
+Default Display Text Format:  
+_{Workgroup.Name:T}_  
+Default Search Member:  
+_Workgroup.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -41,6 +46,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

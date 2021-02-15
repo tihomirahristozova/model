@@ -80,6 +80,10 @@
 <h1 id="financeassetsassets-entity">Finance.Assets.Assets Entity</h1>
 
 <p>The fixed assets. Entity: Ast_Assets</p>
+<p>Default Display Text Format:<br>
+<em>{Code}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -173,6 +177,7 @@
 <h3 id="code">Code</h3>
 <p>The unique code of the Asset. [Required] [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="deploymentdate">DeploymentDate</h3>
@@ -182,6 +187,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>

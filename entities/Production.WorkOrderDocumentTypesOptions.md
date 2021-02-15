@@ -5,6 +5,11 @@ uid: Production.WorkOrderDocumentTypesOptions
 
 Options for user-defined Work Order document types. Entity: Prd_Work_Order_Document_Types_Options
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Options for user-defined Work Order document types. Entity: Prd_Work_Order_Docum
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -42,6 +48,7 @@ _Supported Filters_: **Equals, EqualsIn**
 User-defined Work Order document type. [Required] [Filter(multi eq)]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

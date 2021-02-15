@@ -5,6 +5,11 @@ uid: Systems.Core.Jobs
 
 The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -22,6 +27,7 @@ The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in ve
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -57,6 +63,7 @@ _Supports Order By_: **False**
 The name of the job. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

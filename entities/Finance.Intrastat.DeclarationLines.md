@@ -5,6 +5,11 @@ uid: Finance.Intrastat.DeclarationLines
 
 Contains the details of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declaration_Lines
 
+Default Display Text Format:  
+_{IntrastatDeclaration.DocumentType.Code}:{IntrastatDeclaration.DocumentNo} - {IntrastatDeclaration.DocumentType.TypeName:T}_  
+Default Search Member:  
+_IntrastatDeclaration.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -63,6 +68,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

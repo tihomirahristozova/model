@@ -5,6 +5,11 @@ uid: Finance.Assets.DepreciationAssets
 
 Depreciation document line. Can specify assets, whose depreciation should be calculated. Entity: Ast_Depreciation_Assets
 
+Default Display Text Format:  
+_{Depreciation.DocumentType.Code}:{Depreciation.DocumentNo} - {Depreciation.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Depreciation.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Depreciation document line. Can specify assets, whose depreciation should be cal
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -42,6 +48,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [Depreciation](Finance.Assets.DepreciationAssets.md#depreciation) to which this DepreciationAsset belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Depreciations](Finance.Assets.Depreciations.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

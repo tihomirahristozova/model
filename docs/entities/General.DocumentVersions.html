@@ -80,6 +80,10 @@
 <h1 id="generaldocumentversions-entity">General.DocumentVersions Entity</h1>
 
 <p>History of each saved version of each document. Entity: Gen_Document_Versions</p>
+<p>Default Display Text Format:<br>
+<em>{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Document.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -168,6 +172,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="state">State</h3>
@@ -219,6 +224,7 @@ Allowed values for the <a href="General.DocumentVersions.html#state">State</a> d
 <h3 id="updatetime">UpdateTime</h3>
 <p>The date and time when this version was saved. [Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly]</p>
 <p><em>Type</em>: <strong>datetime</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
@@ -236,6 +242,7 @@ Allowed values for the <a href="General.DocumentVersions.html#state">State</a> d
 <h3 id="document">Document</h3>
 <p>The document whoose version is stored in this row. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

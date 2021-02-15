@@ -5,6 +5,11 @@ uid: General.Contacts.Companies
 
 Contains company definitions. Entity: Cm_Companies
 
+Default Display Text Format:  
+_{PartyCode}: {PartyName:T}_  
+Default Search Member:  
+_PartyCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -105,12 +110,14 @@ _Supports Order By_: **False**
 Global Location Number used by EDI systems. [Filter(multi eq)] [ORD] (Inherited from [Parties](General.Contacts.Parties.md))
 
 _Type_: **string (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -146,6 +153,7 @@ _Default Value_: **False**
 The name of this Company. [Filter(eq;like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -154,6 +162,7 @@ _Supports Order By_: **True**
 The unique code of the party. [Required] [Filter(eq;like)] [ORD] [ReadOnly] (Inherited from [Parties](General.Contacts.Parties.md))
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -178,6 +187,7 @@ _Supports Order By_: **False**
 The name of the party. [Required] [Filter(eq;like)] [ORD] (Inherited from [Parties](General.Contacts.Parties.md))
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -238,6 +248,7 @@ _Supports Order By_: **False**
 Unique, government-assigned registration number. null means unknown. [Filter(eq;like)] [ORD]
 
 _Type_: **string (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -262,6 +273,7 @@ _Supports Order By_: **False**
 VAT registration number where applicable. null means that VAT number is not applicable or unknown. [Filter(eq)] [ORD]
 
 _Type_: **string (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 
@@ -330,6 +342,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. [Filter(multi eq)] (Inherited from [Parties](General.Contacts.Parties.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RegistrationResponsiblePerson

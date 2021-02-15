@@ -5,6 +5,11 @@ uid: General.PartyLocationNumbers
 
 Location numbers for a party. Depending on the partner with which we are doing an exchange, our location number might be different. Entity: Gen_Party_Location_Numbers (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{LocationNumber}_  
+Default Search Member:  
+_LocationNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -28,6 +33,7 @@ Location numbers for a party. Depending on the partner with which we are doing a
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -53,6 +59,7 @@ _Default Value_: **GLN**
 The location number of Party. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 
@@ -88,6 +95,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The party for which we are defining the location number. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

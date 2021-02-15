@@ -80,6 +80,10 @@
 <h1 id="generaldocumentstatechanges-entity">General.DocumentStateChanges Entity</h1>
 
 <p>History of document state changes. Entity: Gen_Document_State_Changes</p>
+<p>Default Display Text Format:<br>
+<em>{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Document.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -147,6 +151,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="newstate">NewState</h3>
@@ -220,6 +225,7 @@ Allowed values for the <a href="General.DocumentStateChanges.html#newstate">NewS
 <h3 id="document">Document</h3>
 <p>The document which has changed state. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="userstatus">UserStatus</h3>
 <p>The new user status after the change. [Filter(multi eq)]</p>

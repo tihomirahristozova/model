@@ -5,6 +5,11 @@ uid: Logistics.Wms.WarehouseOrderFulfillments
 
 Fulfillment of a warehouse order line. Entity: Wms_Warehouse_Order_Fulfillments (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -36,6 +41,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -70,6 +76,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The warehouse order, which is fulfilled. [Required] [Filter(multi eq)]
 
 _Type_: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseOrderLine
@@ -77,6 +84,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The line for which we record fulfillment. [Required] [Filter(multi eq)]
 
 _Type_: **[WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -5,6 +5,11 @@ uid: Crm.Marketing.DistributionChannels
 
 General list of distribution channels. Used to control prices and availability of products for the different channels. Entity: Crm_Distribution_Channels
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -37,6 +42,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

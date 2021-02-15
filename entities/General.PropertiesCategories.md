@@ -5,6 +5,11 @@ uid: General.PropertiesCategories
 
 Categories of properties. Entity: Gen_Properties_Categories
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -18,6 +23,7 @@ Categories of properties. Entity: Gen_Properties_Categories
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -26,6 +32,7 @@ _Default Value_: **NewGuid**
 The name of this PropertiesCategory. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

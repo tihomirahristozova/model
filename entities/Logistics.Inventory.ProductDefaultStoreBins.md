@@ -5,6 +5,11 @@ uid: Logistics.Inventory.ProductDefaultStoreBins
 
 The default store bins in which products should be placed. Entity: Inv_Product_Default_Store_Bins
 
+Default Display Text Format:  
+_{Product.PartNumber}: {Product.Name:T}_  
+Default Search Member:  
+_Product.PartNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ The default store bins in which products should be placed. Entity: Inv_Product_D
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -43,6 +49,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [Product](General.Products.Products.md) to which this ProductDefaultStoreBin belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store

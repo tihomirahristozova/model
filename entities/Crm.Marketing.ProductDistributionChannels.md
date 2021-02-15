@@ -5,6 +5,11 @@ uid: Crm.Marketing.ProductDistributionChannels
 
 Channel assignments (listing) for products. Entity: Crm_Product_Distribution_Channels
 
+Default Display Text Format:  
+_{Product.PartNumber}: {Product.Name:T}_  
+Default Search Member:  
+_Product.PartNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -38,6 +43,7 @@ _Default Value_: **CurrentDate**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -82,6 +88,7 @@ _Supports Order By_: **False**
 The distribution channel in which the product is listed. [Required] [Filter(multi eq)]
 
 _Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -89,6 +96,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The listed product. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

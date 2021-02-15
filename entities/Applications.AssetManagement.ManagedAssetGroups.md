@@ -5,6 +5,11 @@ uid: Applications.AssetManagement.ManagedAssetGroups
 
 Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -28,12 +33,14 @@ Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Intr
 Unique (within all groups) code of the asset group. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -61,6 +68,7 @@ _Supports Order By_: **False**
 The parent asset group in the hierarchy. null means this is a root group. [Filter(multi eq)]
 
 _Type_: **[ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

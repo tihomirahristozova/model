@@ -5,6 +5,11 @@ uid: Finance.Payments.BulkPaymentOrderLines
 
 Bulk payment order document line. Each line usually creates one payment order. Entity: Cash_Bulk_Payment_Order_Lines
 
+Default Display Text Format:  
+_{BulkPaymentOrder.DocumentType.Code}:{BulkPaymentOrder.DocumentNo} - {BulkPaymentOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_BulkPaymentOrder.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -85,6 +90,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -178,6 +184,7 @@ _Default Value_: **Constant**
 The [BulkPaymentOrder](Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) to which this BulkPaymentOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### InvoiceAmountCurrency

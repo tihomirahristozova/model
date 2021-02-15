@@ -5,6 +5,11 @@ uid: Projects.TemplateWorkElements
 
 Contains project work elements, which shall be copied to projects, based on the specified template. Entity: Prj_Template_Work_Elements
 
+Default Display Text Format:  
+_{ProjectTemplate.ProjectTemplateName:T}_  
+Default Search Member:  
+_ProjectTemplate.ProjectTemplateName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Contains project work elements, which shall be copied to projects, based on the 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

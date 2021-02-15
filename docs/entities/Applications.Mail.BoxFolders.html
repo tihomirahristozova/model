@@ -80,6 +80,10 @@
 <h1 id="applicationsmailboxfolders-entity">Applications.Mail.BoxFolders Entity</h1>
 
 <p>Contains the folders inside the mailboxes. Entity: Mail_Box_Folders</p>
+<p>Default Display Text Format:<br>
+<em>{FolderName:T}</em><br>
+Default Search Member:<br>
+<em>FolderName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -164,6 +168,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="serverfolderid">ServerFolderID</h3>
@@ -221,6 +226,7 @@ Allowed values for the <a href="Applications.Mail.BoxFolders.html#systempurpose"
 <h3 id="mailbox">MailBox</h3>
 <p>The <a href="Applications.Mail.Boxes.html">Box</a> to which this BoxFolder belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.Mail.Boxes.html">Boxes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentfolder">ParentFolder</h3>
 <p>The parent folder in the folder hierarchy. Null when the folder is a root folder. [Filter(multi eq)]</p>

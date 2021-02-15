@@ -5,6 +5,11 @@ uid: Finance.Cost.CalculationCosts
 
 Contains the calculated costs allocated to the different Cost Types. Entity: Cost_Calculation_Costs
 
+Default Display Text Format:  
+_{Calculation.DocumentType.Code}:{Calculation.DocumentNo} - {Calculation.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Calculation.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -41,6 +46,7 @@ _Default Value_: **0**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -72,6 +78,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [Calculation](Finance.Cost.CalculationCosts.md#calculation) to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Calculations](Finance.Cost.Calculations.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostCenter

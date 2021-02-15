@@ -80,6 +80,10 @@
 <h1 id="applicationsrentalleasecontractlines-entity">Applications.Rental.LeaseContractLines Entity</h1>
 
 <p>The detail lines of rental contracts. Each line contains rental conditions for one asset of the rental contract. Entity: Rent_Lease_Contract_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{LeaseContract.DocumentType.Code}:{LeaseContract.DocumentNo} - {LeaseContract.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>LeaseContract.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -178,6 +182,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -207,6 +212,7 @@
 <h3 id="leasecontract">LeaseContract</h3>
 <p>The <a href="Applications.Rental.LeaseContractLines.html#leasecontract">LeaseContract</a> to which this LeaseContractLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.Rental.LeaseContracts.html">LeaseContracts</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="rentalasset">RentalAsset</h3>
 <p>The asset which is rented with the current contract. [Required] [Filter(multi eq)]</p>

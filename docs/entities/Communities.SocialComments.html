@@ -80,6 +80,10 @@
 <h1 id="communitiessocialcomments-entity">Communities.SocialComments Entity</h1>
 
 <p>User comment to any object in the system. Entity: Cmm_Social_Comments (Introduced in version 20.1)</p>
+<p>Default Display Text Format:<br>
+<em>{Id}</em><br>
+Default Search Member:<br>
+<em>Id</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -143,10 +147,12 @@
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
 <p>The exact server time (in UTC), when the comment was created. [Required] [ORD]</p>
 <p><em>Type</em>: <strong>datetime</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>

@@ -80,6 +80,10 @@
 <h1 id="systemsbpmprocesses-entity">Systems.Bpm.Processes Entity</h1>
 
 <p>Represents one business process version. All process model elements and execution instances are bound to specfic process version. Entity: Bpm_Processes</p>
+<p>Default Display Text Format:<br>
+<em>{Code}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -180,6 +184,7 @@
 <h3 id="code">Code</h3>
 <p>Unique process code. [Required] [Filter(multi eq)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="description">Description</h3>
@@ -189,6 +194,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isexecutable">IsExecutable</h3>

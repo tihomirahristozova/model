@@ -5,6 +5,11 @@ uid: General.Resources.ResourceCostRates
 
 Contains cost rates for different periods for resources. Each record is valid until the next From Date. Entity: Gen_Resource_Cost_Rates
 
+Default Display Text Format:  
+_{Resource.Name:T}_  
+Default Search Member:  
+_Resource.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -37,6 +42,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -88,6 +94,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The resource for which the cost rate is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Resources](General.Resources.Resources.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

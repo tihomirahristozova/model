@@ -80,6 +80,10 @@
 <h1 id="crmsalesdocumenttypepaymentoptions-entity">Crm.Sales.DocumentTypePaymentOptions Entity</h1>
 
 <p>Contains payment options for user documnet types for sales orders. Entity: Crm_Document_Type_Payment_Options</p>
+<p>Default Display Text Format:<br>
+<em>{Id}</em><br>
+Default Search Member:<br>
+<em>Id</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -137,6 +141,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -147,6 +152,7 @@
 <h3 id="documenttype">DocumentType</h3>
 <p>The document type for which the payment option applies. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company for which the payment options are specified. [Required] [Filter(multi eq)]</p>

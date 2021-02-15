@@ -5,6 +5,11 @@ uid: Systems.Bpm.CalculatedAttributeExpressions
 
 Represent an expression within the calculation of a calculated attribute. Entity: Sys_Calculated_Attribute_Expressions
 
+Default Display Text Format:  
+_{CalculatedAttribute.Name:T}_  
+Default Search Member:  
+_CalculatedAttribute.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -45,6 +50,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -213,6 +219,7 @@ _Supports Order By_: **False**
 The [CalculatedAttribute](Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) to which this CalculatedAttributeExpression belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

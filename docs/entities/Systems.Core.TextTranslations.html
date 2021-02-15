@@ -80,6 +80,10 @@
 <h1 id="systemscoretexttranslations-entity">Systems.Core.TextTranslations Entity</h1>
 
 <p>Obsolete. Not used. Entity: Gen_Text_Translations</p>
+<p>Default Display Text Format:<br>
+<em>{ColumnName:T}</em><br>
+Default Search Member:<br>
+<em>ColumnName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -130,6 +134,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="language">Language</h3>
@@ -144,6 +149,7 @@
 <h3 id="tablename">TableName</h3>
 <p>Obsolete. Not used. [Required] [Filter(eq)] [ORD] [ReadOnly]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="translatedtext">TranslatedText</h3>

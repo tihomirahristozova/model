@@ -80,6 +80,10 @@
 <h1 id="generalcontactscontactmechanisms-entity">General.Contacts.ContactMechanisms Entity</h1>
 
 <p>Contains contacting mechanisms - telephone numbers, addresses, web sites, etc. Contact mechanisms can be attached to parties. Currently each contact mechanism is attached to strictly one party. Entity: Cm_Contact_Mechanisms</p>
+<p>Default Display Text Format:<br>
+<em>{Name:T}</em><br>
+Default Search Member:<br>
+<em>Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -178,6 +182,7 @@ Allowed values for the <a href="General.Contacts.ContactMechanisms.html#contactm
 <em>Default Value</em>: <strong>Address</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>

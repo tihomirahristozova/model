@@ -80,6 +80,10 @@
 <h1 id="generalproductsproductdimensions-entity">General.Products.ProductDimensions Entity</h1>
 
 <p>Contains convertion ratios between the supported measument categories for each product. Does not contain a record for the default category of the products, for which the convertion ratio is defined as equal to 1. Entity: Gen_Product_Dimensions</p>
+<p>Default Display Text Format:<br>
+<em>{Product.PartNumber}: {Product.Name:T}</em><br>
+Default Search Member:<br>
+<em>Product.PartNumber</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -176,6 +180,7 @@
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="sourcequantity">SourceQuantity</h3>
@@ -200,6 +205,7 @@
 <h3 id="product">Product</h3>
 <p>The product for which we specify conversion ratios. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="sourcequantityunit">SourceQuantityUnit</h3>
 <p>The non-base measurement unit for which we specify convertion ratio. [Required] [Filter(multi eq)]</p>

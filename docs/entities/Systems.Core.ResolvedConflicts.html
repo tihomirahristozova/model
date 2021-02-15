@@ -80,6 +80,10 @@
 <h1 id="systemscoreresolvedconflicts-entity">Systems.Core.ResolvedConflicts Entity</h1>
 
 <p>Contains records of conflicts, which were automatically resolved by update procedures. Entity: Sys_Resolved_Conflicts</p>
+<p>Default Display Text Format:<br>
+<em>{TableName:T}</em><br>
+Default Search Member:<br>
+<em>TableName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -145,6 +149,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="resolveconfirmedbyuser">ResolveConfirmedByUser</h3>

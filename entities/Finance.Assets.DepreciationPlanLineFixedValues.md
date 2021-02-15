@@ -5,6 +5,11 @@ uid: Finance.Assets.DepreciationPlanLineFixedValues
 
 When specified, contains user-defined asset depreciation values for each depreciation period. Entity: Ast_Depreciation_Plan_Line_Fixed_Values
 
+Default Display Text Format:  
+_{DepreciationPlanLine.DepreciationPlan.DocumentType.Code}:{DepreciationPlanLine.DepreciationPlan.DocumentNo}:{DepreciationPlanLine.LineNo} - {DepreciationPlanLine.DepreciationPlan.DocumentType.TypeName:T}_  
+Default Search Member:  
+_DepreciationPlanLine.DepreciationPlan.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -51,6 +56,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -62,6 +68,7 @@ _Default Value_: **NewGuid**
 The [DepreciationPlanLine](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationplanline) to which this DepreciationPlanLineFixedValue belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -80,6 +80,10 @@
 <h1 id="generaldocumentfulfillments-entity">General.DocumentFulfillments Entity</h1>
 
 <p>Fulfillment ledger for documents. Entity: Gen_Document_Fulfillments (Introduced in version 20.1)</p>
+<p>Default Display Text Format:<br>
+<em>{Id}</em><br>
+Default Search Member:<br>
+<em>Id</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -164,6 +168,7 @@
 <h3 id="documentlineid">DocumentLineId</h3>
 <p>The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fulfillmenttype">FulfillmentType</h3>
 <p>Type of fulfillment: P=Planned; C=Completed. [Required] [Filter(multi eq)] [Introduced in version 21.1.1.26]</p>
@@ -192,6 +197,7 @@ Allowed values for the <a href="General.DocumentFulfillments.html#fulfillmenttyp
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isfinal">IsFinal</h3>
@@ -223,6 +229,7 @@ Allowed values for the <a href="General.DocumentFulfillments.html#fulfillmenttyp
 <h3 id="document">Document</h3>
 <p>The Document, which is fulfilled. [Required] [Filter(multi eq)] [Introduced in version 21.1.1.26]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

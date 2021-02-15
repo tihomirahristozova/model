@@ -5,6 +5,11 @@ uid: Logistics.Procurement.ReceivingOrderLines
 
 Contains detail records of Receiving Orders. Each line contains the receiving of a quantity of a product. Entity: Scm_Receiving_Order_Lines
 
+Default Display Text Format:  
+_{ReceivingOrder.DocumentType.Code}:{ReceivingOrder.DocumentNo}:{LineNo} - {ReceivingOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_ReceivingOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -83,6 +88,7 @@ _Default Value_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -188,6 +194,7 @@ _Front-End Recalc Expressions:_
 The [ReceivingOrder](Logistics.Procurement.ReceivingOrderLines.md#receivingorder) to which this ReceivingOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LineStore
@@ -214,6 +221,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The received product. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductCode
@@ -235,6 +243,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The purchase order line for which we are receiving quantity. [Filter(multi eq)]
 
 _Type_: **[PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseProductPrice
@@ -263,6 +272,7 @@ _Front-End Recalc Expressions:_
 The [ReceivingOrder](Logistics.Procurement.ReceivingOrderLines.md#receivingorder) to which this ReceivingOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber

@@ -5,6 +5,11 @@ uid: Finance.Intrastat.DocumentAmountTypeSettings
 
 Specifies the additional amounts, which are added to the invoiced and statistical values. Entity: Its_Document_Amount_Type_Settings
 
+Default Display Text Format:  
+_{DocumentAmountType.AmountTypeCode}: {DocumentAmountType.AmountTypeName:T}_  
+Default Search Member:  
+_DocumentAmountType.AmountTypeCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -44,6 +49,7 @@ _Default Value_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -62,6 +68,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The enterprise company for which the setting is valid. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

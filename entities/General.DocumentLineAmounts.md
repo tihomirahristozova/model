@@ -5,6 +5,11 @@ uid: General.DocumentLineAmounts
 
 Specifies user-defined distribution pattern of additonal amount for specific document. Entity: Gen_Document_Line_Amounts
 
+Default Display Text Format:  
+_{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Document.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -35,6 +40,7 @@ _Supported Filters_: **Equals, EqualsIn**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -55,6 +61,7 @@ _Default Value_: **0**
 The [Document](General.DocumentLineAmounts.md#document) to which this DocumentLineAmount belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Documents](General.Documents.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentAmountType
@@ -76,6 +83,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated). [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

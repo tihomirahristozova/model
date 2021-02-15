@@ -5,6 +5,11 @@ uid: General.Printouts
 
 Contains data about binding of printout layouts to specific user-defined document types. Entity: Gen_Printouts
 
+Default Display Text Format:  
+_{ApplicationName:T}_  
+Default Search Member:  
+_ApplicationName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -102,6 +107,7 @@ _Default Value_: **default**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -164,6 +170,7 @@ _Default Value_: **0**
 The document type to which this printout layout is bound. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany

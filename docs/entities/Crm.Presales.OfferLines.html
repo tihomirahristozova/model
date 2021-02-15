@@ -80,6 +80,10 @@
 <h1 id="crmpresalesofferlines-entity">Crm.Presales.OfferLines Entity</h1>
 
 <p>Detail records (lines) of Offers. Entity: Crm_Offer_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{Offer.DocumentType.Code}:{Offer.DocumentNo}:{LineNo} - {Offer.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Offer.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -245,6 +249,7 @@
 <code>obj.Product.GuaranteePeriodDays</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isselected">IsSelected</h3>
@@ -355,6 +360,7 @@
 <h3 id="document">Document</h3>
 <p>The <a href="Crm.Presales.OfferLines.html#offer">Offer</a> to which this OfferLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Presales.Offers.html">Offers</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linediscount">LineDiscount</h3>
 <p>When not null, contains the discount policy selected for this line. [Filter(multi eq)]</p>
@@ -365,6 +371,7 @@
 <h3 id="offer">Offer</h3>
 <p>The <a href="Crm.Presales.OfferLines.html#offer">Offer</a> to which this OfferLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Crm.Presales.Offers.html">Offers</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <p>The offered product. [Required] [Filter(multi eq)]</p>

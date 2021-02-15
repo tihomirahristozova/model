@@ -5,6 +5,11 @@ uid: Logistics.Inventory.TransactionCostCorrectionsSummary
 
 Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transaction_Cost_Corrections_Summary
 
+Default Display Text Format:  
+_{BaseCostAdjustmentValue}: {CostCorrectionAmountValue}_  
+Default Search Member:  
+_BaseCostAdjustmentValue_  
+
 ## Attributes
 
 | Name | Type | Description |

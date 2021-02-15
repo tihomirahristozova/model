@@ -80,6 +80,10 @@
 <h1 id="systemssecurityusergroups-entity">Systems.Security.UserGroups Entity</h1>
 
 <p>Contains the user group members. Entity: Sec_User_Groups</p>
+<p>Default Display Text Format:<br>
+<em>{User.PhoneNumber}: {User.Name:T}</em><br>
+Default Search Member:<br>
+<em>User.PhoneNumber</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -122,6 +126,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -132,6 +137,7 @@
 <h3 id="user">User</h3>
 <p>The <a href="Systems.Security.UserGroups.html#user">User</a> to which this UserGroup belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

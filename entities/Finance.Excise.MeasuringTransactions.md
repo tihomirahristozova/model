@@ -5,6 +5,11 @@ uid: Finance.Excise.MeasuringTransactions
 
 Transaction of product input or output, measured with specialized measuring device for excise purposes. Entity: Exc_Measuring_Transactions (Introduced in version 21.1.1.9)
 
+Default Display Text Format:  
+_{MeasuringDeviceCode}_  
+Default Search Member:  
+_MeasuringDeviceCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -83,6 +88,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -91,6 +97,7 @@ _Default Value_: **NewGuid**
 The code of the measuring device, used to measure the transaction. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 
@@ -134,6 +141,7 @@ _Supports Order By_: **False**
 The product, which was being measured. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
@@ -148,6 +156,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The tax warehouse, where the transaction occurred. [Required] [Filter(multi eq)]
 
 _Type_: **[TaxWarehouses](Finance.Excise.TaxWarehouses.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

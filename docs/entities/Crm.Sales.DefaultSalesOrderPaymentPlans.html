@@ -80,6 +80,10 @@
 <h1 id="crmsalesdefaultsalesorderpaymentplans-entity">Crm.Sales.DefaultSalesOrderPaymentPlans Entity</h1>
 
 <p>Default payment plan for new documents of the specified document type. Entity: Crm_Default_Sales_Order_Payment_Plans</p>
+<p>Default Display Text Format:<br>
+<em>{DocumentType.Code}: {DocumentType.EntityName:T}</em><br>
+Default Search Member:<br>
+<em>DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -206,6 +210,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="installmentnumber">InstallmentNumber</h3>

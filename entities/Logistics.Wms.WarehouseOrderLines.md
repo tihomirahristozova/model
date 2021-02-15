@@ -5,6 +5,11 @@ uid: Logistics.Wms.WarehouseOrderLines
 
 A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lines (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{WarehouseOrder.DocumentType.Code}:{WarehouseOrder.DocumentNo}:{LineNo} - {WarehouseOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_WarehouseOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -38,6 +43,7 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -104,6 +110,7 @@ _Supports Order By_: **False**
 The [WarehouseOrder](Logistics.Wms.WarehouseOrderLines.md#warehouseorder) to which this WarehouseOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LogisticUnit
@@ -167,6 +174,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [WarehouseOrder](Logistics.Wms.WarehouseOrderLines.md#warehouseorder) to which this WarehouseOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseWorker

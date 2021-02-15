@@ -5,6 +5,11 @@ uid: Production.ShopFloor.OutputOrderConsumptionLines
 
 The internal production consumption of materials. Used only for control purposes - for comparison with the active consumption orders. Warehouse and accounting are still updated only by Consumption Orders. Entity: Prd_Output_Order_Consumption_Lines
 
+Default Display Text Format:  
+_{OutputOrder.DocumentType.Code}:{OutputOrder.DocumentNo}:{LineNo} - {OutputOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_OutputOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -62,6 +67,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -94,6 +100,7 @@ _Supports Order By_: **False**
 The [OutputOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) to which this OutputOrderConsumptionLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LineWorkOrder
@@ -117,6 +124,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [OutputOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) to which this OutputOrderConsumptionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit

@@ -5,6 +5,11 @@ uid: Finance.Assets.AssetTransactionLines
 
 Asset value transaction lines. Each line changes the values of one asset in one valuation model. Entity: Ast_Asset_Transaction_Lines
 
+Default Display Text Format:  
+_{AssetTransaction.DocumentType.Code}:{AssetTransaction.DocumentNo} - {AssetTransaction.DocumentType.TypeName:T}_  
+Default Search Member:  
+_AssetTransaction.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -58,6 +63,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -177,6 +183,7 @@ _Front-End Recalc Expressions:_
 Asset for which changes in values have occurred. [Required] [Filter(multi eq)]
 
 _Type_: **[Assets](Finance.Assets.Assets.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssetTransaction
@@ -184,6 +191,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [AssetTransaction](Finance.Assets.AssetTransactionLines.md#assettransaction) to which this AssetTransactionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[AssetTransactions](Finance.Assets.AssetTransactions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationModel

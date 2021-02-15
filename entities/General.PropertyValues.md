@@ -5,6 +5,11 @@ uid: General.PropertyValues
 
 The actual values of the user-defined properties for each actual entity. Entity: Gen_Property_Values
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -43,6 +48,7 @@ _Supported Filters_: **Equals, EqualsIn**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -77,6 +83,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The property, whose value is stored here. [Required] [Filter(multi eq)]
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

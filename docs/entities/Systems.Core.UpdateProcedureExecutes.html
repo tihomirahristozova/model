@@ -80,6 +80,10 @@
 <h1 id="systemscoreupdateprocedureexecutes-entity">Systems.Core.UpdateProcedureExecutes Entity</h1>
 
 <p>Contains data about the execution of Upgrade Procedures. Contains status messages and ensures that each procedure is executed only once. Entity: Sys_Update_Procedure_Executes</p>
+<p>Default Display Text Format:<br>
+<em>{Id}</em><br>
+Default Search Member:<br>
+<em>Id</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -126,6 +130,7 @@
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="resultmessage">ResultMessage</h3>

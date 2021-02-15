@@ -5,6 +5,11 @@ uid: Applications.Service.ServiceObjects
 
 Contains the serviceable objects. The service objects can be covered by service agreements, serviced in service activities, etc. Entity: Srv_Service_Objects
 
+Default Display Text Format:  
+_{SerialNumber}: {Name:T}_  
+Default Search Member:  
+_SerialNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -30,6 +35,7 @@ Contains the serviceable objects. The service objects can be covered by service 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

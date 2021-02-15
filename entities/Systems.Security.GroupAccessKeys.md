@@ -5,6 +5,11 @@ uid: Systems.Security.GroupAccessKeys
 
 Specifies the access keys for which the user groups have permissions. The existance of a record grants read permission. Additional permissions are granted through specialized fields. Entity: Sec_Group_Access_Keys
 
+Default Display Text Format:  
+_{Group.Name:T}_  
+Default Search Member:  
+_Group.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -62,6 +67,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -163,6 +169,7 @@ _Default Value_: **False**
 This access key, to which we are granting access permissions. [Required] [Filter(multi eq)]
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Group
@@ -170,6 +177,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The group, which is granted with access permission. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Groups](Systems.Security.Groups.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

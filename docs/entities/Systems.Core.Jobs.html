@@ -80,6 +80,10 @@
 <h1 id="systemscorejobs-entity">Systems.Core.Jobs Entity</h1>
 
 <p>The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in version 20.1)</p>
+<p>Default Display Text Format:<br>
+<em>{Name:T}</em><br>
+Default Search Member:<br>
+<em>Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -125,6 +129,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
@@ -169,6 +174,7 @@ Allowed values for the <a href="Systems.Core.Jobs.html#jobtype">JobType</a> data
 <h3 id="name">Name</h3>
 <p>The name of the job. [Required] [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>

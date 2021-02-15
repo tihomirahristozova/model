@@ -5,6 +5,11 @@ uid: Production.Technologies.RecipeOperations
 
 Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operations
 
+Default Display Text Format:  
+_{Recipe.Name:T}_  
+Default Search Member:  
+_Recipe.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -40,6 +45,7 @@ Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operati
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -181,6 +187,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [Recipe](Production.Technologies.RecipeOperations.md#recipe) to which this RecipeOperation belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Recipes](Production.Technologies.Recipes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UseQuantityUnit

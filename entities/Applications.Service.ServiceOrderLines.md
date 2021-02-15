@@ -5,6 +5,11 @@ uid: Applications.Service.ServiceOrderLines
 
 Contains the details and problem symptoms for each object, which requires servicing. Entity: Srv_Service_Order_Lines
 
+Default Display Text Format:  
+_{ServiceOrder.DocumentType.Code}:{ServiceOrder.DocumentNo} - {ServiceOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_ServiceOrder.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Contains the details and problem symptoms for each object, which requires servic
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -65,6 +71,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [ServiceOrder](Applications.Service.ServiceOrderLines.md#serviceorder) to which this ServiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ServiceOrders](Applications.Service.ServiceOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

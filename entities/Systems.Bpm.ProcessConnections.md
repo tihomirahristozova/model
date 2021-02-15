@@ -5,6 +5,11 @@ uid: Systems.Bpm.ProcessConnections
 
 Contains the connections between process elements. Part of the process model. Entity: Bpm_Process_Connections
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -46,6 +51,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -81,6 +87,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The element, from which the connection starts. The element should be in the same process as the connection. [Required] [Filter(multi eq)]
 
 _Type_: **[ProcessNodes](Systems.Bpm.ProcessNodes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TargetProcessNode

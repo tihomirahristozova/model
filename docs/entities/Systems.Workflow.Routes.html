@@ -80,6 +80,10 @@
 <h1 id="systemsworkflowroutes-entity">Systems.Workflow.Routes Entity</h1>
 
 <p>Contains document routes, which specify which document generation procedures will be run upon document events. Entity: Wf_Routes</p>
+<p>Default Display Text Format:<br>
+<em>{ProcedureName:T}</em><br>
+Default Search Member:<br>
+<em>ProcedureName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -428,6 +432,7 @@ Enumeration of document system states<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="negativeconditionfilterxml">NegativeConditionFilterXml</h3>

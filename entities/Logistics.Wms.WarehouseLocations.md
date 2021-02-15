@@ -5,6 +5,11 @@ uid: Logistics.Wms.WarehouseLocations
 
 One physical location within a warehouse. Locations are the leaf elements of the rack structure of the warehouse. Entity: Wms_Warehouse_Locations (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{Warehouse.Name:T}_  
+Default Search Member:  
+_Warehouse.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ One physical location within a warehouse. Locations are the leaf elements of the
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

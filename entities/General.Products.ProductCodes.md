@@ -5,6 +5,11 @@ uid: General.Products.ProductCodes
 
 Additional product codes, categorized by coding systems. Entity: Gen_Product_Codes
 
+Default Display Text Format:  
+_{Product.PartNumber}: {Product.Name:T}_  
+Default Search Member:  
+_Product.PartNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -35,6 +40,7 @@ _Default Value_: **True**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -54,6 +60,7 @@ _Supports Order By_: **False**
 The coding system in which the product code is specified. [Required] [Filter(multi eq)]
 
 _Type_: **[CodingSystems](General.Products.CodingSystems.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -61,6 +68,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product for which the code is specified. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

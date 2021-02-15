@@ -5,6 +5,11 @@ uid: Logistics.Inventory.StoreOrderLines
 
 Detail lines of store orders. Each line represents one planned stock transaction line, but can be executed in parts. E.g. many transaction lines can be bound to one order line. Entity: Inv_Store_Order_Lines
 
+Default Display Text Format:  
+_{StoreOrder.DocumentType.Code}:{StoreOrder.DocumentNo}:{LineNo} - {StoreOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_StoreOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -65,6 +70,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -110,6 +116,7 @@ _Supports Order By_: **False**
 Id of the line of the parent document, which generated the store order. null for user-entered store orders or if not applicable. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentLineNo
@@ -189,6 +196,7 @@ _Supports Order By_: **False**
 The [StoreOrder](Logistics.Inventory.StoreOrderLines.md#storeorder) to which this StoreOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[StoreOrders](Logistics.Inventory.StoreOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -203,6 +211,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -233,6 +242,7 @@ _Front-End Recalc Expressions:_
 Sales order line which is managed by this store order line. When specified sales order line is used to make the margin analysis. [Filter(multi eq)]
 
 _Type_: **[SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
@@ -254,6 +264,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [StoreOrder](Logistics.Inventory.StoreOrderLines.md#storeorder) to which this StoreOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[StoreOrders](Logistics.Inventory.StoreOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

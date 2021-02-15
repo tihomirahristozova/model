@@ -80,6 +80,10 @@
 <h1 id="generalmeasurementunits-entity">General.MeasurementUnits Entity</h1>
 
 <p>Contains all measurement units, grouped in categories. Each category has one base unit (with ratio 1/1) and unlimited number of derived units with fixed ratio to the base unit. Entity: Gen_Measurement_Units</p>
+<p>Default Display Text Format:<br>
+<em>{Code}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -153,6 +157,7 @@
 <h3 id="code">Code</h3>
 <p>When not null, contains unique measurement unit code. [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="description">Description</h3>
@@ -168,6 +173,7 @@
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefaultunit">IsDefaultUnit</h3>
@@ -185,6 +191,7 @@
 <h3 id="name">Name</h3>
 <p>Name of the measurement unit. [Required] [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="systemunit">SystemUnit</h3>

@@ -80,6 +80,10 @@
 <h1 id="logisticsinventorycostcorrectionsoptions-entity">Logistics.Inventory.CostCorrectionsOptions Entity</h1>
 
 <p>Options per document type for the cost corrections. Entity: Inv_Cost_Corrections_Options</p>
+<p>Default Display Text Format:<br>
+<em>{Id}</em><br>
+Default Search Member:<br>
+<em>Id</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -127,6 +131,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="resettransactionsstateonreleasing">ResetTransactionsStateOnReleasing</h3>
@@ -145,6 +150,7 @@
 <h3 id="documenttype">DocumentType</h3>
 <p>The document type for which we specify the options. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

@@ -5,6 +5,11 @@ uid: Systems.Bpm.UserBusinessRuleConditions
 
 Represents one condition for the execution of a business rule. Entity: Sys_User_Business_Rule_Conditions
 
+Default Display Text Format:  
+_{AttributeName:T}_  
+Default Search Member:  
+_AttributeName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -70,6 +75,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

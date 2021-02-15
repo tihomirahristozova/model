@@ -5,6 +5,11 @@ uid: General.Sequences
 
 Provides numbering sequences, applicable for use in a multi-threaded environment. Entity: Gen_Sequences
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ Provides numbering sequences, applicable for use in a multi-threaded environment
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

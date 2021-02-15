@@ -5,6 +5,11 @@ uid: Logistics.Shipment.TransportationExecutionLines
 
 Contains details of executions of transportation order lines. Entity: Log_Transportation_Execution_Lines (Introduced in version 18.2)
 
+Default Display Text Format:  
+_{TransportationExecution.DocumentType.Code}:{TransportationExecution.DocumentNo}:{LineNo} - {TransportationExecution.DocumentType.TypeName:T}_  
+Default Search Member:  
+_TransportationExecution.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -61,6 +66,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -142,6 +148,7 @@ _Supports Order By_: **False**
 The [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) to which this TransportationExecutionLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExecutionOfTransportationOrderLine
@@ -168,6 +175,7 @@ _Front-End Recalc Expressions:_
 The [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) to which this TransportationExecutionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

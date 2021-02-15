@@ -5,6 +5,11 @@ uid: Crm.Sales.SalesOrderPromotionalPackages
 
 The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Promotional_Packages
 
+Default Display Text Format:  
+_{SalesOrder.DocumentType.Code}:{SalesOrder.DocumentNo} - {SalesOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_SalesOrder.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Pro
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -66,6 +72,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) to which this SalesOrderPromotionalPackage belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

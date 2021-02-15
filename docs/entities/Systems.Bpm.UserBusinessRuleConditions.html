@@ -80,6 +80,10 @@
 <h1 id="systemsbpmuserbusinessruleconditions-entity">Systems.Bpm.UserBusinessRuleConditions Entity</h1>
 
 <p>Represents one condition for the execution of a business rule. Entity: Sys_User_Business_Rule_Conditions</p>
+<p>Default Display Text Format:<br>
+<em>{AttributeName:T}</em><br>
+Default Search Member:<br>
+<em>AttributeName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -198,6 +202,7 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleConditions.html#comp
 <code>( obj.UserBusinessRule.Conditions.Select( c =&gt; c.ConditionNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>

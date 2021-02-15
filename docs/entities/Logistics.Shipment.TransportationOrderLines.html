@@ -80,6 +80,10 @@
 <h1 id="logisticsshipmenttransportationorderlines-entity">Logistics.Shipment.TransportationOrderLines Entity</h1>
 
 <p>Different cargoes of a transportation order. Entity: Log_Transportation_Order_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{TransportationOrder.DocumentType.Code}:{TransportationOrder.DocumentNo}:{LineNo} - {TransportationOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>TransportationOrder.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -172,6 +176,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -216,6 +221,7 @@
 <h3 id="document">Document</h3>
 <p>The <a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a> to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
@@ -224,6 +230,7 @@
 <h3 id="transportationorder">TransportationOrder</h3>
 <p>The <a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a> to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

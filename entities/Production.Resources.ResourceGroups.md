@@ -5,6 +5,11 @@ uid: Production.Resources.ResourceGroups
 
 Groups of resource types. Entity: Prd_Resource_Groups
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -35,6 +40,7 @@ _Default Value_: ****
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -51,6 +57,7 @@ _Supports Order By_: **False**
 Dot-separated list of parent groups. It also contains leading and trailing dot. [Required] [Default("/")] [Filter(like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 _Default Value_: **/**  

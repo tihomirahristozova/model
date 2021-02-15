@@ -5,6 +5,11 @@ uid: General.DocumentTypeAmounts
 
 Specifies amount types, that should be automatically added to documents of a given type. Entity: Gen_Document_Type_Amounts
 
+Default Display Text Format:  
+_{DocumentType.Code}: {DocumentType.EntityName:T}_  
+Default Search Member:  
+_DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -36,6 +41,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -79,6 +85,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document type for which the amount type is specified. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -5,6 +5,11 @@ uid: Applications.Cms.WebModules
 
 The abstract basic building block of web sites. Each module can render multiple web pages. Entity: Cms_Web_Modules
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -29,6 +34,7 @@ The abstract basic building block of web sites. Each module can render multiple 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

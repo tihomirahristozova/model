@@ -5,6 +5,11 @@ uid: Projects.ProjectParticipants
 
 Represents participant in a project, with a specific role. The same participant can participate multiple times in different roles. Entity: Prj_Project_Participants
 
+Default Display Text Format:  
+_{Project.Code}: {Project.Name:T}_  
+Default Search Member:  
+_Project.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Represents participant in a project, with a specific role. The same participant 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

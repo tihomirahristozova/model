@@ -80,6 +80,10 @@
 <h1 id="crmmarketingtargetgroupmembers-entity">Crm.Marketing.TargetGroupMembers Entity</h1>
 
 <p>Member parties of a marketing target group. Entity: Crm_Target_Group_Members</p>
+<p>Default Display Text Format:<br>
+<em>{TargetGroup.Code}: {TargetGroup.Name:T}</em><br>
+Default Search Member:<br>
+<em>TargetGroup.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -122,16 +126,19 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="party">Party</h3>
 <p>The member party. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="targetgroup">TargetGroup</h3>
 <p>The target group, which includes the member party. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

@@ -5,6 +5,11 @@ uid: General.DocumentTypeProperties
 
 Default user-defined properties, which should be added to new documents. Entity: Gen_Document_Type_Properties
 
+Default Display Text Format:  
+_{DocumentType.Code}: {DocumentType.EntityName:T}_  
+Default Search Member:  
+_DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -55,6 +60,7 @@ _Supported Filters_: **Equals, EqualsIn**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -104,6 +110,7 @@ _Supports Order By_: **False**
 The document type, for which to add user-defined properties. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany

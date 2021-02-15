@@ -5,6 +5,11 @@ uid: Projects.ProjectTasks
 
 Represents one task of a project. Entity: Prj_Project_Tasks
 
+Default Display Text Format:  
+_{TaskName:T}_  
+Default Search Member:  
+_TaskName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -64,6 +69,7 @@ _Default Value_: **CurrentDateTime**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -124,6 +130,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The project, to which this task belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[Projects](Projects.Projects.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectWorkElement

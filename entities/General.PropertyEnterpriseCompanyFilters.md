@@ -5,6 +5,11 @@ uid: General.PropertyEnterpriseCompanyFilters
 
 Provides a way to apply different filtering of the property allowed values for the different enterprise companies. Entity: Gen_Property_Enterprise_Company_Filters
 
+Default Display Text Format:  
+_{Property.Code}: {Property.AllowedValuesEntityName:T}_  
+Default Search Member:  
+_Property.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -33,6 +38,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -44,6 +50,7 @@ _Default Value_: **NewGuid**
 The enterprise company for which the current filter is specifed. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property

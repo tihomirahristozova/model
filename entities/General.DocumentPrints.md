@@ -5,6 +5,11 @@ uid: General.DocumentPrints
 
 Contains the history of each document print or export. Entity: Gen_Document_Prints
 
+Default Display Text Format:  
+_{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Document.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -47,6 +52,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -109,6 +115,7 @@ _Supports Order By_: **False**
 The document which was printed or exported. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Documents](General.Documents.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentPrintImage

@@ -80,6 +80,10 @@
 <h1 id="systemsbpmprocesselements-entity">Systems.Bpm.ProcessElements Entity</h1>
 
 <p>Contains the flow elements of the process model. Entity: Bpm_Process_Elements</p>
+<p>Default Display Text Format:<br>
+<em>{Code}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -290,6 +294,7 @@ Allowed values for the <a href="Systems.Bpm.ProcessElements.html#elementtype">El
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="instructionshtml">InstructionsHtml</h3>
@@ -306,6 +311,7 @@ Allowed values for the <a href="Systems.Bpm.ProcessElements.html#elementtype">El
 <h3 id="process">Process</h3>
 <p>The process, to which this element belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.Processes.html">Processes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="processlane">ProcessLane</h3>
 <p>The process lane to which this element belongs. [Required] [Filter(multi eq)]</p>

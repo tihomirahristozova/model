@@ -5,6 +5,11 @@ uid: Applications.AssetManagement.ManagedAssets
 
 Contains the managed assets. The management of assets include maintenance planning and execution, location assignments tracking, etc. Entity: Eam_Managed_Assets (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -46,6 +51,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -81,6 +87,7 @@ _Supports Order By_: **False**
 The enterprise company to which the managed asset belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAssetGroup
@@ -88,6 +95,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The organizational group of the asset. Used for organizational purposes only. [Required] [Filter(multi eq)]
 
 _Type_: **[ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAssetType

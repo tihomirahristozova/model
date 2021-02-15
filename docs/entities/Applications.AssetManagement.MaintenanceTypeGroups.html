@@ -80,6 +80,10 @@
 <h1 id="applicationsassetmanagementmaintenancetypegroups-entity">Applications.AssetManagement.MaintenanceTypeGroups Entity</h1>
 
 <p>Represents the hierarchy of the groups of maintenance types. Entity: Eam_Maintenance_Type_Groups (Introduced in version 19.1)</p>
+<p>Default Display Text Format:<br>
+<em>{Code}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -133,10 +137,12 @@
 <h3 id="code">Code</h3>
 <p>Unique code of the group. [Required] [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
@@ -153,6 +159,7 @@
 <h3 id="parent">Parent</h3>
 <p>Parent group. null denotes a root group. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceTypeGroups.html">MaintenanceTypeGroups</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

@@ -80,6 +80,10 @@
 <h1 id="productionshopfloorconsumptionorderlines-entity">Production.ShopFloor.ConsumptionOrderLines Entity</h1>
 
 <p>Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{ConsumptionOrder.DocumentType.Code}:{ConsumptionOrder.DocumentNo}:{LineOrd} - {ConsumptionOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>ConsumptionOrder.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -244,6 +248,7 @@ Allowed values for the <a href="Production.ShopFloor.ConsumptionOrderLines.html#
 <code>IIF( ( ( obj.WorkOrderItemIngredient != null) AndAlso ( obj.WorkOrderItemIngredient.WorkOrderItem != null)), ForSpecifiedItem, ForAllItems)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineord">LineOrd</h3>
@@ -275,10 +280,12 @@ Allowed values for the <a href="Production.ShopFloor.ConsumptionOrderLines.html#
 <h3 id="consumptionorder">ConsumptionOrder</h3>
 <p>The <a href="Production.ShopFloor.ConsumptionOrderLines.html#consumptionorder">ConsumptionOrder</a> to which this ConsumptionOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.ConsumptionOrders.html">ConsumptionOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="document">Document</h3>
 <p>The <a href="Production.ShopFloor.ConsumptionOrderLines.html#consumptionorder">ConsumptionOrder</a> to which this ConsumptionOrderLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.ConsumptionOrders.html">ConsumptionOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>If not null, specifies that the material has to be consumed from specific lot. [Filter(multi eq)]</p>
@@ -309,6 +316,7 @@ Allowed values for the <a href="Production.ShopFloor.ConsumptionOrderLines.html#
 <h3 id="workorderitemingredient">WorkOrderItemIngredient</h3>
 <p>The Work Order Item Ingredient for which we are ordering materials. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItemIngredients.html">WorkOrderItemIngredients</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

@@ -80,6 +80,10 @@
 <h1 id="crmposoperators-entity">Crm.Pos.Operators Entity</h1>
 
 <p>Represents one operator (person) in one POS location. Entity: Pos_Operators (Introduced in version 19.1)</p>
+<p>Default Display Text Format:<br>
+<em>{PosOperatorCode}</em><br>
+Default Search Member:<br>
+<em>PosOperatorCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -152,6 +156,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
@@ -183,6 +188,7 @@
 <h3 id="poslocation">PosLocation</h3>
 <p>The POS location where this operator works. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="posrole">PosRole</h3>
 <p>The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. [Required] [Filter(multi eq)]</p>

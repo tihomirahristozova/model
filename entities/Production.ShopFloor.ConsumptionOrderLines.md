@@ -5,6 +5,11 @@ uid: Production.ShopFloor.ConsumptionOrderLines
 
 Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_Lines
 
+Default Display Text Format:  
+_{ConsumptionOrder.DocumentType.Code}:{ConsumptionOrder.DocumentNo}:{LineOrd} - {ConsumptionOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_ConsumptionOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -92,6 +97,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -141,6 +147,7 @@ _Front-End Recalc Expressions:_
 The [ConsumptionOrder](Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) to which this ConsumptionOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Document
@@ -148,6 +155,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [ConsumptionOrder](Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) to which this ConsumptionOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -197,6 +205,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Work Order Item Ingredient for which we are ordering materials. [Required] [Filter(multi eq)]
 
 _Type_: **[WorkOrderItemIngredients](Production.ShopFloor.WorkOrderItemIngredients.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -80,6 +80,10 @@
 <h1 id="financevatbgvatdeclaringpersons-entity">Finance.Vat.BGVATDeclaringPersons Entity</h1>
 
 <p>National data: Contains the persons, which are authorized to issue and sign VAT declarations. Entity: Nat_BG_VAT_Declaring_Persons</p>
+<p>Default Display Text Format:<br>
+<em>{EnterpriseCompany.Company.RegistrationNumber}: {EnterpriseCompany.Company.PartyName:T}</em><br>
+Default Search Member:<br>
+<em>EnterpriseCompany.Company.RegistrationNumber</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -199,6 +203,7 @@ Allowed values for the <a href="Finance.Vat.BGVATDeclaringPersons.html#declarert
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
@@ -211,6 +216,7 @@ Allowed values for the <a href="Finance.Vat.BGVATDeclaringPersons.html#declarert
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company for which the person is presenting the declaration. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
 <p>The person that is presenting the declaration. [Required] [Filter(multi eq)]</p>

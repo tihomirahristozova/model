@@ -5,6 +5,11 @@ uid: Projects.ProjectTaskResources
 
 Contains the resources, required by the project tasks. Entity: Prj_Project_Task_Resources
 
+Default Display Text Format:  
+_{ProjectTask.TaskName:T}_  
+Default Search Member:  
+_ProjectTask.TaskName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -64,6 +69,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

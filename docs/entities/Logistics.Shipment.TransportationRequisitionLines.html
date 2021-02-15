@@ -80,6 +80,10 @@
 <h1 id="logisticsshipmenttransportationrequisitionlines-entity">Logistics.Shipment.TransportationRequisitionLines Entity</h1>
 
 <p>One line in a client requisition for transportation. Different lines usually represent requisitions for different cargo types. Entity: Log_Transportation_Requisition_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{TransportationRequisition.DocumentType.Code}:{TransportationRequisition.DocumentNo}:{LineNo} - {TransportationRequisition.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>TransportationRequisition.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -167,6 +171,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -206,6 +211,7 @@
 <h3 id="document">Document</h3>
 <p>The <a href="Logistics.Shipment.TransportationRequisitionLines.html#transportationrequisition">TransportationRequisition</a> to which this TransportationRequisitionLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationRequisitions.html">TransportationRequisitions</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
@@ -214,6 +220,7 @@
 <h3 id="transportationrequisition">TransportationRequisition</h3>
 <p>The <a href="Logistics.Shipment.TransportationRequisitionLines.html#transportationrequisition">TransportationRequisition</a> to which this TransportationRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationRequisitions.html">TransportationRequisitions</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

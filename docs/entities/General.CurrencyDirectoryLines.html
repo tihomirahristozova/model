@@ -80,6 +80,10 @@
 <h1 id="generalcurrencydirectorylines-entity">General.CurrencyDirectoryLines Entity</h1>
 
 <p>Contains exchange rate for a currency against the main currency of currency directory. Entity: Gen_Currency_Directory_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{CurrencyDirectory.DocumentType.Code}:{CurrencyDirectory.DocumentNo} - {CurrencyDirectory.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>CurrencyDirectory.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -132,6 +136,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="ratedivisor">RateDivisor</h3>
@@ -154,6 +159,7 @@
 <h3 id="currencydirectory">CurrencyDirectory</h3>
 <p>The <a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a> to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">CurrencyDirectories</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="fromcurrency">FromCurrency</h3>
 <p>The currency for which the exchange rate is recorded. [Required] [Filter(multi eq)]</p>

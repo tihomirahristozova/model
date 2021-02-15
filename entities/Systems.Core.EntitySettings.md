@@ -5,6 +5,11 @@ uid: Systems.Core.EntitySettings
 
 Contains entities, which have secured access. Entity: Sys_Entities
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -30,6 +35,7 @@ Contains entities, which have secured access. Entity: Sys_Entities
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -83,6 +89,7 @@ _Default Value_: **False**
 The system name of the entity, which is being secured. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

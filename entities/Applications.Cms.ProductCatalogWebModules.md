@@ -5,6 +5,11 @@ uid: Applications.Cms.ProductCatalogWebModules
 
 A web module, which presents a whole product catalog. Entity: Cms_Product_Catalog_Web_Modules
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -30,6 +35,7 @@ A web module, which presents a whole product catalog. Entity: Cms_Product_Catalo
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

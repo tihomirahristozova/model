@@ -5,6 +5,11 @@ uid: General.Contacts.ActivityResources
 
 Contains the resources, allocated to the activities. Entity: Cm_Activity_Resources
 
+Default Display Text Format:  
+_{Activity.DocumentType.Code}:{Activity.DocumentNo} - {Activity.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Activity.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Contains the resources, allocated to the activities. Entity: Cm_Activity_Resourc
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

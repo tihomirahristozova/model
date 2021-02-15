@@ -5,6 +5,11 @@ uid: Systems.Security.Users
 
 User logins. Entity: Sec_Users
 
+Default Display Text Format:  
+_{PhoneNumber}: {Name:T}_  
+Default Search Member:  
+_PhoneNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -89,6 +94,7 @@ _Supports Order By_: **False**
 Unique email of the user. Can be null because there may be login providers that don't use emails. [Filter(multi eq;like)] [ORD] [Introduced in version 18.2]
 
 _Type_: **string (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 
@@ -104,6 +110,7 @@ _Default Value_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -129,6 +136,7 @@ _Supports Order By_: **False**
 The login name of the user, which is usually the email. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 

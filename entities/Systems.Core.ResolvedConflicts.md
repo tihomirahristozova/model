@@ -5,6 +5,11 @@ uid: Systems.Core.ResolvedConflicts
 
 Contains records of conflicts, which were automatically resolved by update procedures. Entity: Sys_Resolved_Conflicts
 
+Default Display Text Format:  
+_{TableName:T}_  
+Default Search Member:  
+_TableName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -33,6 +38,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

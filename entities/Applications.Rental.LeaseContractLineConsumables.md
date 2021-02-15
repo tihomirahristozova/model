@@ -5,6 +5,11 @@ uid: Applications.Rental.LeaseContractLineConsumables
 
 Contains the consumables, which are sold accompanying asset rentals. Entity: Rent_Lease_Contract_Line_Consumables
 
+Default Display Text Format:  
+_{LeaseLine.LeaseContract.DocumentType.Code}:{LeaseLine.LeaseContract.DocumentNo} - {LeaseLine.LeaseContract.DocumentType.TypeName:T}_  
+Default Search Member:  
+_LeaseLine.LeaseContract.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -37,6 +42,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -68,6 +74,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Lease line with which the current consumable is given. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[LeaseContractLines](Applications.Rental.LeaseContractLines.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product

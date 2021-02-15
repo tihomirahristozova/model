@@ -80,6 +80,10 @@
 <h1 id="generalprintouts-entity">General.Printouts Entity</h1>
 
 <p>Contains data about binding of printout layouts to specific user-defined document types. Entity: Gen_Printouts</p>
+<p>Default Display Text Format:<br>
+<em>{ApplicationName:T}</em><br>
+Default Search Member:<br>
+<em>ApplicationName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -262,6 +266,7 @@ Allowed values for the <a href="General.Printouts.html#allowprintingonstate">All
 <em>Default Value</em>: <strong>default</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
@@ -301,6 +306,7 @@ Allowed values for the <a href="General.Printouts.html#allowprintingonstate">All
 <h3 id="documenttype">DocumentType</h3>
 <p>The document type to which this printout layout is bound. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The Enterprise Company to which this Printout applies, or null if it is for all enterprise companies. [Filter(multi eq)]</p>

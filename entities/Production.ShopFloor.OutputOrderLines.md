@@ -5,6 +5,11 @@ uid: Production.ShopFloor.OutputOrderLines
 
 Detail records of output orders. Entity: Prd_Output_Order_Lines
 
+Default Display Text Format:  
+_{OutputOrder.DocumentType.Code}:{OutputOrder.DocumentNo}:{LineOrd} - {OutputOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_OutputOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -69,6 +74,7 @@ _Default Value_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -154,6 +160,7 @@ _Supports Order By_: **False**
 The [OutputOrder](Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LineWorkOrder
@@ -180,6 +187,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [OutputOrder](Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProducedQuantityUnit
@@ -251,6 +259,7 @@ _Front-End Recalc Expressions:_
 The work order item for which this output is recorded. [Required] [Filter(multi eq)]
 
 _Type_: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItemOperation

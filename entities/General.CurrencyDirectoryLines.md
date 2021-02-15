@@ -5,6 +5,11 @@ uid: General.CurrencyDirectoryLines
 
 Contains exchange rate for a currency against the main currency of currency directory. Entity: Gen_Currency_Directory_Lines
 
+Default Display Text Format:  
+_{CurrencyDirectory.DocumentType.Code}:{CurrencyDirectory.DocumentNo} - {CurrencyDirectory.DocumentType.TypeName:T}_  
+Default Search Member:  
+_CurrencyDirectory.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Contains exchange rate for a currency against the main currency of currency dire
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -59,6 +65,7 @@ _Front-End Recalc Expressions:_
 The [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCurrency

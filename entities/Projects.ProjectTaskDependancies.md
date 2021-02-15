@@ -5,6 +5,11 @@ uid: Projects.ProjectTaskDependancies
 
 Represents dependancy between project tasks. Entity: Prj_Project_Task_Dependancies
 
+Default Display Text Format:  
+_{ProjectTask.TaskName:T}_  
+Default Search Member:  
+_ProjectTask.TaskName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -45,6 +50,7 @@ _Default Value_: **FinishToStart**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

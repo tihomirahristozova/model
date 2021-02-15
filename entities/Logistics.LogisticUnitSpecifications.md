@@ -5,6 +5,11 @@ uid: Logistics.LogisticUnitSpecifications
 
 Specification of a logistic unit. The database can contain any kind of specification, but most client applications and integrated methods process GS1 specifications (application codes). Entity: Log_Logistic_Unit_Specifications (Introduced in version 21.1.0.77)
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -35,6 +40,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -70,6 +76,7 @@ _Supports Order By_: **False**
 The logistic unit, which is detailed by this specification. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[LogisticUnits](Logistics.LogisticUnits.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

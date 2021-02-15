@@ -5,6 +5,11 @@ uid: Finance.Accounting.AccountRequiredProperties
 
 Defines the required properties for new vouchers, for each account. Entity: Acc_Account_Required_Properties
 
+Default Display Text Format:  
+_{Account.AccountFullNumber}: {Account.Name:T}_  
+Default Search Member:  
+_Account.AccountFullNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Defines the required properties for new vouchers, for each account. Entity: Acc_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -59,6 +65,7 @@ _Default Value_: **True**
 The [Account](Finance.Accounting.AccountRequiredProperties.md#account) to which this AccountRequiredProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property

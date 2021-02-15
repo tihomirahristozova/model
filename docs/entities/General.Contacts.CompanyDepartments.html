@@ -80,6 +80,10 @@
 <h1 id="generalcontactscompanydepartments-entity">General.Contacts.CompanyDepartments Entity</h1>
 
 <p>Hierarchical structure of the company departments. The departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Departments</p>
+<p>Default Display Text Format:<br>
+<em>{DepartmentName:T}</em><br>
+Default Search Member:<br>
+<em>DepartmentName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -137,6 +141,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>

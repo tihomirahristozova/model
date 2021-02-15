@@ -80,6 +80,10 @@
 <h1 id="logisticsprocurementpurchaseorderlines-entity">Logistics.Procurement.PurchaseOrderLines Entity</h1>
 
 <p>Contains detail lines of purchase orders. Entity: Scm_Purchase_Order_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{PurchaseOrder.DocumentType.Code}:{PurchaseOrder.DocumentNo}:{LineNo} - {PurchaseOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>PurchaseOrder.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -251,6 +255,7 @@
 <code>IIF( ( ( ( obj.ConfirmedQuantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConfirmedStandardQuantityBase, obj.ConfirmedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -326,6 +331,7 @@
 <h3 id="document">Document</h3>
 <p>The <a href="Logistics.Procurement.PurchaseOrderLines.html#purchaseorder">PurchaseOrder</a> to which this PurchaseOrderLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>When not null, indicates that a specific lot is required to be delivered. [Filter(multi eq)]</p>
@@ -354,6 +360,7 @@
 <h3 id="purchaseorder">PurchaseOrder</h3>
 <p>The <a href="Logistics.Procurement.PurchaseOrderLines.html#purchaseorder">PurchaseOrder</a> to which this PurchaseOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseproductprice">PurchaseProductPrice</h3>
 <p>When not null, specifies that the purchase unit price is loaded automatically from the specified purchase price record. [Filter(multi eq)]</p>

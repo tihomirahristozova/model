@@ -5,6 +5,11 @@ uid: Systems.Security.TrustedApplicationAuthorizations
 
 Authorization of a trusted application to access the data on behalf of a context user. Entity: Sec_Trusted_Application_Authorizations (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{TrustedApplication.Name:T}_  
+Default Search Member:  
+_TrustedApplication.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -39,6 +44,7 @@ _Default Value_: **CurrentDateTimeUtc**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -5,6 +5,11 @@ uid: Applications.Cms.WebSiteLanguages
 
 Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages
 
+Default Display Text Format:  
+_{LanguageCode}_  
+Default Search Member:  
+_LanguageCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

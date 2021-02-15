@@ -5,6 +5,11 @@ uid: Applications.Mail.MessageAttachments
 
 Represents attachments to mail messages. Entity: Mail_Message_Attachments
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -52,6 +57,7 @@ _Default Value_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

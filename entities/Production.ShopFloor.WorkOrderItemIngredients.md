@@ -5,6 +5,11 @@ uid: Production.ShopFloor.WorkOrderItemIngredients
 
 The materials consumed in the production order operations. Entity: Prd_Work_Order_Item_Ingredients
 
+Default Display Text Format:  
+_{WorkOrder.DocumentType.Code}:{WorkOrder.DocumentNo}:{LineOrd} - {WorkOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_WorkOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -70,6 +75,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -146,6 +152,7 @@ _Front-End Recalc Expressions:_
 The [WorkOrder](Production.ShopFloor.WorkOrderItemIngredients.md#workorder) to which this WorkOrderItemIngredient belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -233,6 +240,7 @@ _Front-End Recalc Expressions:_
 The [WorkOrder](Production.ShopFloor.WorkOrderItemIngredients.md#workorder) to which this WorkOrderItemIngredient belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItem
@@ -240,6 +248,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The work order item for which the materials in this line are used. If null means that the materials are distributed amongst all work order items in the document. [Filter(multi eq)]
 
 _Type_: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

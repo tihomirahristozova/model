@@ -5,6 +5,11 @@ uid: Systems.Bpm.UserBusinessRules
 
 Represents user-defined business rule. Entity: Sys_User_Business_Rules
 
+Default Display Text Format:  
+_{Code}: {RepositoryName:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -37,6 +42,7 @@ Represents user-defined business rule. Entity: Sys_User_Business_Rules
 The unique code of the UserBusinessRule. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -51,6 +57,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

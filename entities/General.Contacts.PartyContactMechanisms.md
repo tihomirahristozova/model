@@ -5,6 +5,11 @@ uid: General.Contacts.PartyContactMechanisms
 
 Specifies the contact mechanisms, which are attached to the parties. Currently each contact mechanism is attached to strictly one party. Entity: Cm_Party_Contact_Mechanisms
 
+Default Display Text Format:  
+_{Party.PartyCode}: {Party.PartyName:T}_  
+Default Search Member:  
+_Party.PartyCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -42,6 +47,7 @@ _Default Value_: **CurrentDate**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -109,6 +115,7 @@ _Supports Order By_: **False**
 The contact mechanism of the party. [Required] [Filter(multi eq)]
 
 _Type_: **[ContactMechanisms](General.Contacts.ContactMechanisms.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ContactMechanismPurpose
@@ -123,6 +130,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The party, having the contact mechanism. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PersonalDataProcess

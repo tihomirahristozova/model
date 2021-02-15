@@ -5,6 +5,11 @@ uid: General.DocumentFulfillments
 
 Fulfillment ledger for documents. Entity: Gen_Document_Fulfillments (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -42,6 +47,7 @@ _Default Value_: **CurrentDateTimeUtc**
 The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. [Required] [Filter(multi eq)]
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FulfillmentType
@@ -63,6 +69,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -114,6 +121,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Document, which is fulfilled. [Required] [Filter(multi eq)] [Introduced in version 21.1.1.26]
 
 _Type_: **[Documents](General.Documents.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

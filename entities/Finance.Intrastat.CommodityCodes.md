@@ -5,6 +5,11 @@ uid: Finance.Intrastat.CommodityCodes
 
 Contains the approved Intrastat commodity codes for each period. Entity: Its_Commodity_Codes
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Contains the approved Intrastat commodity codes for each period. Entity: Its_Com
 Product code from the Intrastat Combined nomenclature. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -38,6 +44,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

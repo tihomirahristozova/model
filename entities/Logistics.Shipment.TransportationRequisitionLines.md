@@ -5,6 +5,11 @@ uid: Logistics.Shipment.TransportationRequisitionLines
 
 One line in a client requisition for transportation. Different lines usually represent requisitions for different cargo types. Entity: Log_Transportation_Requisition_Lines
 
+Default Display Text Format:  
+_{TransportationRequisition.DocumentType.Code}:{TransportationRequisition.DocumentNo}:{LineNo} - {TransportationRequisition.DocumentType.TypeName:T}_  
+Default Search Member:  
+_TransportationRequisition.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -40,6 +45,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -103,6 +109,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [TransportationRequisition](Logistics.Shipment.TransportationRequisitionLines.md#transportationrequisition) to which this TransportationRequisitionLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
@@ -117,6 +124,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [TransportationRequisition](Logistics.Shipment.TransportationRequisitionLines.md#transportationrequisition) to which this TransportationRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

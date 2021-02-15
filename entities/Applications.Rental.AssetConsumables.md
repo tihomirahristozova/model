@@ -5,6 +5,11 @@ uid: Applications.Rental.AssetConsumables
 
 Consumables are products, which are usually sold accompanying an asset rental. Entity: Rent_Asset_Consumables
 
+Default Display Text Format:  
+_{RentalAsset.RentalAssetCode}: {RentalAsset.RentalAssetName:T}_  
+Default Search Member:  
+_RentalAsset.RentalAssetCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -36,6 +41,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

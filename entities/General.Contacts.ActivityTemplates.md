@@ -5,6 +5,11 @@ uid: General.Contacts.ActivityTemplates
 
 Templates for automatical generation of activity from any document. Entity: Cm_Activity_Templates
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -46,6 +51,7 @@ _Default Value_: **0**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -5,6 +5,11 @@ uid: Finance.Assets.AssetOrderLines
 
 Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines
 
+Default Display Text Format:  
+_{AssetOrder.DocumentType.Code}:{AssetOrder.DocumentNo} - {AssetOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_AssetOrder.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -39,6 +44,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -74,6 +80,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [AssetOrder](Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[AssetOrders](Finance.Assets.AssetOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssetValueCurrency
@@ -88,6 +95,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [AssetOrder](Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[AssetOrders](Finance.Assets.AssetOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument

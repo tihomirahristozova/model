@@ -80,6 +80,10 @@
 <h1 id="logisticsinventorysupplyschemaroutes-entity">Logistics.Inventory.SupplySchemaRoutes Entity</h1>
 
 <p>Obsolete. Not used. Entity: Inv_Supply_Schema_Routes</p>
+<p>Default Display Text Format:<br>
+<em>{SupplySchema.Name:T}</em><br>
+Default Search Member:<br>
+<em>SupplySchema.Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -142,6 +146,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
@@ -172,6 +177,7 @@
 <h3 id="supplyschema">SupplySchema</h3>
 <p>The <a href="Logistics.Inventory.SupplySchemaRoutes.html#supplyschema">SupplySchema</a> to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SupplySchemata.html">SupplySchemata</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

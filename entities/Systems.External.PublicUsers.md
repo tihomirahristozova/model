@@ -5,6 +5,11 @@ uid: Systems.External.PublicUsers
 
 /Users of the publicly offered services. This includes Internet, external and employee users. Entity: Ext_Public_Users
 
+Default Display Text Format:  
+_{PhoneNumber}: {CompanyName:T}_  
+Default Search Member:  
+_PhoneNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -118,6 +123,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

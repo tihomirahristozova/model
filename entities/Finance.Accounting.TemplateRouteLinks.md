@@ -5,6 +5,11 @@ uid: Finance.Accounting.TemplateRouteLinks
 
 When specified denotes that another route uses the template, initially bound to one route. Entity: Acc_Template_Route_Links
 
+Default Display Text Format:  
+_{Route.ProcedureName:T}_  
+Default Search Member:  
+_Route.ProcedureName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ When specified denotes that another route uses the template, initially bound to 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -35,6 +41,7 @@ _Default Value_: **NewGuid**
 Route for which the specified template will be activated. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Template

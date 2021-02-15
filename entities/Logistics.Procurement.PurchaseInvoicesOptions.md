@@ -5,6 +5,11 @@ uid: Logistics.Procurement.PurchaseInvoicesOptions
 
 Contains purchase invoice specific options for the different document types. Entity: Scm_Purchase_Invoices_Options
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ Contains purchase invoice specific options for the different document types. Ent
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

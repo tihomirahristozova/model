@@ -5,6 +5,11 @@ uid: Logistics.Inventory.TransactionEntryTemplates
 
 Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -33,6 +38,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -51,6 +57,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Obsolete. Not used. [Required] [Filter(multi eq)]
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

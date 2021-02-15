@@ -5,6 +5,11 @@ uid: Production.Resources.Resources
 
 Resource types available to production. Entity: Prd_Resources
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -38,6 +43,7 @@ Resource types available to production. Entity: Prd_Resources
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -113,6 +119,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Id of the containing resource group. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ResourceGroups](Production.Resources.ResourceGroups.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SetupScrapUnit

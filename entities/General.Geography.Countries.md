@@ -5,6 +5,11 @@ uid: General.Geography.Countries
 
 List of countries, listed by their internet suffix code. Entity: Gen_Countries
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -22,12 +27,14 @@ List of countries, listed by their internet suffix code. Entity: Gen_Countries
 Internet suffix code of the country. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -80,6 +80,10 @@
 <h1 id="crminvoicinginvoicelines-entity">Crm.Invoicing.InvoiceLines Entity</h1>
 
 <p>Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{Invoice.DocumentType.Code}:{Invoice.DocumentNo}:{LineNo} - {Invoice.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Invoice.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -357,6 +361,7 @@ Generic enum type for DeliveryTerms properties<br>
 <code>obj.Invoice.DeliveryTermsCode</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="intrastattransactionnaturecode">IntrastatTransactionNatureCode</h3>
@@ -596,6 +601,7 @@ Generic enum type for TransportMode properties<br>
 <h3 id="document">Document</h3>
 <p>The <a href="Crm.Invoicing.InvoiceLines.html#invoice">Invoice</a> to which this InvoiceLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.Invoices.html">Invoices</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastattransportcountry">IntrastatTransportCountry</h3>
 <p>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</p>
@@ -608,10 +614,12 @@ Generic enum type for TransportMode properties<br>
 <h3 id="invoice">Invoice</h3>
 <p>The <a href="Crm.Invoicing.InvoiceLines.html#invoice">Invoice</a> to which this InvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.Invoices.html">Invoices</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="invoiceorderline">InvoiceOrderLine</h3>
 <p>Invoice order line which is invoiced by this line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceOrderLines.html">InvoiceOrderLines</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linedealtype">LineDealType</h3>
 <p>Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. [Filter(multi eq)]</p>
@@ -630,14 +638,17 @@ Generic enum type for TransportMode properties<br>
 <h3 id="parentdocument">ParentDocument</h3>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] [Introduced in version 18.2]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentsalesorderline">ParentSalesOrderLine</h3>
 <p>When not null specifies the Sales Order line that is invoiced by this invoice line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymenttransaction">PaymentTransaction</h3>
 <p>The payment transaction, which is invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <p>The invoiced product. When null, although rarely used, the invoice line is still valid and the Product Description contains the invoiced item. [Filter(multi eq)]</p>
@@ -652,6 +663,7 @@ Generic enum type for TransportMode properties<br>
 <h3 id="salesorder">SalesOrder</h3>
 <p>When not null specifies the Sales Order that is invoiced by this line. [Filter(multi eq;like)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.ParentSalesOrderLine != null), obj.ParentSalesOrderLine.SalesOrder, null)</code></p>
@@ -662,6 +674,7 @@ Generic enum type for TransportMode properties<br>
 <h3 id="transactionline">TransactionLine</h3>
 <p>The store transaction line that is invoiced by this line, for Business Reason = S. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

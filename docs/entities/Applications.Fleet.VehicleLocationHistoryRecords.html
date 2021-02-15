@@ -80,6 +80,10 @@
 <h1 id="applicationsfleetvehiclelocationhistoryrecords-entity">Applications.Fleet.VehicleLocationHistoryRecords Entity</h1>
 
 <p>Stores information about vehicle locations. Entity: Fleet_Vehicle_Location_History_Records</p>
+<p>Default Display Text Format:<br>
+<em>{Id}</em><br>
+Default Search Member:<br>
+<em>Id</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -142,6 +146,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="latitude">Latitude</h3>
@@ -163,6 +168,7 @@
 <h3 id="vehicle">Vehicle</h3>
 <p>The vehicle, whose location is being stored. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Applications.Fleet.Vehicles.html">Vehicles</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

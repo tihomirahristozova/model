@@ -5,6 +5,11 @@ uid: Crm.Presales.OfferLines
 
 Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 
+Default Display Text Format:  
+_{Offer.DocumentType.Code}:{Offer.DocumentNo}:{LineNo} - {Offer.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Offer.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -72,6 +77,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -234,6 +240,7 @@ _Supports Order By_: **False**
 The [Offer](Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[Offers](Crm.Presales.Offers.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LineDiscount
@@ -250,6 +257,7 @@ _Front-End Recalc Expressions:_
 The [Offer](Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Offers](Crm.Presales.Offers.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product

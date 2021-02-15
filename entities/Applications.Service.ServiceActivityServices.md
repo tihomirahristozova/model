@@ -5,6 +5,11 @@ uid: Applications.Service.ServiceActivityServices
 
 Contains the services, which were actually performed during the service activity (repair). Entity: Srv_Service_Activity_Services
 
+Default Display Text Format:  
+_{ServiceActivity.DocumentType.Code}:{ServiceActivity.DocumentNo}:{LineNo} - {ServiceActivity.DocumentType.TypeName:T}_  
+Default Search Member:  
+_ServiceActivity.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -47,6 +52,7 @@ _Default Value_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -98,6 +104,7 @@ _Front-End Recalc Expressions:_
 The [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PerformedByPerson
@@ -119,6 +126,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) to which this ServiceActivityService belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceObject

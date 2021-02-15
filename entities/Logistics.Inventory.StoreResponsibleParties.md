@@ -5,6 +5,11 @@ uid: Logistics.Inventory.StoreResponsibleParties
 
 Contains the list of responsible parties (usually persons) for the stores. Stores can have multiple responsible parties. Entity: Inv_Store_Responsible_Parties
 
+Default Display Text Format:  
+_{Store.PartyCode}: {Store.PartyName:T}_  
+Default Search Member:  
+_Store.PartyCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Contains the list of responsible parties (usually persons) for the stores. Store
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

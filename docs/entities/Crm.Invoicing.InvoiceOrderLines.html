@@ -80,6 +80,10 @@
 <h1 id="crminvoicinginvoiceorderlines-entity">Crm.Invoicing.InvoiceOrderLines Entity</h1>
 
 <p>Detail records (lines) of Invoice Orders. Entity: Crm_Invoice_Order_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{InvoiceOrder.DocumentType.Code}:{InvoiceOrder.DocumentNo}:{LineNo} - {InvoiceOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>InvoiceOrder.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -243,6 +247,7 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <em>Default Value</em>: <strong>Shipment</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineamount">LineAmount</h3>
@@ -319,10 +324,12 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <h3 id="document">Document</h3>
 <p>The <a href="Crm.Invoicing.InvoiceOrderLines.html#invoiceorder">InvoiceOrder</a> to which this InvoiceOrderLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceOrders.html">InvoiceOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="invoiceorder">InvoiceOrder</h3>
 <p>The <a href="Crm.Invoicing.InvoiceOrderLines.html#invoiceorder">InvoiceOrder</a> to which this InvoiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceOrders.html">InvoiceOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linedealtype">LineDealType</h3>
 <p>Deal type to be passed to the invoice line. If deal type in the line is different from deal type in the header another VAT entry is created from the invoice. [Filter(multi eq)]</p>
@@ -341,6 +348,7 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <h3 id="paymenttransaction">PaymentTransaction</h3>
 <p>The payment transaction, which is to be invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <p>The product, which is ordered for invoicing. [Filter(multi eq)]</p>
@@ -355,6 +363,7 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <h3 id="salesorder">SalesOrder</h3>
 <p>When not null specifies the Sales Order that is ordered to be invoiced by this line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.InvoiceOrder.SalesOrder</code></p>
@@ -363,6 +372,7 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <h3 id="salesorderline">SalesOrderLine</h3>
 <p>When not null specifies the Sales Order line that is ordered to be invoiced by this line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <p>Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]</p>
@@ -371,6 +381,7 @@ Generic enum type for InvoicingBusinessReason properties<br>
 <h3 id="transactionline">TransactionLine</h3>
 <p>The store transaction line that is to be invoiced by this line, for Business Reason = S. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

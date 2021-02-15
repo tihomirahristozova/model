@@ -5,6 +5,11 @@ uid: Finance.Payments.PaymentSlipLines
 
 Mass payment line, which is distribution of an amount among payment orders. Each record generates one payment transaction line. Entity: Cash_Payment_Slip_Lines
 
+Default Display Text Format:  
+_{PaymentSlipAmount.PartyName:T}_  
+Default Search Member:  
+_PaymentSlipAmount.PartyName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -48,6 +53,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -59,6 +65,7 @@ _Default Value_: **NewGuid**
 The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)]
 
 _Type_: **[PaymentOrders](Finance.Payments.PaymentOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentSlipAmount
@@ -66,6 +73,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
 _Type_: **[PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

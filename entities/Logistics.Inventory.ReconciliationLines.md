@@ -5,6 +5,11 @@ uid: Logistics.Inventory.ReconciliationLines
 
 Store reconciliations (physical counting) detail lines. Each line contains the reconciliation for one combination of product, lot, bin and serial number. Entity: Inv_Reconciliation_Lines
 
+Default Display Text Format:  
+_{Reconciliation.DocumentType.Code}:{Reconciliation.DocumentNo}:{LineOrd} - {Reconciliation.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Reconciliation.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -46,6 +51,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -120,6 +126,7 @@ _Supports Order By_: **False**
 Parent reconciliation Id. [Required] [Filter(multi eq)]
 
 _Type_: **[Reconciliations](Logistics.Inventory.Reconciliations.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -161,6 +168,7 @@ _Front-End Recalc Expressions:_
 Parent reconciliation Id. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Reconciliations](Logistics.Inventory.Reconciliations.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber

@@ -5,6 +5,11 @@ uid: General.DocumentTypes
 
 List of user-defined document types. Each type has associated system entity (object class). Entity: Gen_Document_Types
 
+Default Display Text Format:  
+_{Code}: {EntityName:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -53,6 +58,7 @@ List of user-defined document types. Each type has associated system entity (obj
 Unique descriptive code of the document type. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -89,6 +95,7 @@ _Default Value_: **False**
 System entity, which contains the documents. [Required] [Filter(multi eq)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
 
@@ -104,6 +111,7 @@ _Default Value_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -139,6 +147,7 @@ _Front-End Recalc Expressions:_
 Description of the document type. [Required] [Filter(like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Indexed_: **True**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 

@@ -5,6 +5,11 @@ uid: Finance.Vat.BGVATDeclaringPersons
 
 National data: Contains the persons, which are authorized to issue and sign VAT declarations. Entity: Nat_BG_VAT_Declaring_Persons
 
+Default Display Text Format:  
+_{EnterpriseCompany.Company.RegistrationNumber}: {EnterpriseCompany.Company.PartyName:T}_  
+Default Search Member:  
+_EnterpriseCompany.Company.RegistrationNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -80,6 +85,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -100,6 +106,7 @@ _Default Value_: **True**
 The enterprise company for which the person is presenting the declaration. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person

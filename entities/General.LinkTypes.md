@@ -5,6 +5,11 @@ uid: General.LinkTypes
 
 Obsolete. Not used. Entity: Gen_Link_Types
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -27,6 +32,7 @@ _Supported Filters_: **Equals, EqualsIn**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **NotFilterable**  
 
 ### Name

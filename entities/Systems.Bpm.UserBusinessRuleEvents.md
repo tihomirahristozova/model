@@ -5,6 +5,11 @@ uid: Systems.Bpm.UserBusinessRuleEvents
 
 Represents event registration of a business rule. Entity: Sys_User_Business_Rule_Events
 
+Default Display Text Format:  
+_{UserBusinessRule.Code}: {UserBusinessRule.RepositoryName:T}_  
+Default Search Member:  
+_UserBusinessRule.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -76,6 +81,7 @@ _Default Value_: **50**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

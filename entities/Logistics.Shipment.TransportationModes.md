@@ -5,6 +5,11 @@ uid: Logistics.Shipment.TransportationModes
 
 Represents a mode of transportation, like water, air, road, etc. Entity: Log_Transportation_Modes
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -22,12 +27,14 @@ Represents a mode of transportation, like water, air, road, etc. Entity: Log_Tra
 Unique transportation mode code. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

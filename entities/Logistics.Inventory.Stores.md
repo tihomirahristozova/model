@@ -5,6 +5,11 @@ uid: Logistics.Inventory.Stores
 
 Represents the physical warehouses. Entity: Inv_Stores
 
+Default Display Text Format:  
+_{PartyCode}: {PartyName:T}_  
+Default Search Member:  
+_PartyCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -76,6 +81,7 @@ Represents the physical warehouses. Entity: Inv_Stores
 The unique code of the Store. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -107,12 +113,14 @@ _Supported Filters_: **Equals, EqualsIn**
 Global Location Number used by EDI systems. [Filter(multi eq)] [ORD] (Inherited from [Parties](General.Contacts.Parties.md))
 
 _Type_: **string (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -147,6 +155,7 @@ _Default Value_: **0**
 The unique code of the party. [Required] [Filter(eq;like)] [ORD] [ReadOnly] (Inherited from [Parties](General.Contacts.Parties.md))
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -171,6 +180,7 @@ _Supports Order By_: **False**
 The name of the party. [Required] [Filter(eq;like)] [ORD] (Inherited from [Parties](General.Contacts.Parties.md))
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -332,6 +342,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. [Filter(multi eq)] (Inherited from [Parties](General.Contacts.Parties.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsibleParty

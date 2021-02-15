@@ -5,6 +5,11 @@ uid: Applications.Fleet.Crews
 
 Represents the crews, which can operate vehicles. Entity: Fleet_Crews
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -40,6 +45,7 @@ _Default Value_: **True**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

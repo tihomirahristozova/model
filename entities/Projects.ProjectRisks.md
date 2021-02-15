@@ -5,6 +5,11 @@ uid: Projects.ProjectRisks
 
 Contains risks, associated to projects. Entity: Prj_Project_Risks
 
+Default Display Text Format:  
+_{RiskName:T}_  
+Default Search Member:  
+_RiskName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -55,6 +60,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

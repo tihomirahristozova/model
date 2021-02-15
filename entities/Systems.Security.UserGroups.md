@@ -5,6 +5,11 @@ uid: Systems.Security.UserGroups
 
 Contains the user group members. Entity: Sec_User_Groups
 
+Default Display Text Format:  
+_{User.PhoneNumber}: {User.Name:T}_  
+Default Search Member:  
+_User.PhoneNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Contains the user group members. Entity: Sec_User_Groups
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -42,6 +48,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [User](Systems.Security.UserGroups.md#user) to which this UserGroup belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

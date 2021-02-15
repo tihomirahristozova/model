@@ -5,6 +5,11 @@ uid: Logistics.Wms.WarehouseRequisitionLines
 
 Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requisition_Lines (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{WarehouseRequisition.DocumentType.Code}:{WarehouseRequisition.DocumentNo}:{LineNo} - {WarehouseRequisition.DocumentType.TypeName:T}_  
+Default Search Member:  
+_WarehouseRequisition.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -34,6 +39,7 @@ Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requ
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -90,6 +96,7 @@ _Supports Order By_: **False**
 The [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -132,6 +139,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

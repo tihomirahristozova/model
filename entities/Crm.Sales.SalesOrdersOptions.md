@@ -5,6 +5,11 @@ uid: Crm.Sales.SalesOrdersOptions
 
 Options for sales orders of specific user defined document type. Entity: Crm_Sales_Orders_Options
 
+Default Display Text Format:  
+_{DocumentType.Code}: {DocumentType.EntityName:T}_  
+Default Search Member:  
+_DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -58,6 +63,7 @@ _Default Value_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

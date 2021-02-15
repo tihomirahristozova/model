@@ -5,6 +5,11 @@ uid: Crm.Invoicing.InvoiceOrderLines
 
 Detail records (lines) of Invoice Orders. Entity: Crm_Invoice_Order_Lines
 
+Default Display Text Format:  
+_{InvoiceOrder.DocumentType.Code}:{InvoiceOrder.DocumentNo}:{LineNo} - {InvoiceOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_InvoiceOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -60,6 +65,7 @@ _Default Value_: **Shipment**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -171,6 +177,7 @@ _Front-End Recalc Expressions:_
 The [InvoiceOrder](Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) to which this InvoiceOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[InvoiceOrders](Crm.Invoicing.InvoiceOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### InvoiceOrder
@@ -178,6 +185,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [InvoiceOrder](Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) to which this InvoiceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[InvoiceOrders](Crm.Invoicing.InvoiceOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LineDealType
@@ -206,6 +214,7 @@ _Front-End Recalc Expressions:_
 The payment transaction, which is to be invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)]
 
 _Type_: **[PaymentTransactions](Finance.Payments.PaymentTransactions.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -229,6 +238,7 @@ _Front-End Recalc Expressions:_
 When not null specifies the Sales Order that is ordered to be invoiced by this line. [Filter(multi eq)]
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -241,6 +251,7 @@ _Front-End Recalc Expressions:_
 When not null specifies the Sales Order line that is ordered to be invoiced by this line. [Filter(multi eq)]
 
 _Type_: **[SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
@@ -255,6 +266,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The store transaction line that is to be invoiced by this line, for Business Reason = S. [Filter(multi eq)]
 
 _Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

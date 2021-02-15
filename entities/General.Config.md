@@ -5,6 +5,11 @@ uid: General.Config
 
 Hierarchical repository of configuration options. Entity: Gen_Config
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -31,6 +36,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -48,6 +54,7 @@ _Default Value_: **True**
 Full path of the configuration option. [Required] [Filter(eq)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 

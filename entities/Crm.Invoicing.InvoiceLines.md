@@ -5,6 +5,11 @@ uid: Crm.Invoicing.InvoiceLines
 
 Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines
 
+Default Display Text Format:  
+_{Invoice.DocumentType.Code}:{Invoice.DocumentNo}:{LineNo} - {Invoice.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Invoice.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -100,6 +105,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -298,6 +304,7 @@ _Default Value_: **Constant**
 The [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[Invoices](Crm.Invoicing.Invoices.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatTransportCountry
@@ -317,6 +324,7 @@ _Front-End Recalc Expressions:_
 The [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Invoices](Crm.Invoicing.Invoices.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### InvoiceOrderLine
@@ -324,6 +332,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Invoice order line which is invoiced by this line. [Filter(multi eq)]
 
 _Type_: **[InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LineDealType
@@ -352,6 +361,7 @@ _Front-End Recalc Expressions:_
 The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)] [Introduced in version 18.2]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentSalesOrderLine
@@ -359,6 +369,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null specifies the Sales Order line that is invoiced by this invoice line. [Filter(multi eq)]
 
 _Type_: **[SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentTransaction
@@ -366,6 +377,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The payment transaction, which is invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. [Filter(multi eq)]
 
 _Type_: **[PaymentTransactions](Finance.Payments.PaymentTransactions.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -389,6 +401,7 @@ _Front-End Recalc Expressions:_
 When not null specifies the Sales Order that is invoiced by this line. [Filter(multi eq;like)]
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -405,6 +418,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The store transaction line that is invoiced by this line, for Business Reason = S. [Filter(multi eq)]
 
 _Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

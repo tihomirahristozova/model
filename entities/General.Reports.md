@@ -5,6 +5,11 @@ uid: General.Reports
 
 Contains user-defined data-sources. The data sources is a user-defined way (similar to query designer) to extract, filter, join and transform data for presentation purposes. Entity: Gen_Reports
 
+Default Display Text Format:  
+_{QueryName:T}_  
+Default Search Member:  
+_QueryName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -27,6 +32,7 @@ Contains user-defined data-sources. The data sources is a user-defined way (simi
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

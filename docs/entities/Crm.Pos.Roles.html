@@ -80,6 +80,10 @@
 <h1 id="crmposroles-entity">Crm.Pos.Roles Entity</h1>
 
 <p>Represents a role, which can be assigned to POS operators (like Cashier, Manager, etc.). The role indicates the operations, which are allowed to be performed by the operators. Entity: Pos_Roles (Introduced in version 19.1)</p>
+<p>Default Display Text Format:<br>
+<em>{PosRoleCode}: {PosRoleName:T}</em><br>
+Default Search Member:<br>
+<em>PosRoleCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -132,11 +136,13 @@
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="posrolecode">PosRoleCode</h3>
 <p>Unique role code. [Required] [Filter(multi eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="posrolename">PosRoleName</h3>

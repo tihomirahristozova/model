@@ -5,6 +5,11 @@ uid: General.DocumentTypeUserStatuses
 
 User-defined document statuses. Entity: Gen_Document_Type_User_Statuses
 
+Default Display Text Format:  
+_{UserStatusName:T}_  
+Default Search Member:  
+_UserStatusName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -51,6 +56,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -108,6 +114,7 @@ _Supports Order By_: **False**
 The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

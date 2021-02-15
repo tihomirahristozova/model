@@ -80,6 +80,10 @@
 <h1 id="crmsalessalesorderpaymentplans-entity">Crm.Sales.SalesOrderPaymentPlans Entity</h1>
 
 <p>Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans</p>
+<p>Default Display Text Format:<br>
+<em>{SalesOrder.DocumentType.Code}:{SalesOrder.DocumentNo} - {SalesOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>SalesOrder.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -238,6 +242,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <code>IIF( ( Convert( obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueStartDate)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="installmentnumber">InstallmentNumber</h3>
@@ -301,6 +306,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <h3 id="salesorder">SalesOrder</h3>
 <p>The <a href="Crm.Sales.SalesOrderPaymentPlans.html#salesorder">SalesOrder</a> to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

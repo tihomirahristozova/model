@@ -80,6 +80,10 @@
 <h1 id="logisticsprocurementrequisitionlines-entity">Logistics.Procurement.RequisitionLines Entity</h1>
 
 <p>Detail lines of Requistions. Entity: Scm_Requisition_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{Requisition.DocumentType.Code}:{Requisition.DocumentNo}:{LineNo} - {Requisition.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Requisition.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -177,6 +181,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -234,6 +239,7 @@
 <h3 id="document">Document</h3>
 <p>The <a href="Logistics.Procurement.RequisitionLines.html#requisition">Requisition</a> to which this RequisitionLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.Requisitions.html">Requisitions</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>When not null, indicates a specific lot should be purchased. [Filter(multi eq)]</p>
@@ -250,6 +256,7 @@
 <h3 id="requisition">Requisition</h3>
 <p>The <a href="Logistics.Procurement.RequisitionLines.html#requisition">Requisition</a> to which this RequisitionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.Requisitions.html">Requisitions</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="suggestedsupplier">SuggestedSupplier</h3>
 <p>When the requisitor knows the supplier or has a supplier preference it is denoted in this field. [Filter(multi eq)]</p>

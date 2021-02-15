@@ -80,6 +80,10 @@
 <h1 id="financepaymentspaymentslipamounts-entity">Finance.Payments.PaymentSlipAmounts Entity</h1>
 
 <p>Mass payment amount. Each record generates one payment transaction. Entity: Cash_Payment_Slip_Amounts</p>
+<p>Default Display Text Format:<br>
+<em>{PartyName:T}</em><br>
+Default Search Member:<br>
+<em>PartyName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -209,6 +213,7 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#direction">D
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="ispartypayment">IsPartyPayment</h3>
@@ -257,6 +262,7 @@ Allowed values for the <a href="Finance.Payments.PaymentOrders.html#direction">D
 <h3 id="paymentslip">PaymentSlip</h3>
 <p>The <a href="Finance.Payments.PaymentSlipAmounts.html#paymentslip">PaymentSlip</a> to which this PaymentSlipAmount belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlips.html">PaymentSlips</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

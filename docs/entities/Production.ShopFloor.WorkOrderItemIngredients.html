@@ -80,6 +80,10 @@
 <h1 id="productionshopfloorworkorderitemingredients-entity">Production.ShopFloor.WorkOrderItemIngredients Entity</h1>
 
 <p>The materials consumed in the production order operations. Entity: Prd_Work_Order_Item_Ingredients</p>
+<p>Default Display Text Format:<br>
+<em>{WorkOrder.DocumentType.Code}:{WorkOrder.DocumentNo}:{LineOrd} - {WorkOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>WorkOrder.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -249,6 +253,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineord">LineOrd</h3>
@@ -299,6 +304,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <h3 id="document">Document</h3>
 <p>The <a href="Production.ShopFloor.WorkOrderItemIngredients.html#workorder">WorkOrder</a> to which this WorkOrderItemIngredient belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>Lot from which to get the material. When null, any lot can be used. [Filter(multi eq)]</p>
@@ -353,10 +359,12 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItemIngredients.ht
 <h3 id="workorder">WorkOrder</h3>
 <p>The <a href="Production.ShopFloor.WorkOrderItemIngredients.html#workorder">WorkOrder</a> to which this WorkOrderItemIngredient belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workorderitem">WorkOrderItem</h3>
 <p>The work order item for which the materials in this line are used. If null means that the materials are distributed amongst all work order items in the document. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.WorkOrderItem != null), null, obj.WorkOrderItem)</code></p>

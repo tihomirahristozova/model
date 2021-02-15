@@ -80,6 +80,10 @@
 <h1 id="crmposproducttypetaxgroups-entity">Crm.Pos.ProductTypeTaxGroups Entity</h1>
 
 <p>Contains the tax group codes for the product types. The tax group codes are used when sales documents are printed to fiscal printers or exported to fiscal authorities. Entity: Pos_Product_Type_Tax_Groups (Introduced in version 19.1)</p>
+<p>Default Display Text Format:<br>
+<em>{ProductType.Code}: {ProductType.Name:T}</em><br>
+Default Search Member:<br>
+<em>ProductType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -249,6 +253,7 @@ Allowed values for the <a href="General.PartyApplicableLegislations.html#applica
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
@@ -309,6 +314,7 @@ Allowed values for the <a href="Crm.Pos.ProductTypeTaxGroups.html#taxgroup">TaxG
 <h3 id="producttype">ProductType</h3>
 <p>The product type for which the tax group is specified. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">ProductTypes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

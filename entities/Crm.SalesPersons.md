@@ -5,6 +5,11 @@ uid: Crm.SalesPersons
 
 Sales persons (or representatives) are sellers inside the enterprise company who sell the products to customers. Entity: Crm_Sales_Persons
 
+Default Display Text Format:  
+_{Person.PartyCode}: {Person.PartyName:T}_  
+Default Search Member:  
+_Person.PartyCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -62,6 +67,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -96,6 +102,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Base personal record. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesPersonGroup

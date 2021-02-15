@@ -80,6 +80,10 @@
 <h1 id="systemscoreobjectfiles-entity">Systems.Core.ObjectFiles Entity</h1>
 
 <p>Contains files attached to objects. Entity: Sys_Object_Files</p>
+<p>Default Display Text Format:<br>
+<em>{PurposeCode}: {FileName:T}</em><br>
+Default Search Member:<br>
+<em>PurposeCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -233,6 +237,7 @@ Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">C
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lastupdatetimeutc">LastUpdateTimeUtc</h3>
@@ -288,6 +293,7 @@ Allowed values for the <a href="Systems.Core.ObjectFiles.html#contentlocation">C
 <h3 id="object">Object</h3>
 <p>The object to which the file is attached. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

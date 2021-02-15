@@ -5,6 +5,11 @@ uid: General.DocumentLinks
 
 Obsolete. Not used. Entity: Gen_Document_Links
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -17,6 +22,7 @@ Obsolete. Not used. Entity: Gen_Document_Links
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

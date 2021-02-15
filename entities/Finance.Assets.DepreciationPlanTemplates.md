@@ -5,6 +5,11 @@ uid: Finance.Assets.DepreciationPlanTemplates
 
 Specifies the default depreciation methods for the asset categories. Different methods can be specified for each valuation model. Entity: Ast_Depreciation_Plan_Templates
 
+Default Display Text Format:  
+_{AssetCategory.Code}: {AssetCategory.Name:T}_  
+Default Search Member:  
+_AssetCategory.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -34,6 +39,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -45,6 +51,7 @@ _Default Value_: **NewGuid**
 Asset category for which this template is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[AssetCategories](Finance.Assets.AssetCategories.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DepreciationMethod

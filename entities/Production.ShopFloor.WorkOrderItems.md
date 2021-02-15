@@ -5,6 +5,11 @@ uid: Production.ShopFloor.WorkOrderItems
 
 The different items that are produced with a work order. Entity: Prd_Work_Order_Items
 
+Default Display Text Format:  
+_{WorkOrder.DocumentType.Code}:{WorkOrder.DocumentNo}:{LineOrd} - {WorkOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_WorkOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -65,6 +70,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -209,6 +215,7 @@ _Supports Order By_: **False**
 The Id of the work order, containing the item. [Required] [Filter(multi eq)]
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -240,6 +247,7 @@ _Front-End Recalc Expressions:_
 The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProducedQuantityUnit
@@ -259,6 +267,7 @@ _Front-End Recalc Expressions:_
 The Id of the produced product. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -306,6 +315,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Id of the work order, containing the item. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

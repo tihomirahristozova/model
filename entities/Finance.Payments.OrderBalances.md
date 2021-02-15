@@ -5,6 +5,11 @@ uid: Finance.Payments.OrderBalances
 
 Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View
 
+Default Display Text Format:  
+_{OrderAmountValue}: {PaidAmountValue}_  
+Default Search Member:  
+_OrderAmountValue_  
+
 ## Attributes
 
 | Name | Type | Description |

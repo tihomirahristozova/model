@@ -5,6 +5,11 @@ uid: Finance.Cost.DistributionCosts
 
 The cost types and their amounts which are distributed by a Cost Distribution document. Entity: Cost_Distribution_Costs
 
+Default Display Text Format:  
+_{CostDistribution.DocumentType.Code}:{CostDistribution.DocumentNo} - {CostDistribution.DocumentType.TypeName:T}_  
+Default Search Member:  
+_CostDistribution.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -34,6 +39,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

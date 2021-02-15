@@ -5,6 +5,11 @@ uid: Systems.Core.ExternalApplications
 
 List of external applications. Used to run external applications. Entity: Sys_External_Applications
 
+Default Display Text Format:  
+_{EntityName:T}_  
+Default Search Member:  
+_EntityName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -61,6 +66,7 @@ _Default Value_: **SINGLE**
 The entity, for which the application is defined. [Required] [Filter(eq)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 
@@ -76,6 +82,7 @@ _Default Value_: **True**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

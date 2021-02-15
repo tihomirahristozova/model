@@ -5,6 +5,11 @@ uid: Production.ShopFloor.OutputOrderDistributedMaterialConsumptions
 
 Contains the quantity of materials distributed over the output order lines. Entity: Prd_Output_Order_Distributed_Material_Consumptions
 
+Default Display Text Format:  
+_{OutputOrderLine.OutputOrder.DocumentType.Code}:{OutputOrderLine.OutputOrder.DocumentNo}:{OutputOrderLine.LineOrd} - {OutputOrderLine.OutputOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_OutputOrderLine.OutputOrder.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -44,6 +49,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -55,6 +61,7 @@ _Default Value_: **NewGuid**
 Consumption order line which requested the Consumed_Quantity. [Required] [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OutputOrderLine
@@ -62,6 +69,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The output order line for which the distribution is recorded. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
 _Type_: **[OutputOrderLines](Production.ShopFloor.OutputOrderLines.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

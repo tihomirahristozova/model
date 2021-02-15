@@ -5,6 +5,11 @@ uid: Systems.Reporting.DataSources
 
 Contains user-defined data sources, which retrieve rows from multiple queries. Entity: Sys_Data_Sources
 
+Default Display Text Format:  
+_{BaseQueryName:T}_  
+Default Search Member:  
+_BaseQueryName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -53,6 +58,7 @@ _Default Value_: **MultiTable**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

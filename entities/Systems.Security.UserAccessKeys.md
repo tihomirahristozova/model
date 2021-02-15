@@ -5,6 +5,11 @@ uid: Systems.Security.UserAccessKeys
 
 Obsolete. Not used. Entity: Sec_User_Access_Keys
 
+Default Display Text Format:  
+_{User.PhoneNumber}: {User.Name:T}_  
+Default Search Member:  
+_User.PhoneNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -52,6 +57,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

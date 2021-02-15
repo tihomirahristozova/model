@@ -5,6 +5,11 @@ uid: Crm.Pos.Roles
 
 Represents a role, which can be assigned to POS operators (like Cashier, Manager, etc.). The role indicates the operations, which are allowed to be performed by the operators. Entity: Pos_Roles (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{PosRoleCode}: {PosRoleName:T}_  
+Default Search Member:  
+_PosRoleCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -39,6 +44,7 @@ _Default Value_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -47,6 +53,7 @@ _Default Value_: **NewGuid**
 Unique role code. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 

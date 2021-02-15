@@ -5,6 +5,11 @@ uid: Logistics.Inventory.StoreTransactionLines
 
 Details records of Transactions. Each detail contains the movement for one product. Entity: Inv_Transaction_Lines
 
+Default Display Text Format:  
+_{TransactionObj.DocumentType.Code}:{TransactionObj.DocumentNo}:{LineNo} - {TransactionObj.DocumentType.TypeName:T}_  
+Default Search Member:  
+_TransactionObj.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -80,6 +85,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -154,6 +160,7 @@ _Supports Order By_: **False**
 Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line. [Filter(multi eq)]
 
 _Type_: **guid (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentLineNo
@@ -213,6 +220,7 @@ _Supports Order By_: **False**
 Exact time when the transaction changes the cost of the product. [Filter(ge;le)] [ORD]
 
 _Type_: **datetime (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 
@@ -233,6 +241,7 @@ _Default Value_: **Constant**
 The transaction to which the transaction line belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -240,6 +249,7 @@ _Supported Filters_: **Equals, EqualsIn**
 If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OriginalProduct
@@ -256,6 +266,7 @@ _Front-End Recalc Expressions:_
 The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentStoreOrderLine
@@ -263,6 +274,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The line, containing the ordered quantity, which this execution line executes. [Filter(multi eq)]
 
 _Type_: **[StoreOrderLines](Logistics.Inventory.StoreOrderLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -270,6 +282,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The item that was received/issued. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -307,6 +320,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Store bin, from/to which the transaction was performed. [Filter(multi eq)]
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransactionObj
@@ -314,6 +328,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

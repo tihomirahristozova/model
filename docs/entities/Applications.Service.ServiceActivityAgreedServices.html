@@ -80,6 +80,10 @@
 <h1 id="applicationsserviceserviceactivityagreedservices-entity">Applications.Service.ServiceActivityAgreedServices Entity</h1>
 
 <p>Contains the services, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Services</p>
+<p>Default Display Text Format:<br>
+<em>{ServiceActivityService.ServiceActivity.DocumentType.Code}:{ServiceActivityService.ServiceActivity.DocumentNo}:{ServiceActivityService.LineNo} - {ServiceActivityService.ServiceActivity.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>ServiceActivityService.ServiceActivity.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -133,12 +137,14 @@
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="serviceactivityservice">ServiceActivityService</h3>
 <p>The <a href="Applications.Service.ServiceActivityAgreedServices.html#serviceactivityservice">ServiceActivityService</a> to which this ServiceActivityAgreedService belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivityServices.html">ServiceActivityServices</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceagreementservice">ServiceAgreementService</h3>
 <p>Service agreement service line that records the paid or agreed in advance service or product. [Required] [Filter(multi eq)] [ReadOnly]</p>

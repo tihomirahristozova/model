@@ -5,6 +5,11 @@ uid: General.DocumentManualDistributedAmounts
 
 Obsolete. Not used. Entity: Gen_Document_Manual_Distributed_Amounts
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -43,6 +48,7 @@ _Supported Filters_: **Equals, EqualsIn**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LinePercent

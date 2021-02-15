@@ -5,6 +5,11 @@ uid: Finance.Accounting.TemplateLineProperties
 
 Contains the way to obtain the values for each required property of both the debit and the credit accounts. Entity: Acc_Template_Line_Properties
 
+Default Display Text Format:  
+_{TemplateLine.AmountColumnName:T}_  
+Default Search Member:  
+_TemplateLine.AmountColumnName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -37,6 +42,7 @@ _Supported Filters_: **Equals, EqualsIn**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -96,6 +102,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) to which this TemplateLineProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[TemplateLines](Finance.Accounting.TemplateLines.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

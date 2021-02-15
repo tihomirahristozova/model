@@ -5,6 +5,11 @@ uid: General.Products.Products
 
 Products are the different items in the enterprise, which can be purchased, stored, sold and depreciated. Entity: Gen_Products
 
+Default Display Text Format:  
+_{PartNumber}: {Name:T}_  
+Default Search Member:  
+_PartNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -202,6 +207,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -278,6 +284,7 @@ _Supports Order By_: **False**
 Unique part number of the product. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 
@@ -469,6 +476,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product group, under which the product is categorized. [Required] [Filter(multi eq)]
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductType
@@ -476,6 +484,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. [Required] [Filter(multi eq)]
 
 _Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

@@ -5,6 +5,11 @@ uid: General.Products.ProductGroupRequiredProperties
 
 Contains the properties, that are required to be set, when creating new products in the category and its sub-categories. Entity: Gen_Product_Group_Required_Properties
 
+Default Display Text Format:  
+_{ProductGroup.NextPartNumber}: {ProductGroup.Name:T}_  
+Default Search Member:  
+_ProductGroup.NextPartNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -52,6 +57,7 @@ _Supported Filters_: **Equals, EqualsIn**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -5,6 +5,11 @@ uid: General.Contacts.Parties
 
 Contains base data for different kind of parties - companies, persons, departments, etc. Entity: Gen_Parties
 
+Default Display Text Format:  
+_{PartyCode}: {PartyName:T}_  
+Default Search Member:  
+_PartyCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -55,6 +60,7 @@ Contains base data for different kind of parties - companies, persons, departmen
 Global Location Number used by EDI systems. [Filter(multi eq)] [ORD]
 
 _Type_: **string (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
 
@@ -72,6 +78,7 @@ _Default Value_: **True**
 The unique code of the party. [Required] [Filter(eq;like)] [ORD] [ReadOnly]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -96,6 +103,7 @@ _Supports Order By_: **False**
 Gets the Id of the party row, related to the domain object
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -104,6 +112,7 @@ _Default Value_: **NewGuid**
 The name of the party. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -188,6 +197,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

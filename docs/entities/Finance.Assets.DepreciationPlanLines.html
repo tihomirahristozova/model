@@ -80,6 +80,10 @@
 <h1 id="financeassetsdepreciationplanlines-entity">Finance.Assets.DepreciationPlanLines Entity</h1>
 
 <p>Each record contains one depreciation plan for one valuation model of one asset. Entity: Ast_Depreciation_Plan_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{DepreciationPlan.DocumentType.Code}:{DepreciationPlan.DocumentNo}:{LineNo} - {DepreciationPlan.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>DepreciationPlan.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -184,6 +188,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -205,6 +210,7 @@
 <h3 id="asset">Asset</h3>
 <p>The asset that is planned for depreciation. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.Assets.html">Assets</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="depreciationmethod">DepreciationMethod</h3>
 <p>Depreciation method by which the asset will be depreciated. [Required] [Filter(multi eq)]</p>
@@ -213,10 +219,12 @@
 <h3 id="depreciationplan">DepreciationPlan</h3>
 <p>The <a href="Finance.Assets.DepreciationPlanLines.html#depreciationplan">DepreciationPlan</a> to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationPlans.html">DepreciationPlans</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="document">Document</h3>
 <p>The <a href="Finance.Assets.DepreciationPlanLines.html#depreciationplan">DepreciationPlan</a> to which this DepreciationPlanLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationPlans.html">DepreciationPlans</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="valuationmodel">ValuationModel</h3>
 <p>Valuation model in which the asset is accounted. [Required] [Filter(multi eq)]</p>

@@ -80,6 +80,10 @@
 <h1 id="logisticsinventorylots-entity">Logistics.Inventory.Lots Entity</h1>
 
 <p>Warehouse lots. They contain one row for each specific product, status, production batch and other specific warehousing conditions. Lot status can block certain operations. Entity: Inv_Lots</p>
+<p>Default Display Text Format:<br>
+<em>{Number}</em><br>
+Default Search Member:<br>
+<em>Number</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -192,6 +196,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="licenseno">LicenseNo</h3>
@@ -272,6 +277,7 @@ Allowed values for the <a href="Logistics.Inventory.Lots.html#status">Status</a>
 <h3 id="product">Product</h3>
 <p>The product to which the lot is bound. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="receiptstoretransaction">ReceiptStoreTransaction</h3>
 <p>The store receipt transaction, which created the lot. null if the lot is manually created. [Filter(multi eq)]</p>

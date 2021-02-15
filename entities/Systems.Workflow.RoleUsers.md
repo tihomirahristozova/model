@@ -5,6 +5,11 @@ uid: Systems.Workflow.RoleUsers
 
 The roles "played" by the security users. Entity: Wf_Role_Users
 
+Default Display Text Format:  
+_{Role.Name:T}_  
+Default Search Member:  
+_Role.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ The roles "played" by the security users. Entity: Wf_Role_Users
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -35,6 +41,7 @@ _Default Value_: **NewGuid**
 The [Role](Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Roles](Systems.Workflow.Roles.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User

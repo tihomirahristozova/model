@@ -5,6 +5,11 @@ uid: Applications.Telephony.CallDetails
 
 Contains call detail records. Calls are phone calls, video calls and SMS messages. Entity: Cm_Call_Details
 
+Default Display Text Format:  
+_{CalledPartyNumber}_  
+Default Search Member:  
+_CalledPartyNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -83,6 +88,7 @@ _Default Value_: **0**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

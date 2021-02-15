@@ -5,6 +5,11 @@ uid: Crm.Sales.DefaultSalesOrderPaymentPlans
 
 Default payment plan for new documents of the specified document type. Entity: Crm_Default_Sales_Order_Payment_Plans
 
+Default Display Text Format:  
+_{DocumentType.Code}: {DocumentType.EntityName:T}_  
+Default Search Member:  
+_DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -61,6 +66,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

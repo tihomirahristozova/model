@@ -5,6 +5,11 @@ uid: Logistics.Inventory.SupplySchemata
 
 Obsolete. Not used. Entity: Inv_Supply_Schemata
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Obsolete. Not used. Entity: Inv_Supply_Schemata
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

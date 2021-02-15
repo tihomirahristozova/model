@@ -5,6 +5,11 @@ uid: Crm.Marketing.TargetGroupMembers
 
 Member parties of a marketing target group. Entity: Crm_Target_Group_Members
 
+Default Display Text Format:  
+_{TargetGroup.Code}: {TargetGroup.Name:T}_  
+Default Search Member:  
+_TargetGroup.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Member parties of a marketing target group. Entity: Crm_Target_Group_Members
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -35,6 +41,7 @@ _Default Value_: **NewGuid**
 The member party. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TargetGroup
@@ -42,6 +49,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The target group, which includes the member party. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[TargetGroups](Crm.Marketing.TargetGroups.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

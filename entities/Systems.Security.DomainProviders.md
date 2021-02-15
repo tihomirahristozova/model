@@ -5,6 +5,11 @@ uid: Systems.Security.DomainProviders
 
 The external authentication providers, linked to the domain. Contains data about registration, usually the app id or app key. Entity: Sec_Domain_Providers (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{DisplayName:T}_  
+Default Search Member:  
+_DisplayName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -54,6 +59,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

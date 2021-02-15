@@ -80,6 +80,10 @@
 <h1 id="generaldocumenttypeproperties-entity">General.DocumentTypeProperties Entity</h1>
 
 <p>Default user-defined properties, which should be added to new documents. Entity: Gen_Document_Type_Properties</p>
+<p>Default Display Text Format:<br>
+<em>{DocumentType.Code}: {DocumentType.EntityName:T}</em><br>
+Default Search Member:<br>
+<em>DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -176,6 +180,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -207,6 +212,7 @@
 <h3 id="documenttype">DocumentType</h3>
 <p>The document type, for which to add user-defined properties. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>When not null, specifies that the current rule is valid only for the specified company. [Filter(multi eq)]</p>

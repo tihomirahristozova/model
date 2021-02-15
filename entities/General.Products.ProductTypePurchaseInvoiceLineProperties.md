@@ -5,6 +5,11 @@ uid: General.Products.ProductTypePurchaseInvoiceLineProperties
 
 When specified for a product type, contains the suggested user-defined properties, which can be specified when creating new purchase invoice lines with products of this type. Entity: Gen_Product_Type_Purchase_Invoice_Line_Properties
 
+Default Display Text Format:  
+_{ProductType.Code}: {ProductType.Name:T}_  
+Default Search Member:  
+_ProductType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ When specified for a product type, contains the suggested user-defined propertie
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -59,6 +65,7 @@ _Default Value_: **False**
 The [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) to which this ProductTypePurchaseInvoiceLineProperty belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property

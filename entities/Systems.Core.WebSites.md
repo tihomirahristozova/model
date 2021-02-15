@@ -5,6 +5,11 @@ uid: Systems.Core.WebSites
 
 Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -29,6 +34,7 @@ Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -105,6 +111,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The web host in which to host the site. [Filter(multi eq)]
 
 _Type_: **[WebHosts](Systems.Core.WebHosts.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

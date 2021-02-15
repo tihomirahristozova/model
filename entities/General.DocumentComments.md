@@ -5,6 +5,11 @@ uid: General.DocumentComments
 
 Contains user comments for documents. Entity: Gen_Document_Comments
 
+Default Display Text Format:  
+_{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Document.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -44,6 +49,7 @@ _Default Value_: **CurrentDateTime**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -62,6 +68,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document to which to attach the comment. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Documents](General.Documents.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User

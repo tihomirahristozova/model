@@ -80,6 +80,10 @@
 <h1 id="generalcontactspartypictures-entity">General.Contacts.PartyPictures Entity</h1>
 
 <p>Party pictures - photos, logos, etc. Entity: Gen_Party_Pictures</p>
+<p>Default Display Text Format:<br>
+<em>{Party.PartyCode}: {Party.PartyName:T}</em><br>
+Default Search Member:<br>
+<em>Party.PartyCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -147,6 +151,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isdefault">IsDefault</h3>
@@ -181,6 +186,7 @@
 <h3 id="party">Party</h3>
 <p>The <a href="General.Contacts.PartyPictures.html#party">Party</a> to which this PartyPicture belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

@@ -5,6 +5,11 @@ uid: General.DocumentAmountTypes
 
 Represents the different types of additional amounts which are calculated for the documents. Entity: Gen_Document_Amount_Types
 
+Default Display Text Format:  
+_{AmountTypeCode}: {AmountTypeName:T}_  
+Default Search Member:  
+_AmountTypeCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -91,6 +96,7 @@ _Default Value_: **False**
 A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. [Required] [Filter(multi eq)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
 
@@ -99,6 +105,7 @@ _Supports Order By_: **True**
 The name of the amount type. [Required] [Filter(like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Indexed_: **True**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
@@ -150,6 +157,7 @@ _Default Value_: **Amount**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

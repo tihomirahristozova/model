@@ -5,6 +5,11 @@ uid: Applications.Rental.AssetTypeProperties
 
 Contains the properties, which are required for each asset category. Entity: Rent_Asset_Type_Properties
 
+Default Display Text Format:  
+_{RentalAssetType.RentalAssetTypeName:T}_  
+Default Search Member:  
+_RentalAssetType.RentalAssetTypeName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -41,6 +46,7 @@ _Supported Filters_: **Equals, EqualsIn**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

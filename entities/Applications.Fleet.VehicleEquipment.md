@@ -5,6 +5,11 @@ uid: Applications.Fleet.VehicleEquipment
 
 Contains the actual and history of equipment, installed on the vehicles. Entity: Fleet_Vehicle_Equipment
 
+Default Display Text Format:  
+_{Vehicle.EngineIdentificationNumber}_  
+Default Search Member:  
+_Vehicle.EngineIdentificationNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -36,6 +41,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

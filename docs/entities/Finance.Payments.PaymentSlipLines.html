@@ -80,6 +80,10 @@
 <h1 id="financepaymentspaymentsliplines-entity">Finance.Payments.PaymentSlipLines Entity</h1>
 
 <p>Mass payment line, which is distribution of an amount among payment orders. Each record generates one payment transaction line. Entity: Cash_Payment_Slip_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{PaymentSlipAmount.PartyName:T}</em><br>
+Default Search Member:<br>
+<em>PaymentSlipAmount.PartyName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -148,16 +152,19 @@
 <code>obj.Amount.ConvertTo( obj.PaymentOrder.TotalAmountCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="paymentorder">PaymentOrder</h3>
 <p>The payment order, that is covered by this payment slip line. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentslipamount">PaymentSlipAmount</h3>
 <p>The <a href="Finance.Payments.PaymentSlipLines.html#paymentslipamount">PaymentSlipAmount</a> to which this PaymentSlipLine belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentSlipAmounts.html">PaymentSlipAmounts</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

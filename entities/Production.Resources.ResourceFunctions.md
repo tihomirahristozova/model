@@ -5,6 +5,11 @@ uid: Production.Resources.ResourceFunctions
 
 List of functions that a specific resource is able to perform. Entity: Prd_Resource_Functions
 
+Default Display Text Format:  
+_{Resource.Name:T}_  
+Default Search Member:  
+_Resource.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ List of functions that a specific resource is able to perform. Entity: Prd_Resou
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

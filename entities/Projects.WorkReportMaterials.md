@@ -5,6 +5,11 @@ uid: Projects.WorkReportMaterials
 
 Each record contains a consumed material, reported by the related Work Report. Entity: Prj_Work_Report_Materials
 
+Default Display Text Format:  
+_{WorkReport.DocumentType.Code}:{WorkReport.DocumentNo} - {WorkReport.DocumentType.TypeName:T}_  
+Default Search Member:  
+_WorkReport.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -28,6 +33,7 @@ Each record contains a consumed material, reported by the related Work Report. E
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

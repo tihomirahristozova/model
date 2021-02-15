@@ -80,6 +80,10 @@
 <h1 id="crmsalessalesorderlines-entity">Crm.Sales.SalesOrderLines Entity</h1>
 
 <p>Sales Orders detail records. Entity: Crm_Sales_Order_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{SalesOrder.DocumentType.Code}:{SalesOrder.DocumentNo}:{LineNo} - {SalesOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>SalesOrder.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -413,6 +417,7 @@ Generic enum type for DeliveryTerms properties<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="intrastattransactionnaturecode">IntrastatTransactionNatureCode</h3>
@@ -714,6 +719,7 @@ Generic enum type for TransportMode properties<br>
 <h3 id="document">Document</h3>
 <p>The <a href="Crm.Sales.SalesOrderLines.html#salesorder">SalesOrder</a> to which this SalesOrderLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastattransportcountry">IntrastatTransportCountry</h3>
 <p>Country of origin of the transport company; used for Intrastat reporting. [Filter(multi eq)]</p>
@@ -760,10 +766,12 @@ Generic enum type for TransportMode properties<br>
 <h3 id="parentdocument">ParentDocument</h3>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <p>The product sold. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>IIF( ( ( obj.BonusProgram != null) AndAlso ( Convert( obj.BonusProgram.BonusAction, Int32) == 0)), obj.BonusProgram.BonusProduct, obj.ProductCode.Product.IfNullThen( obj.Product))</code></p>
@@ -800,14 +808,17 @@ Generic enum type for TransportMode properties<br>
 <h3 id="returnforinvoiceline">ReturnForInvoiceLine</h3>
 <p>When specified, indicates that the current line is a return for products, invoiced with the specified invoice line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoiceLines.html">InvoiceLines</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="returnforsalesorderline">ReturnForSalesOrderLine</h3>
 <p>When specified indicates that the goods sold in Return_For_Sales_Order_Line_Id are returned with the current line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="salesorder">SalesOrder</h3>
 <p>The <a href="Crm.Sales.SalesOrderLines.html#salesorder">SalesOrder</a> to which this SalesOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <p>Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]</p>

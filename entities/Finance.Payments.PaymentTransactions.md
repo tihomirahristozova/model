@@ -5,6 +5,11 @@ uid: Finance.Payments.PaymentTransactions
 
 Represents actual payments, which increase or decrease the balance of a payment account. Entity: Cash_Payment_Transactions
 
+Default Display Text Format:  
+_{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
+Default Search Member:  
+_DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -164,6 +169,7 @@ _Default Value_: **Income**
 The date on which the document was issued. [Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **date**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDate**  
@@ -173,6 +179,7 @@ _Default Value_: **CurrentDate**
 Document number, unique within Document_Type_Id. [Required] [Filter(eq;like)] [ORD] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -198,12 +205,14 @@ _Default Value_: **1**
 The entity name of the document header. [Required] [Filter(eq)] [ORD] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -364,6 +373,7 @@ _Front-End Recalc Expressions:_
 True if the document is null and void. [Required] [Default(false)] [Filter(eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -407,6 +417,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The primary document, which the current document adjusts. null when this is not an adjustment document. [Filter(multi eq)] [ReadOnly] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
@@ -428,6 +439,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -435,6 +447,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The enterprise company which issued the document. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
@@ -475,6 +488,7 @@ _Supported Filters_: **Equals, EqualsIn**
 In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. [Required] [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OriginalPaymentTransaction
@@ -489,6 +503,7 @@ _Supported Filters_: **Equals, EqualsIn**
 In a multi-document tree, this is the direct parent document. If this is the root it is null. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentPaymentSlipAmount
@@ -503,6 +518,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The party that is paying or receiving the money. [Required] [Filter(multi eq)]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentAccount
@@ -510,6 +526,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The account towards which the payment was effected. [Filter(multi eq)]
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -526,6 +543,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null specifies that this payment was part of a payment slip. [Filter(multi eq)]
 
 _Type_: **[PaymentSlips](Finance.Payments.PaymentSlips.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentType
@@ -564,6 +582,7 @@ _Front-End Recalc Expressions:_
 The document that is the prime cause for creation of the current document. [Filter(multi eq)] (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson

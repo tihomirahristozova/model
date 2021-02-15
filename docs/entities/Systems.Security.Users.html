@@ -80,6 +80,10 @@
 <h1 id="systemssecurityusers-entity">Systems.Security.Users Entity</h1>
 
 <p>User logins. Entity: Sec_Users</p>
+<p>Default Display Text Format:<br>
+<em>{PhoneNumber}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>PhoneNumber</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -273,6 +277,7 @@
 <h3 id="email">Email</h3>
 <p>Unique email of the user. Can be null because there may be login providers that don't use emails. [Filter(multi eq;like)] [ORD] [Introduced in version 18.2]</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="emailconfirmed">EmailConfirmed</h3>
@@ -283,6 +288,7 @@
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isadmin">IsAdmin</h3>
@@ -299,6 +305,7 @@
 <h3 id="login">Login</h3>
 <p>The login name of the user, which is usually the email. [Required] [Filter(multi eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="name">Name</h3>

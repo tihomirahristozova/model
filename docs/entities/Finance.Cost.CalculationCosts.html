@@ -80,6 +80,10 @@
 <h1 id="financecostcalculationcosts-entity">Finance.Cost.CalculationCosts Entity</h1>
 
 <p>Contains the calculated costs allocated to the different Cost Types. Entity: Cost_Calculation_Costs</p>
+<p>Default Display Text Format:<br>
+<em>{Calculation.DocumentType.Code}:{Calculation.DocumentNo} - {Calculation.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Calculation.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -168,6 +172,7 @@
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -187,6 +192,7 @@
 <h3 id="calculation">Calculation</h3>
 <p>The <a href="Finance.Cost.CalculationCosts.html#calculation">Calculation</a> to which this CalculationCost belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Calculations.html">Calculations</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costcenter">CostCenter</h3>
 <p>The Cost Center, which absorbed the cost. [Filter(multi eq)]</p>

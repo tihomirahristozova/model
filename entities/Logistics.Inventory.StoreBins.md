@@ -5,6 +5,11 @@ uid: Logistics.Inventory.StoreBins
 
 The storage locations within a store. If there are no differentiated storage locations, create only one, called “(Default)” or similar. Entity: Inv_Store_Bins
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ The storage locations within a store. If there are no differentiated storage loc
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -61,6 +67,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The id of the containing store. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

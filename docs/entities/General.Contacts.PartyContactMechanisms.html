@@ -80,6 +80,10 @@
 <h1 id="generalcontactspartycontactmechanisms-entity">General.Contacts.PartyContactMechanisms Entity</h1>
 
 <p>Specifies the contact mechanisms, which are attached to the parties. Currently each contact mechanism is attached to strictly one party. Entity: Cm_Party_Contact_Mechanisms</p>
+<p>Default Display Text Format:<br>
+<em>{Party.PartyCode}: {Party.PartyName:T}</em><br>
+Default Search Member:<br>
+<em>Party.PartyCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -173,6 +177,7 @@
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
@@ -216,6 +221,7 @@
 <h3 id="contactmechanism">ContactMechanism</h3>
 <p>The contact mechanism of the party. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.ContactMechanisms.html">ContactMechanisms</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="contactmechanismpurpose">ContactMechanismPurpose</h3>
 <p>The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms. [Filter(multi eq)] [Introduced in version 18.2]</p>
@@ -224,6 +230,7 @@
 <h3 id="party">Party</h3>
 <p>The party, having the contact mechanism. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="personaldataprocess">PersonalDataProcess</h3>
 <p>The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown. [Filter(multi eq)] [Introduced in version 18.2]</p>

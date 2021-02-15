@@ -80,6 +80,10 @@
 <h1 id="crmposterminals-entity">Crm.Pos.Terminals Entity</h1>
 
 <p>Represents a POS workplace for 1 person, with all the attached devices. (Not to be confused with Payment Terminal, which is specific POS device). Entity: Pos_Terminals (Introduced in version 19.1)</p>
+<p>Default Display Text Format:<br>
+<em>{PosTerminalCode}: {PosTerminalName:T}</em><br>
+Default Search Member:<br>
+<em>PosTerminalCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -154,6 +158,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
@@ -180,6 +185,7 @@
 <h3 id="poslocation">PosLocation</h3>
 <p>The POS location, where the terminal is located. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

@@ -5,6 +5,11 @@ uid: Production.ShopFloor.WorkOrderItemOperations
 
 The operations that are performed to produce the product. Entity: Prd_Work_Order_Item_Operations
 
+Default Display Text Format:  
+_{WorkOrderItem.WorkOrder.DocumentType.Code}:{WorkOrderItem.WorkOrder.DocumentNo}:{WorkOrderItem.LineOrd} - {WorkOrderItem.WorkOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_WorkOrderItem.WorkOrder.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -62,6 +67,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -204,6 +210,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The work order item, containing the line. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

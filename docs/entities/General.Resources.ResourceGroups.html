@@ -80,6 +80,10 @@
 <h1 id="generalresourcesresourcegroups-entity">General.Resources.ResourceGroups Entity</h1>
 
 <p>Resource groups categorize the resources. Entity: Gen_Resource_Groups</p>
+<p>Default Display Text Format:<br>
+<em>{Name:T}</em><br>
+Default Search Member:<br>
+<em>Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -144,6 +148,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
@@ -159,6 +164,7 @@
 <h3 id="parent">Parent</h3>
 <p>The parent resource group or null if this is root group. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Resources.ResourceGroups.html">ResourceGroups</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

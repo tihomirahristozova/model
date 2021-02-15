@@ -80,6 +80,10 @@
 <h1 id="generaldocumentamounttypes-entity">General.DocumentAmountTypes Entity</h1>
 
 <p>Represents the different types of additional amounts which are calculated for the documents. Entity: Gen_Document_Amount_Types</p>
+<p>Default Display Text Format:<br>
+<em>{AmountTypeCode}: {AmountTypeName:T}</em><br>
+Default Search Member:<br>
+<em>AmountTypeCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -258,11 +262,13 @@ Allowed values for the <a href="General.DocumentAmountTypes.html#alloweddirectio
 <h3 id="amounttypecode">AmountTypeCode</h3>
 <p>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. [Required] [Filter(multi eq)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="amounttypename">AmountTypeName</h3>
 <p>The name of the amount type. [Required] [Filter(like)] [ORD]</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="baseonlines">BaseOnLines</h3>
@@ -315,6 +321,7 @@ Allowed values for the <a href="General.DocumentAmountTypes.html#distributeby">D
 <em>Default Value</em>: <strong>Amount</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>

@@ -5,6 +5,11 @@ uid: General.Products.ProductDocumentAmounts
 
 Contains custom percent ratios for additional amount distribution over products. Entity: Gen_Product_Document_Amounts
 
+Default Display Text Format:  
+_{Product.PartNumber}: {Product.Name:T}_  
+Default Search Member:  
+_Product.PartNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ Contains custom percent ratios for additional amount distribution over products.
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -52,6 +58,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [Product](General.Products.ProductDocumentAmounts.md#product) to which this ProductDocumentAmount belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

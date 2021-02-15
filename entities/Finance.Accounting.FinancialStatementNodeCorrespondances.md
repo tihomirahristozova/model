@@ -5,6 +5,11 @@ uid: Finance.Accounting.FinancialStatementNodeCorrespondances
 
 Contains the actual correspondance filters, which specify how each financial statement node is calculated. Entity: Acc_Financial_Statement_Node_Correspondances
 
+Default Display Text Format:  
+_{FinancialStatementNode.Code}: {FinancialStatementNode.Name:T}_  
+Default Search Member:  
+_FinancialStatementNode.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Contains the actual correspondance filters, which specify how each financial sta
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

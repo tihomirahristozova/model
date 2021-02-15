@@ -80,6 +80,10 @@
 <h1 id="generalproductsproductcodes-entity">General.Products.ProductCodes Entity</h1>
 
 <p>Additional product codes, categorized by coding systems. Entity: Gen_Product_Codes</p>
+<p>Default Display Text Format:<br>
+<em>{Product.PartNumber}: {Product.Name:T}</em><br>
+Default Search Member:<br>
+<em>Product.PartNumber</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -138,6 +142,7 @@
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="productcodefield">ProductCodeField</h3>
@@ -149,10 +154,12 @@
 <h3 id="codingsystem">CodingSystem</h3>
 <p>The coding system in which the product code is specified. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.CodingSystems.html">CodingSystems</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <p>The product for which the code is specified. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

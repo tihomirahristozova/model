@@ -80,6 +80,10 @@
 <h1 id="productionshopfloorworkorderitems-entity">Production.ShopFloor.WorkOrderItems Entity</h1>
 
 <p>The different items that are produced with a work order. Entity: Prd_Work_Order_Items</p>
+<p>Default Display Text Format:<br>
+<em>{WorkOrder.DocumentType.Code}:{WorkOrder.DocumentNo}:{LineOrd} - {WorkOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>WorkOrder.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -258,6 +262,7 @@
 <code>obj.WorkOrder.CompletionDate</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineord">LineOrd</h3>
@@ -378,6 +383,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#priorit
 <h3 id="document">Document</h3>
 <p>The Id of the work order, containing the item. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>The lot of the produced product. [Filter(multi eq)]</p>
@@ -398,6 +404,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#priorit
 <h3 id="parentdocument">ParentDocument</h3>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="producedquantityunit">ProducedQuantityUnit</h3>
 <p>The measurement unit of the quantity produced in the operation. [Required] [Filter(multi eq)]</p>
@@ -410,6 +417,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#priorit
 <h3 id="product">Product</h3>
 <p>The Id of the produced product. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.ProductCode.Product.IfNullThen( obj.Product)</code></p>
@@ -440,6 +448,7 @@ Allowed values for the <a href="Production.ShopFloor.WorkOrderItems.html#priorit
 <h3 id="workorder">WorkOrder</h3>
 <p>The Id of the work order, containing the item. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

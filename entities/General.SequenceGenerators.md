@@ -5,6 +5,11 @@ uid: General.SequenceGenerators
 
 Contains one or more sequence generators for each sequence. Many sequence generators for one sequence are used when the generators must be selected conditionally or when more generators are needed for parallel numbering. Entity: Gen_Sequence_Generators
 
+Default Display Text Format:  
+_{Sequence.Name:T}_  
+Default Search Member:  
+_Sequence.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -38,6 +43,7 @@ _Default Value_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -88,6 +94,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [Sequence](General.SequenceGenerators.md#sequence) to which this SequenceGenerator belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Sequences](General.Sequences.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

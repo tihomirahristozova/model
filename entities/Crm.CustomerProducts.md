@@ -5,6 +5,11 @@ uid: Crm.CustomerProducts
 
 Contains the products, that are contracted (listed) with a customer. Entity: Crm_Customer_Products
 
+Default Display Text Format:  
+_{Customer.Number}_  
+Default Search Member:  
+_Customer.Number_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -37,6 +42,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -78,6 +84,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Customer, for which the product is listed. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Customers](Crm.Customers.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product

@@ -5,6 +5,11 @@ uid: Communities.NotificationSettings
 
 User notification settings for the different notification classes. Entity: Cmm_Notification_Settings (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -27,6 +32,7 @@ User notification settings for the different notification classes. Entity: Cmm_N
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -73,6 +79,7 @@ _Default Value_: **False**
 The user for whom the notification setting is about. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -5,6 +5,11 @@ uid: Applications.Service.ServiceActivityAgreedMaterials
 
 Contains the materials, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Materials
 
+Default Display Text Format:  
+_{ServiceActivityMaterial.ServiceActivity.DocumentType.Code}:{ServiceActivityMaterial.ServiceActivity.DocumentNo}:{ServiceActivityMaterial.LineNo} - {ServiceActivityMaterial.ServiceActivity.DocumentType.TypeName:T}_  
+Default Search Member:  
+_ServiceActivityMaterial.ServiceActivity.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -34,6 +39,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -45,6 +51,7 @@ _Default Value_: **NewGuid**
 The [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivityAgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]
 
 _Type_: **[ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceAgreementMaterial

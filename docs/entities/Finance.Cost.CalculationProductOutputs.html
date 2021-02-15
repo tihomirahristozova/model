@@ -80,6 +80,10 @@
 <h1 id="financecostcalculationproductoutputs-entity">Finance.Cost.CalculationProductOutputs Entity</h1>
 
 <p>Represents costs allocated to product outputs. Entity: Cost_Calculation_Product_Outputs</p>
+<p>Default Display Text Format:<br>
+<em>{Calculation.DocumentType.Code}:{Calculation.DocumentNo} - {Calculation.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Calculation.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -167,6 +171,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -192,6 +197,7 @@
 <h3 id="calculation">Calculation</h3>
 <p>The <a href="Finance.Cost.CalculationProductOutputs.html#calculation">Calculation</a> to which this CalculationProductOutput belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Calculations.html">Calculations</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>The Lot, which absorbed the cost. [Filter(multi eq)]</p>

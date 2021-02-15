@@ -5,6 +5,11 @@ uid: Systems.Security.UserProviderLogins
 
 External login providers. Entity: Sec_User_Provider_Logins (Introduced in version 18.2)
 
+Default Display Text Format:  
+_{User.PhoneNumber}: {User.Name:T}_  
+Default Search Member:  
+_User.PhoneNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ External login providers. Entity: Sec_User_Provider_Logins (Introduced in versio
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -62,6 +68,7 @@ _Supports Order By_: **False**
 The user for which the login is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -5,6 +5,11 @@ uid: Logistics.Inventory.TransferOrdersOptions
 
 Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_Options
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -33,6 +38,7 @@ _Default Value_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

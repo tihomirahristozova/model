@@ -80,6 +80,10 @@
 <h1 id="generaldocumenttypeuserstatuses-entity">General.DocumentTypeUserStatuses Entity</h1>
 
 <p>User-defined document statuses. Entity: Gen_Document_Type_User_Statuses</p>
+<p>Default Display Text Format:<br>
+<em>{UserStatusName:T}</em><br>
+Default Search Member:<br>
+<em>UserStatusName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -162,6 +166,7 @@
 <code>( obj.DocumentType.UserStatuses.Select( c =&gt; c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="instructions">Instructions</h3>
@@ -229,6 +234,7 @@ Enumeration of document system states<br>
 <h3 id="documenttype">DocumentType</h3>
 <p>The document type, to which this user status is bound. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

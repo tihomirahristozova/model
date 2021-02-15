@@ -5,6 +5,11 @@ uid: Applications.Service.ServiceInvoicing
 
 Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
 
+Default Display Text Format:  
+_{Service.Code}: {Service.Name:T}_  
+Default Search Member:  
+_Service.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

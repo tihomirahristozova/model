@@ -5,6 +5,11 @@ uid: General.Resources.ResourceAvailability
 
 Contains the resources availability for the different periods. Each period is a separate record. The availability of a resource for any given date is determined by the sum of all availability periods that include it. Entity: Gen_Resource_Availability
 
+Default Display Text Format:  
+_{Resource.Name:T}_  
+Default Search Member:  
+_Resource.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -43,6 +48,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

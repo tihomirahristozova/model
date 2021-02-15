@@ -5,6 +5,11 @@ uid: Systems.Core.AttributeChanges
 
 Attribute values of an object change. Entity: Sys_Attribute_Changes_View
 
+Default Display Text Format:  
+_{ObjectChangeId}: {AttributeName}_  
+Default Search Member:  
+_ObjectChangeId_  
+
 ## Attributes
 
 | Name | Type | Description |

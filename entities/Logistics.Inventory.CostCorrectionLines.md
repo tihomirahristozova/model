@@ -5,6 +5,11 @@ uid: Logistics.Inventory.CostCorrectionLines
 
 Cost correction detail lines. One line is created for each corrected transaction line. Entity: Inv_Cost_Correction_Lines
 
+Default Display Text Format:  
+_{CostCorrection.DocumentType.Code}:{CostCorrection.DocumentNo} - {CostCorrection.DocumentType.TypeName:T}_  
+Default Search Member:  
+_CostCorrection.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -46,6 +51,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -75,6 +81,7 @@ _Default Value_: **Constant**
 The [CostCorrection](Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[CostCorrections](Logistics.Inventory.CostCorrections.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransactionLine
@@ -82,6 +89,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The transaction line, which is corrected. [Required] [Filter(multi eq)]
 
 _Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

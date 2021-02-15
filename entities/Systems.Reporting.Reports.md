@@ -5,6 +5,11 @@ uid: Systems.Reporting.Reports
 
 User-defined reports. Reports retrieve data from data sources and present it in a user-defined layout. Entity: Sys_Reports
 
+Default Display Text Format:  
+_{QueryName:T}_  
+Default Search Member:  
+_QueryName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -32,6 +37,7 @@ User-defined reports. Reports retrieve data from data sources and present it in 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -80,6 +80,10 @@
 <h1 id="systemsbpmuserbusinessruleactions-entity">Systems.Bpm.UserBusinessRuleActions Entity</h1>
 
 <p>Represents an action within a business rule. Entity: Sys_User_Business_Rule_Actions</p>
+<p>Default Display Text Format:<br>
+<em>{UserBusinessRule.Code}: {UserBusinessRule.RepositoryName:T}</em><br>
+Default Search Member:<br>
+<em>UserBusinessRule.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -203,6 +207,7 @@ Allowed values for the <a href="Systems.Bpm.UserBusinessRuleActions.html#actiont
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="parameter1type">Parameter1Type</h3>

@@ -5,6 +5,11 @@ uid: Projects.ProjectRiskDiscussion
 
 Contains discussions on project risks. Entity: Prj_Project_Risk_Discussion
 
+Default Display Text Format:  
+_{ProjectRisk.RiskName:T}_  
+Default Search Member:  
+_ProjectRisk.RiskName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -36,6 +41,7 @@ _Default Value_: **CurrentDateTime**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

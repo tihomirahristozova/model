@@ -5,6 +5,11 @@ uid: Crm.Distribution.SalesPersonTargetLines
 
 Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Target_Lines
 
+Default Display Text Format:  
+_{SalesPersonTarget.DocumentType.Code}:{SalesPersonTarget.DocumentNo} - {SalesPersonTarget.DocumentType.TypeName:T}_  
+Default Search Member:  
+_SalesPersonTarget.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -35,6 +40,7 @@ Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Ta
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -5,6 +5,11 @@ uid: General.DocumentFileAttachments
 
 Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
 
+Default Display Text Format:  
+_{FileName:T}_  
+Default Search Member:  
+_FileName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -44,6 +49,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -80,6 +80,10 @@
 <h1 id="generalproductsproductsupply-entity">General.Products.ProductSupply Entity</h1>
 
 <p>Contains supply rules, which are used by the procurement planning system. Entity: Gen_Product_Supply</p>
+<p>Default Display Text Format:<br>
+<em>{BuyerName:T}</em><br>
+Default Search Member:<br>
+<em>BuyerName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -293,6 +297,7 @@
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
@@ -571,6 +576,7 @@ Allowed values for the <a href="General.Products.ProductSupply.html#procurementt
 <h3 id="product">Product</h3>
 <p>The <a href="General.Products.ProductSupply.html#product">Product</a> to which this ProductSupply belongs. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productgroup">ProductGroup</h3>
 <p>Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings. [Filter(multi eq)]</p>

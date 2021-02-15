@@ -80,6 +80,10 @@
 <h1 id="logisticsprocurementreceivingorderlines-entity">Logistics.Procurement.ReceivingOrderLines Entity</h1>
 
 <p>Contains detail records of Receiving Orders. Each line contains the receiving of a quantity of a product. Entity: Scm_Receiving_Order_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{ReceivingOrder.DocumentType.Code}:{ReceivingOrder.DocumentNo}:{LineNo} - {ReceivingOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>ReceivingOrder.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -257,6 +261,7 @@
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineamount">LineAmount</h3>
@@ -328,6 +333,7 @@
 <h3 id="document">Document</h3>
 <p>The <a href="Logistics.Procurement.ReceivingOrderLines.html#receivingorder">ReceivingOrder</a> to which this ReceivingOrderLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linestore">LineStore</h3>
 <p>The store in which the goods are received. [Filter(multi eq)]</p>
@@ -344,6 +350,7 @@
 <h3 id="product">Product</h3>
 <p>The received product. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productcode">ProductCode</h3>
 <p>When not null, specifies that the product was selected using the specified product code record. [Filter(multi eq)]</p>
@@ -356,6 +363,7 @@
 <h3 id="purchaseorderline">PurchaseOrderLine</h3>
 <p>The purchase order line for which we are receiving quantity. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOrderLines.html">PurchaseOrderLines</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseproductprice">PurchaseProductPrice</h3>
 <p>When not null, specifies that the purchase unit price is loaded automatically from the specified purchase price record. [Filter(multi eq)]</p>
@@ -374,6 +382,7 @@
 <h3 id="receivingorder">ReceivingOrder</h3>
 <p>The <a href="Logistics.Procurement.ReceivingOrderLines.html#receivingorder">ReceivingOrder</a> to which this ReceivingOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <p>Which serial number to receive/issue. null means that serial number is unknown or not applicable. [Filter(multi eq)]</p>

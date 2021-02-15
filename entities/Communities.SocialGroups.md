@@ -5,6 +5,11 @@ uid: Communities.SocialGroups
 
 Represents a group of users, sharing interest in the group topic. Entity: Cmm_Social_Groups (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -28,12 +33,14 @@ Represents a group of users, sharing interest in the group topic. Entity: Cmm_So
 Unique code of the group. Also used as group slug for Internet URL purposes. [Required] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **True**  
 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -80,6 +80,10 @@
 <h1 id="logisticswmswarehousetransactions-entity">Logistics.Wms.WarehouseTransactions Entity</h1>
 
 <p>Represents increase or decrease in the quantity available in a warehouse location. Entity: Wms_Warehouse_Transactions (Introduced in version 21.1.1.26)</p>
+<p>Default Display Text Format:<br>
+<em>{Id}</em><br>
+Default Search Member:<br>
+<em>Id</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -228,6 +232,7 @@ Allowed values for the <a href="Logistics.Wms.WarehouseTransactions.html#directi
 <em>Default Value</em>: <strong>IN</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="quantity">Quantity</h3>
@@ -247,18 +252,22 @@ Allowed values for the <a href="Logistics.Wms.WarehouseTransactions.html#directi
 <h3 id="logisticunit">LogisticUnit</h3>
 <p>Logistic unit, which was transacted. null when the transaction was not for a logistic unit. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.LogisticUnits.html">LogisticUnits</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>The lot which was transacted. null when the transaction was not for a specific lot. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <p>The product, which was transacted. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
 <p>The product variant, which was transacted. null when the transaction was not for a product variant. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <p>The measurement unit of quantity. [Required] [Filter(multi eq)]</p>
@@ -267,6 +276,7 @@ Allowed values for the <a href="Logistics.Wms.WarehouseTransactions.html#directi
 <h3 id="serialnumber">SerialNumber</h3>
 <p>The serial number which was transacted. null when the transaction was not for a specific serial number. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouse">Warehouse</h3>
 <p>The warehouse in which the transaction occurred. [Required] [Filter(multi eq)]</p>
@@ -275,6 +285,7 @@ Allowed values for the <a href="Logistics.Wms.WarehouseTransactions.html#directi
 <h3 id="warehouselocation">WarehouseLocation</h3>
 <p>The warehouse location, where the transaction occurred. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouseorder">WarehouseOrder</h3>
 <p>The order which created this transaction. null when this transaction was not based on order. [Filter(multi eq)]</p>
@@ -283,6 +294,7 @@ Allowed values for the <a href="Logistics.Wms.WarehouseTransactions.html#directi
 <h3 id="warehouseorderline">WarehouseOrderLine</h3>
 <p>The order line which created this transaction. null when this transaction was not based on order line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLines</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

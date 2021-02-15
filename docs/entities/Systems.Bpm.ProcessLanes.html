@@ -80,6 +80,10 @@
 <h1 id="systemsbpmprocesslanes-entity">Systems.Bpm.ProcessLanes Entity</h1>
 
 <p>The process lanes categorize elements in the process and contain logic for executor selection. Entity: Bpm_Process_Lanes</p>
+<p>Default Display Text Format:<br>
+<em>{Name:T}</em><br>
+Default Search Member:<br>
+<em>Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -196,6 +200,7 @@ Allowed values for the <a href="Systems.Bpm.ProcessLanes.html#assignbyusercondit
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="issystemexecuted">IsSystemExecuted</h3>
@@ -274,6 +279,7 @@ Generic enum type for Locality properties<br>
 <h3 id="process">Process</h3>
 <p>The process to which this lane belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.Processes.html">Processes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

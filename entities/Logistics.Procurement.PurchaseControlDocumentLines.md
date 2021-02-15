@@ -5,6 +5,11 @@ uid: Logistics.Procurement.PurchaseControlDocumentLines
 
 The detail line of purchase control data. The purchase control is used to tally all orders and execuctions in the purchasing module. Entity: Scm_Purchase_Control_Document_Lines (Introduced in version 18.2)
 
+Default Display Text Format:  
+_{PurchaseControlDocument.DocumentType.Code}:{PurchaseControlDocument.DocumentNo}:{LineNo} - {PurchaseControlDocument.DocumentType.TypeName:T}_  
+Default Search Member:  
+_PurchaseControlDocument.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -61,6 +66,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -152,6 +158,7 @@ _Supports Order By_: **False**
 The [PurchaseControlDocument](Logistics.Procurement.PurchaseControlDocumentLines.md#purchasecontroldocument) to which this PurchaseControlDocumentLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseControlDocument
@@ -159,6 +166,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [PurchaseControlDocument](Logistics.Procurement.PurchaseControlDocumentLines.md#purchasecontroldocument) to which this PurchaseControlDocumentLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseInvoice

@@ -80,6 +80,10 @@
 <h1 id="systemssecuritytrustedapplicationauthorizations-entity">Systems.Security.TrustedApplicationAuthorizations Entity</h1>
 
 <p>Authorization of a trusted application to access the data on behalf of a context user. Entity: Sec_Trusted_Application_Authorizations (Introduced in version 20.1)</p>
+<p>Default Display Text Format:<br>
+<em>{TrustedApplication.Name:T}</em><br>
+Default Search Member:<br>
+<em>TrustedApplication.Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -158,6 +162,7 @@
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isrevoked">IsRevoked</h3>

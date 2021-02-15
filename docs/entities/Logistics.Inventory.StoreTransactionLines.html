@@ -80,6 +80,10 @@
 <h1 id="logisticsinventorystoretransactionlines-entity">Logistics.Inventory.StoreTransactionLines Entity</h1>
 
 <p>Details records of Transactions. Each detail contains the movement for one product. Entity: Inv_Transaction_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{TransactionObj.DocumentType.Code}:{TransactionObj.DocumentNo}:{LineNo} - {TransactionObj.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>TransactionObj.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -281,6 +285,7 @@
 <code>obj.Product.GuaranteePeriodDays</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="linebasecost">LineBaseCost</h3>
@@ -330,6 +335,7 @@
 <h3 id="parentlineid">ParentLineId</h3>
 <p>Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong>guid (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
 <p>The number of the line within the parent document, which the current line executes. null when the current line does not execute line.</p>
@@ -369,6 +375,7 @@
 <h3 id="transactiontimestamp">TransactionTimestamp</h3>
 <p>Exact time when the transaction changes the cost of the product. [Filter(ge;le)] [ORD]</p>
 <p><em>Type</em>: <strong>datetime (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="unitcost">UnitCost</h3>
@@ -381,10 +388,12 @@
 <h3 id="document">Document</h3>
 <p>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>If non-null, contains the specific lot to use for the movement. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="originalproduct">OriginalProduct</h3>
 <p>When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead. [Filter(multi eq)]</p>
@@ -395,14 +404,17 @@
 <h3 id="parentdocument">ParentDocument</h3>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentstoreorderline">ParentStoreOrderLine</h3>
 <p>The line, containing the ordered quantity, which this execution line executes. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <p>The item that was received/issued. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.OriginalProduct</code></p>
@@ -425,10 +437,12 @@
 <h3 id="storebin">StoreBin</h3>
 <p>Store bin, from/to which the transaction was performed. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transactionobj">TransactionObj</h3>
 <p>The transaction to which the transaction line belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

@@ -5,6 +5,11 @@ uid: Projects.ProjectTypes
 
 Contains the types of projects, which can be executed by the enterprise company. Entity: Prj_Types
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -33,6 +38,7 @@ Contains the types of projects, which can be executed by the enterprise company.
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

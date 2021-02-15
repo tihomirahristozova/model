@@ -80,6 +80,10 @@
 <h1 id="applicationsassetmanagementmaintenancetypes-entity">Applications.AssetManagement.MaintenanceTypes Entity</h1>
 
 <p>Types of maintenances which can be scheduled and performed on the managed assets. Maintenances can be scheduled based on date and tracked parameter change. Entity: Eam_Maintenance_Types (Introduced in version 19.1)</p>
+<p>Default Display Text Format:<br>
+<em>{Code}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -153,6 +157,7 @@
 <h3 id="code">Code</h3>
 <p>Unique code of the maintenance type. [Required] [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="defaultparameterchange">DefaultParameterChange</h3>
@@ -177,6 +182,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
@@ -188,6 +194,7 @@
 <h3 id="maintenancetypegroup">MaintenanceTypeGroup</h3>
 <p>The group, to which this maintenance type belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.MaintenanceTypeGroups.html">MaintenanceTypeGroups</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="trackedparameter">TrackedParameter</h3>
 <p>Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. [Filter(multi eq)]</p>

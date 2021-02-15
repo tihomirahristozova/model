@@ -5,6 +5,11 @@ uid: Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes
 
 Defines the types of maintenances, which are allowed for assets of the different types. Entity: Eam_Managed_Asset_Type_Maintenance_Types (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{ManagedAssetType.Code}: {ManagedAssetType.Name:T}_  
+Default Search Member:  
+_ManagedAssetType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -52,6 +57,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -78,6 +84,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The asset type for which the allowed maintenance type is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

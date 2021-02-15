@@ -80,6 +80,10 @@
 <h1 id="logisticswmswarehouseorderlines-entity">Logistics.Wms.WarehouseOrderLines Entity</h1>
 
 <p>A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lines (Introduced in version 20.1)</p>
+<p>Default Display Text Format:<br>
+<em>{WarehouseOrder.DocumentType.Code}:{WarehouseOrder.DocumentNo}:{LineNo} - {WarehouseOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>WarehouseOrder.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -192,6 +196,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -279,6 +284,7 @@ Allowed values for the <a href="Logistics.Wms.WarehouseOrderLines.html#tasktype"
 <h3 id="document">Document</h3>
 <p>The <a href="Logistics.Wms.WarehouseOrderLines.html#warehouseorder">WarehouseOrder</a> to which this WarehouseOrderLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="logisticunit">LogisticUnit</h3>
 <p>Logistic unit, which should be used in the operation. [Filter(multi eq)] [Introduced in version 21.1.1.18]</p>
@@ -315,6 +321,7 @@ Allowed values for the <a href="Logistics.Wms.WarehouseOrderLines.html#tasktype"
 <h3 id="warehouseorder">WarehouseOrder</h3>
 <p>The <a href="Logistics.Wms.WarehouseOrderLines.html#warehouseorder">WarehouseOrder</a> to which this WarehouseOrderLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouseworker">WarehouseWorker</h3>
 <p>Human or robot worker, which should execute the operation. null means that the line is shared among all workers, assigned to the order. [Filter(multi eq)]</p>

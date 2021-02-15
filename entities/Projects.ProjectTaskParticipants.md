@@ -5,6 +5,11 @@ uid: Projects.ProjectTaskParticipants
 
 Contains the participants in the project tasks. Entity: Prj_Project_Task_Participants
 
+Default Display Text Format:  
+_{ProjectTask.TaskName:T}_  
+Default Search Member:  
+_ProjectTask.TaskName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -27,6 +32,7 @@ Contains the participants in the project tasks. Entity: Prj_Project_Task_Partici
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -71,6 +77,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The project task for which the participant is planned. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

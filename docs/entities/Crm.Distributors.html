@@ -80,6 +80,10 @@
 <h1 id="crmdistributors-entity">Crm.Distributors Entity</h1>
 
 <p>Distributors are external for the enterprise persons or companies who obtain sales orders from end-customers in benefit of the enterprise. Entity: Crm_Distributors</p>
+<p>Default Display Text Format:<br>
+<em>{Party.PartyCode}: {Party.PartyName:T}</em><br>
+Default Search Member:<br>
+<em>Party.PartyCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -128,6 +132,7 @@
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>

@@ -5,6 +5,11 @@ uid: Logistics.Wms.WarehouseTransactions
 
 Represents increase or decrease in the quantity available in a warehouse location. Entity: Wms_Warehouse_Transactions (Introduced in version 21.1.1.26)
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -70,6 +75,7 @@ _Default Value_: **IN**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -102,6 +108,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Logistic unit, which was transacted. null when the transaction was not for a logistic unit. [Filter(multi eq)]
 
 _Type_: **[LogisticUnits](Logistics.LogisticUnits.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -109,6 +116,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The lot which was transacted. null when the transaction was not for a specific lot. [Filter(multi eq)]
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -116,6 +124,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product, which was transacted. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductVariant
@@ -123,6 +132,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product variant, which was transacted. null when the transaction was not for a product variant. [Filter(multi eq)]
 
 _Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
@@ -137,6 +147,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The serial number which was transacted. null when the transaction was not for a specific serial number. [Filter(multi eq)]
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Warehouse
@@ -151,6 +162,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The warehouse location, where the transaction occurred. [Required] [Filter(multi eq)]
 
 _Type_: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseOrder
@@ -165,6 +177,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The order line which created this transaction. null when this transaction was not based on order line. [Filter(multi eq)]
 
 _Type_: **[WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -5,6 +5,11 @@ uid: Crm.Pos.Terminals
 
 Represents a POS workplace for 1 person, with all the attached devices. (Not to be confused with Payment Terminal, which is specific POS device). Entity: Pos_Terminals (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{PosTerminalCode}: {PosTerminalName:T}_  
+Default Search Member:  
+_PosTerminalCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -33,6 +38,7 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -76,6 +82,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The POS location, where the terminal is located. [Required] [Filter(multi eq)]
 
 _Type_: **[Locations](Crm.Pos.Locations.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

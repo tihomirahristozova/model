@@ -5,6 +5,11 @@ uid: Production.Resources.Workgroups
 
 Production workgroups. Entity: Prd_Workgroups
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -37,6 +42,7 @@ _Default Value_: ****
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -61,6 +67,7 @@ _Supports Order By_: **False**
 Path-like parent workgroup name. [Required] [Default("/")] [Filter(like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 _Default Value_: **/**  

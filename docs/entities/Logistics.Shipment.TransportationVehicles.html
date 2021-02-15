@@ -80,6 +80,10 @@
 <h1 id="logisticsshipmenttransportationvehicles-entity">Logistics.Shipment.TransportationVehicles Entity</h1>
 
 <p>A vehicle, which is used for transportation. One actual vehicle might be defined multiple times as transportation vehicle - for different modes of transportation or cargo types. Entity: Log_Transportation_Vehicles</p>
+<p>Default Display Text Format:<br>
+<em>{Code}</em><br>
+Default Search Member:<br>
+<em>Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -153,10 +157,12 @@
 <h3 id="code">Code</h3>
 <p>The unique code (or call sign) of this transportation vehicle. [Required] [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="maxcargoweightkg">MaxCargoWeightKg</h3>

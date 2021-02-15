@@ -80,6 +80,10 @@
 <h1 id="systemscoreobjectchanges-entity">Systems.Core.ObjectChanges Entity</h1>
 
 <p>Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in version 19.1)</p>
+<p>Default Display Text Format:<br>
+<em>{RepositoryName:T}</em><br>
+Default Search Member:<br>
+<em>RepositoryName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -167,9 +171,11 @@ Allowed values for the <a href="Systems.Core.ObjectChanges.html#changetype">Chan
 <h3 id="entityitemid">EntityItemId</h3>
 <p>The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="repositoryname">RepositoryName</h3>
@@ -181,10 +187,12 @@ Allowed values for the <a href="Systems.Core.ObjectChanges.html#changetype">Chan
 <h3 id="objectchangeset">ObjectChangeset</h3>
 <p>The changeset containing this change. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ObjectChangesets.html">ObjectChangesets</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="rootobject">RootObject</h3>
 <p>The root object in the aggregate of the object, which has been changed. Each change is recorded at the aggregate root level. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

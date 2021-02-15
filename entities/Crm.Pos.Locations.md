@@ -5,6 +5,11 @@ uid: Crm.Pos.Locations
 
 Defines a company location as POS enabled location. Entity: Pos_Locations (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{PosLocationCode}_  
+Default Search Member:  
+_PosLocationCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Defines a company location as POS enabled location. Entity: Pos_Locations (Intro
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -54,6 +60,7 @@ _Supports Order By_: **False**
 The enterprise company of the POS location. [Required] [Filter(multi eq)]
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
@@ -61,6 +68,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. [Required] [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

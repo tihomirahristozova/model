@@ -5,6 +5,11 @@ uid: Finance.Accounting.AccountingVoucherLines
 
 Contains one debit or credit posting within an accounting voucher. Entity: Acc_Voucher_Lines
 
+Default Display Text Format:  
+_{Voucher.DocumentType.Code}:{Voucher.DocumentNo}:{LineNo} - {Voucher.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Voucher.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -92,6 +97,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -142,6 +148,7 @@ _Default Value_: **1**
 The account being debited or credited. [Required] [Filter(multi eq)]
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CostCenter
@@ -163,6 +170,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The voucher to which this line is attached. [Required] [Filter(multi eq)]
 
 _Type_: **[AccountingVouchers](Finance.Accounting.AccountingVouchers.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProfitCenter
@@ -177,6 +185,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document which is referenced by the line. By default, this is the document of the voucher. [Required] [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Voucher
@@ -184,6 +193,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The voucher to which this line is attached. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[AccountingVouchers](Finance.Accounting.AccountingVouchers.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

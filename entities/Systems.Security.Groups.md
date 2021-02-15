@@ -5,6 +5,11 @@ uid: Systems.Security.Groups
 
 Groups of users. Used for providing group access to secured data. Entity: Sec_Groups
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -60,6 +65,7 @@ _Default Value_: **NormalUserDefinableGroup**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -87,6 +93,7 @@ _Supports Order By_: **False**
 When Group_Type=U, contains the user for which the group is defined, null otherwise. [Filter(multi eq)] [ReadOnly]
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

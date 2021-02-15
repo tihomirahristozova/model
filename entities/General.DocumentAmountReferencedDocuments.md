@@ -5,6 +5,11 @@ uid: General.DocumentAmountReferencedDocuments
 
 Contains the documents which are referenced by each document amount. Entity: Gen_Document_Amount_Referenced_Documents
 
+Default Display Text Format:  
+_{DocumentAmount.Document.DocumentType.Code}:{DocumentAmount.Document.DocumentNo} - {DocumentAmount.Document.DocumentType.TypeName:T}_  
+Default Search Member:  
+_DocumentAmount.Document.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Contains the documents which are referenced by each document amount. Entity: Gen
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -35,6 +41,7 @@ _Default Value_: **NewGuid**
 The document amount for which the referenced document is specified. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[DocumentAmounts](General.DocumentAmounts.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReferencedDocument
@@ -42,6 +49,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document which is referenced by the document amount. [Required] [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

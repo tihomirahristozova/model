@@ -5,6 +5,11 @@ uid: Logistics.Procurement.Suppliers
 
 Contains supplier conditions (contracts). Entity: Scm_Suppliers
 
+Default Display Text Format:  
+_{Number}_  
+Default Search Member:  
+_Number_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -91,6 +96,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -108,6 +114,7 @@ _Default Value_: **True**
 The unique supplier number. [Filter(eq)] [ORD]
 
 _Type_: **string (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 
@@ -178,6 +185,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [Party](General.Contacts.Parties.md) to which this Supplier belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SupplierType

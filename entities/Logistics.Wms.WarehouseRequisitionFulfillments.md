@@ -5,6 +5,11 @@ uid: Logistics.Wms.WarehouseRequisitionFulfillments
 
 Fulfillment ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition_Fulfillments (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -45,6 +50,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -79,6 +85,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The warehouse requisiton, which is fulfilled. [Required] [Filter(multi eq)]
 
 _Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseRequisitionLine
@@ -86,6 +93,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The requisition line, which is fulfilled. [Required] [Filter(multi eq)]
 
 _Type_: **[WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

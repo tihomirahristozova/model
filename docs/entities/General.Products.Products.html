@@ -80,6 +80,10 @@
 <h1 id="generalproductsproducts-entity">General.Products.Products Entity</h1>
 
 <p>Products are the different items in the enterprise, which can be purchased, stored, sold and depreciated. Entity: Gen_Products</p>
+<p>Default Display Text Format:<br>
+<em>{PartNumber}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>PartNumber</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -535,6 +539,7 @@ Allowed values for the <a href="General.Products.Products.html#flushingmethod">F
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isfeatured">IsFeatured</h3>
@@ -602,6 +607,7 @@ Allowed values for the <a href="General.Products.Products.html#lotsissue">LotsIs
 <h3 id="partnumber">PartNumber</h3>
 <p>Unique part number of the product. [Required] [Filter(multi eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="planningdemandtimefencedays">PlanningDemandTimeFenceDays</h3>
@@ -740,10 +746,12 @@ Allowed values for the <a href="General.Products.Products.html#uselots">UseLots<
 <h3 id="productgroup">ProductGroup</h3>
 <p>The product group, under which the product is categorized. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="producttype">ProductType</h3>
 <p>The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">ProductTypes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ProductGroup.GetDefaultProductTypeForNewProduct( )</code></p>

@@ -80,6 +80,10 @@
 <h1 id="financeaccountingtemplateroutelinks-entity">Finance.Accounting.TemplateRouteLinks Entity</h1>
 
 <p>When specified denotes that another route uses the template, initially bound to one route. Entity: Acc_Template_Route_Links</p>
+<p>Default Display Text Format:<br>
+<em>{Route.ProcedureName:T}</em><br>
+Default Search Member:<br>
+<em>Route.ProcedureName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -122,12 +126,14 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="route">Route</h3>
 <p>Route for which the specified template will be activated. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html">Routes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="template">Template</h3>
 <p>Template that will be activated for the specified route. [Required] [Filter(multi eq)]</p>

@@ -80,6 +80,10 @@
 <h1 id="systemsbpmcalculatedattributeexpressions-entity">Systems.Bpm.CalculatedAttributeExpressions Entity</h1>
 
 <p>Represent an expression within the calculation of a calculated attribute. Entity: Sys_Calculated_Attribute_Expressions</p>
+<p>Default Display Text Format:<br>
+<em>{CalculatedAttribute.Name:T}</em><br>
+Default Search Member:<br>
+<em>CalculatedAttribute.Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -171,6 +175,7 @@
 <code>( obj.CalculatedAttribute.Expressions.Select( c =&gt; c.ExpressionNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
@@ -541,6 +546,7 @@ Generic enum type for ExpressionParameterType properties<br>
 <h3 id="calculatedattribute">CalculatedAttribute</h3>
 <p>The <a href="Systems.Bpm.CalculatedAttributeExpressions.html#calculatedattribute">CalculatedAttribute</a> to which this CalculatedAttributeExpression belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributes.html">CalculatedAttributes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

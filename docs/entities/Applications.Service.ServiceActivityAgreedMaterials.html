@@ -80,6 +80,10 @@
 <h1 id="applicationsserviceserviceactivityagreedmaterials-entity">Applications.Service.ServiceActivityAgreedMaterials Entity</h1>
 
 <p>Contains the materials, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Materials</p>
+<p>Default Display Text Format:<br>
+<em>{ServiceActivityMaterial.ServiceActivity.DocumentType.Code}:{ServiceActivityMaterial.ServiceActivity.DocumentNo}:{ServiceActivityMaterial.LineNo} - {ServiceActivityMaterial.ServiceActivity.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>ServiceActivityMaterial.ServiceActivity.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -133,12 +137,14 @@
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="serviceactivitymaterial">ServiceActivityMaterial</h3>
 <p>The <a href="Applications.Service.ServiceActivityAgreedMaterials.html#serviceactivitymaterial">ServiceActivityMaterial</a> to which this ServiceActivityAgreedMaterial belongs. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivityMaterials.html">ServiceActivityMaterials</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceagreementmaterial">ServiceAgreementMaterial</h3>
 <p>Service agreement material line that records the paid or agreed in advance material. [Required] [Filter(multi eq)] [ReadOnly]</p>

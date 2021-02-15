@@ -80,6 +80,10 @@
 <h1 id="crmlinediscounts-entity">Crm.LineDiscounts Entity</h1>
 
 <p>Discount policies for sales documents. Entity: Crm_Line_Discounts</p>
+<p>Default Display Text Format:<br>
+<em>{Id}</em><br>
+Default Search Member:<br>
+<em>Id</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -208,6 +212,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="maxquantity">MaxQuantity</h3>
@@ -267,6 +272,7 @@ Generic enum type for Priority properties<br>
 <h3 id="customer">Customer</h3>
 <p>Apply the discount only if this is the customer. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="customertype">CustomerType</h3>
 <p>Apply the discount only if the customer is of this customer type. [Filter(multi eq)]</p>
@@ -275,6 +281,7 @@ Generic enum type for Priority properties<br>
 <h3 id="distributionchannel">DistributionChannel</h3>
 <p>Apply the discount only when the sales document is on the specified channel. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>When not null, the policy is applied only for documents of the specified enterprise company . [Filter(multi eq)]</p>
@@ -293,6 +300,7 @@ Generic enum type for Priority properties<br>
 <h3 id="product">Product</h3>
 <p>Apply the discount only when this specific product is sold. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productgroup">ProductGroup</h3>
 <p>Apply the discount only if the product sold is contained in this product group or any of its sub-groups. [Filter(multi eq)]</p>

@@ -80,6 +80,10 @@
 <h1 id="generalproductvariants-entity">General.ProductVariants Entity</h1>
 
 <p>Contains definitions of different variants of a product. The variants are differentiated by color, size and style. Entity: Gen_Product_Variants</p>
+<p>Default Display Text Format:<br>
+<em>{BarCode}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>BarCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -148,6 +152,7 @@
 <h3 id="barcode">BarCode</h3>
 <p>When specified, it contains a bar code which uniquely identifies the product variant. [Filter(eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="code">Code</h3>
@@ -157,6 +162,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
@@ -172,6 +178,7 @@
 <h3 id="product">Product</h3>
 <p>The product for which this variant is defined. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="variantcolor">VariantColor</h3>
 <p>The color of the variant. null means that the variant does not have a specific color. [Filter(multi eq)]</p>

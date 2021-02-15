@@ -80,6 +80,10 @@
 <h1 id="financeintrastatdeclarationlines-entity">Finance.Intrastat.DeclarationLines Entity</h1>
 
 <p>Contains the details of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declaration_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{IntrastatDeclaration.DocumentType.Code}:{IntrastatDeclaration.DocumentNo} - {IntrastatDeclaration.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>IntrastatDeclaration.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -252,6 +256,7 @@ Allowed values for the <a href="Finance.Intrastat.DeclarationLines.html#delivery
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="invoicedvalueamountbase">InvoicedValueAmountBase</h3>

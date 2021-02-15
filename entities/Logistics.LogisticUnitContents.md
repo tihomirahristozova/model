@@ -5,6 +5,11 @@ uid: Logistics.LogisticUnitContents
 
 Theoretical or actual content of a logistic unit. Entity: Log_Logistic_Unit_Contents (Introduced in version 21.1.0.77)
 
+Default Display Text Format:  
+_{LotNumber}_  
+Default Search Member:  
+_LotNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -57,6 +62,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -113,6 +119,7 @@ _Supports Order By_: **False**
 The containing logistic unit. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[LogisticUnits](Logistics.LogisticUnits.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product

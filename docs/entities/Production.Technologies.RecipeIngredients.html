@@ -80,6 +80,10 @@
 <h1 id="productiontechnologiesrecipeingredients-entity">Production.Technologies.RecipeIngredients Entity</h1>
 
 <p>Contains the materials of a recipe that make up the product. Entity: Prd_Recipe_Ingredients</p>
+<p>Default Display Text Format:<br>
+<em>{Recipe.Name:T}</em><br>
+Default Search Member:<br>
+<em>Recipe.Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -199,6 +203,7 @@
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineord">LineOrd</h3>
@@ -249,6 +254,7 @@
 <h3 id="material">Material</h3>
 <p>The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="operation">Operation</h3>
 <p>Specifies for which operation this ingredient will be used. [Filter(multi eq)]</p>
@@ -261,6 +267,7 @@
 <h3 id="recipe">Recipe</h3>
 <p>The <a href="Production.Technologies.RecipeIngredients.html#recipe">Recipe</a> to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Production.Technologies.Recipes.html">Recipes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
 <p>The store from which to retrieve the material. [Filter(multi eq)]</p>

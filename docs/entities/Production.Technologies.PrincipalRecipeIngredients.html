@@ -80,6 +80,10 @@
 <h1 id="productiontechnologiesprincipalrecipeingredients-entity">Production.Technologies.PrincipalRecipeIngredients Entity</h1>
 
 <p>Template for material usage of a principal recipe. Entity: Prd_Principal_Recipe_Ingredients</p>
+<p>Default Display Text Format:<br>
+<em>{IngredientName:T}</em><br>
+Default Search Member:<br>
+<em>IngredientName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -213,6 +217,7 @@
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="ingredientname">IngredientName</h3>

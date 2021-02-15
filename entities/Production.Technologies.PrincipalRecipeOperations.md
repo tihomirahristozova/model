@@ -5,6 +5,11 @@ uid: Production.Technologies.PrincipalRecipeOperations
 
 Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_Operations
 
+Default Display Text Format:  
+_{PrincipalRecipe.Name:T}_  
+Default Search Member:  
+_PrincipalRecipe.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -57,6 +62,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

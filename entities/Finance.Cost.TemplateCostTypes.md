@@ -5,6 +5,11 @@ uid: Finance.Cost.TemplateCostTypes
 
 Contains the cost types and their hierachy positions within a cost calculation. Entity: Cost_Template_Cost_Types
 
+Default Display Text Format:  
+_{CostTemplate.CostTemplateCode}: {CostTemplate.CostTemplateName:T}_  
+Default Search Member:  
+_CostTemplate.CostTemplateCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -33,6 +38,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

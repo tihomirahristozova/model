@@ -5,6 +5,11 @@ uid: Finance.Cost.Templates
 
 Cost templates specify how to calculate and allocate costs. Entity: Cost_Templates
 
+Default Display Text Format:  
+_{CostTemplateCode}: {CostTemplateName:T}_  
+Default Search Member:  
+_CostTemplateCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -48,6 +53,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

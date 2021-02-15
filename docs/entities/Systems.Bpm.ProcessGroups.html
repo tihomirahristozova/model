@@ -80,6 +80,10 @@
 <h1 id="systemsbpmprocessgroups-entity">Systems.Bpm.ProcessGroups Entity</h1>
 
 <p>Represents a node in the hierarchy of process groups. Entity: Bpm_Process_Groups</p>
+<p>Default Display Text Format:<br>
+<em>{Code}: {Name:T}</em><br>
+Default Search Member:<br>
+<em>Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -137,6 +141,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
@@ -153,6 +158,7 @@
 <h3 id="parent">Parent</h3>
 <p>Parent process group in the hierarchy. null means this is a root group. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.ProcessGroups.html">ProcessGroups</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

@@ -5,6 +5,11 @@ uid: Systems.Core.ObjectFiles
 
 Contains files attached to objects. Entity: Sys_Object_Files
 
+Default Display Text Format:  
+_{PurposeCode}: {FileName:T}_  
+Default Search Member:  
+_PurposeCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -80,6 +85,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -170,6 +176,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The object to which the file is attached. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

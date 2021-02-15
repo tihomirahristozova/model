@@ -5,6 +5,11 @@ uid: Applications.Mail.Boxes
 
 Represents user mailboxes. Entity: Mail_Boxes
 
+Default Display Text Format:  
+_{SentItemsFolderName:T}_  
+Default Search Member:  
+_SentItemsFolderName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -58,6 +63,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -161,6 +167,7 @@ _Supports Order By_: **False**
 The user, who owns the mailbox. [Required] [Filter(multi eq)]
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

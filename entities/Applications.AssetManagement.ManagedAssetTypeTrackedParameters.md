@@ -5,6 +5,11 @@ uid: Applications.AssetManagement.ManagedAssetTypeTrackedParameters
 
 Defines the parameters, which are tracked for the assets of the different types. Entity: Eam_Managed_Asset_Type_Tracked_Parameters (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{ManagedAssetType.Code}: {ManagedAssetType.Name:T}_  
+Default Search Member:  
+_ManagedAssetType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -25,6 +30,7 @@ Defines the parameters, which are tracked for the assets of the different types.
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -44,6 +50,7 @@ _Supports Order By_: **False**
 The asset type for which the tracked parameter is defined. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrackedParameter

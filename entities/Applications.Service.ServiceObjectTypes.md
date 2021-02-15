@@ -5,6 +5,11 @@ uid: Applications.Service.ServiceObjectTypes
 
 Contins the types of serviceable objects. Entity: Srv_Service_Object_Types
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -18,6 +23,7 @@ Contins the types of serviceable objects. Entity: Srv_Service_Object_Types
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -5,6 +5,11 @@ uid: Systems.Core.AttributeChangesHistory
 
 Each entry represents an entity attribute change with previous and new value. Entity: Sys_Attribute_Changes_History_View
 
+Default Display Text Format:  
+_{RepositoryName}: {EntityItemId}_  
+Default Search Member:  
+_RepositoryName_  
+
 ## Attributes
 
 | Name | Type | Description |

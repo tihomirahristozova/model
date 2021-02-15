@@ -5,6 +5,11 @@ uid: Production.Technologies.RecipeIngredients
 
 Contains the materials of a recipe that make up the product. Entity: Prd_Recipe_Ingredients
 
+Default Display Text Format:  
+_{Recipe.Name:T}_  
+Default Search Member:  
+_Recipe.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -55,6 +60,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -132,6 +138,7 @@ _Default Value_: **Constant**
 The Id of the consumed material (Gen_Products_Table). [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Operation
@@ -153,6 +160,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [Recipe](Production.Technologies.RecipeIngredients.md#recipe) to which this RecipeIngredient belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Recipes](Production.Technologies.Recipes.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store

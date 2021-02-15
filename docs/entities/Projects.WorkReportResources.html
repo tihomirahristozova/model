@@ -80,6 +80,10 @@
 <h1 id="projectsworkreportresources-entity">Projects.WorkReportResources Entity</h1>
 
 <p>Each record contains usage of resource, reported by the related Work Report. Entity: Prj_Work_Report_Resources</p>
+<p>Default Display Text Format:<br>
+<em>{WorkReport.DocumentType.Code}:{WorkReport.DocumentNo} - {WorkReport.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>WorkReport.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -157,6 +161,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="totalresourceusagehours">TotalResourceUsageHours</h3>

@@ -5,6 +5,11 @@ uid: General.DocumentJobs
 
 Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Introduced in version 20.1)
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -39,6 +44,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -74,6 +80,7 @@ _Supports Order By_: **False**
 The name of the job. [Required] [Filter(eq;like)] [ORD] (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

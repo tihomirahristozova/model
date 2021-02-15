@@ -80,6 +80,10 @@
 <h1 id="financeaccountingaccountingvoucherlines-entity">Finance.Accounting.AccountingVoucherLines Entity</h1>
 
 <p>Contains one debit or credit posting within an accounting voucher. Entity: Acc_Voucher_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{Voucher.DocumentType.Code}:{Voucher.DocumentNo}:{LineNo} - {Voucher.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Voucher.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -232,6 +236,7 @@
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="itemkey">ItemKey</h3>
@@ -264,6 +269,7 @@
 <h3 id="account">Account</h3>
 <p>The account being debited or credited. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Accounts</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="costcenter">CostCenter</h3>
 <p>The cost center to which this cost is related. [Filter(multi eq)]</p>
@@ -276,6 +282,7 @@
 <h3 id="document">Document</h3>
 <p>The voucher to which this line is attached. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountingVouchers.html">AccountingVouchers</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="profitcenter">ProfitCenter</h3>
 <p>The profit center to which this revenue is related. [Filter(multi eq)]</p>
@@ -284,10 +291,12 @@
 <h3 id="referenceddocument">ReferencedDocument</h3>
 <p>The document which is referenced by the line. By default, this is the document of the voucher. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="voucher">Voucher</h3>
 <p>The voucher to which this line is attached. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountingVouchers.html">AccountingVouchers</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

@@ -5,6 +5,11 @@ uid: Logistics.Shipment.ShipmentOrderLines
 
 Represents detail lines of orders for shipment of sales orders to customers. Each line orders the shipment of one product. Entity: Log_Shipment_Order_Lines
 
+Default Display Text Format:  
+_{ShipmentOrder.DocumentType.Code}:{ShipmentOrder.DocumentNo}:{LineNo} - {ShipmentOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_ShipmentOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -90,6 +95,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -216,6 +222,7 @@ _Supports Order By_: **False**
 The [ShipmentOrder](Logistics.Shipment.ShipmentOrderLines.md#shipmentorder) to which this ShipmentOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[ShipmentOrders](Logistics.Shipment.ShipmentOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -232,6 +239,7 @@ _Front-End Recalc Expressions:_
 The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentSalesOrderLine
@@ -239,6 +247,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Sales order line which is shipped. [Required] [Filter(multi eq)]
 
 _Type_: **[SalesOrderLines](Crm.Sales.SalesOrderLines.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
@@ -262,6 +271,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [ShipmentOrder](Logistics.Shipment.ShipmentOrderLines.md#shipmentorder) to which this ShipmentOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ShipmentOrders](Logistics.Shipment.ShipmentOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreBin

@@ -5,6 +5,11 @@ uid: Logistics.Shipment.TransportationOrderLines
 
 Different cargoes of a transportation order. Entity: Log_Transportation_Order_Lines
 
+Default Display Text Format:  
+_{TransportationOrder.DocumentType.Code}:{TransportationOrder.DocumentNo}:{LineNo} - {TransportationOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_TransportationOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -41,6 +46,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -112,6 +118,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [TransportationOrder](Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[TransportationOrders](Logistics.Shipment.TransportationOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
@@ -126,6 +133,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [TransportationOrder](Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[TransportationOrders](Logistics.Shipment.TransportationOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

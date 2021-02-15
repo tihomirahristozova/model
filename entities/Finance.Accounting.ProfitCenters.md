@@ -5,6 +5,11 @@ uid: Finance.Accounting.ProfitCenters
 
 Defines company profit centers and their relative weight for automatic balance transfers from cost centers. Entity: Acc_Profit_Centers
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Defines company profit centers and their relative weight for automatic balance t
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

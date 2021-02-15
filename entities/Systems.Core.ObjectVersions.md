@@ -5,6 +5,11 @@ uid: Systems.Core.ObjectVersions
 
 Contains history of saved version of the managed objects. Entity: Sys_Object_Versions
 
+Default Display Text Format:  
+_{Object.Id}_  
+Default Search Member:  
+_Object.Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -29,6 +34,7 @@ Contains history of saved version of the managed objects. Entity: Sys_Object_Ver
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -88,6 +94,7 @@ _Supports Order By_: **False**
 The object, for which a version is stored. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User

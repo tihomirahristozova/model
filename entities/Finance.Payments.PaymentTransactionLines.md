@@ -5,6 +5,11 @@ uid: Finance.Payments.PaymentTransactionLines
 
 Contains the distibution of the payments' amounts among the source payment orders. Entity: Cash_Payment_Transaction_Lines
 
+Default Display Text Format:  
+_{PaymentTransaction.DocumentType.Code}:{PaymentTransaction.DocumentNo} - {PaymentTransaction.DocumentType.TypeName:T}_  
+Default Search Member:  
+_PaymentTransaction.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -60,6 +65,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -79,6 +85,7 @@ _Supports Order By_: **False**
 The [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[PaymentTransactions](Finance.Payments.PaymentTransactions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentOrder
@@ -86,6 +93,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The payment order, that is covered by this transaction amount distribution (tr.line). [Required] [Filter(multi eq)]
 
 _Type_: **[PaymentOrders](Finance.Payments.PaymentOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentTransaction
@@ -93,6 +101,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PaymentTransactions](Finance.Payments.PaymentTransactions.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

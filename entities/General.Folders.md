@@ -5,6 +5,11 @@ uid: General.Folders
 
 Folders are the base for the file storage within the system. Each folder is a data object, with the primary idea of containing files. Entity: Gen_Folders (Introduced in version 21.1.1.8)
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Folders are the base for the file storage within the system. Each folder is a da
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -60,6 +66,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Parent folder. null if this is root folder. [Filter(multi eq)]
 
 _Type_: **[Folders](General.Folders.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

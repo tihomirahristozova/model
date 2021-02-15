@@ -80,6 +80,10 @@
 <h1 id="crmpromotionalpackagelines-entity">Crm.PromotionalPackageLines Entity</h1>
 
 <p>Detail records (lines) of promotional package definition. Entity: Crm_Promotional_Package_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{PromotionalPackage.Code}: {PromotionalPackage.Name:T}</em><br>
+Default Search Member:<br>
+<em>PromotionalPackage.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -157,6 +161,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="linenumber">LineNumber</h3>
@@ -227,6 +232,7 @@ Allowed values for the <a href="Crm.PromotionalPackageLines.html#standarddiscoun
 <h3 id="promotionalpackage">PromotionalPackage</h3>
 <p>The <a href="Crm.PromotionalPackageLines.html#promotionalpackage">PromotionalPackage</a> to which this PromotionalPackageLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Crm.PromotionalPackages.html">PromotionalPackages</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="unitpricecurrency">UnitPriceCurrency</h3>
 <p>Currency of the unit price. null if the package specifies only discount. [Filter(multi eq)]</p>

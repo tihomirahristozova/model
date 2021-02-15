@@ -80,6 +80,10 @@
 <h1 id="logisticsinventoryproductdefaultstorebins-entity">Logistics.Inventory.ProductDefaultStoreBins Entity</h1>
 
 <p>The default store bins in which products should be placed. Entity: Inv_Product_Default_Store_Bins</p>
+<p>Default Display Text Format:<br>
+<em>{Product.PartNumber}: {Product.Name:T}</em><br>
+Default Search Member:<br>
+<em>Product.PartNumber</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -127,6 +131,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -137,6 +142,7 @@
 <h3 id="product">Product</h3>
 <p>The <a href="General.Products.Products.html">Product</a> to which this ProductDefaultStoreBin belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="store">Store</h3>
 <p>The store, for which the default bin is specified. [Required] [Filter(multi eq)]</p>

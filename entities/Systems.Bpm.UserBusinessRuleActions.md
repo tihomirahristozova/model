@@ -5,6 +5,11 @@ uid: Systems.Bpm.UserBusinessRuleActions
 
 Represents an action within a business rule. Entity: Sys_User_Business_Rule_Actions
 
+Default Display Text Format:  
+_{UserBusinessRule.Code}: {UserBusinessRule.RepositoryName:T}_  
+Default Search Member:  
+_UserBusinessRule.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -63,6 +68,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

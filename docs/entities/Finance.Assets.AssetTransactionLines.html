@@ -80,6 +80,10 @@
 <h1 id="financeassetsassettransactionlines-entity">Finance.Assets.AssetTransactionLines Entity</h1>
 
 <p>Asset value transaction lines. Each line changes the values of one asset in one valuation model. Entity: Ast_Asset_Transaction_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{AssetTransaction.DocumentType.Code}:{AssetTransaction.DocumentNo} - {AssetTransaction.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>AssetTransaction.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -198,6 +202,7 @@
 <code>obj.DepreciationValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="negativereservevalue">NegativeReserveValue</h3>
@@ -306,10 +311,12 @@ Allowed values for the <a href="Finance.Assets.AssetTransactionLines.html#operat
 <h3 id="asset">Asset</h3>
 <p>Asset for which changes in values have occurred. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.Assets.html">Assets</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assettransaction">AssetTransaction</h3>
 <p>The <a href="Finance.Assets.AssetTransactionLines.html#assettransaction">AssetTransaction</a> to which this AssetTransactionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.AssetTransactions.html">AssetTransactions</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="valuationmodel">ValuationModel</h3>
 <p>Valuation model in which the changes of the asset values have occurred (Taxation model or Accounting model or other). [Required] [Filter(multi eq)]</p>

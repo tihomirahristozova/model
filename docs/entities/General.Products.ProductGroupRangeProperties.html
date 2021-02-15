@@ -80,6 +80,10 @@
 <h1 id="generalproductsproductgrouprangeproperties-entity">General.Products.ProductGroupRangeProperties Entity</h1>
 
 <p>When specified for a product group, provides a way for automatical creation of new products, based on altering a set of values of some user-defined properties. Each value combination is used to create a new, unique product within the group. Entity: Gen_Product_Group_Range_Properties</p>
+<p>Default Display Text Format:<br>
+<em>{ProductGroup.NextPartNumber}: {ProductGroup.Name:T}</em><br>
+Default Search Member:<br>
+<em>ProductGroup.NextPartNumber</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -147,6 +151,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="propertyvalueslist">PropertyValuesList</h3>
@@ -189,6 +194,7 @@ Allowed values for the <a href="General.Products.ProductGroupRangeProperties.htm
 <h3 id="productgroup">ProductGroup</h3>
 <p>The <a href="General.Products.ProductGroupRangeProperties.html#productgroup">ProductGroup</a> to which this ProductGroupRangeProperty belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="property">Property</h3>
 <p>The property whose values will be altered. [Required] [Filter(multi eq)]</p>

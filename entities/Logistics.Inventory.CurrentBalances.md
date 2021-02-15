@@ -5,6 +5,11 @@ uid: Logistics.Inventory.CurrentBalances
 
 The current inventory balances, grouped by storage key (Store, Product, Lot, etc.). Entity: Inv_Current_Balances
 
+Default Display Text Format:  
+_{BaseCostValue}: {EnterpriseCompanyId}_  
+Default Search Member:  
+_BaseCostValue_  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -5,6 +5,11 @@ uid: Applications.Service.ServiceAgreementMaterials
 
 Contains the free materials, included in the service agreement. Entity: Srv_Service_Agreement_Materials
 
+Default Display Text Format:  
+_{ServiceAgreement.DocumentType.Code}:{ServiceAgreement.DocumentNo}:{LineNo} - {ServiceAgreement.DocumentType.TypeName:T}_  
+Default Search Member:  
+_ServiceAgreement.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -40,6 +45,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -106,6 +112,7 @@ _Supports Order By_: **False**
 The [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -129,6 +136,7 @@ _Front-End Recalc Expressions:_
 The [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

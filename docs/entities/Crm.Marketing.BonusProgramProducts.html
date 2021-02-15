@@ -80,6 +80,10 @@
 <h1 id="crmmarketingbonusprogramproducts-entity">Crm.Marketing.BonusProgramProducts Entity</h1>
 
 <p>Provides a way to specify additional (to the one specified in Bonus Program.Conditional Product) products, which will be used to evaluate bonus program conditions. When any of the products exists in the sales document, the conditions are satisfied and the program is applied. When the conditional products list for a bonus program is empty, it is considered that the program is valid for all products. Entity: Crm_Bonus_Program_Products</p>
+<p>Default Display Text Format:<br>
+<em>{BonusProgram.Name:T}</em><br>
+Default Search Member:<br>
+<em>BonusProgram.Name</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -122,12 +126,14 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="bonusprogram">BonusProgram</h3>
 <p>The <a href="Crm.Marketing.BonusProgramProducts.html#bonusprogram">BonusProgram</a> to which this BonusProgramProduct belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.BonusPrograms.html">BonusPrograms</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <p>The product which is required to exist in the final sales document in order for the bonus program to be applied. [Required] [Filter(multi eq)]</p>

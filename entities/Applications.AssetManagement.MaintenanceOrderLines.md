@@ -5,6 +5,11 @@ uid: Applications.AssetManagement.MaintenanceOrderLines
 
 Contains the types of maintenance and maintained assets in the maintenance orders. Entity: Eam_Maintenance_Order_Lines (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{MaintenanceOrder.DocumentType.Code}:{MaintenanceOrder.DocumentNo}:{LineNo} - {MaintenanceOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_MaintenanceOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -30,6 +35,7 @@ Contains the types of maintenance and maintained assets in the maintenance order
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -78,6 +84,7 @@ _Supports Order By_: **False**
 The [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) to which this MaintenanceOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaintenanceOrder
@@ -85,6 +92,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) to which this MaintenanceOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaintenanceType
@@ -99,6 +107,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The maintained asset. [Required] [Filter(multi eq)]
 
 _Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

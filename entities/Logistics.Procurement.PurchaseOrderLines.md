@@ -5,6 +5,11 @@ uid: Logistics.Procurement.PurchaseOrderLines
 
 Contains detail lines of purchase orders. Entity: Scm_Purchase_Order_Lines
 
+Default Display Text Format:  
+_{PurchaseOrder.DocumentType.Code}:{PurchaseOrder.DocumentNo}:{LineNo} - {PurchaseOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_PurchaseOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -81,6 +86,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -193,6 +199,7 @@ _Front-End Recalc Expressions:_
 The [PurchaseOrder](Logistics.Procurement.PurchaseOrderLines.md#purchaseorder) to which this PurchaseOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[PurchaseOrders](Logistics.Procurement.PurchaseOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -239,6 +246,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [PurchaseOrder](Logistics.Procurement.PurchaseOrderLines.md#purchaseorder) to which this PurchaseOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PurchaseOrders](Logistics.Procurement.PurchaseOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseProductPrice

@@ -80,6 +80,10 @@
 <h1 id="systemscoreobjectversions-entity">Systems.Core.ObjectVersions Entity</h1>
 
 <p>Contains history of saved version of the managed objects. Entity: Sys_Object_Versions</p>
+<p>Default Display Text Format:<br>
+<em>{Object.Id}</em><br>
+Default Search Member:<br>
+<em>Object.Id</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -147,6 +151,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="objectcontents">ObjectContents</h3>
@@ -198,6 +203,7 @@ Allowed values for the <a href="Systems.Core.ObjectVersions.html#versiontype">Ve
 <h3 id="object">Object</h3>
 <p>The object, for which a version is stored. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="user">User</h3>
 <p>The user, which saved the version. [Required] [Filter(multi eq)]</p>

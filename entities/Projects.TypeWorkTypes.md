@@ -5,6 +5,11 @@ uid: Projects.TypeWorkTypes
 
 Contains the work types, that can be performed in projects of this project type. Entity: Prj_Type_Work_Types
 
+Default Display Text Format:  
+_{WorkTypeName:T}_  
+Default Search Member:  
+_WorkTypeName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Contains the work types, that can be performed in projects of this project type.
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

@@ -5,6 +5,11 @@ uid: Crm.Distribution.SalesPersonGroups
 
 Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -29,6 +34,7 @@ Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
 The unique code of the SalesPersonGroup. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -43,6 +49,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -69,6 +76,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The parent sales person group in the hierarchy. [Filter(multi eq)]
 
 _Type_: **[SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

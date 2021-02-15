@@ -5,6 +5,11 @@ uid: Production.Resources.Functions
 
 Definition of the functions that the resources can perform. Entity: Prd_Functions
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -26,6 +31,7 @@ Definition of the functions that the resources can perform. Entity: Prd_Function
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -53,6 +59,7 @@ _Supports Order By_: **False**
 The [FunctionGroup](Production.Resources.Functions.md#functiongroup) to which this Function belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[FunctionGroups](Production.Resources.FunctionGroups.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimaryUnit

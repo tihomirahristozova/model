@@ -5,6 +5,11 @@ uid: Finance.Payments.PaymentSlipAmounts
 
 Mass payment amount. Each record generates one payment transaction. Entity: Cash_Payment_Slip_Amounts
 
+Default Display Text Format:  
+_{PartyName:T}_  
+Default Search Member:  
+_PartyName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -62,6 +67,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -137,6 +143,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) to which this PaymentSlipAmount belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PaymentSlips](Finance.Payments.PaymentSlips.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

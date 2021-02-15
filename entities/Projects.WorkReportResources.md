@@ -5,6 +5,11 @@ uid: Projects.WorkReportResources
 
 Each record contains usage of resource, reported by the related Work Report. Entity: Prj_Work_Report_Resources
 
+Default Display Text Format:  
+_{WorkReport.DocumentType.Code}:{WorkReport.DocumentNo} - {WorkReport.DocumentType.TypeName:T}_  
+Default Search Member:  
+_WorkReport.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -45,6 +50,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

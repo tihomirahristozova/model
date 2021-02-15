@@ -80,6 +80,10 @@
 <h1 id="generalpartylocationnumbers-entity">General.PartyLocationNumbers Entity</h1>
 
 <p>Location numbers for a party. Depending on the partner with which we are doing an exchange, our location number might be different. Entity: Gen_Party_Location_Numbers (Introduced in version 19.1)</p>
+<p>Default Display Text Format:<br>
+<em>{LocationNumber}</em><br>
+Default Search Member:<br>
+<em>LocationNumber</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -142,6 +146,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="locationcodingsystem">LocationCodingSystem</h3>
@@ -173,6 +178,7 @@ Allowed values for the <a href="General.PartyLocationNumbers.html#locationcoding
 <h3 id="locationnumber">LocationNumber</h3>
 <p>The location number of Party. [Required] [Filter(multi eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="partnerlocationnumber">PartnerLocationNumber</h3>
@@ -194,6 +200,7 @@ Allowed values for the <a href="General.PartyLocationNumbers.html#locationcoding
 <h3 id="party">Party</h3>
 <p>The party for which we are defining the location number. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

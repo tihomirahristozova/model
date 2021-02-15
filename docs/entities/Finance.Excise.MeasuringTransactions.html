@@ -80,6 +80,10 @@
 <h1 id="financeexcisemeasuringtransactions-entity">Finance.Excise.MeasuringTransactions Entity</h1>
 
 <p>Transaction of product input or output, measured with specialized measuring device for excise purposes. Entity: Exc_Measuring_Transactions (Introduced in version 21.1.1.9)</p>
+<p>Default Display Text Format:<br>
+<em>{MeasuringDeviceCode}</em><br>
+Default Search Member:<br>
+<em>MeasuringDeviceCode</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -222,11 +226,13 @@ Allowed values for the <a href="Finance.Excise.MeasuringTransactions.html#direct
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="measuringdevicecode">MeasuringDeviceCode</h3>
 <p>The code of the measuring device, used to measure the transaction. [Required] [Filter(multi eq;like)] [ORD]</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
@@ -253,6 +259,7 @@ Allowed values for the <a href="Finance.Excise.MeasuringTransactions.html#direct
 <h3 id="product">Product</h3>
 <p>The product, which was being measured. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
@@ -261,6 +268,7 @@ Allowed values for the <a href="Finance.Excise.MeasuringTransactions.html#direct
 <h3 id="taxwarehouse">TaxWarehouse</h3>
 <p>The tax warehouse, where the transaction occurred. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Excise.TaxWarehouses.html">TaxWarehouses</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

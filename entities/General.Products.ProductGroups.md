@@ -5,6 +5,11 @@ uid: General.Products.ProductGroups
 
 Hierarchical categorization of the products. Entity: Gen_Product_Groups
 
+Default Display Text Format:  
+_{NextPartNumber}: {Name:T}_  
+Default Search Member:  
+_NextPartNumber_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -60,6 +65,7 @@ _Default Value_: **True**
 The unique code of the ProductGroup. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
@@ -95,6 +101,7 @@ _Default Value_: **0**
 Full tree path in the form /parent/.../leaf/. Contains the group names. [Required] [Default("")] [Filter(eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Default Value_: ****  
@@ -102,6 +109,7 @@ _Default Value_: ****
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -142,6 +150,7 @@ _Supports Order By_: **False**
 Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. [Required] [Default("/")] [Filter(eq)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Default Value_: **/**  

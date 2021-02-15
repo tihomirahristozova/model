@@ -5,6 +5,11 @@ uid: Crm.LineDiscounts
 
 Discount policies for sales documents. Entity: Crm_Line_Discounts
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -63,6 +68,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -118,6 +124,7 @@ _Supports Order By_: **False**
 Apply the discount only if this is the customer. [Filter(multi eq)]
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CustomerType
@@ -132,6 +139,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Apply the discount only when the sales document is on the specified channel. [Filter(multi eq)]
 
 _Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -162,6 +170,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Apply the discount only when this specific product is sold. [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup

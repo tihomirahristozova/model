@@ -80,6 +80,10 @@
 <h1 id="applicationsserviceserviceactivitymaterials-entity">Applications.Service.ServiceActivityMaterials Entity</h1>
 
 <p>Contains the materials, which were actually used during the service activity (repair). Entity: Srv_Service_Activity_Materials</p>
+<p>Default Display Text Format:<br>
+<em>{ServiceActivity.DocumentType.Code}:{ServiceActivity.DocumentNo}:{LineNo} - {ServiceActivity.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>ServiceActivity.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -190,6 +194,7 @@
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
@@ -228,6 +233,7 @@
 <h3 id="document">Document</h3>
 <p>The <a href="Applications.Service.ServiceActivityMaterials.html#serviceactivity">ServiceActivity</a> to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="linestore">LineStore</h3>
 <p>The store from which the product was taken. null = use the store from the header. [Filter(multi eq)]</p>
@@ -250,6 +256,7 @@
 <h3 id="serviceactivity">ServiceActivity</h3>
 <p>The <a href="Applications.Service.ServiceActivityMaterials.html#serviceactivity">ServiceActivity</a> to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceobject">ServiceObject</h3>
 <p>The service object for which the material is used. null means unkown object or N/A. [Filter(multi eq)]</p>

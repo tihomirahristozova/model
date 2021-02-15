@@ -5,6 +5,11 @@ uid: Crm.Marketing.BonusProgramProducts
 
 Provides a way to specify additional (to the one specified in Bonus Program.Conditional Product) products, which will be used to evaluate bonus program conditions. When any of the products exists in the sales document, the conditions are satisfied and the program is applied. When the conditional products list for a bonus program is empty, it is considered that the program is valid for all products. Entity: Crm_Bonus_Program_Products
 
+Default Display Text Format:  
+_{BonusProgram.Name:T}_  
+Default Search Member:  
+_BonusProgram.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -24,6 +29,7 @@ Provides a way to specify additional (to the one specified in Bonus Program.Cond
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -35,6 +41,7 @@ _Default Value_: **NewGuid**
 The [BonusProgram](Crm.Marketing.BonusProgramProducts.md#bonusprogram) to which this BonusProgramProduct belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[BonusPrograms](Crm.Marketing.BonusPrograms.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product

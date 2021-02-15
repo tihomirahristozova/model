@@ -5,6 +5,11 @@ uid: Finance.Payments.PaymentReasons
 
 Represents reasons for the payments. Contains both system and user-defined reasons. Entity: Cash_Payment_Reasons
 
+Default Display Text Format:  
+_{Name:T}_  
+Default Search Member:  
+_Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -20,6 +25,7 @@ Represents reasons for the payments. Contains both system and user-defined reaso
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -46,6 +52,7 @@ _Default Value_: **False**
 The name of this PaymentReason. [Required] [Filter(eq;like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 

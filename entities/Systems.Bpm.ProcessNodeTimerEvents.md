@@ -5,6 +5,11 @@ uid: Systems.Bpm.ProcessNodeTimerEvents
 
 Timer event definition. Currently - not used. Entity: Bpm_Process_Node_Timer_Events
 
+Default Display Text Format:  
+_{Id}_  
+Default Search Member:  
+_Id_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -21,6 +26,7 @@ Timer event definition. Currently - not used. Entity: Bpm_Process_Node_Timer_Eve
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

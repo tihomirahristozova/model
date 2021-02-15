@@ -5,6 +5,11 @@ uid: Systems.Bpm.Processes
 
 Represents one business process version. All process model elements and execution instances are bound to specfic process version. Entity: Bpm_Processes
 
+Default Display Text Format:  
+_{Code}: {Name:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -40,6 +45,7 @@ Represents one business process version. All process model elements and executio
 Unique process code. [Required] [Filter(multi eq)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
 
@@ -54,6 +60,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

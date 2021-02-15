@@ -80,6 +80,10 @@
 <h1 id="applicationsassetmanagementmanagedassettypemaintenancetypes-entity">Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes Entity</h1>
 
 <p>Defines the types of maintenances, which are allowed for assets of the different types. Entity: Eam_Managed_Asset_Type_Maintenance_Types (Introduced in version 19.1)</p>
+<p>Default Display Text Format:<br>
+<em>{ManagedAssetType.Code}: {ManagedAssetType.Name:T}</em><br>
+Default Search Member:<br>
+<em>ManagedAssetType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -157,6 +161,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
@@ -172,6 +177,7 @@
 <h3 id="managedassettype">ManagedAssetType</h3>
 <p>The asset type for which the allowed maintenance type is defined. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Applications.AssetManagement.ManagedAssetTypes.html">ManagedAssetTypes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

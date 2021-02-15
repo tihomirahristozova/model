@@ -5,6 +5,11 @@ uid: Logistics.Inventory.SupplySchemaRoutes
 
 Obsolete. Not used. Entity: Inv_Supply_Schema_Routes
 
+Default Display Text Format:  
+_{SupplySchema.Name:T}_  
+Default Search Member:  
+_SupplySchema.Name_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -28,6 +33,7 @@ Obsolete. Not used. Entity: Inv_Supply_Schema_Routes
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -78,6 +84,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[SupplySchemata](Logistics.Inventory.SupplySchemata.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

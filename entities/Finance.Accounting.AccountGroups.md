@@ -5,6 +5,11 @@ uid: Finance.Accounting.AccountGroups
 
 Hierarchical chart of account groups. Entity: Acc_Account_Groups
 
+Default Display Text Format:  
+_{Number}: {Name:T}_  
+Default Search Member:  
+_Number_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -53,6 +58,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -69,6 +75,7 @@ _Supports Order By_: **False**
 Unique account group number. May contain characters, if required. [Required] [Filter(like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
@@ -80,6 +87,7 @@ _Supports Order By_: **True**
 Parent account group. null if this is root group. [Filter(multi eq)]
 
 _Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

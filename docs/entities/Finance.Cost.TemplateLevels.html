@@ -80,6 +80,10 @@
 <h1 id="financecosttemplatelevels-entity">Finance.Cost.TemplateLevels Entity</h1>
 
 <p>Represents named hierarchy levels within a cost calculation. The hierarchy levels are used to specify cost allocation mechanisms. Entity: Cost_Template_Levels</p>
+<p>Default Display Text Format:<br>
+<em>{LevelName:T}</em><br>
+Default Search Member:<br>
+<em>LevelName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -133,6 +137,7 @@
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="levelname">LevelName</h3>

@@ -5,6 +5,11 @@ uid: Crm.Pos.Operators
 
 Represents one operator (person) in one POS location. Entity: Pos_Operators (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{PosOperatorCode}_  
+Default Search Member:  
+_PosOperatorCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -30,6 +35,7 @@ Represents one operator (person) in one POS location. Entity: Pos_Operators (Int
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -81,6 +87,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The POS location where this operator works. [Required] [Filter(multi eq)]
 
 _Type_: **[Locations](Crm.Pos.Locations.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosRole

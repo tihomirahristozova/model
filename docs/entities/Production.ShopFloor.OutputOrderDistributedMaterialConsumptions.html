@@ -80,6 +80,10 @@
 <h1 id="productionshopflooroutputorderdistributedmaterialconsumptions-entity">Production.ShopFloor.OutputOrderDistributedMaterialConsumptions Entity</h1>
 
 <p>Contains the quantity of materials distributed over the output order lines. Entity: Prd_Output_Order_Distributed_Material_Consumptions</p>
+<p>Default Display Text Format:<br>
+<em>{OutputOrderLine.OutputOrder.DocumentType.Code}:{OutputOrderLine.OutputOrder.DocumentNo}:{OutputOrderLine.LineOrd} - {OutputOrderLine.OutputOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>OutputOrderLine.OutputOrder.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -144,16 +148,19 @@
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="consumptionorderline">ConsumptionOrderLine</h3>
 <p>Consumption order line which requested the Consumed_Quantity. [Required] [Filter(multi eq)] [ReadOnly]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.ConsumptionOrderLines.html">ConsumptionOrderLines</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="outputorderline">OutputOrderLine</h3>
 <p>The output order line for which the distribution is recorded. [Required] [Filter(multi eq)] [ReadOnly] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.OutputOrderLines.html">OutputOrderLines</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

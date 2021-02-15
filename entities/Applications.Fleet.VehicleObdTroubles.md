@@ -5,6 +5,11 @@ uid: Applications.Fleet.VehicleObdTroubles
 
 Contains troubles, reported by the on-board diagnostics (OBD) of the vehicle. Entity: Fleet_Vehicle_Obd_Troubles
 
+Default Display Text Format:  
+_{DiagnosticTroubleCode}_  
+Default Search Member:  
+_DiagnosticTroubleCode_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -43,6 +48,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -70,6 +76,7 @@ _Supports Order By_: **False**
 The vehicle, which has experienced the trouble. [Required] [Filter(multi eq)]
 
 _Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

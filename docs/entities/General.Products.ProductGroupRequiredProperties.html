@@ -80,6 +80,10 @@
 <h1 id="generalproductsproductgrouprequiredproperties-entity">General.Products.ProductGroupRequiredProperties Entity</h1>
 
 <p>Contains the properties, that are required to be set, when creating new products in the category and its sub-categories. Entity: Gen_Product_Group_Required_Properties</p>
+<p>Default Display Text Format:<br>
+<em>{ProductGroup.NextPartNumber}: {ProductGroup.Name:T}</em><br>
+Default Search Member:<br>
+<em>ProductGroup.NextPartNumber</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -161,6 +165,7 @@
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="propertyno">PropertyNo</h3>

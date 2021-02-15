@@ -80,6 +80,10 @@
 <h1 id="applicationsserviceserviceinvoicing-entity">Applications.Service.ServiceInvoicing Entity</h1>
 
 <p>Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing</p>
+<p>Default Display Text Format:<br>
+<em>{Service.Code}: {Service.Name:T}</em><br>
+Default Search Member:<br>
+<em>Service.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -132,6 +136,7 @@
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="quantityofproduct">QuantityOfProduct</h3>

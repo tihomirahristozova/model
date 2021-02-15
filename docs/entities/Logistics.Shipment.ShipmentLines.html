@@ -80,6 +80,10 @@
 <h1 id="logisticsshipmentshipmentlines-entity">Logistics.Shipment.ShipmentLines Entity</h1>
 
 <p>Represents detail lines of shipments. Each line contains the shipment of one product. Entity: Log_Shipment_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{Shipment.DocumentType.Code}:{Shipment.DocumentNo}:{LineNo} - {Shipment.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>Shipment.DocumentNo</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -275,6 +279,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lengthm">Lengthm</h3>
@@ -359,6 +364,7 @@
 <h3 id="document">Document</h3>
 <p>The <a href="Logistics.Shipment.ShipmentLines.html#shipment">Shipment</a> to which this ShipmentLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.Shipments.html">Shipments</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="lot">Lot</h3>
 <p>The store lot from which to take the goods. [Filter(multi eq)]</p>
@@ -369,10 +375,12 @@
 <h3 id="parentdocument">ParentDocument</h3>
 <p>The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentsalesorderline">ParentSalesOrderLine</h3>
 <p>Sales order line which is shipped. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <p>The measurement unit of Quantity. [Required] [Filter(multi eq)]</p>
@@ -387,10 +395,12 @@
 <h3 id="shipment">Shipment</h3>
 <p>The <a href="Logistics.Shipment.ShipmentLines.html#shipment">Shipment</a> to which this ShipmentLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.Shipments.html">Shipments</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="shipmentorderline">ShipmentOrderLine</h3>
 <p>Shipment order line for which this quantity is shipped. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.ShipmentOrderLines.html">ShipmentOrderLines</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="storebin">StoreBin</h3>
 <p>The store bin from which to take the goods. [Filter(multi eq)]</p>
@@ -399,6 +409,7 @@
 <h3 id="transactionline">TransactionLine</h3>
 <p>The Transaction Line, based on which this shipment line was created. The transaction line contains the store issue operation of the shipped product. [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

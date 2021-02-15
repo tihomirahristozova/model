@@ -80,6 +80,10 @@
 <h1 id="projectsprojecttasks-entity">Projects.ProjectTasks Entity</h1>
 
 <p>Represents one task of a project. Entity: Prj_Project_Tasks</p>
+<p>Default Display Text Format:<br>
+<em>{TaskName:T}</em><br>
+Default Search Member:<br>
+<em>TaskName</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -227,6 +231,7 @@
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
@@ -264,6 +269,7 @@
 <h3 id="project">Project</h3>
 <p>The project, to which this task belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Projects.Projects.html">Projects</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projectworkelement">ProjectWorkElement</h3>
 <p>The work element under which the task is filed. [Required] [Filter(multi eq)]</p>

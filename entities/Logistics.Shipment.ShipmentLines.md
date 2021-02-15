@@ -5,6 +5,11 @@ uid: Logistics.Shipment.ShipmentLines
 
 Represents detail lines of shipments. Each line contains the shipment of one product. Entity: Log_Shipment_Lines
 
+Default Display Text Format:  
+_{Shipment.DocumentType.Code}:{Shipment.DocumentNo}:{LineNo} - {Shipment.DocumentType.TypeName:T}_  
+Default Search Member:  
+_Shipment.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -92,6 +97,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -221,6 +227,7 @@ _Supports Order By_: **False**
 The [Shipment](Logistics.Shipment.ShipmentLines.md#shipment) to which this ShipmentLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[Shipments](Logistics.Shipment.Shipments.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -237,6 +244,7 @@ _Front-End Recalc Expressions:_
 The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentSalesOrderLine
@@ -244,6 +252,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Sales order line which is shipped. [Required] [Filter(multi eq)]
 
 _Type_: **[SalesOrderLines](Crm.Sales.SalesOrderLines.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
@@ -267,6 +276,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [Shipment](Logistics.Shipment.ShipmentLines.md#shipment) to which this ShipmentLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[Shipments](Logistics.Shipment.Shipments.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ShipmentOrderLine
@@ -274,6 +284,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Shipment order line for which this quantity is shipped. [Filter(multi eq)]
 
 _Type_: **[ShipmentOrderLines](Logistics.Shipment.ShipmentOrderLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreBin
@@ -288,6 +299,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Transaction Line, based on which this shipment line was created. The transaction line contains the store issue operation of the shipped product. [Filter(multi eq)]
 
 _Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

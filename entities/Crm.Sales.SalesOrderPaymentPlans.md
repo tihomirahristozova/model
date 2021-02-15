@@ -5,6 +5,11 @@ uid: Crm.Sales.SalesOrderPaymentPlans
 
 Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 
+Default Display Text Format:  
+_{SalesOrder.DocumentType.Code}:{SalesOrder.DocumentNo} - {SalesOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_SalesOrder.DocumentType.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -90,6 +95,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -184,6 +190,7 @@ _Front-End Recalc Expressions:_
 The [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) to which this SalesOrderPaymentPlan belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

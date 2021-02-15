@@ -5,6 +5,11 @@ uid: General.ReportQueries
 
 Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries
 
+Default Display Text Format:  
+_{TableName:T}_  
+Default Search Member:  
+_TableName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -56,6 +61,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

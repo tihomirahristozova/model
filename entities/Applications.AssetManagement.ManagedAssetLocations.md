@@ -5,6 +5,11 @@ uid: Applications.AssetManagement.ManagedAssetLocations
 
 Contains the locations to which the assets are assigned at various moments in time. Entity: Eam_Managed_Asset_Locations (Introduced in version 19.1)
 
+Default Display Text Format:  
+_{ManagedAsset.Code}: {ManagedAsset.Name:T}_  
+Default Search Member:  
+_ManagedAsset.Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -36,6 +41,7 @@ _Default Value_: **CurrentDateTime**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -55,6 +61,7 @@ _Supports Order By_: **False**
 The enterprise company location, where the asset is assigned. [Required] [Filter(multi eq)]
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ManagedAsset
@@ -62,6 +69,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The asset, whose location is recorded. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
@@ -69,6 +77,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The responsible person, to which the asset is assigned. null when the asset is not assigned to any particular responsible person. [Filter(multi eq)]
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

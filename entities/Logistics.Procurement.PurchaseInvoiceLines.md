@@ -5,6 +5,11 @@ uid: Logistics.Procurement.PurchaseInvoiceLines
 
 Contains detail lines for purchase invoice documents. Entity: Scm_Purchase_Invoice_Lines
 
+Default Display Text Format:  
+_{PurchaseInvoice.DocumentType.Code}:{PurchaseInvoice.DocumentNo}:{LineNo} - {PurchaseInvoice.DocumentType.TypeName:T}_  
+Default Search Member:  
+_PurchaseInvoice.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -76,6 +81,7 @@ _Front-End Recalc Expressions:_
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -253,6 +259,7 @@ _Front-End Recalc Expressions:_
 The [PurchaseInvoice](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoice) to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatDestinationRegion
@@ -310,6 +317,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The invoiced product. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -319,6 +327,7 @@ _Front-End Recalc Expressions:_
 The [PurchaseInvoice](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoice) to which this PurchaseInvoiceLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
@@ -335,6 +344,7 @@ _Front-End Recalc Expressions:_
 The receiving order line, which is invoiced by the current line. null means that this line is not directly related to receiving order line. [Filter(multi eq)]
 
 _Type_: **[ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SaleLineDealType

@@ -80,6 +80,10 @@
 <h1 id="financepaymentspaymenttransactionlines-entity">Finance.Payments.PaymentTransactionLines Entity</h1>
 
 <p>Contains the distibution of the payments' amounts among the source payment orders. Entity: Cash_Payment_Transaction_Lines</p>
+<p>Default Display Text Format:<br>
+<em>{PaymentTransaction.DocumentType.Code}:{PaymentTransaction.DocumentNo} - {PaymentTransaction.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>PaymentTransaction.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -169,6 +173,7 @@
 <code>obj.Amount.ConvertTo( obj.PaymentOrder.TotalAmountCurrency, obj.PaymentTransaction.CurrencyDirectory)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
@@ -180,14 +185,17 @@
 <h3 id="document">Document</h3>
 <p>The <a href="Finance.Payments.PaymentTransactionLines.html#paymenttransaction">PaymentTransaction</a> to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentorder">PaymentOrder</h3>
 <p>The payment order, that is covered by this transaction amount distribution (tr.line). [Required] [Filter(multi eq)]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymenttransaction">PaymentTransaction</h3>
 <p>The <a href="Finance.Payments.PaymentTransactionLines.html#paymenttransaction">PaymentTransaction</a> to which this PaymentTransactionLine belongs. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

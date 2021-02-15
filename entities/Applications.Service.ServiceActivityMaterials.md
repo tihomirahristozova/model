@@ -5,6 +5,11 @@ uid: Applications.Service.ServiceActivityMaterials
 
 Contains the materials, which were actually used during the service activity (repair). Entity: Srv_Service_Activity_Materials
 
+Default Display Text Format:  
+_{ServiceActivity.DocumentType.Code}:{ServiceActivity.DocumentNo}:{LineNo} - {ServiceActivity.DocumentType.TypeName:T}_  
+Default Search Member:  
+_ServiceActivity.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -48,6 +53,7 @@ _Default Value_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -106,6 +112,7 @@ _Front-End Recalc Expressions:_
 The [ServiceActivity](Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LineStore
@@ -141,6 +148,7 @@ _Front-End Recalc Expressions:_
 The [ServiceActivity](Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceObject

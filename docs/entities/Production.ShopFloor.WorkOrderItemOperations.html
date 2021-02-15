@@ -80,6 +80,10 @@
 <h1 id="productionshopfloorworkorderitemoperations-entity">Production.ShopFloor.WorkOrderItemOperations Entity</h1>
 
 <p>The operations that are performed to produce the product. Entity: Prd_Work_Order_Item_Operations</p>
+<p>Default Display Text Format:<br>
+<em>{WorkOrderItem.WorkOrder.DocumentType.Code}:{WorkOrderItem.WorkOrder.DocumentNo}:{WorkOrderItem.LineOrd} - {WorkOrderItem.WorkOrder.DocumentType.TypeName:T}</em><br>
+Default Search Member:<br>
+<em>WorkOrderItem.WorkOrder.DocumentType.Code</em></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -229,6 +233,7 @@
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineord">LineOrd</h3>
@@ -320,6 +325,7 @@
 <h3 id="workorderitem">WorkOrderItem</h3>
 <p>The work order item, containing the line. [Required] [Filter(multi eq)] [Owner]</p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

@@ -5,6 +5,11 @@ uid: General.CustomProperties
 
 User-defined properties, which can supplement the system properties of almost all entities in the system. Entity: Gen_Properties
 
+Default Display Text Format:  
+_{Code}: {AllowedValuesEntityName:T}_  
+Default Search Member:  
+_Code_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -61,6 +66,7 @@ _Supports Order By_: **False**
 Unique property code. [Required] [Filter(multi eq;like)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 
@@ -69,6 +75,7 @@ _Supports Order By_: **True**
 The entity for which the property is applicable. [Required] [Filter(eq)] [ORD]
 
 _Type_: **string**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 
@@ -83,6 +90,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -116,6 +124,7 @@ _Supports Order By_: **False**
 The name of this CustomProperty. [Required] [Filter(like)] [ORD]
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Indexed_: **True**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 

@@ -5,6 +5,11 @@ uid: Systems.Core.Translations
 
 Contains user-defined translations for non-english languages of the user interface and program messages. Entity: Sys_Translations
 
+Default Display Text Format:  
+_{ApplicationName:T}_  
+Default Search Member:  
+_ApplicationName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -38,6 +43,7 @@ _Front-End Recalc Expressions:_
 The application, containing the resource. For base resource types (T,C,H), this is null. [Filter(eq)] [ORD]
 
 _Type_: **string (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 
@@ -53,6 +59,7 @@ _Default Value_: **CurrentDateTime**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 

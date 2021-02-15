@@ -5,6 +5,11 @@ uid: Crm.Sales.SalesOrderLines
 
 Sales Orders detail records. Entity: Crm_Sales_Order_Lines
 
+Default Display Text Format:  
+_{SalesOrder.DocumentType.Code}:{SalesOrder.DocumentNo}:{LineNo} - {SalesOrder.DocumentType.TypeName:T}_  
+Default Search Member:  
+_SalesOrder.DocumentNo_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -122,6 +127,7 @@ _Supports Order By_: **False**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -409,6 +415,7 @@ _Front-End Recalc Expressions:_
 The [SalesOrder](Crm.Sales.SalesOrderLines.md#salesorder) to which this SalesOrderLine belongs. [Required] [Filter(multi eq)]
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatTransportCountry
@@ -480,6 +487,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document, which the current line executes. null when the current line does not execute another line. [Filter(multi eq)]
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -487,6 +495,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product sold. [Required] [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -543,6 +552,7 @@ _Front-End Recalc Expressions:_
 When specified, indicates that the current line is a return for products, invoiced with the specified invoice line. [Filter(multi eq)]
 
 _Type_: **[InvoiceLines](Crm.Invoicing.InvoiceLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReturnForSalesOrderLine
@@ -550,6 +560,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When specified indicates that the goods sold in Return_For_Sales_Order_Line_Id are returned with the current line. [Filter(multi eq)]
 
 _Type_: **[SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesOrder
@@ -557,6 +568,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [SalesOrder](Crm.Sales.SalesOrderLines.md#salesorder) to which this SalesOrderLine belongs. [Required] [Filter(multi eq)] [Owner]
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber

@@ -5,6 +5,11 @@ uid: General.Products.ProductSupply
 
 Contains supply rules, which are used by the procurement planning system. Entity: Gen_Product_Supply
 
+Default Display Text Format:  
+_{BuyerName:T}_  
+Default Search Member:  
+_BuyerName_  
+
 ## Attributes
 
 | Name | Type | Description |
@@ -73,6 +78,7 @@ _Default Value_: **Constant**
 ### Id
 
 _Type_: **guid**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -368,6 +374,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The [Product](General.Products.ProductSupply.md#product) to which this ProductSupply belongs. [Filter(multi eq)]
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup
