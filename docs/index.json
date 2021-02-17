@@ -1,4 +1,9 @@
 {
+  "business-rules/R00000.html": {
+    "href": "business-rules/R00000.html",
+    "title": "R00000 Entity - Simple business rule | ERP.net Domain Model",
+    "keywords": "R00000 Entity - Simple business rule Name Value Code R00000 Entity Systems.Core.WebHosts Entity Name SampleBusinessRule Attribute Layer Front-End Back-End Events Commit Planning+ FirmPlanning+ Releasing+ Completing+ Closed ClientCommit AttributeChanged(TheAttribute...?) Priority Early Normal Late Modify YES NO Applicable Legislations ALL // no condition needed BG (fill in the conditional Party e.g. EnterpriseCompany.Company) Action Validate that: Description Message Introduced In Version Introduced: 2021 Updated: - Revocable YES NO"
+  },
   "business-rules/R18067.html": {
     "href": "business-rules/R18067.html",
     "title": "R18067 StoreTransaction - Store Enterprise Company | ERP.net Domain Model",
@@ -23,6 +28,11 @@
     "href": "business-rules/R31531-15.html",
     "title": "R31531-15 Purchase Order Line - Determine Purchase Product Price | ERP.net Domain Model",
     "keywords": "R31531-15 Purchase Order Line - Determine Purchase Product Price Code R31531-15 Entity PurchaseOrderLine Name DeterminePurchaseProductPrice Attribute PurchaseProductPrice Layer Front-End Events AttributeChanged(DocumentDate) AttributeChanged(EnterpriseCompany) AttributeChanged(Supplier) AttributeChanged(PurchasePriceList) AttributeChanged(Product) AttributeChanged(Quantity) Priority Normal Modify YES Applicable Legislations ALL // no condition needed Action PurchaseProductPrice.DeterminePurchaseProductPrice(Document.DocumentDate, PurchaseOrder.Supplier, Product, Quantity, Document.EnterpriseCompany, PurchaseOrder.PurchasePriceList, PurchaseProductPrice) Description Determines Purchase Product Price using the Document Date, Supplier, Enterprise Company, Purchase Price List, Product, Confirmed Quantity or Quantity if the first one doesn't have a value and the current Purchase Product Price as filtering values. (RecalcExpression) Message Version Introduced: 21 Updated: - Revocable YES * For more information about the Business Rules Documentation Template and a short explanation of each column, see topic System Business Rules ."
+  },
+  "business-rules/R31836.html": {
+    "href": "business-rules/R31836.html",
+    "title": "R31836 WebHosts - WebHosts.Name cannot be defined in my.erp.net domain | ERP.net Domain Model",
+    "keywords": "R31836 WebHosts - WebHosts.Name cannot be defined in my.erp.net domain Name Value Code R31836 Entity Systems.Core.WebHosts Entity Name NameCannotBeDefinedInMyErpNet Attribute Name Layer Back-End Events Commit Modify NO Applicable Legislations ALL // no condition needed Action Validate that: WebHosts.Name != *.my.erp.net Description WebHosts.Name cannot be in *.my.erp.net space because this space is reserved for Host Name in databases definitions. Message Web Host Name cannot be defined in my.erp.net domain because this domain is reserved for system purposes. Introduced In Version Introduced: 2021 Revocable NO"
   },
   "data-types.html": {
     "href": "data-types.html",
