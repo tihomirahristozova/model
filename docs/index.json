@@ -31,8 +31,8 @@
   },
   "business-rules/R31836.html": {
     "href": "business-rules/R31836.html",
-    "title": "R31836 WebHosts - WebHosts.Name cannot be defined in my.erp.net domain | ERP.net Domain Model",
-    "keywords": "R31836 WebHosts - WebHosts.Name cannot be defined in my.erp.net domain Name Value Code R31836 Entity Systems.Core.WebHosts Entity Name NameCannotBeDefinedInMyErpNet Attribute Name Layer Back-End Events Commit Modify NO Applicable Legislations ALL // no condition needed Action Validate that: WebHosts.Name != *.my.erp.net Description WebHosts.Name cannot be in *.my.erp.net space because this space is reserved for Host Name in databases definitions. Message Web Host Name cannot be defined in my.erp.net domain because this domain is reserved for system purposes. Introduced In Version Introduced: 2021 Revocable NO"
+    "title": "R31836 WebHosts - Name Cannot Be Defined In My Erp Net | ERP.net Domain Model",
+    "keywords": "R31836 WebHosts - Name Cannot Be Defined In My Erp Net Name Value Code R31836 Entity Systems.Core.WebHosts Entity Name NameCannotBeDefinedInMyErpNet Attribute Name Layer Back-End Events Commit Modify NO Applicable Legislations ALL // no condition needed Action Validate that: WebHosts.Name != *.my.erp.net Description The web host's Name cannot contain 'my.erp.net' because the *.my.erp.net domain is reserved for system purposes. The company's unique my.erp.net address is specified for the whole database and is managed by the database administrators. If you are creating a site for the company's unique my.erp.net address, simply leave the Host field in the Site's definition blank. Message The web host's Name cannot contain 'my.erp.net' because the *.my.erp.net domain is reserved for system purposes. If you want to create a site for the company's unique my.erp.net address, simply leave the Host field in the Site's definition blank. Introduced In Version Introduced: 2021 Revocable NO"
   },
   "data-types.html": {
     "href": "data-types.html",
