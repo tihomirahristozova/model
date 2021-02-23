@@ -14,6 +14,15 @@ Aggregate Tree:
 * [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)  
   * [Finance.Accounting.VoucherCorrespondances](Finance.Accounting.VoucherCorrespondances.md)  
   * [Finance.Accounting.AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md)  
+  * [General.DocumentAmounts](General.DocumentAmounts.md)  
+    * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  
+  * [General.DocumentComments](General.DocumentComments.md)  
+  * [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md)  
+  * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
+  * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentPrints](General.DocumentPrints.md)  
+  * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
+  * [General.DocumentVersions](General.DocumentVersions.md)  
 
 ## Attributes
 

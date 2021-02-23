@@ -14,6 +14,17 @@ Aggregate Tree:
 * [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
   * [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md)  
   * [Logistics.Inventory.StoreResponsibleParties](Logistics.Inventory.StoreResponsibleParties.md)  
+  * [Crm.Customers](Crm.Customers.md)  
+    * [Crm.CustomerProducts](Crm.CustomerProducts.md)  
+  * [Crm.Dealers](Crm.Dealers.md)  
+  * [Crm.Distributors](Crm.Distributors.md)  
+  * [General.PartyApplicableLegislations](General.PartyApplicableLegislations.md)  
+  * [General.PartyLocationNumbers](General.PartyLocationNumbers.md)  
+  * [General.Contacts.ActivityTimeIntervals](General.Contacts.ActivityTimeIntervals.md)  
+  * [General.Contacts.PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md)  
+  * [General.Contacts.PartyBankAccounts](General.Contacts.PartyBankAccounts.md)  
+  * [General.Contacts.PartyPictures](General.Contacts.PartyPictures.md)  
+  * [Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md)  
 
 ## Attributes
 
@@ -76,7 +87,6 @@ Aggregate Tree:
 | Pictures | [PartyPictures](General.Contacts.PartyPictures.md) | List of [PartyPicture](General.Contacts.PartyPictures.md) child objects, based on the [General.Contacts.PartyPicture.Party](General.Contacts.PartyPictures.md#party) back reference (Inherited from [Parties](General.Contacts.Parties.md)) 
 | ResponsibleParties | [StoreResponsibleParties](Logistics.Inventory.StoreResponsibleParties.md) | List of [StoreResponsibleParty](Logistics.Inventory.StoreResponsibleParties.md) child objects, based on the [Logistics.Inventory.StoreResponsibleParty.Store](Logistics.Inventory.StoreResponsibleParties.md#store) back reference 
 | Suppliers | [Suppliers](Logistics.Procurement.Suppliers.md) | List of [Supplier](Logistics.Procurement.Suppliers.md) child objects, based on the [Logistics.Procurement.Supplier.Party](Logistics.Procurement.Suppliers.md#party) back reference (Inherited from [Parties](General.Contacts.Parties.md)) 
-| TargetGroupMembers | [TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.Party](Crm.Marketing.TargetGroupMembers.md#party) back reference (Inherited from [Parties](General.Contacts.Parties.md)) 
 
 
 ## Attribute Details

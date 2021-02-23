@@ -16,6 +16,18 @@ Aggregate Tree:
     * [Applications.Service.ServiceActivityAgreedMaterials](Applications.Service.ServiceActivityAgreedMaterials.md)  
   * [Applications.Service.ServiceActivityServices](Applications.Service.ServiceActivityServices.md)  
     * [Applications.Service.ServiceActivityAgreedServices](Applications.Service.ServiceActivityAgreedServices.md)  
+  * [General.Contacts.ActivityParticipants](General.Contacts.ActivityParticipants.md)  
+  * [General.Contacts.ActivityResources](General.Contacts.ActivityResources.md)  
+  * [General.Contacts.Reminders](General.Contacts.Reminders.md)  
+  * [General.DocumentAmounts](General.DocumentAmounts.md)  
+    * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  
+  * [General.DocumentComments](General.DocumentComments.md)  
+  * [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md)  
+  * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
+  * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentPrints](General.DocumentPrints.md)  
+  * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
+  * [General.DocumentVersions](General.DocumentVersions.md)  
 
 ## Attributes
 

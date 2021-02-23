@@ -64,7 +64,6 @@ Aggregate Tree:
 | LocationNumbers | [PartyLocationNumbers](General.PartyLocationNumbers.md) | List of [PartyLocationNumber](General.PartyLocationNumbers.md) child objects, based on the [General.PartyLocationNumber.Party](General.PartyLocationNumbers.md#party) back reference 
 | Pictures | [PartyPictures](General.Contacts.PartyPictures.md) | List of [PartyPicture](General.Contacts.PartyPictures.md) child objects, based on the [General.Contacts.PartyPicture.Party](General.Contacts.PartyPictures.md#party) back reference 
 | Suppliers | [Suppliers](Logistics.Procurement.Suppliers.md) | List of [Supplier](Logistics.Procurement.Suppliers.md) child objects, based on the [Logistics.Procurement.Supplier.Party](Logistics.Procurement.Suppliers.md#party) back reference 
-| TargetGroupMembers | [TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md) | List of [TargetGroupMember](Crm.Marketing.TargetGroupMembers.md) child objects, based on the [Crm.Marketing.TargetGroupMember.Party](Crm.Marketing.TargetGroupMembers.md#party) back reference 
 
 
 ## Attribute Details

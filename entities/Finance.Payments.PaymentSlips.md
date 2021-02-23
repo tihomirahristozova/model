@@ -14,6 +14,15 @@ Aggregate Tree:
 * [Finance.Payments.PaymentSlips](Finance.Payments.PaymentSlips.md)  
   * [Finance.Payments.PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md)  
     * [Finance.Payments.PaymentSlipLines](Finance.Payments.PaymentSlipLines.md)  
+  * [General.DocumentAmounts](General.DocumentAmounts.md)  
+    * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  
+  * [General.DocumentComments](General.DocumentComments.md)  
+  * [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md)  
+  * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
+  * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentPrints](General.DocumentPrints.md)  
+  * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
+  * [General.DocumentVersions](General.DocumentVersions.md)  
 
 ## Attributes
 
