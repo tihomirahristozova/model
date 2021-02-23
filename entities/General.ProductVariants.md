@@ -10,6 +10,11 @@ _{BarCode}: {Name:T}_
 Default Search Member:  
 _BarCode_  
 
+Aggregate Parent:  
+[General.Products.Products](General.Products.Products.md)  
+Aggregate Root:  
+[General.Products.Products](General.Products.Products.md)  
+
 ## Attributes
 
 | Name | Type | Description |

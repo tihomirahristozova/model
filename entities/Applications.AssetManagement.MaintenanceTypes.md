@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Applications.AssetManagement.MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

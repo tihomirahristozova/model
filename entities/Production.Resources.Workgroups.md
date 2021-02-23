@@ -10,6 +10,12 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Production.Resources.Workgroups](Production.Resources.Workgroups.md)  
+  * [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)  
+    * [Production.Resources.Capacity](Production.Resources.Capacity.md)  
+  * [Production.Resources.WorkgroupShifts](Production.Resources.WorkgroupShifts.md)  
+
 ## Attributes
 
 | Name | Type | Description |

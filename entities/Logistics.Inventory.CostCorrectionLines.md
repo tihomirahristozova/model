@@ -10,6 +10,11 @@ _{CostCorrection.DocumentType.Code}:{CostCorrection.DocumentNo} - {CostCorrectio
 Default Search Member:  
 _CostCorrection.DocumentType.Code_  
 
+Aggregate Parent:  
+[Logistics.Inventory.CostCorrections](Logistics.Inventory.CostCorrections.md)  
+Aggregate Root:  
+[Logistics.Inventory.CostCorrections](Logistics.Inventory.CostCorrections.md)  
+
 ## Attributes
 
 | Name | Type | Description |

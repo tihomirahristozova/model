@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Logistics.Inventory.RequisitionPlan](Logistics.Inventory.RequisitionPlan.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,11 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)  
+  * [Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md)  
+  * [Applications.AssetManagement.ManagedAssetTypeTrackedParameters](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Finance.Payments.PaymentSlipPaymentTransactionsTemplates](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md)  
+
 ## Attributes
 
 | Name | Type | Description |

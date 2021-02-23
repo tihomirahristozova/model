@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Communities.SocialReactions](Communities.SocialReactions.md)  
+
 ## Attributes
 
 | Name | Type | Description |

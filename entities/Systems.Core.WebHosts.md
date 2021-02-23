@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Systems.Core.WebHosts](Systems.Core.WebHosts.md)  
+
 ## Attributes
 
 | Name | Type | Description |

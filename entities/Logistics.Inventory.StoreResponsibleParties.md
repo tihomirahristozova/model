@@ -10,6 +10,11 @@ _{Store.PartyCode}: {Store.PartyName:T}_
 Default Search Member:  
 _Store.PartyCode_  
 
+Aggregate Parent:  
+[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
+Aggregate Root:  
+[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
+
 ## Attributes
 
 | Name | Type | Description |

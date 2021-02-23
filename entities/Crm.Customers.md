@@ -10,6 +10,11 @@ _{Number}_
 Default Search Member:  
 _Number_  
 
+Aggregate Parent:  
+[General.Contacts.Parties](General.Contacts.Parties.md)  
+Aggregate Root:  
+[General.Contacts.Parties](General.Contacts.Parties.md)  
+
 ## Attributes
 
 | Name | Type | Description |

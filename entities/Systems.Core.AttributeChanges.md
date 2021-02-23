@@ -10,6 +10,11 @@ _{ObjectChangeId}: {AttributeName}_
 Default Search Member:  
 _ObjectChangeId_  
 
+Aggregate Parent:  
+[Systems.Core.ObjectChanges](Systems.Core.ObjectChanges.md)  
+Aggregate Root:  
+[Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)  
+
 ## Attributes
 
 | Name | Type | Description |

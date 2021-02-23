@@ -10,6 +10,11 @@ _{SalesPersonTarget.DocumentType.Code}:{SalesPersonTarget.DocumentNo} - {SalesPe
 Default Search Member:  
 _SalesPersonTarget.DocumentType.Code_  
 
+Aggregate Parent:  
+[Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)  
+Aggregate Root:  
+[Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)  
+
 ## Attributes
 
 | Name | Type | Description |

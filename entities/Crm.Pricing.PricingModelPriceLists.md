@@ -10,6 +10,11 @@ _{PricingModel.Name:T}_
 Default Search Member:  
 _PricingModel.Name_  
 
+Aggregate Parent:  
+[Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md)  
+Aggregate Root:  
+[Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md)  
+
 ## Attributes
 
 | Name | Type | Description |

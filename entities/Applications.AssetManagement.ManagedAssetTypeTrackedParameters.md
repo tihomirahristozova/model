@@ -10,6 +10,11 @@ _{ManagedAssetType.Code}: {ManagedAssetType.Name:T}_
 Default Search Member:  
 _ManagedAssetType.Code_  
 
+Aggregate Parent:  
+[Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)  
+Aggregate Root:  
+[Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

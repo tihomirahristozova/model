@@ -10,6 +10,11 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Parent:  
+[Systems.Workflow.Routes](Systems.Workflow.Routes.md)  
+Aggregate Root:  
+[General.DocumentTypes](General.DocumentTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

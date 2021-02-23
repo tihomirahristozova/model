@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Applications.Fleet.VehicleLocationHistoryRecords](Applications.Fleet.VehicleLocationHistoryRecords.md)  
+
 ## Attributes
 
 | Name | Type | Description |

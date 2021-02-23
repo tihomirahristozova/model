@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Logistics.Shipment.CargoTypes](Logistics.Shipment.CargoTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

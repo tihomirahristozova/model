@@ -10,6 +10,12 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Finance.Cost.Distributions](Finance.Cost.Distributions.md)  
+  * [Finance.Cost.DistributionCosts](Finance.Cost.DistributionCosts.md)  
+  * [Finance.Cost.DistributionOutputs](Finance.Cost.DistributionOutputs.md)  
+  * [Finance.Cost.DistributionResults](Finance.Cost.DistributionResults.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Finance.Excise.TaxWarehouses](Finance.Excise.TaxWarehouses.md)  
+
 ## Attributes
 
 | Name | Type | Description |

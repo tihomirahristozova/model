@@ -10,6 +10,11 @@ _{ProjectTemplate.ProjectTemplateName:T}_
 Default Search Member:  
 _ProjectTemplate.ProjectTemplateName_  
 
+Aggregate Parent:  
+[Projects.Templates](Projects.Templates.md)  
+Aggregate Root:  
+[Projects.Templates](Projects.Templates.md)  
+
 ## Attributes
 
 | Name | Type | Description |

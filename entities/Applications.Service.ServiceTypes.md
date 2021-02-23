@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Applications.Service.ServiceTypes](Applications.Service.ServiceTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

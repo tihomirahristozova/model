@@ -10,6 +10,9 @@ _{ApplicationName:T}_
 Default Search Member:  
 _ApplicationName_  
 
+Aggregate Tree:  
+* [Systems.Security.VisualPermissions](Systems.Security.VisualPermissions.md)  
+
 ## Attributes
 
 | Name | Type | Description |

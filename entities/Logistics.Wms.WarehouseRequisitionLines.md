@@ -10,6 +10,11 @@ _{WarehouseRequisition.DocumentType.Code}:{WarehouseRequisition.DocumentNo}:{Lin
 Default Search Member:  
 _WarehouseRequisition.DocumentNo_  
 
+Aggregate Parent:  
+[Logistics.Wms.WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)  
+Aggregate Root:  
+[Logistics.Wms.WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)  
+
 ## Attributes
 
 | Name | Type | Description |

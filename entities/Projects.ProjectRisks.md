@@ -10,6 +10,11 @@ _{RiskName:T}_
 Default Search Member:  
 _RiskName_  
 
+Aggregate Parent:  
+[Projects.Projects](Projects.Projects.md)  
+Aggregate Root:  
+[Projects.Projects](Projects.Projects.md)  
+
 ## Attributes
 
 | Name | Type | Description |

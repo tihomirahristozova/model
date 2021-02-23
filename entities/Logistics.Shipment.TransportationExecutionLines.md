@@ -10,6 +10,11 @@ _{TransportationExecution.DocumentType.Code}:{TransportationExecution.DocumentNo
 Default Search Member:  
 _TransportationExecution.DocumentNo_  
 
+Aggregate Parent:  
+[Logistics.Shipment.TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)  
+Aggregate Root:  
+[Logistics.Shipment.TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)  
+
 ## Attributes
 
 | Name | Type | Description |

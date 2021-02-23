@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Crm.Marketing.Campaigns](Crm.Marketing.Campaigns.md)  
+
 ## Attributes
 
 | Name | Type | Description |

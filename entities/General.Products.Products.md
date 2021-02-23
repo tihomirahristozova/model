@@ -10,6 +10,16 @@ _{PartNumber}: {Name:T}_
 Default Search Member:  
 _PartNumber_  
 
+Aggregate Tree:  
+* [General.Products.Products](General.Products.Products.md)  
+  * [Crm.Marketing.ProductDistributionChannels](Crm.Marketing.ProductDistributionChannels.md)  
+  * [General.ProductVariants](General.ProductVariants.md)  
+  * [General.Products.ProductCodes](General.Products.ProductCodes.md)  
+  * [General.Products.ProductDimensions](General.Products.ProductDimensions.md)  
+  * [General.Products.ProductDocumentAmounts](General.Products.ProductDocumentAmounts.md)  
+  * [General.Products.ProductPictures](General.Products.ProductPictures.md)  
+  * [Logistics.Inventory.ProductDefaultStoreBins](Logistics.Inventory.ProductDefaultStoreBins.md)  
+
 ## Attributes
 
 | Name | Type | Description |

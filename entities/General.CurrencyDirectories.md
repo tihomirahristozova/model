@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [General.CurrencyDirectories](General.CurrencyDirectories.md)  
+  * [General.CurrencyDirectoryLines](General.CurrencyDirectoryLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Applications.Fleet.MaintenancePlans](Applications.Fleet.MaintenancePlans.md)  
+
 ## Attributes
 
 | Name | Type | Description |

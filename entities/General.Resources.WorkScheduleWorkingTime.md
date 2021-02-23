@@ -10,6 +10,11 @@ _{WorkSchedule.Name:T}_
 Default Search Member:  
 _WorkSchedule.Name_  
 
+Aggregate Parent:  
+[General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)  
+Aggregate Root:  
+[General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)  
+
 ## Attributes
 
 | Name | Type | Description |

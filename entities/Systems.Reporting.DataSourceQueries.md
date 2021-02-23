@@ -10,6 +10,11 @@ _{TableName:T}_
 Default Search Member:  
 _TableName_  
 
+Aggregate Parent:  
+[Systems.Reporting.DataSources](Systems.Reporting.DataSources.md)  
+Aggregate Root:  
+[Systems.Reporting.DataSources](Systems.Reporting.DataSources.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,10 @@ _{BaseQueryName:T}_
 Default Search Member:  
 _BaseQueryName_  
 
+Aggregate Tree:  
+* [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md)  
+  * [Systems.Reporting.DataSourceQueries](Systems.Reporting.DataSourceQueries.md)  
+
 ## Attributes
 
 | Name | Type | Description |

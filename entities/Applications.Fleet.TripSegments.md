@@ -10,6 +10,11 @@ _{Trip.DocumentType.Code}:{Trip.DocumentNo} - {Trip.DocumentType.TypeName:T}_
 Default Search Member:  
 _Trip.DocumentType.Code_  
 
+Aggregate Parent:  
+[Applications.Fleet.Trips](Applications.Fleet.Trips.md)  
+Aggregate Root:  
+[Applications.Fleet.Trips](Applications.Fleet.Trips.md)  
+
 ## Attributes
 
 | Name | Type | Description |

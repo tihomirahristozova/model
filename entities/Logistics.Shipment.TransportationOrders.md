@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Logistics.Shipment.TransportationOrders](Logistics.Shipment.TransportationOrders.md)  
+  * [Logistics.Shipment.TransportationOrderLines](Logistics.Shipment.TransportationOrderLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

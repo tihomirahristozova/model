@@ -10,6 +10,9 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Finance.Vat.BGVATDeclarations](Finance.Vat.BGVATDeclarations.md)  
+
 ## Attributes
 
 | Name | Type | Description |

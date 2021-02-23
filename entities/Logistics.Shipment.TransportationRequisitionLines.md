@@ -10,6 +10,11 @@ _{TransportationRequisition.DocumentType.Code}:{TransportationRequisition.Docume
 Default Search Member:  
 _TransportationRequisition.DocumentNo_  
 
+Aggregate Parent:  
+[Logistics.Shipment.TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)  
+Aggregate Root:  
+[Logistics.Shipment.TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)  
+
 ## Attributes
 
 | Name | Type | Description |

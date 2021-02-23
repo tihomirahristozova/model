@@ -10,6 +10,11 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Parent:  
+[General.MeasurementCategories](General.MeasurementCategories.md)  
+Aggregate Root:  
+[General.MeasurementCategories](General.MeasurementCategories.md)  
+
 ## Attributes
 
 | Name | Type | Description |

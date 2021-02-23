@@ -10,6 +10,11 @@ _{UserBusinessRule.Code}: {UserBusinessRule.RepositoryName:T}_
 Default Search Member:  
 _UserBusinessRule.Code_  
 
+Aggregate Parent:  
+[Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
+Aggregate Root:  
+[Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
+
 ## Attributes
 
 | Name | Type | Description |

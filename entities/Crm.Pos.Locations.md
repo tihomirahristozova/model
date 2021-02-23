@@ -10,6 +10,9 @@ _{PosLocationCode}_
 Default Search Member:  
 _PosLocationCode_  
 
+Aggregate Tree:  
+* [Crm.Pos.Locations](Crm.Pos.Locations.md)  
+
 ## Attributes
 
 | Name | Type | Description |

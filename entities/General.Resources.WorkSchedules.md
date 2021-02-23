@@ -10,6 +10,10 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)  
+  * [General.Resources.WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md)  
+
 ## Attributes
 
 | Name | Type | Description |

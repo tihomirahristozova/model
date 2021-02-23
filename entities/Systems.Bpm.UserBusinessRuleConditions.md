@@ -10,6 +10,11 @@ _{AttributeName:T}_
 Default Search Member:  
 _AttributeName_  
 
+Aggregate Parent:  
+[Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
+Aggregate Root:  
+[Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
+
 ## Attributes
 
 | Name | Type | Description |

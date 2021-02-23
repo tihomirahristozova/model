@@ -10,6 +10,13 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [General.Resources.ResourceGroups](General.Resources.ResourceGroups.md)  
+  * [General.Resources.Resources](General.Resources.Resources.md)  
+    * [General.Resources.ResourceAvailability](General.Resources.ResourceAvailability.md)  
+    * [General.Resources.ResourceCostRates](General.Resources.ResourceCostRates.md)  
+    * [General.Resources.ResourceInstances](General.Resources.ResourceInstances.md)  
+
 ## Attributes
 
 | Name | Type | Description |

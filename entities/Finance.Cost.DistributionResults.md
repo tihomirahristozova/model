@@ -10,6 +10,11 @@ _{CostDistribution.DocumentType.Code}:{CostDistribution.DocumentNo} - {CostDistr
 Default Search Member:  
 _CostDistribution.DocumentType.Code_  
 
+Aggregate Parent:  
+[Finance.Cost.Distributions](Finance.Cost.Distributions.md)  
+Aggregate Root:  
+[Finance.Cost.Distributions](Finance.Cost.Distributions.md)  
+
 ## Attributes
 
 | Name | Type | Description |

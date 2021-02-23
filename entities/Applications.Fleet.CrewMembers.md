@@ -10,6 +10,11 @@ _{Crew.Name:T}_
 Default Search Member:  
 _Crew.Name_  
 
+Aggregate Parent:  
+[Applications.Fleet.Crews](Applications.Fleet.Crews.md)  
+Aggregate Root:  
+[General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
+
 ## Attributes
 
 | Name | Type | Description |

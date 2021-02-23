@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [General.Contacts.ContactMechanismPurposes](General.Contacts.ContactMechanismPurposes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

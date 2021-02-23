@@ -10,6 +10,11 @@ _{TableName:T}_
 Default Search Member:  
 _TableName_  
 
+Aggregate Parent:  
+[General.Reports](General.Reports.md)  
+Aggregate Root:  
+[General.Reports](General.Reports.md)  
+
 ## Attributes
 
 | Name | Type | Description |

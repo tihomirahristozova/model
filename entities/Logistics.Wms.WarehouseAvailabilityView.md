@@ -10,6 +10,9 @@ _{WarehouseId}: {WarehouseLocationId}_
 Default Search Member:  
 _WarehouseId_  
 
+Aggregate Tree:  
+* [Logistics.Wms.WarehouseAvailabilityView](Logistics.Wms.WarehouseAvailabilityView.md)  
+
 ## Attributes
 
 | Name | Type | Description |

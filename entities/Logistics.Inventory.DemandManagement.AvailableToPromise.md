@@ -10,6 +10,9 @@ _{ATPBaseValue}: {CurrentAvailabilityBaseValue}_
 Default Search Member:  
 _ATPBaseValue_  
 
+Aggregate Tree:  
+* [Logistics.Inventory.DemandManagement.AvailableToPromise](Logistics.Inventory.DemandManagement.AvailableToPromise.md)  
+
 ## Attributes
 
 | Name | Type | Description |

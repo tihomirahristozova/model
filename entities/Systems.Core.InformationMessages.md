@@ -10,6 +10,9 @@ _{MachineName:T}_
 Default Search Member:  
 _MachineName_  
 
+Aggregate Tree:  
+* [Systems.Core.InformationMessages](Systems.Core.InformationMessages.md)  
+
 ## Attributes
 
 | Name | Type | Description |

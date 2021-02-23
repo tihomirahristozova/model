@@ -10,6 +10,11 @@ _{ShipmentOrder.DocumentType.Code}:{ShipmentOrder.DocumentNo}:{LineNo} - {Shipme
 Default Search Member:  
 _ShipmentOrder.DocumentNo_  
 
+Aggregate Parent:  
+[Logistics.Shipment.ShipmentOrders](Logistics.Shipment.ShipmentOrders.md)  
+Aggregate Root:  
+[Logistics.Shipment.ShipmentOrders](Logistics.Shipment.ShipmentOrders.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,10 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Logistics.Inventory.SupplySchemata](Logistics.Inventory.SupplySchemata.md)  
+  * [Logistics.Inventory.SupplySchemaRoutes](Logistics.Inventory.SupplySchemaRoutes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

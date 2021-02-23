@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

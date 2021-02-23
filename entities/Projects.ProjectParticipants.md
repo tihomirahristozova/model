@@ -10,6 +10,11 @@ _{Project.Code}: {Project.Name:T}_
 Default Search Member:  
 _Project.Code_  
 
+Aggregate Parent:  
+[Projects.Projects](Projects.Projects.md)  
+Aggregate Root:  
+[Projects.Projects](Projects.Projects.md)  
+
 ## Attributes
 
 | Name | Type | Description |

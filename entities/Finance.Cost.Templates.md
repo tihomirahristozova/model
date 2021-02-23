@@ -10,6 +10,11 @@ _{CostTemplateCode}: {CostTemplateName:T}_
 Default Search Member:  
 _CostTemplateCode_  
 
+Aggregate Tree:  
+* [Finance.Cost.Templates](Finance.Cost.Templates.md)  
+  * [Finance.Cost.TemplateCostTypes](Finance.Cost.TemplateCostTypes.md)  
+  * [Finance.Cost.TemplateLevels](Finance.Cost.TemplateLevels.md)  
+
 ## Attributes
 
 | Name | Type | Description |

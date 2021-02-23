@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Finance.Cost.CostTypes](Finance.Cost.CostTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

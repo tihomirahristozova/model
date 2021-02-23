@@ -10,6 +10,13 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)  
+  * [Applications.Service.ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md)  
+    * [Applications.Service.ServiceActivityAgreedMaterials](Applications.Service.ServiceActivityAgreedMaterials.md)  
+  * [Applications.Service.ServiceActivityServices](Applications.Service.ServiceActivityServices.md)  
+    * [Applications.Service.ServiceActivityAgreedServices](Applications.Service.ServiceActivityAgreedServices.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,11 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Parent:  
+[Applications.Mail.Messages](Applications.Mail.Messages.md)  
+Aggregate Root:  
+[Applications.Mail.Boxes](Applications.Mail.Boxes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

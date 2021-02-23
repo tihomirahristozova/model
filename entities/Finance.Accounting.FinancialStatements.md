@@ -10,6 +10,11 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Finance.Accounting.FinancialStatements](Finance.Accounting.FinancialStatements.md)  
+  * [Finance.Accounting.FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md)  
+    * [Finance.Accounting.FinancialStatementNodeCorrespondances](Finance.Accounting.FinancialStatementNodeCorrespondances.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,9 @@ _{CostAllocationModelName:T}_
 Default Search Member:  
 _CostAllocationModelName_  
 
+Aggregate Tree:  
+* [Finance.Cost.AllocationModels](Finance.Cost.AllocationModels.md)  
+
 ## Attributes
 
 | Name | Type | Description |

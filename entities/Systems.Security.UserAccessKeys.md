@@ -10,6 +10,11 @@ _{User.PhoneNumber}: {User.Name:T}_
 Default Search Member:  
 _User.PhoneNumber_  
 
+Aggregate Parent:  
+[Systems.Security.Users](Systems.Security.Users.md)  
+Aggregate Root:  
+[Systems.Security.Users](Systems.Security.Users.md)  
+
 ## Attributes
 
 | Name | Type | Description |

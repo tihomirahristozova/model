@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [General.Config](General.Config.md)  
+
 ## Attributes
 
 | Name | Type | Description |

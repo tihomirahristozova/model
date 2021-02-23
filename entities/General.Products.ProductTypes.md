@@ -10,6 +10,11 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [General.Products.ProductTypes](General.Products.ProductTypes.md)  
+  * [General.Products.ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md)  
+  * [Crm.Pos.ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md)  
+
 ## Attributes
 
 | Name | Type | Description |

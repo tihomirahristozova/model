@@ -10,6 +10,11 @@ _{RentTransaction.DocumentType.Code}:{RentTransaction.DocumentNo} - {RentTransac
 Default Search Member:  
 _RentTransaction.DocumentType.Code_  
 
+Aggregate Parent:  
+[Applications.Rental.Transactions](Applications.Rental.Transactions.md)  
+Aggregate Root:  
+[Applications.Rental.Transactions](Applications.Rental.Transactions.md)  
+
 ## Attributes
 
 | Name | Type | Description |

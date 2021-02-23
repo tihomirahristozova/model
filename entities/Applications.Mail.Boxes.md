@@ -10,6 +10,12 @@ _{SentItemsFolderName:T}_
 Default Search Member:  
 _SentItemsFolderName_  
 
+Aggregate Tree:  
+* [Applications.Mail.Boxes](Applications.Mail.Boxes.md)  
+  * [Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md)  
+    * [Applications.Mail.Messages](Applications.Mail.Messages.md)  
+      * [Applications.Mail.MessageAttachments](Applications.Mail.MessageAttachments.md)  
+
 ## Attributes
 
 | Name | Type | Description |

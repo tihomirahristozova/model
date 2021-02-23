@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md)  
+
 ## Attributes
 
 | Name | Type | Description |

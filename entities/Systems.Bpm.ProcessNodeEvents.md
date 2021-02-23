@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Systems.Bpm.ProcessNodeEvents](Systems.Bpm.ProcessNodeEvents.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,9 @@ _{SerialNumber}: {Name:T}_
 Default Search Member:  
 _SerialNumber_  
 
+Aggregate Tree:  
+* [Applications.Service.ServiceObjects](Applications.Service.ServiceObjects.md)  
+
 ## Attributes
 
 | Name | Type | Description |

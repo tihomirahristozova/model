@@ -10,6 +10,11 @@ _{PromotionalPackage.Code}: {PromotionalPackage.Name:T}_
 Default Search Member:  
 _PromotionalPackage.Code_  
 
+Aggregate Parent:  
+[Crm.PromotionalPackages](Crm.PromotionalPackages.md)  
+Aggregate Root:  
+[Crm.PromotionalPackages](Crm.PromotionalPackages.md)  
+
 ## Attributes
 
 | Name | Type | Description |

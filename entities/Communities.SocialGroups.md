@@ -10,6 +10,10 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Communities.SocialGroups](Communities.SocialGroups.md)  
+  * [Communities.SocialGroupMembers](Communities.SocialGroupMembers.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,10 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [General.MeasurementCategories](General.MeasurementCategories.md)  
+  * [General.MeasurementUnits](General.MeasurementUnits.md)  
+
 ## Attributes
 
 | Name | Type | Description |

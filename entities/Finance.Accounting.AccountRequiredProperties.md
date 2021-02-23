@@ -10,6 +10,11 @@ _{Account.AccountFullNumber}: {Account.Name:T}_
 Default Search Member:  
 _Account.AccountFullNumber_  
 
+Aggregate Parent:  
+[Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)  
+Aggregate Root:  
+[Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)  
+
 ## Attributes
 
 | Name | Type | Description |

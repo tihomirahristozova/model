@@ -10,6 +10,11 @@ _{Voucher.DocumentType.Code}:{Voucher.DocumentNo}:{LineNo} - {Voucher.DocumentTy
 Default Search Member:  
 _Voucher.DocumentNo_  
 
+Aggregate Parent:  
+[Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)  
+Aggregate Root:  
+[Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)  
+
 ## Attributes
 
 | Name | Type | Description |

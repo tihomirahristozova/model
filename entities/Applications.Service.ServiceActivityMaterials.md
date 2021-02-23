@@ -10,6 +10,11 @@ _{ServiceActivity.DocumentType.Code}:{ServiceActivity.DocumentNo}:{LineNo} - {Se
 Default Search Member:  
 _ServiceActivity.DocumentNo_  
 
+Aggregate Parent:  
+[Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)  
+Aggregate Root:  
+[Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)  
+
 ## Attributes
 
 | Name | Type | Description |

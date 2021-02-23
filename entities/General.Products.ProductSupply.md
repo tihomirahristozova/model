@@ -10,6 +10,9 @@ _{BuyerName:T}_
 Default Search Member:  
 _BuyerName_  
 
+Aggregate Tree:  
+* [General.Products.ProductSupply](General.Products.ProductSupply.md)  
+
 ## Attributes
 
 | Name | Type | Description |

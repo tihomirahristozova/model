@@ -10,6 +10,11 @@ _{TrustedApplication.Name:T}_
 Default Search Member:  
 _TrustedApplication.Name_  
 
+Aggregate Parent:  
+[Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md)  
+Aggregate Root:  
+[Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md)  
+
 ## Attributes
 
 | Name | Type | Description |

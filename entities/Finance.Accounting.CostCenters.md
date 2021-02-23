@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md)  
+
 ## Attributes
 
 | Name | Type | Description |

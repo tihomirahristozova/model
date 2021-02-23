@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md)  
+
 ## Attributes
 
 | Name | Type | Description |

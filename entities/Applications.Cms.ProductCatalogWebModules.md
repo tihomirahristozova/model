@@ -10,6 +10,11 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Parent:  
+[Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
+Aggregate Root:  
+[Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
+
 ## Attributes
 
 | Name | Type | Description |

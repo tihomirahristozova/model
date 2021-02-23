@@ -10,6 +10,11 @@ _{Group.Name:T}_
 Default Search Member:  
 _Group.Name_  
 
+Aggregate Parent:  
+[Systems.Security.Groups](Systems.Security.Groups.md)  
+Aggregate Root:  
+[Systems.Security.Groups](Systems.Security.Groups.md)  
+
 ## Attributes
 
 | Name | Type | Description |

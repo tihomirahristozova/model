@@ -10,6 +10,9 @@ _{LanguageCode}_
 Default Search Member:  
 _LanguageCode_  
 
+Aggregate Tree:  
+* [Applications.Cms.NewsWebModuleArticles](Applications.Cms.NewsWebModuleArticles.md)  
+
 ## Attributes
 
 | Name | Type | Description |

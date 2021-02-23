@@ -10,6 +10,20 @@ _{PartyCode}: {PartyName:T}_
 Default Search Member:  
 _PartyCode_  
 
+Aggregate Tree:  
+* [General.Contacts.Parties](General.Contacts.Parties.md)  
+  * [Crm.Customers](Crm.Customers.md)  
+    * [Crm.CustomerProducts](Crm.CustomerProducts.md)  
+  * [Crm.Dealers](Crm.Dealers.md)  
+  * [Crm.Distributors](Crm.Distributors.md)  
+  * [General.PartyApplicableLegislations](General.PartyApplicableLegislations.md)  
+  * [General.PartyLocationNumbers](General.PartyLocationNumbers.md)  
+  * [General.Contacts.ActivityTimeIntervals](General.Contacts.ActivityTimeIntervals.md)  
+  * [General.Contacts.PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md)  
+  * [General.Contacts.PartyBankAccounts](General.Contacts.PartyBankAccounts.md)  
+  * [General.Contacts.PartyPictures](General.Contacts.PartyPictures.md)  
+  * [Logistics.Procurement.Suppliers](Logistics.Procurement.Suppliers.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,11 @@ _{ApplicationName:T}_
 Default Search Member:  
 _ApplicationName_  
 
+Aggregate Tree:  
+* [Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)  
+  * [Systems.Core.ObjectChanges](Systems.Core.ObjectChanges.md)  
+    * [Systems.Core.AttributeChanges](Systems.Core.AttributeChanges.md)  
+
 ## Attributes
 
 | Name | Type | Description |

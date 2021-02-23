@@ -10,6 +10,9 @@ _{Number}: {Name:T}_
 Default Search Member:  
 _Number_  
 
+Aggregate Tree:  
+* [Finance.Accounting.AccountGroups](Finance.Accounting.AccountGroups.md)  
+
 ## Attributes
 
 | Name | Type | Description |

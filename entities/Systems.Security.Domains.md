@@ -10,6 +10,10 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Systems.Security.Domains](Systems.Security.Domains.md)  
+  * [Systems.Security.DomainProviders](Systems.Security.DomainProviders.md)  
+
 ## Attributes
 
 | Name | Type | Description |

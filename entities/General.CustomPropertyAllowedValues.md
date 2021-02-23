@@ -10,6 +10,11 @@ _{Property.Code}: {Property.AllowedValuesEntityName:T}_
 Default Search Member:  
 _Property.Code_  
 
+Aggregate Parent:  
+[General.CustomProperties](General.CustomProperties.md)  
+Aggregate Root:  
+[General.CustomProperties](General.CustomProperties.md)  
+
 ## Attributes
 
 | Name | Type | Description |

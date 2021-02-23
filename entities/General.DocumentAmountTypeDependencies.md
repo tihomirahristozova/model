@@ -10,6 +10,11 @@ _{DocumentAmountType.AmountTypeCode}: {DocumentAmountType.AmountTypeName:T}_
 Default Search Member:  
 _DocumentAmountType.AmountTypeCode_  
 
+Aggregate Parent:  
+[General.DocumentAmountTypes](General.DocumentAmountTypes.md)  
+Aggregate Root:  
+[General.DocumentAmountTypes](General.DocumentAmountTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

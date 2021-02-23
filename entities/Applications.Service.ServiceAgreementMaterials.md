@@ -10,6 +10,11 @@ _{ServiceAgreement.DocumentType.Code}:{ServiceAgreement.DocumentNo}:{LineNo} - {
 Default Search Member:  
 _ServiceAgreement.DocumentNo_  
 
+Aggregate Parent:  
+[Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)  
+Aggregate Root:  
+[Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)  
+
 ## Attributes
 
 | Name | Type | Description |

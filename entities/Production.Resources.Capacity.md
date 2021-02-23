@@ -10,6 +10,11 @@ _{WorkgroupResource.Workgroup.Name:T}_
 Default Search Member:  
 _WorkgroupResource.Workgroup.Name_  
 
+Aggregate Parent:  
+[Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)  
+Aggregate Root:  
+[Production.Resources.Workgroups](Production.Resources.Workgroups.md)  
+
 ## Attributes
 
 | Name | Type | Description |

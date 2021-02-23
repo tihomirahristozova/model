@@ -10,6 +10,13 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Production.ShopFloor.WorkOrders](Production.ShopFloor.WorkOrders.md)  
+  * [Production.ShopFloor.WorkOrderItemIngredients](Production.ShopFloor.WorkOrderItemIngredients.md)  
+  * [Production.ShopFloor.WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)  
+    * [Production.ShopFloor.WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md)  
+      * [Production.Resources.Load](Production.Resources.Load.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,11 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)  
+  * [Applications.PersonalData.JointControllers](Applications.PersonalData.JointControllers.md)  
+  * [Applications.PersonalData.PersonalDataProcessRecipients](Applications.PersonalData.PersonalDataProcessRecipients.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,11 @@ _{Recipe.Name:T}_
 Default Search Member:  
 _Recipe.Name_  
 
+Aggregate Parent:  
+[Production.Technologies.Recipes](Production.Technologies.Recipes.md)  
+Aggregate Root:  
+[Production.Technologies.Recipes](Production.Technologies.Recipes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

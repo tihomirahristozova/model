@@ -10,6 +10,11 @@ _{Role.Name:T}_
 Default Search Member:  
 _Role.Name_  
 
+Aggregate Parent:  
+[Systems.Workflow.Roles](Systems.Workflow.Roles.md)  
+Aggregate Root:  
+[Systems.Workflow.Roles](Systems.Workflow.Roles.md)  
+
 ## Attributes
 
 | Name | Type | Description |

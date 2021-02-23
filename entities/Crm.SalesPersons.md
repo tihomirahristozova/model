@@ -10,6 +10,11 @@ _{Person.PartyCode}: {Person.PartyName:T}_
 Default Search Member:  
 _Person.PartyCode_  
 
+Aggregate Parent:  
+[General.Contacts.Persons](General.Contacts.Persons.md)  
+Aggregate Root:  
+[General.Contacts.Persons](General.Contacts.Persons.md)  
+
 ## Attributes
 
 | Name | Type | Description |

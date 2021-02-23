@@ -10,6 +10,11 @@ _{Invoice.DocumentType.Code}:{Invoice.DocumentNo}:{LineNo} - {Invoice.DocumentTy
 Default Search Member:  
 _Invoice.DocumentNo_  
 
+Aggregate Parent:  
+[Crm.Invoicing.Invoices](Crm.Invoicing.Invoices.md)  
+Aggregate Root:  
+[Crm.Invoicing.Invoices](Crm.Invoicing.Invoices.md)  
+
 ## Attributes
 
 | Name | Type | Description |

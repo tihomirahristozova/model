@@ -10,6 +10,11 @@ _{BonusProgram.Name:T}_
 Default Search Member:  
 _BonusProgram.Name_  
 
+Aggregate Parent:  
+[Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md)  
+Aggregate Root:  
+[Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md)  
+
 ## Attributes
 
 | Name | Type | Description |

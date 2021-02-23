@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Finance.Intrastat.CommodityCodes](Finance.Intrastat.CommodityCodes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

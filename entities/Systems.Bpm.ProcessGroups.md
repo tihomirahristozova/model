@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Systems.Bpm.ProcessGroups](Systems.Bpm.ProcessGroups.md)  
+
 ## Attributes
 
 | Name | Type | Description |

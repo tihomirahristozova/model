@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Applications.Fleet.Trips](Applications.Fleet.Trips.md)  
+  * [Applications.Fleet.TripSegments](Applications.Fleet.TripSegments.md)  
+
 ## Attributes
 
 | Name | Type | Description |

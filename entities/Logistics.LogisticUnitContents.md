@@ -10,6 +10,11 @@ _{LotNumber}_
 Default Search Member:  
 _LotNumber_  
 
+Aggregate Parent:  
+[Logistics.LogisticUnits](Logistics.LogisticUnits.md)  
+Aggregate Root:  
+[Logistics.LogisticUnits](Logistics.LogisticUnits.md)  
+
 ## Attributes
 
 | Name | Type | Description |

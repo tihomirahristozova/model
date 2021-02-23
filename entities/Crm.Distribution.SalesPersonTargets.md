@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)  
+  * [Crm.Distribution.SalesPersonTargetLines](Crm.Distribution.SalesPersonTargetLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,10 @@ _{PartyCode}: {PartyName:T}_
 Default Search Member:  
 _PartyCode_  
 
+Aggregate Tree:  
+* [General.Contacts.Companies](General.Contacts.Companies.md)  
+  * [General.Contacts.CompanyDepartments](General.Contacts.CompanyDepartments.md)  
+
 ## Attributes
 
 | Name | Type | Description |

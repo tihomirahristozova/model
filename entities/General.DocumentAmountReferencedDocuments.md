@@ -10,6 +10,11 @@ _{DocumentAmount.Document.DocumentType.Code}:{DocumentAmount.Document.DocumentNo
 Default Search Member:  
 _DocumentAmount.Document.DocumentType.Code_  
 
+Aggregate Parent:  
+[General.DocumentAmounts](General.DocumentAmounts.md)  
+Aggregate Root:  
+[General.Documents](General.Documents.md)  
+
 ## Attributes
 
 | Name | Type | Description |

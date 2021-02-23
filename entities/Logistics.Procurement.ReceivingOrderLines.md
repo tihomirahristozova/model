@@ -10,6 +10,11 @@ _{ReceivingOrder.DocumentType.Code}:{ReceivingOrder.DocumentNo}:{LineNo} - {Rece
 Default Search Member:  
 _ReceivingOrder.DocumentNo_  
 
+Aggregate Parent:  
+[Logistics.Procurement.ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)  
+Aggregate Root:  
+[Logistics.Procurement.ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)  
+
 ## Attributes
 
 | Name | Type | Description |

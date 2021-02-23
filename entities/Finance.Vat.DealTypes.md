@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

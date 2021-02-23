@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Finance.Assets.AssetTransactions](Finance.Assets.AssetTransactions.md)  
+  * [Finance.Assets.AssetTransactionLines](Finance.Assets.AssetTransactionLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

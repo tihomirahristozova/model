@@ -10,6 +10,12 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
+  * [Logistics.Wms.WarehouseLocations](Logistics.Wms.WarehouseLocations.md)  
+  * [Logistics.Wms.WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md)  
+  * [Logistics.Wms.WarehouseZones](Logistics.Wms.WarehouseZones.md)  
+
 ## Attributes
 
 | Name | Type | Description |

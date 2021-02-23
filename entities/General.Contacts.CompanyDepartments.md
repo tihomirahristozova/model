@@ -10,6 +10,11 @@ _{DepartmentName:T}_
 Default Search Member:  
 _DepartmentName_  
 
+Aggregate Parent:  
+[General.Contacts.Companies](General.Contacts.Companies.md)  
+Aggregate Root:  
+[General.Contacts.Companies](General.Contacts.Companies.md)  
+
 ## Attributes
 
 | Name | Type | Description |

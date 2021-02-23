@@ -10,6 +10,9 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Finance.Payments.PaymentOrders](Finance.Payments.PaymentOrders.md)  
+
 ## Attributes
 
 | Name | Type | Description |

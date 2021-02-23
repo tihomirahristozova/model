@@ -10,6 +10,11 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Parent:  
+[General.Products.ProductGroups](General.Products.ProductGroups.md)  
+Aggregate Root:  
+[General.Products.ProductGroups](General.Products.ProductGroups.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,11 @@ _{FileName:T}_
 Default Search Member:  
 _FileName_  
 
+Aggregate Parent:  
+[General.Documents](General.Documents.md)  
+Aggregate Root:  
+[General.Documents](General.Documents.md)  
+
 ## Attributes
 
 | Name | Type | Description |

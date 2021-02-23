@@ -10,6 +10,11 @@ _{AssetCategory.Code}: {AssetCategory.Name:T}_
 Default Search Member:  
 _AssetCategory.Code_  
 
+Aggregate Parent:  
+[Finance.Assets.AssetCategories](Finance.Assets.AssetCategories.md)  
+Aggregate Root:  
+[Finance.Assets.AssetCategories](Finance.Assets.AssetCategories.md)  
+
 ## Attributes
 
 | Name | Type | Description |

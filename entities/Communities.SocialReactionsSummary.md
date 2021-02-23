@@ -10,6 +10,9 @@ _{DataObjectId}: {SocialCommentId}_
 Default Search Member:  
 _DataObjectId_  
 
+Aggregate Tree:  
+* [Communities.SocialReactionsSummary](Communities.SocialReactionsSummary.md)  
+
 ## Attributes
 
 | Name | Type | Description |

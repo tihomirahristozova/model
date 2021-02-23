@@ -10,6 +10,9 @@ _{TableName:T}_
 Default Search Member:  
 _TableName_  
 
+Aggregate Tree:  
+* [Systems.Core.ResolvedConflicts](Systems.Core.ResolvedConflicts.md)  
+
 ## Attributes
 
 | Name | Type | Description |

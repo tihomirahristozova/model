@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Logistics.Procurement.Requisitions](Logistics.Procurement.Requisitions.md)  
+  * [Logistics.Procurement.RequisitionLines](Logistics.Procurement.RequisitionLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

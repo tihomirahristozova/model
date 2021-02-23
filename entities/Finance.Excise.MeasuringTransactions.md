@@ -10,6 +10,9 @@ _{MeasuringDeviceCode}_
 Default Search Member:  
 _MeasuringDeviceCode_  
 
+Aggregate Tree:  
+* [Finance.Excise.MeasuringTransactions](Finance.Excise.MeasuringTransactions.md)  
+
 ## Attributes
 
 | Name | Type | Description |

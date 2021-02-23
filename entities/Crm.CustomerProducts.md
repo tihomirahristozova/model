@@ -10,6 +10,11 @@ _{Customer.Number}_
 Default Search Member:  
 _Customer.Number_  
 
+Aggregate Parent:  
+[Crm.Customers](Crm.Customers.md)  
+Aggregate Root:  
+[General.Contacts.Parties](General.Contacts.Parties.md)  
+
 ## Attributes
 
 | Name | Type | Description |

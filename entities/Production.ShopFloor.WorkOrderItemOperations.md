@@ -10,6 +10,11 @@ _{WorkOrderItem.WorkOrder.DocumentType.Code}:{WorkOrderItem.WorkOrder.DocumentNo
 Default Search Member:  
 _WorkOrderItem.WorkOrder.DocumentType.Code_  
 
+Aggregate Parent:  
+[Production.ShopFloor.WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)  
+Aggregate Root:  
+[Production.ShopFloor.WorkOrders](Production.ShopFloor.WorkOrders.md)  
+
 ## Attributes
 
 | Name | Type | Description |

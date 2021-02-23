@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Logistics.Inventory.Reconciliations](Logistics.Inventory.Reconciliations.md)  
+  * [Logistics.Inventory.ReconciliationLines](Logistics.Inventory.ReconciliationLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

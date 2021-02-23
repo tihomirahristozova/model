@@ -10,6 +10,11 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Finance.Payments.PaymentSlips](Finance.Payments.PaymentSlips.md)  
+  * [Finance.Payments.PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md)  
+    * [Finance.Payments.PaymentSlipLines](Finance.Payments.PaymentSlipLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

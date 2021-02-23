@@ -10,6 +10,11 @@ _{PurposeCode}: {FileName:T}_
 Default Search Member:  
 _PurposeCode_  
 
+Aggregate Parent:  
+[Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
+Aggregate Root:  
+[Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
+
 ## Attributes
 
 | Name | Type | Description |

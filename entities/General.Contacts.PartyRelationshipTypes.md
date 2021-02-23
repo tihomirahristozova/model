@@ -10,6 +10,9 @@ _{RelationshipTypeName:T}_
 Default Search Member:  
 _RelationshipTypeName_  
 
+Aggregate Tree:  
+* [General.Contacts.PartyRelationshipTypes](General.Contacts.PartyRelationshipTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

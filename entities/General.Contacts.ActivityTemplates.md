@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [General.Contacts.ActivityTemplates](General.Contacts.ActivityTemplates.md)  
+
 ## Attributes
 
 | Name | Type | Description |

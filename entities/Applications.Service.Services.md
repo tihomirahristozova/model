@@ -10,6 +10,10 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Applications.Service.Services](Applications.Service.Services.md)  
+  * [Applications.Service.ServiceInvoicing](Applications.Service.ServiceInvoicing.md)  
+
 ## Attributes
 
 | Name | Type | Description |

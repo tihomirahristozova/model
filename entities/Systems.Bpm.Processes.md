@@ -10,6 +10,13 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Systems.Bpm.Processes](Systems.Bpm.Processes.md)  
+  * [Systems.Bpm.ProcessConnections](Systems.Bpm.ProcessConnections.md)  
+  * [Systems.Bpm.ProcessElements](Systems.Bpm.ProcessElements.md)  
+  * [Systems.Bpm.ProcessLanes](Systems.Bpm.ProcessLanes.md)  
+  * [Systems.Bpm.ProcessNodes](Systems.Bpm.ProcessNodes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

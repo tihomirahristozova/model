@@ -10,6 +10,11 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Parent:  
+[Systems.Bpm.Processes](Systems.Bpm.Processes.md)  
+Aggregate Root:  
+[Systems.Bpm.Processes](Systems.Bpm.Processes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

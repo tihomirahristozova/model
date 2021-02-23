@@ -10,6 +10,26 @@ _{Code}: {EntityName:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [General.DocumentTypes](General.DocumentTypes.md)  
+  * [Crm.Invoicing.InvoicesOptions](Crm.Invoicing.InvoicesOptions.md)  
+  * [Crm.Presales.OffersOptions](Crm.Presales.OffersOptions.md)  
+  * [Crm.Sales.DefaultSalesOrderDocumentProperties](Crm.Sales.DefaultSalesOrderDocumentProperties.md)  
+  * [Crm.Sales.DefaultSalesOrderPaymentPlans](Crm.Sales.DefaultSalesOrderPaymentPlans.md)  
+  * [Crm.Sales.SalesOrdersOptions](Crm.Sales.SalesOrdersOptions.md)  
+  * [General.DocumentTypeAmounts](General.DocumentTypeAmounts.md)  
+  * [General.DocumentTypeEnterpriseCompanies](General.DocumentTypeEnterpriseCompanies.md)  
+  * [General.DocumentTypeNotifications](General.DocumentTypeNotifications.md)  
+  * [General.DocumentTypeProperties](General.DocumentTypeProperties.md)  
+  * [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md)  
+  * [General.Printouts](General.Printouts.md)  
+  * [Systems.Workflow.Routes](Systems.Workflow.Routes.md)  
+    * [Finance.Accounting.TemplateRouteLinks](Finance.Accounting.TemplateRouteLinks.md)  
+    * [Finance.Accounting.Templates](Finance.Accounting.Templates.md)  
+      * [Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md)  
+        * [Finance.Accounting.TemplateLineProperties](Finance.Accounting.TemplateLineProperties.md)  
+    * [Crm.Sales.SalesOrderPaymentOrdersTemplates](Crm.Sales.SalesOrderPaymentOrdersTemplates.md)  
+
 ## Attributes
 
 | Name | Type | Description |

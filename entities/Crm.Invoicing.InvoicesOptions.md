@@ -10,6 +10,11 @@ _{DocumentType.Code}: {DocumentType.EntityName:T}_
 Default Search Member:  
 _DocumentType.Code_  
 
+Aggregate Parent:  
+[General.DocumentTypes](General.DocumentTypes.md)  
+Aggregate Root:  
+[General.DocumentTypes](General.DocumentTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

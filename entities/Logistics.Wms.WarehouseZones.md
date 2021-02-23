@@ -10,6 +10,11 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Parent:  
+[Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
+Aggregate Root:  
+[Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
+
 ## Attributes
 
 | Name | Type | Description |

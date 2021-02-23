@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Finance.Payments.PaymentReasons](Finance.Payments.PaymentReasons.md)  
+
 ## Attributes
 
 | Name | Type | Description |

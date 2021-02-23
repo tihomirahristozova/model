@@ -10,6 +10,11 @@ _{LeaseLine.LeaseContract.DocumentType.Code}:{LeaseLine.LeaseContract.DocumentNo
 Default Search Member:  
 _LeaseLine.LeaseContract.DocumentType.Code_  
 
+Aggregate Parent:  
+[Applications.Rental.LeaseContractLines](Applications.Rental.LeaseContractLines.md)  
+Aggregate Root:  
+[Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md)  
+
 ## Attributes
 
 | Name | Type | Description |

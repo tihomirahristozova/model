@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Finance.Assets.Depreciations](Finance.Assets.Depreciations.md)  
+  * [Finance.Assets.DepreciationAssets](Finance.Assets.DepreciationAssets.md)  
+
 ## Attributes
 
 | Name | Type | Description |

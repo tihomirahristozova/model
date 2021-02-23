@@ -10,6 +10,10 @@ _{QueryName:T}_
 Default Search Member:  
 _QueryName_  
 
+Aggregate Tree:  
+* [General.Reports](General.Reports.md)  
+  * [General.ReportQueries](General.ReportQueries.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,11 @@ _{ApplicationName:T}_
 Default Search Member:  
 _ApplicationName_  
 
+Aggregate Parent:  
+[General.DocumentTypes](General.DocumentTypes.md)  
+Aggregate Root:  
+[General.DocumentTypes](General.DocumentTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

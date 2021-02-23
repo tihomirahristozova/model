@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [General.Geography.Areas](General.Geography.Areas.md)  
+
 ## Attributes
 
 | Name | Type | Description |

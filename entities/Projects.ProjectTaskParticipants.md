@@ -10,6 +10,11 @@ _{ProjectTask.TaskName:T}_
 Default Search Member:  
 _ProjectTask.TaskName_  
 
+Aggregate Parent:  
+[Projects.ProjectTasks](Projects.ProjectTasks.md)  
+Aggregate Root:  
+[Projects.ProjectTasks](Projects.ProjectTasks.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,11 @@ _{Product.PartNumber}: {Product.Name:T}_
 Default Search Member:  
 _Product.PartNumber_  
 
+Aggregate Parent:  
+[General.Products.Products](General.Products.Products.md)  
+Aggregate Root:  
+[General.Products.Products](General.Products.Products.md)  
+
 ## Attributes
 
 | Name | Type | Description |

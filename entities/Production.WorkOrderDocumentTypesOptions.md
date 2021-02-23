@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Production.WorkOrderDocumentTypesOptions](Production.WorkOrderDocumentTypesOptions.md)  
+
 ## Attributes
 
 | Name | Type | Description |

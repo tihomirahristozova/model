@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [General.Currencies](General.Currencies.md)  
+
 ## Attributes
 
 | Name | Type | Description |

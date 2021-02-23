@@ -10,6 +10,9 @@ _{ColumnName:T}_
 Default Search Member:  
 _ColumnName_  
 
+Aggregate Tree:  
+* [Systems.Core.TextTranslations](Systems.Core.TextTranslations.md)  
+
 ## Attributes
 
 | Name | Type | Description |

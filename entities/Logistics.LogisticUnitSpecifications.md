@@ -10,6 +10,11 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Parent:  
+[Logistics.LogisticUnits](Logistics.LogisticUnits.md)  
+Aggregate Root:  
+[Logistics.LogisticUnits](Logistics.LogisticUnits.md)  
+
 ## Attributes
 
 | Name | Type | Description |

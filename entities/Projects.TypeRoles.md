@@ -10,6 +10,11 @@ _{RoleName:T}_
 Default Search Member:  
 _RoleName_  
 
+Aggregate Parent:  
+[Projects.ProjectTypes](Projects.ProjectTypes.md)  
+Aggregate Root:  
+[Projects.ProjectTypes](Projects.ProjectTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

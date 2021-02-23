@@ -10,6 +10,13 @@ _{TaskName:T}_
 Default Search Member:  
 _TaskName_  
 
+Aggregate Tree:  
+* [Projects.ProjectTasks](Projects.ProjectTasks.md)  
+  * [Projects.ProjectTaskDependancies](Projects.ProjectTaskDependancies.md)  
+  * [Projects.ProjectTaskMaterials](Projects.ProjectTaskMaterials.md)  
+  * [Projects.ProjectTaskParticipants](Projects.ProjectTaskParticipants.md)  
+  * [Projects.ProjectTaskResources](Projects.ProjectTaskResources.md)  
+
 ## Attributes
 
 | Name | Type | Description |

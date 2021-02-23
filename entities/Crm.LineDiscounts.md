@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Crm.LineDiscounts](Crm.LineDiscounts.md)  
+
 ## Attributes
 
 | Name | Type | Description |

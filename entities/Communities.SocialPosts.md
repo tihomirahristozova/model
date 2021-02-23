@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Communities.SocialPosts](Communities.SocialPosts.md)  
+
 ## Attributes
 
 | Name | Type | Description |

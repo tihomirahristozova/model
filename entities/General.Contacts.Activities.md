@@ -10,6 +10,12 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [General.Contacts.Activities](General.Contacts.Activities.md)  
+  * [General.Contacts.ActivityParticipants](General.Contacts.ActivityParticipants.md)  
+  * [General.Contacts.ActivityResources](General.Contacts.ActivityResources.md)  
+  * [General.Contacts.Reminders](General.Contacts.Reminders.md)  
+
 ## Attributes
 
 | Name | Type | Description |

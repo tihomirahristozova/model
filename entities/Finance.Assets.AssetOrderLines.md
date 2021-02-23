@@ -10,6 +10,11 @@ _{AssetOrder.DocumentType.Code}:{AssetOrder.DocumentNo} - {AssetOrder.DocumentTy
 Default Search Member:  
 _AssetOrder.DocumentType.Code_  
 
+Aggregate Parent:  
+[Finance.Assets.AssetOrders](Finance.Assets.AssetOrders.md)  
+Aggregate Root:  
+[Finance.Assets.AssetOrders](Finance.Assets.AssetOrders.md)  
+
 ## Attributes
 
 | Name | Type | Description |

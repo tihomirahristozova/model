@@ -10,6 +10,11 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Parent:  
+[Finance.Accounting.FinancialStatements](Finance.Accounting.FinancialStatements.md)  
+Aggregate Root:  
+[Finance.Accounting.FinancialStatements](Finance.Accounting.FinancialStatements.md)  
+
 ## Attributes
 
 | Name | Type | Description |

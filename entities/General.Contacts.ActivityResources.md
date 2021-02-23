@@ -10,6 +10,11 @@ _{Activity.DocumentType.Code}:{Activity.DocumentNo} - {Activity.DocumentType.Typ
 Default Search Member:  
 _Activity.DocumentType.Code_  
 
+Aggregate Parent:  
+[General.Contacts.Activities](General.Contacts.Activities.md)  
+Aggregate Root:  
+[General.Contacts.Activities](General.Contacts.Activities.md)  
+
 ## Attributes
 
 | Name | Type | Description |

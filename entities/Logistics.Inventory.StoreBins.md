@@ -10,6 +10,11 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Parent:  
+[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
+Aggregate Root:  
+[Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
+
 ## Attributes
 
 | Name | Type | Description |

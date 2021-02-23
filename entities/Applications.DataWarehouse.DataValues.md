@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Applications.DataWarehouse.DataValues](Applications.DataWarehouse.DataValues.md)  
+
 ## Attributes
 
 | Name | Type | Description |

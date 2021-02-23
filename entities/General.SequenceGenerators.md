@@ -10,6 +10,11 @@ _{Sequence.Name:T}_
 Default Search Member:  
 _Sequence.Name_  
 
+Aggregate Parent:  
+[General.Sequences](General.Sequences.md)  
+Aggregate Root:  
+[General.Sequences](General.Sequences.md)  
+
 ## Attributes
 
 | Name | Type | Description |

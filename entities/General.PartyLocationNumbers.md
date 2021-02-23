@@ -10,6 +10,11 @@ _{LocationNumber}_
 Default Search Member:  
 _LocationNumber_  
 
+Aggregate Parent:  
+[General.Contacts.Parties](General.Contacts.Parties.md)  
+Aggregate Root:  
+[General.Contacts.Parties](General.Contacts.Parties.md)  
+
 ## Attributes
 
 | Name | Type | Description |

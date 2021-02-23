@@ -10,6 +10,9 @@ _{BaseCostValue}: {EnterpriseCompanyId}_
 Default Search Member:  
 _BaseCostValue_  
 
+Aggregate Tree:  
+* [Logistics.Inventory.CurrentBalances](Logistics.Inventory.CurrentBalances.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,9 @@ _{ApplicationName:T}_
 Default Search Member:  
 _ApplicationName_  
 
+Aggregate Tree:  
+* [Systems.Core.Translations](Systems.Core.Translations.md)  
+
 ## Attributes
 
 | Name | Type | Description |

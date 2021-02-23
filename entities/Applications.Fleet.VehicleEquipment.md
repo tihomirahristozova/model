@@ -10,6 +10,11 @@ _{Vehicle.EngineIdentificationNumber}_
 Default Search Member:  
 _Vehicle.EngineIdentificationNumber_  
 
+Aggregate Parent:  
+[Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)  
+Aggregate Root:  
+[Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)  
+
 ## Attributes
 
 | Name | Type | Description |

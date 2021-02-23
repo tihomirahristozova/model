@@ -10,6 +10,11 @@ _{PurchaseControlDocument.DocumentType.Code}:{PurchaseControlDocument.DocumentNo
 Default Search Member:  
 _PurchaseControlDocument.DocumentNo_  
 
+Aggregate Parent:  
+[Logistics.Procurement.PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)  
+Aggregate Root:  
+[Logistics.Procurement.PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)  
+
 ## Attributes
 
 | Name | Type | Description |

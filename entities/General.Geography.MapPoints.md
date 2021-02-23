@@ -10,6 +10,11 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Parent:  
+[General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
+Aggregate Root:  
+[General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
+
 ## Attributes
 
 | Name | Type | Description |

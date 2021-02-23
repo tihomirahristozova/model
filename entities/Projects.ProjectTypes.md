@@ -10,6 +10,12 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Projects.ProjectTypes](Projects.ProjectTypes.md)  
+  * [Projects.TypeRoles](Projects.TypeRoles.md)  
+  * [Projects.TypeWorkElements](Projects.TypeWorkElements.md)  
+  * [Projects.TypeWorkTypes](Projects.TypeWorkTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

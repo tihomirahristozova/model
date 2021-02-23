@@ -10,6 +10,11 @@ _{LeaseContract.DocumentType.Code}:{LeaseContract.DocumentNo} - {LeaseContract.D
 Default Search Member:  
 _LeaseContract.DocumentType.Code_  
 
+Aggregate Parent:  
+[Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md)  
+Aggregate Root:  
+[Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md)  
+
 ## Attributes
 
 | Name | Type | Description |

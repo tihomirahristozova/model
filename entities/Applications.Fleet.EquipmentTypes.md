@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Applications.Fleet.EquipmentTypes](Applications.Fleet.EquipmentTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,10 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Crm.PromotionalPackages](Crm.PromotionalPackages.md)  
+  * [Crm.PromotionalPackageLines](Crm.PromotionalPackageLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

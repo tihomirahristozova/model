@@ -10,6 +10,10 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md)  
+  * [Crm.Marketing.TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md)  
+
 ## Attributes
 
 | Name | Type | Description |

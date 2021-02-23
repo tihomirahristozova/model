@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Crm.Pos.Sequences](Crm.Pos.Sequences.md)  
+
 ## Attributes
 
 | Name | Type | Description |

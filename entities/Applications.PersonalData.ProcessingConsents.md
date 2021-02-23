@@ -10,6 +10,9 @@ _{ParentName:T}_
 Default Search Member:  
 _ParentName_  
 
+Aggregate Tree:  
+* [Applications.PersonalData.ProcessingConsents](Applications.PersonalData.ProcessingConsents.md)  
+
 ## Attributes
 
 | Name | Type | Description |

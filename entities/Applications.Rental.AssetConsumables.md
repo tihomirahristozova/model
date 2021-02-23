@@ -10,6 +10,11 @@ _{RentalAsset.RentalAssetCode}: {RentalAsset.RentalAssetName:T}_
 Default Search Member:  
 _RentalAsset.RentalAssetCode_  
 
+Aggregate Parent:  
+[Applications.Rental.Assets](Applications.Rental.Assets.md)  
+Aggregate Root:  
+[Applications.Rental.AssetGroups](Applications.Rental.AssetGroups.md)  
+
 ## Attributes
 
 | Name | Type | Description |

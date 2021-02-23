@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Crm.Marketing.DistributionChannels](Crm.Marketing.DistributionChannels.md)  
+
 ## Attributes
 
 | Name | Type | Description |

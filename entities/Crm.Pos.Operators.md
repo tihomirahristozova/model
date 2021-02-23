@@ -10,6 +10,9 @@ _{PosOperatorCode}_
 Default Search Member:  
 _PosOperatorCode_  
 
+Aggregate Tree:  
+* [Crm.Pos.Operators](Crm.Pos.Operators.md)  
+
 ## Attributes
 
 | Name | Type | Description |

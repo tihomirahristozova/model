@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Applications.Service.ServiceOrders](Applications.Service.ServiceOrders.md)  
+  * [Applications.Service.ServiceOrderLines](Applications.Service.ServiceOrderLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

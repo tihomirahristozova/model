@@ -10,6 +10,11 @@ _{ProcedureName:T}_
 Default Search Member:  
 _ProcedureName_  
 
+Aggregate Parent:  
+[General.DocumentTypes](General.DocumentTypes.md)  
+Aggregate Root:  
+[General.DocumentTypes](General.DocumentTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

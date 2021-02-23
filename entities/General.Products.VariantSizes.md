@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [General.Products.VariantSizes](General.Products.VariantSizes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

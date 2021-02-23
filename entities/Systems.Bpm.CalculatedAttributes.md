@@ -10,6 +10,10 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Systems.Bpm.CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)  
+  * [Systems.Bpm.CalculatedAttributeExpressions](Systems.Bpm.CalculatedAttributeExpressions.md)  
+
 ## Attributes
 
 | Name | Type | Description |

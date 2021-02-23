@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Systems.External.PublicUserLists](Systems.External.PublicUserLists.md)  
+
 ## Attributes
 
 | Name | Type | Description |

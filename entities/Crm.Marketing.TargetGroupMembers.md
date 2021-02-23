@@ -10,6 +10,11 @@ _{TargetGroup.Code}: {TargetGroup.Name:T}_
 Default Search Member:  
 _TargetGroup.Code_  
 
+Aggregate Parent:  
+[Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md)  
+Aggregate Root:  
+[Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md)  
+
 ## Attributes
 
 | Name | Type | Description |

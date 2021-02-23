@@ -10,6 +10,11 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md)  
+  * [Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)  
+  * [Logistics.Inventory.TransactionCostCorrectionsSummary](Logistics.Inventory.TransactionCostCorrectionsSummary.md)  
+
 ## Attributes
 
 | Name | Type | Description |

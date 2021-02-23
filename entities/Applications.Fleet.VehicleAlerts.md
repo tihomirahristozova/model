@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Applications.Fleet.VehicleAlerts](Applications.Fleet.VehicleAlerts.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,9 @@ _{RepositoryName}: {EntityItemId}_
 Default Search Member:  
 _RepositoryName_  
 
+Aggregate Tree:  
+* [Systems.Core.AttributeChangesHistory](Systems.Core.AttributeChangesHistory.md)  
+
 ## Attributes
 
 | Name | Type | Description |

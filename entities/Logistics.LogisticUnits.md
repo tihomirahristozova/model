@@ -10,6 +10,11 @@ _{SerialCode}_
 Default Search Member:  
 _SerialCode_  
 
+Aggregate Tree:  
+* [Logistics.LogisticUnits](Logistics.LogisticUnits.md)  
+  * [Logistics.LogisticUnitContents](Logistics.LogisticUnitContents.md)  
+  * [Logistics.LogisticUnitSpecifications](Logistics.LogisticUnitSpecifications.md)  
+
 ## Attributes
 
 | Name | Type | Description |

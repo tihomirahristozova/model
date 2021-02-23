@@ -10,6 +10,13 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Projects.Projects](Projects.Projects.md)  
+  * [Projects.ProjectParticipants](Projects.ProjectParticipants.md)  
+  * [Projects.ProjectRisks](Projects.ProjectRisks.md)  
+    * [Projects.ProjectRiskDiscussion](Projects.ProjectRiskDiscussion.md)  
+  * [Projects.ProjectWorkElements](Projects.ProjectWorkElements.md)  
+
 ## Attributes
 
 | Name | Type | Description |

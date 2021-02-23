@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Logistics.Procurement.PurchaseOperationTypes](Logistics.Procurement.PurchaseOperationTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,14 @@ _{NextPartNumber}: {Name:T}_
 Default Search Member:  
 _NextPartNumber_  
 
+Aggregate Tree:  
+* [General.Products.ProductGroups](General.Products.ProductGroups.md)  
+  * [General.Products.ProductGroupRangeProperties](General.Products.ProductGroupRangeProperties.md)  
+  * [General.Products.ProductGroupRequiredProperties](General.Products.ProductGroupRequiredProperties.md)  
+  * [Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)  
+    * [Production.Technologies.PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md)  
+    * [Production.Technologies.PrincipalRecipeOperations](Production.Technologies.PrincipalRecipeOperations.md)  
+
 ## Attributes
 
 | Name | Type | Description |

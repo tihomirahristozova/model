@@ -10,6 +10,11 @@ _{ConsumptionOrder.DocumentType.Code}:{ConsumptionOrder.DocumentNo}:{LineOrd} - 
 Default Search Member:  
 _ConsumptionOrder.DocumentNo_  
 
+Aggregate Parent:  
+[Production.ShopFloor.ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)  
+Aggregate Root:  
+[Production.ShopFloor.ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)  
+
 ## Attributes
 
 | Name | Type | Description |

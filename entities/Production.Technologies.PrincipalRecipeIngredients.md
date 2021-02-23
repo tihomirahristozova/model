@@ -10,6 +10,11 @@ _{IngredientName:T}_
 Default Search Member:  
 _IngredientName_  
 
+Aggregate Parent:  
+[Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)  
+Aggregate Root:  
+[General.Products.ProductGroups](General.Products.ProductGroups.md)  
+
 ## Attributes
 
 | Name | Type | Description |

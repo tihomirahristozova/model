@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Finance.Intrastat.Declarations](Finance.Intrastat.Declarations.md)  
+  * [Finance.Intrastat.DeclarationLines](Finance.Intrastat.DeclarationLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

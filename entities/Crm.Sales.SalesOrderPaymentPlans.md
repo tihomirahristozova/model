@@ -10,6 +10,11 @@ _{SalesOrder.DocumentType.Code}:{SalesOrder.DocumentNo} - {SalesOrder.DocumentTy
 Default Search Member:  
 _SalesOrder.DocumentType.Code_  
 
+Aggregate Parent:  
+[Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)  
+Aggregate Root:  
+[Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)  
+
 ## Attributes
 
 | Name | Type | Description |

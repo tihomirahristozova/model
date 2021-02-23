@@ -10,6 +10,11 @@ _{BankAccountCode}: {BankBranchName:T}_
 Default Search Member:  
 _BankAccountCode_  
 
+Aggregate Parent:  
+[General.Contacts.Parties](General.Contacts.Parties.md)  
+Aggregate Root:  
+[General.Contacts.Parties](General.Contacts.Parties.md)  
+
 ## Attributes
 
 | Name | Type | Description |

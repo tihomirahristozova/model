@@ -10,6 +10,11 @@ _{CurrencyDirectory.DocumentType.Code}:{CurrencyDirectory.DocumentNo} - {Currenc
 Default Search Member:  
 _CurrencyDirectory.DocumentType.Code_  
 
+Aggregate Parent:  
+[General.CurrencyDirectories](General.CurrencyDirectories.md)  
+Aggregate Root:  
+[General.CurrencyDirectories](General.CurrencyDirectories.md)  
+
 ## Attributes
 
 | Name | Type | Description |

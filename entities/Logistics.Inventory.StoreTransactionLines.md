@@ -10,6 +10,11 @@ _{TransactionObj.DocumentType.Code}:{TransactionObj.DocumentNo}:{LineNo} - {Tran
 Default Search Member:  
 _TransactionObj.DocumentNo_  
 
+Aggregate Parent:  
+[Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md)  
+Aggregate Root:  
+[Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md)  
+
 ## Attributes
 
 | Name | Type | Description |

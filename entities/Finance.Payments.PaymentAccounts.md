@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md)  
+
 ## Attributes
 
 | Name | Type | Description |

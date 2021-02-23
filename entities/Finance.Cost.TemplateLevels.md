@@ -10,6 +10,11 @@ _{LevelName:T}_
 Default Search Member:  
 _LevelName_  
 
+Aggregate Parent:  
+[Finance.Cost.Templates](Finance.Cost.Templates.md)  
+Aggregate Root:  
+[Finance.Cost.Templates](Finance.Cost.Templates.md)  
+
 ## Attributes
 
 | Name | Type | Description |

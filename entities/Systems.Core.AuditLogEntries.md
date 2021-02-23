@@ -10,6 +10,9 @@ _{ApplicationName:T}_
 Default Search Member:  
 _ApplicationName_  
 
+Aggregate Tree:  
+* [Systems.Core.AuditLogEntries](Systems.Core.AuditLogEntries.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,9 @@ _{PhoneNumber}: {CompanyName:T}_
 Default Search Member:  
 _PhoneNumber_  
 
+Aggregate Tree:  
+* [Systems.External.PublicUsers](Systems.External.PublicUsers.md)  
+
 ## Attributes
 
 | Name | Type | Description |

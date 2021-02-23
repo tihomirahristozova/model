@@ -10,6 +10,11 @@ _{CalculatedAttribute.Name:T}_
 Default Search Member:  
 _CalculatedAttribute.Name_  
 
+Aggregate Parent:  
+[Systems.Bpm.CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)  
+Aggregate Root:  
+[Systems.Bpm.CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

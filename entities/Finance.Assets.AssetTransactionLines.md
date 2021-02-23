@@ -10,6 +10,11 @@ _{AssetTransaction.DocumentType.Code}:{AssetTransaction.DocumentNo} - {AssetTran
 Default Search Member:  
 _AssetTransaction.DocumentType.Code_  
 
+Aggregate Parent:  
+[Finance.Assets.AssetTransactions](Finance.Assets.AssetTransactions.md)  
+Aggregate Root:  
+[Finance.Assets.AssetTransactions](Finance.Assets.AssetTransactions.md)  
+
 ## Attributes
 
 | Name | Type | Description |

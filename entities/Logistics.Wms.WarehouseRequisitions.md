@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Logistics.Wms.WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)  
+  * [Logistics.Wms.WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

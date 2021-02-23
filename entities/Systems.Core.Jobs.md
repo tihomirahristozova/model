@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Systems.Core.Jobs](Systems.Core.Jobs.md)  
+
 ## Attributes
 
 | Name | Type | Description |

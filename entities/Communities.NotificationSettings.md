@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Communities.NotificationSettings](Communities.NotificationSettings.md)  
+
 ## Attributes
 
 | Name | Type | Description |

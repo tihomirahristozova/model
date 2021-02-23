@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Crm.Presales.Offers](Crm.Presales.Offers.md)  
+  * [Crm.Presales.OfferLines](Crm.Presales.OfferLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

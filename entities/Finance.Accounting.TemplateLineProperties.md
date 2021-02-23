@@ -10,6 +10,11 @@ _{TemplateLine.AmountColumnName:T}_
 Default Search Member:  
 _TemplateLine.AmountColumnName_  
 
+Aggregate Parent:  
+[Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md)  
+Aggregate Root:  
+[General.DocumentTypes](General.DocumentTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

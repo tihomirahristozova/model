@@ -10,6 +10,9 @@ _{CalledPartyNumber}_
 Default Search Member:  
 _CalledPartyNumber_  
 
+Aggregate Tree:  
+* [Applications.Telephony.CallDetails](Applications.Telephony.CallDetails.md)  
+
 ## Attributes
 
 | Name | Type | Description |

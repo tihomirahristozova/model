@@ -10,6 +10,17 @@ _{Company.RegistrationNumber}: {Company.PartyName:T}_
 Default Search Member:  
 _Company.RegistrationNumber_  
 
+Aggregate Tree:  
+* [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
+  * [Finance.Assets.Assets](Finance.Assets.Assets.md)  
+  * [Applications.Fleet.Crews](Applications.Fleet.Crews.md)  
+    * [Applications.Fleet.CrewMembers](Applications.Fleet.CrewMembers.md)  
+  * [Applications.Fleet.VehicleSets](Applications.Fleet.VehicleSets.md)  
+    * [Applications.Fleet.VehicleSetVehicles](Applications.Fleet.VehicleSetVehicles.md)  
+  * [General.Geography.MapPoints](General.Geography.MapPoints.md)  
+  * [Finance.Vat.BGVATDeclaringPersons](Finance.Vat.BGVATDeclaringPersons.md)  
+  * [Projects.Resources](Projects.Resources.md)  
+
 ## Attributes
 
 | Name | Type | Description |

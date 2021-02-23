@@ -10,6 +10,11 @@ _{Offer.DocumentType.Code}:{Offer.DocumentNo}:{LineNo} - {Offer.DocumentType.Typ
 Default Search Member:  
 _Offer.DocumentNo_  
 
+Aggregate Parent:  
+[Crm.Presales.Offers](Crm.Presales.Offers.md)  
+Aggregate Root:  
+[Crm.Presales.Offers](Crm.Presales.Offers.md)  
+
 ## Attributes
 
 | Name | Type | Description |

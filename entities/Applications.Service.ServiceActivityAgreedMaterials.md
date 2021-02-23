@@ -10,6 +10,11 @@ _{ServiceActivityMaterial.ServiceActivity.DocumentType.Code}:{ServiceActivityMat
 Default Search Member:  
 _ServiceActivityMaterial.ServiceActivity.DocumentType.Code_  
 
+Aggregate Parent:  
+[Applications.Service.ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md)  
+Aggregate Root:  
+[Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)  
+
 ## Attributes
 
 | Name | Type | Description |

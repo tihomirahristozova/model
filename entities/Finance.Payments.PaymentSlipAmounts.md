@@ -10,6 +10,11 @@ _{PartyName:T}_
 Default Search Member:  
 _PartyName_  
 
+Aggregate Parent:  
+[Finance.Payments.PaymentSlips](Finance.Payments.PaymentSlips.md)  
+Aggregate Root:  
+[Finance.Payments.PaymentSlips](Finance.Payments.PaymentSlips.md)  
+
 ## Attributes
 
 | Name | Type | Description |

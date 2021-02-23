@@ -10,6 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Applications.AssetManagement.TrackedParameters](Applications.AssetManagement.TrackedParameters.md)  
+
 ## Attributes
 
 | Name | Type | Description |

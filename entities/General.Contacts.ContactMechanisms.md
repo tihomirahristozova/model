@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [General.Contacts.ContactMechanisms](General.Contacts.ContactMechanisms.md)  
+
 ## Attributes
 
 | Name | Type | Description |

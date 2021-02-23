@@ -10,6 +10,11 @@ _{OutputOrderLine.OutputOrder.DocumentType.Code}:{OutputOrderLine.OutputOrder.Do
 Default Search Member:  
 _OutputOrderLine.OutputOrder.DocumentType.Code_  
 
+Aggregate Parent:  
+[Production.ShopFloor.OutputOrderLines](Production.ShopFloor.OutputOrderLines.md)  
+Aggregate Root:  
+[Production.ShopFloor.OutputOrders](Production.ShopFloor.OutputOrders.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,9 @@ _{EntityName:T}_
 Default Search Member:  
 _EntityName_  
 
+Aggregate Tree:  
+* [Systems.Core.ExternalApplications](Systems.Core.ExternalApplications.md)  
+
 ## Attributes
 
 | Name | Type | Description |

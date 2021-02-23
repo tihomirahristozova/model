@@ -10,6 +10,12 @@ _{Code}: {RepositoryName:T}_
 Default Search Member:  
 _Code_  
 
+Aggregate Tree:  
+* [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
+  * [Systems.Bpm.UserBusinessRuleActions](Systems.Bpm.UserBusinessRuleActions.md)  
+  * [Systems.Bpm.UserBusinessRuleConditions](Systems.Bpm.UserBusinessRuleConditions.md)  
+  * [Systems.Bpm.UserBusinessRuleEvents](Systems.Bpm.UserBusinessRuleEvents.md)  
+
 ## Attributes
 
 | Name | Type | Description |

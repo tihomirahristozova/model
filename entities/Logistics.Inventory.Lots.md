@@ -10,6 +10,9 @@ _{Number}_
 Default Search Member:  
 _Number_  
 
+Aggregate Tree:  
+* [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md)  
+
 ## Attributes
 
 | Name | Type | Description |

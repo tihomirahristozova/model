@@ -10,6 +10,9 @@ _{DiagnosticTroubleCode}_
 Default Search Member:  
 _DiagnosticTroubleCode_  
 
+Aggregate Tree:  
+* [Applications.Fleet.VehicleObdTroubles](Applications.Fleet.VehicleObdTroubles.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,11 @@ _{Reconciliation.DocumentType.Code}:{Reconciliation.DocumentNo}:{LineOrd} - {Rec
 Default Search Member:  
 _Reconciliation.DocumentNo_  
 
+Aggregate Parent:  
+[Logistics.Inventory.Reconciliations](Logistics.Inventory.Reconciliations.md)  
+Aggregate Root:  
+[Logistics.Inventory.Reconciliations](Logistics.Inventory.Reconciliations.md)  
+
 ## Attributes
 
 | Name | Type | Description |

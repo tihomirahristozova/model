@@ -10,6 +10,11 @@ _{RepositoryName:T}_
 Default Search Member:  
 _RepositoryName_  
 
+Aggregate Parent:  
+[Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)  
+Aggregate Root:  
+[Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)  
+
 ## Attributes
 
 | Name | Type | Description |

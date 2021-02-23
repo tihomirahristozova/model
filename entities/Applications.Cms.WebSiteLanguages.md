@@ -10,6 +10,11 @@ _{LanguageCode}_
 Default Search Member:  
 _LanguageCode_  
 
+Aggregate Parent:  
+[Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
+Aggregate Root:  
+[Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
+
 ## Attributes
 
 | Name | Type | Description |

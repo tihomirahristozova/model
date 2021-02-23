@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Logistics.Procurement.PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md)  
+
 ## Attributes
 
 | Name | Type | Description |

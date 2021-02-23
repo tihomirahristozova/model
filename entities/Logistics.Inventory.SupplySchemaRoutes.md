@@ -10,6 +10,11 @@ _{SupplySchema.Name:T}_
 Default Search Member:  
 _SupplySchema.Name_  
 
+Aggregate Parent:  
+[Logistics.Inventory.SupplySchemata](Logistics.Inventory.SupplySchemata.md)  
+Aggregate Root:  
+[Logistics.Inventory.SupplySchemata](Logistics.Inventory.SupplySchemata.md)  
+
 ## Attributes
 
 | Name | Type | Description |

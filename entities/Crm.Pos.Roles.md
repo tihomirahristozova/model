@@ -10,6 +10,9 @@ _{PosRoleCode}: {PosRoleName:T}_
 Default Search Member:  
 _PosRoleCode_  
 
+Aggregate Tree:  
+* [Crm.Pos.Roles](Crm.Pos.Roles.md)  
+
 ## Attributes
 
 | Name | Type | Description |

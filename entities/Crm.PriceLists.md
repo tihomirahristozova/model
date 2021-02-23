@@ -10,6 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Tree:  
+* [Crm.PriceLists](Crm.PriceLists.md)  
+
 ## Attributes
 
 | Name | Type | Description |

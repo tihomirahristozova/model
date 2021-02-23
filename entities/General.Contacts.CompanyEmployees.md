@@ -10,6 +10,11 @@ _{ContractCode}_
 Default Search Member:  
 _ContractCode_  
 
+Aggregate Parent:  
+[General.Contacts.Persons](General.Contacts.Persons.md)  
+Aggregate Root:  
+[General.Contacts.Persons](General.Contacts.Persons.md)  
+
 ## Attributes
 
 | Name | Type | Description |

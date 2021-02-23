@@ -10,6 +10,10 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Applications.Rental.Transactions](Applications.Rental.Transactions.md)  
+  * [Applications.Rental.TransactionLines](Applications.Rental.TransactionLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,11 @@ _{Service.Code}: {Service.Name:T}_
 Default Search Member:  
 _Service.Code_  
 
+Aggregate Parent:  
+[Applications.Service.Services](Applications.Service.Services.md)  
+Aggregate Root:  
+[Applications.Service.Services](Applications.Service.Services.md)  
+
 ## Attributes
 
 | Name | Type | Description |

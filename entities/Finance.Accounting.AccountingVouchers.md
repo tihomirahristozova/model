@@ -10,6 +10,11 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)  
+  * [Finance.Accounting.VoucherCorrespondances](Finance.Accounting.VoucherCorrespondances.md)  
+  * [Finance.Accounting.AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md)  
+
 ## Attributes
 
 | Name | Type | Description |

@@ -10,6 +10,11 @@ _{SocialGroup.Code}: {SocialGroup.Name:T}_
 Default Search Member:  
 _SocialGroup.Code_  
 
+Aggregate Parent:  
+[Communities.SocialGroups](Communities.SocialGroups.md)  
+Aggregate Root:  
+[Communities.SocialGroups](Communities.SocialGroups.md)  
+
 ## Attributes
 
 | Name | Type | Description |

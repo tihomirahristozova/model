@@ -10,6 +10,11 @@ _{DisplayName:T}_
 Default Search Member:  
 _DisplayName_  
 
+Aggregate Parent:  
+[Systems.Security.Domains](Systems.Security.Domains.md)  
+Aggregate Root:  
+[Systems.Security.Domains](Systems.Security.Domains.md)  
+
 ## Attributes
 
 | Name | Type | Description |

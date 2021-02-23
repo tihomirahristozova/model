@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Logistics.Wms.WarehouseOrderFulfillments](Logistics.Wms.WarehouseOrderFulfillments.md)  
+
 ## Attributes
 
 | Name | Type | Description |

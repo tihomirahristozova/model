@@ -10,6 +10,11 @@ _{Code}_
 Default Search Member:  
 _Code_  
 
+Aggregate Parent:  
+[Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)  
+Aggregate Root:  
+[Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)  
+
 ## Attributes
 
 | Name | Type | Description |

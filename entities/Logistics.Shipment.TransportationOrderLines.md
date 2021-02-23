@@ -10,6 +10,11 @@ _{TransportationOrder.DocumentType.Code}:{TransportationOrder.DocumentNo}:{LineN
 Default Search Member:  
 _TransportationOrder.DocumentNo_  
 
+Aggregate Parent:  
+[Logistics.Shipment.TransportationOrders](Logistics.Shipment.TransportationOrders.md)  
+Aggregate Root:  
+[Logistics.Shipment.TransportationOrders](Logistics.Shipment.TransportationOrders.md)  
+
 ## Attributes
 
 | Name | Type | Description |

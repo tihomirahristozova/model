@@ -10,6 +10,9 @@ _{StoreOrderLineId}: {DocumentDate}_
 Default Search Member:  
 _StoreOrderLineId_  
 
+Aggregate Tree:  
+* [Logistics.Inventory.StoreOrderLinesUnfulfilledView](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md)  
+
 ## Attributes
 
 | Name | Type | Description |

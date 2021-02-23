@@ -10,6 +10,11 @@ _{WorkElementCode}: {WorkElementName:T}_
 Default Search Member:  
 _WorkElementCode_  
 
+Aggregate Parent:  
+[Projects.ProjectTypes](Projects.ProjectTypes.md)  
+Aggregate Root:  
+[Projects.ProjectTypes](Projects.ProjectTypes.md)  
+
 ## Attributes
 
 | Name | Type | Description |

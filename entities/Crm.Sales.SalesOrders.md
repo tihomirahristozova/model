@@ -10,6 +10,12 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
+Aggregate Tree:  
+* [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)  
+  * [Crm.Sales.SalesOrderLines](Crm.Sales.SalesOrderLines.md)  
+  * [Crm.Sales.SalesOrderPaymentPlans](Crm.Sales.SalesOrderPaymentPlans.md)  
+  * [Crm.Sales.SalesOrderPromotionalPackages](Crm.Sales.SalesOrderPromotionalPackages.md)  
+
 ## Attributes
 
 | Name | Type | Description |

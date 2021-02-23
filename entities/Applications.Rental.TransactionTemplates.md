@@ -10,6 +10,9 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
+Aggregate Tree:  
+* [Applications.Rental.TransactionTemplates](Applications.Rental.TransactionTemplates.md)  
+
 ## Attributes
 
 | Name | Type | Description |

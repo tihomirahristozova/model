@@ -10,6 +10,11 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
+Aggregate Parent:  
+[Production.Resources.OperationGroups](Production.Resources.OperationGroups.md)  
+Aggregate Root:  
+[Production.Resources.OperationGroups](Production.Resources.OperationGroups.md)  
+
 ## Attributes
 
 | Name | Type | Description |

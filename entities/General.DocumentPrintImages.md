@@ -10,6 +10,11 @@ _{PrintoutLayout.DocumentEntityName:T}_
 Default Search Member:  
 _PrintoutLayout.DocumentEntityName_  
 
+Aggregate Parent:  
+[General.PrintoutLayouts](General.PrintoutLayouts.md)  
+Aggregate Root:  
+[General.PrintoutLayouts](General.PrintoutLayouts.md)  
+
 ## Attributes
 
 | Name | Type | Description |
