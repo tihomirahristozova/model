@@ -3,14 +3,19 @@ uid: Systems.Core.Translations
 ---
 # Systems.Core.Translations Entity
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 Contains user-defined translations for non-english languages of the user interface and program messages. Entity: Sys_Translations
 
+## Default Visualization
 Default Display Text Format:  
 _{ApplicationName:T}_  
 Default Search Member:  
 _ApplicationName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Core.Translations](Systems.Core.Translations.md)  
 
 ## Attributes

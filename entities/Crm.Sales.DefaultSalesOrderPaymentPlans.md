@@ -3,16 +3,21 @@ uid: Crm.Sales.DefaultSalesOrderPaymentPlans
 ---
 # Crm.Sales.DefaultSalesOrderPaymentPlans Entity
 
+**Namespace:** [Crm.Sales](Crm.Sales.md)  
+
 Default payment plan for new documents of the specified document type. Entity: Crm_Default_Sales_Order_Payment_Plans
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}: {DocumentType.EntityName:T}_  
 Default Search Member:  
 _DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

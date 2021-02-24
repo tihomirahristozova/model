@@ -3,16 +3,21 @@ uid: General.Resources.Resources
 ---
 # General.Resources.Resources Entity
 
+**Namespace:** [General.Resources](General.Resources.md)  
+
 Enterprise resources, categorized by groups. Entity: Gen_Resources
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Resources.ResourceGroups](General.Resources.ResourceGroups.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Resources.ResourceGroups](General.Resources.ResourceGroups.md)  
 
 ## Attributes

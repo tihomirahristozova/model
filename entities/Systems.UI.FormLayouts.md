@@ -3,14 +3,19 @@ uid: Systems.UI.FormLayouts
 ---
 # Systems.UI.FormLayouts Entity
 
+**Namespace:** [Systems.UI](Systems.UI.md)  
+
 Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
 
+## Default Visualization
 Default Display Text Format:  
 _{ApplicationName:T}_  
 Default Search Member:  
 _ApplicationName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.UI.FormLayouts](Systems.UI.FormLayouts.md)  
 
 ## Attributes

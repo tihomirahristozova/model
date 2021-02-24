@@ -3,14 +3,20 @@ uid: Finance.Cost.Calculations
 ---
 # Finance.Cost.Calculations Entity
 
+**Namespace:** [Finance.Cost](Finance.Cost.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Represents one cost calculation and allocation. Entity: Cost_Calculations
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Cost.Calculations](Finance.Cost.Calculations.md)  
   * [Finance.Cost.CalculationCosts](Finance.Cost.CalculationCosts.md)  
   * [Finance.Cost.CalculationProductOutputs](Finance.Cost.CalculationProductOutputs.md)  

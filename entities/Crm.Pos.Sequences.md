@@ -3,14 +3,19 @@ uid: Crm.Pos.Sequences
 ---
 # Crm.Pos.Sequences Entity
 
+**Namespace:** [Crm.Pos](Crm.Pos.md)  
+
 Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequences (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Pos.Sequences](Crm.Pos.Sequences.md)  
 
 ## Attributes

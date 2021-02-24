@@ -3,14 +3,19 @@ uid: General.Products.ProductTypes
 ---
 # General.Products.ProductTypes Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 Categorization of the products by their nature. Entity: Gen_Product_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Products.ProductTypes](General.Products.ProductTypes.md)  
   * [General.Products.ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md)  
   * [Crm.Pos.ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md)  

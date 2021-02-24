@@ -3,14 +3,20 @@ uid: Finance.Assets.AssetTransactions
 ---
 # Finance.Assets.AssetTransactions Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Basic asset value transactions. The transactions can increase or decrease any of the 5 asset values. Entity: Ast_Asset_Transactions
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Assets.AssetTransactions](Finance.Assets.AssetTransactions.md)  
   * [Finance.Assets.AssetTransactionLines](Finance.Assets.AssetTransactionLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

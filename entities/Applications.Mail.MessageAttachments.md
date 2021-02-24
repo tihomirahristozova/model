@@ -3,16 +3,21 @@ uid: Applications.Mail.MessageAttachments
 ---
 # Applications.Mail.MessageAttachments Entity
 
+**Namespace:** [Applications.Mail](Applications.Mail.md)  
+
 Represents attachments to mail messages. Entity: Mail_Message_Attachments
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Mail.Messages](Applications.Mail.Messages.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Mail.Boxes](Applications.Mail.Boxes.md)  
 
 ## Attributes

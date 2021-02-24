@@ -3,14 +3,20 @@ uid: Production.ShopFloor.OutputOrders
 ---
 # Production.ShopFloor.OutputOrders Entity
 
+**Namespace:** [Production.ShopFloor](Production.ShopFloor.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Stores the output and run-time of the work orders. Entity: Prd_Output_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Production.ShopFloor.OutputOrders](Production.ShopFloor.OutputOrders.md)  
   * [Production.ShopFloor.OutputOrderConsumptionLines](Production.ShopFloor.OutputOrderConsumptionLines.md)  
   * [Production.ShopFloor.OutputOrderLines](Production.ShopFloor.OutputOrderLines.md)  

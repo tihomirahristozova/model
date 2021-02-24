@@ -3,16 +3,21 @@ uid: Finance.Intrastat.DeclarationLines
 ---
 # Finance.Intrastat.DeclarationLines Entity
 
+**Namespace:** [Finance.Intrastat](Finance.Intrastat.md)  
+
 Contains the details of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declaration_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{IntrastatDeclaration.DocumentType.Code}:{IntrastatDeclaration.DocumentNo} - {IntrastatDeclaration.DocumentType.TypeName:T}_  
 Default Search Member:  
 _IntrastatDeclaration.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Intrastat.Declarations](Finance.Intrastat.Declarations.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Intrastat.Declarations](Finance.Intrastat.Declarations.md)  
 
 ## Attributes

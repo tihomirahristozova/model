@@ -3,14 +3,19 @@ uid: Crm.Marketing.Campaigns
 ---
 # Crm.Marketing.Campaigns Entity
 
+**Namespace:** [Crm.Marketing](Crm.Marketing.md)  
+
 Marketing campaigns. Used to treat target groups with marketing messages, plan budgets and marketing activities. Entity: Crm_Campaigns
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Marketing.Campaigns](Crm.Marketing.Campaigns.md)  
 
 ## Attributes

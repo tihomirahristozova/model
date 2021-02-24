@@ -3,14 +3,20 @@ uid: Finance.Assets.AssetOrders
 ---
 # Finance.Assets.AssetOrders Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Asset purchase or sales order. Entity: Ast_Asset_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Assets.AssetOrders](Finance.Assets.AssetOrders.md)  
   * [Finance.Assets.AssetOrderLines](Finance.Assets.AssetOrderLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

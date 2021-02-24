@@ -3,16 +3,21 @@ uid: General.Products.ProductDocumentAmounts
 ---
 # General.Products.ProductDocumentAmounts Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 Contains custom percent ratios for additional amount distribution over products. Entity: Gen_Product_Document_Amounts
 
+## Default Visualization
 Default Display Text Format:  
 _{Product.PartNumber}: {Product.Name:T}_  
 Default Search Member:  
 _Product.PartNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Products.Products](General.Products.Products.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Products.Products](General.Products.Products.md)  
 
 ## Attributes

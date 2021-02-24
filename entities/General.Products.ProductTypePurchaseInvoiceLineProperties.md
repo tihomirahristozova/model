@@ -3,16 +3,21 @@ uid: General.Products.ProductTypePurchaseInvoiceLineProperties
 ---
 # General.Products.ProductTypePurchaseInvoiceLineProperties Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 When specified for a product type, contains the suggested user-defined properties, which can be specified when creating new purchase invoice lines with products of this type. Entity: Gen_Product_Type_Purchase_Invoice_Line_Properties
 
+## Default Visualization
 Default Display Text Format:  
 _{ProductType.Code}: {ProductType.Name:T}_  
 Default Search Member:  
 _ProductType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Products.ProductTypes](General.Products.ProductTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Products.ProductTypes](General.Products.ProductTypes.md)  
 
 ## Attributes

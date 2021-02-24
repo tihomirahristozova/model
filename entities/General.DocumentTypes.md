@@ -3,14 +3,19 @@ uid: General.DocumentTypes
 ---
 # General.DocumentTypes Entity
 
+**Namespace:** [General](General.md)  
+
 List of user-defined document types. Each type has associated system entity (object class). Entity: Gen_Document_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {EntityName:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.DocumentTypes](General.DocumentTypes.md)  
   * [Crm.Invoicing.InvoicesOptions](Crm.Invoicing.InvoicesOptions.md)  
   * [Crm.Presales.OffersOptions](Crm.Presales.OffersOptions.md)  

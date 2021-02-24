@@ -3,16 +3,21 @@ uid: Logistics.Shipment.ShipmentOrderLines
 ---
 # Logistics.Shipment.ShipmentOrderLines Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+
 Represents detail lines of orders for shipment of sales orders to customers. Each line orders the shipment of one product. Entity: Log_Shipment_Order_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{ShipmentOrder.DocumentType.Code}:{ShipmentOrder.DocumentNo}:{LineNo} - {ShipmentOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ShipmentOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Shipment.ShipmentOrders](Logistics.Shipment.ShipmentOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Shipment.ShipmentOrders](Logistics.Shipment.ShipmentOrders.md)  
 
 ## Attributes

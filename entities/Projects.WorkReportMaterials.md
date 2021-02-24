@@ -3,16 +3,21 @@ uid: Projects.WorkReportMaterials
 ---
 # Projects.WorkReportMaterials Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Each record contains a consumed material, reported by the related Work Report. Entity: Prj_Work_Report_Materials
 
+## Default Visualization
 Default Display Text Format:  
 _{WorkReport.DocumentType.Code}:{WorkReport.DocumentNo} - {WorkReport.DocumentType.TypeName:T}_  
 Default Search Member:  
 _WorkReport.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Projects.WorkReports](Projects.WorkReports.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Projects.WorkReports](Projects.WorkReports.md)  
 
 ## Attributes

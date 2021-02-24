@@ -3,14 +3,20 @@ uid: Applications.Service.ServiceOrders
 ---
 # Applications.Service.ServiceOrders Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Service Orders are issued when a new servicing is required. Entity: Srv_Service_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Service.ServiceOrders](Applications.Service.ServiceOrders.md)  
   * [Applications.Service.ServiceOrderLines](Applications.Service.ServiceOrderLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

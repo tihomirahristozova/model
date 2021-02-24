@@ -3,14 +3,19 @@ uid: General.Currencies
 ---
 # General.Currencies Entity
 
+**Namespace:** [General](General.md)  
+
 List of user-defined currencies. Entity: Gen_Currencies
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Currencies](General.Currencies.md)  
 
 ## Attributes

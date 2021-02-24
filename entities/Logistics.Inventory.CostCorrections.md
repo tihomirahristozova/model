@@ -3,14 +3,20 @@ uid: Logistics.Inventory.CostCorrections
 ---
 # Logistics.Inventory.CostCorrections Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Cost corrections provide a way to correct the cost of stock transactions after they are issued. Entity: Inv_Cost_Corrections
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.CostCorrections](Logistics.Inventory.CostCorrections.md)  
   * [Logistics.Inventory.CostCorrectionLines](Logistics.Inventory.CostCorrectionLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

@@ -3,16 +3,21 @@ uid: Finance.Payments.PaymentTransactionLines
 ---
 # Finance.Payments.PaymentTransactionLines Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+
 Contains the distibution of the payments' amounts among the source payment orders. Entity: Cash_Payment_Transaction_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{PaymentTransaction.DocumentType.Code}:{PaymentTransaction.DocumentNo} - {PaymentTransaction.DocumentType.TypeName:T}_  
 Default Search Member:  
 _PaymentTransaction.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Payments.PaymentTransactions](Finance.Payments.PaymentTransactions.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Payments.PaymentTransactions](Finance.Payments.PaymentTransactions.md)  
 
 ## Attributes

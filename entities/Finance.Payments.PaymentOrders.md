@@ -3,14 +3,20 @@ uid: Finance.Payments.PaymentOrders
 ---
 # Finance.Payments.PaymentOrders Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Each payment order contains a receivable or payable amount. Entity: Cash_Payment_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Payments.PaymentOrders](Finance.Payments.PaymentOrders.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  
     * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  

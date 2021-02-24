@@ -3,14 +3,19 @@ uid: Systems.Core.ObjectChangesets
 ---
 # Systems.Core.ObjectChangesets Entity
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 A set of changes, performed in one request. Entity: Sys_Object_Changesets (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{ApplicationName:T}_  
 Default Search Member:  
 _ApplicationName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)  
   * [Systems.Core.ObjectChanges](Systems.Core.ObjectChanges.md)  
     * [Systems.Core.AttributeChanges](Systems.Core.AttributeChanges.md)  

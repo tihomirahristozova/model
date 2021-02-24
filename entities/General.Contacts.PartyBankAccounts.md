@@ -3,16 +3,21 @@ uid: General.Contacts.PartyBankAccounts
 ---
 # General.Contacts.PartyBankAccounts Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 The bank accounts of a party. Entity: Gen_Party_Bank_Accounts
 
+## Default Visualization
 Default Display Text Format:  
 _{BankAccountCode}: {BankBranchName:T}_  
 Default Search Member:  
 _BankAccountCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

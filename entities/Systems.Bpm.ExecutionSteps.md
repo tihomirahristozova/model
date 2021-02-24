@@ -3,14 +3,19 @@ uid: Systems.Bpm.ExecutionSteps
 ---
 # Systems.Bpm.ExecutionSteps Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 Contains both historical and active steps in the execution of the business processes. Entity: Bpm_Execution_Steps
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Bpm.ExecutionSteps](Systems.Bpm.ExecutionSteps.md)  
 
 ## Attributes

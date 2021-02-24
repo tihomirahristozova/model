@@ -3,14 +3,20 @@ uid: Crm.Invoicing.Invoices
 ---
 # Crm.Invoicing.Invoices Entity
 
+**Namespace:** [Crm.Invoicing](Crm.Invoicing.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Invoices issued by the enterprise companies. Entity: Crm_Invoices
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Invoicing.Invoices](Crm.Invoicing.Invoices.md)  
   * [Crm.Invoicing.InvoiceLines](Crm.Invoicing.InvoiceLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

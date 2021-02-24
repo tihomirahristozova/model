@@ -3,14 +3,19 @@ uid: Applications.Cms.NewsWebModuleArticles
 ---
 # Applications.Cms.NewsWebModuleArticles Entity
 
+**Namespace:** [Applications.Cms](Applications.Cms.md)  
+
 Represents an article in a news web module. Entity: Cms_News_Web_Module_Articles
 
+## Default Visualization
 Default Display Text Format:  
 _{LanguageCode}_  
 Default Search Member:  
 _LanguageCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Cms.NewsWebModuleArticles](Applications.Cms.NewsWebModuleArticles.md)  
 
 ## Attributes

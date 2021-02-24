@@ -3,14 +3,20 @@ uid: Logistics.Procurement.PurchaseControlDocuments
 ---
 # Logistics.Procurement.PurchaseControlDocuments Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 The main document for purchase control data. The purchase control is used to tally all orders and execuctions in the purchasing module. Entity: Scm_Purchase_Control_Documents (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Procurement.PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)  
   * [Logistics.Procurement.PurchaseControlDocumentLines](Logistics.Procurement.PurchaseControlDocumentLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

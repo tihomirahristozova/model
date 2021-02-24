@@ -3,14 +3,19 @@ uid: General.Geography.Areas
 ---
 # General.Geography.Areas Entity
 
+**Namespace:** [General.Geography](General.Geography.md)  
+
 Areas are user-defined division of the sales territories. Entity: Gen_Areas
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Geography.Areas](General.Geography.Areas.md)  
 
 ## Attributes

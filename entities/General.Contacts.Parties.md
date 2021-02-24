@@ -3,14 +3,19 @@ uid: General.Contacts.Parties
 ---
 # General.Contacts.Parties Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 Contains base data for different kind of parties - companies, persons, departments, etc. Entity: Gen_Parties
 
+## Default Visualization
 Default Display Text Format:  
 _{PartyCode}: {PartyName:T}_  
 Default Search Member:  
 _PartyCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Contacts.Parties](General.Contacts.Parties.md)  
   * [Crm.Customers](Crm.Customers.md)  
     * [Crm.CustomerProducts](Crm.CustomerProducts.md)  

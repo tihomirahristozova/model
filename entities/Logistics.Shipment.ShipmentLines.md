@@ -3,16 +3,21 @@ uid: Logistics.Shipment.ShipmentLines
 ---
 # Logistics.Shipment.ShipmentLines Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+
 Represents detail lines of shipments. Each line contains the shipment of one product. Entity: Log_Shipment_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{Shipment.DocumentType.Code}:{Shipment.DocumentNo}:{LineNo} - {Shipment.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Shipment.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Shipment.Shipments](Logistics.Shipment.Shipments.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Shipment.Shipments](Logistics.Shipment.Shipments.md)  
 
 ## Attributes

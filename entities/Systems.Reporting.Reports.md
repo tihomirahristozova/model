@@ -3,14 +3,19 @@ uid: Systems.Reporting.Reports
 ---
 # Systems.Reporting.Reports Entity
 
+**Namespace:** [Systems.Reporting](Systems.Reporting.md)  
+
 User-defined reports. Reports retrieve data from data sources and present it in a user-defined layout. Entity: Sys_Reports
 
+## Default Visualization
 Default Display Text Format:  
 _{QueryName:T}_  
 Default Search Member:  
 _QueryName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Reporting.Reports](Systems.Reporting.Reports.md)  
 
 ## Attributes

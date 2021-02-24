@@ -3,16 +3,21 @@ uid: Logistics.Inventory.ReconciliationLines
 ---
 # Logistics.Inventory.ReconciliationLines Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Store reconciliations (physical counting) detail lines. Each line contains the reconciliation for one combination of product, lot, bin and serial number. Entity: Inv_Reconciliation_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{Reconciliation.DocumentType.Code}:{Reconciliation.DocumentNo}:{LineOrd} - {Reconciliation.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Reconciliation.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Inventory.Reconciliations](Logistics.Inventory.Reconciliations.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Inventory.Reconciliations](Logistics.Inventory.Reconciliations.md)  
 
 ## Attributes

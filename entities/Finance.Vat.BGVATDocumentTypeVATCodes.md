@@ -3,14 +3,19 @@ uid: Finance.Vat.BGVATDocumentTypeVATCodes
 ---
 # Finance.Vat.BGVATDocumentTypeVATCodes Entity
 
+**Namespace:** [Finance.Vat](Finance.Vat.md)  
+
 Contains the VAT codes, which should be used, when reporting VAT for the different document types. Entity: Nat_BG_VAT_Document_Type_VAT_Codes
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Vat.BGVATDocumentTypeVATCodes](Finance.Vat.BGVATDocumentTypeVATCodes.md)  
 
 ## Attributes

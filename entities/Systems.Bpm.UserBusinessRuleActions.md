@@ -3,16 +3,21 @@ uid: Systems.Bpm.UserBusinessRuleActions
 ---
 # Systems.Bpm.UserBusinessRuleActions Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 Represents an action within a business rule. Entity: Sys_User_Business_Rule_Actions
 
+## Default Visualization
 Default Display Text Format:  
 _{UserBusinessRule.Code}: {UserBusinessRule.RepositoryName:T}_  
 Default Search Member:  
 _UserBusinessRule.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
 
 ## Attributes

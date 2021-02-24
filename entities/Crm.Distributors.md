@@ -3,16 +3,21 @@ uid: Crm.Distributors
 ---
 # Crm.Distributors Entity
 
+**Namespace:** [Crm](Crm.md)  
+
 Distributors are external for the enterprise persons or companies who obtain sales orders from end-customers in benefit of the enterprise. Entity: Crm_Distributors
 
+## Default Visualization
 Default Display Text Format:  
 _{Party.PartyCode}: {Party.PartyName:T}_  
 Default Search Member:  
 _Party.PartyCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

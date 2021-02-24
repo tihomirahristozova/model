@@ -3,14 +3,19 @@ uid: Finance.Cost.AllocationModels
 ---
 # Finance.Cost.AllocationModels Entity
 
+**Namespace:** [Finance.Cost](Finance.Cost.md)  
+
 User-defined models for cost allocation. Entity: Cost_Allocation_Models
 
+## Default Visualization
 Default Display Text Format:  
 _{CostAllocationModelName:T}_  
 Default Search Member:  
 _CostAllocationModelName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Cost.AllocationModels](Finance.Cost.AllocationModels.md)  
 
 ## Attributes

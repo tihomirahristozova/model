@@ -3,14 +3,19 @@ uid: General.Config
 ---
 # General.Config Entity
 
+**Namespace:** [General](General.md)  
+
 Hierarchical repository of configuration options. Entity: Gen_Config
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Config](General.Config.md)  
 
 ## Attributes

@@ -3,14 +3,20 @@ uid: Logistics.Inventory.StoreOrders
 ---
 # Logistics.Inventory.StoreOrders Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Orders for store transactions. After an order is executed, store transaction is created. Entity: Inv_Store_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.StoreOrders](Logistics.Inventory.StoreOrders.md)  
   * [Logistics.Inventory.StoreOrderLines](Logistics.Inventory.StoreOrderLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

@@ -3,14 +3,20 @@ uid: Finance.Vat.BGVATDeclarations
 ---
 # Finance.Vat.BGVATDeclarations Entity
 
+**Namespace:** [Finance.Vat](Finance.Vat.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 National data: Contains the VAT declarations, issued by the enterprise company, according to the Bulgarian legislation. Entity: Nat_BG_VAT_Declarations
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Vat.BGVATDeclarations](Finance.Vat.BGVATDeclarations.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  
     * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  

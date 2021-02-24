@@ -3,14 +3,19 @@ uid: Crm.Distribution.SalesPersonGroups
 ---
 # Crm.Distribution.SalesPersonGroups Entity
 
+**Namespace:** [Crm.Distribution](Crm.Distribution.md)  
+
 Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Distribution.SalesPersonGroups](Crm.Distribution.SalesPersonGroups.md)  
 
 ## Attributes

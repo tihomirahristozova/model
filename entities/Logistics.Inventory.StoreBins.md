@@ -3,16 +3,21 @@ uid: Logistics.Inventory.StoreBins
 ---
 # Logistics.Inventory.StoreBins Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 The storage locations within a store. If there are no differentiated storage locations, create only one, called “(Default)” or similar. Entity: Inv_Store_Bins
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
 
 ## Attributes

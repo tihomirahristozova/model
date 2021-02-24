@@ -3,14 +3,20 @@ uid: Finance.Accounting.AccountingVouchers
 ---
 # Finance.Accounting.AccountingVouchers Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains the accounting vouchers (postings) in the general ledger. Entity: Acc_Vouchers
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)  
   * [Finance.Accounting.VoucherCorrespondances](Finance.Accounting.VoucherCorrespondances.md)  
   * [Finance.Accounting.AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md)  

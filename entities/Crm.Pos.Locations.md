@@ -3,14 +3,19 @@ uid: Crm.Pos.Locations
 ---
 # Crm.Pos.Locations Entity
 
+**Namespace:** [Crm.Pos](Crm.Pos.md)  
+
 Defines a company location as POS enabled location. Entity: Pos_Locations (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{PosLocationCode}_  
 Default Search Member:  
 _PosLocationCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Pos.Locations](Crm.Pos.Locations.md)  
 
 ## Attributes

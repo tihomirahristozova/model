@@ -3,16 +3,21 @@ uid: Finance.Cost.CalculationProductOutputs
 ---
 # Finance.Cost.CalculationProductOutputs Entity
 
+**Namespace:** [Finance.Cost](Finance.Cost.md)  
+
 Represents costs allocated to product outputs. Entity: Cost_Calculation_Product_Outputs
 
+## Default Visualization
 Default Display Text Format:  
 _{Calculation.DocumentType.Code}:{Calculation.DocumentNo} - {Calculation.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Calculation.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Cost.Calculations](Finance.Cost.Calculations.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Cost.Calculations](Finance.Cost.Calculations.md)  
 
 ## Attributes

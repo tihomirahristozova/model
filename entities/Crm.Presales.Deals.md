@@ -3,14 +3,20 @@ uid: Crm.Presales.Deals
 ---
 # Crm.Presales.Deals Entity
 
+**Namespace:** [Crm.Presales](Crm.Presales.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Potential deals (Opportunities). Entity: Crm_Deals
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Presales.Deals](Crm.Presales.Deals.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  
     * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  

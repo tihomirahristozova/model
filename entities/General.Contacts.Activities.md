@@ -3,14 +3,20 @@ uid: General.Contacts.Activities
 ---
 # General.Contacts.Activities Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Generic activity. Provides task management functionality. Activity can be one of Task, Communication or Meeting. Entity: Cm_Activities
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Contacts.Activities](General.Contacts.Activities.md)  
   * [General.Contacts.ActivityParticipants](General.Contacts.ActivityParticipants.md)  
   * [General.Contacts.ActivityResources](General.Contacts.ActivityResources.md)  

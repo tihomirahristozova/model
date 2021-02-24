@@ -3,14 +3,19 @@ uid: Applications.Fleet.VehicleObdTroubles
 ---
 # Applications.Fleet.VehicleObdTroubles Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Contains troubles, reported by the on-board diagnostics (OBD) of the vehicle. Entity: Fleet_Vehicle_Obd_Troubles
 
+## Default Visualization
 Default Display Text Format:  
 _{DiagnosticTroubleCode}_  
 Default Search Member:  
 _DiagnosticTroubleCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Fleet.VehicleObdTroubles](Applications.Fleet.VehicleObdTroubles.md)  
 
 ## Attributes

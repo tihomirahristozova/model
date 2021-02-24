@@ -3,16 +3,21 @@ uid: Applications.Rental.AssetConsumables
 ---
 # Applications.Rental.AssetConsumables Entity
 
+**Namespace:** [Applications.Rental](Applications.Rental.md)  
+
 Consumables are products, which are usually sold accompanying an asset rental. Entity: Rent_Asset_Consumables
 
+## Default Visualization
 Default Display Text Format:  
 _{RentalAsset.RentalAssetCode}: {RentalAsset.RentalAssetName:T}_  
 Default Search Member:  
 _RentalAsset.RentalAssetCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Rental.Assets](Applications.Rental.Assets.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Rental.AssetGroups](Applications.Rental.AssetGroups.md)  
 
 ## Attributes

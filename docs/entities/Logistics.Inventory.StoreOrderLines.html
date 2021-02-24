@@ -79,14 +79,18 @@
             <article class="content wrap" id="_content" data-uid="Logistics.Inventory.StoreOrderLines">
 <h1 id="logisticsinventorystoreorderlines-entity">Logistics.Inventory.StoreOrderLines Entity</h1>
 
+<p><strong>Namespace:</strong> <a href="Logistics.Inventory.html">Logistics.Inventory</a></p>
 <p>Detail lines of store orders. Each line represents one planned stock transaction line, but can be executed in parts. E.g. many transaction lines can be bound to one order line. Entity: Inv_Store_Order_Lines</p>
+<h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
 <em>{StoreOrder.DocumentType.Code}:{StoreOrder.DocumentNo}:{LineNo} - {StoreOrder.DocumentType.TypeName:T}</em><br>
 Default Search Member:<br>
 <em>StoreOrder.DocumentNo</em></p>
-<p><a href="xref:aggregates">Aggregate</a> Parent:<br>
+<h2 id="aggregate">Aggregate</h2>
+<p>@aggregates<br>
+Aggregate Parent:<br>
 <a href="Logistics.Inventory.StoreOrders.html">Logistics.Inventory.StoreOrders</a><br>
-<a href="xref:aggregates">Aggregate</a> Root:<br>
+Aggregate Root:<br>
 <a href="Logistics.Inventory.StoreOrders.html">Logistics.Inventory.StoreOrders</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>

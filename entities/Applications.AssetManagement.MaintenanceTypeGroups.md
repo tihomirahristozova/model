@@ -3,14 +3,19 @@ uid: Applications.AssetManagement.MaintenanceTypeGroups
 ---
 # Applications.AssetManagement.MaintenanceTypeGroups Entity
 
+**Namespace:** [Applications.AssetManagement](Applications.AssetManagement.md)  
+
 Represents the hierarchy of the groups of maintenance types. Entity: Eam_Maintenance_Type_Groups (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.AssetManagement.MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md)  
 
 ## Attributes

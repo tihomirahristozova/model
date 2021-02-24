@@ -3,16 +3,21 @@ uid: Logistics.Wms.WarehouseRequisitionLines
 ---
 # Logistics.Wms.WarehouseRequisitionLines Entity
 
+**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
+
 Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requisition_Lines (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{WarehouseRequisition.DocumentType.Code}:{WarehouseRequisition.DocumentNo}:{LineNo} - {WarehouseRequisition.DocumentType.TypeName:T}_  
 Default Search Member:  
 _WarehouseRequisition.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Wms.WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Wms.WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)  
 
 ## Attributes

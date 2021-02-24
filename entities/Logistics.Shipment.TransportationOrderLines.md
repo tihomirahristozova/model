@@ -3,16 +3,21 @@ uid: Logistics.Shipment.TransportationOrderLines
 ---
 # Logistics.Shipment.TransportationOrderLines Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+
 Different cargoes of a transportation order. Entity: Log_Transportation_Order_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{TransportationOrder.DocumentType.Code}:{TransportationOrder.DocumentNo}:{LineNo} - {TransportationOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _TransportationOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Shipment.TransportationOrders](Logistics.Shipment.TransportationOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Shipment.TransportationOrders](Logistics.Shipment.TransportationOrders.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: General.Products.ProductGroupRangeProperties
 ---
 # General.Products.ProductGroupRangeProperties Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 When specified for a product group, provides a way for automatical creation of new products, based on altering a set of values of some user-defined properties. Each value combination is used to create a new, unique product within the group. Entity: Gen_Product_Group_Range_Properties
 
+## Default Visualization
 Default Display Text Format:  
 _{ProductGroup.NextPartNumber}: {ProductGroup.Name:T}_  
 Default Search Member:  
 _ProductGroup.NextPartNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Products.ProductGroups](General.Products.ProductGroups.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Products.ProductGroups](General.Products.ProductGroups.md)  
 
 ## Attributes

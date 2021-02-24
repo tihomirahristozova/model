@@ -3,14 +3,19 @@ uid: General.Products.VariantStyles
 ---
 # General.Products.VariantStyles Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 Contains the different styles, which can be assigned to product variants. Entity: Gen_Variant_Styles
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Products.VariantStyles](General.Products.VariantStyles.md)  
 
 ## Attributes

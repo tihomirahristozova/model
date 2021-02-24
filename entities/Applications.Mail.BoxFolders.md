@@ -3,16 +3,21 @@ uid: Applications.Mail.BoxFolders
 ---
 # Applications.Mail.BoxFolders Entity
 
+**Namespace:** [Applications.Mail](Applications.Mail.md)  
+
 Contains the folders inside the mailboxes. Entity: Mail_Box_Folders
 
+## Default Visualization
 Default Display Text Format:  
 _{FolderName:T}_  
 Default Search Member:  
 _FolderName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Mail.Boxes](Applications.Mail.Boxes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Mail.Boxes](Applications.Mail.Boxes.md)  
 
 ## Attributes

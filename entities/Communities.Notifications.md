@@ -3,14 +3,19 @@ uid: Communities.Notifications
 ---
 # Communities.Notifications Entity
 
+**Namespace:** [Communities](Communities.md)  
+
 A single notification of a user. Entity: Cmm_Notifications (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Communities.Notifications](Communities.Notifications.md)  
 
 ## Attributes

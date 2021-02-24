@@ -3,14 +3,19 @@ uid: Systems.Core.DataEntryDefaultValues
 ---
 # Systems.Core.DataEntryDefaultValues Entity
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 Contains user-specified default values for columns in data entry forms. Entity: Sys_Default_Values
 
+## Default Visualization
 Default Display Text Format:  
 _{ColumnName:T}_  
 Default Search Member:  
 _ColumnName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Core.DataEntryDefaultValues](Systems.Core.DataEntryDefaultValues.md)  
 
 ## Attributes

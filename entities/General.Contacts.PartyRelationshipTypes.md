@@ -3,14 +3,19 @@ uid: General.Contacts.PartyRelationshipTypes
 ---
 # General.Contacts.PartyRelationshipTypes Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 Defines the types of relationships possible between the parties. Entity: Cm_Party_Relationship_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{RelationshipTypeName:T}_  
 Default Search Member:  
 _RelationshipTypeName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Contacts.PartyRelationshipTypes](General.Contacts.PartyRelationshipTypes.md)  
 
 ## Attributes

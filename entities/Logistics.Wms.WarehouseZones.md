@@ -3,16 +3,21 @@ uid: Logistics.Wms.WarehouseZones
 ---
 # Logistics.Wms.WarehouseZones Entity
 
+**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
+
 One zone within a warehouse. Each zone can have different rack structure and different temperature and other properties. Entity: Wms_Warehouse_Zones (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
 
 ## Attributes

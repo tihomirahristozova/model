@@ -3,14 +3,19 @@ uid: General.Documents
 ---
 # General.Documents Entity
 
+**Namespace:** [General](General.md)  
+
 Contains all documents issued by and to the enterprise. Entity: Gen_Documents
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Documents](General.Documents.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  
     * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  

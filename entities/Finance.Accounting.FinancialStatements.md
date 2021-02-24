@@ -3,14 +3,19 @@ uid: Finance.Accounting.FinancialStatements
 ---
 # Finance.Accounting.FinancialStatements Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Contains the user-defined financial statement definitions. Entity: Acc_Financial_Statements
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Accounting.FinancialStatements](Finance.Accounting.FinancialStatements.md)  
   * [Finance.Accounting.FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md)  
     * [Finance.Accounting.FinancialStatementNodeCorrespondances](Finance.Accounting.FinancialStatementNodeCorrespondances.md)  

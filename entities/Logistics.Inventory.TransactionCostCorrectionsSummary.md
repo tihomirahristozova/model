@@ -3,16 +3,21 @@ uid: Logistics.Inventory.TransactionCostCorrectionsSummary
 ---
 # Logistics.Inventory.TransactionCostCorrectionsSummary View
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transaction_Cost_Corrections_Summary
 
+## Default Visualization
 Default Display Text Format:  
 _{BaseCostAdjustmentValue}: {CostCorrectionAmountValue}_  
 Default Search Member:  
 _BaseCostAdjustmentValue_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md)  
 
 ## Attributes

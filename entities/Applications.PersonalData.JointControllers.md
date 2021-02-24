@@ -3,16 +3,21 @@ uid: Applications.PersonalData.JointControllers
 ---
 # Applications.PersonalData.JointControllers Entity
 
+**Namespace:** [Applications.PersonalData](Applications.PersonalData.md)  
+
 Contains relationship between process and joint controllers. For processes with control role, these are the joint controllers. Otherwise, these are the joint controllers, on behalf of which the enterprise company processes the data. Entity: Pdm_Joint_Controllers (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{PersonalDataProcess.Code}: {PersonalDataProcess.Name:T}_  
 Default Search Member:  
 _PersonalDataProcess.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)  
 
 ## Attributes

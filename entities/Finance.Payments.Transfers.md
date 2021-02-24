@@ -3,14 +3,20 @@ uid: Finance.Payments.Transfers
 ---
 # Finance.Payments.Transfers Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Represents one fund transfer from one payment account to another. Entity: Cash_Transfers
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Payments.Transfers](Finance.Payments.Transfers.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  
     * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  

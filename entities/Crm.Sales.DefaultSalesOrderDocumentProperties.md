@@ -3,16 +3,21 @@ uid: Crm.Sales.DefaultSalesOrderDocumentProperties
 ---
 # Crm.Sales.DefaultSalesOrderDocumentProperties Entity
 
+**Namespace:** [Crm.Sales](Crm.Sales.md)  
+
 User-defined properties which shall be copied from the customer to the document for new documents of the specified document type. Entity: Crm_Default_Sales_Order_Document_Properties
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}: {DocumentType.EntityName:T}_  
 Default Search Member:  
 _DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

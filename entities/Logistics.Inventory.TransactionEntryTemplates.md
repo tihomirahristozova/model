@@ -3,14 +3,19 @@ uid: Logistics.Inventory.TransactionEntryTemplates
 ---
 # Logistics.Inventory.TransactionEntryTemplates Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.TransactionEntryTemplates](Logistics.Inventory.TransactionEntryTemplates.md)  
 
 ## Attributes

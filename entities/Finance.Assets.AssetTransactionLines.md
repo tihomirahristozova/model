@@ -3,16 +3,21 @@ uid: Finance.Assets.AssetTransactionLines
 ---
 # Finance.Assets.AssetTransactionLines Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+
 Asset value transaction lines. Each line changes the values of one asset in one valuation model. Entity: Ast_Asset_Transaction_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{AssetTransaction.DocumentType.Code}:{AssetTransaction.DocumentNo} - {AssetTransaction.DocumentType.TypeName:T}_  
 Default Search Member:  
 _AssetTransaction.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Assets.AssetTransactions](Finance.Assets.AssetTransactions.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Assets.AssetTransactions](Finance.Assets.AssetTransactions.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Production.Resources.WorkgroupShifts
 ---
 # Production.Resources.WorkgroupShifts Entity
 
+**Namespace:** [Production.Resources](Production.Resources.md)  
+
 Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts
 
+## Default Visualization
 Default Display Text Format:  
 _{ShiftName:T}_  
 Default Search Member:  
 _ShiftName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.Resources.Workgroups](Production.Resources.Workgroups.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.Resources.Workgroups](Production.Resources.Workgroups.md)  
 
 ## Attributes

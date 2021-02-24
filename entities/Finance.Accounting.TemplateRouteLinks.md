@@ -3,16 +3,21 @@ uid: Finance.Accounting.TemplateRouteLinks
 ---
 # Finance.Accounting.TemplateRouteLinks Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 When specified denotes that another route uses the template, initially bound to one route. Entity: Acc_Template_Route_Links
 
+## Default Visualization
 Default Display Text Format:  
 _{Route.ProcedureName:T}_  
 Default Search Member:  
 _Route.ProcedureName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Workflow.Routes](Systems.Workflow.Routes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

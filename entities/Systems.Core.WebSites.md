@@ -3,14 +3,19 @@ uid: Systems.Core.WebSites
 ---
 # Systems.Core.WebSites Entity
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Core.WebSites](Systems.Core.WebSites.md)  
 
 ## Attributes

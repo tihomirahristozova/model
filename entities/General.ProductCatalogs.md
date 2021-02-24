@@ -3,14 +3,19 @@ uid: General.ProductCatalogs
 ---
 # General.ProductCatalogs Entity
 
+**Namespace:** [General](General.md)  
+
 Product catalogs serve to organize the products for display primarily in web pages. Entity: Gen_Product_Catalogs
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.ProductCatalogs](General.ProductCatalogs.md)  
 
 ## Attributes

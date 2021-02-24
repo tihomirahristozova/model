@@ -3,16 +3,21 @@ uid: Logistics.Inventory.TransferOrderLines
 ---
 # Logistics.Inventory.TransferOrderLines Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Details of Transfer Orders. Each line contains order for the movement of one product. Entity: Inv_Transfer_Order_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{TransferOrder.DocumentType.Code}:{TransferOrder.DocumentNo}:{LineOrd} - {TransferOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _TransferOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Inventory.TransferOrders](Logistics.Inventory.TransferOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Inventory.TransferOrders](Logistics.Inventory.TransferOrders.md)  
 
 ## Attributes

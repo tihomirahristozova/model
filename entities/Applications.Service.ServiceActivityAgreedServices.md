@@ -3,16 +3,21 @@ uid: Applications.Service.ServiceActivityAgreedServices
 ---
 # Applications.Service.ServiceActivityAgreedServices Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+
 Contains the services, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Services
 
+## Default Visualization
 Default Display Text Format:  
 _{ServiceActivityService.ServiceActivity.DocumentType.Code}:{ServiceActivityService.ServiceActivity.DocumentNo}:{ServiceActivityService.LineNo} - {ServiceActivityService.ServiceActivity.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ServiceActivityService.ServiceActivity.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Service.ServiceActivityServices](Applications.Service.ServiceActivityServices.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)  
 
 ## Attributes

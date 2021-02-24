@@ -3,16 +3,21 @@ uid: Projects.ProjectParticipants
 ---
 # Projects.ProjectParticipants Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Represents participant in a project, with a specific role. The same participant can participate multiple times in different roles. Entity: Prj_Project_Participants
 
+## Default Visualization
 Default Display Text Format:  
 _{Project.Code}: {Project.Name:T}_  
 Default Search Member:  
 _Project.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Projects.Projects](Projects.Projects.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Projects.Projects](Projects.Projects.md)  
 
 ## Attributes

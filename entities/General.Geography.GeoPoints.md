@@ -3,14 +3,19 @@ uid: General.Geography.GeoPoints
 ---
 # General.Geography.GeoPoints Entity
 
+**Namespace:** [General.Geography](General.Geography.md)  
+
 Geographical (geo) points are used as points of interest on the map. They are used for routing and other purposes. The points of interest for the different enterprise companies are different. Entity: Gen_Geo_Points
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Geography.GeoPoints](General.Geography.GeoPoints.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Logistics.Inventory.StoreTransactionLines
 ---
 # Logistics.Inventory.StoreTransactionLines Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Details records of Transactions. Each detail contains the movement for one product. Entity: Inv_Transaction_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{TransactionObj.DocumentType.Code}:{TransactionObj.DocumentNo}:{LineNo} - {TransactionObj.DocumentType.TypeName:T}_  
 Default Search Member:  
 _TransactionObj.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md)  
 
 ## Attributes

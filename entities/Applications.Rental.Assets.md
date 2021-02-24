@@ -3,16 +3,21 @@ uid: Applications.Rental.Assets
 ---
 # Applications.Rental.Assets Entity
 
+**Namespace:** [Applications.Rental](Applications.Rental.md)  
+
 Contains the rentable assets. Entity: Rent_Assets
 
+## Default Visualization
 Default Display Text Format:  
 _{RentalAssetCode}: {RentalAssetName:T}_  
 Default Search Member:  
 _RentalAssetCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Rental.AssetGroups](Applications.Rental.AssetGroups.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Rental.AssetGroups](Applications.Rental.AssetGroups.md)  
 
 ## Attributes

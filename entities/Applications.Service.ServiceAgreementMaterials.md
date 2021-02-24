@@ -3,16 +3,21 @@ uid: Applications.Service.ServiceAgreementMaterials
 ---
 # Applications.Service.ServiceAgreementMaterials Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+
 Contains the free materials, included in the service agreement. Entity: Srv_Service_Agreement_Materials
 
+## Default Visualization
 Default Display Text Format:  
 _{ServiceAgreement.DocumentType.Code}:{ServiceAgreement.DocumentNo}:{LineNo} - {ServiceAgreement.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ServiceAgreement.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)  
 
 ## Attributes

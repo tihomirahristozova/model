@@ -3,16 +3,21 @@ uid: Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes
 ---
 # Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes Entity
 
+**Namespace:** [Applications.AssetManagement](Applications.AssetManagement.md)  
+
 Defines the types of maintenances, which are allowed for assets of the different types. Entity: Eam_Managed_Asset_Type_Maintenance_Types (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{ManagedAssetType.Code}: {ManagedAssetType.Name:T}_  
 Default Search Member:  
 _ManagedAssetType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)  
 
 ## Attributes

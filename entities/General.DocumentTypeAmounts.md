@@ -3,16 +3,21 @@ uid: General.DocumentTypeAmounts
 ---
 # General.DocumentTypeAmounts Entity
 
+**Namespace:** [General](General.md)  
+
 Specifies amount types, that should be automatically added to documents of a given type. Entity: Gen_Document_Type_Amounts
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}: {DocumentType.EntityName:T}_  
 Default Search Member:  
 _DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

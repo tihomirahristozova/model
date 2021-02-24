@@ -3,16 +3,21 @@ uid: Crm.Pos.Devices
 ---
 # Crm.Pos.Devices Entity
 
+**Namespace:** [Crm.Pos](Crm.Pos.md)  
+
 Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{PosTerminal.PosTerminalCode}: {PosTerminal.PosTerminalName:T}_  
 Default Search Member:  
 _PosTerminal.PosTerminalCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Crm.Pos.Terminals](Crm.Pos.Terminals.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Crm.Pos.Terminals](Crm.Pos.Terminals.md)  
 
 ## Attributes

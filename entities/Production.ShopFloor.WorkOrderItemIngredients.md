@@ -3,16 +3,21 @@ uid: Production.ShopFloor.WorkOrderItemIngredients
 ---
 # Production.ShopFloor.WorkOrderItemIngredients Entity
 
+**Namespace:** [Production.ShopFloor](Production.ShopFloor.md)  
+
 The materials consumed in the production order operations. Entity: Prd_Work_Order_Item_Ingredients
 
+## Default Visualization
 Default Display Text Format:  
 _{WorkOrder.DocumentType.Code}:{WorkOrder.DocumentNo}:{LineOrd} - {WorkOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _WorkOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.ShopFloor.WorkOrders](Production.ShopFloor.WorkOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.ShopFloor.WorkOrders](Production.ShopFloor.WorkOrders.md)  
 
 ## Attributes

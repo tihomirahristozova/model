@@ -3,16 +3,21 @@ uid: Crm.PromotionalPackageLines
 ---
 # Crm.PromotionalPackageLines Entity
 
+**Namespace:** [Crm](Crm.md)  
+
 Detail records (lines) of promotional package definition. Entity: Crm_Promotional_Package_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{PromotionalPackage.Code}: {PromotionalPackage.Name:T}_  
 Default Search Member:  
 _PromotionalPackage.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Crm.PromotionalPackages](Crm.PromotionalPackages.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Crm.PromotionalPackages](Crm.PromotionalPackages.md)  
 
 ## Attributes

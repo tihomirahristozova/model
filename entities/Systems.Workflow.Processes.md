@@ -3,14 +3,19 @@ uid: Systems.Workflow.Processes
 ---
 # Systems.Workflow.Processes Entity
 
+**Namespace:** [Systems.Workflow](Systems.Workflow.md)  
+
 Contains the business process diagrams. Entity: Wf_Processes
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Workflow.Processes](Systems.Workflow.Processes.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: General.PropertyEnterpriseCompanyFilters
 ---
 # General.PropertyEnterpriseCompanyFilters Entity
 
+**Namespace:** [General](General.md)  
+
 Provides a way to apply different filtering of the property allowed values for the different enterprise companies. Entity: Gen_Property_Enterprise_Company_Filters
 
+## Default Visualization
 Default Display Text Format:  
 _{Property.Code}: {Property.AllowedValuesEntityName:T}_  
 Default Search Member:  
 _Property.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.CustomProperties](General.CustomProperties.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.CustomProperties](General.CustomProperties.md)  
 
 ## Attributes

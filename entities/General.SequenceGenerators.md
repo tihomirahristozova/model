@@ -3,16 +3,21 @@ uid: General.SequenceGenerators
 ---
 # General.SequenceGenerators Entity
 
+**Namespace:** [General](General.md)  
+
 Contains one or more sequence generators for each sequence. Many sequence generators for one sequence are used when the generators must be selected conditionally or when more generators are needed for parallel numbering. Entity: Gen_Sequence_Generators
 
+## Default Visualization
 Default Display Text Format:  
 _{Sequence.Name:T}_  
 Default Search Member:  
 _Sequence.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Sequences](General.Sequences.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Sequences](General.Sequences.md)  
 
 ## Attributes

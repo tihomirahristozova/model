@@ -3,14 +3,19 @@ uid: Applications.DataWarehouse.DataMeasures
 ---
 # Applications.DataWarehouse.DataMeasures Entity
 
+**Namespace:** [Applications.DataWarehouse](Applications.DataWarehouse.md)  
+
 Contains the data measures of the General data warehouse. Entity: Dw_Data_Measures (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.DataWarehouse.DataMeasures](Applications.DataWarehouse.DataMeasures.md)  
 
 ## Attributes

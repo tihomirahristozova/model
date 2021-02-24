@@ -3,14 +3,19 @@ uid: Systems.Bpm.UserBusinessRules
 ---
 # Systems.Bpm.UserBusinessRules Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 Represents user-defined business rule. Entity: Sys_User_Business_Rules
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {RepositoryName:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
   * [Systems.Bpm.UserBusinessRuleActions](Systems.Bpm.UserBusinessRuleActions.md)  
   * [Systems.Bpm.UserBusinessRuleConditions](Systems.Bpm.UserBusinessRuleConditions.md)  

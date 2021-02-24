@@ -3,14 +3,19 @@ uid: General.LinkTypes
 ---
 # General.LinkTypes Entity
 
+**Namespace:** [General](General.md)  
+
 Obsolete. Not used. Entity: Gen_Link_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.LinkTypes](General.LinkTypes.md)  
 
 ## Attributes

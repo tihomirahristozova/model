@@ -3,14 +3,19 @@ uid: Logistics.Inventory.StoreGroups
 ---
 # Logistics.Inventory.StoreGroups Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Hierarchy of store groups. Entity: Inv_Store_Groups
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.StoreGroups](Logistics.Inventory.StoreGroups.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: General.Contacts.CompanyDepartments
 ---
 # General.Contacts.CompanyDepartments Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 Hierarchical structure of the company departments. The departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Departments
 
+## Default Visualization
 Default Display Text Format:  
 _{DepartmentName:T}_  
 Default Search Member:  
 _DepartmentName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Companies](General.Contacts.Companies.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Companies](General.Contacts.Companies.md)  
 
 ## Attributes

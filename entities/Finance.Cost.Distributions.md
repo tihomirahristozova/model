@@ -3,14 +3,20 @@ uid: Finance.Cost.Distributions
 ---
 # Finance.Cost.Distributions Entity
 
+**Namespace:** [Finance.Cost](Finance.Cost.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Used for cost distribution. Contains the period and the store of the cost distribution. Entity: Cost_Distributions
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Cost.Distributions](Finance.Cost.Distributions.md)  
   * [Finance.Cost.DistributionCosts](Finance.Cost.DistributionCosts.md)  
   * [Finance.Cost.DistributionOutputs](Finance.Cost.DistributionOutputs.md)  

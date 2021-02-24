@@ -3,16 +3,21 @@ uid: Finance.Payments.PaymentSlipAmounts
 ---
 # Finance.Payments.PaymentSlipAmounts Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+
 Mass payment amount. Each record generates one payment transaction. Entity: Cash_Payment_Slip_Amounts
 
+## Default Visualization
 Default Display Text Format:  
 _{PartyName:T}_  
 Default Search Member:  
 _PartyName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Payments.PaymentSlips](Finance.Payments.PaymentSlips.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Payments.PaymentSlips](Finance.Payments.PaymentSlips.md)  
 
 ## Attributes

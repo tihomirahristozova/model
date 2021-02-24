@@ -3,16 +3,21 @@ uid: General.Resources.WorkScheduleWorkingTime
 ---
 # General.Resources.WorkScheduleWorkingTime Entity
 
+**Namespace:** [General.Resources](General.Resources.md)  
+
 Contains the different working time periods within the work schedule. Entity: Gen_Work_Schedule_Working_Time
 
+## Default Visualization
 Default Display Text Format:  
 _{WorkSchedule.Name:T}_  
 Default Search Member:  
 _WorkSchedule.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)  
 
 ## Attributes

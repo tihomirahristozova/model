@@ -3,16 +3,21 @@ uid: Crm.Presales.OfferLines
 ---
 # Crm.Presales.OfferLines Entity
 
+**Namespace:** [Crm.Presales](Crm.Presales.md)  
+
 Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{Offer.DocumentType.Code}:{Offer.DocumentNo}:{LineNo} - {Offer.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Offer.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Crm.Presales.Offers](Crm.Presales.Offers.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Crm.Presales.Offers](Crm.Presales.Offers.md)  
 
 ## Attributes

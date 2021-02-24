@@ -3,14 +3,19 @@ uid: Crm.Marketing.TargetGroups
 ---
 # Crm.Marketing.TargetGroups Entity
 
+**Namespace:** [Crm.Marketing](Crm.Marketing.md)  
+
 Marketing target group, containing a fixed list of parties. Entity: Crm_Target_Groups
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md)  
   * [Crm.Marketing.TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md)  
 

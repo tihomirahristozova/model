@@ -3,16 +3,21 @@ uid: General.DocumentComments
 ---
 # General.DocumentComments Entity
 
+**Namespace:** [General](General.md)  
+
 Contains user comments for documents. Entity: Gen_Document_Comments
 
+## Default Visualization
 Default Display Text Format:  
 _{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Document.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Documents](General.Documents.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Documents](General.Documents.md)  
 
 ## Attributes

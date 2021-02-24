@@ -3,14 +3,19 @@ uid: Logistics.Wms.WarehouseAvailabilityView
 ---
 # Logistics.Wms.WarehouseAvailabilityView View
 
+**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
+
 The availability of goods in the warehouse locations of the warehouse. Entity: Wms_Warehouse_Availability_Indexed_View (Introduced in version 21.1.1.35)
 
+## Default Visualization
 Default Display Text Format:  
 _{WarehouseId}: {WarehouseLocationId}_  
 Default Search Member:  
 _WarehouseId_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Wms.WarehouseAvailabilityView](Logistics.Wms.WarehouseAvailabilityView.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Finance.Assets.DepreciationPlanLines
 ---
 # Finance.Assets.DepreciationPlanLines Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+
 Each record contains one depreciation plan for one valuation model of one asset. Entity: Ast_Depreciation_Plan_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{DepreciationPlan.DocumentType.Code}:{DepreciationPlan.DocumentNo}:{LineNo} - {DepreciationPlan.DocumentType.TypeName:T}_  
 Default Search Member:  
 _DepreciationPlan.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Assets.DepreciationPlans](Finance.Assets.DepreciationPlans.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Assets.DepreciationPlans](Finance.Assets.DepreciationPlans.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Systems.Core.ObjectFiles
 ---
 # Systems.Core.ObjectFiles Entity
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 Contains files attached to objects. Entity: Sys_Object_Files
 
+## Default Visualization
 Default Display Text Format:  
 _{PurposeCode}: {FileName:T}_  
 Default Search Member:  
 _PurposeCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: General.DocumentPrintImages
 ---
 # General.DocumentPrintImages Entity
 
+**Namespace:** [General](General.md)  
+
 Contains the data of a printout of a document as it was obtained from the data source in the moment of printing. Entity: Gen_Document_Print_Images
 
+## Default Visualization
 Default Display Text Format:  
 _{PrintoutLayout.DocumentEntityName:T}_  
 Default Search Member:  
 _PrintoutLayout.DocumentEntityName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.PrintoutLayouts](General.PrintoutLayouts.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.PrintoutLayouts](General.PrintoutLayouts.md)  
 
 ## Attributes

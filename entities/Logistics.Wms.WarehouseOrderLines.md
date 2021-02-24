@@ -3,16 +3,21 @@ uid: Logistics.Wms.WarehouseOrderLines
 ---
 # Logistics.Wms.WarehouseOrderLines Entity
 
+**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
+
 A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lines (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{WarehouseOrder.DocumentType.Code}:{WarehouseOrder.DocumentNo}:{LineNo} - {WarehouseOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _WarehouseOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Wms.WarehouseOrders](Logistics.Wms.WarehouseOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Wms.WarehouseOrders](Logistics.Wms.WarehouseOrders.md)  
 
 ## Attributes

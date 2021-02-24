@@ -3,14 +3,19 @@ uid: Logistics.Wms.WarehouseTransactions
 ---
 # Logistics.Wms.WarehouseTransactions Entity
 
+**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
+
 Represents increase or decrease in the quantity available in a warehouse location. Entity: Wms_Warehouse_Transactions (Introduced in version 21.1.1.26)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Wms.WarehouseTransactions](Logistics.Wms.WarehouseTransactions.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: General.PartyLocationNumbers
 ---
 # General.PartyLocationNumbers Entity
 
+**Namespace:** [General](General.md)  
+
 Location numbers for a party. Depending on the partner with which we are doing an exchange, our location number might be different. Entity: Gen_Party_Location_Numbers (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{LocationNumber}_  
 Default Search Member:  
 _LocationNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

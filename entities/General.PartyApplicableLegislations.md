@@ -3,16 +3,21 @@ uid: General.PartyApplicableLegislations
 ---
 # General.PartyApplicableLegislations Entity
 
+**Namespace:** [General](General.md)  
+
 Specifies a legislation, which is applicable for a party. A single party can have more than one applicable legislations. Entity: Gen_Party_Applicable_Legislations (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Party.PartyCode}: {Party.PartyName:T}_  
 Default Search Member:  
 _Party.PartyCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

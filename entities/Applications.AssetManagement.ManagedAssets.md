@@ -3,14 +3,19 @@ uid: Applications.AssetManagement.ManagedAssets
 ---
 # Applications.AssetManagement.ManagedAssets Entity
 
+**Namespace:** [Applications.AssetManagement](Applications.AssetManagement.md)  
+
 Contains the managed assets. The management of assets include maintenance planning and execution, location assignments tracking, etc. Entity: Eam_Managed_Assets (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)  
   * [Applications.AssetManagement.ManagedAssetLocations](Applications.AssetManagement.ManagedAssetLocations.md)  
   * [Applications.AssetManagement.ManagedAssetMaintenanceSchedules](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md)  

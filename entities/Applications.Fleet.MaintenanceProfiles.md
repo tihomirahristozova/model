@@ -3,14 +3,19 @@ uid: Applications.Fleet.MaintenanceProfiles
 ---
 # Applications.Fleet.MaintenanceProfiles Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Profiles contain multiple maintenance plans and can be assigned directly to a vehicle. Entity: Fleet_Maintenance_Profiles
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Fleet.MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md)  
   * [Applications.Fleet.MaintenanceProfilePlans](Applications.Fleet.MaintenanceProfilePlans.md)  
 

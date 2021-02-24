@@ -3,14 +3,20 @@ uid: General.CurrencyDirectories
 ---
 # General.CurrencyDirectories Entity
 
+**Namespace:** [General](General.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains a named set of currency exchange rates against a single currency for a given date. Multiple directories with different names can exist for single date. For example, buy and sell rates are recorded as separate directories. Entity: Gen_Currency_Directories
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.CurrencyDirectories](General.CurrencyDirectories.md)  
   * [General.CurrencyDirectoryLines](General.CurrencyDirectoryLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

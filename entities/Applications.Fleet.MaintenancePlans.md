@@ -3,14 +3,19 @@ uid: Applications.Fleet.MaintenancePlans
 ---
 # Applications.Fleet.MaintenancePlans Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Defines the periodic maintenance plans and the conditions for performing the next maintenance. Entity: Fleet_Maintenance_Plans
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Fleet.MaintenancePlans](Applications.Fleet.MaintenancePlans.md)  
 
 ## Attributes

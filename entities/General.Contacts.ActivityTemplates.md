@@ -3,14 +3,19 @@ uid: General.Contacts.ActivityTemplates
 ---
 # General.Contacts.ActivityTemplates Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 Templates for automatical generation of activity from any document. Entity: Cm_Activity_Templates
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Contacts.ActivityTemplates](General.Contacts.ActivityTemplates.md)  
 
 ## Attributes

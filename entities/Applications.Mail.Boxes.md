@@ -3,14 +3,19 @@ uid: Applications.Mail.Boxes
 ---
 # Applications.Mail.Boxes Entity
 
+**Namespace:** [Applications.Mail](Applications.Mail.md)  
+
 Represents user mailboxes. Entity: Mail_Boxes
 
+## Default Visualization
 Default Display Text Format:  
 _{SentItemsFolderName:T}_  
 Default Search Member:  
 _SentItemsFolderName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Mail.Boxes](Applications.Mail.Boxes.md)  
   * [Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md)  
     * [Applications.Mail.Messages](Applications.Mail.Messages.md)  

@@ -3,16 +3,21 @@ uid: Crm.CustomerProducts
 ---
 # Crm.CustomerProducts Entity
 
+**Namespace:** [Crm](Crm.md)  
+
 Contains the products, that are contracted (listed) with a customer. Entity: Crm_Customer_Products
 
+## Default Visualization
 Default Display Text Format:  
 _{Customer.Number}_  
 Default Search Member:  
 _Customer.Number_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Crm.Customers](Crm.Customers.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

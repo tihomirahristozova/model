@@ -3,16 +3,21 @@ uid: Projects.TemplateWorkElements
 ---
 # Projects.TemplateWorkElements Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Contains project work elements, which shall be copied to projects, based on the specified template. Entity: Prj_Template_Work_Elements
 
+## Default Visualization
 Default Display Text Format:  
 _{ProjectTemplate.ProjectTemplateName:T}_  
 Default Search Member:  
 _ProjectTemplate.ProjectTemplateName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Projects.Templates](Projects.Templates.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Projects.Templates](Projects.Templates.md)  
 
 ## Attributes

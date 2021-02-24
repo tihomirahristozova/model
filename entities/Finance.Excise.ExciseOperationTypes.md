@@ -3,14 +3,19 @@ uid: Finance.Excise.ExciseOperationTypes
 ---
 # Finance.Excise.ExciseOperationTypes Entity
 
+**Namespace:** [Finance.Excise](Finance.Excise.md)  
+
 Types of excise operations. Used by general documents to specify the operation type according to the excise classifications. Entity: Exc_Excise_Operation_Types (Introduced in version 21.1.1.59)
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Excise.ExciseOperationTypes](Finance.Excise.ExciseOperationTypes.md)  
 
 ## Attributes

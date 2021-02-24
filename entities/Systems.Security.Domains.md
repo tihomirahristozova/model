@@ -3,14 +3,19 @@ uid: Systems.Security.Domains
 ---
 # Systems.Security.Domains Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 Represents one user domain. The users in a domain have different emails. But one user can use the same email to register in different domains. Entity: Sec_Domains (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Security.Domains](Systems.Security.Domains.md)  
   * [Systems.Security.DomainProviders](Systems.Security.DomainProviders.md)  
 

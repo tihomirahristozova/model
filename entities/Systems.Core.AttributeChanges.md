@@ -3,16 +3,21 @@ uid: Systems.Core.AttributeChanges
 ---
 # Systems.Core.AttributeChanges View
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 Attribute values of an object change. Entity: Sys_Attribute_Changes_View
 
+## Default Visualization
 Default Display Text Format:  
 _{ObjectChangeId}: {AttributeName}_  
 Default Search Member:  
 _ObjectChangeId_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Core.ObjectChanges](Systems.Core.ObjectChanges.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)  
 
 ## Attributes

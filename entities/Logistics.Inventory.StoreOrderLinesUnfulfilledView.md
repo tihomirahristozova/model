@@ -3,14 +3,19 @@ uid: Logistics.Inventory.StoreOrderLinesUnfulfilledView
 ---
 # Logistics.Inventory.StoreOrderLinesUnfulfilledView View
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Returns the remaining (unfulfilled) quantity and cost for each Store Order Line in Store Orders, which are Planned, FirmPlanned or Released. Is_Fulfilled and Is_QuantityFulfilled can be used to filter out lines which appear fulfilled. For best performance, the store orders should be finished after fulfilling. Entity: Inv_Store_Order_Lines_Unfulfilled_View (Introduced in version 21.1.1.16)
 
+## Default Visualization
 Default Display Text Format:  
 _{StoreOrderLineId}: {DocumentDate}_  
 Default Search Member:  
 _StoreOrderLineId_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.StoreOrderLinesUnfulfilledView](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md)  
 
 ## Attributes

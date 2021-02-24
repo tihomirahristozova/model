@@ -3,14 +3,19 @@ uid: Applications.Fleet.VehicleMaintenancePlanAssignments
 ---
 # Applications.Fleet.VehicleMaintenancePlanAssignments Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Represents assignment of a maintenance plan to a vehicle. Entity: Fleet_Vehicle_Maintenance_Plan_Assignments
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Fleet.VehicleMaintenancePlanAssignments](Applications.Fleet.VehicleMaintenancePlanAssignments.md)  
 
 ## Attributes

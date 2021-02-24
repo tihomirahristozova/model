@@ -3,16 +3,21 @@ uid: General.DocumentTypeNotifications
 ---
 # General.DocumentTypeNotifications Entity
 
+**Namespace:** [General](General.md)  
+
 Provides notification addresses to be notified upon occurrence of different document events. Entity: Gen_Document_Type_Notifications
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}: {DocumentType.EntityName:T}_  
 Default Search Member:  
 _DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

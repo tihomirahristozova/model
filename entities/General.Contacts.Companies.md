@@ -3,14 +3,20 @@ uid: General.Contacts.Companies
 ---
 # General.Contacts.Companies Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+**Inherited From:** [General.Contacts.Parties](General.Contacts.Parties.md)  
+
 Contains company definitions. Entity: Cm_Companies
 
+## Default Visualization
 Default Display Text Format:  
 _{PartyCode}: {PartyName:T}_  
 Default Search Member:  
 _PartyCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Contacts.Companies](General.Contacts.Companies.md)  
   * [General.Contacts.CompanyDepartments](General.Contacts.CompanyDepartments.md)  
   * [Crm.Customers](Crm.Customers.md)  

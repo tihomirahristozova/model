@@ -3,16 +3,21 @@ uid: General.DocumentTypeEnterpriseCompanies
 ---
 # General.DocumentTypeEnterpriseCompanies Entity
 
+**Namespace:** [General](General.md)  
+
 Specifies the visibility (availability) of the document type for the different enterprise companies. Entity: Gen_Document_Type_Enterprise_Companies
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}: {DocumentType.EntityName:T}_  
 Default Search Member:  
 _DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

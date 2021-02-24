@@ -3,16 +3,21 @@ uid: Finance.Payments.BulkPaymentOrderLines
 ---
 # Finance.Payments.BulkPaymentOrderLines Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+
 Bulk payment order document line. Each line usually creates one payment order. Entity: Cash_Bulk_Payment_Order_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{BulkPaymentOrder.DocumentType.Code}:{BulkPaymentOrder.DocumentNo} - {BulkPaymentOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _BulkPaymentOrder.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Payments.BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Payments.BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)  
 
 ## Attributes

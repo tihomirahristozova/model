@@ -3,14 +3,19 @@ uid: Systems.Workflow.Roles
 ---
 # Systems.Workflow.Roles Entity
 
+**Namespace:** [Systems.Workflow](Systems.Workflow.md)  
+
 The various roles, which the users can play. Entity: Wf_Roles
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Workflow.Roles](Systems.Workflow.Roles.md)  
   * [Systems.Workflow.RoleUsers](Systems.Workflow.RoleUsers.md)  
 

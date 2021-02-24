@@ -3,16 +3,21 @@ uid: Applications.Fleet.VehicleSets
 ---
 # Applications.Fleet.VehicleSets Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Sets
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
 
 ## Attributes

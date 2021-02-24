@@ -3,14 +3,20 @@ uid: Applications.AssetManagement.MaintenanceOrders
 ---
 # Applications.AssetManagement.MaintenanceOrders Entity
 
+**Namespace:** [Applications.AssetManagement](Applications.AssetManagement.md)  
+**Inherited From:** [General.Contacts.Activities](General.Contacts.Activities.md)  
+
 Orders for maintenance. It is performed by a single service center, but can contain many different types of maintenance for many assets. The document is Activity and as such is scheduled and visible in the main calendar. Entity: Eam_Maintenance_Orders (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.AssetManagement.MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)  
   * [Applications.AssetManagement.MaintenanceOrderLines](Applications.AssetManagement.MaintenanceOrderLines.md)  
   * [General.Contacts.ActivityParticipants](General.Contacts.ActivityParticipants.md)  

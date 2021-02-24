@@ -3,16 +3,21 @@ uid: Finance.Assets.DepreciationAssets
 ---
 # Finance.Assets.DepreciationAssets Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+
 Depreciation document line. Can specify assets, whose depreciation should be calculated. Entity: Ast_Depreciation_Assets
 
+## Default Visualization
 Default Display Text Format:  
 _{Depreciation.DocumentType.Code}:{Depreciation.DocumentNo} - {Depreciation.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Depreciation.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Assets.Depreciations](Finance.Assets.Depreciations.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Assets.Depreciations](Finance.Assets.Depreciations.md)  
 
 ## Attributes

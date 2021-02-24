@@ -3,16 +3,21 @@ uid: Systems.Core.ObjectChanges
 ---
 # Systems.Core.ObjectChanges Entity
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{RepositoryName:T}_  
 Default Search Member:  
 _RepositoryName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)  
 
 ## Attributes

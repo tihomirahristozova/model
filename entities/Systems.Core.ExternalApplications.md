@@ -3,14 +3,19 @@ uid: Systems.Core.ExternalApplications
 ---
 # Systems.Core.ExternalApplications Entity
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 List of external applications. Used to run external applications. Entity: Sys_External_Applications
 
+## Default Visualization
 Default Display Text Format:  
 _{EntityName:T}_  
 Default Search Member:  
 _EntityName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Core.ExternalApplications](Systems.Core.ExternalApplications.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Systems.Security.GroupAccessKeys
 ---
 # Systems.Security.GroupAccessKeys Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 Specifies the access keys for which the user groups have permissions. The existance of a record grants read permission. Additional permissions are granted through specialized fields. Entity: Sec_Group_Access_Keys
 
+## Default Visualization
 Default Display Text Format:  
 _{Group.Name:T}_  
 Default Search Member:  
 _Group.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Security.Groups](Systems.Security.Groups.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Security.Groups](Systems.Security.Groups.md)  
 
 ## Attributes

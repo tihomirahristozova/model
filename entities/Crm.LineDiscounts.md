@@ -3,14 +3,19 @@ uid: Crm.LineDiscounts
 ---
 # Crm.LineDiscounts Entity
 
+**Namespace:** [Crm](Crm.md)  
+
 Discount policies for sales documents. Entity: Crm_Line_Discounts
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.LineDiscounts](Crm.LineDiscounts.md)  
 
 ## Attributes

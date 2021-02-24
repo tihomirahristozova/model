@@ -3,14 +3,19 @@ uid: Crm.ProductPrices
 ---
 # Crm.ProductPrices Entity
 
+**Namespace:** [Crm](Crm.md)  
+
 Specific prices of products. A price is applied after matching the specified criteria. Entity: Crm_Product_Prices
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.ProductPrices](Crm.ProductPrices.md)  
 
 ## Attributes

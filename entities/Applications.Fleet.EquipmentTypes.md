@@ -3,14 +3,19 @@ uid: Applications.Fleet.EquipmentTypes
 ---
 # Applications.Fleet.EquipmentTypes Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Contains types of equipment, which can be installed on the vehicles. Entity: Fleet_Equipment_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Fleet.EquipmentTypes](Applications.Fleet.EquipmentTypes.md)  
 
 ## Attributes

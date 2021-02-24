@@ -3,14 +3,19 @@ uid: Systems.Security.VisualPermissions
 ---
 # Systems.Security.VisualPermissions Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 Contains permissions, which are honored only by client applications and are used to provide access to (primarily show/hide) different elements of the user interface. Entity: Sec_Visual_Permissions
 
+## Default Visualization
 Default Display Text Format:  
 _{ApplicationName:T}_  
 Default Search Member:  
 _ApplicationName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Security.VisualPermissions](Systems.Security.VisualPermissions.md)  
 
 ## Attributes

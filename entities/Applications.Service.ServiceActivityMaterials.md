@@ -3,16 +3,21 @@ uid: Applications.Service.ServiceActivityMaterials
 ---
 # Applications.Service.ServiceActivityMaterials Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+
 Contains the materials, which were actually used during the service activity (repair). Entity: Srv_Service_Activity_Materials
 
+## Default Visualization
 Default Display Text Format:  
 _{ServiceActivity.DocumentType.Code}:{ServiceActivity.DocumentNo}:{LineNo} - {ServiceActivity.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ServiceActivity.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)  
 
 ## Attributes

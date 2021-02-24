@@ -3,14 +3,19 @@ uid: General.DocumentAmountTypes
 ---
 # General.DocumentAmountTypes Entity
 
+**Namespace:** [General](General.md)  
+
 Represents the different types of additional amounts which are calculated for the documents. Entity: Gen_Document_Amount_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{AmountTypeCode}: {AmountTypeName:T}_  
 Default Search Member:  
 _AmountTypeCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.DocumentAmountTypes](General.DocumentAmountTypes.md)  
   * [General.DocumentAmountTypeDependencies](General.DocumentAmountTypeDependencies.md)  
   * [Finance.Intrastat.DocumentAmountTypeSettings](Finance.Intrastat.DocumentAmountTypeSettings.md)  

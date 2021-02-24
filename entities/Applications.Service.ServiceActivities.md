@@ -3,14 +3,20 @@ uid: Applications.Service.ServiceActivities
 ---
 # Applications.Service.ServiceActivities Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+**Inherited From:** [General.Contacts.Activities](General.Contacts.Activities.md)  
+
 Contains service activity headers. The service activities are the actual actions performed to service (repair) an object. Entity: Srv_Service_Activities
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)  
   * [Applications.Service.ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md)  
     * [Applications.Service.ServiceActivityAgreedMaterials](Applications.Service.ServiceActivityAgreedMaterials.md)  

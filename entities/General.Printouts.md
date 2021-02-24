@@ -3,16 +3,21 @@ uid: General.Printouts
 ---
 # General.Printouts Entity
 
+**Namespace:** [General](General.md)  
+
 Contains data about binding of printout layouts to specific user-defined document types. Entity: Gen_Printouts
 
+## Default Visualization
 Default Display Text Format:  
 _{ApplicationName:T}_  
 Default Search Member:  
 _ApplicationName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

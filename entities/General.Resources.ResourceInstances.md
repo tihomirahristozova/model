@@ -3,16 +3,21 @@ uid: General.Resources.ResourceInstances
 ---
 # General.Resources.ResourceInstances Entity
 
+**Namespace:** [General.Resources](General.Resources.md)  
+
 Represents concrete instances of resources. Entity: Gen_Resource_Instances
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Resources.Resources](General.Resources.Resources.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Resources.ResourceGroups](General.Resources.ResourceGroups.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Logistics.Inventory.TransferOrdersOptions
 ---
 # Logistics.Inventory.TransferOrdersOptions Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_Options
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.TransferOrdersOptions](Logistics.Inventory.TransferOrdersOptions.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Applications.AssetManagement.ManagedAssetLocations
 ---
 # Applications.AssetManagement.ManagedAssetLocations Entity
 
+**Namespace:** [Applications.AssetManagement](Applications.AssetManagement.md)  
+
 Contains the locations to which the assets are assigned at various moments in time. Entity: Eam_Managed_Asset_Locations (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{ManagedAsset.Code}: {ManagedAsset.Name:T}_  
 Default Search Member:  
 _ManagedAsset.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)  
 
 ## Attributes

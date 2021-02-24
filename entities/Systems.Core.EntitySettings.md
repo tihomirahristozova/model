@@ -3,14 +3,19 @@ uid: Systems.Core.EntitySettings
 ---
 # Systems.Core.EntitySettings Entity
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 Contains entities, which have secured access. Entity: Sys_Entities
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Core.EntitySettings](Systems.Core.EntitySettings.md)  
 
 ## Attributes

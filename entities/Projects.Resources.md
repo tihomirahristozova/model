@@ -3,16 +3,21 @@ uid: Projects.Resources
 ---
 # Projects.Resources Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Contains the enterprise resources, which are available for including in projects. Entity: Prj_Resources
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
 
 ## Attributes

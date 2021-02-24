@@ -3,16 +3,21 @@ uid: Applications.Service.ServiceAgreementServices
 ---
 # Applications.Service.ServiceAgreementServices Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+
 Contains the free services, included in the service agreement. Entity: Srv_Service_Agreement_Services
 
+## Default Visualization
 Default Display Text Format:  
 _{ServiceAgreement.DocumentType.Code}:{ServiceAgreement.DocumentNo} - {ServiceAgreement.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ServiceAgreement.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)  
 
 ## Attributes

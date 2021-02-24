@@ -3,14 +3,19 @@ uid: Crm.CustomerTypes
 ---
 # Crm.CustomerTypes Entity
 
+**Namespace:** [Crm](Crm.md)  
+
 User defined customer type. Primarily used for customer definition security, because it has record level security, which is also applied to the individual customer definitions. Entity: Crm_Customer_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.CustomerTypes](Crm.CustomerTypes.md)  
 
 ## Attributes

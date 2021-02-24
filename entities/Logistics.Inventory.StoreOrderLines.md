@@ -3,16 +3,21 @@ uid: Logistics.Inventory.StoreOrderLines
 ---
 # Logistics.Inventory.StoreOrderLines Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Detail lines of store orders. Each line represents one planned stock transaction line, but can be executed in parts. E.g. many transaction lines can be bound to one order line. Entity: Inv_Store_Order_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{StoreOrder.DocumentType.Code}:{StoreOrder.DocumentNo}:{LineNo} - {StoreOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _StoreOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Inventory.StoreOrders](Logistics.Inventory.StoreOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Inventory.StoreOrders](Logistics.Inventory.StoreOrders.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Applications.Fleet.VehicleLocationHistoryRecords
 ---
 # Applications.Fleet.VehicleLocationHistoryRecords Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Stores information about vehicle locations. Entity: Fleet_Vehicle_Location_History_Records
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Fleet.VehicleLocationHistoryRecords](Applications.Fleet.VehicleLocationHistoryRecords.md)  
 
 ## Attributes

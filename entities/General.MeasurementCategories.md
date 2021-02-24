@@ -3,14 +3,19 @@ uid: General.MeasurementCategories
 ---
 # General.MeasurementCategories Entity
 
+**Namespace:** [General](General.md)  
+
 Categories of measurement units. The units within a category are directly convertable to each other. Each category contains one base unit and unlimited number of derived units with fixed ratio to the base unit. Entity: Gen_Measurement_Categories
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.MeasurementCategories](General.MeasurementCategories.md)  
   * [General.MeasurementUnits](General.MeasurementUnits.md)  
 

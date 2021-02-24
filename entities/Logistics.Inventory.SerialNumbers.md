@@ -3,14 +3,19 @@ uid: Logistics.Inventory.SerialNumbers
 ---
 # Logistics.Inventory.SerialNumbers Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Serial numbers, used by the items. Rows are created on first occurrence of the serial number in a document. Rows can be deleted after deleting the last occurence of the serial number in a document. Entity: Inv_Serial_Numbers
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md)  
 
 ## Attributes

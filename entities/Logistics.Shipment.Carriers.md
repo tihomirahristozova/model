@@ -3,14 +3,19 @@ uid: Logistics.Shipment.Carriers
 ---
 # Logistics.Shipment.Carriers Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+
 Represents a carrier agreement. One actual carrier can have different agreements over time or with different enterprise companies. Entity: Log_Carriers
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Shipment.Carriers](Logistics.Shipment.Carriers.md)  
 
 ## Attributes

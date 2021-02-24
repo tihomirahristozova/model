@@ -3,14 +3,19 @@ uid: Applications.Service.ServiceTypes
 ---
 # Applications.Service.ServiceTypes Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+
 Service levels. Entity: Srv_Service_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Service.ServiceTypes](Applications.Service.ServiceTypes.md)  
 
 ## Attributes

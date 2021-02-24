@@ -3,14 +3,19 @@ uid: Applications.PersonalData.ProcessingConsents
 ---
 # Applications.PersonalData.ProcessingConsents Entity
 
+**Namespace:** [Applications.PersonalData](Applications.PersonalData.md)  
+
 Consents of data subjects for processing of their personal data. Entity: Pdm_Processing_Consents (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{ParentName:T}_  
 Default Search Member:  
 _ParentName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.PersonalData.ProcessingConsents](Applications.PersonalData.ProcessingConsents.md)  
 
 ## Attributes

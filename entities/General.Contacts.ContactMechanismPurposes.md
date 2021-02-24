@@ -3,14 +3,19 @@ uid: General.Contacts.ContactMechanismPurposes
 ---
 # General.Contacts.ContactMechanismPurposes Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 Contains user-defined purposes for processing contact mechanisms. Used for personal data management. Entity: Cm_Contact_Mechanism_Purposes (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Contacts.ContactMechanismPurposes](General.Contacts.ContactMechanismPurposes.md)  
 
 ## Attributes

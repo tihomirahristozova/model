@@ -3,14 +3,19 @@ uid: Production.WorkOrderDocumentTypesOptions
 ---
 # Production.WorkOrderDocumentTypesOptions Entity
 
+**Namespace:** [Production](Production.md)  
+
 Options for user-defined Work Order document types. Entity: Prd_Work_Order_Document_Types_Options
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Production.WorkOrderDocumentTypesOptions](Production.WorkOrderDocumentTypesOptions.md)  
 
 ## Attributes

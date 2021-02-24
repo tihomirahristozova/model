@@ -3,16 +3,21 @@ uid: Communities.SocialGroupMembers
 ---
 # Communities.SocialGroupMembers Entity
 
+**Namespace:** [Communities](Communities.md)  
+
 Represents the membership of a user in a social group. Entity: Cmm_Social_Group_Members (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{SocialGroup.Code}: {SocialGroup.Name:T}_  
 Default Search Member:  
 _SocialGroup.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Communities.SocialGroups](Communities.SocialGroups.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Communities.SocialGroups](Communities.SocialGroups.md)  
 
 ## Attributes

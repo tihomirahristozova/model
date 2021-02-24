@@ -3,14 +3,19 @@ uid: Applications.AssetManagement.ServiceCenters
 ---
 # Applications.AssetManagement.ServiceCenters Entity
 
+**Namespace:** [Applications.AssetManagement](Applications.AssetManagement.md)  
+
 Contains data about the service centers, which can maintain the assets. Entity: Eam_Service_Centers (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.AssetManagement.ServiceCenters](Applications.AssetManagement.ServiceCenters.md)  
 
 ## Attributes

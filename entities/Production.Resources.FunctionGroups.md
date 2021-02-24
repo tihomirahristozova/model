@@ -3,14 +3,19 @@ uid: Production.Resources.FunctionGroups
 ---
 # Production.Resources.FunctionGroups Entity
 
+**Namespace:** [Production.Resources](Production.Resources.md)  
+
 Represents the hierarchy of the function groups. They group the multitude of resource functions in logical, user-defined groups. Entity: Prd_Function_Groups
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Production.Resources.FunctionGroups](Production.Resources.FunctionGroups.md)  
   * [Production.Resources.Functions](Production.Resources.Functions.md)  
 

@@ -3,16 +3,21 @@ uid: General.Products.ProductCodes
 ---
 # General.Products.ProductCodes Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 Additional product codes, categorized by coding systems. Entity: Gen_Product_Codes
 
+## Default Visualization
 Default Display Text Format:  
 _{Product.PartNumber}: {Product.Name:T}_  
 Default Search Member:  
 _Product.PartNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Products.Products](General.Products.Products.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Products.Products](General.Products.Products.md)  
 
 ## Attributes

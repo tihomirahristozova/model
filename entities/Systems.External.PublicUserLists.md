@@ -3,14 +3,19 @@ uid: Systems.External.PublicUserLists
 ---
 # Systems.External.PublicUserLists Entity
 
+**Namespace:** [Systems.External](Systems.External.md)  
+
 Each list represents a unique collection of public users. Entity: Ext_Public_User_Lists
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.External.PublicUserLists](Systems.External.PublicUserLists.md)  
 
 ## Attributes

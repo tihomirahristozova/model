@@ -3,14 +3,20 @@ uid: General.Contacts.Persons
 ---
 # General.Contacts.Persons Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+**Inherited From:** [General.Contacts.Parties](General.Contacts.Parties.md)  
+
 Personal records. Requires related party record. Entity: Cm_Persons
 
+## Default Visualization
 Default Display Text Format:  
 _{PartyCode}: {PartyName:T}_  
 Default Search Member:  
 _PartyCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Contacts.Persons](General.Contacts.Persons.md)  
   * [Crm.SalesPersons](Crm.SalesPersons.md)  
   * [General.Contacts.CompanyEmployees](General.Contacts.CompanyEmployees.md)  

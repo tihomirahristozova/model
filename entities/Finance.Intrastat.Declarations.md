@@ -3,14 +3,20 @@ uid: Finance.Intrastat.Declarations
 ---
 # Finance.Intrastat.Declarations Entity
 
+**Namespace:** [Finance.Intrastat](Finance.Intrastat.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains the headers of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declarations
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Intrastat.Declarations](Finance.Intrastat.Declarations.md)  
   * [Finance.Intrastat.DeclarationLines](Finance.Intrastat.DeclarationLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

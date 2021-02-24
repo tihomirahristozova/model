@@ -3,16 +3,21 @@ uid: Finance.Accounting.Templates
 ---
 # Finance.Accounting.Templates Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Accounting templates are used to automate the postings for repetitive business transactions. Templates can be bound to almost all documents and automate their postings. Entity: Acc_Templates
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Workflow.Routes](Systems.Workflow.Routes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Applications.Rental.AssetGroups
 ---
 # Applications.Rental.AssetGroups Entity
 
+**Namespace:** [Applications.Rental](Applications.Rental.md)  
+
 Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Groups
 
+## Default Visualization
 Default Display Text Format:  
 _{RentalAssetGroupCode}: {RentalAssetGroupName:T}_  
 Default Search Member:  
 _RentalAssetGroupCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Rental.AssetGroups](Applications.Rental.AssetGroups.md)  
   * [Applications.Rental.Assets](Applications.Rental.Assets.md)  
     * [Applications.Rental.AssetConsumables](Applications.Rental.AssetConsumables.md)  

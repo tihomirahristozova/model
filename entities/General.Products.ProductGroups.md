@@ -3,14 +3,19 @@ uid: General.Products.ProductGroups
 ---
 # General.Products.ProductGroups Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 Hierarchical categorization of the products. Entity: Gen_Product_Groups
 
+## Default Visualization
 Default Display Text Format:  
 _{NextPartNumber}: {Name:T}_  
 Default Search Member:  
 _NextPartNumber_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Products.ProductGroups](General.Products.ProductGroups.md)  
   * [General.Products.ProductGroupRangeProperties](General.Products.ProductGroupRangeProperties.md)  
   * [General.Products.ProductGroupRequiredProperties](General.Products.ProductGroupRequiredProperties.md)  

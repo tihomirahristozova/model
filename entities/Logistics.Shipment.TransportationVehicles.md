@@ -3,16 +3,21 @@ uid: Logistics.Shipment.TransportationVehicles
 ---
 # Logistics.Shipment.TransportationVehicles Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+
 A vehicle, which is used for transportation. One actual vehicle might be defined multiple times as transportation vehicle - for different modes of transportation or cargo types. Entity: Log_Transportation_Vehicles
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}_  
 Default Search Member:  
 _Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Projects.Projects
 ---
 # Projects.Projects Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Contains the planned, running and completed projects of the enterprises. Entity: Prj_Projects
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Projects.Projects](Projects.Projects.md)  
   * [Projects.ProjectParticipants](Projects.ProjectParticipants.md)  
   * [Projects.ProjectRisks](Projects.ProjectRisks.md)  

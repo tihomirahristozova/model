@@ -3,16 +3,21 @@ uid: Projects.TypeWorkElements
 ---
 # Projects.TypeWorkElements Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 The work elements of the work breakdown structure of each project type. Entity: Prj_Type_Work_Elements
 
+## Default Visualization
 Default Display Text Format:  
 _{WorkElementCode}: {WorkElementName:T}_  
 Default Search Member:  
 _WorkElementCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Projects.ProjectTypes](Projects.ProjectTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Projects.ProjectTypes](Projects.ProjectTypes.md)  
 
 ## Attributes

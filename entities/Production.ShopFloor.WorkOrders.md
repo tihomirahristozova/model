@@ -3,14 +3,20 @@ uid: Production.ShopFloor.WorkOrders
 ---
 # Production.ShopFloor.WorkOrders Entity
 
+**Namespace:** [Production.ShopFloor](Production.ShopFloor.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Scheduled and released production orders. Each order can contain the production of many items. Entity: Prd_Work_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Production.ShopFloor.WorkOrders](Production.ShopFloor.WorkOrders.md)  
   * [Production.ShopFloor.WorkOrderItemIngredients](Production.ShopFloor.WorkOrderItemIngredients.md)  
   * [Production.ShopFloor.WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)  

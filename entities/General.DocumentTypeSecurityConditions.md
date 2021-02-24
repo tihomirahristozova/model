@@ -3,14 +3,19 @@ uid: General.DocumentTypeSecurityConditions
 ---
 # General.DocumentTypeSecurityConditions Entity
 
+**Namespace:** [General](General.md)  
+
 Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_Security_Conditions
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.DocumentTypeSecurityConditions](General.DocumentTypeSecurityConditions.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Crm.Invoicing.InvoiceLines
 ---
 # Crm.Invoicing.InvoiceLines Entity
 
+**Namespace:** [Crm.Invoicing](Crm.Invoicing.md)  
+
 Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{Invoice.DocumentType.Code}:{Invoice.DocumentNo}:{LineNo} - {Invoice.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Invoice.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Crm.Invoicing.Invoices](Crm.Invoicing.Invoices.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Crm.Invoicing.Invoices](Crm.Invoicing.Invoices.md)  
 
 ## Attributes

@@ -3,14 +3,20 @@ uid: Logistics.Inventory.Stores
 ---
 # Logistics.Inventory.Stores Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+**Inherited From:** [General.Contacts.Parties](General.Contacts.Parties.md)  
+
 Represents the physical warehouses. Entity: Inv_Stores
 
+## Default Visualization
 Default Display Text Format:  
 _{PartyCode}: {PartyName:T}_  
 Default Search Member:  
 _PartyCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
   * [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md)  
   * [Logistics.Inventory.StoreResponsibleParties](Logistics.Inventory.StoreResponsibleParties.md)  

@@ -3,14 +3,19 @@ uid: General.Products.VariantColors
 ---
 # General.Products.VariantColors Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 Contains the different colors, which can be assigned to product variants. Entity: Gen_Variant_Colors
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Products.VariantColors](General.Products.VariantColors.md)  
 
 ## Attributes

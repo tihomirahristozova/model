@@ -3,16 +3,21 @@ uid: Finance.Cost.TemplateLevels
 ---
 # Finance.Cost.TemplateLevels Entity
 
+**Namespace:** [Finance.Cost](Finance.Cost.md)  
+
 Represents named hierarchy levels within a cost calculation. The hierarchy levels are used to specify cost allocation mechanisms. Entity: Cost_Template_Levels
 
+## Default Visualization
 Default Display Text Format:  
 _{LevelName:T}_  
 Default Search Member:  
 _LevelName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Cost.Templates](Finance.Cost.Templates.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Cost.Templates](Finance.Cost.Templates.md)  
 
 ## Attributes

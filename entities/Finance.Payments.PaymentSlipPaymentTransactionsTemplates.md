@@ -3,14 +3,19 @@ uid: Finance.Payments.PaymentSlipPaymentTransactionsTemplates
 ---
 # Finance.Payments.PaymentSlipPaymentTransactionsTemplates Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+
 Contains options for generation of payment transactions. Each option set is assigned to specific generation route. Entity: Cash_Payment_Slip_Payment_Transactions_Templates (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Payments.PaymentSlipPaymentTransactionsTemplates](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md)  
 
 ## Attributes

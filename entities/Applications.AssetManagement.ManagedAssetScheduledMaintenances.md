@@ -3,16 +3,21 @@ uid: Applications.AssetManagement.ManagedAssetScheduledMaintenances
 ---
 # Applications.AssetManagement.ManagedAssetScheduledMaintenances Entity
 
+**Namespace:** [Applications.AssetManagement](Applications.AssetManagement.md)  
+
 Contains the scheduled maintenances for the managed assets. Each maintenance can be planned based on date, parameter value or both. Past maintenance plans are kept only for reference and can be deleted at any time. Entity: Eam_Managed_Asset_Scheduled_Maintenances (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{ManagedAsset.Code}: {ManagedAsset.Name:T}_  
 Default Search Member:  
 _ManagedAsset.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)  
 
 ## Attributes

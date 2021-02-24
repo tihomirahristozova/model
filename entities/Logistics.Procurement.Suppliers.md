@@ -3,16 +3,21 @@ uid: Logistics.Procurement.Suppliers
 ---
 # Logistics.Procurement.Suppliers Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+
 Contains supplier conditions (contracts). Entity: Scm_Suppliers
 
+## Default Visualization
 Default Display Text Format:  
 _{Number}_  
 Default Search Member:  
 _Number_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

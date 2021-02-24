@@ -3,14 +3,19 @@ uid: Applications.Rental.TransactionTemplates
 ---
 # Applications.Rental.TransactionTemplates Entity
 
+**Namespace:** [Applications.Rental](Applications.Rental.md)  
+
 Specifies additional options for document routes, generating Rental Transactions. Entity: Rent_Transaction_Templates
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Rental.TransactionTemplates](Applications.Rental.TransactionTemplates.md)  
 
 ## Attributes

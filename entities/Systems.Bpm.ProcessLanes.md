@@ -3,16 +3,21 @@ uid: Systems.Bpm.ProcessLanes
 ---
 # Systems.Bpm.ProcessLanes Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 The process lanes categorize elements in the process and contain logic for executor selection. Entity: Bpm_Process_Lanes
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Bpm.Processes](Systems.Bpm.Processes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Bpm.Processes](Systems.Bpm.Processes.md)  
 
 ## Attributes

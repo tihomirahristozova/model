@@ -3,16 +3,21 @@ uid: Projects.ProjectRiskDiscussion
 ---
 # Projects.ProjectRiskDiscussion Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Contains discussions on project risks. Entity: Prj_Project_Risk_Discussion
 
+## Default Visualization
 Default Display Text Format:  
 _{ProjectRisk.RiskName:T}_  
 Default Search Member:  
 _ProjectRisk.RiskName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Projects.ProjectRisks](Projects.ProjectRisks.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Projects.Projects](Projects.Projects.md)  
 
 ## Attributes

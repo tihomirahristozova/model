@@ -3,14 +3,20 @@ uid: Logistics.Procurement.ReceivingOrders
 ---
 # Logistics.Procurement.ReceivingOrders Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains the received quantities from a supplier. Entity: Scm_Receiving_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Procurement.ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)  
   * [Logistics.Procurement.ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

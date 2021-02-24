@@ -3,14 +3,20 @@ uid: Crm.Distribution.SalesPersonTargets
 ---
 # Crm.Distribution.SalesPersonTargets Entity
 
+**Namespace:** [Crm.Distribution](Crm.Distribution.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Sales person targets document header. Targets are expressed in amount or other numeric objectives and are tracked in achieved percentages. Entity: Crm_Sales_Person_Targets
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)  
   * [Crm.Distribution.SalesPersonTargetLines](Crm.Distribution.SalesPersonTargetLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

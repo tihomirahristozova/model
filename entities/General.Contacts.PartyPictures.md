@@ -3,16 +3,21 @@ uid: General.Contacts.PartyPictures
 ---
 # General.Contacts.PartyPictures Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 Party pictures - photos, logos, etc. Entity: Gen_Party_Pictures
 
+## Default Visualization
 Default Display Text Format:  
 _{Party.PartyCode}: {Party.PartyName:T}_  
 Default Search Member:  
 _Party.PartyCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

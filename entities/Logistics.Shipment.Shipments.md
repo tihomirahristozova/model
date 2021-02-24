@@ -3,14 +3,20 @@ uid: Logistics.Shipment.Shipments
 ---
 # Logistics.Shipment.Shipments Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Represents shipments of sales orders to customers. Entity: Log_Shipments
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Shipment.Shipments](Logistics.Shipment.Shipments.md)  
   * [Logistics.Shipment.ShipmentLines](Logistics.Shipment.ShipmentLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

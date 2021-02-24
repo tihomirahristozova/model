@@ -3,16 +3,21 @@ uid: Finance.Assets.Assets
 ---
 # Finance.Assets.Assets Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+
 The fixed assets. Entity: Ast_Assets
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
 
 ## Attributes

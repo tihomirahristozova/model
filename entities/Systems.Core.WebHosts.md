@@ -3,14 +3,19 @@ uid: Systems.Core.WebHosts
 ---
 # Systems.Core.WebHosts Entity
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 Contains the names and https certificates of the different host names used to host sites. Entity: Sys_Web_Hosts (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Core.WebHosts](Systems.Core.WebHosts.md)  
 
 ## Attributes

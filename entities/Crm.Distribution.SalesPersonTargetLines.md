@@ -3,16 +3,21 @@ uid: Crm.Distribution.SalesPersonTargetLines
 ---
 # Crm.Distribution.SalesPersonTargetLines Entity
 
+**Namespace:** [Crm.Distribution](Crm.Distribution.md)  
+
 Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Target_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{SalesPersonTarget.DocumentType.Code}:{SalesPersonTarget.DocumentNo} - {SalesPersonTarget.DocumentType.TypeName:T}_  
 Default Search Member:  
 _SalesPersonTarget.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)  
 
 ## Attributes

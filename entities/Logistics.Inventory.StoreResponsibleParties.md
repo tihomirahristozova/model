@@ -3,16 +3,21 @@ uid: Logistics.Inventory.StoreResponsibleParties
 ---
 # Logistics.Inventory.StoreResponsibleParties Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Contains the list of responsible parties (usually persons) for the stores. Stores can have multiple responsible parties. Entity: Inv_Store_Responsible_Parties
 
+## Default Visualization
 Default Display Text Format:  
 _{Store.PartyCode}: {Store.PartyName:T}_  
 Default Search Member:  
 _Store.PartyCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
 
 ## Attributes

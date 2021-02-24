@@ -3,16 +3,21 @@ uid: Finance.Accounting.FinancialStatementNodeCorrespondances
 ---
 # Finance.Accounting.FinancialStatementNodeCorrespondances Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Contains the actual correspondance filters, which specify how each financial statement node is calculated. Entity: Acc_Financial_Statement_Node_Correspondances
 
+## Default Visualization
 Default Display Text Format:  
 _{FinancialStatementNode.Code}: {FinancialStatementNode.Name:T}_  
 Default Search Member:  
 _FinancialStatementNode.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Accounting.FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Accounting.FinancialStatements](Finance.Accounting.FinancialStatements.md)  
 
 ## Attributes

@@ -3,14 +3,20 @@ uid: Crm.Presales.Offers
 ---
 # Crm.Presales.Offers Entity
 
+**Namespace:** [Crm.Presales](Crm.Presales.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Offers (quotes) for sales of products. Can contain variants and choice groups. The user can select some approved lines and generate Sales Order. Entity: Crm_Offers
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Presales.Offers](Crm.Presales.Offers.md)  
   * [Crm.Presales.OfferLines](Crm.Presales.OfferLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

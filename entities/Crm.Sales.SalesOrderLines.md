@@ -3,16 +3,21 @@ uid: Crm.Sales.SalesOrderLines
 ---
 # Crm.Sales.SalesOrderLines Entity
 
+**Namespace:** [Crm.Sales](Crm.Sales.md)  
+
 Sales Orders detail records. Entity: Crm_Sales_Order_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{SalesOrder.DocumentType.Code}:{SalesOrder.DocumentNo}:{LineNo} - {SalesOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _SalesOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)  
 
 ## Attributes

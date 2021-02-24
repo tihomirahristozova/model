@@ -3,14 +3,19 @@ uid: General.PrintoutLayouts
 ---
 # General.PrintoutLayouts Entity
 
+**Namespace:** [General](General.md)  
+
 Contains design layouts for document printouts. Entity: Gen_Printout_Layouts
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentEntityName:T}_  
 Default Search Member:  
 _DocumentEntityName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.PrintoutLayouts](General.PrintoutLayouts.md)  
   * [General.DocumentPrintImages](General.DocumentPrintImages.md)  
 

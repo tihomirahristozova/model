@@ -3,16 +3,21 @@ uid: Finance.Payments.PaymentSlipLines
 ---
 # Finance.Payments.PaymentSlipLines Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+
 Mass payment line, which is distribution of an amount among payment orders. Each record generates one payment transaction line. Entity: Cash_Payment_Slip_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{PaymentSlipAmount.PartyName:T}_  
 Default Search Member:  
 _PaymentSlipAmount.PartyName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Payments.PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Payments.PaymentSlips](Finance.Payments.PaymentSlips.md)  
 
 ## Attributes

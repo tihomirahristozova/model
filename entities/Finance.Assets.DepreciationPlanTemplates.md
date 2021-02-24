@@ -3,16 +3,21 @@ uid: Finance.Assets.DepreciationPlanTemplates
 ---
 # Finance.Assets.DepreciationPlanTemplates Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+
 Specifies the default depreciation methods for the asset categories. Different methods can be specified for each valuation model. Entity: Ast_Depreciation_Plan_Templates
 
+## Default Visualization
 Default Display Text Format:  
 _{AssetCategory.Code}: {AssetCategory.Name:T}_  
 Default Search Member:  
 _AssetCategory.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Assets.AssetCategories](Finance.Assets.AssetCategories.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Assets.AssetCategories](Finance.Assets.AssetCategories.md)  
 
 ## Attributes

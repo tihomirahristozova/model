@@ -3,14 +3,20 @@ uid: Crm.Marketing.MarketingActivities
 ---
 # Crm.Marketing.MarketingActivities Entity
 
+**Namespace:** [Crm.Marketing](Crm.Marketing.md)  
+**Inherited From:** [General.Contacts.Activities](General.Contacts.Activities.md)  
+
 Marketing activity, part of a marketing campaign. Entity: Crm_Activities
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Marketing.MarketingActivities](Crm.Marketing.MarketingActivities.md)  
   * [General.Contacts.ActivityParticipants](General.Contacts.ActivityParticipants.md)  
   * [General.Contacts.ActivityResources](General.Contacts.ActivityResources.md)  

@@ -3,16 +3,21 @@ uid: Logistics.Inventory.SupplySchemaRoutes
 ---
 # Logistics.Inventory.SupplySchemaRoutes Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Obsolete. Not used. Entity: Inv_Supply_Schema_Routes
 
+## Default Visualization
 Default Display Text Format:  
 _{SupplySchema.Name:T}_  
 Default Search Member:  
 _SupplySchema.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Inventory.SupplySchemata](Logistics.Inventory.SupplySchemata.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Inventory.SupplySchemata](Logistics.Inventory.SupplySchemata.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Finance.Payments.PaymentReasons
 ---
 # Finance.Payments.PaymentReasons Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+
 Represents reasons for the payments. Contains both system and user-defined reasons. Entity: Cash_Payment_Reasons
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Payments.PaymentReasons](Finance.Payments.PaymentReasons.md)  
 
 ## Attributes

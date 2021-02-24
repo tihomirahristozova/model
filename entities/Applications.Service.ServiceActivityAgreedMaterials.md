@@ -3,16 +3,21 @@ uid: Applications.Service.ServiceActivityAgreedMaterials
 ---
 # Applications.Service.ServiceActivityAgreedMaterials Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+
 Contains the materials, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Materials
 
+## Default Visualization
 Default Display Text Format:  
 _{ServiceActivityMaterial.ServiceActivity.DocumentType.Code}:{ServiceActivityMaterial.ServiceActivity.DocumentNo}:{ServiceActivityMaterial.LineNo} - {ServiceActivityMaterial.ServiceActivity.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ServiceActivityMaterial.ServiceActivity.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Service.ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)  
 
 ## Attributes

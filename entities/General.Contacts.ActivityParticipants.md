@@ -3,16 +3,21 @@ uid: General.Contacts.ActivityParticipants
 ---
 # General.Contacts.ActivityParticipants Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 Contains the additional participants in the activities. These are the participating users, besides the user to which the activitiy is assigned. Entity: Cm_Activity_Participants
 
+## Default Visualization
 Default Display Text Format:  
 _{Activity.DocumentType.Code}:{Activity.DocumentNo} - {Activity.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Activity.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Activities](General.Contacts.Activities.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Activities](General.Contacts.Activities.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: General.Resources.ResourceAvailability
 ---
 # General.Resources.ResourceAvailability Entity
 
+**Namespace:** [General.Resources](General.Resources.md)  
+
 Contains the resources availability for the different periods. Each period is a separate record. The availability of a resource for any given date is determined by the sum of all availability periods that include it. Entity: Gen_Resource_Availability
 
+## Default Visualization
 Default Display Text Format:  
 _{Resource.Name:T}_  
 Default Search Member:  
 _Resource.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Resources.Resources](General.Resources.Resources.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Resources.ResourceGroups](General.Resources.ResourceGroups.md)  
 
 ## Attributes

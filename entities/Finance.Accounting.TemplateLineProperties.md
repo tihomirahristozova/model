@@ -3,16 +3,21 @@ uid: Finance.Accounting.TemplateLineProperties
 ---
 # Finance.Accounting.TemplateLineProperties Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Contains the way to obtain the values for each required property of both the debit and the credit accounts. Entity: Acc_Template_Line_Properties
 
+## Default Visualization
 Default Display Text Format:  
 _{TemplateLine.AmountColumnName:T}_  
 Default Search Member:  
 _TemplateLine.AmountColumnName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

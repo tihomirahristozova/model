@@ -3,14 +3,19 @@ uid: Applications.DataWarehouse.DataValues
 ---
 # Applications.DataWarehouse.DataValues Entity
 
+**Namespace:** [Applications.DataWarehouse](Applications.DataWarehouse.md)  
+
 The actual values in the general data warehouse. Entity: Dw_Data_Values (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.DataWarehouse.DataValues](Applications.DataWarehouse.DataValues.md)  
 
 ## Attributes

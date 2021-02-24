@@ -3,14 +3,20 @@ uid: Projects.WorkReports
 ---
 # Projects.WorkReports Entity
 
+**Namespace:** [Projects](Projects.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains project work report documents. Each work report contains consumed materials and resources. Entity: Prj_Work_Reports
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Projects.WorkReports](Projects.WorkReports.md)  
   * [Projects.WorkReportMaterials](Projects.WorkReportMaterials.md)  
   * [Projects.WorkReportResources](Projects.WorkReportResources.md)  

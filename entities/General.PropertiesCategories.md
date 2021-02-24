@@ -3,14 +3,19 @@ uid: General.PropertiesCategories
 ---
 # General.PropertiesCategories Entity
 
+**Namespace:** [General](General.md)  
+
 Categories of properties. Entity: Gen_Properties_Categories
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.PropertiesCategories](General.PropertiesCategories.md)  
 
 ## Attributes

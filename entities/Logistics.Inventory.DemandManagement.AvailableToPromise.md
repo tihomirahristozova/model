@@ -3,14 +3,19 @@ uid: Logistics.Inventory.DemandManagement.AvailableToPromise
 ---
 # Logistics.Inventory.DemandManagement.AvailableToPromise View
 
+**Namespace:** [Logistics.Inventory.DemandManagement](Logistics.Inventory.DemandManagement.md)  
+
 Quantities available to promise for the different date periods. Also contains the current and projected availability. Entity: Inv_Demand_Management_ATP
 
+## Default Visualization
 Default Display Text Format:  
 _{ATPBaseValue}: {CurrentAvailabilityBaseValue}_  
 Default Search Member:  
 _ATPBaseValue_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.DemandManagement.AvailableToPromise](Logistics.Inventory.DemandManagement.AvailableToPromise.md)  
 
 ## Attributes

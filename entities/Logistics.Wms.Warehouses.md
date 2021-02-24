@@ -3,14 +3,19 @@ uid: Logistics.Wms.Warehouses
 ---
 # Logistics.Wms.Warehouses Entity
 
+**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
+
 Physical warehouse. Entity: Wms_Warehouses (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
   * [Logistics.Wms.WarehouseLocations](Logistics.Wms.WarehouseLocations.md)  
   * [Logistics.Wms.WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md)  

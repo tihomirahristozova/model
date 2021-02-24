@@ -3,14 +3,19 @@ uid: Finance.Assets.ValuationModels
 ---
 # Finance.Assets.ValuationModels Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+
 Valuation models stand for the different valuations an asset can have. For example Accounting, Tax, External Financial Reports, etc. All asset transactions are posted for specific valuation model, but are usually automatically copied to other models. Entity: Ast_Valuation_Models
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Assets.ValuationModels](Finance.Assets.ValuationModels.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Systems.Core.TextTranslations
 ---
 # Systems.Core.TextTranslations Entity
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 Obsolete. Not used. Entity: Gen_Text_Translations
 
+## Default Visualization
 Default Display Text Format:  
 _{ColumnName:T}_  
 Default Search Member:  
 _ColumnName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Core.TextTranslations](Systems.Core.TextTranslations.md)  
 
 ## Attributes

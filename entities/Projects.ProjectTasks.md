@@ -3,14 +3,19 @@ uid: Projects.ProjectTasks
 ---
 # Projects.ProjectTasks Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Represents one task of a project. Entity: Prj_Project_Tasks
 
+## Default Visualization
 Default Display Text Format:  
 _{TaskName:T}_  
 Default Search Member:  
 _TaskName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Projects.ProjectTasks](Projects.ProjectTasks.md)  
   * [Projects.ProjectTaskDependancies](Projects.ProjectTaskDependancies.md)  
   * [Projects.ProjectTaskMaterials](Projects.ProjectTaskMaterials.md)  

@@ -3,14 +3,19 @@ uid: Applications.Service.ServiceObjectTypes
 ---
 # Applications.Service.ServiceObjectTypes Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+
 Contins the types of serviceable objects. Entity: Srv_Service_Object_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Service.ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md)  
 
 ## Attributes

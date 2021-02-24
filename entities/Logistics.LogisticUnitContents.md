@@ -3,16 +3,21 @@ uid: Logistics.LogisticUnitContents
 ---
 # Logistics.LogisticUnitContents Entity
 
+**Namespace:** [Logistics](Logistics.md)  
+
 Theoretical or actual content of a logistic unit. Entity: Log_Logistic_Unit_Contents (Introduced in version 21.1.0.77)
 
+## Default Visualization
 Default Display Text Format:  
 _{LotNumber}_  
 Default Search Member:  
 _LotNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.LogisticUnits](Logistics.LogisticUnits.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.LogisticUnits](Logistics.LogisticUnits.md)  
 
 ## Attributes

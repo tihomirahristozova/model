@@ -3,14 +3,19 @@ uid: General.Resources.ResourceGroups
 ---
 # General.Resources.ResourceGroups Entity
 
+**Namespace:** [General.Resources](General.Resources.md)  
+
 Resource groups categorize the resources. Entity: Gen_Resource_Groups
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Resources.ResourceGroups](General.Resources.ResourceGroups.md)  
   * [General.Resources.Resources](General.Resources.Resources.md)  
     * [General.Resources.ResourceAvailability](General.Resources.ResourceAvailability.md)  

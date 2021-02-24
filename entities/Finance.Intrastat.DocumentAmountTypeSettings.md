@@ -3,16 +3,21 @@ uid: Finance.Intrastat.DocumentAmountTypeSettings
 ---
 # Finance.Intrastat.DocumentAmountTypeSettings Entity
 
+**Namespace:** [Finance.Intrastat](Finance.Intrastat.md)  
+
 Specifies the additional amounts, which are added to the invoiced and statistical values. Entity: Its_Document_Amount_Type_Settings
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentAmountType.AmountTypeCode}: {DocumentAmountType.AmountTypeName:T}_  
 Default Search Member:  
 _DocumentAmountType.AmountTypeCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentAmountTypes](General.DocumentAmountTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentAmountTypes](General.DocumentAmountTypes.md)  
 
 ## Attributes

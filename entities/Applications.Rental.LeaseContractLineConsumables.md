@@ -3,16 +3,21 @@ uid: Applications.Rental.LeaseContractLineConsumables
 ---
 # Applications.Rental.LeaseContractLineConsumables Entity
 
+**Namespace:** [Applications.Rental](Applications.Rental.md)  
+
 Contains the consumables, which are sold accompanying asset rentals. Entity: Rent_Lease_Contract_Line_Consumables
 
+## Default Visualization
 Default Display Text Format:  
 _{LeaseLine.LeaseContract.DocumentType.Code}:{LeaseLine.LeaseContract.DocumentNo} - {LeaseLine.LeaseContract.DocumentType.TypeName:T}_  
 Default Search Member:  
 _LeaseLine.LeaseContract.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Rental.LeaseContractLines](Applications.Rental.LeaseContractLines.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md)  
 
 ## Attributes

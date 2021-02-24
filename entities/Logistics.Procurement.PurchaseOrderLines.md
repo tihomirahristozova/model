@@ -3,16 +3,21 @@ uid: Logistics.Procurement.PurchaseOrderLines
 ---
 # Logistics.Procurement.PurchaseOrderLines Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+
 Contains detail lines of purchase orders. Entity: Scm_Purchase_Order_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{PurchaseOrder.DocumentType.Code}:{PurchaseOrder.DocumentNo}:{LineNo} - {PurchaseOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _PurchaseOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Procurement.PurchaseOrders](Logistics.Procurement.PurchaseOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Procurement.PurchaseOrders](Logistics.Procurement.PurchaseOrders.md)  
 
 ## Attributes

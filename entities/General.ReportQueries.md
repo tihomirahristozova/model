@@ -3,16 +3,21 @@ uid: General.ReportQueries
 ---
 # General.ReportQueries Entity
 
+**Namespace:** [General](General.md)  
+
 Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries
 
+## Default Visualization
 Default Display Text Format:  
 _{TableName:T}_  
 Default Search Member:  
 _TableName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Reports](General.Reports.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Reports](General.Reports.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Finance.Cost.DistributionOutputs
 ---
 # Finance.Cost.DistributionOutputs Entity
 
+**Namespace:** [Finance.Cost](Finance.Cost.md)  
+
 Contains the output data for the specified period. This is the output on which cost is distributed. Entity: Cost_Distribution_Outputs
 
+## Default Visualization
 Default Display Text Format:  
 _{CostDistribution.DocumentType.Code}:{CostDistribution.DocumentNo} - {CostDistribution.DocumentType.TypeName:T}_  
 Default Search Member:  
 _CostDistribution.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Cost.Distributions](Finance.Cost.Distributions.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Cost.Distributions](Finance.Cost.Distributions.md)  
 
 ## Attributes

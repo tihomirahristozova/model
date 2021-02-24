@@ -3,14 +3,20 @@ uid: Logistics.Inventory.StoreTransactions
 ---
 # Logistics.Inventory.StoreTransactions Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Executed store-receipts(in) and store-issues(out). Store-issues are recorded with minus quantity. Entity: Inv_Transactions
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md)  
   * [Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)  
   * [Logistics.Inventory.TransactionCostCorrectionsSummary](Logistics.Inventory.TransactionCostCorrectionsSummary.md)  

@@ -3,16 +3,21 @@ uid: General.Resources.ResourceCostRates
 ---
 # General.Resources.ResourceCostRates Entity
 
+**Namespace:** [General.Resources](General.Resources.md)  
+
 Contains cost rates for different periods for resources. Each record is valid until the next From Date. Entity: Gen_Resource_Cost_Rates
 
+## Default Visualization
 Default Display Text Format:  
 _{Resource.Name:T}_  
 Default Search Member:  
 _Resource.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Resources.Resources](General.Resources.Resources.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Resources.ResourceGroups](General.Resources.ResourceGroups.md)  
 
 ## Attributes

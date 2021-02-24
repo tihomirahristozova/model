@@ -3,16 +3,21 @@ uid: General.Contacts.CompanyEmployees
 ---
 # General.Contacts.CompanyEmployees Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 Contains the company employee contracts. Entity: Cm_Company_Employees
 
+## Default Visualization
 Default Display Text Format:  
 _{ContractCode}_  
 Default Search Member:  
 _ContractCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Persons](General.Contacts.Persons.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Persons](General.Contacts.Persons.md)  
 
 ## Attributes

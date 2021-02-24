@@ -3,14 +3,19 @@ uid: General.Reports
 ---
 # General.Reports Entity
 
+**Namespace:** [General](General.md)  
+
 Contains user-defined data-sources. The data sources is a user-defined way (similar to query designer) to extract, filter, join and transform data for presentation purposes. Entity: Gen_Reports
 
+## Default Visualization
 Default Display Text Format:  
 _{QueryName:T}_  
 Default Search Member:  
 _QueryName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Reports](General.Reports.md)  
   * [General.ReportQueries](General.ReportQueries.md)  
 

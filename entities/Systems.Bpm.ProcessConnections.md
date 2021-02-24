@@ -3,16 +3,21 @@ uid: Systems.Bpm.ProcessConnections
 ---
 # Systems.Bpm.ProcessConnections Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 Contains the connections between process elements. Part of the process model. Entity: Bpm_Process_Connections
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Bpm.Processes](Systems.Bpm.Processes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Bpm.Processes](Systems.Bpm.Processes.md)  
 
 ## Attributes

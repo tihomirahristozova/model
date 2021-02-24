@@ -3,14 +3,19 @@ uid: General.Products.ProductSupply
 ---
 # General.Products.ProductSupply Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 Contains supply rules, which are used by the procurement planning system. Entity: Gen_Product_Supply
 
+## Default Visualization
 Default Display Text Format:  
 _{BuyerName:T}_  
 Default Search Member:  
 _BuyerName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Products.ProductSupply](General.Products.ProductSupply.md)  
 
 ## Attributes

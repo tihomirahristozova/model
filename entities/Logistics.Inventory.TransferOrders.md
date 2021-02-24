@@ -3,14 +3,20 @@ uid: Logistics.Inventory.TransferOrders
 ---
 # Logistics.Inventory.TransferOrders Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Orders for stock transfers between stores. Entity: Inv_Transfer_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.TransferOrders](Logistics.Inventory.TransferOrders.md)  
   * [Logistics.Inventory.TransferOrderLines](Logistics.Inventory.TransferOrderLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

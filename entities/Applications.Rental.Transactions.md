@@ -3,14 +3,20 @@ uid: Applications.Rental.Transactions
 ---
 # Applications.Rental.Transactions Entity
 
+**Namespace:** [Applications.Rental](Applications.Rental.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains all transactions of Record of Handover / Handing-Over Record . Entity: Rent_Transactions
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Rental.Transactions](Applications.Rental.Transactions.md)  
   * [Applications.Rental.TransactionLines](Applications.Rental.TransactionLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

@@ -3,14 +3,19 @@ uid: Systems.Reporting.DataSources
 ---
 # Systems.Reporting.DataSources Entity
 
+**Namespace:** [Systems.Reporting](Systems.Reporting.md)  
+
 Contains user-defined data sources, which retrieve rows from multiple queries. Entity: Sys_Data_Sources
 
+## Default Visualization
 Default Display Text Format:  
 _{BaseQueryName:T}_  
 Default Search Member:  
 _BaseQueryName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md)  
   * [Systems.Reporting.DataSourceQueries](Systems.Reporting.DataSourceQueries.md)  
 

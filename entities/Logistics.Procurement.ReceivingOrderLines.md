@@ -3,16 +3,21 @@ uid: Logistics.Procurement.ReceivingOrderLines
 ---
 # Logistics.Procurement.ReceivingOrderLines Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+
 Contains detail records of Receiving Orders. Each line contains the receiving of a quantity of a product. Entity: Scm_Receiving_Order_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{ReceivingOrder.DocumentType.Code}:{ReceivingOrder.DocumentNo}:{LineNo} - {ReceivingOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ReceivingOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Procurement.ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Procurement.ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)  
 
 ## Attributes

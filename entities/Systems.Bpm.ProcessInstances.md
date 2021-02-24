@@ -3,14 +3,19 @@ uid: Systems.Bpm.ProcessInstances
 ---
 # Systems.Bpm.ProcessInstances Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 Contains the running instances of the processes. Entity: Bpm_Process_Instances
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Bpm.ProcessInstances](Systems.Bpm.ProcessInstances.md)  
 
 ## Attributes

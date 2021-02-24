@@ -3,14 +3,19 @@ uid: Logistics.Procurement.PurchaseOperationTypes
 ---
 # Logistics.Procurement.PurchaseOperationTypes Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+
 User-defined categorization of the purchase operations. Used to group the purchase control data. Entity: Scm_Purchase_Operation_Types (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Procurement.PurchaseOperationTypes](Logistics.Procurement.PurchaseOperationTypes.md)  
 
 ## Attributes

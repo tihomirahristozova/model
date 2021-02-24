@@ -3,14 +3,19 @@ uid: Finance.Assets.AssetGroups
 ---
 # Finance.Assets.AssetGroups Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+
 User-defined grouping of the assets. Entity: Ast_Asset_Groups
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Assets.AssetGroups](Finance.Assets.AssetGroups.md)  
 
 ## Attributes

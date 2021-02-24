@@ -3,16 +3,21 @@ uid: Systems.Core.ObjectVersions
 ---
 # Systems.Core.ObjectVersions Entity
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 Contains history of saved version of the managed objects. Entity: Sys_Object_Versions
 
+## Default Visualization
 Default Display Text Format:  
 _{Object.Id}_  
 Default Search Member:  
 _Object.Id_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
 
 ## Attributes

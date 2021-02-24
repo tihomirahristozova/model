@@ -3,14 +3,19 @@ uid: General.Products.CodingSystems
 ---
 # General.Products.CodingSystems Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 Coding systems categorize additional product codes. Entity: Gen_Coding_Systems
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Products.CodingSystems](General.Products.CodingSystems.md)  
 
 ## Attributes

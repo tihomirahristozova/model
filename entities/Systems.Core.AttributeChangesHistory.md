@@ -3,14 +3,19 @@ uid: Systems.Core.AttributeChangesHistory
 ---
 # Systems.Core.AttributeChangesHistory View
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 Each entry represents an entity attribute change with previous and new value. Entity: Sys_Attribute_Changes_History_View
 
+## Default Visualization
 Default Display Text Format:  
 _{RepositoryName}: {EntityItemId}_  
 Default Search Member:  
 _RepositoryName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Core.AttributeChangesHistory](Systems.Core.AttributeChangesHistory.md)  
 
 ## Attributes

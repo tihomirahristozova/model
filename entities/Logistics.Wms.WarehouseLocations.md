@@ -3,16 +3,21 @@ uid: Logistics.Wms.WarehouseLocations
 ---
 # Logistics.Wms.WarehouseLocations Entity
 
+**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
+
 One physical location within a warehouse. Locations are the leaf elements of the rack structure of the warehouse. Entity: Wms_Warehouse_Locations (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Warehouse.Name:T}_  
 Default Search Member:  
 _Warehouse.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
 
 ## Attributes

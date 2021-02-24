@@ -3,14 +3,19 @@ uid: General.Contacts.PartyRelationships
 ---
 # General.Contacts.PartyRelationships Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 Defines the relationships between the parties. The data is preserved over time. Entity: Cm_Party_Relationships
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Contacts.PartyRelationships](General.Contacts.PartyRelationships.md)  
 
 ## Attributes

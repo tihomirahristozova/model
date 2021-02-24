@@ -3,14 +3,19 @@ uid: Finance.Payments.PaymentAccounts
 ---
 # Finance.Payments.PaymentAccounts Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+
 Payment accounts are cash, bank and other accounts, which are used in payments. Payment accounts are frequently used as analytical dimensions (properties) for general ledger accounts. Entity: Cash_Payment_Accounts
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Logistics.Inventory.Lots
 ---
 # Logistics.Inventory.Lots Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Warehouse lots. They contain one row for each specific product, status, production batch and other specific warehousing conditions. Lot status can block certain operations. Entity: Inv_Lots
 
+## Default Visualization
 Default Display Text Format:  
 _{Number}_  
 Default Search Member:  
 _Number_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md)  
 
 ## Attributes

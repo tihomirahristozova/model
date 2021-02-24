@@ -3,14 +3,19 @@ uid: Systems.Bpm.CalculatedAttributes
 ---
 # Systems.Bpm.CalculatedAttributes Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Bpm.CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)  
   * [Systems.Bpm.CalculatedAttributeExpressions](Systems.Bpm.CalculatedAttributeExpressions.md)  
 

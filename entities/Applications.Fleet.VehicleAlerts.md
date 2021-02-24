@@ -3,14 +3,19 @@ uid: Applications.Fleet.VehicleAlerts
 ---
 # Applications.Fleet.VehicleAlerts Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Contains alerts, specific to one vehicle. Alerts are created based on many sources and stay active, until excplicitly hidden. Entity: Fleet_Vehicle_Alerts
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Fleet.VehicleAlerts](Applications.Fleet.VehicleAlerts.md)  
 
 ## Attributes

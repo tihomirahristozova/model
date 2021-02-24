@@ -3,14 +3,19 @@ uid: Systems.Bpm.ProcessGroups
 ---
 # Systems.Bpm.ProcessGroups Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 Represents a node in the hierarchy of process groups. Entity: Bpm_Process_Groups
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Bpm.ProcessGroups](Systems.Bpm.ProcessGroups.md)  
 
 ## Attributes

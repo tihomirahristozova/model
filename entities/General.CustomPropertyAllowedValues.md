@@ -3,16 +3,21 @@ uid: General.CustomPropertyAllowedValues
 ---
 # General.CustomPropertyAllowedValues Entity
 
+**Namespace:** [General](General.md)  
+
 User-defined properties allowed values. Can be specified only for properties with unbound allowed values (e.g. for which Allowed Values Entity is not set). Entity: Gen_Property_Allowed_Values
 
+## Default Visualization
 Default Display Text Format:  
 _{Property.Code}: {Property.AllowedValuesEntityName:T}_  
 Default Search Member:  
 _Property.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.CustomProperties](General.CustomProperties.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.CustomProperties](General.CustomProperties.md)  
 
 ## Attributes

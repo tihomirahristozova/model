@@ -3,14 +3,19 @@ uid: Applications.Service.Services
 ---
 # Applications.Service.Services Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+
 Contains the services, which can be performed. Entity: Srv_Services
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Service.Services](Applications.Service.Services.md)  
   * [Applications.Service.ServiceInvoicing](Applications.Service.ServiceInvoicing.md)  
 

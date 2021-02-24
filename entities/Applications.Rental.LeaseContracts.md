@@ -3,14 +3,20 @@ uid: Applications.Rental.LeaseContracts
 ---
 # Applications.Rental.LeaseContracts Entity
 
+**Namespace:** [Applications.Rental](Applications.Rental.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains the lease contracts for rental assets. Entity: Rent_Lease_Contracts
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md)  
   * [Applications.Rental.LeaseContractLines](Applications.Rental.LeaseContractLines.md)  
     * [Applications.Rental.LeaseContractLineConsumables](Applications.Rental.LeaseContractLineConsumables.md)  

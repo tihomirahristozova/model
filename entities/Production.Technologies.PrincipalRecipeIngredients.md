@@ -3,16 +3,21 @@ uid: Production.Technologies.PrincipalRecipeIngredients
 ---
 # Production.Technologies.PrincipalRecipeIngredients Entity
 
+**Namespace:** [Production.Technologies](Production.Technologies.md)  
+
 Template for material usage of a principal recipe. Entity: Prd_Principal_Recipe_Ingredients
 
+## Default Visualization
 Default Display Text Format:  
 _{IngredientName:T}_  
 Default Search Member:  
 _IngredientName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Products.ProductGroups](General.Products.ProductGroups.md)  
 
 ## Attributes

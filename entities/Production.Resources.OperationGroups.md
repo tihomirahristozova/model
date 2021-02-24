@@ -3,14 +3,19 @@ uid: Production.Resources.OperationGroups
 ---
 # Production.Resources.OperationGroups Entity
 
+**Namespace:** [Production.Resources](Production.Resources.md)  
+
 Groups of operations. Entity: Prd_Operation_Groups
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Production.Resources.OperationGroups](Production.Resources.OperationGroups.md)  
   * [Production.Resources.Operations](Production.Resources.Operations.md)  
 

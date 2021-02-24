@@ -3,14 +3,19 @@ uid: Systems.Bpm.Processes
 ---
 # Systems.Bpm.Processes Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 Represents one business process version. All process model elements and execution instances are bound to specfic process version. Entity: Bpm_Processes
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Bpm.Processes](Systems.Bpm.Processes.md)  
   * [Systems.Bpm.ProcessConnections](Systems.Bpm.ProcessConnections.md)  
   * [Systems.Bpm.ProcessElements](Systems.Bpm.ProcessElements.md)  

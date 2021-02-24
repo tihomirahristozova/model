@@ -3,14 +3,20 @@ uid: Finance.Payments.PaymentTransactions
 ---
 # Finance.Payments.PaymentTransactions Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Represents actual payments, which increase or decrease the balance of a payment account. Entity: Cash_Payment_Transactions
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Payments.PaymentTransactions](Finance.Payments.PaymentTransactions.md)  
   * [Finance.Payments.PaymentTransactionLines](Finance.Payments.PaymentTransactionLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

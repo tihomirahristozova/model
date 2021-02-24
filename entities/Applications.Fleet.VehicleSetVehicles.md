@@ -3,16 +3,21 @@ uid: Applications.Fleet.VehicleSetVehicles
 ---
 # Applications.Fleet.VehicleSetVehicles Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicles
 
+## Default Visualization
 Default Display Text Format:  
 _{VehicleSet.Name:T}_  
 Default Search Member:  
 _VehicleSet.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Fleet.VehicleSets](Applications.Fleet.VehicleSets.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
 
 ## Attributes

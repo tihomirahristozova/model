@@ -3,16 +3,21 @@ uid: Logistics.Inventory.ProductDefaultStoreBins
 ---
 # Logistics.Inventory.ProductDefaultStoreBins Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 The default store bins in which products should be placed. Entity: Inv_Product_Default_Store_Bins
 
+## Default Visualization
 Default Display Text Format:  
 _{Product.PartNumber}: {Product.Name:T}_  
 Default Search Member:  
 _Product.PartNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Products.Products](General.Products.Products.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Products.Products](General.Products.Products.md)  
 
 ## Attributes

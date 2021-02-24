@@ -3,14 +3,19 @@ uid: Logistics.Procurement.PurchaseProductPrices
 ---
 # Logistics.Procurement.PurchaseProductPrices Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+
 Contains purchase prices of the products. Used for automatically loading unit prices in the purchase documents. Entity: Scm_Purchase_Product_Prices
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Procurement.PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md)  
 
 ## Attributes

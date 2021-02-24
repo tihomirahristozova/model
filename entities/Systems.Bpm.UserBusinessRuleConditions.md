@@ -3,16 +3,21 @@ uid: Systems.Bpm.UserBusinessRuleConditions
 ---
 # Systems.Bpm.UserBusinessRuleConditions Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 Represents one condition for the execution of a business rule. Entity: Sys_User_Business_Rule_Conditions
 
+## Default Visualization
 Default Display Text Format:  
 _{AttributeName:T}_  
 Default Search Member:  
 _AttributeName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
 
 ## Attributes

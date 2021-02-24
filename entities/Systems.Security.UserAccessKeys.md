@@ -3,16 +3,21 @@ uid: Systems.Security.UserAccessKeys
 ---
 # Systems.Security.UserAccessKeys Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 Obsolete. Not used. Entity: Sec_User_Access_Keys
 
+## Default Visualization
 Default Display Text Format:  
 _{User.PhoneNumber}: {User.Name:T}_  
 Default Search Member:  
 _User.PhoneNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Security.Users](Systems.Security.Users.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Security.Users](Systems.Security.Users.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Crm.Marketing.ForecastItems
 ---
 # Crm.Marketing.ForecastItems Entity
 
+**Namespace:** [Crm.Marketing](Crm.Marketing.md)  
+
 Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Marketing.ForecastItems](Crm.Marketing.ForecastItems.md)  
 
 ## Attributes

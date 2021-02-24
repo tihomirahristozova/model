@@ -3,16 +3,21 @@ uid: Production.Technologies.PrincipalRecipeOperations
 ---
 # Production.Technologies.PrincipalRecipeOperations Entity
 
+**Namespace:** [Production.Technologies](Production.Technologies.md)  
+
 Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_Operations
 
+## Default Visualization
 Default Display Text Format:  
 _{PrincipalRecipe.Name:T}_  
 Default Search Member:  
 _PrincipalRecipe.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Products.ProductGroups](General.Products.ProductGroups.md)  
 
 ## Attributes

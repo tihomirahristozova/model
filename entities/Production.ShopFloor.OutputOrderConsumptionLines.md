@@ -3,16 +3,21 @@ uid: Production.ShopFloor.OutputOrderConsumptionLines
 ---
 # Production.ShopFloor.OutputOrderConsumptionLines Entity
 
+**Namespace:** [Production.ShopFloor](Production.ShopFloor.md)  
+
 The internal production consumption of materials. Used only for control purposes - for comparison with the active consumption orders. Warehouse and accounting are still updated only by Consumption Orders. Entity: Prd_Output_Order_Consumption_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{OutputOrder.DocumentType.Code}:{OutputOrder.DocumentNo}:{LineNo} - {OutputOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _OutputOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.ShopFloor.OutputOrders](Production.ShopFloor.OutputOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.ShopFloor.OutputOrders](Production.ShopFloor.OutputOrders.md)  
 
 ## Attributes

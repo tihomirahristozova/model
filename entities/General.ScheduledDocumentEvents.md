@@ -3,14 +3,19 @@ uid: General.ScheduledDocumentEvents
 ---
 # General.ScheduledDocumentEvents Entity
 
+**Namespace:** [General](General.md)  
+
 Contains postponed events, which will be executed later. Usually these are large number of recalculation events, resulting from other events. For example, releasing a cost correction, publishes postponed events for all affected documents. Entity: Gen_Scheduled_Document_Events
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.ScheduledDocumentEvents](General.ScheduledDocumentEvents.md)  
 
 ## Attributes

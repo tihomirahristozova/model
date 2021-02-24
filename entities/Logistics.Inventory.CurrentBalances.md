@@ -3,14 +3,19 @@ uid: Logistics.Inventory.CurrentBalances
 ---
 # Logistics.Inventory.CurrentBalances View
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 The current inventory balances, grouped by storage key (Store, Product, Lot, etc.). Entity: Inv_Current_Balances
 
+## Default Visualization
 Default Display Text Format:  
 _{BaseCostValue}: {EnterpriseCompanyId}_  
 Default Search Member:  
 _BaseCostValue_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.CurrentBalances](Logistics.Inventory.CurrentBalances.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Crm.Pos.Terminals
 ---
 # Crm.Pos.Terminals Entity
 
+**Namespace:** [Crm.Pos](Crm.Pos.md)  
+
 Represents a POS workplace for 1 person, with all the attached devices. (Not to be confused with Payment Terminal, which is specific POS device). Entity: Pos_Terminals (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{PosTerminalCode}: {PosTerminalName:T}_  
 Default Search Member:  
 _PosTerminalCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Pos.Terminals](Crm.Pos.Terminals.md)  
   * [Crm.Pos.Devices](Crm.Pos.Devices.md)  
 

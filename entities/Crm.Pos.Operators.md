@@ -3,14 +3,19 @@ uid: Crm.Pos.Operators
 ---
 # Crm.Pos.Operators Entity
 
+**Namespace:** [Crm.Pos](Crm.Pos.md)  
+
 Represents one operator (person) in one POS location. Entity: Pos_Operators (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{PosOperatorCode}_  
 Default Search Member:  
 _PosOperatorCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Pos.Operators](Crm.Pos.Operators.md)  
 
 ## Attributes

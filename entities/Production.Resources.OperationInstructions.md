@@ -3,14 +3,19 @@ uid: Production.Resources.OperationInstructions
 ---
 # Production.Resources.OperationInstructions Entity
 
+**Namespace:** [Production.Resources](Production.Resources.md)  
+
 Long (full) instructions for performing an operation. The operations point to the instructions and one instruction can be used for different operations. Entity: Prd_Operation_Instructions
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md)  
 
 ## Attributes

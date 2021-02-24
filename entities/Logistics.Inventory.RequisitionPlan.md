@@ -3,14 +3,19 @@ uid: Logistics.Inventory.RequisitionPlan
 ---
 # Logistics.Inventory.RequisitionPlan Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 The current requisition (MRP) plan. The data is deleted and re-created upon each planning. Entity: Inv_Requisition_Plan
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.RequisitionPlan](Logistics.Inventory.RequisitionPlan.md)  
 
 ## Attributes

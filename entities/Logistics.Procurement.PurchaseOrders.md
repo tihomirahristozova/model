@@ -3,14 +3,20 @@ uid: Logistics.Procurement.PurchaseOrders
 ---
 # Logistics.Procurement.PurchaseOrders Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains purchase order headers. The purchase orders are documents, sent to a supplier, to inform him for an order of goods or services. Entity: Scm_Purchase_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Procurement.PurchaseOrders](Logistics.Procurement.PurchaseOrders.md)  
   * [Logistics.Procurement.PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

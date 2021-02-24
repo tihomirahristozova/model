@@ -3,16 +3,22 @@ uid: Applications.Cms.StaticWebModules
 ---
 # Applications.Cms.StaticWebModules Entity
 
+**Namespace:** [Applications.Cms](Applications.Cms.md)  
+**Inherited From:** [Applications.Cms.WebModules](Applications.Cms.WebModules.md)  
+
 A web module, which contains one web page with static text. Entity: Cms_Static_Web_Modules
 
+## Default Visualization
 Default Display Text Format:  
 _{LanguageCode}: {Name:T}_  
 Default Search Member:  
 _LanguageCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Production.ShopFloor.ConsumptionOrderLines
 ---
 # Production.ShopFloor.ConsumptionOrderLines Entity
 
+**Namespace:** [Production.ShopFloor](Production.ShopFloor.md)  
+
 Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{ConsumptionOrder.DocumentType.Code}:{ConsumptionOrder.DocumentNo}:{LineOrd} - {ConsumptionOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ConsumptionOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.ShopFloor.ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.ShopFloor.ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)  
 
 ## Attributes

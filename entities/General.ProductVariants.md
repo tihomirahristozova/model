@@ -3,16 +3,21 @@ uid: General.ProductVariants
 ---
 # General.ProductVariants Entity
 
+**Namespace:** [General](General.md)  
+
 Contains definitions of different variants of a product. The variants are differentiated by color, size and style. Entity: Gen_Product_Variants
 
+## Default Visualization
 Default Display Text Format:  
 _{BarCode}: {Name:T}_  
 Default Search Member:  
 _BarCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Products.Products](General.Products.Products.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Products.Products](General.Products.Products.md)  
 
 ## Attributes

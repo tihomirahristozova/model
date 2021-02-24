@@ -3,14 +3,19 @@ uid: Logistics.Inventory.CostCorrectionsOptions
 ---
 # Logistics.Inventory.CostCorrectionsOptions Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Options per document type for the cost corrections. Entity: Inv_Cost_Corrections_Options
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.CostCorrectionsOptions](Logistics.Inventory.CostCorrectionsOptions.md)  
 
 ## Attributes

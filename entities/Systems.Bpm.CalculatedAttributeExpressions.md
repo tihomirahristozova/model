@@ -3,16 +3,21 @@ uid: Systems.Bpm.CalculatedAttributeExpressions
 ---
 # Systems.Bpm.CalculatedAttributeExpressions Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 Represent an expression within the calculation of a calculated attribute. Entity: Sys_Calculated_Attribute_Expressions
 
+## Default Visualization
 Default Display Text Format:  
 _{CalculatedAttribute.Name:T}_  
 Default Search Member:  
 _CalculatedAttribute.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Bpm.CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Bpm.CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)  
 
 ## Attributes

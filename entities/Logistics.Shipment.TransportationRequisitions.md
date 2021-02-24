@@ -3,14 +3,20 @@ uid: Logistics.Shipment.TransportationRequisitions
 ---
 # Logistics.Shipment.TransportationRequisitions Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Client requisition for transportation. Entity: Log_Transportation_Requisitions
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Shipment.TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)  
   * [Logistics.Shipment.TransportationRequisitionLines](Logistics.Shipment.TransportationRequisitionLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

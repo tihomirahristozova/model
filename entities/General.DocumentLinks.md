@@ -3,14 +3,19 @@ uid: General.DocumentLinks
 ---
 # General.DocumentLinks Entity
 
+**Namespace:** [General](General.md)  
+
 Obsolete. Not used. Entity: Gen_Document_Links
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.DocumentLinks](General.DocumentLinks.md)  
 
 ## Attributes

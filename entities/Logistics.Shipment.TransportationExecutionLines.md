@@ -3,16 +3,21 @@ uid: Logistics.Shipment.TransportationExecutionLines
 ---
 # Logistics.Shipment.TransportationExecutionLines Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+
 Contains details of executions of transportation order lines. Entity: Log_Transportation_Execution_Lines (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{TransportationExecution.DocumentType.Code}:{TransportationExecution.DocumentNo}:{LineNo} - {TransportationExecution.DocumentType.TypeName:T}_  
 Default Search Member:  
 _TransportationExecution.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Shipment.TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Shipment.TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)  
 
 ## Attributes

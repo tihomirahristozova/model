@@ -3,16 +3,21 @@ uid: General.DocumentAmountReferencedDocuments
 ---
 # General.DocumentAmountReferencedDocuments Entity
 
+**Namespace:** [General](General.md)  
+
 Contains the documents which are referenced by each document amount. Entity: Gen_Document_Amount_Referenced_Documents
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentAmount.Document.DocumentType.Code}:{DocumentAmount.Document.DocumentNo} - {DocumentAmount.Document.DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentAmount.Document.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentAmounts](General.DocumentAmounts.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Documents](General.Documents.md)  
 
 ## Attributes

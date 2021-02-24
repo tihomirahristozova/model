@@ -3,14 +3,20 @@ uid: Finance.Assets.DepreciationPlans
 ---
 # Finance.Assets.DepreciationPlans Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Each depreciation plan document can create depreciation plans for numerous assets. Entity: Ast_Depreciation_Plans
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Assets.DepreciationPlans](Finance.Assets.DepreciationPlans.md)  
   * [Finance.Assets.DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md)  
     * [Finance.Assets.DepreciationPlanLineFixedValues](Finance.Assets.DepreciationPlanLineFixedValues.md)  

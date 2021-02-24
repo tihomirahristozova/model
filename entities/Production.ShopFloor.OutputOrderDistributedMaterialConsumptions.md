@@ -3,16 +3,21 @@ uid: Production.ShopFloor.OutputOrderDistributedMaterialConsumptions
 ---
 # Production.ShopFloor.OutputOrderDistributedMaterialConsumptions Entity
 
+**Namespace:** [Production.ShopFloor](Production.ShopFloor.md)  
+
 Contains the quantity of materials distributed over the output order lines. Entity: Prd_Output_Order_Distributed_Material_Consumptions
 
+## Default Visualization
 Default Display Text Format:  
 _{OutputOrderLine.OutputOrder.DocumentType.Code}:{OutputOrderLine.OutputOrder.DocumentNo}:{OutputOrderLine.LineOrd} - {OutputOrderLine.OutputOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _OutputOrderLine.OutputOrder.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.ShopFloor.OutputOrderLines](Production.ShopFloor.OutputOrderLines.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.ShopFloor.OutputOrders](Production.ShopFloor.OutputOrders.md)  
 
 ## Attributes

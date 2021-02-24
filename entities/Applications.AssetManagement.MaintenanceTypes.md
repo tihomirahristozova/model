@@ -3,14 +3,19 @@ uid: Applications.AssetManagement.MaintenanceTypes
 ---
 # Applications.AssetManagement.MaintenanceTypes Entity
 
+**Namespace:** [Applications.AssetManagement](Applications.AssetManagement.md)  
+
 Types of maintenances which can be scheduled and performed on the managed assets. Maintenances can be scheduled based on date and tracked parameter change. Entity: Eam_Maintenance_Types (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.AssetManagement.MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Production.Resources.WorkgroupResources
 ---
 # Production.Resources.WorkgroupResources Entity
 
+**Namespace:** [Production.Resources](Production.Resources.md)  
+
 Describes the availability of resources in the active workgroups. Entity: Prd_Workgroup_Resources
 
+## Default Visualization
 Default Display Text Format:  
 _{Workgroup.Name:T}_  
 Default Search Member:  
 _Workgroup.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.Resources.Workgroups](Production.Resources.Workgroups.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.Resources.Workgroups](Production.Resources.Workgroups.md)  
 
 ## Attributes

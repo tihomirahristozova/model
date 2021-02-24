@@ -3,16 +3,21 @@ uid: Crm.Customers
 ---
 # Crm.Customers Entity
 
+**Namespace:** [Crm](Crm.md)  
+
 Customer contracts list. For each combination of Enterprise Company and external Party there can be zero or one records of this. Entity: Crm_Customers
 
+## Default Visualization
 Default Display Text Format:  
 _{Number}_  
 Default Search Member:  
 _Number_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

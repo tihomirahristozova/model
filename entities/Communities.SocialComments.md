@@ -3,14 +3,19 @@ uid: Communities.SocialComments
 ---
 # Communities.SocialComments Entity
 
+**Namespace:** [Communities](Communities.md)  
+
 User comment to any object in the system. Entity: Cmm_Social_Comments (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Communities.SocialComments](Communities.SocialComments.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: General.Sequences
 ---
 # General.Sequences Entity
 
+**Namespace:** [General](General.md)  
+
 Provides numbering sequences, applicable for use in a multi-threaded environment. Entity: Gen_Sequences
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Sequences](General.Sequences.md)  
   * [General.SequenceGenerators](General.SequenceGenerators.md)  
 

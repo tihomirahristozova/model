@@ -3,14 +3,19 @@ uid: Crm.PriceTypes
 ---
 # Crm.PriceTypes Entity
 
+**Namespace:** [Crm](Crm.md)  
+
 Price types. Entity: Crm_Price_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.PriceTypes](Crm.PriceTypes.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Applications.Fleet.MaintenanceProfilePlans
 ---
 # Applications.Fleet.MaintenanceProfilePlans Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Contains the plans, included in the maintenance profile. Entity: Fleet_Maintenance_Profile_Plans
 
+## Default Visualization
 Default Display Text Format:  
 _{MaintenanceProfile.Code}: {MaintenanceProfile.Name:T}_  
 Default Search Member:  
 _MaintenanceProfile.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Fleet.MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Fleet.MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md)  
 
 ## Attributes

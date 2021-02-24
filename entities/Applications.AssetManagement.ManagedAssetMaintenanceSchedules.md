@@ -3,16 +3,21 @@ uid: Applications.AssetManagement.ManagedAssetMaintenanceSchedules
 ---
 # Applications.AssetManagement.ManagedAssetMaintenanceSchedules Entity
 
+**Namespace:** [Applications.AssetManagement](Applications.AssetManagement.md)  
+
 Contains the maintenance schedules for the managed assets. Entity: Eam_Managed_Asset_Maintenance_Schedules (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{ManagedAsset.Code}: {ManagedAsset.Name:T}_  
 Default Search Member:  
 _ManagedAsset.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)  
 
 ## Attributes

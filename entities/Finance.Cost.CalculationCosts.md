@@ -3,16 +3,21 @@ uid: Finance.Cost.CalculationCosts
 ---
 # Finance.Cost.CalculationCosts Entity
 
+**Namespace:** [Finance.Cost](Finance.Cost.md)  
+
 Contains the calculated costs allocated to the different Cost Types. Entity: Cost_Calculation_Costs
 
+## Default Visualization
 Default Display Text Format:  
 _{Calculation.DocumentType.Code}:{Calculation.DocumentNo} - {Calculation.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Calculation.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Cost.Calculations](Finance.Cost.Calculations.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Cost.Calculations](Finance.Cost.Calculations.md)  
 
 ## Attributes

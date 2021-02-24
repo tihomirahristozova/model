@@ -3,14 +3,19 @@ uid: Applications.PersonalData.DataSubjectRightRequests
 ---
 # Applications.PersonalData.DataSubjectRightRequests Entity
 
+**Namespace:** [Applications.PersonalData](Applications.PersonalData.md)  
+
 Contains user requests for application of user rights. Entity: Pdm_Data_Subject_Right_Requests (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.PersonalData.DataSubjectRightRequests](Applications.PersonalData.DataSubjectRightRequests.md)  
 
 ## Attributes

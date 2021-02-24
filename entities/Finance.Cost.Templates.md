@@ -3,14 +3,19 @@ uid: Finance.Cost.Templates
 ---
 # Finance.Cost.Templates Entity
 
+**Namespace:** [Finance.Cost](Finance.Cost.md)  
+
 Cost templates specify how to calculate and allocate costs. Entity: Cost_Templates
 
+## Default Visualization
 Default Display Text Format:  
 _{CostTemplateCode}: {CostTemplateName:T}_  
 Default Search Member:  
 _CostTemplateCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Cost.Templates](Finance.Cost.Templates.md)  
   * [Finance.Cost.TemplateCostTypes](Finance.Cost.TemplateCostTypes.md)  
   * [Finance.Cost.TemplateLevels](Finance.Cost.TemplateLevels.md)  

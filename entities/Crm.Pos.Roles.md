@@ -3,14 +3,19 @@ uid: Crm.Pos.Roles
 ---
 # Crm.Pos.Roles Entity
 
+**Namespace:** [Crm.Pos](Crm.Pos.md)  
+
 Represents a role, which can be assigned to POS operators (like Cashier, Manager, etc.). The role indicates the operations, which are allowed to be performed by the operators. Entity: Pos_Roles (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{PosRoleCode}: {PosRoleName:T}_  
 Default Search Member:  
 _PosRoleCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Pos.Roles](Crm.Pos.Roles.md)  
 
 ## Attributes

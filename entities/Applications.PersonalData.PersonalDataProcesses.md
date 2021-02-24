@@ -3,14 +3,19 @@ uid: Applications.PersonalData.PersonalDataProcesses
 ---
 # Applications.PersonalData.PersonalDataProcesses Entity
 
+**Namespace:** [Applications.PersonalData](Applications.PersonalData.md)  
+
 Represents processes, which process personal data, regulated by GDPR and other applicable laws. Entity: Pdm_Personal_Data_Processes (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)  
   * [Applications.PersonalData.JointControllers](Applications.PersonalData.JointControllers.md)  
   * [Applications.PersonalData.PersonalDataProcessRecipients](Applications.PersonalData.PersonalDataProcessRecipients.md)  

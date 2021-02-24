@@ -3,16 +3,21 @@ uid: Finance.Accounting.AccountRequiredProperties
 ---
 # Finance.Accounting.AccountRequiredProperties Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Defines the required properties for new vouchers, for each account. Entity: Acc_Account_Required_Properties
 
+## Default Visualization
 Default Display Text Format:  
 _{Account.AccountFullNumber}: {Account.Name:T}_  
 Default Search Member:  
 _Account.AccountFullNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)  
 
 ## Attributes

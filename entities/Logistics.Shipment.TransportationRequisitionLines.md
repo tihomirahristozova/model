@@ -3,16 +3,21 @@ uid: Logistics.Shipment.TransportationRequisitionLines
 ---
 # Logistics.Shipment.TransportationRequisitionLines Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+
 One line in a client requisition for transportation. Different lines usually represent requisitions for different cargo types. Entity: Log_Transportation_Requisition_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{TransportationRequisition.DocumentType.Code}:{TransportationRequisition.DocumentNo}:{LineNo} - {TransportationRequisition.DocumentType.TypeName:T}_  
 Default Search Member:  
 _TransportationRequisition.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Shipment.TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Shipment.TransportationRequisitions](Logistics.Shipment.TransportationRequisitions.md)  
 
 ## Attributes

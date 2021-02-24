@@ -3,16 +3,21 @@ uid: Finance.Cost.DistributionCosts
 ---
 # Finance.Cost.DistributionCosts Entity
 
+**Namespace:** [Finance.Cost](Finance.Cost.md)  
+
 The cost types and their amounts which are distributed by a Cost Distribution document. Entity: Cost_Distribution_Costs
 
+## Default Visualization
 Default Display Text Format:  
 _{CostDistribution.DocumentType.Code}:{CostDistribution.DocumentNo} - {CostDistribution.DocumentType.TypeName:T}_  
 Default Search Member:  
 _CostDistribution.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Cost.Distributions](Finance.Cost.Distributions.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Cost.Distributions](Finance.Cost.Distributions.md)  
 
 ## Attributes

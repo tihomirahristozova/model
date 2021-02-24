@@ -3,14 +3,19 @@ uid: General.Resources.WorkSchedules
 ---
 # General.Resources.WorkSchedules Entity
 
+**Namespace:** [General.Resources](General.Resources.md)  
+
 Represents the different working schedules, used by the employees and resources. Entity: Gen_Work_Schedules
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)  
   * [General.Resources.WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md)  
 

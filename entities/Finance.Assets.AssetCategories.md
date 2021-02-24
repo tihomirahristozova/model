@@ -3,14 +3,19 @@ uid: Finance.Assets.AssetCategories
 ---
 # Finance.Assets.AssetCategories Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+
 Categorization of the assets, which specifies their depreciation plans. Entity: Ast_Asset_Categories
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Assets.AssetCategories](Finance.Assets.AssetCategories.md)  
   * [Finance.Assets.DepreciationPlanTemplates](Finance.Assets.DepreciationPlanTemplates.md)  
 

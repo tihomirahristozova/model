@@ -3,14 +3,19 @@ uid: General.Contacts.ContactMechanisms
 ---
 # General.Contacts.ContactMechanisms Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 Contains contacting mechanisms - telephone numbers, addresses, web sites, etc. Contact mechanisms can be attached to parties. Currently each contact mechanism is attached to strictly one party. Entity: Cm_Contact_Mechanisms
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Contacts.ContactMechanisms](General.Contacts.ContactMechanisms.md)  
 
 ## Attributes

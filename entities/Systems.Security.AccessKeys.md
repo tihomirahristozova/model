@@ -3,14 +3,19 @@ uid: Systems.Security.AccessKeys
 ---
 # Systems.Security.AccessKeys Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 Access keys provide the basic locking mechanism for data security. Each record can be secured by specifying an access key. Then the users are given access to access keys through groups. Entity: Sec_Access_Keys
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Security.AccessKeys](Systems.Security.AccessKeys.md)  
 
 ## Attributes

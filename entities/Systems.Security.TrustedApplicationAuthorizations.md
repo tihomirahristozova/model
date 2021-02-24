@@ -3,16 +3,21 @@ uid: Systems.Security.TrustedApplicationAuthorizations
 ---
 # Systems.Security.TrustedApplicationAuthorizations Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 Authorization of a trusted application to access the data on behalf of a context user. Entity: Sec_Trusted_Application_Authorizations (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{TrustedApplication.Name:T}_  
 Default Search Member:  
 _TrustedApplication.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md)  
 
 ## Attributes

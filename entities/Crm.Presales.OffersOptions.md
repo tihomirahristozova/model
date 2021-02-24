@@ -3,16 +3,21 @@ uid: Crm.Presales.OffersOptions
 ---
 # Crm.Presales.OffersOptions Entity
 
+**Namespace:** [Crm.Presales](Crm.Presales.md)  
+
 Contains options for user defined document types for Offers. Entity: Crm_Offers_Options
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}: {DocumentType.EntityName:T}_  
 Default Search Member:  
 _DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

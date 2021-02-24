@@ -3,16 +3,21 @@ uid: Finance.Assets.AssetOrderLines
 ---
 # Finance.Assets.AssetOrderLines Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+
 Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{AssetOrder.DocumentType.Code}:{AssetOrder.DocumentNo} - {AssetOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _AssetOrder.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Assets.AssetOrders](Finance.Assets.AssetOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Assets.AssetOrders](Finance.Assets.AssetOrders.md)  
 
 ## Attributes

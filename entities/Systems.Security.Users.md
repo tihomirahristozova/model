@@ -3,14 +3,19 @@ uid: Systems.Security.Users
 ---
 # Systems.Security.Users Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 User logins. Entity: Sec_Users
 
+## Default Visualization
 Default Display Text Format:  
 _{PhoneNumber}: {Name:T}_  
 Default Search Member:  
 _PhoneNumber_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Security.Users](Systems.Security.Users.md)  
   * [Systems.Security.UserAccessKeys](Systems.Security.UserAccessKeys.md)  
   * [Systems.Security.UserGroups](Systems.Security.UserGroups.md)  

@@ -3,16 +3,21 @@ uid: Production.Resources.Resources
 ---
 # Production.Resources.Resources Entity
 
+**Namespace:** [Production.Resources](Production.Resources.md)  
+
 Resource types available to production. Entity: Prd_Resources
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.Resources.ResourceGroups](Production.Resources.ResourceGroups.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.Resources.ResourceGroups](Production.Resources.ResourceGroups.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: General.DocumentFulfillments
 ---
 # General.DocumentFulfillments Entity
 
+**Namespace:** [General](General.md)  
+
 Fulfillment ledger for documents. Entity: Gen_Document_Fulfillments (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.DocumentFulfillments](General.DocumentFulfillments.md)  
 
 ## Attributes

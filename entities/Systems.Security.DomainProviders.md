@@ -3,16 +3,21 @@ uid: Systems.Security.DomainProviders
 ---
 # Systems.Security.DomainProviders Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 The external authentication providers, linked to the domain. Contains data about registration, usually the app id or app key. Entity: Sec_Domain_Providers (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{DisplayName:T}_  
 Default Search Member:  
 _DisplayName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Security.Domains](Systems.Security.Domains.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Security.Domains](Systems.Security.Domains.md)  
 
 ## Attributes

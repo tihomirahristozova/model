@@ -3,16 +3,21 @@ uid: Applications.Cms.WebModules
 ---
 # Applications.Cms.WebModules Entity
 
+**Namespace:** [Applications.Cms](Applications.Cms.md)  
+
 The abstract basic building block of web sites. Each module can render multiple web pages. Entity: Cms_Web_Modules
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
 
 ## Attributes

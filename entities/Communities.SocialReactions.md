@@ -3,14 +3,19 @@ uid: Communities.SocialReactions
 ---
 # Communities.SocialReactions Entity
 
+**Namespace:** [Communities](Communities.md)  
+
 Reaction of a user to any social comment to an object of the system. Entity: Cmm_Social_Reactions (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Communities.SocialReactions](Communities.SocialReactions.md)  
 
 ## Attributes

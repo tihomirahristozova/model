@@ -3,14 +3,19 @@ uid: Projects.TaskTypes
 ---
 # Projects.TaskTypes Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Represents the different types of tasks, which can be included in the projects. Entity: Prj_Task_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Projects.TaskTypes](Projects.TaskTypes.md)  
 
 ## Attributes

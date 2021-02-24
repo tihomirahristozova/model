@@ -3,16 +3,21 @@ uid: Crm.Sales.SalesOrderPromotionalPackages
 ---
 # Crm.Sales.SalesOrderPromotionalPackages Entity
 
+**Namespace:** [Crm.Sales](Crm.Sales.md)  
+
 The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Promotional_Packages
 
+## Default Visualization
 Default Display Text Format:  
 _{SalesOrder.DocumentType.Code}:{SalesOrder.DocumentNo} - {SalesOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _SalesOrder.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)  
 
 ## Attributes

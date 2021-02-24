@@ -3,14 +3,19 @@ uid: Production.Resources.Workgroups
 ---
 # Production.Resources.Workgroups Entity
 
+**Namespace:** [Production.Resources](Production.Resources.md)  
+
 Production workgroups. Entity: Prd_Workgroups
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Production.Resources.Workgroups](Production.Resources.Workgroups.md)  
   * [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)  
     * [Production.Resources.Capacity](Production.Resources.Capacity.md)  

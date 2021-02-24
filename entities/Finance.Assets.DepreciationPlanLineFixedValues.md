@@ -3,16 +3,21 @@ uid: Finance.Assets.DepreciationPlanLineFixedValues
 ---
 # Finance.Assets.DepreciationPlanLineFixedValues Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+
 When specified, contains user-defined asset depreciation values for each depreciation period. Entity: Ast_Depreciation_Plan_Line_Fixed_Values
 
+## Default Visualization
 Default Display Text Format:  
 _{DepreciationPlanLine.DepreciationPlan.DocumentType.Code}:{DepreciationPlanLine.DepreciationPlan.DocumentNo}:{DepreciationPlanLine.LineNo} - {DepreciationPlanLine.DepreciationPlan.DocumentType.TypeName:T}_  
 Default Search Member:  
 _DepreciationPlanLine.DepreciationPlan.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Assets.DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Assets.DepreciationPlans](Finance.Assets.DepreciationPlans.md)  
 
 ## Attributes

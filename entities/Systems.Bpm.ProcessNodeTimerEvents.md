@@ -3,14 +3,19 @@ uid: Systems.Bpm.ProcessNodeTimerEvents
 ---
 # Systems.Bpm.ProcessNodeTimerEvents Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 Timer event definition. Currently - not used. Entity: Bpm_Process_Node_Timer_Events
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Bpm.ProcessNodeTimerEvents](Systems.Bpm.ProcessNodeTimerEvents.md)  
 
 ## Attributes

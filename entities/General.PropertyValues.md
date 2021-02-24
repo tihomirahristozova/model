@@ -3,14 +3,19 @@ uid: General.PropertyValues
 ---
 # General.PropertyValues Entity
 
+**Namespace:** [General](General.md)  
+
 The actual values of the user-defined properties for each actual entity. Entity: Gen_Property_Values
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.PropertyValues](General.PropertyValues.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Applications.Rental.AssetTypes
 ---
 # Applications.Rental.AssetTypes Entity
 
+**Namespace:** [Applications.Rental](Applications.Rental.md)  
+
 Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{RentalAssetTypeName:T}_  
 Default Search Member:  
 _RentalAssetTypeName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Rental.AssetTypes](Applications.Rental.AssetTypes.md)  
   * [Applications.Rental.AssetTypeConsumables](Applications.Rental.AssetTypeConsumables.md)  
   * [Applications.Rental.AssetTypeProperties](Applications.Rental.AssetTypeProperties.md)  

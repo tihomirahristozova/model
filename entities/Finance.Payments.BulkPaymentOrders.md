@@ -3,14 +3,20 @@ uid: Finance.Payments.BulkPaymentOrders
 ---
 # Finance.Payments.BulkPaymentOrders Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Bulk payment orders document. Can generate a multitude of payment orders. Often used for opening balances. Entity: Cash_Bulk_Payment_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Payments.BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)  
   * [Finance.Payments.BulkPaymentOrderLines](Finance.Payments.BulkPaymentOrderLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

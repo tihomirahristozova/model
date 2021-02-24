@@ -3,16 +3,21 @@ uid: Logistics.Procurement.PurchaseInvoiceLines
 ---
 # Logistics.Procurement.PurchaseInvoiceLines Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+
 Contains detail lines for purchase invoice documents. Entity: Scm_Purchase_Invoice_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{PurchaseInvoice.DocumentType.Code}:{PurchaseInvoice.DocumentNo}:{LineNo} - {PurchaseInvoice.DocumentType.TypeName:T}_  
 Default Search Member:  
 _PurchaseInvoice.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Procurement.PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Procurement.PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md)  
 
 ## Attributes

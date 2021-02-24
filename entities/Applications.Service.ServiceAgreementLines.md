@@ -3,16 +3,21 @@ uid: Applications.Service.ServiceAgreementLines
 ---
 # Applications.Service.ServiceAgreementLines Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+
 Service agreement lines represent the individual serviced objects that are covered by the service agreement. Entity: Srv_Service_Agreement_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{ServiceAgreement.DocumentType.Code}:{ServiceAgreement.DocumentNo} - {ServiceAgreement.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ServiceAgreement.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)  
 
 ## Attributes

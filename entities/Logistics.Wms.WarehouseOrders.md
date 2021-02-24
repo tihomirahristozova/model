@@ -3,14 +3,20 @@ uid: Logistics.Wms.WarehouseOrders
 ---
 # Logistics.Wms.WarehouseOrders Entity
 
+**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains order for internal warehouse operation or plan for execution of warehouse requisition. Entity: Wms_Warehouse_Orders (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Wms.WarehouseOrders](Logistics.Wms.WarehouseOrders.md)  
   * [Logistics.Wms.WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

@@ -3,14 +3,20 @@ uid: Finance.Vat.Entries
 ---
 # Finance.Vat.Entries Entity
 
+**Namespace:** [Finance.Vat](Finance.Vat.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains the entries in the VAT sales and purchase ledgers. Entity: VAT_Entries
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Vat.Entries](Finance.Vat.Entries.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  
     * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  

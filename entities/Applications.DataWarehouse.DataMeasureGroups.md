@@ -3,14 +3,19 @@ uid: Applications.DataWarehouse.DataMeasureGroups
 ---
 # Applications.DataWarehouse.DataMeasureGroups Entity
 
+**Namespace:** [Applications.DataWarehouse](Applications.DataWarehouse.md)  
+
 Contains the groups of measures in the general data warehouse. Entity: Dw_Data_Measure_Groups (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.DataWarehouse.DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md)  
 
 ## Attributes

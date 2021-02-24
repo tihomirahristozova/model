@@ -3,14 +3,19 @@ uid: General.Products.Products
 ---
 # General.Products.Products Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 Products are the different items in the enterprise, which can be purchased, stored, sold and depreciated. Entity: Gen_Products
 
+## Default Visualization
 Default Display Text Format:  
 _{PartNumber}: {Name:T}_  
 Default Search Member:  
 _PartNumber_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Products.Products](General.Products.Products.md)  
   * [Crm.Marketing.ProductDistributionChannels](Crm.Marketing.ProductDistributionChannels.md)  
   * [General.ProductVariants](General.ProductVariants.md)  

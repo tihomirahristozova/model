@@ -3,16 +3,21 @@ uid: Finance.Accounting.VoucherCorrespondances
 ---
 # Finance.Accounting.VoucherCorrespondances Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Obsolete. Not used. Entity: Acc_Voucher_Correspondances
 
+## Default Visualization
 Default Display Text Format:  
 _{Voucher.DocumentType.Code}:{Voucher.DocumentNo} - {Voucher.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Voucher.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)  
 
 ## Attributes

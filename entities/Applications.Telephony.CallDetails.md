@@ -3,14 +3,19 @@ uid: Applications.Telephony.CallDetails
 ---
 # Applications.Telephony.CallDetails Entity
 
+**Namespace:** [Applications.Telephony](Applications.Telephony.md)  
+
 Contains call detail records. Calls are phone calls, video calls and SMS messages. Entity: Cm_Call_Details
 
+## Default Visualization
 Default Display Text Format:  
 _{CalledPartyNumber}_  
 Default Search Member:  
 _CalledPartyNumber_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Telephony.CallDetails](Applications.Telephony.CallDetails.md)  
 
 ## Attributes

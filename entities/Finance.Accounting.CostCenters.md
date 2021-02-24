@@ -3,14 +3,19 @@ uid: Finance.Accounting.CostCenters
 ---
 # Finance.Accounting.CostCenters Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Centers
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Accounting.CostCenters](Finance.Accounting.CostCenters.md)  
 
 ## Attributes

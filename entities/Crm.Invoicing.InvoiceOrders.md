@@ -3,14 +3,20 @@ uid: Crm.Invoicing.InvoiceOrders
 ---
 # Crm.Invoicing.InvoiceOrders Entity
 
+**Namespace:** [Crm.Invoicing](Crm.Invoicing.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Invoice Orders can be created by different modules and order the creation of Invoices. Entity: Crm_Invoice_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Invoicing.InvoiceOrders](Crm.Invoicing.InvoiceOrders.md)  
   * [Crm.Invoicing.InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

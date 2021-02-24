@@ -3,14 +3,20 @@ uid: Logistics.Shipment.TransportationExecutions
 ---
 # Logistics.Shipment.TransportationExecutions Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains executions (loading, unloading or other operations) of the transportation orders. Entity: Log_Transportation_Executions (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Shipment.TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)  
   * [Logistics.Shipment.TransportationExecutionLines](Logistics.Shipment.TransportationExecutionLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

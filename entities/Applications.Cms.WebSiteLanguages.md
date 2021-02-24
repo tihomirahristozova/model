@@ -3,16 +3,21 @@ uid: Applications.Cms.WebSiteLanguages
 ---
 # Applications.Cms.WebSiteLanguages Entity
 
+**Namespace:** [Applications.Cms](Applications.Cms.md)  
+
 Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages
 
+## Default Visualization
 Default Display Text Format:  
 _{LanguageCode}_  
 Default Search Member:  
 _LanguageCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
 
 ## Attributes

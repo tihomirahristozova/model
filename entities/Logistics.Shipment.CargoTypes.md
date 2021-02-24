@@ -3,14 +3,19 @@ uid: Logistics.Shipment.CargoTypes
 ---
 # Logistics.Shipment.CargoTypes Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+
 Represents a cargo type. Different cargo types might require different types of vehicles or modes of transportartion. Entity: Log_Cargo_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Shipment.CargoTypes](Logistics.Shipment.CargoTypes.md)  
 
 ## Attributes

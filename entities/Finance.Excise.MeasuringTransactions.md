@@ -3,14 +3,19 @@ uid: Finance.Excise.MeasuringTransactions
 ---
 # Finance.Excise.MeasuringTransactions Entity
 
+**Namespace:** [Finance.Excise](Finance.Excise.md)  
+
 Transaction of product input or output, measured with specialized measuring device for excise purposes. Entity: Exc_Measuring_Transactions (Introduced in version 21.1.1.9)
 
+## Default Visualization
 Default Display Text Format:  
 _{MeasuringDeviceCode}_  
 Default Search Member:  
 _MeasuringDeviceCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Excise.MeasuringTransactions](Finance.Excise.MeasuringTransactions.md)  
 
 ## Attributes

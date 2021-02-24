@@ -3,14 +3,19 @@ uid: General.CustomProperties
 ---
 # General.CustomProperties Entity
 
+**Namespace:** [General](General.md)  
+
 User-defined properties, which can supplement the system properties of almost all entities in the system. Entity: Gen_Properties
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {AllowedValuesEntityName:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.CustomProperties](General.CustomProperties.md)  
   * [General.CustomPropertyAllowedValues](General.CustomPropertyAllowedValues.md)  
   * [General.PropertyEnterpriseCompanyFilters](General.PropertyEnterpriseCompanyFilters.md)  

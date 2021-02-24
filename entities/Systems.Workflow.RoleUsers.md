@@ -3,16 +3,21 @@ uid: Systems.Workflow.RoleUsers
 ---
 # Systems.Workflow.RoleUsers Entity
 
+**Namespace:** [Systems.Workflow](Systems.Workflow.md)  
+
 The roles "played" by the security users. Entity: Wf_Role_Users
 
+## Default Visualization
 Default Display Text Format:  
 _{Role.Name:T}_  
 Default Search Member:  
 _Role.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Workflow.Roles](Systems.Workflow.Roles.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Workflow.Roles](Systems.Workflow.Roles.md)  
 
 ## Attributes

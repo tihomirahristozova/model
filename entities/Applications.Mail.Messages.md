@@ -3,16 +3,21 @@ uid: Applications.Mail.Messages
 ---
 # Applications.Mail.Messages Entity
 
+**Namespace:** [Applications.Mail](Applications.Mail.md)  
+
 Represents email messages. Entity: Mail_Messages
 
+## Default Visualization
 Default Display Text Format:  
 _{MailBoxFolder.FolderName:T}_  
 Default Search Member:  
 _MailBoxFolder.FolderName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Mail.Boxes](Applications.Mail.Boxes.md)  
 
 ## Attributes

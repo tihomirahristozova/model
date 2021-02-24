@@ -3,16 +3,21 @@ uid: General.Products.ProductPictures
 ---
 # General.Products.ProductPictures Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 Pictures of products. Entity: Gen_Product_Pictures
 
+## Default Visualization
 Default Display Text Format:  
 _{Product.PartNumber}: {Product.Name:T}_  
 Default Search Member:  
 _Product.PartNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Products.Products](General.Products.Products.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Products.Products](General.Products.Products.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Logistics.Wms.WarehouseOrderFulfillments
 ---
 # Logistics.Wms.WarehouseOrderFulfillments Entity
 
+**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
+
 Fulfillment of a warehouse order line. Entity: Wms_Warehouse_Order_Fulfillments (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Wms.WarehouseOrderFulfillments](Logistics.Wms.WarehouseOrderFulfillments.md)  
 
 ## Attributes

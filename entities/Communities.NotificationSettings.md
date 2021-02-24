@@ -3,14 +3,19 @@ uid: Communities.NotificationSettings
 ---
 # Communities.NotificationSettings Entity
 
+**Namespace:** [Communities](Communities.md)  
+
 User notification settings for the different notification classes. Entity: Cmm_Notification_Settings (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Communities.NotificationSettings](Communities.NotificationSettings.md)  
 
 ## Attributes

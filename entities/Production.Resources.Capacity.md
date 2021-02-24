@@ -3,16 +3,21 @@ uid: Production.Resources.Capacity
 ---
 # Production.Resources.Capacity Entity
 
+**Namespace:** [Production.Resources](Production.Resources.md)  
+
 Contains capacity of workgroup resources available for production. Entity: Prd_Capacity
 
+## Default Visualization
 Default Display Text Format:  
 _{WorkgroupResource.Workgroup.Name:T}_  
 Default Search Member:  
 _WorkgroupResource.Workgroup.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.Resources.Workgroups](Production.Resources.Workgroups.md)  
 
 ## Attributes

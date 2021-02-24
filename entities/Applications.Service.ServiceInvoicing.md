@@ -3,16 +3,21 @@ uid: Applications.Service.ServiceInvoicing
 ---
 # Applications.Service.ServiceInvoicing Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+
 Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
 
+## Default Visualization
 Default Display Text Format:  
 _{Service.Code}: {Service.Name:T}_  
 Default Search Member:  
 _Service.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Service.Services](Applications.Service.Services.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Service.Services](Applications.Service.Services.md)  
 
 ## Attributes

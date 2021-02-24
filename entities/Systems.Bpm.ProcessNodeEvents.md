@@ -3,14 +3,19 @@ uid: Systems.Bpm.ProcessNodeEvents
 ---
 # Systems.Bpm.ProcessNodeEvents Entity
 
+**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
+
 Abstract root of all process node events. Currently - not used. Entity: Bpm_Process_Node_Events
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Bpm.ProcessNodeEvents](Systems.Bpm.ProcessNodeEvents.md)  
 
 ## Attributes

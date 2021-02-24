@@ -3,16 +3,21 @@ uid: General.DocumentTypeProperties
 ---
 # General.DocumentTypeProperties Entity
 
+**Namespace:** [General](General.md)  
+
 Default user-defined properties, which should be added to new documents. Entity: Gen_Document_Type_Properties
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}: {DocumentType.EntityName:T}_  
 Default Search Member:  
 _DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

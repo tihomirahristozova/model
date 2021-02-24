@@ -3,14 +3,19 @@ uid: Finance.Accounting.ProfitCenters
 ---
 # Finance.Accounting.ProfitCenters Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Defines company profit centers and their relative weight for automatic balance transfers from cost centers. Entity: Acc_Profit_Centers
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Accounting.ProfitCenters](Finance.Accounting.ProfitCenters.md)  
 
 ## Attributes

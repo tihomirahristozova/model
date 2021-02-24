@@ -3,14 +3,20 @@ uid: Production.ShopFloor.ConsumptionOrders
 ---
 # Production.ShopFloor.ConsumptionOrders Entity
 
+**Namespace:** [Production.ShopFloor](Production.ShopFloor.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Headers of material consuption orders of the work orders. Entity: Prd_Consumption_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Production.ShopFloor.ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)  
   * [Production.ShopFloor.ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

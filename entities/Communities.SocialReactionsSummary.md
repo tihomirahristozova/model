@@ -3,14 +3,19 @@ uid: Communities.SocialReactionsSummary
 ---
 # Communities.SocialReactionsSummary View
 
+**Namespace:** [Communities](Communities.md)  
+
 Summary with the social reactions per comment and dataobject. Entity: Cmm_Social_Reactions_Summary_Indexed_View
 
+## Default Visualization
 Default Display Text Format:  
 _{DataObjectId}: {SocialCommentId}_  
 Default Search Member:  
 _DataObjectId_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Communities.SocialReactionsSummary](Communities.SocialReactionsSummary.md)  
 
 ## Attributes

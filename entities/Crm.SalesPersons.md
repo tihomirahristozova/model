@@ -3,16 +3,21 @@ uid: Crm.SalesPersons
 ---
 # Crm.SalesPersons Entity
 
+**Namespace:** [Crm](Crm.md)  
+
 Sales persons (or representatives) are sellers inside the enterprise company who sell the products to customers. Entity: Crm_Sales_Persons
 
+## Default Visualization
 Default Display Text Format:  
 _{Person.PartyCode}: {Person.PartyName:T}_  
 Default Search Member:  
 _Person.PartyCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Persons](General.Contacts.Persons.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Persons](General.Contacts.Persons.md)  
 
 ## Attributes

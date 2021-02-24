@@ -3,16 +3,21 @@ uid: Applications.Fleet.CrewMembers
 ---
 # Applications.Fleet.CrewMembers Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Contains the memnbers of vehicle crews. Entity: Fleet_Crew_Members
 
+## Default Visualization
 Default Display Text Format:  
 _{Crew.Name:T}_  
 Default Search Member:  
 _Crew.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Fleet.Crews](Applications.Fleet.Crews.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
 
 ## Attributes

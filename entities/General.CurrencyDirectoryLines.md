@@ -3,16 +3,21 @@ uid: General.CurrencyDirectoryLines
 ---
 # General.CurrencyDirectoryLines Entity
 
+**Namespace:** [General](General.md)  
+
 Contains exchange rate for a currency against the main currency of currency directory. Entity: Gen_Currency_Directory_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{CurrencyDirectory.DocumentType.Code}:{CurrencyDirectory.DocumentNo} - {CurrencyDirectory.DocumentType.TypeName:T}_  
 Default Search Member:  
 _CurrencyDirectory.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.CurrencyDirectories](General.CurrencyDirectories.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.CurrencyDirectories](General.CurrencyDirectories.md)  
 
 ## Attributes

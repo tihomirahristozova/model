@@ -3,14 +3,20 @@ uid: Applications.Service.ServiceAgreements
 ---
 # Applications.Service.ServiceAgreements Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Service agreements represent SLAs between the enterprise company and its clients. Entity: Srv_Service_Agreements
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)  
   * [Applications.Service.ServiceAgreementLines](Applications.Service.ServiceAgreementLines.md)  
   * [Applications.Service.ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md)  

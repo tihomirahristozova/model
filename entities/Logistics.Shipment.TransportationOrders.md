@@ -3,14 +3,20 @@ uid: Logistics.Shipment.TransportationOrders
 ---
 # Logistics.Shipment.TransportationOrders Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Transportation ordered to specific carrier or vehicle. Entity: Log_Transportation_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Shipment.TransportationOrders](Logistics.Shipment.TransportationOrders.md)  
   * [Logistics.Shipment.TransportationOrderLines](Logistics.Shipment.TransportationOrderLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

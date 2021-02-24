@@ -3,14 +3,19 @@ uid: Communities.SocialPosts
 ---
 # Communities.SocialPosts Entity
 
+**Namespace:** [Communities](Communities.md)  
+
 User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Communities.SocialPosts](Communities.SocialPosts.md)  
 
 ## Attributes

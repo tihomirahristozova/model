@@ -3,16 +3,21 @@ uid: Production.Resources.Functions
 ---
 # Production.Resources.Functions Entity
 
+**Namespace:** [Production.Resources](Production.Resources.md)  
+
 Definition of the functions that the resources can perform. Entity: Prd_Functions
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.Resources.FunctionGroups](Production.Resources.FunctionGroups.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.Resources.FunctionGroups](Production.Resources.FunctionGroups.md)  
 
 ## Attributes

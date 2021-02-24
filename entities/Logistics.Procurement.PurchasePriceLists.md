@@ -3,14 +3,19 @@ uid: Logistics.Procurement.PurchasePriceLists
 ---
 # Logistics.Procurement.PurchasePriceLists Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+
 Contains purchase price list headers. Entity: Scm_Purchase_Price_Lists
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Procurement.PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md)  
 
 ## Attributes

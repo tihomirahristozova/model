@@ -3,16 +3,21 @@ uid: Production.ShopFloor.OutputOrderLines
 ---
 # Production.ShopFloor.OutputOrderLines Entity
 
+**Namespace:** [Production.ShopFloor](Production.ShopFloor.md)  
+
 Detail records of output orders. Entity: Prd_Output_Order_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{OutputOrder.DocumentType.Code}:{OutputOrder.DocumentNo}:{LineOrd} - {OutputOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _OutputOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.ShopFloor.OutputOrders](Production.ShopFloor.OutputOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.ShopFloor.OutputOrders](Production.ShopFloor.OutputOrders.md)  
 
 ## Attributes

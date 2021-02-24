@@ -3,16 +3,21 @@ uid: Systems.Workflow.Routes
 ---
 # Systems.Workflow.Routes Entity
 
+**Namespace:** [Systems.Workflow](Systems.Workflow.md)  
+
 Contains document routes, which specify which document generation procedures will be run upon document events. Entity: Wf_Routes
 
+## Default Visualization
 Default Display Text Format:  
 _{ProcedureName:T}_  
 Default Search Member:  
 _ProcedureName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

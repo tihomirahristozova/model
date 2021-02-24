@@ -3,14 +3,19 @@ uid: Crm.Sales.DocumentTypePaymentOptions
 ---
 # Crm.Sales.DocumentTypePaymentOptions Entity
 
+**Namespace:** [Crm.Sales](Crm.Sales.md)  
+
 Contains payment options for user documnet types for sales orders. Entity: Crm_Document_Type_Payment_Options
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Sales.DocumentTypePaymentOptions](Crm.Sales.DocumentTypePaymentOptions.md)  
 
 ## Attributes

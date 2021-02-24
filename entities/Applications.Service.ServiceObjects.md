@@ -3,14 +3,19 @@ uid: Applications.Service.ServiceObjects
 ---
 # Applications.Service.ServiceObjects Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+
 Contains the serviceable objects. The service objects can be covered by service agreements, serviced in service activities, etc. Entity: Srv_Service_Objects
 
+## Default Visualization
 Default Display Text Format:  
 _{SerialNumber}: {Name:T}_  
 Default Search Member:  
 _SerialNumber_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Service.ServiceObjects](Applications.Service.ServiceObjects.md)  
 
 ## Attributes

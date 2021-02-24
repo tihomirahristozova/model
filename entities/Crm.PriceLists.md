@@ -3,14 +3,19 @@ uid: Crm.PriceLists
 ---
 # Crm.PriceLists Entity
 
+**Namespace:** [Crm](Crm.md)  
+
 Price Lists are used to manage multiple price records, assign to customers, etc. Entity: Crm_Price_Lists
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.PriceLists](Crm.PriceLists.md)  
 
 ## Attributes

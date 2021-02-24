@@ -3,14 +3,19 @@ uid: Finance.Payments.OrderBalances
 ---
 # Finance.Payments.OrderBalances View
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+
 Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View
 
+## Default Visualization
 Default Display Text Format:  
 _{OrderAmountValue}: {PaidAmountValue}_  
 Default Search Member:  
 _OrderAmountValue_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Payments.OrderBalances](Finance.Payments.OrderBalances.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Systems.Security.UserProviderLogins
 ---
 # Systems.Security.UserProviderLogins Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 External login providers. Entity: Sec_User_Provider_Logins (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{User.PhoneNumber}: {User.Name:T}_  
 Default Search Member:  
 _User.PhoneNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Security.Users](Systems.Security.Users.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Security.Users](Systems.Security.Users.md)  
 
 ## Attributes

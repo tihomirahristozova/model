@@ -3,14 +3,19 @@ uid: Finance.Vat.DealTypes
 ---
 # Finance.Vat.DealTypes Entity
 
+**Namespace:** [Finance.Vat](Finance.Vat.md)  
+
 Contains deal types supported by the system as well as user-defined types. Entity: VAT_Deal_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md)  
 
 ## Attributes

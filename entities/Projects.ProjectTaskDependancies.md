@@ -3,16 +3,21 @@ uid: Projects.ProjectTaskDependancies
 ---
 # Projects.ProjectTaskDependancies Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Represents dependancy between project tasks. Entity: Prj_Project_Task_Dependancies
 
+## Default Visualization
 Default Display Text Format:  
 _{ProjectTask.TaskName:T}_  
 Default Search Member:  
 _ProjectTask.TaskName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Projects.ProjectTasks](Projects.ProjectTasks.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Projects.ProjectTasks](Projects.ProjectTasks.md)  
 
 ## Attributes

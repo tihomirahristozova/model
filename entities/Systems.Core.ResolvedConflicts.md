@@ -3,14 +3,19 @@ uid: Systems.Core.ResolvedConflicts
 ---
 # Systems.Core.ResolvedConflicts Entity
 
+**Namespace:** [Systems.Core](Systems.Core.md)  
+
 Contains records of conflicts, which were automatically resolved by update procedures. Entity: Sys_Resolved_Conflicts
 
+## Default Visualization
 Default Display Text Format:  
 _{TableName:T}_  
 Default Search Member:  
 _TableName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Core.ResolvedConflicts](Systems.Core.ResolvedConflicts.md)  
 
 ## Attributes

@@ -3,14 +3,20 @@ uid: Logistics.Inventory.Reconciliations
 ---
 # Logistics.Inventory.Reconciliations Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Store reconciliations (physical counting). Usefull for real-world reconciliations and for opening balance. Entity: Inv_Reconciliations
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.Reconciliations](Logistics.Inventory.Reconciliations.md)  
   * [Logistics.Inventory.ReconciliationLines](Logistics.Inventory.ReconciliationLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

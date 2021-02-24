@@ -3,14 +3,19 @@ uid: Crm.Pricing.PricingModels
 ---
 # Crm.Pricing.PricingModels Entity
 
+**Namespace:** [Crm.Pricing](Crm.Pricing.md)  
+
 Pricing models are assigned to product groups and are used to automate creation of standard costs and prices and related price records. Entity: Crm_Pricing_Models
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md)  
   * [Crm.Pricing.PricingModelCosts](Crm.Pricing.PricingModelCosts.md)  
   * [Crm.Pricing.PricingModelPriceLists](Crm.Pricing.PricingModelPriceLists.md)  

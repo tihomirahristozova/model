@@ -3,14 +3,19 @@ uid: Finance.Accounting.AccountGroups
 ---
 # Finance.Accounting.AccountGroups Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Hierarchical chart of account groups. Entity: Acc_Account_Groups
 
+## Default Visualization
 Default Display Text Format:  
 _{Number}: {Name:T}_  
 Default Search Member:  
 _Number_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Accounting.AccountGroups](Finance.Accounting.AccountGroups.md)  
 
 ## Attributes

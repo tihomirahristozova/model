@@ -3,14 +3,19 @@ uid: Logistics.Procurement.SupplierTypes
 ---
 # Logistics.Procurement.SupplierTypes Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+
 Supplier types are primarily used to differentiate the security level access to the different supplier groups. Entity: Scm_Supplier_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Procurement.SupplierTypes](Logistics.Procurement.SupplierTypes.md)  
 
 ## Attributes

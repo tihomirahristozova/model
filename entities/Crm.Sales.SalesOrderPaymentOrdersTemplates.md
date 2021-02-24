@@ -3,16 +3,21 @@ uid: Crm.Sales.SalesOrderPaymentOrdersTemplates
 ---
 # Crm.Sales.SalesOrderPaymentOrdersTemplates Entity
 
+**Namespace:** [Crm.Sales](Crm.Sales.md)  
+
 Contains options for generation of payment orders. Each option set is assigned to specific generation route. Entity: Crm_Sales_Order_Payment_Orders_Templates
 
+## Default Visualization
 Default Display Text Format:  
 _{Route.ProcedureName:T}_  
 Default Search Member:  
 _Route.ProcedureName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Workflow.Routes](Systems.Workflow.Routes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

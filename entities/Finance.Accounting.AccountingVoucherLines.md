@@ -3,16 +3,21 @@ uid: Finance.Accounting.AccountingVoucherLines
 ---
 # Finance.Accounting.AccountingVoucherLines Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Contains one debit or credit posting within an accounting voucher. Entity: Acc_Voucher_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{Voucher.DocumentType.Code}:{Voucher.DocumentNo}:{LineNo} - {Voucher.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Voucher.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Logistics.LogisticUnitSpecifications
 ---
 # Logistics.LogisticUnitSpecifications Entity
 
+**Namespace:** [Logistics](Logistics.md)  
+
 Specification of a logistic unit. The database can contain any kind of specification, but most client applications and integrated methods process GS1 specifications (application codes). Entity: Log_Logistic_Unit_Specifications (Introduced in version 21.1.0.77)
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.LogisticUnits](Logistics.LogisticUnits.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.LogisticUnits](Logistics.LogisticUnits.md)  
 
 ## Attributes

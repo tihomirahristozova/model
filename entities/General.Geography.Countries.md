@@ -3,14 +3,19 @@ uid: General.Geography.Countries
 ---
 # General.Geography.Countries Entity
 
+**Namespace:** [General.Geography](General.Geography.md)  
+
 List of countries, listed by their internet suffix code. Entity: Gen_Countries
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Geography.Countries](General.Geography.Countries.md)  
 
 ## Attributes

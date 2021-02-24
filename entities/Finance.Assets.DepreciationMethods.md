@@ -3,14 +3,19 @@ uid: Finance.Assets.DepreciationMethods
 ---
 # Finance.Assets.DepreciationMethods Entity
 
+**Namespace:** [Finance.Assets](Finance.Assets.md)  
+
 Depreciation methods. Contains both system-defined and user-defined methods. Entity: Ast_Depreciation_Methods
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Assets.DepreciationMethods](Finance.Assets.DepreciationMethods.md)  
 
 ## Attributes

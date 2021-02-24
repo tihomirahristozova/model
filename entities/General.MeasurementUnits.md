@@ -3,16 +3,21 @@ uid: General.MeasurementUnits
 ---
 # General.MeasurementUnits Entity
 
+**Namespace:** [General](General.md)  
+
 Contains all measurement units, grouped in categories. Each category has one base unit (with ratio 1/1) and unlimited number of derived units with fixed ratio to the base unit. Entity: Gen_Measurement_Units
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.MeasurementCategories](General.MeasurementCategories.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.MeasurementCategories](General.MeasurementCategories.md)  
 
 ## Attributes

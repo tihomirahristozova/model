@@ -3,16 +3,21 @@ uid: Applications.Fleet.VehicleEquipment
 ---
 # Applications.Fleet.VehicleEquipment Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Contains the actual and history of equipment, installed on the vehicles. Entity: Fleet_Vehicle_Equipment
 
+## Default Visualization
 Default Display Text Format:  
 _{Vehicle.EngineIdentificationNumber}_  
 Default Search Member:  
 _Vehicle.EngineIdentificationNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Fleet.Vehicles](Applications.Fleet.Vehicles.md)  
 
 ## Attributes

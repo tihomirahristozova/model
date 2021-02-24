@@ -3,14 +3,20 @@ uid: General.DocumentJobs
 ---
 # General.DocumentJobs Entity
 
+**Namespace:** [General](General.md)  
+**Inherited From:** [Systems.Core.Jobs](Systems.Core.Jobs.md)  
+
 Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.DocumentJobs](General.DocumentJobs.md)  
 
 ## Attributes

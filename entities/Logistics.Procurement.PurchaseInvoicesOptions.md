@@ -3,14 +3,19 @@ uid: Logistics.Procurement.PurchaseInvoicesOptions
 ---
 # Logistics.Procurement.PurchaseInvoicesOptions Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+
 Contains purchase invoice specific options for the different document types. Entity: Scm_Purchase_Invoices_Options
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Procurement.PurchaseInvoicesOptions](Logistics.Procurement.PurchaseInvoicesOptions.md)  
 
 ## Attributes

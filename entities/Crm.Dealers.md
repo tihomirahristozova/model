@@ -3,16 +3,21 @@ uid: Crm.Dealers
 ---
 # Crm.Dealers Entity
 
+**Namespace:** [Crm](Crm.md)  
+
 External dealers. Entity: Crm_Dealers
 
+## Default Visualization
 Default Display Text Format:  
 _{Party.PartyCode}: {Party.PartyName:T}_  
 Default Search Member:  
 _Party.PartyCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

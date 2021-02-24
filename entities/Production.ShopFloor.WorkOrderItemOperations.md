@@ -3,16 +3,21 @@ uid: Production.ShopFloor.WorkOrderItemOperations
 ---
 # Production.ShopFloor.WorkOrderItemOperations Entity
 
+**Namespace:** [Production.ShopFloor](Production.ShopFloor.md)  
+
 The operations that are performed to produce the product. Entity: Prd_Work_Order_Item_Operations
 
+## Default Visualization
 Default Display Text Format:  
 _{WorkOrderItem.WorkOrder.DocumentType.Code}:{WorkOrderItem.WorkOrder.DocumentNo}:{WorkOrderItem.LineOrd} - {WorkOrderItem.WorkOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _WorkOrderItem.WorkOrder.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.ShopFloor.WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.ShopFloor.WorkOrders](Production.ShopFloor.WorkOrders.md)  
 
 ## Attributes

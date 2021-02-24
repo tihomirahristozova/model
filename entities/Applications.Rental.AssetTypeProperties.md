@@ -3,16 +3,21 @@ uid: Applications.Rental.AssetTypeProperties
 ---
 # Applications.Rental.AssetTypeProperties Entity
 
+**Namespace:** [Applications.Rental](Applications.Rental.md)  
+
 Contains the properties, which are required for each asset category. Entity: Rent_Asset_Type_Properties
 
+## Default Visualization
 Default Display Text Format:  
 _{RentalAssetType.RentalAssetTypeName:T}_  
 Default Search Member:  
 _RentalAssetType.RentalAssetTypeName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Rental.AssetTypes](Applications.Rental.AssetTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Rental.AssetTypes](Applications.Rental.AssetTypes.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: General.Products.VariantSizes
 ---
 # General.Products.VariantSizes Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 Contains the different sizes, which can be assigned to product variants. Entity: Gen_Variant_Sizes
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Products.VariantSizes](General.Products.VariantSizes.md)  
 
 ## Attributes

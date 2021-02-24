@@ -3,14 +3,19 @@ uid: Production.Technologies.Recipes
 ---
 # Production.Technologies.Recipes Entity
 
+**Namespace:** [Production.Technologies](Production.Technologies.md)  
+
 Contains the characteristics of operations used to create products. Entity: Prd_Recipes
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Production.Technologies.Recipes](Production.Technologies.Recipes.md)  
   * [Production.Technologies.RecipeIngredients](Production.Technologies.RecipeIngredients.md)  
   * [Production.Technologies.RecipeOperations](Production.Technologies.RecipeOperations.md)  

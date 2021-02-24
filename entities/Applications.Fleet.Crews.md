@@ -3,16 +3,21 @@ uid: Applications.Fleet.Crews
 ---
 # Applications.Fleet.Crews Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Represents the crews, which can operate vehicles. Entity: Fleet_Crews
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Systems.Security.ColumnPermissions
 ---
 # Systems.Security.ColumnPermissions Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 User permissions for accessing the system data columns. Entity: Sec_Column_Permissions
 
+## Default Visualization
 Default Display Text Format:  
 _{ColumnName:T}_  
 Default Search Member:  
 _ColumnName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Security.ColumnPermissions](Systems.Security.ColumnPermissions.md)  
 
 ## Attributes

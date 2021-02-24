@@ -3,14 +3,19 @@ uid: Communities.SocialGroups
 ---
 # Communities.SocialGroups Entity
 
+**Namespace:** [Communities](Communities.md)  
+
 Represents a group of users, sharing interest in the group topic. Entity: Cmm_Social_Groups (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Communities.SocialGroups](Communities.SocialGroups.md)  
   * [Communities.SocialGroupMembers](Communities.SocialGroupMembers.md)  
 

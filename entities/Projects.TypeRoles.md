@@ -3,16 +3,21 @@ uid: Projects.TypeRoles
 ---
 # Projects.TypeRoles Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Contains the roles of the participants of each project type. Entity: Prj_Type_Roles
 
+## Default Visualization
 Default Display Text Format:  
 _{RoleName:T}_  
 Default Search Member:  
 _RoleName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Projects.ProjectTypes](Projects.ProjectTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Projects.ProjectTypes](Projects.ProjectTypes.md)  
 
 ## Attributes

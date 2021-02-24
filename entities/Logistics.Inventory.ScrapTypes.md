@@ -3,14 +3,19 @@ uid: Logistics.Inventory.ScrapTypes
 ---
 # Logistics.Inventory.ScrapTypes Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Types of scrap. Used in store transactions to categorize scrap, when it occurs. Entity: Inv_Scrap_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Inventory.ScrapTypes](Logistics.Inventory.ScrapTypes.md)  
 
 ## Attributes

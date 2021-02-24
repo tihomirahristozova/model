@@ -3,16 +3,21 @@ uid: Applications.Fleet.TripSegments
 ---
 # Applications.Fleet.TripSegments Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+
 Represents the segments which comprise the route of the trips. Entity: Fleet_Trip_Segments
 
+## Default Visualization
 Default Display Text Format:  
 _{Trip.DocumentType.Code}:{Trip.DocumentNo} - {Trip.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Trip.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Fleet.Trips](Applications.Fleet.Trips.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Fleet.Trips](Applications.Fleet.Trips.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Applications.Cms.WebSites
 ---
 # Applications.Cms.WebSites Entity
 
+**Namespace:** [Applications.Cms](Applications.Cms.md)  
+
 Contains the public web sites. Entity: Cms_Web_Sites
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
   * [Applications.Cms.NewsWebModules](Applications.Cms.NewsWebModules.md)  
   * [Applications.Cms.ProductCatalogWebModules](Applications.Cms.ProductCatalogWebModules.md)  

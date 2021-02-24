@@ -3,16 +3,21 @@ uid: Production.Technologies.RecipeOperations
 ---
 # Production.Technologies.RecipeOperations Entity
 
+**Namespace:** [Production.Technologies](Production.Technologies.md)  
+
 Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operations
 
+## Default Visualization
 Default Display Text Format:  
 _{Recipe.Name:T}_  
 Default Search Member:  
 _Recipe.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.Technologies.Recipes](Production.Technologies.Recipes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.Technologies.Recipes](Production.Technologies.Recipes.md)  
 
 ## Attributes

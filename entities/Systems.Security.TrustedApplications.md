@@ -3,14 +3,19 @@ uid: Systems.Security.TrustedApplications
 ---
 # Systems.Security.TrustedApplications Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applications (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md)  
   * [Systems.Security.TrustedApplicationAuthorizations](Systems.Security.TrustedApplicationAuthorizations.md)  
 

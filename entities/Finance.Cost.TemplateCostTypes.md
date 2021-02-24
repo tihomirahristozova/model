@@ -3,16 +3,21 @@ uid: Finance.Cost.TemplateCostTypes
 ---
 # Finance.Cost.TemplateCostTypes Entity
 
+**Namespace:** [Finance.Cost](Finance.Cost.md)  
+
 Contains the cost types and their hierachy positions within a cost calculation. Entity: Cost_Template_Cost_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{CostTemplate.CostTemplateCode}: {CostTemplate.CostTemplateName:T}_  
 Default Search Member:  
 _CostTemplate.CostTemplateCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Cost.Templates](Finance.Cost.Templates.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Cost.Templates](Finance.Cost.Templates.md)  
 
 ## Attributes

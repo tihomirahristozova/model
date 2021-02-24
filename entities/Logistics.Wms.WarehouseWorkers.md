@@ -3,16 +3,21 @@ uid: Logistics.Wms.WarehouseWorkers
 ---
 # Logistics.Wms.WarehouseWorkers Entity
 
+**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
+
 Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_Workers (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Systems.External.PublicUsers
 ---
 # Systems.External.PublicUsers Entity
 
+**Namespace:** [Systems.External](Systems.External.md)  
+
 /Users of the publicly offered services. This includes Internet, external and employee users. Entity: Ext_Public_Users
 
+## Default Visualization
 Default Display Text Format:  
 _{PhoneNumber}: {CompanyName:T}_  
 Default Search Member:  
 _PhoneNumber_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.External.PublicUsers](Systems.External.PublicUsers.md)  
 
 ## Attributes

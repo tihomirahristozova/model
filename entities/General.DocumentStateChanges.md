@@ -3,16 +3,21 @@ uid: General.DocumentStateChanges
 ---
 # General.DocumentStateChanges Entity
 
+**Namespace:** [General](General.md)  
+
 History of document state changes. Entity: Gen_Document_State_Changes
 
+## Default Visualization
 Default Display Text Format:  
 _{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Document.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Documents](General.Documents.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Documents](General.Documents.md)  
 
 ## Attributes

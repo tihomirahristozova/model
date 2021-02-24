@@ -3,14 +3,19 @@ uid: Logistics.Shipment.TransportationModes
 ---
 # Logistics.Shipment.TransportationModes Entity
 
+**Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
+
 Represents a mode of transportation, like water, air, road, etc. Entity: Log_Transportation_Modes
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Shipment.TransportationModes](Logistics.Shipment.TransportationModes.md)  
 
 ## Attributes

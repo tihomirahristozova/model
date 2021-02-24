@@ -3,16 +3,21 @@ uid: Crm.Invoicing.InvoicesOptions
 ---
 # Crm.Invoicing.InvoicesOptions Entity
 
+**Namespace:** [Crm.Invoicing](Crm.Invoicing.md)  
+
 Default options for user document types for Invoices. Entity: Crm_Invoices_Options
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}: {DocumentType.EntityName:T}_  
 Default Search Member:  
 _DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

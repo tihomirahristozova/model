@@ -3,14 +3,19 @@ uid: Logistics.Wms.WarehouseRequisitionFulfillments
 ---
 # Logistics.Wms.WarehouseRequisitionFulfillments Entity
 
+**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
+
 Fulfillment ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition_Fulfillments (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Wms.WarehouseRequisitionFulfillments](Logistics.Wms.WarehouseRequisitionFulfillments.md)  
 
 ## Attributes

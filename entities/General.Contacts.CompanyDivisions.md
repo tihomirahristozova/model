@@ -3,14 +3,20 @@ uid: General.Contacts.CompanyDivisions
 ---
 # General.Contacts.CompanyDivisions Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+**Inherited From:** [General.Contacts.Parties](General.Contacts.Parties.md)  
+
 Stores company divisions structure. The divisions are parties and as such, can be organized hierarchically mixed with other structuring mechanisms. The departments and divisions are parallel and different structuring mechanisms for the companies. Entity: Cm_Company_Divisions
 
+## Default Visualization
 Default Display Text Format:  
 _{PartyCode}: {PartyName:T}_  
 Default Search Member:  
 _PartyCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Contacts.CompanyDivisions](General.Contacts.CompanyDivisions.md)  
   * [Crm.Customers](Crm.Customers.md)  
     * [Crm.CustomerProducts](Crm.CustomerProducts.md)  

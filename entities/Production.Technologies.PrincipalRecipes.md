@@ -3,16 +3,21 @@ uid: Production.Technologies.PrincipalRecipes
 ---
 # Production.Technologies.PrincipalRecipes Entity
 
+**Namespace:** [Production.Technologies](Production.Technologies.md)  
+
 List of base recipe models. Recipe models are used by the Product Configurator to create specific recipes. Entity: Prd_Principal_Recipes
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Products.ProductGroups](General.Products.ProductGroups.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Products.ProductGroups](General.Products.ProductGroups.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Applications.Service.ServiceOrderLines
 ---
 # Applications.Service.ServiceOrderLines Entity
 
+**Namespace:** [Applications.Service](Applications.Service.md)  
+
 Contains the details and problem symptoms for each object, which requires servicing. Entity: Srv_Service_Order_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{ServiceOrder.DocumentType.Code}:{ServiceOrder.DocumentNo} - {ServiceOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ServiceOrder.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.Service.ServiceOrders](Applications.Service.ServiceOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.Service.ServiceOrders](Applications.Service.ServiceOrders.md)  
 
 ## Attributes

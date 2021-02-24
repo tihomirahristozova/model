@@ -3,16 +3,21 @@ uid: Systems.Security.UserProviderTokens
 ---
 # Systems.Security.UserProviderTokens Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 Stores verification tokens for users - e.g. tokens for email, phone or two-factor authentication. Entity: Sec_User_Provider_Tokens (Introduced in version 18.2)
 
+## Default Visualization
 Default Display Text Format:  
 _{LoginProviderName:T}_  
 Default Search Member:  
 _LoginProviderName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Security.Users](Systems.Security.Users.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Security.Users](Systems.Security.Users.md)  
 
 ## Attributes

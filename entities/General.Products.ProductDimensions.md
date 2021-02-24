@@ -3,16 +3,21 @@ uid: General.Products.ProductDimensions
 ---
 # General.Products.ProductDimensions Entity
 
+**Namespace:** [General.Products](General.Products.md)  
+
 Contains convertion ratios between the supported measument categories for each product. Does not contain a record for the default category of the products, for which the convertion ratio is defined as equal to 1. Entity: Gen_Product_Dimensions
 
+## Default Visualization
 Default Display Text Format:  
 _{Product.PartNumber}: {Product.Name:T}_  
 Default Search Member:  
 _Product.PartNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Products.Products](General.Products.Products.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Products.Products](General.Products.Products.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: General.Contacts.Reminders
 ---
 # General.Contacts.Reminders Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 Reminders for activities. The reminders are alarms, which can be turned off. Each activity can have multiple reminders. Entity: Cm_Reminders
 
+## Default Visualization
 Default Display Text Format:  
 _{Activity.DocumentType.Code}:{Activity.DocumentNo} - {Activity.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Activity.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Activities](General.Contacts.Activities.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Activities](General.Contacts.Activities.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Logistics.Procurement.RequisitionLines
 ---
 # Logistics.Procurement.RequisitionLines Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+
 Detail lines of Requistions. Entity: Scm_Requisition_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{Requisition.DocumentType.Code}:{Requisition.DocumentNo}:{LineNo} - {Requisition.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Requisition.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Procurement.Requisitions](Logistics.Procurement.Requisitions.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Procurement.Requisitions](Logistics.Procurement.Requisitions.md)  
 
 ## Attributes

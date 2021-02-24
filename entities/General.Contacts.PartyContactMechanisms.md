@@ -3,16 +3,21 @@ uid: General.Contacts.PartyContactMechanisms
 ---
 # General.Contacts.PartyContactMechanisms Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 Specifies the contact mechanisms, which are attached to the parties. Currently each contact mechanism is attached to strictly one party. Entity: Cm_Party_Contact_Mechanisms
 
+## Default Visualization
 Default Display Text Format:  
 _{Party.PartyCode}: {Party.PartyName:T}_  
 Default Search Member:  
 _Party.PartyCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: General.EnterpriseCompanies
 ---
 # General.EnterpriseCompanies Entity
 
+**Namespace:** [General](General.md)  
+
 The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Companies
 
+## Default Visualization
 Default Display Text Format:  
 _{Company.RegistrationNumber}: {Company.PartyName:T}_  
 Default Search Member:  
 _Company.RegistrationNumber_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
   * [Finance.Assets.Assets](Finance.Assets.Assets.md)  
   * [Applications.Fleet.Crews](Applications.Fleet.Crews.md)  

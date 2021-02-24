@@ -3,16 +3,21 @@ uid: Projects.ProjectWorkElements
 ---
 # Projects.ProjectWorkElements Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Contains the work elements from the work breakdown structure, which are included in the projects. Entity: Prj_Project_Work_Elements
 
+## Default Visualization
 Default Display Text Format:  
 _{Project.Code}: {Project.Name:T}_  
 Default Search Member:  
 _Project.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Projects.Projects](Projects.Projects.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Projects.Projects](Projects.Projects.md)  
 
 ## Attributes

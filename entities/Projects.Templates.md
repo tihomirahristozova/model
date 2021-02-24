@@ -3,14 +3,19 @@ uid: Projects.Templates
 ---
 # Projects.Templates Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Contains templates for creating new projects. Entity: Prj_Templates
 
+## Default Visualization
 Default Display Text Format:  
 _{ProjectTemplateName:T}_  
 Default Search Member:  
 _ProjectTemplateName_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Projects.Templates](Projects.Templates.md)  
   * [Projects.TemplateRisks](Projects.TemplateRisks.md)  
   * [Projects.TemplateWorkElements](Projects.TemplateWorkElements.md)  

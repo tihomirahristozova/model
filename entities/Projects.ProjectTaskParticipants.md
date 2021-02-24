@@ -3,16 +3,21 @@ uid: Projects.ProjectTaskParticipants
 ---
 # Projects.ProjectTaskParticipants Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Contains the participants in the project tasks. Entity: Prj_Project_Task_Participants
 
+## Default Visualization
 Default Display Text Format:  
 _{ProjectTask.TaskName:T}_  
 Default Search Member:  
 _ProjectTask.TaskName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Projects.ProjectTasks](Projects.ProjectTasks.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Projects.ProjectTasks](Projects.ProjectTasks.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Finance.Accounting.Accounts
 ---
 # Finance.Accounting.Accounts Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 
+## Default Visualization
 Default Display Text Format:  
 _{AccountFullNumber}: {Name:T}_  
 Default Search Member:  
 _AccountFullNumber_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)  
   * [Finance.Accounting.AccountRequiredProperties](Finance.Accounting.AccountRequiredProperties.md)  
 

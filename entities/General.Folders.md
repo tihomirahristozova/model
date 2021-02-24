@@ -3,14 +3,19 @@ uid: General.Folders
 ---
 # General.Folders Entity
 
+**Namespace:** [General](General.md)  
+
 Folders are the base for the file storage within the system. Each folder is a data object, with the primary idea of containing files. Entity: Gen_Folders (Introduced in version 21.1.1.8)
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.Folders](General.Folders.md)  
 
 ## Attributes

@@ -3,14 +3,19 @@ uid: Projects.ProjectTypes
 ---
 # Projects.ProjectTypes Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Contains the types of projects, which can be executed by the enterprise company. Entity: Prj_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Projects.ProjectTypes](Projects.ProjectTypes.md)  
   * [Projects.TypeRoles](Projects.TypeRoles.md)  
   * [Projects.TypeWorkElements](Projects.TypeWorkElements.md)  

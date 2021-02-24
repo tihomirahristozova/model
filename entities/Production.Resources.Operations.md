@@ -3,16 +3,21 @@ uid: Production.Resources.Operations
 ---
 # Production.Resources.Operations Entity
 
+**Namespace:** [Production.Resources](Production.Resources.md)  
+
 The different steps performed to create products. Entity: Prd_Operations
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Production.Resources.OperationGroups](Production.Resources.OperationGroups.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Production.Resources.OperationGroups](Production.Resources.OperationGroups.md)  
 
 ## Attributes

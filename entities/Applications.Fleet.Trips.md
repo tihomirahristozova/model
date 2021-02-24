@@ -3,14 +3,20 @@ uid: Applications.Fleet.Trips
 ---
 # Applications.Fleet.Trips Entity
 
+**Namespace:** [Applications.Fleet](Applications.Fleet.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Represents actual trip made by the vehicles. Entity: Fleet_Trips
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Applications.Fleet.Trips](Applications.Fleet.Trips.md)  
   * [Applications.Fleet.TripSegments](Applications.Fleet.TripSegments.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

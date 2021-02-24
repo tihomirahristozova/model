@@ -3,16 +3,21 @@ uid: Projects.TemplateRisks
 ---
 # Projects.TemplateRisks Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Contains project risks, which will be copied to projects, based on the template. Entity: Prj_Template_Risks
 
+## Default Visualization
 Default Display Text Format:  
 _{RiskName:T}_  
 Default Search Member:  
 _RiskName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Projects.Templates](Projects.Templates.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Projects.Templates](Projects.Templates.md)  
 
 ## Attributes

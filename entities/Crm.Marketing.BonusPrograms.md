@@ -3,14 +3,19 @@ uid: Crm.Marketing.BonusPrograms
 ---
 # Crm.Marketing.BonusPrograms Entity
 
+**Namespace:** [Crm.Marketing](Crm.Marketing.md)  
+
 Bonus programs allow automatic adding of new line with bonus product or automatic application of discount in a sales document. Entity: Crm_Bonus_Programs
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md)  
   * [Crm.Marketing.BonusProgramProducts](Crm.Marketing.BonusProgramProducts.md)  
 

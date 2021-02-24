@@ -3,16 +3,21 @@ uid: Projects.ProjectRisks
 ---
 # Projects.ProjectRisks Entity
 
+**Namespace:** [Projects](Projects.md)  
+
 Contains risks, associated to projects. Entity: Prj_Project_Risks
 
+## Default Visualization
 Default Display Text Format:  
 _{RiskName:T}_  
 Default Search Member:  
 _RiskName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Projects.Projects](Projects.Projects.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Projects.Projects](Projects.Projects.md)  
 
 ## Attributes

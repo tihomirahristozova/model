@@ -3,14 +3,20 @@ uid: Logistics.Procurement.Requisitions
 ---
 # Logistics.Procurement.Requisitions Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains the internal requisitions for products. Requisitions are consolidated by the purchase department into purchase orders. Entity: Scm_Requisitions
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Procurement.Requisitions](Logistics.Procurement.Requisitions.md)  
   * [Logistics.Procurement.RequisitionLines](Logistics.Procurement.RequisitionLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

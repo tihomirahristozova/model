@@ -3,16 +3,21 @@ uid: Finance.Accounting.FinancialStatementNodes
 ---
 # Finance.Accounting.FinancialStatementNodes Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Contains the hierarchical structure of the user-defined financial statements. Entity: Acc_Financial_Statement_Nodes
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Accounting.FinancialStatements](Finance.Accounting.FinancialStatements.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Finance.Accounting.FinancialStatements](Finance.Accounting.FinancialStatements.md)  
 
 ## Attributes

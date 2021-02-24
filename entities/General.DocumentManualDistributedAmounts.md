@@ -3,14 +3,19 @@ uid: General.DocumentManualDistributedAmounts
 ---
 # General.DocumentManualDistributedAmounts Entity
 
+**Namespace:** [General](General.md)  
+
 Obsolete. Not used. Entity: Gen_Document_Manual_Distributed_Amounts
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [General.DocumentManualDistributedAmounts](General.DocumentManualDistributedAmounts.md)  
 
 ## Attributes

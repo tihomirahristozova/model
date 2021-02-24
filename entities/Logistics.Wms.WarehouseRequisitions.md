@@ -3,14 +3,20 @@ uid: Logistics.Wms.WarehouseRequisitions
 ---
 # Logistics.Wms.WarehouseRequisitions Entity
 
+**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains request for warehouse operation created from another module. Entity: Wms_Warehouse_Requisitions (Introduced in version 20.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Wms.WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)  
   * [Logistics.Wms.WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

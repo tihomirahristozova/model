@@ -3,16 +3,21 @@ uid: General.DocumentDistributedAmounts
 ---
 # General.DocumentDistributedAmounts Entity
 
+**Namespace:** [General](General.md)  
+
 Contains the amounts which are distributed by the system over the document lines as a result of additional amount calculations. Entity: Gen_Document_Distributed_Amounts
 
+## Default Visualization
 Default Display Text Format:  
 _{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Document.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Documents](General.Documents.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Documents](General.Documents.md)  
 
 ## Attributes

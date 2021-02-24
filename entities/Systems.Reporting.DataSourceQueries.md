@@ -3,16 +3,21 @@ uid: Systems.Reporting.DataSourceQueries
 ---
 # Systems.Reporting.DataSourceQueries Entity
 
+**Namespace:** [Systems.Reporting](Systems.Reporting.md)  
+
 Represents a query within a data source. Entity: Sys_Data_Source_Queries
 
+## Default Visualization
 Default Display Text Format:  
 _{TableName:T}_  
 Default Search Member:  
 _TableName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md)  
 
 ## Attributes

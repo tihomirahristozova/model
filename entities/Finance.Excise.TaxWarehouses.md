@@ -3,14 +3,19 @@ uid: Finance.Excise.TaxWarehouses
 ---
 # Finance.Excise.TaxWarehouses Entity
 
+**Namespace:** [Finance.Excise](Finance.Excise.md)  
+
 Contains excise-related data for warehouses (stores), which are defined as tax warehouses. Products subject to excise duties must be produced in tax warehouses. They can also be stored, under duty suspension, in these tax warehouses. Entity: Exc_Tax_Warehouses (Introduced in version 21.1.1.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
 _Id_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Excise.TaxWarehouses](Finance.Excise.TaxWarehouses.md)  
 
 ## Attributes

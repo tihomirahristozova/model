@@ -3,16 +3,21 @@ uid: Finance.Accounting.TemplateLines
 ---
 # Finance.Accounting.TemplateLines Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+
 Each template line contains the posting to a single set of debit and credit account. It also specifies the way to calculate the amount. Entity: Acc_Template_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{AmountColumnName:T}_  
 Default Search Member:  
 _AmountColumnName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Finance.Accounting.Templates](Finance.Accounting.Templates.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

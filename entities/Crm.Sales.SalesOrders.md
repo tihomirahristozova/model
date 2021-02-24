@@ -3,14 +3,20 @@ uid: Crm.Sales.SalesOrders
 ---
 # Crm.Sales.SalesOrders Entity
 
+**Namespace:** [Crm.Sales](Crm.Sales.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Sales order document headers. Entity: Crm_Sales_Orders
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)  
   * [Crm.Sales.SalesOrderLines](Crm.Sales.SalesOrderLines.md)  
   * [Crm.Sales.SalesOrderPaymentPlans](Crm.Sales.SalesOrderPaymentPlans.md)  

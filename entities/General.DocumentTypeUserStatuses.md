@@ -3,16 +3,21 @@ uid: General.DocumentTypeUserStatuses
 ---
 # General.DocumentTypeUserStatuses Entity
 
+**Namespace:** [General](General.md)  
+
 User-defined document statuses. Entity: Gen_Document_Type_User_Statuses
 
+## Default Visualization
 Default Display Text Format:  
 _{UserStatusName:T}_  
 Default Search Member:  
 _UserStatusName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

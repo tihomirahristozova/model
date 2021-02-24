@@ -3,16 +3,21 @@ uid: General.DocumentFileAttachments
 ---
 # General.DocumentFileAttachments Entity
 
+**Namespace:** [General](General.md)  
+
 Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
 
+## Default Visualization
 Default Display Text Format:  
 _{FileName:T}_  
 Default Search Member:  
 _FileName_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Documents](General.Documents.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Documents](General.Documents.md)  
 
 ## Attributes

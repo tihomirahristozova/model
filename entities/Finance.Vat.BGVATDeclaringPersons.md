@@ -3,16 +3,21 @@ uid: Finance.Vat.BGVATDeclaringPersons
 ---
 # Finance.Vat.BGVATDeclaringPersons Entity
 
+**Namespace:** [Finance.Vat](Finance.Vat.md)  
+
 National data: Contains the persons, which are authorized to issue and sign VAT declarations. Entity: Nat_BG_VAT_Declaring_Persons
 
+## Default Visualization
 Default Display Text Format:  
 _{EnterpriseCompany.Company.RegistrationNumber}: {EnterpriseCompany.Company.PartyName:T}_  
 Default Search Member:  
 _EnterpriseCompany.Company.RegistrationNumber_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
 
 ## Attributes

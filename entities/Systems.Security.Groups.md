@@ -3,14 +3,19 @@ uid: Systems.Security.Groups
 ---
 # Systems.Security.Groups Entity
 
+**Namespace:** [Systems.Security](Systems.Security.md)  
+
 Groups of users. Used for providing group access to secured data. Entity: Sec_Groups
 
+## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
 _Name_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Systems.Security.Groups](Systems.Security.Groups.md)  
   * [Systems.Security.GroupAccessKeys](Systems.Security.GroupAccessKeys.md)  
 

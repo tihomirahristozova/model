@@ -3,14 +3,19 @@ uid: Crm.Marketing.DistributionChannels
 ---
 # Crm.Marketing.DistributionChannels Entity
 
+**Namespace:** [Crm.Marketing](Crm.Marketing.md)  
+
 General list of distribution channels. Used to control prices and availability of products for the different channels. Entity: Crm_Distribution_Channels
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.Marketing.DistributionChannels](Crm.Marketing.DistributionChannels.md)  
 
 ## Attributes

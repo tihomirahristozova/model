@@ -3,16 +3,21 @@ uid: General.Contacts.ActivityTimeIntervals
 ---
 # General.Contacts.ActivityTimeIntervals Entity
 
+**Namespace:** [General.Contacts](General.Contacts.md)  
+
 History of work efforts for executing activities (timesheet). Entity: Cm_Activity_Time_Intervals
 
+## Default Visualization
 Default Display Text Format:  
 _{Party.PartyCode}: {Party.PartyName:T}_  
 Default Search Member:  
 _Party.PartyCode_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

@@ -3,16 +3,21 @@ uid: Crm.Pricing.PricingModelPriceLists
 ---
 # Crm.Pricing.PricingModelPriceLists Entity
 
+**Namespace:** [Crm.Pricing](Crm.Pricing.md)  
+
 The price lists, which are updated by the pricing model. Entity: Crm_Pricing_Model_Price_Lists
 
+## Default Visualization
 Default Display Text Format:  
 _{PricingModel.Name:T}_  
 Default Search Member:  
 _PricingModel.Name_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md)  
 
 ## Attributes

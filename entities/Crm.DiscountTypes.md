@@ -3,14 +3,19 @@ uid: Crm.DiscountTypes
 ---
 # Crm.DiscountTypes Entity
 
+**Namespace:** [Crm](Crm.md)  
+
 Contains the different types of discounts, which can be applied to sales lines. Different types of discounts can be combined for a single sales line. Entity: Crm_Discount_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Crm.DiscountTypes](Crm.DiscountTypes.md)  
 
 ## Attributes

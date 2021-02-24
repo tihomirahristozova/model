@@ -3,16 +3,21 @@ uid: Logistics.Inventory.CostCorrectionLines
 ---
 # Logistics.Inventory.CostCorrectionLines Entity
 
+**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
+
 Cost correction detail lines. One line is created for each corrected transaction line. Entity: Inv_Cost_Correction_Lines
 
+## Default Visualization
 Default Display Text Format:  
 _{CostCorrection.DocumentType.Code}:{CostCorrection.DocumentNo} - {CostCorrection.DocumentType.TypeName:T}_  
 Default Search Member:  
 _CostCorrection.DocumentType.Code_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Logistics.Inventory.CostCorrections](Logistics.Inventory.CostCorrections.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Logistics.Inventory.CostCorrections](Logistics.Inventory.CostCorrections.md)  
 
 ## Attributes

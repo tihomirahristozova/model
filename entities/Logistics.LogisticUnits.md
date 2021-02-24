@@ -3,14 +3,19 @@ uid: Logistics.LogisticUnits
 ---
 # Logistics.LogisticUnits Entity
 
+**Namespace:** [Logistics](Logistics.md)  
+
 Composition of products established for transport and/or storage which needs to be managed through the supply chain. Entity: Log_Logistic_Units (Introduced in version 21.1.0.77)
 
+## Default Visualization
 Default Display Text Format:  
 _{SerialCode}_  
 Default Search Member:  
 _SerialCode_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.LogisticUnits](Logistics.LogisticUnits.md)  
   * [Logistics.LogisticUnitContents](Logistics.LogisticUnitContents.md)  
   * [Logistics.LogisticUnitSpecifications](Logistics.LogisticUnitSpecifications.md)  

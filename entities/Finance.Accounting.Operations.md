@@ -3,14 +3,20 @@ uid: Finance.Accounting.Operations
 ---
 # Finance.Accounting.Operations Entity
 
+**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Generic accounting operations. Since templates can be bound to such operations, they are usefull for automating the postings of repetitive business transactions, not represented in other modules. Entity: Acc_Operations
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Accounting.Operations](Finance.Accounting.Operations.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  
     * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  

@@ -3,14 +3,19 @@ uid: Finance.Payments.PaymentTypes
 ---
 # Finance.Payments.PaymentTypes Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+
 Describes the way of payment. For example: in cash, by bank transfer, with credit card, etc. Entity: Cash_Payment_Types
 
+## Default Visualization
 Default Display Text Format:  
 _{Code}: {Name:T}_  
 Default Search Member:  
 _Code_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Payments.PaymentTypes](Finance.Payments.PaymentTypes.md)  
 
 ## Attributes

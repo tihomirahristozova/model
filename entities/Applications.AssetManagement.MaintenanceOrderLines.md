@@ -3,16 +3,21 @@ uid: Applications.AssetManagement.MaintenanceOrderLines
 ---
 # Applications.AssetManagement.MaintenanceOrderLines Entity
 
+**Namespace:** [Applications.AssetManagement](Applications.AssetManagement.md)  
+
 Contains the types of maintenance and maintained assets in the maintenance orders. Entity: Eam_Maintenance_Order_Lines (Introduced in version 19.1)
 
+## Default Visualization
 Default Display Text Format:  
 _{MaintenanceOrder.DocumentType.Code}:{MaintenanceOrder.DocumentNo}:{LineNo} - {MaintenanceOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _MaintenanceOrder.DocumentNo_  
 
-[Aggregate](xref:aggregates) Parent:  
+## Aggregate
+  @aggregates  
+Aggregate Parent:  
 [Applications.AssetManagement.MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)  
-[Aggregate](xref:aggregates) Root:  
+Aggregate Root:  
 [Applications.AssetManagement.MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)  
 
 ## Attributes

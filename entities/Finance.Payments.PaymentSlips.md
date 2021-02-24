@@ -3,14 +3,20 @@ uid: Finance.Payments.PaymentSlips
 ---
 # Finance.Payments.PaymentSlips Entity
 
+**Namespace:** [Finance.Payments](Finance.Payments.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Represents mass payment document (payment slip). Entity: Cash_Payment_Slips
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Finance.Payments.PaymentSlips](Finance.Payments.PaymentSlips.md)  
   * [Finance.Payments.PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md)  
     * [Finance.Payments.PaymentSlipLines](Finance.Payments.PaymentSlipLines.md)  

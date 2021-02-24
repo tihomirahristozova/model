@@ -3,14 +3,20 @@ uid: Logistics.Procurement.PurchaseInvoices
 ---
 # Logistics.Procurement.PurchaseInvoices Entity
 
+**Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
+**Inherited From:** [General.Documents](General.Documents.md)  
+
 Contains purchase invoice headers. Entity: Scm_Purchase_Invoices
 
+## Default Visualization
 Default Display Text Format:  
 _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
 Default Search Member:  
 _DocumentNo_  
 
-## [Aggregate Tree](xref:aggregates)  
+## Aggregate
+  @aggregates  
+Aggregate Tree  
 * [Logistics.Procurement.PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md)  
   * [Logistics.Procurement.PurchaseInvoiceLines](Logistics.Procurement.PurchaseInvoiceLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  
