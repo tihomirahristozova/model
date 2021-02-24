@@ -10,9 +10,9 @@ _{Shipment.DocumentType.Code}:{Shipment.DocumentNo}:{LineNo} - {Shipment.Documen
 Default Search Member:  
 _Shipment.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Shipment.Shipments](Logistics.Shipment.Shipments.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Shipment.Shipments](Logistics.Shipment.Shipments.md)  
 
 ## Attributes

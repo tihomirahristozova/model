@@ -10,7 +10,7 @@ _{ProjectTemplateName:T}_
 Default Search Member:  
 _ProjectTemplateName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Projects.Templates](Projects.Templates.md)  
   * [Projects.TemplateRisks](Projects.TemplateRisks.md)  
   * [Projects.TemplateWorkElements](Projects.TemplateWorkElements.md)  

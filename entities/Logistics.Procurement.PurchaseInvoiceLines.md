@@ -10,9 +10,9 @@ _{PurchaseInvoice.DocumentType.Code}:{PurchaseInvoice.DocumentNo}:{LineNo} - {Pu
 Default Search Member:  
 _PurchaseInvoice.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Procurement.PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Procurement.PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md)  
 
 ## Attributes

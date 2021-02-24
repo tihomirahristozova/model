@@ -10,7 +10,7 @@ _{Number}: {Name:T}_
 Default Search Member:  
 _Number_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Finance.Accounting.AccountGroups](Finance.Accounting.AccountGroups.md)  
 
 ## Attributes

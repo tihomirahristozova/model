@@ -10,9 +10,9 @@ _{WorkTypeName:T}_
 Default Search Member:  
 _WorkTypeName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Projects.ProjectTypes](Projects.ProjectTypes.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Projects.ProjectTypes](Projects.ProjectTypes.md)  
 
 ## Attributes

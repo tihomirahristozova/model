@@ -10,7 +10,7 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)  
   * [General.Resources.WorkScheduleWorkingTime](General.Resources.WorkScheduleWorkingTime.md)  
 

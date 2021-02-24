@@ -10,9 +10,9 @@ _{WorkOrderItemOperation.WorkOrderItem.WorkOrder.DocumentType.Code}:{WorkOrderIt
 Default Search Member:  
 _WorkOrderItemOperation.WorkOrderItem.WorkOrder.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Production.ShopFloor.WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Production.ShopFloor.WorkOrders](Production.ShopFloor.WorkOrders.md)  
 
 ## Attributes

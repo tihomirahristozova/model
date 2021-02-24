@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)  
   * [Crm.Distribution.SalesPersonTargetLines](Crm.Distribution.SalesPersonTargetLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

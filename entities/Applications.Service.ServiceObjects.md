@@ -10,7 +10,7 @@ _{SerialNumber}: {Name:T}_
 Default Search Member:  
 _SerialNumber_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Service.ServiceObjects](Applications.Service.ServiceObjects.md)  
 
 ## Attributes

@@ -10,9 +10,9 @@ _{RepositoryName:T}_
 Default Search Member:  
 _RepositoryName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)  
 
 ## Attributes

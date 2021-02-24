@@ -10,9 +10,18 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Production.ShopFloor.ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)  
   * [Production.ShopFloor.ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md)  
+  * [General.DocumentAmounts](General.DocumentAmounts.md)  
+    * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  
+  * [General.DocumentComments](General.DocumentComments.md)  
+  * [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md)  
+  * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
+  * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentPrints](General.DocumentPrints.md)  
+  * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
+  * [General.DocumentVersions](General.DocumentVersions.md)  
 
 ## Attributes
 

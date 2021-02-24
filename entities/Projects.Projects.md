@@ -10,7 +10,7 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Projects.Projects](Projects.Projects.md)  
   * [Projects.ProjectParticipants](Projects.ProjectParticipants.md)  
   * [Projects.ProjectRisks](Projects.ProjectRisks.md)  

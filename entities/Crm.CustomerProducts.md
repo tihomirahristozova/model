@@ -10,9 +10,9 @@ _{Customer.Number}_
 Default Search Member:  
 _Customer.Number_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Crm.Customers](Crm.Customers.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

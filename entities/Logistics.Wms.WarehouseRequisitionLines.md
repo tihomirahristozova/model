@@ -10,9 +10,9 @@ _{WarehouseRequisition.DocumentType.Code}:{WarehouseRequisition.DocumentNo}:{Lin
 Default Search Member:  
 _WarehouseRequisition.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Wms.WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Wms.WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)  
 
 ## Attributes

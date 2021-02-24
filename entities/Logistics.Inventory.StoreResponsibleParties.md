@@ -10,9 +10,9 @@ _{Store.PartyCode}: {Store.PartyName:T}_
 Default Search Member:  
 _Store.PartyCode_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
 
 ## Attributes

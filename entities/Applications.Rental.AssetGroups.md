@@ -10,7 +10,7 @@ _{RentalAssetGroupCode}: {RentalAssetGroupName:T}_
 Default Search Member:  
 _RentalAssetGroupCode_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Rental.AssetGroups](Applications.Rental.AssetGroups.md)  
   * [Applications.Rental.Assets](Applications.Rental.Assets.md)  
     * [Applications.Rental.AssetConsumables](Applications.Rental.AssetConsumables.md)  

@@ -10,9 +10,9 @@ _{CostCorrection.DocumentType.Code}:{CostCorrection.DocumentNo} - {CostCorrectio
 Default Search Member:  
 _CostCorrection.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Inventory.CostCorrections](Logistics.Inventory.CostCorrections.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Inventory.CostCorrections](Logistics.Inventory.CostCorrections.md)  
 
 ## Attributes

@@ -10,9 +10,9 @@ _{CostTemplate.CostTemplateCode}: {CostTemplate.CostTemplateName:T}_
 Default Search Member:  
 _CostTemplate.CostTemplateCode_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Finance.Cost.Templates](Finance.Cost.Templates.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Finance.Cost.Templates](Finance.Cost.Templates.md)  
 
 ## Attributes

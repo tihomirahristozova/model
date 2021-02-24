@@ -10,9 +10,9 @@ _{WorkSchedule.Name:T}_
 Default Search Member:  
 _WorkSchedule.Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.Resources.WorkSchedules](General.Resources.WorkSchedules.md)  
 
 ## Attributes

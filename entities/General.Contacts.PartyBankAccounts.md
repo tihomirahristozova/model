@@ -10,9 +10,9 @@ _{BankAccountCode}: {BankBranchName:T}_
 Default Search Member:  
 _BankAccountCode_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.Contacts.Parties](General.Contacts.Parties.md)  
 
 ## Attributes

@@ -10,9 +10,9 @@ _{WarehouseOrder.DocumentType.Code}:{WarehouseOrder.DocumentNo}:{LineNo} - {Ware
 Default Search Member:  
 _WarehouseOrder.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Wms.WarehouseOrders](Logistics.Wms.WarehouseOrders.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Wms.WarehouseOrders](Logistics.Wms.WarehouseOrders.md)  
 
 ## Attributes

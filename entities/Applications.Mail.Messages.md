@@ -10,9 +10,9 @@ _{MailBoxFolder.FolderName:T}_
 Default Search Member:  
 _MailBoxFolder.FolderName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Applications.Mail.Boxes](Applications.Mail.Boxes.md)  
 
 ## Attributes

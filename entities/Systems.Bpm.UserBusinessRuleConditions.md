@@ -10,9 +10,9 @@ _{AttributeName:T}_
 Default Search Member:  
 _AttributeName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
 
 ## Attributes

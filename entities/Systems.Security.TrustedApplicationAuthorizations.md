@@ -10,9 +10,9 @@ _{TrustedApplication.Name:T}_
 Default Search Member:  
 _TrustedApplication.Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md)  
 
 ## Attributes

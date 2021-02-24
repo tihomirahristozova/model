@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Projects.WorkReports](Projects.WorkReports.md)  
   * [Projects.WorkReportMaterials](Projects.WorkReportMaterials.md)  
   * [Projects.WorkReportResources](Projects.WorkReportResources.md)  

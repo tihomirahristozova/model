@@ -10,9 +10,9 @@ _{OutputOrderLine.OutputOrder.DocumentType.Code}:{OutputOrderLine.OutputOrder.Do
 Default Search Member:  
 _OutputOrderLine.OutputOrder.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Production.ShopFloor.OutputOrderLines](Production.ShopFloor.OutputOrderLines.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Production.ShopFloor.OutputOrders](Production.ShopFloor.OutputOrders.md)  
 
 ## Attributes

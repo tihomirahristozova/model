@@ -10,9 +10,9 @@ _{Reconciliation.DocumentType.Code}:{Reconciliation.DocumentNo}:{LineOrd} - {Rec
 Default Search Member:  
 _Reconciliation.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Inventory.Reconciliations](Logistics.Inventory.Reconciliations.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Inventory.Reconciliations](Logistics.Inventory.Reconciliations.md)  
 
 ## Attributes

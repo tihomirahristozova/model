@@ -10,7 +10,7 @@ _{DataObjectId}: {SocialCommentId}_
 Default Search Member:  
 _DataObjectId_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Communities.SocialReactionsSummary](Communities.SocialReactionsSummary.md)  
 
 ## Attributes

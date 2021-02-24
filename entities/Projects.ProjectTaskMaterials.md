@@ -10,9 +10,9 @@ _{ProjectTask.TaskName:T}_
 Default Search Member:  
 _ProjectTask.TaskName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Projects.ProjectTasks](Projects.ProjectTasks.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Projects.ProjectTasks](Projects.ProjectTasks.md)  
 
 ## Attributes

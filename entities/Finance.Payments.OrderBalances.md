@@ -10,7 +10,7 @@ _{OrderAmountValue}: {PaidAmountValue}_
 Default Search Member:  
 _OrderAmountValue_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Finance.Payments.OrderBalances](Finance.Payments.OrderBalances.md)  
 
 ## Attributes

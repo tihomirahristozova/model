@@ -10,7 +10,7 @@ _{PartyCode}: {PartyName:T}_
 Default Search Member:  
 _PartyCode_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
   * [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md)  
   * [Logistics.Inventory.StoreResponsibleParties](Logistics.Inventory.StoreResponsibleParties.md)  

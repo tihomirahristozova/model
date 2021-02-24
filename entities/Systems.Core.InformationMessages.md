@@ -10,7 +10,7 @@ _{MachineName:T}_
 Default Search Member:  
 _MachineName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Systems.Core.InformationMessages](Systems.Core.InformationMessages.md)  
 
 ## Attributes

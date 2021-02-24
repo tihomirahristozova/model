@@ -10,9 +10,9 @@ _{Project.Code}: {Project.Name:T}_
 Default Search Member:  
 _Project.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Projects.Projects](Projects.Projects.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Projects.Projects](Projects.Projects.md)  
 
 ## Attributes

@@ -10,7 +10,7 @@ _{AccountFullNumber}: {Name:T}_
 Default Search Member:  
 _AccountFullNumber_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)  
   * [Finance.Accounting.AccountRequiredProperties](Finance.Accounting.AccountRequiredProperties.md)  
 

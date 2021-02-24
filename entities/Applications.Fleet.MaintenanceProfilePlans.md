@@ -10,9 +10,9 @@ _{MaintenanceProfile.Code}: {MaintenanceProfile.Name:T}_
 Default Search Member:  
 _MaintenanceProfile.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.Fleet.MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Applications.Fleet.MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md)  
 
 ## Attributes

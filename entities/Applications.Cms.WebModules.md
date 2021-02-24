@@ -10,9 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Applications.Cms.WebSites](Applications.Cms.WebSites.md)  
 
 ## Attributes

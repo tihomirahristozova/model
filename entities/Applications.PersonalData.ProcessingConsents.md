@@ -10,7 +10,7 @@ _{ParentName:T}_
 Default Search Member:  
 _ParentName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.PersonalData.ProcessingConsents](Applications.PersonalData.ProcessingConsents.md)  
 
 ## Attributes

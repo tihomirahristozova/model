@@ -10,9 +10,9 @@ _{StoreOrder.DocumentType.Code}:{StoreOrder.DocumentNo}:{LineNo} - {StoreOrder.D
 Default Search Member:  
 _StoreOrder.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Inventory.StoreOrders](Logistics.Inventory.StoreOrders.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Inventory.StoreOrders](Logistics.Inventory.StoreOrders.md)  
 
 ## Attributes

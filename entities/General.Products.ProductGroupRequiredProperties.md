@@ -10,9 +10,9 @@ _{ProductGroup.NextPartNumber}: {ProductGroup.Name:T}_
 Default Search Member:  
 _ProductGroup.NextPartNumber_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.Products.ProductGroups](General.Products.ProductGroups.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.Products.ProductGroups](General.Products.ProductGroups.md)  
 
 ## Attributes

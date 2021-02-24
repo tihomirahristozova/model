@@ -10,9 +10,9 @@ _{SalesOrder.DocumentType.Code}:{SalesOrder.DocumentNo} - {SalesOrder.DocumentTy
 Default Search Member:  
 _SalesOrder.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)  
 
 ## Attributes

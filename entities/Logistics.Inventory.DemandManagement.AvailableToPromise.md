@@ -10,7 +10,7 @@ _{ATPBaseValue}: {CurrentAvailabilityBaseValue}_
 Default Search Member:  
 _ATPBaseValue_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Logistics.Inventory.DemandManagement.AvailableToPromise](Logistics.Inventory.DemandManagement.AvailableToPromise.md)  
 
 ## Attributes

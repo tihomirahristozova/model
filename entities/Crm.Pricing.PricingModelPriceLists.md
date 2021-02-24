@@ -10,9 +10,9 @@ _{PricingModel.Name:T}_
 Default Search Member:  
 _PricingModel.Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md)  
 
 ## Attributes

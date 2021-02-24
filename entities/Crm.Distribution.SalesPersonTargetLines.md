@@ -10,9 +10,9 @@ _{SalesPersonTarget.DocumentType.Code}:{SalesPersonTarget.DocumentNo} - {SalesPe
 Default Search Member:  
 _SalesPersonTarget.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Crm.Distribution.SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)  
 
 ## Attributes

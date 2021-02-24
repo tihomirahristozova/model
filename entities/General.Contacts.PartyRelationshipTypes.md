@@ -10,7 +10,7 @@ _{RelationshipTypeName:T}_
 Default Search Member:  
 _RelationshipTypeName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.Contacts.PartyRelationshipTypes](General.Contacts.PartyRelationshipTypes.md)  
 
 ## Attributes

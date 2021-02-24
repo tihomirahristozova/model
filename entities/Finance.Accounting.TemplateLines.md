@@ -10,9 +10,9 @@ _{AmountColumnName:T}_
 Default Search Member:  
 _AmountColumnName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Finance.Accounting.Templates](Finance.Accounting.Templates.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

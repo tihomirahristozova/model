@@ -10,9 +10,9 @@ _{Requisition.DocumentType.Code}:{Requisition.DocumentNo}:{LineNo} - {Requisitio
 Default Search Member:  
 _Requisition.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Procurement.Requisitions](Logistics.Procurement.Requisitions.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Procurement.Requisitions](Logistics.Procurement.Requisitions.md)  
 
 ## Attributes

@@ -10,9 +10,9 @@ _{Service.Code}: {Service.Name:T}_
 Default Search Member:  
 _Service.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.Service.Services](Applications.Service.Services.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Applications.Service.Services](Applications.Service.Services.md)  
 
 ## Attributes

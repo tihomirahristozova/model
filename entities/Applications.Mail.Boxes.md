@@ -10,7 +10,7 @@ _{SentItemsFolderName:T}_
 Default Search Member:  
 _SentItemsFolderName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Mail.Boxes](Applications.Mail.Boxes.md)  
   * [Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md)  
     * [Applications.Mail.Messages](Applications.Mail.Messages.md)  

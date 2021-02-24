@@ -10,7 +10,7 @@ _{ValuationGroupCode}: {ValuationGroupName:T}_
 Default Search Member:  
 _ValuationGroupCode_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Logistics.Inventory.ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md)  
 
 ## Attributes

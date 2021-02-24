@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Fleet.Trips](Applications.Fleet.Trips.md)  
   * [Applications.Fleet.TripSegments](Applications.Fleet.TripSegments.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

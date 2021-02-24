@@ -10,9 +10,9 @@ _{PaymentSlipAmount.PartyName:T}_
 Default Search Member:  
 _PaymentSlipAmount.PartyName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Finance.Payments.PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Finance.Payments.PaymentSlips](Finance.Payments.PaymentSlips.md)  
 
 ## Attributes

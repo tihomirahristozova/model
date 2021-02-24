@@ -10,11 +10,20 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)  
   * [Crm.Sales.SalesOrderLines](Crm.Sales.SalesOrderLines.md)  
   * [Crm.Sales.SalesOrderPaymentPlans](Crm.Sales.SalesOrderPaymentPlans.md)  
   * [Crm.Sales.SalesOrderPromotionalPackages](Crm.Sales.SalesOrderPromotionalPackages.md)  
+  * [General.DocumentAmounts](General.DocumentAmounts.md)  
+    * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  
+  * [General.DocumentComments](General.DocumentComments.md)  
+  * [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md)  
+  * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
+  * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentPrints](General.DocumentPrints.md)  
+  * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
+  * [General.DocumentVersions](General.DocumentVersions.md)  
 
 ## Attributes
 

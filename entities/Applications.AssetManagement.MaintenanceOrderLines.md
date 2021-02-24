@@ -10,9 +10,9 @@ _{MaintenanceOrder.DocumentType.Code}:{MaintenanceOrder.DocumentNo}:{LineNo} - {
 Default Search Member:  
 _MaintenanceOrder.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.AssetManagement.MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Applications.AssetManagement.MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)  
 
 ## Attributes

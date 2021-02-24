@@ -10,10 +10,19 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Logistics.Inventory.StoreTransactions](Logistics.Inventory.StoreTransactions.md)  
   * [Logistics.Inventory.StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)  
   * [Logistics.Inventory.TransactionCostCorrectionsSummary](Logistics.Inventory.TransactionCostCorrectionsSummary.md)  
+  * [General.DocumentAmounts](General.DocumentAmounts.md)  
+    * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  
+  * [General.DocumentComments](General.DocumentComments.md)  
+  * [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md)  
+  * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
+  * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentPrints](General.DocumentPrints.md)  
+  * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
+  * [General.DocumentVersions](General.DocumentVersions.md)  
 
 ## Attributes
 

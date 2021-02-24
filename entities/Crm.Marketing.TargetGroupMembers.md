@@ -10,9 +10,9 @@ _{TargetGroup.Code}: {TargetGroup.Name:T}_
 Default Search Member:  
 _TargetGroup.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md)  
 
 ## Attributes

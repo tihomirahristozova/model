@@ -10,9 +10,9 @@ _{ServiceActivity.DocumentType.Code}:{ServiceActivity.DocumentNo}:{LineNo} - {Se
 Default Search Member:  
 _ServiceActivity.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)  
 
 ## Attributes

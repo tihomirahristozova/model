@@ -10,7 +10,7 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)  
   * [Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md)  
   * [Applications.AssetManagement.ManagedAssetTypeTrackedParameters](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md)  

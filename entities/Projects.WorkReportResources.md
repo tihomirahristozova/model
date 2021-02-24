@@ -10,9 +10,9 @@ _{WorkReport.DocumentType.Code}:{WorkReport.DocumentNo} - {WorkReport.DocumentTy
 Default Search Member:  
 _WorkReport.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Projects.WorkReports](Projects.WorkReports.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Projects.WorkReports](Projects.WorkReports.md)  
 
 ## Attributes

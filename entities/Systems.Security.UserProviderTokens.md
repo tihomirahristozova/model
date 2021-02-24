@@ -10,9 +10,9 @@ _{LoginProviderName:T}_
 Default Search Member:  
 _LoginProviderName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Systems.Security.Users](Systems.Security.Users.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Systems.Security.Users](Systems.Security.Users.md)  
 
 ## Attributes

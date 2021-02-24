@@ -10,7 +10,7 @@ _{LanguageCode}_
 Default Search Member:  
 _LanguageCode_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Cms.NewsWebModuleArticles](Applications.Cms.NewsWebModuleArticles.md)  
 
 ## Attributes

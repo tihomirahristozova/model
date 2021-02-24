@@ -10,11 +10,20 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)  
   * [Applications.Service.ServiceAgreementLines](Applications.Service.ServiceAgreementLines.md)  
   * [Applications.Service.ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md)  
   * [Applications.Service.ServiceAgreementServices](Applications.Service.ServiceAgreementServices.md)  
+  * [General.DocumentAmounts](General.DocumentAmounts.md)  
+    * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  
+  * [General.DocumentComments](General.DocumentComments.md)  
+  * [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md)  
+  * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
+  * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentPrints](General.DocumentPrints.md)  
+  * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
+  * [General.DocumentVersions](General.DocumentVersions.md)  
 
 ## Attributes
 

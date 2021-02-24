@@ -10,9 +10,9 @@ _{ObjectChangeId}: {AttributeName}_
 Default Search Member:  
 _ObjectChangeId_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Systems.Core.ObjectChanges](Systems.Core.ObjectChanges.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)  
 
 ## Attributes

@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.AssetManagement.MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md)  
   * [Applications.AssetManagement.MaintenanceOrderLines](Applications.AssetManagement.MaintenanceOrderLines.md)  
   * [General.Contacts.ActivityParticipants](General.Contacts.ActivityParticipants.md)  

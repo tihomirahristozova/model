@@ -10,9 +10,9 @@ _{IntrastatDeclaration.DocumentType.Code}:{IntrastatDeclaration.DocumentNo} - {I
 Default Search Member:  
 _IntrastatDeclaration.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Finance.Intrastat.Declarations](Finance.Intrastat.Declarations.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Finance.Intrastat.Declarations](Finance.Intrastat.Declarations.md)  
 
 ## Attributes

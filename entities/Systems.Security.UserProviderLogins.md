@@ -10,9 +10,9 @@ _{User.PhoneNumber}: {User.Name:T}_
 Default Search Member:  
 _User.PhoneNumber_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Systems.Security.Users](Systems.Security.Users.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Systems.Security.Users](Systems.Security.Users.md)  
 
 ## Attributes

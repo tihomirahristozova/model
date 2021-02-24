@@ -10,9 +10,9 @@ _{Account.AccountFullNumber}: {Account.Name:T}_
 Default Search Member:  
 _Account.AccountFullNumber_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)  
 
 ## Attributes

@@ -10,7 +10,7 @@ _{Code}: {EntityName:T}_
 Default Search Member:  
 _Code_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.DocumentTypes](General.DocumentTypes.md)  
   * [Crm.Invoicing.InvoicesOptions](Crm.Invoicing.InvoicesOptions.md)  
   * [Crm.Presales.OffersOptions](Crm.Presales.OffersOptions.md)  

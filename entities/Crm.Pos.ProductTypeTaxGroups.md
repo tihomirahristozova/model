@@ -10,9 +10,9 @@ _{ProductType.Code}: {ProductType.Name:T}_
 Default Search Member:  
 _ProductType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.Products.ProductTypes](General.Products.ProductTypes.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.Products.ProductTypes](General.Products.ProductTypes.md)  
 
 ## Attributes

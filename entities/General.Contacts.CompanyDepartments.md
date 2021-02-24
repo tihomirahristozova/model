@@ -10,9 +10,9 @@ _{DepartmentName:T}_
 Default Search Member:  
 _DepartmentName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.Contacts.Companies](General.Contacts.Companies.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.Contacts.Companies](General.Contacts.Companies.md)  
 
 ## Attributes

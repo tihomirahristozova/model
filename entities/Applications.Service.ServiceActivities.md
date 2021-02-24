@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Service.ServiceActivities](Applications.Service.ServiceActivities.md)  
   * [Applications.Service.ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md)  
     * [Applications.Service.ServiceActivityAgreedMaterials](Applications.Service.ServiceActivityAgreedMaterials.md)  

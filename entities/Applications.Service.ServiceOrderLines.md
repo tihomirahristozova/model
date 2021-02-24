@@ -10,9 +10,9 @@ _{ServiceOrder.DocumentType.Code}:{ServiceOrder.DocumentNo} - {ServiceOrder.Docu
 Default Search Member:  
 _ServiceOrder.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.Service.ServiceOrders](Applications.Service.ServiceOrders.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Applications.Service.ServiceOrders](Applications.Service.ServiceOrders.md)  
 
 ## Attributes

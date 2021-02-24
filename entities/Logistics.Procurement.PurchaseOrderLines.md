@@ -10,9 +10,9 @@ _{PurchaseOrder.DocumentType.Code}:{PurchaseOrder.DocumentNo}:{LineNo} - {Purcha
 Default Search Member:  
 _PurchaseOrder.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Procurement.PurchaseOrders](Logistics.Procurement.PurchaseOrders.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Procurement.PurchaseOrders](Logistics.Procurement.PurchaseOrders.md)  
 
 ## Attributes

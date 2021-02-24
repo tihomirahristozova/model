@@ -10,7 +10,7 @@ _{CostTemplateCode}: {CostTemplateName:T}_
 Default Search Member:  
 _CostTemplateCode_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Finance.Cost.Templates](Finance.Cost.Templates.md)  
   * [Finance.Cost.TemplateCostTypes](Finance.Cost.TemplateCostTypes.md)  
   * [Finance.Cost.TemplateLevels](Finance.Cost.TemplateLevels.md)  

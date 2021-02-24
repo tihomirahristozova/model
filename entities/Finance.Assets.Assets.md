@@ -10,9 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
 
 ## Attributes

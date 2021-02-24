@@ -10,9 +10,9 @@ _{DepreciationPlan.DocumentType.Code}:{DepreciationPlan.DocumentNo}:{LineNo} - {
 Default Search Member:  
 _DepreciationPlan.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Finance.Assets.DepreciationPlans](Finance.Assets.DepreciationPlans.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Finance.Assets.DepreciationPlans](Finance.Assets.DepreciationPlans.md)  
 
 ## Attributes

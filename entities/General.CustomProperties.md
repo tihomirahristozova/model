@@ -10,7 +10,7 @@ _{Code}: {AllowedValuesEntityName:T}_
 Default Search Member:  
 _Code_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.CustomProperties](General.CustomProperties.md)  
   * [General.CustomPropertyAllowedValues](General.CustomPropertyAllowedValues.md)  
   * [General.PropertyEnterpriseCompanyFilters](General.PropertyEnterpriseCompanyFilters.md)  

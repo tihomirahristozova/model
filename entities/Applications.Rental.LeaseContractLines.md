@@ -10,9 +10,9 @@ _{LeaseContract.DocumentType.Code}:{LeaseContract.DocumentNo} - {LeaseContract.D
 Default Search Member:  
 _LeaseContract.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md)  
 
 ## Attributes

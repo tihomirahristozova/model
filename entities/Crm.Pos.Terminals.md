@@ -10,7 +10,7 @@ _{PosTerminalCode}: {PosTerminalName:T}_
 Default Search Member:  
 _PosTerminalCode_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Crm.Pos.Terminals](Crm.Pos.Terminals.md)  
   * [Crm.Pos.Devices](Crm.Pos.Devices.md)  
 

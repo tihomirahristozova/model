@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Crm.Marketing.MarketingActivities](Crm.Marketing.MarketingActivities.md)  
   * [General.Contacts.ActivityParticipants](General.Contacts.ActivityParticipants.md)  
   * [General.Contacts.ActivityResources](General.Contacts.ActivityResources.md)  

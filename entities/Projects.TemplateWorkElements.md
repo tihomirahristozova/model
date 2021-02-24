@@ -10,9 +10,9 @@ _{ProjectTemplate.ProjectTemplateName:T}_
 Default Search Member:  
 _ProjectTemplate.ProjectTemplateName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Projects.Templates](Projects.Templates.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Projects.Templates](Projects.Templates.md)  
 
 ## Attributes

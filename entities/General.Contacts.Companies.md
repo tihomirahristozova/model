@@ -10,7 +10,7 @@ _{PartyCode}: {PartyName:T}_
 Default Search Member:  
 _PartyCode_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.Contacts.Companies](General.Contacts.Companies.md)  
   * [General.Contacts.CompanyDepartments](General.Contacts.CompanyDepartments.md)  
   * [Crm.Customers](Crm.Customers.md)  

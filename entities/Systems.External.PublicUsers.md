@@ -10,7 +10,7 @@ _{PhoneNumber}: {CompanyName:T}_
 Default Search Member:  
 _PhoneNumber_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Systems.External.PublicUsers](Systems.External.PublicUsers.md)  
 
 ## Attributes

@@ -10,7 +10,7 @@ _{QueryName:T}_
 Default Search Member:  
 _QueryName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.Reports](General.Reports.md)  
   * [General.ReportQueries](General.ReportQueries.md)  
 

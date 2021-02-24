@@ -10,9 +10,9 @@ _{BulkPaymentOrder.DocumentType.Code}:{BulkPaymentOrder.DocumentNo} - {BulkPayme
 Default Search Member:  
 _BulkPaymentOrder.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Finance.Payments.BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Finance.Payments.BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)  
 
 ## Attributes

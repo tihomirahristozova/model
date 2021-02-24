@@ -10,7 +10,7 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Systems.External.PublicUserLists](Systems.External.PublicUserLists.md)  
 
 ## Attributes

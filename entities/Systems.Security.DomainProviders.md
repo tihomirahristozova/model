@@ -10,9 +10,9 @@ _{DisplayName:T}_
 Default Search Member:  
 _DisplayName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Systems.Security.Domains](Systems.Security.Domains.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Systems.Security.Domains](Systems.Security.Domains.md)  
 
 ## Attributes

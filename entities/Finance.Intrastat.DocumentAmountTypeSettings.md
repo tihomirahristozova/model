@@ -10,9 +10,9 @@ _{DocumentAmountType.AmountTypeCode}: {DocumentAmountType.AmountTypeName:T}_
 Default Search Member:  
 _DocumentAmountType.AmountTypeCode_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.DocumentAmountTypes](General.DocumentAmountTypes.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.DocumentAmountTypes](General.DocumentAmountTypes.md)  
 
 ## Attributes

@@ -10,9 +10,9 @@ _{RiskName:T}_
 Default Search Member:  
 _RiskName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Projects.Projects](Projects.Projects.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Projects.Projects](Projects.Projects.md)  
 
 ## Attributes

@@ -10,7 +10,7 @@ _{DocumentEntityName:T}_
 Default Search Member:  
 _DocumentEntityName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.PrintoutLayouts](General.PrintoutLayouts.md)  
   * [General.DocumentPrintImages](General.DocumentPrintImages.md)  
 

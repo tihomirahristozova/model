@@ -10,9 +10,9 @@ _{IngredientName:T}_
 Default Search Member:  
 _IngredientName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Production.Technologies.PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.Products.ProductGroups](General.Products.ProductGroups.md)  
 
 ## Attributes

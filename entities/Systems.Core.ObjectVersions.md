@@ -10,9 +10,9 @@ _{Object.Id}_
 Default Search Member:  
 _Object.Id_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
 
 ## Attributes

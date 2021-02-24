@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Finance.Assets.AssetTransactions](Finance.Assets.AssetTransactions.md)  
   * [Finance.Assets.AssetTransactionLines](Finance.Assets.AssetTransactionLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

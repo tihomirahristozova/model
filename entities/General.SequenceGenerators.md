@@ -10,9 +10,9 @@ _{Sequence.Name:T}_
 Default Search Member:  
 _Sequence.Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.Sequences](General.Sequences.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.Sequences](General.Sequences.md)  
 
 ## Attributes

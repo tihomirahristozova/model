@@ -10,9 +10,9 @@ _{FileName:T}_
 Default Search Member:  
 _FileName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.Documents](General.Documents.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.Documents](General.Documents.md)  
 
 ## Attributes

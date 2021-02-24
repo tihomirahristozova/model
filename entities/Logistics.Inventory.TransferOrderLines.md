@@ -10,9 +10,9 @@ _{TransferOrder.DocumentType.Code}:{TransferOrder.DocumentNo}:{LineOrd} - {Trans
 Default Search Member:  
 _TransferOrder.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Inventory.TransferOrders](Logistics.Inventory.TransferOrders.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Inventory.TransferOrders](Logistics.Inventory.TransferOrders.md)  
 
 ## Attributes

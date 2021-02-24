@@ -10,7 +10,7 @@ _{PosLocationCode}_
 Default Search Member:  
 _PosLocationCode_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Crm.Pos.Locations](Crm.Pos.Locations.md)  
 
 ## Attributes

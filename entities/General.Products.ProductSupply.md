@@ -10,7 +10,7 @@ _{BuyerName:T}_
 Default Search Member:  
 _BuyerName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.Products.ProductSupply](General.Products.ProductSupply.md)  
 
 ## Attributes

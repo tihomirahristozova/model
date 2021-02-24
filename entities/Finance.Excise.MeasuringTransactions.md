@@ -10,7 +10,7 @@ _{MeasuringDeviceCode}_
 Default Search Member:  
 _MeasuringDeviceCode_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Finance.Excise.MeasuringTransactions](Finance.Excise.MeasuringTransactions.md)  
 
 ## Attributes

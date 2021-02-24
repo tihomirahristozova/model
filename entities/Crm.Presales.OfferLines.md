@@ -10,9 +10,9 @@ _{Offer.DocumentType.Code}:{Offer.DocumentNo}:{LineNo} - {Offer.DocumentType.Typ
 Default Search Member:  
 _Offer.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Crm.Presales.Offers](Crm.Presales.Offers.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Crm.Presales.Offers](Crm.Presales.Offers.md)  
 
 ## Attributes

@@ -10,7 +10,7 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Production.Technologies.Recipes](Production.Technologies.Recipes.md)  
   * [Production.Technologies.RecipeIngredients](Production.Technologies.RecipeIngredients.md)  
   * [Production.Technologies.RecipeOperations](Production.Technologies.RecipeOperations.md)  

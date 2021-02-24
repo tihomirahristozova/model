@@ -10,7 +10,7 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Finance.Payments.PaymentAccounts](Finance.Payments.PaymentAccounts.md)  
 
 ## Attributes

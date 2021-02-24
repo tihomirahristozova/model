@@ -10,9 +10,9 @@ _{BonusProgram.Name:T}_
 Default Search Member:  
 _BonusProgram.Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Crm.Marketing.BonusPrograms](Crm.Marketing.BonusPrograms.md)  
 
 ## Attributes

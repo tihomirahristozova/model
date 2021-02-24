@@ -10,9 +10,9 @@ _{TableName:T}_
 Default Search Member:  
 _TableName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md)  
 
 ## Attributes

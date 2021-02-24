@@ -10,9 +10,9 @@ _{PosTerminal.PosTerminalCode}: {PosTerminal.PosTerminalName:T}_
 Default Search Member:  
 _PosTerminal.PosTerminalCode_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Crm.Pos.Terminals](Crm.Pos.Terminals.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Crm.Pos.Terminals](Crm.Pos.Terminals.md)  
 
 ## Attributes

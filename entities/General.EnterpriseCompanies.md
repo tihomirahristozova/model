@@ -10,7 +10,7 @@ _{Company.RegistrationNumber}: {Company.PartyName:T}_
 Default Search Member:  
 _Company.RegistrationNumber_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
   * [Finance.Assets.Assets](Finance.Assets.Assets.md)  
   * [Applications.Fleet.Crews](Applications.Fleet.Crews.md)  

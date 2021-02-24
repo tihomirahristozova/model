@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Finance.Payments.BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)  
   * [Finance.Payments.BulkPaymentOrderLines](Finance.Payments.BulkPaymentOrderLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

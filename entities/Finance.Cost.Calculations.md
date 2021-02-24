@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Finance.Cost.Calculations](Finance.Cost.Calculations.md)  
   * [Finance.Cost.CalculationCosts](Finance.Cost.CalculationCosts.md)  
   * [Finance.Cost.CalculationProductOutputs](Finance.Cost.CalculationProductOutputs.md)  

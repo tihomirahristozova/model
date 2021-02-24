@@ -10,7 +10,7 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Service.ServiceTypes](Applications.Service.ServiceTypes.md)  
 
 ## Attributes

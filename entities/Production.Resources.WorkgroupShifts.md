@@ -10,9 +10,9 @@ _{ShiftName:T}_
 Default Search Member:  
 _ShiftName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Production.Resources.Workgroups](Production.Resources.Workgroups.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Production.Resources.Workgroups](Production.Resources.Workgroups.md)  
 
 ## Attributes

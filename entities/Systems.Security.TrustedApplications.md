@@ -10,7 +10,7 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Systems.Security.TrustedApplications](Systems.Security.TrustedApplications.md)  
   * [Systems.Security.TrustedApplicationAuthorizations](Systems.Security.TrustedApplicationAuthorizations.md)  
 

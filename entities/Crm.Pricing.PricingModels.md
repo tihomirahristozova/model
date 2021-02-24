@@ -10,7 +10,7 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Crm.Pricing.PricingModels](Crm.Pricing.PricingModels.md)  
   * [Crm.Pricing.PricingModelCosts](Crm.Pricing.PricingModelCosts.md)  
   * [Crm.Pricing.PricingModelPriceLists](Crm.Pricing.PricingModelPriceLists.md)  

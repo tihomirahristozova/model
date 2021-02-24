@@ -10,9 +10,9 @@ _{ContractCode}_
 Default Search Member:  
 _ContractCode_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.Contacts.Persons](General.Contacts.Persons.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.Contacts.Persons](General.Contacts.Persons.md)  
 
 ## Attributes

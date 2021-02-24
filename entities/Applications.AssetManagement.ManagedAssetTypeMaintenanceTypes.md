@@ -10,9 +10,9 @@ _{ManagedAssetType.Code}: {ManagedAssetType.Name:T}_
 Default Search Member:  
 _ManagedAssetType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Applications.AssetManagement.ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)  
 
 ## Attributes

@@ -10,9 +10,9 @@ _{AssetCategory.Code}: {AssetCategory.Name:T}_
 Default Search Member:  
 _AssetCategory.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Finance.Assets.AssetCategories](Finance.Assets.AssetCategories.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Finance.Assets.AssetCategories](Finance.Assets.AssetCategories.md)  
 
 ## Attributes

@@ -10,7 +10,7 @@ _{CalledPartyNumber}_
 Default Search Member:  
 _CalledPartyNumber_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Telephony.CallDetails](Applications.Telephony.CallDetails.md)  
 
 ## Attributes

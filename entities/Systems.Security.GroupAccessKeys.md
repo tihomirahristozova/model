@@ -10,9 +10,9 @@ _{Group.Name:T}_
 Default Search Member:  
 _Group.Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Systems.Security.Groups](Systems.Security.Groups.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Systems.Security.Groups](Systems.Security.Groups.md)  
 
 ## Attributes

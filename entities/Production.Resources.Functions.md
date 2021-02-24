@@ -10,9 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Production.Resources.FunctionGroups](Production.Resources.FunctionGroups.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Production.Resources.FunctionGroups](Production.Resources.FunctionGroups.md)  
 
 ## Attributes

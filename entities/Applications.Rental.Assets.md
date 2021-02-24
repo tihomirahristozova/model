@@ -10,9 +10,9 @@ _{RentalAssetCode}: {RentalAssetName:T}_
 Default Search Member:  
 _RentalAssetCode_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.Rental.AssetGroups](Applications.Rental.AssetGroups.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Applications.Rental.AssetGroups](Applications.Rental.AssetGroups.md)  
 
 ## Attributes

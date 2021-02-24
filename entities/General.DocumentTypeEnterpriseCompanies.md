@@ -10,9 +10,9 @@ _{DocumentType.Code}: {DocumentType.EntityName:T}_
 Default Search Member:  
 _DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

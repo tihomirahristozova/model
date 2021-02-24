@@ -10,9 +10,9 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
 
 ## Attributes

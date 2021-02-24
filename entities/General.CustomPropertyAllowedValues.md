@@ -10,9 +10,9 @@ _{Property.Code}: {Property.AllowedValuesEntityName:T}_
 Default Search Member:  
 _Property.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.CustomProperties](General.CustomProperties.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.CustomProperties](General.CustomProperties.md)  
 
 ## Attributes

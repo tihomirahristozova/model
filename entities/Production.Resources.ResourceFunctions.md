@@ -10,9 +10,9 @@ _{Resource.Name:T}_
 Default Search Member:  
 _Resource.Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Production.Resources.Resources](Production.Resources.Resources.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Production.Resources.ResourceGroups](Production.Resources.ResourceGroups.md)  
 
 ## Attributes

@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Logistics.Procurement.PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)  
   * [Logistics.Procurement.PurchaseControlDocumentLines](Logistics.Procurement.PurchaseControlDocumentLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

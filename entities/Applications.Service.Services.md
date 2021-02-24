@@ -10,7 +10,7 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Service.Services](Applications.Service.Services.md)  
   * [Applications.Service.ServiceInvoicing](Applications.Service.ServiceInvoicing.md)  
 

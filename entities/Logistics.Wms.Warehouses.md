@@ -10,7 +10,7 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Logistics.Wms.Warehouses](Logistics.Wms.Warehouses.md)  
   * [Logistics.Wms.WarehouseLocations](Logistics.Wms.WarehouseLocations.md)  
   * [Logistics.Wms.WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md)  

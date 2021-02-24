@@ -10,7 +10,7 @@ _{ApplicationName:T}_
 Default Search Member:  
 _ApplicationName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Systems.Core.AuditLogEntries](Systems.Core.AuditLogEntries.md)  
 
 ## Attributes

@@ -10,9 +10,9 @@ _{ProcedureName:T}_
 Default Search Member:  
 _ProcedureName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.DocumentTypes](General.DocumentTypes.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

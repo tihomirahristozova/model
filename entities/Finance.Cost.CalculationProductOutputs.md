@@ -10,9 +10,9 @@ _{Calculation.DocumentType.Code}:{Calculation.DocumentNo} - {Calculation.Documen
 Default Search Member:  
 _Calculation.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Finance.Cost.Calculations](Finance.Cost.Calculations.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Finance.Cost.Calculations](Finance.Cost.Calculations.md)  
 
 ## Attributes

@@ -10,9 +10,9 @@ _{SocialGroup.Code}: {SocialGroup.Name:T}_
 Default Search Member:  
 _SocialGroup.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Communities.SocialGroups](Communities.SocialGroups.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Communities.SocialGroups](Communities.SocialGroups.md)  
 
 ## Attributes

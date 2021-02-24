@@ -10,7 +10,7 @@ _{ColumnName:T}_
 Default Search Member:  
 _ColumnName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Systems.Security.ColumnPermissions](Systems.Security.ColumnPermissions.md)  
 
 ## Attributes

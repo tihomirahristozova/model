@@ -10,9 +10,9 @@ _{PurchaseControlDocument.DocumentType.Code}:{PurchaseControlDocument.DocumentNo
 Default Search Member:  
 _PurchaseControlDocument.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Procurement.PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Procurement.PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)  
 
 ## Attributes

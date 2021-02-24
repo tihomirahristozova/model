@@ -10,9 +10,9 @@ _{PersonalDataProcess.Code}: {PersonalDataProcess.Name:T}_
 Default Search Member:  
 _PersonalDataProcess.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Applications.PersonalData.PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md)  
 
 ## Attributes

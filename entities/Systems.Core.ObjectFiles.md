@@ -10,9 +10,9 @@ _{PurposeCode}: {FileName:T}_
 Default Search Member:  
 _PurposeCode_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
 
 ## Attributes

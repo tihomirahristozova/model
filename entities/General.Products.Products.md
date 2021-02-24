@@ -10,7 +10,7 @@ _{PartNumber}: {Name:T}_
 Default Search Member:  
 _PartNumber_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.Products.Products](General.Products.Products.md)  
   * [Crm.Marketing.ProductDistributionChannels](Crm.Marketing.ProductDistributionChannels.md)  
   * [General.ProductVariants](General.ProductVariants.md)  

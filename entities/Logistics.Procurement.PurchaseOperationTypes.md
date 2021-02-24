@@ -10,7 +10,7 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Logistics.Procurement.PurchaseOperationTypes](Logistics.Procurement.PurchaseOperationTypes.md)  
 
 ## Attributes

@@ -10,9 +10,9 @@ _{WorkgroupResource.Workgroup.Name:T}_
 Default Search Member:  
 _WorkgroupResource.Workgroup.Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Production.Resources.WorkgroupResources](Production.Resources.WorkgroupResources.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Production.Resources.Workgroups](Production.Resources.Workgroups.md)  
 
 ## Attributes

@@ -10,7 +10,7 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Production.Resources.OperationInstructions](Production.Resources.OperationInstructions.md)  
 
 ## Attributes

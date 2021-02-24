@@ -10,7 +10,7 @@ _{EntityName:T}_
 Default Search Member:  
 _EntityName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Systems.Core.ExternalApplications](Systems.Core.ExternalApplications.md)  
 
 ## Attributes

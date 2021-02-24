@@ -10,9 +10,9 @@ _{PaymentTransaction.DocumentType.Code}:{PaymentTransaction.DocumentNo} - {Payme
 Default Search Member:  
 _PaymentTransaction.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Finance.Payments.PaymentTransactions](Finance.Payments.PaymentTransactions.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Finance.Payments.PaymentTransactions](Finance.Payments.PaymentTransactions.md)  
 
 ## Attributes

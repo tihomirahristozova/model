@@ -10,7 +10,7 @@ _{RepositoryName}: {EntityItemId}_
 Default Search Member:  
 _RepositoryName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Systems.Core.AttributeChangesHistory](Systems.Core.AttributeChangesHistory.md)  
 
 ## Attributes

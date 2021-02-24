@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Logistics.Wms.WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)  
   * [Logistics.Wms.WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

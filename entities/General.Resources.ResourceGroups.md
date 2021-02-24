@@ -10,7 +10,7 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.Resources.ResourceGroups](General.Resources.ResourceGroups.md)  
   * [General.Resources.Resources](General.Resources.Resources.md)  
     * [General.Resources.ResourceAvailability](General.Resources.ResourceAvailability.md)  

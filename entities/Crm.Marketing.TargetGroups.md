@@ -10,7 +10,7 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md)  
   * [Crm.Marketing.TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md)  
 

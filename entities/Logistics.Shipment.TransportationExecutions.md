@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Logistics.Shipment.TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)  
   * [Logistics.Shipment.TransportationExecutionLines](Logistics.Shipment.TransportationExecutionLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  

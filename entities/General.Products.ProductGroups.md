@@ -10,7 +10,7 @@ _{NextPartNumber}: {Name:T}_
 Default Search Member:  
 _NextPartNumber_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.Products.ProductGroups](General.Products.ProductGroups.md)  
   * [General.Products.ProductGroupRangeProperties](General.Products.ProductGroupRangeProperties.md)  
   * [General.Products.ProductGroupRequiredProperties](General.Products.ProductGroupRequiredProperties.md)  

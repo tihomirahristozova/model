@@ -10,9 +10,9 @@ _{ServiceAgreement.DocumentType.Code}:{ServiceAgreement.DocumentNo}:{LineNo} - {
 Default Search Member:  
 _ServiceAgreement.DocumentNo_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Applications.Service.ServiceAgreements](Applications.Service.ServiceAgreements.md)  
 
 ## Attributes

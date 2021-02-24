@@ -10,9 +10,9 @@ _{Name:T}_
 Default Search Member:  
 _Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Systems.Workflow.Routes](Systems.Workflow.Routes.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes

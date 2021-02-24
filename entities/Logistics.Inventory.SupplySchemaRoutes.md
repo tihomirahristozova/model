@@ -10,9 +10,9 @@ _{SupplySchema.Name:T}_
 Default Search Member:  
 _SupplySchema.Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Logistics.Inventory.SupplySchemata](Logistics.Inventory.SupplySchemata.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Logistics.Inventory.SupplySchemata](Logistics.Inventory.SupplySchemata.md)  
 
 ## Attributes

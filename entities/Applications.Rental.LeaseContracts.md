@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Rental.LeaseContracts](Applications.Rental.LeaseContracts.md)  
   * [Applications.Rental.LeaseContractLines](Applications.Rental.LeaseContractLines.md)  
     * [Applications.Rental.LeaseContractLineConsumables](Applications.Rental.LeaseContractLineConsumables.md)  

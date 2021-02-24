@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Finance.Assets.DepreciationPlans](Finance.Assets.DepreciationPlans.md)  
   * [Finance.Assets.DepreciationPlanLines](Finance.Assets.DepreciationPlanLines.md)  
     * [Finance.Assets.DepreciationPlanLineFixedValues](Finance.Assets.DepreciationPlanLineFixedValues.md)  

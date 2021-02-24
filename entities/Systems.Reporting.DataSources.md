@@ -10,7 +10,7 @@ _{BaseQueryName:T}_
 Default Search Member:  
 _BaseQueryName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md)  
   * [Systems.Reporting.DataSourceQueries](Systems.Reporting.DataSourceQueries.md)  
 

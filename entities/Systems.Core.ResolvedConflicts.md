@@ -10,7 +10,7 @@ _{TableName:T}_
 Default Search Member:  
 _TableName_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Systems.Core.ResolvedConflicts](Systems.Core.ResolvedConflicts.md)  
 
 ## Attributes

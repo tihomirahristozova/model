@@ -10,7 +10,7 @@ _{WarehouseId}: {WarehouseLocationId}_
 Default Search Member:  
 _WarehouseId_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Logistics.Wms.WarehouseAvailabilityView](Logistics.Wms.WarehouseAvailabilityView.md)  
 
 ## Attributes

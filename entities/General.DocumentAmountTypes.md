@@ -10,7 +10,7 @@ _{AmountTypeCode}: {AmountTypeName:T}_
 Default Search Member:  
 _AmountTypeCode_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [General.DocumentAmountTypes](General.DocumentAmountTypes.md)  
   * [General.DocumentAmountTypeDependencies](General.DocumentAmountTypeDependencies.md)  
   * [Finance.Intrastat.DocumentAmountTypeSettings](Finance.Intrastat.DocumentAmountTypeSettings.md)  

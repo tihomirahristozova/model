@@ -10,7 +10,7 @@ _{DiagnosticTroubleCode}_
 Default Search Member:  
 _DiagnosticTroubleCode_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Fleet.VehicleObdTroubles](Applications.Fleet.VehicleObdTroubles.md)  
 
 ## Attributes

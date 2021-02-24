@@ -10,9 +10,9 @@ _{VehicleSet.Name:T}_
 Default Search Member:  
 _VehicleSet.Name_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Applications.Fleet.VehicleSets](Applications.Fleet.VehicleSets.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
 
 ## Attributes

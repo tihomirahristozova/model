@@ -10,9 +10,9 @@ _{PromotionalPackage.Code}: {PromotionalPackage.Name:T}_
 Default Search Member:  
 _PromotionalPackage.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Crm.PromotionalPackages](Crm.PromotionalPackages.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Crm.PromotionalPackages](Crm.PromotionalPackages.md)  
 
 ## Attributes

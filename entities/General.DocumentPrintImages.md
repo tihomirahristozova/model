@@ -10,9 +10,9 @@ _{PrintoutLayout.DocumentEntityName:T}_
 Default Search Member:  
 _PrintoutLayout.DocumentEntityName_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.PrintoutLayouts](General.PrintoutLayouts.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.PrintoutLayouts](General.PrintoutLayouts.md)  
 
 ## Attributes

@@ -10,7 +10,7 @@ _{Code}: {Name:T}_
 Default Search Member:  
 _Code_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Crm.PromotionalPackages](Crm.PromotionalPackages.md)  
   * [Crm.PromotionalPackageLines](Crm.PromotionalPackageLines.md)  
 

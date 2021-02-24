@@ -10,7 +10,7 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Systems.Core.ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
   * [Systems.Core.ObjectFiles](Systems.Core.ObjectFiles.md)  
   * [Systems.Core.ObjectVersions](Systems.Core.ObjectVersions.md)  

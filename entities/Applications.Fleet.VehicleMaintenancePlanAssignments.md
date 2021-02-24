@@ -10,7 +10,7 @@ _{Id}_
 Default Search Member:  
 _Id_  
 
-Aggregate Tree:  
+## [Aggregate Tree](xref:aggregates)  
 * [Applications.Fleet.VehicleMaintenancePlanAssignments](Applications.Fleet.VehicleMaintenancePlanAssignments.md)  
 
 ## Attributes

@@ -10,9 +10,9 @@ _{Voucher.DocumentType.Code}:{Voucher.DocumentNo} - {Voucher.DocumentType.TypeNa
 Default Search Member:  
 _Voucher.DocumentType.Code_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [Finance.Accounting.AccountingVouchers](Finance.Accounting.AccountingVouchers.md)  
 
 ## Attributes

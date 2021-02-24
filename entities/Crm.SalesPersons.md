@@ -10,9 +10,9 @@ _{Person.PartyCode}: {Person.PartyName:T}_
 Default Search Member:  
 _Person.PartyCode_  
 
-Aggregate Parent:  
+[Aggregate](xref:aggregates) Parent:  
 [General.Contacts.Persons](General.Contacts.Persons.md)  
-Aggregate Root:  
+[Aggregate](xref:aggregates) Root:  
 [General.Contacts.Persons](General.Contacts.Persons.md)  
 
 ## Attributes
