@@ -10,7 +10,7 @@ _{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_
 Default Search Member:  
 _DocumentNo_  
 
-Aggregate Tree:  
+## [Aggregate](xref:aggregates) Tree:  
 * [Crm.Sales.SalesOrders](Crm.Sales.SalesOrders.md)  
   * [Crm.Sales.SalesOrderLines](Crm.Sales.SalesOrderLines.md)  
   * [Crm.Sales.SalesOrderPaymentPlans](Crm.Sales.SalesOrderPaymentPlans.md)  
