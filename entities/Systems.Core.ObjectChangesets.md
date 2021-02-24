@@ -14,7 +14,8 @@ Default Search Member:
 _ApplicationName_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Tree  
 * [Systems.Core.ObjectChangesets](Systems.Core.ObjectChangesets.md)  
   * [Systems.Core.ObjectChanges](Systems.Core.ObjectChanges.md)  

@@ -14,7 +14,8 @@ Default Search Member:
 _BulkPaymentOrder.DocumentType.Code_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Parent:  
 [Finance.Payments.BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)  
 Aggregate Root:  

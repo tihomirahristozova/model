@@ -14,7 +14,8 @@ Default Search Member:
 _Name_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Tree  
 * [Production.Technologies.Recipes](Production.Technologies.Recipes.md)  
   * [Production.Technologies.RecipeIngredients](Production.Technologies.RecipeIngredients.md)  

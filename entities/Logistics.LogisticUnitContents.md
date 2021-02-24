@@ -14,7 +14,8 @@ Default Search Member:
 _LotNumber_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Parent:  
 [Logistics.LogisticUnits](Logistics.LogisticUnits.md)  
 Aggregate Root:  

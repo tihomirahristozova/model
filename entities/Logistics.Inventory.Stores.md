@@ -15,7 +15,8 @@ Default Search Member:
 _PartyCode_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Tree  
 * [Logistics.Inventory.Stores](Logistics.Inventory.Stores.md)  
   * [Logistics.Inventory.StoreBins](Logistics.Inventory.StoreBins.md)  

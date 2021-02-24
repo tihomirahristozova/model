@@ -14,7 +14,8 @@ Default Search Member:
 _AttributeName_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Parent:  
 [Systems.Bpm.UserBusinessRules](Systems.Bpm.UserBusinessRules.md)  
 Aggregate Root:  

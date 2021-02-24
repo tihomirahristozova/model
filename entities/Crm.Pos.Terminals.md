@@ -14,7 +14,8 @@ Default Search Member:
 _PosTerminalCode_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Tree  
 * [Crm.Pos.Terminals](Crm.Pos.Terminals.md)  
   * [Crm.Pos.Devices](Crm.Pos.Devices.md)  

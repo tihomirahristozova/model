@@ -14,7 +14,8 @@ Default Search Member:
 _RentalAssetTypeName_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Tree  
 * [Applications.Rental.AssetTypes](Applications.Rental.AssetTypes.md)  
   * [Applications.Rental.AssetTypeConsumables](Applications.Rental.AssetTypeConsumables.md)  

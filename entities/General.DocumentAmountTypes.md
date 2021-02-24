@@ -14,7 +14,8 @@ Default Search Member:
 _AmountTypeCode_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Tree  
 * [General.DocumentAmountTypes](General.DocumentAmountTypes.md)  
   * [General.DocumentAmountTypeDependencies](General.DocumentAmountTypeDependencies.md)  

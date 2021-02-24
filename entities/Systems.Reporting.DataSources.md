@@ -14,7 +14,8 @@ Default Search Member:
 _BaseQueryName_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Tree  
 * [Systems.Reporting.DataSources](Systems.Reporting.DataSources.md)  
   * [Systems.Reporting.DataSourceQueries](Systems.Reporting.DataSourceQueries.md)  

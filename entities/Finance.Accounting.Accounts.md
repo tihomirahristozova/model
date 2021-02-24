@@ -14,7 +14,8 @@ Default Search Member:
 _AccountFullNumber_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Tree  
 * [Finance.Accounting.Accounts](Finance.Accounting.Accounts.md)  
   * [Finance.Accounting.AccountRequiredProperties](Finance.Accounting.AccountRequiredProperties.md)  

@@ -14,7 +14,8 @@ Default Search Member:
 _TemplateLine.AmountColumnName_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Parent:  
 [Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md)  
 Aggregate Root:  

@@ -14,7 +14,8 @@ Default Search Member:
 _StoreOrder.DocumentNo_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Parent:  
 [Logistics.Inventory.StoreOrders](Logistics.Inventory.StoreOrders.md)  
 Aggregate Root:  

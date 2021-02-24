@@ -14,7 +14,8 @@ Default Search Member:
 _Code_  
 
 ## Aggregate
-  @aggregates  
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
 Aggregate Tree  
 * [Crm.Marketing.TargetGroups](Crm.Marketing.TargetGroups.md)  
   * [Crm.Marketing.TargetGroupMembers](Crm.Marketing.TargetGroupMembers.md)  
